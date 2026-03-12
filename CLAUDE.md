@@ -86,6 +86,8 @@ Check `calculator-site-skill/references/calculator-inventory.md` for which calcu
 
 ## Critical Rules — Always Follow These
 
+Before building or reviewing any calculator, read `calculator-site-skill/CALCULATOR_ACCEPTANCE_STANDARD.md` and validate ALL checklist items (Section 8) pass before marking as complete.
+
 ### File Naming
 - Calculator specs: `content/calculators/{category}/{slug}.spec.json`
 - Calculator content: `content/calculators/{category}/{slug}.mdx`
