@@ -32,6 +32,7 @@ import {
   getMethodologyTopicsForCalculator,
 } from '@/lib/content-linker';
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
+import ShareButton from '@/components/ui/ShareButton';
 
 // ═══════════════════════════════════════════════════════
 // Static params
@@ -176,10 +177,13 @@ export default function SlugPage({ params }: Props) {
           ]}
         />
 
-        {/* Section 2: H1 Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
-          {spec.title}
-        </h1>
+        {/* Section 2: H1 Title + Share */}
+        <div className="flex items-start justify-between gap-4 mt-4 mb-6">
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+            {spec.title}
+          </h1>
+          <ShareButton title={spec.title} />
+        </div>
 
         {/* MDX Content: BLUF intro (Section 3) renders before the calculator */}
         {mdxSource && (
