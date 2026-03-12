@@ -64,7 +64,7 @@
     @apply text-brand-500 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 hover:underline;
   }
   .category-card {
-    @apply bg-white dark:bg-slate-800 rounded-xl border border-gray-200 dark:border-slate-700 p-6 hover:shadow-md hover:border-brand-300 dark:hover:border-brand-500 transition-all duration-200;
+    @apply bg-white dark:bg-slate-800 rounded-xl border border-gray-200/80 dark:border-slate-700 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-brand-300 dark:hover:border-brand-500 transition-all duration-200;
   }
   .related-calc-link {
     @apply block p-3 rounded-lg hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors;
@@ -82,9 +82,9 @@
     }
   }
 
-  /* ─── Article section spacing ─── */
+  /* ─── Article section spacing (48px gap between H2 sections) ─── */
   .article-section {
-    @apply py-4;
+    @apply py-6;
   }
 
   /* ─── Collapsible <details> sections ─── */
@@ -99,7 +99,7 @@
     content: '';
   }
 
-  /* ─── FAQ accordion ─── */
+  /* ─── FAQ accordion (legacy) ─── */
   .faq-item summary::-webkit-details-marker {
     display: none;
   }
@@ -109,5 +109,25 @@
   }
   .faq-item[open] {
     @apply bg-gray-50/50 dark:bg-slate-800/50;
+  }
+
+  /* ─── FAQ visible items ─── */
+  .faq-item-visible + .faq-item-visible {
+    @apply border-t border-gray-100 dark:border-slate-700/50 pt-6;
+  }
+
+  /* ─── Prose table polish ─── */
+  .prose table {
+    @apply w-full text-sm;
+  }
+  .prose thead {
+    @apply bg-gray-50 dark:bg-slate-800/80;
+  }
+  .prose th {
+    @apply text-left font-semibold text-gray-700 dark:text-slate-300;
+  }
+  .prose td,
+  .prose th {
+    @apply px-3 py-2 border-b border-gray-100 dark:border-slate-700;
   }
 }

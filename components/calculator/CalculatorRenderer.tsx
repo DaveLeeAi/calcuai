@@ -7,10 +7,11 @@ import InputField from './InputField';
 import OutputDisplay from './OutputDisplay';
 import TabSwitcher from './features/TabSwitcher';
 import { ResultHeader, AssumptionsBar, MethodologyFooter } from './results';
-import ShareButton from '@/components/ui/ShareButton';
 
 interface CalculatorRendererProps {
   spec: CalculatorSpec;
+  /** Compact mode for sidebar — removes max-width, share button, and assumptions bar */
+  compact?: boolean;
 }
 
 function getDefaults(spec: CalculatorSpec, tabId?: string | null): Record<string, unknown> {
@@ -75,7 +76,7 @@ function validateInputs(
   return errors;
 }
 
-export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
+export default function CalculatorRenderer({ spec, compact = false }: CalculatorRendererProps) {
   const [activeTab, setActiveTab] = useState<string | null>(spec.tabs?.[0]?.id ?? null);
   const [inputs, setInputs] = useState<Record<string, unknown>>(() => getDefaults(spec, activeTab));
   const [results, setResults] = useState<Record<string, unknown> | null>(null);
@@ -156,8 +157,8 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
     }
   }, [spec.formula, inputs, visibleInputs]);
 
-  // Determine grid layout: 2 columns if 6+ inputs
-  const useGrid = visibleInputs.length >= 6;
+  // Determine grid layout: 2 columns if 6+ inputs (never in compact mode)
+  const useGrid = !compact && visibleInputs.length >= 6;
 
   // Separate highlighted outputs from the rest for visual hierarchy
   const highlightedOutputs = spec.outputs.filter((o) => o.highlight);
@@ -166,7 +167,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
   const isFlagship = spec.priority === 'flagship';
 
   return (
-    <div className="mx-auto max-w-calculator">
+    <div className={compact ? '' : 'mx-auto max-w-calculator'}>
       <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
         {/* Tabs */}
         {spec.tabs && spec.tabs.length > 0 && (
@@ -201,7 +202,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
           <div className="mt-6">
             <button
               onClick={handleCalculate}
-              className="w-full rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800 sm:w-auto"
+              className={`w-full rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800 ${compact ? '' : 'sm:w-auto'}`}
             >
               Calculate
             </button>
@@ -217,7 +218,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
             />
 
             {/* Assumptions bar */}
-            {isFlagship && (
+            {isFlagship && !compact && (
               <div className="mt-3">
                 <AssumptionsBar inputs={visibleInputs} values={calculatedInputs} />
               </div>
@@ -242,7 +243,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
             )}
 
             {/* Methodology footer */}
-            {isFlagship && (
+            {isFlagship && !compact && (
               <div className="mt-5">
                 <MethodologyFooter
                   formulaCitation={spec.formulaCitation}
@@ -255,7 +256,6 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
 
             {/* Actions bar */}
             <div className="mt-6 pt-5 border-t border-gray-200 dark:border-slate-700 flex flex-wrap items-center gap-3">
-              <ShareButton title={spec.title} />
               <button
                 onClick={handleReset}
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-slate-300 transition-colors hover:bg-gray-50 dark:hover:bg-slate-600 hover:text-gray-800 dark:hover:text-slate-100"
@@ -264,7 +264,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
-                Reset calculator
+                Reset
               </button>
             </div>
           </div>

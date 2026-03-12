@@ -79,7 +79,7 @@ export function ArticleContent({
   if (sections.length === 0) return null;
 
   return (
-    <div className="max-w-content mx-auto mt-10 space-y-8">
+    <div className="max-w-content mx-auto mt-10 space-y-12">
       {sections.map((section, i) => {
         const behavior = getSectionBehavior(
           section.type,

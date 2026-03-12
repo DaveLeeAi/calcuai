@@ -17,7 +17,6 @@ import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
 import StickyCalculator from '@/components/calculator/StickyCalculator';
 import TableOfContents from '@/components/content/TableOfContents';
-import { RelatedSidebar } from '@/components/content/RelatedSidebar';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { AIDiscovery } from '@/components/seo/AIDiscovery';
 import {
@@ -40,7 +39,6 @@ import {
   getMethodologyTopicsForCalculator,
 } from '@/lib/content-linker';
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
-import FeedbackWidget from '@/components/ui/FeedbackWidget';
 import SalesTaxVisualizations from '@/components/content/SalesTaxVisualizations';
 import { siteConfig } from '@/lib/site-config';
 
@@ -249,18 +247,9 @@ export default function SlugPage({ params }: Props) {
 
             {/* Center column: Calculator + Article content */}
             <div className="min-w-0 max-w-[720px]">
-              {/* Mobile/tablet TOC (shown above content below 1280px) */}
-              <div className="xl:hidden">
-                <TableOfContents containerSelector="article" />
-              </div>
-
               {/* Calculator widget (mobile/tablet: inline, desktop: shown in right col) */}
               <div className="xl:hidden my-8">
                 <CalculatorRenderer spec={spec} />
-                <FeedbackWidget
-                  calculatorSlug={spec.slug}
-                  calculatorTitle={spec.title}
-                />
               </div>
 
               {/* Article sections */}
@@ -298,15 +287,10 @@ export default function SlugPage({ params }: Props) {
               <DisclaimerBlock type={spec.disclaimer} />
             </div>
 
-            {/* Right column: Sticky calculator + Related sidebar (desktop >1280px) */}
+            {/* Right column: Sticky calculator (desktop >1280px) */}
             <div className="hidden xl:block min-w-0">
               <div className="sticky top-20 space-y-6">
                 <StickyCalculator spec={spec} />
-                <FeedbackWidget
-                  calculatorSlug={spec.slug}
-                  calculatorTitle={spec.title}
-                />
-                <RelatedSidebar calculators={relatedCalcs} />
               </div>
             </div>
           </div>
@@ -357,7 +341,6 @@ export default function SlugPage({ params }: Props) {
         {/* Calculator Widget */}
         <div className="my-8">
           <CalculatorRenderer spec={spec} />
-          <FeedbackWidget calculatorSlug={spec.slug} calculatorTitle={spec.title} />
         </div>
 
         {/* Article Content */}

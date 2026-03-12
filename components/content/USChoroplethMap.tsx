@@ -2,39 +2,27 @@
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
 import * as topojson from 'topojson-client';
+import { geoAlbersUsa, geoPath } from 'd3-geo';
 import type { Topology, GeometryCollection } from 'topojson-specification';
 
 // ─── Types ───────────────────────────────────────────
 
 interface StateData {
-  /** State name */
   name: string;
-  /** State FIPS code (string to match TopoJSON IDs) */
   fips: string;
-  /** Rate value (e.g., tax rate percentage) */
   rate: number;
-  /** Optional local rate */
   localRate?: number;
-  /** Combined rate (state + local) */
   combinedRate?: number;
-  /** Optional label (e.g., "No sales tax") */
   label?: string;
 }
 
 interface USChoroplethMapProps {
-  /** Array of state-level data to display */
   data: StateData[];
-  /** Label for the color scale (e.g., "Sales Tax Rate") */
   legend: string;
-  /** Source citation text */
   source: string;
-  /** Format for tooltip values (default: percentage) */
   valueFormat?: 'percentage' | 'currency' | 'number';
-  /** Callback when a state is clicked */
   onStateClick?: (state: StateData) => void;
-  /** Color scale: [lowColor, highColor] */
   colorScale?: [string, string];
-  /** Color for states with no data / zero rate */
   noDataColor?: string;
 }
 
@@ -112,7 +100,7 @@ export default function USChoroplethMap({
     state: StateData | null;
     fipsName: string;
   } | null>(null);
-  const svgRef = useRef<SVGSVGElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   // Load TopoJSON
   useEffect(() => {
@@ -131,7 +119,6 @@ export default function USChoroplethMap({
     return map;
   }, [data]);
 
-  // Compute color for a FIPS code
   const maxRate = useMemo(
     () => Math.max(...data.map((d) => d.combinedRate ?? d.rate), 1),
     [data]
@@ -148,21 +135,36 @@ export default function USChoroplethMap({
     [dataByFips, maxRate, colorScale, noDataColor]
   );
 
-  // Generate GeoJSON features from topology
-  const features = useMemo(() => {
-    if (!topology) return [];
+  // Generate projected SVG paths from topology using d3-geo
+  const pathStrings = useMemo(() => {
+    if (!topology) return new Map<string, string>();
+
     const geom = topology.objects.states as GeometryCollection;
     const fc = topojson.feature(topology, geom);
-    return fc.features;
+
+    // AlbersUSA projection scaled to fit a 975x610 viewBox
+    const projection = geoAlbersUsa()
+      .scale(1280)
+      .translate([975 / 2, 610 / 2]);
+
+    const pathGenerator = geoPath().projection(projection);
+
+    const result = new Map<string, string>();
+    for (const feature of fc.features) {
+      const fips = String(feature.id).padStart(2, '0');
+      const d = pathGenerator(feature);
+      if (d) {
+        result.set(fips, d);
+      }
+    }
+    return result;
   }, [topology]);
 
-  // Simple Albers USA-like projection (approximate, no D3 dependency)
-  // We use the pre-projected coordinates from the atlas (already projected)
   const handleMouseMove = useCallback(
-    (e: React.MouseEvent<SVGSVGElement>) => {
-      const svg = svgRef.current;
-      if (!svg || !tooltip) return;
-      const rect = svg.getBoundingClientRect();
+    (e: React.MouseEvent<HTMLDivElement>) => {
+      const container = containerRef.current;
+      if (!container || !tooltip) return;
+      const rect = container.getBoundingClientRect();
       setTooltip((prev) =>
         prev
           ? {
@@ -178,9 +180,9 @@ export default function USChoroplethMap({
 
   const handleStateEnter = useCallback(
     (fips: string, e: React.MouseEvent<SVGPathElement>) => {
-      const svg = svgRef.current;
-      if (!svg) return;
-      const rect = svg.getBoundingClientRect();
+      const container = containerRef.current;
+      if (!container) return;
+      const rect = container.getBoundingClientRect();
       const paddedFips = fips.padStart(2, '0');
       setTooltip({
         x: e.clientX - rect.left,
@@ -215,7 +217,7 @@ export default function USChoroplethMap({
     });
   }, [colorScale, maxRate]);
 
-  if (!topology || features.length === 0) {
+  if (!topology || pathStrings.size === 0) {
     return (
       <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-8 text-center text-gray-400 dark:text-slate-500">
         Loading map...
@@ -223,29 +225,8 @@ export default function USChoroplethMap({
     );
   }
 
-  // Build SVG path data using a simple projection
-  // The US Atlas is pre-projected (AlbersUSA), so coordinates map directly to SVG
-  const pathData = (coords: number[][][]): string => {
-    return coords
-      .map((ring) => {
-        return ring
-          .map((pt, i) => `${i === 0 ? 'M' : 'L'}${pt[0].toFixed(1)},${pt[1].toFixed(1)}`)
-          .join('') + 'Z';
-      })
-      .join('');
-  };
-
-  const renderPath = (geometry: GeoJSON.Geometry): string => {
-    if (geometry.type === 'Polygon') {
-      return pathData(geometry.coordinates as number[][][]);
-    }
-    if (geometry.type === 'MultiPolygon') {
-      return (geometry.coordinates as number[][][][])
-        .map((polygon) => pathData(polygon))
-        .join('');
-    }
-    return '';
-  };
+  // Get all FIPS codes that have paths
+  const fipsList = Array.from(pathStrings.keys());
 
   return (
     <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 overflow-hidden">
@@ -255,33 +236,32 @@ export default function USChoroplethMap({
         </h3>
 
         {/* SVG Map */}
-        <div className="relative">
+        <div
+          ref={containerRef}
+          className="relative"
+          onMouseMove={handleMouseMove}
+        >
           <svg
-            ref={svgRef}
             viewBox="0 0 975 610"
             className="w-full h-auto"
-            onMouseMove={handleMouseMove}
             role="img"
             aria-label={`US map showing ${legend}`}
           >
-            {features.map((feature) => {
-              const fips = String(feature.id).padStart(2, '0');
-              return (
-                <path
-                  key={fips}
-                  d={renderPath(feature.geometry)}
-                  fill={getColor(fips)}
-                  stroke="#fff"
-                  strokeWidth={0.5}
-                  className="transition-opacity duration-150 hover:opacity-80 cursor-pointer"
-                  onMouseEnter={(e) => handleStateEnter(fips, e)}
-                  onMouseLeave={handleStateLeave}
-                  onClick={() => handleStateClick(fips)}
-                  role="button"
-                  aria-label={FIPS_TO_STATE[fips] || `State ${fips}`}
-                />
-              );
-            })}
+            {fipsList.map((fips) => (
+              <path
+                key={fips}
+                d={pathStrings.get(fips)!}
+                fill={getColor(fips)}
+                stroke="#fff"
+                strokeWidth={0.5}
+                className="transition-opacity duration-150 hover:opacity-80 cursor-pointer"
+                onMouseEnter={(e) => handleStateEnter(fips, e)}
+                onMouseLeave={handleStateLeave}
+                onClick={() => handleStateClick(fips)}
+                role="button"
+                aria-label={FIPS_TO_STATE[fips] || `State ${fips}`}
+              />
+            ))}
           </svg>
 
           {/* Tooltip */}
@@ -289,7 +269,7 @@ export default function USChoroplethMap({
             <div
               className="pointer-events-none absolute z-10 rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-800 px-3 py-2 shadow-lg text-sm"
               style={{
-                left: Math.min(tooltip.x + 12, (svgRef.current?.clientWidth ?? 400) - 180),
+                left: Math.min(tooltip.x + 12, (containerRef.current?.clientWidth ?? 400) - 180),
                 top: tooltip.y - 10,
                 transform: 'translateY(-100%)',
               }}

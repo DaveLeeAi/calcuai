@@ -45,7 +45,7 @@ export default function StickyCalculator({ spec }: StickyCalculatorProps) {
         className="lg:sticky lg:top-20 lg:self-start"
         id="calculator-widget"
       >
-        <CalculatorRenderer spec={spec} />
+        <CalculatorRenderer spec={spec} compact />
       </div>
 
       {/* Mobile: floating "Back to calculator" button */}
