@@ -77,9 +77,15 @@
   }
   @media (min-width: 1024px) {
     .flagship-layout {
-      /* Article (flex ~60%) | Calculator sidebar (max 380px) */
-      grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
-      gap: 2rem;
+      grid-template-columns: 1fr 340px;
+      gap: 2.5rem;
+      align-items: start;
+    }
+  }
+  @media (min-width: 1280px) {
+    .flagship-layout {
+      grid-template-columns: 1fr 380px;
+      gap: 3rem;
     }
   }
 

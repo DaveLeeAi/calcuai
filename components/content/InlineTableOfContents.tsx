@@ -72,7 +72,7 @@ export default function InlineTableOfContents({
 
   return (
     <nav
-      className="mb-8 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50/80 dark:bg-slate-800/60 px-5 py-4"
+      className="mb-6 rounded-lg border border-gray-200 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-800/40 px-4 py-3"
       aria-label="Table of contents"
     >
       {/* Mobile: collapsible toggle */}

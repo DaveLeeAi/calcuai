@@ -193,7 +193,7 @@ export default function SlugPage({ params }: Props) {
     // ─── Flagship: 3-column layout ───────────────────
     if (isFlagship) {
       return (
-        <article>
+        <article className="max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8">
           {/* Schema: WebPage + Speakable */}
           <JsonLd data={webPageSchema} id="schema-webpage" />
           {/* Schema: BreadcrumbList */}
@@ -229,7 +229,7 @@ export default function SlugPage({ params }: Props) {
 
           {/* BLUF intro (always full width above the 3-col grid) */}
           {mdxSource && (
-            <div className="max-w-content mx-auto mb-8" data-speakable="true">
+            <div className="mb-8" data-speakable="true">
               <BlufContent source={mdxSource} />
             </div>
           )}
@@ -247,8 +247,10 @@ export default function SlugPage({ params }: Props) {
           <div className="flagship-layout">
             {/* Left column: Article content */}
             <div className="min-w-0 max-w-[720px]">
-              {/* Inline Table of Contents */}
-              <InlineTableOfContents containerSelector="article" />
+              {/* Inline Table of Contents — hidden on desktop flagship, visible on mobile/tablet */}
+              <div className="lg:hidden">
+                <InlineTableOfContents containerSelector="article" />
+              </div>
 
               {/* Article sections */}
               {mdxSource && (

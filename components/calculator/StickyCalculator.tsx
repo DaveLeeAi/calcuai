@@ -42,7 +42,7 @@ export default function StickyCalculator({ spec }: StickyCalculatorProps) {
       {/* Calculator widget — sticky on desktop via CSS, normal flow on mobile */}
       <div
         ref={calcRef}
-        className="lg:sticky lg:top-20 lg:self-start"
+        className="lg:sticky lg:top-24 lg:self-start lg:max-h-[calc(100vh-120px)] lg:overflow-y-auto"
         id="calculator-widget"
       >
         <CalculatorRenderer spec={spec} compact />

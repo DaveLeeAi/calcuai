@@ -167,7 +167,7 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
   const isFlagship = spec.priority === 'flagship';
 
   return (
-    <div className={compact ? 'max-w-[360px]' : 'mx-auto max-w-calculator'}>
+    <div className={compact ? 'w-full' : 'mx-auto max-w-calculator'}>
       <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
         {/* Tabs */}
         {spec.tabs && spec.tabs.length > 0 && (
