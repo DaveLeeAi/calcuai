@@ -19,6 +19,7 @@
     "test:formulas": "jest --testPathPattern=formulas"
   },
   "dependencies": {
+    "@types/topojson-client": "^3.1.5",
     "clsx": "^2.1.0",
     "fuse.js": "^7.0.0",
     "gray-matter": "^4.0.3",
@@ -29,7 +30,8 @@
     "react-dom": "^18.3.0",
     "recharts": "^2.12.0",
     "rehype-katex": "^7.0.1",
-    "remark-math": "^6.0.0"
+    "remark-math": "^6.0.0",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@jest/globals": "^29.7.0",

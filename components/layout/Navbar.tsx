@@ -21,7 +21,7 @@ export function Navbar() {
 
   return (
     <nav className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 sticky top-0 z-50 shadow-sm dark:shadow-none">
-      <div className="max-w-page mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">
             {siteConfig.name}

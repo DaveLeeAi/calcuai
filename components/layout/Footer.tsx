@@ -15,7 +15,7 @@ const CATEGORIES = [
 export function Footer() {
   return (
     <footer className="bg-[#F1F5F9] dark:bg-slate-800 text-gray-500 dark:text-slate-400 mt-16 border-t border-gray-200 dark:border-slate-700">
-      <div className="max-w-page mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-2 sm:grid-cols-5 gap-8">
           {/* Categories */}
           <div className="col-span-2">

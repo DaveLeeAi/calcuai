@@ -70,6 +70,18 @@
     @apply block p-3 rounded-lg hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors;
   }
 
+  /* ─── Flagship 3-column layout ─── */
+  .flagship-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 1024px) {
+    .flagship-layout {
+      /* TOC (200px) | Article (flex) | Calculator+sidebar (380px) */
+      grid-template-columns: 200px 1fr 380px;
+    }
+  }
+
   /* ─── Article section spacing ─── */
   .article-section {
     @apply py-4;

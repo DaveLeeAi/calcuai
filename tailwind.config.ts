@@ -42,6 +42,7 @@ const config: Config = {
         calculator: '720px',
         content: '960px',
         page: '1200px',
+        'page-wide': '1440px',
       },
     },
   },

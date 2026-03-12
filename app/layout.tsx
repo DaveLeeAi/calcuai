@@ -66,7 +66,7 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col bg-[#F8FAFC] dark:bg-slate-900 font-sans">
         <ThemeProvider>
           <Navbar />
-          <main className="flex-1 w-full max-w-page mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <main className="flex-1 w-full max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {children}
           </main>
           <Footer />

@@ -14,7 +14,11 @@ import {
 } from '@/lib/content-loader';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
+import StickyCalculator from '@/components/calculator/StickyCalculator';
+import TableOfContents from '@/components/content/TableOfContents';
+import { RelatedSidebar } from '@/components/content/RelatedSidebar';
 import { JsonLd } from '@/components/seo/JsonLd';
+import { AIDiscovery } from '@/components/seo/AIDiscovery';
 import {
   buildCalculatorMetadata,
   buildSubcategoryMetadata,
@@ -22,7 +26,10 @@ import {
   buildFAQSchema,
   buildCollectionPageSchema,
 } from '@/components/seo/MetaTags';
-import { RelatedCalculators } from '@/components/content/RelatedCalculators';
+import {
+  buildBreadcrumbSchema,
+  buildSoftwareApplicationSchema,
+} from '@/lib/schema-generator';
 import { RelatedResources } from '@/components/content/RelatedResources';
 import { DisclaimerBlock } from '@/components/content/DisclaimerBlock';
 import { ArticleContent } from '@/components/content/ArticleContent';
@@ -33,6 +40,8 @@ import {
 } from '@/lib/content-linker';
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
 import ShareButton from '@/components/ui/ShareButton';
+import FeedbackWidget from '@/components/ui/FeedbackWidget';
+import { siteConfig } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════
 // Static params
@@ -97,7 +106,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 function resolveRelatedCalculators(
   relatedIds: string[],
   allSpecs: CalculatorSpec[]
-): { id: string; title: string; href: string }[] {
+): { id: string; title: string; href: string; category?: string }[] {
   return relatedIds.map((relId) => {
     const relSpec = allSpecs.find((s) => s.id === relId);
     return {
@@ -110,8 +119,27 @@ function resolveRelatedCalculators(
       href: relSpec
         ? `/${relSpec.category}/${relSpec.slug}`
         : `/${relId}`,
+      category: relSpec?.category,
     };
   });
+}
+
+// ═══════════════════════════════════════════════════════
+// Extract plain text from BLUF for AI discovery
+// ═══════════════════════════════════════════════════════
+
+function extractBlufText(mdxSource: string): string | undefined {
+  const match = mdxSource.match(
+    /<div className="bluf-intro">([\s\S]*?)<\/div>/
+  );
+  if (!match) return undefined;
+  // Strip MDX/HTML tags to get plain text
+  return match[1]
+    .replace(/<[^>]+>/g, '')
+    .replace(/\$\$[^$]+\$\$/g, '')
+    .replace(/\$[^$]+\$/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 // ═══════════════════════════════════════════════════════
@@ -133,6 +161,7 @@ export default function SlugPage({ params }: Props) {
     const cat = getCategory(spec.category);
     const catName = cat?.name || spec.category;
     const allSpecs = getAllSpecs();
+    const isFlagship = spec.priority === 'flagship';
 
     // Load MDX source and auto-link glossary terms
     const rawMdx = getCalculatorMDX(spec.category, spec.slug);
@@ -142,6 +171,12 @@ export default function SlugPage({ params }: Props) {
     // Build schemas
     const webPageSchema = buildWebPageSchema(spec);
     const faqSchema = mdxSource ? buildFAQSchema(spec, mdxSource) : null;
+    const breadcrumbSchema = buildBreadcrumbSchema([
+      { name: 'Home', url: siteConfig.url },
+      { name: catName, url: `${siteConfig.url}/${spec.category}` },
+      { name: spec.title },
+    ]);
+    const softwareAppSchema = buildSoftwareApplicationSchema(spec);
 
     // Resolve related calculators
     const relatedCalcs = resolveRelatedCalculators(
@@ -153,22 +188,146 @@ export default function SlugPage({ params }: Props) {
     const glossaryLinks = getGlossaryTermsForCalculator(spec);
     const methodologyLinks = getMethodologyTopicsForCalculator(spec);
 
+    // Extract BLUF text for AI discovery
+    const blufText = mdxSource ? extractBlufText(mdxSource) : undefined;
+
+    // ─── Flagship: 3-column layout ───────────────────
+    if (isFlagship) {
+      return (
+        <article>
+          {/* Schema: WebPage + Speakable */}
+          <JsonLd data={webPageSchema} id="schema-webpage" />
+          {/* Schema: BreadcrumbList */}
+          <JsonLd data={breadcrumbSchema} id="schema-breadcrumb" />
+          {/* Schema: SoftwareApplication */}
+          <JsonLd data={softwareAppSchema} id="schema-software-app" />
+          {/* Schema: FAQPage */}
+          {faqSchema && <JsonLd data={faqSchema} id="schema-faq" />}
+
+          {/* AI Discovery meta tags */}
+          <AIDiscovery spec={spec} blufText={blufText} />
+
+          {/* KaTeX CSS */}
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
+            crossOrigin="anonymous"
+          />
+
+          {/* Breadcrumbs */}
+          <Breadcrumbs
+            items={[
+              { label: 'Home', href: '/' },
+              { label: catName, href: `/${spec.category}` },
+              { label: spec.title },
+            ]}
+          />
+
+          {/* H1 Title + Share */}
+          <div className="flex items-start justify-between gap-4 mt-4 mb-6">
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+              {spec.title}
+            </h1>
+            <ShareButton title={spec.title} />
+          </div>
+
+          {/* BLUF intro (always full width above the 3-col grid) */}
+          {mdxSource && (
+            <div className="max-w-content mx-auto mb-8" data-speakable="true">
+              <BlufContent source={mdxSource} />
+            </div>
+          )}
+
+          {/* ═══ 3-Column Flagship Layout ═══
+               Left: Table of Contents (sticky)
+               Center: Article content
+               Right: Calculator widget (sticky) + Related sidebar
+          */}
+          <div className="flagship-layout gap-8">
+            {/* Left column: TOC (desktop only, hidden on mobile) */}
+            <div className="hidden lg:block lg:col-span-1 min-w-0">
+              <TableOfContents containerSelector="article" />
+            </div>
+
+            {/* Center column: Calculator + Article content */}
+            <div className="lg:col-span-2 min-w-0">
+              {/* Mobile TOC (shown above content on mobile) */}
+              <div className="lg:hidden">
+                <TableOfContents containerSelector="article" />
+              </div>
+
+              {/* Calculator widget (mobile: inline, desktop: shown in right col) */}
+              <div className="lg:hidden my-8">
+                <CalculatorRenderer spec={spec} />
+                <FeedbackWidget
+                  calculatorSlug={spec.slug}
+                  calculatorTitle={spec.title}
+                />
+              </div>
+
+              {/* Article sections */}
+              {mdxSource && (
+                <ArticleContent
+                  mdxSource={mdxSource}
+                  tier={spec.priority}
+                  category={spec.category}
+                  disclaimer={spec.disclaimer}
+                  sectionHeadings={{
+                    ...(spec.sectionHeadings || {}),
+                    ...(spec.interpretationHeading
+                      ? { interpretation: spec.interpretationHeading }
+                      : {}),
+                  }}
+                />
+              )}
+
+              {/* Related Resources */}
+              <RelatedResources
+                calculators={relatedCalcs}
+                glossaryTerms={glossaryLinks}
+                methodologyTopics={methodologyLinks}
+              />
+
+              {/* Disclaimer */}
+              <DisclaimerBlock type={spec.disclaimer} />
+            </div>
+
+            {/* Right column: Sticky calculator + Related sidebar (desktop only) */}
+            <div className="hidden lg:block lg:col-span-1 min-w-0">
+              <div className="sticky top-20 space-y-6">
+                <StickyCalculator spec={spec} />
+                <FeedbackWidget
+                  calculatorSlug={spec.slug}
+                  calculatorTitle={spec.title}
+                />
+                <RelatedSidebar calculators={relatedCalcs} />
+              </div>
+            </div>
+          </div>
+        </article>
+      );
+    }
+
+    // ─── Standard / Utility: 2-column layout (existing) ──
     return (
       <article>
-        {/* JSON-LD Schema: WebPage (+ Speakable for flagships) */}
+        {/* Schema */}
         <JsonLd data={webPageSchema} id="schema-webpage" />
-
-        {/* JSON-LD Schema: FAQPage (only when hasFAQ + actual FAQ content) */}
+        <JsonLd data={breadcrumbSchema} id="schema-breadcrumb" />
+        <JsonLd data={softwareAppSchema} id="schema-software-app" />
         {faqSchema && <JsonLd data={faqSchema} id="schema-faq" />}
 
-        {/* KaTeX CSS for math formulas */}
+        {/* AI Discovery */}
+        <AIDiscovery spec={spec} blufText={blufText} />
+
+        {/* KaTeX CSS */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
           crossOrigin="anonymous"
         />
 
-        {/* Section 1: Breadcrumbs (with BreadcrumbList schema) */}
+        {/* Breadcrumbs */}
         <Breadcrumbs
           items={[
             { label: 'Home', href: '/' },
@@ -177,7 +336,7 @@ export default function SlugPage({ params }: Props) {
           ]}
         />
 
-        {/* Section 2: H1 Title + Share */}
+        {/* H1 Title + Share */}
         <div className="flex items-start justify-between gap-4 mt-4 mb-6">
           <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
             {spec.title}
@@ -185,19 +344,20 @@ export default function SlugPage({ params }: Props) {
           <ShareButton title={spec.title} />
         </div>
 
-        {/* MDX Content: BLUF intro (Section 3) renders before the calculator */}
+        {/* BLUF intro */}
         {mdxSource && (
-          <div className="max-w-content mx-auto mb-8">
+          <div className="max-w-content mx-auto mb-8" data-speakable="true">
             <BlufContent source={mdxSource} />
           </div>
         )}
 
-        {/* Section 4 & 5: Calculator Widget + Result Display */}
+        {/* Calculator Widget */}
         <div className="my-8">
           <CalculatorRenderer spec={spec} />
+          <FeedbackWidget calculatorSlug={spec.slug} calculatorTitle={spec.title} />
         </div>
 
-        {/* Sections 6-14: Modular Article Content */}
+        {/* Article Content */}
         {mdxSource && (
           <ArticleContent
             mdxSource={mdxSource}
@@ -213,14 +373,14 @@ export default function SlugPage({ params }: Props) {
           />
         )}
 
-        {/* Section 15: Related Resources (calculators + glossary + methodology) */}
+        {/* Related Resources */}
         <RelatedResources
           calculators={relatedCalcs}
           glossaryTerms={glossaryLinks}
           methodologyTopics={methodologyLinks}
         />
 
-        {/* Section 17: Disclaimer */}
+        {/* Disclaimer */}
         <DisclaimerBlock type={spec.disclaimer} />
       </article>
     );
