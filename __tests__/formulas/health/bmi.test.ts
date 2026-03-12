@@ -118,4 +118,35 @@ describe('calculateBMI', () => {
     const result = calculateBMI({ weight: 81.0, height: 180, unitSystem: 'metric' });
     expect(result.category).toBe('Overweight');
   });
+
+  // ─── Edge case: height = 0 (division by zero guard) ───
+  it('returns error when height is zero', () => {
+    const result = calculateBMI({ weight: 70, height: 0, unitSystem: 'metric' });
+    expect(result.error).toBe('Height must be greater than zero');
+    expect(result.bmi).toBe(0);
+    expect(result.category).toBe('Invalid');
+  });
+
+  // ─── Edge case: weight = 0 ───
+  it('returns error when weight is zero', () => {
+    const result = calculateBMI({ weight: 0, height: 175, unitSystem: 'metric' });
+    expect(result.error).toBe('Weight must be greater than zero');
+    expect(result.bmi).toBe(0);
+    expect(result.category).toBe('Invalid');
+  });
+
+  // ─── Edge case: negative height ───
+  it('returns error when height is negative', () => {
+    const result = calculateBMI({ weight: 70, height: -10, unitSystem: 'metric' });
+    expect(result.error).toBe('Height must be greater than zero');
+    expect(result.bmi).toBe(0);
+  });
+
+  // ─── Edge case: both zero (imperial) ───
+  it('returns error when both height and weight are zero (imperial)', () => {
+    const result = calculateBMI({ weight: 0, height: 0, unitSystem: 'imperial' });
+    expect(result.error).toBeDefined();
+    expect(result.bmi).toBe(0);
+    expect(result.category).toBe('Invalid');
+  });
 });

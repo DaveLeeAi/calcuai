@@ -185,6 +185,12 @@ export function calculateRoofing(inputs: Record<string, unknown>): Record<string
     { label: 'Tear-off Layers', value: layers },
   ];
 
+  // ── Warnings ─────────────────────────────────────────
+  const warnings: string[] = [];
+  if (pitch > 12) {
+    warnings.push('Pitch exceeds 12/12 (45°) — verify measurement');
+  }
+
   return {
     roofArea: parseFloat(totalRoofArea.toFixed(2)),
     groundArea: parseFloat(groundArea.toFixed(2)),
@@ -196,6 +202,7 @@ export function calculateRoofing(inputs: Record<string, unknown>): Record<string
     nailsLbs,
     costEstimate,
     materialBreakdown,
+    warnings,
   };
 }
 

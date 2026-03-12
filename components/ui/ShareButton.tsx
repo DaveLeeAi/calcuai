@@ -21,6 +21,14 @@ function ShareIcon({ className }: { className?: string }) {
   );
 }
 
+function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+    </svg>
+  );
+}
+
 function LinkIcon({ className }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -79,18 +87,20 @@ function WhatsAppIcon({ className }: { className?: string }) {
   );
 }
 
-function CheckIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
-    </svg>
-  );
-}
+const SHARE_OPTIONS = [
+  { id: 'copy', label: 'Copy Link', Icon: LinkIcon, color: 'bg-gray-100 dark:bg-slate-600 text-gray-600 dark:text-slate-300 hover:bg-gray-200 dark:hover:bg-slate-500' },
+  { id: 'x', label: 'X', Icon: XIcon, color: 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-black dark:hover:bg-gray-100' },
+  { id: 'facebook', label: 'Facebook', Icon: FacebookIcon, color: 'bg-[#1877F2] text-white hover:bg-[#166FE5]' },
+  { id: 'linkedin', label: 'LinkedIn', Icon: LinkedInIcon, color: 'bg-[#0A66C2] text-white hover:bg-[#0958A8]' },
+  { id: 'reddit', label: 'Reddit', Icon: RedditIcon, color: 'bg-[#FF4500] text-white hover:bg-[#E03D00]' },
+  { id: 'whatsapp', label: 'WhatsApp', Icon: WhatsAppIcon, color: 'bg-[#25D366] text-white hover:bg-[#20BD5A]' },
+  { id: 'email', label: 'Email', Icon: MailIcon, color: 'bg-amber-500 text-white hover:bg-amber-600' },
+] as const;
 
 export default function ShareButton({ title, url }: ShareButtonProps) {
   const [isOpen, setIsOpen] = useState(false);
   const [copied, setCopied] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
 
   const shareText = `${title} — Free Online Calculator | ${SITE_NAME}`;
 
@@ -100,10 +110,10 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
     return '';
   }, [url]);
 
-  // Close dropdown on outside click
+  // Close on outside click
   useEffect(() => {
     function handleClick(e: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (panelRef.current && !panelRef.current.contains(e.target as Node)) {
         setIsOpen(false);
       }
     }
@@ -124,22 +134,16 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
     }
   }, [isOpen]);
 
-  const handleShare = useCallback(async () => {
-    const currentUrl = getUrl();
-
+  const handleMainClick = useCallback(async () => {
     // Use Web Share API on mobile if available
     if (typeof navigator !== 'undefined' && navigator.share) {
       try {
-        await navigator.share({
-          title: shareText,
-          url: currentUrl,
-        });
+        await navigator.share({ title: shareText, url: getUrl() });
         return;
       } catch {
-        // User cancelled or API failed — fall through to dropdown
+        // User cancelled — fall through to panel toggle
       }
     }
-
     setIsOpen((prev) => !prev);
   }, [getUrl, shareText]);
 
@@ -147,13 +151,7 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
     const currentUrl = getUrl();
     try {
       await navigator.clipboard.writeText(currentUrl);
-      setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-        setIsOpen(false);
-      }, 2000);
     } catch {
-      // Fallback for older browsers
       const textArea = document.createElement('textarea');
       textArea.value = currentUrl;
       textArea.style.position = 'fixed';
@@ -162,12 +160,9 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
       textArea.select();
       document.execCommand('copy');
       document.body.removeChild(textArea);
-      setCopied(true);
-      setTimeout(() => {
-        setCopied(false);
-        setIsOpen(false);
-      }, 2000);
     }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
   }, [getUrl]);
 
   const openShareWindow = useCallback((shareUrl: string) => {
@@ -175,110 +170,87 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
     setIsOpen(false);
   }, []);
 
-  const shareOptions = [
-    {
-      label: copied ? 'Copied!' : 'Copy Link',
-      icon: copied ? CheckIcon : LinkIcon,
-      onClick: handleCopyLink,
-      colorClass: copied
-        ? 'text-green-600 dark:text-green-400'
-        : 'text-gray-600 dark:text-slate-400',
-    },
-    {
-      label: 'Share to X',
-      icon: XIcon,
-      onClick: () => {
-        const currentUrl = getUrl();
-        openShareWindow(
-          `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(currentUrl)}`
-        );
-      },
-      colorClass: 'text-gray-800 dark:text-slate-300',
-    },
-    {
-      label: 'Share to Facebook',
-      icon: FacebookIcon,
-      onClick: () => {
-        const currentUrl = getUrl();
-        openShareWindow(
-          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`
-        );
-      },
-      colorClass: 'text-[#1877F2]',
-    },
-    {
-      label: 'Share to LinkedIn',
-      icon: LinkedInIcon,
-      onClick: () => {
-        const currentUrl = getUrl();
-        openShareWindow(
-          `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`
-        );
-      },
-      colorClass: 'text-[#0A66C2]',
-    },
-    {
-      label: 'Share to Reddit',
-      icon: RedditIcon,
-      onClick: () => {
-        const currentUrl = getUrl();
-        openShareWindow(
-          `https://reddit.com/submit?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(shareText)}`
-        );
-      },
-      colorClass: 'text-[#FF4500]',
-    },
-    {
-      label: 'Email',
-      icon: MailIcon,
-      onClick: () => {
-        const currentUrl = getUrl();
+  const handleOptionClick = useCallback((id: string) => {
+    const currentUrl = getUrl();
+    switch (id) {
+      case 'copy':
+        handleCopyLink();
+        return;
+      case 'x':
+        openShareWindow(`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(currentUrl)}`);
+        return;
+      case 'facebook':
+        openShareWindow(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`);
+        return;
+      case 'linkedin':
+        openShareWindow(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`);
+        return;
+      case 'reddit':
+        openShareWindow(`https://reddit.com/submit?url=${encodeURIComponent(currentUrl)}&title=${encodeURIComponent(shareText)}`);
+        return;
+      case 'whatsapp':
+        openShareWindow(`https://wa.me/?text=${encodeURIComponent(`${shareText} ${currentUrl}`)}`);
+        return;
+      case 'email':
         window.location.href = `mailto:?subject=${encodeURIComponent(shareText)}&body=${encodeURIComponent(`Check out this calculator: ${currentUrl}`)}`;
         setIsOpen(false);
-      },
-      colorClass: 'text-gray-600 dark:text-slate-400',
-    },
-    {
-      label: 'WhatsApp',
-      icon: WhatsAppIcon,
-      onClick: () => {
-        const currentUrl = getUrl();
-        openShareWindow(
-          `https://wa.me/?text=${encodeURIComponent(`${shareText} ${currentUrl}`)}`
-        );
-      },
-      colorClass: 'text-[#25D366]',
-    },
-  ];
+        return;
+    }
+  }, [getUrl, shareText, handleCopyLink, openShareWindow]);
 
   return (
-    <div ref={dropdownRef} className="relative">
+    <div ref={panelRef} className="relative">
+      {/* Main trigger button */}
       <button
-        onClick={handleShare}
-        className="p-2 rounded-lg transition-colors text-gray-500 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-gray-700 dark:hover:text-slate-200"
-        aria-label="Share this calculator"
-        title="Share this calculator"
+        onClick={handleMainClick}
+        className="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-brand-500/20 transition-all hover:from-brand-600 hover:to-brand-700 hover:shadow-lg hover:shadow-brand-500/30 active:scale-[0.98]"
+        aria-label="Share this result"
         type="button"
       >
-        <ShareIcon className="w-5 h-5" />
+        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20 transition-transform group-hover:scale-110">
+          <ShareIcon className="w-3.5 h-3.5" />
+        </span>
+        Share result
       </button>
 
+      {/* Share options panel */}
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-56 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-lg z-50 py-1 animate-in fade-in slide-in-from-top-1 duration-150">
-          {shareOptions.map((option) => {
-            const Icon = option.icon;
-            return (
-              <button
-                key={option.label}
-                onClick={option.onClick}
-                className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-gray-700 dark:text-slate-300 hover:bg-gray-50 dark:hover:bg-slate-700 transition-colors"
-                type="button"
-              >
-                <Icon className={`w-4 h-4 shrink-0 ${option.colorClass}`} />
-                <span>{option.label}</span>
-              </button>
-            );
-          })}
+        <div className="absolute left-0 bottom-full mb-3 z-50 animate-in fade-in slide-in-from-bottom-2 duration-200">
+          <div className="rounded-2xl border border-gray-200/80 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-xl shadow-black/10 dark:shadow-black/30 p-4 min-w-[280px]">
+            <p className="text-xs font-medium text-gray-500 dark:text-slate-400 uppercase tracking-wider mb-3">
+              Share via
+            </p>
+            <div className="grid grid-cols-4 gap-2">
+              {SHARE_OPTIONS.map(({ id, label, Icon, color }) => (
+                <button
+                  key={id}
+                  onClick={() => handleOptionClick(id)}
+                  className={`group/item flex flex-col items-center gap-1.5 rounded-xl p-2.5 transition-all hover:scale-105 active:scale-95`}
+                  type="button"
+                  title={label}
+                >
+                  <span className={`flex items-center justify-center w-10 h-10 rounded-full transition-colors ${
+                    id === 'copy' && copied
+                      ? 'bg-green-500 text-white'
+                      : color
+                  }`}>
+                    {id === 'copy' && copied ? (
+                      <CheckIcon className="w-4.5 h-4.5" />
+                    ) : (
+                      <Icon className="w-4.5 h-4.5" />
+                    )}
+                  </span>
+                  <span className="text-[10px] font-medium text-gray-600 dark:text-slate-400 leading-tight text-center">
+                    {id === 'copy' && copied ? 'Copied!' : label}
+                  </span>
+                </button>
+              ))}
+            </div>
+          </div>
+          {/* Arrow pointing down to the button */}
+          <div className="flex justify-start pl-8">
+            <div className="w-3 h-3 -mt-1.5 rotate-45 bg-white dark:bg-slate-800 border-r border-b border-gray-200/80 dark:border-slate-700" />
+          </div>
         </div>
       )}
     </div>

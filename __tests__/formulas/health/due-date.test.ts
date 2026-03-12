@@ -166,4 +166,66 @@ describe('calculateDueDate', () => {
     // 2026-06-01 + 280 = 2027-03-08
     expect(result.dueDate).toBe('2027-03-08');
   });
+
+  // ─── Edge case: invalid date string ───
+  it('returns error for invalid date string', () => {
+    const result = calculateDueDate({
+      lastMenstrualPeriod: 'not-a-date',
+    });
+    expect(result.error).toBe('Invalid date format');
+    expect(result.dueDate).toBe('');
+    expect(result.daysElapsed).toBe(0);
+  });
+
+  it('returns error for empty date string', () => {
+    const result = calculateDueDate({
+      lastMenstrualPeriod: '',
+    });
+    expect(result.error).toBe('Invalid date format');
+  });
+
+  // ─── Edge case: cycleLength = 1 (medically impossible, clamped to 21) ───
+  it('clamps cycleLength=1 to 21 and adds warning', () => {
+    const result = calculateDueDate({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 1,
+    });
+    // Clamped to 21: 280 + (21 - 28) = 273 days → 2026-10-01
+    expect(result.dueDate).toBe('2026-10-01');
+    expect(result.cycleLengthWarning).toContain('outside the valid range');
+    expect(result.cycleLengthWarning).toContain('Clamped to 21');
+  });
+
+  // ─── Edge case: cycleLength = 60 (clamped to 45) ───
+  it('clamps cycleLength=60 to 45 and adds warning', () => {
+    const result = calculateDueDate({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 60,
+    });
+    // Clamped to 45: 280 + (45 - 28) = 297 days → 2026-10-25
+    expect(result.dueDate).toBe('2026-10-25');
+    expect(result.cycleLengthWarning).toContain('outside the valid range');
+    expect(result.cycleLengthWarning).toContain('Clamped to 45');
+  });
+
+  // ─── Edge case: cycleLength = 22 (valid but atypical, warning) ───
+  it('adds warning for atypical cycle length of 22', () => {
+    const result = calculateDueDate({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 22,
+    });
+    expect(result.cycleLengthWarning).toContain('outside the typical range');
+    // Should NOT be clamped — 22 is within 21-45
+    // 280 + (22 - 28) = 274 days
+    expect(result.dueDate).toBe('2026-10-02');
+  });
+
+  // ─── Edge case: cycleLength = 28 (no warning) ───
+  it('no warning for standard 28-day cycle', () => {
+    const result = calculateDueDate({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 28,
+    });
+    expect(result.cycleLengthWarning).toBeUndefined();
+  });
 });

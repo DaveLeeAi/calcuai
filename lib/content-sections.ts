@@ -319,11 +319,23 @@ export const SECTION_ICONS: Partial<Record<ArticleSectionType, SectionIcon>> = {
 // ─── Section Parsing ─────────────────────────────────
 
 export function parseArticleSections(mdxSource: string): ParsedSection[] {
+  // Normalize line endings to LF (handles CRLF from Windows)
+  let source = mdxSource.replace(/\r\n/g, '\n');
+
   // Strip BLUF section
-  let source = mdxSource.replace(
+  source = source.replace(
     /\{\/\*\s*Section 3:.*?\*\/\}\s*<div className="bluf-intro">[\s\S]*?<\/div>/,
     ''
   );
+
+  // Also strip BLUF when comment doesn't match "Section 3:" pattern
+  source = source.replace(
+    /<div className="bluf-intro">[\s\S]*?<\/div>/,
+    ''
+  );
+
+  // Strip JSX comments
+  source = source.replace(/\{\/\*[\s\S]*?\*\/\}/g, '');
 
   // Strip section comments
   source = source.replace(/\{\/\*\s*Sections?\s+[^*]*\*\/\}/g, '');

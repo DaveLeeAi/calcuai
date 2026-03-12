@@ -256,4 +256,77 @@ describe('calculateRoofing', () => {
     });
     expect(result.ridgeCap).toBe(0);
   });
+
+  // ─── Test 14: Pitch=0 on non-flat roof defaults to pitch=4 ───
+  it('defaults to pitch=4 when pitch=0 on a gable roof', () => {
+    const result = calculateRoofing({
+      length: 30,
+      lengthUnit: 'ft',
+      width: 30,
+      widthUnit: 'ft',
+      pitch: 0,
+      roofType: 'gable',
+      material: 'architectural',
+      wastePercent: 0,
+      layers: 1,
+    });
+    // pitch=0 is falsy → defaults to 4 → pitchFactor = sqrt(16+144)/12 ≈ 1.0541
+    expect(result.pitchFactor).toBeCloseTo(1.0541, 3);
+    const warnings = result.warnings as string[];
+    expect(warnings).toHaveLength(0);
+  });
+
+  // ─── Test 15: Extreme pitch (24/12) triggers warning ───
+  it('adds warning for pitch > 12 (e.g. 24/12)', () => {
+    const result = calculateRoofing({
+      length: 30,
+      lengthUnit: 'ft',
+      width: 30,
+      widthUnit: 'ft',
+      pitch: 24,
+      roofType: 'gable',
+      material: 'architectural',
+      wastePercent: 0,
+      layers: 1,
+    });
+    const warnings = result.warnings as string[];
+    expect(warnings).toHaveLength(1);
+    expect(warnings[0]).toBe('Pitch exceeds 12/12 (45°) — verify measurement');
+    // Pitch factor for 24/12 = sqrt(576+144)/12 = sqrt(720)/12 ≈ 2.2361
+    expect(result.pitchFactor).toBeCloseTo(2.2361, 3);
+  });
+
+  // ─── Test 16: Pitch of exactly 12 does NOT trigger warning ───
+  it('no warning for pitch exactly 12', () => {
+    const result = calculateRoofing({
+      length: 30,
+      lengthUnit: 'ft',
+      width: 30,
+      widthUnit: 'ft',
+      pitch: 12,
+      roofType: 'gable',
+      material: 'architectural',
+      wastePercent: 0,
+      layers: 1,
+    });
+    const warnings = result.warnings as string[];
+    expect(warnings).toHaveLength(0);
+  });
+
+  // ─── Test 17: Pitch of 13 triggers warning ───
+  it('adds warning for pitch of 13', () => {
+    const result = calculateRoofing({
+      length: 30,
+      lengthUnit: 'ft',
+      width: 30,
+      widthUnit: 'ft',
+      pitch: 13,
+      roofType: 'gable',
+      material: 'architectural',
+      wastePercent: 0,
+      layers: 1,
+    });
+    const warnings = result.warnings as string[];
+    expect(warnings).toContain('Pitch exceeds 12/12 (45°) — verify measurement');
+  });
 });

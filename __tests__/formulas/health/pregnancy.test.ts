@@ -231,4 +231,63 @@ describe('calculatePregnancy', () => {
     expect(result.currentDay).toBe(3);
     expect(result.currentWeekDisplay).toBe('Week 20, Day 3');
   });
+
+  // ─── Edge case: past due (week 41+) ───
+  it('flags past-due when reference date is at week 41', () => {
+    // LMP: 2026-01-01, week 41 day 0 = day 287 = 2026-10-15
+    const result = calculatePregnancy({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 28,
+      referenceDate: '2026-10-15',
+    });
+    expect(result.currentWeek).toBe(41);
+    expect(result.pastDue).toBe(true);
+    expect(result.pastDueWarning).toContain('past the estimated due date');
+    expect(result.pastDueWarning).toContain('41 weeks');
+  });
+
+  it('flags past-due at week 43', () => {
+    // LMP: 2026-01-01, week 43 day 0 = day 301 = 2026-10-29
+    const result = calculatePregnancy({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 28,
+      referenceDate: '2026-10-29',
+    });
+    expect(result.currentWeek).toBe(43);
+    expect(result.pastDue).toBe(true);
+  });
+
+  it('does not flag past-due at exactly week 40', () => {
+    // LMP: 2026-01-01, week 40 day 0 = day 280 = 2026-10-08
+    const result = calculatePregnancy({
+      lastMenstrualPeriod: '2026-01-01',
+      cycleLength: 28,
+      referenceDate: '2026-10-08',
+    });
+    expect(result.currentWeek).toBe(40);
+    expect(result.pastDue).toBeUndefined();
+  });
+
+  // ─── Edge case: future LMP (referenceDate before LMP) ───
+  it('flags invalidLMP when reference date is before LMP', () => {
+    const result = calculatePregnancy({
+      lastMenstrualPeriod: '2026-06-01',
+      cycleLength: 28,
+      referenceDate: '2026-03-01',
+    });
+    expect(result.invalidLMP).toBe(true);
+    expect(result.currentWeek).toBe(0);
+    expect(result.daysElapsed).toBe(0);
+  });
+
+  it('does not flag invalidLMP when reference date equals LMP', () => {
+    const result = calculatePregnancy({
+      lastMenstrualPeriod: '2026-03-01',
+      cycleLength: 28,
+      referenceDate: '2026-03-01',
+    });
+    expect(result.invalidLMP).toBeUndefined();
+    expect(result.currentWeek).toBe(0);
+    expect(result.currentDay).toBe(0);
+  });
 });

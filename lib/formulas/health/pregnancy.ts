@@ -31,6 +31,9 @@ export interface PregnancyOutput {
   daysElapsed: number;
   conceptionDate: string;
   conceptionDateFormatted: string;
+  pastDue?: boolean;
+  pastDueWarning?: string;
+  invalidLMP?: boolean;
 }
 
 /**
@@ -68,11 +71,20 @@ export function calculatePregnancy(input: PregnancyInput): PregnancyOutput {
   // Reference date (today or test override)
   const today = input.referenceDate ? parseDate(input.referenceDate) : parseDate(new Date().toISOString().split('T')[0]);
 
+  // Detect future LMP (referenceDate before LMP)
+  const invalidLMP = today.getTime() < lmp.getTime();
+
   // Gestational age from LMP (use UTC to avoid timezone issues)
   const msElapsed = today.getTime() - lmp.getTime();
   const daysElapsed = Math.max(0, Math.round(msElapsed / (1000 * 60 * 60 * 24)));
   const currentWeek = Math.floor(daysElapsed / 7);
   const currentDay = daysElapsed % 7;
+
+  // Detect past-due (week 41+)
+  const pastDue = currentWeek > 40;
+  const pastDueWarning = pastDue
+    ? `At ${currentWeek} weeks, this pregnancy is past the estimated due date. Consult your healthcare provider about post-term management options.`
+    : undefined;
 
   // Trimester
   let trimester: 1 | 2 | 3;
@@ -118,6 +130,8 @@ export function calculatePregnancy(input: PregnancyInput): PregnancyOutput {
     daysElapsed,
     conceptionDate: toDateString(conceptionDate),
     conceptionDateFormatted: formatDateUTC(conceptionDate),
+    ...(pastDue ? { pastDue, pastDueWarning } : {}),
+    ...(invalidLMP ? { invalidLMP } : {}),
   };
 }
 

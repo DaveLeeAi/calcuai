@@ -18,8 +18,9 @@
 // Server component — all content is in the SSR output for SEO.
 // Collapsible sections use native <details>/<summary>.
 
-import { MDXRemote } from 'next-mdx-remote/rsc';
+import { MDXRemote, type MDXRemoteProps } from 'next-mdx-remote/rsc';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import type { Category, DisclaimerType, Priority } from '@/lib/types';
 import {
@@ -41,7 +42,7 @@ import {
 
 const mdxOptions = {
   mdxOptions: {
-    remarkPlugins: [remarkMath],
+    remarkPlugins: [remarkGfm, remarkMath],
     rehypePlugins: [rehypeKatex],
   },
 };
@@ -53,8 +54,12 @@ interface ArticleContentProps {
   tier: Priority;
   category: Category;
   disclaimer: DisclaimerType;
+  /** Calculator ID for loading calculator-specific components */
+  calculatorId?: string;
   /** Per-calculator heading overrides from spec.sectionHeadings */
   sectionHeadings?: Partial<Record<string, string>>;
+  /** Custom MDX components to pass through to MDXRemote */
+  mdxComponents?: Record<string, React.ComponentType<Record<string, unknown>>>;
 }
 
 // ─── Main Component ──────────────────────────────────
@@ -64,7 +69,9 @@ export function ArticleContent({
   tier,
   category,
   disclaimer,
+  calculatorId,
   sectionHeadings,
+  mdxComponents,
 }: ArticleContentProps) {
   const rawSections = parseArticleSections(mdxSource);
   const sections = sortSections(rawSections);
@@ -118,6 +125,7 @@ export function ArticleContent({
             style={style}
             sectionType={section.type}
             icon={icon}
+            components={mdxComponents}
           />
         );
       })}
@@ -153,6 +161,7 @@ interface ArticleSectionProps {
   style: SectionStyle;
   sectionType: ArticleSectionType;
   icon?: SectionIcon;
+  components?: Record<string, React.ComponentType<Record<string, unknown>>>;
 }
 
 function ArticleSection({
@@ -162,6 +171,7 @@ function ArticleSection({
   style,
   sectionType,
   icon,
+  components,
 }: ArticleSectionProps) {
   const proseClasses =
     'prose prose-gray dark:prose-invert prose-headings:scroll-mt-20 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-table:text-sm prose-td:py-2 prose-td:px-3 prose-th:py-2 prose-th:px-3 max-w-none';
@@ -193,7 +203,7 @@ function ArticleSection({
           <h2 className="text-xl font-bold text-gray-900 dark:text-white">{heading}</h2>
         </summary>
         <div className={`${proseClasses} px-5 pb-5 pt-2 sm:px-6`}>
-          <MDXRemote source={content} options={mdxOptions} />
+          <MDXRemote source={content} options={mdxOptions} components={components} />
         </div>
       </details>
     );
@@ -207,7 +217,7 @@ function ArticleSection({
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{heading}</h2>
       </div>
       <div className={proseClasses}>
-        <MDXRemote source={content} options={mdxOptions} />
+        <MDXRemote source={content} options={mdxOptions} components={components} />
       </div>
     </section>
   );
@@ -235,27 +245,16 @@ function FaqSection({ section, heading }: FaqSectionProps) {
           {heading}
         </h2>
       </div>
-      <div className="divide-y divide-gray-100 dark:divide-slate-700 rounded-lg border border-gray-200 dark:border-slate-700">
+      <div className="space-y-6">
         {items.map((item, i) => (
-          <details key={i} className="group faq-item">
-            <summary className="flex cursor-pointer items-center justify-between gap-3 select-none list-none px-5 py-4">
-              <span className="text-base font-medium text-gray-900 dark:text-white text-left">
-                {item.question}
-              </span>
-              <svg
-                className="h-4 w-4 shrink-0 text-gray-400 dark:text-slate-500 transition-transform duration-200 group-open:rotate-180"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-              </svg>
-            </summary>
-            <div className="prose prose-gray dark:prose-invert prose-sm max-w-none px-5 pb-4 pt-0 text-gray-600 dark:text-slate-300">
+          <div key={i} className="faq-item-visible">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+              {item.question}
+            </h3>
+            <div className="prose prose-gray dark:prose-invert prose-sm max-w-none text-gray-600 dark:text-slate-300">
               <MDXRemote source={item.answer} options={mdxOptions} />
             </div>
-          </details>
+          </div>
         ))}
       </div>
     </section>

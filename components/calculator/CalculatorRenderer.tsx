@@ -7,6 +7,7 @@ import InputField from './InputField';
 import OutputDisplay from './OutputDisplay';
 import TabSwitcher from './features/TabSwitcher';
 import { ResultHeader, AssumptionsBar, MethodologyFooter } from './results';
+import ShareButton from '@/components/ui/ShareButton';
 
 interface CalculatorRendererProps {
   spec: CalculatorSpec;
@@ -114,6 +115,13 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
     },
     []
   );
+
+  const handleReset = useCallback(() => {
+    setInputs(getDefaults(spec, activeTab));
+    setResults(null);
+    setErrors({});
+    setHasCalculated(false);
+  }, [spec, activeTab]);
 
   const handleCalculate = useCallback(() => {
     const validationErrors = validateInputs(visibleInputs, inputs);
@@ -244,6 +252,21 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
                 />
               </div>
             )}
+
+            {/* Actions bar */}
+            <div className="mt-6 pt-5 border-t border-gray-200 dark:border-slate-700 flex flex-wrap items-center gap-3">
+              <ShareButton title={spec.title} />
+              <button
+                onClick={handleReset}
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-slate-300 transition-colors hover:bg-gray-50 dark:hover:bg-slate-600 hover:text-gray-800 dark:hover:text-slate-100"
+                type="button"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Reset calculator
+              </button>
+            </div>
           </div>
         )}
       </div>

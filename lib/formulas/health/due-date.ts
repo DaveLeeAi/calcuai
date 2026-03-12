@@ -18,6 +18,8 @@ export interface DueDateOutput {
   daysElapsed: number;
   progressPercentage: number;
   progressBar: number;
+  error?: string;
+  cycleLengthWarning?: string;
 }
 
 export interface Milestone {
@@ -47,13 +49,28 @@ export interface Milestone {
  * "Methods for Estimating the Due Date." Committee Opinion No. 700 (2017).
  */
 export function calculateDueDate(input: DueDateInput): DueDateOutput {
-  const cycleLength = Math.max(1, Math.min(60, Number(input.cycleLength) || 28));
   const lmpRaw = input.lastMenstrualPeriod;
   const lmp = new Date(typeof lmpRaw === 'string' ? lmpRaw : '');
 
-  // Guard: if LMP is invalid, fall back to today to avoid throwing
+  // Guard: if LMP is invalid, return error object
   if (isNaN(lmp.getTime())) {
-    lmp.setTime(new Date().getTime());
+    return {
+      dueDate: '', dueDateFormatted: '', gestationalAge: { weeks: 0, days: 0 },
+      trimester: 1, trimesterProgress: '', conceptionDate: '', conceptionDateFormatted: '',
+      firstTrimesterEnd: '', secondTrimesterEnd: '', milestones: [],
+      daysRemaining: 0, daysElapsed: 0, progressPercentage: 0, progressBar: 0,
+      error: 'Invalid date format',
+    };
+  }
+
+  // Clamp cycle length to medically valid 21-45 range
+  const rawCycle = Number(input.cycleLength) || 28;
+  const cycleLength = Math.max(21, Math.min(45, rawCycle));
+  let cycleLengthWarning: string | undefined;
+  if (rawCycle < 21 || rawCycle > 45) {
+    cycleLengthWarning = `Cycle length ${rawCycle} days is outside the valid range (21-45). Clamped to ${cycleLength} days.`;
+  } else if (rawCycle < 24 || rawCycle > 38) {
+    cycleLengthWarning = `Cycle length ${rawCycle} days is outside the typical range (24-38). Results may be less accurate.`;
   }
 
   // Cycle length adjustment
@@ -126,6 +143,7 @@ export function calculateDueDate(input: DueDateInput): DueDateOutput {
     daysElapsed,
     progressPercentage,
     progressBar: progressPercentage,
+    ...(cycleLengthWarning ? { cycleLengthWarning } : {}),
   };
 }
 

@@ -130,8 +130,8 @@ export default function TableOfContents({
         />
       </div>
 
-      {/* ── Mobile: collapsible accordion ── */}
-      <div className="lg:hidden mb-6">
+      {/* ── Mobile/tablet: collapsible accordion (below 1280px) ── */}
+      <div className="xl:hidden mb-6">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="flex w-full items-center justify-between rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-sm font-medium text-gray-700 dark:text-slate-300 shadow-sm"
@@ -181,9 +181,9 @@ export default function TableOfContents({
         )}
       </div>
 
-      {/* ── Desktop: sticky sidebar ── */}
+      {/* ── Desktop: sticky sidebar (1280px+) ── */}
       <nav
-        className="hidden lg:block sticky top-20 self-start max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain"
+        className="hidden xl:block sticky top-20 self-start max-w-[200px] max-h-[calc(100vh-6rem)] overflow-y-auto overscroll-contain"
         aria-label="Table of contents"
       >
         <p className="mb-3 text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500">

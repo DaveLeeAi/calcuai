@@ -27,22 +27,31 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-const POPULAR_CALCULATORS = [
-  { title: 'Mortgage Calculator', href: '/finance/mortgage-calculator' },
-  { title: 'BMI Calculator', href: '/health/bmi-calculator' },
-  { title: 'Percentage Calculator', href: '/math/percentage-calculator' },
-  { title: 'Age Calculator', href: '/everyday/age-calculator' },
-  { title: 'Compound Interest Calculator', href: '/finance/compound-interest-calculator' },
-  { title: 'Calorie Calculator', href: '/health/calorie-calculator' },
-  { title: 'Loan Calculator', href: '/finance/loan-calculator' },
-  { title: 'GPA Calculator', href: '/everyday/gpa-calculator' },
-  { title: 'Tip Calculator', href: '/everyday/tip-calculator' },
-  { title: 'Date Calculator', href: '/everyday/date-calculator' },
-  { title: 'Margin Calculator', href: '/business/margin-calculator' },
-  { title: 'Concrete Calculator', href: '/construction/concrete-calculator' },
-  { title: 'Standard Deviation Calculator', href: '/math/standard-deviation-calculator' },
-  { title: 'Salary Calculator', href: '/finance/salary-calculator' },
-  { title: 'ROI Calculator', href: '/business/roi-calculator' },
+/** Curated list of popular calculator slugs shown on the homepage */
+const POPULAR_SLUGS = [
+  'mortgage-calculator',
+  'bmi-calculator',
+  'percentage-calculator',
+  'age-calculator',
+  'compound-interest-calculator',
+  'calorie-calculator',
+  'loan-calculator',
+  'gpa-calculator',
+  'tip-calculator',
+  'date-calculator',
+  'margin-calculator',
+  'concrete-calculator',
+  'standard-deviation-calculator',
+  'salary-calculator',
+  'roi-calculator',
+  'p-value-calculator',
+  'confidence-interval-calculator',
+  'slope-calculator',
+  'pythagorean-theorem-calculator',
+  'square-root-calculator',
+  'scientific-notation-calculator',
+  'significant-figures-calculator',
+  'test-grade-calculator',
 ];
 
 /** Count all unique calculators across subcategories + featured list */
@@ -109,12 +118,28 @@ export default function HomePage() {
       {/* Popular Calculators */}
       <section className="mb-16">
         <h2 className="section-heading text-center mb-8">Popular Calculators</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-content mx-auto">
-          {POPULAR_CALCULATORS.map((calc) => (
-            <Link key={calc.href} href={calc.href} className="related-calc-link text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300">
-              {calc.title}
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-content mx-auto">
+          {POPULAR_SLUGS.map((slug) => {
+            const spec = allSpecs.find((s) => s.slug === slug);
+            if (!spec) return null;
+            return (
+              <Link
+                key={spec.slug}
+                href={`/${spec.category}/${spec.slug}`}
+                className="category-card group flex flex-col"
+              >
+                <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">
+                  {spec.title}
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-slate-400 mt-1 line-clamp-2 flex-1">
+                  {spec.metaDescription}
+                </p>
+                <p className="text-xs text-brand-500 mt-3 font-medium capitalize">
+                  {spec.category} &rarr;
+                </p>
+              </Link>
+            );
+          })}
         </div>
       </section>
 

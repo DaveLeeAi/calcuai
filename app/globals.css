@@ -75,10 +75,10 @@
     display: grid;
     grid-template-columns: 1fr;
   }
-  @media (min-width: 1024px) {
+  @media (min-width: 1280px) {
     .flagship-layout {
-      /* TOC (200px) | Article (flex) | Calculator+sidebar (380px) */
-      grid-template-columns: 200px 1fr 380px;
+      /* TOC (200px max) | Article (flex, max 720px) | Calculator+sidebar (380px) */
+      grid-template-columns: minmax(160px, 200px) minmax(0, 1fr) 380px;
     }
   }
 

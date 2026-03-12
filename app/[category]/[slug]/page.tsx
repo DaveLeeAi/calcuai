@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import {
   resolveSlug,
@@ -39,8 +40,8 @@ import {
   getMethodologyTopicsForCalculator,
 } from '@/lib/content-linker';
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
-import ShareButton from '@/components/ui/ShareButton';
 import FeedbackWidget from '@/components/ui/FeedbackWidget';
+import SalesTaxVisualizations from '@/components/content/SalesTaxVisualizations';
 import { siteConfig } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════
@@ -223,13 +224,10 @@ export default function SlugPage({ params }: Props) {
             ]}
           />
 
-          {/* H1 Title + Share */}
-          <div className="flex items-start justify-between gap-4 mt-4 mb-6">
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-              {spec.title}
-            </h1>
-            <ShareButton title={spec.title} />
-          </div>
+          {/* H1 Title */}
+          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
+            {spec.title}
+          </h1>
 
           {/* BLUF intro (always full width above the 3-col grid) */}
           {mdxSource && (
@@ -244,20 +242,20 @@ export default function SlugPage({ params }: Props) {
                Right: Calculator widget (sticky) + Related sidebar
           */}
           <div className="flagship-layout gap-8">
-            {/* Left column: TOC (desktop only, hidden on mobile) */}
-            <div className="hidden lg:block lg:col-span-1 min-w-0">
+            {/* Left column: TOC (desktop >1280px only) */}
+            <div className="hidden xl:block min-w-0">
               <TableOfContents containerSelector="article" />
             </div>
 
             {/* Center column: Calculator + Article content */}
-            <div className="lg:col-span-2 min-w-0">
-              {/* Mobile TOC (shown above content on mobile) */}
-              <div className="lg:hidden">
+            <div className="min-w-0 max-w-[720px]">
+              {/* Mobile/tablet TOC (shown above content below 1280px) */}
+              <div className="xl:hidden">
                 <TableOfContents containerSelector="article" />
               </div>
 
-              {/* Calculator widget (mobile: inline, desktop: shown in right col) */}
-              <div className="lg:hidden my-8">
+              {/* Calculator widget (mobile/tablet: inline, desktop: shown in right col) */}
+              <div className="xl:hidden my-8">
                 <CalculatorRenderer spec={spec} />
                 <FeedbackWidget
                   calculatorSlug={spec.slug}
@@ -272,6 +270,7 @@ export default function SlugPage({ params }: Props) {
                   tier={spec.priority}
                   category={spec.category}
                   disclaimer={spec.disclaimer}
+                  calculatorId={spec.id}
                   sectionHeadings={{
                     ...(spec.sectionHeadings || {}),
                     ...(spec.interpretationHeading
@@ -279,6 +278,13 @@ export default function SlugPage({ params }: Props) {
                       : {}),
                   }}
                 />
+              )}
+
+              {/* Data visualizations for calculators with requiresSources */}
+              {spec.id === 'sales-tax-calculator' && (
+                <div className="max-w-content mx-auto mt-8">
+                  <SalesTaxVisualizations />
+                </div>
               )}
 
               {/* Related Resources */}
@@ -292,8 +298,8 @@ export default function SlugPage({ params }: Props) {
               <DisclaimerBlock type={spec.disclaimer} />
             </div>
 
-            {/* Right column: Sticky calculator + Related sidebar (desktop only) */}
-            <div className="hidden lg:block lg:col-span-1 min-w-0">
+            {/* Right column: Sticky calculator + Related sidebar (desktop >1280px) */}
+            <div className="hidden xl:block min-w-0">
               <div className="sticky top-20 space-y-6">
                 <StickyCalculator spec={spec} />
                 <FeedbackWidget
@@ -336,13 +342,10 @@ export default function SlugPage({ params }: Props) {
           ]}
         />
 
-        {/* H1 Title + Share */}
-        <div className="flex items-start justify-between gap-4 mt-4 mb-6">
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-            {spec.title}
-          </h1>
-          <ShareButton title={spec.title} />
-        </div>
+        {/* H1 Title */}
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
+          {spec.title}
+        </h1>
 
         {/* BLUF intro */}
         {mdxSource && (
@@ -473,7 +476,7 @@ function BlufContent({ source }: BlufContentProps) {
         source={blufContent}
         options={{
           mdxOptions: {
-            remarkPlugins: [remarkMath],
+            remarkPlugins: [remarkGfm, remarkMath],
             rehypePlugins: [rehypeKatex],
           },
         }}

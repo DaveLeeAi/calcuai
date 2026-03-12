@@ -31,14 +31,14 @@ export default function BarChartOutput({ field, data }: OutputComponentProps) {
       </h4>
       <div className="h-64 sm:h-72">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={chartData} margin={{ top: 5, right: 20, bottom: 20, left: 10 }}>
+          <BarChart data={chartData} margin={{ top: 5, right: 20, bottom: 30, left: 10 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
               dataKey={xKey}
               tick={{ fontSize: 11 }}
               label={
                 field.chartConfig?.xLabel
-                  ? { value: field.chartConfig.xLabel, position: 'insideBottom', offset: -10, fontSize: 12 }
+                  ? { value: field.chartConfig.xLabel, position: 'insideBottom', offset: -5, fontSize: 12 }
                   : undefined
               }
             />
@@ -65,7 +65,7 @@ export default function BarChartOutput({ field, data }: OutputComponentProps) {
               }}
             />
             {barKeys.length > 1 && (
-              <Legend iconType="square" iconSize={10} wrapperStyle={{ fontSize: '12px' }} />
+              <Legend verticalAlign="top" align="center" iconType="square" iconSize={10} wrapperStyle={{ fontSize: '12px', paddingBottom: '8px' }} />
             )}
             {barKeys.map((key, i) => (
               <Bar

@@ -13,6 +13,7 @@ export interface BMIOutput {
   weightToHealthyMax: number;
   primeRatio: number;
   ponderal: number;
+  error?: string;
 }
 
 /**
@@ -35,6 +36,21 @@ export interface BMIOutput {
  */
 export function calculateBMI(input: BMIInput): BMIOutput {
   const { weight, height, unitSystem } = input;
+
+  // Guard: height or weight must be positive
+  if (height <= 0 || weight <= 0) {
+    return {
+      bmi: 0,
+      category: 'Invalid',
+      bmiGauge: 0,
+      healthyWeightRange: { min: 0, max: 0 },
+      weightToHealthyMin: 0,
+      weightToHealthyMax: 0,
+      primeRatio: 0,
+      ponderal: 0,
+      error: height <= 0 ? 'Height must be greater than zero' : 'Weight must be greater than zero',
+    };
+  }
 
   let bmi: number;
   let weightKg: number;
