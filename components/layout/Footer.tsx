@@ -16,11 +16,12 @@ export function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-400 mt-16">
       <div className="max-w-page mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-8">
           {/* Categories */}
           <div className="col-span-2">
             <h3 className="text-white font-semibold mb-4">Calculators</h3>
             <div className="grid grid-cols-2 gap-2">
+              <Link href="/" className="text-sm hover:text-white transition-colors">Home</Link>
               {CATEGORIES.map((cat) => (
                 <Link
                   key={cat.slug}
@@ -44,12 +45,24 @@ export function Footer() {
             </div>
           </div>
 
+          {/* Legal */}
+          <div>
+            <h3 className="text-white font-semibold mb-4">Legal</h3>
+            <div className="flex flex-col gap-2">
+              <Link href="/privacy" className="text-sm hover:text-white transition-colors w-fit">Privacy Policy</Link>
+              <Link href="/terms" className="text-sm hover:text-white transition-colors w-fit">Terms of Service</Link>
+              <Link href="/contact" className="text-sm hover:text-white transition-colors w-fit">Contact</Link>
+            </div>
+          </div>
+
           {/* Brand */}
           <div>
             <h3 className="text-white font-semibold mb-4">{siteConfig.name}</h3>
             <p className="text-sm">
               Free, accurate, and fast online calculators. No signup required.
             </p>
+            {/* TODO: Add social links after deployment */}
+            <div className="mt-4" aria-hidden="true" />
           </div>
         </div>
 
