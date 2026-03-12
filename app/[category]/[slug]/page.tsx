@@ -16,7 +16,7 @@ import {
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
 import StickyCalculator from '@/components/calculator/StickyCalculator';
-import TableOfContents from '@/components/content/TableOfContents';
+import InlineTableOfContents from '@/components/content/InlineTableOfContents';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { AIDiscovery } from '@/components/seo/AIDiscovery';
 import {
@@ -234,23 +234,21 @@ export default function SlugPage({ params }: Props) {
             </div>
           )}
 
-          {/* ═══ 3-Column Flagship Layout ═══
-               Left: Table of Contents (sticky)
-               Center: Article content
-               Right: Calculator widget (sticky) + Related sidebar
+          {/* ═══ 2-Column Flagship Layout ═══
+               Mobile/Tablet (<1024px): Calculator full-width above article
+               Desktop (≥1024px): Article left (60%) | Calculator right (40%, max 380px, sticky)
           */}
-          <div className="flagship-layout gap-8">
-            {/* Left column: TOC (desktop >1280px only) */}
-            <div className="hidden xl:block min-w-0">
-              <TableOfContents containerSelector="article" />
-            </div>
 
-            {/* Center column: Calculator + Article content */}
+          {/* Calculator: full-width on mobile/tablet, above the article */}
+          <div className="lg:hidden my-8">
+            <CalculatorRenderer spec={spec} />
+          </div>
+
+          <div className="flagship-layout">
+            {/* Left column: Article content */}
             <div className="min-w-0 max-w-[720px]">
-              {/* Calculator widget (mobile/tablet: inline, desktop: shown in right col) */}
-              <div className="xl:hidden my-8">
-                <CalculatorRenderer spec={spec} />
-              </div>
+              {/* Inline Table of Contents */}
+              <InlineTableOfContents containerSelector="article" />
 
               {/* Article sections */}
               {mdxSource && (
@@ -271,7 +269,7 @@ export default function SlugPage({ params }: Props) {
 
               {/* Data visualizations for calculators with requiresSources */}
               {spec.id === 'sales-tax-calculator' && (
-                <div className="max-w-content mx-auto mt-8">
+                <div className="mt-8">
                   <SalesTaxVisualizations />
                 </div>
               )}
@@ -287,11 +285,9 @@ export default function SlugPage({ params }: Props) {
               <DisclaimerBlock type={spec.disclaimer} />
             </div>
 
-            {/* Right column: Sticky calculator (desktop >1280px) */}
-            <div className="hidden xl:block min-w-0">
-              <div className="sticky top-20 space-y-6">
-                <StickyCalculator spec={spec} />
-              </div>
+            {/* Right column: Sticky calculator (desktop ≥1024px) */}
+            <div className="hidden lg:block min-w-0">
+              <StickyCalculator spec={spec} />
             </div>
           </div>
         </article>

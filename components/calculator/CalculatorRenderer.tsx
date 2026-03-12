@@ -167,7 +167,7 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
   const isFlagship = spec.priority === 'flagship';
 
   return (
-    <div className={compact ? '' : 'mx-auto max-w-calculator'}>
+    <div className={compact ? 'max-w-[360px]' : 'mx-auto max-w-calculator'}>
       <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
         {/* Tabs */}
         {spec.tabs && spec.tabs.length > 0 && (
@@ -176,13 +176,79 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
           </div>
         )}
 
+        {/* Results — shown ABOVE inputs after calculation */}
+        {hasCalculated && results && (
+          <div className="bg-brand-50/60 dark:bg-brand-900/20 p-4 sm:p-6">
+            {/* Primary result(s) — large, bold numbers */}
+            {highlightedOutputs.length > 0 && (
+              <div className="space-y-3">
+                {highlightedOutputs.map((output) => (
+                  <OutputDisplay key={output.id} field={output} data={results} />
+                ))}
+              </div>
+            )}
+
+            {/* Remaining outputs */}
+            {remainingOutputs.length > 0 && (
+              <div className={`space-y-3 ${highlightedOutputs.length > 0 ? 'mt-3' : ''}`}>
+                {remainingOutputs.map((output) => (
+                  <OutputDisplay key={output.id} field={output} data={results} />
+                ))}
+              </div>
+            )}
+
+            {/* Result header with formula source */}
+            <ResultHeader
+              formulaCitation={isFlagship ? spec.formulaCitation : undefined}
+            />
+
+            {/* Assumptions bar */}
+            {isFlagship && !compact && (
+              <div className="mt-3">
+                <AssumptionsBar inputs={visibleInputs} values={calculatedInputs} />
+              </div>
+            )}
+
+            {/* Methodology footer */}
+            {isFlagship && !compact && (
+              <div className="mt-4">
+                <MethodologyFooter
+                  formulaCitation={spec.formulaCitation}
+                  formulaSource={spec.formulaSource}
+                  disclaimer={spec.disclaimer}
+                  slug={spec.slug}
+                />
+              </div>
+            )}
+
+            {/* Actions bar */}
+            <div className="mt-4 pt-3 border-t border-brand-200/50 dark:border-brand-800/30 flex flex-wrap items-center gap-3">
+              <button
+                onClick={handleReset}
+                className="inline-flex items-center gap-2 rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-4 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 transition-colors hover:bg-gray-50 dark:hover:bg-slate-600 hover:text-gray-800 dark:hover:text-slate-100"
+                type="button"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+                Reset
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* Divider between results and inputs */}
+        {hasCalculated && results && (
+          <div className="border-t border-gray-200 dark:border-slate-700" />
+        )}
+
         {/* Inputs */}
         <div className="p-4 sm:p-6">
           <div
             className={
               useGrid
-                ? 'grid gap-4 sm:gap-5 md:grid-cols-2'
-                : 'flex flex-col gap-4 sm:gap-5'
+                ? 'grid gap-4 md:grid-cols-2'
+                : 'flex flex-col gap-4'
             }
             role={spec.tabs ? 'tabpanel' : undefined}
             id={activeTab ? `tabpanel-${activeTab}` : undefined}
@@ -198,77 +264,16 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
             ))}
           </div>
 
-          {/* Calculate button */}
+          {/* Calculate button — full width, prominent */}
           <div className="mt-6">
             <button
               onClick={handleCalculate}
-              className={`w-full rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800 ${compact ? '' : 'sm:w-auto'}`}
+              className="w-full rounded-lg bg-brand-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
             >
               Calculate
             </button>
           </div>
         </div>
-
-        {/* Results */}
-        {hasCalculated && results && (
-          <div className="border-t border-gray-200 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-800/50 p-4 sm:p-6">
-            {/* Result header with formula source */}
-            <ResultHeader
-              formulaCitation={isFlagship ? spec.formulaCitation : undefined}
-            />
-
-            {/* Assumptions bar */}
-            {isFlagship && !compact && (
-              <div className="mt-3">
-                <AssumptionsBar inputs={visibleInputs} values={calculatedInputs} />
-              </div>
-            )}
-
-            {/* Primary result(s) — highlighted outputs get visual priority */}
-            {highlightedOutputs.length > 0 && (
-              <div className="mt-4 space-y-3">
-                {highlightedOutputs.map((output) => (
-                  <OutputDisplay key={output.id} field={output} data={results} />
-                ))}
-              </div>
-            )}
-
-            {/* Remaining outputs */}
-            {remainingOutputs.length > 0 && (
-              <div className="mt-4 space-y-4">
-                {remainingOutputs.map((output) => (
-                  <OutputDisplay key={output.id} field={output} data={results} />
-                ))}
-              </div>
-            )}
-
-            {/* Methodology footer */}
-            {isFlagship && !compact && (
-              <div className="mt-5">
-                <MethodologyFooter
-                  formulaCitation={spec.formulaCitation}
-                  formulaSource={spec.formulaSource}
-                  disclaimer={spec.disclaimer}
-                  slug={spec.slug}
-                />
-              </div>
-            )}
-
-            {/* Actions bar */}
-            <div className="mt-6 pt-5 border-t border-gray-200 dark:border-slate-700 flex flex-wrap items-center gap-3">
-              <button
-                onClick={handleReset}
-                className="inline-flex items-center gap-2 rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-4 py-2.5 text-sm font-medium text-gray-600 dark:text-slate-300 transition-colors hover:bg-gray-50 dark:hover:bg-slate-600 hover:text-gray-800 dark:hover:text-slate-100"
-                type="button"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
-                Reset
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );

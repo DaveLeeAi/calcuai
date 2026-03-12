@@ -70,15 +70,16 @@
     @apply block p-3 rounded-lg hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors;
   }
 
-  /* ─── Flagship 3-column layout ─── */
+  /* ─── Flagship 2-column layout ─── */
   .flagship-layout {
     display: grid;
     grid-template-columns: 1fr;
   }
-  @media (min-width: 1280px) {
+  @media (min-width: 1024px) {
     .flagship-layout {
-      /* TOC (200px max) | Article (flex) | Calculator+sidebar (360px) */
-      grid-template-columns: minmax(160px, 200px) minmax(0, 1fr) 360px;
+      /* Article (flex ~60%) | Calculator sidebar (max 380px) */
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 380px);
+      gap: 2rem;
     }
   }
 
