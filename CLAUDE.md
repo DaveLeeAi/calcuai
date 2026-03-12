@@ -124,6 +124,12 @@ Run `npm run qa` and fix all errors. Zero warnings allowed for production deploy
 - **Sources section:** Every calculator must cite at least one authoritative source.
 - **Citable statements:** Write precise facts with specific numbers, not fluffy prose.
 
+### Page Infrastructure Requirements
+Every new calculator page MUST use the infrastructure components (TOC, sticky calculator, related sidebar, SEO framework, AI discovery markup). The layout is determined by the `tier` field in the spec: flagship = 3-column with full infrastructure, standard = 2-column with TOC and sticky widget, utility = 2-column minimal. See `calculator-site-skill/CALCULATOR_ACCEPTANCE_STANDARD.md` Section 9 for the complete infrastructure requirements per tier. No calculator page should be built without these components.
+
+### Data-Dependent Calculator Requirements
+For data-dependent calculators (`requiresSources: true`), always include an interactive data table component and at least one data visualization. Always include Dataset schema in JSON-LD. The sales tax calculator (`content/calculators/finance/sales-tax.json`) is the reference implementation for flagship data-dependent pages.
+
 ### Never Do These
 - Never create a calculator without a spec + MDX + formula + tests
 - Never copy content between calculator MDX files

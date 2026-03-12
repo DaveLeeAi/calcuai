@@ -470,7 +470,111 @@ acceptance_checklist:
   - id: A6
     check: "No hallucinated or fake source citations"
     required: true
+
+  # === INFRASTRUCTURE ===
+  - id: I1
+    check: "Layout matches tier requirement (3-col flagship, 2-col standard/utility)"
+    required: true
+  - id: I2
+    check: "Table of Contents present and scroll-highlighting works (flagship + standard)"
+    required: true
+  - id: I3
+    check: "Sticky calculator widget works on desktop, floating button on mobile"
+    required: true
+  - id: I4
+    check: "Related calculators sidebar card present with correct link count per tier"
+    required: true
+  - id: I5
+    check: "Key Takeaway aside block present with aria-label='summary'"
+    required: true
+
+  # === AI/LLM DISCOVERY ===
+  - id: D1
+    check: "data-speakable attributes on BLUF intro and results interpretation"
+    required: true
+  - id: D2
+    check: "Citable statements have data-fact='true' markup (3+ per page)"
+    required: true
+  - id: D3
+    check: "FAQ dual-rendered: JSON-LD schema AND visible HTML with H3 headings"
+    required: true
+  - id: D4
+    check: "Citation meta tags present (citation_title, citation_author)"
+    required: true
+  - id: D5
+    check: "Full schema stack matches tier requirement"
+    required: true
+  - id: D6
+    check: "'Last updated' date visible at top of article"
+    required: true
+
+  # === DATA PAGES (only if requiresSources: true) ===
+  - id: P1
+    check: "Interactive data table with sort/filter/search"
+    required: false
+  - id: P2
+    check: "Data visualization present (chart, map, or graphic)"
+    required: false
+  - id: P3
+    check: "Dataset schema in JSON-LD"
+    required: false
 ```
+
+---
+
+## 9. Page Infrastructure Requirements
+
+Every calculator page must use the shared infrastructure components. The layout and required features are determined by the calculator's tier.
+
+### Flagship Tier (required)
+
+- **3-column layout:** TOC (left sticky) + Article (center) + Calculator + Related Sidebar (right sticky)
+- **Table of Contents** auto-generated from H2/H3 headings, sticky on desktop, collapsible on mobile, scroll-highlighted
+- **Sticky calculator widget** that follows user on scroll (desktop), "Back to calculator" floating button (mobile)
+- **Related calculators sidebar card** below sticky calculator (6 links)
+- **Key Takeaway aside block** at top for AI/LLM extraction
+- **Speakable schema** on BLUF intro and What Your Results Mean sections
+- **Full schema stack:** WebPage + BreadcrumbList + FAQPage + SpeakableSpecification + HowTo + SoftwareApplication
+- All citable statements wrapped in `data-fact="true"` markup
+- "Last updated" date visible at top
+- "Data sources" attribution visible
+- Reading progress indicator
+- **Core Web Vitals:** lazy load below-fold, priority load calculator, font-display: swap, preconnect CDNs
+
+### Standard Tier (required)
+
+- **2-column layout:** Article (left) + Calculator (right sticky)
+- **Table of Contents** auto-generated, sticky on desktop
+- **Sticky calculator widget**
+- **Related calculators sidebar card** (4–5 links)
+- **Key Takeaway aside block**
+- **Schema:** WebPage + BreadcrumbList + FAQPage (if hasFAQ) + SoftwareApplication
+- Citable statements with `data-fact` markup
+- "Last updated" date visible
+- Core Web Vitals optimizations
+
+### Utility Tier (required)
+
+- **2-column layout:** Article (left) + Calculator (right sticky)
+- **Sticky calculator widget**
+- **Related calculators** at bottom (3–4 links)
+- **Schema:** WebPage + BreadcrumbList + SoftwareApplication
+- Core Web Vitals optimizations
+
+### Data-Dependent Pages (additional requirements when `requiresSources: true`)
+
+- Interactive data table component (sortable, filterable, searchable)
+- Data visualization where applicable (chart, map, or comparison graphic)
+- Dataset schema in JSON-LD
+- Source citations with URLs visible in Methodology section
+
+### AI/LLM Discovery (all tiers)
+
+- `data-speakable` attributes on BLUF and results sections
+- Key Takeaway aside with `aria-label="summary"`
+- Structured FAQ dual-rendered (JSON-LD + visible HTML)
+- Citation meta tags (`citation_title`, `citation_author`)
+- Every page must have 3+ citable statements with specific numbers that AI search can extract as direct answers
 
 ---
 
