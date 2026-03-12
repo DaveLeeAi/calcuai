@@ -1,0 +1,237 @@
+{
+  "id": "macro-calculator",
+  "title": "Macro Calculator",
+  "slug": "macro-calculator",
+  "category": "health",
+  "subcategory": "nutrition",
+  "primaryKeyword": "macro calculator",
+  "metaTitle": "Macro Calculator — Protein, Carb & Fat Calculator",
+  "metaDescription": "Calculate your daily protein, carb, and fat targets based on your TDEE and fitness goal. Customizable macro splits for weight loss, maintenance, or gain.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (lbs, inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 15,
+      "max": 100,
+      "step": 1,
+      "helpText": "Enter your age in years"
+    },
+    {
+      "id": "sex",
+      "label": "Sex",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "male",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 180,
+      "min": 50,
+      "max": 700,
+      "step": 1,
+      "helpText": "Enter weight in pounds (imperial) or kilograms (metric)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 70,
+      "min": 36,
+      "max": 300,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    },
+    {
+      "id": "activityLevel",
+      "label": "Activity Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "moderate",
+      "options": [
+        {
+          "value": "sedentary",
+          "label": "Sedentary (little or no exercise)"
+        },
+        {
+          "value": "light",
+          "label": "Lightly Active (1-3 days/week)"
+        },
+        {
+          "value": "moderate",
+          "label": "Moderately Active (3-5 days/week)"
+        },
+        {
+          "value": "active",
+          "label": "Very Active (6-7 days/week)"
+        },
+        {
+          "value": "veryActive",
+          "label": "Extra Active (2x per day)"
+        }
+      ]
+    },
+    {
+      "id": "goal",
+      "label": "Goal",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "maintain",
+      "options": [
+        {
+          "value": "lose",
+          "label": "Lose Weight"
+        },
+        {
+          "value": "maintain",
+          "label": "Maintain Weight"
+        },
+        {
+          "value": "gain",
+          "label": "Gain Weight"
+        }
+      ]
+    },
+    {
+      "id": "dietPreference",
+      "label": "Diet Preference",
+      "type": "select",
+      "required": true,
+      "defaultValue": "balanced",
+      "options": [
+        {
+          "value": "balanced",
+          "label": "Balanced (30/40/30)"
+        },
+        {
+          "value": "high-protein",
+          "label": "High Protein (40/30/30)"
+        },
+        {
+          "value": "low-carb",
+          "label": "Low Carb (35/25/40)"
+        },
+        {
+          "value": "keto",
+          "label": "Keto (25/5/70)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalCalories",
+      "label": "Daily Calorie Target",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "proteinGrams",
+      "label": "Protein",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "carbGrams",
+      "label": "Carbohydrates",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "fatGrams",
+      "label": "Fat",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "macroSplit",
+      "label": "Macro Split",
+      "type": "chart-pie"
+    },
+    {
+      "id": "mealBreakdown",
+      "label": "Meal Breakdown",
+      "type": "table"
+    }
+  ],
+  "formula": "macros",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "bmr-calculator",
+    "body-fat-calculator",
+    "ideal-weight-calculator",
+    "one-rep-max-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "American College of Sports Medicine (ACSM) and International Society of Sports Nutrition (ISSN)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Mifflin-St Jeor BMR (1990) + ACSM activity multipliers + ISSN macronutrient guidelines",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "calorie-calculator"
+  ],
+  "qualityScore": 93,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "methodologyTopics": [
+    "calorie-formulas"
+  ]
+}

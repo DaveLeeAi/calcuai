@@ -1,0 +1,275 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Estimate your 2025 federal income tax and see exactly how much you owe in each tax bracket. A single filer earning \$75,000 with the standard deduction pays \$8,114 in federal tax — an effective rate of 10.82%, not the 22% marginal bracket rate most people assume. This calculator breaks down your tax bracket by bracket, shows your effective vs. marginal rate, factors in pre-tax deductions like 401(k) contributions and tax credits, and calculates your after-tax income.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Tax Estimate Shows */}
+## What Your Tax Estimate Shows
+
+Your federal income tax is calculated using a progressive bracket system — not a flat rate. This means your first \$11,925 of taxable income is taxed at 10% regardless of how much you earn, the next \$36,550 at 12%, and so on through seven brackets up to 37%. The result: your **effective tax rate** (what you actually pay as a percentage of gross income) is always lower than your **marginal rate** (the bracket your last dollar falls into).
+
+This calculator reveals the gap between those two rates. A single filer earning \$75,000 has a marginal rate of 22% but an effective rate of only 10.82% — meaning more than half their income is taxed at rates below 22%. Understanding this distinction is critical for evaluating whether a raise pushes you into a "higher bracket" (it does for the incremental dollars, but your overall rate rises only slightly).
+
+The **bracket-by-bracket breakdown table** shows exactly how much of your income falls into each bracket and the tax generated at each rate. The **pie chart** visualizes the split between federal tax, after-tax income, and pre-tax deductions. Use these to model the impact of contributing more to your [401(k) or traditional IRA](/calculators/finance/retirement-calculator) — every dollar contributed pre-tax reduces your taxable income at your highest marginal rate.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Annual Gross Income** — your total income before any deductions, including wages, salary, bonuses, freelance income, and investment income. If you're salaried, use your annual salary from your W-2 Box 1. The default is \$75,000, near the U.S. median household income.
+
+2. **Select your Filing Status** — choose Single, Married Filing Jointly, Married Filing Separately, or Head of Household. Filing status determines both your tax brackets and your standard deduction amount. Married Filing Jointly has the widest brackets — a couple earning \$150,000 combined pays significantly less than two single filers each earning \$75,000.
+
+3. **Choose your Deduction Type** — Standard Deduction is pre-filled based on your filing status (\$15,000 for Single in 2025, \$30,000 for Married Filing Jointly). Select Itemized Deductions if your mortgage interest, state/local taxes (SALT, capped at \$10,000), and charitable contributions exceed your standard deduction.
+
+4. **Enter Itemized Deductions** (if applicable) — if you selected Itemized Deductions, enter the total dollar amount. This replaces the standard deduction in the calculation. Common itemized deductions include mortgage interest, state income taxes, property taxes, and charitable donations.
+
+5. **Add Pre-Tax Deductions** — enter any contributions to tax-deferred accounts: 401(k) (2025 limit: \$23,500 under age 50), traditional IRA, HSA (\$4,300 individual / \$8,550 family in 2025). These reduce your adjusted gross income before the standard or itemized deduction is applied.
+
+6. **Enter Tax Credits** — credits reduce your tax bill dollar-for-dollar after brackets are applied. Common credits include the Child Tax Credit (\$2,000 per qualifying child), Earned Income Tax Credit (EITC), American Opportunity Credit (up to \$2,500), and Lifetime Learning Credit (up to \$2,000). Credits cannot reduce your tax below \$0 in this calculator.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The U.S. federal income tax uses a **progressive marginal rate system** with seven brackets. Your taxable income is not taxed at a single flat rate — instead, each portion of income within a bracket is taxed at that bracket's rate. The total tax is the sum across all brackets:
+
+$$\text{Federal Tax} = \sum_{i=1}^{7} r_i \times \min\!\bigl(\max(\text{taxableIncome} - B_{i-1},\; 0),\; B_i - B_{i-1}\bigr)$$
+
+Where:
+
+- $r_i$ = the tax rate for bracket $i$ (10%, 12%, 22%, 24%, 32%, 35%, or 37%)
+- $B_i$ = the upper bound of bracket $i$ (filing-status dependent)
+- $B_0 = 0$ (the lower bound of the first bracket)
+- $\text{taxableIncome}$ = Gross Income − Pre-Tax Deductions − Standard/Itemized Deduction
+
+The **effective tax rate** is the actual percentage of gross income paid in tax:
+
+$$\text{Effective Rate} = \frac{\text{Federal Tax}}{\text{Gross Income}} \times 100$$
+
+The **marginal rate** is the tax rate applied to your last dollar of taxable income — the highest bracket your income reaches.
+
+### 2025 Federal Tax Brackets (Single Filer)
+
+| Bracket | Taxable Income Range | Rate |
+|---------|---------------------|------|
+| 1 | \$0 – \$11,925 | 10% |
+| 2 | \$11,926 – \$48,475 | 12% |
+| 3 | \$48,476 – \$103,350 | 22% |
+| 4 | \$103,351 – \$197,300 | 24% |
+| 5 | \$197,301 – \$250,525 | 32% |
+| 6 | \$250,526 – \$626,350 | 35% |
+| 7 | Over \$626,350 | 37% |
+
+### 2025 Federal Tax Brackets (Married Filing Jointly)
+
+| Bracket | Taxable Income Range | Rate |
+|---------|---------------------|------|
+| 1 | \$0 – \$23,850 | 10% |
+| 2 | \$23,851 – \$96,950 | 12% |
+| 3 | \$96,951 – \$206,700 | 22% |
+| 4 | \$206,701 – \$394,600 | 24% |
+| 5 | \$394,601 – \$501,050 | 32% |
+| 6 | \$501,051 – \$751,600 | 35% |
+| 7 | Over \$751,600 | 37% |
+
+### 2025 Standard Deductions
+
+| Filing Status | Standard Deduction |
+|---------------|-------------------|
+| Single | \$15,000 |
+| Married Filing Jointly | \$30,000 |
+| Married Filing Separately | \$15,000 |
+| Head of Household | \$22,500 |
+
+**Source:** 2025 U.S. Federal Income Tax brackets and standard deductions per IRS Revenue Procedure 2024-40, published by the Internal Revenue Service.
+
+For a detailed walkthrough of how progressive brackets work, see our [methodology page on progressive taxation](/methodology/progressive-taxation).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Single Filer — \$75,000 Gross Income, Standard Deduction
+
+**Inputs:**
+- Gross Income: \$75,000
+- Filing Status: Single
+- Deduction: Standard (\$15,000)
+- Pre-Tax Deductions: \$0
+- Tax Credits: \$0
+
+**Step-by-step:**
+
+1. Taxable income: \$75,000 − $15,000 = **$60,000**
+2. Bracket 1 (10%): $11,925 × 0.10 = **$1,192.50**
+3. Bracket 2 (12%): (\$48,475 − $11,925) = $36,550 × 0.12 = **\$4,386.00**
+4. Bracket 3 (22%): (\$60,000 − $48,475) = $11,525 × 0.22 = **\$2,535.50**
+5. Total federal tax: \$1,192.50 + \$4,386.00 + $2,535.50 = **$8,114.00**
+6. Effective rate: \$8,114 ÷ \$75,000 = **10.82%**
+7. Marginal rate: **22%**
+8. After-tax income: \$75,000 − $8,114 = **$66,886**
+
+**Interpretation:** Despite falling in the 22% bracket, this filer's actual tax burden is only 10.82% of gross income. More than three-quarters of their taxable income (\$48,475 of \$60,000) is taxed at 10% or 12%. A \$5,000 raise to \$80,000 would add only \$1,100 in tax (\$5,000 × 22%), not \$1,600 (\$5,000 × 32%) — they remain in the 22% bracket.
+
+### Example 2: Married Filing Jointly — \$150,000 Gross Income
+
+**Inputs:**
+- Gross Income: \$150,000
+- Filing Status: Married Filing Jointly
+- Deduction: Standard (\$30,000)
+- Pre-Tax Deductions: \$0
+- Tax Credits: \$0
+
+**Step-by-step:**
+
+1. Taxable income: \$150,000 − $30,000 = **$120,000**
+2. Bracket 1 (10%): $23,850 × 0.10 = **$2,385.00**
+3. Bracket 2 (12%): (\$96,950 − $23,850) = $73,100 × 0.12 = **\$8,772.00**
+4. Bracket 3 (22%): (\$120,000 − $96,950) = $23,050 × 0.22 = **\$5,071.00**
+5. Total federal tax: \$2,385.00 + \$8,772.00 + $5,071.00 = **$16,228.00**
+6. Effective rate: \$16,228 ÷ \$150,000 = **10.82%**
+7. Marginal rate: **22%**
+8. After-tax income: \$150,000 − $16,228 = **$133,772**
+
+**Interpretation:** A married couple earning \$150,000 combined pays the same effective rate (10.82%) as a single filer earning \$75,000. This is by design — the married-filing-jointly brackets are approximately double the single brackets through the 32% tier. The couple keeps \$133,772 after federal tax. If both spouses filed separately instead, they would each pay tax on \$60,000 of taxable income (\$75,000 − \$15,000), totaling \$16,228 combined — in this case, there is no marriage penalty or bonus because both spouses earn equal amounts.
+
+### Example 3: High Earner with 401(k) and Tax Credits — \$250,000 Single
+
+**Inputs:**
+- Gross Income: \$250,000
+- Filing Status: Single
+- Deduction: Standard (\$15,000)
+- Pre-Tax Deductions: \$23,500 (401k max contribution)
+- Tax Credits: \$3,000 (education credits)
+
+**Step-by-step:**
+
+1. Adjusted gross income: \$250,000 − $23,500 = **$226,500**
+2. Taxable income: \$226,500 − $15,000 = **$211,500**
+3. Bracket 1 (10%): $11,925 × 0.10 = **$1,192.50**
+4. Bracket 2 (12%): $36,550 × 0.12 = **$4,386.00**
+5. Bracket 3 (22%): (\$103,350 − $48,475) = $54,875 × 0.22 = **\$12,072.50**
+6. Bracket 4 (24%): (\$197,300 − $103,350) = $93,950 × 0.24 = **\$22,548.00**
+7. Bracket 5 (32%): (\$211,500 − $197,300) = $14,200 × 0.32 = **\$4,544.00**
+8. Tax before credits: \$1,192.50 + \$4,386.00 + \$12,072.50 + \$22,548.00 + $4,544.00 = **$44,743.00**
+9. Tax after credits: \$44,743.00 − $3,000 = **$41,743.00**
+10. Effective rate: \$41,743 ÷ \$250,000 = **16.70%**
+11. Marginal rate: **32%**
+12. After-tax income: \$250,000 − \$41,743 − $23,500 = **$184,757**
+
+**Interpretation:** The 401(k) contribution alone saves this filer \$7,520 in federal taxes (\$23,500 × 32% marginal rate). Without the 401(k) deduction, taxable income would be \$235,000, pushing more income into the 32% bracket and increasing the tax bill to \$49,263 before credits. Combined with \$3,000 in education credits, this filer's total tax savings from deductions and credits reach \$10,520. For high earners, maximizing pre-tax retirement contributions is the single most impactful tax reduction strategy.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Filing Status** — This is the most impactful selection in the calculator. A single filer earning \$100,000 pays \$13,027 in federal tax (effective rate 13.03%). A head-of-household filer with the same income pays \$11,680 (11.68%). Married filing jointly on \$100,000 pays only \$8,236 (8.24%). The brackets and standard deductions shift significantly between statuses, so choosing the correct one is critical for accuracy.
+
+**Standard vs. Itemized Deductions** — For 2025, the standard deduction is \$15,000 (Single) or \$30,000 (Married Filing Jointly). Since the 2017 Tax Cuts and Jobs Act nearly doubled the standard deduction, approximately 90% of filers now take the standard deduction. Itemizing only makes sense if your combined mortgage interest, state/local taxes (SALT, capped at \$10,000), medical expenses (above 7.5% of AGI), and charitable contributions exceed the standard amount. For a single filer, this typically requires a mortgage balance above \$300,000 or significant charitable giving.
+
+**Pre-Tax Retirement Contributions** — Contributing to a traditional 401(k) or IRA reduces your taxable income dollar-for-dollar. At a 22% marginal rate, a \$23,500 401(k) contribution saves \$5,170 in federal tax. At 32%, the same contribution saves \$7,520. This makes pre-tax contributions more valuable as your income rises. Use our [Retirement Calculator](/calculators/finance/retirement-calculator) to model the long-term growth of those contributions.
+
+**Tax Credits vs. Tax Deductions** — Deductions reduce your taxable income (saving you money at your marginal rate), while credits reduce your tax bill dollar-for-dollar. A \$2,000 Child Tax Credit saves exactly \$2,000 in tax regardless of your bracket. A \$2,000 deduction saves \$440 at the 22% bracket or \$640 at the 32% bracket. Credits are always more valuable per dollar than deductions.
+
+**State Taxes** — This calculator covers federal income tax only. Most states levy an additional income tax ranging from 0% (Alaska, Florida, Nevada, South Dakota, Tennessee, Texas, Washington, Wyoming) to 13.3% (California's top rate). Your total income tax burden is federal plus state, which can push effective rates above 30% for high earners in high-tax states.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Confusing marginal and effective tax rates.** The most common tax misconception in America. If someone tells you "I'm in the 24% bracket," they are not paying 24% on all their income. A single filer in the 24% bracket (taxable income between \$103,351 and \$197,300) has an effective rate between 17.4% and 20.9%. The difference matters enormously when evaluating a raise, bonus, or side income — the incremental tax is at the marginal rate, but your overall burden is the effective rate.
+
+**Forgetting pre-tax deductions reduce taxable income, not tax.** A \$23,500 401(k) contribution does not save you \$23,500 in taxes — it saves \$23,500 multiplied by your marginal rate. At the 22% bracket, that is \$5,170. At 12%, only \$2,820. This distinction is essential when deciding between traditional (pre-tax) and Roth (after-tax) retirement contributions.
+
+**Defaulting to the standard deduction when itemizing saves more.** Roughly 10% of filers benefit from itemizing, but many miss it. If you own a home with a large mortgage, live in a high-tax state, or donate significantly to charity, run the numbers both ways. This calculator lets you toggle between standard and itemized to see which produces a lower tax bill.
+
+**Not claiming credits you qualify for.** The Child Tax Credit (\$2,000 per child under 17), Earned Income Tax Credit (up to \$7,830 for families with 3+ children in 2025), Saver's Credit (up to \$1,000 for retirement contributions by lower-income filers), and education credits are frequently left on the table. Unlike deductions, credits directly reduce your tax dollar-for-dollar.
+
+**Using the wrong filing status.** Head of Household provides a larger standard deduction (\$22,500 vs. \$15,000) and wider brackets than Single, but requires an unmarried filer who pays more than half the cost of maintaining a home for a qualifying dependent. Filing incorrectly as Single when you qualify for Head of Household costs hundreds to thousands of dollars per year.
+
+{/* Section 12: Comparison Table */}
+## Filing Status Comparison on \$100,000 Income
+
+Filing status changes your brackets, your standard deduction, and your total tax bill. Here is a side-by-side comparison for a taxpayer with \$100,000 gross income, standard deduction, no pre-tax deductions, and no credits:
+
+| | **Single** | **Married Filing Jointly** | **Head of Household** |
+|---|---|---|---|
+| Standard Deduction | \$15,000 | \$30,000 | \$22,500 |
+| Taxable Income | \$85,000 | \$70,000 | \$77,500 |
+| Federal Tax | \$13,614 | \$7,923 | \$10,225 |
+| Effective Rate | 13.61% | 7.92% | 10.23% |
+| Marginal Rate | 22% | 12% | 22% |
+| After-Tax Income | \$86,386 | \$92,077 | \$89,775 |
+
+**Key insight:** On the same \$100,000, a married couple filing jointly saves \$5,691 compared to a single filer — a 41.8% reduction in federal tax. This is the "marriage bonus" that applies when one spouse earns significantly more than the other. When both spouses earn equal amounts, the benefit shrinks. Head of Household provides a meaningful middle ground: \$3,389 less tax than Single, available to unmarried filers supporting a qualifying dependent.
+
+## Three Tax Moves That Actually Change Your Outcome
+
+Most tax "tips" save pocket change. These three decisions move thousands of dollars and compound over a career.
+
+**1. Max out pre-tax retirement accounts before anything else.** A single filer earning \$120,000 sits in the 22% bracket with a taxable income of \$105,000. Contributing the full \$23,500 to a traditional 401(k) drops taxable income to \$81,500 — saving \$5,170 in federal tax this year. But the real payoff is compounding: that \$5,170 in annual tax savings, invested at 7% for 25 years, grows to \$340,000. If your employer offers a 401(k) match and you're not contributing enough to capture the full match, you're declining free money — the match is a guaranteed 50–100% instant return on the matched portion.
+
+**2. Know when itemizing flips in your favor — and when it doesn't.** The \$15,000 standard deduction (Single, 2025) means itemizing only helps if your deductible expenses exceed that threshold. Here's the math: mortgage interest on a \$400,000 loan at 6.5% generates roughly \$25,500 in first-year interest. Add \$10,000 in SALT (capped) and \$2,000 in charitable giving, and you have \$37,500 in itemized deductions — \$22,500 more than the standard deduction, saving an additional \$4,950 at the 22% marginal rate. But a homeowner with a \$200,000 loan at 4% generates only \$7,800 in interest, making the standard deduction the clear winner. Run both scenarios in this calculator before deciding — the toggle between Standard and Itemized makes it instant.
+
+**3. Time your income and deductions across tax years.** If you're on the border between the 22% and 24% bracket (\$103,350 taxable income for Single filers), shifting even \$5,000 of income into the next year — by deferring a year-end bonus, accelerating a deductible expense, or making a January estimated tax payment in December — saves \$100 on that \$5,000 alone. For self-employed filers with more control over income timing, this strategy can redirect \$500–\$2,000 per year. Bunch charitable donations into alternating years — donate \$10,000 every two years instead of \$5,000 annually — to alternate between itemizing and taking the standard deduction, capturing the higher deduction in both years.
+
+## What This Calculator Doesn't Include — and Why It Matters
+
+This calculator models federal income tax on ordinary earned income. That's useful, but it's not your full tax picture.
+
+**FICA taxes (Social Security + Medicare)** add 7.65% to your effective rate on the first \$168,600 of earned income (2025), and 1.45% on all income above that. A \$75,000 earner paying 10.82% in federal income tax actually pays 18.47% when FICA is included. Self-employed workers pay both halves: 15.3% up to the Social Security wage base. Use our [Salary Calculator](/calculators/finance/salary-calculator) to see gross-to-net breakdowns.
+
+**State income tax** ranges from 0% (Texas, Florida, and seven other states) to 13.3% (California). For a single filer earning \$100,000, the difference between living in Texas and California can exceed \$6,000 per year in state income tax alone — equivalent to earning \$106,000 in Texas. If you're comparing job offers across states, the headline salary number is misleading without tax-adjusting it.
+
+**Capital gains and dividend income** are taxed at preferential rates: 0% if your taxable income is below \$47,025 (Single, 2025), 15% up to \$518,900, and 20% above that. This means a retiree living on \$50,000 in qualified dividends and long-term capital gains with no other income could pay close to zero federal tax after the standard deduction. This calculator treats all income as ordinary — if investment income is a significant portion of your total, your actual tax bill will be lower than shown.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Calculates **federal income tax only** — does not include state income tax, local taxes, Social Security tax (6.2%), or Medicare tax (1.45%/2.35%).
+- Uses **2025 tax brackets and standard deductions** per IRS Revenue Procedure 2024-40. Brackets are adjusted annually for inflation.
+- Does not account for the **Alternative Minimum Tax (AMT)**, which affects some high-income taxpayers with large deductions.
+- Does not distinguish between **ordinary income and capital gains** — long-term capital gains are taxed at preferential rates (0%, 15%, or 20%) not modeled here.
+- Does not include **self-employment tax** (15.3% on net self-employment income). Self-employed individuals should add the employer-equivalent portion (7.65%) to their tax estimate.
+- Tax credits are applied as **nonrefundable credits** — they reduce tax to \$0 but do not generate a refund in this calculator. Some credits (EITC, Additional Child Tax Credit) are refundable in practice.
+- Does not model the **SALT deduction cap** (\$10,000) separately — if itemizing, ensure your total state and local tax deduction does not exceed this limit.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between marginal and effective tax rate?
+
+Your marginal tax rate is the rate applied to your last dollar of taxable income — the highest bracket your income reaches. Your effective tax rate is your total federal tax divided by your gross income, expressed as a percentage. For a single filer earning \$75,000 (taxable income \$60,000), the marginal rate is 22% but the effective rate is only 10.82%. The effective rate is always lower because the U.S. uses progressive brackets: your first \$11,925 is taxed at just 10%, the next \$36,550 at 12%, and only the remaining \$11,525 at 22%. A common misconception is that earning more "puts all your income in a higher bracket" — in reality, only the dollars above each threshold are taxed at the higher rate.
+
+### What are the 2025 federal income tax brackets?
+
+For 2025, the seven federal income tax brackets for single filers are: 10% on income up to \$11,925, 12% on \$11,926–\$48,475, 22% on \$48,476–\$103,350, 24% on \$103,351–\$197,300, 32% on \$197,301–\$250,525, 35% on \$250,526–\$626,350, and 37% on income over \$626,350. Married filing jointly brackets are roughly double these thresholds through the 32% bracket. These brackets were set by IRS Revenue Procedure 2024-40 and are adjusted annually for inflation. The standard deduction for 2025 is \$15,000 (Single), \$30,000 (Married Filing Jointly), and \$22,500 (Head of Household).
+
+### Should I take the standard deduction or itemize?
+
+Take the standard deduction unless your total itemized deductions exceed it. For 2025, the standard deduction is \$15,000 (Single) or \$30,000 (Married Filing Jointly). About 90% of taxpayers benefit from the standard deduction after the 2017 Tax Cuts and Jobs Act nearly doubled it. To exceed \$15,000 in itemized deductions as a single filer, you typically need a combination of mortgage interest on a loan above \$250,000, state/local taxes near the \$10,000 SALT cap, and charitable donations exceeding \$2,000–\$3,000. Use this calculator to toggle between Standard and Itemized — enter your total itemized deductions and compare the resulting federal tax under each option.
+
+### How does a 401(k) reduce my taxes?
+
+Traditional 401(k) contributions reduce your taxable income dollar-for-dollar, saving you money at your marginal tax rate. If you contribute the 2025 maximum of \$23,500 and your marginal rate is 22%, you save \$5,170 in federal tax that year. At a 32% marginal rate, the same contribution saves \$7,520. The contribution grows tax-deferred until withdrawal in retirement, when it is taxed as ordinary income — ideally at a lower rate if your retirement income is less than your working income. For 2025, the contribution limit is \$23,500 for those under 50 and \$31,000 for those 50 and older (with the \$7,500 catch-up provision). HSA contributions (\$4,300 individual / \$8,550 family) work similarly, with the added benefit that qualified medical withdrawals are never taxed.
+
+### What tax bracket am I in?
+
+Your tax bracket is determined by your filing status and taxable income (gross income minus deductions). For a single filer in 2025: taxable income up to \$11,925 puts you in the 10% bracket, \$11,926–\$48,475 in the 12% bracket, \$48,476–\$103,350 in the 22% bracket, \$103,351–\$197,300 in the 24% bracket, \$197,301–\$250,525 in the 32% bracket, \$250,526–\$626,350 in the 35% bracket, and over \$626,350 in the 37% bracket. Remember: being "in the 22% bracket" means only the income above \$48,475 is taxed at 22%. Your overall effective rate will be lower. Enter your income above to see your exact bracket, effective rate, and tax breakdown.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the 2025 U.S. Federal Income Tax brackets, standard deductions, and filing status thresholds as published in **IRS Revenue Procedure 2024-40** (Internal Revenue Service, November 2024). Tax credit application follows IRS guidelines from **Publication 17** (Your Federal Income Tax). Filing status definitions and deduction rules reference **IRS Publication 501** (Dependents, Standard Deduction, and Filing Information). Supplemental bracket analysis and historical comparison data reference the **Tax Foundation** Federal Income Tax Bracket database. The progressive marginal rate calculation methodology follows the statutory framework established in **26 U.S.C. Section 1** (Tax Imposed) of the Internal Revenue Code.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

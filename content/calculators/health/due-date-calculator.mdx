@@ -1,0 +1,206 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Estimate your baby's due date based on the first day of your last menstrual period using Naegele's Rule. A standard pregnancy lasts 280 days (40 weeks) from the LMP, but only about 4-5% of babies are born on their exact due date — the normal delivery window spans 37 to 42 weeks. Enter your dates below to see your estimated due date, trimester timeline, conception date, and key pregnancy milestones.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Estimate Means */}
+## What Your Estimate Means
+
+Your estimated due date (EDD) marks the 40-week point from the first day of your last menstrual period — the date when pregnancy is considered full-term and delivery is statistically most likely. However, the EDD is a midpoint, not a deadline. The American College of Obstetricians and Gynecologists defines a full-term pregnancy as 39 weeks 0 days through 40 weeks 6 days, with the broader normal range extending from 37 weeks (early term) to 42 weeks (late term).
+
+This calculator also shows your current gestational age in weeks and days, which trimester you are in, and your estimated conception date. The **trimester breakdown** divides pregnancy into three developmental stages: the first trimester (weeks 1-12), when organ formation occurs; the second trimester (weeks 13-26), the period of rapid growth and movement; and the third trimester (weeks 27-40), when the baby gains most of its birth weight. If you want to track fetal development in more detail, use our [Pregnancy Calculator](/calculators/health/pregnancy-calculator) for a week-by-week breakdown.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the First Day of Your Last Menstrual Period (LMP)** — this is the date your most recent period started, not the date it ended. Most healthcare providers use this date as the starting reference point for pregnancy dating. If you are unsure, check your period tracking app or calendar. The LMP should be a confirmed date, not an estimate.
+
+2. **Select Your Average Cycle Length** — choose the number of days in your typical menstrual cycle from the dropdown. The default is 28 days, which is the clinical standard used in Naegele's Rule. If your cycles regularly run shorter (21-27 days) or longer (29-35 days), selecting the correct length adjusts your due date accordingly. A 35-day cycle, for example, shifts your EDD 7 days later than the standard 28-day calculation.
+
+3. **Review Your Results** — the calculator displays your estimated due date, current gestational age, trimester, estimated conception date, a pregnancy progress bar, and a milestone timeline showing key dates throughout your pregnancy. All dates automatically adjust when you change either input.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Pregnancy due dates are calculated using **Naegele's Rule**, the standard method endorsed by the American College of Obstetricians and Gynecologists (ACOG). Published by German obstetrician Franz Naegele in 1812, this formula remains the clinical standard for first-trimester dating when an ultrasound is not yet available.
+
+For a standard 28-day menstrual cycle:
+
+$$\text{EDD} = \text{LMP} + 280 \text{ days}$$
+
+For non-standard cycle lengths, the formula adjusts by the deviation from 28 days:
+
+$$\text{EDD} = \text{LMP} + 280 + (\text{Cycle Length} - 28) \text{ days}$$
+
+The estimated conception date is calculated as:
+
+$$\text{Conception Date} = \text{LMP} + (\text{Cycle Length} - 14) \text{ days}$$
+
+Where:
+
+- **EDD** = estimated due date (also called estimated date of delivery or estimated date of confinement)
+- **LMP** = first day of the last menstrual period (calendar date)
+- **280 days** = the standard gestational period (40 weeks), counting from the LMP
+- **Cycle Length** = the number of days in the patient's average menstrual cycle (default: 28 days)
+- **14 days** = the assumed luteal phase length, representing the interval between ovulation and the next expected period
+
+The 280-day figure assumes ovulation occurs on day 14 of a 28-day cycle. When the cycle is longer or shorter, ovulation likely shifts by the same number of days, so the adjustment $(Cycle Length - 28)$ corrects for that shift. The luteal phase (14 days) is relatively constant across women regardless of total cycle length, which is why the cycle adjustment applies entirely to the follicular (pre-ovulation) phase.
+
+**Source:** Naegele's Rule per ACOG Committee Opinion No. 700, "Methods for Estimating the Due Date" (May 2017). Reaffirmed 2023.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard 28-Day Cycle
+
+**Inputs:**
+- Last Menstrual Period: January 1, 2026
+- Cycle Length: 28 days
+
+**Step-by-step:**
+
+1. Apply Naegele's Rule: January 1 + 280 days
+2. Cycle adjustment: 28 − 28 = 0 days (no adjustment needed)
+3. EDD = January 1 + 280 days = **October 8, 2026**
+4. Conception date: January 1 + (28 − 14) = January 1 + 14 days = **January 15, 2026**
+5. First trimester ends: January 1 + 84 days (12 weeks) = **March 26, 2026**
+6. Second trimester ends: January 1 + 182 days (26 weeks) = **July 2, 2026**
+7. Third trimester begins: **July 3, 2026** (week 27)
+
+**Interpretation:** With a standard 28-day cycle, the due date falls exactly 40 weeks from the LMP. The baby is considered early-term starting week 37 (September 10, 2026) and late-term after week 41 (October 15, 2026). Most providers will discuss induction options if delivery has not occurred by 41 weeks.
+
+### Example 2: Longer 35-Day Cycle
+
+**Inputs:**
+- Last Menstrual Period: March 15, 2026
+- Cycle Length: 35 days
+
+**Step-by-step:**
+
+1. Base calculation: March 15 + 280 days = December 20, 2026
+2. Cycle adjustment: 35 − 28 = +7 days
+3. Adjusted EDD: December 20 + 7 = **December 27, 2026**
+4. Conception date: March 15 + (35 − 14) = March 15 + 21 days = **April 5, 2026**
+5. First trimester ends: March 15 + 84 + 7 = **June 12, 2026**
+
+**Interpretation:** A 35-day cycle shifts the due date 7 days later because ovulation likely occurred on cycle day 21 rather than day 14. Without this adjustment, the standard formula would overestimate gestational age by a full week, potentially leading to unnecessary interventions. This is why reporting your actual cycle length — not just the 28-day default — produces a more accurate estimate.
+
+### Example 3: Shorter 24-Day Cycle
+
+**Inputs:**
+- Last Menstrual Period: June 10, 2026
+- Cycle Length: 24 days
+
+**Step-by-step:**
+
+1. Base calculation: June 10 + 280 days = March 17, 2027
+2. Cycle adjustment: 24 − 28 = −4 days
+3. Adjusted EDD: March 17 − 4 = **March 13, 2027**
+4. Conception date: June 10 + (24 − 14) = June 10 + 10 days = **June 20, 2026**
+
+**Interpretation:** A shorter cycle means ovulation occurred earlier — day 10 instead of day 14 — so the actual gestational age is 4 days further along than a standard calculation would suggest. The due date moves 4 days earlier. For women with cycles under 25 days, this adjustment is clinically meaningful and can affect timing decisions for prenatal screening tests that are gestational-age-sensitive.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Cycle Length Variability** — Naegele's Rule assumes a consistent cycle length, but many women have cycles that vary by 2-5 days month to month. If your cycles range from 26 to 32 days, using the average (29 days) provides a reasonable estimate, but the true margin of error is plus or minus several days. A 2013 study published in *Human Reproduction* found that the average time from ovulation to birth is 268 days, with a standard deviation of 8.9 days — meaning even with a known ovulation date, the delivery window spans roughly 2.5 weeks.
+
+**Accuracy of LMP Date** — The entire calculation depends on correctly identifying the first day of your last period. Studies show that approximately 20-40% of women report inaccurate LMP dates, which directly shifts the estimated due date. If you are uncertain about your LMP within a range of several days, an early ultrasound (before 14 weeks) provides a more reliable estimate, typically accurate to within 5-7 days.
+
+**First Pregnancy vs. Subsequent Pregnancies** — First-time mothers (nulliparas) tend to deliver slightly later than the EDD, with a median delivery at 40 weeks and 5 days. Women who have previously given birth (multiparas) tend to deliver closer to 40 weeks and 1 day on average.
+
+**Ultrasound Dating** — When an ultrasound performed before 14 weeks disagrees with the LMP-based EDD by more than 7 days, ACOG recommends using the ultrasound date. Crown-rump length measurement in the first trimester is the single most accurate dating method, with a margin of error of plus or minus 5 days.
+
+**Maternal Age and Health Factors** — Advanced maternal age (over 35), diabetes, hypertension, and multiple gestations (twins, triplets) can all affect delivery timing independent of the calculated EDD. These factors do not change the formula but influence the probability of delivering before or after the estimated date.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Using the wrong date for LMP.** The LMP is the first day of bleeding, not the last day of your period, not the day you think you conceived, and not the date of a positive pregnancy test. Using the end date of your period instead of the start date shifts the due date by 3-7 days.
+
+**Assuming the due date is an exact prediction.** Only 4-5% of babies arrive on their exact EDD. The due date is the statistical midpoint of a 5-week normal delivery window (37-42 weeks). Planning around a precise date rather than a range leads to unnecessary anxiety when the date passes without labor.
+
+**Ignoring irregular cycles.** If your cycles vary significantly (e.g., ranging from 25 to 38 days) or you have been recently using hormonal contraceptives, Naegele's Rule becomes less reliable. In these cases, first-trimester ultrasound dating is more accurate than an LMP-based calculation. Tell your healthcare provider about irregular cycles at your first prenatal visit.
+
+**Confusing gestational age with fetal age.** Gestational age counts from the LMP and is always about 2 weeks longer than fetal age (which counts from conception). When your doctor says you are "8 weeks pregnant," the embryo has actually been developing for approximately 6 weeks. This distinction matters for interpreting prenatal test results and developmental milestones.
+
+## When to Rely on Clinical Dating Instead
+
+This calculator implements the standard Naegele's Rule LMP method, which works well for women with regular cycles and a known period date. Several situations make it the wrong tool for the job:
+
+**IVF and frozen embryo transfers.** Assisted reproduction provides the most precise dating possible because the conception date is known exactly. For IVF with a day-5 blastocyst transfer, the EDD is calculated as: transfer date + 261 days (or equivalently, transfer date minus 5 days to estimate conception, then add 266 days). Using the LMP method for an IVF pregnancy produces a date that may be off by 1–2 weeks because hormonal stimulation disrupts the normal cycle timing. Your fertility clinic will provide the correct EDD — do not override it with this calculator.
+
+**Irregular cycles longer than 35 days or shorter than 21 days.** The cycle-length adjustment in Naegele's Rule assumes ovulation occurs 14 days before the next expected period. For cycles outside the 21–35 day range, ovulation timing becomes unpredictable enough that the adjustment loses clinical value. Women with PCOS, for example, may have cycles of 40–90+ days with ovulation occurring at highly variable points. A first-trimester ultrasound (ideally at 8–12 weeks) is the only reliable dating method for these pregnancies.
+
+**Unknown or uncertain LMP.** If you cannot confidently identify the first day of your last period within a 3-day window, the calculator's output carries a built-in error of at least ±3 days before any other factors. Combined with the formula's inherent ±14-day margin, this makes the estimate too imprecise for scheduling gestational-age-sensitive tests like the nuchal translucency scan (performed at 11 weeks 0 days through 13 weeks 6 days — a narrow window where a week of error matters).
+
+**When ultrasound disagrees by more than 7 days.** ACOG is explicit: if a first-trimester ultrasound (before 14 weeks) produces an EDD that differs from the LMP-based date by more than 7 days, the ultrasound date replaces the LMP date. Do not continue using this calculator's output after your provider has revised the due date based on imaging. The revised date is more accurate, and switching back creates confusion about gestational age for all subsequent prenatal care decisions.
+
+{/* Section 12: Comparison Table */}
+## Due Date Estimation Methods Compared
+
+Three methods are commonly used to estimate a due date. Each has different accuracy depending on when it is applied:
+
+| | **Naegele's Rule (LMP-based)** | **Ultrasound Dating** | **Conception-Based** |
+|---|---|---|---|
+| Input Required | First day of last period + cycle length | Crown-rump length or biparietal diameter | Known conception or ovulation date |
+| Accuracy (margin of error) | Plus or minus 14 days | Plus or minus 5-7 days (first trimester) | Plus or minus 3-5 days |
+| Best Used When | LMP is certain, cycles are regular | LMP is uncertain or irregular cycles | Ovulation tracked via OPK or IVF transfer date |
+| ACOG-Recommended | Yes (initial estimate) | Yes (gold standard before 14 weeks) | Yes (when available) |
+| Limitations | Assumes 14-day luteal phase; unreliable with irregular cycles | Less accurate after 20 weeks (plus or minus 14 days) | Rare to know exact conception date outside assisted reproduction |
+| Cost | Free | Requires clinical ultrasound | Free (if tracking ovulation) |
+
+**When methods disagree:** ACOG guidelines state that if a first-trimester ultrasound differs from the LMP-based date by more than 7 days, the ultrasound date should be used. If ultrasound is performed at 14-20 weeks, the threshold widens to 10 days. After 20 weeks, ultrasound dating becomes progressively less reliable and should not override an earlier established due date.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant luteal phase of 14 days** for all women. In reality, luteal phase length ranges from 10 to 16 days, introducing a potential error of plus or minus 2 days even with an accurate LMP.
+- Assumes the reported **cycle length is consistent**. Women with irregular cycles (variation greater than 7 days) should rely on ultrasound dating instead.
+- Does not account for **factors that affect delivery timing**, including maternal age, parity, medical conditions, or multiple gestations.
+- This is an **estimate, not a medical diagnosis**. All due dates should be confirmed by a healthcare provider, ideally with a first-trimester ultrasound.
+- The calculation uses the **Gregorian calendar** and does not adjust for leap years in the day count (the difference is negligible at plus or minus 1 day).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How accurate is a due date calculator?
+
+A due date calculator based on the LMP is accurate to within plus or minus 14 days for women with regular 28-day cycles. However, only 4-5% of babies are born on the exact estimated date. A 2013 study in *Human Reproduction* found that even when the exact ovulation date is known, the natural variation in pregnancy length has a standard deviation of 8.9 days. First-trimester ultrasound narrows this to plus or minus 5-7 days and is considered more accurate than LMP-based calculation when available.
+
+### Can my due date change?
+
+Yes, your due date can be revised after an ultrasound measurement. ACOG recommends changing the LMP-based due date if a first-trimester ultrasound (before 14 weeks) shows a discrepancy of more than 7 days. Once a due date is established by early ultrasound, it should not be changed based on later scans, because ultrasound accuracy decreases as the pregnancy progresses — from plus or minus 7 days in the first trimester to plus or minus 21 days in the third trimester.
+
+### What is the difference between gestational age and fetal age?
+
+Gestational age is measured from the first day of the last menstrual period and is approximately 2 weeks longer than fetal age (also called embryonic age), which is measured from the date of conception. When a healthcare provider says a pregnancy is at "10 weeks," that is gestational age — the embryo has been developing for about 8 weeks. All standard pregnancy timelines, including due date calculations and prenatal test scheduling, use gestational age rather than fetal age.
+
+### What happens if I go past my due date?
+
+Approximately 50% of pregnancies extend past the estimated due date. A pregnancy is not considered post-term until 42 weeks 0 days (294 days from LMP). Between 40 and 42 weeks, most providers increase monitoring with non-stress tests and amniotic fluid checks. ACOG recommends offering induction between 41 weeks 0 days and 42 weeks 0 days for uncomplicated pregnancies, as the risk of stillbirth, while still low, increases after 42 weeks from approximately 1 in 3,000 at 37 weeks to 3 in 3,000 at 42 weeks.
+
+### Does cycle length really affect the due date?
+
+Yes, cycle length directly shifts the estimated due date. A woman with a 35-day cycle ovulates approximately 7 days later than a woman with a 28-day cycle, which pushes the due date 7 days later. This adjustment is clinically significant — without it, women with long cycles may be incorrectly classified as overdue and face unnecessary induction. Conversely, women with 21-day cycles may be further along than their LMP suggests, affecting the timing of gestational-age-sensitive screening tests like the nuchal translucency scan (performed at 11-14 weeks).
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements Naegele's Rule as endorsed by the **American College of Obstetricians and Gynecologists (ACOG)** in Committee Opinion No. 700, "Methods for Estimating the Due Date" (May 2017, reaffirmed 2023). Cycle-length adjustment follows the standard clinical practice of modifying the ovulation assumption based on deviation from a 28-day cycle. Trimester definitions follow ACOG guidelines. Delivery statistics are drawn from Jukic et al., "Length of human pregnancy and contributors to its natural variation," *Human Reproduction* 28(10):2848-2855 (2013).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

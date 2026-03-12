@@ -1,0 +1,87 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+log₁₀(1000) = 3, because 10³ = 1,000. This logarithm calculator computes common logarithms (base 10), natural logarithms (base e), and logarithms in any custom base using the change of base formula. Enter a positive number and the calculator returns the log value with antilog verification.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+A logarithm answers the question: "To what power must I raise the base to get this number?" When you enter 1000 in common log mode, the result 3 tells you that 10 raised to the 3rd power equals 1,000. The antilog verification confirms this by computing b^result and showing you the original value.
+
+Common logarithms (base 10) are used in decibel scales, pH chemistry, and the Richter earthquake magnitude scale. Natural logarithms (base e ≈ 2.71828) appear throughout calculus, compound interest formulas, and exponential decay models. Custom base logarithms are essential in computer science — log₂ determines how many binary digits are needed to represent a number, and log₂(1,000,000) ≈ 19.93 tells you that a million items require about 20 bits to address. For related exponential calculations, use our [Exponent Calculator](/calculators/math/exponent-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. Select the **logarithm type** using the tabs: Common (log₁₀), Natural (ln), or Custom Base.
+2. Enter the **value (x)** — the positive number you want to take the logarithm of. For example, enter **1000**.
+3. If using Custom Base mode, enter the **base (b)** — any positive number except 1. For example, enter **2** for a binary logarithm.
+4. Read the **result** — the logarithm value. For log₁₀(1000), the result is **3**.
+5. Check the **antilog verification** — this computes b^result and should match your original input value, confirming accuracy.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Change of Base Formula
+
+$$\log_b(x) = \frac{\ln(x)}{\ln(b)}$$
+
+Where:
+
+- **b** = the base of the logarithm (must be positive and not equal to 1)
+- **x** = the argument (the number whose logarithm is being computed, must be positive)
+- **ln** = the natural logarithm (base e ≈ 2.71828)
+
+This formula converts any logarithm into a ratio of natural logarithms, which computers can evaluate directly using the Taylor series expansion of ln(x). For common logarithms, b = 10. For natural logarithms, b = e and the formula simplifies to ln(x)/ln(e) = ln(x)/1 = ln(x).
+
+### Special Cases
+
+- **log_b(1) = 0** for any valid base, because b⁰ = 1
+- **log_b(b) = 1** for any valid base, because b¹ = b
+- **log_b(0) = −∞** because no finite power of b yields 0
+- **log_b(negative)** is undefined in the real numbers
+
+### Antilog Verification
+
+$$\text{antilog} = b^{\text{result}}$$
+
+If the computation is correct, the antilog equals the original value x.
+
+**Source:** Change of base formula — standard logarithmic identity documented in Abramowitz & Stegun, *Handbook of Mathematical Functions* (Dover, 1965), Section 4.1.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Example: How Many Times Must You Double \$1 to Reach \$1,000?
+
+This is the same as asking: what is log₂(1000)?
+
+**Step-by-step:**
+
+1. Identify the base: b = **2** (doubling)
+2. Identify the value: x = **1,000**
+3. Apply the change of base formula: log₂(1000) = ln(1000) / ln(2)
+4. Compute ln(1000) = **6.907755** (the natural log of 1000)
+5. Compute ln(2) = **0.693147** (the natural log of 2)
+6. Divide: 6.907755 / 0.693147 = **9.96578**
+
+**Result:** log₂(1000) ≈ **9.966**, meaning you need to double approximately 10 times to turn \$1 into roughly \$1,000 (2¹⁰ = 1,024).
+
+**Practical interpretation:** This is why computer scientists work with powers of 2. A binary search through 1,000 sorted items takes at most 10 comparisons (⌈log₂(1000)⌉ = 10). Each doubling halves the remaining search space, and 10 halvings narrows 1,000 items down to 1.
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes logarithms using the change-of-base formula: log_b(x) = ln(x) / ln(b), where ln is the natural logarithm provided by JavaScript's Math.log(). Common log (base 10) and natural log (base e) are computed directly via Math.log10() and Math.log(). The calculator returns undefined for non-positive inputs and for base values of 0 or 1, consistent with the mathematical domain of logarithms.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

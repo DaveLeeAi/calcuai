@@ -1,0 +1,148 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+$10,000 received 5 years from now is worth only $7,835 today at a 5% annual discount rate — a $2,165 difference caused entirely by the time value of money. Present value (PV) answers the fundamental finance question: "What is a future sum or payment stream worth in today's dollars?" This calculator discounts lump sums and periodic payment streams (annuities) to their equivalent current value, supporting annual through daily compounding frequencies.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This calculator converts future money into today's equivalent purchasing power by applying a discount rate. It answers: "How much would I need to invest today to have X dollars in Y years?" or equivalently, "What is a promise of X dollars in Y years actually worth right now?"
+
+**Present value is the foundation of all financial valuation.** Every bond price, stock valuation, real estate analysis, and business acquisition uses PV calculations to compare cash flows occurring at different times. A corporate bond paying $50,000 in 10 years is not worth $50,000 today — at a 6% discount rate, its present value is $27,920. The $22,080 difference represents the return you'd need to justify locking up your money for a decade.
+
+**The discount rate encodes your opportunity cost.** If you can reliably earn 7% annually in the stock market, then $10,000 in 10 years is worth only $5,083 today — because you'd need to invest just $5,083 at 7% to reach $10,000. A lower discount rate (say 3%) gives a higher PV ($7,441), reflecting a world with fewer alternative investment opportunities. For calculating how money grows in the opposite direction, use our [Compound Interest Calculator](/calculators/finance/compound-interest-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Future Value** — the lump sum amount you expect to receive at the end of the time period. This could be a bond's face value, a settlement payout, a savings goal, or any future cash amount. Leave at $0 if you only have periodic payments.
+
+2. **Enter the Periodic Payment (optional)** — if you're receiving regular payments (like an annuity, pension, or rental income), enter the amount received each compounding period. For annual compounding, this is the annual payment. For monthly compounding, enter the monthly payment amount.
+
+3. **Set the Discount Rate** — the annual rate that reflects either your required return, the prevailing market interest rate, or your opportunity cost. For conservative investments, use 3–5%. For equity investments, 7–10%. For high-risk ventures, 12–20%.
+
+4. **Set the Number of Years** — how far in the future the money will be received. Longer time horizons produce lower present values because the money is discounted more heavily.
+
+5. **Choose Compounding Frequency** — how often interest compounds. Annual is standard for most PV analysis. Monthly compounding is common for mortgages, savings, and bond valuations. More frequent compounding slightly reduces the present value.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Present value of a lump sum:**
+
+$$PV = \frac{FV}{(1 + r/n)^{n \times t}}$$
+
+**Present value of an annuity (series of equal payments):**
+
+$$PV_{annuity} = PMT \times \frac{1 - (1 + r/n)^{-n \times t}}{r/n}$$
+
+**Total present value (when both apply):**
+
+$$PV_{total} = PV_{lump\,sum} + PV_{annuity}$$
+
+Where:
+
+- **PV** = present value — the equivalent value in today's dollars
+- **FV** = future value — the lump sum received at the end of the period (dollars)
+- **PMT** = periodic payment amount received each compounding period (dollars)
+- **r** = annual discount rate (decimal, e.g., 5% = 0.05)
+- **n** = compounding periods per year (1 = annual, 12 = monthly, etc.)
+- **t** = time in years
+
+The **discount factor** — $1/(1+r/n)^{nt}$ — represents how much $1 in the future is worth today. At 5% annual discounting for 10 years, the discount factor is 0.6139, meaning each future dollar is worth about 61 cents today.
+
+At 0% discount rate, PV equals FV (money today is identical to money in the future — there's no time preference).
+
+**Source:** CFA Institute Curriculum Level I, Quantitative Methods: Time Value of Money; Corporate Finance Institute discounted cash flow (DCF) methodology.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Lump Sum — What Is $100,000 in 10 Years Worth Today?
+
+**Inputs:**
+- Future Value: $100,000
+- Discount Rate: 7%
+- Time: 10 years
+- Compounding: Annual
+
+**Step-by-step:**
+
+1. Discount factor: 1 / (1.07)^10 = 1 / 1.9672 = **0.5083**
+2. Present value: $100,000 × 0.5083 = **$50,835**
+3. Total discount: $100,000 − $50,835 = **$49,165**
+
+**Interpretation:** You'd need to invest $50,835 today at 7% annual return to have $100,000 in 10 years. Conversely, if someone offers to sell you a zero-coupon bond paying $100,000 in 10 years and your required return is 7%, you should pay no more than $50,835.
+
+### Example 2: Annuity — PV of $5,000/Year for 20 Years at 4%
+
+**Inputs:**
+- Periodic Payment: $5,000/year
+- Discount Rate: 4%
+- Time: 20 years
+- Compounding: Annual
+
+**Step-by-step:**
+
+1. Annuity factor: (1 − (1.04)^−20) / 0.04 = (1 − 0.4564) / 0.04 = **13.5903**
+2. PV of annuity: $5,000 × 13.5903 = **$67,952**
+3. Total future payments: $5,000 × 20 = **$100,000**
+4. Total discount: $100,000 − $67,952 = **$32,048**
+
+**Interpretation:** A pension paying $5,000 per year for 20 years is worth $67,952 as a lump sum today — not the $100,000 you'd receive in total. This is exactly what pension buyout offers calculate. If your pension fund offers a lump-sum buyout of $70,000, it's slightly more than the mathematical PV at 4%, making it a reasonable offer.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Discount Rate** — The single most powerful input. At 3% for 20 years, $100,000 is worth $55,368 today. At 10%, it's worth only $14,864 — a 73% reduction. Small rate changes create massive PV swings on long-duration cash flows, which is why bond prices move inversely to interest rates.
+
+**Time Horizon** — Each additional year compounds the discounting effect. At 5%, PV drops by roughly 5% per year compounded. After 5 years: $7,835. After 10 years: $6,139. After 20 years: $3,769. After 30 years: $2,314. Patient money is more valuable money.
+
+**Compounding Frequency** — More frequent compounding slightly reduces PV. $10,000 at 6% for 5 years: annual compounding gives PV = $7,473; monthly gives PV = $7,414 — a $59 difference. The effect is modest for typical time horizons but matters for large sums.
+
+**Payment Timing** — This calculator assumes ordinary annuity (payments at end of each period). An annuity due (payments at the beginning) would have a higher PV because each payment is received one period sooner. The difference is: PV_due = PV_ordinary × (1 + r/n).
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant discount rate** for the entire time period. In practice, discount rates may vary with economic conditions and the yield curve.
+- Uses the **ordinary annuity** assumption (payments received at the end of each period). For annuity due (beginning of period), multiply the annuity PV by (1 + r/n).
+- Does **not account for inflation** separately. The discount rate can incorporate an inflation premium, but for explicit inflation-adjusted analysis, use a real discount rate (nominal rate minus inflation).
+- Does **not account for taxes** on investment returns or payment income.
+- Assumes **certain cash flows**. For uncertain or risky cash flows, a risk-adjusted discount rate should be used (higher rate for riskier cash flows).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What discount rate should I use for present value calculations?
+
+The appropriate discount rate depends on the context and risk level of the cash flows. For risk-free cash flows (e.g., U.S. Treasury obligations), use the current Treasury yield (approximately 4.2–4.5% for 10-year T-notes as of early 2025). For personal financial planning, use your expected investment return (7–8% for a diversified stock portfolio, 4–5% for bonds). For corporate project evaluation, use the company's weighted average cost of capital (WACC), typically 8–12%. A higher discount rate reflects higher risk or higher opportunity cost, producing a lower present value.
+
+### What is the difference between present value and net present value (NPV)?
+
+Present value (PV) discounts future cash flows to today's value without subtracting the initial investment cost. Net present value (NPV) equals PV minus the upfront cost: NPV = PV − Initial Investment. If you're evaluating whether to invest $40,000 today for cash flows with a PV of $46,000, the NPV is +$6,000 — a positive NPV means the investment exceeds your required return. NPV is the primary tool for capital budgeting decisions in corporate finance.
+
+### Why does present value decrease as the discount rate increases?
+
+A higher discount rate means your money has more valuable alternative uses. If you can earn 10% elsewhere, a future $10,000 is worth less to you today than if you could only earn 3% — because at 10%, you'd need to invest only $6,139 to reach $10,000 in 5 years, compared to $8,626 at 3%. The discount rate quantifies this opportunity cost. This inverse relationship between rates and PV is also why bond prices fall when interest rates rise.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the standard time value of money (TVM) present value formulas as taught in the **CFA Institute Level I Curriculum** (Quantitative Methods: Time Value of Money). The lump sum PV formula follows the discounted cash flow (DCF) methodology per the **Corporate Finance Institute**. Annuity PV uses the ordinary annuity present value factor. Treasury yield benchmarks reference the **U.S. Department of the Treasury Daily Treasury Yield Curve Rates**. The WACC ranges for corporate discount rates are based on **Aswath Damodaran's** (NYU Stern) annual industry WACC dataset. Bond pricing examples follow conventions established by the **Securities Industry and Financial Markets Association (SIFMA)**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

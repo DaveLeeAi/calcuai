@@ -1,0 +1,292 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Project whether your retirement savings will last through your lifetime. A 30-year-old saving \$1,000/month with \$50,000 already saved at a 7% average annual return accumulates approximately \$2,376,362 by age 65 — enough to sustain \$50,000/year in inflation-adjusted withdrawals through age 90 and beyond. Use this calculator to find your personal retirement number, determine your sustainable monthly income, and identify any savings gap before it becomes a crisis.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+Your **retirement savings projection** is the cornerstone number for every financial plan. This calculator answers the question most people avoid: "Will I run out of money in retirement?" It does this by modeling two distinct financial phases of your life and connecting them into a single projection.
+
+During the **accumulation phase** (your working years), the calculator compounds your current savings and monthly contributions at your pre-retirement rate of return. A 7% average annual return reflects the historical performance of a diversified stock-heavy portfolio — the S&P 500 has returned approximately 10.3% annually since 1957, roughly 7% after inflation. At this rate, \$1,000/month with \$50,000 already saved grows to \$2,376,362 over 35 years, but only \$470,000 of that is your contributions. The remaining \$1,906,362 is compound growth — money your money earned.
+
+During the **distribution phase** (retirement), the model shifts to a lower return rate reflecting a more conservative bond-and-stock allocation, and withdraws your desired income each year adjusted upward for inflation. This is where most retirement plans fail: a \$50,000 annual withdrawal today becomes \$84,934 in 20 years at 3% inflation. The calculator tracks every year until your balance hits zero or you reach your life expectancy — whichever comes first.
+
+The **sustainable monthly income** figure tells you the maximum inflation-adjusted amount you can withdraw monthly without depleting your savings before your planned end date. Compare this against your desired income to see if you have a surplus or a gap. If the calculator shows your money running out at age 82 but you're planning to age 90, you have an 8-year funding gap that requires either higher contributions, a later retirement date, or reduced spending.
+
+For a deeper look at how your contributions grow during the accumulation phase, use our [Investment Calculator](/calculators/finance/investment-calculator) to model different contribution schedules and return scenarios.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Current Age** — your age today. This determines the length of your accumulation phase. The default is 30, but even entering this calculator at 50 produces actionable results.
+
+2. **Set your Retirement Age** — the age you plan to stop working and begin drawing down savings. The default is 65, which aligns with Medicare eligibility. Early retirees can set this as low as 30, though the accumulation period shrinks dramatically.
+
+3. **Enter Current Retirement Savings** — the total balance across all retirement accounts today: 401(k), IRA, Roth IRA, 403(b), brokerage accounts designated for retirement. Check your latest statements and add them together. The default is \$50,000.
+
+4. **Set your Monthly Contribution** — the amount you save each month toward retirement. Include your personal 401(k) contributions and any IRA deposits. The default is \$1,000/month (\$12,000/year). If your employer matches, you can increase this to reflect the total going into your account.
+
+5. **Set Pre-Retirement Return** — the expected average annual return on your portfolio during your working years. The default of 7% reflects a growth-oriented portfolio (80/20 stocks/bonds). If you invest more conservatively, use 5-6%.
+
+6. **Set Post-Retirement Return** — the expected return after you retire. The default of 5% reflects a more conservative allocation (50/50 or 40/60 stocks/bonds) appropriate for retirees who need stability.
+
+7. **Enter Desired Annual Income** — how much you want to spend per year in retirement, expressed in today's dollars. The calculator automatically adjusts this for inflation each year. A common starting point is 70-80% of your current gross income. The default is \$50,000.
+
+8. **Set the Inflation Rate** — the default of 3% matches the long-run U.S. average. Periods of higher inflation (like 2021-2023 at 5-8%) are typically temporary, but you can model worst-case scenarios by increasing this to 4-5%.
+
+9. **Set Life Expectancy** — plan conservatively. The default of 90 provides a safety margin beyond the current U.S. average life expectancy of 77.5 years. If longevity runs in your family or you're in excellent health, consider 95 or even 100.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+This calculator uses a two-phase retirement projection model adopted by certified financial planners worldwide. Each phase uses a distinct mathematical approach.
+
+### Phase 1: Accumulation (Working Years)
+
+The future value of your retirement savings at your target retirement age combines compound growth on existing savings with the future value of a regular contribution stream:
+
+$$FV = PV \times (1 + r_1)^{n_1} + C \times \frac{(1 + r_1)^{n_1} - 1}{r_1}$$
+
+Where:
+
+- **FV** = future value of retirement savings at retirement age (dollars)
+- **PV** = present value of current retirement savings (dollars)
+- **C** = monthly contribution amount (dollars)
+- **r_1** = monthly pre-retirement rate of return (annual rate / 12, as decimal)
+- **n_1** = total months until retirement (years to retirement x 12)
+
+The first term compounds your existing savings. The second term calculates the future value of an ordinary annuity — the stream of equal monthly contributions growing at the same rate.
+
+### Phase 2: Distribution (Retirement Years)
+
+During retirement, each year the model applies portfolio growth and subtracts an inflation-adjusted withdrawal:
+
+$$B_{t+1} = B_t \times (1 + r_2) - W \times (1 + i)^t$$
+
+Where:
+
+- **B_t** = portfolio balance at the start of year t (dollars)
+- **r_2** = annual post-retirement rate of return (decimal)
+- **W** = desired annual income in today's dollars (dollars)
+- **i** = annual inflation rate (decimal)
+- **t** = years since retirement began (starting at 0)
+
+The withdrawal amount increases each year by the inflation rate, reflecting the reality that \$50,000 of purchasing power today requires \$67,196 in 10 years at 3% inflation, and \$84,934 in 20 years.
+
+### Sustainable Monthly Income
+
+The calculator also solves for the maximum sustainable withdrawal using the present value of an inflation-adjusted annuity:
+
+$$PMT = \frac{FV \times r_{real}}{1 - (1 + r_{real})^{-n_2}}$$
+
+Where **r_real** = (1 + r_2) / (1 + i) - 1 is the real (inflation-adjusted) monthly return, and **n_2** is the total months in retirement.
+
+This goes beyond the commonly cited **4% rule** from William Bengen's 1994 study. The 4% rule assumes a 50/50 stock/bond portfolio and a 30-year retirement horizon. This calculator uses your actual return assumptions and time horizon to compute a precise sustainable withdrawal rate, which may be higher or lower than 4% depending on your inputs.
+
+**Source:** Two-phase retirement projection model per the Financial Planning Standards Board (FPSB). The accumulation formula is the standard future value of an annuity formula used across actuarial science. The distribution model follows the systematic withdrawal methodology described in Bengen, W. P. (1994), "Determining Withdrawal Rates Using Historical Data," *Journal of Financial Planning*.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Young Saver — Age 30, Retire at 65
+
+**Inputs:**
+- Current Age: 30
+- Retirement Age: 65
+- Current Savings: \$50,000
+- Monthly Contribution: \$1,000
+- Pre-Retirement Return: 7%
+- Post-Retirement Return: 5%
+- Desired Annual Income: \$50,000
+- Inflation Rate: 3%
+- Life Expectancy: 90
+
+**Step-by-step (Accumulation):**
+
+1. Years to retirement: 65 - 30 = **35 years** (420 months)
+2. Monthly pre-retirement return: 7% / 12 = **0.005833**
+3. Compound factor: (1 + 0.005833)^420 = **11.4236**
+4. Growth on existing savings: $50,000 x 11.4236 = **$571,182**
+5. Future value of contributions: $1,000 x [(11.4236 - 1) / 0.005833] = **$1,805,180**
+6. Total at retirement: \$571,182 + $1,805,180 = **$2,376,362**
+
+**Distribution phase:**
+- Year 1 withdrawal: \$50,000 (no inflation yet)
+- Year 10 withdrawal: $50,000 x (1.03)^10 = $67,196
+- Year 20 withdrawal: $50,000 x (1.03)^20 = $90,306
+
+With \$2,376,362 earning 5% annually, the balance comfortably sustains inflation-adjusted \$50,000/year withdrawals through the full 25-year retirement to age 90 with a significant surplus remaining. The sustainable monthly income is approximately \$11,244 in today's dollars — well above the \$4,167/month target (\$50,000/12).
+
+**Interpretation:** Starting at 30 with consistent \$1,000/month savings gives enormous runway. The 35-year compounding period means your investment growth (\$1,906,362) exceeds your total contributions (\$470,000) by more than 4:1. This is the power of starting early.
+
+### Example 2: Late Starter — Age 45, Retire at 67
+
+**Inputs:**
+- Current Age: 45
+- Retirement Age: 67
+- Current Savings: \$100,000
+- Monthly Contribution: \$2,000
+- Pre-Retirement Return: 7%
+- Post-Retirement Return: 5%
+- Desired Annual Income: \$60,000
+- Inflation Rate: 3%
+- Life Expectancy: 90
+
+**Step-by-step:**
+
+1. Years to retirement: 67 - 45 = **22 years** (264 months)
+2. Monthly rate: 0.07/12 = **0.005833**
+3. Compound factor: (1.005833)^264 = **4.6287**
+4. Existing savings grow to: $100,000 x 4.6287 = **$462,870**
+5. Contribution annuity: $2,000 x [(4.6287 - 1) / 0.005833] = **$1,250,798**
+6. **Total at retirement: approximately \$1,713,668**
+
+**Distribution phase:**
+- 23 years in retirement (age 67 to 90)
+- Year 1 withdrawal: \$60,000
+- Year 15 withdrawal: $60,000 x 1.03^15 = $93,478
+
+With \$1,713,668 at 5% return and inflation-adjusted \$60,000/year withdrawals, the money lasts comfortably through age 90 with surplus remaining. The sustainable monthly income is approximately \$8,581 in today's dollars, versus the \$5,000/month target (\$60,000/12).
+
+**Interpretation:** Even starting at 45, aggressive saving of \$2,000/month at 7% builds substantial wealth. Total contributions are \$628,000 (vs. \$470,000 for the 30-year-old), but the total grows to \$1,713,668 (vs. \$2,376,362). The 13-year compounding difference costs approximately \$662,694 — illustrating why starting earlier matters, even though the late starter still achieves a fully funded retirement by saving more aggressively.
+
+### Example 3: Early Retirement (FIRE) — Age 35, Targeting Age 50
+
+**Inputs:**
+- Current Age: 35
+- Retirement Age: 50
+- Current Savings: \$200,000
+- Monthly Contribution: \$3,000
+- Pre-Retirement Return: 7%
+- Post-Retirement Return: 5%
+- Desired Annual Income: \$60,000
+- Inflation Rate: 3%
+- Life Expectancy: 90
+
+**Step-by-step:**
+
+1. Years to retirement: 50 - 35 = **15 years** (180 months)
+2. Monthly rate: 0.07/12 = **0.005833**
+3. Compound factor: (1.005833)^180 = **2.8543**
+4. Existing savings: $200,000 x 2.8543 = **$570,860**
+5. Contribution annuity: $3,000 x [(2.8543 - 1) / 0.005833] = **$949,816**
+6. **Total at retirement: approximately \$1,520,676**
+
+**Distribution phase:**
+- 40 years in retirement (age 50 to 90) — extremely long horizon
+- Year 20 withdrawal: $60,000 x 1.03^20 = $108,367
+- Year 35 withdrawal: $60,000 x 1.03^35 = $169,053
+
+With a 40-year retirement, even \$1.52M at 5% faces serious inflation pressure. By year 30, annual withdrawals exceed \$145,000 while portfolio growth decelerates. The money runs out around age 84-86, leaving a 4-6 year gap. Sustainable monthly income in today's dollars is approximately \$4,572, below the \$5,000 target.
+
+**Interpretation:** Early retirement is achievable but requires either a larger nest egg, lower spending, or higher post-retirement returns. FIRE practitioners often target a 3.5% withdrawal rate (not 4%) for retirements exceeding 30 years. Increasing monthly contributions to \$4,500 or building passive income streams can close the gap.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Starting Age** — The single most powerful variable in retirement planning. A 25-year-old contributing \$500/month at 7% accumulates \$1,312,407 by age 65. A 35-year-old contributing the same amount accumulates only \$609,985. Starting 10 years earlier more than doubles the outcome on identical contributions. Every year you delay costs you approximately \$70,000 in lost compound growth on a \$500/month contribution over a 40 vs. 30 year horizon.
+
+**Savings Rate** — More controllable than investment returns. Increasing from \$500/month to \$1,000/month doubles your accumulation proportionally. Financial planners recommend saving 15-20% of gross income for retirement. If you earn \$80,000, that's \$1,000-\$1,333/month. Workers who start late often need to save 25-30% to catch up — painful, but mathematically necessary.
+
+**Rate of Return** — A 2-percentage-point difference compounds enormously over decades. On \$1,000/month over 35 years: 5% yields \$1,136,092, 7% yields \$1,801,055, and 9% yields \$2,941,784. However, chasing higher returns means accepting higher volatility. A balanced approach — aggressive during accumulation, conservative during distribution — is why this calculator uses two separate return rates.
+
+**Retirement Spending** — Every \$10,000 reduction in desired annual income extends your money by 3-5 years. Many retirees find they spend 70-80% of their pre-retirement income because they no longer pay payroll taxes, commuting costs, or retirement contributions. Building a detailed retirement budget before choosing this number is critical.
+
+**Social Security** — This calculator does not include Social Security benefits. The average Social Security benefit in 2026 is approximately \$1,907/month (\$22,884/year). If you expect to receive Social Security, you can subtract your estimated benefit from the desired annual income field. A worker earning \$80,000 might receive \$2,400/month at full retirement age (67) — effectively reducing the required withdrawal from savings by \$28,800/year.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Underestimating longevity.** Planning to age 85 feels safe until you consider that a 65-year-old woman has a 30% chance of living to 90 and a 12% chance of reaching 95. Using a life expectancy of 90-95 provides a meaningful buffer. Running out of money at 88 when you live to 94 creates six years of financial crisis with no ability to recover.
+
+**Ignoring inflation entirely.** A retirement plan built on today's dollars falls apart over a 25-30 year retirement. At 3% inflation, \$50,000 of purchasing power requires \$104,689 in year 25. Many online calculators ignore inflation — this one doesn't. Always enter a realistic inflation rate (2.5-3.5% for the U.S. long-run average).
+
+**Using a withdrawal rate above 4-5%.** The 4% rule was designed for a 30-year retirement with a diversified portfolio. Withdrawing 6-7% annually virtually guarantees running out of money within 15-20 years. If your calculator shows a withdrawal rate above 5%, you either need more savings, lower spending, or a later retirement date.
+
+**Not adjusting asset allocation at retirement.** Keeping 90% in stocks at age 70 exposes you to sequence-of-returns risk: a 30% market crash early in retirement permanently impairs your portfolio's ability to recover while funding withdrawals. The shift from 7% pre-retirement to 5% post-retirement in this calculator reflects the standard glide-path approach.
+
+**Counting on Social Security alone.** The average Social Security benefit of \$22,884/year replaces roughly 40% of the average worker's income. For higher earners, the replacement rate drops to 25-30%. Social Security was designed as a supplement, not a complete retirement income. Always model your retirement with and without it to understand your personal dependency.
+
+{/* Section 12: Comparison Table */}
+## Starting Age Comparison: The Cost of Waiting
+
+The most common question in retirement planning is "Am I too late?" This comparison shows the impact of starting age on identical \$1,000/month contributions at 7% pre-retirement return, retiring at 65:
+
+| | **Start at 25** | **Start at 35** | **Start at 45** |
+|---|---|---|---|
+| Years of Contributions | 40 | 30 | 20 |
+| Total Contributed | \$480,000 | \$360,000 | \$240,000 |
+| Investment Growth | \$2,144,813 | \$859,971 | \$280,927 |
+| **Total at 65** | **\$2,624,813** | **\$1,219,971** | **\$520,927** |
+| Sustainable Monthly Income (5%, 25yr) | \$13,798 | \$6,413 | \$2,739 |
+| Can Fund \$50k/yr to 90? | Yes (surplus) | Yes (close) | No (gap at ~78) |
+
+**Key takeaway:** The 25-year-old contributes only \$120,000 more than the 45-year-old but accumulates \$2,103,886 more. That is not a typo — 20 extra years of compounding at 7% generates over 17x the additional growth per dollar of extra contribution. Starting early is the closest thing to a financial superpower.
+
+**If you started late:** Don't panic, but do act. The 45-year-old can close the gap by increasing contributions to \$2,500/month, delaying retirement to 70, or combining both. Use the calculator's compare-scenarios feature to model these catch-up strategies.
+
+## What This Calculator Cannot Model
+
+Every retirement projection — including this one — is a simplification. Three risks sit outside the formula and regularly derail real-world retirements.
+
+**Sequence-of-returns risk.** This calculator assumes your portfolio earns a steady 5% annually during retirement. Reality is nothing like that. A 25% market crash in your first year of retirement permanently damages your portfolio's recovery capacity because you're withdrawing from a depressed balance. Two retirees with identical savings, returns, and spending can have wildly different outcomes depending on whether the bad years hit early or late. A retiree who experiences a -25% year followed by +25% ends up worse than one who gets the same returns in reverse order — because withdrawals during the down year consume a larger share of the smaller balance. The standard mitigation is a "cash bucket" strategy: keeping 2-3 years of living expenses in cash or short-term bonds so you never sell stocks during a downturn.
+
+**Healthcare costs before Medicare.** If you retire before 65, you face a healthcare gap that this calculator doesn't price in. ACA marketplace premiums for a 60-year-old couple average $1,800-$2,500/month before subsidies (2025 data). That's $21,600-$30,000 per year in expenses that disappear at 65 when Medicare kicks in. For early retirees, healthcare alone can consume 15-20% of annual spending.
+
+**Tax drag on withdrawals.** A $50,000 withdrawal from a traditional 401(k) costs $50,000 in spending power, but you may need to withdraw $60,000-$65,000 to net $50,000 after federal and state income taxes. Roth IRA withdrawals, by contrast, are tax-free. Your actual sustainable income depends heavily on the tax treatment of your accounts — a mix of traditional and Roth balances gives you flexibility to manage your tax bracket in retirement.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **constant rates of return** throughout each phase. In reality, markets fluctuate year to year, and sequence-of-returns risk can significantly impact outcomes in early retirement years.
+- Does **not include Social Security, pensions, or annuity income**. Subtract expected benefits from the desired annual income to approximate their effect.
+- Does **not model taxes** on withdrawals. Traditional 401(k) and IRA withdrawals are taxed as ordinary income; Roth withdrawals are tax-free. Your effective withdrawal amount may need to be 15-25% higher to cover taxes.
+- Assumes **level monthly contributions** throughout working years. In practice, most people increase contributions over time as income grows.
+- Uses a **single inflation rate** for all expenses. Healthcare costs historically inflate at 5-7% annually — roughly double the general inflation rate — which can disproportionately affect retirees.
+- Does **not account for employer matching contributions**. If your employer matches 50% of contributions up to 6% of salary, your effective savings rate is significantly higher than the entered amount.
+- Assumes **withdrawals occur at the start of each year** in the distribution phase. Monthly withdrawals with monthly compounding would produce slightly different results.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much do I need to retire?
+
+The amount you need depends on your desired lifestyle, not a single magic number. A common benchmark is 25 times your desired annual retirement income — derived from the 4% withdrawal rule. If you want \$50,000/year, target \$1,250,000. If you want \$80,000/year, target \$2,000,000. However, this calculator provides a more precise answer by factoring in your specific return assumptions, inflation rate, and retirement duration. Run your actual numbers rather than relying on rules of thumb, because a 40-year retirement (FIRE) requires a much larger multiple than a 20-year retirement.
+
+### What is the 4% rule?
+
+The 4% rule states that you can withdraw 4% of your retirement portfolio in year one, then adjust that amount for inflation each subsequent year, and your money will last at least 30 years with approximately 95% confidence. It was established by financial planner William Bengen in 1994 using historical U.S. stock and bond returns from 1926 to 1992. On a \$1,000,000 portfolio, the 4% rule permits a \$40,000 first-year withdrawal. The rule assumes a 50/50 stock/bond allocation and does not account for fees, taxes, or retirements longer than 30 years. For retirements exceeding 30 years, many planners recommend a 3.5% rate.
+
+### How much should I save for retirement each month?
+
+Most financial planners recommend saving 15% of gross income for retirement, including any employer match. On a \$70,000 salary, that's \$875/month. If you start at 25, this typically builds a sufficient nest egg by 65. Starting at 35 pushes the recommendation to 20-25%, and starting at 45 may require 30% or more. The actual amount depends on your current savings, expected returns, and desired retirement income — use this calculator with your real numbers rather than following a generic percentage. A 30-year-old earning \$70,000 who saves 15% at 7% return accumulates approximately \$1,415,000 by 65.
+
+### Can I retire at 55?
+
+Retiring at 55 is mathematically possible but requires aggressive savings and planning for a potentially 35-40 year retirement. You need roughly 30-35 times your desired annual spending (versus 25x for a standard retirement) because the money must last longer and you won't have Medicare until 65 or Social Security until 62. Healthcare costs between 55 and 65 alone can run \$500-\$1,500/month per person without employer coverage. A 30-year-old targeting retirement at 55 with \$60,000/year in desired income needs approximately \$1,800,000-\$2,100,000 saved, requiring contributions of \$2,500-\$3,500/month at 7% returns.
+
+### How does inflation affect retirement savings?
+
+Inflation silently erodes purchasing power over long time horizons. At 3% annual inflation, \$50,000 today buys only \$23,880 worth of goods in 25 years. This means a retiree who withdraws a flat \$50,000/year will feel progressively poorer each year. This calculator addresses this by increasing withdrawals at the inflation rate — if you enter \$50,000 desired income with 3% inflation, your year-25 withdrawal is automatically \$104,689 to maintain the same purchasing power. The impact is dramatic: at 3% inflation, your total withdrawals over a 25-year retirement sum to approximately \$1,822,000, not \$1,250,000. Inflation is the reason most people need more retirement savings than they initially expect.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the two-phase retirement projection model as described by the **Financial Planning Standards Board (FPSB)** in its Certified Financial Planner (CFP) curriculum. The accumulation formula uses the standard future value of an ordinary annuity, a foundational formula in actuarial science and corporate finance (Brealey, Myers & Allen, *Principles of Corporate Finance*). Distribution-phase modeling follows the systematic withdrawal methodology from **Bengen, W. P. (1994), "Determining Withdrawal Rates Using Historical Data," *Journal of Financial Planning*, 7(1), 171-180** — the seminal paper that established the 4% rule. Inflation adjustment methodology follows **U.S. Bureau of Labor Statistics (BLS)** Consumer Price Index historical data. Social Security reference figures are from the **Social Security Administration (SSA)** 2026 annual statistical supplement. Life expectancy data references the **CDC National Center for Health Statistics** actuarial life tables.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

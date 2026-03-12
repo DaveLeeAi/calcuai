@@ -1,0 +1,114 @@
+{
+  "id": "grade-calculator",
+  "title": "Grade Calculator",
+  "slug": "grade-calculator",
+  "category": "everyday",
+  "subcategory": "education",
+  "primaryKeyword": "grade calculator",
+  "metaTitle": "Grade Calculator — What Grade Do I Need on My Final?",
+  "metaDescription": "Find out what grade you need on your final exam to get the course grade you want. Enter current grade, desired grade, and final exam weight. Free and instant.",
+  "inputs": [
+    {
+      "id": "currentGrade",
+      "label": "Current Grade (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 85,
+      "min": 0,
+      "max": 100,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Your current course grade before the final exam"
+    },
+    {
+      "id": "desiredGrade",
+      "label": "Desired Final Grade (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 90,
+      "min": 0,
+      "max": 100,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "The overall course grade you want to achieve"
+    },
+    {
+      "id": "finalWeight",
+      "label": "Final Exam Weight (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "How much the final exam counts toward your total grade"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "requiredGrade",
+      "label": "Grade Needed on Final",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "letterGradeNeeded",
+      "label": "Letter Grade Needed",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "isPossible",
+      "label": "Is It Achievable?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "currentWeightedContribution",
+      "label": "Points Already Earned",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    }
+  ],
+  "formula": "grade",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "final-grade-calculator",
+    "gpa-calculator",
+    "percentage-calculator",
+    "tip-calculator",
+    "date-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard weighted average formula — AACRAO (American Association of Collegiate Registrars and Admissions Officers) grading standards.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "requiredFinalGrade = (desiredGrade - currentGrade × (1 - finalWeight)) / finalWeight",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "final-grade-calculator"
+  ],
+  "qualityScore": 76,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "Q2"
+}

@@ -1,0 +1,203 @@
+{
+  "id": "refinance-calculator",
+  "title": "Refinance Calculator",
+  "slug": "refinance-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "refinance calculator",
+  "metaTitle": "Refinance Calculator — Free Mortgage Refinance Savings Tool",
+  "metaDescription": "Calculate monthly savings, break-even point, and lifetime savings from refinancing. Compare old vs. new mortgage loan costs in seconds. Free, no signup.",
+  "inputs": [
+    {
+      "id": "currentLoanBalance",
+      "label": "Current Loan Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 280000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "currentRate",
+      "label": "Current Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 20,
+      "step": 0.125,
+      "helpText": "Your current mortgage interest rate."
+    },
+    {
+      "id": "currentTermRemaining",
+      "label": "Months Remaining on Current Loan",
+      "type": "number",
+      "required": true,
+      "defaultValue": 300,
+      "min": 1,
+      "max": 360,
+      "step": 1,
+      "helpText": "Number of monthly payments left on your current mortgage."
+    },
+    {
+      "id": "newRate",
+      "label": "New Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5.5,
+      "min": 0,
+      "max": 20,
+      "step": 0.125,
+      "helpText": "The interest rate offered on the new loan."
+    },
+    {
+      "id": "newTerm",
+      "label": "New Loan Term",
+      "type": "select",
+      "required": true,
+      "defaultValue": "30",
+      "options": [
+        {
+          "value": "10",
+          "label": "10 Years"
+        },
+        {
+          "value": "15",
+          "label": "15 Years"
+        },
+        {
+          "value": "20",
+          "label": "20 Years"
+        },
+        {
+          "value": "25",
+          "label": "25 Years"
+        },
+        {
+          "value": "30",
+          "label": "30 Years"
+        }
+      ]
+    },
+    {
+      "id": "closingCosts",
+      "label": "Closing Costs",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 50000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Total refinancing closing costs. Average: 2–5% of loan amount."
+    },
+    {
+      "id": "cashOut",
+      "label": "Cash-Out Amount",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 500000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Optional — additional cash taken out during refinance."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlySavings",
+      "label": "Monthly Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "breakEvenMonths",
+      "label": "Break-Even Point (Months)",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalSavings",
+      "label": "Total Lifetime Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "newMonthlyPayment",
+      "label": "New Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "currentMonthlyPayment",
+      "label": "Current Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Refinance Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "comparisonChart",
+      "label": "Current vs. New Loan Comparison",
+      "type": "chart-bar",
+      "chartConfig": {
+        "xLabel": "Metric",
+        "yLabel": "Amount ($)",
+        "colors": [
+          "#E74C3C",
+          "#2ECC71"
+        ]
+      }
+    }
+  ],
+  "formula": "refinance-breakeven",
+  "features": [
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "amortization-calculator",
+    "home-affordability-calculator",
+    "interest-rate-calculator",
+    "loan-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "CFPB refinancing guidelines",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Monthly savings = Old Payment - New Payment; Break-even = Closing costs / Monthly savings; per CFPB refinancing analysis (consumerfinance.gov)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "mortgage-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "equity"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
+}

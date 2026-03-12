@@ -1,0 +1,161 @@
+{
+  "id": "circle-calculator",
+  "title": "Circle Calculator",
+  "slug": "circle-calculator",
+  "category": "math",
+  "subcategory": "geometry",
+  "primaryKeyword": "circle calculator",
+  "metaTitle": "Circle Calculator — Area, Circumference & Radius",
+  "metaDescription": "Calculate circle area, circumference, diameter, and radius from any known value. Uses π for precise results. Free online calculator.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculate From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "from-radius",
+      "options": [
+        {
+          "value": "from-radius",
+          "label": "From Radius"
+        },
+        {
+          "value": "from-diameter",
+          "label": "From Diameter"
+        },
+        {
+          "value": "from-area",
+          "label": "From Area"
+        },
+        {
+          "value": "from-circumference",
+          "label": "From Circumference"
+        }
+      ],
+      "helpText": "Select which circle property you know"
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "step": 0.01,
+      "placeholder": "Enter the known value"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "radius",
+      "label": "Radius",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6,
+      "highlight": true
+    },
+    {
+      "id": "diameter",
+      "label": "Diameter",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "circumference",
+      "label": "Circumference",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "area",
+      "label": "Area",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6,
+      "highlight": true
+    }
+  ],
+  "formula": "circle",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "tabs": [
+    {
+      "id": "from-radius",
+      "label": "From Radius",
+      "description": "Calculate all circle properties from a known radius",
+      "defaultInputOverrides": {
+        "mode": "from-radius"
+      },
+      "visibleInputs": [
+        "value"
+      ]
+    },
+    {
+      "id": "from-diameter",
+      "label": "From Diameter",
+      "description": "Calculate all circle properties from a known diameter",
+      "defaultInputOverrides": {
+        "mode": "from-diameter"
+      },
+      "visibleInputs": [
+        "value"
+      ]
+    },
+    {
+      "id": "from-area",
+      "label": "From Area",
+      "description": "Calculate radius, diameter, and circumference from a known area",
+      "defaultInputOverrides": {
+        "mode": "from-area"
+      },
+      "visibleInputs": [
+        "value"
+      ]
+    },
+    {
+      "id": "from-circumference",
+      "label": "From Circumference",
+      "description": "Calculate radius, diameter, and area from a known circumference",
+      "defaultInputOverrides": {
+        "mode": "from-circumference"
+      },
+      "visibleInputs": [
+        "value"
+      ]
+    }
+  ],
+  "relatedCalculators": [
+    "triangle-calculator",
+    "square-footage-calculator",
+    "percentage-calculator",
+    "exponent-calculator",
+    "concrete-calculator",
+    "area-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Circle formulas: A = πr², C = 2πr (Archimedes, 3rd century BC; Euclid's Elements, Book XII)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "A = πr², C = 2πr, d = 2r. Inverse derivations: r = √(A/π), r = C/(2π). Source: Archimedes, Measurement of a Circle (circa 250 BC)",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 72,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

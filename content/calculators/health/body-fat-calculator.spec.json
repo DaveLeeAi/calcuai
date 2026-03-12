@@ -1,0 +1,206 @@
+{
+  "id": "body-fat-calculator",
+  "title": "Body Fat Calculator",
+  "slug": "body-fat-calculator",
+  "category": "health",
+  "subcategory": "body-metrics",
+  "primaryKeyword": "body fat calculator",
+  "metaTitle": "Body Fat Calculator — Free US Navy Method Estimator",
+  "metaDescription": "Estimate your body fat percentage using the US Navy circumference method. See your fitness category per ACE standards based on waist, neck, and height.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (cm)"
+        }
+      ]
+    },
+    {
+      "id": "sex",
+      "label": "Sex",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "male",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "waist",
+      "label": "Waist Circumference",
+      "type": "number",
+      "required": true,
+      "defaultValue": 34,
+      "min": 10,
+      "max": 80,
+      "step": 0.5,
+      "helpText": "Measure at navel level (inches or cm)"
+    },
+    {
+      "id": "neck",
+      "label": "Neck Circumference",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 5,
+      "max": 35,
+      "step": 0.5,
+      "helpText": "Measure just below the Adam's apple (inches or cm)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 71,
+      "min": 36,
+      "max": 108,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    },
+    {
+      "id": "hip",
+      "label": "Hip Circumference",
+      "type": "number",
+      "required": false,
+      "defaultValue": 38,
+      "min": 15,
+      "max": 80,
+      "step": 0.5,
+      "helpText": "Required for females. Measure at widest point (inches or cm)",
+      "dependsOn": "sex"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bodyFatPercentage",
+      "label": "Body Fat Percentage",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "category",
+      "label": "Fitness Category",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "bodyFatGauge",
+      "label": "Body Fat Scale",
+      "type": "gauge",
+      "gaugeConfig": {
+        "min": 0,
+        "max": 45,
+        "ranges": [
+          {
+            "min": 0,
+            "max": 5,
+            "label": "Essential",
+            "color": "#3B82F6"
+          },
+          {
+            "min": 5,
+            "max": 13,
+            "label": "Athletes",
+            "color": "#22C55E"
+          },
+          {
+            "min": 13,
+            "max": 17,
+            "label": "Fitness",
+            "color": "#84CC16"
+          },
+          {
+            "min": 17,
+            "max": 24,
+            "label": "Average",
+            "color": "#F59E0B"
+          },
+          {
+            "min": 24,
+            "max": 45,
+            "label": "Obese",
+            "color": "#EF4444"
+          }
+        ]
+      }
+    },
+    {
+      "id": "composition",
+      "label": "Body Composition",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#F59E0B",
+          "#22C55E"
+        ]
+      }
+    }
+  ],
+  "formula": "body-fat",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "bmi-calculator",
+    "calorie-calculator",
+    "lean-body-mass-calculator",
+    "one-rep-max-calculator",
+    "bmr-calculator",
+    "ideal-weight-calculator",
+    "macro-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Hodgdon & Beckett, Naval Health Research Center (1984)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Hodgdon JA, Beckett MB (1984). Prediction of percent body fat for U.S. Navy men and women from body circumferences and height. NHRC Report No. 84-29 & 84-11.",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "lean-body-mass-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "bmi"
+  ],
+  "methodologyTopics": [
+    "bmi-formula",
+    "calorie-formulas"
+  ]
+}

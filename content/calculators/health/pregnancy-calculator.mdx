@@ -1,0 +1,152 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Enter your last menstrual period to see your current pregnancy week, trimester, and baby's developmental stage — at week 20, your baby is roughly the size of a banana and you're at the halfway point of a typical 40-week pregnancy. This calculator tracks gestational age using Naegele's Rule per ACOG guidelines and maps each week to a size comparison and developmental milestone from week 4 through week 40.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Estimate Means */}
+## What Your Estimate Means
+
+This pregnancy calculator provides a **week-by-week developmental timeline** showing where you are in your pregnancy and what's happening with your baby at each stage. While our [Due Date Calculator](/calculators/health/due-date-calculator) focuses on estimating the delivery date itself, this tool is designed for ongoing tracking — giving you a snapshot of gestational age, trimester progress, and fetal development at any point during pregnancy.
+
+The calculator displays your current gestational week and day (e.g., "Week 20, Day 3"), your trimester with a visual progress gauge, and a complete development table covering weeks 4 through 40. Each week includes a fruit-size comparison — a widely used reference endorsed by organizations like the American Pregnancy Association — so you can visualize your baby's growth in tangible terms. For example, at week 12 your baby is the size of a lime with fully formed fingers and toes, while at week 24 (the viability milestone) the baby has reached the size of an ear of corn.
+
+You also get a key dates table listing the most important milestones: estimated conception, end of first trimester, anatomy scan window (week 20), viability (week 24), third trimester start, full term (week 37), and your estimated due date. These dates help you plan prenatal appointments and screening tests that are gestational-age-dependent.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the first day of your last menstrual period (LMP).** This is the date your most recent period started — not the date it ended or the date you believe you conceived. Gestational age is always counted from the LMP, which is the standard reference point used by healthcare providers worldwide.
+
+2. **Select your average cycle length.** The default is 28 days, which is the clinical standard. If your cycles regularly run shorter (21-27 days) or longer (29-35 days), selecting the correct length adjusts all calculations. A 35-day cycle pushes your due date 7 days later and shifts all milestone dates accordingly.
+
+3. **Review your results.** The calculator immediately shows your current gestational age, trimester, progress percentage, a week-by-week development table, and key milestone dates. All values update automatically when you change either input. Bookmark or share your results using the shareable URL feature to check back each week as your pregnancy progresses.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Pregnancy dating uses **Naegele's Rule**, the standard method endorsed by the American College of Obstetricians and Gynecologists (ACOG) for estimating due dates when an early ultrasound is not yet available.
+
+**Estimated Due Date (EDD):**
+
+$$\text{EDD} = \text{LMP} + 280 + (\text{Cycle Length} - 28) \text{ days}$$
+
+**Gestational Age:**
+
+$$\text{Gestational Age (days)} = \text{Today} - \text{LMP}$$
+
+$$\text{Weeks} = \lfloor \text{days} \div 7 \rfloor, \quad \text{Days} = \text{days} \mod 7$$
+
+**Estimated Conception Date:**
+
+$$\text{Conception} = \text{LMP} + (\text{Cycle Length} - 14) \text{ days}$$
+
+**Progress Percentage:**
+
+$$\text{Progress} = \frac{\text{Days Elapsed}}{\text{Total Days (280 + adjustment)}} \times 100$$
+
+Where:
+
+- **LMP** = first day of the last menstrual period
+- **280 days** = standard gestational period (40 weeks from LMP)
+- **Cycle Length** = average menstrual cycle in days (default: 28)
+- **14 days** = assumed luteal phase length (constant across cycle lengths)
+
+The 280-day figure assumes ovulation on day 14 of a 28-day cycle. For non-standard cycles, ovulation shifts by the same deviation, so $(Cycle Length - 28)$ corrects for this shift. Trimester boundaries follow ACOG definitions: first trimester covers weeks 1-12, second trimester weeks 13-26, and third trimester weeks 27-40.
+
+**Source:** ACOG Committee Opinion No. 700, "Methods for Estimating the Due Date" (May 2017, reaffirmed 2023).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Cycle at Week 20
+
+**Inputs:**
+- Last Menstrual Period: January 1, 2026
+- Cycle Length: 28 days
+- Today's Date: May 21, 2026
+
+**Step-by-step:**
+
+1. Days elapsed since LMP: January 1 to May 21 = 140 days
+2. Gestational age: 140 / 7 = **Week 20, Day 0**
+3. Trimester: Week 20 falls in weeks 13-26 = **Second trimester**
+4. Progress: 140 / 280 = **50%**
+5. Due date: January 1 + 280 = **October 8, 2026**
+6. Baby's size at week 20: **Banana** — anatomy scan milestone
+
+**Interpretation:** You are exactly halfway through your pregnancy. This is typically when the detailed anatomy ultrasound is performed (the "20-week scan"), checking all major organ systems and often revealing the baby's sex. Your baby is approximately 6.5 inches long and weighs about 10 ounces.
+
+### Example 2: Long Cycle, Early Pregnancy
+
+**Inputs:**
+- Last Menstrual Period: March 1, 2026
+- Cycle Length: 35 days
+- Today's Date: April 12, 2026
+
+**Step-by-step:**
+
+1. Days elapsed: March 1 to April 12 = 42 days
+2. Gestational age: 42 / 7 = **Week 6, Day 0**
+3. Trimester: Week 6 falls in weeks 1-12 = **First trimester**
+4. Total gestational days: 280 + (35 - 28) = 287 days
+5. Progress: 42 / 287 = **15%**
+6. Due date: March 1 + 287 = **December 13, 2026**
+7. Baby's size at week 6: **Lentil** — nose, mouth, and ears beginning to form
+
+**Interpretation:** At 6 weeks, a heartbeat may be detectable via transvaginal ultrasound. Because of the longer 35-day cycle, ovulation occurred around cycle day 21 (March 22) rather than day 14, shifting all milestone dates 7 days later than a standard 28-day calculation. The first prenatal blood work and dating ultrasound are typically scheduled between weeks 8 and 10.
+
+{/* Section 10: Key Factors */}
+## Key Factors
+
+**Cycle Length Accuracy** — The cycle length input directly shifts your due date and all milestone dates. If your cycles vary significantly (e.g., ranging from 25 to 35 days), using the average provides a reasonable estimate, but an early ultrasound measurement will be more accurate. Women with irregular cycles should report this at their first prenatal visit so their provider can order a dating ultrasound.
+
+**LMP Date Confidence** — The entire calculation depends on correctly identifying the first day of your last period. Studies show 20-40% of women report inaccurate LMP dates. If you're unsure within a range of several days, note that each day of error shifts your gestational age by one day. A first-trimester ultrasound (before 14 weeks) is accurate to within 5-7 days and is considered more reliable when the LMP is uncertain.
+
+**Developmental Milestones Are Approximate** — The fruit-size comparisons and developmental descriptions represent averages across the general population. Individual babies develop at slightly different rates. Your healthcare provider uses ultrasound measurements — not general charts — to assess whether your baby's growth is on track.
+
+**Gestational Age vs. Fetal Age** — This calculator reports gestational age, which counts from the LMP and is always approximately 2 weeks longer than fetal age (counting from conception). When your doctor says "8 weeks pregnant," the embryo has been developing for about 6 weeks. All standard prenatal scheduling uses gestational age.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **14-day luteal phase** for all women. Actual luteal phases range from 10 to 16 days, introducing a potential error of plus or minus 2 days.
+- Assumes the reported **cycle length is consistent**. Women with cycle variation greater than 7 days should rely on ultrasound dating instead.
+- Developmental milestones are population averages and **do not replace clinical ultrasound** assessment of individual fetal growth.
+- This calculator estimates gestational age — it is **not a substitute for prenatal care**. All dates should be confirmed by a healthcare provider.
+- Size comparisons (fruit analogies) are approximate visual references, not precise measurements.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How is this different from the due date calculator?
+
+The due date calculator focuses on estimating your delivery date and showing trimester boundaries. This pregnancy calculator is designed for ongoing week-by-week tracking — it tells you your current gestational age, what developmental stage your baby is at right now, and maps the entire 40-week journey with size comparisons and milestones. Use the due date calculator to find your EDD, then use this calculator to track your progress week by week.
+
+### Are the fruit size comparisons accurate?
+
+The fruit comparisons are approximate visual references used by the American Pregnancy Association and major obstetric resources to help parents visualize fetal growth. They represent average crown-to-rump or crown-to-heel lengths at each gestational week. Individual babies vary — your healthcare provider uses ultrasound biometry (head circumference, abdominal circumference, femur length) to assess actual growth rather than generalized size charts.
+
+### What happens if my ultrasound dating differs from this calculator?
+
+ACOG recommends using ultrasound-based dating when a first-trimester scan (before 14 weeks) disagrees with the LMP-based date by more than 7 days. If your ultrasound gives you a different gestational age, your provider will likely adjust your due date, which shifts all milestone dates. In that case, you can recalculate by entering the LMP that corresponds to your ultrasound-adjusted due date.
+
+</div>
+
+{/* Section 13: Related Calculators — auto-rendered from spec */}
+
+{/* Section 14: Sources & Methodology */}
+## Sources & Methodology
+
+This calculator implements Naegele's Rule as endorsed by the **American College of Obstetricians and Gynecologists (ACOG)** in Committee Opinion No. 700, "Methods for Estimating the Due Date" (May 2017, reaffirmed 2023). Fetal development milestones and size comparisons are drawn from ACOG patient education resources and the *American Pregnancy Association* week-by-week pregnancy guide. Trimester definitions follow ACOG standards.
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

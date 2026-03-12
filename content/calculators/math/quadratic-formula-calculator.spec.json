@@ -1,0 +1,128 @@
+{
+  "id": "quadratic-formula-calculator",
+  "title": "Quadratic Formula Calculator",
+  "slug": "quadratic-formula-calculator",
+  "category": "math",
+  "subcategory": "algebra",
+  "primaryKeyword": "quadratic formula calculator",
+  "metaTitle": "Quadratic Formula Calculator — Solve ax² + bx + c = 0",
+  "metaDescription": "Solve any quadratic equation instantly. See discriminant, both roots (real or complex), vertex, and axis of symmetry. Step-by-step solution.",
+  "inputs": [
+    {
+      "id": "a",
+      "label": "Coefficient a",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "step": 0.01,
+      "placeholder": "e.g. 1",
+      "helpText": "The coefficient of x²"
+    },
+    {
+      "id": "b",
+      "label": "Coefficient b",
+      "type": "number",
+      "required": true,
+      "defaultValue": -5,
+      "step": 0.01,
+      "placeholder": "e.g. -5",
+      "helpText": "The coefficient of x"
+    },
+    {
+      "id": "c",
+      "label": "Coefficient c",
+      "type": "number",
+      "required": true,
+      "defaultValue": 6,
+      "step": 0.01,
+      "placeholder": "e.g. 6",
+      "helpText": "The constant term"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "x1",
+      "label": "Root x₁",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "x2",
+      "label": "Root x₂",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "discriminant",
+      "label": "Discriminant (Δ)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "rootType",
+      "label": "Nature of Roots",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "vertexX",
+      "label": "Vertex x-coordinate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "vertexY",
+      "label": "Vertex y-coordinate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "axisOfSymmetry",
+      "label": "Axis of Symmetry",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    }
+  ],
+  "formula": "quadratic",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "exponent-calculator",
+    "logarithm-calculator",
+    "percentage-calculator",
+    "triangle-calculator",
+    "standard-deviation-calculator",
+    "mean-median-mode-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Quadratic formula: x = (-b ± √(b²-4ac)) / 2a, derived from completing the square (standard algebraic identity)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Quadratic formula x = (-b ± √(b² - 4ac)) / (2a), derived from completing the square. Documented in CRC Standard Mathematical Tables and Formulae (33rd Edition, CRC Press)",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 79,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "back-to-school"
+}

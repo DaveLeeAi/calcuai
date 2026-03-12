@@ -1,0 +1,169 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A typical 1,200 sq ft ranch-style roof with a 4/12 pitch requires approximately 14.6 roofing squares (1,460 sq ft of shingles) — that is 44 bundles of three-tab shingles at roughly \$1,320–\$2,200 in materials before labor. Steeper roofs need significantly more material: the same footprint at a 12/12 pitch jumps to 19.8 squares due to the 1.414x pitch multiplier. Enter your roof dimensions and pitch below to get your exact square count, bundle estimate, and material cost.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Roofing materials in the United States are measured in **squares** — one square covers exactly 100 square feet of roof surface. This calculator converts your building footprint and roof pitch into the actual roof surface area, then divides by 100 to give you the number of squares needed to order shingles, underlayment, and other materials.
+
+The **pitch multiplier** is what makes roofing math different from simple area measurement. A roof with a 4/12 pitch (rises 4 inches for every 12 inches of horizontal run) has a multiplier of 1.054, meaning the actual surface area is 5.4% larger than the footprint. A steep 12/12 pitch has a multiplier of 1.414 — the roof surface is 41.4% larger than the building footprint. Ignoring pitch leads to significant material shortages on anything steeper than 3/12.
+
+The **bundle count** translates squares into what you actually purchase. Standard three-tab asphalt shingles require 3 bundles per square. Architectural (dimensional) shingles vary by manufacturer but typically need 3–4 bundles per square depending on the product line. Always check the coverage printed on the bundle wrapper — it overrides any rule of thumb. For related area calculations, try our [Square Footage Calculator](/calculators/construction/square-footage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your roof length** — measure the longest horizontal dimension of the roof section at the eave line (the bottom edge). For a simple gable roof, this is the full length of the house along the ridge. Measure in feet from outside wall to outside wall.
+
+2. **Enter your roof width** — this is the horizontal distance from the eave to the ridge (half the building width for a symmetrical gable). For a hip roof, measure from eave to ridge along the slope direction. If you cannot access the roof, measure the building width on the ground and divide by 2 for a gable roof.
+
+3. **Select the roof pitch** — pitch is expressed as rise over 12 inches of run (e.g., 4/12 means 4 inches of rise per 12 inches of horizontal run). Check your building plans, use a pitch gauge, or hold a level against the rafter and measure the rise at the 12-inch mark. Common residential pitches range from 3/12 (low slope) to 12/12 (45-degree).
+
+4. **Set the number of roof sections** — a simple gable roof has 2 identical sections. A hip roof has 4 sections (2 triangles + 2 trapezoids). Enter the count for identical sections and run separately for differently sized sections.
+
+5. **Adjust the waste factor** — the default 10% covers normal cutting waste around ridges, valleys, hips, and edges. Increase to 15% for complex roofs with many valleys, dormers, or skylights. Simple rectangular sections with no penetrations can use 7%.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Roofing area is calculated by multiplying the flat (plan-view) area of each roof section by a pitch factor derived from the Pythagorean theorem.
+
+**Roof surface area:**
+
+$$A_{\text{roof}} = L \times W \times F_{\text{pitch}}$$
+
+**Pitch factor (multiplier):**
+
+$$F_{\text{pitch}} = \frac{\sqrt{\text{rise}^2 + 12^2}}{12}$$
+
+**Roofing squares:**
+
+$$\text{Squares} = \frac{A_{\text{roof}} \times (1 + \text{Waste} \%)}{100}$$
+
+**Bundle count:**
+
+$$\text{Bundles} = \text{Squares} \times \text{Bundles per Square}$$
+
+Where:
+
+- **L** = roof section length at the eave line (feet)
+- **W** = horizontal run from eave to ridge (feet)
+- **F_pitch** = pitch multiplier (dimensionless) — converts flat area to sloped surface area
+- **rise** = vertical rise in inches per 12 inches of horizontal run
+- **Bundles per Square** = 3 for standard three-tab shingles; 3–4 for architectural shingles (check manufacturer specs)
+
+Common pitch factors: 3/12 = 1.031, 4/12 = 1.054, 6/12 = 1.118, 8/12 = 1.202, 10/12 = 1.302, 12/12 = 1.414.
+
+**Source:** Pitch factor formula derived from the Pythagorean theorem as published in the *Gable Roof Rafter Calculator* methodology by the National Roofing Contractors Association (NRCA). Shingle coverage rates per manufacturer specifications (GAF, CertainTeed, Owens Corning).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Ranch House — 40 x 30 ft Footprint, 4/12 Pitch
+
+A single-story ranch with a simple gable roof. The building is 40 feet long and 30 feet wide. Each roof section runs from the eave to the ridge — a horizontal run of 15 feet (half the building width).
+
+**Inputs:**
+- Roof Length: 40 ft
+- Roof Width (run): 15 ft
+- Pitch: 4/12
+- Sections: 2 (gable roof)
+- Waste Factor: 10%
+- Shingle Type: Three-tab (3 bundles/square)
+
+**Step-by-step:**
+
+1. Calculate pitch factor: sqrt(4^2 + 12^2) / 12 = sqrt(16 + 144) / 12 = sqrt(160) / 12 = 12.649 / 12 = **1.054**
+2. Flat area per section: 40 x 15 = **600 sq ft**
+3. Sloped area per section: 600 x 1.054 = **632.4 sq ft**
+4. Total sloped area (2 sections): 632.4 x 2 = **1,264.9 sq ft**
+5. Add 10% waste: 1,264.9 x 1.10 = **1,391.4 sq ft**
+6. Convert to squares: 1,391.4 / 100 = **13.9 squares** (round up to 14)
+7. Bundle count: 14 x 3 = **42 bundles**
+8. Cost estimate: 42 x \$30–$50 = **$1,260–\$2,100** in shingles
+
+**Interpretation:** A 1,200 sq ft footprint ranch with a mild 4/12 pitch needs 14 squares of shingles. The pitch adds only 5.4% to the flat area — a manageable increase. At 42 bundles, this is roughly two pallet loads. Budget \$3,000–\$6,000 for full materials including underlayment, ridge caps, flashing, and nails, or \$7,000–\$12,000 installed by a contractor.
+
+### Example 2: Steep Colonial — 30 x 30 ft Footprint, 12/12 Pitch
+
+A two-story colonial with a steeply pitched gable roof. Building footprint is 30 x 30. Each roof section has a 15-foot horizontal run from eave to ridge.
+
+**Inputs:**
+- Roof Length: 30 ft
+- Roof Width (run): 15 ft
+- Pitch: 12/12
+- Sections: 2 (gable roof)
+- Waste Factor: 15% (steep roofs create more cutting waste)
+- Shingle Type: Architectural (4 bundles/square)
+
+**Step-by-step:**
+
+1. Calculate pitch factor: sqrt(12^2 + 12^2) / 12 = sqrt(144 + 144) / 12 = sqrt(288) / 12 = 16.971 / 12 = **1.414**
+2. Flat area per section: 30 x 15 = **450 sq ft**
+3. Sloped area per section: 450 x 1.414 = **636.3 sq ft**
+4. Total sloped area (2 sections): 636.3 x 2 = **1,272.6 sq ft**
+5. Add 15% waste: 1,272.6 x 1.15 = **1,463.5 sq ft**
+6. Convert to squares: 1,463.5 / 100 = **14.6 squares** (round up to 15)
+7. Bundle count: 15 x 4 = **60 bundles**
+8. Cost estimate: 60 x \$35–$55 = **$2,100–\$3,300** in shingles
+
+**Interpretation:** Despite a smaller footprint than Example 1, this steep 12/12 pitch roof requires more material. The 1.414 pitch factor adds 41.4% to the flat area. Steep roofs also require specialized safety equipment and take longer to install, increasing labor costs by 20–40%. Budget \$10,000–\$18,000 fully installed for a roof this steep.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Roof pitch is the dominant variable.** Moving from a 4/12 to an 8/12 pitch on the same footprint increases material needs by 14% (from a 1.054 to a 1.202 multiplier). A 12/12 pitch requires 34% more material than a 4/12 pitch. Always measure or verify pitch before ordering — guessing wrong by even two increments causes significant over- or under-ordering.
+
+**Roof complexity multiplies waste.** A simple gable roof with two rectangular planes wastes 5–8% of material on edge cuts. A complex roof with valleys, dormers, skylights, and hip ridges can waste 15–20%. Each valley requires shingles to be cut at an angle, and the offcuts are often too small to reuse. Count your valleys, hips, and penetrations before setting the waste factor.
+
+**Shingle type changes bundle math.** Three-tab shingles reliably cover 33.3 sq ft per bundle (3 bundles per square). Architectural shingles vary: GAF Timberline HDZ covers 33.3 sq ft per bundle, but some premium lines cover only 25 sq ft per bundle (4 bundles per square). Always check the sq ft coverage on the bundle wrapper before calculating your order.
+
+**Underlayment and accessories add cost.** Shingles are only part of the material list. Budget for synthetic underlayment (\$50–\$75 per roll covering 10 squares), ice and water shield for eaves and valleys (\$70–\$100 per roll covering 2 squares), ridge caps (\$30–\$60 per bundle covering 20–35 linear feet), drip edge flashing (\$5–\$10 per 10-foot piece), and roofing nails (2–3 lbs per square).
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **rectangular roof sections**. Complex shapes like hip triangles and trapezoids are approximated by treating them as rectangles and adjusting section count. For precise hip roof calculations, measure each plane individually.
+- Pitch factor assumes a **uniform slope** across the entire section. Roof sections with variable pitch (such as mansard or gambrel roofs) require separate calculations for each pitch zone.
+- Bundle counts use **standard coverage rates**: 3 bundles per square for three-tab, 3–4 for architectural. Always verify with manufacturer packaging — some premium products have different coverage.
+- **Cost estimates** reflect 2026 U.S. retail shingle pricing only. Does not include underlayment, flashing, ridge caps, nails, ventilation, or labor. Full installation typically costs 2–3x the shingle material cost.
+- Does not account for **tear-off of existing roofing**. Most jurisdictions allow a maximum of two shingle layers before tear-off is required (IRC Section R907.3). Tear-off adds \$1,000–\$3,000 for a typical residential roof.
+- Waste factor is **user-adjustable** and defaults to 10%. Complex roofs with multiple dormers or valleys may need 15–20%.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many bundles of shingles do I need per square?
+
+Three bundles of standard three-tab asphalt shingles cover one roofing square (100 sq ft). Architectural (dimensional) shingles typically require 3 to 4 bundles per square depending on the manufacturer and product line. For example, GAF Timberline HDZ uses 3 bundles per square, while some premium designer shingles need 4–5 bundles. Always check the coverage specification printed on the bundle — it lists exact square footage per bundle, which overrides any general rule.
+
+### How do I measure roof pitch from the ground?
+
+Use a speed square and a level from inside the attic against a rafter, or measure from the ground using a smartphone inclinometer app aimed at the roof edge. From inside the attic, hold a level horizontally against the bottom of a rafter so it extends 12 inches outward, then measure vertically from the end of the level up to the rafter — that measurement in inches is your rise (e.g., 6 inches = 6/12 pitch). If you cannot access the attic, check original building plans or hire a roofer for a free estimate, which always includes pitch measurement.
+
+### How much does a new roof cost in 2026?
+
+A new asphalt shingle roof costs \$5,000–\$12,000 for a typical 1,500 sq ft home, or roughly \$3.50–\$8.00 per square foot installed. Materials (shingles, underlayment, flashing, nails) account for 35–45% of the total; labor accounts for 55–65%. Architectural shingles cost 20–30% more than three-tab but last 25–30 years versus 15–20 years. Metal roofing costs \$8–\$14 per square foot installed. Prices vary by region — coastal and high-wind zones cost 10–20% more due to code-required wind-rated shingles and additional fastening.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the Pythagorean theorem to derive pitch factors, a method standardized by the **National Roofing Contractors Association (NRCA)** in their *Roofing and Waterproofing Manual*. Shingle coverage rates (3 bundles per square for three-tab, 3–4 for architectural) follow manufacturer specifications from **GAF**, **CertainTeed**, and **Owens Corning**. The one-square-equals-100-sq-ft standard is the U.S. roofing industry convention maintained by the NRCA. Maximum shingle layer requirements reference the **International Residential Code (IRC) Section R907.3**. Cost benchmarks reflect 2026 national averages from **HomeAdvisor** and **RSMeans** construction cost data.
+
+{/* Section 17: Disclaimer — auto-rendered */}

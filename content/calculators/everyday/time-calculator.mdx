@@ -1,0 +1,133 @@
+---
+title: "Time Calculator"
+description: "Add or subtract hours, minutes, and seconds. Get results in HH:MM:SS format, decimal hours, and total minutes."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Add 2 hours 30 minutes to 1 hour 45 minutes and you get exactly 4 hours 15 minutes — or 4.25 decimal hours, or 255 total minutes. This calculator performs time arithmetic in hours, minutes, and seconds, giving you the result in HH:MM:SS format plus decimal equivalents for timesheets, project tracking, and scheduling.
+
+</section>
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The result shows your total time in three formats: HH:MM:SS (standard clock notation), decimal hours (what payroll systems use), and total minutes. This matters because most timesheet software expects decimal hours — not clock time. For example, 7 hours 45 minutes is 7.75 decimal hours, not 7.45.
+
+The calculator also handles subtraction, so you can find the difference between two time durations without manually borrowing minutes from hours. For converting between time zones instead of adding durations, use the [Time Zone Converter](/calculators/everyday/time-zone-converter). To calculate hours worked from a clock-in and clock-out time, use the [Hours Calculator](/calculators/everyday/hours-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Time 1** — type the hours, minutes, and seconds for the first duration. For example, 2 hours 30 minutes 0 seconds.
+2. **Choose an operation** — select "Add" to combine two durations or "Subtract" to find the difference.
+3. **Enter Time 2** — type the hours, minutes, and seconds for the second duration. For example, 1 hour 45 minutes 0 seconds.
+4. **Read the result** — the calculator instantly shows the answer in HH:MM:SS, decimal hours, total minutes, and total seconds.
+
+If the subtraction result is negative (Time 2 is larger than Time 1), the result displays with a negative sign.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{totalSeconds} = h \times 3600 + m \times 60 + s
+$$
+
+Convert both time values to total seconds, then add or subtract:
+
+$$
+\text{result} = \text{totalSeconds}_1 \pm \text{totalSeconds}_2
+$$
+
+Convert back to HH:MM:SS:
+
+$$
+h = \left\lfloor \frac{|\text{result}|}{3600} \right\rfloor, \quad m = \left\lfloor \frac{|\text{result}| \bmod 3600}{60} \right\rfloor, \quad s = |\text{result}| \bmod 60
+$$
+
+Where:
+- **$h$** = hours, **$m$** = minutes, **$s$** = seconds
+- **3600** = seconds per hour (60 × 60)
+- **$\lfloor x \rfloor$** = floor function (round down to integer)
+
+To convert to decimal hours: $\text{decimalHours} = \text{totalSeconds} \div 3600$
+
+*Source: International System of Units (SI) — sexagesimal time division. 1 hour = 60 minutes = 3600 seconds.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Adding Two Durations — Meeting Blocks
+
+You have a 1-hour 45-minute morning meeting and a 2-hour 30-minute afternoon workshop. How much total meeting time is that?
+
+**Step 1:** Convert to total seconds
+- Time 1: 1 × 3600 + 45 × 60 + 0 = 6,300 seconds
+- Time 2: 2 × 3600 + 30 × 60 + 0 = 9,000 seconds
+
+**Step 2:** Add
+- Result: 6,300 + 9,000 = 15,300 seconds
+
+**Step 3:** Convert back
+- Hours: ⌊15,300 / 3600⌋ = 4
+- Remaining: 15,300 − 14,400 = 900 seconds
+- Minutes: ⌊900 / 60⌋ = 15
+- Seconds: 0
+
+**Result:** 04:15:00 = 4.25 decimal hours
+
+### Example 2: Subtracting Durations — Remaining Time
+
+You allocated 8 hours to a project and have spent 5 hours 20 minutes. How much time remains?
+
+**Step 1:** Convert to seconds
+- Time 1: 8 × 3600 = 28,800
+- Time 2: 5 × 3600 + 20 × 60 = 19,200
+
+**Step 2:** Subtract
+- Result: 28,800 − 19,200 = 9,600 seconds
+
+**Step 3:** Convert
+- Hours: 2, Minutes: 40, Seconds: 0
+
+**Result:** 02:40:00 = 2.6667 decimal hours — you have 2 hours 40 minutes left.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **Sexagesimal vs. decimal confusion.** 7 hours 30 minutes is 7.5 decimal hours, not 7.30. The most common timesheet error is treating clock minutes as decimal fractions.
+2. **Seconds matter for precision.** For payroll rounding, the FLSA allows employers to round to the nearest 5, 6, or 15 minutes, but the calculator gives you exact seconds so you can decide how to round.
+3. **Negative results.** Subtracting a larger time from a smaller one produces a negative result. The calculator displays this clearly with a minus sign. Spreadsheet programs like Excel cannot display negative times by default and show `#####` errors — you need the 1904 date system or a custom formula like `TEXT(ABS(A1-B1),"h:mm")` with a separate sign indicator.
+4. **24-hour vs. 12-hour format.** The 24-hour clock runs from 00:00 to 23:59, eliminating AM/PM ambiguity entirely. 13:00 = 1:00 PM, 18:30 = 6:30 PM, 00:00 = midnight. Military and aviation use a no-colon format (0001 through 2400) called "military time" to prevent miscommunication — a medication order for "0800" is unambiguous, whereas "8:00" could be misread as AM or PM in a high-pressure healthcare setting.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Operates on pure time durations (not clock times or dates)
+- Maximum input is 9,999 hours per field — suitable for project totals
+- Does not account for time zones, daylight saving, or calendar dates
+- Seconds are rounded to the nearest whole number
+
+## Frequently Asked Questions
+
+### How do I convert hours and minutes to decimal hours?
+
+Divide the minutes by 60 and add to the hours. For example, 3 hours 45 minutes = 3 + (45/60) = 3.75 decimal hours. This is the format most payroll and timesheet systems require.
+
+### What is the difference between the Time Calculator and the Hours Calculator?
+
+The Time Calculator adds or subtracts two arbitrary time durations (e.g., 2h30m + 1h45m). The Hours Calculator converts a clock-in and clock-out time (e.g., 9:00 AM to 5:00 PM) into total hours worked, with optional break deduction. Use the Time Calculator for duration math, and the Hours Calculator for timesheets.
+
+### Can I add more than two time values?
+
+This calculator handles two values at a time. To add three or more, add the first two, note the result, then add the next value to that result. For example: (2:30 + 1:45 = 4:15) then (4:15 + 0:50 = 5:05).
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator performs arithmetic on time values by converting all inputs to a common unit (seconds), performing the addition or subtraction, then converting back to hours, minutes, and seconds. Negative results are displayed with a minus sign. The calculator handles carrying — for example, 2 hours 45 minutes plus 30 minutes correctly yields 3 hours 15 minutes rather than 2 hours 75 minutes.

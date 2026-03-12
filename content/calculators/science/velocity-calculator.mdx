@@ -1,0 +1,142 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A car traveling 100 kilometers in 1.5 hours has an average speed of 66.67 km/h (18.52 m/s, 41.42 mph). This velocity calculator solves for any one of the three kinematic variables — speed, distance, or time — when you provide the other two. Enter any pair of values and get instant results with automatic unit conversions between m/s, km/h, and mph for physics coursework, engineering, athletics, and everyday speed questions.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The velocity equation is the most fundamental relationship in kinematics: speed equals distance divided by time. This calculator rearranges that single equation to solve for whichever variable you are missing. Provide distance and time, and it returns speed. Provide speed and time, and it returns distance. Provide speed and distance, and it returns the time required.
+
+The results represent average velocity over the given distance or time interval. A runner completing a 10,000-meter race in 26 minutes and 17.53 seconds has an average speed of 6.34 m/s (22.82 km/h), even though their instantaneous speed varied throughout the race. For constant-velocity problems — a satellite in stable orbit, a car on cruise control, light in a vacuum — the average and instantaneous speeds are identical.
+
+Unit conversions are provided automatically: m/s, km/h, and mph. For related physics calculations, the [Energy Calculator](/calculators/science/energy-calculator) uses velocity as an input for kinetic energy, and the [Density Calculator](/calculators/science/density-calculator) covers mass-volume relationships.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the two values you know.** You need exactly two of the three quantities: Speed (m/s), Distance (m), or Time (s). Check your problem statement, measurement data, or stopwatch readings.
+2. **Enter the first known value** in its corresponding field. Use SI base units — meters per second for speed, meters for distance, seconds for time. Convert before entering: 1 km = 1,000 m, 1 hour = 3,600 s, 1 mile = 1,609.344 m.
+3. **Enter the second known value** in its field. Leave the third field empty.
+4. **Read the results.** The calculator solves for the missing value and displays all three quantities along with speed unit conversions (m/s, km/h, mph).
+5. **Verify reasonableness.** A typical walking speed is about 1.4 m/s (5 km/h), a car on the highway moves at roughly 30 m/s (108 km/h), and the speed of sound in air is 343 m/s (1,235 km/h). If your result falls far outside the expected range, check your unit conversions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Speed from Distance and Time
+
+$$v = \frac{d}{t}$$
+
+Where:
+
+- **v** = speed (velocity magnitude), in meters per second (m/s)
+- **d** = distance traveled, in meters (m)
+- **t** = time elapsed, in seconds (s)
+
+### Distance from Speed and Time
+
+$$d = v \times t$$
+
+### Time from Speed and Distance
+
+$$t = \frac{d}{v}$$
+
+These three forms are algebraic rearrangements of the same equation. The relationship is linear: doubling the speed while holding time constant doubles the distance; doubling the time while holding speed constant also doubles the distance. This linearity holds for all constant-velocity motion and for average velocity over any interval.
+
+### Unit Conversions
+
+$$1 \text{ m/s} = 3.6 \text{ km/h} = 2.23694 \text{ mph}$$
+
+To convert m/s to km/h, multiply by 3.6. To convert m/s to mph, multiply by 2.23694. These factors derive from the definitions: 1 km = 1,000 m, 1 hour = 3,600 s, and 1 mile = 1,609.344 m.
+
+**Source:** The distance-speed-time relationship was formalized by Galileo Galilei in *Discorsi e dimostrazioni matematiche intorno a due nuove scienze* (1638) and systematized in Isaac Newton's *Philosophiae Naturalis Principia Mathematica* (1687). Unit definitions follow NIST Special Publication 330 (2019 Edition).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: How Fast Is a 100m Sprinter?
+
+Usain Bolt set the world record for the 100-meter dash at 9.58 seconds (Berlin, 2009). What was his average speed?
+
+**Step-by-step:**
+
+1. Known values: d = **100 m**, t = **9.58 s**
+2. Apply the formula: v = d / t = 100 / 9.58 = **10.4384 m/s**
+3. Convert to km/h: 10.4384 × 3.6 = **37.578 km/h**
+4. Convert to mph: 10.4384 × 2.23694 = **23.350 mph**
+
+**Result:** Bolt's average speed was **10.44 m/s** (37.58 km/h, 23.35 mph).
+
+**Practical interpretation:** His peak instantaneous speed during the race reached approximately 12.27 m/s (44.17 km/h) between the 60- and 80-meter marks. The average is lower because it includes the acceleration phase from the blocks, where speed starts at zero. In this calculator, enter Distance = 100 and Time = 9.58 to see the full result.
+
+### Example 2: How Far Does a Plane Fly in 3 Hours?
+
+A Boeing 747 cruises at approximately 250 m/s (900 km/h). How far does it travel in 3 hours?
+
+**Step-by-step:**
+
+1. Known values: v = **250 m/s**, t = 3 hours = 3 × 3,600 = **10,800 s**
+2. Apply the formula: d = v × t = 250 × 10,800 = **2,700,000 m**
+3. Convert to kilometers: 2,700,000 / 1,000 = **2,700 km**
+4. Convert to miles: 2,700 / 1.609344 = **1,677.7 miles**
+
+**Result:** The aircraft covers **2,700 km** (1,677.7 miles) in 3 hours.
+
+**Practical interpretation:** This is roughly the distance from New York to Denver, or from London to Athens. In practice, headwinds or tailwinds can shift ground speed by 50-100 km/h, meaning the actual distance covered varies. Jet streams at cruising altitude (250-300 km/h tailwinds) can push effective ground speed above 1,100 km/h on eastbound transatlantic routes.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Air resistance increases with the square of speed.** At low speeds, air drag is negligible, but it grows rapidly. A cyclist at 10 m/s faces four times the air resistance of a cyclist at 5 m/s. This means maintaining constant speed requires exponentially more energy as speed increases — which is why fuel consumption rises sharply at highway speeds above 100 km/h.
+
+**Average velocity vs. instantaneous velocity.** This calculator computes average velocity over the entire distance or time interval. A car that accelerates from 0 to 100 km/h over 10 seconds has an average speed of roughly 50 km/h during that interval, but its instantaneous speed at the end is 100 km/h. For acceleration problems, you need the kinematic equations of motion (v = v0 + at), not the simple v = d/t formula.
+
+**Reference frame matters.** A passenger walking at 1.5 m/s toward the front of a train moving at 30 m/s has a ground speed of 31.5 m/s. All velocity measurements are relative to a chosen reference frame. This calculator assumes a single, consistent reference frame for all inputs.
+
+**Measurement precision limits result accuracy.** Timing a 100-meter dash to the nearest second (10 s) gives v = 10.0 m/s. Timing it to the nearest hundredth (9.58 s) gives v = 10.44 m/s — a 4.4% difference. Your result is only as precise as your least precise input.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Constant velocity assumed.** The formula v = d/t gives average speed. It does not account for acceleration, deceleration, or stops during the journey.
+- **Straight-line (scalar) calculation.** This calculator computes speed (scalar), not velocity (vector). It does not account for direction or displacement vs. total path length.
+- **Non-relativistic speeds only.** At speeds approaching the speed of light (299,792,458 m/s), special relativity applies and the classical formula becomes inaccurate. For everyday speeds (up to thousands of km/h), the error is negligible.
+- **Positive values only.** All inputs must be positive. Negative velocity (indicating direction) is not modeled.
+- **SI units required.** Enter values in meters, seconds, and m/s. Convert from other units before entering.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between speed and velocity?
+
+Speed is a scalar quantity — it measures how fast something moves regardless of direction (e.g., 30 m/s). Velocity is a vector quantity — it includes both magnitude and direction (e.g., 30 m/s due north). A car driving in a circle at a constant 60 km/h has constant speed but continuously changing velocity because its direction changes at every point. This calculator computes speed (scalar), which is the magnitude of velocity.
+
+### How do I convert m/s to km/h?
+
+Multiply meters per second by 3.6 to get kilometers per hour. The conversion factor comes from the unit definitions: 1 km = 1,000 m and 1 hour = 3,600 s, so 1 m/s = (1/1,000) km / (1/3,600) h = 3.6 km/h. For example, 10 m/s = 36 km/h, and 100 km/h = 27.78 m/s. A useful mental shortcut: divide km/h by 4, then add 10% — for instance, 100 km/h / 4 = 25, plus 10% = 27.5 m/s (close to the exact 27.78).
+
+### What is the speed of sound?
+
+The speed of sound in dry air at 20 degrees Celsius is 343 m/s (1,235 km/h, 767 mph, Mach 1). This speed varies with temperature: at 0 degrees C it drops to 331 m/s, and at 35 degrees C it rises to 351 m/s. The speed of sound increases by approximately 0.6 m/s for each 1 degree C increase in air temperature. In water, sound travels at about 1,480 m/s — over four times faster than in air. In steel, it reaches approximately 5,960 m/s.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes velocity using v = d/t (distance divided by time) and solves for any unknown variable (velocity, distance, or time) given the other two. Unit conversions between m/s, km/h, mph, ft/s, and knots use fixed conversion factors. The calculator also computes acceleration-based velocity using v = v₀ + at when initial velocity and acceleration are provided.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

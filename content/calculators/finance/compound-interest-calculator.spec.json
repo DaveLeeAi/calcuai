@@ -1,0 +1,179 @@
+{
+  "id": "compound-interest-calculator",
+  "title": "Compound Interest Calculator",
+  "slug": "compound-interest-calculator",
+  "category": "finance",
+  "subcategory": "investment",
+  "primaryKeyword": "compound interest calculator",
+  "metaTitle": "Compound Interest Calculator — Free Savings & Investment Tool",
+  "metaDescription": "Calculate how your savings grow with compound interest. See future value, total interest earned, and year-by-year growth charts. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "initialDeposit",
+      "label": "Initial Deposit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$"
+    },
+    {
+      "id": "monthlyContribution",
+      "label": "Monthly Contribution",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 100000,
+      "step": 50,
+      "prefix": "$"
+    },
+    {
+      "id": "annualRate",
+      "label": "Annual Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 50,
+      "step": 0.1,
+      "helpText": "The S&P 500 has averaged approximately 10% nominal (7% inflation-adjusted) annual returns since 1926."
+    },
+    {
+      "id": "compoundingFrequency",
+      "label": "Compounding Frequency",
+      "type": "select",
+      "required": true,
+      "defaultValue": "12",
+      "options": [
+        {
+          "value": "1",
+          "label": "Annually"
+        },
+        {
+          "value": "2",
+          "label": "Semi-Annually"
+        },
+        {
+          "value": "4",
+          "label": "Quarterly"
+        },
+        {
+          "value": "12",
+          "label": "Monthly"
+        },
+        {
+          "value": "365",
+          "label": "Daily"
+        }
+      ]
+    },
+    {
+      "id": "years",
+      "label": "Time Period (Years)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 20,
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "helpText": "The number of years you plan to save or invest."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "futureValue",
+      "label": "Future Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Projected total value of your investment including all contributions and compounded returns"
+    },
+    {
+      "id": "breakdown",
+      "label": "Growth Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#F39C12"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Investment Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "growthOverTime",
+      "label": "Growth Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
+      }
+    }
+  ],
+  "formula": "compound-interest",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "investment-calculator",
+    "savings-calculator",
+    "retirement-calculator",
+    "cd-calculator",
+    "mortgage-calculator",
+    "roi-calculator",
+    "401k-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "CFA Institute",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard compound interest formula with periodic contributions (A = P(1+r/n)^(nt) + PMT×[((1+r/n)^(nt)-1)/(r/n)])",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "investment-calculator",
+    "savings-calculator"
+  ],
+  "qualityScore": 100,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "annuity",
+    "compound-interest",
+    "effective-rate",
+    "future-value",
+    "interest-rate",
+    "principal"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

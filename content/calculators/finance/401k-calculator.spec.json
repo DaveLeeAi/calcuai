@@ -1,0 +1,249 @@
+{
+  "id": "401k-calculator",
+  "title": "401(k) Calculator",
+  "slug": "401k-calculator",
+  "category": "finance",
+  "subcategory": "retirement",
+  "primaryKeyword": "401k calculator",
+  "metaTitle": "401(k) Calculator — Free Retirement Savings Projector",
+  "metaDescription": "Estimate your 401(k) balance at retirement with employer match, salary growth, and compound returns. See year-by-year projections. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "currentAge",
+      "label": "Current Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 18,
+      "max": 80,
+      "step": 1
+    },
+    {
+      "id": "retirementAge",
+      "label": "Retirement Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 65,
+      "min": 30,
+      "max": 85,
+      "step": 1
+    },
+    {
+      "id": "currentBalance",
+      "label": "Current 401(k) Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "annualSalary",
+      "label": "Annual Salary",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 75000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "contributionPercent",
+      "label": "Your Contribution (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "helpText": "Percentage of your salary contributed to your 401(k) each year."
+    },
+    {
+      "id": "employerMatchPercent",
+      "label": "Employer Match (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "helpText": "Your employer matches this percentage of your contribution, up to the match limit."
+    },
+    {
+      "id": "employerMatchLimit",
+      "label": "Employer Match Limit (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 6,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "helpText": "Employer matches only on the first X% of your salary. Common: 3–6%."
+    },
+    {
+      "id": "annualReturn",
+      "label": "Expected Annual Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 20,
+      "step": 0.1,
+      "helpText": "Historical average: ~7% real (after inflation) for diversified stock portfolios."
+    },
+    {
+      "id": "annualSalaryIncrease",
+      "label": "Annual Salary Increase",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 15,
+      "step": 0.5,
+      "helpText": "Expected annual raise. U.S. average: ~3% (Bureau of Labor Statistics)."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "projectedBalance",
+      "label": "Projected Balance at Retirement",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalContributions",
+      "label": "Your Total Contributions",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalEmployerMatch",
+      "label": "Total Employer Match",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalGrowth",
+      "label": "Total Investment Growth",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "401(k) Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Balance Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#F39C12",
+          "#9B59B6"
+        ]
+      }
+    },
+    {
+      "id": "growthOverTime",
+      "label": "Growth Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Age",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#F39C12"
+        ]
+      }
+    },
+    {
+      "id": "yearByYear",
+      "label": "Year-by-Year Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "age",
+          "label": "Age"
+        },
+        {
+          "key": "salary",
+          "label": "Salary",
+          "format": "currency"
+        },
+        {
+          "key": "contribution",
+          "label": "Your Contribution",
+          "format": "currency"
+        },
+        {
+          "key": "match",
+          "label": "Employer Match",
+          "format": "currency"
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "format": "currency"
+        },
+        {
+          "key": "balance",
+          "label": "Balance",
+          "format": "currency"
+        }
+      ]
+    }
+  ],
+  "formula": "401k-growth",
+  "features": [
+    "chart"
+  ],
+  "relatedCalculators": [
+    "retirement-calculator",
+    "compound-interest-calculator",
+    "investment-calculator",
+    "savings-calculator",
+    "tax-bracket-calculator",
+    "income-tax-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "IRS Publication 560 / IRS.gov 401(k) contribution limits",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "401(k) growth with employer match: FV = sum of (contributions + match) compounded annually at expected return rate, subject to IRS annual limits ($23,500 under 50; $31,000 for 50+ in 2025)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "retirement-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "compound-interest",
+    "future-value"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

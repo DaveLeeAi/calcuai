@@ -1,0 +1,232 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Estimate your body fat percentage using the U.S. Navy circumference method from just three or four body measurements. A 5'11" male with a 34-inch waist and 15-inch neck carries approximately 17.7% body fat, placing him in the "Fitness" category per ACE guidelines. Females require an additional hip measurement. Enter your numbers below to see your body fat percentage, fitness classification, and lean-versus-fat body composition breakdown.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Your body fat percentage represents the proportion of your total body weight that consists of adipose tissue. Unlike BMI, which uses only height and weight, this calculator accounts for where you carry your mass — making it a far more meaningful indicator of health and fitness.
+
+The result places you into one of five fitness categories established by the American Council on Exercise (ACE). For males, essential fat is 2-5%, athletes range from 6-13%, fitness is 14-17%, average is 18-24%, and obese is 25% or higher. For females, these ranges shift upward: essential fat is 10-13%, athletes 14-20%, fitness 21-24%, average 25-31%, and obese is 32% or higher. Females carry more essential fat due to reproductive and hormonal functions.
+
+Beyond classification, your body fat percentage helps you set realistic fitness goals. A male at 22% aiming for the "Fitness" category needs to reduce to 17% or below — a meaningful but achievable target. Pair this result with your [BMI Calculator](/calculators/health/bmi-calculator) score and [Lean Body Mass Calculator](/calculators/health/lean-body-mass-calculator) to get a complete picture of your body composition.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your Unit System** — choose Imperial (inches) or Metric (centimeters). All circumference and height measurements must use the same unit system. The calculator defaults to Imperial.
+
+2. **Select your Sex** — the Navy method uses different formulas for males and females. Females require an additional hip measurement, which appears automatically when you select Female.
+
+3. **Measure your Waist Circumference** — wrap a flexible measuring tape around your bare abdomen at navel level. Stand relaxed, exhale normally, and read the tape without pulling it tight. For males, this is the most influential measurement in the formula.
+
+4. **Measure your Neck Circumference** — place the tape just below your larynx (Adam's apple), keeping it level around the entire neck. Tilt your head slightly forward and look straight ahead. A typical male neck measures 14-18 inches.
+
+5. **Enter your Height** — use your most recent accurate height measurement in inches or centimeters. Even half an inch changes the result, so measure without shoes against a flat wall.
+
+6. **Measure your Hip Circumference (females only)** — stand with feet together and wrap the tape around the widest horizontal point of your hips and buttocks. This field appears only when Female is selected.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The U.S. Navy body fat estimation method uses logarithmic equations developed by Hodgdon and Beckett at the Naval Health Research Center in 1984. The military adopted this method because it requires only a measuring tape, making it practical for field assessments of thousands of service members.
+
+**Male formula:**
+
+$$\%BF = 86.010 \times \log_{10}(\text{waist} - \text{neck}) - 70.041 \times \log_{10}(\text{height}) + 36.76$$
+
+**Female formula:**
+
+$$\%BF = 163.205 \times \log_{10}(\text{waist} + \text{hip} - \text{neck}) - 97.684 \times \log_{10}(\text{height}) - 78.387$$
+
+Where:
+
+- **%BF** = estimated body fat percentage
+- **waist** = waist circumference at navel level (inches)
+- **neck** = neck circumference below the larynx (inches)
+- **hip** = hip circumference at widest point (inches, females only)
+- **height** = standing height (inches)
+- **log₁₀** = base-10 logarithm
+
+The male formula relies on the difference between waist and neck circumferences as a proxy for abdominal fat distribution. A larger waist-to-neck ratio indicates higher body fat. The female formula adds hip circumference because women store a greater proportion of fat in the gluteal-femoral region.
+
+For metric inputs (centimeters), the calculator converts to inches internally before applying the formula, since the original regression coefficients were derived from measurements in inches.
+
+The logarithmic structure means that changes at lower body fat levels produce larger percentage shifts than changes at higher levels — a 1-inch waist reduction from 32 to 31 inches has a greater impact on estimated body fat than a reduction from 42 to 41 inches.
+
+**Source:** Hodgdon JA, Beckett MB. "Prediction of percent body fat for U.S. Navy men and women from body circumferences and height." Naval Health Research Center, Report No. 84-29 (men) and 84-11 (women), 1984.
+
+For context on how BMI and body fat percentage relate, including why body fat is a more accurate measure, see our [methodology page on BMI](/methodology/bmi-formula).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Adult Male — Fitness Category
+
+**Inputs:**
+- Sex: Male
+- Waist: 34 inches
+- Neck: 15 inches
+- Height: 71 inches (5'11")
+
+**Step-by-step:**
+
+1. Calculate waist minus neck: 34 - 15 = **19 inches**
+2. Compute $\log_{10}(19)$: **1.27875**
+3. Compute $\log_{10}(71)$: **1.85126**
+4. Apply the male formula:
+   - $86.010 \times 1.27875 = 109.98$
+   - $70.041 \times 1.85126 = 129.65$
+   - $109.98 - 129.65 + 36.76 = \mathbf{17.1\%}$
+
+**Interpretation:** At 17.1% body fat, this male falls in the upper end of the "Fitness" category (14-17%). He carries approximately 30.2 pounds of fat on a roughly 177-pound frame, with 146.8 pounds of lean mass. To reach the "Athletes" category (6-13%), he would need to reduce body fat by at least 4 percentage points — roughly 7 pounds of fat loss while maintaining lean mass. This is an aggressive but achievable 3-6 month goal with structured training and a moderate caloric deficit.
+
+### Example 2: Adult Female — Average Category
+
+**Inputs:**
+- Sex: Female
+- Waist: 32 inches
+- Hip: 40 inches
+- Neck: 13 inches
+- Height: 65 inches (5'5")
+
+**Step-by-step:**
+
+1. Calculate waist + hip - neck: 32 + 40 - 13 = **59 inches**
+2. Compute $\log_{10}(59)$: **1.77085**
+3. Compute $\log_{10}(65)$: **1.81291**
+4. Apply the female formula:
+   - $163.205 \times 1.77085 = 289.01$
+   - $97.684 \times 1.81291 = 177.05$
+   - $289.01 - 177.05 - 78.387 = \mathbf{33.6\%}$
+
+**Interpretation:** At 33.6% body fat, this female is slightly above the "Obese" threshold of 32% per ACE classifications. On a 150-pound frame, this means approximately 50.4 pounds of fat mass and 99.6 pounds of lean mass. A reduction of about 3 pounds of fat — bringing her to roughly 31.5% body fat — would move her into the "Average" category. For context, the average American woman has approximately 32% body fat according to the CDC's National Health and Nutrition Examination Survey (NHANES) data. Her result is close to the population mean.
+
+### Example 3: Athletic Male — Low Body Fat
+
+**Inputs:**
+- Sex: Male
+- Waist: 30 inches
+- Neck: 16 inches
+- Height: 69 inches (5'9")
+
+**Step-by-step:**
+
+1. Calculate waist minus neck: 30 - 16 = **14 inches**
+2. Compute $\log_{10}(14)$: **1.14613**
+3. Compute $\log_{10}(69)$: **1.83885**
+4. Apply the male formula:
+   - $86.010 \times 1.14613 = 98.58$
+   - $70.041 \times 1.83885 = 128.78$
+   - $98.58 - 128.78 + 36.76 = \mathbf{6.6\%}$
+
+**Interpretation:** At 6.6% body fat, this male is in the "Athletes" category (6-13%). This level is typical of competitive athletes in sports where low body fat is advantageous — distance runners, wrestlers at competition weight, or bodybuilders in off-competition condition. Maintaining body fat below 6% long-term is physiologically challenging and not recommended for most people, as essential fat for males is 2-5%. At 165 pounds, this individual carries just 10.9 pounds of fat and 154.1 pounds of lean mass. Tracking changes over time with the [Calorie Calculator](/calculators/health/calorie-calculator) ensures he maintains adequate energy intake to support training.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Measurement technique** — The Navy method's accuracy depends entirely on consistent, correct tape placement. A waist measurement taken 1 inch above the navel versus at the navel can differ by 1-2 inches, shifting the body fat estimate by 1.5-3 percentage points. Always measure at the same anatomical landmarks: navel for waist, just below the larynx for neck, and widest point for hips. Measure on bare skin, not over clothing.
+
+**Hydration and meal timing** — Waist circumference fluctuates 0.5-1.5 inches throughout the day depending on food intake, hydration, and bloating. For consistent tracking, measure first thing in the morning after using the bathroom but before eating or drinking. Sodium-heavy meals the night before can cause water retention that temporarily inflates waist measurements by up to 1 inch.
+
+**Body composition extremes** — The Navy method was validated on active-duty military personnel with typical body compositions. It tends to overestimate body fat in very muscular individuals (bodybuilders, powerlifters) because large neck and chest musculature doesn't adequately offset a muscular, thicker waist. Conversely, it may underestimate body fat in individuals with very little muscle mass (sedentary, elderly) who carry fat primarily in the torso.
+
+**Sex-specific fat distribution** — The female formula accounts for hip fat storage, but women who carry fat predominantly in their arms or upper body may receive less accurate estimates. Similarly, males who store fat primarily in the hips rather than the abdomen — a pattern more common in some ethnic groups — may get underestimated readings with the male formula.
+
+**Age** — Body fat tends to increase with age even at the same weight, as muscle mass naturally declines at a rate of 3-8% per decade after age 30 (sarcopenia). The ACE fitness categories do not adjust for age, so a 55-year-old male at 20% is classified identically to a 25-year-old at 20%, despite being relatively leaner for his age group.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Pulling the measuring tape too tight.** The tape should rest flat against your skin with enough tension to stay in place but without compressing the tissue. Pulling tight can reduce your waist reading by 1-2 inches and underestimate body fat by 2-3 percentage points. If the tape leaves an indentation on your skin, it is too tight.
+
+**Measuring over clothing.** Even a thin T-shirt adds 0.25-0.5 inches to circumference measurements. The formula coefficients assume bare-skin measurements. Always measure directly on skin for accuracy.
+
+**Confusing the waist measurement location.** The Navy method specifies the waist at the navel — not the natural waist (narrowest point above the hips) and not the belt line (which sits lower). Measuring at the natural waist instead of the navel typically produces a reading 1-3 inches smaller, underestimating body fat by 2-5 percentage points.
+
+**Using the wrong neck landmark.** Measure just below the larynx, perpendicular to the long axis of the neck. Measuring too high (at the jaw line) inflates the neck reading, and measuring too low (at the base near the shoulders) captures trapezius muscle mass, both of which distort the result.
+
+**Comparing results across different methods.** A Navy method estimate of 18% body fat is not directly comparable to an 18% reading from a bioelectrical impedance (BIA) scale or a DEXA scan. Each method has different biases and error margins. Track progress using the same method consistently rather than switching between tools.
+
+## Tracking Changes Without Getting Misled
+
+The Navy method's ±3–4% error margin means a single measurement is a rough snapshot, not a precise reading. Its real value is in tracking trends — but only if you understand what the numbers actually tell you.
+
+**Expect 1–2% noise between sessions.** If you measure 19.5% today and 18.8% next week, that is almost certainly measurement variability, not fat loss. Waist circumference fluctuates 0.5–1.5 inches day to day from hydration, digestion, and bloating alone. A 1-inch waist change shifts the male formula result by approximately 1.5 percentage points. Do not celebrate or panic over week-to-week swings — look at the 4-week trend instead.
+
+**Record raw measurements, not just the percentage.** If your body fat percentage dropped from 22% to 20% but your waist grew by 1 inch while your neck grew by 2 inches, the math improved but your body composition may not have. The raw circumference values tell a more honest story than the derived percentage. A shrinking waist with a stable neck is the clearest signal of genuine fat loss.
+
+**Do not compare your Navy method result to a friend's DEXA scan.** Each method has different systematic biases. The Navy method tends to read 2–3 points higher than DEXA for lean individuals and 2–3 points lower for those with central obesity. A Navy result of 18% and a DEXA result of 18% on two different people do not mean they have the same body composition. Pick one method and stick with it.
+
+**Stop chasing a number below 10%.** For males, the Navy method becomes unreliable below approximately 8% body fat because the logarithmic formula compresses at low waist-minus-neck values. Small measurement errors of 0.25 inches can swing the result by 2+ percentage points in this range. If you are training for very low body fat (competition bodybuilding, weight-class sports), switch to skinfold calipers or DEXA for the final cut — the Navy method is too coarse for that resolution.
+
+{/* Section 12: Comparison Table */}
+## Body Fat Measurement Methods Compared
+
+Choosing a body fat measurement method involves trade-offs between accuracy, cost, accessibility, and repeatability. The Navy circumference method used in this calculator is one of several validated approaches:
+
+| Method | Accuracy (± %BF) | Cost | Accessibility | Best For |
+|---|---|---|---|---|
+| **DEXA Scan** | ±1-2% | \$75-150/scan | Medical facilities | Gold-standard clinical measurement |
+| **Hydrostatic Weighing** | ±1.5-2.5% | \$40-75/test | University labs, specialty gyms | Research-grade validation |
+| **US Navy Method** (this calculator) | ±3-4% | Free (tape measure) | Anywhere | Free, repeatable home tracking |
+| **Skinfold Calipers** | ±3-5% | \$10-30 for calipers | Home or gym with trained tester | Affordable, portable, requires practice |
+| **Bioelectrical Impedance (BIA)** | ±4-5% | \$30-200 for scale | Home bathroom scales | Convenient daily weigh-ins |
+| **Bod Pod (ADP)** | ±2-3% | \$45-75/test | University labs, specialty clinics | Non-invasive, no water immersion |
+
+**Interpretation:** DEXA is the clinical gold standard with the lowest error margin, but at \$75-150 per scan it is impractical for frequent monitoring. The Navy method offers a zero-cost alternative with ±3-4% accuracy — sufficient for tracking trends over weeks and months. If your Navy method result says 20% and DEXA says 18%, both agree you are in the "Average" male category. For most fitness goals, consistency matters more than absolute precision: measure the same way each time and track the trend.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes measurements are taken on **bare skin** with a flexible tape at the **specified anatomical landmarks** (navel, below larynx, widest hip point).
+- The formula was validated on **active-duty U.S. Navy personnel** aged 18-55. Accuracy may decrease for populations outside this demographic, including adolescents and adults over 65.
+- Error range is approximately **±3-4 percentage points** compared to hydrostatic weighing, the method used as the reference standard in the original 1984 study.
+- Does not account for **individual variation in fat distribution patterns**, particularly in very muscular or very sedentary individuals.
+- The ACE fitness categories are **not age-adjusted** — a 50-year-old is classified by the same thresholds as a 20-year-old.
+- Metric inputs are **converted to inches** before the formula is applied, since the regression coefficients were derived from imperial measurements.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a healthy body fat percentage?
+
+A healthy body fat percentage ranges from 14-24% for males and 21-31% for females, according to the American Council on Exercise (ACE) fitness classifications. These "Fitness" and "Average" categories represent the range associated with reduced risk of obesity-related diseases. Males below 5% and females below 13% are at the essential fat threshold — going below these levels impairs hormone production, immune function, and organ insulation. The optimal percentage depends on your age, activity level, and goals: a competitive athlete targets 6-13% (male) or 14-20% (female), while general health is well-served at 18-24% (male) or 25-31% (female).
+
+### How accurate is the US Navy body fat calculator?
+
+The US Navy circumference method has an accuracy of approximately ±3-4 percentage points when compared to hydrostatic (underwater) weighing. In the original 1984 validation study by Hodgdon and Beckett, the standard error of estimate was 3.5% for men and 3.7% for women across a sample of over 600 Navy personnel. This means if the calculator estimates your body fat at 20%, your true value likely falls between 16% and 24%. While less precise than DEXA scanning (±1-2%), the Navy method is free, requires no equipment beyond a tape measure, and produces reliable trend data when measurements are taken consistently.
+
+### How often should I measure my body fat?
+
+Measure body fat every 2-4 weeks for meaningful trend data. Weekly measurements are too frequent because natural fluctuations in hydration, food intake, and hormonal cycles can swing circumference readings by 0.5-1 inch, translating to 1-2 percentage points of apparent body fat change. Monthly measurements smooth out these fluctuations and reveal genuine changes from diet and exercise. Always measure at the same time of day — ideally first thing in the morning, before eating, after using the bathroom — to minimize variability. Record your raw measurements (waist, neck, hip) alongside the calculated percentage so you can identify which measurement is driving changes.
+
+### Can body fat percentage be lower than BMI suggests?
+
+Yes — body fat percentage and BMI often diverge significantly because BMI cannot distinguish between muscle and fat. A 6-foot, 210-pound male with a muscular build has a BMI of 28.5 ("Overweight") but may have only 15% body fat, placing him solidly in the "Fitness" category. The reverse also occurs: a sedentary person at a "Normal" BMI of 23 may carry 28% body fat — classified as "Average" and approaching the obese threshold. Research published in the *International Journal of Obesity* found that 29% of people classified as "Normal" by BMI had body fat percentages in the obese range. Use both metrics together with the [BMI Calculator](/calculators/health/bmi-calculator) for a more complete assessment.
+
+### Does body fat percentage change with age?
+
+Body fat percentage increases naturally with age, even if body weight remains constant. After age 30, adults lose approximately 3-8% of their muscle mass per decade through a process called sarcopenia, while fat mass tends to increase. A 25-year-old male at 170 pounds and 15% body fat may weigh the same 170 pounds at 55 but carry 22% body fat due to muscle loss and fat gain. The ACE fitness categories used in this calculator are not age-adjusted, so older adults should interpret their results in the context of age-appropriate benchmarks. The American College of Sports Medicine (ACSM) publishes age-graded body fat percentile tables that provide more nuanced context for adults over 40.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the circumference-based body fat estimation equations published by **Hodgdon JA and Beckett MB** at the Naval Health Research Center in 1984 (Report No. 84-29 for men, 84-11 for women). Fitness classification categories follow the **American Council on Exercise (ACE)** body fat percentage guidelines. Essential fat thresholds reference **Lohman TG, "Advances in Body Composition Assessment" (1992)**. Age-related body composition data draws from the **CDC National Health and Nutrition Examination Survey (NHANES)** and the **American College of Sports Medicine (ACSM)** body composition guidelines.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

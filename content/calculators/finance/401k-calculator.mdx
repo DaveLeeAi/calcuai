@@ -1,0 +1,152 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 30-year-old earning \$75,000 who contributes 10% of salary with a 50% employer match on the first 6% can accumulate approximately \$1.87 million by age 65 at a 7% average annual return. Of that total, roughly \$424,000 comes from your own contributions, \$127,000 from your employer's match, and the remaining \$1.29 million from compound investment growth — meaning more than two-thirds of your retirement balance is money you never directly deposited. Enter your age, salary, contribution rate, and employer match details below to see your personalized 401(k) projection.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This 401(k) calculator projects your retirement account balance by modeling three growth engines simultaneously: your contributions, your employer's matching contributions, and compound investment returns on the combined total. It answers the question every working American asks: "Will my 401(k) be enough to retire on?"
+
+**The employer match is free money that compounds for decades.** A common match structure — 50% on the first 6% of salary — adds 3% of your salary annually. On a \$75,000 salary, that's \$2,250 per year. Over 35 years at 7% growth, that employer match alone grows to roughly \$355,000. Employees who don't contribute at least enough to capture the full match are leaving tens of thousands of dollars on the table. According to Vanguard's How America Saves 2024 report, approximately 25% of 401(k) participants fail to contribute enough to receive the full employer match.
+
+**Annual salary increases amplify the compounding effect.** A 2% annual raise doesn't just increase your paycheck — it increases every future 401(k) contribution and every future employer match. Over 35 years, a \$75,000 salary growing at 2% annually becomes \$149,476, nearly doubling the base. This calculator models that salary growth year by year, so you can see how even modest raises compound into significantly larger retirement contributions over a career. For a broader view of your retirement readiness including Social Security and withdrawal planning, see our [Retirement Calculator](/calculators/finance/retirement-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Current Age and Retirement Age** — these define your investment horizon. The default is 30 to 65 (35 years), but earlier retirement at 55 or delayed retirement at 70 produces dramatically different outcomes. Every additional year of contributions adds both new money and another year of compound growth on your entire balance.
+
+2. **Enter your Current 401(k) Balance** — the amount already in your account today. Even a modest existing balance gets a significant head start from compounding. A \$25,000 balance today at 7% grows to approximately \$267,000 in 35 years — without adding a single dollar.
+
+3. **Set your Annual Salary and Contribution Percentage** — your contribution is calculated as a percentage of salary, capped at the 2025 IRS limit of \$23,500 (or \$31,000 if you're 50 or older). The calculator automatically applies catch-up contribution limits when your age reaches 50.
+
+4. **Configure your Employer Match** — enter both the match percentage (e.g., 50% means your employer contributes \$0.50 for every \$1.00 you contribute) and the match limit (e.g., 6% means the match applies only on the first 6% of salary). A "100% match on 3%" is equivalent to a "50% match on 6%" — both add 3% of salary.
+
+5. **Adjust the Expected Annual Return** — the default is 7%, representing the historical inflation-adjusted return of a diversified stock portfolio. Target-date funds, which most 401(k) plans offer, typically hold 90% stocks for young investors and gradually shift toward bonds. If you're conservative, use 5–6%.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The 401(k) growth model iterates year by year, applying salary increases, IRS contribution limits, employer matching, and compound investment returns:
+
+$$B_t = (B_{t-1} + C_t + M_t) \times (1 + r)$$
+
+Where:
+
+- **$B_t$** = balance at end of year $t$
+- **$B_{t-1}$** = balance at end of previous year (or current balance at $t=0$)
+- **$C_t$** = employee contribution in year $t$ = $\min(\text{salary}_t \times \text{contrib\%}, \text{IRS limit})$
+- **$M_t$** = employer match in year $t$ = $\min(C_t,\ \text{salary}_t \times \text{match limit\%}) \times \text{match\%}$
+- **$r$** = expected annual rate of return (decimal)
+- **$\text{salary}_t$** = salary in year $t$ = $\text{salary}_0 \times (1 + g)^t$, where $g$ = annual raise rate
+
+The IRS contribution limit for 2025 is \$23,500 for employees under age 50, and \$31,000 for employees 50 and older (includes the \$7,500 catch-up contribution). These limits apply to the employee contribution only — the employer match does not count toward the employee limit.
+
+**Source:** IRS Publication 560; IRS.gov 401(k) Plan Contribution Limits (2025); Department of Labor Employee Benefits Security Administration.
+
+For a deeper explanation of how compound interest drives retirement account growth over decades, see our [methodology page on compound interest](/methodology/compound-interest).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Default Scenario — 30-Year-Old, \$75,000 Salary, 10% Contribution
+
+**Inputs:**
+- Current Age: 30, Retirement Age: 65 (35 years)
+- Current Balance: \$25,000
+- Annual Salary: \$75,000 with 2% annual raises
+- Contribution: 10% of salary
+- Employer Match: 50% on first 6% of salary
+- Annual Return: 7%
+
+**Step-by-step (Year 1):**
+
+1. Salary in Year 1: \$75,000
+2. Employee contribution: \$75,000 x 10% = **\$7,500** (under IRS limit of \$23,500)
+3. Matchable amount: min(\$7,500, \$75,000 x 6%) = min(\$7,500, \$4,500) = **\$4,500**
+4. Employer match: \$4,500 x 50% = **\$2,250**
+5. Year-start balance: \$25,000 + \$7,500 + \$2,250 = **\$34,750**
+6. Growth: \$34,750 x 7% = **\$2,432.50**
+7. Year-end balance: \$34,750 + \$2,432.50 = **\$37,182.50**
+
+By Year 35 (age 65), the balance accumulates to approximately **\$1,870,000**, with \$424,000 from your contributions, \$127,000 from employer match, and \$1,290,000 from investment growth.
+
+### Example 2: Late Starter — 45-Year-Old, \$90,000 Salary, 15% Contribution
+
+**Inputs:**
+- Current Age: 45, Retirement Age: 65 (20 years)
+- Current Balance: \$50,000
+- Annual Salary: \$90,000 with 2% annual raises
+- Contribution: 15% of salary
+- Employer Match: 100% on first 3% of salary
+- Annual Return: 7%
+
+**Step-by-step (Year 1):**
+
+1. Salary in Year 1: \$90,000
+2. Employee contribution: \$90,000 x 15% = **\$13,500** (under \$23,500 limit)
+3. Matchable amount: min(\$13,500, \$90,000 x 3%) = min(\$13,500, \$2,700) = **\$2,700**
+4. Employer match: \$2,700 x 100% = **\$2,700**
+5. Year-start balance: \$50,000 + \$13,500 + \$2,700 = **\$66,200**
+6. Growth: \$66,200 x 7% = **\$4,634**
+7. Year-end balance: **\$70,834**
+
+At age 50 (Year 6), the IRS catch-up contribution limit kicks in, allowing up to \$31,000/year. Over 20 years this scenario projects approximately **\$836,000** — a respectable sum but significantly less than the 35-year scenario, illustrating the enormous cost of starting late.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Time Horizon** — The single most powerful variable. Starting at 25 instead of 35 with identical contributions can double your final balance, because that extra decade allows compound growth to work on a much larger base. Every year of delay costs roughly 7% of potential terminal wealth at a 7% return — not 7% of one year's contribution, but 7% of the entire compounding chain that year would have started.
+
+**Employer Match Structure** — Match formulas vary widely. A "dollar-for-dollar on the first 3%" match adds 3% of your salary annually. A "50 cents per dollar on the first 6%" also adds 3%, but requires you to contribute 6% to capture it. According to the Bureau of Labor Statistics, the average employer match is roughly 3.5% of salary. Always contribute at least enough to capture the full match — it is an immediate 50–100% return on your money before any market growth.
+
+**IRS Contribution Limits** — The 2025 limit of \$23,500 caps how much tax-advantaged money you can contribute annually. High earners who hit this cap should explore additional retirement vehicles like IRAs, HSAs, or taxable brokerage accounts. The \$7,500 catch-up contribution for those 50+ is specifically designed to help late starters accelerate their savings.
+
+**Investment Returns** — A 1 percentage point difference in annual return over 35 years changes the final balance by roughly 25–35%. The default 7% represents a diversified stock portfolio's historical real return. If your 401(k) is heavily in bonds or stable value funds, 4–5% may be more realistic. Review your fund selections annually and keep expense ratios below 0.50%.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant annual rate of return** applied each year. Actual market returns fluctuate widely — the S&P 500 has returned between -37% and +53% in a single year. Sequence-of-returns risk can significantly affect outcomes, especially near retirement.
+- Uses **2025 IRS contribution limits** (\$23,500 under 50; \$31,000 for 50+). Congress adjusts these limits periodically for inflation — future limits will likely be higher, which this calculator does not project.
+- Assumes **contributions and match are added at the start of each year** for simplicity. In practice, contributions occur per paycheck (bi-weekly or semi-monthly), which slightly affects compounding.
+- Does **not account for taxes** on withdrawals. Traditional 401(k) distributions are taxed as ordinary income. Roth 401(k) contributions are after-tax but grow tax-free. Your effective retirement balance depends on your tax bracket at withdrawal.
+- Does **not model vesting schedules**. Some employers require 3–6 years of service before you fully own employer match contributions. If you leave before vesting, you may forfeit some or all of the match.
+- Assumes **steady employment** with no gaps in contributions. Career changes, layoffs, and leaves of absence are not modeled.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much should I contribute to my 401(k)?
+
+At minimum, contribute enough to capture your full employer match — anything less is leaving free money on the table. Beyond that, most financial advisors recommend saving 15–20% of gross income for retirement across all accounts (401(k), IRA, HSA). On a \$75,000 salary, that means \$11,250–\$15,000 per year, or \$937–\$1,250 per month. If 15% feels unreachable today, start at whatever you can and increase by 1% each year until you reach your target. The 2025 IRS limit is \$23,500 for those under 50 and \$31,000 for those 50 and older.
+
+### What is a good employer 401(k) match?
+
+A good employer match is 50–100% of your contribution on the first 3–6% of salary, which translates to an employer contribution of 3–6% of your salary. The most common formula in the U.S. is a 50% match on the first 6% (adding 3% of salary), according to Vanguard's How America Saves 2024 report. A dollar-for-dollar match on 6% — adding 6% of salary — is considered excellent and is typically found at large tech companies and financial firms. Even a modest 25% match on 4% (adding 1% of salary) is worth capturing, because it represents an immediate 25% return on your contributions.
+
+### How much will my 401(k) be worth at retirement?
+
+The answer depends entirely on your contribution rate, employer match, investment returns, and time horizon. Using historical averages: a 30-year-old earning \$75,000 who contributes 10% with a 50% match on 6% at 7% real return accumulates approximately \$1.87 million by age 65. A 40-year-old in the same scenario reaches roughly \$720,000 by 65 — less than half, despite contributing for 25 years instead of 35. The compounding curve is exponential: the last 10 years of a 35-year investment horizon typically generate more growth than the first 25 years combined.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator models 401(k) growth using year-by-year iteration incorporating employee contributions, employer matching, salary growth, and compound investment returns. Contribution limits are based on **IRS Publication 560** and the **IRS.gov 401(k) Plan page**, reflecting 2025 limits of \$23,500 (under 50) and \$31,000 (50+, with \$7,500 catch-up). Employer match statistics reference **Vanguard's How America Saves 2024** annual report, which surveys over 1,700 retirement plans covering 5 million participants. The default 7% annual return reflects the S&P 500's historical inflation-adjusted average return as documented by **Ibbotson Associates / Morningstar** SBBI data. Salary growth assumptions are informed by the **Bureau of Labor Statistics** Employment Cost Index, which has tracked average annual wage growth of 2–3% over the past two decades.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

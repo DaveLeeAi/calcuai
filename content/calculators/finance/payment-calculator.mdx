@@ -1,0 +1,149 @@
+---
+title: "Payment Calculator"
+description: "Calculate the monthly payment for any loan type. See total cost, interest breakdown, payoff timeline, and full amortization schedule instantly."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A \$20,000 loan at 7% APR for 60 months requires a monthly payment of \$396.02, with \$3,761 paid in total interest over the life of the loan. That makes the total cost \$23,761. Adding just \$50 per month in extra payments reduces total interest to \$3,118 and pays off the loan 8 months early — saving \$643 in interest for an extra \$50/month commitment.
+
+</section>
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+This calculator computes the fixed monthly payment for any amortizing loan — personal loans, auto loans, student loans, or any fixed-rate installment debt. Enter the loan amount, interest rate, and term in months to see your monthly payment, total interest, total cost, and payoff timeline.
+
+The optional extra payment field shows how additional principal payments reduce your total interest and shorten the payoff period. The amortization table breaks down every single month so you can see exactly how much goes to interest vs. principal at any point in the loan.
+
+This calculator reuses the same underlying formula as the [Loan Calculator](/calculators/finance/loan-calculator) but is focused on answering the direct question "What will my monthly payment be?" For a detailed year-by-year breakdown, see the [Amortization Calculator](/calculators/finance/amortization-calculator). To solve for the rate instead of the payment, use the [Interest Rate Calculator](/calculators/finance/interest-rate-calculator).
+
+## How to Use This Calculator
+
+1. **Enter the loan amount** — the total principal you are borrowing (e.g., \$20,000 for an auto loan).
+2. **Enter the interest rate** — the annual percentage rate (APR) on your loan. Check your loan offer letter or credit union rate sheet.
+3. **Enter the loan term in months** — common terms: 36 months (3 years), 48 months (4 years), 60 months (5 years), 72 months (6 years).
+4. **Optional: extra monthly payment** — enter any additional amount you can pay each month above the minimum.
+5. **Review results** — see the monthly payment, total cost, and interest summary. Scroll down for the full amortization table and balance chart.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Monthly Payment (fixed-rate amortization):**
+
+$$
+M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}
+$$
+
+**Total Payment:**
+
+$$
+\text{Total} = M \times n
+$$
+
+**Total Interest:**
+
+$$
+\text{Interest} = \text{Total} - P
+$$
+
+Where:
+- **M** = monthly payment (principal + interest)
+- **P** = loan principal (the amount borrowed)
+- **r** = monthly interest rate = annual rate / 12
+- **n** = total number of monthly payments
+
+When **r = 0** (zero interest): M = P / n
+
+*Source: Consumer Financial Protection Bureau (CFPB) — standard fixed-rate loan payment formula, as required under Truth in Lending Act (TILA) disclosures.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Auto Loan Payment
+
+You are financing a \$28,000 car at 5.9% APR for 72 months.
+
+**Step 1:** Convert annual rate to monthly
+- r = 5.9% / 12 = 0.4917% = 0.004917
+
+**Step 2:** Calculate (1 + r)^n
+- (1.004917)^72 = 1.4229
+
+**Step 3:** Calculate payment
+- M = \$28,000 × [0.004917 × 1.4229] / [1.4229 - 1]
+- M = \$28,000 × 0.006994 / 0.4229
+- M = $28,000 × 0.016546 = **$463.28/month**
+
+**Step 4:** Calculate totals
+- Total paid = $463.28 × 72 = **$33,356.16**
+- Total interest = \$33,356.16 - $28,000 = **$5,356.16**
+
+*Interpretation:* The 72-month term keeps payments manageable at \$463, but you will pay over \$5,300 in interest. Shortening to 60 months increases the payment to \$540.39 but saves \$1,083 in interest (\$4,273 total).
+
+### Example 2: Personal Loan with Extra Payments
+
+You take a \$15,000 personal loan at 9.5% APR for 48 months, and you can afford \$50/month extra.
+
+**Standard payment:**
+- r = 9.5% / 12 = 0.007917
+- (1.007917)^48 = 1.4607
+- M = \$15,000 × [0.007917 × 1.4607] / [0.4607]
+- M = $15,000 × 0.02510 = **$376.46/month**
+
+**Without extra payments:**
+- Total = $376.46 × 48 = **$18,070.08**
+- Interest = \$18,070.08 - $15,000 = **$3,070.08**
+
+**With \$50/month extra:**
+- Effective monthly: \$376.46 + $50 = $426.46 toward the loan
+- Pays off in approximately 41 months instead of 48
+- Total interest: approximately **\$2,497**
+- Interest saved: approximately **\$573**
+
+*Interpretation:* The \$50 extra payment saves \$573 in interest and frees you from the loan 7 months early. That is 7 months of \$376 payments you no longer make — a total cash flow benefit of over \$3,200.
+
+## Key Factors That Affect Your Results
+
+1. **Loan Term** — Longer terms reduce monthly payments but increase total interest dramatically. A \$20,000 loan at 7%: 36 months costs \$2,186 in interest; 72 months costs \$4,442 — more than double.
+2. **Interest Rate** — Even small rate differences matter over time. A \$25,000 loan for 60 months at 5% costs \$3,307 in interest; at 8%, it costs \$5,416 — a \$2,109 difference from just 3 percentage points.
+3. **Extra Payments** — Every extra dollar goes directly to principal reduction, which lowers all future interest charges. Front-loading extra payments (early in the loan) saves more than adding them later.
+4. **Loan Fees and Origination Costs** — Some lenders charge origination fees (1–6% of the loan amount) or prepayment penalties. These costs are not reflected in the APR calculation but affect total cost.
+5. **Credit Score Impact on Rate** — Borrowers with scores above 720 typically qualify for rates 2–5 percentage points lower than subprime borrowers. On a \$20,000/60-month loan, the difference between 5% and 12% APR is \$4,087 in extra interest.
+
+## Assumptions & Limitations
+
+- Assumes a fixed interest rate for the entire loan term
+- Payment is principal and interest only — does not include fees, insurance, or taxes
+- Extra payments are applied to principal at the end of each month
+- Does not account for origination fees, prepayment penalties, or balloon payments
+- Assumes all payments are made on time
+- The payoff date calculation assumes consistent extra payments every month
+
+## Frequently Asked Questions
+
+### How is the payment calculator different from the loan calculator?
+
+Both use the same amortization formula, but they serve different primary intents. The payment calculator focuses on answering "What will my monthly payment be?" for a known loan amount, rate, and term. The loan calculator provides a broader analysis including multiple comparison scenarios, detailed summaries, and tabbed presets for different loan types (general, auto). If you just need the payment number quickly, this is the right tool.
+
+### Should I choose a shorter or longer loan term?
+
+A shorter term saves significant interest but requires higher monthly payments. Choose the shortest term where the payment is comfortably within your budget — typically no more than 15–20% of your monthly take-home pay for non-housing debt. For example, a \$20,000 loan at 7%: 36-month payment is \$617 with \$2,186 interest; 60-month payment is \$396 with \$3,761 interest. If you can afford \$617, the 36-month option saves \$1,575.
+
+### Do extra payments always save money?
+
+Yes, on any amortizing loan with a positive interest rate, extra payments reduce the principal balance and therefore reduce all future interest charges. The only exceptions are loans with prepayment penalties (some mortgages and certain personal loans) or zero-interest promotional financing. Check your loan agreement for prepayment penalty clauses before committing to extra payments.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Consumer Financial Protection Bureau (CFPB)** — Standard amortizing loan payment formula and TILA disclosure requirements.
+- **Federal Reserve** — Consumer credit data and average interest rates by loan type (G.19 Statistical Release, 2024).
+- **Experian** — Average auto loan rates by credit score tier (2024 State of the Automotive Finance Market report).
+
+The payment formula calculates the fixed monthly amount that amortizes the full principal plus accrued interest over the specified term. Extra payments are subtracted from principal after interest is calculated for the current month, accelerating principal reduction for all subsequent months.

@@ -1,0 +1,208 @@
+{
+  "id": "income-tax-calculator",
+  "title": "Income Tax Calculator",
+  "slug": "income-tax-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "income tax calculator",
+  "metaTitle": "Income Tax Calculator — 2025 Federal Tax Estimator",
+  "metaDescription": "Estimate your 2025 federal income tax with bracket-by-bracket breakdown. See effective vs. marginal rates, deductions, credits, and after-tax income instantly.",
+  "inputs": [
+    {
+      "id": "grossIncome",
+      "label": "Annual Gross Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 75000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Your total annual income before deductions"
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        {
+          "value": "single",
+          "label": "Single"
+        },
+        {
+          "value": "married-jointly",
+          "label": "Married Filing Jointly"
+        },
+        {
+          "value": "married-separately",
+          "label": "Married Filing Separately"
+        },
+        {
+          "value": "head-of-household",
+          "label": "Head of Household"
+        }
+      ]
+    },
+    {
+      "id": "deductionType",
+      "label": "Deduction Type",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard Deduction"
+        },
+        {
+          "value": "itemized",
+          "label": "Itemized Deductions"
+        }
+      ]
+    },
+    {
+      "id": "itemizedDeductions",
+      "label": "Itemized Deductions",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "prefix": "$",
+      "dependsOn": "deductionType",
+      "helpText": "Total itemized deductions (mortgage interest, state taxes, charity, etc.)"
+    },
+    {
+      "id": "preTaxDeductions",
+      "label": "Pre-Tax Deductions",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "prefix": "$",
+      "helpText": "Pre-tax deductions: 401(k), HSA, traditional IRA contributions"
+    },
+    {
+      "id": "taxCredits",
+      "label": "Tax Credits",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "prefix": "$",
+      "helpText": "Tax credits: Child Tax Credit, EITC, education credits, etc."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "federalTax",
+      "label": "Federal Tax Owed",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "taxBreakdown",
+      "label": "Income Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#E74C3C",
+          "#2ECC71",
+          "#1A6FA0"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Tax Summary",
+      "type": "value-group"
+    },
+    {
+      "id": "bracketBreakdown",
+      "label": "Bracket-by-Bracket Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "bracket",
+          "label": "Bracket"
+        },
+        {
+          "key": "range",
+          "label": "Income Range"
+        },
+        {
+          "key": "taxableInBracket",
+          "label": "Taxable Amount",
+          "format": "currency"
+        },
+        {
+          "key": "taxFromBracket",
+          "label": "Tax",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "id": "marginalRateChart",
+      "label": "Tax by Bracket",
+      "type": "chart-bar",
+      "chartConfig": {
+        "xLabel": "Tax Bracket",
+        "yLabel": "Tax ($)",
+        "colors": [
+          "#1A6FA0"
+        ]
+      }
+    }
+  ],
+  "formula": "income-tax",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "tax-bracket-calculator",
+    "retirement-calculator",
+    "401k-calculator",
+    "sales-tax-calculator",
+    "overtime-calculator",
+    "payroll-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Internal Revenue Service (IRS)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "2025 U.S. Federal Income Tax brackets per IRS Revenue Procedure 2024-40",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "tax-bracket-calculator",
+    "salary-calculator"
+  ],
+  "qualityScore": 100,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "tax-season",
+  "glossaryTerms": [
+    "gross-income",
+    "tax-bracket"
+  ],
+  "methodologyTopics": [
+    "progressive-taxation"
+  ]
+}

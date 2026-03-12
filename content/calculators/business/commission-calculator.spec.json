@@ -1,0 +1,238 @@
+{
+  "id": "commission-calculator",
+  "title": "Commission Calculator",
+  "slug": "commission-calculator",
+  "category": "business",
+  "subcategory": "sales",
+  "primaryKeyword": "commission calculator",
+  "metaTitle": "Commission Calculator — Sales Commission Calculator",
+  "metaDescription": "Calculate flat or tiered sales commissions instantly. Enter sales amount and commission rate to see total earnings. Supports multi-tier structures. Free tool.",
+  "inputs": [
+    {
+      "id": "salesAmount",
+      "label": "Sales Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total sales volume for the period"
+    },
+    {
+      "id": "commissionStructure",
+      "label": "Commission Structure",
+      "type": "select",
+      "required": true,
+      "defaultValue": "flat",
+      "options": [
+        {
+          "value": "flat",
+          "label": "Flat Rate"
+        },
+        {
+          "value": "tiered",
+          "label": "Tiered / Graduated"
+        }
+      ],
+      "helpText": "Flat applies one rate to all sales; tiered uses escalating brackets"
+    },
+    {
+      "id": "flatRate",
+      "label": "Commission Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "suffix": "%",
+      "dependsOn": "commissionStructure",
+      "helpText": "Flat percentage applied to all sales"
+    },
+    {
+      "id": "basePay",
+      "label": "Base Salary",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Fixed base salary before commission"
+    },
+    {
+      "id": "tier1Threshold",
+      "label": "Tier 1 Threshold",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 25000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "dependsOn": "commissionStructure",
+      "helpText": "Sales amount where Tier 1 ends and Tier 2 begins"
+    },
+    {
+      "id": "tier1Rate",
+      "label": "Tier 1 Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "suffix": "%",
+      "dependsOn": "commissionStructure",
+      "helpText": "Commission rate for sales from $0 to Tier 1 Threshold"
+    },
+    {
+      "id": "tier2Threshold",
+      "label": "Tier 2 Threshold",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "dependsOn": "commissionStructure",
+      "helpText": "Sales amount where Tier 2 ends and Tier 3 begins"
+    },
+    {
+      "id": "tier2Rate",
+      "label": "Tier 2 Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 8,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "suffix": "%",
+      "dependsOn": "commissionStructure",
+      "helpText": "Commission rate for sales between Tier 1 and Tier 2 thresholds"
+    },
+    {
+      "id": "tier3Rate",
+      "label": "Tier 3 Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 12,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "suffix": "%",
+      "dependsOn": "commissionStructure",
+      "helpText": "Commission rate for sales above Tier 2 threshold"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalEarnings",
+      "label": "Total Earnings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "commissionAmount",
+      "label": "Commission Earned",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "effectiveCommissionRate",
+      "label": "Effective Commission Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "earningsBreakdown",
+      "label": "Earnings Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#3498DB",
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "tierBreakdown",
+      "label": "Tier Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "tier",
+          "label": "Tier"
+        },
+        {
+          "key": "salesRange",
+          "label": "Sales Range"
+        },
+        {
+          "key": "rate",
+          "label": "Rate (%)",
+          "format": "percentage"
+        },
+        {
+          "key": "commissionEarned",
+          "label": "Commission",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Commission Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "commission",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "payroll-calculator",
+    "overtime-calculator",
+    "revenue-calculator",
+    "margin-calculator",
+    "roi-calculator",
+    "profit-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Bureau of Labor Statistics — Sales Occupations compensation methodology (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Flat: Commission = Sales × Rate; Tiered: Commission = Sum of (portion in each bracket × bracket rate); Total Earnings = Base Pay + Commission",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 95,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "commission"
+  ]
+}

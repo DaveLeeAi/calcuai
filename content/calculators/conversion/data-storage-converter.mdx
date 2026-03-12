@@ -1,0 +1,123 @@
+---
+title: "Data Storage Converter"
+description: "Convert between bytes, kilobytes, megabytes, gigabytes, terabytes, and binary units (KiB, MiB, GiB, TiB). Free data storage converter with SI and IEC units."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert data storage values between SI decimal units and IEC binary units instantly. One gigabyte equals exactly 1,000 megabytes (1,000,000,000 bytes) in SI notation, but one gibibyte equals 1,024 mebibytes (1,073,741,824 bytes) in binary. This 7.37% discrepancy between GB and GiB is why a "500 GB" hard drive shows only about 465 GiB in your operating system. Enter any value and convert across all 11 supported units.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Conversion Works
+
+This converter translates data storage sizes between two parallel unit systems: **SI decimal** (KB, MB, GB, TB, PB) based on powers of 1,000, and **IEC binary** (KiB, MiB, GiB, TiB) based on powers of 1,024. It also converts to and from raw bytes and bits. The distinction matters because storage manufacturers use SI units while operating systems historically display binary sizes, creating apparent "missing space."
+
+Understanding the difference helps accurately estimate backup needs and cloud storage costs. For physical measurements, see our [Length Converter](/calculators/conversion/length-converter) or [Weight Converter](/calculators/conversion/weight-converter).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the value** -- type the data size you want to convert. Decimals are supported (e.g., 1.5, 256, 0.5).
+2. **Select "From" unit** -- choose the unit your value is currently in (defaults to Gigabyte).
+3. **Select "To" unit** -- choose the target unit (defaults to Megabyte).
+4. **Read the result** -- the converted value appears instantly.
+5. **Check the conversion table** -- see your value across all 11 units (both SI and binary) for a comprehensive comparison.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Data storage uses two distinct conversion systems:
+
+**SI Decimal Prefixes** (powers of 1,000):
+
+$$
+1 \text{ KB} = 10^3 \text{ B} = 1{,}000 \text{ B}
+$$
+
+$$
+1 \text{ MB} = 10^6 \text{ B} = 1{,}000{,}000 \text{ B}
+$$
+
+$$
+1 \text{ GB} = 10^9 \text{ B} = 1{,}000{,}000{,}000 \text{ B}
+$$
+
+$$
+1 \text{ TB} = 10^{12} \text{ B} = 1{,}000{,}000{,}000{,}000 \text{ B}
+$$
+
+**IEC Binary Prefixes** (powers of 1,024):
+
+$$
+1 \text{ KiB} = 2^{10} \text{ B} = 1{,}024 \text{ B}
+$$
+
+$$
+1 \text{ MiB} = 2^{20} \text{ B} = 1{,}048{,}576 \text{ B}
+$$
+
+$$
+1 \text{ GiB} = 2^{30} \text{ B} = 1{,}073{,}741{,}824 \text{ B}
+$$
+
+$$
+1 \text{ TiB} = 2^{40} \text{ B} = 1{,}099{,}511{,}627{,}776 \text{ B}
+$$
+
+To convert between any two units, the calculator first converts to bytes (the base unit), then divides by the target unit's byte factor:
+
+$$
+\text{Result} = \text{Value} \times \frac{\text{fromUnit (bytes)}}{\text{toUnit (bytes)}}
+$$
+
+**Bits:** 1 byte = 8 bits. Network speeds are typically measured in bits per second (Mbps), while storage is measured in bytes (MB).
+
+*Source: IEC 80000-13:2008, "Quantities and units -- Part 13: Information science and technology." SI prefixes defined by the Bureau International des Poids et Mesures (BIPM).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Hard Drive Capacity -- 500 GB to GiB (Why Your Drive Looks Smaller)
+
+You buy a "500 GB" external hard drive, but your computer shows only 465 GB available. Why?
+
+**The manufacturer uses SI (decimal):**
+- 500 GB = 500 x 1,000,000,000 = 500,000,000,000 bytes
+
+**Your OS displays in GiB (binary):**
+- 500,000,000,000 / 1,073,741,824 = **465.66 GiB**
+
+*Interpretation:* The drive genuinely contains 500,000,000,000 bytes as advertised. The manufacturer uses SI gigabytes (10^9) while the operating system reports in gibibytes (2^30). The "missing" 34.34 GiB is the 7.37% difference between SI and binary prefixes. This gap grows with drive size: a 2 TB drive shows as approximately 1.82 TiB.
+
+### Example 2: Cloud Backup -- 1.5 TB of Photos to GiB
+
+Your photo library is 1.5 TB. A cloud storage plan offers 1,500 GiB. Will your photos fit?
+
+**Convert 1.5 TB to bytes:**
+- 1.5 x 1,000,000,000,000 = 1,500,000,000,000 bytes
+
+**Convert to GiB:**
+- 1,500,000,000,000 / 1,073,741,824 = **1,396.98 GiB**
+
+*Interpretation:* Your 1.5 TB photo library equals approximately 1,397 GiB, fitting within the 1,500 GiB plan with about 103 GiB to spare. If the provider means 1,500 GB (SI) instead, the available space is exactly 1.5 TB -- identical to your library size with no headroom. Always verify whether a provider advertises in GB or GiB.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- SI prefixes (KB, MB, GB, TB, PB) follow the IEC/SI standard where each step is 1,000x (not 1,024x)
+- Binary prefixes (KiB, MiB, GiB, TiB) follow IEC 80000-13 where each step is 1,024x
+- 1 byte = 8 bits in all cases (the historical 6-bit and 7-bit byte definitions are not used)
+- Does not include network speed units (Mbps, Gbps) -- those measure bits per second, not storage capacity
+- Petabyte and Tebibyte are the largest units included; exabyte and exbibyte are omitted as they exceed typical consumer usage
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter handles both binary (IEC) and decimal (SI) storage units. Binary units use powers of 1,024 (KiB, MiB, GiB, TiB), while decimal units use powers of 1,000 (KB, MB, GB, TB). All conversions route through bytes as the base unit. The distinction between binary and decimal prefixes follows the IEC 80000-13 standard adopted in 1998.

@@ -1,0 +1,293 @@
+{
+  "id": "roofing-calculator",
+  "title": "Roofing Calculator",
+  "slug": "roofing-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "roofing calculator",
+  "metaTitle": "Roofing Calculator — Squares, Bundles & Material Cost",
+  "metaDescription": "Calculate roofing squares, bundles, and underlayment rolls for your project. Supports shingles, metal, tile, and wood shake with pitch factor and cost.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Roof Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "step": 1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Length of the building footprint (ridge line direction)"
+    },
+    {
+      "id": "width",
+      "label": "Roof Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 30,
+      "min": 1,
+      "step": 1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Width of the building footprint (eave to eave)"
+    },
+    {
+      "id": "pitch",
+      "label": "Roof Pitch",
+      "type": "select",
+      "required": true,
+      "defaultValue": "4",
+      "options": [
+        {
+          "value": "0",
+          "label": "Flat (0/12)"
+        },
+        {
+          "value": "1",
+          "label": "1/12"
+        },
+        {
+          "value": "2",
+          "label": "2/12"
+        },
+        {
+          "value": "3",
+          "label": "3/12"
+        },
+        {
+          "value": "4",
+          "label": "4/12"
+        },
+        {
+          "value": "5",
+          "label": "5/12"
+        },
+        {
+          "value": "6",
+          "label": "6/12"
+        },
+        {
+          "value": "7",
+          "label": "7/12"
+        },
+        {
+          "value": "8",
+          "label": "8/12"
+        },
+        {
+          "value": "9",
+          "label": "9/12"
+        },
+        {
+          "value": "10",
+          "label": "10/12"
+        },
+        {
+          "value": "12",
+          "label": "12/12 (45°)"
+        }
+      ],
+      "helpText": "Rise per 12 inches of horizontal run"
+    },
+    {
+      "id": "roofType",
+      "label": "Roof Style",
+      "type": "select",
+      "required": true,
+      "defaultValue": "gable",
+      "options": [
+        {
+          "value": "gable",
+          "label": "Gable"
+        },
+        {
+          "value": "hip",
+          "label": "Hip"
+        },
+        {
+          "value": "flat",
+          "label": "Flat"
+        }
+      ]
+    },
+    {
+      "id": "material",
+      "label": "Roofing Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "architectural",
+      "options": [
+        {
+          "value": "3tab",
+          "label": "3-Tab Shingles"
+        },
+        {
+          "value": "architectural",
+          "label": "Architectural Shingles"
+        },
+        {
+          "value": "metal",
+          "label": "Metal Panels"
+        },
+        {
+          "value": "tile",
+          "label": "Clay/Concrete Tile"
+        },
+        {
+          "value": "wood-shake",
+          "label": "Wood Shake"
+        }
+      ]
+    },
+    {
+      "id": "wastePercent",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 25,
+      "helpText": "10% for simple roofs, 15% for complex with dormers/valleys"
+    },
+    {
+      "id": "layers",
+      "label": "Existing Layers (for tear-off)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 3,
+      "helpText": "Number of existing layers to remove before re-roofing"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "roofArea",
+      "label": "Total Roof Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "squares",
+      "label": "Roofing Squares",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "bundlesOrPanels",
+      "label": "Bundles / Panels Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "underlaymentRolls",
+      "label": "Underlayment Rolls",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "ridgeCap",
+      "label": "Ridge Cap Bundles",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "materialBreakdown",
+      "label": "Roof Details",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "roofing",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "square-footage-calculator",
+    "paint-calculator",
+    "drywall-calculator",
+    "gravel-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "National Roofing Contractors Association (NRCA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "NRCA pitch multiplier tables and standard geometric area calculations. Bundle counts per manufacturer specifications.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "square-footage-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "spring-summer"
+}

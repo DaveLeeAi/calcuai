@@ -1,0 +1,239 @@
+{
+  "id": "fence-calculator",
+  "title": "Fence Calculator",
+  "slug": "fence-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "fence calculator",
+  "metaTitle": "Fence Calculator — Posts, Rails, Boards & Material Cost",
+  "metaDescription": "Calculate fence materials: posts, rails, boards, and concrete. Supports privacy, picket, board-on-board, split-rail, and chain-link with cost estimates.",
+  "inputs": [
+    {
+      "id": "fenceLength",
+      "label": "Total Fence Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 100,
+      "min": 1,
+      "step": 1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total linear feet of fence line"
+    },
+    {
+      "id": "fenceHeight",
+      "label": "Fence Height",
+      "type": "select",
+      "required": true,
+      "defaultValue": "6",
+      "options": [
+        {
+          "value": "3",
+          "label": "3 ft"
+        },
+        {
+          "value": "4",
+          "label": "4 ft"
+        },
+        {
+          "value": "5",
+          "label": "5 ft"
+        },
+        {
+          "value": "6",
+          "label": "6 ft"
+        },
+        {
+          "value": "8",
+          "label": "8 ft"
+        }
+      ]
+    },
+    {
+      "id": "fenceType",
+      "label": "Fence Style",
+      "type": "select",
+      "required": true,
+      "defaultValue": "privacy",
+      "options": [
+        {
+          "value": "privacy",
+          "label": "Privacy (solid board)"
+        },
+        {
+          "value": "picket",
+          "label": "Picket"
+        },
+        {
+          "value": "board-on-board",
+          "label": "Board-on-Board"
+        },
+        {
+          "value": "split-rail",
+          "label": "Split Rail"
+        },
+        {
+          "value": "chain-link",
+          "label": "Chain Link"
+        }
+      ]
+    },
+    {
+      "id": "postSpacing",
+      "label": "Post Spacing",
+      "type": "select",
+      "required": true,
+      "defaultValue": "8",
+      "options": [
+        {
+          "value": "6",
+          "label": "6 ft (stronger)"
+        },
+        {
+          "value": "8",
+          "label": "8 ft (standard)"
+        }
+      ],
+      "helpText": "Distance between posts center-to-center"
+    },
+    {
+      "id": "gateCount",
+      "label": "Number of Gates",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 10
+    },
+    {
+      "id": "gateWidth",
+      "label": "Gate Width",
+      "type": "number",
+      "required": false,
+      "defaultValue": 4,
+      "min": 3,
+      "max": 16,
+      "suffix": "ft",
+      "helpText": "Standard walk gate = 4 ft, double gate = 8-12 ft"
+    },
+    {
+      "id": "boardWidth",
+      "label": "Board Width",
+      "type": "number",
+      "required": false,
+      "defaultValue": 5.5,
+      "min": 1.5,
+      "max": 8,
+      "step": 0.5,
+      "suffix": "in",
+      "helpText": "Picket/board width: 3.5\" (1×4 nominal) or 5.5\" (1×6 nominal)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "posts",
+      "label": "Posts Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "rails",
+      "label": "Rails Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "boards",
+      "label": "Boards / Pickets",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "concreteBags",
+      "label": "Concrete Bags (80 lb)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "postCaps",
+      "label": "Post Caps",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "materialBreakdown",
+      "label": "Fence Details",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "fence",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "board-foot-calculator",
+    "paint-calculator",
+    "mulch-calculator",
+    "square-footage-calculator",
+    "gravel-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "American Fence Association (AFA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Post spacing and rail calculations per American Fence Association (AFA) installation standards. Concrete per post uses standard post hole formula (π × r² × h). Board counts based on fence type geometry.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "spring-summer"
+}

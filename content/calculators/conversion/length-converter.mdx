@@ -1,0 +1,213 @@
+---
+title: "Length Converter"
+description: "Convert between all length and distance units: meters, feet, inches, miles, kilometers, yards, centimeters, millimeters, and more. Metric and imperial."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert any length or distance between metric and imperial units instantly. One meter equals exactly 3.28084 feet, one mile equals exactly 1.609344 kilometers, and one inch equals exactly 25.4 millimeters. Select your source and target units, enter a value, and see the result along with a full conversion table for all 12 supported length units.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Conversion Works
+
+This converter handles all common length and distance unit conversions in a single tool. Rather than searching for individual conversion factors, enter any value and see it expressed in every supported unit simultaneously via the conversion table.
+
+The converter supports **metric** units (kilometer, meter, centimeter, millimeter, micrometer, nanometer), **imperial/US** units (mile, yard, foot, inch), and **specialized** units (nautical mile, light year). All conversion factors are based on the exact definitions established by NIST — there is no rounding in the underlying math.
+
+For area conversions, use our [Square Footage Calculator](/calculators/construction/square-footage-calculator). For weight and mass, the [Weight Converter](/calculators/conversion/weight-converter) follows the same base-unit pattern.
+
+## How to Use This Calculator
+
+1. **Enter the value** — type the number you want to convert. Decimals are supported (e.g., 5.5, 0.25, 1000.75).
+2. **Select "From" unit** — choose the unit your value is currently in from the dropdown menu.
+3. **Select "To" unit** — choose the unit you want to convert to.
+4. **Read the result** — the converted value appears instantly. Scroll down to see the value converted to all 12 length units at once.
+5. **Use the conversion table** — the full table below the result shows your value in every supported unit, useful for quick reference.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+All unit conversions use a **base-unit intermediary** pattern. Every length unit has an exact conversion factor to the base unit (meters). To convert between any two units:
+
+$$
+\text{Result} = \text{Value} \times \frac{\text{fromUnit.toBase}}{\text{toUnit.toBase}}
+$$
+
+For example, converting feet to inches:
+
+$$
+\text{inches} = \text{feet} \times \frac{0.3048 \text{ m/ft}}{0.0254 \text{ m/in}} = \text{feet} \times 12
+$$
+
+**Key conversion factors (to meters):**
+
+| Unit | Exact Factor to Meters |
+|:--|:--|
+| 1 kilometer | 1,000 m |
+| 1 meter | 1 m (base) |
+| 1 centimeter | 0.01 m |
+| 1 millimeter | 0.001 m |
+| 1 mile | 1,609.344 m |
+| 1 yard | 0.9144 m |
+| 1 foot | 0.3048 m |
+| 1 inch | 0.0254 m |
+| 1 nautical mile | 1,852 m |
+
+*Source: National Institute of Standards and Technology (NIST) — "The International System of Units (SI)" Special Publication 330 (2019 Edition). Imperial-to-metric factors established by the International Yard and Pound Agreement (1959).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Marathon Distance — Kilometers to Miles
+
+A marathon is 42.195 kilometers. How many miles is that?
+
+**Conversion:**
+- From km to meters: 42.195 × 1,000 = 42,195 m
+- From meters to miles: 42,195 / 1,609.344 = **26.2188 miles**
+
+*Interpretation:* A marathon is 26.2188 miles, commonly rounded to 26.2 miles or "26 miles and 385 yards" — the exact figure codified by the IAAF since 1921.
+
+### Example 2: Height — Feet and Inches to Centimeters
+
+A person is 5 feet 10 inches tall. What is that in centimeters?
+
+**Step 1: Convert to inches**
+- 5 feet × 12 = 60 inches
+- 60 + 10 = 70 inches total
+
+**Step 2: Convert to centimeters**
+- 70 inches × 2.54 cm/inch = **177.8 cm**
+
+*Interpretation:* 5'10" equals 177.8 centimeters or 1.778 meters. The average American male height is 175.4 cm (5'9"), so 177.8 cm is slightly above average (CDC, 2024).
+
+### Example 3: International Shipping — Meters to Feet
+
+A shipping container is 12.192 meters long. What is that in feet?
+
+**Conversion:**
+- 12.192 m / 0.3048 m/ft = **40 feet exactly**
+
+*Interpretation:* This is a standard 40-foot shipping container — the most common size in international freight. The exact metric equivalent (12.192 m) confirms why the conversion factor 1 foot = 0.3048 meters is important for international trade specifications.
+
+### Example 4: Running a 5K — Kilometers to Miles
+
+A runner signs up for a 5K race and wants to know the distance in miles.
+
+**Conversion:**
+- From km to meters: 5 × 1,000 = 5,000 m
+- From meters to miles: 5,000 / 1,609.344 = **3.10686 miles**
+
+*Interpretation:* A 5K is 3.107 miles. A runner targeting a 25-minute finish needs a pace of 25 / 3.107 = 8:03 per mile, or 5:00 per kilometer. Other common race distances: 10K = 6.214 miles, half marathon = 13.109 miles (21.0975 km), full marathon = 26.219 miles (42.195 km).
+
+### Example 5: Room Measurement — Feet to Meters for International Furniture
+
+A homeowner measures a bedroom as 12 ft × 15 ft and needs metric dimensions for European furniture.
+
+**Conversion:**
+- Width: 12 ft × 0.3048 = **3.658 m**
+- Length: 15 ft × 0.3048 = **4.572 m**
+
+*Interpretation:* The room is 3.66 m × 4.57 m. A European king-size bed (180 cm × 200 cm) fits comfortably, leaving 1.86 m (6.1 ft) of clearance on the width and 2.57 m (8.4 ft) on the length. Note that U.S. and European bed sizes differ — a U.S. king is 76 × 80 inches (193 × 203 cm), 13 cm wider than the European standard.
+
+## Key Factors That Affect Your Results
+
+1. **Exact vs. Approximate Factors** — The inch is defined as exactly 25.4 mm by international agreement (1959). The mile is exactly 5,280 feet. This calculator uses these exact definitions, not rounded approximations like "1 km ≈ 0.62 miles."
+2. **Significant Figures** — For scientific applications, the number of significant figures matters. Converting 1.00 meter to feet gives 3.28084 ft. The tool displays up to 10 significant digits for very small conversions.
+3. **Survey Foot vs. International Foot** — The U.S. Survey foot (1 m = 39.37 inches exactly) differs from the International foot (1 m = 1/0.3048 ft) by about 2 parts per million. This calculator uses the International foot. The Survey foot was officially retired by NIST in 2023.
+4. **Nautical Mile** — Defined as exactly 1,852 meters (not based on the yard/meter relationship). Used exclusively in maritime and aviation navigation, where 1 nautical mile corresponds to 1 minute of latitude.
+5. **Temperature of Measurement** — For extremely precise scientific measurements, thermal expansion of measuring instruments matters. This calculator uses standard reference definitions, not temperature-corrected values.
+6. **When Precision Matters at Scale** — The casual approximation 1 inch ≈ 2.5 cm differs from the exact value (2.54 cm) by 0.04 cm per inch. Over short distances this is negligible, but errors accumulate: a 100-foot steel beam calculated at 2.5 cm/inch instead of 2.54 cm/inch would be off by 1,200 × 0.04 = 48 cm (nearly 19 inches). In engineering and construction, always use the exact factor. In aerospace, tolerances can be as tight as 0.001 inches (0.0254 mm), making the distinction between approximate and exact conversions a matter of structural safety.
+
+## Common Mistakes to Avoid
+
+1. **Confusing Metric Prefixes** — A centimeter is 1/100 of a meter, not 1/1000 (that's a millimeter). 1 km = 1,000 m, not 100 m.
+2. **Mixing Up Conversion Direction** — To convert from a smaller unit to a larger unit, divide. From a larger unit to smaller, multiply. 5 feet = 60 inches (× 12), but 60 inches = 5 feet (÷ 12).
+3. **Rounding Too Early** — When chaining conversions (miles → meters → centimeters), carry full precision through intermediate steps and only round the final result.
+4. **Forgetting Area vs. Length** — Square feet are NOT square meters × 3.281. Converting area requires squaring the linear conversion factor: 1 sq meter = 10.764 sq feet (3.281²).
+5. **Using the Wrong Foot** — In property surveying, the U.S. Survey foot (deprecated 2023) was slightly different from the International foot. Historical property descriptions may use the old Survey foot.
+
+## Common Length Conversions Quick Reference
+
+| From → To | Factor | Example |
+|:--|:-:|:--|
+| Inches → Centimeters | × 2.54 | 12 in = 30.48 cm |
+| Feet → Meters | × 0.3048 | 6 ft = 1.8288 m |
+| Yards → Meters | × 0.9144 | 100 yd = 91.44 m |
+| Miles → Kilometers | × 1.609344 | 1 mi = 1.609 km |
+| Centimeters → Inches | × 0.3937 | 10 cm = 3.937 in |
+| Meters → Feet | × 3.28084 | 1.8 m = 5.905 ft |
+| Kilometers → Miles | × 0.62137 | 10 km = 6.214 mi |
+| Nautical Miles → km | × 1.852 | 1 nmi = 1.852 km |
+
+## When to Use Metric vs Imperial
+
+The system you should use depends on your industry, country, and audience. Here is a practical guide:
+
+| Context | System Used | Notes |
+|:--|:-:|:--|
+| U.S. construction & real estate | Imperial | Feet, inches, square footage. Lumber is sold in nominal imperial sizes (a "2×4" is actually 1.5 × 3.5 inches). |
+| Science & medicine (worldwide) | Metric | SI units are mandatory in research publications. Drug dosages are always in milligrams and milliliters. |
+| International manufacturing | Metric | ISO standards use millimeters. A 10 mm bolt is a 10 mm bolt in every country. |
+| U.S. road signage & speed limits | Imperial | Miles and MPH. Only the U.S., UK (partially), and a few island nations use miles on road signs. |
+| Aviation (worldwide) | Mixed | Altitude in feet, runway length in meters (ICAO standard), visibility in meters or statute miles depending on country. |
+| Maritime navigation | Nautical | Nautical miles and knots worldwide. 1 nautical mile = 1.852 km = 1.151 statute miles. |
+| UK everyday use | Mixed | Road distances in miles, personal height in feet/inches, weight in stone/pounds, but food packaging in grams/kg. |
+| Athletics & track | Metric | Track events measured in meters (100 m, 1500 m), but road races in the U.S. often list both km and miles. |
+
+## Where Unit Confusion Has Caused Real Failures
+
+Unit conversion errors are not just math mistakes — they have caused engineering disasters, aviation emergencies, and spacecraft losses. These cases illustrate why precise conversion matters beyond the classroom.
+
+**Mars Climate Orbiter (1999).** NASA's $125 million spacecraft was destroyed when Lockheed Martin's ground software output thruster impulse data in pound-force seconds (imperial) while NASA's navigation system expected newton seconds (metric). The factor-of-4.45 discrepancy caused the orbiter to enter Mars's atmosphere at 57 km altitude instead of the planned 226 km. It broke apart on contact. The root cause was not a complex engineering failure — it was a length/force unit mismatch that a single conversion check would have caught.
+
+**Air Canada Flight 143 — the "Gimli Glider" (1983).** A Boeing 767 ran out of fuel mid-flight because ground crew calculated the fuel load in pounds instead of kilograms. The aircraft needed 22,300 kg of fuel but was loaded with 22,300 pounds — less than half the required amount. The plane glided to an emergency landing at a decommissioned airfield in Gimli, Manitoba. No one was killed, but the incident became the defining case study for unit conversion protocols in aviation.
+
+**The Vasa warship (1628).** Sweden's most expensive warship sank on its maiden voyage in Stockholm harbor. Archaeological analysis of the hull in the 1960s revealed that the port side was built using Swedish feet (12 inches) while the starboard side used Amsterdam feet (11 inches). The asymmetry shifted the center of gravity, and the ship capsized in a light gust. The Vasa sat on the harbor floor for 333 years — a monument to what happens when two measurement systems meet on the same project.
+
+These are not obscure edge cases. In 2023, NIST deprecated the U.S. survey foot, eliminating a 2-parts-per-million discrepancy with the international foot that had accumulated errors of up to 3.2 millimeters per mile in property surveys. The lesson is consistent: use exact conversion factors, verify units at every handoff, and never assume the other party is using the same system you are.
+
+## Assumptions & Limitations
+
+- Uses the International foot (1 foot = 0.3048 meters exactly), not the deprecated U.S. Survey foot
+- Conversion factors follow NIST SP 330 (2019 Edition) exact definitions
+- Light year calculation uses the IAU definition (9.461 × 10¹⁵ meters)
+- Does not handle compound units like "5 feet 10 inches" — convert the total to one unit first
+- No temperature-corrected conversions (uses standard reference conditions)
+- Maximum input value limited by JavaScript floating-point precision (~15 significant digits)
+- Very small or very large values use smart rounding to avoid floating-point display artifacts
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### Why do the U.S., Liberia, and Myanmar still use imperial units?
+
+The U.S. never mandated a full switch to metric, despite Congress authorizing it in the Metric Conversion Act of 1975. The act made adoption voluntary, and industries with high conversion costs (construction, manufacturing, road signage) kept imperial. The estimated cost to replace U.S. road signs alone exceeds \$300 million. Liberia and Myanmar have historically followed U.S. trade standards, though Myanmar began transitioning to metric in 2013. U.S. science, medicine, and military already use metric exclusively — it's everyday consumer use that remains imperial.
+
+### What is the difference between a U.S. survey foot and an international foot?
+
+The U.S. survey foot (1 meter = 39.37 inches) was 2 parts per million longer than the international foot (1 foot = 0.3048 meters exactly). Over short distances the difference is negligible, but over a mile it amounts to about 3.2 millimeters. NIST officially deprecated the U.S. survey foot on January 1, 2023, making the international foot the sole legal definition. Historical property deeds and land surveys filed before 2023 may still reference the survey foot.
+
+### How accurate are length conversions with very large or very small numbers?
+
+Conversions are exact to approximately 15 significant digits, which is the precision limit of JavaScript's 64-bit floating-point arithmetic (IEEE 754). For everyday use, this is more than sufficient — 15 significant digits can represent the distance from Earth to the Sun (149.6 billion meters) to within a fraction of a millimeter. For scientific applications requiring higher precision (nanotechnology, semiconductor fabrication), specialized arbitrary-precision math libraries are used instead.
+
+### What is the fastest way to estimate kilometers to miles in your head?
+
+Multiply kilometers by 0.6 for a quick estimate, or use the Fibonacci sequence trick: consecutive Fibonacci numbers (1, 1, 2, 3, 5, 8, 13, 21, 34...) approximate the km-to-miles ratio. So 5 km is about 3 miles, 8 km is about 5 miles, 13 km is about 8 miles. This works because the ratio between consecutive Fibonacci numbers converges to 1.618, and the exact conversion factor is 1.609 — a difference of less than 0.6%.
+
+### Why are there exactly 5,280 feet in a mile?
+
+The 5,280-foot mile is the result of a 1593 English statute that reconciled two older measurements: the Roman mile (5,000 feet) and the English furlong (660 feet). Queen Elizabeth I's Parliament redefined the mile as exactly 8 furlongs (8 × 660 = 5,280 feet) so that miles and furlongs would divide evenly — important for land surveying. The furlong itself was the length of one plowed furrow in a standard field (a "furrow long"), approximately 201 meters.
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter multiplies or divides by fixed conversion factors between length units (inches, feet, yards, miles, millimeters, centimeters, meters, kilometers, nautical miles). All conversions route through meters as the base unit. Conversion factors use exact definitions — for example, 1 inch = 25.4 mm exactly, as standardized in 1959. Results are displayed to 6 decimal places.

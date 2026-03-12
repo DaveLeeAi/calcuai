@@ -1,0 +1,271 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 10 × 10-foot patio with 4-inch depth requires 1.23 cubic yards of concrete — about 56 bags of 80-lb pre-mix at roughly \$308–\$476 in materials. A typical two-car driveway (20 × 50 ft, 6 inches thick) needs 18.5 cubic yards before waste, making it a ready-mix truck job at \$2,400–\$3,700 delivered. Enter your project dimensions below to get your exact volume in cubic yards, bag count by size, and cost estimate with waste factor included.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Concrete is sold two ways: by the cubic yard from a ready-mix plant, or by the bag at a hardware store. This calculator converts your project dimensions into both units so you can choose the right purchasing method. For most residential projects under 2 cubic yards — patios, walkways, post footings — bagged concrete is practical. Above 2 cubic yards, a ready-mix truck delivery is faster, cheaper per yard, and produces a more consistent pour.
+
+The **volume calculation** accounts for shape. Slabs and footings are rectangular prisms, columns and post holes are cylinders, and steps use a triangular prism approximation. The formula converts your length, width, and depth into cubic feet, then divides by 27 to get cubic yards — the standard ordering unit for concrete in the United States.
+
+The **waste factor** is critical. Concrete doesn't pour perfectly into forms. Subgrade irregularities, over-excavation, spillage, and form bulging mean you always need more than the theoretical volume. The Portland Cement Association recommends a 10% waste factor for standard rectangular pours and 15% for irregular shapes. Running short mid-pour is far more expensive than ordering 10% extra — a cold joint from a delayed second batch weakens the entire slab.
+
+The **bag count** converts your total volume into the number of 40-lb, 60-lb, or 80-lb bags needed. An 80-lb bag yields approximately 0.60 cubic feet (0.022 cubic yards) of mixed concrete. For a 1-cubic-yard project, that's roughly 45 bags at 80 lbs each — over 3,600 pounds of material to mix by hand. This is why projects over 1.5 cubic yards generally justify a ready-mix truck at \$125–\$200 per cubic yard delivered.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your project type** — choose Slab/Pad for flat pours like patios and driveways, Footing/Wall for rectangular foundations and stem walls, Column/Cylinder for post holes and round piers, or Steps/Stairs for staircase pours. The calculator adjusts its volume formula based on your selection.
+
+2. **Enter the length** — for slabs and footings, this is the longer horizontal dimension. For columns, this is the height (vertical dimension). You can enter in feet, inches, meters, or centimeters, and the calculator converts automatically. Measure to the inside of your forms, not the outside.
+
+3. **Enter the width** — for slabs and footings, this is the shorter horizontal dimension. For columns, this is the diameter. If you're pouring a round column with a Sonotube form, measure the tube's inner diameter. For post holes dug without a form, measure the hole diameter at its widest point.
+
+4. **Set the depth** — this is the thickness of a slab or the depth of a footing. The default is 4 inches, which is the minimum for residential slabs per most building codes. Driveways and garage floors typically require 5–6 inches. Footings for load-bearing walls are usually 8–12 inches deep. Enter in inches, feet, or centimeters.
+
+5. **Set the quantity** — if you're pouring multiple identical sections (such as 10 fence post footings or 4 identical porch columns), enter the count here. The calculator multiplies the single-section volume by this number.
+
+6. **Adjust the waste factor** — the default 10% works for most rectangular pours with good forms. Increase to 15% for irregular shapes, hand-dug holes, or sloped subgrades. For precision form work on flat ground, you can reduce to 5%.
+
+7. **Choose your bag size** — select 40 lb, 60 lb, or 80 lb bags based on what's available and what you can physically handle. An 80-lb bag is the best value per cubic foot but weighs as much as a small person. For overhead pours or long carry distances, 60-lb bags are more manageable.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Concrete volume is calculated using standard geometric formulas, then converted to the U.S. construction standard of cubic yards.
+
+**Slab, Pad, Footing, or Wall (rectangular prism):**
+
+$$V = L \times W \times D$$
+
+**Column, Post Hole, or Pier (cylinder):**
+
+$$V = \pi \times r^2 \times h$$
+
+**Steps or Stairs (triangular prism approximation):**
+
+$$V = \frac{L \times W \times D}{2}$$
+
+**Conversion to cubic yards:**
+
+$$\text{Cubic Yards} = \frac{V_{\text{cubic feet}}}{27}$$
+
+**With waste factor applied:**
+
+$$V_{\text{total}} = V_{\text{base}} \times \left(1 + \frac{\text{Waste \%}}{100}\right)$$
+
+**Bag count:**
+
+$$\text{Bags} = \left\lceil \frac{V_{\text{total (cu ft)}}}{\text{Yield per bag (cu ft)}} \right\rceil$$
+
+Where:
+
+- **L** = length of the pour area (feet)
+- **W** = width of the pour area (feet); for cylinders, this is the diameter
+- **D** = depth or thickness of the pour (feet)
+- **r** = radius of a cylinder = diameter ÷ 2 (feet)
+- **h** = height of a cylinder (feet)
+- **V** = volume (cubic feet)
+- **Yield per bag**: 80 lb = 0.60 cu ft, 60 lb = 0.45 cu ft, 40 lb = 0.30 cu ft
+
+All input dimensions are converted to feet before calculation. Depth inputs in inches are divided by 12. The result is rounded up to the next whole bag — you cannot buy a partial bag.
+
+**Source:** Volume formulas are standard geometry. Bag yield data is from the Portland Cement Association (PCA) and manufacturer specifications (Quikrete, Sakrete). The 27 cubic feet per cubic yard conversion is the U.S. construction standard.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Backyard Patio — 12 × 14 ft, 4 Inches Deep
+
+A homeowner is pouring a patio behind the house. The form dimensions are 12 feet by 14 feet with a 4-inch depth, which meets the minimum residential slab code in most jurisdictions.
+
+**Inputs:**
+- Project Type: Slab / Pad
+- Length: 12 ft
+- Width: 14 ft
+- Depth: 4 in
+- Quantity: 1
+- Waste Factor: 10%
+- Bag Size: 80 lb
+
+**Step-by-step:**
+
+1. Convert depth to feet: 4 in ÷ 12 = **0.3333 ft**
+2. Calculate base volume: 12 × 14 × 0.3333 = **56.00 cu ft**
+3. Apply 10% waste: 56.00 × 1.10 = **61.60 cu ft**
+4. Convert to cubic yards: 61.60 ÷ 27 = **2.28 cu yd**
+5. Calculate bags: 61.60 ÷ 0.60 = 102.67 → **103 bags** of 80 lb
+6. Cost estimate: 103 × $5.50 (low) = $566.50; 103 × $8.50 (high) = $875.50
+
+**Interpretation:** At 2.28 cubic yards, this project is at the crossover point between bagged and ready-mix. A ready-mix truck typically delivers a minimum of 1 yard at \$125–\$200/yard, plus a short-load fee of \$30–\$75 for orders under 5 yards. Total delivered cost would be roughly \$350–\$525. Compare that to \$566–\$876 for bags, plus 8+ hours of hand-mixing labor. For this size, a ready-mix truck saves both money and effort.
+
+### Example 2: Fence Post Footings — 10 Holes, 12-Inch Diameter × 36 Inches Deep
+
+A homeowner is setting 10 fence posts. Each post hole is 12 inches in diameter and 36 inches deep, filled with concrete to anchor the 4×4 posts.
+
+**Inputs:**
+- Project Type: Column / Cylinder
+- Length (height): 36 in
+- Width (diameter): 12 in
+- Depth: 4 in (ignored for column type)
+- Quantity: 10
+- Waste Factor: 10%
+- Bag Size: 80 lb
+
+**Step-by-step:**
+
+1. Convert dimensions to feet: height = 36 ÷ 12 = **3 ft**, diameter = 12 ÷ 12 = **1 ft**
+2. Calculate radius: 1 ÷ 2 = **0.5 ft**
+3. Volume per hole: π × 0.5² × 3 = π × 0.25 × 3 = **2.356 cu ft**
+4. Total for 10 holes: 2.356 × 10 = **23.56 cu ft**
+5. Apply 10% waste: 23.56 × 1.10 = **25.92 cu ft**
+6. Convert to cubic yards: 25.92 ÷ 27 = **0.96 cu yd**
+7. Calculate bags: 25.92 ÷ 0.60 = 43.2 → **44 bags** of 80 lb
+8. Total weight: 44 × 80 = **3,520 lbs**
+9. Cost estimate: 44 × $5.50 = $242 to 44 × $8.50 = $374
+
+**Interpretation:** Under 1 cubic yard, bagged concrete is the clear winner here. A ready-mix truck would charge the minimum delivery fee (\$125+) plus the short-load surcharge — and you'd need the truck to navigate your yard to reach the post holes. With 44 bags at 80 lbs each, plan for 2–3 hours of mixing with a wheelbarrow and mixing tub, or rent a portable mixer for \$50/day.
+
+### Example 3: Sidewalk — 4 ft × 30 ft, 4 Inches Deep with 10% Waste
+
+A homeowner is pouring a straight sidewalk from the driveway to the front door.
+
+**Inputs:**
+- Project Type: Slab / Pad
+- Length: 30 ft
+- Width: 4 ft
+- Depth: 4 in
+- Quantity: 1
+- Waste Factor: 10%
+- Bag Size: 80 lb
+
+**Step-by-step:**
+
+1. Convert depth to feet: 4 ÷ 12 = **0.3333 ft**
+2. Base volume: 30 × 4 × 0.3333 = **40.00 cu ft**
+3. Apply 10% waste: 40.00 × 1.10 = **44.00 cu ft**
+4. Convert to cubic yards: 44.00 ÷ 27 = **1.63 cu yd**
+5. Bags needed: 44.00 ÷ 0.60 = 73.33 → **74 bags** of 80 lb
+6. Total weight: 74 × 80 = **5,920 lbs**
+7. Cost estimate: 74 × $5.50 = $407 to 74 × $8.50 = $629
+
+**Interpretation:** At 1.63 cubic yards, bagged concrete is workable but labor-intensive — 74 bags weighing nearly 3 tons total. A sidewalk is poured in continuous sections (typically 4-foot control joints), so you can mix and pour one section at a time over a weekend. If you have help and a mixer, bagged is cost-effective. Solo, consider a half-yard trailer rental from a ready-mix plant (\$75–\$125 per load) to reduce mixing time.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Depth is the single most impactful variable.** Increasing slab thickness from 4 inches to 6 inches adds 50% more concrete — not a minor adjustment. A 10 × 20-foot slab goes from 24.7 cu ft at 4 inches to 100 cu ft at 6 inches. Always check your local building code for minimum slab thickness before calculating. Residential patios typically require 4 inches, driveways 5–6 inches, and garage floors 4–6 inches depending on vehicle weight.
+
+**Aggregate type affects yield and strength.** Standard pre-mix bags contain Portland cement, sand, and gravel with a compressive strength of 4,000 PSI at 28 days. High-early-strength mixes reach 4,000 PSI in one day but cost 15–25% more per bag. Fiber-reinforced mixes add structural integrity but don't change volume calculations. For load-bearing applications, verify the mix design meets your project's PSI requirement — the bag label specifies this.
+
+**Reinforcement doesn't change volume, but it changes cost.** Wire mesh (6×6 W1.4/W1.4) adds \$0.15–\$0.25 per square foot. Rebar (#4 at 12-inch centers) adds \$0.50–\$0.75 per square foot. Neither changes the concrete volume, but both add to total project cost. Most residential slabs use fiber-reinforced concrete or wire mesh; footings and load-bearing slabs typically require rebar per code.
+
+**Weather conditions affect pour timing.** Concrete sets best between 50°F and 85°F. Below 50°F, set time extends dramatically — a pour that cures in 7 days at 70°F may take 14+ days at 40°F. Above 85°F, rapid moisture loss causes surface cracking. In hot weather, schedule pours for early morning and keep the surface misted during initial cure. In freezing conditions, use insulated blankets or heated enclosures.
+
+**Subbase preparation determines slab longevity.** Concrete poured on undisturbed, compacted soil with 4 inches of gravel base will outlast concrete poured directly on clay or topsoil. A poorly prepared subbase leads to settling, cracking, and premature failure — no amount of extra concrete thickness compensates for a bad base. Budget 2–4 inches of compacted gravel (about 0.15 cubic yards per 10 sq ft of slab area at 4 inches deep).
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Forgetting the waste factor.** The number-one mistake homeowners make is calculating the theoretical volume and ordering exactly that amount. Concrete doesn't fill forms perfectly — subgrade dips, form bulges, and spillage consume 5–15% of your material. Ordering 10% extra is cheap insurance against the catastrophic cost of a short pour. A cold joint from a delayed second batch is a structural weakness that may require demolition and repour.
+
+**Measuring in the wrong units without converting.** Mixing feet and inches is the most common unit error. A "4-foot-deep" footing entered as "4 inches" gives you a result that's 12 times too small. Always double-check that your depth unit matches your actual measurement. This calculator lets you select units independently for each dimension — use them.
+
+**Ordering too little and creating a cold joint.** When you run out of concrete mid-pour, the dried edge of the first batch forms a cold joint with the second — a permanent weak point that cracks under load and allows water infiltration. For critical pours like driveways and foundations, order 10–15% extra. Leftover concrete can always be used for small projects or disposed of.
+
+**Not accounting for slope or uneven subgrade.** If your excavation has a 2-inch variation across a 20-foot span, the deepest section needs 50% more concrete than the shallowest. Measure depth at multiple points and use the deepest measurement (or the average plus 10%) for your calculation. For significantly sloped sites, consider step-forming the pour into level sections.
+
+**Skipping the subbase.** Pouring concrete directly on clay, topsoil, or organic soil is a recipe for settling and cracking within 1–3 years. Residential slabs require a minimum 4-inch compacted gravel base over undisturbed or compacted fill soil. The gravel base cost (\$200–\$500 for a patio) is a fraction of the repour cost (\$2,000+) when the slab fails.
+
+{/* Section 12: Comparison Table */}
+## Bagged Concrete vs. Ready-Mix Truck Delivery
+
+Choosing between bags and a truck delivery depends on project size, site access, and budget. Here's a direct comparison:
+
+| | **Bagged Pre-Mix (80 lb)** | **Ready-Mix Truck** |
+|---|---|---|
+| Best for | Under 1.5 cu yd | Over 2 cu yd |
+| Cost per cu yd | \$250–\$385 (bags only) | \$125–\$200 (delivered) |
+| Minimum order | 1 bag (0.022 cu yd) | 1 cu yd (most plants) |
+| Short-load fee | None | \$30–\$75 per yard under minimum |
+| Labor required | High — hand mixing each bag | Low — truck pours directly |
+| Consistency | Varies by batch mixing | Uniform plant-mixed quality |
+| Time to pour 1 cu yd | 2–4 hours (hand mix) | 15–30 minutes |
+| Equipment needed | Wheelbarrow, mixing tub, hoe | Chute access or pump (\$200+) |
+| Shelf life | 3–6 months if dry | Must pour within 90 minutes |
+| Site access | Anywhere you can carry a bag | Needs truck access to pour site |
+
+**When to choose bags:** Projects under 1 cubic yard, remote locations without truck access, small repairs, post holes, and pours you can spread over multiple days.
+
+**When to choose ready-mix:** Any project over 2 cubic yards, time-critical pours (driveways, foundations), projects requiring consistent PSI strength, and any pour where the cost of a cold joint exceeds the truck delivery fee.
+
+**The crossover zone (1–2 cubic yards):** Either option works. Factor in your labor value — mixing 60+ bags by hand takes 3–6 hours of strenuous work. A half-yard trailer rental (\$75–\$125) from a ready-mix plant is a good middle ground for projects in this range.
+
+## What This Calculator Doesn't Cover
+
+This tool handles volume and material quantity — the "how much concrete" question. Several critical project decisions fall outside its scope:
+
+**Structural engineering requirements.** A patio slab and a garage floor may use the same 4-inch depth, but the garage floor needs reinforcement (wire mesh or rebar) and a thicker edge footing to support vehicle weight. This calculator does not determine whether your project requires rebar size/spacing, post-tensioning, or fiber reinforcement — those depend on load calculations that require an engineer. Any slab supporting a structure (house foundation, retaining wall footing, load-bearing column pad) should be designed by a licensed structural engineer, not sized from a volume calculator.
+
+**Soil bearing capacity.** The calculator assumes your subbase can support the concrete. In reality, expansive clay soils (common in Texas, Colorado, and the Southeast) can heave and crack a slab regardless of thickness. Organic soils (peat, topsoil) compress under load and cause settling. A geotechnical report ($300–$800) identifies these issues before you pour. The cheapest concrete pour is the one you don't have to demolish and repour because the soil failed underneath it.
+
+**Frost line depth for footings.** Footings for load-bearing walls and deck posts must extend below the local frost line — 12 inches in the mid-Atlantic, 36 inches in the upper Midwest, 48–72 inches in Minnesota and Alaska. This calculator computes volume from whatever depth you enter, but it does not validate whether that depth meets code. Check your local building code or call your building department before digging. A footing above the frost line will heave with freeze-thaw cycles and crack the structure above it.
+
+**Drainage and slope requirements.** Outdoor slabs need a minimum slope of 1/8 inch per foot (1% grade) away from structures for water drainage. This means a 20-foot-wide patio should be 2.5 inches thicker on the high side than the low side. The calculator assumes uniform depth — you may need to add 15–25% more concrete to account for the slope, depending on the grade change across the slab.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **standard-weight concrete** at approximately 150 lbs per cubic foot (2,400 kg/m³). Lightweight aggregate mixes weigh 90–120 lbs per cubic foot and have different bag yields.
+- Bag yields are based on **manufacturer specifications** for standard pre-mix (Quikrete, Sakrete): 80 lb = 0.60 cu ft, 60 lb = 0.45 cu ft, 40 lb = 0.30 cu ft. Actual yield may vary by 5–10% based on water ratio and mixing technique.
+- **Steps/stairs** use a triangular prism approximation (length × width × depth ÷ 2). Complex stair geometries with varying riser heights or winder treads require more detailed calculations.
+- **Cost estimates** use typical U.S. retail pricing for pre-mixed concrete bags. Prices vary by region, retailer, and whether you buy in bulk. Ready-mix truck pricing is not included in the calculator output — contact your local plant for delivered price per yard.
+- Does not account for **reinforcement materials** (rebar, wire mesh, fiber), form lumber, release agent, curing compound, or gravel subbase — these are additional project costs.
+- Assumes **uniform depth** across the entire pour area. For sloped or uneven subgrades, measure at multiple points and use the average or maximum depth.
+- The waste factor is **user-adjustable** and defaults to 10%. Actual waste depends on form quality, subgrade preparation, and pour technique. Experienced contractors may use 5%; complex forms may need 15–20%.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many bags of concrete do I need for a 10×10 slab?
+
+A 10 × 10-foot slab at the standard 4-inch depth requires 1.23 cubic yards of concrete without waste. With a 10% waste factor, you need approximately 1.36 cubic yards — that's 62 bags of 80-lb pre-mix, 82 bags of 60-lb, or 123 bags of 40-lb. At 6-inch depth (common for driveways), the requirement increases to 1.85 cubic yards, or about 93 bags of 80-lb mix. For slabs larger than 10 × 10, a ready-mix truck delivery becomes more cost-effective than bags.
+
+### How much does a cubic yard of concrete cost?
+
+A cubic yard of ready-mix concrete costs \$125–\$200 delivered from a batch plant as of 2026, depending on your location, mix design, and order volume. The same cubic yard in pre-mixed bags costs \$250–\$385 for materials alone (approximately 45 bags of 80-lb mix at \$5.50–\$8.50 each). Ready-mix becomes cheaper per yard above 2 cubic yards. Below that, short-load fees (\$30–\$75 per yard under the plant's minimum, typically 3–5 yards) can erase the per-yard savings. Specialty mixes (high-early-strength, colored, fiber-reinforced) add \$10–\$30 per yard at the plant or \$1–\$3 per bag at retail.
+
+### How thick should a concrete slab be?
+
+The minimum thickness for a residential concrete slab is 4 inches per most U.S. building codes (IRC Section R506). Driveways should be 5–6 inches thick to support vehicle weight — passenger cars need 5 inches minimum, and heavy trucks or RVs require 6 inches with wire mesh or rebar reinforcement. Garage floors are typically 4–6 inches depending on expected loads. Sidewalks and patios can use the 4-inch minimum. Footings for load-bearing walls are usually 8–12 inches deep and must extend below the frost line, which varies from 0 inches in Florida to 72 inches in Minnesota.
+
+### What is the difference between ready-mix and bagged concrete?
+
+Ready-mix concrete is batched at a plant to precise specifications (PSI strength, slump, aggregate size, air content) and delivered by truck. It's mixed by weight with computer-controlled proportioning, producing consistent quality across the entire pour. Bagged pre-mix (Quikrete, Sakrete) contains the same basic ingredients — Portland cement, sand, and gravel — but is dry-mixed at a factory and requires adding water on site. The main differences are consistency (plant-mixed is more uniform), volume capacity (a truck carries 8–10 cubic yards; each bag yields 0.60 cu ft), and cost (ready-mix is cheaper per cubic yard above 2+ yards). For structural applications like foundations, most engineers specify ready-mix for its verified strength and consistency.
+
+### How long does concrete take to cure?
+
+Concrete reaches approximately 70% of its rated compressive strength in 7 days and 99% at 28 days under standard conditions (70°F, adequate moisture). You can walk on a residential slab after 24–48 hours, drive a car on a driveway after 7 days, and place heavy loads after 28 days. Full hydration continues for years, but the 28-day mark is the industry standard for rated strength. Temperature significantly affects cure time: concrete cured at 50°F takes roughly twice as long to reach the same strength as concrete cured at 70°F. During the first 7 days, keep the surface continuously moist — use a curing compound, wet burlap, or plastic sheeting to prevent premature moisture loss, which causes surface cracking and reduced strength.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses standard geometric volume formulas (rectangular prism and cylinder) as taught in construction mathematics and published by the **Portland Cement Association (PCA)** in *Design and Control of Concrete Mixtures* (16th Edition). Bag yield values (0.60 cu ft per 80-lb bag, 0.45 cu ft per 60-lb bag, 0.30 cu ft per 40-lb bag) are from manufacturer specifications published by **Quikrete** and **Sakrete**, consistent with PCA guidelines. The 27 cubic feet per cubic yard conversion is the U.S. construction standard defined by the **National Institute of Standards and Technology (NIST)**. Slab thickness recommendations follow the **International Residential Code (IRC) Section R506**. Cure time data references the **American Concrete Institute (ACI) 308R** guide for curing concrete. Cost estimates reflect typical 2026 U.S. retail pricing from national home improvement retailers and ready-mix industry averages published by the **National Ready Mixed Concrete Association (NRMCA)**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

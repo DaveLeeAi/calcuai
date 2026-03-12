@@ -1,0 +1,250 @@
+{
+  "id": "mulch-calculator",
+  "title": "Mulch Calculator",
+  "slug": "mulch-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "mulch calculator",
+  "metaTitle": "Mulch Calculator — Cubic Yards, Bags & Cost Estimate",
+  "metaDescription": "Calculate how much mulch you need in cubic yards and bags. Get volume, weight, and cost for hardwood, cedar, pine bark, and rubber mulch types.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Area Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "width",
+      "label": "Area Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "depth",
+      "label": "Mulch Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0.5,
+      "max": 12,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 12
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Recommended: 2-3 inches for flower beds, 3-4 inches for weed suppression"
+    },
+    {
+      "id": "materialType",
+      "label": "Mulch Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "hardwood-mulch",
+      "options": [
+        {
+          "value": "hardwood-mulch",
+          "label": "Hardwood Mulch"
+        },
+        {
+          "value": "cedar-mulch",
+          "label": "Cedar Mulch"
+        },
+        {
+          "value": "pine-bark-mulch",
+          "label": "Pine Bark Mulch"
+        },
+        {
+          "value": "cypress-mulch",
+          "label": "Cypress Mulch"
+        },
+        {
+          "value": "rubber-mulch",
+          "label": "Rubber Mulch"
+        },
+        {
+          "value": "compost",
+          "label": "Compost"
+        },
+        {
+          "value": "pine-straw",
+          "label": "Pine Straw"
+        },
+        {
+          "value": "straw",
+          "label": "Straw"
+        }
+      ]
+    },
+    {
+      "id": "bagSize",
+      "label": "Bag Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 cu ft bag"
+        },
+        {
+          "value": "1.5",
+          "label": "1.5 cu ft bag"
+        },
+        {
+          "value": "2",
+          "label": "2 cu ft bag"
+        },
+        {
+          "value": "3",
+          "label": "3 cu ft bag"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cubicYards",
+      "label": "Mulch Needed (cubic yards)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "numberOfBags",
+      "label": "Number of Bags",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "weightLbs",
+      "label": "Total Weight (lbs)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Cost (Bulk Delivery)",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "volumeBreakdown",
+      "label": "Volume Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "volume-material",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "gravel-calculator",
+    "concrete-calculator",
+    "square-footage-calculator",
+    "fence-calculator",
+    "paint-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "USDA Natural Resources Conservation Service",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard volume formula (L × W × D). Density data from USDA NRCS material tables and landscape supplier industry standards.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "gravel-calculator"
+  ],
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "spring"
+}

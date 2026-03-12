@@ -1,0 +1,192 @@
+{
+  "id": "investment-calculator",
+  "title": "Investment Calculator",
+  "slug": "investment-calculator",
+  "category": "finance",
+  "subcategory": "investment",
+  "primaryKeyword": "investment calculator",
+  "metaTitle": "Investment Calculator — Free Return & Growth Calculator",
+  "metaDescription": "Calculate investment growth with monthly contributions, compound returns, and inflation adjustment. See nominal and real returns over time. Free.",
+  "inputs": [
+    {
+      "id": "initialInvestment",
+      "label": "Initial Investment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Starting amount"
+    },
+    {
+      "id": "monthlyContribution",
+      "label": "Monthly Contribution",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Amount added each month"
+    },
+    {
+      "id": "annualReturn",
+      "label": "Annual Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": -20,
+      "max": 50,
+      "step": 0.1,
+      "helpText": "Expected annual return (S&P 500 averages ~10% nominal, ~7% after inflation)"
+    },
+    {
+      "id": "investmentPeriod",
+      "label": "Investment Period (Years)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 20,
+      "min": 1,
+      "max": 50,
+      "step": 1
+    },
+    {
+      "id": "inflationRate",
+      "label": "Inflation Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 20,
+      "step": 0.1,
+      "helpText": "Expected annual inflation rate (U.S. historical average: ~3%)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "futureValue",
+      "label": "Future Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "breakdown",
+      "label": "Investment Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#F39C12"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Investment Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "growthOverTime",
+      "label": "Growth Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Value ($)",
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#E74C3C"
+        ]
+      }
+    },
+    {
+      "id": "yearByYear",
+      "label": "Year-by-Year Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "year",
+          "label": "Year"
+        },
+        {
+          "key": "startBalance",
+          "label": "Start Balance",
+          "format": "currency"
+        },
+        {
+          "key": "contributions",
+          "label": "Contributions",
+          "format": "currency"
+        },
+        {
+          "key": "earnings",
+          "label": "Earnings",
+          "format": "currency"
+        },
+        {
+          "key": "endBalance",
+          "label": "End Balance",
+          "format": "currency"
+        }
+      ]
+    }
+  ],
+  "formula": "investment-growth",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "compound-interest-calculator",
+    "retirement-calculator",
+    "savings-calculator",
+    "roi-calculator",
+    "inflation-calculator",
+    "401k-calculator",
+    "cd-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "CFA Institute",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Future value of annuity with initial lump sum (FV = PV(1+r)^n + PMT×[((1+r)^n-1)/r])",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "compound-interest-calculator",
+    "savings-calculator"
+  ],
+  "qualityScore": 100,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "annuity",
+    "compound-interest",
+    "future-value",
+    "inflation",
+    "present-value"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

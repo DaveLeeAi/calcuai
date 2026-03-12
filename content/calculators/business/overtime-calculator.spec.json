@@ -1,0 +1,178 @@
+{
+  "id": "overtime-calculator",
+  "title": "Overtime Calculator",
+  "slug": "overtime-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "overtime calculator",
+  "metaTitle": "Overtime Calculator — Calculate Overtime Pay Instantly",
+  "metaDescription": "Calculate regular and overtime pay for any hourly rate. See time-and-a-half, double-time, and total weekly earnings. FLSA-compliant OT calculator.",
+  "inputs": [
+    {
+      "id": "hourlyRate",
+      "label": "Hourly Rate",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25,
+      "min": 0,
+      "max": 10000,
+      "step": 0.25,
+      "prefix": "$",
+      "helpText": "Your base hourly pay rate before overtime"
+    },
+    {
+      "id": "regularHours",
+      "label": "Regular Hours",
+      "type": "number",
+      "required": true,
+      "defaultValue": 40,
+      "min": 0,
+      "max": 168,
+      "step": 1,
+      "helpText": "Standard hours worked per week (typically 40)"
+    },
+    {
+      "id": "overtimeHours",
+      "label": "Overtime Hours",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 128,
+      "step": 0.5,
+      "helpText": "Hours worked beyond your regular schedule"
+    },
+    {
+      "id": "overtimeMultiplier",
+      "label": "Overtime Rate",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1.5",
+      "options": [
+        {
+          "value": "1.5",
+          "label": "1.5× (Time-and-a-Half)"
+        },
+        {
+          "value": "2.0",
+          "label": "2.0× (Double Time)"
+        },
+        {
+          "value": "2.5",
+          "label": "2.5× (Triple-Half Time)"
+        }
+      ],
+      "helpText": "1.5× is the standard US overtime rate under FLSA"
+    },
+    {
+      "id": "weeksPerMonth",
+      "label": "Weeks per Month",
+      "type": "number",
+      "required": false,
+      "defaultValue": 4.33,
+      "min": 1,
+      "max": 5,
+      "step": 0.01,
+      "helpText": "Average weeks per month (4.33 = 52 weeks ÷ 12 months)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalPay",
+      "label": "Total Weekly Pay",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "regularPay",
+      "label": "Regular Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "overtimePay",
+      "label": "Overtime Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveRate",
+      "label": "Effective Hourly Rate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyProjection",
+      "label": "Monthly Projection",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "overtimePremium",
+      "label": "Overtime Premium Earned",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "payBreakdown",
+      "label": "Pay Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#3498DB",
+          "#E67E22"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Pay Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "overtime",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "payroll-calculator",
+    "commission-calculator",
+    "employee-cost-calculator",
+    "income-tax-calculator",
+    "break-even-calculator",
+    "hours-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Department of Labor — Fair Labor Standards Act (FLSA), overtime pay requirements, 29 U.S.C. § 207 (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Regular Pay = Hours × Rate; Overtime Pay = OT Hours × Rate × Multiplier; Total = Regular + Overtime; Effective Rate = Total / Total Hours",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 95,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "overtime",
+    "payroll"
+  ]
+}

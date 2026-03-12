@@ -1,0 +1,253 @@
+{
+  "id": "concrete-calculator",
+  "title": "Concrete Calculator",
+  "slug": "concrete-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "concrete calculator",
+  "metaTitle": "Concrete Calculator — Yards, Bags & Cost Estimate",
+  "metaDescription": "Calculate how much concrete you need in cubic yards and bags for slabs, footings, columns, and steps. Accurate volume, bag counts, and cost estimates.",
+  "inputs": [
+    {
+      "id": "projectType",
+      "label": "Project Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "slab",
+      "options": [
+        {
+          "value": "slab",
+          "label": "Slab / Pad"
+        },
+        {
+          "value": "footing",
+          "label": "Footing / Wall"
+        },
+        {
+          "value": "column",
+          "label": "Column / Cylinder"
+        },
+        {
+          "value": "steps",
+          "label": "Steps / Stairs"
+        }
+      ],
+      "helpText": "Select the shape of your concrete project"
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.0328084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "For columns, this is the height"
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.0328084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "For columns, this is the diameter"
+    },
+    {
+      "id": "depth",
+      "label": "Depth / Thickness",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 4,
+      "min": 0.5,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 12
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
+      ],
+      "defaultUnit": "in"
+    },
+    {
+      "id": "quantity",
+      "label": "Number of Identical Sections",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 100,
+      "helpText": "For multiple identical pours"
+    },
+    {
+      "id": "wastePercent",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 30,
+      "helpText": "Recommended: 10% for most projects, 15% for irregular shapes"
+    },
+    {
+      "id": "bagSize",
+      "label": "Bag Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "80",
+      "options": [
+        {
+          "value": "40",
+          "label": "40 lb bag"
+        },
+        {
+          "value": "60",
+          "label": "60 lb bag"
+        },
+        {
+          "value": "80",
+          "label": "80 lb bag"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cubicYards",
+      "label": "Concrete Needed (cubic yards)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Concrete Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "numberOfBags",
+      "label": "Number of Bags",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "preMixCost",
+      "label": "Estimated Pre-Mix Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "weightTotal",
+      "label": "Total Weight (lbs)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "projectBreakdown",
+      "label": "Project Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "concrete-volume",
+  "features": [
+    "shareable-url",
+    "print-results",
+    "presets"
+  ],
+  "relatedCalculators": [
+    "square-footage-calculator",
+    "roofing-calculator",
+    "mulch-calculator",
+    "gravel-calculator",
+    "paint-calculator",
+    "board-foot-calculator",
+    "drywall-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Portland Cement Association (PCA)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard geometric volume formulas for rectangular prisms and cylinders, bag yield data per Portland Cement Association (PCA)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 88,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "spring-summer"
+}

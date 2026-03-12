@@ -1,0 +1,163 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A $100,000 annuity at 5% interest paid over 20 years yields monthly payments of $659.96, with $58,390 paid in total interest over the life of the annuity. Flip the calculation: saving $500 per month at 7% for 30 years builds a future value of $610,994. This calculator handles all four annuity scenarios — computing payment amount, present value, or future value — for both ordinary annuities (end-of-period payments) and annuities due (start-of-period payments).
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+An annuity is any series of equal payments at regular intervals — mortgage payments, pension distributions, retirement contributions, lease payments, or insurance premiums. This calculator solves for the unknown variable when you know the other three (payment, present value or future value, rate, and time).
+
+**The four modes cover every annuity scenario:**
+1. **PV → Payment**: "I have $500,000 in retirement savings. How much can I withdraw monthly for 25 years at 4%?" Answer: $2,639/month.
+2. **FV → Payment**: "I want $1,000,000 in 30 years at 7%. How much must I save monthly?" Answer: $820/month.
+3. **Payment → PV**: "A pension offers $3,000/month for 20 years. What's that worth as a lump sum today at 5%?" Answer: $453,901.
+4. **Payment → FV**: "I'm saving $1,000/month at 8% for 25 years. What will I have?" Answer: $951,026.
+
+**Ordinary vs. annuity due makes a real difference.** Rent and insurance premiums are typically annuity due (paid at the beginning of the period). Loan payments and pension distributions are typically ordinary annuities (paid at the end). The same $1,000/month at 6% for 20 years has a PV of $139,581 as an ordinary annuity but $140,280 as an annuity due — a $699 difference that compounds over time. For detailed retirement withdrawal planning, see our [Retirement Calculator](/calculators/finance/retirement-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose "Solve For"** — select the variable you want to calculate. If you know the lump sum and want to find the periodic payment, choose "Payment from Present Value." If you know how much you can save per month and want to see the result, choose "Future Value from Payment."
+
+2. **Select the Annuity Type** — "Ordinary Annuity" for payments at the end of each period (most loans, 401k contributions, dividends). "Annuity Due" for payments at the beginning (rent, insurance, lease payments). When in doubt, ordinary annuity is more common.
+
+3. **Enter the known values** — depending on your mode, enter either Present Value, Future Value, or Payment Amount. Only the fields relevant to your chosen mode are used.
+
+4. **Set the Annual Interest Rate** — the annual rate used to discount or grow the payments. For annuity payouts, use the insurer's guaranteed rate (typically 3–5%). For investment growth, use your expected return. For loan analysis, use the stated APR.
+
+5. **Set Years and Payment Frequency** — the total time span and how often payments occur. Monthly (12/year) is most common. Choose bi-weekly (26) for paycheck-aligned savings, quarterly (4) for dividend reinvestment, or annually (1) for simple analysis.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Payment from Present Value (loan payout):**
+
+$$PMT = PV \times \frac{r}{1 - (1+r)^{-n}}$$
+
+**Payment from Future Value (savings goal):**
+
+$$PMT = FV \times \frac{r}{(1+r)^n - 1}$$
+
+**Present Value from Payment:**
+
+$$PV = PMT \times \frac{1 - (1+r)^{-n}}{r}$$
+
+**Future Value from Payment:**
+
+$$FV = PMT \times \frac{(1+r)^n - 1}{r}$$
+
+Where:
+
+- **PMT** = periodic payment amount (dollars)
+- **PV** = present value of the annuity (dollars)
+- **FV** = future value of the annuity (dollars)
+- **r** = interest rate per payment period (annual rate ÷ payments per year)
+- **n** = total number of payment periods (years × payments per year)
+
+**For annuity due** (payments at start of period), multiply the ordinary annuity result by $(1 + r)$. This adjustment accounts for each payment earning one extra period of interest.
+
+At 0% interest, all formulas simplify to: $PMT = PV/n$ or $FV = PMT \times n$ (pure arithmetic division or multiplication).
+
+**Source:** CFA Institute Level I Curriculum, Quantitative Methods: Time Value of Money; Actuarial Standards Board, Standard of Practice for present value of annuities.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Retirement Payout — $500,000 Savings at 4% for 25 Years
+
+**Inputs:**
+- Mode: PV to Payment
+- Present Value: $500,000
+- Annual Rate: 4%
+- Time: 25 years
+- Payments: Monthly (ordinary)
+
+**Step-by-step:**
+
+1. Rate per period: 4% / 12 = **0.003333**
+2. Total periods: 25 × 12 = **300**
+3. Factor: 0.003333 / (1 − (1.003333)^−300) = 0.003333 / (1 − 0.3689) = **0.005278**
+4. Monthly payment: $500,000 × 0.005278 = **$2,639.18**
+5. Total withdrawals: $2,639.18 × 300 = **$791,754**
+6. Total interest earned: $791,754 − $500,000 = **$291,754**
+
+**Interpretation:** Your $500,000 nest egg funds $2,639/month for 25 years, with the remaining balance earning 4% annually. You withdraw nearly $792K total — the $500K principal plus $292K in interest earned during the payout phase. If you need the money for 30 years instead, the monthly payout drops to $2,387 — just $252 less, because extending 5 more years adds significant interest.
+
+### Example 2: Savings Goal — $1,000/Month at 7% for 20 Years
+
+**Inputs:**
+- Mode: Payment to FV
+- Payment: $1,000/month
+- Annual Rate: 7%
+- Time: 20 years
+- Payments: Monthly (ordinary)
+
+**Step-by-step:**
+
+1. Rate per period: 7% / 12 = **0.005833**
+2. Total periods: 20 × 12 = **240**
+3. Growth factor: ((1.005833)^240 − 1) / 0.005833 = (4.0387 − 1) / 0.005833 = **520.93**
+4. Future value: $1,000 × 520.93 = **$520,927**
+5. Total contributed: $1,000 × 240 = **$240,000**
+6. Interest earned: $520,927 − $240,000 = **$280,927**
+
+**Interpretation:** Contributing $1,000/month for 20 years at 7% builds $521K. More than half ($281K) comes from compound interest, not your contributions. Starting this same plan 5 years earlier (25-year horizon) would yield $810K instead — an extra $289K from just 5 more years of compounding.
+
+{/* Section 10: Key Factors */}
+## Key Factors
+
+**Interest Rate** — Annuity payouts are highly sensitive to rate assumptions. A $500,000 annuity at 3% for 25 years pays $2,372/month. At 5%, it pays $2,923 — a 23% increase in monthly income from just 2 percentage points. Insurance company annuity rates and pension discount rates directly determine your retirement income.
+
+**Payment Frequency** — More frequent payments with the same annual total produce slightly different results. Paying $12,000 annually at 6% for 20 years has a different PV than paying $1,000 monthly at 6%. The monthly payments have a PV of $139,581; the annual equivalent has a PV of $137,639 — a $1,942 gap because monthly payments are partially received earlier.
+
+**Ordinary vs. Due** — For savings, making contributions at the start of each period (annuity due) means each dollar compounds one extra period. At 7% monthly for 30 years, a $500/month annuity due accumulates $614,557 vs $610,994 for ordinary — a $3,563 bonus just for timing each deposit one period earlier.
+
+**Time Horizon** — In payout mode, extending your time horizon reduces each payment but dramatically increases total distributions. In savings mode, each extra year adds disproportionately more growth because the accumulated base is larger.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant interest rate** throughout the entire annuity term. Insurance annuity rates may be fixed, but investment returns fluctuate.
+- Assumes **equal payment amounts** every period. Inflation-adjusted annuities (increasing payments) require a different formula.
+- Uses the **ordinary annuity or annuity due** convention as selected. Mixed-timing cash flows need a more general DCF model.
+- Does **not account for taxes** on annuity income. Qualified annuity distributions are taxed as ordinary income. Non-qualified annuity distributions are partially return of basis (tax-free) and partially earnings (taxable).
+- Does **not model mortality risk** or life expectancy. Life annuities (purchased from insurance companies) are priced based on actuarial tables and may pay for life regardless of the period specified.
+- Does **not include fees or surrender charges** that apply to insurance annuity products.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between an ordinary annuity and an annuity due?
+
+An ordinary annuity makes payments at the end of each period — your mortgage payment is due at the end of the month for that month's occupancy. An annuity due makes payments at the beginning of each period — rent is paid at the start of the month before occupancy. Mathematically, an annuity due is worth more than an ordinary annuity with identical payments because each payment is received (or made) one period earlier, giving it one extra period of compounding. The PV of an annuity due equals the ordinary annuity PV multiplied by (1 + r), where r is the per-period interest rate.
+
+### How much do I need to save monthly to reach $1 million by retirement?
+
+The required monthly savings depends on your timeframe and return rate. At 7% annual return: 40 years → $381/month; 30 years → $820/month; 20 years → $1,920/month; 10 years → $5,728/month. Starting early is overwhelmingly more powerful than saving more later. The person who starts at 25 ($381/month) contributes just $183K of their own money. The person who starts at 45 ($1,920/month) contributes $461K — 2.5× more of their own money — for the same $1M result.
+
+### Are annuities a good investment for retirement?
+
+Fixed annuities from insurance companies provide guaranteed income for life, eliminating the risk of outliving your savings — the primary benefit. A 65-year-old purchasing a $500,000 immediate annuity in 2025 might receive approximately $2,800–$3,200/month for life, depending on the insurer and whether the annuity includes a survivor benefit. The tradeoff: you give up liquidity, growth potential, and the ability to leave the remaining principal to heirs. Annuities make the most sense for retirees who want baseline guaranteed income beyond Social Security, not as a total portfolio strategy.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Sources & Methodology */}
+## Sources & Methodology
+
+This calculator implements the standard annuity present value and future value formulas as specified in the **CFA Institute Level I Curriculum** (Quantitative Methods: Time Value of Money). Ordinary annuity and annuity due conventions follow the **Actuarial Standards Board** recommended practices for present value calculations. Insurance annuity payout estimates reference **LIMRA** annuity market data and **Cannex** annuity rate benchmarks. Tax treatment of annuity distributions follows **IRS Publication 575** (Pension and Annuity Income). Retirement savings benchmarks reference the **Employee Benefit Research Institute (EBRI)** Retirement Readiness survey data.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

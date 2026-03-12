@@ -1,0 +1,78 @@
+---
+title: "Countdown Calculator"
+description: "Count the exact number of days, weeks, and months until any future date. Free countdown calculator with instant results."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+From March 11, 2026 to December 25, 2026, there are exactly 289 days — or 41 weeks and 2 days, or roughly 9 months and 14 days. This countdown calculator shows the exact time remaining until any target date, broken down into years, months, weeks, days, hours, and minutes.
+
+</section>
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The results show a multi-level breakdown of the time between your starting date and target date. The headline number is total days, which is the most precise measure. Below that, the calculator shows the decomposition into years, months, and days — useful for understanding the span in human terms — plus total weeks, total hours, and total minutes for planning purposes.
+
+Event planners commonly need day counts for venue booking deadlines, vendor lead times, and invitation send dates — most wedding planners recommend mailing invitations 6 to 8 weeks (42–56 days) before the event. Project managers use week counts to map sprints and milestones. Travelers use the breakdown to gauge how far out a trip is when booking flights, since airline prices typically rise sharply within 21 days of departure.
+
+This reuses the same date-difference engine as the [Date Calculator](/calculators/everyday/date-calculator) and [Age Calculator](/calculators/everyday/age-calculator), so the arithmetic is consistent across all three tools.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Set the "From Date"** — this defaults to today's date. Change it if you want to count from a past or future starting point, such as the day you signed a contract or the start of a school semester.
+2. **Set the "Target Date"** — enter the date you are counting down to. This could be a wedding date, a project deadline, a vacation departure, a holiday, or any future milestone you need to plan around.
+3. **Read the results** — the calculator instantly shows the "Days Until Target" as the primary result, followed by the full "Time Breakdown" in years, months, and days, plus "Total Weeks" and "Total Hours" for more granular planning.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{totalDays} = \left\lfloor \frac{|D_{\text{target}} - D_{\text{start}}|}{86{,}400{,}000} \right\rfloor
+$$
+
+Where:
+- **$D_{\text{target}}$** = target date as milliseconds since Unix epoch (January 1, 1970)
+- **$D_{\text{start}}$** = start date as milliseconds since epoch
+- **86,400,000** = milliseconds in one day (24 × 60 × 60 × 1,000)
+
+The year/month/day decomposition uses Gregorian calendar arithmetic: count complete years, then complete months, then remaining days, adjusting for month-length differences and leap years.
+
+*Source: Gregorian calendar system per ISO 8601. Date arithmetic follows the Julian Day Number method for absolute day counts.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Example: Days Until New Year's Eve
+
+How many days from July 4, 2026 to December 31, 2026?
+
+**Step 1:** July has 31 days → 31 − 4 = 27 remaining days in July
+**Step 2:** Full months: August (31) + September (30) + October (31) + November (30) + December (31) = 153 days
+**Step 3:** Total: 27 + 153 = 180 days
+
+**Breakdown:** 0 years, 5 months, 27 days. Total weeks: 25 weeks and 5 days. Total hours: 4,320.
+
+*Interpretation:* You have roughly 6 months — about 25 and a half weeks — between Independence Day and New Year's Eve in any non-leap year.
+
+### Example: Project Deadline Countdown
+
+A software team starts a project on February 1, 2027, with a launch deadline of June 15, 2027. How many working weeks do they have?
+
+**Step 1:** February has 28 days in 2027 → 28 − 1 = 27 remaining days in February.
+**Step 2:** Full months: March (31) + April (30) + May (31) = 92 days.
+**Step 3:** June 1–15 = 15 days.
+**Step 4:** Total: 27 + 92 + 15 = 134 days = 19 weeks and 1 day.
+
+*Interpretation:* With 134 calendar days, the team has roughly 19 full weeks. Accounting for weekends (approximately 38 weekend days), that leaves about 96 working days — enough for four to five 2-week agile sprints with buffer.
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator subtracts the current date and time from your target date to compute the remaining days, hours, minutes, and seconds. Leap years and daylight saving time transitions are handled automatically through JavaScript's Date object. The countdown updates in real time using a one-second interval timer.

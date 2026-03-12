@@ -1,0 +1,134 @@
+{
+  "id": "electricity-cost-calculator",
+  "title": "Electricity Cost Calculator",
+  "slug": "electricity-cost-calculator",
+  "category": "everyday",
+  "subcategory": "money",
+  "primaryKeyword": "electricity cost calculator",
+  "metaTitle": "Electricity Cost Calculator — Appliance Energy Cost Estimator",
+  "metaDescription": "Calculate how much it costs to run any appliance. Enter watts, hours per day, and electricity rate to see daily, monthly, and yearly energy costs. Free tool.",
+  "inputs": [
+    {
+      "id": "watts",
+      "label": "Wattage",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1000,
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "suffix": "watts",
+      "helpText": "The appliance's power consumption (check the label or manual)"
+    },
+    {
+      "id": "hoursPerDay",
+      "label": "Hours Used Per Day",
+      "type": "number",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0,
+      "max": 24,
+      "step": 0.5,
+      "suffix": "hours",
+      "helpText": "Average hours per day the appliance runs"
+    },
+    {
+      "id": "ratePerKWh",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 0.16,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "Your electricity rate per kilowatt-hour (check your utility bill)"
+    },
+    {
+      "id": "daysPerMonth",
+      "label": "Days Per Month",
+      "type": "number",
+      "required": false,
+      "defaultValue": 30,
+      "min": 1,
+      "max": 31,
+      "step": 1,
+      "helpText": "Number of days per month the appliance is used"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyCost",
+      "label": "Monthly Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "yearlyCost",
+      "label": "Yearly Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "dailyCost",
+      "label": "Daily Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 4
+    },
+    {
+      "id": "monthlyKWh",
+      "label": "Monthly Energy (kWh)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "costPerHour",
+      "label": "Cost Per Hour",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 4
+    }
+  ],
+  "formula": "electricity-cost",
+  "features": [
+    "shareable-url",
+    "print-results",
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "fuel-cost-calculator",
+    "discount-calculator",
+    "sales-tax-calculator",
+    "percentage-calculator",
+    "tip-calculator",
+    "energy-calculator",
+    "ohms-law-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Energy Information Administration (EIA) — residential electricity rate averages and appliance consumption estimates (2024).",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "kWh = (watts × hours) / 1000; cost = kWh × rate. National average residential rate: $0.16/kWh (EIA, 2024).",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 79,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

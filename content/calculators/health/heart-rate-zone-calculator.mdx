@@ -1,0 +1,159 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 30-year-old with a resting heart rate of 70 bpm has a maximum heart rate of 190 bpm and should train at 154–166 bpm (Zone 3) for cardiovascular fitness, or 142–154 bpm (Zone 2) for optimal fat burning, based on the Karvonen formula. Enter your age and resting heart rate below to calculate your personalized five training zones — from warm-up recovery through peak VO2max effort.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Heart rate training zones divide your effort spectrum into five distinct intensity bands, each producing different physiological adaptations. Zone 2 (60–70% of heart rate reserve) maximizes fat oxidation and builds aerobic endurance — the foundation for all other training. Zone 3 (70–80%) strengthens the cardiovascular system and improves oxygen delivery. Zone 4 (80–90%) raises your lactate threshold, allowing you to sustain faster paces before fatigue sets in. Zone 5 (90–100%) develops peak power and VO2max capacity, but is sustainable only in short bursts.
+
+This calculator uses the Karvonen method, which accounts for your resting heart rate — a marker of cardiovascular fitness — rather than simply applying flat percentages to your max heart rate. The result is more personalized zones. An athlete with a resting heart rate of 50 bpm and a sedentary person with an RHR of 85 bpm will have substantially different zone boundaries even at the same age. The Karvonen formula reflects this difference by calculating zones from heart rate reserve (the gap between resting and maximum), placing your Zone 2 higher if your baseline fitness is higher.
+
+If you know your actual maximum heart rate from a graded exercise test or a timed all-out effort, enter it directly for the most accurate zones. The default 220-minus-age formula (Fox, 1971) has a standard deviation of 10–12 bpm, meaning your true max could be 10+ beats higher or lower than estimated.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your age** — this is used to estimate your maximum heart rate via the Fox formula (220 − age) if you do not have a known value.
+
+2. **Measure your resting heart rate** — count your pulse first thing in the morning before getting out of bed, for 60 seconds. A consistent RHR measured over 3–5 mornings is the most reliable. The American Heart Association considers a normal adult RHR to be 60–100 bpm; trained endurance athletes often fall in the 40–60 bpm range.
+
+3. **Choose your max heart rate method** — select "Estimate from age" for the standard 220 − age formula, or "I know my max heart rate" if you have a clinically tested or field-tested value.
+
+4. **If you selected known max heart rate**, enter the value. This should come from a supervised graded exercise test (GXT) or a validated field protocol like a 3-minute all-out running test.
+
+5. **Read your results** — the calculator displays your estimated max heart rate, heart rate reserve, a table of all five zones with BPM ranges and training purposes, and a bar chart for visual reference. Use a heart rate monitor during workouts to stay within your target zone.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+This calculator implements the Karvonen formula (1957), which uses heart rate reserve to calculate individualized training intensities:
+
+**Maximum Heart Rate (Fox formula, 1971):**
+
+$$\text{MHR} = 220 - \text{age}$$
+
+**Heart Rate Reserve:**
+
+$$\text{HRR} = \text{MHR} - \text{RHR}$$
+
+**Target Heart Rate (Karvonen formula):**
+
+$$\text{THR} = (\text{HRR} \times \text{intensity\%}) + \text{RHR}$$
+
+Where:
+
+- **MHR** = maximum heart rate in beats per minute
+- **RHR** = resting heart rate in beats per minute
+- **HRR** = heart rate reserve (the working range between rest and max)
+- **intensity%** = the fraction of HRR corresponding to each training zone (0.50 to 1.00)
+
+The five zones are defined by the American Heart Association and exercise physiology standards:
+
+| Zone | Intensity | Adaptation |
+|------|-----------|------------|
+| 1 | 50–60% HRR | Recovery, warm-up |
+| 2 | 60–70% HRR | Fat burning, aerobic base |
+| 3 | 70–80% HRR | Cardiovascular fitness |
+| 4 | 80–90% HRR | Lactate threshold, speed |
+| 5 | 90–100% HRR | VO2max, peak power |
+
+**Source:** Karvonen MJ, Kentala E, Mustala O (1957). "The effects of training on heart rate." *Annales Medicinae Experimentalis et Biologiae Fenniae*, 35(3), 307–315. Fox SM, Naughton JP, Haskell WL (1971). "Physical activity and the prevention of coronary heart disease." *Annals of Clinical Research*, 3, 404–432. American Heart Association target heart rate guidelines.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 30-Year-Old Recreational Runner (RHR 70)
+
+**Inputs:**
+- Age: 30
+- Resting Heart Rate: 70 bpm
+- Max Heart Rate Method: Formula
+
+**Step-by-step:**
+
+1. Maximum heart rate: $220 - 30 = 190$ bpm
+2. Heart rate reserve: $190 - 70 = 120$ bpm
+3. Zone 1 (50–60%): $(120 \times 0.50) + 70 = 130$ to $(120 \times 0.60) + 70 = 142$ bpm
+4. Zone 2 (60–70%): $(120 \times 0.60) + 70 = 142$ to $(120 \times 0.70) + 70 = 154$ bpm
+5. Zone 3 (70–80%): $(120 \times 0.70) + 70 = 154$ to $(120 \times 0.80) + 70 = 166$ bpm
+6. Zone 4 (80–90%): $(120 \times 0.80) + 70 = 166$ to $(120 \times 0.90) + 70 = 178$ bpm
+7. Zone 5 (90–100%): $(120 \times 0.90) + 70 = 178$ to $(120 \times 1.00) + 70 = 190$ bpm
+
+**Result:** For easy runs and fat burning, this runner should target 142–154 bpm (Zone 2). Tempo runs and steady-state cardio fall in Zone 3 at 154–166 bpm. Speed intervals should push heart rate to 166–178 bpm (Zone 4). An 80/20 training approach means spending roughly 80% of weekly training time in Zones 1–2 and only 20% in Zones 3–5.
+
+### Example 2: 50-Year-Old with RHR 65
+
+**Inputs:**
+- Age: 50
+- Resting Heart Rate: 65 bpm
+- Max Heart Rate Method: Formula
+
+**Step-by-step:**
+
+1. Maximum heart rate: $220 - 50 = 170$ bpm
+2. Heart rate reserve: $170 - 65 = 105$ bpm
+3. Zone 2 (fat burning): $(105 \times 0.60) + 65 = 128$ to $(105 \times 0.70) + 65 = 139$ bpm
+4. Zone 3 (cardio): $(105 \times 0.70) + 65 = 139$ to $(105 \times 0.80) + 65 = 149$ bpm
+
+**Result:** This person's fat-burning zone sits at 128–139 bpm, and cardiovascular fitness training falls in the 139–149 bpm range. Because the heart rate reserve is smaller (105 vs. 120 in Example 1), there is less separation between zones — making accurate heart rate monitoring more important for staying in the intended zone.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Resting Heart Rate Accuracy** — RHR fluctuates with stress, caffeine, dehydration, sleep quality, and illness. A single measurement can be off by 5–10 bpm. The American Heart Association recommends measuring first thing in the morning over 3–5 consecutive days and averaging the values. An error of 10 bpm in RHR shifts all five zone boundaries by 5–10 bpm, potentially putting you in the wrong zone during training.
+
+**Max Heart Rate Estimation** — The 220-minus-age formula has a standard deviation of 10–12 bpm (Tanaka et al., 2001). A 40-year-old could have a true MHR anywhere from 168 to 192 bpm instead of the predicted 180. For the most accurate zones, perform a graded exercise test with a cardiologist or use a validated field test. This is especially important for people over 40, those on beta-blockers (which cap heart rate), or trained athletes whose max HR may deviate significantly from age-predicted values.
+
+**Cardiovascular Medications** — Beta-blockers, calcium channel blockers, and certain anti-arrhythmics directly suppress heart rate. If you take any heart rate-modifying medication, heart rate zones calculated from the standard formula will not be accurate. Consult your physician for a clinically supervised exercise test to determine safe training intensities.
+
+**Fitness Level** — As aerobic fitness improves, resting heart rate decreases — often by 1 bpm per week of consistent training in beginners. This means your zones will shift over time. Recalculate every 4–8 weeks if you are actively training, or whenever your resting heart rate changes by 5+ bpm.
+
+**Environmental Conditions** — Heat, humidity, and altitude all elevate heart rate at a given effort level. In hot conditions, heart rate can be 10–20 bpm higher than normal for the same pace or power output. This phenomenon, called cardiac drift, can push you into a higher zone than intended. Consider adjusting pace rather than chasing a specific heart rate number in extreme conditions.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes the 220 − age formula provides a reasonable estimate of maximum heart rate. Individual variation is significant (standard deviation: 10–12 bpm).
+- Assumes resting heart rate is measured under standardized conditions (morning, before rising, no caffeine).
+- Does not account for the effects of cardiovascular medications such as beta-blockers, which suppress peak and resting heart rate.
+- Zone boundaries are rounded to the nearest whole BPM, which may cause minor overlap at zone transitions depending on rounding direction.
+- The Karvonen formula assumes a linear relationship between heart rate reserve and oxygen consumption (VO2). This holds reasonably well for Zones 2–4 but may be less accurate at extreme intensities (Zones 1 and 5).
+- This calculator is designed for healthy adults. Individuals with cardiovascular conditions, arrhythmias, or pacemakers should consult a physician before using heart rate-based training.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the best heart rate zone for burning fat?
+
+Zone 2 (60–70% of heart rate reserve) maximizes the percentage of calories burned from fat, which is why it is often called the "fat-burning zone." At this intensity, approximately 60–70% of calories come from fat oxidation. However, higher-intensity zones burn more total calories per minute — a 30-minute Zone 4 session burns roughly 50% more total calories than the same duration in Zone 2. For fat loss, total caloric expenditure matters more than fuel source, so the best approach combines Zone 2 base training with occasional higher-intensity sessions.
+
+### How accurate is the 220-minus-age formula?
+
+The 220-minus-age formula is a rough population-level estimate with a standard deviation of 10–12 bpm, according to a meta-analysis by Tanaka et al. (2001) published in the *Journal of the American College of Cardiology*. This means about 33% of people will have an actual maximum heart rate more than 10 bpm away from the predicted value. The formula is least accurate for people over 40 and for highly trained athletes. For the most reliable max heart rate, complete a graded exercise test (GXT) supervised by a physician or exercise physiologist.
+
+### How often should I recalculate my training zones?
+
+Recalculate your zones every 4–8 weeks if you are actively training, or whenever your resting heart rate changes by 5 or more bpm. As cardiovascular fitness improves through consistent aerobic training, resting heart rate typically decreases — beginners may see a drop of 1 bpm per week during the first 8–12 weeks of a training program. Since the Karvonen formula uses resting heart rate as an input, a lower RHR shifts all zone boundaries and reflects your improved fitness.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the Karvonen target heart rate formula as published by **Karvonen MJ, Kentala E, Mustala O (1957)** in *Annales Medicinae Experimentalis et Biologiae Fenniae*. Maximum heart rate estimation uses the Fox formula from **Fox SM, Naughton JP, Haskell WL (1971)**, published in *Annals of Clinical Research*. Zone definitions align with the **American Heart Association** exercise intensity guidelines. Accuracy limitations of the 220-minus-age formula are documented in **Tanaka H, Monahan KD, Seals DR (2001)**, "Age-predicted maximal heart rate revisited," *Journal of the American College of Cardiology*, 37(1), 153–156. Fat oxidation zone research references **Achten J, Jeukendrup AE (2004)**, "Optimizing fat oxidation through exercise and diet," *Nutrition*, 20(7-8), 716–727.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

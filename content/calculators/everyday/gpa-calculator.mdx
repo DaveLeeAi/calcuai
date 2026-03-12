@@ -1,0 +1,254 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A student taking 15 credit hours with three A's (9 credits), one B+ (3 credits), and one B (3 credits) earns a semester GPA of 3.66 on the standard 4.0 scale — that is 54.9 total quality points divided by 15 credit hours. Enter your courses below to calculate your exact semester or cumulative GPA, see a per-course quality point breakdown, and determine how each grade affects your overall standing.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Grade Means */}
+## What Your Grade Means
+
+Your GPA (Grade Point Average) is a single number that summarizes your entire academic performance. It is the credit-weighted average of all your course grades — meaning a 4-credit course counts twice as heavily as a 2-credit course. On the standard 4.0 scale used by most US colleges, an A earns 4.0 grade points, a B earns 3.0, a C earns 2.0, a D earns 1.0, and an F earns 0.0. Plus and minus modifiers shift these values by 0.3 points (e.g., B+ = 3.3, B- = 2.7).
+
+This calculator gives you two key outputs. **Semester GPA** reflects only the courses you enter — useful for tracking performance in a single term. **Cumulative GPA** combines your new semester with your existing academic record, showing your overall standing across all completed coursework. If you have completed 60 credits with a 3.5 GPA and earn a 3.0 in 15 new credits, your cumulative GPA drops to 3.40 — not 3.25 — because the 60 prior credits carry four times the weight of the new 15.
+
+The **course breakdown table** shows the quality points each course contributes, making it clear which courses help and which courses drag your GPA down. A 4-credit A contributes 16.0 quality points, while a 4-credit C contributes only 8.0. This visibility helps you prioritize: improving a low grade in a high-credit course has a much larger GPA impact than improving a low grade in a 1-credit elective.
+
+Use the **College Cumulative tab** to see how your current semester fits into your overall academic trajectory. For individual assignment weighting within a single course, use our [Grade Calculator](/calculators/everyday/grade-calculator), or try our [Percentage Calculator](/calculators/math/percentage-calculator) for quick grade-to-percentage conversions.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your grade scale** — choose between the standard 4.0 scale (used by most US colleges) or the 4.3 scale (which includes A+ = 4.3). If you are unsure, use 4.0 — it is the default at approximately 90% of US institutions according to AACRAO surveys.
+
+2. **Choose your mode** — use the **Semester GPA** tab to calculate GPA for a single term. Switch to the **College Cumulative** tab if you want to incorporate your existing academic record into the calculation.
+
+3. **Add your courses** — for each course, enter the course name (for your reference), the number of credit hours (typically 1-5, check your course catalog or transcript), and select the letter grade you received or expect to receive. Add as many courses as you need — most students take 4-6 courses per semester.
+
+4. **Enter your existing record (College tab only)** — if using the College Cumulative tab, enter your current cumulative GPA (found on your unofficial transcript) and total credit hours completed before this semester. These two numbers let the calculator combine your history with your new grades.
+
+5. **Review your results** — your semester GPA and cumulative GPA appear immediately. The course breakdown table shows the quality points each course contributes, so you can see exactly which courses are pulling your GPA up or down.
+
+6. **Experiment with scenarios** — change individual grades to see their impact. For example, check how raising one course from a B to an A changes your semester GPA, or see what GPA you need this semester to reach a specific cumulative target like 3.0 or 3.5.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The GPA formula is a weighted arithmetic mean. Each course's letter grade is converted to a numeric grade point value, multiplied by the course's credit hours to produce quality points, and then the sum of all quality points is divided by the sum of all credit hours:
+
+$$\text{GPA} = \frac{\sum_{i=1}^{n}(\text{Credit Hours}_i \times \text{Grade Points}_i)}{\sum_{i=1}^{n} \text{Credit Hours}_i}$$
+
+Where:
+
+- **GPA** = Grade Point Average, a number typically ranging from 0.00 to 4.00 (or 4.30 on the plus/minus scale)
+- **Credit Hours_i** = the credit hour weight of course *i* (typically 1-5 hours per course)
+- **Grade Points_i** = the numeric value assigned to the letter grade in course *i*
+- **n** = total number of courses
+- **Quality Points** = Credit Hours × Grade Points for a single course (intermediate value)
+
+### Standard 4.0 Scale Grade Points
+
+| Letter Grade | Grade Points | Letter Grade | Grade Points |
+|---|---|---|---|
+| A | 4.0 | C+ | 2.3 |
+| A- | 3.7 | C | 2.0 |
+| B+ | 3.3 | C- | 1.7 |
+| B | 3.0 | D+ | 1.3 |
+| B- | 2.7 | D | 1.0 |
+| | | D- | 0.7 |
+| | | F | 0.0 |
+
+On the 4.3 scale, A+ = 4.3 is added. All other values remain the same.
+
+### Cumulative GPA Formula
+
+When combining a new semester with an existing academic record:
+
+$$\text{Cumulative GPA} = \frac{(\text{Previous GPA} \times \text{Previous Credits}) + \sum(\text{New Credits}_i \times \text{New Grade Points}_i)}{\text{Previous Credits} + \sum \text{New Credits}_i}$$
+
+The numerator adds the total quality points from all previous coursework (Previous GPA multiplied by Previous Credits) to the quality points earned in the new semester. The denominator is the total of all credit hours, old and new.
+
+**Source:** Grade point average calculation methodology per the American Association of Collegiate Registrars and Admissions Officers (AACRAO), as documented in the *AACRAO Academic Record and Transcript Guide* and widely adopted across US higher education institutions.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Typical Semester — 5 Courses, Mixed Grades
+
+**Scenario:** A sophomore takes 15 credit hours with the following results:
+
+| Course | Credits | Grade | Grade Points | Quality Points |
+|---|---|---|---|---|
+| English 201 | 3 | A | 4.0 | 12.0 |
+| Calculus II | 4 | B+ | 3.3 | 13.2 |
+| Chemistry 101 | 4 | B | 3.0 | 12.0 |
+| History 102 | 3 | A- | 3.7 | 11.1 |
+| Art Elective | 1 | A | 4.0 | 4.0 |
+
+**Step-by-step:**
+
+1. Calculate quality points for each course: Credits × Grade Points
+2. Sum all quality points: 12.0 + 13.2 + 12.0 + 11.1 + 4.0 = **52.3**
+3. Sum all credit hours: 3 + 4 + 4 + 3 + 1 = **15**
+4. Divide: 52.3 / 15 = **3.49**
+
+**Interpretation:** A 3.49 semester GPA places this student in strong academic standing at most universities — above the typical 3.0 threshold for dean's list consideration at many schools. The 1-credit art elective barely moves the GPA because it carries so little weight: even if the student earned an F in that course instead of an A, the semester GPA would only drop from 3.49 to 3.22. However, dropping from a B+ to a C in the 4-credit Calculus course would reduce the GPA to 3.13 — a 0.36-point swing from a single course.
+
+### Example 2: Cumulative GPA with Existing Record
+
+**Scenario:** A junior has completed 75 credit hours with a cumulative GPA of 3.40. This semester, she takes 12 credits:
+
+| Course | Credits | Grade | Grade Points | Quality Points |
+|---|---|---|---|---|
+| Organic Chemistry | 4 | B- | 2.7 | 10.8 |
+| Statistics | 3 | A | 4.0 | 12.0 |
+| Philosophy | 3 | B+ | 3.3 | 9.9 |
+| Research Lab | 2 | A | 4.0 | 8.0 |
+
+**Step-by-step:**
+
+1. New semester quality points: 10.8 + 12.0 + 9.9 + 8.0 = **40.7**
+2. New semester credits: 4 + 3 + 3 + 2 = **12**
+3. New semester GPA: 40.7 / 12 = **3.39**
+4. Previous quality points: 3.40 × 75 = **255.0**
+5. Combined quality points: 255.0 + 40.7 = **295.7**
+6. Combined credits: 75 + 12 = **87**
+7. Cumulative GPA: 295.7 / 87 = **3.40**
+
+**Interpretation:** Despite earning a B- in Organic Chemistry, this student's semester GPA of 3.39 almost perfectly matches her existing 3.40 cumulative. Her cumulative GPA remains at 3.40 (rounded to two decimal places). This illustrates an important property of cumulative GPA: as you accumulate more credits, each individual course has progressively less impact. After 75 credits, even an F in a 4-credit course would only drop her cumulative GPA from 3.40 to 3.22 — a significant but not catastrophic change.
+
+### Example 3: Impact of a Low Grade on GPA
+
+**Scenario:** Two students take identical 15-credit schedules, but one earns a D in a 4-credit science course while the other earns a B.
+
+**Student A (B in Science):**
+
+| Course | Credits | Grade | Quality Points |
+|---|---|---|---|
+| Science 201 | 4 | B | 12.0 |
+| English 201 | 3 | A | 12.0 |
+| Math 202 | 3 | A- | 11.1 |
+| History 201 | 3 | B+ | 9.9 |
+| Music 101 | 2 | A | 8.0 |
+
+Total quality points: 53.0. GPA: 53.0 / 15 = **3.53**
+
+**Student B (D in Science):**
+
+| Course | Credits | Grade | Quality Points |
+|---|---|---|---|
+| Science 201 | 4 | D | 4.0 |
+| English 201 | 3 | A | 12.0 |
+| Math 202 | 3 | A- | 11.1 |
+| History 201 | 3 | B+ | 9.9 |
+| Music 101 | 2 | A | 8.0 |
+
+Total quality points: 45.0. GPA: 45.0 / 15 = **3.00**
+
+**Interpretation:** A single grade change from B to D in the 4-credit science course causes a 0.53-point GPA drop — from 3.53 to 3.00. That is the difference between dean's list honors and bare minimum good standing at most universities. The outsized impact occurs because the course carries 4 credit hours: the 2.0 grade-point difference (3.0 vs. 1.0) is multiplied by 4 credits, producing an 8.0 quality-point gap out of only 15 total credits. Had the same D occurred in the 2-credit music course instead, the GPA would only drop from 3.53 to 3.27.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Credit Hour Weighting** — This is the most overlooked factor in GPA calculation. A 4-credit course contributes twice as many quality points as a 2-credit course, so the grade in a 4-credit course has exactly double the GPA impact. Students commonly assume all courses count equally — they do not. A strategic student who earns an A in a 4-credit major course and a B in a 1-credit elective will have a higher GPA than one who earns a B in the 4-credit course and an A in the 1-credit elective. Specifically: 4(4.0) + 1(3.0) = 19.0 / 5 = 3.80 vs. 4(3.0) + 1(4.0) = 16.0 / 5 = 3.20. Same total letter grades, 0.60 GPA difference.
+
+**Grade Scale (4.0 vs. 4.3)** — Institutions using the 4.3 scale award A+ = 4.3 grade points, making it possible to exceed a 4.0 GPA. On this scale, a student with four A+ grades across 12 credits earns a 4.30 GPA. However, approximately 90% of US colleges use the standard 4.0 scale where A+ and A both equal 4.0. Always check which scale your school uses before interpreting your GPA — a 3.9 on a 4.3 scale is proportionally lower than a 3.9 on a 4.0 scale.
+
+**Pass/Fail and Withdrawal Courses** — Most institutions exclude pass/fail (P/F) courses from GPA calculation entirely. A "Pass" earns credit hours toward graduation but does not generate quality points or count in GPA-eligible credits. Similarly, a course dropped with a "W" (withdrawal) typically does not affect GPA. This calculator assumes all entered courses are graded on the standard letter-grade scale. If you are considering taking a course pass/fail, omit it from the calculator to see your accurate graded GPA.
+
+**Grade Replacement and Retake Policies** — Many colleges allow students to retake a course and replace the original grade in GPA calculation. Policies vary: some schools replace only the lower grade, others average both attempts, and some count both but mark the original as a repeat. At institutions that replace the original grade, retaking a 3-credit F and earning a B raises the student's quality points for that course from 0.0 to 9.0 — a 9.0-point swing that can significantly boost cumulative GPA, especially for students with fewer total credits.
+
+**Transfer Credits** — Credits transferred from another institution usually count toward degree requirements but do not factor into the receiving school's GPA. A student who transfers 60 credits with a 3.8 GPA to a new university starts with a 0.00 GPA at the new institution. Only courses taken at the current school contribute to the GPA shown on the official transcript. However, some graduate programs and professional schools recalculate GPA using all undergraduate coursework across all institutions.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Treating all courses as equal weight.** Students frequently calculate a simple average of letter grades — counting an A and a C as a 3.0 average (B). This is only correct if both courses carry the same number of credits. A 4-credit A and a 1-credit C actually yield a GPA of 3.60, not 3.00. Always use the weighted formula: sum of quality points divided by sum of credit hours.
+
+**Using the wrong grade scale.** If your school uses the standard 4.0 scale, an A+ earns 4.0 points — not 4.3. Students who enter grades on the 4.3 scale when their institution uses the 4.0 scale will overestimate their GPA. Conversely, entering A+ as A (4.0) on a school that awards 4.3 points will underestimate it. Confirm your school's grading policy in the academic catalog before calculating.
+
+**Forgetting to exclude pass/fail and audited courses.** Courses graded as P/F, S/U (Satisfactory/Unsatisfactory), or AU (Audit) do not generate grade points and should not be included in GPA calculation. Including a "P" as an A or a "U" as an F will distort your result. Only enter courses that received standard letter grades (A through F, with or without plus/minus).
+
+**Confusing term GPA with cumulative GPA.** Your semester GPA reflects only the current term's courses. Your cumulative GPA incorporates all graded coursework across your entire enrollment. A strong 3.8 semester does not mean your cumulative is 3.8 — it means your cumulative moved slightly toward 3.8 from wherever it was before. After 90 prior credits, a single 15-credit semester can only move your cumulative GPA by a maximum of about 0.4 points in either direction.
+
+**Not accounting for in-progress or expected grades.** When planning, students often calculate GPA using only completed grades and forget to include in-progress courses. If you are registered for 15 credits and have only completed 9, your actual GPA at the end of the semester will include all 15 credits. Use this calculator to model scenarios with projected grades for incomplete courses to avoid surprises.
+
+{/* Section 12: Comparison Table */}
+## 4.0 Scale vs. 4.3 Scale Comparison
+
+The table below compares GPA outcomes for identical course loads on both grading scales. All scenarios use 5 courses at 3 credits each (15 total credits).
+
+| Grades | 4.0 Scale GPA | 4.3 Scale GPA | Difference |
+|---|---|---|---|
+| All A+ | 4.00 | 4.30 | +0.30 |
+| A+, A, A, B+, B | 3.66 | 3.72 | +0.06 |
+| A, A, B+, B, B- | 3.26 | 3.26 | 0.00 |
+| A, B, B, C+, C | 2.92 | 2.92 | 0.00 |
+| B+, B, B-, C, C- | 2.60 | 2.60 | 0.00 |
+
+**Key takeaway:** The 4.3 scale only makes a difference when a student earns A+ grades. For all other grades, the two scales produce identical GPAs. A student with all A+ grades on the 4.3 scale earns a 4.30 — impossible on the 4.0 scale where A+ and A are both worth 4.0. The practical impact is most significant for honors-track students competing for valedictorian or summa cum laude distinctions, where a 4.30 clearly separates A+ performance from A performance. For students who rarely or never earn A+, the scale choice has zero effect on their GPA.
+
+## When GPA Matters — and When It's Noise
+
+GPA opens specific doors at specific moments. Outside those moments, almost nobody asks.
+
+**When it matters most:** Graduate school admissions (minimum cutoffs of 3.0–3.5 for most programs), professional school applications (medical schools report admitted student median GPAs of 3.73 per AAMC 2023 data), merit-based scholarships and financial aid (many require 3.0–3.5 to maintain), Latin honors at graduation (cum laude thresholds are typically 3.5–3.9), and your first job out of college. Roughly 67% of employers screen entry-level candidates on GPA according to a 2023 NACE survey, with 3.0 being the most common cutoff.
+
+**When it stops mattering:** After approximately 2–3 years of professional experience, GPA becomes irrelevant for hiring. A 2024 LinkedIn analysis found that fewer than 5% of job postings for roles requiring 3+ years of experience mention GPA. By mid-career, no one cares whether you graduated with a 3.2 or a 3.8 — they care about what you've built, shipped, or managed since then. If you're 5 years into your career and still leading with your GPA, you're advertising the wrong credential.
+
+**The GPA trap for high achievers:** A 3.95 student who avoids challenging courses to protect their GPA learns less than a 3.4 student who takes demanding electives and struggles through them. Medical school admissions committees are explicit about this: they would rather see a 3.6 with organic chemistry, biochemistry, and upper-level biology than a 3.9 built on introductory courses. The same principle applies broadly — a GPA earned in hard courses signals more than a GPA earned in easy ones, even if the number is lower.
+
+**The strategic recovery question:** If your GPA has taken a hit, the math of recovery gets harder as you accumulate credits. A student with a 2.5 GPA after 60 credits needs to average a 3.5 over the next 60 credits just to reach a 3.0 cumulative. That's achievable but demands consistent B+ or better in every remaining course. Use the cumulative tab above to model your exact recovery path — knowing the precise target GPA per semester removes the guesswork and lets you plan course loads realistically.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes all entered courses use the **standard letter-grade scale** (A through F, with optional plus/minus). Pass/fail, satisfactory/unsatisfactory, and audited courses should be excluded.
+- Uses the **AACRAO standard grade point values** (A = 4.0, B = 3.0, etc.). Some institutions assign slightly different values — for example, a few schools weight A- as 3.67 instead of 3.7. Check your school's official grade point mapping.
+- Assumes a **uniform credit hour system**. Some international institutions use ECTS credits, UK credits (CATS), or other weighting systems that are not directly compatible with this calculator.
+- Does **not account for grade replacement policies**. If your school replaces retaken course grades, you should enter only the replacement grade, not both the original and replacement.
+- The cumulative GPA calculation assumes your **prior GPA was calculated on the same scale** (4.0 or 4.3) as the new courses you are entering.
+- Does **not include incomplete (I) or withdrawn (W) grades**, which typically do not affect GPA unless converted to a letter grade after a deadline.
+- Does **not calculate honors designations** (cum laude, magna cum laude, summa cum laude), which have institution-specific GPA thresholds.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What GPA do you need for dean's list?
+
+Dean's list GPA requirements vary by institution, but the most common threshold is a 3.5 GPA on the 4.0 scale for the semester. Some universities set the bar at 3.3, while elite institutions may require 3.7 or higher. Almost all schools require full-time enrollment (typically 12+ credit hours) and no incomplete or failing grades during the semester. According to a 2023 AACRAO survey, 78% of US colleges set their dean's list cutoff between 3.3 and 3.7. Check your school's academic policies for the exact requirement — it is almost always based on your semester GPA, not your cumulative GPA.
+
+### How much does one bad grade affect your GPA?
+
+The impact of one bad grade depends on the course's credit hours and your total credits. On a 15-credit semester, dropping one 3-credit course from an A (4.0) to a C (2.0) lowers your semester GPA by 0.40 points — from 3.60 to 3.20, for example. However, the same grade change on a 4-credit course causes a 0.53-point drop. The effect on cumulative GPA shrinks as you accumulate more credits: after 120 completed credits, a single 3-credit F changes your cumulative by only 0.10 points. Early in your college career with 15-30 total credits, each course has a much larger proportional impact.
+
+### What is the difference between weighted and unweighted GPA?
+
+Unweighted GPA uses the standard 4.0 maximum scale for all courses. Weighted GPA, used primarily in high school, awards extra grade points for honors, AP, and IB courses — typically adding 0.5 for honors and 1.0 for AP/IB, making a 5.0 the maximum possible GPA. In weighted systems, an A in AP Chemistry earns 5.0 grade points while an A in regular Chemistry earns 4.0. Most US colleges and universities use unweighted GPA — they recalculate high school GPAs on their own unweighted scale during admissions. This calculator computes unweighted GPA on the standard 4.0 or 4.3 college scale.
+
+### Can your GPA go up after a bad semester?
+
+Yes, and mathematically it is guaranteed to recover if you consistently earn higher grades afterward. After a bad semester that drops your cumulative GPA to 2.80 with 30 credits completed, earning a 3.50 each semester for the next four semesters (60 credits) raises your cumulative to 3.27 by graduation. The recovery formula is straightforward: if your target cumulative is *T*, your current cumulative is *C* with *P* credits, you need to average *T* + ((*T* - *C*) × *P* / *N*) over the next *N* credits. The more credits you still have ahead of you, the smaller the semester GPA boost required to reach your target.
+
+### What GPA do you need for graduate school?
+
+Most master's programs require a minimum 3.0 cumulative GPA for admission, with competitive programs expecting 3.3-3.5. Top-tier MBA programs (Harvard, Stanford, Wharton) report median admitted GPAs of 3.7-3.8. Medical schools (MD programs) have a median admitted GPA of 3.73 according to AAMC 2023 data, with a science GPA median of 3.65. Law schools weight LSAT scores alongside GPA, with T14 schools reporting median GPAs above 3.8. PhD programs vary widely by field but generally expect 3.5+ for competitive applicants. However, GPA is rarely the sole deciding factor — research experience, test scores, recommendations, and personal statements all contribute to admissions decisions.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator converts letter grades to grade points using the standard 4.0 scale (A = 4.0, B = 3.0, C = 2.0, D = 1.0, F = 0.0), multiplies each by the course's credit hours, sums the total quality points, and divides by total credit hours attempted. Plus/minus modifiers add or subtract 0.3 (e.g., B+ = 3.3, B− = 2.7). A− is capped at 3.7 on a 4.0 scale.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

@@ -1,0 +1,158 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+With a due date of December 15, 2026 and a standard 28-day cycle, your estimated conception date is March 25, 2026 — approximately 266 days before delivery, with a fertile window spanning March 20-26. This calculator works in both directions: enter your due date to find when you conceived, or enter your last menstrual period to see your ovulation date, fertile window, and full early-pregnancy timeline based on ACOG guidelines.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Estimate Means */}
+## What Your Estimate Means
+
+This conception calculator estimates when fertilization most likely occurred by working backward from either your due date or your last menstrual period. Unlike the [Due Date Calculator](/calculators/health/due-date-calculator) (which takes an LMP and gives you a delivery date) or the [Pregnancy Calculator](/calculators/health/pregnancy-calculator) (which tracks week-by-week development), this tool focuses specifically on the **conception window** — when ovulation happened, when you were most fertile, and when the embryo likely implanted.
+
+The calculator outputs five key data points: your estimated conception/ovulation date, the 6-day fertile window during which intercourse could have led to pregnancy, the implantation window (6-12 days post-conception when the embryo attaches to the uterine wall), and a complete early-pregnancy timeline from LMP through due date. This timeline includes the dates for your first missed period, when a home pregnancy test would first show positive, and when the first ultrasound heartbeat is typically visible.
+
+Understanding your conception date matters for several practical reasons: it helps date a pregnancy when the LMP is uncertain, it clarifies paternity timing questions, it explains why gestational age (counted from LMP) is always about 2 weeks longer than the embryo's actual age, and it puts early pregnancy symptoms in context — implantation spotting typically occurs 6-12 days after conception, and a positive home test becomes reliable about 14 days after.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose your calculation method.** Select "I know my due date" if your healthcare provider has already given you an estimated due date (from an ultrasound or Naegele's Rule calculation). Select "I know my last menstrual period" if you want to calculate forward from the first day of your last period.
+
+2. **Enter the relevant date.** If calculating from a due date, enter the date exactly as your provider stated it. If calculating from LMP, enter the first day of your last menstrual period — the day bleeding started, not the day it ended.
+
+3. **Select your average cycle length.** The default is 28 days. If your cycles are shorter (21-27 days), ovulation occurred earlier in your cycle, which shifts the conception date earlier. If your cycles are longer (29-35 days), ovulation and conception shift later. This adjustment is clinically significant — a 35-day cycle shifts the conception estimate by 7 days compared to a 28-day cycle.
+
+4. **Review the results.** The calculator shows your estimated conception date, fertile window, implantation range, and a detailed timeline of early pregnancy events. All dates adjust automatically when you change any input.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Conception date estimation uses the ovulation-timing component of **Naegele's Rule**, working either forward from the LMP or backward from the due date.
+
+**From LMP (forward calculation):**
+
+$$\text{Conception Date} = \text{LMP} + (\text{Cycle Length} - 14) \text{ days}$$
+
+$$\text{Due Date} = \text{LMP} + 280 + (\text{Cycle Length} - 28) \text{ days}$$
+
+**From Due Date (reverse calculation):**
+
+$$\text{LMP} = \text{Due Date} - 280 - (\text{Cycle Length} - 28) \text{ days}$$
+
+$$\text{Conception Date} = \text{LMP} + (\text{Cycle Length} - 14) \text{ days}$$
+
+**Fertile Window:**
+
+$$\text{Fertile Window Start} = \text{Ovulation Date} - 5 \text{ days}$$
+
+$$\text{Fertile Window End} = \text{Ovulation Date} + 1 \text{ day}$$
+
+**Implantation Range:**
+
+$$\text{Early Implantation} = \text{Conception Date} + 6 \text{ days}$$
+
+$$\text{Late Implantation} = \text{Conception Date} + 12 \text{ days}$$
+
+Where:
+
+- **LMP** = first day of the last menstrual period
+- **Cycle Length** = average menstrual cycle in days (default: 28)
+- **14 days** = assumed luteal phase length (the interval from ovulation to next period)
+- **280 days** = standard gestational period (40 weeks from LMP)
+- **5 days** = maximum sperm survival in the reproductive tract
+- **1 day** = approximate egg survival after ovulation (12-24 hours)
+
+The fertile window is 6 days because sperm can survive up to 5 days in the female reproductive tract, while the egg remains viable for approximately 12-24 hours after release. Implantation occurs 6-12 days after fertilization, with most embryos implanting between days 8-10.
+
+**Source:** ACOG Committee Opinion No. 700, "Methods for Estimating the Due Date" (May 2017). Fertile window data from Wilcox AJ, et al., "Timing of sexual intercourse in relation to ovulation," *NEJM* 333(23):1517-1521 (1995).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: From Due Date — Standard 28-Day Cycle
+
+**Inputs:**
+- Due Date: December 15, 2026
+- Cycle Length: 28 days
+
+**Step-by-step:**
+
+1. Calculate LMP: December 15, 2026 - 280 days - (28 - 28) = **March 10, 2026**
+2. Conception date: March 10 + (28 - 14) = March 10 + 14 = **March 24, 2026**
+3. Fertile window: March 24 - 5 days to March 24 + 1 day = **March 19 to March 25**
+4. Early implantation: March 24 + 6 = **March 30, 2026**
+5. Late implantation: March 24 + 12 = **April 5, 2026**
+6. First missed period: March 10 + 28 = **April 7, 2026**
+
+**Interpretation:** Conception most likely occurred around March 24, but intercourse any time during March 19-25 could have resulted in pregnancy. Implantation spotting (if it occurs) would have been noticed between March 30 and April 5, and a home pregnancy test would reliably show positive around April 7 — roughly the date of the first missed period.
+
+### Example 2: From LMP — Longer 32-Day Cycle
+
+**Inputs:**
+- Last Menstrual Period: June 1, 2026
+- Cycle Length: 32 days
+
+**Step-by-step:**
+
+1. Conception date: June 1 + (32 - 14) = June 1 + 18 = **June 19, 2026**
+2. Due date: June 1 + 280 + (32 - 28) = June 1 + 284 = **March 12, 2027**
+3. Fertile window: June 19 - 5 to June 19 + 1 = **June 14 to June 20**
+4. Early implantation: June 19 + 6 = **June 25, 2026**
+5. Late implantation: June 19 + 12 = **July 1, 2026**
+
+**Interpretation:** With a 32-day cycle, ovulation occurred on day 18 rather than day 14, shifting the conception window 4 days later than a standard 28-day calculation would suggest. This means the embryo is 4 days younger than a basic LMP calculation (without cycle adjustment) would indicate — a difference that matters for scheduling gestational-age-sensitive screening tests like the nuchal translucency scan at weeks 11-14.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Cycle Regularity** — The formula assumes consistent cycles. If your cycles vary by more than 5 days month to month, the estimated ovulation date has a wider margin of error. Ovulation predictor kits (OPKs) or basal body temperature charting provide more precise ovulation dating for women with irregular cycles.
+
+**Luteal Phase Variation** — The calculator assumes a 14-day luteal phase, which is the population average. In practice, luteal phases range from 10 to 16 days. A woman with an 11-day luteal phase ovulates 3 days later (relative to her next period) than the formula predicts, shifting the actual conception date by up to 3 days.
+
+**Sperm Survival and Timing** — Conception does not necessarily occur on the day of intercourse. Sperm can survive up to 5 days in the reproductive tract, so intercourse on Monday could result in fertilization on Thursday if ovulation occurs that day. The "conception date" this calculator provides is the estimated ovulation date — the most likely date of fertilization — not necessarily the date of the intercourse that led to pregnancy.
+
+**IVF and Assisted Reproduction** — If conception occurred through IVF, the embryo transfer date provides a known conception reference point and this calculator is not needed. For IUI (intrauterine insemination), the procedure date closely approximates the conception date.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **14-day luteal phase** for all women. Actual range is 10-16 days, introducing potential error of plus or minus 3 days.
+- Assumes **ovulation occurs on a single day**. In reality, the LH surge triggering ovulation spans 24-48 hours.
+- The fertile window model assumes **maximum sperm survival of 5 days**, based on Wilcox et al. (1995). Some studies report shorter average survival.
+- Implantation timing (6-12 days) is based on population data from Wilcox et al., *NEJM* (1999). Individual variation exists.
+- This tool provides **estimates, not diagnoses**. Confirm all dates with your healthcare provider, especially for pregnancy dating and screening test scheduling.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Can I determine the exact date of conception?
+
+No, the exact date of conception cannot be determined without assisted reproduction (IVF) where the fertilization date is known. Natural conception involves a 6-day fertile window, and sperm can survive up to 5 days in the reproductive tract. The "conception date" this calculator provides is the estimated ovulation date — the most statistically likely day of fertilization — but intercourse 1-5 days before ovulation could equally be the initiating event. Even with ovulation predictor kits, the actual moment of fertilization can only be narrowed to a 24-48 hour window.
+
+### Why does my gestational age differ from my baby's actual age?
+
+Gestational age counts from the first day of the last menstrual period, which is approximately 2 weeks before conception actually occurred. This means gestational age is always about 14 days longer than fetal age (the actual time since fertilization). The medical community uses gestational age as the standard because the LMP is a known date for most women, while the exact conception date is rarely certain. When your doctor says "10 weeks pregnant," the embryo has been developing for approximately 8 weeks.
+
+### Can I use this calculator to determine paternity?
+
+This calculator narrows the conception window but cannot definitively determine paternity. The fertile window spans 6 days, and the actual date of fertilizing intercourse could be any day within that window or even slightly outside it. For paternity determination, a prenatal paternity test (non-invasive prenatal paternity testing via blood draw after week 7) or postnatal DNA test provides definitive results. This calculator can help narrow the timeframe but should not be used as the sole basis for paternity conclusions.
+
+</div>
+
+{/* Section 13: Related Calculators — auto-rendered from spec */}
+
+{/* Section 14: Sources & Methodology */}
+## Methodology & Sources
+
+This calculator applies Naegele's Rule per the **American College of Obstetricians and Gynecologists (ACOG)** Committee Opinion No. 700 (May 2017, reaffirmed 2023). Fertile window duration is based on Wilcox AJ, Weinberg CR, Baird DD, "Timing of sexual intercourse in relation to ovulation," *New England Journal of Medicine* 333(23):1517-1521 (1995). Implantation timing follows Wilcox AJ, Baird DD, Weinberg CR, "Time of implantation of the conceptus and loss of pregnancy," *NEJM* 340(23):1796-1799 (1999).
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

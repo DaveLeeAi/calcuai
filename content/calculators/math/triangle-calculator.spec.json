@@ -1,0 +1,260 @@
+{
+  "id": "triangle-calculator",
+  "title": "Triangle Calculator",
+  "slug": "triangle-calculator",
+  "category": "math",
+  "subcategory": "geometry",
+  "primaryKeyword": "triangle calculator",
+  "metaTitle": "Triangle Calculator — Solve Any Triangle (SSS SAS ASA)",
+  "metaDescription": "Solve any triangle: enter sides or angles to find all missing measurements. Supports SSS, SAS, ASA, AAS. Area, perimeter, angles.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Known Values",
+      "type": "select",
+      "required": true,
+      "defaultValue": "sss",
+      "options": [
+        {
+          "value": "sss",
+          "label": "SSS (3 sides)"
+        },
+        {
+          "value": "sas",
+          "label": "SAS (2 sides + included angle)"
+        },
+        {
+          "value": "aas",
+          "label": "AAS (2 angles + non-included side)"
+        },
+        {
+          "value": "asa",
+          "label": "ASA (2 angles + included side)"
+        }
+      ],
+      "helpText": "Select what measurements you know"
+    },
+    {
+      "id": "sideA",
+      "label": "Side a",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3,
+      "min": 0.0001,
+      "step": 0.01,
+      "placeholder": "e.g. 3",
+      "helpText": "Length of side a (opposite angle A)"
+    },
+    {
+      "id": "sideB",
+      "label": "Side b",
+      "type": "number",
+      "required": false,
+      "defaultValue": 4,
+      "min": 0.0001,
+      "step": 0.01,
+      "placeholder": "e.g. 4",
+      "helpText": "Length of side b (opposite angle B)"
+    },
+    {
+      "id": "sideC",
+      "label": "Side c",
+      "type": "number",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0.0001,
+      "step": 0.01,
+      "placeholder": "e.g. 5",
+      "helpText": "Length of side c (opposite angle C)"
+    },
+    {
+      "id": "angleA",
+      "label": "Angle A (°)",
+      "type": "number",
+      "required": false,
+      "min": 0.01,
+      "max": 179.99,
+      "step": 0.01,
+      "placeholder": "e.g. 60",
+      "helpText": "Angle A in degrees (opposite side a)"
+    },
+    {
+      "id": "angleB",
+      "label": "Angle B (°)",
+      "type": "number",
+      "required": false,
+      "min": 0.01,
+      "max": 179.99,
+      "step": 0.01,
+      "placeholder": "e.g. 60",
+      "helpText": "Angle B in degrees (opposite side b)"
+    },
+    {
+      "id": "angleC",
+      "label": "Angle C (°)",
+      "type": "number",
+      "required": false,
+      "min": 0.01,
+      "max": 179.99,
+      "step": 0.01,
+      "placeholder": "e.g. 60",
+      "helpText": "Angle C in degrees (opposite side c)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sideA",
+      "label": "Side a",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "sideB",
+      "label": "Side b",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "sideC",
+      "label": "Side c",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "angleA",
+      "label": "Angle A",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "angleB",
+      "label": "Angle B",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "angleC",
+      "label": "Angle C",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "area",
+      "label": "Area",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "perimeter",
+      "label": "Perimeter",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "triangleType",
+      "label": "Triangle Type",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "sss",
+      "label": "SSS",
+      "description": "Three sides known",
+      "defaultInputOverrides": {
+        "mode": "sss"
+      },
+      "visibleInputs": [
+        "sideA",
+        "sideB",
+        "sideC"
+      ]
+    },
+    {
+      "id": "sas",
+      "label": "SAS",
+      "description": "Two sides and included angle",
+      "defaultInputOverrides": {
+        "mode": "sas"
+      },
+      "visibleInputs": [
+        "sideA",
+        "sideB",
+        "angleC"
+      ]
+    },
+    {
+      "id": "aas",
+      "label": "AAS",
+      "description": "Two angles and a non-included side",
+      "defaultInputOverrides": {
+        "mode": "aas"
+      },
+      "visibleInputs": [
+        "angleA",
+        "angleB",
+        "sideA"
+      ]
+    },
+    {
+      "id": "asa",
+      "label": "ASA",
+      "description": "Two angles and included side",
+      "defaultInputOverrides": {
+        "mode": "asa"
+      },
+      "visibleInputs": [
+        "angleA",
+        "angleB",
+        "sideC"
+      ]
+    }
+  ],
+  "formula": "triangle-solver",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "circle-calculator",
+    "quadratic-formula-calculator",
+    "percentage-calculator",
+    "exponent-calculator",
+    "square-footage-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Law of cosines and law of sines; Heron's formula for area (attributed to Heron of Alexandria, 1st century AD)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Law of cosines: c² = a² + b² - 2ab·cos(C). Law of sines: a/sin(A) = b/sin(B) = c/sin(C). Heron's formula: Area = √(s(s-a)(s-b)(s-c)). Standard trigonometric identities",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "circle-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "back-to-school"
+}

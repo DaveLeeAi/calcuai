@@ -1,0 +1,120 @@
+{
+  "id": "velocity-calculator",
+  "title": "Velocity Calculator",
+  "slug": "velocity-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "velocity calculator",
+  "metaTitle": "Velocity Calculator — Speed, Distance, Time Solver",
+  "metaDescription": "Calculate speed, distance, or time from any two known values. Supports m/s, km/h, mph. Free online velocity calculator with unit conversions and formulas.",
+  "inputs": [
+    {
+      "id": "speed",
+      "label": "Speed",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "helpText": "Enter any two values to calculate the third"
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 100",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m",
+      "defaultValue": 100,
+      "helpText": "Distance in meters"
+    },
+    {
+      "id": "time",
+      "label": "Time",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "s",
+      "defaultValue": 10,
+      "helpText": "Time in seconds"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "speed",
+      "label": "Speed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "time",
+      "label": "Time",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "velocity",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "density-calculator",
+    "energy-calculator",
+    "pressure-calculator",
+    "ohms-law-calculator",
+    "percentage-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Galileo Galilei, Discorsi e dimostrazioni matematiche (1638)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Classical kinematics: v = d/t, d = vt, t = d/v",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "pace-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

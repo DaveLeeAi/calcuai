@@ -1,0 +1,190 @@
+{
+  "id": "payment-calculator",
+  "title": "Payment Calculator",
+  "slug": "payment-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "payment calculator",
+  "metaTitle": "Payment Calculator — Monthly Loan Payment & Total Cost",
+  "metaDescription": "Calculate your monthly payment for any loan amount, rate, and term. See total cost, interest breakdown, and amortization schedule. Free, instant.",
+  "inputs": [
+    {
+      "id": "loanAmount",
+      "label": "Loan Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 20000,
+      "min": 100,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$"
+    },
+    {
+      "id": "annualRate",
+      "label": "Interest Rate (APR)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 36,
+      "step": 0.1,
+      "helpText": "Your annual interest rate (APR)"
+    },
+    {
+      "id": "loanTerm",
+      "label": "Loan Term (Months)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 60,
+      "min": 1,
+      "max": 360,
+      "step": 1,
+      "helpText": "Loan term in months (e.g., 60 = 5 years)"
+    },
+    {
+      "id": "extraPayment",
+      "label": "Extra Monthly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Optional extra monthly payment toward principal"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyPayment",
+      "label": "Monthly Payment",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalPayment",
+      "label": "Total Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "payoffDate",
+      "label": "Payoff Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Payment Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "paymentBreakdown",
+      "label": "Payment Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C"
+        ]
+      }
+    },
+    {
+      "id": "amortizationSchedule",
+      "label": "Amortization Schedule",
+      "type": "table",
+      "columns": [
+        {
+          "key": "month",
+          "label": "Month"
+        },
+        {
+          "key": "payment",
+          "label": "Payment",
+          "format": "currency"
+        },
+        {
+          "key": "principal",
+          "label": "Principal",
+          "format": "currency"
+        },
+        {
+          "key": "interest",
+          "label": "Interest",
+          "format": "currency"
+        },
+        {
+          "key": "extraPayment",
+          "label": "Extra",
+          "format": "currency"
+        },
+        {
+          "key": "balance",
+          "label": "Balance",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "id": "balanceOverTime",
+      "label": "Balance Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Month",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
+      }
+    }
+  ],
+  "formula": "loan-payment",
+  "features": [
+    "chart",
+    "amortization-table"
+  ],
+  "relatedCalculators": [
+    "loan-calculator",
+    "amortization-calculator",
+    "mortgage-calculator",
+    "interest-rate-calculator",
+    "debt-payoff-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB) — standard fixed-rate loan payment formula.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "M = P[r(1+r)^n]/[(1+r)^n-1] — standard amortizing loan payment",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "loan-calculator"
+  ],
+  "qualityScore": 91,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "loan-term"
+  ]
+}

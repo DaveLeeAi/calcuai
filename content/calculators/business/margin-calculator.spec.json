@@ -1,0 +1,150 @@
+{
+  "id": "margin-calculator",
+  "title": "Margin Calculator",
+  "slug": "margin-calculator",
+  "category": "business",
+  "subcategory": "margins",
+  "primaryKeyword": "margin calculator",
+  "metaTitle": "Margin Calculator — Gross & Net Profit Margin Calculator",
+  "metaDescription": "Calculate gross margin, net margin, and markup percentage instantly. Enter revenue and costs to see your profit margins. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "revenue",
+      "label": "Revenue (Sales)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 100000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total revenue or sales amount"
+    },
+    {
+      "id": "costOfGoods",
+      "label": "Cost of Goods Sold (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 60000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Direct costs to produce goods or deliver services"
+    },
+    {
+      "id": "operatingExpenses",
+      "label": "Operating Expenses",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Rent, salaries, marketing, utilities, etc."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "grossMarginPercent",
+      "label": "Gross Margin",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "netMarginPercent",
+      "label": "Net Margin",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "profitBreakdown",
+      "label": "Revenue Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#E74C3C",
+          "#F39C12",
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Margin Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "marginComparison",
+      "label": "Margin at Different Revenue Levels",
+      "type": "table",
+      "columns": [
+        {
+          "key": "label",
+          "label": "Revenue"
+        },
+        {
+          "key": "amount",
+          "label": "Net Profit",
+          "format": "currency"
+        },
+        {
+          "key": "percentage",
+          "label": "Net Margin %"
+        }
+      ]
+    }
+  ],
+  "formula": "gross-margin",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "break-even-calculator",
+    "roi-calculator",
+    "markup-calculator",
+    "profit-calculator",
+    "percentage-calculator",
+    "business-sales-tax-calculator",
+    "commission-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Corporate Finance Institute (CFI) — Profit Margin formulas (2024)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gross Margin = (Revenue − COGS) / Revenue × 100; Net Margin = (Revenue − COGS − OpEx) / Revenue × 100; Markup = (Revenue − COGS) / COGS × 100",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "markup-calculator",
+    "profit-calculator"
+  ],
+  "qualityScore": 91,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "profit-margin"
+  ],
+  "methodologyTopics": [
+    "break-even-analysis"
+  ]
+}

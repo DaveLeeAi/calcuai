@@ -1,0 +1,495 @@
+{
+  "id": "hours-calculator",
+  "title": "Hours Calculator",
+  "slug": "hours-calculator",
+  "category": "everyday",
+  "subcategory": "date-time",
+  "primaryKeyword": "hours calculator",
+  "metaTitle": "Hours Calculator — Start & End Time to Total Hours Worked",
+  "metaDescription": "Enter start time, end time, and break to calculate total hours worked. Handles overnight shifts. Get results in decimal hours for timesheets. Free and instant.",
+  "inputs": [
+    {
+      "id": "startTime",
+      "label": "Start Time",
+      "type": "select",
+      "required": true,
+      "defaultValue": "09:00",
+      "options": [
+        {
+          "value": "00:00",
+          "label": "12:00 AM"
+        },
+        {
+          "value": "00:30",
+          "label": "12:30 AM"
+        },
+        {
+          "value": "01:00",
+          "label": "1:00 AM"
+        },
+        {
+          "value": "01:30",
+          "label": "1:30 AM"
+        },
+        {
+          "value": "02:00",
+          "label": "2:00 AM"
+        },
+        {
+          "value": "02:30",
+          "label": "2:30 AM"
+        },
+        {
+          "value": "03:00",
+          "label": "3:00 AM"
+        },
+        {
+          "value": "03:30",
+          "label": "3:30 AM"
+        },
+        {
+          "value": "04:00",
+          "label": "4:00 AM"
+        },
+        {
+          "value": "04:30",
+          "label": "4:30 AM"
+        },
+        {
+          "value": "05:00",
+          "label": "5:00 AM"
+        },
+        {
+          "value": "05:30",
+          "label": "5:30 AM"
+        },
+        {
+          "value": "06:00",
+          "label": "6:00 AM"
+        },
+        {
+          "value": "06:30",
+          "label": "6:30 AM"
+        },
+        {
+          "value": "07:00",
+          "label": "7:00 AM"
+        },
+        {
+          "value": "07:30",
+          "label": "7:30 AM"
+        },
+        {
+          "value": "08:00",
+          "label": "8:00 AM"
+        },
+        {
+          "value": "08:30",
+          "label": "8:30 AM"
+        },
+        {
+          "value": "09:00",
+          "label": "9:00 AM"
+        },
+        {
+          "value": "09:30",
+          "label": "9:30 AM"
+        },
+        {
+          "value": "10:00",
+          "label": "10:00 AM"
+        },
+        {
+          "value": "10:30",
+          "label": "10:30 AM"
+        },
+        {
+          "value": "11:00",
+          "label": "11:00 AM"
+        },
+        {
+          "value": "11:30",
+          "label": "11:30 AM"
+        },
+        {
+          "value": "12:00",
+          "label": "12:00 PM"
+        },
+        {
+          "value": "12:30",
+          "label": "12:30 PM"
+        },
+        {
+          "value": "13:00",
+          "label": "1:00 PM"
+        },
+        {
+          "value": "13:30",
+          "label": "1:30 PM"
+        },
+        {
+          "value": "14:00",
+          "label": "2:00 PM"
+        },
+        {
+          "value": "14:30",
+          "label": "2:30 PM"
+        },
+        {
+          "value": "15:00",
+          "label": "3:00 PM"
+        },
+        {
+          "value": "15:30",
+          "label": "3:30 PM"
+        },
+        {
+          "value": "16:00",
+          "label": "4:00 PM"
+        },
+        {
+          "value": "16:30",
+          "label": "4:30 PM"
+        },
+        {
+          "value": "17:00",
+          "label": "5:00 PM"
+        },
+        {
+          "value": "17:30",
+          "label": "5:30 PM"
+        },
+        {
+          "value": "18:00",
+          "label": "6:00 PM"
+        },
+        {
+          "value": "18:30",
+          "label": "6:30 PM"
+        },
+        {
+          "value": "19:00",
+          "label": "7:00 PM"
+        },
+        {
+          "value": "19:30",
+          "label": "7:30 PM"
+        },
+        {
+          "value": "20:00",
+          "label": "8:00 PM"
+        },
+        {
+          "value": "20:30",
+          "label": "8:30 PM"
+        },
+        {
+          "value": "21:00",
+          "label": "9:00 PM"
+        },
+        {
+          "value": "21:30",
+          "label": "9:30 PM"
+        },
+        {
+          "value": "22:00",
+          "label": "10:00 PM"
+        },
+        {
+          "value": "22:30",
+          "label": "10:30 PM"
+        },
+        {
+          "value": "23:00",
+          "label": "11:00 PM"
+        },
+        {
+          "value": "23:30",
+          "label": "11:30 PM"
+        }
+      ],
+      "helpText": "When you started working"
+    },
+    {
+      "id": "endTime",
+      "label": "End Time",
+      "type": "select",
+      "required": true,
+      "defaultValue": "17:00",
+      "options": [
+        {
+          "value": "00:00",
+          "label": "12:00 AM"
+        },
+        {
+          "value": "00:30",
+          "label": "12:30 AM"
+        },
+        {
+          "value": "01:00",
+          "label": "1:00 AM"
+        },
+        {
+          "value": "01:30",
+          "label": "1:30 AM"
+        },
+        {
+          "value": "02:00",
+          "label": "2:00 AM"
+        },
+        {
+          "value": "02:30",
+          "label": "2:30 AM"
+        },
+        {
+          "value": "03:00",
+          "label": "3:00 AM"
+        },
+        {
+          "value": "03:30",
+          "label": "3:30 AM"
+        },
+        {
+          "value": "04:00",
+          "label": "4:00 AM"
+        },
+        {
+          "value": "04:30",
+          "label": "4:30 AM"
+        },
+        {
+          "value": "05:00",
+          "label": "5:00 AM"
+        },
+        {
+          "value": "05:30",
+          "label": "5:30 AM"
+        },
+        {
+          "value": "06:00",
+          "label": "6:00 AM"
+        },
+        {
+          "value": "06:30",
+          "label": "6:30 AM"
+        },
+        {
+          "value": "07:00",
+          "label": "7:00 AM"
+        },
+        {
+          "value": "07:30",
+          "label": "7:30 AM"
+        },
+        {
+          "value": "08:00",
+          "label": "8:00 AM"
+        },
+        {
+          "value": "08:30",
+          "label": "8:30 AM"
+        },
+        {
+          "value": "09:00",
+          "label": "9:00 AM"
+        },
+        {
+          "value": "09:30",
+          "label": "9:30 AM"
+        },
+        {
+          "value": "10:00",
+          "label": "10:00 AM"
+        },
+        {
+          "value": "10:30",
+          "label": "10:30 AM"
+        },
+        {
+          "value": "11:00",
+          "label": "11:00 AM"
+        },
+        {
+          "value": "11:30",
+          "label": "11:30 AM"
+        },
+        {
+          "value": "12:00",
+          "label": "12:00 PM"
+        },
+        {
+          "value": "12:30",
+          "label": "12:30 PM"
+        },
+        {
+          "value": "13:00",
+          "label": "1:00 PM"
+        },
+        {
+          "value": "13:30",
+          "label": "1:30 PM"
+        },
+        {
+          "value": "14:00",
+          "label": "2:00 PM"
+        },
+        {
+          "value": "14:30",
+          "label": "2:30 PM"
+        },
+        {
+          "value": "15:00",
+          "label": "3:00 PM"
+        },
+        {
+          "value": "15:30",
+          "label": "3:30 PM"
+        },
+        {
+          "value": "16:00",
+          "label": "4:00 PM"
+        },
+        {
+          "value": "16:30",
+          "label": "4:30 PM"
+        },
+        {
+          "value": "17:00",
+          "label": "5:00 PM"
+        },
+        {
+          "value": "17:30",
+          "label": "5:30 PM"
+        },
+        {
+          "value": "18:00",
+          "label": "6:00 PM"
+        },
+        {
+          "value": "18:30",
+          "label": "6:30 PM"
+        },
+        {
+          "value": "19:00",
+          "label": "7:00 PM"
+        },
+        {
+          "value": "19:30",
+          "label": "7:30 PM"
+        },
+        {
+          "value": "20:00",
+          "label": "8:00 PM"
+        },
+        {
+          "value": "20:30",
+          "label": "8:30 PM"
+        },
+        {
+          "value": "21:00",
+          "label": "9:00 PM"
+        },
+        {
+          "value": "21:30",
+          "label": "9:30 PM"
+        },
+        {
+          "value": "22:00",
+          "label": "10:00 PM"
+        },
+        {
+          "value": "22:30",
+          "label": "10:30 PM"
+        },
+        {
+          "value": "23:00",
+          "label": "11:00 PM"
+        },
+        {
+          "value": "23:30",
+          "label": "11:30 PM"
+        }
+      ],
+      "helpText": "When you stopped working"
+    },
+    {
+      "id": "breakMinutes",
+      "label": "Break Duration (minutes)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 30,
+      "min": 0,
+      "max": 480,
+      "step": 5,
+      "helpText": "Total break time to deduct (lunch, rest breaks)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "formatted",
+      "label": "Net Hours Worked (HH:MM:SS)",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "decimalHours",
+      "label": "Decimal Hours",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "grossFormatted",
+      "label": "Gross Hours (before break)",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "breakDeducted",
+      "label": "Break Deducted",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "hours-worked",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "time-calculator",
+    "overtime-calculator",
+    "salary-calculator",
+    "date-calculator",
+    "time-zone-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. Department of Labor — Fair Labor Standards Act (FLSA) timekeeping requirements and rounding rules (29 CFR § 785).",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Elapsed = endTime - startTime (add 24h if overnight). Net hours = elapsed - break. Decimal hours = total seconds / 3600.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "time-calculator"
+  ],
+  "qualityScore": 76,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "overtime"
+  ]
+}

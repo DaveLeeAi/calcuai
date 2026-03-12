@@ -1,0 +1,95 @@
+---
+title: "How Compound Interest Works"
+slug: "compound-interest"
+relatedCalculators: ["compound-interest-calculator", "investment-calculator", "savings-calculator", "401k-calculator", "cd-calculator"]
+---
+
+## The Compound Interest Formula
+
+The standard compound interest formula calculates the future value of a principal amount that earns interest on both the initial deposit and previously accumulated interest:
+
+$$A = P\left(1 + \frac{r}{n}\right)^{nt}$$
+
+Where:
+
+- **$A$** = final amount (principal + interest)
+- **$P$** = principal (initial deposit)
+- **$r$** = annual interest rate (as a decimal, e.g., 0.07 for 7%)
+- **$n$** = number of compounding periods per year
+- **$t$** = time in years
+
+This formula is the foundation for virtually every savings, investment, and retirement calculator. It appears in standardized financial education materials from the SEC, CFA Institute, and Federal Reserve.
+
+## Derivation: From Simple Interest to Exponential Growth
+
+Simple interest pays a flat amount each period. If you invest $10,000 at 7% simple interest for 10 years, you earn $700/year for a total of $17,000.
+
+Simple interest formula:
+
+$$A_{\text{simple}} = P(1 + rt) = 10{,}000 \times (1 + 0.07 \times 10) = \$17{,}000$$
+
+Compound interest reinvests each period's earnings. After year 1, your $10,000 earns $700 in interest, giving you $10,700. In year 2, you earn interest on $10,700 — not just the original $10,000. This reinvestment creates exponential rather than linear growth.
+
+For annual compounding, each year multiplies the balance by $(1 + r)$:
+
+- After 1 year: $P(1 + r)$
+- After 2 years: $P(1 + r)^2$
+- After $t$ years: $P(1 + r)^t$
+
+When interest compounds $n$ times per year, each period applies a rate of $r/n$, and there are $nt$ total periods — yielding the general formula $P(1 + r/n)^{nt}$.
+
+## Compounding Frequency Comparison
+
+How much does compounding frequency actually matter? Here is $10,000 invested at 7% annual rate for 10 years:
+
+| Frequency | $n$ | Formula | Final Value | Interest Earned |
+|-----------|-----|---------|-------------|-----------------|
+| Annual | 1 | $10{,}000(1.07)^{10}$ | $19,671.51 | $9,671.51 |
+| Semi-annual | 2 | $10{,}000(1.035)^{20}$ | $19,897.89 | $9,897.89 |
+| Quarterly | 4 | $10{,}000(1.0175)^{40}$ | $20,015.97 | $10,015.97 |
+| Monthly | 12 | $10{,}000(1.00583)^{120}$ | $20,096.61 | $10,096.61 |
+| Daily | 365 | $10{,}000(1.000192)^{3650}$ | $20,137.05 | $10,137.05 |
+| Continuous | ∞ | $10{,}000 \times e^{0.7}$ | $20,137.53 | $10,137.53 |
+
+The jump from annual to monthly compounding adds $425.10 in interest. The jump from monthly to daily adds only $40.44. Beyond daily compounding, the gains are negligible — less than $0.48 separates daily from continuous over a decade.
+
+## The Rule of 72
+
+The Rule of 72 is a mental math shortcut for estimating how long it takes money to double at a given interest rate:
+
+$$\text{Years to double} \approx \frac{72}{r\%}$$
+
+At 7% interest: $72 / 7 \approx 10.3$ years. The exact answer using the compound interest formula is $\ln(2)/\ln(1.07) = 10.24$ years — the Rule of 72 is within 1% accuracy.
+
+**When the Rule of 72 breaks down:** It is most accurate for rates between 4% and 12%. At very low rates (below 2%) or very high rates (above 20%), the approximation diverges. For rates above 20%, the Rule of 69.3 (using $\ln(2) \times 100 \approx 69.3$) provides better accuracy.
+
+## Continuous Compounding
+
+As compounding frequency increases toward infinity, the formula converges to:
+
+$$A = Pe^{rt}$$
+
+Where $e \approx 2.71828$ is Euler's number. This is derived from the mathematical limit:
+
+$$\lim_{n \to \infty} P\left(1 + \frac{r}{n}\right)^{nt} = Pe^{rt}$$
+
+Continuous compounding is primarily used in theoretical finance (Black-Scholes option pricing model) and as an upper bound for discrete compounding. In practice, the difference between daily and continuous compounding is trivially small for consumer savings products.
+
+## Assumptions and Limitations
+
+The compound interest formula assumes:
+
+1. **Constant interest rate** — the rate $r$ never changes over the investment period. In reality, savings account rates fluctuate, and investment returns vary dramatically year to year.
+2. **No withdrawals or additional deposits** — the formula models a single lump-sum investment left untouched. For regular contributions, you need the future value of an annuity formula.
+3. **No taxes** — interest earned in taxable accounts is subject to income tax, which reduces the effective compounding rate. A 7% return taxed at 24% effectively compounds at approximately 5.32%.
+4. **No inflation adjustment** — the formula returns nominal (not real) future value. At 3% inflation, $20,000 in 10 years has the purchasing power of roughly $14,882 in today's dollars.
+5. **Interest is reinvested at the same rate** — the formula assumes earned interest can always be reinvested at rate $r$. This "reinvestment risk" is particularly relevant for bonds and CDs where rates may differ at renewal.
+
+For long-term projections (20+ years), the constant-rate assumption introduces significant uncertainty. Historical stock market returns average roughly 10% nominal (7% real) per year, but actual yearly returns range from −37% to +53%. The compound interest formula gives an expected trajectory, not a guarantee.
+
+## Sources
+
+- **CFA Institute.** *Quantitative Methods: Time Value of Money.* CFA Program Curriculum Level I.
+- **U.S. Securities and Exchange Commission.** "Compound Interest Calculator." Investor.gov. [investor.gov/financial-tools-calculators/calculators/compound-interest-calculator](https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator)
+- **Federal Reserve Bank of St. Louis.** "The Power of Compound Interest." FRED Economic Education.
+- **Brigham, E. & Houston, J.** *Fundamentals of Financial Management*, 16th ed. Cengage Learning, 2022.

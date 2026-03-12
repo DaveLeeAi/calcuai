@@ -1,0 +1,206 @@
+{
+  "id": "home-affordability-calculator",
+  "title": "Home Affordability Calculator",
+  "slug": "home-affordability-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "home affordability calculator",
+  "metaTitle": "Home Affordability Calculator — How Much House Can You Afford?",
+  "metaDescription": "Calculate how much house you can afford using the 28/36 rule. Enter income, debts, and down payment to see your max home price, payment, and DTI ratios.",
+  "inputs": [
+    {
+      "id": "annualIncome",
+      "label": "Annual Household Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 100000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "monthlyDebts",
+      "label": "Monthly Debt Payments",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 100000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Total monthly payments for car loans, student loans, credit cards, etc. (excluding housing)."
+    },
+    {
+      "id": "downPayment",
+      "label": "Down Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 60000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "interestRate",
+      "label": "Mortgage Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 6.5,
+      "min": 0,
+      "max": 15,
+      "step": 0.125,
+      "helpText": "Current 30-year fixed mortgage rates. Check Freddie Mac PMMS for this week's average."
+    },
+    {
+      "id": "loanTerm",
+      "label": "Loan Term",
+      "type": "select",
+      "required": true,
+      "defaultValue": "30",
+      "options": [
+        {
+          "value": "15",
+          "label": "15 Years"
+        },
+        {
+          "value": "20",
+          "label": "20 Years"
+        },
+        {
+          "value": "30",
+          "label": "30 Years"
+        }
+      ]
+    },
+    {
+      "id": "propertyTaxRate",
+      "label": "Property Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 1.2,
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "helpText": "Annual property tax rate. U.S. average: ~1.1%. Varies by state and county."
+    },
+    {
+      "id": "annualInsurance",
+      "label": "Annual Homeowner's Insurance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1500,
+      "min": 0,
+      "max": 20000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "U.S. average: ~$1,500/year."
+    },
+    {
+      "id": "includePMI",
+      "label": "Include PMI",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": true,
+      "helpText": "Private mortgage insurance is required when down payment is less than 20%."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "maxHomePrice",
+      "label": "Maximum Home Price",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "maxLoanAmount",
+      "label": "Maximum Loan Amount",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "maxMonthlyPayment",
+      "label": "Maximum Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "frontEndDTI",
+      "label": "Front-End DTI Ratio",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "backEndDTI",
+      "label": "Back-End DTI Ratio",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "summary",
+      "label": "Affordability Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "paymentBreakdown",
+      "label": "Monthly Payment Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C",
+          "#F39C12",
+          "#9B59B6"
+        ]
+      }
+    }
+  ],
+  "formula": "home-affordability",
+  "features": [
+    "chart"
+  ],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "down-payment-calculator",
+    "refinance-calculator",
+    "loan-calculator",
+    "rent-vs-buy-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "CFPB / Fannie Mae / Freddie Mac DTI guidelines",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "28/36 DTI rule: Max housing = min(28% of gross income, 36% of gross income - debts); reverse mortgage formula for max loan; per CFPB and Fannie Mae Selling Guide B3-6-02",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "mortgage-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "down-payment",
+    "equity",
+    "gross-income",
+    "pmi"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
+}

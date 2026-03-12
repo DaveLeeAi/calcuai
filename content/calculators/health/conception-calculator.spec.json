@@ -1,0 +1,206 @@
+{
+  "id": "conception-calculator",
+  "title": "Conception Calculator",
+  "slug": "conception-calculator",
+  "category": "health",
+  "subcategory": "pregnancy",
+  "primaryKeyword": "conception calculator",
+  "metaTitle": "Conception Calculator — When Did I Conceive?",
+  "metaDescription": "Estimate your conception date from your due date or last menstrual period. See your fertile window, ovulation date, and implantation timeline. Free.",
+  "inputs": [
+    {
+      "id": "calculationMethod",
+      "label": "Calculate From",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "fromLMP",
+      "options": [
+        {
+          "value": "fromDueDate",
+          "label": "I know my due date"
+        },
+        {
+          "value": "fromLMP",
+          "label": "I know my last menstrual period"
+        }
+      ]
+    },
+    {
+      "id": "dueDate",
+      "label": "Due Date",
+      "type": "date",
+      "required": false,
+      "defaultValue": "2026-10-08",
+      "dependsOn": "calculationMethod",
+      "helpText": "Enter the estimated due date given by your healthcare provider"
+    },
+    {
+      "id": "lastMenstrualPeriod",
+      "label": "First Day of Last Menstrual Period",
+      "type": "date",
+      "required": false,
+      "defaultValue": "2026-01-01",
+      "dependsOn": "calculationMethod",
+      "helpText": "Enter the first day of your last menstrual period (LMP)"
+    },
+    {
+      "id": "cycleLength",
+      "label": "Average Cycle Length",
+      "type": "select",
+      "required": false,
+      "defaultValue": "28",
+      "options": [
+        {
+          "value": "21",
+          "label": "21 days"
+        },
+        {
+          "value": "22",
+          "label": "22 days"
+        },
+        {
+          "value": "23",
+          "label": "23 days"
+        },
+        {
+          "value": "24",
+          "label": "24 days"
+        },
+        {
+          "value": "25",
+          "label": "25 days"
+        },
+        {
+          "value": "26",
+          "label": "26 days"
+        },
+        {
+          "value": "27",
+          "label": "27 days"
+        },
+        {
+          "value": "28",
+          "label": "28 days (average)"
+        },
+        {
+          "value": "29",
+          "label": "29 days"
+        },
+        {
+          "value": "30",
+          "label": "30 days"
+        },
+        {
+          "value": "31",
+          "label": "31 days"
+        },
+        {
+          "value": "32",
+          "label": "32 days"
+        },
+        {
+          "value": "33",
+          "label": "33 days"
+        },
+        {
+          "value": "34",
+          "label": "34 days"
+        },
+        {
+          "value": "35",
+          "label": "35 days"
+        }
+      ],
+      "helpText": "Most cycles are 28 days. Adjusting this changes the estimated ovulation date."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "conceptionDateFormatted",
+      "label": "Estimated Conception Date",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "ovulationDateFormatted",
+      "label": "Estimated Ovulation Date",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "fertileWindowStartFormatted",
+      "label": "Fertile Window Start",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "fertileWindowEndFormatted",
+      "label": "Fertile Window End",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "implantation",
+      "label": "Estimated Implantation Window",
+      "type": "value-group",
+      "format": "text"
+    },
+    {
+      "id": "timeline",
+      "label": "Conception & Early Pregnancy Timeline",
+      "type": "table",
+      "columns": [
+        {
+          "key": "event",
+          "label": "Event"
+        },
+        {
+          "key": "dateFormatted",
+          "label": "Date"
+        },
+        {
+          "key": "description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "formula": "conception",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "due-date-calculator",
+    "pregnancy-calculator",
+    "bmi-calculator",
+    "calorie-calculator",
+    "countdown-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "American College of Obstetricians and Gynecologists (ACOG)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Naegele's Rule — ACOG Committee Opinion No. 700 (2017): Methods for Estimating the Due Date.",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "due-date-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

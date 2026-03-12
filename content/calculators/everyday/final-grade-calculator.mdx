@@ -1,0 +1,110 @@
+---
+title: "Final Grade Calculator"
+description: "Calculate your overall course grade from individual assignment categories and weights. See which categories contribute most to your final grade."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Score 95% on homework (worth 20%), 82% on midterms (worth 30%), 88% on a project (worth 20%), and 79% on the final (worth 30%), and your overall course grade is 84.5% — a solid B. This calculator computes your weighted final grade from any number of assignment categories, each with its own score and weight, and shows the per-category contribution so you know exactly which scores helped and which hurt.
+
+</section>
+
+{/* Section 6: What Your Grade Means */}
+## What Your Grade Means
+
+The result shows your weighted final grade as a percentage and letter grade, a pass/fail indicator, and a category-by-category breakdown showing each category's weighted contribution. If your total weights do not add up to 100%, the calculator normalizes them — but a warning indicates the weights are incomplete.
+
+This answers "what IS my grade?" If you instead need to know "what do I NEED on the final?", use the [Grade Calculator](/calculators/everyday/grade-calculator). For GPA calculations across multiple courses or semesters, use the [GPA Calculator](/calculators/everyday/gpa-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Add a category** — enter the category name (e.g., "Homework"), the score you earned (as a percentage, 0–100), and its weight in the course (as a percentage, e.g., 20 for 20%).
+2. **Repeat for each category** — add midterms, projects, participation, final exam, quizzes, etc. Include every graded category from your syllabus.
+3. **Check total weight** — the calculator shows whether your weights sum to 100%. If not, results are normalized but may not reflect your actual grade.
+4. **Read the result** — the weighted final grade, letter grade, and per-category breakdown appear instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{finalGrade} = \frac{\sum_{i=1}^{n} (\text{score}_i \times w_i)}{\sum_{i=1}^{n} w_i} \times 100
+$$
+
+Where:
+- **$\text{score}_i$** = the percentage score for category $i$ (0–100)
+- **$w_i$** = the weight of category $i$ as a decimal (e.g., 0.20 for 20%)
+- **$n$** = the number of grade categories
+
+If weights sum to 100%, the denominator equals 1 and the formula simplifies to a direct weighted sum. If weights do not sum to 100%, the formula normalizes by dividing by the total weight.
+
+*Source: Standard weighted average formula. Reference: AACRAO (American Association of Collegiate Registrars and Admissions Officers) grading calculation standards.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard 4-Category Course
+
+A biology course has: Homework 15%, Quizzes 15%, Midterm 30%, Final 40%.
+Your scores: Homework 92%, Quizzes 85%, Midterm 78%, Final 81%.
+
+**Step 1:** Calculate weighted scores
+- Homework: 92 × 0.15 = 13.80
+- Quizzes: 85 × 0.15 = 12.75
+- Midterm: 78 × 0.30 = 23.40
+- Final: 81 × 0.40 = 32.40
+
+**Step 2:** Sum weighted scores
+- Total = 13.80 + 12.75 + 23.40 + 32.40 = 82.35
+
+**Result:** 82.35% — a B. The final exam contributed the most (32.40 of 82.35 points, or 39.3% of your weighted score). Raising the midterm from 78 to 88 would have pushed you to 85.35% (B+).
+
+### Example 2: Weights That Don't Sum to 100%
+
+You know three of four category scores. Participation (10%): 95%. Homework (25%): 88%. Midterm (25%): 76%. The final (40%) hasn't happened yet.
+
+**Step 1:** Total weight entered = 10 + 25 + 25 = 60%
+**Step 2:** Weighted scores = 9.5 + 22.0 + 19.0 = 50.5
+**Step 3:** Normalized = (50.5 / 60) × 100 = 84.17%
+
+**Result:** Based on 60% of the course, your projected grade is 84.17% (B). To find what final exam score you need, use the [Grade Calculator](/calculators/everyday/grade-calculator) with current grade = 84.17%, final weight = 40%.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **Weight distribution.** A category worth 40% of your grade has twice the impact of one worth 20%. A 10-point improvement on a 40%-weight exam adds 4 points to your final grade; the same improvement on a 10%-weight quiz adds only 1 point.
+2. **Low outliers.** A single very low score on a heavily weighted category drags down the overall grade disproportionately. Identify your lowest weighted contribution in the breakdown to see where recovery effort has the most impact.
+3. **Incomplete weights.** If your total weights are below 100% (e.g., the final hasn't been graded yet), the calculator normalizes the result, which may overstate or understate your actual grade.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a standard percentage-based grading system (0–100 scale)
+- Scores above 100% are allowed (for extra credit) up to 200%
+- Does not account for dropped lowest scores or curved grades
+- Does not convert to GPA — use the [GPA Calculator](/calculators/everyday/gpa-calculator) for that
+- Letter grade cutoffs follow the most common US scale (A = 93+, A− = 90+, etc.)
+
+## Frequently Asked Questions
+
+### What if my weights do not add up to 100%?
+
+The calculator normalizes by dividing the weighted sum by the total weight entered. For example, if you enter categories totaling 75%, the result reflects your grade based on that 75% of the course. This is useful for projecting your grade before all assignments are graded, but the actual final grade may differ once all weights are accounted for.
+
+### How is this different from the Grade Calculator?
+
+The Final Grade Calculator takes all your known scores and weights and tells you your current overall grade. The Grade Calculator takes your current grade and tells you what score you need on a specific upcoming exam to reach a target grade. Use this calculator first to find your current grade, then the Grade Calculator to plan for the final.
+
+### Can I use this for a course with extra credit?
+
+Yes. Enter scores above 100% for categories where extra credit was earned. The calculator accepts scores up to 200%. The weighted average will reflect the bonus points proportionally.
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses the weighted average formula to determine what score you need on a final exam to achieve your target grade. It solves: target = (current × current_weight) + (final × final_weight) for the unknown final exam score. If the required score exceeds 100%, the calculator reports that the target grade is not achievable.

@@ -1,0 +1,214 @@
+---
+title: "ROI Calculator"
+description: "Calculate return on investment with simple ROI, annualized ROI (CAGR), net profit, and growth visualization. Compare any investment's performance."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate the return on any investment by entering the amount invested and its current or final value. A \$10,000 investment that grows to \$15,000 over 5 years delivers a 50% total ROI and an 8.45% annualized return (CAGR). The annualized figure lets you compare investments of different durations on an equal basis — critical for choosing between opportunities.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+ROI measures how efficiently your money worked. The calculator provides four metrics: **simple ROI** (total percentage gain or loss), **net profit** (dollar amount gained or lost), **annualized ROI** (CAGR — the equivalent annual growth rate), and **total return multiple** (how many times your original investment you received back).
+
+Simple ROI is intuitive but misleading when comparing investments held for different time periods. A 100% return over 10 years sounds impressive until you annualize it: that's only 7.18% per year, barely beating the S&P 500 average of ~10%. The annualized ROI (CAGR) solves this by expressing any return as an equivalent annual rate.
+
+The growth chart shows your investment's trajectory year by year, assuming the annualized growth rate compounded steadily. For deeper investment modeling with regular contributions, use our [Investment Calculator](/calculators/finance/investment-calculator) or [Compound Interest Calculator](/calculators/finance/compound-interest-calculator).
+
+## How to Use This Calculator
+
+1. **Enter Initial Investment** — the total amount you invested or the cost of the project. This is your capital outlay at the start.
+2. **Enter Final Value** — the current value or expected end value of the investment. Include all returns: capital appreciation, dividends reinvested, proceeds from a sale, or total revenue generated.
+3. **Enter Investment Period** — the number of years you held (or plan to hold) the investment. Use decimals for partial years (e.g., 2.5 for two and a half years).
+4. **Read your results** — Total ROI shows the full percentage return, while Annualized ROI (CAGR) shows the equivalent yearly rate. The growth chart visualizes the compounding trajectory.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Simple ROI:**
+
+$$
+\text{ROI \%} = \frac{\text{Final Value} - \text{Initial Investment}}{\text{Initial Investment}} \times 100
+$$
+
+**Net Profit:**
+
+$$
+\text{Net Profit} = \text{Final Value} - \text{Initial Investment}
+$$
+
+**Annualized ROI (CAGR):**
+
+$$
+\text{CAGR} = \left(\left(\frac{\text{Final Value}}{\text{Initial Investment}}\right)^{\frac{1}{n}} - 1\right) \times 100
+$$
+
+**Total Return Multiple:**
+
+$$
+\text{Multiple} = \frac{\text{Final Value}}{\text{Initial Investment}}
+$$
+
+Where:
+- **Final Value** = ending value of investment (including all returns)
+- **Initial Investment** = original capital invested
+- **n** = investment period in years
+- **CAGR** = compound annual growth rate
+
+*Source: CFA Institute — "Return on Investment" from the Standards of Practice Handbook (2023). CAGR methodology follows the Global Investment Performance Standards (GIPS).*
+
+For a deeper explanation of how ROI connects to break-even analysis and sensitivity modeling, see our [methodology page on break-even analysis](/methodology/break-even-analysis).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Stock Market Investment
+
+You invested \$25,000 in an index fund 7 years ago. Today it's worth \$48,000.
+
+**Simple ROI:**
+- Net Profit = \$48,000 − $25,000 = **$23,000**
+- ROI = \$23,000 / \$25,000 × 100 = **92%**
+
+**Annualized ROI:**
+- CAGR = (48,000/25,000)^(1/7) − 1 = (1.92)^(0.1429) − 1
+- CAGR = 1.0977 − 1 = **9.77% per year**
+
+**Return Multiple:**
+- Multiple = \$48,000 / \$25,000 = **1.92×**
+
+*Interpretation:* Your 92% total return translates to 9.77% per year — slightly below the S&P 500's long-term average of ~10% annually. The 1.92× multiple means you received nearly double your money back. This is a solid but not exceptional market return.
+
+### Example 2: Real Estate Investment
+
+You bought a rental property for \$200,000 (including closing costs and initial renovation). After 10 years, you sell for \$340,000 net of selling costs.
+
+**Simple ROI:**
+- Net Profit = \$340,000 − $200,000 = **$140,000**
+- ROI = \$140,000 / \$200,000 × 100 = **70%**
+
+**Annualized ROI:**
+- CAGR = (340,000/200,000)^(1/10) − 1 = (1.70)^(0.10) − 1
+- CAGR = 1.0545 − 1 = **5.45% per year**
+
+*Interpretation:* 70% total ROI over 10 years sounds strong, but annualized it's only 5.45%. This doesn't include rental income — if the property generated \$18,000/year net rental income (\$180,000 total), your real final value is \$340,000 + $180,000 = $520,000, pushing the CAGR to 10.04%.
+
+### Example 3: Business Marketing Campaign
+
+A business spends \$5,000 on a digital ad campaign that generates \$18,500 in attributable revenue over 6 months (0.5 years).
+
+**Simple ROI:**
+- Net Profit = \$18,500 − $5,000 = **$13,500**
+- ROI = \$13,500 / \$5,000 × 100 = **270%**
+
+**Annualized ROI:**
+- CAGR = (18,500/5,000)^(1/0.5) − 1 = (3.70)^(2) − 1
+- CAGR = 13.69 − 1 = **1,269% annualized**
+
+*Interpretation:* The 270% ROI over 6 months is excellent — every dollar spent returned \$3.70. The annualized figure (1,269%) is mathematically correct but practically misleading for short-term campaigns, because it assumes you could sustain this rate for a full year. For marketing, focus on the simple ROI and payback period, not the annualized rate.
+
+## Key Factors That Affect Your Results
+
+1. **Time Period Matters Enormously** — A 50% return over 1 year is exceptional (50% CAGR). A 50% return over 10 years is underwhelming (4.14% CAGR). Always compare annualized returns, not simple ROI.
+2. **Include All Costs in Initial Investment** — Transaction fees, commissions, renovation costs, due diligence expenses. Excluding \$2,000 in fees from a \$10,000 investment understates your true cost basis by 20%.
+3. **Include All Returns in Final Value** — Dividends, rental income, royalties, and residual value. Excluding dividend reinvestment can understate stock returns by 2–3% annually.
+4. **Inflation Erodes Real Returns** — A 7% nominal CAGR with 3% inflation is only 4% in real purchasing power. For investments over 5+ years, consider inflation-adjusted returns.
+5. **Risk-Adjusted Comparison** — A 12% CAGR from venture capital involves far more risk than 8% from treasury bonds. ROI alone doesn't capture risk. Compare similar asset classes.
+
+## Common Mistakes to Avoid
+
+1. **Annualizing Short-Term Returns** — A 20% return in 2 months annualizes to 289%. This is mathematically valid but practically useless — short-term results rarely compound for a full year. Use simple ROI for periods under 1 year.
+2. **Ignoring Cash Flows During the Period** — If you added \$5,000 to your investment midway through, your initial investment wasn't just the original amount. For investments with multiple cash flows, use Internal Rate of Return (IRR) instead of simple ROI.
+3. **Cherry-Picking Time Periods** — Measuring stock returns from March 2020 (pandemic low) to December 2021 (market peak) gives an artificially high ROI. Use consistent start/end dates.
+4. **Forgetting Opportunity Cost** — A 6% CAGR might seem acceptable, but if a risk-free treasury bill yielded 5%, your risk premium was only 1%. Compare ROI against the next-best alternative.
+5. **Confusing ROI with Profit Margin** — ROI measures return relative to investment cost. Profit margin measures return relative to revenue. A business with 10% profit margin on \$1M revenue (\$100K profit) on a \$200K investment has a 50% ROI.
+
+## ROI Benchmarks: How Does Your Return Compare?
+
+| Investment Type | Typical Annual ROI | Time Horizon |
+|:-:|:-:|:-:|
+| U.S. Treasury Bonds | 4–5% | 1–30 years |
+| S&P 500 Index Fund | 8–10% average | 10+ years |
+| Real Estate (with income) | 8–12% | 5–10 years |
+| Small Business | 15–25% | 3–7 years |
+| Venture Capital | 20–35% (top quartile) | 7–10 years |
+| Marketing Campaigns | 200–500% | 1–12 months |
+
+*S&P 500 average based on 1957–2024 nominal returns (Macrotrends). Real estate includes rental income and appreciation. Small business and VC returns are median top-quartile (Cambridge Associates 2024).*
+
+## ROI vs Other Return Metrics
+
+ROI is one of several ways to measure investment performance. Each metric answers a different question, and using the wrong one leads to flawed comparisons:
+
+| Metric | What It Measures | Accounts for Time? | Best Used When |
+|:--|:--|:-:|:--|
+| **Simple ROI** | Total percentage gain or loss | No | Comparing projects of similar duration; quick back-of-envelope checks |
+| **CAGR (Annualized ROI)** | Equivalent steady annual growth rate | Yes (smoothed) | Comparing investments held for different periods; long-term portfolio returns |
+| **IRR (Internal Rate of Return)** | Annualized return accounting for cash flow timing | Yes (exact) | Investments with multiple deposits or withdrawals; real estate with rental income; PE/VC fund returns |
+| **Payback Period** | Time to recoup the original investment | Partially (time only) | Capital budgeting decisions; evaluating risk of loss; quick liquidity assessments |
+| **NPV (Net Present Value)** | Total value created in today's dollars | Yes (discounted) | Go/no-go decisions on new projects; comparing mutually exclusive investments |
+
+**When to use each:** If you made a single investment and received a single payout, simple ROI and CAGR are sufficient. If you contributed money at multiple points (monthly 401k contributions, quarterly reinvestments) or received irregular cash flows (rental income, dividend payments), IRR is the correct metric — simple ROI will overstate or understate your true return depending on when cash flows occurred. A real estate investor who put \$200,000 down, received \$1,500/month in net rent for 10 years, and sold for \$340,000 would calculate an IRR of approximately 12.3%, compared to the 5.45% CAGR that ignores the rental income entirely. Payback period is most useful for risk assessment: a project that recoups its cost in 18 months carries less risk than one requiring 5 years, even if the 5-year project has a higher total ROI.
+
+## When ROI Gives You the Wrong Answer
+
+ROI is one of the most widely used financial metrics and one of the most frequently misapplied. Knowing its blind spots prevents expensive mistakes.
+
+**It ignores timing of cash flows.** A rental property bought for $200,000 and sold for $300,000 after 10 years shows a 50% ROI. But if the property generated $15,000/year in net rental income, the actual economic return is far higher — and simple ROI has no way to capture this. Any investment that produces income during the holding period (dividends, rent, interest, royalties) needs Internal Rate of Return (IRR), not simple ROI. The ROI here tells you the appreciation story; the IRR tells you the whole story.
+
+**It doesn't account for risk.** A 12% annualized return from a leveraged crypto fund and a 9% return from a diversified index fund look different on paper but may carry wildly different probabilities of loss. ROI treats every dollar of return identically regardless of how likely you were to lose it. When comparing opportunities, pair ROI with a qualitative risk assessment: How likely is a total loss? How volatile are the interim values? Can you access the money if you need it?
+
+**It breaks down for short periods.** A 25% return in 3 months annualizes to 144%, implying you could sustain that pace for a full year. You almost certainly can't. For anything under 12 months, report the simple ROI and the actual time period ("25% over 3 months") rather than the annualized figure. Save CAGR for holding periods of 1 year or longer.
+
+**The practical rule:** Use simple ROI for quick comparisons of similar-duration investments. Use CAGR for comparing investments held different lengths of time. Use IRR the moment any investment involves multiple cash flows. And never make a decision on ROI alone without asking: "What could I have earned with the same money in a no-risk alternative?"
+
+## Assumptions & Limitations
+
+- Assumes a single lump-sum investment and a single exit value (no interim cash flows)
+- Annualized ROI (CAGR) assumes smooth, steady compounding — real returns are volatile
+- Does not account for taxes on gains (capital gains tax can reduce after-tax ROI by 15–37%)
+- Does not account for inflation — nominal returns only
+- For investments with multiple deposits or withdrawals, use Internal Rate of Return (IRR) or Modified Dietz method instead
+- Negative final values (debts exceeding asset value) are clamped to \$0
+- Growth chart assumes constant annual compounding at the CAGR rate
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### What is a good ROI for a small business investment?
+
+Most small business investments should target a 15–25% annualized ROI to justify the risk involved, according to Cambridge Associates benchmarks (2024). For comparison, passive S&P 500 index investing averages 8–10% annually with far less effort and risk. If a business project returns less than 10% annualized, the capital may be better deployed in the stock market. Marketing campaigns are an exception — short-term ROI of 200–500% is common but not directly comparable to multi-year investments.
+
+### How does inflation affect ROI?
+
+Inflation reduces the purchasing power of your returns, making nominal ROI misleading over long periods. A 7% nominal CAGR with 3% inflation produces only about 3.9% real return (calculated as (1.07/1.03) − 1). Over 10 years, this gap compounds: a \$10,000 investment growing at 7% nominally reaches \$19,672 — but in today's purchasing power (at 3% inflation), that's equivalent to only \$14,641. For investments spanning 5 or more years, subtract the average inflation rate from your CAGR to approximate real returns.
+
+### When should I use IRR instead of ROI?
+
+Use Internal Rate of Return (IRR) instead of simple ROI whenever you make multiple investments or receive cash flows at different times. Simple ROI assumes a single lump-sum investment and a single exit — it cannot accurately measure a rental property with monthly income, a business with quarterly reinvestments, or a stock portfolio with periodic contributions. IRR accounts for the timing and size of every cash flow, producing a more accurate annualized return. Excel's XIRR function handles this calculation.
+
+### Why is annualized ROI misleading for short-term investments?
+
+Annualizing short-term returns projects a brief period's performance over a full year, which is unrealistic. A 15% return in 2 months annualizes to 132%, implying you could sustain that pace for 12 months — almost never true. The math is correct but the assumption is flawed. For investments held less than 1 year, report the simple ROI over the actual period (e.g., "15% over 2 months") rather than the annualized figure. CAGR becomes meaningful only for holding periods of 1 year or longer.
+
+### How do taxes affect my real ROI?
+
+Taxes can reduce your after-tax ROI by 15–37% depending on the type of gain and your income bracket. Long-term capital gains (assets held over 1 year) are taxed at 0%, 15%, or 20% federally. Short-term gains are taxed as ordinary income, up to 37%. A \$10,000 investment returning \$15,000 (50% ROI) in under a year yields only \$13,150 after 37% tax on the \$5,000 gain — an after-tax ROI of 31.5%. Always calculate after-tax returns when comparing investments with different tax treatments.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **CFA Institute** — "Return on Investment" from Standards of Practice Handbook (2023); GIPS standards for CAGR calculation
+- **Damodaran, Aswath (NYU Stern)** — Implied Equity Risk Premiums and historical return data, updated January 2024
+- **Cambridge Associates** — Private equity and venture capital benchmark returns (2024)
+- **Macrotrends** — S&P 500 historical annual returns, 1957–2024
+
+Simple ROI uses the standard gain-over-cost formula. Annualized ROI uses the CAGR (geometric mean return) formula, which is the industry standard for comparing returns across different time horizons. Growth chart assumes smooth compounding at the calculated CAGR rate.

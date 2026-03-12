@@ -1,0 +1,228 @@
+---
+title: "Break Even Calculator"
+description: "Calculate your break-even point in units and revenue. Find exactly how many units you need to sell to cover fixed costs and start profiting."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate how many units you must sell to cover all costs and start generating profit. With \$10,000 in monthly fixed costs, a \$50 selling price, and \$30 variable cost per unit, your break-even point is exactly 500 units — or \$25,000 in revenue. Every unit sold beyond 500 contributes \$20 of pure profit to your bottom line.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Break-even analysis answers the most fundamental question in business: "How much do I need to sell before I stop losing money?" The calculator gives you two critical numbers — break-even **units** and break-even **revenue** — plus the **contribution margin** that determines how fast you reach profitability.
+
+The contribution margin (\$20 per unit in the example above) represents the amount each sale contributes toward covering your fixed costs. Once fixed costs are fully covered, that same \$20 becomes profit. The **contribution margin ratio** (40% in this case) tells you what percentage of each revenue dollar goes toward fixed cost recovery and profit.
+
+If you've set a target profit, the calculator also shows how many units you need to achieve it — think of this as "break-even plus your desired earnings." For a fuller profitability picture, pair this with our [Margin Calculator](/calculators/business/margin-calculator) to see your percentage margins once you're past break-even.
+
+## How to Use This Calculator
+
+1. **Enter Fixed Costs** — your total monthly or annual costs that don't change with sales volume: rent, salaries, insurance premiums, loan payments, software subscriptions. Use the same time period consistently.
+2. **Enter Price per Unit** — the amount you charge per unit sold. For services, this is your rate per job or project. For products, this is your selling price.
+3. **Enter Variable Cost per Unit** — what it costs to produce or deliver one additional unit: materials, direct labor, shipping, packaging, payment processing fees.
+4. **Enter Target Profit (optional)** — if you want to know the sales needed for a specific profit goal, enter it here. Leave at \$0 to see the pure break-even point.
+5. **Review the chart** — the revenue vs. cost lines cross at your break-even point. The shaded area above the intersection represents profit; below represents loss.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Break-Even in Units:**
+
+$$
+\text{Break-Even Units} = \frac{\text{Fixed Costs}}{\text{Price per Unit} - \text{Variable Cost per Unit}}
+$$
+
+**Contribution Margin:**
+
+$$
+\text{Contribution Margin} = \text{Price per Unit} - \text{Variable Cost per Unit}
+$$
+
+**Contribution Margin Ratio:**
+
+$$
+\text{CM Ratio} = \frac{\text{Contribution Margin}}{\text{Price per Unit}} \times 100
+$$
+
+**Break-Even in Revenue:**
+
+$$
+\text{Break-Even Revenue} = \frac{\text{Fixed Costs}}{\text{CM Ratio}}
+$$
+
+**Units for Target Profit:**
+
+$$
+\text{Units for Profit Target} = \frac{\text{Fixed Costs} + \text{Target Profit}}{\text{Contribution Margin}}
+$$
+
+Where:
+- **Fixed Costs** = expenses that remain constant regardless of production volume
+- **Price per Unit** = selling price per unit
+- **Variable Cost per Unit** = cost to produce/deliver one additional unit
+- **Contribution Margin** = revenue per unit available to cover fixed costs
+
+*Source: Horngren, Datar & Rajan — "Cost Accounting: A Managerial Emphasis" (Pearson, 16th edition). Standard CVP (cost-volume-profit) analysis framework.*
+
+For a deeper explanation of break-even analysis including multi-product calculations and sensitivity analysis, see our [methodology page on break-even analysis](/methodology/break-even-analysis).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Coffee Shop — Monthly Break-Even
+
+A coffee shop has \$8,000/month in fixed costs (rent, utilities, salaried staff, insurance). The average drink sells for \$5.50 with \$1.65 in variable costs (beans, milk, cup, sleeve).
+
+**Step 1: Contribution Margin**
+- CM = \$5.50 − $1.65 = **$3.85 per drink**
+- CM Ratio = \$3.85 / \$5.50 = **70%**
+
+**Step 2: Break-Even Units**
+- Break-Even = \$8,000 / \$3.85 = **2,078 drinks per month**
+- That's approximately 69 drinks per day (30-day month)
+
+**Step 3: Break-Even Revenue**
+- Revenue = 2,078 × $5.50 = **$11,429/month**
+
+*Interpretation:* This coffee shop needs to sell about 69 drinks daily to cover all costs. At a busy location averaging 120 drinks/day, they'd generate 51 extra sales × $3.85 = $196/day in profit, or roughly \$5,900/month.
+
+### Example 2: SaaS Business — Annual Break-Even
+
+A SaaS startup has \$240,000 in annual fixed costs (engineering salaries, cloud hosting, office lease). Monthly subscription is \$49/user. Variable costs per user (support time, API costs, payment processing) are \$7/month or \$84/year.
+
+**Step 1: Contribution Margin (annual per user)**
+- CM = \$588 − $84 = **$504 per user/year**
+- CM Ratio = \$504 / \$588 = **85.7%**
+
+**Step 2: Break-Even Users**
+- Break-Even = \$240,000 / \$504 = **477 paying users**
+
+**Step 3: With \$100,000 Profit Target**
+- Units = (\$240,000 + \$100,000) / \$504 = **675 users**
+
+*Interpretation:* The business needs 477 paying subscribers to break even and 675 to generate \$100,000 in annual profit. The 85.7% contribution margin ratio is typical for SaaS — most of the subscription revenue directly covers fixed costs.
+
+### Example 3: Product Manufacturing
+
+A manufacturer has \$50,000/month in fixed costs. They sell widgets at \$25 each with \$15 in variable costs per unit.
+
+**Step 1: Contribution Margin**
+- CM = \$25 − $15 = **$10 per widget**
+- CM Ratio = \$10 / \$25 = **40%**
+
+**Step 2: Break-Even**
+- Break-Even = \$50,000 / \$10 = **5,000 widgets/month**
+- Revenue = 5,000 × $25 = **$125,000/month**
+
+**If they raise price to \$28:**
+- New CM = \$28 − $15 = $13
+- New Break-Even = \$50,000 / \$13 = **3,847 units** (23% fewer units needed)
+
+*Interpretation:* A \$3 price increase (12%) reduces the break-even point by 23% because the entire increase goes straight to contribution margin. This demonstrates why small pricing adjustments have outsized impact on break-even.
+
+## Key Factors That Affect Your Results
+
+1. **Fixed Cost Accuracy** — Underestimating fixed costs is the #1 break-even error. Include ALL recurring expenses: rent, insurance, salaried employees, software, loan payments, equipment leases. A 10% underestimate in a \$10,000 fixed cost moves break-even from 500 to 550 units.
+2. **Variable Cost Completeness** — Include payment processing (2.9% + \$0.30 for Stripe/Square), shipping, packaging, returns allowance, and sales commissions. Missing \$2/unit in variable costs on a \$20 contribution margin shifts break-even by 10%.
+3. **Pricing Power** — Price increases disproportionately lower break-even because the entire increase flows to contribution margin. A 10% price increase on \$50 adds \$5 to CM, potentially reducing break-even by 20%+.
+4. **Volume Assumptions** — Break-even assumes you can actually sell that many units. Validate against market size and your current capacity before committing to a business plan.
+5. **Mixed Products** — If you sell multiple products at different prices and margins, use the weighted-average contribution margin across your product mix.
+
+## Common Mistakes to Avoid
+
+1. **Forgetting Semi-Variable Costs** — Some costs are fixed up to a point, then step up: a warehouse that costs \$5,000/month until you exceed capacity, then requires a second warehouse at \$10,000. Model these as step functions, not smooth lines.
+2. **Using Break-Even as the Sales Target** — Break-even means zero profit. Your actual target should be break-even plus desired profit. Always use the "Target Profit" field.
+3. **Ignoring Time Period** — Fixed costs of \$10,000/month vs. \$10,000/year produce wildly different break-even points. Ensure all inputs use the same time period (monthly or annually).
+4. **Static Analysis for Dynamic Business** — Break-even assumes constant pricing, constant costs, and a single product. Reality involves seasonal pricing, bulk discounts, and changing supplier costs. Recalculate quarterly.
+5. **Overlooking Contribution Margin Ratio** — A low CM ratio (below 20%) means you need massive volume to break even. If your CM ratio is below 15%, seriously reconsider your pricing or cost structure before scaling.
+
+## Break-Even Scenarios by Contribution Margin
+
+| Fixed Costs | CM per Unit | Break-Even Units | Break-Even Revenue (at \$50/unit) |
+|:-:|:-:|:-:|:-:|
+| \$5,000 | \$10 | 500 | \$25,000 |
+| \$5,000 | \$20 | 250 | \$12,500 |
+| \$5,000 | \$30 | 167 | \$8,350 |
+| \$10,000 | \$10 | 1,000 | \$50,000 |
+| \$10,000 | \$20 | 500 | \$25,000 |
+| \$10,000 | \$30 | 334 | \$16,700 |
+| \$25,000 | \$10 | 2,500 | \$125,000 |
+| \$25,000 | \$20 | 1,250 | \$62,500 |
+| \$25,000 | \$30 | 834 | \$41,700 |
+
+*Doubling the contribution margin halves the break-even point. Doubling fixed costs doubles it. The relationship is perfectly linear in both directions.*
+
+## Break-Even by Business Type
+
+Different business models have fundamentally different break-even profiles. Here is how four common business types compare when you plug in realistic numbers:
+
+| Business Type | Monthly Fixed Costs | Price per Unit | Variable Cost | Contribution Margin | Break-Even Units | Break-Even Revenue |
+|:--|:-:|:-:|:-:|:-:|:-:|:-:|
+| **Coffee shop** | \$8,000 | \$5.50/drink | \$3.00 | \$2.50 | 3,200 drinks/mo | \$17,600 |
+| **SaaS product** | \$50,000 | \$30/subscriber/mo | \$3 | \$27 | 1,852 subscribers | \$55,556 |
+| **Restaurant** | \$15,000 | \$28/avg check | \$20 | \$8 | 1,875 covers/mo | \$52,500 |
+| **E-commerce store** | \$3,000 | \$45/order | \$33 | \$12 | 250 orders/mo | \$11,250 |
+
+**Interpretation:** The coffee shop needs to sell 3,200 drinks per month — roughly 107 per day assuming 30-day operation — to cover its $8,000 in fixed costs. That is achievable for a high-traffic location but out of reach for a low-footfall neighborhood shop. The SaaS business needs 1,852 paying subscribers, which sounds daunting until you note the 90% contribution margin means every new subscriber after breakeven contributes $27 in pure margin. The restaurant must serve 1,875 covers (about 63 per day), which is within range for a 60-seat venue with 1.5 table turns per day. The e-commerce store has the lowest break-even threshold at just 250 orders per month — roughly 8 per day — because it carries only $3,000 in fixed costs (warehousing, software, hosting). The key insight: businesses with high contribution margins (SaaS, consulting) tolerate higher fixed costs, while low-margin businesses (restaurants, retail) must keep fixed costs minimal or drive very high volume.
+
+## After Break-Even: Putting the Number to Work
+
+Knowing your break-even point is step one. The real value comes from using it as a decision-making tool across your business.
+
+**Pricing decisions.** Before changing your price, run the new number through this calculator. A 10% price increase on a $50 product adds $5 to your contribution margin — but if the increase causes 15% of customers to leave, you need to check whether the higher margin per unit compensates for the lost volume. Model both scenarios: higher price × lower volume versus current price × current volume.
+
+**Hiring decisions.** Every new full-time hire adds $4,000-$8,000/month in fixed costs (salary, benefits, taxes, equipment). On a $20 contribution margin, a $6,000/month hire means you need 300 additional units sold per month just to cover that person. If the hire is a salesperson expected to close 500 units/month, the math works. If it's an operations role that doesn't directly generate revenue, the break-even point rises for every other unit you sell.
+
+**Expansion decisions.** Opening a second location doubles (or more) your fixed costs while your contribution margin per unit stays the same. If your current location breaks even at 500 units and a second location adds $12,000/month in fixed costs, you need 600 additional units from the new location before it contributes any profit. Map this against realistic demand estimates before signing a lease.
+
+**Seasonal planning.** If your business is seasonal, calculate break-even by month. A landscaping company with $8,000/month in fixed costs but revenue concentrated in April-October must cover 12 months of overhead in 7 months of active selling — effectively raising the monthly break-even by 71%.
+
+## Assumptions & Limitations
+
+- Assumes a single product at a uniform price (for multi-product businesses, use weighted-average contribution margin)
+- All costs are perfectly classified as either fixed or variable (in reality, some costs are semi-variable)
+- Fixed costs remain constant across all production levels (no step costs)
+- No quantity discounts on variable costs (bulk purchasing can lower per-unit costs at higher volumes)
+- Selling price is constant (no discounting or price tiers)
+- All units produced are sold (no inventory buildup)
+- Does not account for taxes or time value of money
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### What is a good contribution margin ratio?
+
+A good contribution margin ratio depends on your industry, but generally 40% or higher is considered healthy for product businesses. SaaS companies typically achieve 80–90%, service businesses 50–70%, and retail/manufacturing 20–40%. If your contribution margin ratio falls below 20%, your business requires very high volume to cover fixed costs — a sign that pricing or cost structure needs revisiting before scaling.
+
+### How often should I recalculate my break-even point?
+
+Recalculate your break-even point at least quarterly, or immediately after any significant change to fixed costs, pricing, or variable costs. A new hire adding \$5,000/month in salary, a supplier price increase of \$2/unit, or a 5% price adjustment all shift break-even materially. Businesses that track break-even monthly catch margin erosion 3–4 months earlier on average than those who check annually.
+
+### How does break-even differ for multi-product businesses?
+
+Multi-product businesses must use a weighted-average contribution margin based on their sales mix. If Product A has a \$30 CM and represents 60% of sales, and Product B has a \$10 CM at 40% of sales, the blended CM is (\$30 × 0.60) + (\$10 × 0.40) = \$22. Break-even is then calculated using this blended figure. The key risk is that shifts in product mix change the blended CM — selling more low-margin products raises your break-even point even if total volume increases.
+
+### What is the difference between break-even analysis and profit margin?
+
+Break-even analysis tells you the minimum sales volume needed to avoid a loss, while profit margin tells you what percentage of revenue becomes profit at your current sales level. Break-even is forward-looking (a planning tool), and profit margin is backward-looking (a performance metric). A business can have a healthy 25% profit margin today but still need break-even analysis to evaluate whether a new product line, location, or hire will be profitable.
+
+### Should I use monthly or annual fixed costs in break-even analysis?
+
+Use whichever time period matches your decision-making cycle, but stay consistent across all inputs. Monthly break-even is more actionable for day-to-day operations — knowing you need 500 units this month is more useful than knowing you need 6,000 this year. Annual break-even is better for strategic planning and investor presentations. The break-even units will differ (monthly fixed costs produce a monthly unit target), but the underlying relationship is identical.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Horngren, Datar & Rajan** — "Cost Accounting: A Managerial Emphasis" (Pearson, 16th edition) — CVP analysis framework and break-even formulas
+- **Garrison, Noreen & Brewer** — "Managerial Accounting" (McGraw-Hill, 17th edition) — Contribution margin and multi-product break-even methodology
+- **SCORE/SBA** — Break-even analysis templates and small business profitability benchmarks (2024)
+
+The break-even formula assumes a linear cost-volume-profit relationship. Break-even units are rounded up to the next whole unit because you cannot sell a fractional unit. All monetary values are rounded to 2 decimal places.

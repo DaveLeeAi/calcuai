@@ -1,0 +1,164 @@
+{
+  "id": "markup-calculator",
+  "title": "Markup Calculator",
+  "slug": "markup-calculator",
+  "category": "business",
+  "subcategory": "pricing",
+  "primaryKeyword": "markup calculator",
+  "metaTitle": "Markup Calculator — Cost-Plus Pricing Calculator",
+  "metaDescription": "Calculate selling price from cost and markup percentage, or find your markup from cost and price. See markup vs margin conversion. Free, instant results.",
+  "inputs": [
+    {
+      "id": "calculationMode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "cost-to-price",
+      "options": [
+        {
+          "value": "cost-to-price",
+          "label": "Cost → Selling Price"
+        },
+        {
+          "value": "price-to-markup",
+          "label": "Price → Markup %"
+        }
+      ],
+      "helpText": "Choose whether to calculate selling price or find markup percentage"
+    },
+    {
+      "id": "cost",
+      "label": "Cost (Purchase/Production)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your cost to purchase or produce the item"
+    },
+    {
+      "id": "markupPercent",
+      "label": "Markup Percentage",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 10000,
+      "step": 0.1,
+      "helpText": "Desired markup percentage over cost",
+      "dependsOn": "calculationMode"
+    },
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 100,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "The price you charge customers",
+      "dependsOn": "calculationMode"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "markupPercent",
+      "label": "Markup %",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "grossProfit",
+      "label": "Gross Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "marginPercent",
+      "label": "Equivalent Margin %",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "markupToMarginTable",
+      "label": "Markup vs Margin Reference",
+      "type": "table",
+      "columns": [
+        {
+          "key": "markup",
+          "label": "Markup %"
+        },
+        {
+          "key": "margin",
+          "label": "Margin %"
+        },
+        {
+          "key": "sellAt",
+          "label": "Sell $1 Cost At",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Pricing Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "markup",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "margin-calculator",
+    "profit-calculator",
+    "break-even-calculator",
+    "sales-tax-calculator",
+    "business-sales-tax-calculator",
+    "roi-calculator",
+    "discount-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Corporate Finance Institute (CFI) — Markup percentage and cost-plus pricing formulas (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Selling Price = Cost × (1 + Markup%/100); Markup% = ((Price − Cost) / Cost) × 100",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "margin-calculator"
+  ],
+  "qualityScore": 95,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "profit-margin"
+  ]
+}

@@ -1,0 +1,115 @@
+---
+title: "Profit Calculator"
+description: "Calculate gross profit, operating profit, and net profit from your revenue and costs. See tax impact, profit per unit, and a visual breakdown of where your revenue goes."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A business with \$75,000 in revenue, \$30,000 in cost of goods sold, and \$20,000 in operating expenses earns \$18,750 in net profit after 25% taxes — that's \$18.75 profit per unit on 1,000 units sold. This calculator breaks down the three layers of profit (gross, operating, and net) so you can see exactly where your revenue goes. While revenue tells you how much money comes in, profit tells you how much you actually keep.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Profit is what remains after subtracting all costs from revenue. But "profit" is not one number — it's three, and each tells a different story about your business:
+
+**Gross profit** (\$75,000 − \$30,000 = \$45,000 in the example above) shows how much you earn after direct production costs. If gross profit is low, your product pricing or manufacturing costs need attention — no amount of overhead reduction will fix a product that costs more to make than it sells for.
+
+**Operating profit** (\$45,000 − \$20,000 = \$25,000) reveals whether the business is viable after covering rent, salaries, marketing, and other overhead. A positive operating profit means the core business works before taxes and financing enter the picture.
+
+**Net profit** (\$25,000 − \$6,250 tax = \$18,750) is the final bottom line — what the owner takes home or reinvests. The pie chart breakdown shows exactly what percentage of each revenue dollar goes to COGS, overhead, taxes, and net profit.
+
+For top-line sales forecasting, use the [Revenue Calculator](/calculators/business/revenue-calculator). To see your profitability as a percentage (margin), use the [Margin Calculator](/calculators/business/margin-calculator).
+
+## How to Use This Calculator
+
+1. **Enter Revenue** — total sales income for the period you're analyzing (monthly, quarterly, or annual). This is the top line before any deductions.
+2. **Enter Cost of Goods Sold** — direct costs tied to producing your product or delivering your service. For a bakery: flour, butter, sugar, packaging, and hourly baker wages. For SaaS: server hosting and direct engineering costs.
+3. **Enter Operating Expenses** — overhead costs not directly tied to production. Rent, salaried employees, marketing spend, insurance, utilities, and software subscriptions.
+4. **Enter Tax Rate** — your combined federal and state effective tax rate. The 2024 U.S. federal corporate rate is 21%; most small businesses pay 25-35% combined.
+5. **Enter Units Sold (optional)** — if you sell discrete units, enter the count to see profit per unit. Leave at zero if not applicable.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Gross Profit:**
+
+$$
+\text{Gross Profit} = \text{Revenue} - \text{Cost of Goods Sold}
+$$
+
+**Operating Profit:**
+
+$$
+\text{Operating Profit} = \text{Gross Profit} - \text{Operating Expenses}
+$$
+
+**Net Profit:**
+
+$$
+\text{Net Profit} = \text{Operating Profit} - \left(\text{Operating Profit} \times \frac{\text{Tax Rate}}{100}\right)
+$$
+
+**Profit per Unit:**
+
+$$
+\text{Profit per Unit} = \frac{\text{Net Profit}}{\text{Units Sold}}
+$$
+
+Where:
+- **Revenue** = total income from sales (\$)
+- **COGS** = direct costs of producing goods or services (\$)
+- **Operating Expenses** = indirect overhead costs (\$)
+- **Tax Rate** = combined federal + state tax rate (%)
+- **Units Sold** = number of units sold in the period
+
+*Source: U.S. Small Business Administration (SBA) — Business profitability and financial statement guidelines (2024). Profit layers follow standard GAAP income statement structure.*
+
+For a deeper explanation of how profit analysis connects to break-even calculations, see our [methodology page on break-even analysis](/methodology/break-even-analysis).
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Small Bakery — Monthly Figures
+
+Sarah runs a bakery in Austin, TX. Here are her monthly numbers:
+- **Revenue:** \$75,000 (from 1,000 custom cake orders averaging \$75 each)
+- **COGS:** \$30,000 (ingredients \$18,000 + hourly baker wages \$10,000 + packaging \$2,000)
+- **Operating Expenses:** \$20,000 (rent \$5,500 + salaried staff \$9,000 + marketing \$2,500 + utilities \$1,200 + insurance \$800 + POS/software \$1,000)
+- **Tax Rate:** 25% (combined federal + Texas franchise tax equivalent)
+
+**Step 1 — Gross Profit:**
+- \$75,000 − \$30,000 = **\$45,000**
+- Gross margin = \$45,000 / \$75,000 = 60% (healthy for food service; industry average is 55-65%)
+
+**Step 2 — Operating Profit:**
+- \$45,000 − \$20,000 = **\$25,000**
+- Operating margin = \$25,000 / \$75,000 = 33.3%
+
+**Step 3 — Tax:**
+- \$25,000 × 25% = **\$6,250**
+
+**Step 4 — Net Profit:**
+- \$25,000 − \$6,250 = **\$18,750**
+- Net margin = \$18,750 / \$75,000 = 25%
+
+**Step 5 — Profit per Unit:**
+- \$18,750 / 1,000 orders = **\$18.75 profit per cake**
+
+**Interpretation:** Sarah keeps \$18.75 from every \$75 cake order. Her 25% net margin is strong for a bakery — the National Restaurant Association reports average restaurant net margins of 3-9%. She could increase profit by negotiating better ingredient pricing (reducing COGS) or raising prices. A \$5 price increase per cake would add \$5,000/month to gross profit, flowing almost entirely to the bottom line — boosting net profit to roughly \$22,500/month after taxes.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **U.S. Small Business Administration (SBA)** — Business profitability guidelines, income statement structure, and small business financial benchmarks (2024)
+- **GAAP (Generally Accepted Accounting Principles)** — Standard three-tier profit structure: gross profit, operating profit, net profit
+- **IRS** — Federal corporate tax rate of 21% (2024); pass-through entity taxation rules for small businesses
+- **National Restaurant Association** — Industry profit margin benchmarks for food service businesses (2024)
+
+This calculator follows the standard GAAP income statement waterfall: Revenue minus COGS equals Gross Profit, minus Operating Expenses equals Operating Profit, minus Taxes equals Net Profit. Taxes are calculated only on positive operating profit (losses do not generate a tax liability in this simplified model). For businesses with complex tax situations including deductions, credits, and loss carryforwards, consult a CPA for an accurate effective tax rate.

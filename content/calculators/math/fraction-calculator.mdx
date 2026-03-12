@@ -1,0 +1,253 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+3/4 + 1/2 = 5/4, which simplifies to 1 1/4 as a mixed number (1.25 in decimal). This fraction calculator performs all four operations — addition, subtraction, multiplication, and division — on any two fractions. Enter your numerators and denominators, select an operation, and get the unsimplified result, the fully reduced fraction, the decimal equivalent, the mixed number form, and a complete step-by-step solution showing every intermediate calculation.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Fraction arithmetic is one of the most frequently searched math topics online, and for good reason — it underpins everything from adjusting recipes to calculating material quantities on a job site. This calculator handles the four fundamental operations on rational numbers and returns five distinct outputs for every calculation.
+
+The **unsimplified result** shows the raw fraction produced by the arithmetic operation before any reduction. This is the intermediate step most textbooks show, and seeing it helps you understand *why* simplification matters. For example, adding 1/3 + 1/4 first produces 7/12 — which happens to already be in lowest terms. But adding 2/6 + 3/12 produces 24/72 + 18/72 = 42/72, which reduces to 7/12.
+
+The **simplified (reduced) fraction** divides numerator and denominator by their greatest common divisor (GCD). A fraction is fully reduced when the GCD of its numerator and denominator equals 1. The calculator computes this automatically using the Euclidean algorithm — the same method Euclid described around 300 BCE that remains the most efficient approach for finding the GCD of two integers.
+
+The **mixed number** output converts any improper fraction (where the numerator exceeds the denominator) into a whole-number-plus-fraction form. Engineers, carpenters, and cooks generally prefer mixed numbers because they are easier to visualize — "2 3/8 inches" communicates more intuitively than "19/8 inches."
+
+The **decimal equivalent** gives you the floating-point value to six decimal places. This is essential when you need to compare a fraction result to measurements in decimal format or when inputting values into software that only accepts decimals.
+
+The **step-by-step solution** traces every intermediate calculation: finding the common denominator, converting numerators, performing the operation, computing the GCD, simplifying, and converting to a mixed number. This is designed as a learning tool — you can follow along and verify each step.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the first fraction.** Type the numerator (top number) and denominator (bottom number). The numerator can be any integer, including negatives and zero. The denominator must be at least 1. If you're starting with a mixed number like 2 3/4, convert it first: multiply the whole number by the denominator and add the numerator (2 × 4 + 3 = 11), then enter 11/4.
+
+2. **Select the operation.** Choose from the four arithmetic operations: addition (+), subtraction (−), multiplication (×), or division (÷). Addition and subtraction require finding a common denominator internally; multiplication and division do not.
+
+3. **Enter the second fraction.** Type the numerator and denominator of the second fraction. For division, the numerator of the second fraction cannot be zero (division by zero is undefined).
+
+4. **Read your results.** The output shows five forms of the answer — unsimplified, simplified, decimal, mixed number, and a full step-by-step solution. Use the step-by-step trace to verify your own hand work or to pinpoint where a calculation went wrong.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Fraction arithmetic uses four standard formulas for the four operations. Every formula operates on two fractions expressed as a/b and c/d, where b and d are nonzero integers.
+
+### Addition
+
+$$\frac{a}{b} + \frac{c}{d} = \frac{ad + bc}{bd}$$
+
+To add two fractions, cross-multiply to get a common denominator, then add the resulting numerators. The common denominator is the product of the two original denominators (bd). While this is not always the *least* common denominator, simplifying afterward produces the same reduced result.
+
+### Subtraction
+
+$$\frac{a}{b} - \frac{c}{d} = \frac{ad - bc}{bd}$$
+
+Subtraction follows the same cross-multiplication pattern as addition. The only difference is subtracting the cross products instead of adding them. A negative numerator in the result means the answer is a negative fraction.
+
+### Multiplication
+
+$$\frac{a}{b} \times \frac{c}{d} = \frac{ac}{bd}$$
+
+Multiplication is the simplest operation: multiply the numerators together and multiply the denominators together. No common denominator is needed. The result is then simplified by dividing both parts by their GCD.
+
+### Division
+
+$$\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \times \frac{d}{c} = \frac{ad}{bc}$$
+
+Division flips the second fraction (takes its reciprocal) and then multiplies. This is often stated as "multiply by the reciprocal." Division by zero — when c = 0 — is undefined and will produce an error.
+
+### Simplification via GCD
+
+After every operation, the result is reduced to lowest terms using the Euclidean algorithm:
+
+$$\gcd(a, b) = \gcd(b,\ a \bmod b) \quad \text{until } b = 0$$
+
+The GCD is the largest integer that divides both the numerator and denominator evenly. Dividing both by the GCD produces the simplest form of the fraction.
+
+**Source:** Standard arithmetic operations on rational numbers as defined in elementary number theory. The Euclidean algorithm for GCD computation originates from Euclid's *Elements*, Book VII, Propositions 1–2 (c. 300 BCE) and remains the standard method used in modern computer algebra systems.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Adding Fractions With Different Denominators — Doubling a Recipe
+
+**Scenario:** A bread recipe calls for 2/3 cup of whole wheat flour and 3/8 cup of rye flour. You want to know the total flour needed.
+
+**Inputs:**
+- Fraction 1: 2/3
+- Operation: Add (+)
+- Fraction 2: 3/8
+
+**Step-by-step:**
+
+1. Set up the addition: 2/3 + 3/8
+2. Find the common denominator: 3 × 8 = **24**
+3. Convert the numerators: (2 × 8) + (3 × 3) = 16 + 9 = **25**
+4. Unsimplified result: **25/24**
+5. Find GCD: gcd(25, 24) = **1** — already in simplest form
+6. Decimal: 25 ÷ 24 = **1.041667**
+7. Mixed number: 25 ÷ 24 = 1 remainder 1 → **1 1/24**
+
+**Interpretation:** You need 1 1/24 cups of total flour — just a hair over 1 cup. In practice, you would measure 1 cup plus roughly half a teaspoon (since 1/24 of a cup is about 2 teaspoons). This example shows why mixed numbers are more practical for cooking: "1 1/24 cups" is immediately actionable, while "25/24 cups" requires an extra mental step.
+
+### Example 2: Multiplying Fractions — Calculating Partial Area
+
+**Scenario:** A rectangular garden bed measures 3/4 of a yard wide and 2/5 of a yard long. What is its area?
+
+**Inputs:**
+- Fraction 1: 3/4
+- Operation: Multiply (×)
+- Fraction 2: 2/5
+
+**Step-by-step:**
+
+1. Set up the multiplication: 3/4 × 2/5
+2. Multiply numerators: 3 × 2 = **6**
+3. Multiply denominators: 4 × 5 = **20**
+4. Unsimplified result: **6/20**
+5. Find GCD: gcd(6, 20) = **2**
+6. Simplified: 6 ÷ 2 = 3, 20 ÷ 2 = 10 → **3/10**
+7. Decimal: 3 ÷ 10 = **0.3**
+8. Mixed number: 3/10 is a proper fraction — no conversion needed
+
+**Interpretation:** The garden bed covers 3/10 of a square yard, or 0.3 square yards. Multiplying fractions always produces a result smaller than either input (when both fractions are between 0 and 1), which makes intuitive sense: you are taking a *part* of a *part*. Three-quarters of two-fifths is less than either three-quarters or two-fifths alone.
+
+### Example 3: Dividing Fractions — Cutting Material Into Equal Pieces
+
+**Scenario:** You have a board that is 7/8 of a meter long and you need to cut it into pieces that are each 1/4 of a meter. How many pieces can you cut?
+
+**Inputs:**
+- Fraction 1: 7/8
+- Operation: Divide (÷)
+- Fraction 2: 1/4
+
+**Step-by-step:**
+
+1. Set up the division: 7/8 ÷ 1/4
+2. Flip the second fraction (reciprocal): 1/4 → 4/1
+3. Multiply: 7/8 × 4/1
+4. Multiply numerators: 7 × 4 = **28**
+5. Multiply denominators: 8 × 1 = **8**
+6. Unsimplified result: **28/8**
+7. Find GCD: gcd(28, 8) = **4**
+8. Simplified: 28 ÷ 4 = 7, 8 ÷ 4 = 2 → **7/2**
+9. Decimal: 7 ÷ 2 = **3.5**
+10. Mixed number: 7 ÷ 2 = 3 remainder 1 → **3 1/2**
+
+**Interpretation:** You can cut 3 full pieces of 1/4 meter each, with 1/2 of a quarter-meter piece left over (which is 1/8 of a meter). Division by a fraction answers the question "how many groups of this size fit into that amount?" — and the answer is 3.5 groups. On a job site, you would cut 3 pieces and have a 1/8-meter offcut remaining.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Least Common Denominator (LCD) vs. Cross Multiplication.** This calculator uses cross multiplication (multiplying both denominators) to find a common denominator, which always works but may produce larger intermediate numbers. The LCD — the least common multiple of the two denominators — produces smaller intermediate values. For example, adding 5/6 + 7/12: cross multiplication gives a denominator of 72, while the LCD is 12. Both simplify to the same final answer, but LCD-based arithmetic involves smaller numbers and fewer reduction steps.
+
+**Simplification and the GCD.** Every fraction result is automatically reduced by dividing numerator and denominator by their greatest common divisor. Fractions that appear different — 4/6, 6/9, 8/12 — are all equivalent to 2/3. The GCD finds this canonical form. When working by hand, simplifying *before* multiplying (called cross-cancellation) can keep numbers smaller, but the final answer is identical.
+
+**Negative Fractions.** A fraction is negative when its numerator and denominator have opposite signs. This calculator normalizes the sign to always place it on the numerator: -3/4 and 3/-4 both display as -3/4. When subtracting, a negative result simply means the second fraction was larger than the first.
+
+**Improper Fractions vs. Mixed Numbers.** A fraction is "improper" when the absolute value of the numerator exceeds the denominator (e.g., 7/4). The mixed number form (1 3/4) separates the whole-number part from the fractional remainder. Neither form is more correct — improper fractions are standard in algebra and calculus, while mixed numbers are preferred in measurement, construction, and cooking.
+
+**Integer Results.** When a fraction operation produces a result where the numerator is exactly divisible by the denominator (e.g., 6/3 = 2), the calculator displays the whole number rather than "2/1." This is both the simplified result and the mixed number.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Adding or subtracting numerators without finding a common denominator.** The most common fraction error is computing 1/3 + 1/4 as 2/7 — simply adding across. The correct answer is 7/12. You must convert fractions to a common denominator before combining numerators. Only the numerators are added or subtracted; the denominator stays the same after conversion.
+
+**Multiplying denominators when adding fractions.** Some students correctly find the common denominator but then also multiply the numerators as if they were multiplying fractions. In 1/3 + 1/4, the common denominator is 12, and the numerators are cross-multiplied and *added* (4 + 3 = 7), not multiplied (4 × 3 = 12). Confusing the addition and multiplication procedures produces wildly wrong answers.
+
+**Forgetting to simplify the result.** A result of 6/8 is technically correct but not in simplest form. Always divide both numerator and denominator by their GCD. In this case, gcd(6, 8) = 2, so the simplified answer is 3/4. Unsimplified fractions are marked wrong on most math assignments and can cause confusion in practical applications.
+
+**Dividing numerators and denominators separately.** When dividing fractions, beginners sometimes try 6/8 ÷ 3/4 = (6÷3)/(8÷4) = 2/2 = 1. While this happens to give the right answer in this specific case (since 6/8 and 3/4 are equivalent), it only works when both divisions produce integers. The correct method — multiply by the reciprocal — works universally: 6/8 × 4/3 = 24/24 = 1.
+
+**Not handling negative signs correctly.** When subtracting fractions, the sign of the result depends on which fraction is larger. 1/4 − 3/4 = −2/4 = −1/2, not 2/4. Additionally, be careful with double negatives: −(−3/5) = 3/5. This calculator handles all sign normalization automatically.
+
+{/* Section 12: Comparison Table */}
+## Fractions vs. Decimals: When to Use Each
+
+Both fractions and decimals represent the same values, but each format has distinct advantages depending on the context.
+
+| | **Fractions** | **Decimals** |
+|---|---|---|
+| Precision | Exact — 1/3 is exactly 1/3 | Approximate — 0.333... repeats forever |
+| Best for | Cooking, construction, sewing, math proofs | Money, science, engineering, spreadsheets |
+| Comparison ease | Harder — requires common denominator | Easier — compare digit by digit |
+| Arithmetic ease | Requires LCD for +/−, simpler for ×/÷ | Straightforward for all operations |
+| Repeating values | Handles perfectly (1/3, 1/7, 1/9) | Requires rounding or truncation |
+| Standard use | Recipes (3/4 cup), lumber (2 3/8"), music (3/4 time) | Currency (\$3.50), metrics (1.5 kg), science (9.81 m/s²) |
+| Calculator input | Requires separate numerator/denominator | Single value entry |
+| Computer storage | Two integers (exact) | Floating-point (subject to rounding errors) |
+
+**When fractions are better:** Any time you need exact representation of ratios, especially for values like 1/3 or 1/7 that produce infinitely repeating decimals. Construction measurements in the US are almost always in fractions (3/8", 5/16", 7/32"). Music time signatures use fractions exclusively.
+
+**When decimals are better:** Financial calculations (currency is inherently decimal), scientific measurements (metric system), percentages, and any context where you need to quickly compare magnitudes. Spreadsheet software and most programming languages default to decimal representation.
+
+**Converting between them:** Any fraction a/b converts to a decimal by dividing a ÷ b. Converting a terminating decimal to a fraction uses place value: 0.375 = 375/1000 = 3/8. Repeating decimals require algebraic conversion: 0.333... = 1/3.
+
+## Where Fraction Errors Cost Real Money
+
+Fraction arithmetic isn't just a classroom exercise. In several industries, getting fractions wrong creates tangible, expensive consequences.
+
+**Construction measurement.** U.S. lumber and hardware dimensions are specified in fractions of an inch — 3/8", 5/16", 7/32". A contractor cutting a board to 15 7/16" who misreads the tape as 15 1/2" is off by 1/16 of an inch (1.6 mm). On a single cut, that's barely visible. Across 40 stud placements in a wall frame, the cumulative error reaches 2.5 inches — enough to throw a door opening out of square. The fix (shimming or reframing) costs hours of labor that a correct fraction calculation would have prevented.
+
+**Recipe scaling.** Scaling a recipe from 4 servings to 6 requires multiplying every ingredient by 6/4 = 3/2. A home cook who mentally rounds "3/4 cup × 3/2" to "about 1 cup" instead of correctly computing 9/8 cup (1 1/8 cups) adds 12.5% too much of that ingredient. For salt or baking powder, a 12.5% overshoot is the difference between edible and inedible. Professional bakers work by weight precisely to avoid fraction-of-a-cup accumulation errors.
+
+**Pharmaceutical compounding.** A pharmacist diluting a drug concentration from 1/4 strength to 1/10 strength must divide correctly: (1/4) ÷ (1/10) = 10/4 = 2.5 — meaning the original is 2.5× stronger than the target, not "about twice as strong." A 25% error in drug concentration can be medically dangerous. Compounding pharmacies use fraction arithmetic daily, and the margin for error is zero.
+
+**Stock trading (pre-decimalization).** Before 2001, U.S. stock prices were quoted in fractions: 1/8, 1/16, 1/32 of a dollar. A bid of 45 3/16 versus 45 1/4 is a difference of 1/16 ($0.0625) per share — on a 10,000-share order, that's $625. Traders who could do fraction arithmetic faster made better split-second decisions. Decimalization eliminated this, but bond markets still quote in fractions of a point (32nds), and mortgage-backed securities trade in 256ths.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- This calculator operates on **integer fractions only** — both numerator and denominator must be whole numbers. It does not handle compound fractions (fractions of fractions like (1/2)/(3/4)) directly, though you can express these as division of two fractions.
+- Results are **exact for all rational numbers**. No floating-point rounding occurs in the fraction arithmetic itself; the decimal output is rounded to 6 decimal places for display.
+- The calculator does not support **continued fractions, Egyptian fractions, or fraction decomposition**. It performs the four basic operations only.
+- **Very large numerators or denominators** (beyond JavaScript's safe integer limit of 2^53 - 1) may produce inaccurate results due to integer overflow. For typical use cases, this is not a concern.
+- The calculator assumes **standard mathematical conventions**: division by zero is undefined, 0/n = 0 for any nonzero n, and the denominator is always positive in the simplified result.
+- **Mixed number input is not supported** — you must convert mixed numbers to improper fractions first. To convert, multiply the whole number by the denominator and add the numerator: 2 3/4 = (2 × 4 + 3)/4 = 11/4.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How do you add fractions with different denominators?
+
+To add fractions with different denominators, find a common denominator by multiplying the two denominators together (or find the least common denominator), convert each fraction so both have that denominator, then add the numerators. For example, 1/3 + 1/4: the common denominator is 12 (or 3 × 4). Convert: 4/12 + 3/12 = 7/12. The denominator stays the same; only the numerators are added.
+
+### What does it mean to simplify a fraction?
+
+Simplifying (or reducing) a fraction means dividing both the numerator and denominator by their greatest common divisor (GCD) until no common factor remains other than 1. For example, 8/12: the GCD of 8 and 12 is 4, so 8 ÷ 4 = 2 and 12 ÷ 4 = 3, giving the simplified fraction 2/3. A fraction is in simplest form when gcd(numerator, denominator) = 1.
+
+### Why do you flip the second fraction when dividing?
+
+Dividing by a fraction is equivalent to multiplying by its reciprocal. The reciprocal of a/b is b/a. Mathematically, (a/b) ÷ (c/d) = (a/b) × (d/c) because dividing by c/d asks "how many groups of c/d fit into a/b?" — and multiplying by the reciprocal answers that question. This rule holds for all nonzero fractions and is derived from the definition of division as the inverse of multiplication.
+
+### What is the difference between a proper fraction and an improper fraction?
+
+A proper fraction has a numerator smaller than its denominator (e.g., 3/4, 2/7), so its value is between -1 and 1. An improper fraction has a numerator equal to or greater than its denominator (e.g., 7/4, 5/3), so its value is 1 or greater (or -1 or less for negatives). Improper fractions can be converted to mixed numbers: 7/4 = 1 3/4. Neither form is more "correct" — improper fractions are standard in algebra, while mixed numbers are preferred in everyday measurement.
+
+### Can fractions be negative?
+
+Yes. A fraction is negative when exactly one of its numerator or denominator is negative: -3/4 = 3/(-4) = -0.75. If both are negative, the negatives cancel and the fraction is positive: (-3)/(-4) = 3/4. By convention, the negative sign is placed on the numerator, not the denominator, when writing a simplified fraction. Negative fractions follow the same arithmetic rules as positive ones.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator performs fraction arithmetic (addition, subtraction, multiplication, division) by finding common denominators for addition/subtraction and cross-multiplying for multiplication/division. Results are automatically simplified to lowest terms using the greatest common divisor (Euclidean algorithm). Mixed numbers are converted to improper fractions before computation and converted back for display.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

@@ -1,0 +1,169 @@
+{
+  "id": "profit-calculator",
+  "title": "Profit Calculator",
+  "slug": "profit-calculator",
+  "category": "business",
+  "subcategory": "margins",
+  "primaryKeyword": "profit calculator",
+  "metaTitle": "Profit Calculator — Calculate Business Profit Instantly",
+  "metaDescription": "Calculate gross profit, operating profit, and net profit from your revenue and costs. See tax impact and profit per unit. Free business profit calculator.",
+  "inputs": [
+    {
+      "id": "revenue",
+      "label": "Revenue",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 75000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total revenue or sales for the period"
+    },
+    {
+      "id": "costOfGoodsSold",
+      "label": "Cost of Goods Sold (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 30000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Direct costs: materials, labor, manufacturing"
+    },
+    {
+      "id": "operatingExpenses",
+      "label": "Operating Expenses",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 20000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Overhead: rent, salaries, marketing, utilities"
+    },
+    {
+      "id": "taxRate",
+      "label": "Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 25,
+      "min": 0,
+      "max": 100,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Combined federal + state tax rate"
+    },
+    {
+      "id": "unitsSold",
+      "label": "Units Sold (Optional)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1,
+      "helpText": "Optional: calculate profit per unit"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netProfit",
+      "label": "Net Profit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "grossProfit",
+      "label": "Gross Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "operatingProfit",
+      "label": "Operating Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "taxAmount",
+      "label": "Tax Amount",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "profitPerUnit",
+      "label": "Profit per Unit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "profitBreakdown",
+      "label": "Revenue Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#E74C3C",
+          "#F39C12",
+          "#95A5A6",
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Profit Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "profit",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "margin-calculator",
+    "revenue-calculator",
+    "break-even-calculator",
+    "markup-calculator",
+    "commission-calculator",
+    "business-sales-tax-calculator",
+    "employee-cost-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": false,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Small Business Administration (SBA) — Business profitability and financial statement guidelines (2024)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gross Profit = Revenue − COGS; Operating Profit = Gross Profit − Operating Expenses; Net Profit = Operating Profit − (Operating Profit × Tax Rate); Profit per Unit = Net Profit / Units Sold",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "margin-calculator",
+    "revenue-calculator"
+  ],
+  "qualityScore": 85,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "profit-margin"
+  ],
+  "methodologyTopics": [
+    "break-even-analysis"
+  ]
+}

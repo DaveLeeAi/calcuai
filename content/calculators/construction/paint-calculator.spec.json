@@ -1,0 +1,259 @@
+{
+  "id": "paint-calculator",
+  "title": "Paint Calculator",
+  "slug": "paint-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "paint calculator",
+  "metaTitle": "Paint Calculator — Gallons Needed by Room Size & Finish",
+  "metaDescription": "Calculate how many gallons of paint you need for walls and ceilings. Deducts doors and windows, adjusts for paint finish, coats, and provides cost estimates.",
+  "inputs": [
+    {
+      "id": "roomLength",
+      "label": "Room Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 14,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "roomWidth",
+      "label": "Room Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 4,
+      "max": 20,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "doors",
+      "label": "Number of Doors",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 20,
+      "helpText": "Standard door = 21 sq ft (3 × 7 ft)"
+    },
+    {
+      "id": "windows",
+      "label": "Number of Windows",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 20,
+      "helpText": "Standard window = 15 sq ft (3 × 5 ft)"
+    },
+    {
+      "id": "coats",
+      "label": "Number of Coats",
+      "type": "select",
+      "required": true,
+      "defaultValue": "2",
+      "options": [
+        {
+          "value": "1",
+          "label": "1 Coat"
+        },
+        {
+          "value": "2",
+          "label": "2 Coats"
+        },
+        {
+          "value": "3",
+          "label": "3 Coats"
+        }
+      ]
+    },
+    {
+      "id": "paintType",
+      "label": "Paint Finish",
+      "type": "select",
+      "required": true,
+      "defaultValue": "eggshell",
+      "options": [
+        {
+          "value": "flat",
+          "label": "Flat / Matte (350 sq ft/gal)"
+        },
+        {
+          "value": "eggshell",
+          "label": "Eggshell (375 sq ft/gal)"
+        },
+        {
+          "value": "satin",
+          "label": "Satin (375 sq ft/gal)"
+        },
+        {
+          "value": "semi-gloss",
+          "label": "Semi-Gloss (325 sq ft/gal)"
+        },
+        {
+          "value": "gloss",
+          "label": "Gloss (300 sq ft/gal)"
+        },
+        {
+          "value": "primer",
+          "label": "Primer (300 sq ft/gal)"
+        }
+      ]
+    },
+    {
+      "id": "includeCeiling",
+      "label": "Include Ceiling",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "Add ceiling area to the paint calculation"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "gallonsNeeded",
+      "label": "Gallons of Paint Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "paintableArea",
+      "label": "Total Paintable Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "totalWallArea",
+      "label": "Gross Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "openingsArea",
+      "label": "Openings Deducted (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Paint Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "areaBreakdown",
+      "label": "Area Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "paint-coverage",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "drywall-calculator",
+    "square-footage-calculator",
+    "flooring-calculator",
+    "roofing-calculator",
+    "concrete-calculator",
+    "fence-calculator",
+    "mulch-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Benjamin Moore and Sherwin-Williams coverage specifications",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard perimeter-based wall area formula. Coverage rates from manufacturer data sheets (Benjamin Moore, Sherwin-Williams). Opening deductions use residential standard door (21 sq ft) and window (15 sq ft) sizes.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "spring-summer",
+  "glossaryTerms": [
+    "square-footage"
+  ]
+}

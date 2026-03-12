@@ -1,0 +1,170 @@
+---
+title: "Overtime Calculator"
+description: "Calculate regular and overtime pay for any hourly rate. See time-and-a-half, double-time, total weekly earnings, effective hourly rate, and monthly projection."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your total weekly pay including regular and overtime hours. A worker earning \$25/hour who works 50 hours in a week takes home \$1,375 — \$1,000 for 40 regular hours plus \$375 for 10 overtime hours at the standard 1.5× rate, yielding an effective hourly rate of \$27.50. That overtime premium adds \$125 above what those same hours would have earned at the base rate.
+
+</section>
+
+{/* Section 6: What Your Estimate Shows */}
+## What Your Estimate Shows
+
+This calculator breaks down your weekly paycheck into regular and overtime components so you can see exactly how much extra you earn from overtime hours. The key outputs are **total weekly pay**, **overtime pay** (the full amount earned during OT hours), **overtime premium** (the bonus above your regular rate), and your **effective hourly rate** — what you actually earned per hour averaged across all hours worked.
+
+The effective hourly rate is particularly useful for comparing overtime opportunities. Working 50 hours at \$25/hour with 1.5× overtime pays \$27.50/hour effectively, but working 60 hours at \$20/hour with 1.5× overtime pays only \$22.50/hour effectively. The monthly projection extends your weekly total across 4.33 weeks (the average number of weeks per month), giving you a realistic picture of your monthly gross income before taxes.
+
+If you need to convert an annual salary to an hourly rate before using this calculator, try our [Salary Calculator](/calculators/business/salary-calculator). For a complete view of your take-home pay after taxes, see the [Payroll Calculator](/calculators/business/payroll-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Hourly Rate** — your base pay rate before any overtime premium. If you only know your annual salary, divide by 2,080 (40 hours × 52 weeks) to get your hourly equivalent.
+2. **Enter Regular Hours** — the number of standard (non-overtime) hours you work per week. The FLSA standard threshold is 40 hours, though some employers use different schedules.
+3. **Enter Overtime Hours** — the number of hours worked beyond your regular schedule in the same week. For FLSA purposes, this is any time over 40 hours per workweek.
+4. **Select Overtime Rate** — choose 1.5× (time-and-a-half, the federal standard), 2.0× (double time, common for holidays or California daily OT after 12 hours), or 2.5× (used in some union contracts).
+5. **Review results** — your total weekly pay, effective rate, and monthly projection appear instantly. The pie chart shows what portion of your paycheck comes from regular vs. overtime hours.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Regular Pay:**
+
+$$
+\text{Regular Pay} = \text{Regular Hours} \times \text{Hourly Rate}
+$$
+
+**Overtime Pay:**
+
+$$
+\text{Overtime Pay} = \text{Overtime Hours} \times \text{Hourly Rate} \times \text{OT Multiplier}
+$$
+
+**Total Weekly Pay:**
+
+$$
+\text{Total Pay} = \text{Regular Pay} + \text{Overtime Pay}
+$$
+
+**Effective Hourly Rate:**
+
+$$
+\text{Effective Rate} = \frac{\text{Total Pay}}{\text{Regular Hours} + \text{Overtime Hours}}
+$$
+
+**Overtime Premium:**
+
+$$
+\text{OT Premium} = \text{Overtime Hours} \times \text{Hourly Rate} \times (\text{OT Multiplier} - 1)
+$$
+
+Where:
+- **Hourly Rate** = your base pay rate per hour
+- **Regular Hours** = standard weekly hours (typically 40 under FLSA)
+- **Overtime Hours** = hours worked beyond the regular schedule
+- **OT Multiplier** = the overtime rate factor (1.5× standard, 2.0× double time, 2.5× triple-half)
+- **OT Premium** = the additional earnings above your base rate specifically from overtime
+
+*Source: U.S. Department of Labor — Fair Labor Standards Act (FLSA), overtime pay requirements, 29 U.S.C. § 207 (2024). The FLSA mandates 1.5× pay for hours exceeding 40 per workweek for non-exempt employees.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard FLSA Overtime (Time-and-a-Half)
+
+A warehouse worker earns \$25/hour and works 50 hours in one week (40 regular + 10 overtime).
+
+**Regular Pay:**
+- 40 hours × $25 = **$1,000**
+
+**Overtime Pay:**
+- 10 hours × $25 × 1.5 = **$375**
+
+**Total Weekly Pay:**
+- \$1,000 + $375 = **$1,375**
+
+**Effective Hourly Rate:**
+- $1,375 ÷ 50 hours = **$27.50/hour**
+
+**Overtime Premium:**
+- 10 hours × $25 × (1.5 − 1) = 10 × $25 × 0.5 = **\$125**
+
+**Monthly Projection:**
+- $1,375 × 4.33 weeks = **$5,953.75/month**
+
+*Interpretation:* Those 10 overtime hours added \$375 to the paycheck, but \$125 of that is the overtime premium — the extra money earned specifically because the OT rate is 1.5× instead of 1.0×. Without the overtime premium, those 10 hours would have earned only \$250 at the regular rate. The effective rate of \$27.50 means every hour worked that week — including the regular hours — averaged out to more than the base \$25 rate.
+
+### Example 2: Double-Time Holiday Pay
+
+A nurse earning \$40/hour works a holiday shift: 40 regular hours plus 8 hours at double time (2.0×).
+
+**Regular Pay:**
+- 40 hours × $40 = **$1,600**
+
+**Overtime Pay:**
+- 8 hours × $40 × 2.0 = **$640**
+
+**Total Weekly Pay:**
+- \$1,600 + $640 = **$2,240**
+
+**Effective Hourly Rate:**
+- $2,240 ÷ 48 hours = **$46.67/hour**
+
+**Overtime Premium:**
+- 8 hours × $40 × (2.0 − 1) = 8 × $40 × 1.0 = **\$320**
+
+*Interpretation:* Double time pays \$80/hour for the holiday shift — twice the base rate. The \$320 overtime premium represents the bonus beyond what those 8 hours would have earned at the standard \$40 rate. For healthcare workers, holiday and weekend differential pay can significantly boost annual earnings.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **FLSA Threshold Is Weekly, Not Daily** — Under federal law, overtime kicks in after 40 hours per *workweek*, regardless of daily hours. Working four 10-hour days does not trigger federal overtime, even though each day exceeds 8 hours. However, California and a few other states mandate daily overtime after 8 hours and double time after 12 hours, which can produce significantly higher OT pay for the same total weekly hours.
+
+2. **Exempt vs. Non-Exempt Status** — Not every worker qualifies for overtime. The FLSA exempts salaried employees earning above \$43,888/year (as of the 2024 DOL rule) who perform executive, administrative, or professional duties. Misclassification is common — the DOL estimates millions of workers are incorrectly classified as exempt. If you earn a salary and regularly work over 40 hours, verify your exemption status.
+
+3. **Overtime Multiplier Variations** — While 1.5× is the federal minimum, many union contracts, state laws, and company policies set higher multipliers. California requires 2.0× after 12 hours in a day. Some union contracts specify 2.5× for holidays. Using the correct multiplier can change weekly OT earnings by hundreds of dollars — for the \$25/hour example, 10 OT hours at 2.0× yields \$500 vs. \$375 at 1.5×.
+
+4. **Shift Differentials Stack with Overtime** — Many employers pay a shift differential (e.g., +\$3/hour for night shifts). Under FLSA, the overtime rate must be calculated on the *regular rate of pay*, which includes shift differentials. A \$25/hour worker with a \$3 night differential has a \$28 regular rate, making their OT rate \$42/hour (1.5× of \$28), not \$37.50 (1.5× of \$25).
+
+5. **Compounding Effect on Monthly Income** — Consistent overtime dramatically changes annual earnings. A \$25/hour worker earning \$52,000/year at 40 hours jumps to \$71,500/year (\$5,953.75 × 12) with 10 weekly OT hours — a 37.5% annual income increase from 25% more hours, thanks to the 1.5× multiplier.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a single overtime multiplier for all OT hours (does not handle mixed rates within one pay period, such as 8 OT hours at 1.5× plus 4 hours at 2.0×)
+- Does not account for federal, state, or local income taxes — results show gross pay, not take-home pay
+- Does not include shift differentials, bonuses, or tips in the base rate calculation
+- Monthly projection uses 4.33 weeks/month (52 ÷ 12) as an average — actual months vary from 4.0 to 4.43 weeks
+- Does not address exempt vs. non-exempt classification — assumes the worker qualifies for OT under FLSA
+- Does not calculate California-style daily overtime, which requires different threshold logic (8 hours/day vs. 40 hours/week)
+- Overtime premium calculation assumes the multiplier applies to the full base hourly rate
+
+## Frequently Asked Questions
+
+### What is the FLSA overtime rate?
+
+The federal overtime rate under the Fair Labor Standards Act (FLSA) is 1.5 times the employee's regular rate of pay for all hours worked over 40 in a workweek. This is commonly called "time-and-a-half." For a worker earning \$20/hour, the overtime rate is \$30/hour. The FLSA does not require overtime pay for work on weekends, holidays, or regular days of rest unless overtime hours are actually worked beyond 40 in that workweek. Some states and employers set higher rates — California mandates double time (2.0×) after 12 hours in a single day.
+
+### Who qualifies for overtime pay?
+
+Non-exempt employees are eligible for overtime under the FLSA. As of the 2024 Department of Labor rule, salaried workers earning below \$43,888/year (\$844/week) automatically qualify for overtime regardless of job duties. Workers above that threshold may still qualify if they do not perform executive, administrative, or professional duties as defined by the DOL. Hourly workers are almost always non-exempt. Common exceptions include certain agricultural workers, some transportation employees, and independent contractors (who are not covered by FLSA at all).
+
+### Does overtime apply after 8 hours per day?
+
+Under federal FLSA rules, overtime applies after 40 hours per workweek, not per day. A worker can work a 12-hour shift without triggering federal overtime if their weekly total stays at or below 40 hours. However, several states have stricter daily overtime laws. California requires 1.5× pay after 8 hours per day and 2.0× after 12 hours per day, regardless of weekly totals. Alaska, Nevada, and Colorado also have daily overtime provisions. Always check your state labor department for local overtime rules that may exceed the federal standard.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **U.S. Department of Labor** — Fair Labor Standards Act (FLSA), 29 U.S.C. § 207 — federal overtime requirements, exemption thresholds, and regular rate of pay calculation rules (2024)
+- **U.S. Department of Labor, Wage and Hour Division** — Fact Sheet #23: Overtime Pay Requirements of the FLSA
+- **California Department of Industrial Relations** — Daily overtime provisions under California Labor Code § 510
+
+The calculator uses the standard FLSA formula: overtime pay equals overtime hours multiplied by the regular hourly rate multiplied by the applicable overtime multiplier. The effective hourly rate divides total gross pay by total hours worked. Monthly projections use 4.33 weeks per month (52 weeks ÷ 12 months), which is the standard payroll conversion factor used by the American Payroll Association.

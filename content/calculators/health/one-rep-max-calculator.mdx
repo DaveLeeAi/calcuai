@@ -1,0 +1,115 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+If you can bench press 185 pounds for 5 reps, your estimated one-rep max is 215.8 lbs using the Epley formula and 208.1 lbs using the Brzycki formula — an average predicted 1RM of 212 pounds. Enter the weight you lifted and the number of reps you completed to see your estimated max and a full percentage-based training chart.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Your one-rep max (1RM) is the maximum amount of weight you can lift for a single repetition with proper form. It is the standard benchmark for measuring absolute strength and the foundation for percentage-based training programs. Knowing your 1RM allows you to program working sets at precise intensities — for example, 70–80% of 1RM for hypertrophy (muscle growth) or 85–95% for maximal strength development.
+
+This calculator estimates your 1RM from a submaximal lift using two well-established prediction formulas: Epley (1985) and Brzycki (1993). Both are most accurate when the input rep count is between 2 and 10. Above 10 reps, accuracy decreases as the formulas begin to overpredict — the Brzycki formula diverges more sharply at high rep counts while Epley remains more conservative. By displaying both estimates plus their average, you get a reliable working range rather than a single point estimate. The percentage chart then translates your predicted max into working weights for common training percentages from 60% to 100%.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Perform a working set** — choose a weight you can lift for 2–10 reps with good form. The closer to your true max (fewer reps, heavier weight), the more accurate the estimate. A 3–5 rep set provides the best balance of accuracy and safety.
+
+2. **Enter the weight** — type the exact weight you lifted, including bar weight. For a barbell bench press, a standard Olympic bar weighs 45 lbs (20 kg).
+
+3. **Enter reps completed** — count only reps performed with full range of motion and controlled tempo. Do not count partial reps or reps completed with significant form breakdown.
+
+4. **Select your unit** — choose pounds or kilograms. The unit does not affect the calculation; it labels the output in your preferred system.
+
+5. **Read your results** — the calculator shows Epley and Brzycki estimates, their average, and a training percentage table. Use the average 1RM as your reference for programming training loads.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Two formulas are widely used to estimate one-rep max from submaximal performance:
+
+**Epley formula (1985):**
+
+$$\text{1RM} = w \times \left(1 + \frac{r}{30}\right)$$
+
+**Brzycki formula (1993):**
+
+$$\text{1RM} = w \times \frac{36}{37 - r}$$
+
+Where:
+
+- **w** = weight lifted (lbs or kg)
+- **r** = number of repetitions completed
+
+When **r = 1**, both formulas return the weight itself — a single rep is already a max attempt.
+
+The Epley formula is linear: each additional rep adds w/30 to the estimated max. The Brzycki formula is nonlinear and diverges more steeply above 10 reps. Both formulas produce nearly identical results for 1–6 reps and diverge progressively beyond that.
+
+**Source:** Epley B (1985). "Poundage Chart." Boyd Epley Workout. Brzycki M (1993). "Strength testing: predicting a one-rep max from repetitions to fatigue." *Journal of Health, Physical Education, Recreation & Dance*, 64(1), 88–90.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example: 185 lbs for 5 reps
+
+**Inputs:**
+- Weight: 185 lbs
+- Reps: 5
+
+**Epley formula:**
+
+1. Divide reps by 30: $5 \div 30 = 0.1667$
+2. Add 1: $1 + 0.1667 = 1.1667$
+3. Multiply by weight: $185 \times 1.1667 = 215.8$ lbs
+
+**Brzycki formula:**
+
+1. Subtract reps from 37: $37 - 5 = 32$
+2. Divide 36 by result: $36 \div 32 = 1.125$
+3. Multiply by weight: $185 \times 1.125 = 208.1$ lbs
+
+**Average 1RM:** $(215.8 + 208.1) \div 2 = 212.0$ lbs
+
+**Interpretation:** With an estimated 1RM of 212 lbs, a hypertrophy program at 75% would prescribe sets at approximately 159 lbs, while a strength block at 90% would use about 191 lbs. The 7.7-lb gap between the two formulas (3.7%) is typical for a 5-rep input — both are within the expected accuracy range of these prediction equations.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Both formulas assume reps are performed to technical failure (or very close to it) with strict form. Stopping 2–3 reps short of failure will underestimate your 1RM.
+- Accuracy decreases as rep count increases. Both formulas are validated primarily for 1–10 reps. Above 10 reps, the Brzycki formula tends to overpredict more significantly than Epley.
+- These formulas were developed and validated primarily for compound barbell lifts (bench press, squat, deadlift). They may be less accurate for isolation exercises or machine-based movements.
+- Muscular endurance and strength are separate capacities. A person with high endurance can complete more reps at a submaximal load without having a proportionally higher 1RM — this can cause overprediction.
+- The calculator assumes the weight entered includes all equipment (barbell, collars, plates). For barbell exercises, remember to include the bar weight (typically 45 lbs / 20 kg for an Olympic bar).
+- Actual 1RM testing should only be attempted with a spotter, proper warm-up, and progressive loading. Never attempt a true max lift without safety precautions.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How accurate are 1RM prediction formulas?
+
+Both the Epley and Brzycki formulas are accurate to within approximately 5% of your true 1RM when the input is 10 reps or fewer. A 2004 study by LeSuer et al. published in the *Journal of Strength and Conditioning Research* found that prediction accuracy ranged from 2.7% to 5.5% error depending on the exercise and formula used. Accuracy decreases substantially above 10 reps, where both formulas tend to overestimate — particularly the Brzycki formula. For the most reliable estimate, use a 3–5 rep set as your input.
+
+### Should I test my actual one-rep max?
+
+Only test your actual 1RM if you have a qualified spotter, are experienced with the lift, and follow a proper warm-up protocol — typically 5–6 progressively heavier sets over 15–20 minutes before attempting a true max. For most lifters, estimated 1RM from a 3–5 rep set is sufficient for programming purposes and carries substantially less injury risk. The National Strength and Conditioning Association (NSCA) recommends 1RM testing only for trained individuals and suggests estimated 1RM as a safer alternative for beginners and intermediate lifters.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the **Epley (1985)** and **Brzycki (1993)** one-rep max prediction formulas, the two most widely cited equations in strength training literature. Formula accuracy data references **LeSuer DA, McCormick JH, Mayhew JL, Wasserstein RL, Arnold MD (2004)**, "The accuracy of prediction equations for estimating 1-RM performance in the bench press, squat, and deadlift," *Journal of Strength and Conditioning Research*, 11(4), 211–213. Training percentage guidelines follow **National Strength and Conditioning Association (NSCA)** recommendations from *Essentials of Strength Training and Conditioning* (4th edition, 2016).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

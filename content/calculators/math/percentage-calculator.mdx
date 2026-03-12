@@ -1,0 +1,225 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+25% of 200 is 50. This percentage calculator handles three operations: find what percent of a number equals, calculate the percentage change between two values, or measure the percentage difference between any two numbers. Switch between modes using the tabs below, enter your values, and get step-by-step results instantly.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Percentages are the most universal way to express proportions, changes, and comparisons — yet the three core percentage operations solve fundamentally different questions. This calculator gives you all three in one place.
+
+**"What is X% of Y?"** answers a proportion question. When you need 15% of \$1,250 for a tip, 8.25% of \$499 for sales tax, or 30% of 240 calories from fat — this is the mode to use. The formula simply multiplies the base number by the percentage expressed as a decimal.
+
+**Percentage change** measures how much a value has increased or decreased relative to its starting point. A stock that moves from \$80 to \$100 has increased by 25%. A price that drops from \$100 to \$75 has decreased by 25%. The direction matters — percentage change can be positive (increase) or negative (decrease), and the original value is always the reference point.
+
+**Percentage difference** measures the relative gap between any two values without designating either one as the "starting" value. If two test scores are 78 and 92, the percentage difference is 16.47% — and you get the same answer regardless of which value you enter first. This is the right tool for comparing two independent measurements, prices, or quantities.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+### Mode 1: % of a Number
+1. Select the **"% of a Number"** tab.
+2. Enter the percentage in the first field (e.g., 15).
+3. Enter the base number in the second field (e.g., 1250).
+4. Read the result: 15% of 1,250 = **187.5**.
+
+### Mode 2: Percentage Change
+1. Select the **"Percentage Change"** tab.
+2. Enter the original (starting) value (e.g., 80).
+3. Enter the new (ending) value (e.g., 100).
+4. Read the percentage change: the value increased by **25%** with an absolute change of **20**.
+
+### Mode 3: Percentage Difference
+1. Select the **"Percentage Difference"** tab.
+2. Enter the first value (e.g., 78).
+3. Enter the second value (e.g., 92).
+4. Read the percentage difference: **16.47%**, with an absolute difference of **14** and an average of **85**.
+5. Note: the result is the same regardless of which value you enter first.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### 1. Percentage of a Number
+
+$$\text{Result} = \frac{P}{100} \times V$$
+
+Where:
+
+- **P** = the percentage value (e.g., 25 for 25%)
+- **V** = the base value (the number you are taking a percentage of)
+
+This converts the percentage to a decimal by dividing by 100, then multiplies by the base value. For example, 25% of 200: (25 / 100) × 200 = 0.25 × 200 = 50.
+
+### 2. Percentage Change
+
+$$\text{Percentage Change} = \frac{V_{\text{new}} - V_{\text{old}}}{|V_{\text{old}}|} \times 100$$
+
+Where:
+
+- **V_new** = the new value (after the change)
+- **V_old** = the original value (before the change)
+- **|V_old|** = the absolute value of the original, ensuring correct sign for negative starting values
+
+A positive result indicates an increase; a negative result indicates a decrease. Division by the absolute value of the original ensures that percentage change from -50 to -30 is correctly reported as a 40% increase (the value moved 20 units closer to zero relative to a magnitude of 50). If the original value is zero, percentage change is undefined (division by zero).
+
+### 3. Percentage Difference
+
+$$\text{Percentage Difference} = \frac{|V_1 - V_2|}{\frac{V_1 + V_2}{2}} \times 100$$
+
+Where:
+
+- **V_1** = the first value
+- **V_2** = the second value
+- **|V_1 - V_2|** = the absolute difference between the two values
+- **(V_1 + V_2) / 2** = the arithmetic mean (average) of both values
+
+Percentage difference divides the absolute gap by the average of both values. This makes it symmetric — swapping V_1 and V_2 produces the same result. When both values are zero, the percentage difference is 0%. If the average is zero but the values differ (e.g., -5 and 5), the formula produces an infinite result.
+
+**Source:** Standard arithmetic operations on ratios, as documented in the *CRC Standard Mathematical Tables and Formulae* (33rd Edition, CRC Press) and the *NIST/SEMATECH e-Handbook of Statistical Methods*.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: What is 15% of \$1,250? (Calculating a Tip)
+
+You want to leave a 15% tip on a restaurant bill of \$1,250.
+
+**Step-by-step:**
+
+1. Identify the percentage: P = **15**
+2. Identify the base value: V = **\$1,250**
+3. Convert percentage to decimal: 15 / 100 = **0.15**
+4. Multiply: 0.15 × \$1,250 = **\$187.50**
+
+**Result:** 15% of \$1,250 is **\$187.50**.
+
+**Practical interpretation:** Your tip is \$187.50, making the total bill \$1,437.50. For a quick mental check, 10% of \$1,250 is \$125 and half of that is \$62.50 — add them together: \$125 + \$62.50 = \$187.50. This shortcut works for any 15% calculation.
+
+### Example 2: Price Changed from \$80 to \$68 — What's the Percentage Change?
+
+A jacket was priced at \$80 last week and is now marked at \$68. What percentage discount is that?
+
+**Step-by-step:**
+
+1. Identify the original value: V_old = **\$80**
+2. Identify the new value: V_new = **\$68**
+3. Calculate the absolute change: \$68 − \$80 = **−\$12**
+4. Divide by the absolute value of the original: −12 / |80| = **−0.15**
+5. Multiply by 100: −0.15 × 100 = **−15%**
+
+**Result:** The price decreased by **15%** (a \$12 reduction).
+
+**Practical interpretation:** This is a 15% discount. If you had been told "15% off" and wanted to verify, you can reverse-check: 15% of \$80 = \$12, and \$80 − \$12 = \$68. The percentage change formula always uses the original value as the denominator — this is why a \$12 drop from \$80 is 15%, but a \$12 increase from \$68 back to \$80 would be a 17.65% increase (12 / 68 × 100). Percentage changes are not symmetric.
+
+### Example 3: Comparing Test Scores of 78 and 92 — Percentage Difference
+
+A student scored 78 on the midterm and 92 on the final. What is the percentage difference between the two scores?
+
+**Step-by-step:**
+
+1. Identify the two values: V_1 = **78**, V_2 = **92**
+2. Calculate the absolute difference: |78 − 92| = **14**
+3. Calculate the average: (78 + 92) / 2 = 170 / 2 = **85**
+4. Divide the difference by the average: 14 / 85 = **0.16471**
+5. Multiply by 100: 0.16471 × 100 = **16.47%**
+
+**Result:** The percentage difference between 78 and 92 is **16.47%**.
+
+**Practical interpretation:** The two scores differ by 16.47% relative to their average. Note this is different from the percentage change: if you calculated the percentage *change* from 78 to 92, the answer would be 17.95% (14 / 78 × 100). Percentage difference uses the average as the reference, making it a fair comparison when neither value is inherently the "starting point."
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Percentage Change vs. Percentage Difference — Choosing the Right One.** Use percentage change when one value is clearly "before" and the other is "after" — price changes, population growth, stock returns. Use percentage difference when comparing two independent measurements — two test scores, two competing prices, two population sizes from different cities. Using the wrong formula gives a misleading answer: a change from 50 to 100 is a 100% increase, but the percentage difference is only 66.67%.
+
+**Negative Numbers Require Extra Care.** When the original value in a percentage change calculation is negative, the formula uses the absolute value to avoid sign confusion. A stock going from −\$5 to \$5 has changed by \$10 on a base of \$5 (absolute value), yielding a 200% increase. Without the absolute value, the result would incorrectly show −200%. Always verify that negative starting points are handled correctly in your context.
+
+**Compound Percentages Don't Add Linearly.** A 10% increase followed by a 10% decrease does not return you to the starting value. Starting at 100: a 10% increase gives 110, and a 10% decrease from 110 gives 99 — a net loss of 1%. This asymmetry grows with larger percentages: a 50% gain followed by a 50% loss leaves you at 75% of your original value. To find the net effect, multiply the factors: 1.10 × 0.90 = 0.99, or a 1% net decrease.
+
+**Percentage Points vs. Percentages.** An interest rate rising from 5% to 7% is a 2 *percentage point* increase but a 40% *percentage change* (2 / 5 × 100). News headlines frequently confuse these, so always specify which you mean. This calculator computes percentage change and percentage difference — not percentage point differences.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Confusing percentage change with percentage difference.** Percentage change requires a clear "old" and "new" value and is directional (it can be positive or negative). Percentage difference treats both values equally and is always positive. A jump from 50 to 100 is a 100% *change* but only a 66.67% *difference*.
+
+**Dividing by the new value instead of the old value.** In percentage change, the denominator is always the *original* value. A price going from \$80 to \$100 is a 25% increase (20/80), not a 20% increase (20/100). This mistake is extremely common in business reporting.
+
+**Forgetting the absolute value in the denominator.** When the original value is negative, you must divide by its absolute value. Otherwise, a negative denominator flips the sign and produces an incorrect result. This matters in financial contexts where losses (negative values) are common.
+
+**Treating percentage points as percentages.** A tax rate rising from 5% to 8% is a 3 percentage point increase, but a 60% relative increase. These are fundamentally different numbers that answer different questions.
+
+**Applying successive percentages by adding them.** A 20% discount followed by an additional 10% discount is not a 30% total discount. It is: 1 − (0.80 × 0.90) = 1 − 0.72 = 28% total discount. Always multiply successive percentage factors rather than adding the percentages.
+
+{/* Section 12: Comparison Table */}
+## Percentage Change vs. Percentage Difference
+
+These two operations are the most frequently confused. Here is a side-by-side comparison:
+
+| | **Percentage Change** | **Percentage Difference** |
+|---|---|---|
+| **Question it answers** | How much did a value increase or decrease? | How far apart are two values? |
+| **Formula** | ((New − Old) / \|Old\|) × 100 | (\|V1 − V2\| / avg(V1, V2)) × 100 |
+| **Reference value** | The original (old) value | The average of both values |
+| **Directional?** | Yes — can be positive or negative | No — always positive (or zero) |
+| **Order matters?** | Yes — swapping old/new changes the result | No — same result either way |
+| **Use when** | Tracking change over time (prices, growth, returns) | Comparing two independent values (scores, sizes, costs) |
+| **Example: 50 → 100** | +100% increase | 66.67% difference |
+| **Example: 100 → 50** | −50% decrease | 66.67% difference |
+| **Example: 78 vs 92** | 17.95% change (if 78 → 92) | 16.47% difference |
+
+**Rule of thumb:** If you have a "before" and "after," use percentage change. If you are comparing two things side-by-side with no inherent order, use percentage difference.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Division by zero is undefined.** If the original value in percentage change is zero, the result is mathematically undefined (displayed as infinity). Similarly, if both values in percentage difference are zero, the denominator is zero — the calculator returns 0% by convention.
+- **These are simple percentage operations.** They do not account for compound percentages, weighted averages, or statistical significance. For compound growth, use the [Compound Interest Calculator](/calculators/finance/compound-interest-calculator).
+- **Percentage difference assumes a meaningful average.** If one value is positive and the other is negative with equal magnitudes (e.g., −10 and 10), the average is zero and the percentage difference is infinite. In practice, percentage difference is most meaningful when both values are positive.
+- **No rounding bias correction.** Results are displayed to 4 decimal places. For financial calculations requiring specific rounding rules (e.g., tax rounding to the nearest cent), apply your jurisdiction's rounding convention to the raw result.
+- **Percentages greater than 100% are valid.** A 250% increase means the value has more than tripled. A percentage difference of 180% means the two values are very far apart relative to their average.
+- **Negative percentages in "% of" mode are valid.** Calculating −20% of 500 yields −100, which represents a reduction. This can be useful for modeling discounts or losses.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How do I calculate percentage of a number?
+
+Multiply the number by the percentage divided by 100. For example, to find 20% of 350: divide 20 by 100 to get 0.20, then multiply 0.20 × 350 = 70. The general formula is: Result = (Percentage / 100) × Number. For a quick mental shortcut, find 10% first (move the decimal one place left), then adjust: 10% of 350 is 35, so 20% is 35 × 2 = 70.
+
+### What is the difference between percentage change and percentage difference?
+
+Percentage change measures how much a value increased or decreased from its original value: ((New − Old) / |Old|) × 100. Percentage difference measures the relative gap between two values using their average as the reference: (|V1 − V2| / average) × 100. The key distinction is directionality — percentage change can be positive or negative and depends on which value is "original," while percentage difference is always positive and gives the same result regardless of input order. Use percentage change for tracking growth or decline over time; use percentage difference for comparing two independent values.
+
+### How do I calculate percentage increase?
+
+Percentage increase is a specific case of percentage change where the new value is larger than the original. The formula is: ((New Value − Original Value) / Original Value) × 100. For example, if a salary increases from \$50,000 to \$55,000: (\$55,000 − \$50,000) / \$50,000 × 100 = \$5,000 / \$50,000 × 100 = 10% increase. To reverse it — finding the new value from a known percentage increase — multiply the original by (1 + percentage/100): \$50,000 × 1.10 = \$55,000.
+
+### What is percentage error?
+
+Percentage error measures how far an experimental or estimated value is from the true or accepted value: ((|Measured − Actual|) / |Actual|) × 100. It is essentially the absolute percentage change between the actual value and the measured value. For example, if you estimated a room to be 12 feet long but it actually measures 11.5 feet: (|12 − 11.5| / 11.5) × 100 = (0.5 / 11.5) × 100 = 4.35% error. Use the "Percentage Change" tab with the actual value as the original and your measurement as the new value, then take the absolute value of the result.
+
+### How do I reverse a percentage?
+
+To find the original value before a percentage was applied, divide by (1 + percentage/100) for an increase, or by (1 − percentage/100) for a decrease. For example, if a price is \$115 after a 15% markup, the original was \$115 / 1.15 = \$100. If a price is \$85 after a 15% discount, the original was \$85 / 0.85 = \$100. A common mistake is subtracting the percentage from the final value — \$115 minus 15% of \$115 gives \$97.75, not \$100, because 15% of \$115 is not the same as 15% of the original \$100.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator implements three standard percentage operations: "what is X% of Y" (multiply Y by X/100), "X is what percent of Y" (divide X by Y and multiply by 100), and "percentage change from X to Y" ((Y−X)/|X| × 100). Division by zero returns undefined. All operations use standard floating-point arithmetic with results displayed to 4 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

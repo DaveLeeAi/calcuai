@@ -1,0 +1,147 @@
+{
+  "id": "standard-deviation-calculator",
+  "title": "Standard Deviation Calculator",
+  "slug": "standard-deviation-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "standard deviation calculator",
+  "metaTitle": "Standard Deviation Calculator — Population & Sample",
+  "metaDescription": "Calculate population and sample standard deviation with step-by-step breakdown. See variance, mean, range, and deviation table for any data set. Free.",
+  "inputs": [
+    {
+      "id": "dataSet",
+      "label": "Data Values",
+      "type": "number",
+      "required": true,
+      "placeholder": "Enter values separated by commas (e.g., 4, 8, 6, 5, 3)",
+      "defaultValue": "2, 4, 4, 4, 5, 5, 7, 9",
+      "helpText": "Enter your data points separated by commas"
+    },
+    {
+      "id": "calculationType",
+      "label": "Calculation Type",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "sample",
+      "options": [
+        {
+          "value": "population",
+          "label": "Population (σ)"
+        },
+        {
+          "value": "sample",
+          "label": "Sample (s)"
+        }
+      ],
+      "helpText": "Use population if your data is the complete set. Use sample if your data is a subset."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "standardDeviation",
+      "label": "Standard Deviation",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "variance",
+      "label": "Variance",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "mean",
+      "label": "Mean (μ / x̄)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "count",
+      "label": "Count (n)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "sum",
+      "label": "Sum (Σx)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "range",
+      "label": "Range",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "stepByStep",
+      "label": "Deviation Table",
+      "type": "table",
+      "columns": [
+        {
+          "key": "value",
+          "label": "Value (xᵢ)"
+        },
+        {
+          "key": "deviation",
+          "label": "Deviation (xᵢ − x̄)"
+        },
+        {
+          "key": "deviationSquared",
+          "label": "(xᵢ − x̄)²"
+        }
+      ]
+    },
+    {
+      "id": "sortedData",
+      "label": "Sorted Data",
+      "type": "value-group"
+    }
+  ],
+  "formula": "standard-deviation",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "percentage-calculator",
+    "mean-median-mode-calculator",
+    "probability-calculator",
+    "fraction-calculator",
+    "final-grade-calculator",
+    "gpa-calculator",
+    "exponent-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "CFA Institute; Introduction to Statistics textbooks",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Population: σ = √[Σ(xᵢ − μ)² / N]; Sample: s = √[Σ(xᵢ − x̄)² / (n−1)] (Bessel's correction)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "mean-median-mode-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

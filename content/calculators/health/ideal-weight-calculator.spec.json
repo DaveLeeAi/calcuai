@@ -1,0 +1,150 @@
+{
+  "id": "ideal-weight-calculator",
+  "title": "Ideal Weight Calculator",
+  "slug": "ideal-weight-calculator",
+  "category": "health",
+  "subcategory": "body-metrics",
+  "primaryKeyword": "ideal weight calculator",
+  "metaTitle": "Ideal Weight Calculator — Find Your Healthy Weight",
+  "metaDescription": "Calculate your ideal body weight using Devine, Robinson, Miller, and Hamwi formulas. Compare results across four clinical methods based on height and sex.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (lbs, inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        }
+      ]
+    },
+    {
+      "id": "sex",
+      "label": "Sex",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "male",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 70,
+      "min": 36,
+      "max": 300,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "devineWeight",
+      "label": "Devine Formula",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "robinsonWeight",
+      "label": "Robinson Formula",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "millerWeight",
+      "label": "Miller Formula",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "hamwiWeight",
+      "label": "Hamwi Formula",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "averageIdealWeight",
+      "label": "Average Ideal Weight",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "bmiHealthyRange",
+      "label": "BMI Healthy Weight Range",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "comparisonTable",
+      "label": "Formula Comparison",
+      "type": "table"
+    }
+  ],
+  "formula": "ideal-weight",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "bmi-calculator",
+    "body-fat-calculator",
+    "bmr-calculator",
+    "lean-body-mass-calculator",
+    "macro-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Devine BJ (1974), Robinson JD (1983), Miller DR (1983), Hamwi GJ (1964)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Devine (1974), Robinson (1983), Miller (1983), Hamwi (1964) — clinical ideal body weight estimation formulas",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "bmi-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "bmi"
+  ],
+  "methodologyTopics": [
+    "bmi-formula"
+  ]
+}

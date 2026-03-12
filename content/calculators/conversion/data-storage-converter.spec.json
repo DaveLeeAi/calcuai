@@ -1,0 +1,198 @@
+{
+  "id": "data-storage-converter",
+  "title": "Data Storage Converter",
+  "slug": "data-storage-converter",
+  "category": "conversion",
+  "subcategory": "data-storage",
+  "primaryKeyword": "data storage converter",
+  "metaTitle": "Data Storage Converter — Bytes, KB, MB, GB, TB",
+  "metaDescription": "Convert between bytes, kilobytes, megabytes, gigabytes, terabytes, and binary units (KiB, MiB, GiB). Free data storage converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Enter the data storage value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "gigabyte",
+      "options": [
+        {
+          "value": "byte",
+          "label": "Byte (B)"
+        },
+        {
+          "value": "kilobyte",
+          "label": "Kilobyte (KB)"
+        },
+        {
+          "value": "megabyte",
+          "label": "Megabyte (MB)"
+        },
+        {
+          "value": "gigabyte",
+          "label": "Gigabyte (GB)"
+        },
+        {
+          "value": "terabyte",
+          "label": "Terabyte (TB)"
+        },
+        {
+          "value": "petabyte",
+          "label": "Petabyte (PB)"
+        },
+        {
+          "value": "kibibyte",
+          "label": "Kibibyte (KiB)"
+        },
+        {
+          "value": "mebibyte",
+          "label": "Mebibyte (MiB)"
+        },
+        {
+          "value": "gibibyte",
+          "label": "Gibibyte (GiB)"
+        },
+        {
+          "value": "tebibyte",
+          "label": "Tebibyte (TiB)"
+        },
+        {
+          "value": "bit",
+          "label": "Bit (bit)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "megabyte",
+      "options": [
+        {
+          "value": "byte",
+          "label": "Byte (B)"
+        },
+        {
+          "value": "kilobyte",
+          "label": "Kilobyte (KB)"
+        },
+        {
+          "value": "megabyte",
+          "label": "Megabyte (MB)"
+        },
+        {
+          "value": "gigabyte",
+          "label": "Gigabyte (GB)"
+        },
+        {
+          "value": "terabyte",
+          "label": "Terabyte (TB)"
+        },
+        {
+          "value": "petabyte",
+          "label": "Petabyte (PB)"
+        },
+        {
+          "value": "kibibyte",
+          "label": "Kibibyte (KiB)"
+        },
+        {
+          "value": "mebibyte",
+          "label": "Mebibyte (MiB)"
+        },
+        {
+          "value": "gibibyte",
+          "label": "Gibibyte (GiB)"
+        },
+        {
+          "value": "tebibyte",
+          "label": "Tebibyte (TiB)"
+        },
+        {
+          "value": "bit",
+          "label": "Bit (bit)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Data Storage Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "length-converter",
+    "weight-converter",
+    "area-converter",
+    "volume-converter",
+    "temperature-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IEC 80000-13:2008 — Quantities and units for information technology; SI Prefixes (BIPM)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "SI (decimal) prefixes: 1 KB = 1,000 B, 1 MB = 1,000,000 B. Binary (IEC) prefixes: 1 KiB = 1,024 B, 1 MiB = 1,048,576 B. Per IEC 80000-13:2008.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

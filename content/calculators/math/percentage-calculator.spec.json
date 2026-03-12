@@ -1,0 +1,219 @@
+{
+  "id": "percentage-calculator",
+  "title": "Percentage Calculator",
+  "slug": "percentage-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "percentage calculator",
+  "metaTitle": "Percentage Calculator — Free Online % Calculator",
+  "metaDescription": "Calculate percentages instantly: find % of a number, percentage change, or percentage difference. Step-by-step solutions with formulas. Free, no signup.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "percent-of",
+      "options": [
+        {
+          "value": "percent-of",
+          "label": "What is X% of Y?"
+        },
+        {
+          "value": "percent-change",
+          "label": "Percentage Change"
+        },
+        {
+          "value": "percent-difference",
+          "label": "Percentage Difference"
+        }
+      ],
+      "helpText": "Choose which percentage calculation you need"
+    },
+    {
+      "id": "percentValue",
+      "label": "Percentage (%)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 25,
+      "min": -1000000,
+      "max": 1000000,
+      "step": 0.01,
+      "suffix": "%",
+      "placeholder": "e.g. 25",
+      "helpText": "The percentage to apply"
+    },
+    {
+      "id": "baseValue",
+      "label": "Base Number",
+      "type": "number",
+      "required": false,
+      "defaultValue": 200,
+      "step": 0.01,
+      "placeholder": "e.g. 200",
+      "helpText": "The number to calculate the percentage of"
+    },
+    {
+      "id": "originalValue",
+      "label": "Original Value",
+      "type": "number",
+      "required": false,
+      "defaultValue": 80,
+      "step": 0.01,
+      "placeholder": "e.g. 80",
+      "helpText": "The starting value before the change"
+    },
+    {
+      "id": "newValue",
+      "label": "New Value",
+      "type": "number",
+      "required": false,
+      "defaultValue": 100,
+      "step": 0.01,
+      "placeholder": "e.g. 100",
+      "helpText": "The value after the change"
+    },
+    {
+      "id": "value1",
+      "label": "First Value",
+      "type": "number",
+      "required": false,
+      "defaultValue": 78,
+      "step": 0.01,
+      "placeholder": "e.g. 78",
+      "helpText": "The first value to compare"
+    },
+    {
+      "id": "value2",
+      "label": "Second Value",
+      "type": "number",
+      "required": false,
+      "defaultValue": 92,
+      "step": 0.01,
+      "placeholder": "e.g. 92",
+      "helpText": "The second value to compare"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Result",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "percentChange",
+      "label": "Percentage Change",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "absoluteChange",
+      "label": "Absolute Change",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "percentDifference",
+      "label": "Percentage Difference",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "absoluteDifference",
+      "label": "Absolute Difference",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "average",
+      "label": "Average of Both Values",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    }
+  ],
+  "tabs": [
+    {
+      "id": "percent-of",
+      "label": "% of a Number",
+      "description": "What is X% of Y?",
+      "defaultInputOverrides": {
+        "mode": "percent-of"
+      },
+      "visibleInputs": [
+        "percentValue",
+        "baseValue"
+      ]
+    },
+    {
+      "id": "percent-change",
+      "label": "Percentage Change",
+      "description": "Percentage change from X to Y",
+      "defaultInputOverrides": {
+        "mode": "percent-change"
+      },
+      "visibleInputs": [
+        "originalValue",
+        "newValue"
+      ]
+    },
+    {
+      "id": "percent-difference",
+      "label": "Percentage Difference",
+      "description": "Percentage difference between X and Y",
+      "defaultInputOverrides": {
+        "mode": "percent-difference"
+      },
+      "visibleInputs": [
+        "value1",
+        "value2"
+      ]
+    }
+  ],
+  "formula": "percentage",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "fraction-calculator",
+    "standard-deviation-calculator",
+    "ratio-calculator",
+    "mean-median-mode-calculator",
+    "grade-calculator",
+    "margin-calculator",
+    "discount-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard mathematical percentage formulas (arithmetic operations on ratios)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard percentage formulas: P% of V = (P/100) × V; % Change = ((New − Old) / |Old|) × 100; % Difference = (|V1 − V2| / ((V1 + V2) / 2)) × 100",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 88,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

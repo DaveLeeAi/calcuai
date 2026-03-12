@@ -1,0 +1,127 @@
+---
+title: "Fuel Cost Calculator"
+description: "Calculate the gas cost for any trip. Enter distance, MPG, and fuel price to see total fuel cost, gallons used, and cost per mile."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 300-mile road trip in a car that gets 25 MPG with gas at \$3.50/gallon costs \$42.00 in fuel — 12 gallons of gas at \$0.14 per mile. Double it for the round trip and budget \$84.00. This calculator estimates fuel cost for any distance, fuel efficiency, and gas price, with both US (MPG) and metric (L/100km) support.
+
+</section>
+
+{/* Section 6: What Your Result Shows */}
+## What Your Result Shows
+
+The results show your total trip fuel cost, gallons (or liters) of fuel consumed, cost per mile (or per km), and the round-trip cost. The cost-per-mile figure is especially useful for IRS mileage deduction comparisons — the 2024 standard mileage rate is \$0.67/mile, so if your actual fuel cost is \$0.14/mile, fuel is only about 21% of total vehicle operating cost.
+
+For calculating electricity costs for an EV or home appliance, use the [Electricity Cost Calculator](/calculators/everyday/electricity-cost-calculator). To estimate a purchase after discounts, see the [Discount Calculator](/calculators/everyday/discount-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the trip distance** — the one-way distance in miles (or kilometers if using metric).
+2. **Enter your fuel efficiency** — your vehicle's MPG rating. Check your car's window sticker, owner's manual, or look it up at fueleconomy.gov.
+3. **Enter the current fuel price** — the price per gallon (or per liter) at your local station.
+4. **Choose the unit system** — US (miles, gallons, MPG) or metric (km, liters, L/100km).
+5. **Read the results** — total cost, fuel used, cost per mile, and round-trip cost appear instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**US (MPG):**
+
+$$
+\text{gallons} = \frac{\text{distance (miles)}}{\text{MPG}}
+$$
+
+$$
+\text{totalCost} = \text{gallons} \times \text{pricePerGallon}
+$$
+
+$$
+\text{costPerMile} = \frac{\text{totalCost}}{\text{distance}}
+$$
+
+**Metric (L/100km):**
+
+$$
+\text{liters} = \frac{\text{distance (km)}}{100} \times \text{L/100km}
+$$
+
+$$
+\text{totalCost} = \text{liters} \times \text{pricePerLiter}
+$$
+
+Where:
+- **MPG** = miles per gallon (EPA fuel economy rating)
+- **L/100km** = liters per 100 kilometers (lower is more efficient)
+- **1 US gallon = 3.785 liters**; **1 mile = 1.609 km**
+
+*Source: U.S. Department of Energy / fueleconomy.gov — EPA fuel economy ratings and fuel cost calculation methodology.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Weekend Road Trip
+
+Driving 450 miles from Austin to New Orleans in an SUV rated at 22 MPG, with gas at \$3.25/gallon.
+
+**Step 1:** Gallons = 450 / 22 = 20.45 gallons
+**Step 2:** Cost = 20.45 × $3.25 = **$66.47**
+**Step 3:** Cost per mile = $66.47 / 450 = **$0.1477/mile**
+**Step 4:** Round trip = $66.47 × 2 = **$132.93**
+
+*Interpretation:* Budget about \$133 for the round trip. If splitting between 3 passengers, that is \$44.31 each — less than a one-way economy flight.
+
+### Example 2: Daily Commute Cost
+
+A 28-mile round-trip daily commute, 5 days/week, in a sedan getting 32 MPG, with gas at \$3.60/gallon.
+
+**Step 1:** Daily gallons = 28 / 32 = 0.875 gallons
+**Step 2:** Daily cost = 0.875 × $3.60 = **$3.15/day**
+**Step 3:** Monthly (22 work days) = $3.15 × 22 = **$69.30/month**
+**Step 4:** Annual (260 work days) = $3.15 × 260 = **$819.00/year**
+
+*Interpretation:* Fuel alone costs \$69/month for this commute. If gas rises to \$4.50/gallon, the annual cost jumps to \$1,023.75 — a 25% increase.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **City vs. highway MPG.** EPA ratings list separate city and highway figures. Highway driving can be 25–30% more efficient than city driving — a car rated 30 MPG combined might achieve 35 MPG on the highway and 25 MPG in stop-and-go traffic. For a 300-mile highway trip, that difference means burning 8.57 gallons vs. 12.0 gallons, a 40% gap in fuel consumption. Use the combined rating for mixed driving and the highway rating for interstate trips.
+2. **Driving habits.** Aggressive acceleration and speeds above 50 mph reduce fuel economy. Every 5 mph over 50 is roughly equivalent to paying an additional \$0.30/gallon (DOE estimate).
+3. **Gas price volatility and seasonal variation.** The national average regular gasoline price has ranged from \$2.25 to \$5.00+ per gallon since 2020. Summer-blend gasoline (required June 1 to September 15 in many states) typically costs \$0.15–\$0.30 more per gallon than winter-blend due to stricter vapor pressure regulations and higher refining costs. Planning long road trips for early spring or late fall can save 5–8% on fuel compared to peak summer pricing.
+4. **Vehicle load and conditions.** Extra weight, roof racks, underinflated tires, and cold weather all reduce MPG by 1–5%. A fully loaded vehicle may get 5–10% worse efficiency than the EPA rating.
+5. **Electric vehicles and MPGe.** For EVs, fuel economy is measured in MPGe (miles per gallon equivalent), where 33.7 kWh of electricity equals the energy content of 1 gallon of gasoline. A Tesla Model 3 rated at 132 MPGe uses about 25.5 kWh per 100 miles. At the U.S. average residential electricity rate of \$0.16/kWh, that is \$4.08 per 100 miles — compared to \$12.00 per 100 miles for a 30-MPG gas car at \$3.60/gallon, roughly 66% less in energy cost per mile.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses a single MPG or L/100km value — does not blend city/highway
+- Does not account for terrain, weather, or traffic conditions
+- Round trip is calculated as exactly 2× one-way (assumes the same route and conditions)
+- Does not include non-fuel vehicle costs (depreciation, maintenance, insurance, tolls)
+- EPA MPG ratings are estimates; actual mileage varies with driving style and conditions
+
+## Frequently Asked Questions
+
+### How do I find my car's MPG?
+
+Check the fuel economy label on your car's window sticker, look in the owner's manual, or search your make, model, and year at fueleconomy.gov. The EPA provides city, highway, and combined MPG ratings for every vehicle sold in the US since 1984.
+
+### How do I convert MPG to L/100km?
+
+Divide 235.215 by your MPG to get L/100km. For example, 25 MPG = 235.215 / 25 = 9.41 L/100km. Lower L/100km means better fuel efficiency. A car rated at 40 MPG is 5.88 L/100km.
+
+### Is it cheaper to drive or fly?
+
+For a solo traveler, flying is often cheaper for trips over 500 miles when you factor in time, meals, and lodging. But for 2–4 passengers sharing fuel costs, driving is usually cheaper up to about 1,000 miles. Calculate your fuel cost with this tool, then compare to round-trip airfare.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+Fuel cost formulas follow the **U.S. Department of Energy** methodology published at **fueleconomy.gov**. EPA fuel economy ratings follow **40 CFR Part 600** test procedures. The 2024 IRS standard mileage rate of \$0.67/mile is published in **IRS Notice 2024-08**. National average gas prices referenced from the **U.S. Energy Information Administration** (EIA) weekly surveys.

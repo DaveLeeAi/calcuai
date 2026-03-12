@@ -1,0 +1,149 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+For x² − 5x + 6 = 0, the solutions are x = 3 and x = 2. This quadratic formula calculator solves any equation of the form ax² + bx + c = 0 by computing the discriminant, both roots (real or complex), the vertex, and the axis of symmetry. Enter coefficients a, b, and c to get a complete solution.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The quadratic formula finds the values of x where a parabola crosses the x-axis. When you enter coefficients a = 1, b = -5, c = 6, the calculator determines that the parabola y = x² − 5x + 6 crosses zero at x = 3 and x = 2. But the roots are only part of the story.
+
+The **discriminant** (b² − 4ac) reveals the nature of the roots before you even compute them: a positive discriminant means two distinct real roots, zero means one repeated root (the parabola just touches the x-axis), and a negative discriminant means the roots are complex numbers with no real x-intercepts. For x² − 5x + 6, the discriminant is 25 − 24 = 1, confirming two distinct real roots.
+
+The **vertex** (2.5, −0.25) tells you the minimum or maximum point of the parabola. The **axis of symmetry** x = 2.5 is the vertical line through the vertex. These values are essential for graphing and optimization problems. For related power calculations, see the [Exponent Calculator](/calculators/math/exponent-calculator), or for solving expressions involving logarithmic equations, try the [Logarithm Calculator](/calculators/math/logarithm-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. Identify your quadratic equation in the standard form **ax² + bx + c = 0**. For example, 2x² − 7x + 3 = 0 has a = 2, b = −7, c = 3.
+2. Enter **Coefficient a** — the number multiplying x². Enter **2**.
+3. Enter **Coefficient b** — the number multiplying x. Enter **-7** (include the negative sign).
+4. Enter **Coefficient c** — the constant term. Enter **3**.
+5. Read the roots: **x₁ = 3** and **x₂ = 0.5**. The discriminant is **25**, confirming two distinct real roots.
+6. Check the vertex coordinates and axis of symmetry for graphing: vertex at **(1.75, −3.125)**, axis of symmetry at **x = 1.75**.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### The Quadratic Formula
+
+$$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$$
+
+Where:
+
+- **a** = coefficient of x² (must not be 0 for a quadratic)
+- **b** = coefficient of x
+- **c** = constant term
+- **b² − 4ac** = the discriminant (Δ), which determines the nature of the roots
+
+The ± symbol means there are two solutions: one using addition (x₁) and one using subtraction (x₂).
+
+### The Discriminant
+
+$$\Delta = b^2 - 4ac$$
+
+The discriminant classifies the roots:
+
+- **Δ > 0** — two distinct real roots. The parabola crosses the x-axis at two points.
+- **Δ = 0** — one repeated real root (also called a double root). The parabola touches the x-axis at exactly one point (the vertex).
+- **Δ < 0** — two complex conjugate roots. The parabola does not cross the x-axis. The roots are: x = (−b ± i√|Δ|) / (2a).
+
+### Vertex of the Parabola
+
+$$x_v = \frac{-b}{2a}, \quad y_v = c - \frac{b^2}{4a}$$
+
+The vertex is the minimum point when a > 0 (parabola opens upward) or the maximum point when a < 0 (parabola opens downward).
+
+### Linear Fallback (a = 0)
+
+When a = 0, the equation reduces to bx + c = 0, a linear equation with solution x = −c/b.
+
+**Source:** The quadratic formula is derived from completing the square on the general form ax² + bx + c = 0. This derivation is a standard result in algebra, documented in the *CRC Standard Mathematical Tables and Formulae* (33rd Edition, CRC Press).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Two Distinct Real Roots — x² − 5x + 6 = 0
+
+**Step-by-step:**
+
+1. Identify coefficients: a = **1**, b = **−5**, c = **6**
+2. Compute the discriminant: Δ = (−5)² − 4(1)(6) = 25 − 24 = **1**
+3. Since Δ > 0, there are two distinct real roots
+4. Compute x₁: x₁ = (−(−5) + √1) / (2 × 1) = (5 + 1) / 2 = **3**
+5. Compute x₂: x₂ = (−(−5) − √1) / (2 × 1) = (5 − 1) / 2 = **2**
+6. Vertex: x_v = −(−5) / (2 × 1) = **2.5**, y_v = 6 − 25/4 = **−0.25**
+
+**Result:** The roots are **x = 3** and **x = 2**. The vertex of the parabola is at **(2.5, −0.25)**.
+
+**Verification:** Substituting x = 3: 9 − 15 + 6 = 0. Substituting x = 2: 4 − 10 + 6 = 0. Both check out.
+
+### Example 2: Complex Roots — x² + 2x + 5 = 0
+
+**Step-by-step:**
+
+1. Identify coefficients: a = **1**, b = **2**, c = **5**
+2. Compute the discriminant: Δ = (2)² − 4(1)(5) = 4 − 20 = **−16**
+3. Since Δ < 0, the roots are complex conjugates
+4. Real part: −b / (2a) = −2 / 2 = **−1**
+5. Imaginary part: √|−16| / (2 × 1) = 4 / 2 = **2**
+6. x₁ = **−1 + 2i**, x₂ = **−1 − 2i**
+7. Vertex: x_v = **−1**, y_v = 5 − 4/4 = **4**
+
+**Result:** The roots are **−1 + 2i** and **−1 − 2i**. The parabola has its minimum at **(−1, 4)** and never crosses the x-axis.
+
+**Practical interpretation:** A negative discriminant means the quadratic expression ax² + bx + c is always positive (when a > 0) or always negative (when a < 0) for all real x. In this case, x² + 2x + 5 is always at least 4, never reaching zero. In applied problems, no real roots carries concrete meaning. For projectile motion, the height h of a ball thrown upward is modeled as h(t) = −16t² + v₀t + h₀. If you set h(t) = 100 and the discriminant is negative, the ball never reaches 100 feet — the maximum height (at the vertex) is below your target. For example, a ball launched at 60 ft/s from ground level reaches a maximum height of only 56.25 feet (at t = 1.875 seconds), so solving −16t² + 60t = 100 yields Δ = 3,600 − 6,400 = −2,800 — confirming the ball falls short of 100 feet. Recognizing a negative discriminant immediately saves you from searching for a solution that does not exist.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**The discriminant is the single most important diagnostic.** Before computing roots, check whether Δ = b² − 4ac is positive, zero, or negative. For 3x² − 12x + 12 = 0, Δ = 144 − 144 = 0, immediately telling you there is exactly one repeated root (x = 2) without further computation. A discriminant of −4 would mean complex roots, while +4 means two real roots separated by √4/(2a) units.
+
+**The coefficient a determines whether the parabola opens upward or downward.** When a > 0, the vertex is the minimum point — the function decreases to the vertex, then increases. When a < 0, the vertex is the maximum point. This matters for optimization: maximizing revenue, minimizing cost, or finding the peak height of a projectile all reduce to finding the vertex of a quadratic.
+
+**Large coefficients can cause floating-point precision issues.** For equations like 0.001x² + 1000x − 0.001 = 0, the discriminant (1,000,000.000004) is very close to b², and subtracting nearly equal numbers can lose significant digits. This calculator uses double-precision arithmetic (about 15 decimal digits), which is sufficient for most practical problems.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Assumes real-number coefficients.** The calculator accepts any real values for a, b, and c but does not handle complex-valued coefficients.
+- **When a = 0, the equation is linear, not quadratic.** The calculator handles this gracefully by solving bx + c = 0, but the vertex and axis of symmetry are undefined for linear equations.
+- **Floating-point precision.** Results are computed in double-precision (IEEE 754) and rounded to 6-10 significant digits. Extremely large or extremely small coefficients may produce rounding artifacts.
+- **Complex roots are displayed in a + bi format.** The calculator does not decompose complex roots into polar form (modulus and argument).
+- **Does not factor automatically.** While the calculator finds the roots, it does not display the factored form (a)(x − x₁)(x − x₂) unless the roots are clean integers or simple fractions.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What does the discriminant tell you about a quadratic equation?
+
+The discriminant (Δ = b² − 4ac) reveals the number and type of solutions without solving the equation. When Δ > 0, the equation has two distinct real roots and the parabola crosses the x-axis twice. When Δ = 0, there is exactly one repeated root — the parabola touches the x-axis at a single point (its vertex). When Δ < 0, both roots are complex conjugates (a ± bi form) and the parabola does not intersect the x-axis at all. The discriminant also appears under the square root in the quadratic formula, which is why a negative value leads to imaginary numbers.
+
+### Can a quadratic equation have complex roots?
+
+Yes, a quadratic equation has complex roots whenever the discriminant b² − 4ac is negative. For example, x² + 1 = 0 has discriminant 0 − 4 = −4, yielding roots x = ±i. Complex roots always come in conjugate pairs: if a + bi is a root, then a − bi is also a root. Every quadratic equation with real coefficients has exactly two roots (counting multiplicity) in the complex number system — this is guaranteed by the Fundamental Theorem of Algebra.
+
+### What is the vertex of a parabola and why does it matter?
+
+The vertex is the highest or lowest point on the parabola y = ax² + bx + c, located at x = −b/(2a) with y-value c − b²/(4a). When a > 0 the vertex is the minimum (parabola opens upward); when a < 0 it is the maximum (parabola opens downward). The vertex matters for optimization problems: the maximum height of a projectile, the price that maximizes revenue, or the dimensions that minimize material cost are all found by computing the vertex of the relevant quadratic function.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator solves ax² + bx + c = 0 using the quadratic formula: x = (−b ± √(b²−4ac)) / 2a. The discriminant (b²−4ac) determines the nature of the roots: positive yields two real roots, zero yields one repeated root, and negative yields two complex conjugate roots displayed in a + bi form. Results are rounded to 6 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

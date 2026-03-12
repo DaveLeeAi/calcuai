@@ -1,0 +1,106 @@
+---
+title: "Grade Calculator"
+description: "Calculate what grade you need on your final exam to achieve your desired course grade. Enter current grade, desired grade, and final exam weight."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+If your current grade is 85% and you want a 90% in the course, and the final exam is worth 30% of your grade, you need a 101.67% on the final — which means an A is not achievable through the final alone. This calculator tells you exactly what score you need on your final exam to hit your target course grade, and whether that target is mathematically possible.
+
+</section>
+
+{/* Section 6: What Your Grade Means */}
+## What Your Grade Means
+
+The result shows the exact percentage you need on the final exam, the corresponding letter grade, and a feasibility flag: "possible" (score ≤ 100%), "not possible" (score > 100%), or "guaranteed" (you already have enough points even with a 0% on the final). This eliminates guessing and lets you set realistic study goals.
+
+If you want to calculate your current overall grade from multiple categories instead, use the [Final Grade Calculator](/calculators/everyday/final-grade-calculator). For cumulative GPA across semesters, use the [GPA Calculator](/calculators/everyday/gpa-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your current grade** — the percentage grade you have in the course right now, before the final exam. Check your syllabus or LMS gradebook.
+2. **Enter your desired grade** — the overall course grade you want to finish with (e.g., 90 for an A−).
+3. **Enter the final exam weight** — the percentage of your total grade that the final exam represents (e.g., 30 for a final worth 30%). Check your syllabus.
+4. **Read the result** — the calculator shows the required final exam score, the letter grade equivalent, and whether the target is achievable.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{requiredFinal} = \frac{\text{desiredGrade} - \text{currentGrade} \times (1 - w)}{w}
+$$
+
+Where:
+- **desiredGrade** = the overall course grade you want (0–100)
+- **currentGrade** = your current grade in the course (0–100)
+- **$w$** = the weight of the final exam as a decimal (e.g., 0.30 for 30%)
+
+The term $\text{currentGrade} \times (1 - w)$ represents the points you have already locked in from coursework. The remaining points must come from the final.
+
+*Source: Standard weighted average formula used in educational grading systems. Reference: AACRAO (American Association of Collegiate Registrars and Admissions Officers) grading calculation standards.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Realistic Target
+
+Your current grade is 88%, you want a 90% (A−), and the final is worth 25%.
+
+**Step 1:** Points already locked in = 88 × (1 − 0.25) = 88 × 0.75 = 66.0
+**Step 2:** Points needed from final = 90 − 66.0 = 24.0
+**Step 3:** Required final score = 24.0 / 0.25 = **96.0%**
+
+**Result:** You need a 96% on the final — an A. Difficult but achievable.
+
+### Example 2: Impossible Target
+
+Your current grade is 72%, you want a 90%, and the final is worth 20%.
+
+**Step 1:** Points locked in = 72 × 0.80 = 57.6
+**Step 2:** Points needed = 90 − 57.6 = 32.4
+**Step 3:** Required final score = 32.4 / 0.20 = **162.0%**
+
+**Result:** Not possible. Even a perfect 100% on the final would give you only 77.6%. Consider adjusting your target to a B (80%) — that requires (80 − 57.6) / 0.20 = 112%, still not possible. A C+ (78%) needs 102%. A C (75%) needs (75 − 57.6) / 0.20 = 87% — achievable.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **Final exam weight.** A final worth 40% gives you more room to recover than one worth 15%. With a 40% final, each percentage point on the exam moves your course grade by 0.4 points.
+2. **Starting position.** The gap between your current grade and desired grade determines the slope. A 5-point gap with a 30% final requires ~16.7 extra points on the exam; a 10-point gap requires ~33.3 points.
+3. **Extra credit.** Some courses allow final exam scores above 100%. If your professor caps at 100%, scores above that are impossible. If extra credit is available, scores up to 105-110% may be feasible.
+4. **Weighted vs. unweighted impact.** Most courses weight categories differently — homework might count for 10%, quizzes 20%, midterms 40%, and the final 30%. A homework assignment worth 10% of your grade affects your GPA far less than an exam worth 30%. Earning 100% on 10%-weight homework and 70% on the 30%-weight final produces a lower course grade than earning 80% on both, because the exam's heavier weight dominates.
+5. **Grading scales vary by institution.** Some schools define an A as 90–100% while others set A at 93–100%, with A− covering 90–92%. This seemingly small difference can shift a borderline student a full letter grade: a 91% is an A at one school and an A− at another, affecting GPA, scholarship eligibility, and honors standing. Always check your specific syllabus for cutoff thresholds.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes the final exam is the only remaining graded item
+- Uses standard percentage grading (0–100 scale)
+- Does not account for extra credit, curved finals, or dropped scores
+- Letter grade cutoffs follow the most common US scale (A = 93+, A− = 90+, etc.)
+- The "current grade" should reflect all completed work excluding the final
+
+## Frequently Asked Questions
+
+### What if my final exam is worth more than 30%?
+
+A heavier final gives you more opportunity to change your grade. If the final is worth 50% of your course grade, you effectively need to average your current grade and your final score — making recovery much more realistic. Enter the exact weight from your syllabus.
+
+### How is this different from the Final Grade Calculator?
+
+This Grade Calculator answers "what do I need on the final?" — it solves backward from a desired grade. The Final Grade Calculator answers "what IS my final grade?" — it takes all your category scores (homework, midterms, projects, final) and calculates the weighted overall grade. They are complementary tools.
+
+### Can I still pass if the required grade is over 100%?
+
+Not unless your course allows extra credit on the final. If the required score exceeds 100%, the target grade is mathematically impossible under standard grading. Try lowering your desired grade to find the highest achievable outcome.
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes a weighted average of your assignment scores. Each category (homework, exams, quizzes, etc.) is multiplied by its percentage weight, and the results are summed to produce your overall grade. When individual assignments have different point values within a category, scores are normalized to percentages before weighting. The letter grade is assigned using the standard scale (A = 90–100%, B = 80–89%, etc.).

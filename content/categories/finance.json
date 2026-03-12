@@ -1,0 +1,63 @@
+{
+  "id": "finance",
+  "name": "Financial Calculators",
+  "slug": "finance",
+  "description": "Free financial calculators for mortgages, loans, investments, retirement planning, taxes, and savings. Make smarter money decisions with accurate, easy-to-use tools.",
+  "icon": "/icons/finance.svg",
+  "metaTitle": "Financial Calculators — Free Online Tools",
+  "metaDescription": "Calculate mortgage payments, compound interest, loan terms, retirement savings, and more. Free financial calculators with no signup required.",
+  "subcategories": [
+    {
+      "id": "mortgage",
+      "name": "Mortgage & Home",
+      "slug": "mortgage",
+      "description": "Calculate monthly mortgage payments, compare renting vs. buying, find your home budget, estimate refinance savings, and plan your down payment timeline.",
+      "calculators": ["mortgage-calculator", "amortization-calculator", "refinance-calculator", "home-affordability-calculator", "down-payment-calculator", "rent-vs-buy-calculator"]
+    },
+    {
+      "id": "loans",
+      "name": "Loans & Debt",
+      "slug": "loans",
+      "description": "Calculate monthly loan payments, find your implied interest rate, compare debt payoff strategies, and see total interest costs. Free loan calculators.",
+      "calculators": ["loan-calculator", "payment-calculator", "interest-rate-calculator", "debt-payoff-calculator"]
+    },
+    {
+      "id": "investment",
+      "name": "Investment & Savings",
+      "slug": "investment",
+      "description": "Project compound interest growth, calculate investment returns with contributions, track net worth, and measure the impact of inflation over time.",
+      "calculators": ["compound-interest-calculator", "investment-calculator", "net-worth-calculator", "inflation-calculator"]
+    },
+    {
+      "id": "savings",
+      "name": "Savings",
+      "slug": "savings",
+      "description": "Calculate savings growth, CD returns, and savings goal timelines.",
+      "calculators": ["savings-calculator", "cd-calculator"]
+    },
+    {
+      "id": "retirement",
+      "name": "Retirement",
+      "slug": "retirement",
+      "description": "Plan for retirement with 401k projections and savings calculators.",
+      "calculators": ["retirement-calculator", "401k-calculator"]
+    },
+    {
+      "id": "tax",
+      "name": "Tax",
+      "slug": "tax",
+      "description": "Estimate your 2025 federal income tax, see your tax bracket breakdown, calculate sales tax on any purchase, and convert salary to hourly pay. Free.",
+      "calculators": ["income-tax-calculator", "sales-tax-calculator", "tax-bracket-calculator", "salary-calculator"]
+    }
+  ],
+  "featuredCalculators": [
+    "mortgage-calculator",
+    "compound-interest-calculator",
+    "loan-calculator",
+    "investment-calculator",
+    "retirement-calculator",
+    "income-tax-calculator",
+    "salary-calculator",
+    "savings-calculator"
+  ]
+}

@@ -1,0 +1,90 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A circle with radius 5 has an area of 78.54 square units and a circumference of 31.42 units. This circle calculator computes all four core properties — radius, diameter, circumference, and area — from any single known value. Select the measurement you have, enter the number, and get the remaining three values instantly using standard formulas based on pi.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+A circle is defined by a single measurement — its radius — and every other property follows directly from that one number. This calculator works in reverse too: if you know the area of a circular garden plot, the circumference of a wheel, or the diameter of a pipe, it derives the radius first and then computes all remaining properties.
+
+**From Radius or Diameter:** The most straightforward mode. Enter the radius (distance from center to edge) or diameter (distance across the full circle), and the calculator returns area and circumference. This is what you need when sizing circular objects — tabletops, ponds, pizza dimensions, or pipe cross-sections.
+
+**From Area:** Enter a known area (such as the square footage of a circular room) and get back the radius, diameter, and circumference. This is essential when working backward from material quantities — if you need 200 square feet of turf for a circular lawn, the radius is 7.98 feet and the circumference (edging needed) is 50.13 feet.
+
+**From Circumference:** Enter a circumference (such as the distance around a tree trunk or a wheel's rolling distance per revolution) and derive the radius, diameter, and area. A bicycle wheel with a 2,136 mm circumference has a diameter of 679.6 mm (roughly 26.75 inches).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your known measurement** — use the tabs to choose "From Radius," "From Diameter," "From Area," or "From Circumference."
+
+2. **Enter the value** — type the known measurement into the input field. The calculator accepts integers and decimals. Units are not specified — the output will be in whatever unit system you use for input (enter inches, get results in inches and square inches).
+
+3. **Read the results** — all four circle properties appear: radius, diameter, circumference, and area. The area is in square units of whatever unit you entered.
+
+4. **Switch modes** — if you need to solve from a different known value, select a different tab. The calculator recalculates instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+All circle calculations derive from two fundamental relationships discovered by Archimedes in the 3rd century BC.
+
+**Area of a circle:**
+
+$$A = \pi r^2$$
+
+**Circumference of a circle:**
+
+$$C = 2\pi r$$
+
+**Diameter:**
+
+$$d = 2r$$
+
+Where:
+
+- **r** = radius (distance from center to any point on the circle)
+- **d** = diameter (distance across the circle through the center)
+- **C** = circumference (distance around the circle)
+- **A** = area (surface enclosed by the circle)
+- **pi** = the mathematical constant pi, approximately 3.14159265359
+
+**Inverse formulas** (solving for radius from other properties):
+
+$$r = \frac{d}{2} \qquad r = \frac{C}{2\pi} \qquad r = \sqrt{\frac{A}{\pi}}$$
+
+**Source:** Archimedes, *Measurement of a Circle* (circa 250 BC). The relationship between a circle's circumference and diameter defines pi. Euclid's *Elements*, Book XII, Proposition 2 proves that circles' areas are proportional to the squares of their diameters.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example
+
+### Finding All Properties from a Known Radius of 7
+
+You have a circular garden bed with a radius of 7 feet and need to calculate the area for mulch coverage and the circumference for edging material.
+
+**Step-by-step:**
+
+1. Radius: **r = 7 ft**
+2. Diameter: d = 2 x 7 = **14 ft**
+3. Circumference: C = 2 x pi x 7 = **43.9823 ft**
+4. Area: A = pi x 7^2 = pi x 49 = **153.9380 sq ft**
+
+**Practical interpretation:** You need approximately 154 square feet of mulch (at 1 inch depth, that is about 1.3 cubic yards) and approximately 44 feet of edging material. For purchasing, round the edging up to 45 feet to account for waste.
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses the standard circle geometry formulas: area = πr², circumference = 2πr, and diameter = 2r. When you provide any one measurement, it solves for all others using algebraic rearrangement. Results use JavaScript's built-in π constant (3.141592653589793) and are rounded to 6 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

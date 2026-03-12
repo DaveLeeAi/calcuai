@@ -1,0 +1,145 @@
+---
+title: "How Break-Even Analysis Works"
+slug: "break-even-analysis"
+relatedCalculators: ["break-even-calculator", "margin-calculator", "profit-calculator", "roi-calculator"]
+---
+
+## The Break-Even Formula
+
+Break-even analysis determines the point at which total revenue equals total costs — the exact volume of sales where a business neither makes a profit nor incurs a loss. The formula in units:
+
+$$\text{Break-Even Units} = \frac{\text{Fixed Costs}}{\text{Price per Unit} - \text{Variable Cost per Unit}}$$
+
+The denominator ($\text{Price} - \text{Variable Cost}$) is called the **contribution margin per unit** — the amount each sale contributes toward covering fixed costs and generating profit.
+
+The same calculation expressed in revenue dollars:
+
+$$\text{Break-Even Revenue} = \frac{\text{Fixed Costs}}{\text{Contribution Margin Ratio}}$$
+
+Where:
+
+$$\text{Contribution Margin Ratio} = \frac{\text{Price} - \text{Variable Cost}}{\text{Price}} = 1 - \frac{\text{Variable Cost}}{\text{Price}}$$
+
+## Worked Example: Coffee Shop
+
+A coffee shop has the following cost structure:
+
+- **Fixed costs:** $5,000/month (rent, insurance, salaried staff, equipment leases)
+- **Latte price:** $4.50
+- **Variable cost per latte:** $1.50 (milk, espresso, cup, lid, labor per drink)
+
+$$\text{Contribution margin} = \$4.50 - \$1.50 = \$3.00 \text{ per latte}$$
+
+$$\text{Break-even units} = \frac{\$5{,}000}{\$3.00} = 1{,}667 \text{ lattes/month}$$
+
+$$\text{Break-even revenue} = 1{,}667 \times \$4.50 = \$7{,}501.50\text{/month}$$
+
+At 1,667 lattes per month (roughly 56 per day), the shop covers all its costs exactly. Every latte sold beyond 1,667 contributes $3.00 directly to profit. If the shop sells 2,000 lattes/month:
+
+$$\text{Profit} = (2{,}000 - 1{,}667) \times \$3.00 = 333 \times \$3.00 = \$999\text{/month}$$
+
+## Contribution Margin: The Key Concept
+
+The contribution margin is the single most important number in break-even analysis. It answers: "How much of each sale goes toward covering fixed costs?"
+
+$$\text{Contribution Margin per Unit} = P - V$$
+
+$$\text{Contribution Margin Ratio} = \frac{P - V}{P}$$
+
+Where $P$ is price per unit and $V$ is variable cost per unit.
+
+The contribution margin ratio tells you what percentage of each revenue dollar is available after variable costs. For the coffee shop: $3.00 / $4.50 = 66.7%. This means for every dollar of revenue, $0.667 contributes to covering fixed costs and profit.
+
+A higher contribution margin ratio means:
+- Break-even point is reached with fewer sales
+- Each additional sale generates more profit
+- The business is less sensitive to volume fluctuations
+
+Software businesses often have contribution margins above 80% (low variable costs). Retail grocery operates at 25–30%. Manufacturing typically falls between 40–60%.
+
+## Multi-Product Break-Even
+
+Most businesses sell more than one product. The multi-product break-even uses a **weighted average contribution margin** based on the expected sales mix:
+
+$$\text{Weighted Avg CM} = \sum_{i=1}^{k} \text{CM}_i \times w_i$$
+
+Where $\text{CM}_i$ is the contribution margin for product $i$ and $w_i$ is its proportion of total unit sales (with $\sum w_i = 1$).
+
+**Example:** The coffee shop also sells muffins.
+
+| Product | Price | Variable Cost | CM | Sales Mix |
+|---------|-------|--------------|-----|-----------|
+| Latte | $4.50 | $1.50 | $3.00 | 70% |
+| Muffin | $3.50 | $1.00 | $2.50 | 30% |
+
+$$\text{Weighted Avg CM} = \$3.00 \times 0.70 + \$2.50 \times 0.30 = \$2.10 + \$0.75 = \$2.85$$
+
+$$\text{Break-even units (total)} = \frac{\$5{,}000}{\$2.85} = 1{,}755 \text{ units/month}$$
+
+Of those 1,755 total units: 1,228 lattes (70%) and 527 muffins (30%).
+
+The multi-product model is sensitive to sales mix assumptions. If the actual mix shifts toward the lower-margin product (more muffins, fewer lattes), the break-even point increases.
+
+## Margin of Safety
+
+The margin of safety measures how far current or projected sales are above the break-even point:
+
+$$\text{Margin of Safety} = \frac{\text{Actual Sales} - \text{Break-Even Sales}}{\text{Actual Sales}} \times 100\%$$
+
+If the coffee shop sells 2,500 lattes/month with a break-even of 1,667:
+
+$$\text{Margin of Safety} = \frac{2{,}500 - 1{,}667}{2{,}500} \times 100\% = 33.3\%$$
+
+Sales could drop by 33.3% before the shop starts losing money. A margin of safety below 20% signals vulnerability — a moderate sales decline would push the business into losses. Most financial advisors recommend maintaining at least a 25% margin of safety for small businesses.
+
+## Sensitivity Analysis: Price vs. Cost Changes
+
+Break-even analysis reveals an asymmetry between price increases and cost reductions. Consider the coffee shop's baseline: $5,000 fixed costs, $4.50 price, $1.50 variable cost, break-even at 1,667 units.
+
+**Scenario A — 10% price increase** (from $4.50 to $4.95):
+
+$$\text{New CM} = \$4.95 - \$1.50 = \$3.45$$
+
+$$\text{New break-even} = \frac{\$5{,}000}{\$3.45} = 1{,}449 \text{ units}$$
+
+Break-even drops by 218 units (13.1% reduction).
+
+**Scenario B — 10% variable cost reduction** (from $1.50 to $1.35):
+
+$$\text{New CM} = \$4.50 - \$1.35 = \$3.15$$
+
+$$\text{New break-even} = \frac{\$5{,}000}{\$3.15} = 1{,}587 \text{ units}$$
+
+Break-even drops by 80 units (4.8% reduction).
+
+The price increase has nearly 3× more impact on break-even than the equivalent percentage cost reduction. This is because price changes affect the contribution margin ratio directly, while cost changes only affect the numerator of that ratio. In general, pricing strategy has a larger leverage effect on profitability than cost-cutting — though price increases also carry the risk of reducing demand.
+
+## Graphical Interpretation
+
+The break-even chart plots three lines against volume (units sold):
+
+1. **Total Revenue line** — starts at origin, rises with slope equal to price per unit: $TR = P \times Q$
+2. **Total Cost line** — starts at fixed costs, rises with slope equal to variable cost per unit: $TC = FC + V \times Q$
+3. **Fixed Cost line** — horizontal line at $FC$
+
+The break-even point is where the Total Revenue and Total Cost lines intersect. Below this intersection, the gap between the lines represents losses. Above it, the gap represents profit. The vertical distance between Total Revenue and Total Cost at any volume is the profit (or loss) at that volume:
+
+$$\text{Profit} = (P - V) \times Q - FC$$
+
+This is the fundamental profit equation. Setting Profit = 0 and solving for $Q$ yields the break-even formula.
+
+## Assumptions and Limitations
+
+1. **Linear cost behavior** — the model assumes variable costs increase at a constant rate per unit and fixed costs remain constant. In reality, variable costs per unit may decrease at high volumes (bulk purchasing discounts) or increase (overtime labor), and fixed costs can jump in steps (e.g., needing to lease a second location beyond a certain volume).
+2. **Constant pricing** — the model assumes a single, fixed selling price. Businesses offering discounts, tiered pricing, or volume-based pricing need to use weighted-average pricing.
+3. **Single-period analysis** — break-even analysis applies to one time period. It does not account for the time value of money, which matters for startup scenarios where break-even may take months or years.
+4. **No taxes** — the standard break-even formula ignores income taxes. A tax-adjusted break-even requires higher pre-tax revenue: $\text{BE}_{\text{tax}} = \frac{FC + \text{Target Profit}/(1-t)}{CM}$ where $t$ is the tax rate.
+5. **Deterministic** — the formula provides a single point estimate with no uncertainty range. In practice, prices, costs, and volumes are all uncertain. Monte Carlo simulation or scenario analysis provides a more realistic picture.
+6. **No product mix interactions** — the multi-product model assumes products are independent. In reality, products may be complements (lattes drive muffin sales) or substitutes, making the sales mix assumption more complex.
+
+## Sources
+
+- **Horngren, C.T., Datar, S.M., & Rajan, M.V.** *Cost Accounting: A Managerial Emphasis*, 16th ed. Pearson, 2018. Chapters 3 and 7.
+- **U.S. Small Business Administration.** "Break-Even Analysis: Know When You Can Expect a Profit." [sba.gov](https://www.sba.gov/business-guide/plan-your-business/calculate-your-startup-costs)
+- **Garrison, R.H., Noreen, E.W., & Brewer, P.C.** *Managerial Accounting*, 17th ed. McGraw-Hill, 2021. Chapter 5: Cost-Volume-Profit Relationships.
+- **Drury, C.** *Management and Cost Accounting*, 10th ed. Cengage Learning, 2018.

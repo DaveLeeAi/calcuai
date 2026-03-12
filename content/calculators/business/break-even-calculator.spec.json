@@ -1,0 +1,143 @@
+{
+  "id": "break-even-calculator",
+  "title": "Break Even Calculator",
+  "slug": "break-even-calculator",
+  "category": "business",
+  "subcategory": "margins",
+  "primaryKeyword": "break even calculator",
+  "metaTitle": "Break Even Calculator — Units & Revenue to Break Even",
+  "metaDescription": "Calculate your break-even point in units and revenue. See how fixed costs, pricing, and variable costs determine when you start profiting. Free calculator.",
+  "inputs": [
+    {
+      "id": "fixedCosts",
+      "label": "Fixed Costs",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Monthly or annual fixed costs (rent, salaries, insurance)"
+    },
+    {
+      "id": "pricePerUnit",
+      "label": "Price per Unit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50,
+      "min": 0.01,
+      "max": 1000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Selling price per unit of product or service"
+    },
+    {
+      "id": "variableCostPerUnit",
+      "label": "Variable Cost per Unit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 30,
+      "min": 0,
+      "max": 1000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Cost to produce or deliver one unit (materials, labor, shipping)"
+    },
+    {
+      "id": "targetProfit",
+      "label": "Target Profit (Optional)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Desired profit amount beyond break-even"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "breakEvenUnits",
+      "label": "Break-Even Units",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "breakEvenRevenue",
+      "label": "Break-Even Revenue",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "chartData",
+      "label": "Revenue vs Cost",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Units Sold",
+        "yLabel": "Amount ($)",
+        "colors": [
+          "#2ECC71",
+          "#E74C3C",
+          "#3498DB"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Break-Even Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "break-even",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "margin-calculator",
+    "roi-calculator",
+    "profit-calculator",
+    "markup-calculator",
+    "employee-cost-calculator",
+    "business-sales-tax-calculator",
+    "overtime-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Horngren, Datar & Rajan — Cost Accounting: A Managerial Emphasis (Pearson, 16th ed.)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Break-Even Units = Fixed Costs / (Price per Unit − Variable Cost per Unit); Contribution Margin Ratio = (Price − Variable Cost) / Price",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "margin-calculator"
+  ],
+  "qualityScore": 92,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "profit-margin"
+  ],
+  "methodologyTopics": [
+    "break-even-analysis"
+  ]
+}

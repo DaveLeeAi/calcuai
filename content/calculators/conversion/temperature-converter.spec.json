@@ -1,0 +1,142 @@
+{
+  "id": "temperature-converter",
+  "title": "Temperature Converter",
+  "slug": "temperature-converter",
+  "category": "conversion",
+  "subcategory": "temperature",
+  "primaryKeyword": "temperature converter",
+  "metaTitle": "Temperature Converter — Fahrenheit, Celsius, Kelvin",
+  "metaDescription": "Convert between Fahrenheit, Celsius, Kelvin, and Rankine instantly. Free temperature converter with formulas and conversion table.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 72,
+      "min": -999999999,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Enter the temperature value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "fahrenheit",
+      "options": [
+        {
+          "value": "celsius",
+          "label": "Celsius (°C)"
+        },
+        {
+          "value": "fahrenheit",
+          "label": "Fahrenheit (°F)"
+        },
+        {
+          "value": "kelvin",
+          "label": "Kelvin (K)"
+        },
+        {
+          "value": "rankine",
+          "label": "Rankine (°R)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "celsius",
+      "options": [
+        {
+          "value": "celsius",
+          "label": "Celsius (°C)"
+        },
+        {
+          "value": "fahrenheit",
+          "label": "Fahrenheit (°F)"
+        },
+        {
+          "value": "kelvin",
+          "label": "Kelvin (K)"
+        },
+        {
+          "value": "rankine",
+          "label": "Rankine (°R)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Temperature Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "weight-converter",
+    "length-converter",
+    "volume-converter",
+    "area-converter",
+    "data-storage-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Anders Celsius (1742), Daniel Gabriel Fahrenheit (1724), William Thomson Lord Kelvin (1848)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Temperature conversions use direct formulas (not base-unit ratios): °F = °C × 9/5 + 32, K = °C + 273.15, °R = °F + 459.67.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 85,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

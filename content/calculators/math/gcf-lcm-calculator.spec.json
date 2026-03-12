@@ -1,0 +1,117 @@
+{
+  "id": "gcf-lcm-calculator",
+  "title": "GCF & LCM Calculator",
+  "slug": "gcf-lcm-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "gcf lcm calculator",
+  "metaTitle": "GCF & LCM Calculator — With Prime Factorization",
+  "metaDescription": "Find the greatest common factor and least common multiple of any numbers. Shows prime factorization steps. Free GCF LCM calculator.",
+  "inputs": [
+    {
+      "id": "valueA",
+      "label": "First Number",
+      "type": "number",
+      "required": true,
+      "defaultValue": 12,
+      "step": 1,
+      "placeholder": "e.g. 12"
+    },
+    {
+      "id": "valueB",
+      "label": "Second Number",
+      "type": "number",
+      "required": true,
+      "defaultValue": 18,
+      "step": 1,
+      "placeholder": "e.g. 18"
+    },
+    {
+      "id": "valueC",
+      "label": "Third Number (optional)",
+      "type": "number",
+      "required": false,
+      "step": 1,
+      "placeholder": "e.g. 24",
+      "helpText": "Leave empty to calculate for two numbers only"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "gcf",
+      "label": "Greatest Common Factor (GCF)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "lcm",
+      "label": "Least Common Multiple (LCM)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "primeFactorsA",
+      "label": "Prime Factors (First Number)",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "primeFactorsB",
+      "label": "Prime Factors (Second Number)",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "primeFactorsC",
+      "label": "Prime Factors (Third Number)",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "product",
+      "label": "Verification",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "gcf-lcm",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "fraction-calculator",
+    "ratio-calculator",
+    "exponent-calculator",
+    "mean-median-mode-calculator",
+    "percentage-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Euclidean algorithm for GCF (Euclid's Elements, Book VII); LCM via GCF relationship: LCM(a,b) = |a×b|/GCF(a,b)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "GCF via Euclidean algorithm: gcd(a,b) = gcd(b, a mod b); LCM(a,b) = |a×b| / GCF(a,b); Identity: a × b = GCF(a,b) × LCM(a,b). Source: Euclid's Elements, Book VII (circa 300 BC)",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "fraction-calculator"
+  ],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

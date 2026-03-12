@@ -1,0 +1,161 @@
+{
+  "id": "time-calculator",
+  "title": "Time Calculator",
+  "slug": "time-calculator",
+  "category": "everyday",
+  "subcategory": "date-time",
+  "primaryKeyword": "time calculator",
+  "metaTitle": "Time Calculator — Add & Subtract Hours, Minutes, Seconds",
+  "metaDescription": "Add or subtract hours, minutes, and seconds with this free time calculator. Get results in HH:MM:SS, decimal hours, and total minutes instantly.",
+  "inputs": [
+    {
+      "id": "hours1",
+      "label": "Hours (Time 1)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 9999,
+      "step": 1,
+      "helpText": "Hours for the first time value"
+    },
+    {
+      "id": "minutes1",
+      "label": "Minutes (Time 1)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Minutes for the first time value"
+    },
+    {
+      "id": "seconds1",
+      "label": "Seconds (Time 1)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Seconds for the first time value"
+    },
+    {
+      "id": "operation",
+      "label": "Operation",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "add",
+      "options": [
+        {
+          "value": "add",
+          "label": "Add (+)"
+        },
+        {
+          "value": "subtract",
+          "label": "Subtract (−)"
+        }
+      ]
+    },
+    {
+      "id": "hours2",
+      "label": "Hours (Time 2)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 9999,
+      "step": 1,
+      "helpText": "Hours for the second time value"
+    },
+    {
+      "id": "minutes2",
+      "label": "Minutes (Time 2)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 45,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Minutes for the second time value"
+    },
+    {
+      "id": "seconds2",
+      "label": "Seconds (Time 2)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Seconds for the second time value"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "formatted",
+      "label": "Result (HH:MM:SS)",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "decimalHours",
+      "label": "Decimal Hours",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "decimalMinutes",
+      "label": "Total Minutes",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "totalSeconds",
+      "label": "Total Seconds",
+      "type": "single-value",
+      "format": "number"
+    }
+  ],
+  "formula": "time-math",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "hours-calculator",
+    "date-calculator",
+    "countdown-calculator",
+    "time-zone-converter",
+    "age-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "International System of Units (SI) — sexagesimal time division: 1 hour = 60 minutes = 3600 seconds.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total seconds = h × 3600 + m × 60 + s. Add or subtract total seconds, then convert back to HH:MM:SS.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "hours-calculator"
+  ],
+  "qualityScore": 76,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

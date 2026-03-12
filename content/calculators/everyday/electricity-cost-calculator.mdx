@@ -1,0 +1,118 @@
+---
+title: "Electricity Cost Calculator"
+description: "Calculate how much it costs to run any appliance. Enter watts, hours per day, and electricity rate to see daily, monthly, and yearly energy costs."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 1,000-watt space heater running 8 hours per day at the national average rate of \$0.16/kWh costs \$1.28 per day, \$38.40 per month, and \$467.20 per year. This calculator estimates the electricity cost of running any appliance based on its wattage, daily usage hours, and your local electricity rate — giving you daily, monthly, and yearly cost breakdowns.
+
+</section>
+
+{/* Section 6: What Your Result Shows */}
+## What Your Result Shows
+
+The results show your energy consumption in kilowatt-hours (kWh) and the corresponding cost across three time periods: daily, monthly, and yearly. It also shows the cost per hour of operation, which is useful for comparing appliance efficiency. For example, running a 100-watt LED TV for 5 hours costs about \$0.08/day, while a 1,500-watt space heater for the same duration costs \$1.20/day — a 15× difference.
+
+For calculating trip fuel costs for gas vehicles, use the [Fuel Cost Calculator](/calculators/everyday/fuel-cost-calculator). To understand your utility bill tax, see the [Sales Tax Calculator](/calculators/finance/sales-tax-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the wattage** — find this on the appliance label, in the manual, or on a product listing. Common examples: LED bulb = 10W, laptop = 65W, refrigerator = 150W, space heater = 1,500W, window AC = 1,200W.
+2. **Enter hours used per day** — how many hours the appliance runs in a typical day. For always-on devices like a refrigerator, use 8–12 hours (the compressor cycles, not 24h continuous).
+3. **Enter your electricity rate** — find this on your utility bill, listed as $/kWh. The U.S. national average is about \$0.16/kWh, but rates range from \$0.10 (Idaho) to \$0.36 (Hawaii).
+4. **Adjust days per month (optional)** — default is 30 days. Change this if the appliance is seasonal (e.g., a space heater used only 20 days/month in winter).
+5. **Read the results** — daily, monthly, and yearly costs plus kWh consumption appear instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{kWh per day} = \frac{\text{watts} \times \text{hours per day}}{1{,}000}
+$$
+
+$$
+\text{daily cost} = \text{kWh per day} \times \text{rate per kWh}
+$$
+
+$$
+\text{monthly cost} = \text{daily cost} \times \text{days per month}
+$$
+
+$$
+\text{yearly cost} = \text{kWh per day} \times 365 \times \text{rate per kWh}
+$$
+
+Where:
+- **watts** = the appliance's power consumption in watts (W)
+- **1,000** = watts per kilowatt (the conversion factor from W to kW)
+- **rate per kWh** = your electricity price in dollars per kilowatt-hour
+
+*Source: U.S. Energy Information Administration (EIA). National average residential electricity rate: \$0.16/kWh (2024). Appliance wattage ranges from ENERGY STAR product databases.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Gaming PC
+
+A gaming desktop draws 450 watts under load. You game for 4 hours per day. Your electricity rate is \$0.14/kWh.
+
+**Step 1:** Daily kWh = (450 × 4) / 1,000 = 1.80 kWh
+**Step 2:** Daily cost = 1.80 × $0.14 = **$0.252/day**
+**Step 3:** Monthly cost = $0.252 × 30 = **$7.56/month**
+**Step 4:** Yearly cost = 1.80 × 365 × $0.14 = **$91.98/year**
+
+*Interpretation:* The PC costs about \$92/year to power during gaming sessions. Adding a 200W monitor brings the total to 650W and \$133/year — still modest compared to heating or cooling.
+
+### Example 2: Window Air Conditioner
+
+A 1,200-watt window AC unit runs 10 hours/day during summer. Rate: \$0.18/kWh. Used approximately 25 days/month for 4 months.
+
+**Step 1:** Daily kWh = (1,200 × 10) / 1,000 = 12.00 kWh
+**Step 2:** Daily cost = 12.00 × $0.18 = **$2.16/day**
+**Step 3:** Monthly cost = $2.16 × 25 = **$54.00/month**
+**Step 4:** Seasonal cost (4 months) = $54.00 × 4 = **$216.00**
+
+*Interpretation:* This window unit adds about \$54/month to your electric bill during summer. An ENERGY STAR certified unit using 1,000W would save \$18/month (\$72 over the season).
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **Wattage varies by mode.** A washing machine uses 500W during the wash cycle but only 5W on standby. Use the active wattage for the hours it is actually running, not 24 hours.
+2. **Electricity rates vary widely.** U.S. residential rates range from \$0.10/kWh (Idaho, Utah) to \$0.36/kWh (Hawaii, Connecticut). Check your utility bill for your exact rate — many utilities also have tiered pricing where usage above a threshold costs more per kWh.
+3. **Time-of-use pricing.** Some utilities charge different rates for peak (afternoon) vs. off-peak (night) hours. Running a dishwasher at 10 PM instead of 2 PM can cut that appliance's cost by 20–40%.
+4. **Phantom load.** Many devices draw 1–5 watts even when "off" (TVs, chargers, gaming consoles). A single device is negligible, but 20 devices at 3W each = 60W × 24h = 1.44 kWh/day = \$84/year at \$0.16/kWh.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes the appliance draws constant wattage during operation (does not model cycling compressors or variable-speed motors)
+- Does not account for tiered or time-of-use electricity pricing
+- Monthly calculation uses a configurable day count (default 30) — adjust for seasonal appliances
+- Yearly calculation uses 365 days regardless of the monthly setting
+- Does not include demand charges (common on commercial accounts)
+
+## Frequently Asked Questions
+
+### How do I find an appliance's wattage?
+
+Check the label on the back or bottom of the appliance — it lists watts (W) or amps and volts (watts = amps × volts). You can also use a plug-in electricity meter like a Kill A Watt to measure actual power draw. For estimates, the U.S. DOE publishes typical wattage ranges at energy.gov.
+
+### What is a kilowatt-hour (kWh)?
+
+A kilowatt-hour is the amount of energy consumed by a 1,000-watt appliance running for 1 hour. It is the standard billing unit on electricity bills. A 100-watt light bulb running for 10 hours uses 1 kWh (100W × 10h / 1,000 = 1 kWh).
+
+### How much electricity does a refrigerator use?
+
+A modern ENERGY STAR refrigerator uses about 300–500 kWh per year, or roughly 35–60 watts on average (the compressor cycles on and off). At \$0.16/kWh, that is \$48–\$80 per year. Older models can use 600–1,000 kWh/year.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+The kWh formula is the standard energy consumption calculation used by electric utilities worldwide. National average electricity rates are from the **U.S. Energy Information Administration (EIA)** Monthly Energy Review (2024). Appliance wattage estimates reference the **U.S. Department of Energy** appliance energy data and **ENERGY STAR** product specifications. The formula $\text{kWh} = \frac{W \times h}{1000}$ is the definition of the kilowatt-hour as a unit of energy.

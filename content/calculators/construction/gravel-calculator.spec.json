@@ -1,0 +1,243 @@
+{
+  "id": "gravel-calculator",
+  "title": "Gravel Calculator",
+  "slug": "gravel-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "gravel calculator",
+  "metaTitle": "Gravel Calculator — Cubic Yards, Tons & Cost Estimate",
+  "metaDescription": "Calculate how much gravel you need in cubic yards and tons. Supports pea gravel, crushed stone, river rock, and decomposed granite with cost estimates.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Area Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "width",
+      "label": "Area Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "depth",
+      "label": "Gravel Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0.5,
+      "max": 24,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 12
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Recommended: 2-4 inches for walkways, 4-6 inches for driveways"
+    },
+    {
+      "id": "materialType",
+      "label": "Gravel Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "pea-gravel",
+      "options": [
+        {
+          "value": "pea-gravel",
+          "label": "Pea Gravel"
+        },
+        {
+          "value": "crushed-stone",
+          "label": "Crushed Stone"
+        },
+        {
+          "value": "river-rock",
+          "label": "River Rock"
+        },
+        {
+          "value": "decomposed-granite",
+          "label": "Decomposed Granite (DG)"
+        },
+        {
+          "value": "base-gravel",
+          "label": "Base Gravel / Road Base"
+        },
+        {
+          "value": "lava-rock",
+          "label": "Lava Rock"
+        },
+        {
+          "value": "marble-chips",
+          "label": "Marble Chips"
+        },
+        {
+          "value": "slate-chips",
+          "label": "Slate Chips"
+        }
+      ]
+    },
+    {
+      "id": "bagSize",
+      "label": "Bag Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "0.5",
+      "options": [
+        {
+          "value": "0.5",
+          "label": "0.5 cu ft bag"
+        },
+        {
+          "value": "1",
+          "label": "1 cu ft bag"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cubicYards",
+      "label": "Gravel Needed (cubic yards)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "weightTons",
+      "label": "Weight (tons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "numberOfBags",
+      "label": "Number of Bags",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Cost (Bulk Delivery)",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "volumeBreakdown",
+      "label": "Volume Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "volume-material",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "mulch-calculator",
+    "concrete-calculator",
+    "square-footage-calculator",
+    "fence-calculator",
+    "drywall-calculator",
+    "roofing-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "USDA Natural Resources Conservation Service",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard volume formula (L × W × D). Density data from USDA NRCS and aggregate supplier industry standards.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "mulch-calculator"
+  ],
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "spring-summer"
+}

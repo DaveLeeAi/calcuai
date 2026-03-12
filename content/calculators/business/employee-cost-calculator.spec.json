@@ -1,0 +1,212 @@
+{
+  "id": "employee-cost-calculator",
+  "title": "Employee Cost Calculator",
+  "slug": "employee-cost-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "employee cost calculator",
+  "metaTitle": "Employee Cost Calculator — True Cost of an Employee",
+  "metaDescription": "Calculate the real cost of hiring an employee including salary, benefits, taxes, and overhead. See the true cost multiplier. Free employer cost calculator.",
+  "inputs": [
+    {
+      "id": "annualSalary",
+      "label": "Annual Salary",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 60000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Employee's annual base salary before taxes"
+    },
+    {
+      "id": "healthInsurance",
+      "label": "Health Insurance (Annual)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 7500,
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Annual employer health insurance contribution"
+    },
+    {
+      "id": "retirementMatch",
+      "label": "Retirement Match %",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 4,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "helpText": "401(k) match percentage of salary"
+    },
+    {
+      "id": "paidTimeOffDays",
+      "label": "PTO Days per Year",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0,
+      "max": 365,
+      "step": 1,
+      "helpText": "Annual PTO days (vacation + sick + personal)"
+    },
+    {
+      "id": "otherBenefits",
+      "label": "Other Benefits (Annual)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 2000,
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Life insurance, disability, wellness programs, etc."
+    },
+    {
+      "id": "stateUnemploymentRate",
+      "label": "SUTA Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "State unemployment tax rate (varies by state and experience rating)"
+    },
+    {
+      "id": "stateUnemploymentWageBase",
+      "label": "SUTA Wage Base",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "SUTA taxable wage base (varies by state, e.g. $7,000–$56,500)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalAnnualCost",
+      "label": "Total Annual Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "costMultiplier",
+      "label": "Cost Multiplier",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "employerTaxes",
+      "label": "Employer Taxes",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalBenefits",
+      "label": "Total Benefits",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyCost",
+      "label": "Monthly Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "hourlyCost",
+      "label": "Hourly Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#6366f1",
+          "#22c55e",
+          "#f59e0b"
+        ]
+      }
+    },
+    {
+      "id": "costDetailTable",
+      "label": "Cost Detail",
+      "type": "table",
+      "columns": [
+        {
+          "key": "item",
+          "label": "Line Item"
+        },
+        {
+          "key": "annualCost",
+          "label": "Annual Cost",
+          "format": "currency"
+        },
+        {
+          "key": "percentOfTotal",
+          "label": "% of Total",
+          "format": "percentage"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Employee Cost Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "employee-cost",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "payroll-calculator",
+    "overtime-calculator",
+    "break-even-calculator",
+    "profit-calculator",
+    "roi-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Bureau of Labor Statistics (BLS) — Employer Costs for Employee Compensation, ECEC survey (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total Cost = Salary + SS(6.2%) + Medicare(1.45%) + FUTA($42) + SUTA + Benefits; Multiplier = Total / Salary",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 95,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "payroll"
+  ]
+}

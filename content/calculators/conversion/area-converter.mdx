@@ -1,0 +1,99 @@
+---
+title: "Area Converter"
+description: "Convert between all area units: square feet, square meters, acres, hectares, square kilometers, square miles. Free area converter with full conversion table."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert any area measurement between metric and imperial units instantly. One acre equals exactly 43,560 square feet (4,046.86 m²), one hectare equals 10,000 square meters (2.471 acres), and one square mile contains exactly 640 acres. Enter your value, select units, and see the result alongside a complete conversion table for all 10 supported area units.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Conversion Works
+
+This converter translates area measurements across metric, imperial, and land-survey unit systems. Area conversions are derived from linear conversions squared -- one foot equals 0.3048 meters, so one square foot equals 0.3048² = 0.09290304 square meters. This squaring relationship means area conversion factors are not intuitive: a meter is about 3.3 feet, but a square meter is about 10.76 square feet, not 3.3.
+
+The tool supports small-scale units (square millimeters, square inches) for engineering, mid-scale units (square feet, square meters) for real estate and construction, and large-scale units (acres, hectares, square miles, square kilometers) for land measurement. For calculating area from room dimensions, use our [Square Footage Calculator](/calculators/construction/square-footage-calculator). For linear measurements, see the [Length Converter](/calculators/conversion/length-converter).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the area value** -- type the number you want to convert. Decimals are supported (e.g., 0.25, 1500, 2.47).
+2. **Select "From" unit** -- choose the unit your value is currently expressed in (defaults to Square Foot).
+3. **Select "To" unit** -- choose the target unit for conversion (defaults to Square Meter).
+4. **Read the result** -- the converted value appears instantly below the inputs.
+5. **Use the full table** -- the conversion table shows your value in all 10 area units, useful for comparing across measurement systems.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+All area conversions use a **base-unit intermediary** pattern. Every area unit has an exact conversion factor to the base unit (square meters). To convert between any two units:
+
+$$
+\text{Result} = \text{Value} \times \frac{\text{fromUnit.toBase}}{\text{toUnit.toBase}}
+$$
+
+For example, converting acres to hectares:
+
+$$
+\text{hectares} = \text{acres} \times \frac{4{,}046.8564224 \text{ m}^2\text{/ac}}{10{,}000 \text{ m}^2\text{/ha}} = \text{acres} \times 0.40469
+$$
+
+**Key conversion factors (to square meters):**
+
+| Unit | Exact Factor to m² |
+|:--|:--|
+| 1 square kilometer | 1,000,000 m² |
+| 1 hectare | 10,000 m² |
+| 1 square meter | 1 m² (base) |
+| 1 square centimeter | 0.0001 m² |
+| 1 square millimeter | 0.000001 m² |
+| 1 square mile | 2,589,988.11 m² |
+| 1 acre | 4,046.8564224 m² |
+| 1 square yard | 0.83612736 m² |
+| 1 square foot | 0.09290304 m² |
+| 1 square inch | 0.00064516 m² |
+
+*Source: NIST Special Publication 330, "The International System of Units (SI)" (2019 Edition). Imperial area factors derived by squaring the linear factors from the International Yard and Pound Agreement (1959): 1 yard = 0.9144 m exactly.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Real Estate Lot Size -- 0.25 Acres to Square Feet
+
+A property listing describes a lot as 0.25 acres. How many square feet is that?
+
+**Conversion:**
+- From acres to square meters: 0.25 x 4,046.8564224 = 1,011.714 m²
+- From square meters to square feet: 1,011.714 / 0.09290304 = **10,890 square feet**
+
+*Interpretation:* A quarter-acre lot is 10,890 sq ft -- roughly equivalent to a 104 x 105 foot rectangle. For context, the median US single-family lot is approximately 8,177 sq ft (Census Bureau, 2022), so a quarter-acre lot is about 33% larger than average.
+
+### Example 2: Apartment Size -- 75 Square Meters to Square Feet
+
+A European apartment listing shows 75 m². What is that in square feet?
+
+**Conversion:**
+- From square meters to square feet: 75 / 0.09290304 = **807.29 square feet**
+
+*Interpretation:* A 75 m² apartment is approximately 807 sq ft. In US terms, this is a typical one-bedroom or small two-bedroom apartment. Note that European listings measure total floor area including interior walls, while US listings sometimes use different measurement standards (ANSI Z765), so actual usable space may vary slightly.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses international definitions where 1 foot = 0.3048 m exactly (squared for area)
+- The acre is defined as exactly 43,560 square feet (a historical surveying unit, not metric-derived)
+- Does not include specialized land units such as roods, perches, or arpents
+- Area conversion factors are the square of the corresponding linear factors -- never use a linear factor directly for area
+- Maximum input value limited by JavaScript floating-point precision (~15 significant digits)
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter multiplies or divides by fixed conversion factors between area units (square feet, square meters, acres, hectares, square yards, square miles, etc.). All conversions route through square meters as the base unit, then convert to the target unit. Conversion factors are exact values defined by the International System of Units. Results are displayed to 6 decimal places.

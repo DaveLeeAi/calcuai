@@ -1,0 +1,153 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Your ideal body weight depends on which clinical formula you use — and they rarely agree. A 5'10" male has an ideal weight of 166.2 lb by Devine, 156.5 lb by Robinson, 154.9 lb by Miller, and 165.3 lb by Hamwi. This calculator compares all four established formulas side by side, plus the BMI-based healthy range of 129–174 lb, so you can see the full clinical picture rather than relying on a single number.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+"Ideal weight" is not a single number — it is a range defined differently by different clinical frameworks. This calculator shows you results from four formulas that were developed between 1964 and 1983 for specific medical purposes: drug dosage calculations (Devine, Robinson, Miller) and diabetes management (Hamwi). Each uses height and sex to estimate the weight at which health outcomes are statistically optimized, but they were never designed to be universal targets for every individual.
+
+The spread between formulas is informative. For a 5'10" male, the difference between the lowest estimate (Miller: 154.9 lb) and the highest (Hamwi: 165.3 lb) is over 10 pounds. This range reflects the reality that "ideal" weight varies based on frame size, muscle mass, age, and ethnicity — factors these simple height-based formulas cannot capture. The BMI-based healthy weight range (18.5–24.9 BMI) provides a broader reference band validated by the World Health Organization across large populations.
+
+Use these results as a general reference, not a prescription. If you want to understand your body composition in more detail, our [Body Fat Calculator](/calculators/health/body-fat-calculator) and [BMI Calculator](/calculators/health/bmi-calculator) provide complementary perspectives.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your unit system** — choose Imperial (inches) or Metric (centimeters). The calculator converts internally as needed — all four formulas use height in inches relative to a 5-foot (60-inch) baseline.
+
+2. **Select your sex** — choose Male or Female. Each formula uses different base weights and per-inch increments for each sex, reflecting average differences in frame size and body composition.
+
+3. **Enter your height** — stand straight against a wall without shoes for the most accurate measurement. Enter total inches for imperial (e.g., 70 for 5'10") or centimeters for metric.
+
+4. **Review your results** — compare all four formula estimates plus the BMI-based healthy range. The average of the four formulas provides a reasonable middle-ground target. The comparison table shows both kilogram and pound values for each formula.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+All four formulas share the same structure: a base weight at 5 feet (60 inches) plus an increment for each inch above 60. They differ in their base values and per-inch coefficients because each was derived from a different study population.
+
+**Devine Formula (1974):**
+
+$$IBW_{male} = 50 + 2.3 \times (h - 60) \text{ kg}$$
+$$IBW_{female} = 45.5 + 2.3 \times (h - 60) \text{ kg}$$
+
+**Robinson Formula (1983):**
+
+$$IBW_{male} = 52 + 1.9 \times (h - 60) \text{ kg}$$
+$$IBW_{female} = 49 + 1.7 \times (h - 60) \text{ kg}$$
+
+**Miller Formula (1983):**
+
+$$IBW_{male} = 56.2 + 1.41 \times (h - 60) \text{ kg}$$
+$$IBW_{female} = 53.1 + 1.36 \times (h - 60) \text{ kg}$$
+
+**Hamwi Formula (1964):**
+
+$$IBW_{male} = 48 + 2.7 \times (h - 60) \text{ kg}$$
+$$IBW_{female} = 45.5 + 2.2 \times (h - 60) \text{ kg}$$
+
+Where:
+
+- **$h$** = height in inches
+- **$IBW$** = Ideal Body Weight in kilograms
+
+The BMI-based healthy range uses:
+
+$$W_{min} = 18.5 \times h_m^2 \quad | \quad W_{max} = 24.9 \times h_m^2$$
+
+Where **$h_m$** = height in meters.
+
+**Sources:** Devine BJ, *Drug Intelligence & Clinical Pharmacy*, 1974. Robinson JD et al., *American Journal of Hospital Pharmacy*, 1983. Miller DR et al., *American Journal of Hospital Pharmacy*, 1983. Hamwi GJ, in *Diabetes Mellitus: Diagnosis and Treatment*, 1964.
+
+For context on how BMI thresholds relate to ideal weight ranges and their limitations, see our [methodology page on BMI](/methodology/bmi-formula).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Male, 5'10" (70 inches)
+
+**All four formulas with $h = 70$, inches over 60 = 10:**
+
+| Formula | Calculation | Result (kg) | Result (lb) |
+|---|---|---|---|
+| Devine | $50 + 2.3 \times 10$ | 73.0 kg | 160.9 lb |
+| Robinson | $52 + 1.9 \times 10$ | 71.0 kg | 156.5 lb |
+| Miller | $56.2 + 1.41 \times 10$ | 70.3 kg | 155.0 lb |
+| Hamwi | $48 + 2.7 \times 10$ | 75.0 kg | 165.3 lb |
+
+**Average:** $(73.0 + 71.0 + 70.3 + 75.0) / 4 = 72.3$ kg = **159.4 lb**
+
+**BMI healthy range:** Height = 1.778 m. Min = $18.5 \times 1.778^2 = 58.5$ kg (128.9 lb). Max = $24.9 \times 1.778^2 = 78.7$ kg (173.5 lb).
+
+**Interpretation:** The four formulas cluster between 155–165 lb, all well within the BMI healthy range of 129–174 lb. Hamwi gives the highest estimate because it uses the largest per-inch increment (2.7 kg), while Miller gives the lowest because it has the highest base weight (56.2 kg) but the smallest per-inch increment (1.41 kg). For this height, any weight in the 155–165 lb range aligns with clinical ideal weight estimates.
+
+### Example 2: Female, 5'4" (64 inches)
+
+**All four formulas with $h = 64$, inches over 60 = 4:**
+
+| Formula | Calculation | Result (kg) | Result (lb) |
+|---|---|---|---|
+| Devine | $45.5 + 2.3 \times 4$ | 54.7 kg | 120.6 lb |
+| Robinson | $49 + 1.7 \times 4$ | 55.8 kg | 123.0 lb |
+| Miller | $53.1 + 1.36 \times 4$ | 58.5 kg | 129.1 lb |
+| Hamwi | $45.5 + 2.2 \times 4$ | 54.3 kg | 119.7 lb |
+
+**Average:** $(54.7 + 55.8 + 58.5 + 54.3) / 4 = 55.8$ kg = **123.1 lb**
+
+**Interpretation:** Miller produces a noticeably higher estimate for shorter individuals because of its high base weight (53.1 kg for females vs. 45.5 kg for Devine and Hamwi). For a 5'4" female, the practical takeaway is that an ideal weight between 120–129 lb is reasonable across all established formulas. The BMI healthy range for this height is 108–145 lb, providing wider bounds.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Frame size** — These formulas do not account for skeletal frame size. A person with a large frame (wider wrists, broader shoulders) naturally carries more bone and muscle mass than someone with a small frame at the same height. Some clinicians adjust ideal weight by plus or minus 10% based on frame size, measured by wrist circumference or elbow breadth.
+
+**Muscle mass** — A highly muscular individual will weigh significantly more than these formula estimates while being perfectly healthy. A 5'10" male who strength trains regularly might weigh 185 lb with 12% body fat — well above all four formula estimates — yet have excellent metabolic health markers. Our [Body Fat Calculator](/calculators/health/body-fat-calculator) provides a more composition-aware assessment.
+
+**Ethnicity** — The original study populations were predominantly white adults in clinical settings. Research published in *The Lancet* and the *International Journal of Obesity* shows that BMI-health relationships differ across ethnic groups. Asian populations, for example, tend to have higher body fat percentages at the same BMI, which is why some health organizations use lower BMI thresholds (23 instead of 25) for overweight classification in Asian populations.
+
+**Age** — None of the four formulas include age as a variable, yet body composition changes significantly with age. Adults naturally lose lean mass and gain fat mass after age 30, which means the same weight at age 25 and age 55 represents very different body compositions.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All four formulas were developed for **clinical drug dosing or diabetes management**, not as universal weight goals for the general population.
+- They assume an **average frame size** and body composition — they cannot account for individual variation in bone density, muscle mass, or fat distribution.
+- Formulas are validated primarily for adults **between 60 and 76 inches tall**. Results for very short or very tall individuals may be less meaningful.
+- The formulas use **only height and sex** — they do not consider age, ethnicity, fitness level, or health status.
+- These are **population-level estimates**, not personalized health targets. Consult a healthcare provider for individualized weight goals.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Which ideal weight formula is the most accurate?
+
+No single formula is definitively most accurate because they measure slightly different things. The Devine formula is the most widely used in clinical practice, particularly for drug dosing calculations. Robinson and Miller were developed as refinements of the Devine approach using larger datasets. For general health guidance, the BMI-based healthy weight range (18.5–24.9) is the most broadly validated metric, endorsed by the World Health Organization based on mortality and morbidity data across millions of individuals.
+
+### Why do the four formulas give different results?
+
+The formulas give different results because they were derived from different study populations using different statistical methods between 1964 and 1983. Hamwi used clinical observations of diabetic patients. Devine derived his formula from pharmacokinetic data. Robinson and Miller refined earlier work using larger hospital datasets. Each applies different base weights and per-inch increments, producing a spread of 10–15 pounds for most heights. This spread is actually useful — it shows you the range of reasonable estimates rather than implying false precision from a single number.
+
+### Is ideal weight the same as healthy weight?
+
+Ideal weight formulas and healthy weight ranges measure related but different concepts. The four clinical formulas estimate a single target weight based only on height and sex. The BMI-based healthy range (18.5–24.9) defines a broader band associated with lower disease risk based on epidemiological data. A person can be healthy at weights above the formula-derived "ideal" if they have greater muscle mass, or unhealthy at weights within the ideal range if they have excess visceral fat. Body composition, fitness level, blood pressure, blood sugar, and cholesterol are better indicators of health than any single weight number.
+
+</div>
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements four established ideal body weight formulas: **Devine BJ** (*Drug Intelligence & Clinical Pharmacy*, 1974;8:650–655), **Robinson JD et al.** (*American Journal of Hospital Pharmacy*, 1983;40:1016–1019), **Miller DR et al.** (*American Journal of Hospital Pharmacy*, 1983;40:1622), and **Hamwi GJ** (*Diabetes Mellitus: Diagnosis and Treatment*, 1964:73–78). The BMI-based healthy weight range follows **World Health Organization** classification thresholds (BMI 18.5–24.9).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

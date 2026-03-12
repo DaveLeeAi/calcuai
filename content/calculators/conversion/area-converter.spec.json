@@ -1,0 +1,192 @@
+{
+  "id": "area-converter",
+  "title": "Area Converter",
+  "slug": "area-converter",
+  "category": "conversion",
+  "subcategory": "area",
+  "primaryKeyword": "area converter",
+  "metaTitle": "Area Converter — Convert sq ft, sq m, acres, hectares",
+  "metaDescription": "Convert between all area units: square feet, square meters, acres, hectares, square kilometers. Free area converter with full conversion table.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Enter the area value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "square-foot",
+      "options": [
+        {
+          "value": "square-meter",
+          "label": "Square Meter (m²)"
+        },
+        {
+          "value": "square-kilometer",
+          "label": "Square Kilometer (km²)"
+        },
+        {
+          "value": "square-centimeter",
+          "label": "Square Centimeter (cm²)"
+        },
+        {
+          "value": "square-millimeter",
+          "label": "Square Millimeter (mm²)"
+        },
+        {
+          "value": "hectare",
+          "label": "Hectare (ha)"
+        },
+        {
+          "value": "acre",
+          "label": "Acre (ac)"
+        },
+        {
+          "value": "square-foot",
+          "label": "Square Foot (ft²)"
+        },
+        {
+          "value": "square-yard",
+          "label": "Square Yard (yd²)"
+        },
+        {
+          "value": "square-inch",
+          "label": "Square Inch (in²)"
+        },
+        {
+          "value": "square-mile",
+          "label": "Square Mile (mi²)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "square-meter",
+      "options": [
+        {
+          "value": "square-meter",
+          "label": "Square Meter (m²)"
+        },
+        {
+          "value": "square-kilometer",
+          "label": "Square Kilometer (km²)"
+        },
+        {
+          "value": "square-centimeter",
+          "label": "Square Centimeter (cm²)"
+        },
+        {
+          "value": "square-millimeter",
+          "label": "Square Millimeter (mm²)"
+        },
+        {
+          "value": "hectare",
+          "label": "Hectare (ha)"
+        },
+        {
+          "value": "acre",
+          "label": "Acre (ac)"
+        },
+        {
+          "value": "square-foot",
+          "label": "Square Foot (ft²)"
+        },
+        {
+          "value": "square-yard",
+          "label": "Square Yard (yd²)"
+        },
+        {
+          "value": "square-inch",
+          "label": "Square Inch (in²)"
+        },
+        {
+          "value": "square-mile",
+          "label": "Square Mile (mi²)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Area Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "length-converter",
+    "volume-converter",
+    "square-footage-calculator",
+    "weight-converter",
+    "circle-calculator",
+    "data-storage-converter",
+    "temperature-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NIST — SI Special Publication 330 (2019 Edition); International Yard and Pound Agreement (1959)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Conversion via base unit (square meters): result = value × (fromUnit.toBase / toUnit.toBase). NIST exact conversion factors.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 87,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

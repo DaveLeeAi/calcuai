@@ -1,0 +1,130 @@
+{
+  "id": "fuel-cost-calculator",
+  "title": "Fuel Cost Calculator",
+  "slug": "fuel-cost-calculator",
+  "category": "everyday",
+  "subcategory": "money",
+  "primaryKeyword": "fuel cost calculator",
+  "metaTitle": "Fuel Cost Calculator — Trip Gas Cost by Distance & MPG",
+  "metaDescription": "Calculate how much gas will cost for your trip. Enter distance, MPG, and fuel price to get total fuel cost, gallons used, and cost per mile. Free and instant.",
+  "inputs": [
+    {
+      "id": "distance",
+      "label": "Trip Distance",
+      "type": "number",
+      "required": true,
+      "defaultValue": 300,
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "suffix": "miles",
+      "helpText": "One-way distance of your trip"
+    },
+    {
+      "id": "fuelEfficiency",
+      "label": "Fuel Efficiency (MPG)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 25,
+      "min": 1,
+      "max": 200,
+      "step": 0.1,
+      "suffix": "MPG",
+      "helpText": "Your vehicle's miles per gallon (check EPA sticker or fueleconomy.gov)"
+    },
+    {
+      "id": "fuelPrice",
+      "label": "Fuel Price (per gallon)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 3.5,
+      "min": 0,
+      "max": 20,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Current price per gallon of gas"
+    },
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "us",
+      "options": [
+        {
+          "value": "us",
+          "label": "US (miles, gallons)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (km, liters)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalCost",
+      "label": "Trip Fuel Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "fuelUsed",
+      "label": "Fuel Used",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "costPerMile",
+      "label": "Cost Per Mile",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 4
+    },
+    {
+      "id": "roundTripCost",
+      "label": "Round Trip Cost",
+      "type": "single-value",
+      "format": "currency"
+    }
+  ],
+  "formula": "fuel-cost",
+  "features": [
+    "shareable-url",
+    "print-results",
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "electricity-cost-calculator",
+    "discount-calculator",
+    "tip-calculator",
+    "sales-tax-calculator",
+    "percentage-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Department of Energy / fueleconomy.gov — EPA fuel economy ratings and fuel cost methodology.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "gallonsUsed = distance / MPG; totalCost = gallonsUsed × pricePerGallon; costPerMile = totalCost / distance.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 78,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

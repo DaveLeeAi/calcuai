@@ -1,0 +1,141 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 1,500 kg car traveling at 27.78 m/s (100 km/h) has a kinetic energy of 578,703 joules — equivalent to the energy needed to lift that same car 39.3 meters straight up. This energy calculator computes kinetic energy (half mv squared) or gravitational potential energy (mgh) from mass, velocity, and height inputs. Results are displayed in joules with automatic conversions to calories, kilowatt-hours, BTU, and electron volts for physics, engineering, and energy comparison problems.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Energy is the capacity to do work, and this calculator handles the two most common mechanical forms. Kinetic energy is the energy an object possesses due to its motion — a speeding truck has more kinetic energy than a bicycle at the same speed because it has more mass. Potential energy is stored energy due to an object's position in a gravitational field — a book on a high shelf has more potential energy than one on the floor.
+
+Select "Kinetic Energy" mode to calculate the energy of a moving object from its mass and velocity. Select "Potential Energy" mode to calculate the stored gravitational energy from mass, height, and local gravitational acceleration. The calculator defaults to Earth's surface gravity (9.80665 m/s squared) but allows custom values for problems involving the Moon (1.625), Mars (3.721), or Jupiter (24.79).
+
+For electrical energy calculations, see the [Ohm's Law Calculator](/calculators/science/ohms-law-calculator). For speed-distance-time relationships that often feed into energy problems, use the [Velocity Calculator](/calculators/science/velocity-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select energy type.** Choose "Kinetic Energy" for moving objects or "Potential Energy" for elevated objects.
+2. **Enter the mass** in kilograms. All objects have mass — this is always required. Convert from grams (divide by 1,000) or pounds (multiply by 0.4536) if needed.
+3. **For kinetic energy, enter velocity** in meters per second. Convert from km/h (divide by 3.6) or mph (divide by 2.237) first. The velocity field appears when kinetic mode is selected.
+4. **For potential energy, enter height** in meters above the reference point (usually ground level). The height field appears when potential mode is selected. Optionally adjust gravitational acceleration from the default 9.80665 m/s squared.
+5. **Read the results.** Energy is displayed in joules (J), with conversions to calories (cal), kilocalories (kcal), kilowatt-hours (kWh), British thermal units (BTU), and electron volts (eV).
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Kinetic Energy
+
+$$KE = \frac{1}{2} m v^2$$
+
+Where:
+
+- **KE** = kinetic energy, in joules (J)
+- **m** = mass of the object, in kilograms (kg)
+- **v** = velocity (speed) of the object, in meters per second (m/s)
+
+Kinetic energy scales linearly with mass but with the **square** of velocity. Doubling the mass doubles the energy, but doubling the speed quadruples it. This is why vehicle stopping distance increases dramatically with speed — a car at 120 km/h has four times the kinetic energy of the same car at 60 km/h.
+
+### Potential Energy
+
+$$PE = m \times g \times h$$
+
+Where:
+
+- **PE** = gravitational potential energy, in joules (J)
+- **m** = mass of the object, in kilograms (kg)
+- **g** = gravitational acceleration, in meters per second squared (m/s squared). Default: 9.80665 m/s squared (standard gravity at Earth's surface)
+- **h** = height above the reference point, in meters (m)
+
+Potential energy scales linearly with all three variables. The reference point for height is arbitrary — only differences in height matter physically. A 10 kg object at 5 meters has PE = 10 x 9.80665 x 5 = 490.33 J relative to the ground.
+
+### Energy Unit Conversions
+
+$$1 \text{ J} = 0.2390 \text{ cal} = 2.778 \times 10^{-7} \text{ kWh} = 9.478 \times 10^{-4} \text{ BTU}$$
+
+**Source:** The kinetic energy formula was developed from Gottfried Wilhelm Leibniz's concept of *vis viva* (living force, 1676), refined to its modern half-mv-squared form by Gaspard-Gustave de Coriolis (1829). The term "potential energy" was coined by William Rankine in 1853. Standard gravity (9.80665 m/s squared) is defined by the 3rd General Conference on Weights and Measures (CGPM, 1901).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Kinetic Energy of a Pitched Baseball
+
+A major-league fastball has a mass of 0.145 kg (5.125 ounces) and is thrown at 40 m/s (144 km/h, 89.5 mph). What is its kinetic energy?
+
+**Step-by-step:**
+
+1. Known values: m = **0.145 kg**, v = **40 m/s**
+2. Apply the formula: KE = 0.5 x m x v squared = 0.5 x 0.145 x 40 squared
+3. Calculate v squared: 40 squared = **1,600**
+4. Multiply: KE = 0.5 x 0.145 x 1,600 = **116 J**
+5. Convert to calories: 116 x 0.2390 = **27.7 cal**
+
+**Result:** The baseball carries **116 joules** of kinetic energy.
+
+**Practical interpretation:** For comparison, a bullet from a 9mm pistol (8 g at 370 m/s) carries about 548 J — roughly 4.7 times the energy of the fastball despite being 18 times lighter. The v-squared relationship explains why: the bullet's speed is 9.25 times faster, and speed has a squared effect on energy. This 116 J is also why a 90-mph fastball to an unprotected area can cause serious injury.
+
+### Example 2: Potential Energy of Water Behind a Dam
+
+A hydroelectric reservoir holds water at a height of 50 meters above the turbines. What is the potential energy of 1,000 kg (1 cubic meter) of that water?
+
+**Step-by-step:**
+
+1. Known values: m = **1,000 kg**, h = **50 m**, g = **9.80665 m/s squared**
+2. Apply the formula: PE = m x g x h = 1,000 x 9.80665 x 50
+3. Calculate: PE = **490,332.5 J**
+4. Convert to kWh: 490,332.5 / 3,600,000 = **0.1362 kWh**
+
+**Result:** Each cubic meter of water at 50 m height stores **490,332.5 joules** (0.1362 kWh) of potential energy.
+
+**Practical interpretation:** A large reservoir releasing 100 cubic meters per second through turbines at 85% efficiency would generate: 100 x 490,332.5 x 0.85 = 41.68 MW of electrical power. The Hoover Dam, with a head of 180 m and flow rates up to 1,000 m cubed/s, generates up to 2,080 MW — confirming that height and flow rate are the primary drivers of hydroelectric capacity.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Velocity dominates kinetic energy.** Because KE depends on v-squared, small increases in speed produce large energy changes. Increasing highway speed from 100 km/h to 130 km/h (a 30% speed increase) raises kinetic energy by 69%. This is the physics behind why higher-speed crashes are disproportionately more destructive and why crash fatality rates climb steeply with impact speed.
+
+**Gravitational acceleration varies by location.** Standard gravity (9.80665 m/s squared) is a defined constant, but actual surface gravity ranges from 9.764 m/s squared at the equator to 9.832 m/s squared at the poles — a 0.7% variation. For problems on other bodies: Moon = 1.625, Mars = 3.721, Jupiter = 24.79 m/s squared. The calculator allows custom gravity input.
+
+**Energy conservation links KE and PE.** In a frictionless system, total mechanical energy (KE + PE) remains constant. A roller coaster at the top of a 30-meter hill with zero velocity converts all PE into KE as it descends: v = square root of (2gh) = square root of (2 x 9.807 x 30) = 24.26 m/s (87.3 km/h) at the bottom. Real systems lose energy to friction, air resistance, and sound.
+
+**Unit confusion between calories and kilocalories.** In physics, 1 calorie (cal) = 4.184 joules. In nutrition, 1 "Calorie" (capital C) = 1 kilocalorie (kcal) = 4,184 joules. A 2,000-Calorie daily diet equals 8,368,000 joules — enough energy to accelerate a 1,500 kg car to 105.7 m/s (380 km/h) if fully converted to kinetic energy.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Classical (non-relativistic) mechanics only.** The formula KE = half mv squared is accurate for speeds well below the speed of light. At 10% of light speed, the relativistic correction is about 0.5% — negligible for all terrestrial applications but significant in particle physics.
+- **Point-mass approximation.** Rotational kinetic energy (spinning objects) is not included. A rolling ball has both translational and rotational KE; this calculator computes only translational.
+- **Uniform gravitational field.** PE = mgh assumes gravity is constant over the height range. For heights comparable to Earth's radius (6,371 km), use the general formula PE = -GMm/r instead.
+- **No friction or air resistance.** Energy losses due to drag, friction, and heat are not modeled. Real-world energy conversions are always less than 100% efficient.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between kinetic and potential energy?
+
+Kinetic energy is the energy of motion — any object with mass and velocity has it (KE = half mv squared). Potential energy is stored energy due to position or configuration — an object elevated above a reference point has gravitational potential energy (PE = mgh). The two forms are interchangeable: a dropped ball converts PE to KE as it falls, gaining speed. At any point during the fall, KE + PE equals the total mechanical energy (constant in the absence of friction). At the top, energy is 100% PE; at the bottom, it is 100% KE.
+
+### How do I convert joules to calories?
+
+Divide joules by 4.184 to get thermochemical calories (cal). One calorie is the energy required to raise the temperature of 1 gram of water by 1 degree Celsius. Be careful with the capitalization: 1 food Calorie (capital C) = 1 kilocalorie (kcal) = 1,000 cal = 4,184 J. So 500 kJ = 119.5 kcal = 119.5 food Calories. Other common conversions: 1 J = 9.478 x 10 to the negative fourth BTU, and 1 kWh = 3,600,000 J.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies fundamental energy formulas: kinetic energy (KE = ½mv²), potential energy (PE = mgh), and work-energy relationships (W = Fd). It solves for any unknown variable given sufficient inputs. Unit conversions between joules, calories, kilowatt-hours, and BTUs use fixed conversion factors from the International System of Units. Results are rounded to 4 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

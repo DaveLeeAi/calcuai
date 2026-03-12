@@ -1,0 +1,203 @@
+{
+  "id": "business-sales-tax-calculator",
+  "title": "Business Sales Tax Calculator",
+  "slug": "business-sales-tax-calculator",
+  "category": "business",
+  "subcategory": "tax",
+  "primaryKeyword": "business sales tax calculator",
+  "metaTitle": "Business Sales Tax Calculator — Merchant Tax Pricing Tool",
+  "metaDescription": "Calculate sales tax for your business pricing. See tax-inclusive vs tax-exclusive strategies, monthly tax liability, and profit impact. Built for merchants.",
+  "inputs": [
+    {
+      "id": "pricingStrategy",
+      "label": "Pricing Strategy",
+      "type": "select",
+      "required": true,
+      "defaultValue": "tax-exclusive",
+      "options": [
+        {
+          "value": "tax-exclusive",
+          "label": "Tax-Exclusive (tax added at checkout)"
+        },
+        {
+          "value": "tax-inclusive",
+          "label": "Tax-Inclusive (tax built into price)"
+        }
+      ],
+      "helpText": "Choose how you display prices to customers"
+    },
+    {
+      "id": "unitCost",
+      "label": "Unit Cost",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your cost to produce or acquire the item"
+    },
+    {
+      "id": "desiredMarginPercent",
+      "label": "Desired Markup %",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 40,
+      "min": 0,
+      "max": 10000,
+      "step": 0.1,
+      "helpText": "Target markup percentage over cost"
+    },
+    {
+      "id": "taxRate",
+      "label": "Sales Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 8.25,
+      "min": 0,
+      "max": 25,
+      "step": 0.01,
+      "helpText": "Combined state + local sales tax rate"
+    },
+    {
+      "id": "monthlySalesVolume",
+      "label": "Monthly Sales Volume",
+      "type": "number",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 10000000,
+      "step": 1,
+      "helpText": "Average units sold per month"
+    },
+    {
+      "id": "stickerPrice",
+      "label": "Sticker Price (Tax-Inclusive)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "dependsOn": "pricingStrategy",
+      "helpText": "The all-in price the customer sees (used in tax-inclusive mode)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "customerPays",
+      "label": "Customer Pays",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "listPrice",
+      "label": "List Price (Pre-Tax)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "taxPerUnit",
+      "label": "Tax per Unit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "yourRevenuePerUnit",
+      "label": "Your Revenue per Unit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "profitPerUnit",
+      "label": "Profit per Unit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "marginPercent",
+      "label": "Actual Margin %",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "monthlyTaxLiability",
+      "label": "Monthly Tax Liability",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "monthlyRevenue",
+      "label": "Monthly Revenue",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyProfit",
+      "label": "Monthly Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "priceBreakdown",
+      "label": "Price Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#6366f1",
+          "#22c55e",
+          "#f59e0b"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Sales Tax Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "business-sales-tax",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "sales-tax-calculator",
+    "markup-calculator",
+    "margin-calculator",
+    "profit-calculator",
+    "revenue-calculator",
+    "break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "State revenue departments — standard sales tax computation as codified in state tax codes (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "List Price = Cost × (1 + Margin%/100); Tax = List Price × (Tax Rate/100); Customer Pays = List Price + Tax",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "sales-tax-calculator"
+  ],
+  "qualityScore": 95,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

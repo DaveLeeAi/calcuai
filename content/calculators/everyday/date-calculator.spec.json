@@ -1,0 +1,144 @@
+{
+  "id": "date-calculator",
+  "title": "Date Calculator",
+  "slug": "date-calculator",
+  "category": "everyday",
+  "subcategory": "date-time",
+  "primaryKeyword": "date calculator",
+  "metaTitle": "Date Calculator — Days Between Dates & Add/Subtract Days",
+  "metaDescription": "Calculate the number of days between two dates or add and subtract days from any date. Free date arithmetic calculator with instant results.",
+  "inputs": [
+    {
+      "id": "startDate",
+      "label": "Start Date",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-01-01"
+    },
+    {
+      "id": "endDate",
+      "label": "End Date",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-03-12"
+    },
+    {
+      "id": "baseDate",
+      "label": "Starting Date",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-03-12"
+    },
+    {
+      "id": "daysToAdd",
+      "label": "Number of Days",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 0,
+      "max": 36500
+    },
+    {
+      "id": "operation",
+      "label": "Operation",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "add",
+      "options": [
+        {
+          "value": "add",
+          "label": "Add Days"
+        },
+        {
+          "value": "subtract",
+          "label": "Subtract Days"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "daysBetween",
+      "label": "Days Between",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "dateBreakdown",
+      "label": "Time Breakdown",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "resultDate",
+      "label": "Resulting Date",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    }
+  ],
+  "formula": "date-diff",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "tabs": [
+    {
+      "id": "days-between",
+      "label": "Days Between Dates",
+      "description": "Calculate the exact number of days between two dates",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "startDate",
+        "endDate"
+      ]
+    },
+    {
+      "id": "add-subtract",
+      "label": "Add/Subtract Days",
+      "description": "Add or subtract days from any date",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "baseDate",
+        "daysToAdd",
+        "operation"
+      ]
+    }
+  ],
+  "relatedCalculators": [
+    "age-calculator",
+    "countdown-calculator",
+    "time-calculator",
+    "hours-calculator",
+    "time-zone-converter",
+    "grade-calculator",
+    "due-date-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Gregorian calendar system (Pope Gregory XIII, 1582)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gregorian calendar date arithmetic with Julian Day Number conversion for absolute day counts",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "age-calculator",
+    "countdown-calculator"
+  ],
+  "qualityScore": 79,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

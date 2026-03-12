@@ -1,0 +1,54 @@
+{
+  "id": "conversion",
+  "name": "Unit Converters",
+  "slug": "conversion",
+  "description": "Free unit converters for length, weight, temperature, area, volume, and data storage.",
+  "icon": "/icons/conversion.svg",
+  "metaTitle": "Unit Converters — Free Online Tools",
+  "metaDescription": "Convert between metric and imperial units for length, weight, area, volume, temperature, and data storage. Instant unit converters, no signup.",
+  "subcategories": [
+    {
+      "id": "length",
+      "name": "Length",
+      "slug": "length",
+      "description": "Convert between units of length and distance.",
+      "calculators": ["length-converter"]
+    },
+    {
+      "id": "weight",
+      "name": "Weight",
+      "slug": "weight",
+      "description": "Convert between units of weight and mass.",
+      "calculators": ["weight-converter"]
+    },
+    {
+      "id": "area",
+      "name": "Area",
+      "slug": "area",
+      "description": "Convert between units of area measurement.",
+      "calculators": ["area-converter"]
+    },
+    {
+      "id": "volume",
+      "name": "Volume",
+      "slug": "volume",
+      "description": "Convert between units of volume and capacity.",
+      "calculators": ["volume-converter"]
+    },
+    {
+      "id": "temperature",
+      "name": "Temperature",
+      "slug": "temperature",
+      "description": "Convert between temperature scales.",
+      "calculators": ["temperature-converter"]
+    },
+    {
+      "id": "data-storage",
+      "name": "Data Storage",
+      "slug": "data-storage",
+      "description": "Convert between units of digital data storage.",
+      "calculators": ["data-storage-converter"]
+    }
+  ],
+  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter"]
+}

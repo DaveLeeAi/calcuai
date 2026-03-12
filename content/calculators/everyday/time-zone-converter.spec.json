@@ -1,0 +1,353 @@
+{
+  "id": "time-zone-converter",
+  "title": "Time Zone Converter",
+  "slug": "time-zone-converter",
+  "category": "everyday",
+  "subcategory": "date-time",
+  "primaryKeyword": "time zone converter",
+  "metaTitle": "Time Zone Converter — Convert Times Across 30 Time Zones",
+  "metaDescription": "Convert any time between 30 world time zones. See the exact hour and minute in EST, PST, GMT, JST, IST, and more. Handles day boundary crossings.",
+  "inputs": [
+    {
+      "id": "sourceHour",
+      "label": "Hour",
+      "type": "number",
+      "required": true,
+      "defaultValue": 9,
+      "min": 0,
+      "max": 23,
+      "step": 1,
+      "helpText": "Hour in source timezone (0-23)"
+    },
+    {
+      "id": "sourceMinute",
+      "label": "Minute",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Minute in source timezone"
+    },
+    {
+      "id": "sourceTimezone",
+      "label": "From Time Zone",
+      "type": "select",
+      "required": true,
+      "defaultValue": "EST",
+      "options": [
+        {
+          "value": "UTC",
+          "label": "UTC (Coordinated Universal Time)"
+        },
+        {
+          "value": "EST",
+          "label": "EST — Eastern Standard (UTC-5)"
+        },
+        {
+          "value": "EDT",
+          "label": "EDT — Eastern Daylight (UTC-4)"
+        },
+        {
+          "value": "CST",
+          "label": "CST — Central Standard (UTC-6)"
+        },
+        {
+          "value": "CDT",
+          "label": "CDT — Central Daylight (UTC-5)"
+        },
+        {
+          "value": "MST",
+          "label": "MST — Mountain Standard (UTC-7)"
+        },
+        {
+          "value": "MDT",
+          "label": "MDT — Mountain Daylight (UTC-6)"
+        },
+        {
+          "value": "PST",
+          "label": "PST — Pacific Standard (UTC-8)"
+        },
+        {
+          "value": "PDT",
+          "label": "PDT — Pacific Daylight (UTC-7)"
+        },
+        {
+          "value": "AKST",
+          "label": "AKST — Alaska Standard (UTC-9)"
+        },
+        {
+          "value": "HST",
+          "label": "HST — Hawaii Standard (UTC-10)"
+        },
+        {
+          "value": "GMT",
+          "label": "GMT — Greenwich Mean Time (UTC+0)"
+        },
+        {
+          "value": "BST",
+          "label": "BST — British Summer (UTC+1)"
+        },
+        {
+          "value": "CET",
+          "label": "CET — Central European (UTC+1)"
+        },
+        {
+          "value": "CEST",
+          "label": "CEST — Central European Summer (UTC+2)"
+        },
+        {
+          "value": "EET",
+          "label": "EET — Eastern European (UTC+2)"
+        },
+        {
+          "value": "MSK",
+          "label": "MSK — Moscow (UTC+3)"
+        },
+        {
+          "value": "GST",
+          "label": "GST — Gulf Standard (UTC+4)"
+        },
+        {
+          "value": "IST",
+          "label": "IST — India Standard (UTC+5:30)"
+        },
+        {
+          "value": "ICT",
+          "label": "ICT — Indochina (UTC+7)"
+        },
+        {
+          "value": "CST_CHINA",
+          "label": "CST — China Standard (UTC+8)"
+        },
+        {
+          "value": "SGT",
+          "label": "SGT — Singapore (UTC+8)"
+        },
+        {
+          "value": "HKT",
+          "label": "HKT — Hong Kong (UTC+8)"
+        },
+        {
+          "value": "JST",
+          "label": "JST — Japan Standard (UTC+9)"
+        },
+        {
+          "value": "KST",
+          "label": "KST — Korea Standard (UTC+9)"
+        },
+        {
+          "value": "AEST",
+          "label": "AEST — Australian Eastern Standard (UTC+10)"
+        },
+        {
+          "value": "AEDT",
+          "label": "AEDT — Australian Eastern Daylight (UTC+11)"
+        },
+        {
+          "value": "NZST",
+          "label": "NZST — New Zealand Standard (UTC+12)"
+        },
+        {
+          "value": "BRT",
+          "label": "BRT — Brasília (UTC-3)"
+        },
+        {
+          "value": "AST",
+          "label": "AST — Atlantic Standard (UTC-4)"
+        }
+      ]
+    },
+    {
+      "id": "targetTimezone",
+      "label": "To Time Zone",
+      "type": "select",
+      "required": true,
+      "defaultValue": "PST",
+      "options": [
+        {
+          "value": "UTC",
+          "label": "UTC (Coordinated Universal Time)"
+        },
+        {
+          "value": "EST",
+          "label": "EST — Eastern Standard (UTC-5)"
+        },
+        {
+          "value": "EDT",
+          "label": "EDT — Eastern Daylight (UTC-4)"
+        },
+        {
+          "value": "CST",
+          "label": "CST — Central Standard (UTC-6)"
+        },
+        {
+          "value": "CDT",
+          "label": "CDT — Central Daylight (UTC-5)"
+        },
+        {
+          "value": "MST",
+          "label": "MST — Mountain Standard (UTC-7)"
+        },
+        {
+          "value": "MDT",
+          "label": "MDT — Mountain Daylight (UTC-6)"
+        },
+        {
+          "value": "PST",
+          "label": "PST — Pacific Standard (UTC-8)"
+        },
+        {
+          "value": "PDT",
+          "label": "PDT — Pacific Daylight (UTC-7)"
+        },
+        {
+          "value": "AKST",
+          "label": "AKST — Alaska Standard (UTC-9)"
+        },
+        {
+          "value": "HST",
+          "label": "HST — Hawaii Standard (UTC-10)"
+        },
+        {
+          "value": "GMT",
+          "label": "GMT — Greenwich Mean Time (UTC+0)"
+        },
+        {
+          "value": "BST",
+          "label": "BST — British Summer (UTC+1)"
+        },
+        {
+          "value": "CET",
+          "label": "CET — Central European (UTC+1)"
+        },
+        {
+          "value": "CEST",
+          "label": "CEST — Central European Summer (UTC+2)"
+        },
+        {
+          "value": "EET",
+          "label": "EET — Eastern European (UTC+2)"
+        },
+        {
+          "value": "MSK",
+          "label": "MSK — Moscow (UTC+3)"
+        },
+        {
+          "value": "GST",
+          "label": "GST — Gulf Standard (UTC+4)"
+        },
+        {
+          "value": "IST",
+          "label": "IST — India Standard (UTC+5:30)"
+        },
+        {
+          "value": "ICT",
+          "label": "ICT — Indochina (UTC+7)"
+        },
+        {
+          "value": "CST_CHINA",
+          "label": "CST — China Standard (UTC+8)"
+        },
+        {
+          "value": "SGT",
+          "label": "SGT — Singapore (UTC+8)"
+        },
+        {
+          "value": "HKT",
+          "label": "HKT — Hong Kong (UTC+8)"
+        },
+        {
+          "value": "JST",
+          "label": "JST — Japan Standard (UTC+9)"
+        },
+        {
+          "value": "KST",
+          "label": "KST — Korea Standard (UTC+9)"
+        },
+        {
+          "value": "AEST",
+          "label": "AEST — Australian Eastern Standard (UTC+10)"
+        },
+        {
+          "value": "AEDT",
+          "label": "AEDT — Australian Eastern Daylight (UTC+11)"
+        },
+        {
+          "value": "NZST",
+          "label": "NZST — New Zealand Standard (UTC+12)"
+        },
+        {
+          "value": "BRT",
+          "label": "BRT — Brasília (UTC-3)"
+        },
+        {
+          "value": "AST",
+          "label": "AST — Atlantic Standard (UTC-4)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "targetTime",
+      "label": "Converted Time",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "sourceTime",
+      "label": "Source Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeDifferenceFormatted",
+      "label": "Time Difference",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "dayShiftLabel",
+      "label": "Day Change",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "timezone",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "time-calculator",
+    "hours-calculator",
+    "date-calculator",
+    "countdown-calculator",
+    "age-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IANA Time Zone Database (maintained by ICANN). UTC offsets per ISO 8601.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "targetTime = sourceTime - sourceUTCOffset + targetUTCOffset. Offsets from IANA Time Zone Database.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 76,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

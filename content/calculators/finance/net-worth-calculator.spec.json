@@ -1,0 +1,224 @@
+{
+  "id": "net-worth-calculator",
+  "title": "Net Worth Calculator",
+  "slug": "net-worth-calculator",
+  "category": "finance",
+  "subcategory": "investment",
+  "primaryKeyword": "net worth calculator",
+  "metaTitle": "Net Worth Calculator — Free Assets vs Liabilities Tool",
+  "metaDescription": "Calculate your net worth by totaling assets and liabilities. See where you stand vs. the U.S. median of $192,900. Includes asset and liability breakdown charts.",
+  "inputs": [
+    {
+      "id": "cashSavings",
+      "label": "Cash & Savings",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Checking, savings, CDs, money market accounts"
+    },
+    {
+      "id": "investments",
+      "label": "Investments",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Stocks, bonds, mutual funds, ETFs (non-retirement)"
+    },
+    {
+      "id": "retirementAccounts",
+      "label": "Retirement Accounts",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 75000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "401(k), IRA, Roth IRA, 403(b), pension value"
+    },
+    {
+      "id": "homeValue",
+      "label": "Home Value",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 350000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Current market value of your primary residence"
+    },
+    {
+      "id": "otherRealEstate",
+      "label": "Other Real Estate",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Investment properties, rental properties, land"
+    },
+    {
+      "id": "vehicleValue",
+      "label": "Vehicle Value",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 25000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$",
+      "helpText": "Current value of all vehicles"
+    },
+    {
+      "id": "otherAssets",
+      "label": "Other Assets",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Jewelry, collectibles, business equity, other valuables"
+    },
+    {
+      "id": "mortgageBalance",
+      "label": "Mortgage Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 250000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Remaining balance on your mortgage(s)"
+    },
+    {
+      "id": "studentLoans",
+      "label": "Student Loans",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 30000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "autoLoans",
+      "label": "Auto Loans",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "creditCardDebt",
+      "label": "Credit Card Debt",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "otherDebts",
+      "label": "Other Debts",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$",
+      "helpText": "Personal loans, medical debt, other liabilities"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netWorth",
+      "label": "Your Net Worth",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "summary",
+      "label": "Net Worth Summary",
+      "type": "value-group"
+    },
+    {
+      "id": "assetBreakdown",
+      "label": "Asset Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#2ECC71",
+          "#1A6FA0",
+          "#F39C12",
+          "#9B59B6",
+          "#3498DB",
+          "#E67E22",
+          "#1ABC9C"
+        ]
+      }
+    },
+    {
+      "id": "liabilityBreakdown",
+      "label": "Liability Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#E74C3C",
+          "#C0392B",
+          "#E67E22",
+          "#F39C12",
+          "#D35400"
+        ]
+      }
+    }
+  ],
+  "formula": "net-worth",
+  "features": [
+    "chart",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "retirement-calculator",
+    "investment-calculator",
+    "debt-payoff-calculator",
+    "savings-calculator",
+    "cd-calculator",
+    "tax-bracket-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Federal Reserve Survey of Consumer Finances (2022)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Worth = Total Assets - Total Liabilities (Federal Reserve SCF methodology)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "equity"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "id": "heart-rate-zone-calculator",
+  "title": "Heart Rate Zone Calculator",
+  "slug": "heart-rate-zone-calculator",
+  "category": "health",
+  "subcategory": "fitness",
+  "primaryKeyword": "heart rate zone calculator",
+  "metaTitle": "Heart Rate Zone Calculator — Training Zone Finder",
+  "metaDescription": "Calculate your 5 heart rate training zones using the Karvonen formula. Enter age and resting heart rate to find fat-burning, cardio, and peak training zones.",
+  "inputs": [
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 10,
+      "max": 100,
+      "step": 1,
+      "helpText": "Your current age in years"
+    },
+    {
+      "id": "restingHeartRate",
+      "label": "Resting Heart Rate",
+      "type": "number",
+      "required": true,
+      "defaultValue": 70,
+      "min": 30,
+      "max": 120,
+      "step": 1,
+      "helpText": "Measure first thing in the morning before getting up"
+    },
+    {
+      "id": "maxHeartRateMethod",
+      "label": "Max Heart Rate Method",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "formula",
+      "options": [
+        {
+          "value": "formula",
+          "label": "Estimate from age (220 − age)"
+        },
+        {
+          "value": "known",
+          "label": "I know my max heart rate"
+        }
+      ]
+    },
+    {
+      "id": "knownMaxHeartRate",
+      "label": "Known Max Heart Rate",
+      "type": "number",
+      "required": false,
+      "defaultValue": 190,
+      "min": 100,
+      "max": 220,
+      "step": 1,
+      "helpText": "Enter your tested or clinically measured max heart rate",
+      "dependsOn": "maxHeartRateMethod",
+      "dependsOnValue": "known"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "maxHeartRate",
+      "label": "Max Heart Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "heartRateReserve",
+      "label": "Heart Rate Reserve",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "zones",
+      "label": "Training Zones",
+      "type": "table",
+      "tableConfig": {
+        "columns": [
+          {
+            "key": "zone",
+            "label": "Zone"
+          },
+          {
+            "key": "name",
+            "label": "Name"
+          },
+          {
+            "key": "percentRange",
+            "label": "% HRR"
+          },
+          {
+            "key": "bpmRange",
+            "label": "BPM Range"
+          },
+          {
+            "key": "description",
+            "label": "Purpose"
+          }
+        ]
+      }
+    },
+    {
+      "id": "zoneChart",
+      "label": "Heart Rate Zones",
+      "type": "chart-bar",
+      "chartConfig": {
+        "xKey": "name",
+        "yKey": "bpmMax",
+        "colors": [
+          "#3B82F6",
+          "#22C55E",
+          "#F59E0B",
+          "#EF4444",
+          "#991B1B"
+        ]
+      }
+    }
+  ],
+  "formula": "heart-rate-zones",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "pace-calculator",
+    "bmr-calculator",
+    "bmi-calculator",
+    "one-rep-max-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Karvonen MJ, Kentala E, Mustala O (1957) and American Heart Association",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Karvonen MJ, Kentala E, Mustala O (1957). The effects of training on heart rate. Fox SM et al. (1971). Physical activity and the prevention of coronary heart disease. AHA.",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

@@ -1,0 +1,241 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Estimate your daily calorie needs based on age, sex, weight, height, and activity level using the Mifflin-St Jeor equation — the most accurate predictive formula for resting metabolic rate according to the Academy of Nutrition and Dietetics. A 30-year-old male weighing 180 lb (81.6 kg) at 5'10" with moderate activity requires approximately 2,762 calories per day to maintain weight, 2,262 calories to lose one pound per week, or 3,262 calories to gain one pound per week. Switch to TDEE mode for a complete breakdown by activity level.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Your daily calorie number is the foundation of every nutrition decision — whether you are trying to lose fat, build muscle, or simply maintain your current weight. This calculator produces two values: your **Basal Metabolic Rate (BMR)**, the calories your body burns at complete rest just to keep organs functioning, and your **Total Daily Energy Expenditure (TDEE)**, which multiplies BMR by an activity factor to reflect your actual daily burn.
+
+The TDEE number is what matters for practical nutrition planning. Eating below your TDEE creates a caloric deficit that drives fat loss; eating above it creates a surplus that supports muscle gain. A deficit of 500 calories per day produces roughly one pound of weight loss per week, since one pound of body fat contains approximately 3,500 stored calories.
+
+BMR alone typically accounts for 60–75% of total daily energy expenditure in adults. The remaining 25–40% comes from physical activity and the thermic effect of food (the energy required to digest what you eat, roughly 10% of intake). For a more granular view of how to distribute your calorie target across protein, carbs, and fat, use our [Macro Calculator](/calculators/health/macro-calculator) alongside your TDEE result.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your sex** — choose Male or Female. The Mifflin-St Jeor equation uses a different constant for each: +5 for males, −161 for females. This reflects the average difference in lean mass between sexes at equivalent body weights.
+
+2. **Enter your age** — input your current age in years. Metabolic rate declines approximately 1–2% per decade after age 20, so this field significantly affects your result. Use your age at last birthday.
+
+3. **Enter your weight** — input in pounds or kilograms. If using pounds, the calculator converts to kilograms internally (1 lb = 0.4536 kg). Use your morning weight for the most consistent reading.
+
+4. **Enter your height** — input in feet/inches or centimeters. If using feet and inches, the calculator converts to centimeters (1 inch = 2.54 cm). Stand straight against a wall for an accurate measurement.
+
+5. **Select your activity level** — choose the option that best matches your typical week. Be honest — overestimating activity is the most common reason calorie calculations fail. If you work a desk job and exercise 3 days per week, select "Lightly Active" rather than "Moderately Active."
+
+6. **Choose your goal (optional)** — select Maintain, Lose, or Gain weight to see adjusted calorie targets. The default deficit and surplus is 500 calories/day, equivalent to roughly one pound per week.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The Mifflin-St Jeor equation, published in 1990, replaced the older Harris-Benedict equation as the clinical standard for estimating resting metabolic rate. A 2005 comparative study by the American Dietetic Association found Mifflin-St Jeor predicted measured resting metabolic rate within 10% in more non-obese and obese individuals than any of four other published equations.
+
+**For males:**
+
+$$BMR = (10 \times W) + (6.25 \times H) - (5 \times A) + 5$$
+
+**For females:**
+
+$$BMR = (10 \times W) + (6.25 \times H) - (5 \times A) - 161$$
+
+Where:
+
+- **$W$** = body weight in kilograms (kg)
+- **$H$** = height in centimeters (cm)
+- **$A$** = age in years
+- **$BMR$** = Basal Metabolic Rate in kilocalories per day (kcal/day)
+
+To convert BMR to Total Daily Energy Expenditure, multiply by an activity factor:
+
+$$TDEE = BMR \times AF$$
+
+Where **$AF$** (Activity Factor) is one of:
+
+| Activity Level | Factor | Description |
+|---|---|---|
+| Sedentary | 1.2 | Little or no exercise, desk job |
+| Lightly Active | 1.375 | Light exercise 1–3 days/week |
+| Moderately Active | 1.55 | Moderate exercise 3–5 days/week |
+| Very Active | 1.725 | Hard exercise 6–7 days/week |
+| Extra Active | 1.9 | Very hard exercise, physical job, or 2× training |
+
+These activity multipliers originate from the WHO/FAO/UNU energy requirement guidelines and have been validated in multiple metabolic ward studies. The Mifflin-St Jeor base formula provides the BMR foundation, while the activity factor scales it to real-world energy expenditure.
+
+**Source:** Mifflin MD, St Jeor ST, Hill LA, Scott BJ, Daugherty SA, Koh YO. "A new predictive equation for resting energy expenditure in healthy individuals." *American Journal of Clinical Nutrition*, 1990;51(2):241–247.
+
+For a deeper comparison of BMR formulas, activity multiplier accuracy, and the 3,500-calorie rule, see our [methodology page on calorie and BMR formulas](/methodology/calorie-formulas).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Weight Maintenance — 30-Year-Old Active Male
+
+**Inputs:**
+- Sex: Male
+- Age: 30 years
+- Weight: 180 lb (81.6 kg)
+- Height: 5'10" (177.8 cm)
+- Activity Level: Moderately Active
+
+**Step-by-step:**
+
+1. Convert weight: 180 lb × 0.4536 = **81.6 kg**
+2. Convert height: 70 inches × 2.54 = **177.8 cm**
+3. Apply Mifflin-St Jeor (male): $(10 \times 81.6) + (6.25 \times 177.8) - (5 \times 30) + 5$
+4. Calculate each term: $816 + 1,111.25 - 150 + 5 = $ **1,782 kcal/day (BMR)**
+5. Apply activity factor (Moderately Active): $1,782 \times 1.55 = $ **2,762 kcal/day (TDEE)**
+6. For weight loss (−500 kcal): **2,262 kcal/day**
+7. For weight gain (+500 kcal): **3,262 kcal/day**
+
+**Interpretation:** At 2,762 calories per day, this individual maintains his current weight. Reducing intake to 2,262 calories — roughly cutting one large meal component per day — would produce about one pound of fat loss per week. This is the moderate, sustainable rate recommended by the National Institutes of Health for long-term weight management.
+
+### Example 2: Weight Loss — 45-Year-Old Sedentary Female
+
+**Inputs:**
+- Sex: Female
+- Age: 45 years
+- Weight: 160 lb (72.6 kg)
+- Height: 5'5" (165.1 cm)
+- Activity Level: Sedentary
+
+**Step-by-step:**
+
+1. Convert weight: 160 lb × 0.4536 = **72.6 kg**
+2. Convert height: 65 inches × 2.54 = **165.1 cm**
+3. Apply Mifflin-St Jeor (female): $(10 \times 72.6) + (6.25 \times 165.1) - (5 \times 45) - 161$
+4. Calculate each term: $726 + 1,031.88 - 225 - 161 = $ **1,372 kcal/day (BMR)**
+5. Apply activity factor (Sedentary): $1,372 \times 1.2 = $ **1,646 kcal/day (TDEE)**
+6. For weight loss (−500 kcal): **1,146 kcal/day**
+
+**Interpretation:** A 500-calorie daily deficit brings this individual to 1,146 calories, which falls below the commonly recommended minimum of 1,200 kcal/day for women. In this scenario, a safer approach is a 250-calorie deficit (targeting 1,396 kcal/day for 0.5 lb/week loss) combined with increasing activity from sedentary to lightly active — which alone raises TDEE to 1,886 and allows a more comfortable 1,386-calorie target for one pound per week. This example demonstrates why activity level changes often matter more than extreme calorie cutting.
+
+### Example 3: Muscle Gain — 25-Year-Old Very Active Male
+
+**Inputs:**
+- Sex: Male
+- Age: 25 years
+- Weight: 155 lb (70.3 kg)
+- Height: 5'9" (175.3 cm)
+- Activity Level: Very Active
+
+**Step-by-step:**
+
+1. Convert weight: 155 lb × 0.4536 = **70.3 kg**
+2. Convert height: 69 inches × 2.54 = **175.3 cm**
+3. Apply Mifflin-St Jeor (male): $(10 \times 70.3) + (6.25 \times 175.3) - (5 \times 25) + 5$
+4. Calculate each term: $703 + 1,095.63 - 125 + 5 = $ **1,679 kcal/day (BMR)**
+5. Apply activity factor (Very Active): $1,679 \times 1.725 = $ **2,896 kcal/day (TDEE)**
+6. For lean bulk (+500 kcal): **3,396 kcal/day**
+7. For conservative bulk (+250 kcal): **3,146 kcal/day**
+
+**Interpretation:** To support muscle growth with hard training 6–7 days per week, this individual needs approximately 3,146–3,396 calories daily. Research published in the *Journal of the International Society of Sports Nutrition* suggests a caloric surplus of 250–500 kcal/day paired with 1.6–2.2 g protein per kg bodyweight maximizes lean mass gain while limiting fat accumulation. At 70.3 kg, that translates to 112–155 g of protein per day — use our [Macro Calculator](/calculators/health/macro-calculator) to plan the full macronutrient split.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Activity Level Selection** — This is the single largest variable in the equation and the most commonly misjudged. The gap between Sedentary (1.2) and Very Active (1.725) on a 1,700-calorie BMR is over 890 calories per day — the equivalent of an entire extra meal. Most people overestimate their activity level by one category. If you exercise 3 times per week but sit at a desk the other 12+ waking hours, "Lightly Active" is more accurate than "Moderately Active."
+
+**Body Composition** — The Mifflin-St Jeor equation estimates BMR based on total body weight, not lean mass. Two people who weigh 180 lb at the same height and age will get identical BMR estimates, even if one has 15% body fat and the other has 30%. Higher muscle mass increases actual metabolic rate by approximately 6 calories per pound of muscle per day. If you carry significantly more or less muscle than average, consider adjusting your result by 5–10%. Our [Body Fat Calculator](/calculators/health/body-fat-calculator) can help quantify the difference.
+
+**Age** — The formula subtracts 5 calories per year of age, reflecting the gradual decline in resting metabolism. Between ages 20 and 60, this accounts for a 200-calorie reduction in BMR. This decline is partly due to loss of lean tissue, which means resistance training can partially offset age-related metabolic slowdown.
+
+**Thermic Effect of Food** — Digesting food itself requires energy, roughly 10% of calorie intake. High-protein diets have a thermic effect of 20–30% (meaning 20–30% of protein calories are burned during digestion), compared to 5–10% for carbohydrates and 0–3% for fats. This is already partially captured in the activity factor but is not explicitly modeled.
+
+**Metabolic Adaptation** — During prolonged calorie restriction, your body can reduce BMR by 5–15% beyond what the formula predicts, a phenomenon called adaptive thermogenesis. This means a calculated 500-calorie deficit may produce slower weight loss after 8–12 weeks.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Overestimating activity level.** This is the number-one reason calorie calculators produce results that don't match reality. Walking 8,000 steps at a desk job does not make you "Moderately Active" — it makes you Sedentary with some movement. Reserve "Moderately Active" for consistent, intentional exercise 3–5 days per week on top of a non-sedentary baseline.
+
+**Dropping calories too aggressively.** Cutting 1,000+ calories below TDEE causes muscle loss, metabolic adaptation, and is rarely sustainable. The National Institutes of Health recommends a maximum deficit of 500–750 calories per day for most adults. Women should generally not eat below 1,200 kcal/day and men below 1,500 kcal/day without medical supervision.
+
+**Treating the result as exact.** The Mifflin-St Jeor equation predicts resting metabolic rate within 10% for most people — that is a margin of plus or minus 150–200 calories. Use the calculator as a starting point, then adjust based on two weeks of real-world tracking. If your weight is stable, your intake matches your TDEE.
+
+**Ignoring non-exercise activity thermogenesis (NEAT).** Fidgeting, walking, standing, and other non-exercise movement can vary by 200–900 calories per day between individuals. Two people with identical exercise routines can have very different TDEEs based on how much they move throughout the rest of the day.
+
+**Recalculating too infrequently.** Every 10 pounds of weight change shifts BMR by approximately 50–70 calories. Recalculate your TDEE after every 10 lb change or every 8–12 weeks, whichever comes first.
+
+{/* Section 12: Comparison Table */}
+## TDEE by Activity Level — Side-by-Side Comparison
+
+The activity multiplier is the most impactful variable in the calorie equation. The table below shows how TDEE changes across all five levels for two common profiles:
+
+| Activity Level | Factor | 30M, 180 lb, 5'10" | 35F, 140 lb, 5'5" |
+|---|---|---|---|
+| Sedentary | 1.2 | 2,139 kcal | 1,597 kcal |
+| Lightly Active | 1.375 | 2,451 kcal | 1,830 kcal |
+| Moderately Active | 1.55 | 2,762 kcal | 2,063 kcal |
+| Very Active | 1.725 | 3,074 kcal | 2,296 kcal |
+| Extra Active | 1.9 | 3,386 kcal | 2,529 kcal |
+
+**Key takeaway:** Moving from Sedentary to Moderately Active adds 623 calories/day for the male profile and 466 calories/day for the female profile — more than the typical 500-calorie deficit used for weight loss. This is why increasing activity is often more sustainable than cutting food intake alone. If you are sedentary and struggling to lose weight on a low-calorie diet, adding three 45-minute moderate exercise sessions per week (moving to "Lightly Active") creates more dietary flexibility than cutting another 300 calories.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes an **average body composition** for the given height and weight — it does not account for individual variation in lean mass versus fat mass.
+- Activity factors are **broad categories** that cannot capture the precise energy cost of your specific activities, occupation, and daily movement patterns.
+- Does not account for **metabolic adaptation** from prolonged dieting, medical conditions affecting metabolism (hypothyroidism, PCOS), or medications that alter metabolic rate.
+- The 3,500-calories-per-pound rule is a **simplified estimate**. Actual weight change depends on metabolic adaptation, water retention, and body composition shifts.
+- Accuracy is highest for **non-obese adults aged 19–78**. The equation was validated primarily in this population. Results may be less accurate for adolescents, older adults, or individuals with BMI above 40.
+
+## When This Calculator Falls Short
+
+The Mifflin-St Jeor equation was validated on healthy adults aged 19–78 with typical metabolic function. Several common situations produce estimates that diverge significantly from actual needs:
+
+**Pregnancy and breastfeeding.** Calorie requirements increase by 340 kcal/day in the second trimester and 450 kcal/day in the third trimester (Institute of Medicine, 2009). Breastfeeding adds approximately 500 kcal/day. This calculator does not model any of these adjustments — using it during pregnancy will underestimate your needs by 15–25%.
+
+**Thyroid disorders.** Hypothyroidism can reduce actual metabolic rate by 15–40% below what the equation predicts. A person whose Mifflin-St Jeor BMR calculates to 1,600 kcal/day may actually burn only 1,100–1,350 kcal/day with untreated hypothyroidism. Conversely, hyperthyroidism elevates metabolic rate above the prediction. If you have been diagnosed with a thyroid condition, your endocrinologist's guidance supersedes any calculator estimate.
+
+**Post-surgery and recovery.** Major surgery increases metabolic rate by 20–60% depending on the procedure, as the body diverts energy to healing. Burn patients can require double their calculated TDEE. This calculator assumes a non-recovery metabolic state.
+
+**Medications that alter metabolism.** Beta-blockers, corticosteroids, antipsychotics, and some antidepressants can shift metabolic rate by 5–15% in either direction. If you take any of these long-term and your weight does not respond as the calculator predicts, medication interaction is a likely explanation — not a failure of willpower. Discuss calorie targets with your prescribing physician.
+
+**Very low or very high body fat.** Below 10% body fat (male) or 18% (female), the equation tends to overestimate BMR because it does not account for the metabolic downregulation that accompanies very low fat stores. Above BMI 40, it tends to overestimate because a larger proportion of body mass is metabolically inactive adipose tissue. For these populations, the Katch-McArdle formula — which uses lean body mass directly — is more accurate. Estimate your lean mass with the [Body Fat Calculator](/calculators/health/body-fat-calculator) first, then apply Katch-McArdle: BMR = 370 + (21.6 × lean mass in kg).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many calories should I eat a day to lose weight?
+
+To lose one pound per week, eat 500 calories below your Total Daily Energy Expenditure (TDEE). For most adults, this falls between 1,400 and 2,200 calories per day depending on sex, size, age, and activity level. The National Institutes of Health recommends women consume no fewer than 1,200 calories per day and men no fewer than 1,500 without medical supervision. Calculate your personal TDEE first using the tool above, then subtract 500 for a sustainable deficit. Faster loss (2 lb/week) requires a 1,000-calorie deficit, but this aggressive approach increases muscle loss and is difficult to maintain beyond a few weeks.
+
+### What is the difference between BMR and TDEE?
+
+BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest to maintain basic life functions — breathing, circulation, cell production, and temperature regulation. TDEE (Total Daily Energy Expenditure) is your BMR multiplied by an activity factor that accounts for all physical movement throughout the day. BMR typically represents 60–75% of TDEE. For example, a person with a BMR of 1,700 and moderate activity has a TDEE of approximately 2,635 calories (1,700 times 1.55). You should base your eating plan on TDEE, not BMR, since BMR alone does not reflect the calories you burn through daily movement and exercise.
+
+### Is the Mifflin-St Jeor equation accurate?
+
+The Mifflin-St Jeor equation predicts resting metabolic rate within 10% of measured values (via indirect calorimetry) for approximately 82% of healthy adults, according to a 2005 validation study by the American Dietetic Association. It is more accurate than the Harris-Benedict equation (1919) and the WHO/FAO/UNU equations across both normal-weight and obese populations. However, no predictive equation can match the precision of laboratory measurement. Individual variation in genetics, body composition, hormonal status, and metabolic adaptation means your actual metabolic rate may differ by 100–200 calories from any calculated estimate. Use the result as a calibrated starting point and adjust based on real-world results over 2–4 weeks.
+
+### How do I know what activity level to choose?
+
+Choose "Sedentary" if you work a desk job and do not exercise regularly — this applies to most office workers even if you walk 5,000–8,000 steps per day. "Lightly Active" means exercise 1–3 times per week with light effort. "Moderately Active" fits 3–5 days per week at moderate intensity (jogging, swimming, weight training). "Very Active" applies to hard training 6–7 days per week or a physically demanding job. "Extra Active" is reserved for competitive athletes training twice daily. When in doubt, choose one level lower — overestimating activity is the most common error and leads to eating more than intended.
+
+### How often should I recalculate my calorie needs?
+
+Recalculate every 10 pounds of body weight change or every 8–12 weeks, whichever comes first. A 10-pound weight loss reduces your BMR by approximately 50–70 calories per day, which means the deficit that initially produced one pound per week of loss will gradually slow. Your activity level may also change over time — starting a new exercise program or shifting to a more sedentary job both warrant recalculation. If you have been dieting for more than 12 consecutive weeks, consider a 1–2 week maintenance break at your current TDEE before resuming a deficit.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the **Mifflin-St Jeor equation** (Mifflin MD, St Jeor ST, et al., *American Journal of Clinical Nutrition*, 1990;51(2):241–247), validated as the most accurate resting metabolic rate prediction equation by the **American Dietetic Association** (Frankenfield et al., *Journal of the American Dietetic Association*, 2005). Activity multipliers follow **WHO/FAO/UNU** energy requirement guidelines. Weight change estimates use the widely cited 3,500 kcal/lb approximation established by **Max Wishnofsky** (*American Journal of Clinical Nutrition*, 1958) and endorsed as a clinical guideline by the **National Institutes of Health**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

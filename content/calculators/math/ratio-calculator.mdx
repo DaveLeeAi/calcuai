@@ -1,0 +1,158 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+3:4 simplifies from 15:20 by dividing both terms by their greatest common divisor (GCD) of 5. This ratio calculator handles three operations: simplify any ratio to lowest terms, solve for the missing value in a proportion (e.g., 3:4 = 9:x yields x = 12), and scale a ratio by any multiplier. Enter your values, choose a mode, and get the simplified ratio, decimal equivalent, GCD breakdown, and a complete step-by-step solution.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Ratios express how two quantities relate to each other. A ratio of 15:20 and 3:4 convey the same relationship, but 3:4 communicates it more clearly because no further reduction is possible. This calculator simplifies ratios, solves proportions, and scales ratios — the three most common ratio operations in math, cooking, construction, and business.
+
+**Simplify mode** reduces any ratio a:b to its lowest terms by finding the greatest common divisor (GCD) of both values using the Euclidean algorithm, then dividing each term by that GCD. The result is the canonical form of the ratio — the smallest pair of integers that preserves the original relationship. For example, 24:36 simplifies to 2:3 because GCD(24, 36) = 12.
+
+**Solve mode** finds the missing value in a proportion. If you know that 5:8 = 15:x, the calculator cross-multiplies to find x = 24. This is the foundation of proportional reasoning — scaling recipes, converting units, computing map distances, and hundreds of other practical applications.
+
+**Scale mode** multiplies both terms of a ratio by the same factor. Scaling 2:3 by a factor of 5 produces 10:15. This is useful when you need concrete quantities from an abstract ratio — if a concrete mix calls for a 1:2:3 ratio of cement, sand, and gravel, scaling by 50 tells you to use 50 kg cement, 100 kg sand, and 150 kg gravel.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose your mode.** Select "Simplify" to reduce a ratio to lowest terms, "Solve Proportion" to find a missing value in a:b = c:x, or "Scale" to multiply both ratio terms by a factor.
+
+2. **Enter your values.** For simplify, enter Value A and Value B (the two terms of your ratio). For solve, enter A, B, and C — the calculator finds x such that A:B = C:x. For scale, enter A, B, and the scale factor.
+
+3. **Read the results.** The calculator shows the simplified ratio (or solved/scaled result), the GCD used for simplification, the decimal equivalent of the ratio, and a step-by-step breakdown of every calculation.
+
+4. **Share or print.** Generate a shareable URL or print your results for class assignments, project planning, or recipe conversions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Simplifying a Ratio
+
+To simplify a ratio a:b, divide both terms by their greatest common divisor:
+
+$$\text{Simplified ratio} = \frac{a}{\gcd(a, b)} : \frac{b}{\gcd(a, b)}$$
+
+The GCD is computed using the Euclidean algorithm:
+
+$$\gcd(a, b) = \gcd(b,\ a \bmod b) \quad \text{until } b = 0$$
+
+For example, to simplify 15:20:
+- gcd(15, 20) = gcd(20, 15) = gcd(15, 5) = gcd(5, 0) = **5**
+- Simplified: 15 ÷ 5 = 3, 20 ÷ 5 = 4 → **3:4**
+
+### Solving a Proportion
+
+Given the proportion a:b = c:x, solve for x using cross-multiplication:
+
+$$\frac{a}{b} = \frac{c}{x} \implies x = \frac{b \times c}{a}$$
+
+This follows directly from the definition of equal ratios: two ratios are equal when their cross products are equal (a × x = b × c).
+
+### Scaling a Ratio
+
+Multiply both terms by the scale factor k:
+
+$$\text{Scaled ratio} = (a \times k) : (b \times k)$$
+
+Scaling preserves the ratio's proportional relationship — the decimal equivalent a/b remains unchanged regardless of the scale factor.
+
+**Source:** Ratio simplification uses the Euclidean algorithm for GCD, originating from Euclid's *Elements*, Book VII (c. 300 BCE). Proportion solving via cross-multiplication is a standard algebraic identity taught in every pre-algebra curriculum and formalized in elementary number theory.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Simplifying a Recipe Ratio
+
+**Scenario:** A bread recipe uses 250g of flour and 150g of water. What is the flour-to-water ratio in simplest form?
+
+**Inputs:**
+- Mode: Simplify
+- Value A: 250
+- Value B: 150
+
+**Step-by-step:**
+
+1. Input ratio: **250:150**
+2. Find GCD: gcd(250, 150) = gcd(150, 100) = gcd(100, 50) = gcd(50, 0) = **50**
+3. Divide both terms: 250 ÷ 50 = 5, 150 ÷ 50 = 3
+4. Simplified ratio: **5:3**
+5. Decimal: 5 ÷ 3 = **1.666667**
+
+**Interpretation:** The flour-to-water ratio is 5:3, meaning for every 5 parts flour, you use 3 parts water. If you want to scale up to 1 kg of flour, multiply both by 200: 1,000g flour to 600g water. The simplified ratio makes scaling intuitive — any multiple of 5 and 3 maintains the correct proportion.
+
+### Example 2: Solving a Proportion — Map Distance
+
+**Scenario:** A map has a scale of 1:50,000 (1 cm on the map represents 50,000 cm in reality). If two cities are 8.5 cm apart on the map, what is the actual distance?
+
+**Inputs:**
+- Mode: Solve Proportion
+- Value A: 1
+- Value B: 50000
+- Value C: 8.5
+
+**Step-by-step:**
+
+1. Proportion: 1:50,000 = 8.5:x
+2. Cross-multiply: 1 × x = 50,000 × 8.5
+3. Compute: x = 425,000
+4. Solved value: x = **425,000 cm = 4.25 km**
+
+**Interpretation:** The two cities are 425,000 cm (4.25 km) apart in reality. Proportional reasoning via cross-multiplication is the standard method for all map-scale and unit-conversion problems. The same approach works for architectural blueprints, model building, and engineering drawings.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Integer vs. Decimal Ratios.** This calculator works best with integer inputs. While it accepts decimals, the GCD-based simplification is designed for whole numbers. For decimal ratios like 2.5:3.75, multiply both by an appropriate power of 10 first (25:37.5 → 250:375) to get integers, then simplify. The ratio 250:375 simplifies to 2:3 via GCD = 125.
+
+**Order Matters.** A ratio of 3:4 is different from 4:3. The first term represents the numerator and the second the denominator. In recipes, "flour to water" and "water to flour" are inverses. Always confirm which quantity comes first to avoid reversing the proportion.
+
+**Zero Values.** A ratio with zero in one position (e.g., 5:0) is mathematically defined but represents an infinite or undefined relationship. The calculator handles this by returning 1:0 for a:0 (where a is nonzero) and 0:1 for 0:b. A ratio of 0:0 is entirely undefined.
+
+**Negative Ratios.** Negative ratios are valid and arise in contexts like temperature differences, financial changes, and coordinate geometry. The calculator preserves the sign of each term. A ratio of -6:3 simplifies to -2:1.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- This calculator handles **two-term ratios** only (a:b). For three-term ratios (a:b:c), simplify each pair separately by dividing all three terms by their mutual GCD, or enter the pairwise ratios individually.
+- The GCD computation uses **integer arithmetic** internally. Very large values exceeding JavaScript's safe integer range (2^53 - 1) may produce imprecise results.
+- Proportion solving assumes a **linear proportional relationship**. It does not apply to nonlinear relationships such as inverse proportionality (a:b = x:c) or quadratic scaling.
+- The calculator assumes **all inputs are finite real numbers**. Infinity and NaN inputs are not supported.
+- Scale factors of zero are technically valid but produce the trivial ratio 0:0.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between a ratio and a fraction?
+
+A ratio compares two quantities side by side (3:4), while a fraction represents a part of a whole (3/4). Numerically, the ratio 3:4 and the fraction 3/4 encode the same relationship — 3 divided by 4 equals 0.75 in both cases. The distinction is contextual: "3 parts cement to 4 parts sand" is naturally a ratio, while "3/4 of the total mixture is sand" is naturally a fraction. Ratios can also compare quantities that do not add up to a whole (miles:hours in speed), whereas fractions always imply a numerator-out-of-denominator relationship.
+
+### How do you simplify a ratio with decimals?
+
+Multiply both terms by a power of 10 to eliminate decimals, then divide by the GCD. For 0.75:1.25, multiply both by 100 to get 75:125. The GCD of 75 and 125 is 25, so divide both by 25 to get 3:5. Alternatively, express each decimal as a fraction first: 0.75 = 3/4 and 1.25 = 5/4, so the ratio is (3/4):(5/4) = 3:5 after canceling the common denominator.
+
+### Can a ratio have more than two terms?
+
+Yes. A three-term ratio like 1:2:3 compares three quantities simultaneously, such as cement, sand, and gravel in a concrete mix. To simplify a multi-term ratio, find the GCD of all the terms and divide each by it. For example, 6:9:15 has GCD = 3, so it simplifies to 2:3:5. This calculator handles two-term ratios; for three or more terms, simplify by computing the GCD across all values.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator simplifies ratios by dividing all terms by their greatest common divisor (Euclidean algorithm). For solving proportions (a:b = c:x), it uses cross-multiplication. Scaling operations multiply all ratio terms by the same factor to maintain proportionality. The calculator handles two-term and three-term ratios, displaying results as whole numbers when possible.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

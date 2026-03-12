@@ -1,0 +1,159 @@
+{
+  "id": "board-foot-calculator",
+  "title": "Board Foot Calculator",
+  "slug": "board-foot-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "board foot calculator",
+  "metaTitle": "Board Foot Calculator — Lumber Volume & Pricing",
+  "metaDescription": "Calculate board feet for lumber projects. Enter thickness, width, and length to get board foot volume, total cost, and nominal-to-actual dimension conversion.",
+  "inputs": [
+    {
+      "id": "thickness",
+      "label": "Thickness",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0.25,
+      "max": 16,
+      "step": 0.25,
+      "suffix": "in",
+      "helpText": "Nominal thickness (e.g., 2 for a 2×6)"
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "number",
+      "required": true,
+      "defaultValue": 6,
+      "min": 1,
+      "max": 16,
+      "step": 0.5,
+      "suffix": "in",
+      "helpText": "Nominal width (e.g., 6 for a 2×6)"
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 1,
+      "step": 1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "quantity",
+      "label": "Number of Pieces",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 1,
+      "max": 1000,
+      "helpText": "Total identical pieces needed"
+    },
+    {
+      "id": "pricePerBdFt",
+      "label": "Price per Board Foot",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 100,
+      "step": 0.25,
+      "prefix": "$",
+      "helpText": "Enter your lumber supplier's price per board foot"
+    },
+    {
+      "id": "useNominal",
+      "label": "Use Nominal Dimensions",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": true,
+      "helpText": "Industry standard: pricing uses nominal dimensions (2×6 not 1.5×5.5)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalBoardFeet",
+      "label": "Total Board Feet",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "boardFeetPerPiece",
+      "label": "Board Feet per Piece",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "totalCost",
+      "label": "Total Lumber Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Total Volume (cu ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "pieceBreakdown",
+      "label": "Piece Details",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "board-foot",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "fence-calculator",
+    "flooring-calculator",
+    "drywall-calculator",
+    "square-footage-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "National Hardwood Lumber Association (NHLA) and American Lumber Standard Committee (ALSC)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Board foot formula: BF = (T × W × L) ÷ 144. Nominal-to-actual conversion per ALSC PS 20-20 (American Softwood Lumber Standard).",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

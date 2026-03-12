@@ -1,0 +1,259 @@
+{
+  "id": "debt-payoff-calculator",
+  "title": "Debt Payoff Calculator",
+  "slug": "debt-payoff-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "debt payoff calculator",
+  "metaTitle": "Debt Payoff Calculator — Snowball vs Avalanche Comparison",
+  "metaDescription": "Calculate your fastest debt payoff plan using snowball or avalanche method. See total interest, payoff timeline, and how extra payments accelerate debt freedom.",
+  "inputs": [
+    {
+      "id": "debt1Name",
+      "label": "Debt 1 Name",
+      "type": "text",
+      "required": true,
+      "defaultValue": "Credit Card",
+      "helpText": "Name of your first debt"
+    },
+    {
+      "id": "debt1Balance",
+      "label": "Debt 1 Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 8000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt1Rate",
+      "label": "Debt 1 Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt1MinPayment",
+      "label": "Debt 1 Minimum Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt2Name",
+      "label": "Debt 2 Name",
+      "type": "text",
+      "required": false,
+      "defaultValue": "Car Loan"
+    },
+    {
+      "id": "debt2Balance",
+      "label": "Debt 2 Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt2Rate",
+      "label": "Debt 2 Interest Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 6.5,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt2MinPayment",
+      "label": "Debt 2 Minimum Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 350,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt3Name",
+      "label": "Debt 3 Name",
+      "type": "text",
+      "required": false,
+      "defaultValue": "Student Loan"
+    },
+    {
+      "id": "debt3Balance",
+      "label": "Debt 3 Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 25000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt3Rate",
+      "label": "Debt 3 Interest Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt3MinPayment",
+      "label": "Debt 3 Minimum Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 280,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "extraMonthlyPayment",
+      "label": "Extra Monthly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$",
+      "helpText": "Additional amount above all minimums, applied to target debt"
+    },
+    {
+      "id": "strategy",
+      "label": "Payoff Strategy",
+      "type": "select",
+      "required": true,
+      "defaultValue": "avalanche",
+      "options": [
+        {
+          "value": "avalanche",
+          "label": "Avalanche (highest rate first)"
+        },
+        {
+          "value": "snowball",
+          "label": "Snowball (lowest balance first)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalMonths",
+      "label": "Months to Debt Freedom",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "totalInterestPaid",
+      "label": "Total Interest Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "payoffDate",
+      "label": "Payoff Timeline",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "interestSaved",
+      "label": "Interest Saved vs. Minimums Only",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Payoff Summary",
+      "type": "value-group"
+    },
+    {
+      "id": "debtPayoffTimeline",
+      "label": "Balance Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Month",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#E74C3C",
+          "#1A6FA0",
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "payoffOrder",
+      "label": "Payoff Order",
+      "type": "table",
+      "columns": [
+        {
+          "key": "debtName",
+          "label": "Debt Name"
+        },
+        {
+          "key": "payoffMonth",
+          "label": "Payoff Month"
+        },
+        {
+          "key": "interestPaid",
+          "label": "Interest Paid",
+          "format": "currency"
+        }
+      ]
+    }
+  ],
+  "formula": "debt-payoff",
+  "features": [
+    "chart",
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "loan-calculator",
+    "compound-interest-calculator",
+    "net-worth-calculator",
+    "mortgage-calculator",
+    "savings-calculator",
+    "payment-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "CFPB debt management guidelines — iterative monthly amortization with payment cascading",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "loan-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "loan-term"
+  ]
+}

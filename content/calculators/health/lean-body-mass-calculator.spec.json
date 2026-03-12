@@ -1,0 +1,148 @@
+{
+  "id": "lean-body-mass-calculator",
+  "title": "Lean Body Mass Calculator",
+  "slug": "lean-body-mass-calculator",
+  "category": "health",
+  "subcategory": "body-metrics",
+  "primaryKeyword": "lean body mass calculator",
+  "metaTitle": "Lean Body Mass Calculator — LBM & Fat-Free Mass",
+  "metaDescription": "Calculate your lean body mass using the Boer formula. See your fat-free mass, body fat mass, and lean-to-fat ratio based on height, weight, and sex.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (lbs, inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        }
+      ]
+    },
+    {
+      "id": "sex",
+      "label": "Sex",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "male",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 154,
+      "min": 50,
+      "max": 700,
+      "step": 1,
+      "helpText": "Enter weight in pounds (imperial) or kilograms (metric)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 69,
+      "min": 36,
+      "max": 108,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "leanBodyMass",
+      "label": "Lean Body Mass",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "bodyFatMass",
+      "label": "Body Fat Mass",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "bodyFatPercentage",
+      "label": "Body Fat Percentage",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1
+    },
+    {
+      "id": "leanToFatRatio",
+      "label": "Lean-to-Fat Ratio",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "composition",
+      "label": "Body Composition",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#22C55E",
+          "#F59E0B"
+        ]
+      }
+    }
+  ],
+  "formula": "lean-body-mass",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "body-fat-calculator",
+    "bmi-calculator",
+    "ideal-weight-calculator",
+    "bmr-calculator",
+    "one-rep-max-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Boer P (1984). Estimated lean body mass as an index for normalization of body fluid volumes in humans.",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Boer P (1984). Estimated lean body mass as an index for normalization of body fluid volumes in humans. American Journal of Physiology, 247(4), F632-F636.",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "body-fat-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

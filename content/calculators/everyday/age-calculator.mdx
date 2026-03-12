@@ -1,0 +1,255 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Born on January 15, 1990? As of March 10, 2026, you are exactly 36 years, 1 month, and 23 days old — or 13,203 total days, 316,872 hours, and 1,886 weeks. This calculator determines your precise age by decomposing the Gregorian calendar difference between any birth date and any target date into complete years, months, and remaining days, with correct handling of leap years and variable-length months.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Your exact age is more than a number for birthday cards. Legal systems, insurance underwriters, and medical professionals all depend on precise age calculation — and the math is less obvious than it sounds. A person born on January 31 who checks their age on March 1 has lived 1 month and 1 day in a non-leap year, but 1 month and 0 days in a leap year because February 29 fills the gap. This calculator handles those month-boundary subtleties correctly.
+
+The breakdown into **total days, weeks, and hours** provides perspective that the years-months-days figure hides. At age 30, you have lived approximately 10,957 days. By age 50, that number reaches 18,262 — a gain of 7,305 days that felt like it passed faster than the first 10,957. The total-hours view reveals that a 36-year-old has lived roughly 316,872 hours, of which about 105,624 were spent sleeping (assuming 8 hours per night).
+
+The **next birthday countdown** is calculated by finding the next occurrence of your birth month and day after the target date. For February 29 birthdays, the calculator advances to February 28 in non-leap years — the convention used by most legal jurisdictions worldwide. To track time until a specific future event, use our [Countdown Calculator](/calculators/everyday/countdown-calculator). For general date arithmetic, see the [Date Calculator](/calculators/everyday/date-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Date of Birth** — select or type the full date including year. The calculator accepts any date from January 1, 1900 onward. If you know the exact date, enter it directly. If calculating someone else's age, enter their birth date here.
+
+2. **Set the "Age as of" Date** — this defaults to today's date (March 10, 2026). Change it to calculate your age on any past or future date: a retirement milestone, a past event, or a date mentioned on a legal document. The target date must be on or after the birth date.
+
+3. **Read your results** — the primary display shows your age in years, months, and days. Below that, the full breakdown shows total days, total weeks, total hours, and total minutes lived. The next birthday section shows the date and countdown for your upcoming birthday.
+
+4. **Share or print** — use the share link to send your exact age result to someone, or print the results for documentation. The shareable URL preserves both dates so the recipient sees the same calculation.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Age calculation uses Gregorian calendar decomposition — there is no single closed-form equation because months have different lengths. The algorithm works in three passes:
+
+**Pass 1 — Count complete years:**
+
+$$Y = \text{endYear} - \text{startYear} - \begin{cases} 1 & \text{if end month/day is before start month/day} \\ 0 & \text{otherwise} \end{cases}$$
+
+**Pass 2 — Count remaining complete months:**
+
+$$M = (\text{endMonth} - \text{startMonth} + 12) \mod 12 - \begin{cases} 1 & \text{if endDay} < \text{startDay} \\ 0 & \text{otherwise} \end{cases}$$
+
+When the end day is less than the start day, we borrow one month and add the number of days in the previous month to the day count.
+
+**Pass 3 — Count remaining days:**
+
+$$D = \begin{cases} \text{endDay} - \text{startDay} & \text{if endDay} \geq \text{startDay} \\ \text{daysInPrevMonth} + \text{endDay} - \text{startDay} & \text{if endDay} < \text{startDay} \end{cases}$$
+
+**Total days** use the simpler millisecond-based calculation:
+
+$$\text{totalDays} = \left\lfloor \frac{\text{endDate}_{\text{ms}} - \text{startDate}_{\text{ms}}}{86{,}400{,}000} \right\rfloor$$
+
+Where:
+- **Y** = complete years between dates
+- **M** = remaining complete months after years (0-11)
+- **D** = remaining days after months (0-30)
+- **daysInPrevMonth** = number of days in the month before the end month, accounting for leap years
+- **86,400,000** = milliseconds in one day (1000 x 60 x 60 x 24)
+
+**Leap year rule:** A year is a leap year if divisible by 4, except century years (divisible by 100) are not leap years, unless also divisible by 400. This means 2000 was a leap year, but 1900 was not.
+
+**Source:** Gregorian calendar reform established by Pope Gregory XIII in the papal bull *Inter gravissimas* (February 24, 1582). Leap year rules per ISO 8601 and the Explanatory Supplement to the Astronomical Almanac (Seidelmann, 2005).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Age Calculation — Born January 15, 1990
+
+**Inputs:**
+- Date of Birth: January 15, 1990
+- Age as of: March 10, 2026
+
+**Step-by-step:**
+
+1. Complete years: 1990 to 2026 = 36 years tentative. Since March 10 is after January 15, the birthday has passed → **36 complete years**
+2. Remaining months: January to March = 2 months tentative. Since day 10 < day 15, borrow one month → **1 complete month**
+3. Remaining days: From February 15 to March 10. February 2026 has 28 days. Days remaining in February: 28 - 15 = 13. Days into March: 10. Total: 13 + 10 = **23 days**
+4. Total days: March 10, 2026 minus January 15, 1990 = **13,203 days**
+5. Total weeks: 13,203 / 7 = **1,886 weeks** and 1 day
+6. Total hours: 13,203 x 24 = **316,872 hours**
+
+**Result:** 36 years, 1 month, 23 days (13,203 total days)
+
+**Interpretation:** At 36 years old, this person is approaching their late thirties. They have lived through 9 leap years since birth (1992, 1996, 2000, 2004, 2008, 2012, 2016, 2020, 2024), adding 9 extra days to their life compared to a calendar of uniform 365-day years. Their next birthday is January 15, 2027 — 311 days away.
+
+### Example 2: Passport Application — Exact Age Verification for Travel
+
+**Inputs:**
+- Date of Birth: July 22, 1988
+- Age as of: November 5, 2026 (date of passport application)
+
+**Step-by-step:**
+
+1. Complete years: 1988 to 2026 = 38 years tentative. Since November 5 is after July 22, the birthday has passed → **38 complete years**
+2. Remaining months: July to November = 4 months tentative. Since day 5 < day 22, borrow one month → **3 complete months**
+3. Remaining days: From October 22 to November 5. October has 31 days. Days remaining in October: 31 - 22 = 9. Days into November: 5. Total: 9 + 5 = **14 days**
+4. Total days: November 5, 2026 minus July 22, 1988 = **13,985 days**
+5. Total weeks: 13,985 / 7 = **1,997 weeks** and 6 days
+6. Total hours: 13,985 x 24 = **335,640 hours**
+
+**Result:** 38 years, 3 months, 14 days (13,985 total days)
+
+**Interpretation:** U.S. passport applications require applicants to state their exact date of birth, and passport validity periods depend on the applicant's age at the time of issuance. Adults 16 and older receive a 10-year passport; minors under 16 receive a 5-year passport. At 38 years old, this applicant qualifies for the adult 10-year passport, valid through November 2036. The State Department also uses exact age to verify identity against birth records — the day-level precision of this calculation matches the format required on Form DS-11.
+
+### Example 3: Leap Year Birthday — Born February 29, 2000
+
+**Inputs:**
+- Date of Birth: February 29, 2000
+- Age as of: March 10, 2026
+
+**Step-by-step:**
+
+1. Complete years: 2000 to 2026 = 26 tentative. Since March 10 is after February 29, the birthday has passed → **26 complete years**
+2. Remaining months: February to March = 1 month tentative. Since day 10 < day 29, borrow → **0 complete months**
+3. Remaining days: From February 29 to March 10. But 2026 is not a leap year, so February has 28 days. The calculation counts from Feb 28 (the adjusted birthday) forward: Feb 28 to March 10 = **10 days**
+4. Total days: March 10, 2026 minus February 29, 2000 = **9,506 days**
+5. Total weeks: 9,506 / 7 = **1,358 weeks** and 0 days
+6. Total hours: 9,506 x 24 = **228,144 hours**
+
+**Result:** 26 years, 0 months, 10 days (9,506 total days)
+
+**Interpretation:** Leap year babies technically have a birthday only once every four years. In the 26 years since birth, this person has had only 6 actual February 29 birthdays (2004, 2008, 2012, 2016, 2020, 2024). Most legal systems and this calculator treat their birthday as February 28 in non-leap years for age advancement purposes. Their next true leap-year birthday is February 29, 2028.
+
+### Example 4: Newborn — Born Today
+
+**Inputs:**
+- Date of Birth: March 10, 2026
+- Age as of: March 10, 2026
+
+**Step-by-step:**
+
+1. Both dates are identical
+2. Years: **0**, Months: **0**, Days: **0**
+3. Total days: **0**
+4. Total hours: **0**
+
+**Result:** 0 years, 0 months, 0 days
+
+**Interpretation:** A newborn on day zero. Their first birthday is exactly 365 days away (or 366 if the next year is a leap year). This edge case confirms the calculator correctly returns zero for same-day inputs rather than producing an off-by-one error — a common bug in date arithmetic implementations.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Month length variation** — The Gregorian calendar has months ranging from 28 to 31 days. This means "one month from January 31" could be February 28 (or 29), creating a 2-3 day discrepancy depending on the year. The calculator handles this by capping the day to the maximum valid day in the target month, matching the convention used by legal and financial systems. Someone born on the 31st of a month will see their "monthly anniversary" fall on the 28th, 29th, or 30th in shorter months.
+
+**Leap years** — Leap years add an extra day every 4 years, with exceptions for centuries. Over a 100-year lifespan, a person experiences approximately 24 or 25 leap years, adding 24-25 extra days beyond what a simple 365-day-per-year calculation would predict. This means a person who turns 50 has lived approximately 18,262 days, not 18,250 (50 x 365). The 12-day difference matters for precise calculations in legal, medical, and actuarial contexts.
+
+**Timezone considerations** — This calculator operates on calendar dates (not timestamps), so timezone does not affect the result. If you were born at 11:55 PM in New York, your birth certificate shows that date regardless of what time it was in Tokyo. The calculator counts complete calendar days between two dates, which is the standard for age determination worldwide.
+
+**Calendar system differences** — The Gregorian calendar is used by default in nearly all countries for civil purposes. The Hebrew, Islamic, Chinese, and other calendar systems calculate age differently. In the traditional Korean age system (만 나이 vs. 세는 나이), a baby is considered 1 year old at birth and gains a year every January 1 — not on their birthday. Someone born on December 31 would be "2 years old" by Korean reckoning the very next day, despite being less than 24 hours old. South Korea officially adopted the international age-counting system for legal and administrative purposes in June 2023, but the traditional system persists in everyday conversation. In the Chinese age system (虚岁), a similar convention applies, with age incrementing at Chinese New Year rather than January 1. This calculator uses exclusively the Gregorian international system, where age increments on each birthday anniversary.
+
+**Leap year birthday recognition** — Approximately 5 million people worldwide were born on February 29 (roughly 1 in 1,461 births). In non-leap years, most legal jurisdictions treat their birthday as either February 28 or March 1, but the convention varies. In England and Wales, a person born on February 29 is legally considered to have their birthday on March 1 in non-leap years (for purposes such as turning 18). In most U.S. states and in this calculator, February 28 is used instead. New Zealand and Taiwan also default to February 28, while Hong Kong uses March 1 for legal age advancement.
+
+**Precision requirements vary by context** — Different documents and systems require different levels of age precision. Birth certificates record the exact date (and sometimes time) of birth. Passport applications need the full date of birth but calculate age only to the year. Insurance actuarial tables use age in complete years (a 35-year-old and a 35-year-11-month-old are in the same bracket). Medical growth charts for infants track age in weeks and days for the first 2 years. Social Security uses the "day before" rule — a person born on January 1 is considered to reach retirement age on December 31 of the preceding year, which can affect benefit calculations by an entire calendar year.
+
+**Legal age cutoffs** — Many jurisdictions specify the exact moment a person reaches a legal age. In the U.S., most states consider you to have reached an age at the start of your birthday (midnight). A person born on June 15, 2005 turns 21 at midnight on June 15, 2026, not at the exact time they were born. The calculator's day-level precision is sufficient for all standard legal age checks.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Counting the end date when you shouldn't.** The interval between March 1 and March 10 is 9 days, not 10. If you leave on March 1 and arrive on March 10, you traveled for 9 days. The calculator returns the elapsed difference between dates — it does not count both endpoints. If you need to include both dates (for example, counting work days including start and end), add 1 to the result.
+
+**Assuming all months are 30 days.** A common shortcut is dividing total days by 30 to get months. This produces errors of up to 3 days per month. The calculator avoids this by counting actual calendar months with their real lengths (28, 29, 30, or 31 days). Over a decade, the 30-day approximation accumulates roughly a 30-day error.
+
+**Forgetting about Feb 29 birthdays.** If you were born on February 29, you do not age 0.25 years per year in common years. The legal and conventional approach is to treat February 28 as your birthday in non-leap years. The calculator follows this convention. Some systems use March 1 instead — if your jurisdiction does, mentally adjust the result by one day.
+
+**Confusing calendar age with exact age.** A baby born at 11:00 PM on January 1 is 0 years old for the entire next day, even though they have been alive for 25 hours by 12:00 AM on January 3. Calendar-based age calculators (including this one) operate on dates, not timestamps. The difference is almost never more than 1 day.
+
+**Using the wrong "as of" date.** If you need your age on a specific past date (for tax filing, insurance enrollment, or school enrollment cutoffs), make sure you set the "Age as of" field to that exact date rather than today. Many age-dependent eligibility rules use a specific cutoff date (like September 1 for school enrollment or December 31 for tax years).
+
+{/* Section 12: Comparison Table */}
+## Age in Different Units
+
+Understanding your age in various units provides surprising perspective. Here is a comparison for a person born on January 15, 1990, calculated as of March 10, 2026:
+
+| Unit | Value | Notes |
+|---|---|---|
+| **Years, months, days** | 36 years, 1 month, 23 days | Standard representation |
+| **Total years (decimal)** | 36.15 years | Useful for actuarial tables |
+| **Total months** | 433 months | Rental leases, subscription tracking |
+| **Total weeks** | 1,886 weeks | Fitness and training cycles |
+| **Total days** | 13,203 days | Legal contexts, day counting |
+| **Total hours** | 316,872 hours | 10,000-hour rule: you have lived 31.7x that |
+| **Total minutes** | 19,012,320 minutes | Average human lifespan is ~42 million minutes |
+| **Total heartbeats** | ~1,056,240,000 | At 80 bpm average resting rate |
+| **Total breaths** | ~228,147,840 | At 12 breaths per minute average |
+
+**Interpretation:** The average American life expectancy is 77.5 years (CDC, 2023), which equals approximately 28,306 days. At 36 years and 13,204 days, a person born in 1990 has lived through roughly 46.6% of the statistical average lifespan. By their 40th birthday, they will have crossed the halfway mark at approximately 14,610 days.
+
+## Age in Different Formats
+
+The same age can be expressed in multiple formats, each useful in different contexts. Here is how a birthday of January 15, 1990 looks in every common format as of March 10, 2026:
+
+| Format | Value | Typical Use Case |
+|---|---|---|
+| **Years + Months + Days** | 36 years, 1 month, 23 days | Legal documents, everyday conversation |
+| **Decimal Years** | 36.15 years | Actuarial tables, demographic research |
+| **Total Months** | 433 months | Pediatric growth tracking (infants), loan terms |
+| **Total Weeks** | 1,886 weeks | Pregnancy tracking, training cycles |
+| **Total Days** | 13,203 days | Legal day-counting, astronomical calculations |
+| **Total Hours** | 316,872 hours | Perspective and comparison contexts |
+| **Korean Traditional Age** | 37 (until Jan 1, 2027) | Cultural contexts in Korea (pre-2023 reform) |
+| **Insurance Age (nearest)** | 36 | Life insurance (age nearest birthday method) |
+
+**Why formats matter:** Life insurance companies use two different age-rounding methods. The "age nearest birthday" method rounds to the closest birthday — at 36 years and 1 month, you are closer to 36 than 37, so your insurance age is 36. The "age last birthday" method always uses completed years (also 36 in this case). The distinction matters near the 6-month mark: at 36 years and 7 months, "age nearest" rounds to 37 and may place you in a higher premium bracket, while "age last" keeps you at 36. On a $500,000 term life policy, moving from age bracket 36 to 37 can increase annual premiums by $50–$150 depending on the insurer.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes the **Gregorian calendar** throughout. Dates before October 15, 1582 (when the Gregorian calendar was adopted) may not align with the Julian calendar used at the time. Most countries adopted the Gregorian calendar between 1582 and 1923.
+- Treats all dates as **calendar dates without time zones or timestamps**. Your age in years/months/days is the same regardless of your time zone, but the total hours figure is approximate (within +/-24 hours) if birth and target dates are in different time zones.
+- February 29 birthdays are handled by using **February 28 in non-leap years**, following the most common legal convention. Some jurisdictions (notably the UK for certain purposes) use March 1 instead.
+- Assumes the **proleptic Gregorian calendar** for dates before 1582. This means the leap year rule is applied retroactively to years that historically used the Julian calendar.
+- Does not account for **historical calendar anomalies** such as the 10 days skipped when the Gregorian calendar was adopted (October 4 was followed by October 15 in 1582) or country-specific adoption dates.
+- Maximum supported date range is approximately **January 1, 1900 to December 31, 2099**. Dates outside this range may produce inaccurate results due to JavaScript Date object limitations.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How is age calculated if I was born on February 29?
+
+February 29 birthdays occur only in leap years, which happen every 4 years (with exceptions for century years). In non-leap years, most legal systems and this calculator treat your birthday as February 28. This means a person born on February 29, 2000 turned 1 year old on February 28, 2001. In a leap year, the actual February 29 date is used. Over a 72-year period, a leap-year baby has only 18 actual Feb 29 birthdays but ages 72 years, just like everyone else.
+
+### What is the difference between chronological age and biological age?
+
+Chronological age is the exact number of years, months, and days since your birth — the figure this calculator provides. Biological age measures how your body has aged relative to population averages, using biomarkers like telomere length, DNA methylation, blood pressure, and organ function. A 50-year-old marathon runner might have a biological age of 40, while a sedentary 50-year-old could test at 60. Chronological age is objective and fixed; biological age is estimated and changeable through lifestyle modifications.
+
+### Why does my age show a different number of months than I expected?
+
+Month counting follows calendar rules, not a fixed 30-day cycle. If you were born on January 31 and check your age on March 2, the result is 1 month and 2 days — not 1 month and 0 days — because February is the intervening month and it only has 28 (or 29) days. The calculation borrows from the shorter month, which can produce results that feel unintuitive. The key rule: a "month" in age calculation means advancing from one calendar month-day to the same day in the next month, with shorter months capped at their maximum day.
+
+### At what exact moment do I legally turn a certain age?
+
+In most U.S. states, you reach a new age at the start of your birthday — midnight (12:00 AM) on the date shown on your birth certificate. This matters for legal thresholds: you can legally drink at midnight on your 21st birthday, not at the exact time you were born. A few jurisdictions use the "birthday eve" rule, where you legally turn a year older the day before your birthday. Federal law (for Social Security purposes) also uses the day-before convention: a person born on January 1 reaches retirement age on December 31 of the preceding year.
+
+### How accurate is the total days calculation?
+
+The total days calculation is accurate to within 1 day for all dates within the supported range (1900-2099). It uses the millisecond difference between two UTC dates divided by 86,400,000 (the number of milliseconds in 24 hours) and rounds to the nearest integer. This method correctly accounts for every leap year in the range. Daylight saving time does not affect the result because the calculation uses UTC dates. For dates before 1900 or after 2099, precision may degrade due to JavaScript Date object limitations.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes the difference between two dates using Gregorian calendar arithmetic. It counts complete years, remaining months, and remaining days, correctly handling leap years (divisible by 4, except centuries not divisible by 400) and varying month lengths. The calculation runs entirely in your browser using JavaScript's Date object for reliable date parsing and day-of-month handling.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

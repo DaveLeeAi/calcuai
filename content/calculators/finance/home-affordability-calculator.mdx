@@ -1,0 +1,178 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A household earning \$100,000 per year with \$500 in monthly debts and a \$60,000 down payment can afford a home priced at approximately \$370,000 under the standard 28/36 debt-to-income rules used by Fannie Mae and Freddie Mac. That translates to a maximum monthly housing payment of roughly \$2,333 — covering principal, interest, property taxes, insurance, and PMI if applicable. This calculator determines your maximum home price, loan amount, and monthly payment based on your income, existing debts, down payment, and current mortgage rates. Enter your financial details below to find out how much house you can realistically afford.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+This home affordability calculator determines the maximum home price you can finance based on the 28/36 rule — the standard debt-to-income framework that Fannie Mae, Freddie Mac, and most conventional lenders use to qualify borrowers. It answers the question every prospective buyer asks: "How much house can I actually afford without overextending my finances?"
+
+**The 28/36 rule sets two ceilings on your housing costs.** The front-end ratio caps total housing expenses (principal, interest, taxes, insurance, and PMI) at 28% of your gross monthly income. The back-end ratio caps all debt payments — housing plus car loans, student loans, credit card minimums, and other obligations — at 36% of gross monthly income. Your maximum affordable payment is the lower of these two limits. For a \$100,000 income, the front-end cap is \$2,333/month on housing; the back-end cap is \$3,000/month on all debts combined. If you already carry \$800/month in non-housing debts, the back-end rule limits your housing to \$2,200/month — below the front-end cap.
+
+**Down payment size determines more than just loan amount.** Putting down less than 20% triggers private mortgage insurance (PMI), typically 0.5% of the loan amount annually, which reduces your borrowing power by consuming part of your monthly housing budget. A \$60,000 down payment on a \$370,000 home is 16.2% — just below the PMI threshold — adding roughly \$129/month to your housing cost. Increasing the down payment to \$74,000 (20%) eliminates PMI entirely and shifts that \$129 toward principal and interest, increasing your maximum home price. To estimate your monthly mortgage payment for a specific home price, see our [Mortgage Calculator](/calculators/finance/mortgage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Annual Household Income** — your total gross (pre-tax) income from all sources. Include both partners' income for joint applications. Lenders use gross income, not take-home pay, so enter the number from your W-2 or tax return, not your direct deposit amount.
+
+2. **Enter your Monthly Debt Payments** — the total of all minimum monthly payments for non-housing debts: car loans, student loans, credit card minimums, personal loans, and any other recurring obligations. Do not include utilities, groceries, or subscriptions — only debts reported to credit bureaus.
+
+3. **Set your Down Payment** — the cash you'll bring to closing. A larger down payment increases your purchasing power and eliminates PMI once you cross the 20% threshold. The median down payment for first-time buyers is 8%, and for repeat buyers it is 19%, according to the National Association of Realtors 2024 Profile of Home Buyers and Sellers.
+
+4. **Enter the Mortgage Interest Rate** — the current rate for your target loan term. Check Freddie Mac's Primary Mortgage Market Survey for this week's average. As of March 2025, 30-year fixed rates average approximately 6.5%.
+
+5. **Choose the Loan Term** — 30-year terms maximize affordability (lower monthly payments), while 15-year terms reduce total interest but require higher monthly payments, lowering your maximum home price.
+
+6. **Adjust Property Tax Rate and Insurance** — property tax rates vary widely by location, from 0.28% in Hawaii to 2.49% in New Jersey (Tax Foundation, 2024). The default 1.2% reflects the national average. Annual homeowner's insurance defaults to \$1,500, close to the national average.
+
+7. **Toggle PMI** — if your down payment is less than 20% of the calculated home price, PMI is added at 0.5% of the loan amount annually. Turn this off if you have a VA loan or plan to use lender-paid PMI.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The home affordability calculation applies the 28/36 DTI rule, then reverses the mortgage payment formula to find the maximum loan amount:
+
+**Step 1 — Maximum monthly housing payment:**
+
+$$M_{\text{max}} = \min\left(\frac{I}{12} \times 0.28,\quad \frac{I}{12} \times 0.36 - D\right)$$
+
+Where:
+- **$I$** = annual gross income (dollars)
+- **$D$** = monthly non-housing debt payments (dollars)
+- **0.28** = front-end DTI ratio limit
+- **0.36** = back-end DTI ratio limit
+
+**Step 2 — Maximum loan amount (reverse mortgage formula):**
+
+$$P_{\text{max}} = (M_{\text{max}} - T - Ins - PMI) \times \frac{(1+r)^n - 1}{r \times (1+r)^n}$$
+
+Where:
+- **$P_{\text{max}}$** = maximum loan amount (dollars)
+- **$T$** = monthly property tax (estimated from home price and tax rate)
+- **$Ins$** = monthly homeowner's insurance (dollars)
+- **$PMI$** = monthly private mortgage insurance, if applicable (dollars)
+- **$r$** = monthly interest rate (annual rate / 12)
+- **$n$** = total monthly payments (term in years x 12)
+
+**Step 3 — Maximum home price:**
+
+$$\text{Max Home Price} = P_{\text{max}} + \text{Down Payment}$$
+
+Because property tax and PMI depend on the home price (which depends on the loan amount), the calculation uses iterative convergence — recalculating taxes and PMI based on the estimated home price until the values stabilize.
+
+**Source:** Consumer Financial Protection Bureau (CFPB); Fannie Mae Selling Guide (B3-6-02: Debt-to-Income Ratios); Freddie Mac Seller/Servicer Guide (Section 5401.1).
+
+For a deeper explanation of how the fixed-rate mortgage payment formula works, see our [methodology page on mortgage amortization](/methodology/mortgage-amortization).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Dual-Income Household — \$100,000 Income, \$500/Month Debts
+
+**Inputs:**
+- Annual Income: \$100,000
+- Monthly Debts: \$500
+- Down Payment: \$60,000
+- Interest Rate: 6.5%
+- Loan Term: 30 years
+- Property Tax Rate: 1.2%
+- Annual Insurance: \$1,500
+- PMI: Included
+
+**Step-by-step:**
+
+1. Gross monthly income: $100,000 / 12 = **$8,333**
+2. Front-end limit (28%): $8,333 x 0.28 = **$2,333**
+3. Back-end limit (36%): \$8,333 x 0.36 - $500 = **$2,500**
+4. Max housing payment: min(\$2,333, $2,500) = **$2,333** (front-end binds)
+5. Subtract insurance: \$2,333 - \$125 ($1,500/12) = **$2,208**
+6. After iterative calculation with property taxes (~\$370/mo) and PMI (~\$129/mo): Available for P&I ≈ **\$1,709**
+7. Max loan: reverse mortgage formula at 6.5%/12 for 360 months ≈ **\$270,400**
+8. Max home price: \$270,400 + $60,000 = **~$330,400**
+
+**Interpretation:** With a 6.5% rate and \$500 in existing debts, this household can afford approximately \$330,000–\$370,000 depending on exact tax and PMI calculations. The front-end ratio (28%) is the binding constraint here, not the back-end (36%), because monthly debts are relatively low.
+
+### Example 2: First-Time Buyer — \$70,000 Income, No Debts, Minimal Down Payment
+
+**Inputs:**
+- Annual Income: \$70,000
+- Monthly Debts: \$0
+- Down Payment: \$15,000
+- Interest Rate: 6.5%
+- Loan Term: 30 years
+- Property Tax Rate: 1.2%
+- Annual Insurance: \$1,500
+- PMI: Included
+
+**Step-by-step:**
+
+1. Gross monthly income: $70,000 / 12 = **$5,833**
+2. Front-end limit: $5,833 x 0.28 = **$1,633**
+3. Back-end limit: \$5,833 x 0.36 - $0 = **$2,100**
+4. Max housing payment: **\$1,633** (front-end binds)
+5. With zero debts, the front-end ratio is the constraint. After taxes, insurance, and PMI: Available for P&I ≈ **\$1,150**
+6. Max loan ≈ **\$182,000**
+7. Max home price: \$182,000 + $15,000 = **~$197,000**
+
+**Interpretation:** A \$70,000 income with minimal down payment limits the buyer to roughly \$197,000 — well below the national median home price of \$412,000 (NAR, Q4 2024). This illustrates why down payment assistance programs and dual-income households are critical for first-time buyers in many markets. Increasing the down payment to \$40,000 would raise affordability to approximately \$225,000 and potentially eliminate PMI.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Interest Rate** — Every 0.5% increase in mortgage rates reduces your purchasing power by approximately 5–6%. At 6.0%, a \$100,000 income supports roughly \$390,000 in home price; at 7.0%, that drops to approximately \$340,000 — a \$50,000 reduction from a single percentage point. Rate shopping among 3–5 lenders can save 0.25–0.50%, directly translating into thousands more in affordable home price.
+
+**Existing Debt Load** — Monthly debts directly reduce your back-end DTI capacity. Every \$100/month in existing debts reduces your maximum home price by roughly \$15,000–\$18,000. Paying off a \$350/month car loan before house hunting can increase your budget by \$50,000 or more. This is often the highest-leverage financial move a buyer can make.
+
+**Down Payment Size** — Beyond reducing the loan amount, crossing the 20% down payment threshold eliminates PMI, freeing \$80–\$200/month for principal and interest. On a \$300,000 home, 20% down (\$60,000) versus 10% down (\$30,000) not only reduces the loan by \$30,000 but also eliminates approximately \$100/month in PMI — effectively increasing purchasing power by \$15,000 beyond the direct down payment difference.
+
+**Property Tax Rate** — Local property tax rates vary from under 0.3% (Hawaii) to over 2.4% (New Jersey). On a \$400,000 home, the difference between a 0.5% and 2.0% tax rate is \$500/month — an enormous impact on affordability that many buyers overlook when comparing homes across state or county lines.
+
+**Loan Term** — A 15-year mortgage reduces total interest by 50–60% but increases monthly payments by approximately 40%, dramatically lowering your maximum affordable home price. A buyer who can afford a \$350,000 home on a 30-year term may only qualify for \$250,000 on a 15-year term.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses the **standard 28/36 DTI rule** as the qualifying framework. Some loan programs allow higher ratios: FHA loans permit up to 31/43, and VA loans have no front-end limit with a 41% back-end guideline. Manual underwriting exceptions may allow even higher ratios with compensating factors.
+- Assumes a **fixed-rate mortgage**. Adjustable-rate mortgages (ARMs) may qualify you for a higher initial amount due to lower starting rates, but future rate adjustments could increase your payment.
+- PMI is estimated at **0.5% of loan amount annually**. Actual PMI rates range from 0.2% to 2.0% depending on credit score, loan-to-value ratio, and insurer. Borrowers with credit scores above 760 pay significantly less.
+- Does **not include HOA fees**, which can range from \$100 to \$1,000+/month in condos and planned communities. HOA fees reduce your available budget for P&I.
+- Does **not account for closing costs**, which typically add 2–5% of the home price. A \$350,000 home may require \$7,000–\$17,500 in additional cash at closing beyond the down payment.
+- Property tax and insurance are estimated, not quoted. Actual amounts vary by location and coverage level.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much house can I afford on a \$100,000 salary?
+
+On a \$100,000 annual salary with no existing debts, a 20% down payment, and a 6.5% mortgage rate, you can afford approximately \$420,000 in home price under the 28/36 rule. With \$500/month in existing debts, that drops to roughly \$370,000. With \$1,000/month in debts, it falls to approximately \$310,000. The exact number depends heavily on your local property tax rate, insurance costs, and how much you've saved for a down payment. As a quick rule of thumb, most buyers can afford a home priced at 3–4.5 times their annual gross income, depending on debts and rates.
+
+### What is the 28/36 rule for mortgages?
+
+The 28/36 rule is a lending guideline that sets two limits on how much of your income can go toward debt. The front-end ratio (28%) means your total monthly housing costs — mortgage payment, property taxes, insurance, and PMI — should not exceed 28% of your gross monthly income. The back-end ratio (36%) means all monthly debt payments combined — housing plus car loans, student loans, credit cards, and other debts — should not exceed 36% of gross monthly income. For a \$100,000 income (\$8,333/month gross), the 28% cap allows \$2,333/month for housing and the 36% cap allows \$3,000/month for all debts. These thresholds are used by Fannie Mae and Freddie Mac as standard qualifying criteria for conventional loans.
+
+### Should I put 20% down on a house?
+
+A 20% down payment eliminates private mortgage insurance (PMI), which typically costs 0.5–1.0% of the loan amount annually — saving \$125–\$250/month on a \$300,000 loan. However, saving 20% of a \$400,000 home (\$80,000) takes the median American household approximately 7–10 years. Many financial advisors recommend buying with 10–15% down if you have stable income, adequate emergency savings, and can afford the PMI, rather than delaying homeownership for years to reach 20%. FHA loans allow as little as 3.5% down, and VA loans require zero down payment for eligible veterans. The optimal strategy depends on your local market appreciation rate, rent costs, and opportunity cost of capital.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the 28/36 debt-to-income framework as specified in the **Fannie Mae Selling Guide (Section B3-6-02)** and the **Freddie Mac Seller/Servicer Guide (Section 5401.1)**, the two Government-Sponsored Enterprises that set conventional mortgage underwriting standards. The mortgage payment formula follows the standard annuity calculation as defined in **Regulation Z (Truth in Lending Act)**. PMI cost estimates are based on average rates published by the **Urban Institute's Housing Finance Policy Center**. Property tax averages reference the **Tax Foundation's** annual state-by-state property tax analysis. Home price and down payment statistics are from the **National Association of Realtors (NAR) Profile of Home Buyers and Sellers, 2024**. Mortgage rate benchmarks reference **Freddie Mac's Primary Mortgage Market Survey (PMMS)**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

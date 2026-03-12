@@ -1,0 +1,222 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate your monthly mortgage payment including principal, interest, taxes, and insurance. On a \$350,000 home with 20% down at today's 6.5% rate, expect a monthly principal and interest payment of approximately \$1,770 — or about \$2,162 with taxes and insurance included. Enter your numbers below to see your exact payment, full amortization schedule, and total cost of ownership.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+Your monthly mortgage payment is the single largest recurring expense in homeownership. This calculator breaks it into four components: principal, interest, property taxes, and homeowner's insurance — commonly called PITI. If your down payment is below 20%, it also factors in private mortgage insurance (PMI), which typically adds 0.5% to 1% of the loan amount annually.
+
+The **amortization schedule** reveals something most buyers don't expect: on a 30-year loan at 6.5%, roughly 65% of your first year's payments go toward interest, not principal. By year 15, that flips — more of each payment builds equity. Understanding this curve is critical for deciding between a 15-year and 30-year term, or evaluating whether to make extra principal payments.
+
+Your **total cost of ownership** shows the true price of the home over the full loan term. A \$280,000 loan at 6.5% over 30 years costs \$637,376 in total payments — meaning you pay \$357,376 in interest alone. Compare this against a 15-year term using our [Amortization Calculator](/calculators/finance/amortization-calculator) to see the long-term savings.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Home Price** — the full purchase price of the property. If you're still shopping, use the listing price or your target budget. The default is \$350,000, close to the current U.S. median.
+
+2. **Set your Down Payment** — enter the dollar amount or use the percentage field. The calculator auto-syncs between the two. A 20% down payment eliminates PMI; any amount below that triggers automatic PMI estimation at 0.5% of the loan annually.
+
+3. **Enter the Interest Rate** — your annual mortgage rate as a percentage. Check current rates from your lender or Freddie Mac's Primary Mortgage Market Survey. The default is 6.5%, reflecting early-2026 averages. Adjust in 0.125% increments to match rate quotes.
+
+4. **Choose a Loan Term** — select 10, 15, 20, or 30 years. Shorter terms mean higher monthly payments but dramatically less total interest. A 15-year loan at the same rate saves over \$200,000 in interest compared to 30 years.
+
+5. **Add Property Tax and Insurance** — enter your annual property tax and homeowner's insurance. These vary by location: the U.S. average property tax is roughly 1.1% of assessed value, and homeowner's insurance averages about \$1,200 per year nationally. Your county assessor's website has the exact tax rate.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The standard fixed-rate mortgage payment is calculated using the annuity formula adopted by virtually all U.S. lenders:
+
+$$M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$$
+
+Where:
+
+- **M** = monthly principal and interest payment (dollars)
+- **P** = loan principal — the home price minus your down payment (dollars)
+- **r** = monthly interest rate — your annual rate divided by 12 (decimal)
+- **n** = total number of monthly payments — loan term in years × 12
+
+This formula calculates only the principal and interest (P&I) portion of your payment. The full PITI payment adds:
+
+$$\text{Monthly Payment} = M + \frac{\text{Annual Property Tax}}{12} + \frac{\text{Annual Insurance}}{12} + \text{PMI}$$
+
+PMI is estimated at 0.5% of the outstanding loan balance per year when the down payment is below 20%. It is typically removed once you reach 20% equity.
+
+**Source:** Standard fixed-rate mortgage amortization formula per the Consumer Financial Protection Bureau (CFPB). The CFPB publishes this formula in its mortgage education materials and it is codified in the Truth in Lending Act (TILA) Regulation Z calculations.
+
+For a deeper explanation of how the amortization formula is derived and how each payment splits between principal and interest, see our [methodology page on mortgage amortization](/methodology/mortgage-amortization).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Typical First-Time Buyer — \$350,000 Home, 20% Down, 30 Years
+
+**Inputs:**
+- Home Price: \$350,000
+- Down Payment: \$70,000 (20%)
+- Interest Rate: 6.5%
+- Loan Term: 30 years
+- Annual Property Tax: \$3,850
+- Annual Home Insurance: \$1,200
+
+**Step-by-step:**
+
+1. Loan principal: \$350,000 − $70,000 = **$280,000**
+2. Monthly rate: 6.5% ÷ 12 = **0.005417**
+3. Number of payments: 30 × 12 = **360**
+4. Rate factor: (1 + 0.005417)^360 = **6.9915**
+5. P&I payment: $280,000 × (0.005417 × 6.9915) ÷ (6.9915 − 1) = **$1,770.49/mo**
+6. Monthly tax: $3,850 ÷ 12 = **$320.83**
+7. Monthly insurance: $1,200 ÷ 12 = **$100.00**
+8. PMI: \$0 (down payment is 20%)
+9. Total monthly payment: \$1,770.49 + \$320.83 + $100.00 = **$2,191.32/mo**
+
+**Interpretation:** Over 30 years, you'll pay \$637,376 in total — \$357,376 of that is interest. Your first payment sends \$1,516.67 to interest and only \$253.82 to principal. By month 216 (year 18), the split crosses over and principal exceeds interest in each payment.
+
+### Example 2: Low Down Payment with PMI — \$300,000 Home, 5% Down
+
+**Inputs:**
+- Home Price: \$300,000
+- Down Payment: \$15,000 (5%)
+- Interest Rate: 7.0%
+- Loan Term: 30 years
+
+**Step-by-step:**
+
+1. Loan principal: \$300,000 − $15,000 = **$285,000**
+2. Monthly rate: 7.0% ÷ 12 = **0.005833**
+3. P&I payment: $285,000 × (0.005833 × 8.1165) ÷ (8.1165 − 1) = **$1,896.16/mo**
+4. PMI: $285,000 × 0.005 ÷ 12 = **$118.75/mo**
+5. Total monthly payment (P&I + PMI): **\$2,014.91/mo**
+
+**Interpretation:** PMI adds \$118.75/month — that's \$1,425 per year in extra cost that doesn't build equity. At 7% interest, total interest over 30 years reaches \$397,618. Increasing your down payment from 5% to 10% would eliminate \$71.25/month in PMI and reduce total interest by approximately \$19,000.
+
+### Example 3: 15-Year Accelerated Payoff — \$400,000 Home, 25% Down
+
+**Inputs:**
+- Home Price: \$400,000
+- Down Payment: \$100,000 (25%)
+- Interest Rate: 5.75%
+- Loan Term: 15 years
+
+**Step-by-step:**
+
+1. Loan principal: \$400,000 − $100,000 = **$300,000**
+2. Monthly rate: 5.75% ÷ 12 = **0.004792**
+3. Number of payments: 15 × 12 = **180**
+4. P&I payment: **\$2,491.58/mo**
+
+**Interpretation:** The monthly payment is \$721 more than a 30-year term at the same rate (\$1,770.55). But you save \$195,714 in total interest and own the home free and clear in 15 years. If you can afford the higher payment, a 15-year mortgage is one of the most efficient wealth-building tools available.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Interest Rate** — The most powerful variable. On a \$280,000 loan over 30 years, dropping from 7.0% to 6.0% saves \$214/month and \$77,040 over the loan's life. Even a 0.25% reduction saves roughly \$50/month. Always compare rates from at least three lenders; Freddie Mac data shows borrowers who get two or more quotes save an average of \$1,500 over the first five years.
+
+**Loan Term** — Choosing 15 years over 30 cuts your total interest by more than half, but increases your monthly payment by 40–50%. A 20-year term offers a middle ground: on \$280,000 at 6.5%, a 20-year mortgage costs \$2,088/month versus \$1,770 for 30 years, but saves \$143,000 in interest.
+
+**Down Payment** — Beyond reducing your loan amount, crossing the 20% threshold eliminates PMI entirely. On a \$300,000 home, PMI on a 5% down payment adds roughly \$118/month. Saving an extra \$45,000 to reach 20% down pays for itself in under three years through PMI savings alone.
+
+**Property Taxes** — These vary dramatically by location. New Jersey averages 2.23% of assessed value while Hawaii averages 0.32%. On a \$350,000 home, that's the difference between \$651/month and \$93/month in property tax alone. Always check your specific county's tax rate.
+
+**Home Insurance** — National average is roughly \$1,200/year, but coastal or disaster-prone areas can exceed \$3,000/year. Insurance costs have risen approximately 20% since 2020, so use current quotes rather than historical averages.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Ignoring total cost and focusing only on monthly payment.** A 30-year loan has lower payments but costs \$150,000–\$250,000 more in interest than a 15-year loan on a typical mortgage. Always check the "Total Cost" in the loan summary before choosing a term.
+
+**Forgetting about PMI.** Buyers who put less than 20% down often forget that PMI adds \$100–\$200/month to their payment with zero equity benefit. If you're close to 20% down, it may be worth delaying the purchase to save more — or negotiating a lender-paid PMI option with a slightly higher rate.
+
+**Using outdated interest rates.** Mortgage rates can shift 0.25–0.50% in a single week. A rate from a news headline three months ago could mean a difference of \$100+/month. Use the rate from your actual lender pre-approval letter, or check Freddie Mac's weekly survey for the latest average.
+
+**Not accounting for property tax increases.** Your lender's initial estimate may use the previous owner's assessed value. After purchase, the county reassesses based on the sale price — which can jump property taxes 20–50% or more in some jurisdictions.
+
+**Comparing only the mortgage rate, not APR.** The Annual Percentage Rate (APR) includes origination fees, discount points, and other closing costs. A 6.5% rate with 2 points costs more upfront than a 6.75% rate with zero points. Compare APR-to-APR when shopping lenders.
+
+{/* Section 12: Comparison Table */}
+## 15-Year vs. 30-Year Mortgage Comparison
+
+The most common decision homebuyers face is choosing between a 15-year and 30-year term. Here's a side-by-side comparison on a \$280,000 loan at current rates:
+
+| | **15-Year (5.75%)** | **30-Year (6.5%)** |
+|---|---|---|
+| Monthly P&I | \$2,326 | \$1,770 |
+| Total Interest Paid | \$138,680 | \$357,376 |
+| Total Cost | \$418,680 | \$637,376 |
+| Interest Savings | \$218,696 more equity | — |
+| Monthly Difference | +\$556/mo | — |
+| Breakeven on Higher Payment | — | Never (30yr always costs more) |
+
+**When to choose 15 years:** Your monthly budget comfortably handles the higher payment (PITI under 25% of gross income) and you want to build equity fast. Best for buyers with stable income who prioritize long-term savings.
+
+**When to choose 30 years:** You need the lower payment for cash flow flexibility, plan to invest the monthly savings at a higher return, or are buying at the top of your budget. A 30-year term also provides a safety margin if income drops.
+
+## When This Calculator Falls Short
+
+This calculator models a fixed-rate mortgage with standard monthly payments. Several common scenarios require a different tool or additional analysis:
+
+**Adjustable-rate mortgages (ARMs).** A 5/1 ARM starting at 5.5% that adjusts to 7.5% after year 5 raises the payment on a $280,000 balance from roughly $1,590 to $1,891 — a $301/month shock no fixed-rate model can predict. If you're evaluating an ARM, run this calculator twice: once at the teaser rate for years 1-5, and again at the rate cap to stress-test your budget.
+
+**Bi-weekly payment strategies.** Paying half your monthly amount every two weeks creates 26 half-payments per year — equivalent to 13 monthly payments instead of 12. That one extra payment shortens a 30-year loan by 4-5 years. This calculator models monthly payments only; see our [Amortization Calculator](/calculators/finance/amortization-calculator) for early payoff scenarios.
+
+**Investment property loans.** Rental property rates run 0.5-0.75% higher than primary residence rates and require 20-25% down. The tax dimensions — mortgage interest deduction, depreciation, rental income offset — add complexity that a payment calculator can't capture. Model the payment here, but build your full investment case with the [ROI Calculator](/calculators/business/roi-calculator).
+
+**Refinancing decisions.** Determining whether to refinance involves comparing your remaining balance and term against a new rate and closing costs — a break-even problem, not a simple payment calculation. Use our [Refinance Calculator](/calculators/finance/refinance-calculator) for that specific analysis.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **fixed-rate mortgage** — adjustable-rate mortgages (ARMs) will have different payments after the initial fixed period.
+- PMI is estimated at a **flat 0.5% annually** of the loan balance. Actual PMI rates range from 0.22% to 2.25% based on credit score, down payment, and loan type.
+- Property taxes and insurance are assumed **constant** over the loan term. In reality, both increase over time.
+- Does not include **closing costs**, which typically run 2–5% of the loan amount.
+- Does not account for **HOA fees**, which can add \$200–\$600+/month in condos and planned communities.
+- Assumes all payments are made **on time and on schedule** — no extra payments, late fees, or principal prepayments.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much house can I afford on a \$100,000 salary?
+
+On a \$100,000 annual salary, most lenders allow a maximum PITI payment of \$2,333–\$2,833/month (the 28–34% front-end DTI rule). At 6.5% interest with 20% down, that supports a home price of roughly \$350,000–\$420,000 depending on your property taxes and other debts. Use the calculator above with your exact rate and down payment for a precise answer, then validate with our [Home Affordability Calculator](/calculators/finance/home-affordability-calculator).
+
+### What is a good mortgage interest rate in 2026?
+
+As of early 2026, the average 30-year fixed mortgage rate is approximately 6.5%, according to Freddie Mac's Primary Mortgage Market Survey. Rates below 6.25% are considered favorable, while anything above 7.0% is above-average. Your actual rate depends on credit score, down payment, loan type, and lender — borrowers with 760+ credit scores typically qualify for rates 0.25–0.50% below the average.
+
+### How much does PMI cost, and when can I remove it?
+
+PMI typically costs 0.22% to 2.25% of your original loan amount per year, depending on your credit score and down payment. On a \$300,000 loan, that's \$55 to \$563 per month. Under the Homeowners Protection Act, your lender must automatically cancel PMI when your loan balance reaches 78% of the original home value. You can request cancellation earlier once you reach 80% loan-to-value, which may require a new appraisal.
+
+### Should I make extra mortgage payments?
+
+One extra payment per year on a \$280,000, 30-year loan at 6.5% reduces the loan term by approximately 4.5 years and saves over \$63,000 in interest. Extra payments make financial sense when your mortgage rate exceeds what you'd earn investing (after taxes). If your rate is 6.5% and your post-tax investment return is 5%, extra payments are the better choice. Conversely, if you have high-interest debt (credit cards at 20%+), pay that down first.
+
+### What's the difference between interest rate and APR?
+
+The interest rate is the annual cost of borrowing the principal, expressed as a percentage. The APR (Annual Percentage Rate) includes the interest rate plus lender fees, discount points, and certain closing costs, spread over the loan term. The APR is always equal to or higher than the interest rate. For example, a 6.5% rate with \$4,000 in fees on a \$280,000 loan might have an APR of 6.62%. Federal law requires lenders to disclose the APR, making it the best tool for comparing total borrowing costs across lenders.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard fixed-rate mortgage amortization formula as defined by the **Consumer Financial Protection Bureau (CFPB)** and codified under the Truth in Lending Act (TILA), Regulation Z. PMI estimates follow industry-standard rates published by the **Urban Institute Housing Finance Policy Center**. Default property tax and insurance values reflect national averages from the **U.S. Census Bureau** American Community Survey and the **Insurance Information Institute** (2025 data). Interest rate benchmarks reference **Freddie Mac's Primary Mortgage Market Survey**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

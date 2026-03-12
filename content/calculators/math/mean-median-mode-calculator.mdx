@@ -1,0 +1,154 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+For the data set {3, 7, 7, 2, 9}, the mean is 5.6, the median is 7, and the mode is 7. These three measures of central tendency each describe the "center" of a data set differently — the mean averages all values, the median finds the middle value when sorted, and the mode identifies the most frequent value. Enter your numbers below to compute all three measures along with the count, sum, range, minimum, maximum, and sorted data order.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Mean, median, and mode are the three fundamental measures of central tendency — statistical tools that summarize where the "center" of a data set lies. Each measure answers a slightly different question, and choosing the right one depends on your data's distribution and your analytical goal.
+
+The **mean (arithmetic average)** sums all values and divides by the count. It uses every data point, which makes it comprehensive but also sensitive to outliers. A single extreme value can drag the mean far from where most of the data clusters. For the data set {20, 22, 23, 24, 200}, the mean is 57.8 — a number that does not represent any typical value because the outlier of 200 inflates it.
+
+The **median** is the middle value after sorting the data in ascending order. For an odd number of values, it is the exact middle; for an even count, it is the average of the two middle values. The median is robust to outliers — in {20, 22, 23, 24, 200}, the median is 23, which accurately represents the center of the data. Financial analysts often prefer the median for income data, home prices, and other distributions skewed by high outliers.
+
+The **mode** is the most frequently occurring value. A data set can have no mode (all values appear equally often), one mode (unimodal), two modes (bimodal), or many modes (multimodal). Mode is the only measure of central tendency that works for categorical (non-numeric) data — for shoe sizes sold at a store, the mode tells you which size is most popular.
+
+Use this alongside our [Standard Deviation Calculator](/calculators/math/standard-deviation-calculator) to add spread analysis, or our [Probability Calculator](/calculators/math/probability-calculator) to apply these statistics in probability contexts.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your data values.** Type or paste your numbers into the data field, separated by commas. For example: `3, 7, 7, 2, 9`. The calculator accepts integers, decimals, and negative numbers. Non-numeric entries are automatically filtered out.
+
+2. **Read your results.** The calculator displays the mean, median, and mode (all highlighted), plus the count, sum, range, minimum, maximum, and sorted data. If multiple modes exist, all are listed. If no mode exists (all values appear equally often), it reports "No mode."
+
+3. **Interpret the differences.** When mean, median, and mode are close together, your data is roughly symmetric. When the mean is much higher than the median, your data is right-skewed (pulled up by high values). When the mean is much lower, it is left-skewed. The relationship between these three measures reveals the shape of your distribution without needing a histogram.
+
+4. **Share or print.** Use the share button to generate a URL encoding your data set, or print the results for reports and assignments.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Mean (Arithmetic Average)
+
+$$\bar{x} = \frac{\sum_{i=1}^{n} x_i}{n} = \frac{x_1 + x_2 + \cdots + x_n}{n}$$
+
+Where:
+- **x̄** (x-bar) = the arithmetic mean
+- **xᵢ** = each individual data value
+- **n** = the number of values
+- **Σ** = summation across all values
+
+### Median
+
+Sort all values in ascending order, then:
+
+$$\text{Median} = \begin{cases} x_{\frac{n+1}{2}} & \text{if } n \text{ is odd} \\ \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2} & \text{if } n \text{ is even} \end{cases}$$
+
+For an odd count, the median is the single middle value. For an even count, it is the average of the two middle values.
+
+### Mode
+
+$$\text{Mode} = \text{value(s) with the highest frequency in the data set}$$
+
+If every value occurs the same number of times, no mode exists. If two values share the highest frequency, the data set is **bimodal**. Three or more equally frequent values make it **multimodal**.
+
+**Source:** These definitions follow the **NIST/SEMATECH e-Handbook of Statistical Methods** (Section 1.3.5.4) and standard introductory statistics textbooks including Wackerly, Mendenhall, and Scheaffer's *Mathematical Statistics with Applications*.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Odd-Count Data Set — Single Mode
+
+**Scenario:** A teacher records quiz scores for 7 students to summarize class performance.
+
+**Data:** {85, 92, 78, 92, 88, 75, 90}
+
+**Step-by-step:**
+
+1. **Count (n):** 7
+2. **Sum:** 85 + 92 + 78 + 92 + 88 + 75 + 90 = **600**
+3. **Mean:** 600 ÷ 7 = **85.7143**
+4. **Sort:** {75, 78, 85, 88, 90, 92, 92}
+5. **Median:** 7 values → middle is position 4 → **88**
+6. **Mode:** 92 appears twice (all others appear once) → **92**
+7. **Range:** 92 − 75 = **17**
+8. **Min/Max:** 75 / 92
+
+**Interpretation:** The mean (85.7), median (88), and mode (92) are fairly close, indicating a roughly symmetric distribution with a slight left skew (the mean is pulled down by the 75 and 78 scores). The mode of 92 tells us the most common score was near the top of the range — two students scored the same high mark. The median of 88 is a better "typical score" than the mean because it is less affected by the low outlier of 75.
+
+### Example 2: Even-Count Data Set — Bimodal
+
+**Scenario:** A retailer tracks daily sales counts over 8 days to understand typical demand.
+
+**Data:** {12, 15, 12, 18, 15, 20, 14, 16}
+
+**Step-by-step:**
+
+1. **Count (n):** 8
+2. **Sum:** 12 + 15 + 12 + 18 + 15 + 20 + 14 + 16 = **122**
+3. **Mean:** 122 ÷ 8 = **15.25**
+4. **Sort:** {12, 12, 14, 15, 15, 16, 18, 20}
+5. **Median:** 8 values → average of positions 4 and 5 → (15 + 15) ÷ 2 = **15**
+6. **Mode:** 12 appears twice, 15 appears twice (all others once) → **12, 15** (bimodal)
+7. **Range:** 20 − 12 = **8**
+8. **Min/Max:** 12 / 20
+
+**Interpretation:** The mean (15.25) and median (15) are nearly identical, confirming the data is roughly symmetric. The bimodal result (12 and 15) reveals two sales "clusters" — some days see lower traffic around 12 sales, while other days consistently hit 15. This bimodal pattern might correspond to weekday vs. weekend patterns, a hypothesis the retailer could investigate further.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Outliers Affect the Mean Dramatically.** A single extreme value shifts the mean far more than it affects the median or mode. In income data, a few high earners can push the mean income well above what most people actually earn. The U.S. Census Bureau reports median household income rather than mean for exactly this reason — the median of \$74,580 (2022) better represents the typical household than the mean, which high-income outliers inflate.
+
+**Even vs. Odd Count Changes Median Calculation.** With an odd number of values, the median is a value that actually exists in the data set. With an even count, the median is the average of two values, which may not appear in the data at all. For {2, 4, 6, 8}, the median is 5 — a value not present in the set. This is mathematically correct but worth noting when interpreting results.
+
+**Mode May Not Exist or May Be Misleading.** When all values are unique, there is no mode — every value appears exactly once. With continuous data (like heights measured to the nearest millimeter), modes rarely occur naturally. Mode is most useful for discrete data with repeated values, such as test scores, shoe sizes, or survey responses.
+
+**Data Type Determines Which Measure to Report.** For symmetric distributions, all three measures are close and any can be reported. For skewed distributions, the median is preferred because it resists outlier distortion. For categorical data (favorite color, preferred brand), only the mode applies — mean and median require numeric values.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- This calculator computes the **arithmetic mean** only. It does not compute the geometric mean, harmonic mean, or weighted mean, which are appropriate in specific contexts (growth rates, rates of speed, and weighted survey data, respectively).
+- Median calculation assumes **interval or ratio scale data** where averaging two values is meaningful. For ordinal data (rankings), the median is the middle rank, but averaging two middle ranks may not always be interpretable.
+- The mode algorithm considers two values "the same" only if they are **exactly equal**. Values of 3.0 and 3.00 are treated as identical, but 3.0 and 3.001 are not. With continuous data, consider rounding to an appropriate precision before computing the mode.
+- When all values in a data set have equal frequency and that frequency exceeds 1 (e.g., {1, 1, 2, 2, 3, 3}), the calculator reports "No mode" because no single value dominates. Some textbooks would call this set trimodal; the calculator follows the convention that requires a value to appear strictly more often than all others.
+- **Non-numeric entries** (letters, symbols) are silently filtered out. Ensure your input contains only numbers and commas.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### When should I use the mean vs. the median?
+
+Use the mean when your data is roughly symmetric and free of extreme outliers — for example, measurement data in quality control or test scores in a class with no unusual results. Use the median when your data is skewed or contains outliers — for example, home prices in a neighborhood (a few mansions skew the mean upward), household income data, or reaction time measurements (where slow outliers inflate the average). In general, if the mean and median differ substantially, the median usually provides a more representative measure of the "typical" value.
+
+### What does it mean when a data set has no mode?
+
+A data set has no mode when every value appears the same number of times. In {2, 4, 6, 8, 10}, each value occurs exactly once, so no value is more frequent than any other. This is common in small data sets with continuous or highly varied values. It does not mean the data lacks a center — the mean and median still provide valid measures of central tendency. Mode is simply not informative for data without repetition.
+
+### Can the mean, median, and mode all be different?
+
+Yes, and they frequently are. In a right-skewed distribution (like income data), the mode is typically smallest, the median falls in the middle, and the mean is largest because high outliers pull it upward. For {1, 2, 2, 3, 10}, the mode is 2, the median is 2, and the mean is 3.6. The mean is inflated by the outlier of 10. The relationship between these three values reveals the shape and skewness of your data distribution.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes three measures of central tendency from your dataset. The mean sums all values and divides by the count. The median sorts values and selects the middle value (or averages the two middle values for even-sized sets). The mode identifies the most frequently occurring value(s), reporting multiple modes when they exist. Results are displayed to 4 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

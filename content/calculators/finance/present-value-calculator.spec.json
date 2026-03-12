@@ -1,0 +1,153 @@
+{
+  "id": "present-value-calculator",
+  "title": "Present Value Calculator",
+  "slug": "present-value-calculator",
+  "category": "finance",
+  "subcategory": "investment",
+  "primaryKeyword": "present value calculator",
+  "metaTitle": "Present Value Calculator — Free PV of Lump Sum & Annuity Calculator",
+  "metaDescription": "Calculate the present value of a future sum or payment stream. Discount future cash flows to today's dollars using PV = FV/(1+r)^n. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "futureValue",
+      "label": "Future Value (Lump Sum)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "A single amount to be received in the future."
+    },
+    {
+      "id": "periodicPayment",
+      "label": "Periodic Payment (Annuity)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Regular payment received each compounding period. Leave at 0 for lump sum only."
+    },
+    {
+      "id": "annualRate",
+      "label": "Discount Rate (Annual)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 0.1,
+      "helpText": "The annual rate used to discount future cash flows. Higher rates produce lower present values."
+    },
+    {
+      "id": "years",
+      "label": "Number of Years",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "id": "compoundingFrequency",
+      "label": "Compounding Frequency",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1",
+      "options": [
+        { "value": "1", "label": "Annually" },
+        { "value": "2", "label": "Semi-Annually" },
+        { "value": "4", "label": "Quarterly" },
+        { "value": "12", "label": "Monthly" },
+        { "value": "365", "label": "Daily" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalPresentValue",
+      "label": "Present Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "pvLumpSum",
+      "label": "PV of Lump Sum",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "pvAnnuity",
+      "label": "PV of Payments",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalDiscount",
+      "label": "Total Discount",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "PV Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "PV Components",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#1A6FA0", "#2ECC71"]
+      }
+    },
+    {
+      "id": "pvOverTime",
+      "label": "Present Value Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Present Value ($)",
+        "colors": ["#1A6FA0"]
+      }
+    }
+  ],
+  "formula": "present-value",
+  "features": ["chart"],
+  "relatedCalculators": [
+    "future-value-calculator",
+    "compound-interest-calculator",
+    "annuity-calculator",
+    "investment-calculator",
+    "inflation-calculator",
+    "retirement-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "CFA Institute / Corporate Finance Institute",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Time Value of Money (TVM) present value formula PV = FV/(1+r)^n per CFA Institute curriculum and Corporate Finance Institute DCF methodology",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["future-value-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null,
+  "glossaryTerms": ["present-value", "future-value", "discount-rate", "annuity", "compound-interest"],
+  "methodologyTopics": ["present-value", "time-value-of-money"]
+}

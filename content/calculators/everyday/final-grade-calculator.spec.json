@@ -1,0 +1,84 @@
+{
+  "id": "final-grade-calculator",
+  "title": "Final Grade Calculator",
+  "slug": "final-grade-calculator",
+  "category": "everyday",
+  "subcategory": "education",
+  "primaryKeyword": "final grade calculator",
+  "metaTitle": "Final Grade Calculator — Calculate Your Course Grade",
+  "metaDescription": "Calculate your final course grade from individual assignment categories and weights. See which categories help or hurt your grade most. Free, instant results.",
+  "inputs": [
+    {
+      "id": "categories",
+      "label": "Grade Categories",
+      "type": "number",
+      "required": true,
+      "helpText": "Add your assignment categories with scores and weights"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "finalGrade",
+      "label": "Final Grade",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "letterGrade",
+      "label": "Letter Grade",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "passFail",
+      "label": "Pass / Fail",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "categoryBreakdown",
+      "label": "Category Breakdown",
+      "type": "table"
+    }
+  ],
+  "formula": "final-grade",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "grade-calculator",
+    "gpa-calculator",
+    "percentage-calculator",
+    "tip-calculator",
+    "discount-calculator",
+    "standard-deviation-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard weighted average formula — AACRAO (American Association of Collegiate Registrars and Admissions Officers) grading standards.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "finalGrade = Σ(score_i × weight_i) / Σ(weight_i), where each category contributes proportionally to its weight",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "grade-calculator"
+  ],
+  "qualityScore": 87,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "Q2"
+}

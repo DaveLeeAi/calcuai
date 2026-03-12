@@ -1,0 +1,141 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A $10,000 investment at 5% simple interest earns exactly $500 per year — $1,500 after 3 years, growing the balance to $11,500. Unlike compound interest, simple interest is calculated only on the original principal, making it predictable and easy to verify. This calculator computes total interest earned, monthly and daily interest amounts, and projects your balance over time using the standard I = P × r × t formula. Enter your principal, rate, and time period below.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This calculator shows you how much interest accrues on a fixed principal amount at a constant rate over time, using the simple interest method. The key distinction: **simple interest does not compound** — the interest earned each period is always the same fixed dollar amount, regardless of how long the money has been invested.
+
+**Simple interest applies in specific real-world scenarios.** Most auto loans, some personal loans, and U.S. Treasury bills use simple interest calculations. A $20,000 auto loan at 6% simple interest accrues $1,200 per year in interest charges — whether it's year 1 or year 5, the annual interest cost stays $1,200. This contrasts with compound interest, where a $20,000 balance at 6% would accrue $1,200 in year 1 but $1,272 in year 2 because interest accrues on prior interest.
+
+**The linear growth pattern makes budgeting straightforward.** If your monthly interest is $50, it will be $50 every month for the life of the loan or investment. For situations where compound interest applies instead — such as savings accounts, credit cards, or investment portfolios — use our [Compound Interest Calculator](/calculators/finance/compound-interest-calculator) for accurate projections.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Principal Amount** — the initial sum of money being invested or borrowed. For a savings bond, this is the face value. For a loan, this is the original loan amount before any payments. Example: $10,000 for a personal loan or $5,000 for a short-term investment.
+
+2. **Enter the Annual Interest Rate** — the yearly percentage rate. For loans, this is the stated APR (not APY, since simple interest has no compounding). For investments, use the stated annual rate. Example: 5% for a Treasury bill or 6.5% for an auto loan.
+
+3. **Set the Time Period in Years** — the full number of years the money will earn or accrue interest. For a 36-month auto loan, enter 3 years.
+
+4. **Add Additional Months (optional)** — if your time period isn't an exact number of years, add the remaining months here. A 42-month loan would be 3 years + 6 months. The calculator converts this to a fractional year (3.5 years) for the formula.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Simple interest is calculated using one of the most fundamental formulas in finance:
+
+$$I = P \times r \times t$$
+
+$$A = P + I = P(1 + r \times t)$$
+
+Where:
+
+- **I** = total interest earned or charged (dollars)
+- **A** = total amount (principal + interest) at the end of the period (dollars)
+- **P** = principal — the original amount invested or borrowed (dollars)
+- **r** = annual interest rate as a decimal (e.g., 5% = 0.05)
+- **t** = time period in years (e.g., 2 years and 6 months = 2.5)
+
+The formula produces a **linear** relationship between time and interest. Doubling the time exactly doubles the interest. Doubling the rate exactly doubles the interest. This linearity is what distinguishes simple interest from compound interest, where the relationship is exponential.
+
+**Derived values:**
+- Monthly interest = $P \times r / 12$
+- Daily interest = $P \times r / 365$
+
+**Source:** Consumer Financial Protection Bureau (CFPB); Truth in Lending Act (15 U.S.C. § 1601 et seq.), implemented by Regulation Z (12 CFR Part 1026), which requires lenders to disclose finance charges calculated using simple interest methods.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Personal Loan — $15,000 at 7% for 4 Years
+
+**Inputs:**
+- Principal: $15,000
+- Annual Rate: 7%
+- Time: 4 years
+
+**Step-by-step:**
+
+1. Convert rate to decimal: 7% ÷ 100 = **0.07**
+2. Apply formula: I = $15,000 × 0.07 × 4 = **$4,200**
+3. Total amount: A = $15,000 + $4,200 = **$19,200**
+4. Monthly interest: $15,000 × 0.07 / 12 = **$87.50/month**
+
+**Interpretation:** Over 4 years, you pay $4,200 in interest on a $15,000 simple-interest loan — 28% of the original principal. Monthly interest is a flat $87.50 regardless of remaining balance. With compound interest at the same rate, total interest would be $4,670 — $470 more — because interest would accrue on prior interest.
+
+### Example 2: Short-Term Investment — $50,000 for 8 Months at 4.5%
+
+**Inputs:**
+- Principal: $50,000
+- Annual Rate: 4.5%
+- Time: 0 years + 8 months
+
+**Step-by-step:**
+
+1. Convert months to years: 8 / 12 = **0.6667 years**
+2. Convert rate: 4.5% ÷ 100 = **0.045**
+3. Apply formula: I = $50,000 × 0.045 × 0.6667 = **$1,500**
+4. Total amount: A = $50,000 + $1,500 = **$51,500**
+5. Daily interest: $50,000 × 0.045 / 365 = **$6.16/day**
+
+**Interpretation:** Parking $50,000 in a simple-interest instrument at 4.5% for 8 months earns $1,500. At $6.16 per day, you can calculate the exact interest for any holding period. This is how U.S. Treasury bills are priced — on a simple interest (discount) basis.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Principal Size** — Simple interest scales directly with the principal. $100,000 at 5% earns $5,000/year; $10,000 at the same rate earns $500/year. There's no compounding advantage to having the money invested longer — only the principal size and rate matter for the annual interest amount.
+
+**Interest Rate** — A 1% rate difference has a constant dollar impact. On $25,000, the difference between 4% and 5% is exactly $250/year, every year. On compound interest, that gap widens over time. This makes simple interest more predictable but also means you don't benefit from the "snowball effect" of compounding.
+
+**Time Period** — Each additional year adds exactly the same dollar amount of interest ($P × r$). Five years at $500/year = $2,500. Ten years = $5,000. This linear growth means simple interest underperforms compound interest significantly over long periods — at 5% for 20 years, simple interest on $10,000 yields $10,000 in interest, while compound interest yields $16,533.
+
+**When Simple Interest Applies** — Auto loans, some personal loans, U.S. Treasury bills, short-term commercial paper, and certain bonds use simple interest. Credit cards, savings accounts, mortgages, and investment accounts use compound interest. Knowing which applies to your situation determines which calculator to use.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant interest rate** for the entire time period. Variable-rate loans or investments will have changing interest amounts per period.
+- Assumes **no payments or withdrawals** during the term. For amortizing loans where you make monthly payments that reduce the principal, use our [Loan Calculator](/calculators/finance/loan-calculator) instead.
+- Uses a **365-day year** for daily interest calculations. Some financial instruments use a 360-day year (banker's year), which would produce slightly higher daily interest ($P × r / 360$).
+- Does **not account for fees, taxes, or inflation**. The actual return or cost of a financial instrument includes these factors.
+- Simple interest is **less common than compound interest** for most consumer financial products. Verify whether your specific loan or investment uses simple or compound interest before relying on these results.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between simple and compound interest?
+
+Simple interest is calculated only on the original principal amount, producing the same dollar amount of interest every period. Compound interest is calculated on the principal plus all previously earned interest, causing the balance to grow exponentially. On a $10,000 investment at 5% for 10 years: simple interest earns $5,000 total ($500/year × 10), while compound interest (annually) earns $6,289 total — 25.8% more. The longer the time period, the larger this gap becomes.
+
+### What types of loans use simple interest?
+
+Most auto loans, many personal loans, and some student loans in the U.S. use the simple interest method. Federal student loans, for example, accrue interest daily using a simple interest formula (daily rate × outstanding principal). Mortgages, credit cards, and savings accounts typically use compound interest. The Truth in Lending Act (Regulation Z) requires lenders to disclose the calculation method, so check your loan agreement to confirm.
+
+### How do I calculate simple interest for days instead of years?
+
+Divide the annual rate by 365 to get the daily rate, then multiply by the number of days: I = P × (r / 365) × days. For example, $10,000 at 5% for 90 days: I = $10,000 × (0.05 / 365) × 90 = $123.29. Some instruments use a 360-day year convention (called "ordinary interest" or "banker's rule"), which would yield I = $10,000 × (0.05 / 360) × 90 = $125.00 — slightly more.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard simple interest formula (I = P × r × t) as defined by the **Consumer Financial Protection Bureau (CFPB)** in consumer lending disclosures. Interest rate calculation standards follow the **Truth in Lending Act (15 U.S.C. § 1601)**, implemented by **Regulation Z (12 CFR Part 1026)**, which governs how finance charges are calculated and disclosed to borrowers. The daily interest calculation uses a 365-day year (actual/365 day-count convention), consistent with most U.S. consumer lending products. For the 360-day convention used in some commercial contexts, the daily interest would be approximately 1.4% higher. Treasury bill pricing references are from the **U.S. Department of the Treasury** TreasuryDirect.gov resources on discount rate calculations.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

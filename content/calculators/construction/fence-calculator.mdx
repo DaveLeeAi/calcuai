@@ -1,0 +1,198 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 100-linear-foot privacy fence at 6 feet tall with posts spaced every 8 feet requires 14 posts, 39 rails, approximately 198 pickets, and 14 bags of concrete for post footings — costing roughly \$1,400–\$2,800 in materials depending on wood species. Enter your fence length, height, post spacing, gate count, and fence type below to get a complete materials list including posts, rails, boards, fasteners, and concrete.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Building a fence without a materials list leads to multiple hardware store trips, wasted lumber, and budget overruns. This calculator converts your fence dimensions into a complete bill of materials — every post, rail, board, bag of concrete, and pound of fasteners — so you can buy everything in one trip and get an accurate cost before you start digging.
+
+The **post calculation** determines how many vertical supports you need based on total fence length and spacing interval. Posts are the structural backbone of any fence: undersized or under-spaced posts lead to leaning, sagging, and wind failure within 2–5 years. The calculator accounts for end posts, corner posts, and gate posts separately, since gates require doubled posts with heavier hardware.
+
+The **rail count** gives you the number of horizontal stringers connecting each pair of posts. A standard 6-foot privacy fence uses 3 rails (top, middle, bottom), while a 4-foot picket fence uses 2 rails. Rails are typically 2x4 lumber for residential fences or 2x3 for lightweight picket styles.
+
+The **board or picket count** tells you how many vertical face boards to purchase. Privacy fences use boards placed edge-to-edge (or slightly overlapping), while picket fences space boards 2–3 inches apart. Board width (typically 5.5 inches for a nominal 1x6) and any overlap or gap directly affect the total count. The calculator adds a 10% waste factor for cuts, knots, and warped boards.
+
+The **concrete calculation** estimates the number of bags needed to set all posts in the ground. Each post hole typically requires 1–2 bags of 50-lb fast-setting concrete depending on hole diameter and depth. Properly set posts are the difference between a fence that lasts 20 years and one that leans after the first storm.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the total fence length** — measure along the property line or desired fence path in feet. Include the full run from the first corner post to the last. If your fence has multiple straight sections at different angles, add all section lengths together for the total.
+
+2. **Select the fence type** — choose Privacy (boards placed tight together, no gaps), Picket (boards spaced apart with visible gaps), or Shadowbox (alternating boards on each side of the rail for a finished look from both sides). Each type calculates board count differently.
+
+3. **Set the fence height** — common residential heights are 4 feet (front yard picket), 6 feet (standard privacy), and 8 feet (maximum allowed without a permit in most jurisdictions). Height determines rail count: fences under 5 feet use 2 rails, 5–6 feet use 3 rails, and 7–8 feet use 3 or 4 rails.
+
+4. **Set the post spacing** — the standard is 8 feet on center for most residential wood fences. Some builders prefer 6-foot spacing for added wind resistance or when using lighter post material. Never exceed 8 feet between posts for wood fences.
+
+5. **Enter the number of gates** — each gate requires two additional gate posts (doubled for hinge and latch hardware) plus the gate frame itself. Standard single-walk gates are 3–4 feet wide; double-drive gates are 10–12 feet wide.
+
+6. **Adjust board width and spacing** — the default is 5.5-inch boards (nominal 1x6 actual width) with 0-inch spacing for privacy fences. For picket fences, set spacing to 2–3 inches between boards.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Fence material calculations use linear division for posts and rails, then area-based coverage for boards:
+
+**Number of posts:**
+
+$$\text{Posts} = \left\lfloor \frac{L}{S} \right\rfloor + 1 + (2 \times G)$$
+
+**Number of rails:**
+
+$$\text{Rails} = (\text{Posts} - 1 + G) \times R$$
+
+**Number of boards (privacy — no gaps):**
+
+$$\text{Boards} = \left\lceil \frac{L \times 12}{B_w} \right\rceil \times (1 + W_f)$$
+
+**Number of boards (picket — with gaps):**
+
+$$\text{Boards} = \left\lceil \frac{L \times 12}{B_w + G_s} \right\rceil \times (1 + W_f)$$
+
+**Concrete bags per post:**
+
+$$\text{Concrete Bags} = \text{Posts} \times B_p$$
+
+Where:
+
+- **L** = total fence length (feet)
+- **S** = post spacing, center to center (feet)
+- **G** = number of gates (each adds 2 gate posts)
+- **R** = number of rails per section (2 for fences under 5 ft, 3 for 5–7 ft, 4 for 8 ft)
+- **B_w** = board face width (inches); standard 1x6 = 5.5 inches actual
+- **G_s** = gap between boards (inches); 0 for privacy, 2–3 for picket
+- **W_f** = waste factor (default 0.10 = 10%)
+- **B_p** = bags of concrete per post (typically 1 bag of 50-lb fast-set for standard 4x4 post in an 8-inch-diameter, 24-inch-deep hole; 2 bags for 36-inch-deep holes)
+
+Posts are rounded down then +1 to account for both end posts. Boards are rounded up because partial boards still require a full piece of lumber.
+
+**Source:** Post spacing and rail configuration standards per the **American Fence Association (AFA)** residential fence guidelines. Concrete-per-post values based on **Quikrete** fast-setting concrete specifications for post-hole applications. Board coverage formulas follow standard linear-footage material estimation methods published in **RSMeans Residential Cost Data**.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 100-Foot Privacy Fence — 6 ft Tall, 8 ft Post Spacing, 1 Gate
+
+A homeowner is installing a cedar privacy fence along the back property line. The fence is 100 feet long, 6 feet tall, with posts every 8 feet and one 4-foot-wide walk gate.
+
+**Inputs:**
+- Fence Length: 100 ft
+- Fence Type: Privacy (no gaps)
+- Fence Height: 6 ft
+- Post Spacing: 8 ft
+- Gates: 1
+- Board Width: 5.5 in (nominal 1x6)
+- Board Spacing: 0 in
+- Post Depth: 30 in (2 bags of 50-lb concrete per post)
+
+**Step-by-step:**
+
+1. Calculate posts: floor(100 / 8) + 1 = 12 + 1 = 13 line posts, plus 2 gate posts = **15 posts total** (4x4x8 treated)
+2. Rails per section: 6-ft fence = 3 rails. Sections = (15 - 1) + 1 gate section = 15 sections. Rails = 15 × 3 = **45 rails** (2x4x8)
+3. Board count: (100 × 12) / 5.5 = 1,200 / 5.5 = 218.18 → 219 boards. With 10% waste: 219 × 1.10 = 240.9 → **241 boards** (1x6x6 cedar)
+4. Concrete: 15 posts × 2 bags = **30 bags** of 50-lb fast-setting concrete
+5. Gate hardware: **1 set** (hinges, latch, handle)
+
+**Cost estimate (cedar):**
+- 15 posts (4x4x8 treated) × $12 = $180
+- 45 rails (2x4x8 cedar) × $7 = $315
+- 241 boards (1x6x6 cedar) × $5 = $1,205
+- 30 bags concrete × $6 = $180
+- Gate hardware: \$40
+- Fasteners (5 lbs galvanized screws): \$35
+- **Total materials: approximately \$1,955**
+
+**Interpretation:** At roughly \$19.55 per linear foot in materials, this cedar privacy fence falls within the typical \$15–\$30/ft range for wood privacy fences. Professional installation adds \$15–\$25 per linear foot in labor, bringing the total installed cost to \$3,000–\$4,500 for this 100-foot run. The 30 bags of concrete weigh 1,500 lbs total — plan for delivery or multiple vehicle loads.
+
+### Example 2: 200-Foot Picket Fence — 4 ft Tall, 8 ft Post Spacing, 2 Gates
+
+A homeowner is building a white cedar picket fence across the front yard. The fence is 200 feet total with two 3.5-foot-wide walk gates and 2.5-inch gaps between pickets.
+
+**Inputs:**
+- Fence Length: 200 ft
+- Fence Type: Picket (with gaps)
+- Fence Height: 4 ft
+- Post Spacing: 8 ft
+- Gates: 2
+- Board Width: 3.5 in (nominal 1x4 picket)
+- Board Spacing: 2.5 in
+- Post Depth: 24 in (1 bag of 50-lb concrete per post)
+
+**Step-by-step:**
+
+1. Calculate posts: floor(200 / 8) + 1 = 25 + 1 = 26 line posts, plus 2 × 2 gate posts = 4 gate posts. **30 posts total** (4x4x6 treated)
+2. Rails per section: 4-ft fence = 2 rails. Sections = (30 - 1) + 2 gate sections = 31 sections. Rails = 31 × 2 = **62 rails** (2x4x8)
+3. Board count: (200 × 12) / (3.5 + 2.5) = 2,400 / 6.0 = 400 pickets. With 10% waste: 400 × 1.10 = **440 pickets** (1x4x4 cedar)
+4. Concrete: 30 posts × 1 bag = **30 bags** of 50-lb fast-setting concrete
+5. Gate hardware: **2 sets**
+
+**Cost estimate (cedar):**
+- 30 posts (4x4x6 treated) × $9 = $270
+- 62 rails (2x4x8 cedar) × $7 = $434
+- 440 pickets (1x4x4 cedar) × $3 = $1,320
+- 30 bags concrete × $6 = $180
+- Gate hardware: 2 × $40 = $80
+- Fasteners (8 lbs galvanized screws): \$55
+- **Total materials: approximately \$2,339**
+
+**Interpretation:** At \$11.70 per linear foot in materials, a picket fence costs significantly less per foot than a privacy fence because the boards are shorter (4 ft vs. 6 ft), narrower, and spaced apart — reducing lumber by roughly 40%. The 200-foot length makes this a substantial project: 440 pickets plus 30 posts means handling over 500 individual pieces of lumber. Consider renting a post-hole auger (\$50–\$75/day) to speed up the 30 post-hole excavations.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Post spacing is the biggest structural decision.** Reducing spacing from 8 feet to 6 feet increases post count by 33% and concrete by the same proportion, but dramatically improves wind resistance. In areas with sustained winds above 50 mph (coastal regions, open plains), 6-foot spacing is strongly recommended. An 8-foot-spaced fence with 6-foot-tall privacy boards creates 48 square feet of wind load per section — equivalent to a 4x12-foot sail.
+
+**Wood species determines both cost and lifespan.** Pressure-treated pine costs \$2–\$4 per board foot and lasts 15–20 years. Western red cedar costs \$4–\$8 per board foot and lasts 15–25 years with natural rot resistance. Redwood costs \$6–\$12 per board foot and lasts 20–30 years. Composite and vinyl alternatives cost \$15–\$30 per linear foot installed but last 25–50 years with minimal maintenance.
+
+**Post depth affects concrete quantity and fence stability.** The standard rule is to bury one-third of the total post length: a 6-foot fence with 4x4x8 posts gets buried 24 inches deep (2 feet above-ground buried, 6 feet above). In frost-prone areas, posts must extend below the frost line — 36 inches in the northern U.S. — which doubles concrete usage per post from 1 bag to 2 bags of 50-lb mix.
+
+**Gate placement adds material cost.** Each gate requires two reinforced posts (often 4x4 or 6x6), heavy-duty hinges, a latch, and a separate frame. A single walk gate adds \$75–\$150 in hardware and lumber. A double-drive gate (for vehicle access) adds \$200–\$400. Plan gate locations before calculating post layout to avoid repositioning posts mid-build.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **straight fence line** on flat terrain. Fences on slopes require stepped or racked panels and may need additional posts at grade changes. Stepped fences use more lumber because each section is cut to a different height.
+- Post spacing is measured **center to center**. Actual open span between posts is the spacing minus the post width (3.5 inches for a 4x4 post), so an 8-foot spacing leaves 7 feet 8.5 inches of board coverage per section.
+- Board counts assume **uniform board width**. Natural wood varies by up to 1/4 inch per board, which can accumulate over long runs. The 10% waste factor covers this variation plus cuts, splits, and warped boards rejected on site.
+- Concrete calculations assume **standard post-hole dimensions**: 8–10 inches in diameter for 4x4 posts and 12 inches for 6x6 posts. Oversized holes require proportionally more concrete.
+- **Cost estimates** reflect typical 2026 U.S. retail lumber pricing and vary significantly by region, season, and supply conditions. Cedar and redwood prices fluctuate more than treated pine.
+- Does not include **permit costs**, property survey fees, or HOA review timelines, which vary by municipality. Most jurisdictions require a permit for fences over 6 feet tall, and many require a property survey before installation.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many fence posts do I need for 100 feet of fence?
+
+For a 100-foot fence with standard 8-foot post spacing, you need 14 posts — calculated as 100 divided by 8 equals 12 sections, plus 1 for the starting post, totaling 13 line posts. Add 2 posts per gate: one gate adds 2 posts for a total of 15, and two gates bring the total to 17 posts. If you use 6-foot spacing instead of 8-foot, the count increases to 18 line posts (100 / 6 = 16.67, rounded up to 17, plus 1). Always confirm your exact post count by measuring the actual fence path on site and staking post locations before purchasing.
+
+### How deep should fence posts be set?
+
+Fence posts should be buried a minimum of 24 inches (2 feet) for fences up to 6 feet tall, following the one-third rule: one-third of the total post length goes underground. In frost-prone areas, posts must extend below the local frost line — 36 inches in the Midwest and Northeast, 42–48 inches in northern Minnesota and Wisconsin, and as deep as 60 inches in parts of Alaska. The International Residential Code (IRC) does not specify fence post depth directly, but local jurisdictions set minimums based on frost depth and wind load. Setting posts too shallow is the most common cause of leaning fences, especially in clay soils that expand and contract with freeze-thaw cycles.
+
+### How much does a privacy fence cost per foot?
+
+A wood privacy fence costs \$15–\$35 per linear foot for materials only and \$30–\$60 per linear foot installed, as of 2026. Pressure-treated pine is the most affordable at \$15–\$25/ft installed, while cedar runs \$25–\$40/ft and redwood \$35–\$55/ft. Vinyl privacy fence costs \$20–\$40/ft for materials and \$30–\$60/ft installed, with a 25–50 year lifespan versus 15–25 years for wood. A 150-foot privacy fence at the national average of \$35/ft installed totals \$5,250. Material costs account for roughly 40–50% of total installed price, with labor, concrete, hardware, and permits making up the remainder.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses standard construction material estimation formulas for linear fence projects. Post spacing and rail configuration guidelines follow the **American Fence Association (AFA)** residential fence installation best practices. Concrete-per-post calculations use yield specifications from **Quikrete** fast-setting concrete product data sheets. Post burial depth recommendations reference the **International Residential Code (IRC)** and regional frost-line data from the **NOAA National Weather Service**. Lumber dimensions follow **American Lumber Standard Committee (ALSC)** nominal-to-actual size specifications (e.g., a nominal 1x6 has an actual width of 5.5 inches). Cost benchmarks reference **HomeAdvisor** and **RSMeans Residential Cost Data** (2025–2026 national averages).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

@@ -1,0 +1,155 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Your Basal Metabolic Rate is the number of calories your body burns at complete rest — just to keep you alive. A 30-year-old male weighing 180 lb at 5'10" has a Mifflin-St Jeor BMR of approximately 1,783 calories per day and a Harris-Benedict BMR of 1,865 calories per day. This calculator compares both validated formulas side by side so you can see the range and use the average as your baseline for nutrition planning.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Your BMR represents the minimum energy your body requires to sustain vital functions — breathing, blood circulation, cell production, nutrient processing, and temperature regulation — if you did nothing but lie in bed for 24 hours. It is the largest single component of your total daily energy expenditure, typically accounting for 60–75% of all calories burned.
+
+This calculator provides BMR estimates from two well-established formulas: the **Mifflin-St Jeor equation** (1990), which the American Dietetic Association identified as the most accurate for estimating resting metabolic rate, and the **Harris-Benedict equation** (revised by Roza and Shizgal in 1984), the most widely cited formula in clinical nutrition research. The two formulas use different coefficients and typically produce results within 50–100 calories of each other. Neither is "wrong" — they were derived from different study populations using different regression models.
+
+Unlike our [Calorie Calculator](/calculators/health/calorie-calculator), which focuses on Total Daily Energy Expenditure and goal-based adjustments, this tool isolates your resting metabolism specifically. BMR is useful when you want to understand what your body needs before layering on activity, or when comparing your metabolism to population averages by age and sex.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your unit system** — choose Imperial (pounds, inches) or Metric (kilograms, centimeters). The calculator handles all conversions internally.
+
+2. **Enter your age** — input your current age in years. BMR decreases with age as lean body mass gradually declines. The Mifflin-St Jeor equation subtracts 5 calories per year of age.
+
+3. **Select your sex** — choose Male or Female. Males receive a +5 constant in the Mifflin-St Jeor formula; females receive −161, reflecting average differences in body composition between sexes.
+
+4. **Enter your weight** — use your morning weight for consistency. If using imperial, enter pounds; if metric, enter kilograms.
+
+5. **Enter your height** — stand straight against a wall for accuracy. Enter inches for imperial or centimeters for metric.
+
+6. **Review your results** — compare the Mifflin-St Jeor and Harris-Benedict estimates. The daily calorie range shows your estimated expenditure from sedentary (BMR × 1.2) to active (BMR × 1.725) levels.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+This calculator implements two peer-reviewed BMR estimation equations. Both take the same inputs — weight, height, age, and sex — but apply different coefficients derived from different study populations.
+
+**Mifflin-St Jeor Equation (1990):**
+
+$$BMR_{male} = (10 \times W) + (6.25 \times H) - (5 \times A) + 5$$
+
+$$BMR_{female} = (10 \times W) + (6.25 \times H) - (5 \times A) - 161$$
+
+**Harris-Benedict Equation (Revised by Roza & Shizgal, 1984):**
+
+$$BMR_{male} = (13.397 \times W) + (4.799 \times H) - (5.677 \times A) + 88.362$$
+
+$$BMR_{female} = (9.247 \times W) + (3.098 \times H) - (4.330 \times A) + 447.593$$
+
+Where:
+
+- **$W$** = body weight in kilograms (kg)
+- **$H$** = height in centimeters (cm)
+- **$A$** = age in years
+- **$BMR$** = Basal Metabolic Rate in kilocalories per day (kcal/day)
+
+The daily calorie range multiplies your average BMR by activity factors:
+
+$$Sedentary = BMR \times 1.2 \quad | \quad Active = BMR \times 1.725$$
+
+**Sources:** Mifflin MD, St Jeor ST, et al. "A new predictive equation for resting energy expenditure in healthy individuals." *American Journal of Clinical Nutrition*, 1990;51(2):241–247. Roza AM, Shizgal HM. "The Harris Benedict equation reevaluated." *American Journal of Clinical Nutrition*, 1984;40(1):168–182.
+
+For a deeper comparison of Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas, see our [methodology page on calorie and BMR formulas](/methodology/calorie-formulas).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 30-Year-Old Male, 180 lb, 5'10"
+
+**Inputs:**
+- Sex: Male | Age: 30 | Weight: 180 lb (81.65 kg) | Height: 70 in (177.8 cm)
+
+**Mifflin-St Jeor:**
+
+1. $(10 \times 81.65) + (6.25 \times 177.8) - (5 \times 30) + 5$
+2. $816.5 + 1,111.25 - 150 + 5 = $ **1,783 kcal/day**
+
+**Harris-Benedict:**
+
+1. $(13.397 \times 81.65) + (4.799 \times 177.8) - (5.677 \times 30) + 88.362$
+2. $1,093.87 + 853.26 - 170.31 + 88.362 = $ **1,865 kcal/day**
+
+**Average BMR:** $(1,783 + 1,865) / 2 = $ **1,824 kcal/day**
+
+**Interpretation:** The two formulas differ by 82 calories — about 4.5%. The Mifflin-St Jeor result is typically considered more accurate for modern populations. At a sedentary activity level (× 1.2), this person burns approximately 2,189 calories per day; at an active level (× 1.725), approximately 3,146 calories.
+
+### Example 2: 45-Year-Old Female, 140 lb, 5'5"
+
+**Inputs:**
+- Sex: Female | Age: 45 | Weight: 140 lb (63.50 kg) | Height: 65 in (165.1 cm)
+
+**Mifflin-St Jeor:**
+
+1. $(10 \times 63.50) + (6.25 \times 165.1) - (5 \times 45) - 161$
+2. $635 + 1,031.88 - 225 - 161 = $ **1,281 kcal/day**
+
+**Harris-Benedict:**
+
+1. $(9.247 \times 63.50) + (3.098 \times 165.1) - (4.330 \times 45) + 447.593$
+2. $587.18 + 511.48 - 194.85 + 447.593 = $ **1,351 kcal/day**
+
+**Average BMR:** $(1,281 + 1,351) / 2 = $ **1,316 kcal/day**
+
+**Interpretation:** This person's resting metabolism burns about 1,316 calories daily. Note how the 15-year age difference from Example 1 reduces BMR by the formula's age penalty (75 calories for Mifflin, 85 for Harris-Benedict), and the sex difference accounts for the rest of the gap. For practical meal planning, use the [Calorie Calculator](/calculators/health/calorie-calculator) to factor in activity and goals.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Body composition** — Both formulas estimate BMR based on total body weight, not lean mass. A muscular 180 lb person has a higher actual BMR than a 180 lb person with more body fat, because muscle tissue is more metabolically active (roughly 6 kcal/lb/day) than fat tissue (roughly 2 kcal/lb/day). If you know your body fat percentage, the Katch-McArdle formula may provide a more personalized estimate.
+
+**Age** — BMR declines approximately 1–2% per decade after age 20, primarily due to gradual loss of lean tissue. The Mifflin-St Jeor equation subtracts 5 calories per year, while Harris-Benedict subtracts 5.677 (males) or 4.330 (females). Between ages 20 and 60, this represents a 200–227 calorie reduction in estimated BMR. Resistance training can partially offset this decline by preserving muscle mass.
+
+**Sex** — Males typically have higher BMR than females at the same height and weight due to greater average lean body mass. The formulas account for this with different constants: Mifflin-St Jeor adds 5 for males and subtracts 161 for females, a built-in 166-calorie difference before body size factors are applied.
+
+**Formula choice** — The Harris-Benedict equation tends to produce slightly higher estimates than Mifflin-St Jeor, particularly for overweight individuals. A 2005 study by the American Dietetic Association found Mifflin-St Jeor predicted measured resting metabolic rate within 10% for more subjects than Harris-Benedict. When the two results diverge significantly, use the Mifflin-St Jeor value as your primary reference.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Both formulas assume **average body composition** for a given height and weight — they do not account for individual variation in lean mass versus fat mass.
+- Accuracy is highest for **non-obese adults aged 19–78**. Results may be less reliable for adolescents, older adults, or individuals with BMI above 40.
+- Does not account for **metabolic conditions** (hypothyroidism, hyperthyroidism, PCOS) or medications that alter metabolic rate.
+- BMR measured under **controlled laboratory conditions** may differ from these estimates by up to 10% due to individual genetic variation.
+- The daily calorie range uses simplified activity multipliers — for precise TDEE calculations, use our [Calorie Calculator](/calculators/health/calorie-calculator).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a good BMR for my age?
+
+Average BMR for a 30-year-old male of average height (5'9") and weight (198 lb) is approximately 1,800 kcal/day; for a 30-year-old female of average height (5'4") and weight (170 lb), approximately 1,500 kcal/day. BMR decreases by roughly 50–70 calories per decade. These are population averages — your individual BMR depends on your specific height, weight, body composition, and genetics. A BMR that falls within 10% of these averages is typical.
+
+### Which BMR formula is more accurate — Mifflin-St Jeor or Harris-Benedict?
+
+The Mifflin-St Jeor equation is generally more accurate for modern populations. A 2005 validation study published in the *Journal of the American Dietetic Association* found it predicted measured resting metabolic rate within 10% for 82% of subjects, compared to 69% for the Harris-Benedict equation. Harris-Benedict tends to overestimate BMR slightly, especially in overweight individuals, because it was originally derived from a leaner 1919 population. Use Mifflin-St Jeor as your primary reference and Harris-Benedict as a secondary check.
+
+### How is BMR different from the calories I should eat?
+
+BMR is the energy your body burns at complete rest — it does not include any physical activity, digestion, or movement. Your actual daily calorie needs (TDEE) are always higher than your BMR, typically 20–90% higher depending on activity level. Eating at your BMR level would create a significant calorie deficit for anyone who moves during the day. To determine how much you should eat, multiply your BMR by an activity factor or use our [Calorie Calculator](/calculators/health/calorie-calculator) for a goal-adjusted target.
+
+</div>
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the **Mifflin-St Jeor equation** (Mifflin MD, St Jeor ST, et al., *American Journal of Clinical Nutrition*, 1990;51(2):241–247) and the **Harris-Benedict equation** as revised by **Roza and Shizgal** (*American Journal of Clinical Nutrition*, 1984;40(1):168–182). Accuracy validation from Frankenfield DC, et al., "Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults," *Journal of the American Dietetic Association*, 2005;105(5):775–789.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

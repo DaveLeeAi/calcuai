@@ -1,0 +1,135 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 70 kg (154 lb) male standing 175 cm (5'9") tall has an estimated lean body mass of 56.0 kg (123.5 lb) using the Boer formula — meaning approximately 80% of total body weight is fat-free tissue including muscle, bone, organs, and water. Enter your height, weight, and sex below to calculate your lean body mass, fat mass, body fat percentage, and lean-to-fat ratio.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Lean body mass (LBM) is everything in your body that is not fat: skeletal muscle, bone, organs, blood, water, and connective tissue. Knowing your LBM helps you track body composition changes more meaningfully than total body weight alone. A person who gains 5 lbs of muscle and loses 5 lbs of fat shows zero change on the scale but a significant improvement in body composition — LBM captures this distinction.
+
+This calculator uses the Boer formula (1984), a validated anthropometric equation that estimates lean body mass from height, weight, and sex without requiring circumference measurements, skinfold calipers, or specialized equipment. It is particularly useful as a quick screening tool and for clinical contexts where body fluid volumes need to be normalized to lean mass. The output includes your estimated body fat mass, body fat percentage, and the lean-to-fat ratio — a value above 3.0 generally indicates an athletic composition, while values between 1.5 and 3.0 are typical for healthy adults.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your unit system** — choose Imperial (pounds and inches) or Metric (kilograms and centimeters). The formula converts internally to metric for calculation.
+
+2. **Select your sex** — the Boer formula uses different coefficients for males and females because men and women carry different proportions of lean tissue relative to body size.
+
+3. **Enter your weight** — weigh yourself in the morning before eating, wearing minimal clothing, for the most consistent result.
+
+4. **Enter your height** — measure without shoes. If using Imperial, enter total height in inches (e.g., 5'9" = 69 inches). If using Metric, enter height in centimeters.
+
+5. **Read your results** — the calculator displays your lean body mass, body fat mass, body fat percentage, lean-to-fat ratio, and a pie chart showing the composition breakdown.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The Boer formula (1984) estimates lean body mass from weight and height with sex-specific coefficients:
+
+**Male:**
+
+$$\text{LBM (kg)} = (0.407 \times W) + (0.267 \times H) - 19.2$$
+
+**Female:**
+
+$$\text{LBM (kg)} = (0.252 \times W) + (0.473 \times H) - 48.3$$
+
+Where:
+
+- **W** = body weight in kilograms
+- **H** = height in centimeters
+
+**Derived values:**
+
+$$\text{Body Fat Mass} = W - \text{LBM}$$
+
+$$\text{Body Fat \%} = \frac{\text{Body Fat Mass}}{W} \times 100$$
+
+$$\text{Lean-to-Fat Ratio} = \frac{\text{LBM}}{\text{Body Fat Mass}}$$
+
+For imperial inputs, the calculator converts internally: 1 lb = 0.453592 kg, 1 inch = 2.54 cm. Output values are displayed in the user's selected unit system.
+
+**Source:** Boer P (1984). "Estimated lean body mass as an index for normalization of body fluid volumes in humans." *American Journal of Physiology*, 247(4), F632–F636.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Male, 70 kg, 175 cm
+
+**Inputs:**
+- Sex: Male
+- Weight: 70 kg
+- Height: 175 cm
+
+**Step-by-step:**
+
+1. Weight component: $0.407 \times 70 = 28.49$
+2. Height component: $0.267 \times 175 = 46.725$
+3. LBM: $28.49 + 46.725 - 19.2 = 56.015$ kg
+4. Body fat mass: $70 - 56.015 = 13.985$ kg
+5. Body fat percentage: $(13.985 \div 70) \times 100 = 20.0\%$
+6. Lean-to-fat ratio: $56.015 \div 13.985 = 4.00$
+
+**Result:** Lean body mass = **56.0 kg**, body fat = **20.0%**, lean-to-fat ratio = **4.00**. A body fat percentage of 20% and a lean-to-fat ratio of 4.0 place this individual in the "fitness" category for males (per ACE guidelines: 14–17% = fitness, 18–24% = acceptable).
+
+### Example 2: Female, 140 lbs, 65 inches (Imperial)
+
+**Inputs:**
+- Sex: Female
+- Weight: 140 lbs (63.5 kg)
+- Height: 65 inches (165.1 cm)
+
+**Step-by-step:**
+
+1. Convert: 140 lbs = 63.503 kg, 65 in = 165.1 cm
+2. Weight component: $0.252 \times 63.503 = 16.003$
+3. Height component: $0.473 \times 165.1 = 78.092$
+4. LBM: $16.003 + 78.092 - 48.3 = 45.795$ kg = 101.0 lbs
+5. Body fat mass: $140 - 101.0 = 39.0$ lbs
+6. Body fat percentage: $(39.0 \div 140) \times 100 = 27.9\%$
+
+**Result:** Lean body mass = **101.0 lbs**, body fat = **27.9%**. For females, a body fat percentage of 25–31% falls in the "acceptable" range per ACE standards, and 21–24% is considered "fitness." This result is within the healthy range for an average adult woman.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- The Boer formula is an **anthropometric estimate** — it does not directly measure lean tissue. Methods such as DEXA scan, hydrostatic weighing, or bioelectrical impedance provide more precise body composition data.
+- Accuracy is highest for adults of **average build**. The formula may overestimate LBM in individuals with very high body fat or underestimate it in highly muscular athletes, because it relies on height and weight alone without accounting for body shape or muscle development.
+- The formula was developed and validated on **adult populations**. It should not be used for children, adolescents, or pregnant women.
+- **Hydration status** affects body weight and therefore LBM estimates. Dehydration can reduce measured weight by 2–4 lbs, artificially lowering the estimated fat mass and inflating the lean percentage.
+- The Boer formula does not distinguish between **skeletal muscle mass and other lean tissue** (bone, organs, water). Lean body mass includes all non-fat tissue, which is approximately 73% water.
+- Sex-specific coefficients reflect **population averages** and may not capture individual variation in body proportions, frame size, or ethnic differences in body composition.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a healthy lean body mass percentage?
+
+A healthy lean body mass percentage ranges from approximately 60% to 90% of total body weight, depending on sex and fitness level. For males, the American Council on Exercise (ACE) classifies 14–17% body fat as "fitness" level — corresponding to 83–86% lean mass. For females, 21–24% body fat is "fitness" level, meaning 76–79% lean mass. Athletes may have lean mass percentages above 85% (males) or 80% (females), while acceptable health ranges extend to approximately 75% lean mass for males and 69% for females.
+
+### How does lean body mass differ from muscle mass?
+
+Lean body mass includes all non-fat tissue in the body — not just skeletal muscle. It encompasses bones (which account for roughly 15% of body weight), internal organs (liver, kidneys, brain, heart), blood, water, and connective tissue, in addition to skeletal muscle. Skeletal muscle typically represents about 40–45% of total body weight in healthy males and 30–35% in healthy females, while total LBM is substantially higher because it includes all of these other components. To measure skeletal muscle mass specifically, a DEXA scan or MRI is required.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the **Boer formula** as published by **Boer P (1984)**, "Estimated lean body mass as an index for normalization of body fluid volumes in humans," *American Journal of Physiology*, 247(4), F632–F636. Body fat classification categories reference the **American Council on Exercise (ACE)** body fat percentage norms. Body composition reference data draws from **Heymsfield SB et al. (2005)**, "Human Body Composition," *Human Kinetics* (2nd edition). Skeletal muscle mass percentages reference **Janssen I et al. (2000)**, "Skeletal muscle mass and distribution in 468 men and women aged 18–88 yr," *Journal of Applied Physiology*, 89(1), 81–88.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

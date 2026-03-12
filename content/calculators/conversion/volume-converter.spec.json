@@ -1,0 +1,223 @@
+{
+  "id": "volume-converter",
+  "title": "Volume Converter",
+  "slug": "volume-converter",
+  "category": "conversion",
+  "subcategory": "volume",
+  "primaryKeyword": "volume converter",
+  "metaTitle": "Volume Converter — Cups, Liters, Gallons, mL & More",
+  "metaDescription": "Convert between all volume units: cups, liters, gallons, milliliters, fluid ounces, tablespoons, cubic meters. Free volume converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Enter the volume value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "us-cup",
+      "options": [
+        {
+          "value": "liter",
+          "label": "Liter (L)"
+        },
+        {
+          "value": "milliliter",
+          "label": "Milliliter (mL)"
+        },
+        {
+          "value": "cubic-meter",
+          "label": "Cubic Meter (m³)"
+        },
+        {
+          "value": "cubic-centimeter",
+          "label": "Cubic Centimeter (cm³)"
+        },
+        {
+          "value": "us-gallon",
+          "label": "US Gallon (gal)"
+        },
+        {
+          "value": "us-quart",
+          "label": "US Quart (qt)"
+        },
+        {
+          "value": "us-pint",
+          "label": "US Pint (pt)"
+        },
+        {
+          "value": "us-cup",
+          "label": "US Cup (cup)"
+        },
+        {
+          "value": "us-fluid-ounce",
+          "label": "US Fluid Ounce (fl oz)"
+        },
+        {
+          "value": "tablespoon",
+          "label": "Tablespoon (tbsp)"
+        },
+        {
+          "value": "teaspoon",
+          "label": "Teaspoon (tsp)"
+        },
+        {
+          "value": "imperial-gallon",
+          "label": "Imperial Gallon (imp gal)"
+        },
+        {
+          "value": "cubic-foot",
+          "label": "Cubic Foot (ft³)"
+        },
+        {
+          "value": "cubic-inch",
+          "label": "Cubic Inch (in³)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "milliliter",
+      "options": [
+        {
+          "value": "liter",
+          "label": "Liter (L)"
+        },
+        {
+          "value": "milliliter",
+          "label": "Milliliter (mL)"
+        },
+        {
+          "value": "cubic-meter",
+          "label": "Cubic Meter (m³)"
+        },
+        {
+          "value": "cubic-centimeter",
+          "label": "Cubic Centimeter (cm³)"
+        },
+        {
+          "value": "us-gallon",
+          "label": "US Gallon (gal)"
+        },
+        {
+          "value": "us-quart",
+          "label": "US Quart (qt)"
+        },
+        {
+          "value": "us-pint",
+          "label": "US Pint (pt)"
+        },
+        {
+          "value": "us-cup",
+          "label": "US Cup (cup)"
+        },
+        {
+          "value": "us-fluid-ounce",
+          "label": "US Fluid Ounce (fl oz)"
+        },
+        {
+          "value": "tablespoon",
+          "label": "Tablespoon (tbsp)"
+        },
+        {
+          "value": "teaspoon",
+          "label": "Teaspoon (tsp)"
+        },
+        {
+          "value": "imperial-gallon",
+          "label": "Imperial Gallon (imp gal)"
+        },
+        {
+          "value": "cubic-foot",
+          "label": "Cubic Foot (ft³)"
+        },
+        {
+          "value": "cubic-inch",
+          "label": "Cubic Inch (in³)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Volume Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "weight-converter",
+    "area-converter",
+    "length-converter",
+    "concrete-calculator",
+    "data-storage-converter",
+    "temperature-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NIST — Handbook 133, Checking the Net Contents (2023 Edition)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Conversion via base unit (liters): result = value × (fromUnit.toBase / toUnit.toBase). NIST exact conversion factors.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 88,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

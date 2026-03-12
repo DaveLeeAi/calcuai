@@ -1,0 +1,120 @@
+---
+title: "Temperature Converter"
+description: "Convert between Fahrenheit, Celsius, Kelvin, and Rankine temperature scales instantly. Free converter with formulas and conversion table."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert temperatures between Fahrenheit, Celsius, Kelvin, and Rankine scales instantly. Water freezes at 32°F (0°C, 273.15 K) and boils at 212°F (100°C, 373.15 K). Unlike other unit conversions, temperature requires offset-based formulas rather than simple multiplication -- enter any temperature value and get accurate results across all four scales.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Conversion Works
+
+This converter handles all four major temperature scales and displays results across every scale simultaneously. Temperature conversion is unique among unit converters because the scales have different zero points -- you cannot simply multiply by a conversion factor. Celsius and Kelvin share the same degree size but differ by an offset of 273.15. Fahrenheit and Rankine share their degree size but use different zero points.
+
+The converter is useful for cooking (oven temperatures between American and European recipes), science (Kelvin for thermodynamic calculations), weather (Fahrenheit to Celsius for international forecasts), and engineering (Rankine for certain thermodynamic equations). For converting other physical quantities, see our [Length Converter](/calculators/conversion/length-converter) or [Weight Converter](/calculators/conversion/weight-converter).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the temperature value** -- type any number, including negative values (e.g., -40, 98.6, 2500). Note that Kelvin cannot be negative.
+2. **Select "From" scale** -- choose the temperature scale your value is currently in (defaults to Fahrenheit).
+3. **Select "To" scale** -- choose the target scale you want to convert to (defaults to Celsius).
+4. **Read the result** -- the converted value appears immediately.
+5. **Review the conversion table** -- see your temperature expressed in all four scales at once for quick comparison.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Temperature conversions use **direct formulas** with offsets, not simple ratio-based multiplication. Each pair of scales has its own conversion equation:
+
+**Fahrenheit to Celsius:**
+
+$$
+°C = (°F - 32) \times \frac{5}{9}
+$$
+
+**Celsius to Fahrenheit:**
+
+$$
+°F = °C \times \frac{9}{5} + 32
+$$
+
+**Celsius to Kelvin:**
+
+$$
+K = °C + 273.15
+$$
+
+**Fahrenheit to Kelvin:**
+
+$$
+K = (°F - 32) \times \frac{5}{9} + 273.15
+$$
+
+**Fahrenheit to Rankine:**
+
+$$
+°R = °F + 459.67
+$$
+
+**Kelvin to Rankine:**
+
+$$
+°R = K \times \frac{9}{5}
+$$
+
+**Variable definitions:**
+- **°F** = temperature in degrees Fahrenheit
+- **°C** = temperature in degrees Celsius
+- **K** = temperature in Kelvin (no degree symbol -- Kelvin is an absolute unit)
+- **°R** = temperature in degrees Rankine
+
+*Source: Celsius scale (Anders Celsius, 1742), Fahrenheit scale (Daniel Gabriel Fahrenheit, 1724), Kelvin scale (William Thomson, Lord Kelvin, 1848). Modern definitions per BIPM -- International System of Units (SI), 9th edition (2019).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Body Temperature -- 98.6°F to Celsius
+
+Normal human body temperature is commonly cited as 98.6°F. What is that in Celsius?
+
+**Step 1: Subtract 32**
+- 98.6 - 32 = 66.6
+
+**Step 2: Multiply by 5/9**
+- 66.6 x 5/9 = **37.0°C**
+
+*Interpretation:* Normal body temperature is 37.0°C. Modern medical research (Protsiv et al., 2020, eLife) suggests the current average is actually closer to 97.9°F (36.6°C), as the original 98.6°F figure dates to Carl Wunderlich's 1868 study.
+
+### Example 2: Baking -- 350°F Oven to Celsius
+
+An American recipe calls for a 350°F oven. European ovens display Celsius. What setting should you use?
+
+**Step 1: Subtract 32**
+- 350 - 32 = 318
+
+**Step 2: Multiply by 5/9**
+- 318 x 5/9 = **176.67°C**
+
+*Interpretation:* 350°F converts to approximately 177°C. Most European oven dials are marked in increments of 10°C, so you would select 180°C -- the standard "moderate oven" setting used across European baking. The 3°C difference is negligible for all but the most sensitive pastries.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Kelvin values cannot be negative (absolute zero = 0 K = -273.15°C); the calculator accepts negative Celsius and Fahrenheit inputs
+- Rankine values cannot be negative (absolute zero = 0°R = -459.67°F)
+- All formulas use the exact offset values defined by the SI (273.15 for Celsius-to-Kelvin, 459.67 for Fahrenheit-to-Rankine)
+- Does not include the Reaumur, Delisle, Newton, or Romer historical temperature scales
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter applies the standard temperature conversion formulas: °F = °C × 9/5 + 32, °C = (°F − 32) × 5/9, and K = °C + 273.15. Unlike most unit conversions, temperature conversions require both multiplication and addition (not just a single conversion factor) because the scales have different zero points. Results are displayed to 2 decimal places.

@@ -1,0 +1,118 @@
+{
+  "id": "density-calculator",
+  "title": "Density Calculator",
+  "slug": "density-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "density calculator",
+  "metaTitle": "Density Calculator — Mass, Volume, Density Solver",
+  "metaDescription": "Calculate density, mass, or volume from any two values. Supports kg/m³, g/cm³, lb/ft³. Free density calculator with material comparison table.",
+  "inputs": [
+    {
+      "id": "density",
+      "label": "Density",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 1000",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "kg/m³",
+      "defaultValue": 1000,
+      "helpText": "Enter any two values to calculate the third"
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 5",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "kg",
+      "defaultValue": 5,
+      "helpText": "Mass in kilograms"
+    },
+    {
+      "id": "volume",
+      "label": "Volume",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 0.005",
+      "min": 0,
+      "step": 0.0001,
+      "suffix": "m³",
+      "helpText": "Volume in cubic meters"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "density",
+      "label": "Density",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "volume",
+      "label": "Volume",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "density",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "energy-calculator",
+    "pressure-calculator",
+    "ohms-law-calculator",
+    "concrete-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Archimedes, On Floating Bodies (c. 250 BC)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Density equation: ρ = m/V, m = ρV, V = m/ρ",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 80,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

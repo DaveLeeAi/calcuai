@@ -1,0 +1,402 @@
+{
+  "id": "square-footage-calculator",
+  "title": "Square Footage Calculator",
+  "slug": "square-footage-calculator",
+  "category": "construction",
+  "subcategory": "measurement",
+  "primaryKeyword": "square footage calculator",
+  "metaTitle": "Square Footage Calculator — Area for Any Shape | CalcHub",
+  "metaDescription": "Calculate square footage for rooms, yards, and projects. Supports rectangle, triangle, circle, and trapezoid shapes with unit conversions and cost estimates.",
+  "tabs": [
+    {
+      "id": "rectangle",
+      "label": "Rectangle / Square",
+      "description": "Calculate the area of a rectangular or square space",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "length",
+        "width",
+        "numberOfRooms"
+      ]
+    },
+    {
+      "id": "triangle",
+      "label": "Triangle",
+      "description": "Calculate the area of a triangular space",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "base",
+        "triangleHeight",
+        "numberOfRooms"
+      ]
+    },
+    {
+      "id": "circle",
+      "label": "Circle",
+      "description": "Calculate the area of a circular space",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "radius",
+        "numberOfRooms"
+      ]
+    },
+    {
+      "id": "trapezoid",
+      "label": "Trapezoid",
+      "description": "Calculate the area of a trapezoidal space",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "parallelSide1",
+        "parallelSide2",
+        "trapezoidHeight",
+        "numberOfRooms"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "base",
+      "label": "Base",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "triangleHeight",
+      "label": "Height",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 8,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "radius",
+      "label": "Radius",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "parallelSide1",
+      "label": "Side A (parallel)",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "parallelSide2",
+      "label": "Side B (parallel)",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 6,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "trapezoidHeight",
+      "label": "Height",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 8,
+      "min": 0.1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "numberOfRooms",
+      "label": "Number of Identical Areas",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 50,
+      "helpText": "Multiply for multiple rooms of the same size"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "squareFeet",
+      "label": "Total Square Footage",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "squareMeters",
+      "label": "Square Meters",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "squareYards",
+      "label": "Square Yards",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "acres",
+      "label": "Acres",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "perimeter",
+      "label": "Perimeter (ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Costs",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "square-footage",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "flooring-calculator",
+    "triangle-calculator",
+    "roofing-calculator",
+    "circle-calculator",
+    "board-foot-calculator",
+    "drywall-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Standard geometric area formulas (Euclidean geometry)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard Euclidean area formulas: Rectangle A=L*W, Triangle A=0.5*b*h, Circle A=pi*r^2, Trapezoid A=0.5*(a+b)*h",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "flooring-calculator"
+  ],
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "square-footage"
+  ]
+}

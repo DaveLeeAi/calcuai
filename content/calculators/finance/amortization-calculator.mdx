@@ -1,0 +1,150 @@
+---
+title: "Amortization Calculator"
+description: "Generate a complete amortization schedule for any mortgage or loan. See monthly and yearly breakdowns of principal, interest, and remaining balance."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A \$300,000 mortgage at 6.5% for 30 years generates \$382,633 in total interest — more than the original loan amount. Your monthly payment of \$1,896.20 covers both principal and interest, but the split changes dramatically over time: in year one, 76% of each payment goes to interest (\$14,515 of \$22,754 paid); by year 25, that flips to 76% principal. Adding just \$200 per month in extra payments cuts 6 years and 2 months off the loan and saves \$104,328 in interest.
+
+</section>
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+This calculator generates a complete month-by-month amortization schedule showing exactly how each payment splits between principal and interest. It also provides a yearly summary table, a balance-over-time chart, and an interest-vs-principal bar chart so you can visualize how the composition of your payments shifts over the life of the loan.
+
+The key insight amortization reveals is **front-loading**: in a standard 30-year mortgage, you pay more interest than principal for roughly the first 19 years. Understanding this schedule helps you decide whether extra payments, refinancing, or a shorter term makes financial sense.
+
+For a broader mortgage cost estimate including taxes and insurance, see the [Mortgage Calculator](/calculators/finance/mortgage-calculator). To reverse-engineer the interest rate from your known payment, try the [Interest Rate Calculator](/calculators/finance/interest-rate-calculator).
+
+## How to Use This Calculator
+
+1. **Enter the loan amount** — your total mortgage or loan principal (e.g., \$300,000).
+2. **Enter the interest rate** — your annual percentage rate (APR). This is the rate on your loan documents, not the APY.
+3. **Select the loan term** — choose from 10, 15, 20, 25, or 30 years. Shorter terms have higher monthly payments but far less total interest.
+4. **Optional: add extra payments** — enter an additional monthly amount to see how it accelerates payoff and reduces interest.
+5. **Review the schedule** — scroll through the monthly table, yearly breakdown, and charts to understand your payment trajectory.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Monthly Payment (fixed-rate loan):**
+
+$$
+M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}
+$$
+
+**Monthly Interest Portion:**
+
+$$
+\text{Interest}_k = \text{Balance}_{k-1} \times r
+$$
+
+**Monthly Principal Portion:**
+
+$$
+\text{Principal}_k = M - \text{Interest}_k
+$$
+
+**Remaining Balance:**
+
+$$
+\text{Balance}_k = \text{Balance}_{k-1} - \text{Principal}_k
+$$
+
+Where:
+- **M** = fixed monthly payment (principal + interest)
+- **P** = loan principal (original loan amount)
+- **r** = monthly interest rate (annual rate / 12)
+- **n** = total number of monthly payments (years × 12)
+- **k** = current month number
+
+*Source: Consumer Financial Protection Bureau (CFPB) — standard fixed-rate mortgage amortization formula used by all U.S. mortgage lenders.*
+
+For a deeper explanation of how the amortization formula is derived and the impact of extra payments, see our [methodology page on mortgage amortization](/methodology/mortgage-amortization).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 30-Year Mortgage Amortization
+
+A homebuyer takes out a \$250,000 mortgage at 7.0% for 30 years.
+
+**Step 1:** Calculate the monthly payment
+- r = 7.0% / 12 = 0.005833
+- n = 30 × 12 = 360
+- M = \$250,000 × [0.005833 × (1.005833)^360] / [(1.005833)^360 - 1]
+- M = \$250,000 × [0.005833 × 8.1165] / [8.1165 - 1]
+- M = $250,000 × 0.04735 / 7.1165 = **$1,663.26/month**
+
+**Step 2:** First month breakdown
+- Interest = $250,000 × 0.005833 = **$1,458.33**
+- Principal = \$1,663.26 - $1,458.33 = **$204.93**
+- Remaining balance = \$250,000 - $204.93 = **$249,795.07**
+
+**Step 3:** Totals over 30 years
+- Total paid = $1,663.26 × 360 = **$598,773.60**
+- Total interest = \$598,773.60 - $250,000 = **$348,773.60**
+
+*Interpretation:* The borrower pays nearly \$349,000 in interest — 1.4× the original loan. In the first year, only \$2,587 of \$19,959 paid goes to principal (13%). By year 20, the split becomes roughly 50/50.
+
+### Example 2: 15-Year vs. 30-Year Comparison
+
+Same \$250,000 loan at 7.0%, but comparing a 15-year term:
+
+**15-Year Monthly Payment:**
+- n = 180
+- M = \$250,000 × [0.005833 × (1.005833)^180] / [(1.005833)^180 - 1]
+- M = **\$2,247.07/month**
+
+**15-Year Totals:**
+- Total paid = $2,247.07 × 180 = **$404,472.60**
+- Total interest = \$404,472.60 - $250,000 = **$154,472.60**
+
+**Savings:** The 15-year loan costs \$583.81 more per month but saves **\$194,301** in total interest — a 56% reduction. The first-year principal share jumps from 13% to 37%.
+
+## Key Factors That Affect Your Results
+
+1. **Loan Term Length** — A 15-year term roughly halves the total interest compared to 30 years, but increases the monthly payment by 35–50%. The crossover point where principal exceeds interest shifts from around year 19 (30-year) to year 6 (15-year).
+2. **Interest Rate** — Each 0.5% increase in rate on a \$300,000/30-year loan adds approximately \$100/month and \$36,000+ in total interest. Rate differences compound significantly over long terms.
+3. **Extra Payments** — Extra payments bypass the front-loaded interest structure by reducing principal immediately. On a \$300,000 loan at 6.5%/30 years, an extra \$100/month saves \$62,000 in interest and cuts 4 years off the term.
+4. **Payment Timing** — Biweekly payment plans (half the monthly payment every two weeks) result in 26 half-payments = 13 full payments per year instead of 12, effectively making one extra payment annually.
+5. **Refinancing Breakeven** — The amortization schedule reveals your current principal-to-interest ratio. If you are still in the interest-heavy early years, refinancing to a lower rate captures the most savings.
+
+## Assumptions & Limitations
+
+- Assumes a fixed interest rate for the entire loan term (does not model ARMs)
+- Monthly payment is principal and interest only — does not include property taxes, homeowner's insurance, or PMI
+- Extra payments are applied to principal at the end of each monthly period
+- Does not account for escrow, closing costs, or points
+- Assumes all payments are made on time with no deferrals or forbearance
+- Rounding to the nearest cent may cause the final payment to differ slightly from the standard amount
+
+## Frequently Asked Questions
+
+### Why does most of my payment go to interest at the beginning?
+
+Interest is calculated on the outstanding balance each month. At the start, your balance is at its highest, so the dollar amount of interest is large. As you pay down principal, the interest portion shrinks and more of your fixed payment goes to principal. On a \$300,000 loan at 6.5% for 30 years, the first month's interest is \$1,625 out of a \$1,896 payment (86%). By month 180 (year 15), interest drops to \$1,057 (56%) as the balance has fallen to \$195,200.
+
+### How much interest do extra payments save?
+
+Extra payments reduce the principal balance immediately, which reduces all future interest calculations. On a \$300,000 mortgage at 6.5% for 30 years, paying an extra \$200/month saves approximately \$104,000 in total interest and shortens the loan by about 6 years. The earlier you start making extra payments, the greater the compounding savings because you avoid interest on a larger balance for more months.
+
+### What is the difference between amortization and a simple interest loan?
+
+An amortizing loan has a fixed payment schedule where each payment covers that month's interest plus a portion of principal, gradually reducing the balance to zero over the term. A simple interest loan calculates interest on the remaining principal but may not have a fixed payment schedule — the principal portion varies or is paid in a lump sum at maturity. Virtually all mortgages and auto loans use amortization. Lines of credit and some commercial loans use simple interest.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Consumer Financial Protection Bureau (CFPB)** — Mortgage amortization formula and disclosure requirements under the Truth in Lending Act (TILA).
+- **Freddie Mac** — Primary Mortgage Market Survey. Average 30-year fixed rate historical data.
+- **Federal Reserve Board** — Regulation Z, which mandates amortization schedule disclosure for closed-end mortgage loans.
+
+The amortization schedule decomposes each fixed monthly payment into interest (calculated on the current balance) and principal (the remainder). The balance decreases by the principal amount each month, creating the characteristic front-loaded interest pattern. Yearly summaries aggregate 12 months of principal and interest for high-level analysis.

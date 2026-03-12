@@ -1,0 +1,147 @@
+{
+  "id": "ohms-law-calculator",
+  "title": "Ohm's Law Calculator",
+  "slug": "ohms-law-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "ohms law calculator",
+  "metaTitle": "Ohm's Law Calculator — Voltage, Current, Resistance, Power",
+  "metaDescription": "Calculate voltage, current, resistance, and power using Ohm's Law. Enter any two values to solve the other two instantly. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "voltage",
+      "label": "Voltage",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 12",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "V",
+      "defaultValue": 12,
+      "helpText": "Enter any two values to calculate the other two"
+    },
+    {
+      "id": "current",
+      "label": "Current",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 2",
+      "min": 0,
+      "step": 0.001,
+      "suffix": "A",
+      "defaultValue": 2,
+      "helpText": "Current in amperes (amps)"
+    },
+    {
+      "id": "resistance",
+      "label": "Resistance",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 6",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "Ω",
+      "helpText": "Resistance in ohms"
+    },
+    {
+      "id": "power",
+      "label": "Power",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 24",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "W",
+      "helpText": "Power in watts"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "voltage",
+      "label": "Voltage",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "current",
+      "label": "Current",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "resistance",
+      "label": "Resistance",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "power",
+      "label": "Power",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "formulaRelationships",
+      "label": "Formula Relationships",
+      "type": "table",
+      "columns": [
+        {
+          "key": "formula",
+          "label": "Formula"
+        },
+        {
+          "key": "result",
+          "label": "Result"
+        }
+      ]
+    }
+  ],
+  "formula": "ohms-law",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "energy-calculator",
+    "density-calculator",
+    "pressure-calculator",
+    "electricity-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Georg Simon Ohm, Die galvanische Kette, mathematisch bearbeitet (1827)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Ohm's Law (V = IR) and Joule's Law of Heating (P = IV)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "energy-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

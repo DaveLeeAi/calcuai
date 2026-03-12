@@ -1,0 +1,200 @@
+{
+  "id": "payroll-calculator",
+  "title": "Payroll Calculator",
+  "slug": "payroll-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "payroll calculator",
+  "metaTitle": "Payroll Calculator — Gross to Net Pay Calculator",
+  "metaDescription": "Calculate your take-home pay from gross salary. See federal tax, state tax, Social Security, and Medicare deductions. Free paycheck calculator.",
+  "inputs": [
+    {
+      "id": "grossPay",
+      "label": "Gross Pay (Per Pay Period)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your gross pay for a single pay period before any deductions"
+    },
+    {
+      "id": "payFrequency",
+      "label": "Pay Frequency",
+      "type": "select",
+      "required": true,
+      "defaultValue": "biweekly",
+      "options": [
+        {
+          "value": "weekly",
+          "label": "Weekly (52 paychecks/year)"
+        },
+        {
+          "value": "biweekly",
+          "label": "Biweekly (26 paychecks/year)"
+        },
+        {
+          "value": "semi-monthly",
+          "label": "Semi-Monthly (24 paychecks/year)"
+        },
+        {
+          "value": "monthly",
+          "label": "Monthly (12 paychecks/year)"
+        }
+      ],
+      "helpText": "How often you receive a paycheck"
+    },
+    {
+      "id": "federalTaxRate",
+      "label": "Federal Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 50,
+      "step": 0.1,
+      "helpText": "Your effective federal income tax withholding rate"
+    },
+    {
+      "id": "stateTaxRate",
+      "label": "State Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "Your state income tax rate (0% for states without income tax)"
+    },
+    {
+      "id": "preTaxDeductions",
+      "label": "Pre-Tax Deductions",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "401(k) contributions, health insurance premiums, HSA, FSA per pay period"
+    },
+    {
+      "id": "postTaxDeductions",
+      "label": "Post-Tax Deductions",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Roth 401(k), union dues, wage garnishments, life insurance per pay period"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netPay",
+      "label": "Net Pay (Take-Home)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalDeductions",
+      "label": "Total Deductions",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveTaxRate",
+      "label": "Effective Tax Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "annualGross",
+      "label": "Annual Gross Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualNet",
+      "label": "Annual Net Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "deductionBreakdown",
+      "label": "Paycheck Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#E74C3C",
+          "#F39C12",
+          "#3498DB",
+          "#9B59B6",
+          "#1ABC9C",
+          "#95A5A6",
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Pay Stub Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "payroll",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "income-tax-calculator",
+    "overtime-calculator",
+    "employee-cost-calculator",
+    "tax-bracket-calculator",
+    "margin-calculator",
+    "commission-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "IRS Publication 15 (Circular E) — Employer's Tax Guide, Social Security and Medicare withholding rates (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Pay = Gross - Federal Tax - State Tax - SS (6.2% capped $168,600) - Medicare (1.45% + 0.9% over $200k) - Deductions",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "salary-calculator"
+  ],
+  "qualityScore": 95,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "tax-season",
+  "glossaryTerms": [
+    "gross-income",
+    "overtime",
+    "payroll"
+  ],
+  "methodologyTopics": [
+    "progressive-taxation"
+  ]
+}

@@ -1,0 +1,158 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A triangle with sides 3, 4, and 5 has angles of 36.87°, 53.13°, and 90°, an area of 6, and is a right scalene triangle. This triangle calculator solves any triangle when you know three measurements — enter any combination of sides and angles (SSS, SAS, AAS, or ASA) and the calculator finds all missing sides, angles, area, and perimeter.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Solving a triangle means finding all six measurements — three sides and three angles — from a minimum of three known values. The calculator uses the law of cosines and law of sines to compute every missing measurement, then applies Heron's formula or the sine area formula to determine the exact area.
+
+Beyond the raw numbers, the calculator classifies each triangle by both its angles and its sides. A triangle can be acute (all angles < 90°), right (one angle = 90°), or obtuse (one angle > 90°), and simultaneously equilateral (all sides equal), isosceles (two sides equal), or scalene (all sides different). The classic 3-4-5 triangle is a "right scalene" triangle — the only right triangle where all three sides are consecutive integers.
+
+The perimeter and semiperimeter are also computed, since the semiperimeter appears in Heron's formula and is needed for inscribed circle radius calculations. For calculations involving circles inscribed in or circumscribed around triangles, see our [Circle Calculator](/calculators/math/circle-calculator). For area calculations of rectangular and irregular spaces, the [Square Footage Calculator](/calculators/construction/square-footage-calculator) may be more appropriate.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. Select the **mode** matching the measurements you know: SSS (3 sides), SAS (2 sides + the angle between them), AAS (2 angles + a side opposite one of them), or ASA (2 angles + the side between them).
+2. Enter the known values in the visible fields. For SSS mode with a 3-4-5 triangle, enter **Side a = 3**, **Side b = 4**, **Side c = 5**.
+3. For modes involving angles, enter angles in **degrees** (not radians). For a SAS problem with sides 7 and 8 with a 30° included angle, enter **Side a = 7**, **Side b = 8**, **Angle C = 30**.
+4. Read all computed values: missing sides, missing angles, area, perimeter, and the triangle classification.
+5. Verify the results: all three angles should sum to exactly **180°**, and the area should be positive.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formulas
+
+### Law of Cosines
+
+$$c^2 = a^2 + b^2 - 2ab \cos(C)$$
+
+Where:
+
+- **a, b, c** = the three sides of the triangle
+- **C** = the angle opposite side c
+- When C = 90°, cos(C) = 0, and this reduces to the Pythagorean theorem: c² = a² + b²
+
+Rearranged to find an angle from three known sides:
+
+$$\cos(A) = \frac{b^2 + c^2 - a^2}{2bc}$$
+
+### Law of Sines
+
+$$\frac{a}{\sin(A)} = \frac{b}{\sin(B)} = \frac{c}{\sin(C)}$$
+
+Used to find unknown sides when angles are known (AAS/ASA), or to find angles when sides are known (after finding one angle via law of cosines).
+
+### Heron's Formula (Area from Three Sides)
+
+$$s = \frac{a + b + c}{2}$$
+
+$$\text{Area} = \sqrt{s(s-a)(s-b)(s-c)}$$
+
+Where **s** is the semiperimeter. For the 3-4-5 triangle: s = 6, Area = √(6 × 3 × 2 × 1) = √36 = 6.
+
+### Area from Two Sides and Included Angle
+
+$$\text{Area} = \frac{1}{2} \cdot a \cdot b \cdot \sin(C)$$
+
+This alternative formula is used in SAS mode and is often computationally simpler than Heron's formula.
+
+**Source:** Law of cosines and law of sines — fundamental trigonometric identities. Heron's formula attributed to Heron of Alexandria (1st century AD), documented in *Metrica* (c. 60 AD). Modern treatment in *Trigonometry* by I.M. Gelfand and M. Saul (Birkhauser, 2001).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: SSS — The Classic 3-4-5 Right Triangle
+
+Given: a = 3, b = 4, c = 5. Find all angles and the area.
+
+**Step-by-step:**
+
+1. Verify triangle inequality: 3 + 4 = 7 > 5, 3 + 5 = 8 > 4, 4 + 5 = 9 > 3. Valid triangle.
+2. Find angle A using the law of cosines:
+   - cos(A) = (b² + c² − a²) / (2bc) = (16 + 25 − 9) / (2 × 4 × 5) = 32/40 = **0.8**
+   - A = arccos(0.8) = **36.87°**
+3. Find angle B:
+   - cos(B) = (a² + c² − b²) / (2ac) = (9 + 25 − 16) / (2 × 3 × 5) = 18/30 = **0.6**
+   - B = arccos(0.6) = **53.13°**
+4. Angle C = 180° − 36.87° − 53.13° = **90°**
+5. Area using Heron's formula: s = (3 + 4 + 5)/2 = 6
+   - Area = √(6 × 3 × 2 × 1) = √36 = **6**
+
+**Result:** Angles are **36.87°, 53.13°, 90°**. Area = **6 square units**. This is a **right scalene** triangle.
+
+**Practical interpretation:** The 3-4-5 triangle is the smallest Pythagorean triple — it has been used by builders since ancient Egypt to create perfect right angles. Carpenters still use it: measure 3 feet along one wall, 4 feet along the adjacent wall, and if the diagonal is exactly 5 feet, the corner is square.
+
+### Example 2: SAS — Two Sides with an Included Angle
+
+Given: a = 7, b = 8, included angle C = 30°. Find the third side, remaining angles, and area.
+
+**Step-by-step:**
+
+1. Find side c using the law of cosines:
+   - c² = 7² + 8² − 2(7)(8)cos(30°) = 49 + 64 − 112 × 0.8660 = 113 − 96.99 = **16.01**
+   - c = √16.01 = **4.001**
+2. Find angle A using the law of cosines:
+   - cos(A) = (b² + c² − a²) / (2bc) = (64 + 16.01 − 49) / (2 × 8 × 4.001) = 31.01/64.02 = **0.4844**
+   - A = arccos(0.4844) = **61.00°**
+3. Angle B = 180° − 61.00° − 30° = **89.00°**
+4. Area = 0.5 × 7 × 8 × sin(30°) = 0.5 × 56 × 0.5 = **14**
+
+**Result:** Side c = **4.001**, angles are approximately **61.00°, 89.00°, 30.00°**. Area = **14 square units**. This is an **acute scalene** triangle (though angle B is very close to 90°).
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**The triangle inequality constrains valid inputs.** For SSS mode, the sum of any two sides must exceed the third side. If you enter sides 1, 1, and 10, no triangle exists — the two short sides cannot span the gap. The calculator validates this and returns an error rather than a nonsensical result.
+
+**Angle sum must equal 180°.** For AAS and ASA modes, the two given angles must sum to less than 180°. If you enter 100° and 90°, the third angle would be −10°, which is impossible. The closer the angle sum gets to 180°, the flatter and more degenerate the triangle becomes.
+
+**The obtuse angle is opposite the longest side.** In any triangle, the largest angle is always opposite the longest side. For a 3-4-5 triangle, the 90° angle is opposite the 5 (the hypotenuse). This relationship comes directly from the law of cosines: as the angle increases past 90°, cos(C) becomes negative, making c² larger than a² + b².
+
+**Heron's formula is numerically stable for nearly degenerate triangles.** When a triangle is very flat (the three sides nearly form a straight line), the semiperimeter terms (s−a), (s−b), (s−c) include one value close to zero, correctly driving the area toward zero.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **All angles are in degrees.** The calculator converts to radians internally for trigonometric computations. If you have angles in radians, multiply by 180/π before entering.
+- **Only Euclidean (flat-plane) geometry is supported.** On a curved surface (spherical or hyperbolic geometry), the angle sum of a triangle is not 180° and these formulas do not apply.
+- **The ambiguous case (SSA) is not supported.** When two sides and a non-included angle are given, there may be zero, one, or two valid triangles. This calculator supports AAS (where the known side is opposite a known angle), which avoids the ambiguity.
+- **Floating-point precision.** Computed angles may not sum to exactly 180.000000° due to IEEE 754 rounding, but the error is typically less than 0.0001°.
+- **Degenerate triangles (area = 0) occur when all three points are collinear.** The calculator does not flag these as errors — it will return an area of 0.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How do you solve a triangle when you know all three sides (SSS)?
+
+Use the law of cosines to find each angle: cos(A) = (b² + c² − a²) / (2bc). Compute this for each angle, then take the inverse cosine (arccos) to get the angle in degrees. For a 5-12-13 triangle, cos(A) = (144 + 169 − 25) / (2 × 12 × 13) = 288/312 = 0.9231, so A = arccos(0.9231) = 22.62°. Repeat for the other two angles, or compute the third as 180° minus the first two. The area is then found via Heron's formula.
+
+### What is the difference between SAS, ASA, and AAS?
+
+SAS means you know two sides and the angle between them (the included angle). ASA means you know two angles and the side between them (the included side). AAS means you know two angles and a side that is not between them (a non-included side). All three provide enough information to solve the triangle uniquely. ASA and AAS actually produce the same solution method: find the third angle (180° minus the two known), then use the law of sines to find the unknown sides. The distinction matters because it determines which law to apply first and which side-angle pairs are available.
+
+### Why does my triangle calculator show an error for certain inputs?
+
+The calculator returns an error when the inputs cannot form a valid triangle. For SSS, this happens when the sum of any two sides is less than or equal to the third side (triangle inequality violation). For AAS/ASA, it occurs when the two given angles sum to 180° or more, leaving no room for a third positive angle. For SAS, the included angle must be strictly between 0° and 180°. Additionally, all sides must be positive numbers — a side of 0 would produce a degenerate line segment, not a triangle.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses the appropriate formula based on your inputs: Heron's formula for area from three sides (A = √(s(s−a)(s−b)(s−c))), the law of cosines for finding unknown sides or angles, and the law of sines for angle-side relationships. Right triangles are detected automatically and solved with the Pythagorean theorem. All trigonometric functions use radian conversion internally, with angles displayed in degrees.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

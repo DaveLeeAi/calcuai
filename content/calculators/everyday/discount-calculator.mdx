@@ -1,0 +1,90 @@
+---
+title: "Discount Calculator"
+description: "Calculate the sale price after any percentage discount. Supports stacked discounts and sales tax. See exactly how much you save."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 25% discount on a \$200 item saves you \$50, bringing the price to \$150. Stack a second 10% coupon on top and the final price drops to \$135 — not \$130, because the second discount applies to the already-reduced price. This calculator handles single discounts, stacked discounts, and optional sales tax in one step.
+
+</section>
+
+{/* Section 6: What Your Result Shows */}
+## What Your Result Shows
+
+The result shows the discounted sale price, the dollar amount saved, the effective total discount percentage (important for stacked discounts), and the final total including optional sales tax. Stacked discounts are multiplicative, not additive — a 25% + 10% double discount equals a 32.5% total discount, not 35%. This distinction matters more than most shoppers realize: two 20% discounts don't save 40% — they save 36%, costing you $64 on a $100 item instead of the $60 you might expect.
+
+The effective total discount percentage is especially useful for comparing deals across retailers. A store offering "30% off everything" gives a better deal than one offering "20% off + extra 15% off" — the stacked version only yields 32% total, not 35%.
+
+For calculating the tax portion of a purchase, use the [Sales Tax Calculator](/calculators/finance/sales-tax-calculator). For tip calculations, use the [Tip Calculator](/calculators/everyday/tip-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the "Original Price"** — the item's full retail price before any discounts. Use the price on the tag or product listing page, not a previously marked-down price.
+2. **Enter the "Discount (%)"** — the primary discount percentage (e.g., enter 25 for a 25%-off sale). This is typically the store-wide or item-specific sale discount.
+3. **Enter the "Additional Discount (%)" (optional)** — a second stacked discount such as a coupon code, loyalty reward, employee discount, or credit card cashback. Leave at 0 if you only have one discount.
+4. **Enter the "Sales Tax Rate (%)" (optional)** — your local sales tax rate, which varies by state and municipality. The average combined U.S. state and local sales tax rate is 8.2% as of 2026. Tax is applied after all discounts are subtracted.
+5. **Read the results** — the "Sale Price," "You Save" amount, "Total Discount" percentage, and "Total with Tax" appear instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Single discount:**
+
+$$
+\text{salePrice} = \text{originalPrice} \times \left(1 - \frac{d}{100}\right)
+$$
+
+**Stacked (two discounts):**
+
+$$
+\text{salePrice} = \text{originalPrice} \times \left(1 - \frac{d_1}{100}\right) \times \left(1 - \frac{d_2}{100}\right)
+$$
+
+**With sales tax:**
+
+$$
+\text{total} = \text{salePrice} \times \left(1 + \frac{\text{taxRate}}{100}\right)
+$$
+
+Where:
+- **$d$**, **$d_1$**, **$d_2$** = discount percentages
+- **taxRate** = sales tax rate as a percentage
+
+Stacked discounts are multiplicative: 25% + 10% = \$1 - (1-0.25)(1-0.10)$ = 32.5%, not 35%.
+
+*Source: Standard percentage arithmetic. Stacked discount convention follows FTC pricing guidelines — the second discount applies to the already-discounted price, not the original.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Example: Black Friday Double Discount
+
+A \$349.99 jacket is 30% off, and you have an additional 15% employee discount. Local sales tax is 8%.
+
+**Step 1:** First discount: $349.99 × (1 − 0.30) = $349.99 × 0.70 = **\$245.00**
+**Step 2:** Second discount: $245.00 × (1 − 0.15) = $245.00 × 0.85 = **\$208.25**
+**Step 3:** Total savings: \$349.99 − $208.25 = **$141.74** (40.5% total discount)
+**Step 4:** With tax: $208.25 × 1.08 = **$224.91**
+
+*Interpretation:* The combined 30% + 15% stacked discount saves you \$141.74 (40.5%), not the \$157.50 (45%) you would get from adding the percentages. The multiplicative stacking still saves substantially — nearly half the original price.
+
+### Example: Simple Single Discount
+
+A pair of running shoes originally priced at \$89.95 is marked 20% off with no additional discounts. No sales tax applies (e.g., shopping in Oregon).
+
+**Step 1:** Savings: \$89.95 × 0.20 = **\$17.99**
+**Step 2:** Sale price: \$89.95 − \$17.99 = **\$71.96**
+
+*Interpretation:* A single 20% discount is straightforward — you pay exactly 80% of the original price. For quick mental math, move the decimal one place left to get 10% (\$9.00), then double it to get the 20% savings (\$18.00).
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator multiplies the original price by the discount percentage divided by 100 to find the savings amount, then subtracts that from the original price for the final price. For stacked discounts, each percentage is applied sequentially to the running total — not added together — because a 20% + 10% discount is 28% total savings, not 30%.

@@ -1,0 +1,87 @@
+{
+  "id": "age-calculator",
+  "title": "Age Calculator",
+  "slug": "age-calculator",
+  "category": "everyday",
+  "subcategory": "date-time",
+  "primaryKeyword": "age calculator",
+  "metaTitle": "Age Calculator — Exact Age in Years, Months, and Days",
+  "metaDescription": "Calculate your exact age in years, months, and days. Find time between any two dates with precision. Free, instant results.",
+  "inputs": [
+    {
+      "id": "birthDate",
+      "label": "Date of Birth",
+      "type": "date",
+      "required": true,
+      "defaultValue": "1990-01-15",
+      "helpText": "Enter your birth date"
+    },
+    {
+      "id": "toDate",
+      "label": "Age as of Date",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-03-12",
+      "helpText": "Defaults to today's date"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ageResult",
+      "label": "Your Age",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "ageBreakdown",
+      "label": "Age Breakdown",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "nextBirthday",
+      "label": "Next Birthday",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "age-calc",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "date-calculator",
+    "countdown-calculator",
+    "time-calculator",
+    "pregnancy-calculator",
+    "due-date-calculator",
+    "time-zone-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Gregorian calendar system (Pope Gregory XIII, 1582)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gregorian calendar date arithmetic with leap year rules (divisible by 4, except centuries unless divisible by 400)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "date-calculator"
+  ],
+  "qualityScore": 78,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

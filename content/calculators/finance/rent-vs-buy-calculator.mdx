@@ -1,0 +1,190 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On a \$400,000 home with 20% down at 6.5% interest, buying costs approximately \$138,000 net over 10 years after accounting for \$537,000 in equity — while renting at \$2,000/month with 3% annual increases and investing the down payment at 7% costs roughly \$195,000 net. The break-even point where buying becomes cheaper than renting typically falls between year 4 and year 7, depending on local appreciation rates and rent inflation. Enter your numbers below to see a personalized year-by-year comparison.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+The rent-vs-buy decision is the most consequential financial choice most households face, and the answer is rarely obvious. This calculator models the true total cost of each option over your chosen time horizon, accounting for factors that simple monthly payment comparisons miss entirely.
+
+The **net cost of buying** includes your down payment, closing costs (estimated at 3% of home price), mortgage payments, property taxes, insurance, and maintenance — minus the equity you build through principal payments and home appreciation. A \$400,000 home appreciating at 3% annually is worth \$537,567 after 10 years. Subtract your remaining mortgage balance, and that equity offsets a significant portion of your out-of-pocket costs.
+
+The **net cost of renting** includes cumulative rent payments minus the investment returns you would earn by investing the down payment and closing costs instead of tying them up in a home. If you would have spent \$92,000 on a down payment and closing costs, and instead invest that at 7% annual return, it grows to approximately \$180,948 over 10 years — a gain of \$88,948 that reduces your effective rent cost.
+
+The **cost comparison chart** shows both net costs evolving year by year. The crossover point — where the buying line drops below the renting line — is your break-even year. Before that year, renting is cheaper; after it, buying pulls ahead. This crossover typically occurs between year 4 and year 7 in most U.S. markets. Use the [Mortgage Calculator](/calculators/finance/mortgage-calculator) to explore different loan scenarios and the [Down Payment Calculator](/calculators/finance/down-payment-calculator) to plan your savings timeline.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Home Price** — use a realistic purchase price for your target area. The National Association of Realtors reported a U.S. median existing-home price of \$407,500 in late 2025. If you are comparing a specific property, use its listing price.
+
+2. **Set the Down Payment percentage** — 20% avoids private mortgage insurance. The calculator accounts for the opportunity cost of this cash. Lower down payments mean a larger loan but more cash available to invest.
+
+3. **Enter the Mortgage Interest Rate and Loan Term** — use the current rate you have been quoted or the prevailing 30-year fixed rate (approximately 6.5% as of early 2026). Select 15-year if you are considering an accelerated payoff.
+
+4. **Enter your Monthly Rent** — use your current rent or the rent for a comparable property in the area where you would buy. This is the starting rent; it increases annually by the percentage you specify.
+
+5. **Adjust the advanced inputs** — Annual Rent Increase (national average ~3%), Property Tax Rate (national average ~1.1%), Home Insurance, Maintenance (rule of thumb: 1% of home value/year), Home Appreciation (national average ~3-4%), and Investment Return (S&P 500 historical average ~10%, conservative estimate 7%).
+
+6. **Set the comparison period** — 5 years is the minimum meaningful window. 10 years is the most common analysis period. If you plan to stay fewer than 5 years, renting almost always wins due to closing costs.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The calculator compares cumulative net costs for each option year by year:
+
+**Monthly mortgage payment (principal and interest):**
+
+$$M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
+
+Where:
+- **$M$** = monthly mortgage payment (dollars)
+- **$P$** = loan amount (home price minus down payment)
+- **$r$** = monthly interest rate (annual rate / 12)
+- **$n$** = total number of monthly payments (loan term in years x 12)
+
+**Net cost of buying** after year $t$:
+
+$$\text{Net Buy}_t = \text{Down Payment} + \text{Closing Costs} + \sum_{y=1}^{t}(\text{Mortgage}_y + \text{Tax}_y + \text{Insurance}_y + \text{Maintenance}_y) - \text{Equity}_t$$
+
+Where equity equals the current home value minus the remaining loan balance.
+
+**Net cost of renting** after year $t$:
+
+$$\text{Net Rent}_t = \sum_{y=1}^{t} \text{Rent}_y \times 12 - \text{Investment Gains}_t$$
+
+Where investment gains represent the growth of the down payment and closing costs if invested instead.
+
+**Recommendation:** If $\text{Net Rent}_t > \text{Net Buy}_t$, buying saves money at year $t$.
+
+**Source:** This methodology follows the **NY Times rent-vs-buy** framework and **CFPB** homeownership cost guidelines, incorporating opportunity cost analysis as recommended by academic finance literature.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 10-Year Comparison — \$400,000 Home vs. \$2,000/Month Rent
+
+**Inputs:**
+- Home Price: \$400,000
+- Down Payment: 20% (\$80,000)
+- Mortgage Rate: 6.5%, 30-year fixed
+- Monthly Rent: \$2,000
+- Annual Rent Increase: 3%
+- Property Tax Rate: 1.2%
+- Annual Insurance: \$1,500
+- Maintenance: 1% of home value
+- Home Appreciation: 3%
+- Investment Return: 7%
+- Years to Compare: 10
+
+**Step-by-step:**
+
+1. Loan amount: \$400,000 - \$80,000 = **\$320,000**
+2. Monthly mortgage payment (P&I): \$320,000 at 6.5% for 30 years = **\$2,023/month**
+3. Closing costs (3%): \$400,000 x 0.03 = **\$12,000**
+4. Year 1 costs (buying): \$2,023 x 12 + \$4,800 tax + \$1,500 insurance + \$4,000 maintenance = **\$30,576**
+5. Year 1 rent: \$2,000 x 12 = **\$24,000**
+6. Year 10 home value: \$400,000 x (1.03)^10 = **\$537,567**
+7. Year 10 remaining mortgage: approximately **\$277,000**
+8. Year 10 equity: \$537,567 - \$277,000 = **\$260,567**
+9. Cumulative buying costs (10 years): \$80,000 + \$12,000 + ~\$330,000 = **\$422,000**
+10. Net buying cost: \$422,000 - \$260,567 = **~\$161,000**
+11. Cumulative rent (10 years with 3% increases): approximately **\$275,000**
+12. Down payment invested at 7% for 10 years: \$92,000 grows to ~\$180,948
+13. Net renting cost: \$275,000 - \$88,948 = **~\$186,000**
+
+**Results:**
+- Net cost of buying: **~\$161,000**
+- Net cost of renting: **~\$186,000**
+- Buying saves approximately **\$25,000** over 10 years
+- Break-even year: approximately **year 5**
+
+**Interpretation:** Buying wins over 10 years in this scenario, primarily because of equity accumulation and home appreciation. The break-even occurs around year 5 — if you move before year 5, renting would have been cheaper. The 3% home appreciation is critical to this outcome; at 0% appreciation, the break-even shifts to year 8-9.
+
+### Example 2: High-Rent City — 5-Year Comparison
+
+**Inputs:**
+- Home Price: \$750,000
+- Down Payment: 20% (\$150,000)
+- Mortgage Rate: 6.5%, 30-year fixed
+- Monthly Rent: \$3,500
+- Annual Rent Increase: 4%
+- Property Tax Rate: 0.8%
+- Home Appreciation: 2%
+- Investment Return: 7%
+- Years to Compare: 5
+
+**Step-by-step:**
+
+1. Monthly mortgage: \$600,000 at 6.5% = **\$3,793/month**
+2. Closing costs: \$750,000 x 0.03 = **\$22,500**
+3. Year 1 buying costs: \$3,793 x 12 + \$6,000 tax + \$1,500 insurance + \$7,500 maintenance = **\$60,516**
+4. Year 1 rent: \$3,500 x 12 = **\$42,000**
+5. After 5 years, home value: \$750,000 x (1.02)^5 = **\$828,122**
+6. Remaining mortgage at year 5: approximately **\$564,000**
+7. Equity: \$828,122 - \$564,000 = **\$264,122**
+8. Net buying cost (5 years): approximately **-\$10,000** (buying shows a net gain from equity)
+9. Net renting cost (5 years): approximately **\$140,000**
+
+**Interpretation:** Even in a high-cost market, buying can win at the 5-year mark when appreciation is positive and rent is high. However, this scenario is sensitive to appreciation — if the housing market declines 5% instead of growing 2%, the net buying cost swings by over \$75,000, making renting the better choice.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Time Horizon** — This is the single most important variable. Buying has large upfront costs (down payment, closing costs) that take years to recoup through equity. In most U.S. markets, the break-even point falls between year 4 and year 7. If you expect to move within 3 years, renting almost always wins. At 10+ years, buying almost always wins (assuming positive or flat appreciation).
+
+**Home Appreciation Rate** — Each 1% change in annual appreciation shifts the 10-year outcome by approximately \$40,000-\$50,000 on a \$400,000 home. The national average from 1991-2024 is approximately 3.8% per year, but individual markets vary dramatically. Some cities (Austin, Boise) saw 15%+ annual appreciation in 2020-2022, then corrections of 5-10%. Use your local market's long-term average, not recent peaks.
+
+**Rent Growth Rate** — The national average rent increase has been approximately 3-4% annually over the past decade, but specific markets have seen 8-12% annual increases. Higher rent growth makes buying more attractive because the cost of renting accelerates while your mortgage payment stays fixed (on a fixed-rate loan). If you expect rent in your area to grow faster than 3%, buying becomes more compelling.
+
+**Opportunity Cost of the Down Payment** — This is the factor most people overlook. An \$80,000 down payment invested in a diversified portfolio at 7% annual return grows to \$157,353 in 10 years. That \$77,353 in investment gains is money you forgo by buying. The higher your expected investment return, the higher the hurdle for buying to beat renting.
+
+**Property Tax and Maintenance** — These ongoing costs add 2-3% of home value annually and are frequently underestimated. On a \$400,000 home, 1.2% property tax + 1% maintenance = \$8,800/year — costs that renters do not pay directly. Some states (New Jersey, Illinois, Texas) have property tax rates above 2%, significantly increasing the cost of ownership.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **fixed mortgage rate** for the entire loan term. Adjustable-rate mortgages would change the buying cost trajectory after the initial fixed period.
+- Closing costs are estimated at **3% of home price**. Actual closing costs range from 2-5% depending on location, lender fees, and negotiation.
+- Does **not include selling costs** (typically 5-6% in agent commissions) at the end of the comparison period. If you sell at year 10, subtract approximately \$27,000 from your equity.
+- Does **not account for tax benefits** of homeownership (mortgage interest deduction, property tax deduction up to \$10,000, capital gains exclusion up to \$250,000/\$500,000). These benefits favor buying.
+- Assumes **rent increases at a constant rate**. Actual rent changes vary by year and market conditions.
+- Investment returns use a **constant annual rate** without accounting for market volatility. Real returns vary year to year.
+- Does **not include renter's insurance** (typically \$150-\$300/year) on the renting side.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How long do you need to stay to make buying worth it?
+
+The typical break-even point for buying versus renting is 4-7 years in most U.S. markets, assuming 3% annual home appreciation and 3% annual rent increases. Closing costs (3% at purchase, 5-6% at sale) create a combined 8-9% transaction cost hurdle that takes several years to overcome through equity accumulation and appreciation. In expensive coastal markets with slower appreciation, the break-even can extend to 7-10 years. In faster-appreciating markets, it may be as short as 2-3 years. Run the calculator with your specific local numbers and a realistic time horizon.
+
+### Is renting really throwing money away?
+
+No. Renting pays for housing, flexibility, and zero maintenance responsibility. The "throwing money away" argument ignores the opportunity cost of the down payment, closing costs, property taxes, insurance, and maintenance that homeowners pay. A renter who invests the equivalent of a down payment at 7% annual return accumulates significant wealth. The real question is whether the equity you build through homeownership exceeds the investment returns you would earn by renting and investing the difference. The answer depends on local market conditions, your time horizon, and your investment discipline.
+
+### What appreciation rate should I use?
+
+The national average home appreciation rate from 1991-2024 is approximately 3.8% per year, according to the Federal Housing Finance Agency (FHFA) House Price Index. However, local rates vary significantly. Use 3% as a conservative baseline, your metro area's 10-year average for a moderate estimate, or 0% for a stress test. Avoid using the 2020-2022 pandemic appreciation rates (10-20% in some markets) as a baseline — those were anomalous. Also consider that individual properties appreciate differently from metro averages based on neighborhood, condition, and local development.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator follows the total cost comparison methodology used by the **NY Times rent-vs-buy calculator** and recommended by the **Consumer Financial Protection Bureau (CFPB)** for homeownership cost analysis. Mortgage payment calculations use the standard amortization formula per **Truth in Lending Act (TILA) Regulation Z**. The 3% closing cost estimate aligns with **Freddie Mac** guidelines for typical buyer closing costs. Home appreciation benchmarks reference the **Federal Housing Finance Agency (FHFA) House Price Index**, which has tracked U.S. home prices since 1991. Rent increase data references the **Bureau of Labor Statistics (BLS) Consumer Price Index** shelter component. The 7% investment return benchmark represents the long-term real return of the S&P 500 (approximately 10% nominal minus 3% inflation), per **Ibbotson Associates / Morningstar** historical market data. Property tax averages reference the **Tax Foundation's** state-by-state property tax analysis.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

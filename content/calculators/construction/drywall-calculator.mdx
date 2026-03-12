@@ -1,0 +1,189 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 14 x 12-foot bedroom with 8-foot ceilings requires 14 sheets of 4 x 8-foot drywall for the walls alone — plus approximately 4.5 gallons of joint compound, 250 feet of paper tape, and 560 drywall screws. Adding the ceiling brings the total to 20 sheets. At \$12–\$17 per sheet for 1/2-inch standard drywall, materials for a single room run \$240–\$340 before tape, mud, and fasteners. Enter your room dimensions below for a complete drywall materials list.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Drywall installation requires four coordinated materials: sheets, joint compound (mud), paper or mesh tape, and screws. This calculator estimates all four based on your room dimensions, so you can make a single trip to the building supply store with a complete materials list.
+
+The **sheet count** is the primary output. Standard drywall sheets are 4 x 8 feet (32 sq ft each), though 4 x 12-foot sheets (48 sq ft) are available for rooms with 9- or 10-foot ceilings or for reducing the number of horizontal seams. The calculator computes total wall area (and optionally ceiling area), applies a waste factor, and divides by the sheet size. Sheets are always rounded up — partial sheets create waste but cannot be avoided.
+
+The **accessory quantities** are equally important for avoiding return trips. Joint compound consumption averages 0.054 gallons per square foot of drywall installed (about one 4.5-gallon bucket per 375–400 sq ft). Paper tape runs along every seam: each 4 x 8 sheet creates an average of 12 linear feet of seams when accounting for butt joints, tapered edges, and inside corners. Drywall screws are spaced every 12 inches along studs at the field and every 8 inches at edges, averaging about 32 screws per 4 x 8-foot sheet. For measuring the room dimensions, try our [Square Footage Calculator](/calculators/construction/square-footage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter room length** — measure the longest wall in feet from corner to corner. For rooms being fully drywalled (like a basement finishing project), measure the longest interior dimension of the framed space.
+
+2. **Enter room width** — measure the shorter wall. For non-rectangular rooms, break the space into rectangular sections and calculate each separately.
+
+3. **Enter ceiling height** — standard residential height is 8 feet. Measure from the subfloor (or finished floor) to the bottom of the ceiling joists. Basements often have shorter ceiling heights of 7–7.5 feet after accounting for ductwork and beams.
+
+4. **Select whether to include the ceiling** — toggle this on for new construction or basement finishing where both walls and ceiling need drywall. Toggle off for wall-only projects like replacing damaged drywall in an existing room.
+
+5. **Choose your drywall sheet size** — select 4 x 8 ft (standard, fits 8-foot ceilings) or 4 x 12 ft (fewer seams, fits 9–12-foot ceilings). The 4 x 12 sheets are heavier (about 80 lbs each for 1/2-inch) and harder to handle but reduce taping work.
+
+6. **Adjust the waste factor** — the default 10% covers cutting waste around doors, windows, outlets, and irregular framing. Simple rectangular rooms with few openings can use 7%. Rooms with multiple windows, doors, and soffits may need 12–15%.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Drywall quantity is calculated from wall and ceiling area, with accessory quantities derived from the total sheet count.
+
+**Wall area:**
+
+$$A_{\text{walls}} = 2 \times (L + W) \times H$$
+
+**Ceiling area (if included):**
+
+$$A_{\text{ceiling}} = L \times W$$
+
+**Total area with waste:**
+
+$$A_{\text{total}} = (A_{\text{walls}} + A_{\text{ceiling}}) \times \left(1 + \frac{W_f}{100}\right)$$
+
+**Sheet count:**
+
+$$S = \left\lceil \frac{A_{\text{total}}}{A_{\text{sheet}}} \right\rceil$$
+
+**Accessory quantities:**
+
+$$\text{Joint Compound (gal)} = S \times A_{\text{sheet}} \times 0.054$$
+
+$$\text{Tape (ft)} = S \times 12$$
+
+$$\text{Screws} = S \times 32$$
+
+Where:
+
+- **L** = room length (feet)
+- **W** = room width (feet)
+- **H** = ceiling height (feet)
+- **W_f** = waste factor percentage (default 10%)
+- **A_sheet** = area per sheet: 32 sq ft for 4x8, 48 sq ft for 4x12
+- **S** = number of sheets (rounded up)
+- **0.054** = gallons of joint compound per sq ft of drywall (industry average for three coats)
+- **12** = average linear feet of seams per 4x8 sheet
+- **32** = average screws per 4x8 sheet (16-inch stud spacing, 12-inch screw spacing in field)
+
+Screw count assumes studs on 16-inch centers. For 24-inch stud spacing, reduce screw count to approximately 24 per sheet.
+
+**Source:** Joint compound consumption rates per **United States Gypsum (USG)** technical data sheets. Screw spacing per **ASTM C840** (Standard Specification for Application and Finishing of Gypsum Board). Tape quantities per **Gypsum Association** installation guidelines (GA-216).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Bedroom — 14 x 12 ft, 8-ft Ceiling, Walls Only
+
+A homeowner is hanging drywall on the walls of a bedroom during a renovation. The ceiling already has existing drywall in good condition. The room has 1 door and 2 windows.
+
+**Inputs:**
+- Length: 14 ft
+- Width: 12 ft
+- Ceiling Height: 8 ft
+- Include Ceiling: No
+- Sheet Size: 4 x 8 ft (32 sq ft)
+- Waste Factor: 10%
+
+**Step-by-step:**
+
+1. Wall area: 2 x (14 + 12) x 8 = 2 x 26 x 8 = **416 sq ft**
+2. Add 10% waste: 416 x 1.10 = **457.6 sq ft**
+3. Sheet count: 457.6 / 32 = 14.3 → **15 sheets**
+4. Joint compound: 15 x 32 x 0.054 = **25.9 sq ft worth → ~1.5 five-gallon buckets** (more precisely: 457.6 x 0.054 = 24.7 gallons, but standard practice is ~1 bucket per 8–10 sheets)
+5. Tape: 15 x 12 = **180 ft** (1 standard 250-ft roll)
+6. Screws: 15 x 32 = **480 screws** (1 lb of 1-5/8" coarse-thread = ~175 screws, so buy 3 lbs)
+7. Sheet cost: 15 x \$12–$17 = **$180–\$255**
+8. Total materials estimate: **\$250–\$375** including compound, tape, and screws
+
+**Interpretation:** Fifteen sheets of 4 x 8 drywall covers this bedroom with about 10% waste for cuts around the door, windows, and electrical outlets. The waste factor effectively accounts for the area of openings — the door and 2 windows total about 51 sq ft of non-drywalled area, but the cuts create unusable offcuts of similar total area. One 4.5-gallon bucket of all-purpose joint compound and one roll of paper tape handles all taping and three finish coats.
+
+### Example 2: Basement Finishing — 20 x 30 ft, 8-ft Ceiling, Walls + Ceiling
+
+A homeowner is finishing a basement recreation room. Both walls and ceiling need new drywall over framed stud walls and ceiling joists. The space has 1 door and 2 small egress windows.
+
+**Inputs:**
+- Length: 30 ft
+- Width: 20 ft
+- Ceiling Height: 8 ft
+- Include Ceiling: Yes
+- Sheet Size: 4 x 8 ft (32 sq ft)
+- Waste Factor: 10%
+
+**Step-by-step:**
+
+1. Wall area: 2 x (30 + 20) x 8 = 2 x 50 x 8 = **800 sq ft**
+2. Ceiling area: 30 x 20 = **600 sq ft**
+3. Total raw area: 800 + 600 = **1,400 sq ft**
+4. Add 10% waste: 1,400 x 1.10 = **1,540 sq ft**
+5. Sheet count: 1,540 / 32 = 48.1 → **49 sheets**
+6. Joint compound: 1,540 x 0.054 = **83.2 gallons → approximately 4–5 five-gallon buckets** (use 2 buckets all-purpose for embedding tape + 2–3 buckets lightweight for finish coats)
+7. Tape: 49 x 12 = **588 ft** (3 standard 250-ft rolls)
+8. Screws: 49 x 32 = **1,568 screws** (about 9 lbs of 1-5/8" screws)
+9. Sheet cost: 49 x \$12–$17 = **$588–\$833**
+10. Total materials estimate: **\$850–\$1,250** including compound, tape, and screws
+
+**Interpretation:** This basement requires 49 sheets — nearly 2 tons of drywall (each 1/2-inch 4 x 8 sheet weighs about 57 lbs). Plan for delivery rather than hauling. The ceiling alone consumes 19 sheets and is the most labor-intensive phase — consider renting a drywall lift (\$40–\$60/day) rather than using T-braces. With 5 buckets of joint compound and three finish coats, taping and mudding will take 4–6 days including drying time between coats (24 hours minimum per coat).
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Ceiling inclusion nearly doubles the project.** In the basement example above, adding the ceiling increased the sheet count from 25 to 49 — a 96% increase. Ceiling drywall is also harder to install, requiring a lift or extra helpers. For rooms where the ceiling is already finished, toggling ceiling off cuts your material list (and budget) roughly in half.
+
+**Drywall thickness depends on application.** Standard walls use 1/2-inch drywall. Ceilings over 24-inch joist spacing require 5/8-inch to prevent sag. Fire-rated assemblies (garage walls adjoining living space, furnace rooms) require 5/8-inch Type X. Moisture-resistant (green board) is used in bathrooms but not in shower surrounds — cement board or KERDI is required behind tile. Thickness does not change the sheet count but affects weight and price per sheet (\$12–\$17 for 1/2-inch vs. \$14–\$22 for 5/8-inch Type X).
+
+**Joint compound is consumed in three coats.** The first coat (embedding tape) uses all-purpose compound and consumes about 40% of total mud. The second coat (fill) uses another 35%. The third coat (skim/finish) uses 25% but should be lightweight compound for easier sanding. Buying too little compound means stopping mid-project while a coat dries. Buy one more bucket than the calculator suggests for your first project.
+
+**Sheet orientation reduces seams.** Hanging drywall horizontally (long edge parallel to the floor) on walls creates fewer vertical seams and places the tapered factory edges together for easier taping. A single 4 x 12 sheet can span a full 12-foot wall with zero vertical seams. Fewer seams means less tape, less compound, and a smoother finished surface.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **standard stud spacing of 16 inches on center**. For 24-inch stud spacing, reduce the screw count by approximately 25%.
+- Joint compound estimate of **0.054 gallons per sq ft** covers three coats (tape, fill, finish) on flat seams. Inside corners, outside corners with metal bead, and butt joints require additional compound. Complex rooms may need 15–20% more.
+- Tape estimate of **12 linear feet per sheet** is an average. Rooms with many inside corners (closets, soffits) use more tape. Large open walls with fewer seams use less.
+- Does **not deduct for doors, windows, or other openings**. The waste factor (default 10%) approximately offsets these deductions — the area of a door opening is about 21 sq ft, but the drywall sheets cut around it generate comparable waste.
+- Does **not include corner bead** (metal or paper-faced) for outside corners, which must be purchased separately. Count outside corners and buy one 8-foot stick per corner.
+- Assumes **new installation only**. Repair patches and overlay jobs use different quantities of compound and tape per square foot.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many sheets of drywall do I need for a room?
+
+Divide the total wall (and ceiling) area by 32 square feet per sheet for standard 4 x 8-foot panels, then add 10% for waste. A 12 x 12-foot room with 8-foot ceilings has 384 sq ft of wall area. With 10% waste: 384 x 1.10 = 422 sq ft. Divide by 32 = 13.2, rounded up to 14 sheets for walls. Add the ceiling (144 sq ft / 32 = 4.5, round to 5 sheets) if needed, for a total of 19 sheets for walls and ceiling. Each sheet weighs 50–70 lbs depending on thickness, so plan your delivery and staging accordingly.
+
+### How much joint compound do I need?
+
+One 4.5-gallon bucket of pre-mixed all-purpose joint compound covers approximately 375–400 square feet of drywall for all three finishing coats (taping, filling, and finish skim). For a standard bedroom (400–450 sq ft of wall area), one bucket is usually sufficient. For larger projects, plan roughly one bucket per 8–10 sheets of 4 x 8-foot drywall. Buy lightweight or "plus 3" compound for the final finish coat — it sands more easily and produces a smoother surface than all-purpose compound.
+
+### What size drywall sheets should I use?
+
+Use 4 x 8-foot sheets for standard 8-foot ceiling heights — they are easier to handle (57 lbs each for 1/2-inch) and fit through standard doorways. Use 4 x 12-foot sheets for 9-foot or higher ceilings, or on long walls to reduce the number of butt joints; these sheets weigh about 85 lbs each and require two people to carry and hang. For ceilings, 4 x 12 sheets reduce the number of end joints by 33% compared to 4 x 8 sheets, producing a flatter ceiling. Use 1/2-inch thickness for most walls, and 5/8-inch for ceilings with 24-inch joist spacing or any fire-rated assembly.
+
+### How many drywall screws do I need?
+
+Use approximately 32 screws per 4 x 8-foot sheet, or about 1 screw per square foot of drywall. Screws are placed every 12 inches along each stud in the field and every 8 inches along the edges. On 16-inch stud centers, a 4 x 8 sheet crosses 7 studs, with 8 screws per stud at the edges and 6 per interior stud. Drywall screws are sold by the pound: 1 lb of 1-5/8-inch coarse-thread screws contains approximately 175 screws. For a 15-sheet bedroom project (480 screws needed), buy 3 lbs. Always use coarse-thread screws for wood framing and fine-thread for metal studs.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses wall and ceiling area formulas with accessory consumption rates published by **United States Gypsum (USG)** in their *Gypsum Construction Handbook* (7th Edition). Joint compound consumption of 0.054 gallons per sq ft reflects three-coat finishing as specified in **ASTM C840** (Standard Specification for Application and Finishing of Gypsum Board). Screw spacing follows **Gypsum Association (GA)** standard GA-216 and ASTM C840 requirements for wood-framed assemblies. Tape consumption estimates are based on average seam lengths per sheet from USG technical bulletins. Fire-rating requirements reference the **International Residential Code (IRC) Section R302.6**. Pricing reflects 2026 U.S. retail averages from national home improvement retailers.
+
+{/* Section 17: Disclaimer — auto-rendered */}

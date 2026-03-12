@@ -1,0 +1,150 @@
+{
+  "id": "bmr-calculator",
+  "title": "BMR Calculator",
+  "slug": "bmr-calculator",
+  "category": "health",
+  "subcategory": "nutrition",
+  "primaryKeyword": "bmr calculator",
+  "metaTitle": "BMR Calculator — Basal Metabolic Rate Calculator",
+  "metaDescription": "Calculate your Basal Metabolic Rate using the Mifflin-St Jeor and Harris-Benedict equations. See calories burned at rest by age, sex, and size.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (lbs, inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 15,
+      "max": 100,
+      "step": 1,
+      "helpText": "Enter your age in years"
+    },
+    {
+      "id": "sex",
+      "label": "Sex",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "male",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 180,
+      "min": 50,
+      "max": 700,
+      "step": 1,
+      "helpText": "Enter weight in pounds (imperial) or kilograms (metric)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 70,
+      "min": 36,
+      "max": 300,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "mifflinBMR",
+      "label": "Mifflin-St Jeor BMR",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "harrisBenedictBMR",
+      "label": "Harris-Benedict BMR",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "dailyCalorieRange",
+      "label": "Estimated Daily Calorie Range",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "bmrComparison",
+      "label": "Formula Comparison",
+      "type": "table"
+    }
+  ],
+  "formula": "bmr",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "macro-calculator",
+    "body-fat-calculator",
+    "ideal-weight-calculator",
+    "lean-body-mass-calculator",
+    "bmi-calculator",
+    "heart-rate-zone-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Mifflin-St Jeor equation (1990) and Harris-Benedict equation (1918, revised 1984)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Mifflin MD, St Jeor ST, et al. American Journal of Clinical Nutrition, 1990; Roza AM, Shizgal HM. American Journal of Clinical Nutrition, 1984",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "calorie-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "methodologyTopics": [
+    "calorie-formulas"
+  ]
+}

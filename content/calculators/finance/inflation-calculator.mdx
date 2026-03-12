@@ -1,0 +1,145 @@
+---
+title: "Inflation Calculator"
+description: "Calculate how inflation erodes purchasing power or how prices rise over time. Based on BLS CPI data with adjustable rates and time periods."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+\$100 today will have the purchasing power of only \$74.41 in 10 years at 3% annual inflation — a 25.6% loss in buying power. Flip the calculation: something that costs \$100 today will cost \$134.39 in 10 years at the same rate. The U.S. historical average inflation rate from 1913 to 2024 is approximately 3.2% per year (BLS CPI data), meaning prices roughly double every 22 years and purchasing power halves over the same period.
+
+</section>
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This calculator models the effect of inflation in two directions. **Buying Power** mode shows how today's dollars lose purchasing power over time — \$100 is worth less in the future because prices rise. **Future Cost** mode shows what a current price will become — a \$100 item today costs more in the future.
+
+Both modes use compound growth at the specified inflation rate. The result includes a year-by-year chart so you can visualize the erosion or escalation over your chosen time period. This is essential for retirement planning (will your savings be enough?), salary negotiations (is a 2% raise keeping up with 3% inflation?), and long-term budgeting.
+
+For projecting investment returns that outpace inflation, see the [Investment Calculator](/calculators/finance/investment-calculator). To see how compound growth works on your savings, try the [Compound Interest Calculator](/calculators/finance/compound-interest-calculator).
+
+## How to Use This Calculator
+
+1. **Enter a dollar amount** — the amount you want to adjust for inflation (e.g., \$100, \$50,000, \$1,000,000).
+2. **Enter the annual inflation rate** — the default is 3%, close to the U.S. historical average. Use 2% for a conservative estimate or 4–5% for recent higher-inflation periods.
+3. **Enter the number of years** — the time horizon. For retirement planning, this might be 20–40 years; for short-term budgeting, 1–5 years.
+4. **Select the calculation mode** — "Future Buying Power" to see what today's money will be worth, or "Future Cost" to see what today's prices will become.
+5. **Review the results** — see the adjusted amount, total change, percentage change, and year-by-year chart.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Future Cost (what will today's price cost in the future):**
+
+$$
+FV = PV \times (1 + r)^n
+$$
+
+**Buying Power (what will today's dollars be worth):**
+
+$$
+\text{Buying Power} = \frac{PV}{(1 + r)^n}
+$$
+
+**Percentage Change:**
+
+$$
+\text{Change} = \frac{FV - PV}{PV} \times 100\%
+$$
+
+**Rule of 72 (doubling time approximation):**
+
+$$
+\text{Years to Double} \approx \frac{72}{r \times 100}
+$$
+
+Where:
+- **PV** = present value (today's amount)
+- **FV** = future value
+- **r** = annual inflation rate as a decimal (e.g., 0.03 for 3%)
+- **n** = number of years
+
+*Source: Bureau of Labor Statistics (BLS) — Consumer Price Index for All Urban Consumers (CPI-U). Historical average U.S. inflation 1913–2024: approximately 3.2% annually.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Purchasing Power Erosion Over 20 Years
+
+You have \$50,000 in a savings account earning 0.5% interest. Inflation averages 3% per year. What will your \$50,000 buy in 20 years?
+
+**Step 1:** Calculate future buying power
+- Buying Power = \$50,000 / (1 + 0.03)^20
+- Buying Power = \$50,000 / (1.03)^20
+- Buying Power = $50,000 / 1.8061 = **$27,684**
+
+**Step 2:** Calculate the loss
+- Loss = \$50,000 - $27,684 = **$22,316**
+- Percentage loss = 44.6%
+
+**With 0.5% savings interest factored in:**
+- Account balance after 20 years: $50,000 × (1.005)^20 = $55,257
+- Real (inflation-adjusted) value: $55,257 / 1.8061 = **$30,594**
+
+*Interpretation:* Even with savings interest, your \$50,000 loses 39% of its purchasing power over 20 years at 3% inflation. This is why financial advisors recommend investing in assets that outpace inflation — historically, the S&P 500 has returned ~10% nominal (approximately 7% after inflation).
+
+### Example 2: Future Cost of College Tuition
+
+Average in-state public university tuition is currently \$11,260 per year (College Board, 2024). At a 4% annual inflation rate for education costs, what will tuition cost in 18 years when a newborn reaches college age?
+
+**Step 1:** Calculate future cost
+- FV = \$11,260 × (1 + 0.04)^18
+- FV = \$11,260 × (1.04)^18
+- FV = $11,260 × 2.0258 = **$22,811 per year**
+
+**Step 2:** Four-year total
+- Today: $11,260 × 4 = $45,040
+- In 18 years: $22,811 × 4 = **$91,244**
+
+*Interpretation:* Education costs have historically inflated at 4–5% annually — faster than general CPI. A family starting a 529 college savings plan today needs to target roughly \$91,000 (in future dollars) for four years of in-state tuition, more than double the current cost.
+
+## Key Factors That Affect Your Results
+
+1. **Inflation Rate Assumption** — The U.S. Federal Reserve targets 2% annual inflation. The historical average (1913–2024) is approximately 3.2%. Recent years (2021–2023) saw rates of 4.7%, 8.0%, and 4.1%. The rate you choose dramatically affects results: at 2%, \$100 loses 18% over 10 years; at 5%, it loses 39%.
+2. **Time Horizon** — Inflation compounds. A 3% rate seems small annually, but over 30 years it erodes 59% of purchasing power. Over 40 years: 69%. This is why inflation is most dangerous for retirement savings and long-term fixed-income investments.
+3. **Category-Specific Inflation** — Not everything inflates at the same rate. Healthcare costs have averaged 5.5% annually (CMS data), education ~4.5%, while technology prices have deflated. Use category-specific rates for precise projections.
+4. **Nominal vs. Real Returns** — Investment returns must be adjusted for inflation. A 7% stock market return during 3% inflation yields a 4% real return. Bonds yielding 4% during 3% inflation earn only 1% in real terms.
+5. **Wage Growth** — If your salary grows at or above the inflation rate, your purchasing power is maintained. Average U.S. wage growth has tracked close to inflation historically (BLS data), though with significant variation by industry and decade.
+
+## Assumptions & Limitations
+
+- Assumes a constant annual inflation rate over the entire period (inflation varies year to year in reality)
+- Does not model deflation (negative inflation rates) as a standard scenario
+- Based on the compound growth formula, which matches the BLS CPI methodology
+- Does not account for category-specific inflation rates (healthcare, education, housing, food)
+- The U.S. historical average of 3.2% includes extreme periods (14.4% in 1947, deflation in the 1930s)
+- Does not adjust for regional cost-of-living differences
+
+## Frequently Asked Questions
+
+### What is the average inflation rate in the United States?
+
+The average annual U.S. inflation rate from 1913 to 2024 is approximately 3.2%, as measured by the Bureau of Labor Statistics Consumer Price Index for All Urban Consumers (CPI-U). However, this average masks significant variation: inflation was near zero in the 1930s (deflation), exceeded 14% in 1947, hit 13.5% in 1980, stayed below 2% for much of 2010–2020, and surged to 8.0% in 2022. For future projections, most financial planners use 2–3% as a reasonable baseline.
+
+### How does inflation affect retirement savings?
+
+Inflation is the biggest hidden risk to retirement savings because it compounds over decades. At 3% inflation, \$1,000,000 saved today has the purchasing power of only \$411,987 in 30 years — meaning you would need \$2.43 million in future dollars to maintain the same lifestyle. This is why retirement calculators recommend investing in growth assets (stocks, real estate) that historically outpace inflation, rather than keeping savings in cash or low-yield bonds.
+
+### What is the Rule of 72 for inflation?
+
+The Rule of 72 estimates how long it takes for prices to double at a given inflation rate: divide 72 by the annual rate. At 3% inflation, prices double in approximately 72 / 3 = 24 years. At 4%, doubling takes 18 years. At 6%, only 12 years. This quick mental math helps you gauge the long-term impact of inflation without a calculator. The rule is an approximation — exact doubling time uses the formula ln(2) / ln(1 + r).
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Bureau of Labor Statistics (BLS)** — Consumer Price Index for All Urban Consumers (CPI-U), All Items. Historical data series 1913–2024. Annual average inflation: ~3.2%.
+- **Federal Reserve Bank of Minneapolis** — Consumer Price Index, 1800–Present. Extended historical inflation data.
+- **Centers for Medicare & Medicaid Services (CMS)** — National Health Expenditure data. Healthcare inflation average: ~5.5% annually.
+- **College Board** — Trends in College Pricing and Student Aid (2024). Tuition inflation average: ~4.5% annually.
+
+The calculator applies the standard compound growth formula. Future cost multiplies by (1 + r)^n. Buying power divides by the same factor. Year-by-year data points are generated by applying the formula at each integer year from 0 to n.

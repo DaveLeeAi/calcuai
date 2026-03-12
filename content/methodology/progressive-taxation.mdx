@@ -1,0 +1,102 @@
+---
+title: "How Progressive Tax Brackets Work"
+slug: "progressive-taxation"
+relatedCalculators: ["income-tax-calculator", "tax-bracket-calculator", "salary-calculator", "payroll-calculator"]
+---
+
+## The Core Misconception
+
+The single most common misunderstanding about US federal income tax is the belief that moving into a higher tax bracket means all your income is taxed at the higher rate. This is false. The US uses a **marginal** tax system: each bracket's rate applies only to the income within that bracket's range.
+
+If you earn $95,000, you do not pay 22% on all $95,000. You pay 10% on the first $11,925, then 12% on the next portion, then 22% only on the amount above $48,475. Understanding this distinction is essential for accurate tax planning.
+
+## Step-by-Step Calculation: Single Filer, $95,000 Gross Income
+
+**Step 1: Subtract the standard deduction.**
+
+For 2025, the standard deduction for a single filer is $15,000 (per IRS Revenue Procedure 2024-40):
+
+$$\text{Taxable income} = \$95{,}000 - \$15{,}000 = \$80{,}000$$
+
+**Step 2: Apply each bracket's rate sequentially.**
+
+The 2025 federal income tax brackets for single filers:
+
+| Bracket | Rate | Income Range | Tax on This Bracket |
+|---------|------|-------------|---------------------|
+| 1 | 10% | $0 – $11,925 | $11,925 × 0.10 = $1,192.50 |
+| 2 | 12% | $11,926 – $48,475 | $36,550 × 0.12 = $4,386.00 |
+| 3 | 22% | $48,476 – $80,000 | $31,525 × 0.22 = $6,935.50 |
+
+$$\text{Total federal tax} = \$1{,}192.50 + \$4{,}386.00 + \$6{,}935.50 = \$12{,}514.00$$
+
+**Step 3: Calculate the effective rate.**
+
+$$\text{Effective rate} = \frac{\$12{,}514}{\$80{,}000} = 15.64\%$$
+
+Despite having a marginal rate of 22%, the effective tax rate is only 15.64%. The difference — 22% vs. 15.64% — is entirely due to the progressive structure.
+
+## Marginal Rate vs. Effective Rate
+
+These two rates answer different questions:
+
+**Marginal rate** is the rate applied to the next dollar earned. For someone with $80,000 taxable income, the marginal rate is 22%. If they earn $1 more, they pay $0.22 in additional tax. The marginal rate determines the tax impact of raises, bonuses, and deductions.
+
+**Effective rate** is total tax divided by total taxable income. It reflects the blended average rate across all brackets. The effective rate is always lower than or equal to the marginal rate (they're equal only if all income falls in a single bracket).
+
+$$\text{Effective rate} = \frac{\text{Total tax liability}}{\text{Taxable income}} \leq \text{Marginal rate}$$
+
+For tax planning decisions — "Should I contribute to a traditional 401(k) or Roth?" — the marginal rate is what matters, because your deduction or additional income is taxed at the margin.
+
+## How Income Fills Each Bracket
+
+Visualize taxable income as water filling a series of containers stacked on top of each other. Each container has a fixed capacity (the bracket width) and a fixed rate:
+
+$$\text{Tax} = \sum_{i=1}^{k} r_i \times \min(w_i,\ \max(0,\ I - L_i))$$
+
+Where $r_i$ is the rate for bracket $i$, $w_i$ is the width (upper limit − lower limit), $I$ is taxable income, and $L_i$ is the lower limit of bracket $i$. Income fills the 10% bracket first, and only after that bracket is completely full does income begin filling the 12% bracket.
+
+This is why a $1,000 raise never results in a net pay decrease. If a raise pushes you into the 22% bracket, only the dollars above the 12% bracket threshold are taxed at 22%. The rest of your income remains taxed at the lower rates.
+
+## Filing Status Differences
+
+The IRS provides different bracket widths for different filing statuses. For 2025:
+
+| Bracket Rate | Single | Married Filing Jointly |
+|-------------|--------|----------------------|
+| 10% | $0 – $11,925 | $0 – $23,850 |
+| 12% | $11,926 – $48,475 | $23,851 – $96,950 |
+| 22% | $48,476 – $103,350 | $96,951 – $206,700 |
+| 24% | $103,351 – $197,300 | $206,701 – $394,600 |
+| 32% | $197,301 – $250,525 | $394,601 – $501,050 |
+| 35% | $250,526 – $626,350 | $501,051 – $751,600 |
+| 37% | Over $626,350 | Over $751,600 |
+
+The married filing jointly brackets are approximately double the single brackets through the 32% bracket. This design eliminates the "marriage penalty" for most middle-income couples — two individuals each earning $50,000 pay roughly the same tax whether they file separately or jointly.
+
+The marriage penalty still exists at higher incomes and in specific situations (e.g., both spouses earn similar high incomes, pushing combined income into higher brackets faster than if doubled).
+
+## What This Calculation Does Not Include
+
+This methodology covers federal income tax brackets only. A complete tax liability calculation also involves:
+
+- **FICA taxes** — Social Security (6.2% on wages up to $176,100 in 2025) and Medicare (1.45% on all wages, plus 0.9% surtax on wages above $200,000). These are flat taxes, not progressive.
+- **State income tax** — 41 states and DC levy their own income tax, many with their own progressive bracket structures. Nine states have no income tax (AK, FL, NV, NH, SD, TN, TX, WA, WY).
+- **Tax credits** — reduce tax liability dollar-for-dollar (e.g., Child Tax Credit, Earned Income Tax Credit). Credits are applied after the bracket calculation.
+- **Alternative Minimum Tax (AMT)** — a parallel tax system that limits certain deductions. Primarily affects high-income taxpayers with large itemized deductions.
+- **Net Investment Income Tax** — 3.8% surtax on investment income for individuals earning over $200,000.
+
+## Assumptions and Limitations
+
+1. **Single tax year** — brackets apply to one calendar year. Income timing strategies (deferring bonuses, accelerating deductions) can shift income between years to minimize lifetime tax.
+2. **Federal only** — state taxes add 0% to 13.3% depending on the state, significantly changing the total effective rate.
+3. **Standard deduction assumed** — itemized deductions (mortgage interest, state taxes, charitable contributions) may reduce taxable income further for some taxpayers.
+4. **Wage income only** — capital gains and qualified dividends are taxed at separate, preferential rates (0%, 15%, or 20%), not through the ordinary income brackets.
+5. **Current law rates** — the 2017 Tax Cuts and Jobs Act brackets are scheduled to sunset after 2025, potentially reverting to higher rates unless Congress acts.
+
+## Sources
+
+- **Internal Revenue Service.** Revenue Procedure 2024-40: Tax Year 2025 inflation adjustments. [irs.gov](https://www.irs.gov/newsroom/irs-provides-tax-inflation-adjustments-for-tax-year-2025)
+- **Internal Revenue Service.** Publication 17: *Your Federal Income Tax (For Individuals)*, 2024 edition.
+- **Tax Foundation.** "2025 Tax Brackets and Federal Income Tax Rates." [taxfoundation.org](https://taxfoundation.org/data/all/federal/2025-tax-brackets/)
+- **Congressional Budget Office.** "The Distribution of Household Income," annual report on effective tax rates by income quintile.

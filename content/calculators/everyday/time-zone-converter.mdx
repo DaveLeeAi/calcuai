@@ -1,0 +1,107 @@
+---
+title: "Time Zone Converter"
+description: "Convert any time between 30 world time zones. See the exact time in EST, PST, GMT, JST, IST, and more. Handles day boundary crossings."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+When it is 9:00 AM Eastern (EST), it is 6:00 AM Pacific (PST), 2:00 PM in London (GMT), and 11:00 PM in Tokyo (JST) — a 14-hour spread across four common business zones. This converter handles 30 world time zones, shows day-boundary crossings (next day / previous day), and displays the exact UTC offset difference between any two zones.
+
+</section>
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The result shows the converted time in both 12-hour and 24-hour format, the UTC offset for each zone, the hour difference between the two zones, and whether the conversion crosses a day boundary. The day-shift indicator ("Same day," "Next day," or "Previous day") prevents the classic mistake of scheduling a Monday call that arrives on Tuesday in the target zone.
+
+For calculating elapsed time between two durations, use the [Time Calculator](/calculators/everyday/time-calculator). For computing total hours worked on a shift, use the [Hours Calculator](/calculators/everyday/hours-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the hour and minute** — type the time in 24-hour format (0–23 for hour, 0–59 for minute).
+2. **Select the source time zone** — the zone you are converting from. The dropdown includes standard and daylight variants (e.g., EST vs. EDT).
+3. **Select the target time zone** — the zone you are converting to.
+4. **Read the results** — the converted time, the offset difference, and any day change appear instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+t_{\text{target}} = t_{\text{source}} + (\text{offset}_{\text{target}} - \text{offset}_{\text{source}})
+$$
+
+Where:
+- **$t_{\text{source}}$** = source time in minutes from midnight (e.g., 9:00 AM = 540)
+- **$\text{offset}_{\text{source}}$** = UTC offset of the source zone in minutes (e.g., EST = −300)
+- **$\text{offset}_{\text{target}}$** = UTC offset of the target zone in minutes (e.g., JST = +540)
+
+If $t_{\text{target}} < 0$, add 1,440 (minutes in a day) and flag "Previous day."
+If $t_{\text{target}} \geq 1{,}440$, subtract 1,440 and flag "Next day."
+
+*Source: IANA Time Zone Database (maintained by ICANN). UTC offsets follow ISO 8601. Standard and daylight saving variants are listed separately.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: US East to Japan
+
+Convert 3:30 PM Eastern Standard Time (EST) to Japan Standard Time (JST).
+
+**Step 1:** Source minutes from midnight = 15 × 60 + 30 = 930
+**Step 2:** Offset difference = JST (+540) − EST (−300) = +840 minutes = +14 hours
+**Step 3:** Target = 930 + 840 = 1,770 minutes
+**Step 4:** 1,770 ≥ 1,440 → subtract 1,440 = 330 minutes → 5:30 AM, **next day**
+
+**Result:** 3:30 PM EST = 5:30 AM JST (next day). Schedule accordingly — your afternoon is their next morning.
+
+### Example 2: India to US Pacific
+
+Convert 10:00 PM India Standard Time (IST) to Pacific Standard Time (PST).
+
+**Step 1:** Source minutes = 22 × 60 = 1,320
+**Step 2:** Offset difference = PST (−480) − IST (+330) = −810 minutes = −13.5 hours
+**Step 3:** Target = 1,320 + (−810) = 510 minutes = 8:30 AM
+**Step 4:** 510 is within 0–1,439 → **same day**
+
+**Result:** 10:00 PM IST = 8:30 AM PST, same day. India's late evening is California's morning.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **Standard vs. daylight saving time.** EST (UTC−5) and EDT (UTC−4) are one hour apart. Select the correct variant for the current season — using the wrong one shifts your result by an hour. The U.S. observes DST from the second Sunday in March to the first Sunday in November, while the EU shifts from the last Sunday in March to the last Sunday in October. Because these transitions do not always fall on the same weekend, there are 1–3 week windows each spring and fall when the offset between New York and London changes from the usual 5 hours to 4 or 6 hours. In March 2026, the U.S. springs forward on March 8 while the EU does not shift until March 29 — during those 3 weeks, New York is only 4 hours behind London instead of the usual 5.
+2. **Half-hour and 45-minute offsets.** Not all time zones align to whole hours. India Standard Time is UTC+5:30, Nepal is UTC+5:45, Iran is UTC+3:30, and the Chatham Islands (New Zealand) use UTC+12:45 — the largest non-hour offset in regular use. Parts of Australia also use half-hour zones: the Northern Territory and South Australia are UTC+9:30. These fractional offsets exist because countries chose to split the difference between adjacent whole-hour zones to better match local solar noon.
+3. **Day boundary crossings.** Converting late evening times eastward or early morning times westward can push the result into the next or previous calendar day. Always check the day-shift indicator.
+4. **International Date Line.** Conversions spanning the Date Line (e.g., Hawaii to New Zealand = 22-hour difference) may cross two day boundaries. The calculator normalizes this to ±1 day.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses fixed UTC offsets — does not auto-detect whether DST is currently in effect for your location
+- Standard and daylight variants are listed separately; select the correct one for the current season
+- Does not handle historical time zone changes (e.g., zones that have shifted their offset)
+- Covers 30 common world time zones; some smaller zones are omitted
+
+## Frequently Asked Questions
+
+### What is the time difference between EST and PST?
+
+Eastern Standard Time (EST, UTC−5) is exactly 3 hours ahead of Pacific Standard Time (PST, UTC−8). When it is 12:00 PM EST, it is 9:00 AM PST. During daylight saving, EDT (UTC−4) and PDT (UTC−7) maintain the same 3-hour gap.
+
+### How do I know if I should use EST or EDT?
+
+In the United States, Eastern Daylight Time (EDT, UTC−4) is used from the second Sunday of March to the first Sunday of November. Eastern Standard Time (EST, UTC−5) applies the rest of the year. If your clocks have "sprung forward," use EDT. If they have "fallen back," use EST.
+
+### Why is India's time zone offset 5 hours 30 minutes instead of a whole hour?
+
+India Standard Time (IST) is UTC+5:30, a half-hour offset. India adopted this in 1947 to use a single time zone for the entire country, splitting the difference between the eastern and western borders. Nepal uses UTC+5:45, and several Australian zones use half-hour offsets as well.
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter adds or subtracts the UTC offset difference between two time zones to shift the time value. For example, converting 3:00 PM EST (UTC−5) to PST (UTC−8) subtracts 3 hours to yield 12:00 PM. The calculator uses the IANA time zone database for UTC offsets and accounts for daylight saving time transitions where applicable.

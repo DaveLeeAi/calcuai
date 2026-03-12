@@ -1,0 +1,222 @@
+{
+  "id": "flooring-calculator",
+  "title": "Flooring Calculator",
+  "slug": "flooring-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "flooring calculator",
+  "metaTitle": "Flooring Calculator — Square Feet, Boxes & Cost by Material",
+  "metaDescription": "Calculate how much flooring you need in square feet and boxes. Supports hardwood, laminate, vinyl plank, tile, and carpet with waste factor and cost estimates.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Room Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 14,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "width",
+      "label": "Room Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "materialType",
+      "label": "Flooring Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "hardwood",
+      "options": [
+        {
+          "value": "hardwood",
+          "label": "Hardwood"
+        },
+        {
+          "value": "laminate",
+          "label": "Laminate"
+        },
+        {
+          "value": "vinyl-plank",
+          "label": "Vinyl Plank (LVP)"
+        },
+        {
+          "value": "tile",
+          "label": "Ceramic / Porcelain Tile"
+        },
+        {
+          "value": "carpet",
+          "label": "Carpet"
+        },
+        {
+          "value": "stone",
+          "label": "Natural Stone"
+        }
+      ]
+    },
+    {
+      "id": "wastePercent",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 25,
+      "helpText": "10% standard, 15% for diagonal layout or natural stone"
+    },
+    {
+      "id": "boxSize",
+      "label": "Box Coverage (sq ft per box)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 20,
+      "min": 1,
+      "max": 100,
+      "helpText": "Check your specific product packaging for sq ft per box"
+    },
+    {
+      "id": "rooms",
+      "label": "Number of Identical Rooms",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 20,
+      "helpText": "For multiple rooms of the same size"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "materialNeeded",
+      "label": "Flooring Needed (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalArea",
+      "label": "Room Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "boxesNeeded",
+      "label": "Boxes / Cartons Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "wasteArea",
+      "label": "Waste Allowance (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "flooringBreakdown",
+      "label": "Flooring Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "flooring",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "square-footage-calculator",
+    "paint-calculator",
+    "drywall-calculator",
+    "concrete-calculator",
+    "board-foot-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "National Wood Flooring Association (NWFA) and Tile Council of North America (TCNA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard area formula with waste factor per NWFA installation guidelines and TCNA handbook waste recommendations.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "square-footage-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "square-footage"
+  ]
+}

@@ -1,0 +1,144 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Standard atmospheric pressure at sea level is 101,325 pascals (14.696 psi, 1.01325 bar, 760 mmHg) — the force of approximately 10,332 kg pressing on every square meter of surface. This pressure calculator solves for any one of three variables — pressure, force, or area — when you provide the other two. Enter any pair of known values and get instant results with automatic unit conversions between Pa, kPa, bar, atm, psi, and mmHg for physics, engineering, hydraulics, and HVAC applications.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Pressure is force distributed over an area. This calculator applies that definition directly: give it force and area, and it returns pressure. Give it pressure and area, and it returns force. Give it pressure and force, and it returns the area over which that force acts.
+
+The results reveal how force concentration works in practice. A 60 kg person standing on flat shoes (total sole area about 0.04 m squared) exerts a pressure of 14,715 Pa on the floor — roughly one-seventh of atmospheric pressure. The same 60 kg person on stiletto heels (heel area about 1 cm squared per heel) exerts over 2.9 million Pa through each heel — enough to dent hardwood floors and exceed the compressive strength of soft stone.
+
+Pressure calculations are essential in hydraulic systems (car brakes, industrial presses), pneumatics (tire inflation, compressed air tools), weather forecasting (barometric pressure), and structural engineering (load distribution on foundations). For force and area in building contexts, see the [Square Footage Calculator](/calculators/construction/square-footage-calculator). For the energy implications of pressurized systems, the [Energy Calculator](/calculators/science/energy-calculator) handles joule-based problems.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the two values you know.** You need exactly two of three quantities: Pressure (Pa), Force (N), or Area (m squared). Check your engineering specifications, pressure gauge readings, or problem statement.
+2. **Enter the first known value** in its corresponding field. Use SI units — pascals for pressure, newtons for force, square meters for area. Common conversions: 1 kPa = 1,000 Pa; 1 atm = 101,325 Pa; 1 psi = 6,894.76 Pa; 1 N = 1 kg x m/s squared.
+3. **Enter the second known value** in its field. Leave the third field empty.
+4. **Read the results.** The calculator returns the missing value and displays pressure in multiple units (Pa, kPa, bar, atm, psi, mmHg).
+5. **Cross-check with known references.** Standard atmospheric pressure = 101,325 Pa. A typical car tire runs at about 220,000 Pa (32 psi). Blood pressure of 120/80 mmHg = 15,998/10,666 Pa. If your result seems unreasonable, verify your unit conversions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Pressure from Force and Area
+
+$$P = \frac{F}{A}$$
+
+Where:
+
+- **P** = pressure, in pascals (Pa). 1 Pa = 1 N/m squared
+- **F** = force applied perpendicular to the surface, in newtons (N)
+- **A** = area over which the force is distributed, in square meters (m squared)
+
+### Force from Pressure and Area
+
+$$F = P \times A$$
+
+### Area from Pressure and Force
+
+$$A = \frac{F}{P}$$
+
+Pressure is inversely proportional to area for a given force. Halving the area doubles the pressure — which is why cutting tools work by concentrating force onto an extremely small edge area, and why snowshoes work by spreading body weight over a large area to reduce ground pressure and prevent sinking.
+
+### Common Pressure Unit Conversions
+
+$$1 \text{ atm} = 101{,}325 \text{ Pa} = 14.696 \text{ psi} = 1.01325 \text{ bar} = 760 \text{ mmHg}$$
+
+$$1 \text{ psi} = 6{,}894.76 \text{ Pa}$$
+
+$$1 \text{ bar} = 100{,}000 \text{ Pa}$$
+
+**Source:** The relationship between force, area, and pressure was established by Blaise Pascal in *Traite de l'equilibre des liqueurs* (1663), which also demonstrated that pressure in a confined fluid transmits equally in all directions (Pascal's Principle). The pascal unit (1 Pa = 1 N/m squared) was adopted by the 14th General Conference on Weights and Measures (CGPM) in 1971. Standard atmospheric pressure (101,325 Pa) was defined by the 10th CGPM in 1954.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Pressure Under a Stiletto Heel
+
+A person weighing 60 kg stands with all their weight on one stiletto heel. The heel tip has an area of 1 cm squared (0.0001 m squared). What pressure does the heel exert on the floor?
+
+**Step-by-step:**
+
+1. Calculate the force (weight): F = m x g = 60 x 9.80665 = **588.399 N**
+2. Convert area: A = 1 cm squared = **0.0001 m squared**
+3. Apply the formula: P = F / A = 588.399 / 0.0001 = **5,883,990 Pa**
+4. Convert to psi: 5,883,990 / 6,894.76 = **853.4 psi**
+5. Convert to atm: 5,883,990 / 101,325 = **58.1 atm**
+
+**Result:** The stiletto heel exerts **5,883,990 Pa** (853.4 psi, 58.1 atm) on the floor.
+
+**Practical interpretation:** This pressure exceeds the compressive strength of softwood (roughly 30-50 MPa parallel to grain) but falls below the strength of concrete (20-40 MPa). It explains why stiletto heels leave permanent indentations in wooden floors, damage vinyl, and are banned on some aircraft and historic buildings. For comparison, a typical car tire generates about 200 kPa of ground pressure — nearly 30 times less than the stiletto heel.
+
+### Example 2: Hydraulic Press Force
+
+A hydraulic press applies 500 N of force to a piston with a cross-sectional area of 0.01 m squared. What pressure does this create in the hydraulic fluid, and what force would a larger piston (0.1 m squared) on the other side produce?
+
+**Step-by-step:**
+
+1. Known values (small piston): F = **500 N**, A = **0.01 m squared**
+2. Calculate pressure: P = F / A = 500 / 0.01 = **50,000 Pa** (50 kPa)
+3. Large piston force: F = P x A = 50,000 x 0.1 = **5,000 N**
+
+**Result:** The hydraulic fluid pressure is **50,000 Pa** (50 kPa, 7.25 psi), and the large piston produces **5,000 N** of force — a 10x mechanical advantage.
+
+**Practical interpretation:** This is Pascal's Principle in action. The area ratio of the two pistons (0.1 / 0.01 = 10) equals the force multiplication factor. Real hydraulic systems in auto repair shops use area ratios of 50:1 or more, allowing a small hand pump to generate enough force to lift a 2,000 kg car. A typical hydraulic car jack operates at pressures around 20 MPa (2,900 psi).
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Gauge pressure vs. absolute pressure.** Most pressure gauges read zero at atmospheric pressure, meaning they display *gauge* pressure — the pressure above (or below) the surrounding atmosphere. Absolute pressure equals gauge pressure plus atmospheric pressure: P_abs = P_gauge + P_atm. A tire gauge reading 32 psi (220.6 kPa) means the absolute pressure inside the tire is 32 + 14.696 = 46.696 psi (321.9 kPa). This calculator computes absolute pressure values.
+
+**Fluid pressure depends on depth.** In a fluid, pressure increases linearly with depth: P = rho x g x h, where rho is the fluid density and h is the depth. Water at 10 meters depth adds 98,066.5 Pa (about 1 atm) to the surface pressure. This is why scuba divers experience 2 atm of absolute pressure at 10 m depth — one from the atmosphere above the water and one from the water column itself.
+
+**Temperature affects gas pressure.** For a sealed container of gas, pressure is directly proportional to absolute temperature (Gay-Lussac's Law): P1/T1 = P2/T2. A tire inflated to 32 psi at 20 degrees C (293 K) will read approximately 34.2 psi at 40 degrees C (313 K) — a change of about 1 psi per 10 degrees C. This is why tire pressure should be checked when tires are cold.
+
+**Force must be perpendicular.** The formula P = F/A assumes force is applied perpendicular (normal) to the surface. If force is applied at an angle theta, only the perpendicular component contributes to pressure: P = F x cos(theta) / A. At a 45-degree angle, effective pressure drops to 70.7% of the perpendicular value.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Static (equilibrium) conditions assumed.** This calculator computes pressure for systems at rest or in steady state. Dynamic pressure in moving fluids (Bernoulli's equation) requires additional velocity terms.
+- **Force perpendicular to surface.** The formula assumes force acts normal to the area. Shear forces and angular loads are not modeled.
+- **Positive values only.** All inputs must be positive. Negative gauge pressures (vacuum) are physically valid but require converting to absolute pressure for this calculator.
+- **Rigid surfaces assumed.** The area does not change under load. For deformable materials (rubber, soil, biological tissue), the contact area changes with applied force, making the pressure calculation iterative.
+- **SI units required.** Enter values in pascals, newtons, and square meters. Convert from psi (multiply by 6,894.76), bar (multiply by 100,000), or atm (multiply by 101,325) before entering.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between gauge and absolute pressure?
+
+Gauge pressure is measured relative to the surrounding atmospheric pressure — a tire gauge reading 32 psi means the tire is 32 psi above atmospheric pressure. Absolute pressure is measured relative to a perfect vacuum — the same tire has an absolute pressure of 32 + 14.696 = 46.696 psi. Scientific calculations almost always use absolute pressure. Weather barometers report absolute pressure (standard = 101,325 Pa = 29.92 inHg). Vacuum systems use negative gauge pressure: a reading of -10 psi gauge means the absolute pressure is 14.696 - 10 = 4.696 psi.
+
+### How do I convert psi to bar?
+
+Divide psi by 14.5038 to get bar, or multiply psi by 0.0689476 for the same result. The conversion factor derives from the definitions: 1 psi = 6,894.76 Pa and 1 bar = 100,000 Pa, so 1 psi = 6,894.76 / 100,000 = 0.0689476 bar. Common reference points: 14.696 psi = 1.01325 bar (1 atm), 32 psi (typical tire) = 2.206 bar, 3,000 psi (scuba tank) = 206.8 bar.
+
+### What is atmospheric pressure and why does it change?
+
+Atmospheric pressure is the weight of the air column above a given point. At sea level, this column extends roughly 100 km into the atmosphere and weighs approximately 101,325 Pa (14.696 psi, 1 atm, 29.92 inches of mercury). Pressure decreases with altitude because there is less air above — at 5,500 m elevation (approximately 18,000 ft), atmospheric pressure drops to about half the sea-level value. Weather systems also cause local pressure variations: high-pressure systems (clear weather) typically reach 102,000-103,000 Pa, while low-pressure systems (storms) can drop below 98,000 Pa. The lowest recorded sea-level pressure was 87,000 Pa (25.69 inHg) during Typhoon Tip in 1979.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses the pressure formula P = F/A (force divided by area) and solves for any unknown variable. Unit conversions between pascals, atmospheres, PSI, bar, and torr use fixed conversion factors from the International System of Units. Hydrostatic pressure calculations use P = ρgh. Results are displayed to 4 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

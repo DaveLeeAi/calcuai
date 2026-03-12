@@ -1,0 +1,197 @@
+{
+  "id": "annuity-calculator",
+  "title": "Annuity Calculator",
+  "slug": "annuity-calculator",
+  "category": "finance",
+  "subcategory": "retirement",
+  "primaryKeyword": "annuity calculator",
+  "metaTitle": "Annuity Calculator — Free Payment, PV & FV Annuity Calculator",
+  "metaDescription": "Calculate annuity payments, present value, or future value. Compare ordinary annuity vs annuity due. Monthly or annual payments. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Solve For",
+      "type": "select",
+      "required": true,
+      "defaultValue": "pv-to-payment",
+      "options": [
+        { "value": "pv-to-payment", "label": "Payment from Present Value (Loan/Payout)" },
+        { "value": "fv-to-payment", "label": "Payment from Future Value (Savings Goal)" },
+        { "value": "payment-to-pv", "label": "Present Value from Payment" },
+        { "value": "payment-to-fv", "label": "Future Value from Payment" }
+      ],
+      "helpText": "Choose what you want to calculate."
+    },
+    {
+      "id": "timing",
+      "label": "Annuity Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "ordinary",
+      "options": [
+        { "value": "ordinary", "label": "Ordinary Annuity (end of period)" },
+        { "value": "due", "label": "Annuity Due (start of period)" }
+      ],
+      "helpText": "Ordinary = payments at end of period. Due = payments at start."
+    },
+    {
+      "id": "presentValue",
+      "label": "Present Value",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 100000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Used in PV-to-Payment and Payment-to-PV modes."
+    },
+    {
+      "id": "futureValue",
+      "label": "Future Value",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 500000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Used in FV-to-Payment and Payment-to-FV modes."
+    },
+    {
+      "id": "paymentAmount",
+      "label": "Payment Amount",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 1000,
+      "min": 0,
+      "max": 10000000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Used in Payment-to-PV and Payment-to-FV modes."
+    },
+    {
+      "id": "annualRate",
+      "label": "Annual Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 30,
+      "step": 0.1
+    },
+    {
+      "id": "years",
+      "label": "Number of Years",
+      "type": "number",
+      "required": true,
+      "defaultValue": 20,
+      "min": 1,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "id": "paymentsPerYear",
+      "label": "Payments Per Year",
+      "type": "select",
+      "required": true,
+      "defaultValue": "12",
+      "options": [
+        { "value": "1", "label": "Annually (1)" },
+        { "value": "2", "label": "Semi-Annually (2)" },
+        { "value": "4", "label": "Quarterly (4)" },
+        { "value": "12", "label": "Monthly (12)" },
+        { "value": "26", "label": "Bi-Weekly (26)" },
+        { "value": "52", "label": "Weekly (52)" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "payment",
+      "label": "Payment Amount",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "presentValue",
+      "label": "Present Value",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "futureValue",
+      "label": "Future Value",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalPayments",
+      "label": "Total of All Payments",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Annuity Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Payment Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#1A6FA0", "#2ECC71"]
+      }
+    },
+    {
+      "id": "balanceOverTime",
+      "label": "Balance Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": ["#1A6FA0"]
+      }
+    }
+  ],
+  "formula": "annuity",
+  "features": ["chart"],
+  "relatedCalculators": [
+    "present-value-calculator",
+    "future-value-calculator",
+    "retirement-calculator",
+    "compound-interest-calculator",
+    "loan-calculator",
+    "savings-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "CFA Institute / Actuarial Standards Board",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annuity present and future value formulas per CFA Institute Level I Quantitative Methods curriculum and Actuarial Standards Board guidelines",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["present-value-calculator", "retirement-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null,
+  "glossaryTerms": ["annuity", "present-value", "future-value", "compound-interest", "amortization"],
+  "methodologyTopics": ["annuity", "time-value-of-money"]
+}

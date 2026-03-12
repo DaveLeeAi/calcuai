@@ -1,0 +1,125 @@
+{
+  "id": "roi-calculator",
+  "title": "ROI Calculator",
+  "slug": "roi-calculator",
+  "category": "business",
+  "subcategory": "margins",
+  "primaryKeyword": "ROI calculator",
+  "metaTitle": "ROI Calculator — Return on Investment Calculator",
+  "metaDescription": "Calculate your return on investment with simple and annualized ROI. Enter investment cost and returns to see total profit and CAGR. Free, instant results.",
+  "inputs": [
+    {
+      "id": "initialInvestment",
+      "label": "Initial Investment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total amount invested or cost of project"
+    },
+    {
+      "id": "finalValue",
+      "label": "Final Value (or Total Returns)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Current or projected value of the investment"
+    },
+    {
+      "id": "investmentPeriodYears",
+      "label": "Investment Period (Years)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0.1,
+      "max": 100,
+      "step": 0.5,
+      "helpText": "How long you held (or plan to hold) the investment"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "roiPercent",
+      "label": "Total ROI",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "annualizedROI",
+      "label": "Annualized ROI (CAGR)",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "growthOverTime",
+      "label": "Investment Growth Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Value ($)",
+        "colors": [
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "ROI Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "roi",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "investment-calculator",
+    "compound-interest-calculator",
+    "margin-calculator",
+    "break-even-calculator",
+    "retirement-calculator",
+    "commission-calculator",
+    "employee-cost-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "CFA Institute — Return on Investment (Standards of Practice Handbook, 2023)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "ROI = (Final Value − Initial Investment) / Initial Investment × 100; Annualized ROI (CAGR) = ((Final/Initial)^(1/years) − 1) × 100",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "investment-calculator"
+  ],
+  "qualityScore": 92,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "methodologyTopics": [
+    "break-even-analysis"
+  ]
+}

@@ -1,0 +1,169 @@
+---
+title: "Commission Calculator"
+description: "Calculate flat rate or tiered sales commissions instantly. Enter sales amount, commission rate, and base salary to see total earnings and effective rate."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your total earnings from flat or tiered sales commissions. A salesperson closing \$80,000 in monthly sales at a 10% flat commission earns \$8,000 in commission — or \$11,000 total with a \$3,000 base salary, for an effective commission rate of 10% of sales. With a tiered structure, \$100,000 in sales split across brackets of 5%, 8%, and 12% yields \$9,250 in commission, rewarding higher performance with accelerating returns.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+This calculator shows your total compensation from a commission-based pay structure, separating base salary from commission income so you can evaluate both components independently. The key outputs are **commission amount** (what you earn from sales activity alone), **total earnings** (base pay plus commission), and **effective commission rate** (the blended percentage when using tiered structures).
+
+The effective commission rate is especially valuable for tiered structures. When your plan pays 5% on the first \$25,000, 8% on the next \$25,000, and 12% above \$50,000, the effective rate on \$100,000 in sales is 9.25% — not the headline 12% top-tier rate. Knowing your blended rate helps you compare job offers accurately. A "12% commission" plan with tiers may actually pay less than a flat 10% plan depending on your typical sales volume.
+
+For tiered commissions, the tier breakdown table shows exactly how much commission you earned in each bracket, making it easy to see where additional sales effort yields the highest marginal return. To analyze your broader compensation including overtime, use our [Overtime Calculator](/calculators/business/overtime-calculator), or to plan your overall salary structure, try the [Salary Calculator](/calculators/business/salary-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Sales Amount** — total sales revenue you closed during the period (monthly, quarterly, or annually). Use gross sales before returns or chargebacks unless your plan specifies net sales.
+2. **Select Commission Structure** — choose "Flat Rate" if one percentage applies to all sales, or "Tiered / Graduated" if different rates apply at different sales levels. Most SaaS and enterprise sales roles use tiered structures.
+3. **Set Commission Rate(s)** — for flat rate, enter the single percentage. For tiered, enter the threshold amounts and rates for each bracket. The calculator supports three tiers covering most standard commission plans.
+4. **Enter Base Salary** — your fixed compensation before commission. Leave at \$0 for commission-only roles. This is typically your monthly or period-matching base pay.
+5. **Review results** — total earnings and commission amount appear at the top. The pie chart shows the base vs. commission split. For tiered structures, the breakdown table shows exactly how much you earned in each tier.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Flat Commission:**
+
+$$
+\text{Commission} = \text{Sales Amount} \times \frac{\text{Commission Rate}}{100}
+$$
+
+$$
+\text{Total Earnings} = \text{Base Pay} + \text{Commission}
+$$
+
+**Tiered Commission:**
+
+$$
+\text{Tier 1 Commission} = \min(\text{Sales}, T_1) \times \frac{R_1}{100}
+$$
+
+$$
+\text{Tier 2 Commission} = \max(0, \min(\text{Sales}, T_2) - T_1) \times \frac{R_2}{100}
+$$
+
+$$
+\text{Tier 3 Commission} = \max(0, \text{Sales} - T_2) \times \frac{R_3}{100}
+$$
+
+$$
+\text{Total Commission} = \text{Tier 1} + \text{Tier 2} + \text{Tier 3}
+$$
+
+**Effective Commission Rate:**
+
+$$
+\text{Effective Rate} = \frac{\text{Commission}}{\text{Sales Amount}} \times 100
+$$
+
+Where:
+- **Sales Amount** = total revenue generated during the period
+- **Commission Rate** = percentage applied to sales (flat mode)
+- **T₁, T₂** = threshold values separating tier brackets
+- **R₁, R₂, R₃** = commission rates for each respective tier
+- **Base Pay** = fixed salary independent of sales performance
+
+*Source: U.S. Bureau of Labor Statistics — compensation structures for sales occupations. Tiered (graduated) commission methodology follows standard marginal rate calculation, analogous to progressive tax brackets, as described in sales compensation design literature (WorldatWork, "Sales Compensation Handbook," 2023).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Flat Rate Commission
+
+A real estate agent earns a 6% commission on home sales. She closes a \$450,000 home sale and has no base salary.
+
+**Commission:**
+- \$450,000 × 6% = **\$27,000**
+
+**Total Earnings:**
+- \$0 base + \$27,000 commission = **\$27,000**
+
+**Effective Rate:**
+- \$27,000 ÷ \$450,000 × 100 = **6.00%**
+
+*Interpretation:* In real estate, the 6% gross commission is typically split between the listing and buyer's agent (3% each), then split again with their brokerage. The agent's actual take-home commission might be 1.5–3% of the sale price (\$6,750–\$13,500), depending on brokerage split. This calculator shows the gross commission before splits — enter the net rate you actually receive for a more accurate personal earnings calculation.
+
+### Example 2: Tiered Commission Structure
+
+A SaaS account executive has a tiered commission plan with a \$4,000 monthly base salary. She closes \$100,000 in annual recurring revenue (ARR) this month. Her tiers: 5% on the first \$25,000, 8% on \$25,001–\$50,000, and 12% above \$50,000.
+
+**Tier 1:** \$0–\$25,000
+- \$25,000 × 5% = **\$1,250**
+
+**Tier 2:** \$25,001–\$50,000
+- \$25,000 × 8% = **\$2,000**
+
+**Tier 3:** Above \$50,000
+- \$50,000 × 12% = **\$6,000**
+
+**Total Commission:**
+- \$1,250 + \$2,000 + \$6,000 = **\$9,250**
+
+**Total Earnings:**
+- \$4,000 base + \$9,250 commission = **\$13,250**
+
+**Effective Commission Rate:**
+- \$9,250 ÷ \$100,000 × 100 = **9.25%**
+
+*Interpretation:* Although the top tier pays 12%, the blended effective rate is 9.25% because lower tiers drag down the average. This tiered structure incentivizes pushing past the \$50,000 mark — every dollar above that threshold earns 12 cents in commission, compared to only 5 cents for the first \$25,000. The marginal return on sales effort nearly triples above \$50,000, which is exactly the behavior the plan is designed to encourage.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Commission Structure Type Drives Total Pay** — A flat 10% on \$100,000 yields \$10,000 in commission. The same \$100,000 under a tiered plan (5%/8%/12%) yields \$9,250. But at \$200,000, the tiered plan catches up and surpasses flat rate because the 12% top tier applies to a larger portion. The crossover point depends on your specific tier thresholds and rates — high performers generally earn more under tiered structures.
+
+2. **Sales Volume and Consistency** — Commission earnings are directly proportional to sales. A 10% rate means every \$1,000 in additional sales adds \$100 in commission. For tiered plans, the marginal incentive increases at each tier — the same extra \$1,000 in sales could earn \$50 (Tier 1), \$80 (Tier 2), or \$120 (Tier 3). Consistent high-volume sellers benefit most from accelerator tiers.
+
+3. **Base-to-Commission Ratio (Pay Mix)** — Industry pay mixes vary significantly. Enterprise SaaS roles typically split 50/50 to 60/40 (base/variable). Inside sales skews 70/30 toward base. Commission-only roles (100% variable) are common in real estate and insurance. A higher base provides income stability but usually comes with lower commission rates, reducing upside for top performers.
+
+4. **Accelerators and Decelerators** — Many plans include multipliers that kick in above quota. Hitting 120% of quota might pay 1.5× the standard rate on the excess. Conversely, some plans reduce rates (decelerators) below a minimum threshold. This calculator handles standard flat and tiered structures — for plans with accelerators, multiply the over-quota portion by the accelerator rate manually.
+
+5. **Draw Against Commission** — Some employers advance a "draw" against future commissions. A \$3,000/month draw means you receive at least \$3,000 regardless of sales, but any draw amount is deducted from commission earned that period. If your commission is \$5,000 and your draw was \$3,000, you receive \$2,000 additional. Enter the draw amount as base pay for a rough estimate.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes all sales are collected and commission-eligible (does not account for returns, chargebacks, or clawbacks)
+- Supports a maximum of three tiers — plans with four or more tiers require multiple calculations
+- Does not include commission accelerators or decelerators (over/under-quota multipliers)
+- Does not account for commission caps (maximum commission limits per period)
+- Base pay and sales amount should cover the same time period (monthly, quarterly, or annually) for accurate total earnings
+- Tiered calculation uses marginal rates (each tier applies only to its bracket), not the average rate — matching how most progressive commission plans work
+- Does not factor in team splits, brokerage splits, or manager overrides common in real estate and insurance
+- Results show gross earnings before income tax, Social Security, and Medicare withholding
+
+## Frequently Asked Questions
+
+### What is a typical commission rate?
+
+Commission rates vary widely by industry and role. Real estate agents typically earn 5–6% of the sale price (split between buyer and seller agents). SaaS sales representatives earn 8–15% of annual contract value (ACV), with account executives at the higher end and SDRs at the lower end. Retail sales associates receive 1–3% commission. Insurance agents earn 5–20% on new policies and 2–5% on renewals. Financial advisors receive 1–2% of assets under management annually. The BLS reports that median pay for sales representatives was \$65,630 in 2023, with top earners exceeding \$130,000 when combining base and commission.
+
+### What is a tiered commission structure?
+
+A tiered (or graduated) commission structure applies different commission rates to different portions of your sales, similar to how tax brackets work. Sales in the first bracket earn a lower rate, while sales exceeding higher thresholds earn progressively higher rates. For example, 5% on the first \$25,000, 8% on \$25,001–\$50,000, and 12% above \$50,000. Each rate applies only to the sales within its bracket — earning \$30,000 in sales pays 5% on \$25,000 (\$1,250) plus 8% on \$5,000 (\$400) = \$1,650 total, not 8% on the entire \$30,000. Companies use tiered plans to incentivize exceeding quotas by offering accelerating rewards.
+
+### What is OTE (on-target earnings)?
+
+OTE (On-Target Earnings) is the total compensation a salesperson can expect if they hit 100% of their sales quota. It combines base salary and expected commission at target performance. A role with \$60,000 base and \$60,000 OTE variable (at 100% quota) has a \$120,000 OTE. OTE is the industry standard for comparing sales compensation across companies. Important: OTE is not guaranteed — it represents expected earnings at quota attainment. According to Pavilion's 2024 SaaS compensation report, the median account executive OTE is \$180,000 with a 50/50 base-to-variable split, meaning \$90,000 base salary and \$90,000 in expected commission.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **U.S. Bureau of Labor Statistics** — Occupational Employment and Wage Statistics, Sales and Related Occupations (May 2023)
+- **WorldatWork** — "The Sales Compensation Handbook," commission structure design principles and tiered/graduated rate methodology (2023)
+- **Pavilion (formerly Revenue Collective)** — SaaS Sales Compensation Report, median OTE and pay mix data (2024)
+
+The flat commission formula multiplies total sales by the commission rate. The tiered formula applies each rate to only the sales portion within its bracket (marginal calculation), identical to progressive tax bracket methodology. Effective commission rate divides total commission by total sales to produce a blended average rate. This marginal approach ensures that crossing a tier threshold never reduces total earnings — every additional dollar of sales always increases commission.

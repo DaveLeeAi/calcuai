@@ -1,0 +1,124 @@
+---
+title: "How Mortgage Amortization Works"
+slug: "mortgage-amortization"
+relatedCalculators: ["mortgage-calculator", "amortization-calculator", "refinance-calculator", "home-affordability-calculator", "loan-calculator"]
+---
+
+## The Fixed-Rate Amortization Formula
+
+The standard fixed-rate mortgage payment formula calculates the constant monthly payment required to fully repay a loan over a set term:
+
+$$M = P \cdot \frac{r(1+r)^n}{(1+r)^n - 1}$$
+
+Where:
+
+- **$M$** = monthly payment (principal + interest, excluding taxes/insurance)
+- **$P$** = loan principal (amount borrowed)
+- **$r$** = monthly interest rate (annual rate ÷ 12, as a decimal)
+- **$n$** = total number of monthly payments (years × 12)
+
+For a $280,000 loan at 6.5% APR over 30 years: $r = 0.065/12 = 0.005417$, $n = 360$.
+
+$$M = 280{,}000 \times \frac{0.005417(1.005417)^{360}}{(1.005417)^{360} - 1} = \$1{,}770.09$$
+
+Over 30 years, you pay $637,232.40 total — meaning $357,232.40 goes to interest alone, more than the original loan amount.
+
+## Derivation: Why the Formula Works
+
+The amortization formula derives from the present value of an annuity. A mortgage is a loan where the lender gives you $P$ today, and you repay it as a series of $n$ equal payments of $M$, each discounted by the interest rate.
+
+The present value of $n$ equal payments at rate $r$ per period is:
+
+$$PV = M \cdot \frac{1 - (1+r)^{-n}}{r}$$
+
+Setting $PV = P$ (the loan amount equals the present value of all payments) and solving for $M$:
+
+$$M = P \cdot \frac{r}{1 - (1+r)^{-n}}$$
+
+Multiplying numerator and denominator by $(1+r)^n$ yields the standard form shown above. The key insight: each payment is the exact amount needed so that the series of discounted cash flows equals the loan principal.
+
+## How Each Payment Splits Between Principal and Interest
+
+Every monthly payment contains two components. The interest portion for any given month is calculated on the outstanding balance:
+
+$$\text{Interest}_k = \text{Balance}_{k-1} \times r$$
+
+$$\text{Principal}_k = M - \text{Interest}_k$$
+
+$$\text{Balance}_k = \text{Balance}_{k-1} - \text{Principal}_k$$
+
+For the $280,000 loan at 6.5%, here is how the split changes over time:
+
+| Payment # | Month | Payment | Interest | Principal | Remaining Balance |
+|-----------|-------|---------|----------|-----------|-------------------|
+| 1 | Month 1 | $1,770.09 | $1,516.67 | $253.42 | $279,746.58 |
+| 180 | Month 180 | $1,770.09 | $1,064.59 | $705.50 | $196,197.42 |
+| 360 | Month 360 | $1,770.09 | $9.53 | $1,760.56 | $0.00 |
+
+In month 1, 85.7% of the payment goes to interest. By month 180 (the halfway point), the split is roughly 60/40 interest-to-principal. By the final payment, nearly the entire amount applies to principal. This is why early payments feel like they barely reduce the balance — because they mostly don't.
+
+## The Impact of Extra Payments
+
+Adding extra principal payments dramatically reduces total interest and shortens the loan term. For the same $280,000 loan at 6.5%:
+
+**Scenario: $200/month extra payment starting from month 1**
+
+- Original term: 360 months (30 years)
+- New payoff: 281 months (23 years, 5 months)
+- Time saved: 79 months (6 years, 7 months)
+- Total interest without extra: $357,232.40
+- Total interest with $200 extra: $269,445.18
+- Interest saved: **$87,787.22**
+
+The $200/month extra costs $56,200 in additional payments over 281 months but saves $87,787 in interest — a net benefit of $31,587. Extra payments are most effective early in the loan when the outstanding balance (and therefore the interest charge) is highest.
+
+The balance reduction from an extra payment of $X$ in month $k$ saves approximately:
+
+$$\text{Interest saved} \approx X \times r \times (n - k)$$
+
+A $1,000 extra payment in month 1 saves roughly $1,000 \times 0.005417 \times 359 = $1,944.70$ in lifetime interest.
+
+## Fixed-Rate vs. Adjustable-Rate Mortgages
+
+The fixed-rate formula above assumes $r$ never changes. Adjustable-rate mortgages (ARMs) use the same underlying math but recalculate $M$ at each rate adjustment period.
+
+A 5/1 ARM fixes the rate for 5 years, then adjusts annually. At each reset:
+
+1. The remaining balance becomes the new $P$
+2. The new rate becomes $r$
+3. The remaining months become the new $n$
+4. A new $M$ is calculated using the standard formula
+
+ARMs typically start with a lower initial rate (the "teaser rate") but carry the risk of payment increases. Rate caps limit how much the rate can increase per adjustment period (typically 2%) and over the life of the loan (typically 5-6% above the initial rate).
+
+## Amortization Schedule Structure
+
+A complete amortization schedule is a table showing every payment over the loan's life. Each row contains:
+
+| Column | Description |
+|--------|-------------|
+| Payment number | Sequential count (1 to $n$) |
+| Payment date | Calendar date of each payment |
+| Beginning balance | Outstanding principal before this payment |
+| Payment amount | Fixed monthly payment $M$ |
+| Principal portion | Amount applied to reducing the balance |
+| Interest portion | Amount paid as interest on the remaining balance |
+| Ending balance | Outstanding principal after this payment |
+| Cumulative interest | Total interest paid through this payment |
+
+The schedule is the core output of any amortization calculator. Lenders are required by the Truth in Lending Act (Regulation Z) to disclose the total amount of interest over the loan's life, which is directly derived from this schedule.
+
+## Assumptions and Limitations
+
+1. **Fixed rate assumption** — the standard formula assumes a constant interest rate. For variable-rate loans, the payment must be recalculated at each adjustment.
+2. **360-day year convention** — most US mortgages use a 30/360 day-count convention, meaning each month is treated as 30 days regardless of actual length. This slightly overstates interest compared to an actual/365 calculation.
+3. **No prepayment penalties** — the extra payment analysis assumes the lender allows additional principal payments without penalty. Some loans restrict prepayment, especially in the first 3-5 years.
+4. **Excludes escrow** — the formula calculates principal and interest only. The actual monthly payment typically includes property taxes, homeowners insurance, and possibly PMI (private mortgage insurance), which can add 30-50% to the P&I amount.
+5. **Monthly compounding** — US mortgages compound monthly. Canadian mortgages compound semi-annually, producing slightly different results for the same nominal rate.
+
+## Sources
+
+- **Consumer Financial Protection Bureau (CFPB).** "Understand loan options." consumerfinance.gov.
+- **Federal Housing Finance Agency.** *Truth in Lending Act (Regulation Z)* disclosure requirements.
+- **Freddie Mac.** "Understanding Your Mortgage." Primary Mortgage Market Survey methodology.
+- **Fabozzi, F.J.** *Fixed Income Analysis*, 3rd ed. CFA Institute Investment Series. Wiley, 2015.

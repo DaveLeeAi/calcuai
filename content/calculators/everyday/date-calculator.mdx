@@ -1,0 +1,294 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+There are exactly 365 days between January 1, 2026 and January 1, 2027 — or 52 weeks and 1 day. Add 90 days to March 10, 2026 and you land on June 8, 2026, a Monday. This calculator has two modes: count the exact number of days, weeks, months, and years between any two dates, or add and subtract a specific number of days from any starting date to find the resulting calendar date.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Date arithmetic is surprisingly error-prone when done by hand. February has 28 or 29 days, months range from 28 to 31 days, and a "year" is 365 or 366 days depending on the leap year cycle. Counting 90 days forward from January 15 requires crossing two month boundaries and accounting for February's variable length — the kind of calculation where off-by-one errors are almost inevitable without a tool.
+
+The **Days Between** mode gives you the exact interval between any two calendar dates, decomposed into years, months, days, total weeks, and total hours. This is essential for calculating contract durations, rental periods, project timelines, statutory deadlines, and interest accrual periods. A 180-day notice period starting March 10, 2026 ends on September 6, 2026 — not September 5, which is the mistake most people make by mentally estimating "6 months."
+
+The **Add/Subtract Days** mode performs forward or backward date arithmetic. Enter a starting date, specify a number of days, and get the exact resulting date with day of week. Landlords calculating 30-day notice periods, project managers setting 90-day milestones, and anyone counting down to an event can get a precise answer. For age-specific calculations, our [Age Calculator](/calculators/everyday/age-calculator) provides a dedicated interface with birthday tracking. For countdown timers to future events, see the [Countdown Calculator](/calculators/everyday/countdown-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+### Days Between Dates Mode
+
+1. **Select the Start Date** — choose the earlier date of your two-date range. This is your reference point: a contract start date, the day you moved in, the beginning of a project, or any fixed calendar date.
+
+2. **Select the End Date** — choose the later date. The calculator accepts any combination of dates; if you accidentally enter the end date before the start date, it will still return the correct absolute number of days between them.
+
+3. **Read the results** — the headline figure shows total days between the dates. Below it, the time breakdown shows the same interval expressed as years, months, and days, plus total weeks, total hours, and total minutes.
+
+### Add/Subtract Days Mode
+
+1. **Select the Starting Date** — the date from which you want to count forward or backward. This is your anchor point: today's date, a contract signing date, a deadline, or any reference date.
+
+2. **Enter the Number of Days** — type the number of calendar days to add or subtract. Common values: 30 (one month approximation), 60, 90 (quarterly), 180 (half year), 365 (one year). The maximum is 36,500 days (approximately 100 years).
+
+3. **Choose Add or Subtract** — select "Add Days" to count forward from your starting date, or "Subtract Days" to count backward. Adding 90 days from March 10, 2026 gives you June 8, 2026. Subtracting 90 days gives you December 10, 2025.
+
+4. **Read the result** — the calculator returns the exact resulting date, formatted with day of week, so you can immediately see whether your target date falls on a weekend or weekday.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Days Between Two Dates
+
+The total number of days between two dates is computed using absolute time difference:
+
+$$\text{totalDays} = \left\lfloor \frac{|D_{\text{end}} - D_{\text{start}}|}{86{,}400{,}000} \right\rfloor$$
+
+Where:
+- **$D_{\text{end}}$** = end date as milliseconds since the Unix epoch (January 1, 1970 00:00:00 UTC)
+- **$D_{\text{start}}$** = start date as milliseconds since the epoch
+- **86,400,000** = number of milliseconds in one day (1000 ms x 60 s x 60 min x 24 h)
+
+The year/month/day decomposition uses the same Gregorian calendar algorithm described in the Age Calculator:
+
+$$Y = \text{endYear} - \text{startYear} - \delta_y$$
+
+$$M = (\text{endMonth} - \text{startMonth} + 12) \bmod 12 - \delta_m$$
+
+$$D = \begin{cases} \text{endDay} - \text{startDay} & \text{if endDay} \geq \text{startDay} \\ \text{daysInPrevMonth} + \text{endDay} - \text{startDay} & \text{otherwise} \end{cases}$$
+
+Where $\delta_y$ and $\delta_m$ are borrowing adjustments (0 or 1) that account for incomplete years and months.
+
+### Add/Subtract Days
+
+Date addition is straightforward calendar arithmetic:
+
+$$D_{\text{result}} = D_{\text{start}} + (n \times 86{,}400{,}000)$$
+
+Where:
+- **$D_{\text{result}}$** = resulting date in milliseconds
+- **$D_{\text{start}}$** = starting date in milliseconds
+- **$n$** = number of days to add (positive) or subtract (negative)
+
+The resulting millisecond value is converted back to a calendar date (year, month, day, day of week) using standard Gregorian calendar rules.
+
+**Weeks and remaining days:**
+
+$$\text{weeks} = \left\lfloor \frac{\text{totalDays}}{7} \right\rfloor \qquad \text{remainderDays} = \text{totalDays} \bmod 7$$
+
+**Total hours and minutes:**
+
+$$\text{totalHours} = \text{totalDays} \times 24 \qquad \text{totalMinutes} = \text{totalDays} \times 1{,}440$$
+
+**Source:** Gregorian calendar system per ISO 8601 (International Organization for Standardization). Julian Day Number arithmetic as described in Meeus, *Astronomical Algorithms* (2nd edition, 1998), Chapter 7.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Days Between Two Dates — Project Duration
+
+**Scenario:** A construction project started on February 15, 2025 and completed on November 3, 2025. How long did the project take?
+
+**Inputs:**
+- Start Date: February 15, 2025
+- End Date: November 3, 2025
+
+**Step-by-step:**
+
+1. Year difference: 2025 - 2025 = 0 years
+2. Month difference: November - February = 9 months tentative. Since day 3 < day 15, borrow one month → **8 months**
+3. Day difference: From October 15 to November 3. October has 31 days. Days remaining in October: 31 - 15 = 16. Days into November: 3. Total: 16 + 3 = **19 days**
+4. Total days: Count each month — Feb (13 days remaining) + Mar (31) + Apr (30) + May (31) + Jun (30) + Jul (31) + Aug (31) + Sep (30) + Oct (31) + Nov (3 days) = **261 days**
+5. Total weeks: 261 / 7 = **37 weeks** and 2 days
+6. Total hours: 261 x 24 = **6,264 hours**
+
+**Result:** 8 months, 19 days (261 total days / 37 weeks and 2 days)
+
+**Interpretation:** The project took just under 9 months. At 261 calendar days, this is roughly 186 business days (excluding weekends) — or 37.3 standard 5-day work weeks. If the contractor quoted "8-10 months," the project finished within the estimated range.
+
+### Example 2: Add Days — Calculating a 90-Day Deadline
+
+**Scenario:** A legal filing has a 90-day response deadline from the service date of March 10, 2026. What is the deadline date?
+
+**Inputs:**
+- Starting Date: March 10, 2026
+- Number of Days: 90
+- Operation: Add
+
+**Step-by-step:**
+
+1. Start: March 10, 2026
+2. Days remaining in March: 31 - 10 = 21 days → **21 days consumed** (running total: 21, remaining: 69)
+3. April: 30 days → **30 days consumed** (running total: 51, remaining: 39)
+4. May: 31 days → **31 days consumed** (running total: 82, remaining: 8)
+5. June: 8 days into June → June 8, 2026
+6. Day of week: June 8, 2026 falls on a **Monday**
+
+**Result:** June 8, 2026 (Monday)
+
+**Interpretation:** The 90-day deadline lands on a Monday — a regular business day. If the deadline rule specifies "next business day" when it falls on a weekend or holiday, no adjustment is needed here. Note that "90 days" is not the same as "3 months" — three months from March 10 would be June 10, two days later. Legal deadlines typically count calendar days, not months, making this distinction critical.
+
+### Example 3: Subtract Days — Looking Back 180 Days
+
+**Scenario:** A job application asks for employment history for the past 180 days. From March 10, 2026, what date is 180 days ago?
+
+**Inputs:**
+- Starting Date: March 10, 2026
+- Number of Days: 180
+- Operation: Subtract
+
+**Step-by-step:**
+
+1. Start: March 10, 2026
+2. Subtract 10 days → March 0 = February 28, 2026 (running total: 10, remaining: 170)
+3. Subtract February (28 days) → January 31, 2026 (running total: 38, remaining: 142)
+4. Subtract January (31 days) → December 31, 2025 (running total: 69, remaining: 111)
+5. Subtract December (31 days) → November 30, 2025 (running total: 100, remaining: 80)
+6. Subtract November (30 days) → October 31, 2025 (running total: 130, remaining: 50)
+7. Subtract October (31 days) → September 30, 2025 (running total: 161, remaining: 19)
+8. Subtract 19 days from September 30 → September 11, 2025
+9. Day of week: September 11, 2025 is a **Thursday**
+
+**Result:** September 11, 2025 (Thursday)
+
+**Interpretation:** Your employment history window covers September 11, 2025 through March 10, 2026. This spans roughly 6 months and includes the holiday season (Thanksgiving, Christmas, New Year's), which is relevant if you had seasonal employment gaps. At 180 calendar days, this period includes approximately 128 business days.
+
+### Example 4: Business Days for a 90-Day Contract Deadline
+
+**Scenario:** A consulting contract requires delivery within 90 calendar days of signing on March 1, 2024. How many business days does the team actually have to work?
+
+**Inputs:**
+- Start Date: March 1, 2024
+- End Date: May 30, 2024 (90 calendar days later, calculated from Example 2 logic)
+
+**Step-by-step:**
+
+1. March 1–31: 31 calendar days. March 2024 has 21 weekdays (March 1 is a Friday, March 31 is a Sunday). Excluding weekends: **21 business days**
+2. April 1–30: 30 calendar days. April 2024 has 22 weekdays. **22 business days**
+3. May 1–30: 30 calendar days through May 30. May 2024 has 22 weekdays through May 30 (May 30 is a Thursday). **22 business days**
+4. Subtract federal holidays in period: Memorial Day (May 27, 2024) = 1 holiday. **−1 day**
+5. Total business days: 21 + 22 + 22 − 1 = **64 business days**
+
+**Result:** The 90-calendar-day window contains 64 business days (excluding weekends and Memorial Day)
+
+**Interpretation:** A team planning for 90 days of work actually has 64 working days — 29% fewer days than the calendar number suggests. If each team member works 8-hour days, that is 512 billable hours. Project managers who estimate timelines in calendar days without converting to business days consistently overcommit: a "90-day project" with 64 working days leaves no buffer for sick days, internal meetings, or review cycles. Convert to business days first, then subtract 10–15% for non-project overhead.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Leap years add an extra day every 4 years.** When counting days across a February boundary, you get 366 days in a leap year instead of 365. The interval from January 1, 2024 to January 1, 2025 is 366 days (2024 is a leap year), while January 1, 2025 to January 1, 2026 is 365 days. Over a 10-year span, you cross 2-3 leap years, adding 2-3 extra days beyond the 3,650-day estimate (10 x 365). The next leap years are 2028, 2032, and 2036.
+
+**"Days" vs. "months" are not interchangeable.** Adding 30 days to January 1 gives you January 31. Adding "1 month" gives you February 1. The difference is 1 day in most years, but it compounds over longer intervals. Adding 12 "months" always returns the same calendar date next year, but adding 365 days may land on the day before (in a year preceding a leap year) or the day after (coming out of a leap year). Always clarify whether a deadline means "calendar days" or "calendar months."
+
+**Business days vs. calendar days.** This calculator counts calendar days (every day including weekends and holidays). A 30-calendar-day period contains approximately 22 business days, but the exact count depends on which days fall in the range and any holidays. Legal deadlines, financial settlement periods, and shipping estimates each follow their own conventions — some count calendar days, others business days. When a contract specifies "30 days" without qualification, the default interpretation in most U.S. jurisdictions is calendar days.
+
+**Holiday impact on date calculations.** The U.S. federal government observes 11 paid holidays per year, reducing the annual working-day total from 261 weekdays to approximately 250. When a holiday falls on a Saturday, the preceding Friday is observed; when it falls on a Sunday, the following Monday is observed — so the actual day off may differ from the calendar holiday date.
+
+**Adding "1 month" is ambiguous.** Calendar month arithmetic does not have a single universally agreed definition. Adding 1 month to January 31 could yield February 28 (capping at the last day of the target month), March 1 (preserving the day count), or March 2 (adding exactly 30 days). Most date libraries and this calculator use the "cap at last day" convention: January 31 + 1 month = February 28 (or 29 in a leap year). But adding 1 month to February 28 yields March 28, not March 31 — the operation is not reversible. This asymmetry is why financial contracts almost always specify exact calendar day counts rather than month intervals.
+
+**Timezone and date line crossings.** If you are calculating dates across time zones, the calendar date depends on which time zone you reference. A flight departing Los Angeles at 11 PM on March 10 arrives in Tokyo at 4 AM on March 12 (crossing the International Date Line). This calculator uses abstract calendar dates without time zone conversion, which is correct for most practical purposes — legal deadlines, age calculations, and contract durations are all defined by calendar dates, not timestamps.
+
+**Historical calendar transitions.** If you are calculating intervals involving dates before 1582 (when the Gregorian calendar was adopted), results may not match historical records. Many countries adopted the Gregorian calendar at different times — Britain and its colonies switched in 1752, Russia in 1918, and Turkey in 1926. The "missing days" from each transition are not accounted for in this calculator.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Confusing "days between" with "days including."** The number of days from March 1 to March 10 is 9, not 10. The calculation counts elapsed days — the interval between the dates. If you need to count both the start and end date (for example, "how many days is my hotel stay from check-in on the 1st to check-out on the 10th"), add 1 to the result for nights or use the standard calculation for elapsed days.
+
+**Assuming "3 months" equals "90 days."** Three calendar months from January 15 is April 15 (90 days in a non-leap year). But three months from November 15 is February 15 (92 days if crossing a 31-day month). The discrepancy can be up to 3 days depending on which months are involved. Always specify whether you mean calendar months or a fixed day count.
+
+**Forgetting about leap years in multi-year calculations.** The interval from March 1, 2023 to March 1, 2027 is 1,461 days (not 1,460). The extra day comes from the leap year 2024. Over a 4-year period, this is always either 1,460 or 1,461 days. Over 100 years, the leap year correction adds 24 or 25 extra days compared to a naive 365-day-per-year estimate.
+
+**Using "30 days" as a universal month proxy.** Insurance companies, banks, and government agencies each define "one month" differently. The federal government's 30-day comment period means 30 calendar days. A mortgage "monthly payment" is due on the same calendar date each month regardless of how many days that month contains. A credit card "billing cycle" is typically 28-31 days. When in doubt, count calendar days rather than estimating months.
+
+**Mixing up weekdays and calendar days.** A "10-day waiting period" could mean 10 calendar days or 10 business days. Ten business days is typically 14 calendar days (10 weekdays plus 2 weekends), possibly more with holidays. If a deadline doesn't specify which type, calendar days is the default in most U.S. jurisdictions.
+
+{/* Section 12: Comparison Table */}
+## Common Date Intervals Reference
+
+When planning deadlines, milestones, or recurring events, these standard intervals from March 10, 2026 are useful benchmarks:
+
+| Days Added | Resulting Date | Day of Week | Common Use |
+|---|---|---|---|
+| **7 days** | March 17, 2026 | Tuesday | One week, weekly review cycle |
+| **14 days** | March 24, 2026 | Tuesday | Two weeks, biweekly payroll |
+| **30 days** | April 9, 2026 | Thursday | Approximate month, notice periods |
+| **45 days** | April 24, 2026 | Friday | Insurance claim windows |
+| **60 days** | May 9, 2026 | Saturday | Return policies, billing cycles |
+| **90 days** | June 8, 2026 | Monday | Quarterly deadlines, probation periods |
+| **120 days** | July 8, 2026 | Wednesday | Four-month milestones |
+| **180 days** | September 6, 2026 | Sunday | Half-year, statute of limitations |
+| **365 days** | March 10, 2027 | Wednesday | One year, annual renewals |
+| **730 days** | March 10, 2028 | Friday | Two years (includes 1 leap day) |
+
+**Interpretation:** Notice that 365 days from March 10, 2026 (Tuesday) lands on March 10, 2027 (Wednesday) — the day of week advances by 1 in a non-leap year and by 2 when crossing a leap year's February 29. A "year" from now is always the same calendar date, but the day of week shifts. Two years from March 10, 2026 crosses the leap year 2028 (Feb 29), so the day of week advances by 3 (Tuesday to Friday).
+
+## Calendar Days vs Business Days
+
+Converting between calendar days and business days is one of the most common date calculation needs. This table shows standard conversions assuming no holidays (holidays would reduce business days by 1 per holiday in the period):
+
+| Calendar Days | Approximate Business Days | Approximate Weeks | Common Use |
+|:-:|:-:|:-:|:--|
+| 7 | 5 | 1 | Weekly deadlines, pay periods |
+| 14 | 10 | 2 | Two-week sprints, biweekly payroll |
+| 30 | 22 | 4.3 | Monthly billing, 30-day notice periods |
+| 45 | 32 | 6.4 | Insurance claim windows |
+| 60 | 43 | 8.6 | Return policies, billing cycles |
+| 90 | 64 | 12.9 | Quarterly reporting, probation periods |
+| 120 | 86 | 17.1 | Four-month project milestones |
+| 180 | 131 | 25.7 | Semi-annual reviews, statute of limitations |
+| 365 | 261 | 52.1 | Annual contracts, fiscal year planning |
+
+**The conversion ratio:** Calendar days × 5/7 gives a close approximation of business days, but the exact count depends on which day of the week you start. Starting on a Monday yields the maximum business days for any given calendar span; starting on a Saturday yields the minimum. For a 30-day period, the actual business day count ranges from 20 to 23 depending on the starting day — a 15% variation that can affect project schedules and contractual deadlines.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Counts **calendar days** only — does not exclude weekends, holidays, or any non-business days. If you need business days, subtract approximately 2 days per 7 for weekends and account for public holidays separately.
+- Operates on the **Gregorian calendar** exclusively. Dates before the Gregorian adoption (1582 in Catholic countries, later in others) are projected using the proleptic Gregorian calendar, which may not match historical records.
+- **Time of day is not considered.** The calculator treats dates as whole calendar days. The difference between 11:59 PM on March 9 and 12:01 AM on March 10 is 1 day in this calculator, even though only 2 minutes elapsed.
+- The **maximum interval** is 36,500 days (approximately 100 years) in add/subtract mode. The days-between mode has no practical upper limit for dates within the 1900-2099 range.
+- **Daylight Saving Time** transitions do not affect results because the calculator uses UTC dates internally. DST causes one day per year to be 23 hours and one to be 25 hours, but the calendar date count remains the same.
+- **International Date Line** crossings are not modeled. If you need to account for date changes due to eastbound or westbound travel, adjust your input dates manually.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many days are there in a year?
+
+A standard Gregorian year has 365 days. A leap year has 366 days. Leap years occur every 4 years (2024, 2028, 2032), except for century years not divisible by 400 — so 1900 was not a leap year, but 2000 was. The average Gregorian year length is 365.2425 days, which is why the calendar stays aligned with the solar year (365.2422 days) to within 1 day every 3,236 years. For practical calculations, use 365.25 as a reasonable average when converting between days and years.
+
+### What is the difference between calendar days and business days?
+
+Calendar days include every day — weekdays, weekends, and holidays. Business days (also called working days) typically include only Monday through Friday, excluding public holidays. A 30-calendar-day period contains approximately 22 business days, depending on holidays. To convert, multiply calendar days by 5/7 for an estimate: 90 calendar days is roughly 64 business days. This calculator counts calendar days only. For precise business-day calculations, you would need a holiday calendar for your specific jurisdiction.
+
+### How do I calculate the number of weeks between two dates?
+
+Divide the total number of days by 7. The quotient is complete weeks, and the remainder is extra days. For example, 100 days equals 14 weeks and 2 days. This calculator provides both the total weeks and the remainder automatically. Note that "weeks" in common usage can mean different things: "two weeks" usually means 14 calendar days, but "biweekly" can mean every two weeks (14 days) or twice per week (every 3-4 days), depending on context.
+
+### Does this calculator account for daylight saving time?
+
+No, and it does not need to. Daylight Saving Time affects clock time, not calendar dates. When clocks spring forward, one day has only 23 hours; when they fall back, one day has 25 hours. But the calendar date still advances by exactly one day in both cases. This calculator counts calendar days, so DST transitions have no effect on the result. The total hours figure (totalDays x 24) is technically approximate by +/-1 hour around DST transitions, but this difference is negligible for practical purposes.
+
+### How far apart are two dates that are exactly "6 months" apart?
+
+It depends on which months are involved. Six months from January 15 is July 15 (181 days in a non-leap year). Six months from July 15 is January 15 (184 days). Six months from August 31 is February 28 or 29 (because there is no February 31). The concept of "N months" is inherently ambiguous because months have 28-31 days. When precision matters, always specify the exact number of calendar days rather than using month-based intervals. Legal contracts often define "month" as 30 days to avoid this ambiguity.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator performs date arithmetic in two modes: date difference (counting days, weeks, months, and years between two dates) and date addition/subtraction (adding or removing a specified number of days, weeks, months, or years from a start date). Leap years and varying month lengths are handled automatically through Gregorian calendar rules. Business day calculations exclude Saturdays and Sundays.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

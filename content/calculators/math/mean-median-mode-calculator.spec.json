@@ -1,0 +1,125 @@
+{
+  "id": "mean-median-mode-calculator",
+  "title": "Mean, Median, Mode Calculator",
+  "slug": "mean-median-mode-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "mean median mode calculator",
+  "metaTitle": "Mean, Median, Mode Calculator — Central Tendency Stats",
+  "metaDescription": "Calculate mean, median, and mode for any data set. See sorted values, range, and count. Step-by-step solutions. Free statistics calculator.",
+  "inputs": [
+    {
+      "id": "dataSet",
+      "label": "Data Values",
+      "type": "number",
+      "required": true,
+      "placeholder": "Enter values separated by commas (e.g., 3, 7, 7, 2, 9)",
+      "helpText": "Enter your data points separated by commas"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "mean",
+      "label": "Mean (Average)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "median",
+      "label": "Median",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "mode",
+      "label": "Mode",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "count",
+      "label": "Count (n)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "sum",
+      "label": "Sum (Σx)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "range",
+      "label": "Range",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "min",
+      "label": "Minimum",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "max",
+      "label": "Maximum",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "sortedData",
+      "label": "Sorted Data",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "central-tendency",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "standard-deviation-calculator",
+    "percentage-calculator",
+    "probability-calculator",
+    "ratio-calculator",
+    "quadratic-formula-calculator",
+    "fraction-calculator",
+    "gcf-lcm-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Arithmetic mean, median, and mode definitions from standard statistics (NIST/SEMATECH e-Handbook of Statistical Methods)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Mean = Σxᵢ/n; Median = middle value (sorted); Mode = most frequent value",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "standard-deviation-calculator"
+  ],
+  "qualityScore": 88,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

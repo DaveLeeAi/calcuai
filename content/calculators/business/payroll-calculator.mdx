@@ -1,0 +1,186 @@
+---
+title: "Payroll Calculator"
+description: "Calculate your take-home pay from gross salary. See the full breakdown of federal tax, state tax, Social Security, Medicare, and deductions on your paycheck."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your net take-home pay from gross earnings after federal income tax, state income tax, Social Security, and Medicare withholdings. An employee earning \$5,000 gross per biweekly pay period with a 22% federal rate and 5% state rate takes home approximately \$3,268 after \$1,732.50 in combined deductions — a 34.65% effective tax rate. Pre-tax contributions like 401(k) reduce your taxable income and increase take-home pay.
+
+</section>
+
+{/* Section 6: What Your Estimate Shows */}
+## What Your Estimate Shows
+
+Your gross pay and your take-home pay are two different numbers, and this calculator shows exactly where the gap goes. The largest deductions for most employees are federal income tax (typically 10-37% depending on bracket) and FICA taxes — Social Security at 6.2% and Medicare at 1.45%. State income tax adds another 0-13.3% depending on your state.
+
+The paycheck breakdown pie chart visualizes every dollar's destination: how much goes to federal tax, state tax, Social Security, Medicare, voluntary deductions, and ultimately your bank account. This matters because many employees focus on their annual salary without understanding that a \$130,000 annual salary translates to roughly \$3,785 per biweekly paycheck after a typical 24.3% effective deduction rate — not the \$5,000 gross figure on the offer letter.
+
+The calculator also shows your annual totals. If you need to convert between hourly and annual salary figures before running this calculation, use our [Salary Calculator](/calculators/business/salary-calculator) for frequency conversion, then return here for the tax deduction breakdown.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Gross Pay** — the total pay for a single pay period before any taxes or deductions. Find this on your pay stub as "Gross Pay" or "Total Earnings." If you only know your annual salary, divide by the number of pay periods (e.g., \$130,000 / 26 = \$5,000 biweekly).
+2. **Select Pay Frequency** — how often you receive a paycheck. Most salaried employees are biweekly (26 times/year) or semi-monthly (24 times/year). Hourly workers are often weekly (52 times/year).
+3. **Enter Federal Tax Rate** — your effective federal income tax withholding rate. Check your W-4 or most recent pay stub. Common rates: 12% for income \$11,601-\$47,150, 22% for \$47,151-\$100,525, 24% for \$100,526-\$191,950 (2024 single filer brackets).
+4. **Enter State Tax Rate** — your state income tax rate. Enter 0% for states with no income tax (Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming).
+5. **Enter Pre-Tax Deductions** — per-period 401(k) contributions, health insurance premiums, HSA, or FSA amounts. These reduce your taxable income before federal and state taxes are calculated.
+6. **Enter Post-Tax Deductions** — Roth 401(k) contributions, union dues, wage garnishments, or after-tax life insurance premiums. These do not reduce taxable income.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Net Pay Calculation:**
+
+$$
+\text{Net Pay} = \text{Gross Pay} - \text{Federal Tax} - \text{State Tax} - \text{Social Security} - \text{Medicare} - \text{Pre-Tax Ded.} - \text{Post-Tax Ded.}
+$$
+
+**Taxable Gross (for federal and state withholding):**
+
+$$
+\text{Taxable Gross} = \text{Gross Pay} - \text{Pre-Tax Deductions}
+$$
+
+**Federal and State Taxes:**
+
+$$
+\text{Federal Tax} = \text{Taxable Gross} \times \frac{\text{Federal Rate}}{100}
+$$
+
+$$
+\text{State Tax} = \text{Taxable Gross} \times \frac{\text{State Rate}}{100}
+$$
+
+**Social Security (OASDI):**
+
+$$
+\text{Social Security} = \text{Taxable Gross} \times 6.2\%
+$$
+
+Capped at the annual wage base of \$168,600 (2024). Once year-to-date earnings reach this threshold, Social Security withholding stops for the remainder of the year.
+
+**Medicare (HI):**
+
+$$
+\text{Medicare} = \text{Taxable Gross} \times 1.45\%
+$$
+
+An additional 0.9% surtax applies to annual earnings over \$200,000 (\$250,000 for married filing jointly), bringing the total Medicare rate to 2.35% on income above the threshold.
+
+**Effective Tax Rate:**
+
+$$
+\text{Effective Rate} = \frac{\text{Total Deductions}}{\text{Gross Pay}} \times 100
+$$
+
+Where:
+- **Gross Pay** = total earnings before any deductions for one pay period
+- **Pre-Tax Deductions** = 401(k), health insurance, HSA, FSA contributions (reduce taxable income)
+- **Post-Tax Deductions** = Roth 401(k), union dues, garnishments (do not reduce taxable income)
+- **6.2%** = employee Social Security rate (employer matches with another 6.2%)
+- **1.45%** = employee Medicare rate (employer matches)
+- **\$168,600** = 2024 Social Security wage base cap (adjusted annually for inflation)
+
+*Source: IRS Publication 15 (Circular E) — Employer's Tax Guide, Social Security and Medicare withholding rates (2024). Social Security Administration — 2024 OASDI contribution and benefit base.*
+
+For a deeper explanation of how progressive tax brackets work and the difference between marginal and effective rates, see our [methodology page on progressive taxation](/methodology/progressive-taxation).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Biweekly Paycheck (\$130,000 Salary)
+
+An employee earns \$130,000 annually, paid biweekly (\$5,000 per pay period). They are in the 22% federal bracket, live in a state with 5% income tax, and contribute \$500/period to a traditional 401(k).
+
+**Step 1: Calculate taxable gross**
+- Taxable Gross = \$5,000 - \$500 (401k) = **\$4,500**
+
+**Step 2: Federal tax**
+- Federal Tax = \$4,500 x 22% = **\$990.00**
+
+**Step 3: State tax**
+- State Tax = \$4,500 x 5% = **\$225.00**
+
+**Step 4: Social Security**
+- Social Security = \$4,500 x 6.2% = **\$279.00**
+- Annual taxable: \$4,500 x 26 = \$117,000 (below \$168,600 cap, so full tax applies)
+
+**Step 5: Medicare**
+- Medicare = \$4,500 x 1.45% = **\$65.25**
+- Annual taxable: \$117,000 (below \$200,000 threshold, no additional surtax)
+
+**Step 6: Net pay**
+- Total Deductions = \$990 + \$225 + \$279 + \$65.25 + \$500 + \$0 = **\$2,059.25**
+- Net Pay = \$5,000 - \$2,059.25 = **\$2,940.75**
+- Effective Rate = \$2,059.25 / \$5,000 = **41.19%**
+
+*Interpretation:* The employee takes home \$2,940.75 per biweekly check (\$76,459.50 annually). The 401(k) contribution saved \$135 in taxes this period ((\$990 vs. \$1,100 federal) + (\$225 vs. \$250 state)) while building retirement savings. Without the 401(k) contribution, take-home would be \$3,267.50 but with no retirement savings.
+
+### Example 2: High-Income Monthly Paycheck with Medicare Surtax
+
+A senior manager earns \$300,000 annually, paid monthly (\$25,000 per period). Federal bracket: 32%. State tax: 9.3% (California). No pre-tax deductions.
+
+**Federal Tax:** \$25,000 x 32% = **\$8,000**
+**State Tax:** \$25,000 x 9.3% = **\$2,325**
+**Social Security:** min(\$25,000, \$168,600/12) x 6.2% = \$14,050 x 6.2% = **\$871.10**
+**Medicare:** \$25,000 x 1.45% = \$362.50, plus additional 0.9% on amount over \$200,000/12 threshold: (\$25,000 - \$16,666.67) x 0.9% = \$75.00. Total Medicare = **\$437.50**
+
+**Net Pay:** \$25,000 - \$8,000 - \$2,325 - \$871.10 - \$437.50 = **\$13,366.40**
+**Effective Rate:** \$11,633.60 / \$25,000 = **46.53%**
+
+*Interpretation:* At \$300,000 annual income in California, nearly half of each paycheck goes to taxes and mandatory contributions. The Medicare surtax adds \$75/month (\$900/year) compared to a worker under the \$200,000 threshold. Social Security reaches its annual cap of \$168,600 in October, after which monthly take-home increases by \$871.10 for the remaining months.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Pre-Tax Deductions Lower Your Tax Bill** — Every dollar contributed to a traditional 401(k) or health insurance premium reduces your taxable income. A \$500 biweekly 401(k) contribution at a 22% federal + 5% state tax rate saves \$135 per paycheck in taxes (\$3,510 annually), effectively reducing the "cost" of the \$500 contribution to \$365.
+
+2. **Social Security Cap Creates a Pay Bump** — Social Security tax stops once your year-to-date earnings reach \$168,600 (2024). For an employee earning \$200,000, this cap is reached in late October, resulting in approximately \$500 more per biweekly paycheck for the last 2 months of the year.
+
+3. **State Tax Variation Is Significant** — State income tax ranges from 0% (nine states) to 13.3% (California top bracket). An employee earning \$100,000 in Texas keeps roughly \$5,000-\$6,000 more annually than the same employee in California, all else being equal.
+
+4. **Pay Frequency Affects Per-Period Amounts** — The same \$100,000 salary produces very different paycheck sizes: \$1,923.08 weekly, \$3,846.15 biweekly, \$4,166.67 semi-monthly, or \$8,333.33 monthly. Biweekly employees receive 26 paychecks (two months have 3 paydays), while semi-monthly employees receive exactly 24.
+
+5. **Filing Status Changes Everything** — This calculator uses a flat effective rate, but actual federal withholding depends on filing status (single vs. married), number of dependents, and W-4 allowances. Married filing jointly has wider tax brackets, so the same income is taxed at a lower effective rate.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses a flat effective federal tax rate rather than progressive bracket calculation — actual withholding may vary based on W-4 elections and filing status
+- State tax is applied as a flat rate; some states use progressive brackets (California, New York) or have no income tax at all
+- Social Security cap is prorated evenly across pay periods; actual withholding may differ if income varies throughout the year (bonuses, overtime)
+- Does not include local/city income taxes (relevant in New York City, Philadelphia, and other municipalities)
+- Does not model employer contributions (employer-side Social Security, Medicare, or 401(k) match)
+- Pre-tax deductions reduce taxable income for federal and state tax in this calculator; actual rules vary by deduction type and state
+- The additional Medicare tax threshold of \$200,000 applies to single filers; it is \$250,000 for married filing jointly
+
+## Frequently Asked Questions
+
+### What percentage of my paycheck goes to taxes?
+
+The total percentage depends on your income level and state. For a typical employee earning \$50,000-\$100,000 annually, combined federal income tax (12-22%), Social Security (6.2%), Medicare (1.45%), and state tax (0-9%) total roughly 25-35% of gross pay. At \$130,000 with a 22% federal rate and 5% state rate, the effective combined rate is approximately 34.65%. Pre-tax deductions like 401(k) contributions reduce this percentage by lowering your taxable income.
+
+### How much does a 401(k) contribution save on taxes?
+
+A traditional 401(k) contribution saves you your combined marginal tax rate on every dollar contributed. At a 22% federal + 5% state rate, each \$100 contributed saves \$27 in taxes, making the effective cost only \$73. Contributing the 2024 maximum of \$23,000 saves \$6,210 in taxes at that rate. This does not reduce Social Security or Medicare taxes — only federal and state income taxes.
+
+### Why is my take-home pay different from my gross salary divided by pay periods?
+
+Your take-home pay is lower because mandatory deductions are withheld before you receive your paycheck. Federal income tax, state income tax, Social Security (6.2%), and Medicare (1.45%) are withheld by your employer and sent directly to the government. A \$100,000 salary divided by 26 biweekly periods equals \$3,846 gross, but after approximately 30-35% in deductions, you receive roughly \$2,500-\$2,700 per check. Additional voluntary deductions (401k, health insurance) further reduce take-home pay.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **IRS Publication 15 (Circular E)** — Employer's Tax Guide: federal income tax withholding methods, Social Security and Medicare tax rates, and annual wage base limits (2024)
+- **Social Security Administration** — 2024 OASDI contribution and benefit base: \$168,600 wage cap, 6.2% employee rate, 6.2% employer rate
+- **IRS Topic No. 751** — Social Security and Medicare withholding rates and additional Medicare tax threshold (\$200,000 single / \$250,000 MFJ)
+- **Tax Foundation** — State Individual Income Tax Rates and Brackets, 2024 edition
+
+All calculations apply employee-side withholding rates only. Employer-side contributions (matching Social Security, Medicare, and 401(k)) are not included in the net pay calculation. Federal tax rates used are effective rates, not marginal bracket rates — consult IRS tax tables or a tax professional for precise withholding based on your W-4 elections.

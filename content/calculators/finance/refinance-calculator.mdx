@@ -1,0 +1,160 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Refinancing a \$280,000 mortgage balance from 7.0% to 5.5% on a new 30-year term saves \$303 per month on your principal-and-interest payment. With \$5,000 in closing costs, you break even in 17 months and save approximately \$104,080 over the life of the new loan. Whether refinancing makes financial sense depends entirely on your monthly savings versus closing costs — and how long you plan to stay in the home. Enter your current loan details and the new rate below to see your personalized break-even timeline and total savings.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+This refinance calculator determines whether replacing your current mortgage with a new loan at a lower rate produces a net financial benefit, and if so, how long it takes to recoup the upfront costs. It computes three critical numbers: your monthly payment reduction, the break-even point in months, and the total lifetime savings after closing costs.
+
+**The break-even point is the decision point.** If you plan to stay in the home longer than the break-even period, refinancing produces a net gain. If you might sell or move before that date, the closing costs outweigh the monthly savings and refinancing loses money. A refinance that saves \$300/month with \$6,000 in closing costs breaks even in 20 months. If you stay 5 years beyond break-even, you save \$12,000 net. If you sell in 15 months, you lose \$1,500.
+
+**Rate reduction is not the only variable.** A common misconception is that a 1% rate reduction always justifies refinancing. In reality, the decision depends on loan balance, remaining term, closing costs, and hold period. Refinancing a \$100,000 balance from 7% to 6% saves only \$66/month — with \$4,000 in closing costs, the break-even is 61 months. Refinancing a \$400,000 balance with the same rate drop saves \$264/month and breaks even in just 15 months. Loan size magnifies the benefit. For detailed amortization analysis on your new loan, use our [Mortgage Calculator](/calculators/finance/mortgage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Current Loan Balance** — the remaining principal on your existing mortgage. Check your most recent statement or online portal for the exact payoff amount. This is not your original loan amount — it's what you still owe today.
+
+2. **Set your Current Interest Rate** — the rate on your existing mortgage. Fixed-rate borrowers have one rate; ARM borrowers should enter their current adjusted rate.
+
+3. **Enter Months Remaining** — the number of payments left on your current loan. A 30-year mortgage originated 5 years ago has 300 months remaining. This affects the comparison because a shorter remaining term means higher current payments (more principal, less interest).
+
+4. **Set the New Interest Rate** — the rate you've been quoted or pre-approved for. Check current rates at Freddie Mac's Primary Mortgage Market Survey for benchmark data.
+
+5. **Choose the New Loan Term** — most refinances use 30-year or 15-year terms. A 30-year term maximizes monthly savings but increases total interest. A 15-year term raises the monthly payment but builds equity faster and saves massively on total interest.
+
+6. **Enter Closing Costs** — the total cost to close the refinance. Typical range: 2–5% of the loan amount. On a \$280,000 loan, that's \$5,600–\$14,000. Include appraisal, title insurance, origination fees, and recording fees.
+
+7. **Enter Cash-Out Amount (optional)** — if you're taking equity out during the refinance, this amount is added to the new loan balance. Cash-out refinancing gives you liquid funds but increases your debt.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The refinance analysis uses the standard fixed-rate mortgage payment formula to compute both current and new payments, then derives savings:
+
+$$M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
+
+Where:
+
+- **M** = monthly principal and interest payment (dollars)
+- **P** = loan principal (dollars)
+- **r** = monthly interest rate — annual rate divided by 12 (decimal)
+- **n** = total number of monthly payments
+
+From this:
+
+$$\text{Monthly Savings} = M_{\text{current}} - M_{\text{new}}$$
+
+$$\text{Break-Even (months)} = \left\lceil \frac{\text{Closing Costs}}{\text{Monthly Savings}} \right\rceil$$
+
+$$\text{Total Savings} = (\text{Total Interest}_{\text{current}} - \text{Total Interest}_{\text{new}}) - \text{Closing Costs}$$
+
+The break-even formula uses the ceiling function because you must complete a full month to receive each month's savings.
+
+**Source:** Consumer Financial Protection Bureau (CFPB) refinancing guidance; Freddie Mac refinancing analysis methodology; Federal Reserve Board Regulation Z (Truth in Lending).
+
+For a deeper explanation of the fixed-rate amortization formula and how payment structures change over time, see our [methodology page on mortgage amortization](/methodology/mortgage-amortization).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Rate-and-Term Refinance — 7% to 5.5%
+
+**Inputs:**
+- Current Balance: \$280,000
+- Current Rate: 7.0%, 300 months remaining
+- New Rate: 5.5%, 30-year term
+- Closing Costs: \$5,000
+- Cash-Out: \$0
+
+**Step-by-step:**
+
+1. Current monthly rate: 7.0% / 12 = **0.005833**
+2. Current payment: $280,000 x [0.005833 x (1.005833)^300] / [(1.005833)^300 - 1] = **$1,893.40**
+3. New monthly rate: 5.5% / 12 = **0.004583**
+4. New payment: $280,000 x [0.004583 x (1.004583)^360] / [(1.004583)^360 - 1] = **$1,589.77**
+5. Monthly savings: \$1,893.40 - $1,589.77 = **$303.63**
+6. Break-even: \$5,000 / \$303.63 = 16.47 → **17 months**
+7. Total current interest: (\$1,893.40 x 300) - $280,000 = **$288,020**
+8. Total new interest: (\$1,589.77 x 360) - $280,000 = **$292,317**
+9. Net savings: \$288,020 - \$292,317 - $5,000 = **-$9,297**
+
+**Interpretation:** The monthly savings of \$303 is significant, and you recoup closing costs in just 17 months. However, because you're restarting a 30-year clock, you actually pay slightly more in total interest over the full life of the new loan. The key question is what you do with the \$303/month savings — if invested at 7% for 25 years, that monthly savings grows to over \$240,000.
+
+### Example 2: Shorter-Term Refinance — 7% to 5.5% on 15-Year
+
+**Inputs:**
+- Current Balance: \$280,000
+- Current Rate: 7.0%, 300 months remaining
+- New Rate: 5.5%, 15-year term
+- Closing Costs: \$5,000
+
+**Step-by-step:**
+
+1. Current payment: **\$1,893.40** (same as above)
+2. New payment on 15-year: $280,000 x [0.004583 x (1.004583)^180] / [(1.004583)^180 - 1] = **$2,288.55**
+3. Monthly change: \$1,893.40 - $2,288.55 = **-$395.15** (payment increases)
+4. Total current interest: **\$288,020**
+5. Total new interest: (\$2,288.55 x 180) - $280,000 = **$131,939**
+6. Net savings: \$288,020 - \$131,939 - $5,000 = **$151,081**
+
+**Interpretation:** The 15-year option costs \$395 more per month but saves \$151,081 in total interest and eliminates your mortgage 10 years earlier. This illustrates a fundamental refinance tradeoff: maximizing monthly cash flow versus minimizing total lifetime cost.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Rate Differential** — The gap between your current and new rate is the primary driver of monthly savings. Generally, a 0.75–1.0% or greater reduction justifies refinancing for most borrowers, but the exact threshold depends on your balance and closing costs. On larger balances (\$400,000+), even a 0.50% reduction can produce meaningful savings.
+
+**Loan Balance** — Larger balances amplify the impact of rate changes. A 1% rate reduction saves approximately \$60/month per \$100,000 of balance on a 30-year mortgage. At \$280,000, that's roughly \$168/month; at \$500,000, it's \$300/month.
+
+**Closing Costs** — Lower closing costs mean a faster break-even. Some lenders offer no-closing-cost refinances by rolling fees into the loan balance or charging a slightly higher rate. This eliminates the break-even question but increases total interest over the life of the loan.
+
+**Hold Period** — How long you plan to stay in the home determines whether you'll benefit from the refinance. If you're likely to move in 2–3 years, only refinance if the break-even is under 18 months. If you're staying 10+ years, even a slow break-even is worthwhile because the cumulative savings keep growing.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Compares **principal and interest (P&I) only**. Property taxes, homeowner's insurance, and PMI are not included in the comparison because they typically transfer to the new loan unchanged.
+- Assumes both the current and new loans are **fixed-rate mortgages**. Adjustable-rate mortgage (ARM) comparisons require modeling future rate adjustments, which this calculator does not support.
+- Assumes **immediate refinance** with no gap between loans. In practice, refinancing takes 30–60 days, during which payments continue on the old loan.
+- Does **not account for the time value of money**. A dollar saved today is worth more than a dollar saved in Year 25, but the break-even calculation uses simple division without discounting.
+- Does **not model tax implications**. Mortgage interest is tax-deductible for itemizers, and the deduction value changes when the rate and payment change.
+- Cash-out amounts are added to the new loan balance but are not treated as a cost — they represent equity conversion, not a net expense.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### When does it make sense to refinance?
+
+Refinancing makes financial sense when your monthly savings exceed your closing costs within a reasonable timeframe — generally when the break-even point is under 3 years and you plan to stay in the home at least 2 years beyond break-even. The old rule of thumb that "you need at least a 1% rate drop" is oversimplified. On a \$400,000 balance, a 0.50% rate reduction saves \$133/month and breaks even in under 3 years with typical closing costs. On a \$100,000 balance, even a 1.5% drop might not justify \$5,000 in closing costs if you're planning to move in 2 years.
+
+### How much does it cost to refinance a mortgage?
+
+Refinancing closing costs typically range from 2% to 5% of the loan amount. For a \$280,000 loan, that's \$5,600–\$14,000. Common fees include: loan origination (0.5–1% of loan), appraisal (\$300–\$600), title search and insurance (\$700–\$1,200), recording fees (\$50–\$250), and credit report (\$25–\$50). Some lenders offer no-closing-cost options where fees are added to the loan balance or offset by a higher rate. The CFPB requires lenders to provide a Loan Estimate within 3 business days of application, detailing all expected costs.
+
+### Should I refinance to a 15-year or 30-year term?
+
+Choose a 30-year term if your primary goal is reducing monthly payments and improving cash flow — your payment drops significantly but total interest increases. Choose a 15-year term if you can afford the higher payment and want to minimize total interest cost and build equity faster. A 15-year refinance at 5.5% on \$280,000 costs \$395/month more than a 30-year at the same rate, but saves over \$160,000 in total interest and eliminates the mortgage 15 years sooner. If you're unsure, refinance to a 30-year for payment flexibility, but make extra payments equivalent to a 15-year schedule when cash flow allows.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard fixed-rate mortgage payment formula as documented by the **Consumer Financial Protection Bureau (CFPB)** in their mortgage refinancing guide. The break-even analysis follows the CFPB's recommended approach of dividing total closing costs by monthly savings. Closing cost ranges are based on the **CFPB's Closing Cost Report** and **Bankrate's** annual closing cost survey. Current mortgage rate benchmarks reference **Freddie Mac's Primary Mortgage Market Survey (PMMS)**, published weekly since 1971. The mortgage payment formula is the standard annuity formula from **Regulation Z (Truth in Lending Act)**, which governs how lenders calculate and disclose mortgage costs to consumers.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

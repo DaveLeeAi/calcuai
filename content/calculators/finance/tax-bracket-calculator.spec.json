@@ -1,0 +1,161 @@
+{
+  "id": "tax-bracket-calculator",
+  "title": "Tax Bracket Calculator",
+  "slug": "tax-bracket-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "tax bracket calculator",
+  "metaTitle": "Tax Bracket Calculator — 2025 Federal Bracket Breakdown",
+  "metaDescription": "See which 2025 federal tax brackets apply to your income. Compare marginal vs. effective rates with a visual bracket-by-bracket breakdown. Free.",
+  "inputs": [
+    {
+      "id": "taxableIncome",
+      "label": "Taxable Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 85000,
+      "min": 0,
+      "max": 100000000,
+      "prefix": "$",
+      "helpText": "Your taxable income after deductions (not gross income)"
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        {
+          "value": "single",
+          "label": "Single"
+        },
+        {
+          "value": "married-jointly",
+          "label": "Married Filing Jointly"
+        },
+        {
+          "value": "married-separately",
+          "label": "Married Filing Separately"
+        },
+        {
+          "value": "head-of-household",
+          "label": "Head of Household"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "marginalBracket",
+      "label": "Marginal Tax Bracket",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "effectiveRate",
+      "label": "Effective Tax Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "totalTax",
+      "label": "Total Federal Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "afterTaxIncome",
+      "label": "After-Tax Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Tax Summary",
+      "type": "value-group"
+    },
+    {
+      "id": "bracketBreakdown",
+      "label": "Bracket-by-Bracket Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "bracket",
+          "label": "Bracket"
+        },
+        {
+          "key": "range",
+          "label": "Income Range"
+        },
+        {
+          "key": "taxableAmount",
+          "label": "Taxable Amount",
+          "format": "currency"
+        },
+        {
+          "key": "taxOwed",
+          "label": "Tax Owed",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "id": "bracketVisualization",
+      "label": "Tax by Bracket",
+      "type": "chart-bar",
+      "chartConfig": {
+        "xLabel": "Tax Bracket",
+        "yLabel": "Tax ($)",
+        "colors": [
+          "#1A6FA0"
+        ]
+      }
+    }
+  ],
+  "formula": "tax-brackets",
+  "features": [
+    "chart"
+  ],
+  "relatedCalculators": [
+    "income-tax-calculator",
+    "salary-calculator",
+    "retirement-calculator",
+    "net-worth-calculator",
+    "investment-calculator",
+    "payroll-calculator",
+    "401k-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Internal Revenue Service (IRS) — Revenue Procedure 2024-40",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "2025 U.S. Federal Income Tax brackets per IRS Revenue Procedure 2024-40 (progressive marginal rate system)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "income-tax-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "tax-season",
+  "glossaryTerms": [
+    "tax-bracket"
+  ],
+  "methodologyTopics": [
+    "progressive-taxation"
+  ]
+}

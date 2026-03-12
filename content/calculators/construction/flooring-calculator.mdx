@@ -1,0 +1,165 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 14 x 12-foot bedroom needs 168 square feet of flooring — but with the standard 10% waste factor for hardwood, you should order 185 sq ft, which typically means 8 boxes at 23.5 sq ft per box. Waste factors vary significantly by material: 5–7% for vinyl plank, 10% for standard hardwood, and 15% for diagonal tile or natural stone. Enter your room dimensions and material type below to get your exact order quantity in both square footage and number of boxes or cartons.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Flooring is purchased in boxes or cartons, but your room is measured in square feet. This calculator converts your room dimensions into the total square footage needed — including the waste factor specific to your flooring material — then divides by the box coverage to tell you exactly how many boxes to order.
+
+The **waste factor** is what separates an accurate estimate from a mid-project shortage. Every flooring installation produces waste from end cuts at walls, fitting around door frames, damaged pieces in the box, and pattern matching. Hardwood and laminate produce 8–10% waste on straight-lay installations. Tile installations waste 10–15% because cuts at walls and around obstacles produce small, unusable fragments. Diagonal or herringbone patterns waste 15–20% because every angled cut generates more offcuts. This calculator applies the right waste factor for your chosen material.
+
+The **box count** is what you actually need at the store. Hardwood and laminate are sold in cartons covering 18–25 sq ft each. Tile is sold by the box (typically 10–15 sq ft) or individual piece. Vinyl plank cartons cover 20–30 sq ft. Rounding up to the next full box is mandatory — you cannot purchase partial boxes, and having an extra box on hand for future repairs is a common installer recommendation. For measuring the room area itself, see our [Square Footage Calculator](/calculators/construction/square-footage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter room length** — measure the longest dimension of the room in feet, measuring from wall to wall at floor level. Do not include baseboard thickness. If the room is L-shaped, split it into two rectangles and run the calculator for each section.
+
+2. **Enter room width** — measure the shorter wall dimension. For irregular rooms, measure at the widest point and calculate the full rectangle, then subtract any cutout areas separately.
+
+3. **Select your flooring material** — choose from hardwood, laminate, vinyl plank, ceramic/porcelain tile, or natural stone. The calculator automatically applies the appropriate waste factor: hardwood 10%, laminate 8%, vinyl plank 7%, ceramic tile 10%, porcelain tile 10%, natural stone 15%.
+
+4. **Adjust the waste factor** (optional) — override the default if your installation is non-standard. Increase to 15% for diagonal layouts, herringbone patterns, or rooms with many angles and obstacles. Reduce to 5% for simple rectangular rooms with straight-lay vinyl plank.
+
+5. **Enter box or carton coverage** — check the flooring packaging for the square footage per box. Common values: hardwood 20–24 sq ft, laminate 18–22 sq ft, vinyl plank 20–30 sq ft, tile 10–15 sq ft. This value is printed on every box and listed on the retailer's product page.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Flooring quantity is calculated by finding the room area, adding the material-specific waste factor, and dividing by the per-box coverage to determine the number of boxes to purchase.
+
+**Room area:**
+
+$$A = L \times W$$
+
+**Total flooring needed (with waste):**
+
+$$A_{\text{total}} = A \times \left(1 + \frac{W_f}{100}\right)$$
+
+**Number of boxes:**
+
+$$B = \left\lceil \frac{A_{\text{total}}}{C_{\text{box}}} \right\rceil$$
+
+**Total cost estimate:**
+
+$$\text{Cost} = A_{\text{total}} \times P_{\text{per sq ft}}$$
+
+Where:
+
+- **L** = room length (feet)
+- **W** = room width (feet)
+- **A** = net room area (sq ft)
+- **W_f** = waste factor percentage (varies by material: 7–15%)
+- **C_box** = coverage per box/carton (sq ft, from manufacturer packaging)
+- **B** = number of boxes (rounded up to next whole number)
+- **P** = price per square foot
+
+The ceiling function (round up) ensures you always purchase complete boxes. Partial boxes are not available at retail.
+
+**Source:** Waste factor recommendations per the National Wood Flooring Association (NWFA) installation guidelines and the Tile Council of North America (TCNA) Handbook. Box coverage values from manufacturer specifications (Shaw, Mohawk, Armstrong, DalTile).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Hardwood Bedroom — 14 x 12 ft, 10% Waste
+
+A homeowner is installing 3/4-inch solid hardwood flooring in a master bedroom. The room is a simple rectangle with no closet alcoves. The hardwood is sold in cartons covering 23.5 sq ft each at \$6.50 per sq ft.
+
+**Inputs:**
+- Length: 14 ft
+- Width: 12 ft
+- Material: Hardwood
+- Waste Factor: 10%
+- Box Coverage: 23.5 sq ft
+- Price: \$6.50/sq ft
+
+**Step-by-step:**
+
+1. Room area: 14 x 12 = **168 sq ft**
+2. Add 10% waste: 168 x 1.10 = **184.8 sq ft**
+3. Number of boxes: 184.8 / 23.5 = 7.86 → **8 boxes**
+4. Actual coverage purchased: 8 x 23.5 = **188 sq ft**
+5. Material cost: 184.8 x $6.50 = **$1,201.20**
+
+**Interpretation:** Eight boxes of hardwood gives you 188 sq ft of material for a 168 sq ft room — a comfortable buffer of 20 sq ft (about 12%). This extra covers wall cuts, doorway transitions, and gives you a few spare planks for future scratch repairs. At \$6.50/sq ft, this bedroom costs about \$1,200 in hardwood materials. Budget an additional \$3–\$5 per sq ft for professional installation, bringing the total to roughly \$1,700–\$2,100 installed.
+
+### Example 2: Tile Bathroom — 8 x 10 ft, 15% Waste
+
+A homeowner is tiling a bathroom floor with 12 x 24-inch porcelain tile. The higher waste factor accounts for the many cuts around the toilet flange, vanity, and shower curb. Tile is sold in boxes covering 12 sq ft at \$4.25 per sq ft.
+
+**Inputs:**
+- Length: 10 ft
+- Width: 8 ft
+- Material: Porcelain Tile
+- Waste Factor: 15%
+- Box Coverage: 12 sq ft
+- Price: \$4.25/sq ft
+
+**Step-by-step:**
+
+1. Room area: 10 x 8 = **80 sq ft**
+2. Add 15% waste: 80 x 1.15 = **92 sq ft**
+3. Number of boxes: 92 / 12 = 7.67 → **8 boxes**
+4. Actual coverage purchased: 8 x 12 = **96 sq ft**
+5. Material cost: 92 x $4.25 = **$391**
+
+**Interpretation:** Eight boxes provides 96 sq ft of tile for an 80 sq ft bathroom — a 20% effective buffer. Bathrooms generate more waste than bedrooms because of cuts around plumbing fixtures, the toilet flange, and the shower threshold. The 15% waste factor is appropriate here; a bathroom with a freestanding tub or complex layout might need 18–20%. Budget \$2.50–\$6 per sq ft for thin-set mortar, grout, backer board, and professional installation in addition to tile cost.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Installation pattern is the biggest waste driver.** Straight-lay (planks parallel to the longest wall) produces the least waste at 5–10%. A 45-degree diagonal layout increases waste to 12–15% because every wall-edge cut creates a triangular offcut. Herringbone and chevron patterns waste 15–20% due to the angled cuts on every piece. Running-bond (brick) patterns waste 8–12% because staggered rows create half-plank cuts at each wall.
+
+**Room shape complexity adds waste.** A simple rectangle wastes the minimum. Each additional corner, alcove, closet, or angled wall adds cuts. An L-shaped room with a bay window nook may need 3–5% more waste factor than the same total area in a simple rectangle. Count the number of inside and outside corners — more than 8 corners (a standard rectangle has 4) warrants adding 3–5% to your waste factor.
+
+**Tile size affects waste percentage.** Large-format tiles (24 x 24 inch or larger) produce more waste in small rooms because each cut removes a larger piece. A 24 x 24-inch tile cut in half at a wall wastes 2 sq ft per cut. A 6 x 6-inch tile cut at the same wall wastes only 0.25 sq ft. In bathrooms under 50 sq ft, consider using smaller tiles or increasing the waste factor to 18–20% for large-format tile.
+
+**Buy from the same dye lot.** Hardwood, tile, and laminate are manufactured in batches (dye lots or production runs). Color can vary noticeably between lots. Always buy all boxes for your project at the same time from the same lot. Ordering an extra box upfront for future repairs is far easier than trying to match a discontinued dye lot three years later.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **rectangular rooms** measured wall to wall. L-shaped rooms, closet alcoves, and bay windows should be calculated as separate rectangles and summed.
+- Waste factors are **material-type defaults**: hardwood 10%, laminate 8%, vinyl plank 7%, ceramic/porcelain tile 10%, natural stone 15%. Actual waste depends on room complexity, pattern, installer skill, and tile/plank size.
+- **Box coverage values** must be entered from the manufacturer packaging. The calculator does not assume a default box size because coverage varies widely between brands and products (12–30 sq ft per box).
+- Does **not include underlayment, adhesive, grout, transitions, or baseboards** — these are additional material costs depending on flooring type.
+- Assumes **floor-level installation only**. Stairs, risers, and landings require separate calculations using linear measurements.
+- Does **not account for subfloor preparation** (leveling compound, moisture barrier, backer board for tile) — these add \$0.50–\$2.00 per sq ft.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much extra flooring should I buy for waste?
+
+Buy 10% extra for standard straight-lay hardwood or laminate installations, 7% for vinyl plank, 10% for ceramic or porcelain tile, and 15% for natural stone or diagonal/herringbone patterns. Complex rooms with many corners, angles, or obstacles (bathroom fixtures, kitchen islands) should add an extra 3–5% beyond these defaults. Always round up to the next full box and keep one unopened box for future repairs — matching a discontinued product later is often impossible.
+
+### What is the cheapest type of flooring?
+
+Vinyl plank flooring is the most affordable option for most homeowners at \$1.50–\$4.00 per square foot for materials, with some budget lines starting under \$1.00/sq ft. Sheet vinyl is even cheaper (\$0.50–\$2.00/sq ft) but harder to install neatly. Laminate costs \$1.00–\$5.00/sq ft. Ceramic tile runs \$1.50–\$6.00/sq ft. Engineered hardwood costs \$4.00–\$10.00/sq ft, and solid hardwood ranges from \$5.00–\$15.00/sq ft. Installation costs add \$2–\$8/sq ft depending on the material and your market. Vinyl plank also has the lowest waste factor (5–7%) because planks score and snap easily with minimal material loss.
+
+### How many boxes of flooring do I need?
+
+Divide your total square footage (room area plus waste factor) by the square footage per box listed on the packaging. For example, a 200 sq ft room with 10% waste needs 220 sq ft of material. If each box covers 22 sq ft, you need 220 / 22 = 10 boxes. Always round up to the next whole box — you cannot purchase partial boxes, and a spare box costs \$30–\$80 but saves a \$200+ special-order fee later if you need to replace damaged planks.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses standard area formulas with material-specific waste factors as recommended by the **National Wood Flooring Association (NWFA)** installation guidelines for hardwood and laminate, and the **Tile Council of North America (TCNA)** Handbook for tile installations. Vinyl plank waste factors follow **Resilient Floor Covering Institute (RFCI)** recommendations. Box coverage values are manufacturer-specific and must be sourced from product packaging (Shaw, Mohawk, Armstrong, DalTile, LifeProof). Cost benchmarks reflect 2026 U.S. retail pricing from national home improvement retailers and **RSMeans** construction cost data.
+
+{/* Section 17: Disclaimer — auto-rendered */}

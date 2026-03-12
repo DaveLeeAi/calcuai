@@ -1,0 +1,212 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On an \$85 restaurant bill, a 20% tip comes to \$17.00 for a total of \$102.00. Split four ways, that's \$25.50 per person. The standard tipping range in the United States is 15–20% of the pre-tax bill, with 20% now considered the baseline for good service at sit-down restaurants. Enter your bill amount and tip percentage below to see your exact tip, total, and per-person share instantly.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Result Shows */}
+## What Your Result Shows
+
+Your tip amount is a direct function of two numbers: the bill total and the percentage you choose. This calculator shows you the exact dollar amount of your tip, the grand total including tip, and — when splitting — what each person owes. The comparison table lets you see all four standard tip levels (15%, 18%, 20%, 25%) side by side so you can make a quick, informed decision without mental math.
+
+The **Split Bill** tab adds a critical feature for group dining. Splitting a \$247 dinner check among six people is the kind of arithmetic that causes table-wide confusion and delays. The calculator divides the tip-included total evenly, giving you a clean per-person number. According to a 2023 Bankrate survey, 65% of American adults tip 20% or more at sit-down restaurants, up from 56% in 2019 — a shift partly driven by the post-pandemic reevaluation of service worker compensation.
+
+The **round-up** option eliminates awkward cent amounts. If your total comes to \$57.40, rounding up to \$58 simplifies payment and slightly increases your tip. Over the course of a year, rounding up on a weekly dinner adds roughly \$30–\$50 in extra tips — a minimal cost for the convenience of clean numbers and the goodwill of leaving a bit extra.
+
+If you need to calculate a discount before tipping (such as a coupon or happy hour special), use our [Percentage Calculator](/calculators/math/percentage-calculator) to find the discounted bill first, then return here to tip on the reduced amount.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Bill Amount** — type the pre-tax total from your receipt. If you're tipping on the full amount including tax, enter that total instead. The default is \$85, which reflects a typical two-person casual dining check in the U.S. as of 2025 (National Restaurant Association data).
+
+2. **Choose a Tip Percentage** — select or type your desired tip rate. The helper text shows common tiers: 15% for adequate service, 18% for good service, 20% for great service, and 25% for exceptional service. The default is 20%, reflecting the current national norm for sit-down restaurants.
+
+3. **Switch to the Split Bill Tab** — if you're dining with others, click "Split Bill" to reveal the number-of-people field. Enter the total number of diners. The calculator divides the tip-included total evenly among all parties.
+
+4. **Toggle Round Up (optional)** — enable this to round your total up to the nearest whole dollar. This simplifies payment and slightly increases your effective tip percentage. The adjusted tip and total update instantly.
+
+5. **Review the Tip Comparison Table** — below the primary result, the breakdown table shows what your tip, total, and per-person amount would be at 15%, 18%, 20%, and 25%. Use this to quickly compare options without re-entering numbers.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Tip calculation uses straightforward arithmetic applied to three variables:
+
+$$\text{Tip Amount} = \text{Bill Amount} \times \frac{\text{Tip Percentage}}{100}$$
+
+$$\text{Total} = \text{Bill Amount} + \text{Tip Amount}$$
+
+$$\text{Per Person} = \frac{\text{Total}}{\text{Number of People}}$$
+
+Where:
+
+- **Bill Amount** = the pre-tax (or post-tax) total on your receipt, in dollars
+- **Tip Percentage** = the gratuity rate you select, expressed as a whole number (e.g., 20 for 20%)
+- **Number of People** = the count of diners splitting the bill (minimum 1)
+
+When the **Round Up** option is enabled, an additional step applies:
+
+$$\text{Rounded Total} = \lceil \text{Bill Amount} + \text{Tip Amount} \rceil$$
+
+The ceiling function ($\lceil x \rceil$) rounds up to the nearest whole dollar. The tip is then recalculated as the difference between the rounded total and the original bill:
+
+$$\text{Adjusted Tip} = \text{Rounded Total} - \text{Bill Amount}$$
+
+This means the effective tip percentage may be slightly higher than the selected percentage when rounding up.
+
+**Source:** Tip percentage norms per the Emily Post Institute (2024) and the National Restaurant Association's annual "State of the Restaurant Industry" report. The 15–20% standard for full-service restaurants has been the U.S. cultural norm since the mid-20th century, with 20% increasingly treated as the baseline since 2020.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Dinner — \$85 Bill, 20% Tip
+
+**Inputs:**
+- Bill Amount: \$85.00
+- Tip Percentage: 20%
+- Number of People: 1
+- Round Up: Off
+
+**Step-by-step:**
+
+1. Calculate tip: \$85.00 × (20 / 100) = \$85.00 × 0.20 = **\$17.00**
+2. Calculate total: \$85.00 + \$17.00 = **\$102.00**
+3. Per person (1 diner): \$102.00 / 1 = **\$102.00**
+
+**Interpretation:** A \$17 tip on an \$85 meal is squarely in the "great service" range. The \$102 total is clean and easy to pay. For context, a 15% tip on the same bill would be \$12.75 (total \$97.75) and a 25% tip would be \$21.25 (total \$106.25). The \$8.50 difference between adequate and excellent tipping on this bill is roughly the cost of a single drink.
+
+### Example 2: Group Dinner Split — \$247 Bill, 18% Tip, 6 People
+
+**Inputs:**
+- Bill Amount: \$247.00
+- Tip Percentage: 18%
+- Number of People: 6
+- Round Up: Off
+
+**Step-by-step:**
+
+1. Calculate tip: \$247.00 × (18 / 100) = \$247.00 × 0.18 = **\$44.46**
+2. Calculate total: \$247.00 + \$44.46 = **\$291.46**
+3. Per person: \$291.46 / 6 = **\$48.58**
+
+**Interpretation:** Each of the six diners pays \$48.58 — a manageable amount that includes a fair 18% tip. Without a calculator, this split often leads to under-tipping: if each person eyeballs "\$40 each," the group leaves only \$240 total, which is \$7 less than the bill itself and zero tip. This is the single most common reason tables under-tip — group estimation errors. Always calculate before throwing cash on the table.
+
+### Example 3: Round-Up Tipping — \$63.47 Bill, 20% Tip
+
+**Inputs:**
+- Bill Amount: \$63.47
+- Tip Percentage: 20%
+- Number of People: 1
+- Round Up: On
+
+**Step-by-step:**
+
+1. Calculate base tip: \$63.47 × 0.20 = **\$12.69** (rounded to nearest cent)
+2. Calculate base total: \$63.47 + \$12.69 = **\$76.16**
+3. Round up total: ⌈\$76.16⌉ = **\$77.00**
+4. Recalculate adjusted tip: \$77.00 − \$63.47 = **\$13.53**
+5. Effective tip percentage: \$13.53 / \$63.47 = **21.32%**
+
+**Interpretation:** Rounding up added \$0.84 to the total and bumped the effective tip from 20.0% to 21.3%. On a credit card, \$77.00 is a cleaner number to write on the receipt. Over a year of weekly dining, this rounding habit adds roughly \$40 in extra tips — barely noticeable to the tipper but meaningful cumulatively to servers who rely on gratuities for 60–70% of their income (Bureau of Labor Statistics, 2024).
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Pre-Tax vs. Post-Tax Tipping** — Etiquette experts are split. The Emily Post Institute recommends tipping on the pre-tax subtotal, while many servers and tipping advocates suggest tipping on the post-tax total. On a \$100 meal with 8% sales tax, the difference between tipping 20% pre-tax (\$20.00) and 20% post-tax (\$21.60) is \$1.60. It's a small difference per meal, but over 100 restaurant visits per year, it amounts to \$160. Enter whichever amount matches your preference — just be consistent.
+
+**Service Quality Tiers** — The standard U.S. tipping scale for full-service restaurants runs from 15% (adequate service — food arrived, no issues) to 25% or higher (exceptional, personalized attention). For genuinely poor service, 10% signals dissatisfaction without stiffing the server entirely. Below 10% is generally considered inappropriate except in cases of serious misconduct, as servers in most U.S. states earn a tipped minimum wage of \$2.13–\$5.00/hour (Department of Labor, 2024) and depend on tips for the majority of their income.
+
+**Delivery and Takeout** — Delivery tips have risen sharply since 2020. The current norm is 15–20% for restaurant delivery and \$3–\$5 minimum for food delivery apps, regardless of order size. For takeout, tipping 10–15% is increasingly expected, up from the pre-2020 norm of 0–10%. This calculator works for all scenarios — just enter the bill and your chosen percentage.
+
+**Tipping on Alcohol** — At bars and restaurants, tip on the full bill including drinks. A common exception: if you order a single expensive bottle of wine (\$200+), some etiquette guides suggest tipping 15% on food and 10% on wine separately, since the server's effort doesn't scale with wine price. For cocktails at a bar, \$1–\$2 per drink or 20% of the tab, whichever is greater.
+
+**Regional and International Norms** — Tipping culture varies dramatically worldwide. In Japan and South Korea, tipping is considered rude. In much of Europe, a 5–10% tip is generous because service charges are included. In Canada, 15–20% mirrors U.S. norms. This calculator assumes U.S. conventions. If traveling internationally, research local customs before applying these percentages.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Tipping on the total after a discount or coupon.** If you used a 50%-off coupon and your bill shows \$40 but the original price was \$80, tip on the \$80 pre-discount amount. Your server did the same work regardless of your discount. This is the most frequently cited tipping etiquette rule from both the Emily Post Institute and restaurant industry groups.
+
+**Splitting the tip unevenly without agreeing first.** When one person orders a \$60 steak and another orders a \$15 salad, splitting the total evenly creates resentment. Either split evenly and accept the averaging, or calculate individual bills before adding tip. If splitting unevenly, each person should tip on their own subtotal using this calculator separately.
+
+**Forgetting to tip on tax in states with high sales tax.** In cities like Chicago (10.25% sales tax) or Seattle (10.35%), the difference between tipping on the pre-tax and post-tax amount is significant. On a \$150 pre-tax dinner in Chicago, the tax is \$15.38. Tipping 20% pre-tax = \$30.00; tipping 20% post-tax = \$33.08. Neither approach is wrong, but be aware of which number you're using.
+
+**Double-tipping when a gratuity is already included.** Many restaurants automatically add an 18–20% gratuity for parties of six or more. Check your bill for "service charge" or "gratuity included" before adding a tip on top. Adding another 20% on a bill that already includes a 20% service charge means you're tipping 40% — generous, but likely unintentional.
+
+**Using post-pandemic tipping guilt to over-tip beyond your budget.** While tipping generously is admirable, consistently tipping 30–40% when you can't afford it leads to dining out less frequently, which ultimately hurts restaurants and servers more than a steady 20% from a regular customer. Tip what you can sustain consistently: 20% is a strong, respectful tip at any full-service restaurant.
+
+{/* Section 12: Comparison Table */}
+## Tipping Standards by Service Type
+
+Tipping expectations vary by service type. This table reflects the current U.S. consensus from the Emily Post Institute, the National Restaurant Association, and the American Hotel & Lodging Association (2024):
+
+| Service Type | Standard Tip | Exceptional Tip | Notes |
+|---|---|---|---|
+| Sit-down restaurant | 18–20% | 25%+ | On pre-tax total |
+| Buffet restaurant | 10–15% | 18%+ | Lower because you serve yourself |
+| Food delivery | 15–20% (min \$3–\$5) | 25%+ | Higher for bad weather or long distance |
+| Takeout | 10–15% | 20% | Post-2020 norm; previously 0–5% |
+| Coffee shop / counter | \$1–\$2 or 15–20% | \$3+ | Per drink, or on total if ordering food |
+| Bar / bartender | \$1–\$2 per drink or 18–20% | 25%+ | Per drink for simple pours; % for cocktails |
+| Hair salon / barber | 15–20% | 25%+ | On total service cost |
+| Hotel housekeeping | \$2–\$5 per night | \$10+ per night | Leave daily, not just at checkout |
+| Taxi / rideshare | 15–20% | 25%+ | In-app or cash |
+| Valet parking | \$2–\$5 | \$10+ | Per retrieval, not per park |
+| Movers | \$20–\$50 per mover | \$50+ per mover | For a full-day move |
+| Grocery delivery | 10–15% (min \$5) | 20%+ | Higher for heavy orders or stairs |
+
+**When to tip above the standard:** Bad weather, holidays, unusually large or complex orders, accessibility challenges, or when the server went genuinely above and beyond. Tipping above 25% is always appropriate when service was truly exceptional — it's the most direct way to reward good work in a service economy.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **even splitting** among all diners. If individuals ordered items at different price points and want to split proportionally, each person should calculate their tip separately on their own subtotal.
+- The **round-up** feature rounds the total (bill + tip) to the next whole dollar. It does not round individual per-person amounts when splitting — each person's share may still include cents.
+- Does not account for **automatic gratuity** already added to the bill. If a service charge is included, deduct it before calculating an additional tip.
+- Tip percentages are based on **U.S. cultural norms**. Expectations differ significantly in other countries — in many European and Asian countries, tipping is optional or considered inappropriate.
+- The calculator treats the bill amount as entered — it does not distinguish between **pre-tax and post-tax** totals. Enter whichever amount you intend to tip on.
+- Does not handle **itemized splitting** (different tip percentages on food vs. alcohol, or different amounts per person based on individual orders).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Should I tip on the pre-tax or post-tax amount?
+
+Tip on the pre-tax subtotal if you want to follow traditional etiquette guidelines from the Emily Post Institute. However, many diners tip on the post-tax total for simplicity — the difference is typically 1–2% of the bill. On a \$100 pre-tax dinner with 8% sales tax, tipping 20% pre-tax yields \$20.00 while tipping 20% post-tax yields \$21.60. Neither approach is considered wrong. The key is to tip at least 18–20% on one or the other, not to agonize over which base to use.
+
+### How much should I tip for delivery?
+
+Tip 15–20% of the order total for restaurant delivery, with a minimum of \$3–\$5 regardless of order size. For food delivery app orders (DoorDash, Uber Eats, Grubhub), drivers receive a base pay of \$2–\$4 per delivery in most markets and rely heavily on tips. In bad weather, during holidays, or for orders requiring stairs or long walks, 25% or a \$7–\$10 minimum is considered appropriate. A 2024 Pew Research study found that 92% of Americans believe tipping delivery drivers is important, compared to 78% in 2019.
+
+### Is it ever acceptable to leave no tip?
+
+Leaving zero tip at a sit-down restaurant is generally considered unacceptable in the United States, even for poor service. Servers in 43 states earn a tipped minimum wage below the standard minimum (\$2.13/hour federally), making tips their primary income. For genuinely bad service, 10% communicates dissatisfaction while still compensating the server's time. If the issue is with the kitchen (wrong order, long wait for food), the server is not at fault — speak to a manager and tip normally. The only widely accepted reason for zero tip is if the server was personally abusive or discriminatory, and even then, speaking to management is the recommended response.
+
+### How do I handle tipping when using a coupon or discount?
+
+Always tip on the original, pre-discount bill amount. If your meal would have cost \$80 but you used a 50%-off coupon and paid \$40, calculate your tip on \$80. Your server provided the same level of service regardless of your discount. This is the single most agreed-upon tipping rule across etiquette experts, restaurant industry groups, and servers themselves. The same applies to gift cards, loyalty rewards, and comp'd items — tip on what the meal would have cost at full price.
+
+### What is the average tip percentage in the United States?
+
+The average tip at U.S. full-service restaurants is 19.4% as of 2024, according to payment data from Toast (a major restaurant point-of-sale provider that processes billions in transactions annually). This is up from 16.9% in 2019. The shift reflects both post-pandemic tipping culture changes and the prevalence of digital payment screens that default to 18%, 20%, and 25% options. Regionally, the Northeast and West Coast average slightly higher (20–21%), while the Midwest and South average 18–19%.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator multiplies the bill amount by the tip percentage divided by 100 to find the tip, adds it to the bill for the total, and divides by the number of people for the per-person share. The round-up option adjusts the total to the next whole dollar and recalculates the effective tip percentage. The comparison table applies the same formula at 15%, 18%, 20%, and 25%.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

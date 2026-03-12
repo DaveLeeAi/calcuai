@@ -1,0 +1,204 @@
+{
+  "id": "savings-calculator",
+  "title": "Savings Calculator",
+  "slug": "savings-calculator",
+  "category": "finance",
+  "subcategory": "savings",
+  "primaryKeyword": "savings calculator",
+  "metaTitle": "Savings Calculator — Free Savings Growth & Goal Tracker",
+  "metaDescription": "Calculate how your savings grow with compound interest. Track your savings goal, see interest earned, and plan monthly deposits. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "initialDeposit",
+      "label": "Initial Deposit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$"
+    },
+    {
+      "id": "monthlyDeposit",
+      "label": "Monthly Deposit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 100000,
+      "step": 50,
+      "prefix": "$"
+    },
+    {
+      "id": "annualRate",
+      "label": "Annual Interest Rate (APY)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 4.5,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "High-yield savings accounts currently offer 4–5% APY (2025)."
+    },
+    {
+      "id": "years",
+      "label": "Time Period (Years)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 1,
+      "max": 50,
+      "step": 1
+    },
+    {
+      "id": "savingsGoal",
+      "label": "Savings Goal",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Optional — set a target amount to see how long it takes to reach your goal."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "futureValue",
+      "label": "Future Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalDeposits",
+      "label": "Total Deposits",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Interest Earned",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthsToGoalText",
+      "label": "Time to Reach Goal",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Savings Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Savings Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#F39C12"
+        ]
+      }
+    },
+    {
+      "id": "growthOverTime",
+      "label": "Savings Growth Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
+      }
+    }
+  ],
+  "formula": "savings-growth",
+  "features": [
+    "chart",
+    "presets"
+  ],
+  "tabs": [
+    {
+      "id": "savings-growth",
+      "label": "Savings Growth",
+      "description": "Calculate how your savings grow over time with compound interest and regular deposits",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "initialDeposit",
+        "monthlyDeposit",
+        "annualRate",
+        "years",
+        "savingsGoal"
+      ]
+    },
+    {
+      "id": "emergency-fund",
+      "label": "Emergency Fund",
+      "description": "Calculate how long it takes to build your emergency fund target",
+      "defaultInputOverrides": {
+        "annualRate": 4.5,
+        "savingsGoal": 24000
+      },
+      "visibleInputs": [
+        "initialDeposit",
+        "monthlyDeposit",
+        "annualRate",
+        "years",
+        "savingsGoal"
+      ]
+    }
+  ],
+  "relatedCalculators": [
+    "compound-interest-calculator",
+    "cd-calculator",
+    "401k-calculator",
+    "investment-calculator",
+    "down-payment-calculator",
+    "debt-payoff-calculator",
+    "inflation-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "FDIC / Federal Reserve",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Compound interest with regular deposits: FV = P(1+r/n)^(nt) + PMT×[((1+r/n)^(nt)-1)/(r/n)] per FDIC Truth in Savings Act (Regulation DD)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "compound-interest-calculator"
+  ],
+  "qualityScore": 96,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "compound-interest",
+    "future-value",
+    "inflation",
+    "interest-rate"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

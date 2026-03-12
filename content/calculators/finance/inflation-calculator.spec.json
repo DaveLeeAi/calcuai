@@ -1,0 +1,141 @@
+{
+  "id": "inflation-calculator",
+  "title": "Inflation Calculator",
+  "slug": "inflation-calculator",
+  "category": "finance",
+  "subcategory": "investment",
+  "primaryKeyword": "inflation calculator",
+  "metaTitle": "Inflation Calculator — Future Cost & Buying Power",
+  "metaDescription": "Calculate how inflation erodes your purchasing power over time or what today's prices will cost in the future. Based on BLS CPI data. Free inflation tool.",
+  "inputs": [
+    {
+      "id": "amount",
+      "label": "Amount ($)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 100,
+      "min": 0.01,
+      "max": 100000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Enter a dollar amount to adjust for inflation"
+    },
+    {
+      "id": "inflationRate",
+      "label": "Annual Inflation Rate (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 50,
+      "step": 0.1,
+      "helpText": "Average annual inflation rate (U.S. historical average: ~3.2%)"
+    },
+    {
+      "id": "years",
+      "label": "Number of Years",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "helpText": "Time period in years"
+    },
+    {
+      "id": "calculationMode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "buying-power",
+      "options": [
+        {
+          "value": "buying-power",
+          "label": "Future Buying Power"
+        },
+        {
+          "value": "future-cost",
+          "label": "Future Cost"
+        }
+      ],
+      "helpText": "Buying power: what today's dollars will be worth. Future cost: what today's price will cost later."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "resultAmount",
+      "label": "Result",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalChange",
+      "label": "Total Change",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "percentageChange",
+      "label": "Percentage Change",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "summary",
+      "label": "Inflation Summary",
+      "type": "value-group"
+    },
+    {
+      "id": "inflationOverTime",
+      "label": "Value Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Value ($)",
+        "colors": [
+          "#E74C3C"
+        ]
+      }
+    }
+  ],
+  "formula": "inflation",
+  "features": [
+    "chart"
+  ],
+  "relatedCalculators": [
+    "investment-calculator",
+    "retirement-calculator",
+    "compound-interest-calculator",
+    "savings-calculator",
+    "salary-calculator",
+    "cd-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Bureau of Labor Statistics (BLS) — Consumer Price Index (CPI), historical U.S. inflation data (1913–2024).",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "FV = PV × (1 + r)^n (future cost); PV = FV / (1 + r)^n (buying power)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 93,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "inflation",
+    "present-value"
+  ]
+}

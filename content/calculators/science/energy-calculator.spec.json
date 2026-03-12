@@ -1,0 +1,131 @@
+{
+  "id": "energy-calculator",
+  "title": "Energy Calculator",
+  "slug": "energy-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "energy calculator",
+  "metaTitle": "Energy Calculator — Kinetic & Potential Energy",
+  "metaDescription": "Calculate kinetic energy (½mv²) or potential energy (mgh). Convert between joules, calories, kWh, BTU. Free physics energy calculator.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Energy Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "kinetic",
+      "options": [
+        {
+          "value": "kinetic",
+          "label": "Kinetic Energy (½mv²)"
+        },
+        {
+          "value": "potential",
+          "label": "Potential Energy (mgh)"
+        }
+      ]
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 10",
+      "min": 0.001,
+      "step": 0.01,
+      "suffix": "kg",
+      "defaultValue": 10,
+      "helpText": "Mass of the object in kilograms"
+    },
+    {
+      "id": "velocity",
+      "label": "Velocity",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 5",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "defaultValue": 5,
+      "helpText": "Required for kinetic energy",
+      "dependsOn": "mode"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "step": 0.01,
+      "suffix": "m",
+      "defaultValue": 10,
+      "helpText": "Required for potential energy",
+      "dependsOn": "mode"
+    },
+    {
+      "id": "gravity",
+      "label": "Gravitational Acceleration",
+      "type": "number",
+      "required": false,
+      "placeholder": "9.80665",
+      "min": 0.01,
+      "step": 0.01,
+      "suffix": "m/s²",
+      "helpText": "Default: 9.80665 (Earth surface)",
+      "defaultValue": 9.80665
+    }
+  ],
+  "outputs": [
+    {
+      "id": "energy",
+      "label": "Energy",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "energy",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "density-calculator",
+    "pressure-calculator",
+    "ohms-law-calculator",
+    "electricity-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Gottfried Wilhelm Leibniz (1676, vis viva); William Rankine (1853, potential energy)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "KE = ½mv², PE = mgh",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "ohms-law-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

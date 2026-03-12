@@ -1,0 +1,231 @@
+---
+title: "Salary Calculator"
+description: "Convert between annual salary, monthly, biweekly, weekly, daily, and hourly pay. Includes PTO adjustment for true hourly rate. Hourly-to-salary mode built in."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert any salary to every pay frequency instantly. A \$55,000 annual salary equals \$4,583.33 per month, \$2,115.38 biweekly, \$1,057.69 weekly, \$211.54 daily, and \$26.44 per hour based on a standard 2,080-hour work year (40 hours × 52 weeks). Conversely, a \$25/hour wage translates to \$52,000 annually — but after accounting for 10 vacation days and 10 holidays, your effective hourly rate as a salaried worker rises to \$27.08.
+
+</section>
+
+{/* Section 6: What Your Tax Estimate Shows */}
+## What Your Tax Estimate Shows
+
+This calculator converts between all standard pay frequencies — annual, monthly, biweekly (every 2 weeks), weekly, daily, and hourly — and shows both **unadjusted** and **PTO-adjusted** values. The adjustment matters because salaried employees earn the same annual amount regardless of vacation, but their effective hourly rate increases with more time off.
+
+The **Hourly to Salary** tab reverses the calculation: enter an hourly rate to see what annual salary it equates to, and how vacation and holidays affect the total. This is critical when comparing job offers — a \$28/hour contract position without PTO is not equivalent to a \$55,000 salaried position with 3 weeks of paid vacation.
+
+For detailed tax withholding calculations on your salary, use our [Income Tax Calculator](/calculators/finance/income-tax-calculator). To see how investing a portion of your salary compounds over time, try the [Compound Interest Calculator](/calculators/finance/compound-interest-calculator).
+
+## How to Use This Calculator
+
+1. **Select your mode** — "Salary Calculator" if you know your annual salary, or "Hourly to Salary" if you know your hourly rate. Use the tabs at the top to switch.
+2. **Enter your salary or hourly rate** — your gross (pre-tax) annual salary or hourly wage.
+3. **Confirm hours per week** — default is 40 (standard full-time). Change to 35 for reduced schedule, or 45+ if you regularly work overtime.
+4. **Confirm weeks per year** — default is 52. Reduce if you work a seasonal or contract-based schedule.
+5. **Enter vacation/PTO days** — paid time off days per year. Average U.S. PTO is 10–15 days after the first year (BLS, 2024).
+6. **Enter paid holidays** — company-observed holidays. The U.S. average is 8–10 paid holidays per year.
+7. **Review the breakdown table** — see your pay at every frequency, both unadjusted and adjusted for PTO.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Annual to Hourly:**
+
+$$
+\text{Hourly Rate} = \frac{\text{Annual Salary}}{\text{Hours per Week} \times \text{Weeks per Year}}
+$$
+
+**Hourly to Annual:**
+
+$$
+\text{Annual Salary} = \text{Hourly Rate} \times \text{Hours per Week} \times \text{Weeks per Year}
+$$
+
+**Standard pay frequency conversions:**
+
+$$
+\text{Monthly} = \frac{\text{Annual}}{12}
+$$
+
+$$
+\text{Biweekly} = \frac{\text{Annual}}{26}
+$$
+
+$$
+\text{Weekly} = \frac{\text{Annual}}{52}
+$$
+
+$$
+\text{Daily} = \frac{\text{Annual}}{\text{Weeks per Year} \times 5}
+$$
+
+**PTO-Adjusted Hourly Rate:**
+
+$$
+\text{Adjusted Hourly} = \frac{\text{Annual Salary}}{(\text{Working Days} - \text{PTO Days} - \text{Holidays}) \times \frac{\text{Hours/Week}}{5}}
+$$
+
+Where:
+- **Hours per Week** = typically 40 for full-time
+- **Weeks per Year** = typically 52
+- **Working Days** = Weeks per Year × 5 (standard 5-day work week)
+- **Standard work year** = 2,080 hours (40 × 52)
+
+*Source: U.S. Bureau of Labor Statistics (BLS) — "Occupational Employment and Wage Statistics" (2024). Standard full-time work year defined as 2,080 hours.*
+
+For details on how tax withholding applies to different pay frequencies, see our [methodology page on progressive taxation](/methodology/progressive-taxation).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Annual Salary to Hourly
+
+A marketing manager earns \$72,000/year with standard 40-hour weeks. What is the hourly equivalent?
+
+**Hourly Rate:**
+- $72,000 / (40 × 52) = $72,000 / 2,080 = **\$34.62/hour**
+
+**All Frequencies:**
+- Monthly: $72,000 / 12 = **$6,000.00**
+- Biweekly: $72,000 / 26 = **$2,769.23**
+- Weekly: $72,000 / 52 = **$1,384.62**
+- Daily: $72,000 / 260 = **$276.92**
+
+**With PTO Adjustment (15 vacation + 10 holidays = 25 days off):**
+- Working days: 260 − 25 = 235
+- Working hours: 235 × 8 = 1,880
+- Adjusted hourly: $72,000 / 1,880 = **$38.30/hour**
+
+*Interpretation:* This manager's effective hourly rate is \$38.30 when you account for paid time off — 10.6% higher than the unadjusted \$34.62. This adjusted figure is the true hourly value of the compensation package.
+
+### Example 2: Hourly to Annual (Comparing a Contract Offer)
+
+A software developer receives two offers:
+- **Offer A:** \$85,000 salary with 15 PTO days + 10 holidays
+- **Offer B:** \$48/hour contract, no PTO, no holidays
+
+**Offer A Breakdown:**
+- Unadjusted hourly: $85,000 / 2,080 = $40.87/hour
+- Adjusted hourly: $85,000 / (235 × 8) = $85,000 / 1,880 = **\$45.21/hour**
+
+**Offer B Breakdown:**
+- Annual (if working all 52 weeks): $48 × 40 × 52 = **$99,840**
+- But if they take 3 weeks unpaid vacation: $48 × 40 × 49 = **$94,080**
+- No holidays paid: lose 10 days = $48 × 8 × 10 = **$3,840** less
+- Realistic annual: \$94,080 − $3,840 = **$90,240**
+
+*Interpretation:* Offer B pays more in raw dollars (\$90,240 vs. \$85,000) but the developer must also cover their own health insurance, retirement contributions, and has no paid time off. After factoring in ~\$8,000/year for self-purchased benefits, the offers are nearly equivalent.
+
+### Example 3: Part-Time to Annual Equivalent
+
+A part-time retail worker earns \$16.50/hour, working 25 hours per week, 50 weeks per year (2 weeks unpaid).
+
+**Annual Income:**
+- $16.50 × 25 × 50 = **$20,625/year**
+- Monthly: $20,625 / 12 = **$1,718.75**
+- Biweekly: $20,625 / 26 = **$793.27**
+
+**Full-Time Equivalent:**
+- If this worker switched to 40 hours/week: $16.50 × 40 × 52 = **$34,320/year**
+- Hourly rate stays the same; only hours change
+
+*Interpretation:* At 25 hours/week, this worker earns 60% of what a full-time position at the same rate would pay. The annual figure (\$20,625) is useful for budgeting and tax planning — it's just above the federal poverty line for a single person (\$15,060 in 2024).
+
+## Key Factors That Affect Your Results
+
+1. **Hours Per Week** — The single biggest variable. Moving from 40 to 45 hours/week at \$50,000 salary drops your effective hourly rate from \$24.04 to \$21.37 — a 11% reduction in hourly value.
+2. **PTO and Holidays** — The average U.S. worker receives 11 paid vacation days and 8 paid holidays after 1 year (BLS, 2024). After 5 years, the average rises to 15 vacation days. Each PTO day adds approximately 0.4% to your effective hourly rate.
+3. **Pay Frequency Affects Budgeting** — Biweekly pay produces 26 paychecks per year, while semi-monthly produces 24. On a \$60,000 salary, biweekly checks are \$2,307.69 each and semi-monthly checks are \$2,500.00 each — the biweekly checks are smaller, but you get 2 extra per year. Workers paid biweekly who budget around two paychecks per month effectively set aside \$4,616 in surplus across the two three-paycheck months, creating a natural forced-savings mechanism that semi-monthly pay does not provide.
+4. **Overtime Exemption** — Salaried employees classified as "exempt" under the FLSA don't receive overtime pay. If you regularly work 50+ hours/week, your effective hourly rate may be significantly lower than the standard calculation shows.
+4. **Benefits Value** — Benefits (health insurance, 401k match, dental/vision) typically add 30–40% to base salary value. A \$60,000 salary with \$20,000 in benefits has a total compensation value of \$80,000.
+5. **State and Local Taxes** — This calculator shows gross (pre-tax) amounts. Actual take-home pay varies dramatically: Texas has no state income tax, while California's top rate is 13.3%.
+
+## Common Mistakes to Avoid
+
+1. **Using 50 Weeks Instead of 52** — The standard work year is 52 weeks (2,080 hours), not 50. Using 50 weeks makes your hourly rate appear 4% higher than the standard calculation. PTO is already accounted for in the adjusted columns.
+2. **Comparing Gross Salary Across States** — A \$70,000 salary in Texas (no state income tax) yields more take-home pay than \$75,000 in California. Always compare after-tax or use cost-of-living adjustments.
+3. **Ignoring Overtime Hours** — If you regularly work 45–50 hours but only get paid for 40, your actual hourly rate is lower than calculated. Enter your true hours per week, not just the standard 40.
+4. **Forgetting the Biweekly ≠ Semi-Monthly Distinction** — Biweekly (every 2 weeks) means 26 paychecks per year. Semi-monthly (1st and 15th) means 24 paychecks. The difference is about 8% per paycheck.
+5. **Double-Counting PTO** — If you reduced "weeks per year" from 52 to 50 AND entered 10 vacation days, you've counted that time off twice. Use 52 weeks and let the PTO fields handle the adjustment.
+
+## Salary to Hourly Quick Reference
+
+| Annual Salary | Hourly (40 hrs/wk) | Monthly | Biweekly |
+|:-:|:-:|:-:|:-:|
+| \$30,000 | \$14.42 | \$2,500 | \$1,154 |
+| \$40,000 | \$19.23 | \$3,333 | \$1,538 |
+| \$50,000 | \$24.04 | \$4,167 | \$1,923 |
+| \$60,000 | \$28.85 | \$5,000 | \$2,308 |
+| \$70,000 | \$33.65 | \$5,833 | \$2,692 |
+| \$80,000 | \$38.46 | \$6,667 | \$3,077 |
+| \$90,000 | \$43.27 | \$7,500 | \$3,462 |
+| \$100,000 | \$48.08 | \$8,333 | \$3,846 |
+| \$120,000 | \$57.69 | \$10,000 | \$4,615 |
+| \$150,000 | \$72.12 | \$12,500 | \$5,769 |
+
+*Based on standard 2,080-hour work year (40 hours × 52 weeks). Actual take-home will be lower after federal, state, and FICA taxes.*
+
+## What the Offer Letter Leaves Out
+
+A salary number is the starting point of compensation, not the finish line. Two offers with the same headline pay can differ by \$20,000–\$40,000 in total value once you account for what isn't on the first page.
+
+**Health insurance is the invisible salary.** Employer-sponsored family coverage averages \$23,968/year (KFF, 2024), of which employers typically pay 73% — roughly \$17,500 in value that never appears on your pay stub. A \$90,000 offer with employer health coverage is worth roughly \$107,500 in total compensation. A \$100,000 contract offer without benefits requires you to buy individual coverage at \$600–\$1,200/month out of pocket. Suddenly the "higher" offer pays less.
+
+**Retirement matching is free money with a vesting schedule.** A 4% 401(k) match on a \$80,000 salary adds \$3,200/year — but only if you contribute at least 4% yourself. If the match vests over 4 years and you leave after 2, you keep only 50% of the employer's contributions at most companies. Before comparing offers, ask: What's the match formula? What's the vesting schedule? A 6% match with immediate vesting is worth more than an 8% match with a 5-year cliff.
+
+**Equity compensation requires a discount rate.** Stock options and RSUs look valuable on the grant letter but carry uncertainty. Private company equity has no liquid market and could be worth zero. Public company RSUs are more concrete but still fluctuate — a \$20,000 annual RSU grant could be worth \$14,000 or \$28,000 by the time it vests, depending on stock performance. Discount private equity by 50–75% and public RSUs by 15–20% when comparing against cash salary for a realistic picture.
+
+**Location changes everything.** A \$120,000 salary in San Francisco has the purchasing power of approximately \$68,000 in Raleigh, NC, after adjusting for cost of living (BLS Regional Price Parities, 2024). Remote work complicates this further: if you earn a San Francisco salary while living in Raleigh, your effective purchasing power nearly doubles. When evaluating offers across cities, convert all salaries to a common cost-of-living baseline before comparing.
+
+**The PTO-adjusted hourly rate reveals the hidden value of time off.** This calculator quantifies it: a \$72,000 salary with 25 PTO days (vacation + holidays) yields an effective hourly rate of \$38.30/hour, versus \$34.62 at the nominal 2,080 hours. That 10.6% premium represents the implicit value your employer places on your time off — 25 days of paid rest that a contractor making the same hourly rate would have to fund out of their own pocket.
+
+## Assumptions & Limitations
+
+- Uses a standard 5-day work week (Monday–Friday) for daily calculations
+- Standard work year = 2,080 hours (40 hours × 52 weeks)
+- Does not calculate taxes, deductions, or net (take-home) pay
+- PTO adjustment for salaried workers assumes annual salary is fixed (more days off = higher effective hourly rate)
+- PTO adjustment for hourly workers assumes unpaid time off (more days off = lower annual income)
+- Biweekly = 26 pay periods/year (not semi-monthly = 24)
+- Does not account for overtime pay premiums (1.5× or 2×)
+- Benefits value is not included in the calculation
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### How do I compare a salaried job offer to a contract (hourly) offer?
+
+Add the dollar value of benefits to the salaried offer before comparing. Employer-provided health insurance averages \$8,435/year for single coverage and \$23,968 for family coverage (KFF, 2024). A 401(k) match at 4% of a \$70,000 salary adds \$2,800. So a \$70,000 salary with benefits has a total compensation value of roughly \$81,000–\$97,000. Divide the contract hourly rate by 1.3 (to approximate the 30% benefits gap) for a fairer apples-to-apples comparison.
+
+### What is the difference between biweekly and semi-monthly pay?
+
+Biweekly pay arrives every 2 weeks (26 paychecks per year), while semi-monthly pay arrives twice per month on fixed dates like the 1st and 15th (24 paychecks per year). On a \$60,000 salary, each biweekly check is \$2,307.69 and each semi-monthly check is \$2,500.00. Biweekly pay produces 2 "extra" paychecks per year — in 2 months you receive 3 paychecks instead of 2, which some people use as forced savings or bonus debt payments.
+
+### How many hours does the average American actually work per year?
+
+The average American full-time employee works approximately 1,811 hours per year, according to the OECD (2023 data). This is below the standard 2,080 because it accounts for PTO, holidays, sick days, and partial weeks. By comparison, German workers average 1,341 hours and Mexican workers average 2,226 hours. The gap between 2,080 (standard) and actual hours worked explains why effective hourly rates are typically 10–15% higher than the simple salary-divided-by-2,080 calculation.
+
+### Does working overtime change my effective salary?
+
+For exempt salaried employees (those not eligible for overtime pay under the FLSA), extra hours reduce your effective hourly rate without increasing annual pay. A \$60,000 salaried worker doing 50 hours/week earns \$23.08/hour (vs. \$28.85 at 40 hours) — a 20% pay cut per hour worked. For non-exempt hourly employees, overtime at 1.5x after 40 hours actually increases the effective annual pay: a \$25/hour worker averaging 45 hours/week earns \$71,500/year instead of \$52,000.
+
+### What salary do I need to earn \$100,000 after taxes?
+
+You need a gross salary of roughly \$130,000–\$145,000 to take home \$100,000, depending on your state. In Texas or Florida (no state income tax), approximately \$130,000 gross yields \$100,000 after federal tax and FICA. In California (13.3% top state rate) or New York City (combined state + city rate up to 12.7%), you need closer to \$145,000–\$150,000 gross. The exact figure depends on your filing status, deductions, and pre-tax contributions to retirement accounts and health insurance.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **U.S. Bureau of Labor Statistics (BLS)** — "Occupational Employment and Wage Statistics" (OEWS), May 2024. Standard 2,080-hour work year definition.
+- **U.S. Bureau of Labor Statistics (BLS)** — "Employee Benefits in the United States" (2024). Average PTO days by tenure: 1 year = 11 days, 5 years = 15 days, 10 years = 17 days, 20 years = 20 days.
+- **U.S. Office of Personnel Management (OPM)** — Federal employee pay calculation methodology, 2,087-hour annual standard.
+- **Fair Labor Standards Act (FLSA)** — Overtime exemption rules and salary threshold definitions (DOL, updated 2024).
+
+All calculations use standard pay period conventions: 12 months, 26 biweekly periods, 52 weeks per year. Daily rate uses a 5-day work week. PTO adjustment follows the BLS methodology for distinguishing between paid and working hours.

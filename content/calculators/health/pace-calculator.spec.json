@@ -1,0 +1,220 @@
+{
+  "id": "pace-calculator",
+  "title": "Pace Calculator",
+  "slug": "pace-calculator",
+  "category": "health",
+  "subcategory": "fitness",
+  "primaryKeyword": "pace calculator",
+  "metaTitle": "Pace Calculator — Running & Walking Pace Calculator",
+  "metaDescription": "Calculate your running or walking pace, finish time, or distance. Convert between min/mile and min/km. See split times for 5K, 10K, half marathon, and marathon.",
+  "inputs": [
+    {
+      "id": "calculationMode",
+      "label": "What do you want to calculate?",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "findPace",
+      "options": [
+        {
+          "value": "findPace",
+          "label": "Find my pace"
+        },
+        {
+          "value": "findTime",
+          "label": "Find my finish time"
+        },
+        {
+          "value": "findDistance",
+          "label": "Find my distance"
+        }
+      ]
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3.1,
+      "min": 0.1,
+      "step": 0.01,
+      "helpText": "Enter the distance you ran, walked, or plan to cover"
+    },
+    {
+      "id": "distanceUnit",
+      "label": "Distance Unit",
+      "type": "radio",
+      "required": false,
+      "defaultValue": "miles",
+      "options": [
+        {
+          "value": "miles",
+          "label": "Miles"
+        },
+        {
+          "value": "kilometers",
+          "label": "Kilometers"
+        }
+      ]
+    },
+    {
+      "id": "hours",
+      "label": "Hours",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+
+      "min": 0,
+      "max": 99,
+      "step": 1,
+      "helpText": "Time: hours component"
+    },
+    {
+      "id": "minutes",
+      "label": "Minutes",
+      "type": "number",
+      "required": false,
+      "defaultValue": 25,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Time: minutes component"
+    },
+    {
+      "id": "seconds",
+      "label": "Seconds",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Time: seconds component"
+    },
+    {
+      "id": "paceMinutes",
+      "label": "Pace (Minutes)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Your pace: minutes per mile or km"
+    },
+    {
+      "id": "paceSeconds",
+      "label": "Pace (Seconds)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 59,
+      "step": 1,
+      "helpText": "Your pace: seconds per mile or km"
+    },
+    {
+      "id": "paceUnit",
+      "label": "Pace Unit",
+      "type": "radio",
+      "required": false,
+      "defaultValue": "min/mile",
+      "options": [
+        {
+          "value": "min/mile",
+          "label": "min/mile"
+        },
+        {
+          "value": "min/km",
+          "label": "min/km"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pace",
+      "label": "Your Pace",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "finishTime",
+      "label": "Finish Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "speed",
+      "label": "Speed",
+      "type": "value-group",
+      "format": "text"
+    },
+    {
+      "id": "splitTimes",
+      "label": "Race Split Times",
+      "type": "table",
+      "columns": [
+        {
+          "key": "raceName",
+          "label": "Race"
+        },
+        {
+          "key": "distanceMiles",
+          "label": "Miles"
+        },
+        {
+          "key": "distanceKm",
+          "label": "Km"
+        },
+        {
+          "key": "finishTime",
+          "label": "Finish Time"
+        }
+      ]
+    },
+    {
+      "id": "paceConversion",
+      "label": "Pace Conversion",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "pace",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "heart-rate-zone-calculator",
+    "bmi-calculator",
+    "bmr-calculator",
+    "one-rep-max-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "American College of Sports Medicine (ACSM)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "ACSM's Guidelines for Exercise Testing and Prescription (11th ed., 2022).",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

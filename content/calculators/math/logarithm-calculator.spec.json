@@ -1,0 +1,153 @@
+{
+  "id": "logarithm-calculator",
+  "title": "Logarithm Calculator",
+  "slug": "logarithm-calculator",
+  "category": "math",
+  "subcategory": "algebra",
+  "primaryKeyword": "logarithm calculator",
+  "metaTitle": "Logarithm Calculator — Log, Ln & Custom Base",
+  "metaDescription": "Calculate logarithms in any base: common (log₁₀), natural (ln), or custom. Shows antilog verification. Free online log calculator.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Logarithm Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "common",
+      "options": [
+        {
+          "value": "common",
+          "label": "Common Log (base 10)"
+        },
+        {
+          "value": "natural",
+          "label": "Natural Log (base e)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom Base"
+        }
+      ],
+      "helpText": "Choose the logarithm base"
+    },
+    {
+      "id": "value",
+      "label": "Value (x)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1000,
+      "min": 0,
+      "step": 0.0001,
+      "placeholder": "e.g. 1000",
+      "helpText": "The number to take the logarithm of (must be positive)"
+    },
+    {
+      "id": "base",
+      "label": "Base (b)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 2,
+      "min": 0.0001,
+      "step": 0.01,
+      "placeholder": "e.g. 2",
+      "helpText": "The base of the logarithm (for custom mode only, must be positive and not 1)",
+      "dependsOn": "mode"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Logarithm Result",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6,
+      "highlight": true
+    },
+    {
+      "id": "antilog",
+      "label": "Antilog Verification",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "baseUsed",
+      "label": "Base Used",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    }
+  ],
+  "tabs": [
+    {
+      "id": "common",
+      "label": "Common (log₁₀)",
+      "description": "Base-10 logarithm",
+      "defaultInputOverrides": {
+        "mode": "common"
+      },
+      "visibleInputs": [
+        "value"
+      ]
+    },
+    {
+      "id": "natural",
+      "label": "Natural (ln)",
+      "description": "Base-e logarithm",
+      "defaultInputOverrides": {
+        "mode": "natural"
+      },
+      "visibleInputs": [
+        "value"
+      ]
+    },
+    {
+      "id": "custom",
+      "label": "Custom Base",
+      "description": "Logarithm with any base",
+      "defaultInputOverrides": {
+        "mode": "custom"
+      },
+      "visibleInputs": [
+        "value",
+        "base"
+      ]
+    }
+  ],
+  "formula": "logarithm",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "exponent-calculator",
+    "percentage-calculator",
+    "quadratic-formula-calculator",
+    "standard-deviation-calculator",
+    "probability-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Change of base formula: log_b(x) = ln(x)/ln(b), standard logarithmic identities (Abramowitz & Stegun, 1965)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Change of base formula: log_b(x) = ln(x)/ln(b). Standard logarithmic identity from Abramowitz & Stegun, Handbook of Mathematical Functions (1965), Section 4.1",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "exponent-calculator"
+  ],
+  "qualityScore": 73,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

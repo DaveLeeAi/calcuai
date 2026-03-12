@@ -1,0 +1,227 @@
+{
+  "id": "retirement-calculator",
+  "title": "Retirement Calculator",
+  "slug": "retirement-calculator",
+  "category": "finance",
+  "subcategory": "retirement",
+  "primaryKeyword": "retirement calculator",
+  "metaTitle": "Retirement Calculator — Free Savings & Income Planner",
+  "metaDescription": "Project your retirement savings and income sustainability. See if your savings will last, calculate your retirement gap, and plan contributions. Free.",
+  "inputs": [
+    {
+      "id": "currentAge",
+      "label": "Current Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 18,
+      "max": 80,
+      "step": 1
+    },
+    {
+      "id": "retirementAge",
+      "label": "Retirement Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 65,
+      "min": 30,
+      "max": 85,
+      "step": 1,
+      "helpText": "When you plan to retire"
+    },
+    {
+      "id": "currentSavings",
+      "label": "Current Retirement Savings",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 50000000,
+      "prefix": "$",
+      "helpText": "Current retirement savings (401k, IRA, etc.)"
+    },
+    {
+      "id": "monthlyContribution",
+      "label": "Monthly Contribution",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1000,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$",
+      "helpText": "Monthly amount you save for retirement"
+    },
+    {
+      "id": "preRetirementReturn",
+      "label": "Pre-Retirement Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 20,
+      "step": 0.1,
+      "helpText": "Expected return before retirement (stock-heavy portfolio)"
+    },
+    {
+      "id": "postRetirementReturn",
+      "label": "Post-Retirement Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "Expected return after retirement (conservative portfolio)"
+    },
+    {
+      "id": "desiredAnnualIncome",
+      "label": "Desired Annual Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 1000000,
+      "prefix": "$",
+      "helpText": "Annual income needed in retirement (today's dollars)"
+    },
+    {
+      "id": "inflationRate",
+      "label": "Inflation Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 10,
+      "step": 0.1
+    },
+    {
+      "id": "lifeExpectancy",
+      "label": "Life Expectancy",
+      "type": "number",
+      "required": true,
+      "defaultValue": 90,
+      "min": 65,
+      "max": 110,
+      "step": 1,
+      "helpText": "Plan to this age for safety"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "retirementSavings",
+      "label": "Retirement Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Projected total retirement savings at your target retirement age, before withdrawals begin"
+    },
+    {
+      "id": "breakdown",
+      "label": "Savings Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71",
+          "#F39C12"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Retirement Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "savingsGrowth",
+      "label": "Savings Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Age",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0"
+        ]
+      }
+    },
+    {
+      "id": "yearByYear",
+      "label": "Year-by-Year Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "age",
+          "label": "Age"
+        },
+        {
+          "key": "yearStart",
+          "label": "Year Start",
+          "format": "currency"
+        },
+        {
+          "key": "contributionOrWithdrawal",
+          "label": "Contribution/Withdrawal",
+          "format": "currency"
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "format": "currency"
+        },
+        {
+          "key": "yearEnd",
+          "label": "Year End",
+          "format": "currency"
+        }
+      ]
+    }
+  ],
+  "formula": "retirement-projection",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "investment-calculator",
+    "compound-interest-calculator",
+    "401k-calculator",
+    "savings-calculator",
+    "inflation-calculator",
+    "roi-calculator",
+    "income-tax-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Financial Planning Standards Board (FPSB)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Two-phase retirement model: accumulation (FV with contributions) + distribution (systematic withdrawal with inflation)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "401k-calculator",
+    "investment-calculator"
+  ],
+  "qualityScore": 100,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "annuity",
+    "inflation",
+    "present-value"
+  ]
+}

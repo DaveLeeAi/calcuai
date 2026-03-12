@@ -1,0 +1,104 @@
+---
+title: "Volume Converter"
+description: "Convert between all volume units: cups, liters, gallons, milliliters, fluid ounces, tablespoons, teaspoons, cubic meters. Free instant volume converter."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert any volume measurement between metric, US customary, and imperial units instantly. One US gallon equals exactly 3.785411784 liters (128 fluid ounces), one liter equals 1,000 milliliters, and one US cup holds exactly 236.588 mL. Select your units, enter a value, and get precise results with a full conversion table across all 14 supported volume units.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Conversion Works
+
+This converter handles volume conversions across metric units (liters, milliliters, cubic meters), US customary units (gallons, quarts, pints, cups, fluid ounces, tablespoons, teaspoons), imperial units (imperial gallons), and geometric units (cubic feet, cubic inches). Volume is one of the most confusing measurement categories because US and imperial units share names but differ in size -- a US gallon is 3.785 L while an imperial gallon is 4.546 L, a 20% difference.
+
+For related conversions, see the [Weight Converter](/calculators/conversion/weight-converter) or the [Area Converter](/calculators/conversion/area-converter).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the volume value** -- type the number you want to convert. Decimals are supported (e.g., 1.5, 0.33, 15000).
+2. **Select "From" unit** -- choose the unit your value is currently expressed in (defaults to US Cup).
+3. **Select "To" unit** -- choose the unit you want to convert to (defaults to Milliliter).
+4. **Read the result** -- the converted value appears immediately below the inputs.
+5. **Scan the conversion table** -- see your value expressed in all 14 volume units at once, making it easy to find the exact unit you need.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+All volume conversions use a **base-unit intermediary** pattern. Every volume unit has an exact or defined conversion factor to the base unit (liters). To convert between any two units:
+
+$$
+\text{Result} = \text{Value} \times \frac{\text{fromUnit.toBase}}{\text{toUnit.toBase}}
+$$
+
+For example, converting US cups to tablespoons:
+
+$$
+\text{tbsp} = \text{cups} \times \frac{0.236588 \text{ L/cup}}{0.014787 \text{ L/tbsp}} = \text{cups} \times 16
+$$
+
+**Key conversion factors (to liters):**
+
+| Unit | Factor to Liters |
+|:--|:--|
+| 1 cubic meter | 1,000 L |
+| 1 liter | 1 L (base) |
+| 1 milliliter | 0.001 L |
+| 1 cubic centimeter | 0.001 L |
+| 1 US gallon | 3.785411784 L |
+| 1 US quart | 0.946352946 L |
+| 1 US pint | 0.473176473 L |
+| 1 US cup | 0.236588 L |
+| 1 US fluid ounce | 0.0295735 L |
+| 1 tablespoon | 0.0147868 L |
+| 1 teaspoon | 0.00492892 L |
+| 1 imperial gallon | 4.54609 L |
+| 1 cubic foot | 28.3168 L |
+| 1 cubic inch | 0.0163871 L |
+
+*Source: NIST Handbook 133, "Checking the Net Contents of Packaged Goods" (2023 Edition). US customary volume units defined by the US gallon = 231 cubic inches exactly.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Recipe Conversion -- 2 US Cups to Milliliters
+
+A US recipe calls for 2 cups of milk. You have a metric measuring jug. How many milliliters do you need?
+
+**Conversion:**
+- From cups to liters: 2 x 0.236588 = 0.473176 L
+- From liters to milliliters: 0.473176 x 1,000 = **473.18 mL**
+
+*Interpretation:* Two US cups equal approximately 473 mL. On a metric measuring jug, fill to the 475 mL line -- the 2 mL difference is negligible for cooking. Note that if you are using an Australian recipe, their "cup" is 250 mL (not 236.6 mL), so always check the recipe's country of origin.
+
+### Example 2: Pool Volume -- 15,000 US Gallons to Cubic Meters
+
+A swimming pool holds 15,000 gallons of water. What is the volume in cubic meters for a chemical dosing calculation?
+
+**Conversion:**
+- From gallons to liters: 15,000 x 3.785411784 = 56,781.18 L
+- From liters to cubic meters: 56,781.18 / 1,000 = **56.78 m³**
+
+*Interpretation:* A 15,000-gallon pool holds approximately 56.78 cubic meters of water. Since water weighs roughly 1 kg per liter, this pool contains about 56,781 kg of water. Chemical dosing charts typically require volume in gallons or liters, so knowing both values is essential.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All "cup," "fluid ounce," "pint," "quart," and "gallon" measurements refer to **US customary** units unless explicitly labeled "imperial"
+- A US gallon is defined as exactly 231 cubic inches; an imperial gallon is defined as exactly 4.54609 liters -- they are not interchangeable
+- Tablespoon and teaspoon follow US FDA definitions (1 tbsp = 14.787 mL, 1 tsp = 4.929 mL)
+- Does not include dry volume units (US dry pint, dry quart, bushel, peck)
+- Cubic centimeters and milliliters are treated as exactly equal (1 cm³ = 1 mL), which is accurate to within 28 parts per million
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter multiplies or divides by fixed conversion factors between volume units (liters, milliliters, gallons, quarts, pints, cups, fluid ounces, cubic meters, cubic feet, cubic inches). All conversions route through liters as the base unit. US and imperial gallon conversions are handled separately — 1 US gallon = 3.78541 liters, 1 imperial gallon = 4.54609 liters. Results are displayed to 6 decimal places.

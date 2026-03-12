@@ -1,0 +1,117 @@
+{
+  "id": "interest-rate-calculator",
+  "title": "Interest Rate Calculator",
+  "slug": "interest-rate-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "interest rate calculator",
+  "metaTitle": "Interest Rate Calculator — Find Your Loan APR",
+  "metaDescription": "Calculate the interest rate on any loan from the payment amount, loan balance, and term. Reverse-engineer your APR instantly. Free interest rate solver.",
+  "inputs": [
+    {
+      "id": "loanAmount",
+      "label": "Loan Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25000,
+      "min": 100,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Original loan amount (principal)"
+    },
+    {
+      "id": "monthlyPayment",
+      "label": "Monthly Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500,
+      "min": 1,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Your fixed monthly payment amount"
+    },
+    {
+      "id": "loanTerm",
+      "label": "Loan Term (Months)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 60,
+      "min": 1,
+      "max": 600,
+      "step": 1,
+      "helpText": "Total number of monthly payments"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualRate",
+      "label": "Annual Interest Rate (APR)",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "monthlyRate",
+      "label": "Monthly Interest Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "totalPayment",
+      "label": "Total Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Rate Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "interest-rate-solve",
+  "features": [],
+  "relatedCalculators": [
+    "loan-calculator",
+    "payment-calculator",
+    "mortgage-calculator",
+    "amortization-calculator",
+    "compound-interest-calculator",
+    "refinance-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB); Newton-Raphson numerical method for solving implicit rate equations.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Solve for r in M = P[r(1+r)^n]/[(1+r)^n-1] using Newton-Raphson iteration",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 81,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "apr",
+    "effective-rate",
+    "interest-rate"
+  ]
+}

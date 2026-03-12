@@ -1,0 +1,244 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate how your money grows with compound interest over time. A \$10,000 initial investment earning 7% annually with \$500 monthly contributions grows to \$300,851 in 20 years — with \$170,851 of that coming from interest alone, not your contributions. That means your money more than doubled itself through compounding. Enter your numbers below to see your exact future value, year-by-year growth chart, and total interest earned.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+Compound interest is the process of earning interest on your interest — and it is the single most powerful force in long-term wealth building. Unlike simple interest, which only earns returns on your original principal, compound interest reinvests your earnings so that each period's gains become the base for the next period's calculation. The difference is dramatic: \$10,000 invested at 7% simple interest for 30 years grows to \$31,000. The same \$10,000 at 7% compound interest (compounded monthly) grows to \$81,165 — more than 2.6 times as much.
+
+This calculator shows you three critical numbers. **Future Value** is the total amount your investment will be worth at the end of your time horizon, including all contributions and accumulated interest. **Total Contributions** is the sum of your initial deposit plus every periodic contribution you make — this is the money that came out of your pocket. **Total Interest Earned** is the difference between the two — this is the money your money made for you, without any additional effort.
+
+The **growth chart** reveals the most important insight about compounding: the curve is exponential, not linear. In the early years, most of your balance comes from contributions. But as time passes, interest begins to dominate. On a \$10,000 investment with \$500 monthly contributions at 7%, interest surpasses total contributions around year 16. By year 30, interest accounts for more than 72% of your total balance. This is why starting early matters more than contributing more — time is the irreplaceable ingredient.
+
+Use this calculator alongside our [Investment Calculator](/calculators/finance/investment-calculator) to compare specific portfolio strategies, or our [Retirement Calculator](/calculators/finance/retirement-calculator) to plan for long-term financial goals.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Your Initial Deposit** — this is the lump sum you are starting with today. It can be \$0 if you are beginning from scratch, or any amount up to \$10,000,000. The default is \$10,000, which represents a typical starting investment for a new brokerage or savings account.
+
+2. **Set Your Monthly Contribution** — enter the amount you plan to add every month. Consistency matters more than amount: contributing \$500/month for 30 years at 7% produces \$429,985 in interest alone. Even \$100/month makes a meaningful difference over two decades. Set this to \$0 if you want to see how a lump sum grows without additional deposits.
+
+3. **Choose Your Annual Interest Rate** — enter the expected annual return as a percentage. For context: the S&P 500 has averaged approximately 10% nominal returns (about 7% after inflation) since 1926. High-yield savings accounts currently offer 4–5%. CDs range from 3.5% to 5.5% depending on term. Government bonds average 3–4%. Adjust this to match your investment vehicle.
+
+4. **Select Compounding Frequency** — choose how often interest is calculated and added to your balance. Monthly is the most common for investment accounts. Savings accounts and CDs may compound daily. Bonds typically compound semi-annually. The more frequently interest compounds, the faster your money grows — though the difference between monthly and daily compounding is small (see the comparison table below).
+
+5. **Set Your Time Period** — enter the number of years you plan to invest. This is the most impactful variable in the formula. Doubling your time horizon does not double your returns — it can triple or quadruple them due to the exponential nature of compounding. A 20-year investment at 7% grows to 4.04x your initial amount; a 40-year investment grows to 16.31x.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The compound interest formula with periodic contributions is the standard time-value-of-money equation used throughout finance, from CFA curriculum to SEC investor education materials:
+
+$$A = P\left(1 + \frac{r}{n}\right)^{nt} + PMT \times \frac{\left(1 + \frac{r}{n}\right)^{nt} - 1}{\frac{r}{n}}$$
+
+Where:
+
+- **A** = future value — the total amount at the end of the investment period (dollars)
+- **P** = principal — your initial deposit (dollars)
+- **r** = annual interest rate expressed as a decimal (e.g., 7% = 0.07)
+- **n** = compounding frequency — the number of times interest is compounded per year (e.g., 12 for monthly)
+- **t** = time — the number of years the money is invested
+- **PMT** = contribution per compounding period (dollars per period)
+
+The first term, P(1 + r/n)^nt, calculates how the initial principal grows through compounding alone. The second term calculates the future value of the contribution stream — this is the future value of an ordinary annuity, which accounts for each contribution growing at the compound rate from the time it is deposited.
+
+When the annual interest rate is zero, the formula simplifies to straight addition:
+
+$$A = P + PMT \times n \times t$$
+
+The basic compound interest formula without contributions is:
+
+$$A = P\left(1 + \frac{r}{n}\right)^{nt}$$
+
+This simpler version is useful for calculating lump-sum growth on a CD, bond, or one-time investment with no additional deposits.
+
+**Source:** Standard compound interest and future value of annuity formulas as published by the CFA Institute in the CFA Program Curriculum (Quantitative Methods: Time Value of Money) and the U.S. Securities and Exchange Commission's Investor.gov education materials.
+
+For a deeper explanation of how compound interest formulas are derived, including continuous compounding and the Rule of 72, see our [methodology page on compound interest](/methodology/compound-interest).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Long-Term Savings — \$10,000 Initial, \$500/Month, 7%, 20 Years
+
+**Inputs:**
+- Initial Deposit: \$10,000
+- Monthly Contribution: \$500
+- Annual Rate: 7%
+- Compounding: Monthly
+- Time Period: 20 years
+
+**Step-by-step:**
+
+1. Convert annual rate to monthly: 7% / 12 = **0.5833% per month** (0.005833 as decimal)
+2. Calculate total compounding periods: 12 × 20 = **240 periods**
+3. Calculate compound factor: (1 + 0.005833)^240 = **4.0387**
+4. Principal growth: \$10,000 × 4.0387 = **\$40,387.39**
+5. Contribution growth: \$500 × ((4.0387 − 1) / 0.005833) = **\$260,463.33**
+6. Future value: \$40,387.39 + \$260,463.33 = **\$300,850.72**
+7. Total contributions: \$10,000 + (\$500 × 240) = **\$130,000.00**
+8. Total interest earned: \$300,850.72 − \$130,000.00 = **\$170,850.72**
+
+**Interpretation:** Your \$130,000 in total out-of-pocket contributions grew to \$300,851 — a 131% return on investment. Interest earned (\$170,851) exceeds your total contributions by over \$40,000. At year 10, your balance was approximately \$107,000 with \$70,000 in contributions — meaning interest was already \$37,000. The exponential growth in the second decade generated more than four times the interest of the first decade.
+
+### Example 2: Lump Sum Growth — The Power of Patience
+
+**Inputs:**
+- Initial Deposit: \$50,000
+- Monthly Contribution: \$0
+- Annual Rate: 8%
+- Compounding: Monthly
+- Time Period: 30 years
+
+**Step-by-step:**
+
+1. Monthly rate: 8% / 12 = **0.6667% per month** (0.006667)
+2. Total periods: 12 × 30 = **360**
+3. Compound factor: (1 + 0.006667)^360 = **10.9357**
+4. Future value: \$50,000 × 10.9357 = **\$546,786.48**
+5. Total interest: \$546,786.48 − \$50,000 = **\$496,786.48**
+
+**Interpretation:** A single \$50,000 investment with no additional contributions grows nearly elevenfold in 30 years at 8% compounded monthly. This example illustrates the **Rule of 72** — a quick estimation method where you divide 72 by the annual rate to get the approximate doubling time. At 8%, money doubles roughly every 9 years (72 / 8 = 9). Over 30 years, that is approximately 3.3 doublings: \$50,000 → \$100,000 → \$200,000 → \$400,000+. The actual result (\$546,786) exceeds this estimate because the Rule of 72 is an approximation, and monthly compounding adds slightly more growth than annual.
+
+### Example 3: The Cost of Waiting — Starting at 25 vs. 35
+
+This example compares two investors who both want to retire at 65 with the same contribution amount and return.
+
+**Investor A (starts at age 25, invests for 40 years):**
+- Initial Deposit: \$5,000
+- Monthly Contribution: \$300
+- Annual Rate: 7%, compounded monthly
+- Time: 40 years
+
+Compound factor: (1 + 0.005833)^480 = 16.3114
+Future value: \$5,000 × 16.3114 + \$300 × ((16.3114 − 1) / 0.005833) = **\$869,001**
+Total contributions: \$5,000 + (\$300 × 480) = **\$149,000**
+Total interest: **\$720,001**
+
+**Investor B (starts at age 35, invests for 30 years):**
+- Initial Deposit: \$5,000
+- Monthly Contribution: \$300
+- Annual Rate: 7%, compounded monthly
+- Time: 30 years
+
+Compound factor: (1 + 0.005833)^360 = 8.1165
+Future value: \$5,000 × 8.1165 + \$300 × ((8.1165 − 1) / 0.005833) = **\$406,574**
+Total contributions: \$5,000 + (\$300 × 360) = **\$113,000**
+Total interest: **\$293,574**
+
+**Interpretation:** Investor A contributes only \$36,000 more out of pocket (\$149,000 vs. \$113,000) but ends up with \$462,427 more in total wealth (\$869,001 vs. \$406,574). The extra 10 years of compounding generated \$426,427 in additional interest on just \$36,000 in additional contributions. Every year of delay costs roughly \$46,243 in lost compounding. This is why financial advisors repeat the mantra: the best time to start investing was yesterday.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Rate of Return** — The most powerful variable after time. On a \$10,000 initial investment with \$500/month over 20 years, the difference between 5% and 9% is staggering: \$232,643 at 5% versus \$394,035 at 9% — a \$161,392 gap from just 4 percentage points. However, higher expected returns typically come with higher volatility. The S&P 500's 10% long-term average includes years of -37% (2008) and +31% (2019). Use a rate consistent with your actual investment vehicle, not an aspirational one.
+
+**Compounding Frequency** — More frequent compounding produces higher returns, but the marginal benefit shrinks as frequency increases. On \$10,000 at 7% for 20 years with no contributions: annual compounding yields \$38,697, monthly yields \$40,387, and daily yields \$40,547. The jump from annual to monthly is \$1,691; from monthly to daily is only \$159. For most practical purposes, the difference between monthly and daily compounding is negligible.
+
+**Time Horizon** — Time is the irreplaceable ingredient in compound interest. You cannot substitute more money for more time. \$1,000/month for 20 years at 7% produces \$520,927. To reach the same amount in 10 years, you would need to contribute \$3,010/month — more than triple the monthly amount. Each additional year of compounding adds proportionally more than the last because the base amount grows exponentially.
+
+**Contribution Consistency** — Regular contributions leverage a concept called dollar-cost averaging. By investing the same amount each period regardless of market conditions, you automatically buy more shares when prices are low and fewer when prices are high. Missing even a few months of contributions can have outsized effects: skipping 12 months of \$500 contributions in year 5 of a 20-year plan reduces your final balance by approximately \$17,653 — nearly three times the \$6,000 in missed deposits.
+
+**Inflation Impact** — A 7% nominal return with 3% inflation produces only a 4% real return. On \$10,000 with \$500/month over 20 years, the nominal future value is \$300,851, but the inflation-adjusted purchasing power is closer to \$166,500 in today's dollars. Always consider whether your quoted return is nominal or real, and use our [Investment Calculator](/calculators/finance/investment-calculator) to run scenarios with inflation-adjusted returns.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Ignoring inflation when projecting future values.** A \$1,000,000 portfolio in 30 years is not the same as having \$1,000,000 today. At 3% average inflation, \$1,000,000 in 2056 has the purchasing power of approximately \$412,000 in 2026 dollars. Always run your projections with both nominal and real (inflation-adjusted) rates. Subtract 2.5–3% from your expected return to get the real return.
+
+**Comparing nominal returns across different investment types.** A savings account paying 4.5% and a stock index fund averaging 10% are not directly comparable. The savings account return is guaranteed and already net of fees. The stock return is an average that includes years of significant losses, and you may pay 0.03–1.0% in fund expense ratios. Compare after-fee, after-tax, risk-adjusted returns — not headline numbers.
+
+**Underestimating the impact of compounding frequency.** While the difference between monthly and daily compounding is small, the difference between annual and monthly compounding is material. On \$100,000 at 8% for 30 years: annual compounding yields \$1,006,266, while monthly compounding yields \$1,093,573 — a difference of \$87,307. When evaluating savings accounts or CDs, check whether interest compounds daily, monthly, or quarterly, as this directly affects your annual percentage yield (APY).
+
+**Not accounting for fees and taxes.** A mutual fund with a 1% expense ratio effectively reduces your return from 7% to 6%. Over 30 years on a \$10,000 initial investment with \$500/month contributions, that 1% fee costs you approximately \$128,667 in lost growth. Similarly, if your investments are in a taxable account, capital gains taxes reduce your effective compounding rate. Tax-advantaged accounts (401(k), IRA, Roth IRA) let your money compound without annual tax drag.
+
+**Starting late and trying to compensate with larger contributions.** As shown in Example 3, starting 10 years later requires dramatically higher contributions to reach the same goal. A 25-year-old investing \$300/month reaches \$869,001 by age 65 at 7%. A 35-year-old needs approximately \$718/month to reach the same amount — nearly 2.4 times the monthly contribution. Time is the one variable you cannot buy back.
+
+{/* Section 12: Comparison Table */}
+## Compounding Frequency Comparison
+
+The table below shows how compounding frequency affects your final balance. All scenarios use the same inputs: \$10,000 initial deposit, \$500 monthly contribution, 7% annual rate, 20-year time horizon.
+
+| Compounding | Future Value | Total Interest | vs. Monthly |
+|---|---|---|---|
+| **Annually** | \$284,670 | \$154,670 | −\$16,181 |
+| **Semi-Annually** | \$293,243 | \$163,243 | −\$7,608 |
+| **Quarterly** | \$297,755 | \$167,755 | −\$3,096 |
+| **Monthly** | \$300,851 | \$170,851 | — |
+| **Daily** | \$302,374 | \$172,374 | +\$1,523 |
+
+**Key takeaway:** The jump from annual to monthly compounding is worth \$16,181 over 20 years — a meaningful 5.7% improvement in total future value. But the jump from monthly to daily adds only \$1,523. For most investors, monthly compounding captures the vast majority of the compounding benefit. The biggest gains come from moving from annual to quarterly or monthly, not from chasing daily compounding.
+
+This is why APY (Annual Percentage Yield) exists: it standardizes the comparison by expressing the effective annual rate including compounding effects. A 7% rate compounded monthly has an APY of 7.23%, while the same rate compounded annually has an APY of exactly 7.00%.
+
+## When Compound Interest Works Against You
+
+Every insight on this page reverses when you're the borrower instead of the investor. The same exponential force that grows your savings also inflates your debts — and most people encounter the destructive side first.
+
+**Credit card debt at 24% APR** compounds the same way as a 7% investment, but three times faster. A $5,000 credit card balance making only minimum payments ($100/month) takes 9 years and 2 months to pay off, costing $5,840 in interest — more than the original balance. The compound interest formula does not care whether you're earning or owing.
+
+**Student loan capitalization** is compound interest in disguise. During forbearance or income-driven repayment plan interest capitalization events, unpaid interest gets added to principal, and future interest accrues on the larger amount. A $35,000 student loan at 6.8% that capitalizes $4,760 in accrued interest now charges interest on $39,760 — permanently accelerating the debt's growth.
+
+**The strategic implication:** If you have both savings to invest and debt to pay down, the mathematically correct move is almost always to pay down the highest-rate debt first. Investing at 7% while carrying credit card debt at 22% means compound interest is working against you three times harder than it's working for you. The only exception is employer-matched retirement contributions — a 100% instant return from the match outweighs almost any debt interest rate.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant annual rate of return** for the entire investment period. Real-world returns fluctuate year to year — the S&P 500's annual returns have ranged from -37% to +53% historically.
+- Does **not account for taxes** on interest, dividends, or capital gains. In a taxable account, your effective compounding rate is reduced by your marginal tax rate on investment income.
+- Does **not account for investment fees**, including expense ratios, advisory fees, or transaction costs. A 1% annual fee on a 7% return effectively reduces your compounding rate to 6%.
+- Assumes **contributions are made at regular intervals** without interruption. Missed contributions will reduce the final balance.
+- Does **not adjust for inflation**. To estimate real (inflation-adjusted) returns, subtract 2.5–3% from your expected nominal rate.
+- Assumes contributions occur at the **end of each compounding period** (ordinary annuity). If contributions are made at the beginning of each period (annuity due), the actual result will be slightly higher.
+- The monthly contribution is converted to match the compounding frequency. For example, with annual compounding, the calculator treats \$500/month as \$6,000 deposited once per year.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between compound interest and simple interest?
+
+Simple interest is calculated only on the original principal amount — if you invest \$10,000 at 5% simple interest, you earn exactly \$500 per year regardless of how long you invest. Compound interest is calculated on the principal plus all previously accumulated interest, so your earnings accelerate over time. After 10 years, \$10,000 at 5% simple interest grows to \$15,000, while the same amount at 5% compound interest (monthly) grows to \$16,470 — a \$1,470 difference. After 30 years, the gap widens dramatically to \$19,677: \$25,000 with simple interest versus \$44,677 with compound interest. Every savings account, CD, and investment account in the United States uses compound interest.
+
+### How much will \$10,000 grow in 10 years?
+
+At 7% annual return compounded monthly with no additional contributions, \$10,000 grows to \$20,097 in 10 years — slightly more than doubling. With \$500 monthly contributions added, the total reaches \$106,639, of which \$70,000 is contributions and \$36,639 is compound interest. The exact amount depends on your rate of return and compounding frequency: at 5%, \$10,000 grows to \$16,470 without contributions; at 10%, it reaches \$27,070. Use the calculator above with your specific expected rate to see your personalized projection.
+
+### What is the Rule of 72?
+
+The Rule of 72 is a mental math shortcut that estimates how long it takes for an investment to double at a given annual return. Divide 72 by the annual interest rate to get the approximate doubling time in years. At 6%, money doubles in roughly 12 years (72 / 6 = 12). At 8%, it doubles in about 9 years. At 12%, approximately 6 years. The rule is most accurate for rates between 6% and 10%. For example, at 7% the Rule of 72 predicts doubling in 10.3 years; the actual doubling time with monthly compounding is 9.9 years — remarkably close. This rule was first described by Luca Pacioli in 1494 and remains one of the most useful tools in personal finance for quick mental calculations.
+
+### Does compounding frequency really matter?
+
+Yes, but the impact depends on the frequency gap. Moving from annual to monthly compounding on \$10,000 at 7% over 20 years (no contributions) adds \$1,691 to your final balance — a meaningful 4.4% improvement. However, moving from monthly to daily compounding adds only \$159, a negligible 0.4% difference. The mathematical reason: as compounding frequency approaches infinity (continuous compounding), the formula converges to A = Pe^rt, and the gains from increasing frequency diminish rapidly. For practical purposes, monthly compounding captures 97%+ of the benefit of continuous compounding. When comparing financial products, focus on the APY (Annual Percentage Yield), which already accounts for compounding frequency.
+
+### How does compound interest work on savings accounts?
+
+Savings accounts compound interest on your deposited balance, typically daily or monthly. The bank calculates your earned interest each compounding period and adds it to your balance, so the next period's interest is calculated on the higher amount. For example, a high-yield savings account paying 4.5% APY on a \$10,000 balance earns approximately \$37.50 in the first month. In the second month, interest is calculated on \$10,037.50, earning \$37.64 — an extra \$0.14 from compounding. Over 5 years with no additional deposits, that \$10,000 grows to \$12,523. The key distinction for savings accounts is that the advertised APY already includes the compounding effect, so a 4.5% APY means you earn exactly 4.5% over one year regardless of whether the bank compounds daily or monthly. The nominal rate (APR) is what differs — a 4.5% APY corresponds to a 4.41% APR with daily compounding.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard compound interest formula with periodic contributions as taught in the **CFA Institute's CFA Program Curriculum** (Quantitative Methods: Time Value of Money, Level I). The formula is the foundation of present value and future value calculations used throughout investment analysis, financial planning, and actuarial science.
+
+Default rate assumptions reference historical returns data from the **Federal Reserve Bank of St. Louis** (FRED database) and **Aswath Damodaran's** historical returns dataset at NYU Stern School of Business, which documents S&P 500 returns since 1928. The Rule of 72 approximation referenced in this article is derived from the natural logarithm relationship $t = \ln(2) / \ln(1+r)$ and is documented in standard finance textbooks including Brealey, Myers, and Allen's *Principles of Corporate Finance*.
+
+Savings account and CD rate benchmarks reference current data from the **Federal Deposit Insurance Corporation** (FDIC) National Rates and Rate Caps. Inflation adjustment guidance uses the **U.S. Bureau of Labor Statistics** Consumer Price Index (CPI) historical data, which shows a long-term average inflation rate of approximately 3.0% annually.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

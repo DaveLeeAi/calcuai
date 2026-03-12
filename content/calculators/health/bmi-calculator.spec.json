@@ -1,0 +1,181 @@
+{
+  "id": "bmi-calculator",
+  "title": "BMI Calculator",
+  "slug": "bmi-calculator",
+  "category": "health",
+  "subcategory": "body-metrics",
+  "primaryKeyword": "bmi calculator",
+  "metaTitle": "BMI Calculator — Free Body Mass Index Calculator",
+  "metaDescription": "Calculate your Body Mass Index (BMI) instantly. Enter height and weight to see your BMI category per WHO standards. Includes healthy weight range and BMI Prime.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (lbs, inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        }
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 154,
+      "min": 1,
+      "max": 1000,
+      "step": 1,
+      "helpText": "Enter weight in pounds (imperial) or kilograms (metric)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 69,
+      "min": 1,
+      "max": 300,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bmi",
+      "label": "Your BMI",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true,
+      "description": "Body Mass Index per WHO guidelines. A BMI between 18.5 and 24.9 is considered normal weight for adults."
+    },
+    {
+      "id": "category",
+      "label": "BMI Category",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "bmiGauge",
+      "label": "BMI Scale",
+      "type": "gauge",
+      "gaugeConfig": {
+        "min": 10,
+        "max": 45,
+        "ranges": [
+          {
+            "min": 10,
+            "max": 16,
+            "label": "Severely Underweight",
+            "color": "#3B82F6"
+          },
+          {
+            "min": 16,
+            "max": 18.5,
+            "label": "Underweight",
+            "color": "#60A5FA"
+          },
+          {
+            "min": 18.5,
+            "max": 25,
+            "label": "Normal",
+            "color": "#22C55E"
+          },
+          {
+            "min": 25,
+            "max": 30,
+            "label": "Overweight",
+            "color": "#F59E0B"
+          },
+          {
+            "min": 30,
+            "max": 35,
+            "label": "Obese I",
+            "color": "#EF4444"
+          },
+          {
+            "min": 35,
+            "max": 40,
+            "label": "Obese II",
+            "color": "#DC2626"
+          },
+          {
+            "min": 40,
+            "max": 45,
+            "label": "Obese III",
+            "color": "#991B1B"
+          }
+        ]
+      }
+    },
+    {
+      "id": "healthyWeightRange",
+      "label": "Healthy Weight Range",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "primeRatio",
+      "label": "BMI Prime",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "description": "Ratio of your BMI to the upper normal limit (25). Values below 1.0 indicate normal weight."
+    }
+  ],
+  "formula": "bmi",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "body-fat-calculator",
+    "calorie-calculator",
+    "ideal-weight-calculator",
+    "bmr-calculator",
+    "lean-body-mass-calculator",
+    "weight-converter",
+    "conception-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "World Health Organization (WHO)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "BMI = weight(kg) / height(m)² — WHO Global Database on Body Mass Index",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "ideal-weight-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "bmi"
+  ],
+  "methodologyTopics": [
+    "bmi-formula"
+  ]
+}

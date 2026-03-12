@@ -1,0 +1,256 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Project the growth of your investments over time, adjusted for inflation. Investing \$10,000 today with \$500 monthly contributions at a 7% annual return grows to \$300,851 in 20 years — but after 3% inflation, that's worth \$166,574 in today's dollars. This calculator shows both nominal and real returns so you can plan with realistic expectations. Enter your starting amount, monthly contribution, expected return, and time horizon below to see your projected wealth accumulation year by year.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This investment calculator projects how your money grows through the combined power of compound returns and consistent contributions. It answers the most fundamental question in personal finance: "If I invest X dollars today and add Y dollars every month, how much will I have in Z years?" — and critically, it answers that question in both nominal dollars and inflation-adjusted (real) dollars.
+
+**Nominal vs. real returns** represent the difference between what your account statement shows and what that money can actually buy. If your portfolio grows from \$100,000 to \$200,000 over 10 years, you've doubled your nominal value. But if inflation averaged 3% annually during that period, your \$200,000 buys only what \$148,818 would have bought at the start. That's your real return — the only number that matters for retirement planning, college savings, or any long-term financial goal.
+
+**Why inflation matters more than most investors realize:** At 3% annual inflation, a dollar loses roughly half its purchasing power in 24 years. At 4% inflation, that halving takes just 18 years. An investment that returns 10% nominally but faces 4% inflation delivers only a 5.77% real return. This calculator makes that distinction transparent by plotting both nominal and real growth curves on the same chart, so you can see the widening gap between what your account shows and what your money is worth.
+
+**Time horizon is the dominant variable.** The difference between investing for 20 years and 30 years is not 50% more growth — it's often 150% to 200% more, thanks to exponential compounding. At 7% annual return, \$500/month grows to \$260,463 in 20 years but \$609,985 in 30 years. That extra decade more than doubles your ending balance while adding only \$60,000 in contributions. For a deeper look at the compounding mechanics, use our [Compound Interest Calculator](/calculators/finance/compound-interest-calculator) which isolates the compounding frequency variable.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Initial Investment** — the lump sum you're starting with today. This could be savings, an inheritance, a 401(k) rollover, or any existing investment balance. If you're starting from zero, enter \$0 — the calculator works with contributions alone.
+
+2. **Set your Monthly Contribution** — the amount you'll invest every month going forward. Consistency matters more than amount: \$500/month at 7% for 30 years produces \$610,729, while \$1,000/month for 15 years at the same rate produces only \$317,796. Time beats contribution size. Include employer 401(k) matches if applicable.
+
+3. **Choose your Expected Annual Return** — the average annualized return you expect. The default is 7%, which represents the S&P 500's historical average real return (after inflation). If you're using a nominal benchmark, the S&P 500 has averaged approximately 10% annually since 1926. Conservative bond portfolios average 4–5%. A balanced 60/40 portfolio historically returns about 8% nominal, or 5% real.
+
+4. **Set the Investment Period** — your time horizon in years. For retirement, this is typically years until your target retirement age. For college savings, count from now until enrollment. For a house down payment, use your planned purchase timeline. Longer periods amplify compounding dramatically.
+
+5. **Adjust the Inflation Rate** — the default is 3%, which approximates the long-term U.S. average (the CPI has averaged 3.1% since 1926). Recent years have seen higher inflation — if you expect 4% or more, adjust accordingly. This rate determines the gap between your nominal future value and what it can actually purchase.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Investment growth with regular contributions uses the future value of an annuity combined with the future value of a lump sum, both compounded monthly:
+
+$$FV = PV \times (1 + r)^n + PMT \times \frac{(1 + r)^n - 1}{r}$$
+
+Where:
+
+- **FV** = future value — the nominal ending balance of your investment (dollars)
+- **PV** = present value — your initial investment (dollars)
+- **PMT** = monthly contribution amount (dollars)
+- **r** = monthly rate of return — annual return divided by 12 (decimal)
+- **n** = total number of compounding periods — investment years × 12
+
+The first term, $PV \times (1 + r)^n$, calculates how your initial lump sum grows through compound returns alone. The second term, $PMT \times \frac{(1 + r)^n - 1}{r}$, calculates the accumulated future value of all monthly contributions, each compounding for a different number of remaining months.
+
+To convert the nominal future value into today's purchasing power, apply the inflation discount:
+
+$$\text{Real Value} = \frac{FV}{(1 + i)^t}$$
+
+Where:
+
+- **i** = annual inflation rate (decimal)
+- **t** = investment period in years
+
+The real rate of return — what your investment actually earns after inflation — is calculated using the Fisher equation:
+
+$$r_{\text{real}} = \frac{1 + r_{\text{nominal}}}{1 + i} - 1$$
+
+For example, a 10% nominal return with 3% inflation yields a real return of 6.80%, not 7%. The Fisher equation accounts for the compounding interaction between returns and inflation that simple subtraction misses.
+
+**Source:** CFA Institute — *Time Value of Money and Discounted Cash Flow Analysis*, Level I curriculum. The future value of annuity formula is the foundational building block of investment analysis and appears in Chapter 1 of the CFA Program's Quantitative Methods readings.
+
+For a deeper explanation of how compound interest drives investment growth, including compounding frequency comparisons and the Rule of 72, see our [methodology page on compound interest](/methodology/compound-interest).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Young Investor — \$10,000 + \$500/Month at 7% for 30 Years
+
+**Inputs:**
+- Initial Investment: \$10,000
+- Monthly Contribution: \$500
+- Annual Return: 7%
+- Investment Period: 30 years
+- Inflation Rate: 3%
+
+**Step-by-step:**
+
+1. Monthly rate: 7% ÷ 12 = **0.005833**
+2. Total months: 30 × 12 = **360**
+3. Compound factor: (1 + 0.005833)^360 = **8.1165**
+4. Lump sum growth: $10,000 × 8.1165 = **$81,165**
+5. Contribution growth: $500 × (8.1165 − 1) ÷ 0.005833 = **$609,985**
+6. Nominal future value: \$81,165 + $609,985 = **$691,150**
+7. Total contributed: \$10,000 + ($500 × 360) = **$190,000**
+8. Total earnings: \$691,150 − $190,000 = **$501,150**
+9. Inflation factor: (1.03)^30 = **2.4273**
+10. Real value: $691,150 ÷ 2.4273 = **$284,745**
+
+**Interpretation:** You contribute \$190,000 of your own money over 30 years, but compounding generates an additional \$501,150 in earnings — more than 2.6× your total contributions. However, inflation erodes purchasing power significantly: the \$691,150 nominal balance is worth only \$284,745 in today's dollars. This is why starting early is critical — the same \$500/month for only 20 years produces just \$300,851 nominal, less than half the 30-year result, despite contributing \$120,000 versus \$190,000.
+
+### Example 2: Lump Sum Inheritance — \$100,000, No Monthly Contributions, 8% for 20 Years
+
+**Inputs:**
+- Initial Investment: \$100,000
+- Monthly Contribution: \$0
+- Annual Return: 8%
+- Investment Period: 20 years
+- Inflation Rate: 3%
+
+**Step-by-step:**
+
+1. Monthly rate: 8% ÷ 12 = **0.006667**
+2. Total months: 20 × 12 = **240**
+3. Compound factor: (1 + 0.006667)^240 = **4.9268**
+4. Future value: $100,000 × 4.9268 = **$492,680**
+5. Total contributed: **\$100,000** (no monthly additions)
+6. Total earnings: \$492,680 − $100,000 = **$392,680**
+7. Inflation factor: (1.03)^20 = **1.8061**
+8. Real value: $492,680 ÷ 1.8061 = **$272,785**
+
+**Interpretation:** A \$100,000 lump sum nearly quintuples in 20 years at 8% — without adding a single dollar. This demonstrates pure compound growth: the first year earns about \$8,000, but by year 20, annual earnings exceed \$36,000 as the base grows. In real terms, the \$100,000 grows to \$272,785 of today's purchasing power, a 2.7× real return. If you added even \$200/month, the ending balance jumps to \$610,484 nominal — showing how even modest contributions amplify a large starting balance.
+
+### Example 3: Conservative vs. Aggressive — Same Inputs, Different Return Rates
+
+**Inputs (same for both):**
+- Initial Investment: \$25,000
+- Monthly Contribution: \$750
+- Investment Period: 20 years
+- Inflation Rate: 3%
+
+| Metric | Conservative (5%) | Moderate (7%) | Aggressive (10%) |
+|---|---|---|---|
+| Nominal Future Value | \$376,091 | \$491,663 | \$752,728 |
+| Real Value (after 3% inflation) | \$208,233 | \$272,222 | \$416,768 |
+| Total Contributed | \$205,000 | \$205,000 | \$205,000 |
+| Investment Earnings | \$171,091 | \$286,663 | \$547,728 |
+| Earnings as % of Total | 45.5% | 58.3% | 72.8% |
+
+**Interpretation:** The return rate difference between conservative and aggressive investing is not just 5 percentage points — it's \$376,637 in nominal future value over 20 years. At 5%, your earnings roughly match your contributions. At 10%, earnings are nearly double your contributions. This is the core risk-reward tradeoff: a diversified stock portfolio (averaging ~10%) has historically outperformed bonds (averaging ~5%) by a wide margin, but with significantly more volatility along the way. Your optimal allocation depends on your time horizon, risk tolerance, and whether you can stay invested through 30–40% drawdowns.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Rate of Return** — The single most impactful variable after time. A 1 percentage point increase in annual return on a \$500/month investment over 20 years adds approximately \$30,000–\$45,000 to your ending balance, depending on the base rate. Over 30 years, that same 1% difference adds \$80,000–\$130,000. Historical S&P 500 returns have ranged from -37% (2008) to +53% (1954) in a single year, but the 20-year rolling average has never been negative since 1926.
+
+**Time Horizon** — Compounding is exponential, not linear. The first \$100,000 is the hardest — at \$500/month and 7% return, it takes roughly 10.5 years. The second \$100,000 takes only 5.5 years. The third \$100,000 takes about 3.8 years. Each subsequent milestone arrives faster because your earnings base keeps growing. This is why delaying investing by even 5 years has an outsized cost.
+
+**Inflation** — The silent wealth destroyer. At 3% annual inflation, prices double every 24 years. Your \$1 million retirement target today needs to be \$1.81 million if retirement is 20 years away. This calculator accounts for inflation automatically, but many investors use nominal return assumptions in planning tools that ignore it, which leads to under-saving by 25–45%.
+
+**Contribution Amount and Consistency** — Dollar-cost averaging through regular contributions smooths out market volatility. Investors who contribute monthly through bear markets buy more shares at lower prices, boosting long-term returns. Missing just 5 contribution months per year (contributing \$500 for only 7 months instead of 12) reduces 20-year wealth by approximately \$108,000 at 7% return.
+
+**Asset Allocation** — Your mix of stocks, bonds, and other assets determines your expected return range. Historical annualized returns (1926–2024): large-cap U.S. stocks ~10.3%, investment-grade bonds ~5.1%, Treasury bills ~3.3%, inflation ~3.0%. A classic 60/40 stock/bond portfolio has averaged approximately 8.7% nominal, with lower volatility than an all-stock portfolio.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Using nominal returns for retirement planning.** This is the most common and most costly mistake. An investor projecting \$1 million at retirement using a 10% nominal return may actually have only \$553,676 in today's purchasing power after 20 years of 3% inflation. Always plan using real (inflation-adjusted) returns — or use this calculator's inflation-adjusted output as your target number.
+
+**Ignoring investment fees and expense ratios.** A 1% annual advisory fee on a \$500,000 portfolio costs \$5,000 in the first year — but over 20 years, the compounded drag reduces your ending balance by approximately \$130,000 compared to a low-cost index fund at 0.03%. This calculator doesn't subtract fees, so if your investments carry a 1% expense ratio, reduce your expected return input by 1 percentage point.
+
+**Attempting to time the market.** Research from J.P. Morgan Asset Management shows that missing just the 10 best trading days over a 20-year period cuts total returns nearly in half. The best days often occur near the worst days — during maximum fear and volatility. Staying invested through downturns is how compounding works; selling low and buying back higher destroys the exponential curve.
+
+**Making inconsistent contributions.** Skipping contributions during market dips (when shares are cheapest) and increasing them during rallies (when shares are most expensive) is the opposite of optimal. Set up automatic monthly transfers and treat investment contributions like a fixed expense. Behavioral consistency beats timing.
+
+**Setting unrealistic return expectations.** Expecting 15% annual returns because your portfolio gained 25% last year leads to under-saving. Use long-term averages: 7% real for an all-stock portfolio, 5% real for a balanced portfolio, 2% real for bonds. If you need your plan to work at 12% returns, you don't actually have a plan — you have a wish.
+
+{/* Section 12: Comparison Table */}
+## Investment Growth Comparison: Conservative vs. Moderate vs. Aggressive
+
+How does expected return affect long-term outcomes? The table below compares three strategies over 20 years, starting with \$10,000 and contributing \$500/month. All values are nominal — use the calculator's inflation adjustment to see real purchasing power.
+
+| Metric | Conservative (5%) | Moderate (7%) | Aggressive (10%) |
+|---|---|---|---|
+| Annual Return | 5.0% | 7.0% | 10.0% |
+| Typical Portfolio | Bonds + CDs + Treasuries | 60/40 Stocks/Bonds | 100% Stocks (S&P 500) |
+| Monthly Payment | \$500 | \$500 | \$500 |
+| Future Value (20 years) | \$232,643 | \$300,851 | \$452,965 |
+| Total Contributed | \$130,000 | \$130,000 | \$130,000 |
+| Total Earnings | \$102,643 | \$170,851 | \$322,965 |
+| Earnings Share | 44.1% | 56.8% | 71.3% |
+| Worst 1-Year Loss (Historical) | ~-3% | ~-22% | ~-37% |
+| Real Value (after 3% inflation) | \$128,809 | \$166,574 | \$250,796 |
+
+**When conservative makes sense:** You're within 5 years of needing the money (retirement, home purchase), cannot tolerate a 20%+ portfolio drop, or need capital preservation above all else. Lower returns are the cost of lower risk.
+
+**When moderate makes sense:** You have a 10–20 year horizon, want growth but can't stomach all-stock volatility, and are comfortable with occasional 15–20% drawdowns. The 60/40 portfolio has been called "the free lunch of investing" because diversification has historically improved risk-adjusted returns.
+
+**When aggressive makes sense:** You have 20+ years, won't panic-sell during bear markets, and want to maximize long-term compounding. Historically, every 20-year period in S&P 500 history has delivered positive returns, even starting from pre-crash peaks. Time converts stock market risk into stock market return.
+
+## This Calculator vs. the Compound Interest Calculator
+
+Both tools project future value using compound growth. The difference is what question they answer — and getting that wrong leads to plans built on the wrong number.
+
+The [Compound Interest Calculator](/calculators/finance/compound-interest-calculator) isolates the mechanics of compounding: how frequency, rate, and time interact to grow a balance. It's the right tool for comparing a 4.5% savings account compounded daily against a 4.7% CD compounded quarterly, or for understanding why the Rule of 72 works. It does not adjust for inflation.
+
+This calculator answers a different question: **"What will my portfolio actually be worth in today's dollars?"** The inflation adjustment is the critical difference. A \$300,851 nominal balance at 7% over 20 years sounds impressive until you see the inflation-adjusted figure: \$166,574 in today's purchasing power. That's the number you should use for retirement planning, college savings targets, and down payment goals. If you're building a financial plan, use this calculator. If you're studying how compounding works or comparing savings products, use the Compound Interest Calculator.
+
+**When you need both:** Run the Compound Interest Calculator first to understand how your specific account compounds (daily, monthly, quarterly), then use this calculator with the equivalent annual rate to project the inflation-adjusted outcome. A savings account advertising 4.5% APY compounded daily produces effectively the same result as entering 4.5% annual return here — the compounding frequency difference washes out at the annual level.
+
+## Building a Return Assumption You Can Trust
+
+The return rate you enter determines whether your projection is a plan or a fantasy. Here's how to choose a number you can defend.
+
+**Start with history, but adjust for your actual portfolio.** The S&P 500's 10.3% long-term nominal average assumes 100% stock allocation with zero fees and no behavioral mistakes. Almost nobody invests that way. If you hold a target-date fund with 80% stocks and 20% bonds, your expected nominal return is closer to 8.5–9%. A 60/40 portfolio: roughly 7.5–8%. A conservative 40/60 allocation for someone near retirement: 6–7%.
+
+**Subtract fees before entering the rate.** A 0.03% expense ratio (Vanguard Total Stock Market Index Fund) barely registers. A 1.2% advisory fee plus a 0.5% fund expense ratio reduces a 10% gross return to 8.3% net — and over 30 years, that 1.7% annual drag costs you 35% of your ending balance. Enter your after-fee rate, not the market return.
+
+**Use real returns for real goals.** If your goal is denominated in today's dollars ("I need \$1 million in today's purchasing power"), enter the real (after-inflation) return directly and set the inflation rate to 0%. The S&P 500's real return is roughly 7%. A balanced portfolio: 4.5–5.5%. This avoids the mental gymnastics of comparing a big nominal number against a smaller real number.
+
+**Stress-test with a range.** Never make a plan that only works at your optimistic estimate. Run three scenarios: expected (7% real for stocks), pessimistic (5% — a prolonged low-return environment like 2000–2010), and catastrophic (3% — covering inflation barely exceeds bond returns). If your plan fails at 5%, it's not a plan — it's a wish.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant annual rate of return** applied evenly across all months. In reality, investment returns are volatile — you might earn 25% one year and lose 15% the next, even if the long-term average is 7%. Sequence-of-returns risk means the order of good and bad years affects outcomes, especially near retirement.
+- **Does not deduct fees, taxes, or trading costs.** Advisory fees (0.25–1.5%), fund expense ratios (0.03–1.0%), and capital gains taxes (15–23.8%) all reduce actual returns. For after-fee projections, subtract your total annual fee percentage from the expected return input.
+- Assumes **consistent monthly contributions** with no interruptions. Job loss, medical expenses, and other life events may cause gaps. The calculator does not model variable contribution schedules.
+- Applies a **single constant inflation rate** over the entire period. Actual inflation varies year to year — it was 1.2% in 2020 and 9.1% in 2022. Long periods may see inflation average higher or lower than the input.
+- Does not model **tax-advantaged account benefits.** Investments in 401(k)s, IRAs, and Roth accounts grow tax-deferred or tax-free, which can significantly improve real after-tax outcomes compared to taxable brokerage accounts.
+- Assumes **monthly compounding.** Some investments compound daily, quarterly, or annually. Monthly compounding is standard for modeling purposes and closely approximates daily compounding for practical planning.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a realistic rate of return on investments?
+
+A realistic long-term rate of return depends on your asset allocation. The S&P 500 has returned approximately 10.3% annually (nominal) since 1926, or about 7% after adjusting for inflation. A balanced 60/40 stock/bond portfolio has historically returned 8–9% nominal, or roughly 5–6% real. Conservative bond-only portfolios average 4–5% nominal. For planning purposes, most financial advisors recommend using 6–7% for a diversified stock portfolio and 4–5% for a balanced portfolio — these are pre-fee, pre-tax figures, so subtract your investment costs for a more accurate projection.
+
+### How much should I invest per month?
+
+A widely cited guideline is to invest 15–20% of your gross income for retirement, including any employer match. On a \$75,000 salary, that's \$937 to \$1,250 per month. However, the right amount depends on your age, goals, and timeline. Starting at age 25, investing \$500/month at 7% real return produces approximately \$610,729 by age 55. Starting at age 35 with the same inputs produces only \$260,919 by 55 — meaning a 35-year-old needs to invest about \$1,170/month to match the 25-year-old's outcome. The most important rule: invest whatever you can consistently, and increase the amount whenever your income rises.
+
+### How does inflation affect investment returns?
+
+Inflation reduces the purchasing power of your future dollars. A 10% nominal investment return in a year with 3% inflation actually delivers only a 6.80% real return (using the Fisher equation, not simple subtraction). Over 20 years at 3% annual inflation, a dollar's purchasing power drops to \$0.55. This means your \$500,000 nominal investment balance can only buy what \$276,838 would have bought at the start. This calculator displays both nominal and inflation-adjusted values precisely because the gap between them grows exponentially over time — at 3% inflation over 30 years, nominal values are 2.43× higher than their real purchasing power.
+
+### Is 7% a good investment return?
+
+A 7% annual return is an excellent benchmark for long-term stock market investing after inflation. It aligns with the S&P 500's historical real return over nearly a century of data. In nominal terms, 7% is below the S&P 500's ~10% average, making it a conservative planning assumption that already accounts for inflation. Beating 7% real consistently over 20+ years would place an investor in the top tier of outcomes. For context: Warren Buffett's Berkshire Hathaway has compounded at approximately 19.8% annually since 1965 — a rate virtually no one should plan on replicating. Use 7% as a realistic base case for stock-heavy portfolios, and 4–5% for balanced portfolios.
+
+### How long does it take to double your money?
+
+The Rule of 72 provides a quick estimate: divide 72 by your annual return to get the approximate doubling time. At 7% annual return, your money doubles in roughly 10.3 years. At 10%, it doubles in 7.2 years. At 5%, it takes 14.4 years. With monthly compounding (as this calculator uses), the actual doubling is slightly faster than the Rule of 72 predicts — \$10,000 at 7% compounded monthly reaches \$20,000 in about 9.93 years, not 10.3 years. After the first doubling, the second doubling takes the same amount of time but produces twice the dollar gain, which is the essence of exponential growth.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard future value of an annuity formula as taught in the **CFA Institute** Level I Quantitative Methods curriculum — the global standard for investment analysis education. The inflation adjustment uses the Fisher equation, which was formulated by economist Irving Fisher and is the standard method used by the **Federal Reserve** and the **Bureau of Labor Statistics** to distinguish nominal from real economic values. Historical S&P 500 return data (10.3% nominal, ~7% real since 1926) is sourced from **Ibbotson Associates / Morningstar** SBBI data. Inflation benchmarks reference the **U.S. Bureau of Labor Statistics** Consumer Price Index (CPI-U) historical series. Asset allocation return assumptions are based on research published by **Vanguard's Investment Strategy Group** (2024) and the **SEC's Office of Investor Education and Advocacy**. The Rule of 72 approximation is a standard financial heuristic cited in CFA, CFP, and Series 65 exam curricula.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

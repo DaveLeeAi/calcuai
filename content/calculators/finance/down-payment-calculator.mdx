@@ -1,0 +1,161 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20% down payment on a \$400,000 home requires \$80,000. With \$15,000 already saved and contributing \$1,000/month to a high-yield savings account at 4.5% APY, you will reach that goal in approximately 56 months. Putting down less than 20% triggers private mortgage insurance (PMI) averaging \$187/month on the resulting \$320,000 loan. Enter your home price and savings details below to see your personalized timeline, PMI impact, and savings growth projection.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+This calculator answers the most common question for aspiring homeowners: how long will it take to save enough for a down payment? The answer depends on four variables — home price, down payment percentage, current savings, and monthly savings rate — and the results often surprise people.
+
+The **savings growth projection** chart shows your balance growing over time, factoring in compound interest from a high-yield savings account. At 4.5% APY, a \$15,000 starting balance earns \$56.25 in interest in the first month alone. Over 56 months, interest earnings add approximately \$4,800 to your savings beyond what you deposit — free money that accelerates your timeline by roughly 4 months compared to a zero-interest account.
+
+The **PMI impact** figure shows the monthly cost of private mortgage insurance if your down payment falls below 20%. On a \$400,000 home with 10% down, PMI adds approximately \$210/month to your housing payment. Over 5 years (a common period before PMI can be removed), that totals \$12,600 — a significant hidden cost that makes the 20% threshold worth pursuing. However, if reaching 20% would delay your purchase by several years, the home appreciation you miss may exceed the PMI cost. Use the [Mortgage Calculator](/calculators/finance/mortgage-calculator) to see the full monthly payment picture.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Home Price** — this is the total purchase price of the home you are targeting. Use your local market's median price if you are not yet shopping. The National Association of Realtors reported a median U.S. existing-home price of \$407,500 in late 2025.
+
+2. **Set your Down Payment Percentage** — 20% is the standard target to avoid PMI. FHA loans accept as low as 3.5%, conventional loans as low as 3%. Adjust this to see how different percentages change your timeline and PMI exposure. The default is 20%.
+
+3. **Enter your Current Savings** — this is the amount you have already set aside specifically for the down payment. Do not include your emergency fund — that money should remain untouched. Only count savings earmarked for the home purchase.
+
+4. **Set your Monthly Savings** — the amount you can reliably contribute each month toward the down payment fund. Be conservative — using your actual monthly surplus after all expenses, not an aspirational number. The default is \$1,000.
+
+5. **Adjust the Savings Account APY** — enter the annual percentage yield on your savings vehicle. High-yield savings accounts currently offer 4.0-5.0% APY. Traditional bank savings accounts average 0.45%. This rate compounds monthly and can save you several months on your timeline.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The down payment amount is calculated directly:
+
+$$\text{Down Payment} = \text{Home Price} \times \frac{\text{Down Payment \%}}{100}$$
+
+The savings growth projection uses the future value formula with monthly compounding:
+
+$$FV = PV \times (1 + r)^n + PMT \times \frac{(1 + r)^n - 1}{r}$$
+
+Where:
+
+- **$FV$** = future value of savings (target = down payment amount)
+- **$PV$** = current savings balance (present value)
+- **$r$** = monthly interest rate (annual APY divided by 12)
+- **$n$** = number of months
+- **$PMT$** = monthly savings contribution
+
+To find the number of months to reach the goal, the calculator iterates monthly until the balance meets or exceeds the down payment target.
+
+**PMI estimate** when down payment is below 20%:
+
+$$\text{Monthly PMI} = \frac{\text{Loan Amount} \times 0.007}{12}$$
+
+The 0.7% annual PMI rate is a national average. Actual PMI rates range from 0.2% to 2.0% depending on credit score, loan-to-value ratio, and loan type.
+
+**Source:** Down payment and PMI guidelines per the **Consumer Financial Protection Bureau (CFPB)** and **U.S. Department of Housing and Urban Development (HUD)**.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard 20% Down Payment
+
+**Inputs:**
+- Home Price: \$400,000
+- Down Payment: 20%
+- Current Savings: \$15,000
+- Monthly Savings: \$1,000
+- Savings APY: 4.5%
+
+**Step-by-step:**
+
+1. Down payment required: $400,000 x 0.20 = **$80,000**
+2. Amount still needed: \$80,000 - $15,000 = **$65,000**
+3. Monthly rate: 4.5% / 12 = **0.375%** (0.00375)
+4. Month 1: \$15,000 x 1.00375 + $1,000 = **$16,056.25**
+5. Month 2: \$16,056.25 x 1.00375 + $1,000 = **$17,116.46**
+6. This continues month by month...
+7. By month 56: balance reaches approximately **\$80,100**
+
+**Results:**
+- Down payment required: **\$80,000**
+- Months to goal: **56 months** (~4 years, 8 months)
+- PMI: **\$0/month** (20% down avoids PMI)
+- Interest earned on savings: approximately **\$4,800** over the savings period
+
+**Interpretation:** Saving \$1,000/month at 4.5% APY takes 56 months to reach \$80,000 from a \$15,000 starting point. Without any interest (0% APY), the same goal requires 65 months — the high-yield savings account shaves 9 months off the timeline. Consider whether waiting 4.7 years for 20% down is worth the PMI savings versus buying sooner with 10% down.
+
+### Example 2: FHA Minimum — 3.5% Down Payment
+
+**Inputs:**
+- Home Price: \$400,000
+- Down Payment: 3.5%
+- Current Savings: \$15,000
+- Monthly Savings: \$1,000
+- Savings APY: 4.5%
+
+**Step-by-step:**
+
+1. Down payment required: $400,000 x 0.035 = **$14,000**
+2. Current savings (\$15,000) already exceeds the \$14,000 target
+3. Months to goal: **0** — already have enough
+4. Loan amount: \$400,000 - $14,000 = **$386,000**
+5. Estimated monthly PMI: $386,000 x 0.007 / 12 = **$225/month**
+
+**Interpretation:** With only 3.5% down, you can buy immediately but PMI adds \$225/month. Over 5 years before you can request PMI removal, that costs \$13,500. However, if home values appreciate 3% annually, the \$400,000 home will be worth \$463,700 in 5 years — a gain of \$63,700 in equity versus waiting to save 20%. Weigh the PMI cost against potential appreciation using local market data.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Savings Account APY** — The difference between a 0.45% traditional savings account and a 4.5% high-yield savings account is substantial. On a \$65,000 savings goal with \$1,000/month contributions, a HYSA saves you 9 months compared to a traditional account. As of early 2026, the top HYSAs from Marcus, Ally, and Discover offer 4.0-5.0% APY with FDIC insurance.
+
+**Home Price Appreciation** — While you save, home prices may rise. If prices increase 3% per year, a \$400,000 home becomes \$424,360 after two years — your 20% target moves from \$80,000 to \$84,872. This "moving target" effect means faster saving or a lower down payment percentage may be strategically better than waiting for 20%.
+
+**PMI Removal Threshold** — PMI is required until you reach 20% equity. You can request removal when your loan-to-value ratio reaches 80%, and lenders must automatically cancel it at 78%. Building equity through payments and appreciation both count. If home values rise 5% in year one, you reach the 80% LTV threshold faster.
+
+**Closing Costs** — This calculator focuses on the down payment, but closing costs add 2-5% of the home price. On a \$400,000 home, expect \$8,000-\$20,000 in additional cash needed at closing. Factor this into your total savings target.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant monthly savings contribution** throughout the saving period. Real contributions may vary month to month.
+- The savings APY is applied as **monthly compounding** at a fixed rate. Actual HYSA rates fluctuate with federal funds rate changes.
+- PMI is estimated at **0.7% annually** — a national average. Your actual rate depends on credit score (higher score = lower PMI), loan-to-value ratio, and loan type.
+- Does **not include closing costs** (2-5% of home price), moving expenses, or initial home maintenance reserves. Plan for these separately.
+- Home price is assumed **fixed**. In reality, prices change over time. If saving for more than 2 years, your target may increase with market appreciation.
+- Does **not account for gift funds**, down payment assistance programs, or employer homebuyer programs that could reduce the savings needed.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much should I put down on a house?
+
+The optimal down payment depends on your financial situation and local market. Putting 20% down avoids PMI and gives you a lower monthly payment, but it requires significant savings — \$80,000 on a \$400,000 home. If you have excellent credit and stable income, 10-15% down is a strong compromise: you will pay PMI for 2-4 years but start building equity sooner. FHA loans allow 3.5% down, and some conventional programs accept 3%. The key trade-off is PMI cost versus opportunity cost of waiting. On average, homeowners who buy with 10% down and pay PMI for 3 years spend \$7,500 on PMI but gain access to home appreciation years earlier.
+
+### Where should I save for a down payment?
+
+For down payment savings within 1-5 years of purchase, a high-yield savings account (HYSA) is the safest option. HYSAs currently offer 4.0-5.0% APY with full FDIC insurance up to \$250,000. Do not invest down payment funds in the stock market — a 20% market downturn could delay your timeline by years. Certificates of deposit (CDs) are another option if you know your purchase timeline precisely and want to lock in a rate. Money market accounts offer similar rates to HYSAs with check-writing ability.
+
+### Can I avoid PMI with less than 20% down?
+
+Yes, there are several options. Some lenders offer "lender-paid PMI" (LPMI) where you accept a slightly higher interest rate instead of a separate PMI payment. VA loans (for veterans) require zero down payment and never charge PMI. USDA loans in eligible rural areas also have no PMI (though they have a guarantee fee). Some credit unions and community banks offer special programs for first-time buyers that waive PMI below 20%. The trade-off is typically a higher interest rate or stricter qualification requirements.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+Down payment requirements and PMI guidelines reference the **Consumer Financial Protection Bureau (CFPB)** and **U.S. Department of Housing and Urban Development (HUD)**. The 0.7% average PMI rate is derived from the **Urban Institute's Housing Finance Policy Center** analysis of PMI pricing across major insurers (MGIC, Radian, Essent, Genworth). The future value of savings formula uses standard compound interest mathematics per the **CFA Institute**. Median existing-home price data references the **National Association of Realtors (NAR)** monthly housing statistics. High-yield savings account APY benchmarks reference **FDIC** weekly national rate publications and **Bankrate** best savings rate surveys. The Homeowners Protection Act of 1998 governs PMI cancellation rights at 80% LTV (borrower request) and 78% LTV (automatic termination).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

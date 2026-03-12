@@ -1,0 +1,198 @@
+{
+  "id": "length-converter",
+  "title": "Length Converter",
+  "slug": "length-converter",
+  "category": "conversion",
+  "subcategory": "length",
+  "primaryKeyword": "length converter",
+  "metaTitle": "Length Converter — Convert Meters, Feet, Inches, Miles & More",
+  "metaDescription": "Convert between all length units: meters, feet, inches, miles, kilometers, yards, centimeters. Metric and imperial. Free, instant conversion with full table.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Enter the length value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "meter",
+      "options": [
+        {
+          "value": "kilometer",
+          "label": "Kilometer (km)"
+        },
+        {
+          "value": "meter",
+          "label": "Meter (m)"
+        },
+        {
+          "value": "centimeter",
+          "label": "Centimeter (cm)"
+        },
+        {
+          "value": "millimeter",
+          "label": "Millimeter (mm)"
+        },
+        {
+          "value": "micrometer",
+          "label": "Micrometer (µm)"
+        },
+        {
+          "value": "nanometer",
+          "label": "Nanometer (nm)"
+        },
+        {
+          "value": "mile",
+          "label": "Mile (mi)"
+        },
+        {
+          "value": "yard",
+          "label": "Yard (yd)"
+        },
+        {
+          "value": "foot",
+          "label": "Foot (ft)"
+        },
+        {
+          "value": "inch",
+          "label": "Inch (in)"
+        },
+        {
+          "value": "nautical-mile",
+          "label": "Nautical Mile (nmi)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "foot",
+      "options": [
+        {
+          "value": "kilometer",
+          "label": "Kilometer (km)"
+        },
+        {
+          "value": "meter",
+          "label": "Meter (m)"
+        },
+        {
+          "value": "centimeter",
+          "label": "Centimeter (cm)"
+        },
+        {
+          "value": "millimeter",
+          "label": "Millimeter (mm)"
+        },
+        {
+          "value": "micrometer",
+          "label": "Micrometer (µm)"
+        },
+        {
+          "value": "nanometer",
+          "label": "Nanometer (nm)"
+        },
+        {
+          "value": "mile",
+          "label": "Mile (mi)"
+        },
+        {
+          "value": "yard",
+          "label": "Yard (yd)"
+        },
+        {
+          "value": "foot",
+          "label": "Foot (ft)"
+        },
+        {
+          "value": "inch",
+          "label": "Inch (in)"
+        },
+        {
+          "value": "nautical-mile",
+          "label": "Nautical Mile (nmi)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Length Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "weight-converter",
+    "temperature-converter",
+    "area-converter",
+    "volume-converter",
+    "data-storage-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Institute of Standards and Technology (NIST) — SI Special Publication 330 (2019 Edition)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Conversion via base unit (meters): result = value × (fromUnit.toBase / toUnit.toBase). NIST SP 330 exact conversion factors.",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

@@ -1,0 +1,133 @@
+---
+title: "Hours Calculator"
+description: "Calculate total hours worked from start and end times with break deduction. Get decimal hours for timesheets. Handles overnight shifts."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Clock in at 9:00 AM, clock out at 5:00 PM, take a 30-minute lunch, and you have worked 7 hours 30 minutes — or 7.5 decimal hours for your timesheet. This calculator converts any start time and end time into total hours worked, deducts break time, and outputs the result in both HH:MM:SS and decimal format. It handles overnight shifts automatically.
+
+</section>
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The results show your net hours worked (after break deduction), gross hours (before break), and the decimal-hours equivalent that most payroll systems require. If your end time is earlier than your start time, the calculator treats it as an overnight shift spanning midnight — for example, 10:00 PM to 6:00 AM = 8 hours.
+
+Decimal hours avoid the common confusion of entering "7:30" as 7.30 on a timesheet (which would undercount by 20 minutes). At \$20/hour, that rounding error costs \$6.67 per shift. For adding multiple time durations together, use the [Time Calculator](/calculators/everyday/time-calculator). To calculate overtime pay, see the [Overtime Calculator](/calculators/business/overtime-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your start time** — choose the time you began working from the dropdown. Times are in 30-minute increments; choose the closest option.
+2. **Select your end time** — choose the time you stopped working. If the end time is before the start time, the calculator assumes an overnight shift.
+3. **Enter break duration** — enter the total minutes of unpaid breaks (lunch, rest). Default is 30 minutes. Set to 0 if no break was taken.
+4. **Read the results** — the calculator shows net hours worked (after break), gross hours, and decimal hours instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{elapsed} = t_{\text{end}} - t_{\text{start}}
+$$
+
+If $t_{\text{end}} < t_{\text{start}}$ (overnight shift):
+
+$$
+\text{elapsed} = (86{,}400 - t_{\text{start}}) + t_{\text{end}}
+$$
+
+Net hours after break deduction:
+
+$$
+\text{netSeconds} = \max(0, \; \text{elapsed} - \text{breakMinutes} \times 60)
+$$
+
+$$
+\text{decimalHours} = \frac{\text{netSeconds}}{3600}
+$$
+
+Where:
+- **$t_{\text{start}}$**, **$t_{\text{end}}$** = start and end times as seconds from midnight
+- **86,400** = total seconds in 24 hours
+- **breakMinutes** = total minutes of unpaid break time
+
+*Source: U.S. Department of Labor — Fair Labor Standards Act (FLSA) timekeeping requirements and rounding rules (29 CFR § 785).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Day Shift
+
+A retail employee clocks in at 8:00 AM and out at 4:30 PM with a 30-minute unpaid lunch.
+
+**Step 1:** Convert to seconds from midnight
+- Start: 8:00 AM = 28,800 seconds
+- End: 4:30 PM = 59,400 seconds
+
+**Step 2:** Calculate elapsed time
+- Elapsed = 59,400 − 28,800 = 30,600 seconds = 8 hours 30 minutes
+
+**Step 3:** Deduct break
+- Break: 30 minutes = 1,800 seconds
+- Net = 30,600 − 1,800 = 28,800 seconds = 8 hours 0 minutes
+
+**Result:** 8.0 decimal hours
+
+### Example 2: Overnight Shift
+
+A nurse starts at 10:00 PM and ends at 6:30 AM with a 45-minute break.
+
+**Step 1:** Convert to seconds from midnight
+- Start: 10:00 PM = 79,200
+- End: 6:30 AM = 23,400
+
+**Step 2:** Overnight calculation
+- Elapsed = (86,400 − 79,200) + 23,400 = 7,200 + 23,400 = 30,600 seconds = 8h 30m
+
+**Step 3:** Deduct break
+- Break: 45 minutes = 2,700 seconds
+- Net = 30,600 − 2,700 = 27,900 seconds = 7 hours 45 minutes
+
+**Result:** 7.75 decimal hours. The overnight flag confirms this spans midnight.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+1. **Break deductions.** Under FLSA, meal periods of 30 minutes or more are unpaid and must be deducted. Rest breaks of 5–20 minutes are generally paid and should not be deducted. A common scenario: an employee works an 8.5-hour shift (8:00 AM to 4:30 PM) with a 30-minute unpaid lunch — the billable total is 8.0 hours. The two paid 15-minute rest breaks remain counted as work time.
+2. **Overtime thresholds.** The FLSA requires 1.5× pay for non-exempt employees after 40 hours per week. California also mandates daily overtime after 8 hours and double-time after 12 hours in a single day. An employee working a 10-hour shift in California earns 8 hours at their regular rate and 2 hours at 1.5×, regardless of their weekly total.
+3. **Rounding conventions.** The FLSA allows employers to round to the nearest 5, 6, or 15 minutes, but rounding must average out over time. Under the common 7-minute rule (15-minute rounding), clocking in 7 minutes early rounds down to the quarter-hour (not counted), while 8 minutes early rounds up (counted as a full 15-minute increment). An employee who consistently clocks in 7 minutes early loses approximately 28 hours of unpaid time annually.
+4. **Decimal vs. clock time.** Most payroll systems use decimal hours (7.75, not 7:45). Entering 7:45 as 7.45 undercounts by 5 minutes per shift — a \$1,000+ annual error at \$25/hour.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a single contiguous work period (no split shifts)
+- Break time is entered as total minutes, not as separate start/end times
+- Time options are in 30-minute increments; for exact minutes, enter a time closest to your actual clock-in
+- Does not calculate overtime premium (use the [Overtime Calculator](/calculators/business/overtime-calculator) for that)
+- Does not track multiple days or weekly totals
+
+## Frequently Asked Questions
+
+### How do I convert hours and minutes to decimal hours for my timesheet?
+
+Divide the minutes by 60 and add to the hours. For example, 7 hours 45 minutes = 7 + (45 ÷ 60) = 7.75 decimal hours. Common conversions: 15 min = 0.25, 30 min = 0.50, 45 min = 0.75.
+
+### Does this calculator handle overnight shifts?
+
+Yes. If the end time is earlier than the start time, the calculator automatically adds 24 hours to account for crossing midnight. A shift from 10:00 PM to 6:00 AM correctly calculates as 8 hours.
+
+### Should I deduct my 15-minute rest break?
+
+Generally, no. Under the FLSA, short breaks of 5 to 20 minutes are considered compensable work time. Only bona fide meal periods (typically 30 minutes or longer, where you are completely relieved of duties) should be deducted. Check your employer's specific policy.
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator converts between time formats and computes elapsed time. It subtracts start time from end time, handling AM/PM and 24-hour formats. If the end time is earlier than the start time, it assumes the period crosses midnight and adds 24 hours. Break time is subtracted from the total. Decimal hours are converted to hours and minutes by multiplying the fractional part by 60.

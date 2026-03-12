@@ -1,0 +1,196 @@
+---
+title: "Employee Cost Calculator"
+description: "Calculate the true total cost of hiring an employee including salary, benefits, employer taxes, and overhead. See the real cost multiplier and hourly rate."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate the real cost of employing a full-time worker beyond base salary. An employee earning \$60,000 annually actually costs approximately \$80,294 per year — a 1.34x multiplier — once you add \$7,500 in health insurance, \$2,400 in 401(k) matching, \$4,932 in employer payroll taxes, and \$3,462 in PTO productivity cost. That is \$6,691 per month, or \$38.60 per hour in true employer cost.
+
+</section>
+
+{/* Section 6: What Your Estimate Shows */}
+## What Your Estimate Shows
+
+This calculator reveals the gap between what an employee earns and what they actually cost your business. The **cost multiplier** is the key output — it tells you how many times the base salary your total employment cost is. Bureau of Labor Statistics data shows the average US employer cost multiplier ranges from 1.25x to 1.40x, depending on industry and benefits generosity.
+
+The distinction matters for pricing, budgeting, and hiring decisions. If you price your services based on salary alone, you are undercharging by 25%–40%. A \$60,000 employee billed at \$30/hour generates zero margin — their true cost is closer to \$38.60/hour. You need to bill at least \$50–\$60/hour to cover overhead and generate profit.
+
+The calculator also breaks down every cost component into a detailed table, so you can see exactly where each dollar goes. Use this alongside our [Break-Even Calculator](/calculators/business/break-even-calculator) to determine how many billable hours or product sales each new hire needs to generate before becoming profitable.
+
+## How to Use This Calculator
+
+1. **Enter Annual Salary** — the employee's gross annual base pay before any deductions. For hourly workers, multiply their hourly rate by 2,080 (40 hours x 52 weeks). A \$25/hour worker has a \$52,000 annual salary.
+2. **Enter Health Insurance** — your annual employer contribution to health insurance premiums. The 2024 KFF Employer Health Benefits Survey reports the average employer contribution is \$7,034 for individual coverage and \$17,393 for family coverage. Enter only the employer portion, not the employee's premium share.
+3. **Enter Retirement Match %** — the percentage of salary you match for 401(k) or similar plans. The most common match is 50% of employee contributions up to 6% of salary (equivalent to a 3% employer contribution), but enter your actual match rate. If you match dollar-for-dollar up to 4%, enter 4%.
+4. **Enter PTO Days** — total paid time off per year including vacation, sick days, and personal days. The BLS reports 10 days for new employees, 15 days at 5 years tenure, and 20+ days at 15+ years. This represents a productivity cost — days the employee is paid but not working.
+5. **Enter Other Benefits** — annual cost of life insurance, short/long-term disability, wellness programs, education reimbursement, commuter benefits, or other perks. The average is \$1,500–\$3,000 per employee.
+6. **Enter SUTA Rate and Wage Base** — your state unemployment tax rate and the taxable wage base. New employers typically pay 2.7%–3.4%. Established employers with good claims history may pay as low as 0.5%. Wage bases range from \$7,000 (Arizona, California, Florida) to \$56,500 (Washington state). Check your state unemployment agency for exact figures.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Total Employee Cost:**
+
+$$
+\text{Total Cost} = \text{Salary} + \text{Employer Taxes} + \text{Total Benefits}
+$$
+
+**Employer Payroll Taxes:**
+
+$$
+\text{Social Security} = \min(\text{Salary},\ \$168{,}600) \times 6.2\%
+$$
+
+$$
+\text{Medicare} = \text{Salary} \times 1.45\%
+$$
+
+$$
+\text{FUTA} = \min(\text{Salary},\ \$7{,}000) \times 0.6\%
+$$
+
+$$
+\text{SUTA} = \min(\text{Salary},\ \text{Wage Base}) \times \text{SUTA Rate}
+$$
+
+**Benefits:**
+
+$$
+\text{Retirement Match} = \text{Salary} \times \frac{\text{Match \%}}{100}
+$$
+
+$$
+\text{PTO Cost} = \frac{\text{Salary}}{260} \times \text{PTO Days}
+$$
+
+$$
+\text{Total Benefits} = \text{Health Insurance} + \text{Retirement Match} + \text{PTO Cost} + \text{Other Benefits}
+$$
+
+**Derived Metrics:**
+
+$$
+\text{Cost Multiplier} = \frac{\text{Total Cost}}{\text{Salary}}
+$$
+
+$$
+\text{Hourly Cost} = \frac{\text{Total Cost}}{2{,}080}
+$$
+
+Where:
+- **\$168,600** = 2024 Social Security wage base (adjusted annually by SSA)
+- **6.2%** = employer share of Social Security (FICA)
+- **1.45%** = employer share of Medicare (FICA)
+- **\$7,000** = federal unemployment (FUTA) taxable wage base
+- **0.6%** = effective FUTA rate after standard state credit (6.0% gross rate minus 5.4% credit)
+- **260** = working days per year (52 weeks x 5 days)
+- **2,080** = working hours per year (52 weeks x 40 hours)
+
+*Source: Bureau of Labor Statistics (BLS) — "Employer Costs for Employee Compensation" (ECEC), September 2024 release. IRS Publication 15 (Circular E) for 2024 payroll tax rates and wage bases.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Full-Time Employee (\$60,000 Salary)
+
+A small business hires a marketing coordinator at \$60,000/year with a typical benefits package.
+
+**Step 1: Employer Payroll Taxes**
+- Social Security: \$60,000 x 6.2% = **\$3,720**
+- Medicare: \$60,000 x 1.45% = **\$870**
+- FUTA: \$7,000 x 0.6% = **\$42**
+- SUTA: \$10,000 x 3.0% = **\$300**
+- Total Employer Taxes: **\$4,932**
+
+**Step 2: Benefits**
+- Health Insurance: **\$7,500** (employer share, individual plan)
+- 401(k) Match: \$60,000 x 4% = **\$2,400**
+- PTO Cost: (\$60,000 / 260) x 15 days = \$230.77/day x 15 = **\$3,461.54**
+- Other Benefits: **\$2,000** (life insurance, disability)
+- Total Benefits: **\$15,361.54**
+
+**Step 3: Total Cost**
+- Total = \$60,000 + \$4,932 + \$15,361.54 = **\$80,293.54**
+- Cost Multiplier: \$80,293.54 / \$60,000 = **1.34x**
+- Monthly Cost: \$80,293.54 / 12 = **\$6,691.13**
+- Hourly Cost: \$80,293.54 / 2,080 = **\$38.60**
+
+*Interpretation:* This \$60,000 employee costs the company \$80,294 per year — 34% more than the salary alone. To break even on this hire, the employee must generate at least \$6,691 per month in revenue or value. If billing their time to clients, the minimum billable rate is \$38.60/hour before any profit margin.
+
+### Example 2: Senior Engineer (\$120,000 Salary)
+
+A tech company hires a senior software engineer at \$120,000/year with competitive benefits.
+
+**Step 1: Employer Payroll Taxes**
+- Social Security: \$120,000 x 6.2% = **\$7,440** (below \$168,600 cap)
+- Medicare: \$120,000 x 1.45% = **\$1,740**
+- FUTA: \$7,000 x 0.6% = **\$42**
+- SUTA: \$10,000 x 3.0% = **\$300**
+- Total Employer Taxes: **\$9,522**
+
+**Step 2: Benefits**
+- Health Insurance: **\$17,000** (employer share, family plan)
+- 401(k) Match: \$120,000 x 6% = **\$7,200**
+- PTO Cost: (\$120,000 / 260) x 20 days = \$461.54/day x 20 = **\$9,230.77**
+- Other Benefits: **\$3,000** (life insurance, disability, education stipend)
+- Total Benefits: **\$36,430.77**
+
+**Step 3: Total Cost**
+- Total = \$120,000 + \$9,522 + \$36,430.77 = **\$165,952.77**
+- Cost Multiplier: \$165,952.77 / \$120,000 = **1.38x**
+- Monthly Cost: \$165,952.77 / 12 = **\$13,829.40**
+- Hourly Cost: \$165,952.77 / 2,080 = **\$79.79**
+
+*Interpretation:* The cost multiplier is 1.38x — higher than the \$60,000 employee's 1.34x — because the benefits package is richer (family health plan at \$17,000 versus individual at \$7,500, higher 401(k) match, more PTO). Note that Social Security remains proportional because \$120,000 is still below the \$168,600 cap. Above the cap, the Social Security portion stops growing, which slightly reduces the multiplier for salaries above \$168,600.
+
+## Key Factors That Affect Your Results
+
+1. **Health Insurance Is the Biggest Variable** — Employer health insurance costs range from \$5,000 to \$25,000+ per employee depending on plan type (HMO vs PPO), coverage level (individual vs family), and geography. In 2024, the KFF survey reported average annual employer premiums of \$7,034 for individual and \$17,393 for family coverage. This single line item can swing the cost multiplier from 1.20x to 1.50x.
+
+2. **Social Security Cap Creates a Ceiling** — Once salary exceeds \$168,600, additional earnings are not subject to the 6.2% employer Social Security tax. This saves the employer \$62 for every additional \$1,000 above the cap. For a \$250,000 employee, the SS tax is \$10,453 (same as a \$168,600 employee), not \$15,500. Medicare has no cap and continues at 1.45% on all earnings.
+
+3. **State Unemployment Varies 10x** — SUTA rates range from 0.1% to 12%+ depending on your state, industry, and claims history. New employers typically pay 2.7%–3.4%, while employers with many unemployment claims may pay 8%–12%. The taxable wage base ranges from \$7,000 (Arizona, California) to \$56,500 (Washington). A Washington employer at 5% on \$56,500 pays \$2,825 in SUTA — versus \$42 in Arizona at 0.6% on \$7,000.
+
+4. **PTO Is a Hidden Cost** — Fifteen PTO days at a \$60,000 salary cost \$3,462 in paid-but-unworked productivity. At 25 PTO days, that rises to \$5,769. Companies offering unlimited PTO still incur this cost — employees take an average of 10–15 days regardless of policy.
+
+5. **Contractor vs Employee Trade-Off** — Independent contractors avoid all employer taxes and benefits (saving 25%–40% of the cost multiplier), but typically charge 20%–50% higher hourly rates to compensate. A \$60,000 employee at 1.34x (\$38.60/hour true cost) is often cheaper than a contractor billing \$55–\$75/hour for the same work, unless the engagement is short-term (under 6 months).
+
+## Assumptions & Limitations
+
+- Uses 2024 federal tax rates and wage bases (Social Security cap of \$168,600, FUTA \$7,000 base)
+- Does not include Additional Medicare Tax (0.9% on earnings above \$200,000 — paid by employee only, not employer)
+- PTO cost represents a productivity cost, not an additional cash outlay (salary is paid regardless)
+- Does not include recruiting costs (average \$4,700 per hire per SHRM), training costs, or equipment/workspace costs
+- Assumes full-year employment — partial-year employees have prorated taxes but may still incur full-year benefit costs
+- Workers' compensation insurance is excluded (varies by industry from 0.5% to 15%+ of payroll)
+- Does not account for overtime, bonuses, or variable compensation
+
+## Frequently Asked Questions
+
+### What is a typical employee cost multiplier?
+
+The typical employee cost multiplier in the US ranges from 1.25x to 1.40x base salary, according to Bureau of Labor Statistics ECEC data. Government and union employees tend toward the higher end (1.45x–1.60x) due to generous pension and health benefits. Private-sector service industries average 1.25x–1.30x with leaner benefit packages. Tech companies with rich benefits (family health plans, 6%+ 401(k) match, 20+ PTO days) commonly see 1.35x–1.45x. The multiplier increases with salary up to a point, then plateaus because the Social Security tax cap prevents that component from growing further above \$168,600.
+
+### What employer taxes do I have to pay?
+
+Employers are required to pay four payroll taxes: Social Security at 6.2% of wages up to \$168,600 (the employer matches the employee's 6.2% share), Medicare at 1.45% of all wages with no cap, Federal Unemployment Tax (FUTA) at an effective rate of 0.6% on the first \$7,000 of wages per employee (approximately \$42 per employee per year), and State Unemployment Tax (SUTA) at a rate and wage base that varies by state — typically 2%–5% on the first \$7,000–\$56,500 of wages. Combined, these mandatory employer taxes add 7.65% to 10%+ on top of salary for most employees.
+
+### Are contractors cheaper than employees?
+
+Contractors eliminate employer payroll taxes (7.65% FICA savings), health insurance (\$7,000–\$17,000/year), retirement match, PTO, and other benefits — reducing the cost multiplier from 1.30x+ to effectively 1.00x of the contracted rate. However, contractors typically charge 20%–50% more per hour than an equivalent employee's hourly salary to cover their own self-employment tax (15.3%), health insurance, retirement savings, and business expenses. A \$60,000 employee costing \$38.60/hour in total may be comparable to a contractor billing \$55–\$65/hour. Contractors become more cost-effective for short-term projects (under 6 months), specialized skills needed intermittently, or roles where you want to avoid long-term benefit commitments. The IRS strictly defines employee vs contractor status — misclassification penalties include back taxes, benefits, and fines.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Bureau of Labor Statistics (BLS)** — "Employer Costs for Employee Compensation" (ECEC), September 2024 release — national averages for wages, benefits, and employer tax costs by industry
+- **IRS Publication 15 (Circular E)** — 2024 employer payroll tax rates: Social Security 6.2% (wage base \$168,600), Medicare 1.45%, FUTA 6.0% (0.6% effective after 5.4% state credit)
+- **KFF Employer Health Benefits Survey** — 2024 edition — average employer premium contributions for individual and family health insurance coverage
+- **Society for Human Resource Management (SHRM)** — "Benchmarking Human Capital" report — average recruiting, onboarding, and total cost-per-hire data
+
+The calculator computes employer-side payroll taxes using 2024 federal rates and applies SUTA based on user-provided state rate and wage base. PTO cost is calculated as a productivity-equivalent cost using 260 working days per year. All monetary values are rounded to 2 decimal places. The cost multiplier is rounded to 2 decimal places.

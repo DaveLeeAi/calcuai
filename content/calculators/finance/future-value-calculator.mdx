@@ -1,0 +1,152 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A $10,000 investment earning 7% annually grows to $19,672 in 10 years — nearly doubling without adding a single extra dollar. Add $500 per year in contributions and the total reaches $26,573, with $10,573 coming from compound interest alone. This calculator projects the future value of any combination of lump-sum investment and periodic contributions, with adjustable compounding from annual to daily. Enter your starting amount, contribution schedule, rate of return, and time horizon below.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This calculator answers the most fundamental investment question: "How much will my money grow to?" It projects the future value of an initial investment, periodic contributions, or both, at a given rate of return over any time horizon.
+
+**Future value makes the cost of waiting visible.** A 25-year-old investing $10,000 at 7% has $149,745 at age 65. A 35-year-old with the same $10,000 at 7% has only $76,123 at 65 — half the money, just by starting 10 years later. The extra $73,622 isn't from any additional contribution; it's purely the compound interest earned during those 10 early years. This asymmetry is why financial advisors emphasize starting early over investing more.
+
+**The growth acceleration is non-linear.** At 7% annually, your first $10,000 earns $700 in year 1. By year 10, the same investment earns $1,318 that year alone (because you're earning 7% on $18,815, not $10,000). By year 30, annual interest hits $7,129. This exponential curve — visible in the growth chart below — is why Einstein allegedly called compound interest the eighth wonder of the world. For the inverse question — what a future sum is worth today — see our [Present Value Calculator](/calculators/finance/present-value-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Initial Investment (PV)** — the lump sum you're starting with today. This could be your current savings balance, an inheritance, a bonus, or any amount available to invest right now. Enter $0 if you're starting from scratch with contributions only.
+
+2. **Enter the Periodic Contribution (optional)** — the amount you'll add regularly. For annual compounding, enter your yearly contribution. For monthly compounding, enter your monthly contribution. The calculator assumes contributions occur at the end of each period.
+
+3. **Set the Annual Interest Rate** — your expected annual rate of return. Historical averages: S&P 500 = ~10% nominal (7% inflation-adjusted), bonds = ~4–5%, savings accounts = ~4–5% (2025), real estate = ~8–10% including appreciation. Use a conservative estimate for planning.
+
+4. **Set the Time Horizon** — the number of years until you need the money. Retirement accounts might be 30–40 years. College funds: 18 years from birth. Short-term goals: 1–5 years.
+
+5. **Choose Compounding Frequency** — how often returns compound. Most investment accounts compound daily or monthly. Bank savings compound daily or monthly. For simplicity, annual compounding gives a close approximation. More frequent compounding produces slightly higher future values.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Future value of a lump sum:**
+
+$$FV = PV \times (1 + r/n)^{n \times t}$$
+
+**Future value of an annuity (series of equal contributions):**
+
+$$FV_{annuity} = PMT \times \frac{(1 + r/n)^{n \times t} - 1}{r/n}$$
+
+**Total future value (when both apply):**
+
+$$FV_{total} = FV_{lump\,sum} + FV_{annuity}$$
+
+Where:
+
+- **FV** = future value — the total amount at the end of the investment period (dollars)
+- **PV** = present value — the initial investment today (dollars)
+- **PMT** = periodic contribution per compounding period (dollars)
+- **r** = annual interest/return rate (decimal, e.g., 7% = 0.07)
+- **n** = compounding periods per year (1 = annual, 12 = monthly, etc.)
+- **t** = time in years
+
+The **(1 + r/n)^(nt)** term is the compound growth factor. At 7% annual for 10 years, this factor is 1.9672 — meaning each dollar nearly doubles. The annuity formula captures the separate growth of each contribution, each compounding for a different number of remaining periods.
+
+At 0% interest rate, the formula simplifies to: $FV = PV + PMT \times n \times t$ (pure accumulation).
+
+**Source:** CFA Institute Level I Curriculum, Quantitative Methods: Time Value of Money; SEC Investor.gov compound interest education resources.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Lump Sum — $10,000 at 7% for 10 Years (Annual Compounding)
+
+**Inputs:**
+- Initial Investment: $10,000
+- Annual Rate: 7%
+- Time: 10 years
+- Compounding: Annual
+
+**Step-by-step:**
+
+1. Growth factor: (1.07)^10 = **1.9672**
+2. Future value: $10,000 × 1.9672 = **$19,672**
+3. Interest earned: $19,672 − $10,000 = **$9,672**
+4. Growth multiplier: 1.97× your original investment
+
+**Interpretation:** Your $10,000 nearly doubles in 10 years at 7%, earning $9,672 in compound interest. The Rule of 72 approximation (72 ÷ 7 ≈ 10.3 years to double) confirms this. In the last year alone, you earn $1,287 — 2.8× more than the $700 earned in year 1.
+
+### Example 2: Monthly Contributions — $500/Month at 7% for 30 Years
+
+**Inputs:**
+- Initial Investment: $0
+- Periodic Contribution: $500/month
+- Annual Rate: 7%
+- Time: 30 years
+- Compounding: Monthly
+
+**Step-by-step:**
+
+1. Monthly rate: 7% ÷ 12 = **0.005833**
+2. Total periods: 12 × 30 = **360**
+3. Growth factor: (1.005833)^360 = **8.1165**
+4. FV of contributions: $500 × (8.1165 − 1) / 0.005833 = **$610,994**
+5. Total contributed: $500 × 360 = **$180,000**
+6. Interest earned: $610,994 − $180,000 = **$430,994**
+
+**Interpretation:** You contribute $180,000 of your own money over 30 years, but compound interest adds $430,994 — 2.4× your contributions. This is the power of consistent long-term investing. If you waited 10 years and then contributed $500/month for only 20 years, the FV would be just $263,191 — less than half, despite contributing $120,000 (only $60,000 less).
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Rate of Return** — The most powerful variable. $10,000 over 30 years: at 5% → $43,219. At 7% → $76,123. At 10% → $174,494. The difference between 7% and 10% is a factor of 2.3× — a seemingly small rate gap that creates a massive outcome gap over long time horizons.
+
+**Time** — Compound interest rewards duration disproportionately. At 7%, your money doubles every ~10.3 years (Rule of 72). In 10 years: 2×. In 20 years: 4×. In 30 years: 7.6×. In 40 years: 15×. The last decade of a 40-year investment generates more growth than the first 30 years combined.
+
+**Contribution Consistency** — Regular contributions matter enormously because each one begins its own compounding timeline. $500/month at 7% for 30 years grows to $611K. Missing just 2 years of contributions (reducing to 28 years at $500/month) drops it to $523K — an $88K loss from $12,000 in skipped contributions, because each missed $500 also loses decades of compounding.
+
+**Compounding Frequency** — More frequent compounding increases FV slightly. $10,000 at 7% for 30 years: annual = $76,123; monthly = $81,165; daily = $81,662. The jump from annual to monthly matters ($5K); monthly to daily is negligible ($497).
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant rate of return** for the entire period. Real investment returns fluctuate annually. The S&P 500 returned +26% in 2023 but −18% in 2022. Use long-term averages for planning, not recent performance.
+- Assumes **contributions occur at the end of each period** (ordinary annuity). If contributions happen at the beginning (annuity due), the FV is slightly higher — multiply by (1 + r/n).
+- Does **not account for inflation**. A 7% nominal return with 3% inflation yields approximately 3.9% in real purchasing power growth. $100,000 in 30 years will buy what $41,199 buys today at 3% inflation.
+- Does **not account for taxes** on investment gains. Tax-deferred accounts (401k, IRA) grow at the full rate; taxable accounts lose 15–37% of gains annually depending on tax bracket and holding period.
+- Does **not model market volatility** or sequence-of-returns risk. The same average return can produce very different outcomes depending on the order of annual returns.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What rate of return should I use for a future value calculation?
+
+Use the long-term historical average for your asset class, adjusted for your risk tolerance. The S&P 500 has returned approximately 10.0% annually from 1926–2024 (nominal) or 6.8% after inflation. A balanced 60/40 stock/bond portfolio has averaged about 8.5% nominal. For conservative planning, many financial advisors recommend using 6–7% for stock-heavy portfolios and 4–5% for bond-heavy portfolios. Avoid using recent high returns (2023–2024) as your baseline — they're above the long-term average and unlikely to persist every year.
+
+### What is the Rule of 72?
+
+The Rule of 72 is a quick mental math shortcut to estimate how long it takes for money to double: divide 72 by the annual return rate. At 6%, money doubles in 72 ÷ 6 = 12 years. At 8%, it doubles in 9 years. At 12%, just 6 years. The rule is accurate within 0.5 years for rates between 2% and 15%. For example, at 7%, the rule predicts doubling in 10.3 years; the exact answer is 10.24 years. It's useful for quick comparisons without a calculator.
+
+### How does compound interest differ from simple interest?
+
+Simple interest calculates returns only on the original principal: $10,000 at 7% earns $700/year, every year, regardless of how long it's invested ($7,000 after 10 years, $21,000 after 30 years). Compound interest calculates returns on the growing balance including prior interest: the same $10,000 at 7% earns $9,672 after 10 years and $66,123 after 30 years — more than three times the simple interest amount. The longer the time period, the wider the gap. See our [Simple Interest Calculator](/calculators/finance/simple-interest-calculator) for a direct comparison.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard time value of money (TVM) future value formulas as specified by the **CFA Institute Level I Curriculum** (Quantitative Methods: Time Value of Money). Historical S&P 500 return data references **NYU Stern School of Business** (Aswath Damodaran's annual returns dataset, 1928–2024). The Rule of 72 approximation is described in **Investopedia** and standard finance textbooks including Brealey, Myers & Allen's *Principles of Corporate Finance*. Inflation adjustment methodology follows the **Bureau of Labor Statistics (BLS)** CPI data. Tax treatment of investment accounts references **IRS Publication 550** (Investment Income and Expenses). The SEC compound interest education materials are from **Investor.gov**, the SEC's Office of Investor Education and Advocacy.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

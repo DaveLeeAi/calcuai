@@ -1,0 +1,280 @@
+{
+  "id": "probability-calculator",
+  "title": "Probability Calculator",
+  "slug": "probability-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "probability calculator",
+  "metaTitle": "Probability Calculator — Events, Combos & Perms",
+  "metaDescription": "Calculate probability of events, combinations (nCr), permutations (nPr), and conditional probability. Step-by-step results. Free.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        {
+          "value": "single",
+          "label": "Single Event"
+        },
+        {
+          "value": "complement",
+          "label": "Complement"
+        },
+        {
+          "value": "union",
+          "label": "Union (A or B)"
+        },
+        {
+          "value": "intersection-independent",
+          "label": "Intersection (Independent)"
+        },
+        {
+          "value": "conditional",
+          "label": "Conditional P(A|B)"
+        },
+        {
+          "value": "permutation",
+          "label": "Permutation (nPr)"
+        },
+        {
+          "value": "combination",
+          "label": "Combination (nCr)"
+        }
+      ]
+    },
+    {
+      "id": "favorableOutcomes",
+      "label": "Favorable Outcomes",
+      "type": "number",
+      "required": false,
+      "defaultValue": 4,
+      "min": 0,
+      "step": 1,
+      "placeholder": "e.g. 4",
+      "helpText": "Number of favorable outcomes"
+    },
+    {
+      "id": "totalOutcomes",
+      "label": "Total Outcomes",
+      "type": "number",
+      "required": false,
+      "defaultValue": 52,
+      "min": 1,
+      "step": 1,
+      "placeholder": "e.g. 52",
+      "helpText": "Total number of possible outcomes"
+    },
+    {
+      "id": "probabilityA",
+      "label": "P(A)",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "placeholder": "e.g. 0.5",
+      "helpText": "Probability of event A (0 to 1)"
+    },
+    {
+      "id": "probabilityB",
+      "label": "P(B)",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "placeholder": "e.g. 0.3",
+      "helpText": "Probability of event B (0 to 1)"
+    },
+    {
+      "id": "probabilityBoth",
+      "label": "P(A ∩ B)",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 1,
+      "step": 0.01,
+      "placeholder": "e.g. 0.1",
+      "helpText": "Probability that both A and B occur"
+    },
+    {
+      "id": "n",
+      "label": "n (total items)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 170,
+      "step": 1,
+      "placeholder": "e.g. 10",
+      "helpText": "Total number of items"
+    },
+    {
+      "id": "r",
+      "label": "r (items chosen)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3,
+      "min": 0,
+      "step": 1,
+      "placeholder": "e.g. 3",
+      "helpText": "Number of items chosen",
+      "maxDependency": "n"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Result",
+      "type": "single-value",
+      "format": "number",
+      "precision": 10,
+      "highlight": true
+    },
+    {
+      "id": "resultPercentage",
+      "label": "As Percentage",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 4
+    },
+    {
+      "id": "resultFraction",
+      "label": "As Fraction",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "expression",
+      "label": "Expression",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "probability",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "tabs": [
+    {
+      "id": "single",
+      "label": "Single Event",
+      "description": "P(A) = favorable / total outcomes",
+      "defaultInputOverrides": {
+        "mode": "single"
+      },
+      "visibleInputs": [
+        "favorableOutcomes",
+        "totalOutcomes"
+      ]
+    },
+    {
+      "id": "complement",
+      "label": "Complement",
+      "description": "P(A') = 1 - P(A)",
+      "defaultInputOverrides": {
+        "mode": "complement"
+      },
+      "visibleInputs": [
+        "probabilityA"
+      ]
+    },
+    {
+      "id": "union",
+      "label": "Union (A or B)",
+      "description": "P(A ∪ B) = P(A) + P(B) - P(A ∩ B)",
+      "defaultInputOverrides": {
+        "mode": "union"
+      },
+      "visibleInputs": [
+        "probabilityA",
+        "probabilityB",
+        "probabilityBoth"
+      ]
+    },
+    {
+      "id": "intersection-independent",
+      "label": "Intersection",
+      "description": "P(A ∩ B) = P(A) × P(B) for independent events",
+      "defaultInputOverrides": {
+        "mode": "intersection-independent"
+      },
+      "visibleInputs": [
+        "probabilityA",
+        "probabilityB"
+      ]
+    },
+    {
+      "id": "conditional",
+      "label": "Conditional",
+      "description": "P(A|B) = P(A ∩ B) / P(B)",
+      "defaultInputOverrides": {
+        "mode": "conditional"
+      },
+      "visibleInputs": [
+        "probabilityBoth",
+        "probabilityB"
+      ]
+    },
+    {
+      "id": "permutation",
+      "label": "Permutation (nPr)",
+      "description": "nPr = n! / (n-r)!",
+      "defaultInputOverrides": {
+        "mode": "permutation"
+      },
+      "visibleInputs": [
+        "n",
+        "r"
+      ]
+    },
+    {
+      "id": "combination",
+      "label": "Combination (nCr)",
+      "description": "nCr = n! / (r!(n-r)!)",
+      "defaultInputOverrides": {
+        "mode": "combination"
+      },
+      "visibleInputs": [
+        "n",
+        "r"
+      ]
+    }
+  ],
+  "relatedCalculators": [
+    "percentage-calculator",
+    "mean-median-mode-calculator",
+    "standard-deviation-calculator",
+    "ratio-calculator",
+    "logarithm-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Classical probability definitions; permutation and combination formulas from combinatorics (Blaise Pascal, Pierre de Fermat, 17th century)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "P(A) = favorable/total; P(A') = 1-P(A); P(A∪B) = P(A)+P(B)-P(A∩B); P(A∩B) = P(A)×P(B) (independent); P(A|B) = P(A∩B)/P(B); nPr = n!/(n-r)!; nCr = n!/(r!(n-r)!)",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "percentage-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

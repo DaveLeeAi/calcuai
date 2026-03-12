@@ -1,0 +1,183 @@
+{
+  "id": "weight-converter",
+  "title": "Weight Converter",
+  "slug": "weight-converter",
+  "category": "conversion",
+  "subcategory": "weight",
+  "primaryKeyword": "weight converter",
+  "metaTitle": "Weight Converter — Convert kg, lbs, oz, stone, grams & More",
+  "metaDescription": "Convert between all weight and mass units: kilograms, pounds, ounces, stone, grams, metric tons. Free instant weight converter with full conversion table.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Enter the weight value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "kilogram",
+      "options": [
+        {
+          "value": "kilogram",
+          "label": "Kilogram (kg)"
+        },
+        {
+          "value": "gram",
+          "label": "Gram (g)"
+        },
+        {
+          "value": "milligram",
+          "label": "Milligram (mg)"
+        },
+        {
+          "value": "metric-ton",
+          "label": "Metric Ton (t)"
+        },
+        {
+          "value": "pound",
+          "label": "Pound (lb)"
+        },
+        {
+          "value": "ounce",
+          "label": "Ounce (oz)"
+        },
+        {
+          "value": "stone",
+          "label": "Stone (st)"
+        },
+        {
+          "value": "short-ton",
+          "label": "US Ton (short ton)"
+        },
+        {
+          "value": "long-ton",
+          "label": "Imperial Ton (long ton)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "pound",
+      "options": [
+        {
+          "value": "kilogram",
+          "label": "Kilogram (kg)"
+        },
+        {
+          "value": "gram",
+          "label": "Gram (g)"
+        },
+        {
+          "value": "milligram",
+          "label": "Milligram (mg)"
+        },
+        {
+          "value": "metric-ton",
+          "label": "Metric Ton (t)"
+        },
+        {
+          "value": "pound",
+          "label": "Pound (lb)"
+        },
+        {
+          "value": "ounce",
+          "label": "Ounce (oz)"
+        },
+        {
+          "value": "stone",
+          "label": "Stone (st)"
+        },
+        {
+          "value": "short-ton",
+          "label": "US Ton (short ton)"
+        },
+        {
+          "value": "long-ton",
+          "label": "Imperial Ton (long ton)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Weight Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "length-converter",
+    "temperature-converter",
+    "volume-converter",
+    "area-converter",
+    "bmi-calculator",
+    "data-storage-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Institute of Standards and Technology (NIST) — Handbook 44, Specifications for Weighing Devices (2023 Edition)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Conversion via base unit (kilograms): result = value × (fromUnit.toBase / toUnit.toBase). NIST exact conversion factors.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

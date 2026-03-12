@@ -1,0 +1,133 @@
+{
+  "id": "one-rep-max-calculator",
+  "title": "One Rep Max Calculator",
+  "slug": "one-rep-max-calculator",
+  "category": "health",
+  "subcategory": "fitness",
+  "primaryKeyword": "one rep max calculator",
+  "metaTitle": "One Rep Max Calculator — Estimate Your 1RM",
+  "metaDescription": "Estimate your one-rep max (1RM) using Epley and Brzycki formulas. Enter the weight lifted and reps to see your predicted maximum across rep ranges.",
+  "inputs": [
+    {
+      "id": "weight",
+      "label": "Weight Lifted",
+      "type": "number",
+      "required": true,
+      "defaultValue": 135,
+      "min": 1,
+      "max": 1500,
+      "step": 5,
+      "helpText": "Weight lifted in your working set"
+    },
+    {
+      "id": "reps",
+      "label": "Reps Completed",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "helpText": "Number of reps completed with good form"
+    },
+    {
+      "id": "weightUnit",
+      "label": "Weight Unit",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "lbs",
+      "options": [
+        {
+          "value": "lbs",
+          "label": "Pounds (lbs)"
+        },
+        {
+          "value": "kg",
+          "label": "Kilograms (kg)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "epley1RM",
+      "label": "Epley 1RM",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "brzycki1RM",
+      "label": "Brzycki 1RM",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "average1RM",
+      "label": "Average 1RM",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "percentageChart",
+      "label": "Training Percentages",
+      "type": "table",
+      "tableConfig": {
+        "columns": [
+          {
+            "key": "percentage",
+            "label": "% of 1RM"
+          },
+          {
+            "key": "weight",
+            "label": "Weight"
+          },
+          {
+            "key": "estimatedReps",
+            "label": "Est. Reps"
+          }
+        ]
+      }
+    }
+  ],
+  "formula": "one-rep-max",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "heart-rate-zone-calculator",
+    "calorie-calculator",
+    "bmr-calculator",
+    "pace-calculator",
+    "lean-body-mass-calculator",
+    "body-fat-calculator",
+    "macro-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Epley B (1985) and Brzycki M (1993)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Epley B (1985). Poundage Chart. Brzycki M (1993). Strength testing: predicting a one-rep max from repetitions to fatigue. JOHPERD 64(1), 88-90.",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 91,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

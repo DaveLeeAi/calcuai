@@ -1,0 +1,219 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 12-volt car battery driving 2 amps through a circuit has a resistance of 6 ohms and dissipates 24 watts of power. This Ohm's Law calculator solves for any two unknown electrical quantities — voltage (V), current (I), resistance (R), or power (P) — when you provide the other two. Enter any pair of values and get instant results with full formula breakdowns for DC circuit analysis, electronics design, and electrical engineering coursework.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Ohm's Law defines the fundamental relationship between voltage, current, and resistance in any linear DC circuit. When you add the power equation (Joule's Law), the four quantities become fully interdependent — knowing any two lets you derive the other two. This calculator performs that derivation instantly across all six possible input combinations.
+
+The results tell you the electrical conditions at a specific point in a circuit. A voltage of 120 V across a resistance of 9.6 ohms means 12.5 amps of current are flowing and the load is consuming 1,500 watts — enough to identify whether a standard 15-amp household breaker can handle it (it cannot; you need a 20-amp circuit). A 5 V supply driving 20 milliamps through an LED tells you the current-limiting resistor must be 250 ohms and the LED dissipates only 0.1 watts of heat.
+
+These relationships apply to any resistive DC circuit element: light bulbs, heaters, resistors, motors at stall, and wire segments. For a broader look at energy relationships in physics, try the [Energy Calculator](/calculators/science/energy-calculator) to convert between joules, calories, and kilowatt-hours.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the two values you know.** You need exactly two of the four quantities: Voltage (V), Current (A), Resistance (Ω), or Power (W). Check your circuit schematic, datasheet, or multimeter readings.
+2. **Enter the first known value** in its corresponding field. Use the unit shown next to each input — volts for voltage, amps for current, ohms for resistance, watts for power. For milliamp values, convert first: 20 mA = 0.02 A.
+3. **Enter the second known value** in its corresponding field. Leave the other two fields empty.
+4. **Read the results.** The calculator solves for the two unknown values and displays all four quantities together. It also shows how each formula relationship (V = IR, P = IV, P = I²R, P = V²/R) produces the same consistent result.
+5. **Verify with a cross-check.** If you know a third value, compare it against the calculated result to confirm your input values are correct. A mismatch usually indicates a measurement error or a non-linear circuit element.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Ohm's Law
+
+$$V = I \times R$$
+
+Where:
+
+- **V** = voltage across the element, in volts (V)
+- **I** = current through the element, in amperes (A)
+- **R** = resistance of the element, in ohms (Ω)
+
+Ohm's Law states that voltage is directly proportional to current for a constant resistance. Doubling the voltage across a fixed resistor doubles the current through it. This holds for all ohmic (linear) materials — metals, carbon resistors, and most wire at constant temperature.
+
+### Power Equations (Joule's Law)
+
+$$P = I \times V$$
+
+$$P = I^2 \times R$$
+
+$$P = \frac{V^2}{R}$$
+
+Where:
+
+- **P** = power dissipated by the element, in watts (W)
+
+These three forms are algebraically equivalent. The first (P = IV) is the definition of electrical power. The second (P = I²R) is found by substituting V = IR into P = IV, and is most useful when you know the current and resistance. The third (P = V²/R) is found by substituting I = V/R into P = IV, and is most useful when you know the voltage and resistance.
+
+### Solving for Any Unknown
+
+From these equations, any unknown can be isolated:
+
+$$I = \frac{V}{R} \qquad R = \frac{V}{I} \qquad V = \sqrt{R \times P} \qquad I = \sqrt{\frac{P}{R}}$$
+
+**Source:** Ohm's Law was published by Georg Simon Ohm in *Die galvanische Kette, mathematisch bearbeitet* (1827). The power relationships derive from James Prescott Joule's work on electrical heating (1841). These laws are foundational in electrical engineering and are documented in every standard physics textbook, including Halliday, Resnick & Walker, *Fundamentals of Physics* (11th Edition, Wiley, 2018), Chapter 26.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Choosing a Resistor for an LED Circuit
+
+You want to power a standard red LED (forward voltage 2 V, typical current 20 mA) from a 5 V supply. What resistance do you need, and how much power will the resistor dissipate?
+
+**Step-by-step:**
+
+1. The resistor must drop the excess voltage: V_resistor = 5 V − 2 V = **3 V**
+2. The LED needs 20 mA = **0.02 A**
+3. Apply Ohm's Law: R = V / I = 3 / 0.02 = **150 Ω**
+4. Calculate power: P = V × I = 3 × 0.02 = **0.06 W (60 mW)**
+
+**Result:** Use a 150 Ω resistor. It dissipates 60 milliwatts, well within the rating of a standard 1/4-watt (250 mW) resistor.
+
+**Practical interpretation:** In this calculator, enter Voltage = 3 and Current = 0.02. The calculator returns Resistance = 150 Ω and Power = 0.06 W. Always size the resistor's power rating to at least twice the calculated dissipation for reliability — so a 1/8 W resistor (125 mW) would also work here, but a 1/4 W part gives better margin.
+
+### Example 2: How Much Current Does a 1,500 W Space Heater Draw?
+
+Your portable space heater is rated at 1,500 watts and plugs into a standard 120 V US outlet. What current does it draw, and what is its internal resistance?
+
+**Step-by-step:**
+
+1. Known values: V = **120 V**, P = **1,500 W**
+2. Solve for current: I = P / V = 1,500 / 120 = **12.5 A**
+3. Solve for resistance: R = V² / P = 120² / 1,500 = 14,400 / 1,500 = **9.6 Ω**
+
+**Result:** The heater draws **12.5 amps** through a **9.6 ohm** heating element.
+
+**Practical interpretation:** A standard US household circuit is rated at 15 amps with a 14-gauge wire and breaker. A 12.5 A continuous load exceeds the 80% continuous load rule (15 A × 0.80 = 12 A), which means this heater should be on a dedicated 20-amp circuit. This is why space heaters frequently trip breakers when other devices share the circuit.
+
+### Example 3: Power Dissipation in a Car Battery Circuit
+
+A 12 V car battery is connected to a 6 Ω load (such as a set of fog lights). How much current flows, and how much power is consumed?
+
+**Step-by-step:**
+
+1. Known values: V = **12 V**, R = **6 Ω**
+2. Solve for current: I = V / R = 12 / 6 = **2 A**
+3. Solve for power: P = V × I = 12 × 2 = **24 W**
+4. Cross-check with P = V² / R: 144 / 6 = **24 W** ✓
+5. Cross-check with P = I² × R: 4 × 6 = **24 W** ✓
+
+**Result:** The circuit draws **2 amps** and consumes **24 watts**.
+
+**Practical interpretation:** At 24 watts and 12 volts, a typical 60 Ah car battery could theoretically sustain this load for 30 hours (60 Ah / 2 A) before full discharge. In practice, you should not discharge a lead-acid battery below 50%, giving roughly 15 hours of runtime with the engine off.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Temperature changes resistance.** Ohm's Law assumes constant resistance, but real conductors change resistance with temperature. A tungsten filament light bulb has roughly 10× higher resistance when hot (operating) versus cold (off). A 100 W bulb at 120 V has a hot resistance of 144 Ω (drawing 0.83 A), but its cold resistance is only about 14 Ω — which is why the inrush current spike when you flip a light switch can be 8–10 amps for a fraction of a second.
+
+**AC circuits require impedance, not just resistance.** Ohm's Law in its basic form (V = IR) applies strictly to DC circuits and purely resistive AC loads. When inductors or capacitors are present, you must use impedance (Z) instead of resistance: V = IZ. A motor running on 120 V AC may have a wire resistance of only 2 Ω but an impedance of 24 Ω at 60 Hz due to its inductive component. Using R instead of Z would overestimate the current by a factor of 12.
+
+**Wire resistance adds to total circuit resistance.** Long wire runs contribute their own resistance, reducing the voltage available at the load. Standard 14-gauge copper wire has a resistance of approximately 2.525 Ω per 1,000 feet. For a 100-foot run (200 feet round trip), that adds 0.505 Ω to the circuit — enough to drop 6.3 V in a 12.5 A heater circuit, reducing the actual power delivered by about 10%.
+
+**Power ratings are maximum, not nominal.** A "1/4 watt resistor" can handle up to 0.25 W of continuous heat dissipation before risking damage. Standard engineering practice is to derate to 50–60% of the rated power for reliability. If your calculation shows 0.2 W dissipation, use a 1/2 W resistor, not a 1/4 W.
+
+**Non-ohmic devices do not follow V = IR linearly.** Diodes, transistors, LEDs, and gas-discharge tubes have non-linear voltage-current characteristics. An LED at its rated forward voltage of 2 V may draw 20 mA, but at 3 V it may draw 200 mA and burn out. For these components, use Ohm's Law only for the resistor portion of the circuit, not the non-linear device itself.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Using milliamps instead of amps.** The formulas require current in amperes. A common error is entering "20" when the current is 20 mA (0.02 A), which produces results off by a factor of 1,000. Always convert: 1 mA = 0.001 A, 1 μA = 0.000001 A. A 20 mA LED with 3 V across its resistor needs R = 3 / 0.02 = 150 Ω — not R = 3 / 20 = 0.15 Ω.
+
+**Applying Ohm's Law to non-ohmic components.** LEDs, diodes, and transistors do not have a fixed resistance. Their voltage-current relationship is exponential, not linear. Use Ohm's Law to size the resistor in series with these components, but never apply V = IR directly to the LED or diode itself.
+
+**Forgetting that power scales with the square of voltage or current.** Doubling the voltage across a fixed resistance quadruples the power (P = V²/R). A 10% overvoltage on a 120 V heater (132 V instead of 120 V) increases power by 21%, not 10%. This is why voltage regulation matters in power-sensitive circuits.
+
+**Confusing open-circuit voltage with loaded voltage.** A battery's terminal voltage drops under load due to its internal resistance. A 12 V car battery might measure 12.6 V with no load but only 11.8 V while cranking the starter motor at 200 A. Always measure voltage at the load, not at the unloaded source.
+
+**Mixing AC and DC values without conversion.** AC voltages are typically given as RMS (root mean square) values. A 120 V AC outlet has a peak voltage of 170 V (120 × √2). Using peak voltage in Ohm's Law calculations when RMS is appropriate will overestimate current and power by 41%.
+
+{/* Section 12: Comparison Table */}
+## DC Series vs. Parallel Resistor Circuits
+
+The way resistors are connected changes how Ohm's Law is applied. Here is a side-by-side comparison for two 100 Ω resistors on a 12 V supply:
+
+| | **Series Circuit** | **Parallel Circuit** |
+|---|---|---|
+| **Total resistance** | R_total = R1 + R2 = 200 Ω | R_total = (R1 × R2) / (R1 + R2) = 50 Ω |
+| **Total current** | I = V / R_total = 12 / 200 = 0.06 A | I = V / R_total = 12 / 50 = 0.24 A |
+| **Total power** | P = V² / R_total = 144 / 200 = 0.72 W | P = V² / R_total = 144 / 50 = 2.88 W |
+| **Voltage across each R** | V1 = V2 = 6 V (voltage divides equally) | V1 = V2 = 12 V (same as source) |
+| **Current through each R** | I1 = I2 = 0.06 A (same current throughout) | I1 = I2 = 0.12 A (current divides equally) |
+| **Power per resistor** | P1 = P2 = 0.36 W | P1 = P2 = 1.44 W |
+| **If one resistor fails (open)** | Circuit breaks — no current flows | Other resistor continues at full current |
+| **Common use** | Voltage dividers, current limiting | Increasing current capacity, redundancy |
+
+**Key insight:** The parallel circuit draws 4× the power of the series circuit from the same 12 V source because total resistance is 4× lower. This is why adding more loads in parallel (like plugging more devices into a power strip) increases total current draw — each new load provides an additional path for current.
+
+## Where Ohm's Law Stops Working
+
+Ohm's Law is reliable for resistors, heaters, and wire, but several common circuit elements violate V = IR in ways that produce dangerous miscalculations if you apply the formula blindly.
+
+**LEDs and diodes.** A red LED has a forward voltage of approximately 2 V at 20 mA. Computing its "resistance" as R = 2/0.02 = 100 Ω and then predicting that 4 V will push 40 mA is wrong — the actual current at 4 V would be several hundred milliamps, instantly destroying the LED. Diodes have an exponential V-I curve, not a linear one. Use Ohm's Law only for the series resistor, never for the diode itself.
+
+**Incandescent bulbs at turn-on.** A 100 W bulb operating at 120 V has a hot filament resistance of 144 Ω (0.83 A steady-state). But tungsten's resistance at room temperature is roughly 1/10 of its operating value — about 14 Ω cold. At the moment you flip the switch, the inrush current spikes to 120/14 = 8.6 A, more than 10× the steady-state value. This is why light bulbs almost always burn out at turn-on, not during operation. Ohm's Law gives the right answer at both temperatures, but you have to know which resistance to use.
+
+**Superconductors.** Below their critical temperature, superconductors have literally zero resistance. V = IR predicts zero voltage drop at any current — which is true, until you exceed the critical current density, at which point resistance appears abruptly and the material can quench (suddenly heat to hundreds of degrees). Ohm's Law is vacuously true for superconductors but useless for predicting their behavior at the boundary.
+
+**Spark gaps and gas discharge tubes.** Air is an insulator at low voltages (effectively infinite resistance), but once the electric field exceeds approximately 30 kV/cm, air ionizes and becomes a conductor with very low resistance. A spark plug gaps from "no current at 10,000 V" to "full current at 10,001 V" — there is no gradual V = IR relationship. The transition is a discrete breakdown event, not a linear scaling.
+
+**Transistors in their active region.** A MOSFET in saturation acts as a current source, not a resistor. The current through it depends on gate voltage, not drain-source voltage. Applying V = IR to the drain-source terminals gives a "resistance" that changes with operating point — a meaningless number. Transistor behavior requires device equations (Shockley, Ebers-Moll, or square-law models), not Ohm's Law.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **DC circuits only.** This calculator assumes direct current. For AC circuits with capacitors or inductors, you need impedance calculations (Z = √(R² + (XL − XC)²)), which are beyond the scope of Ohm's Law in its basic form.
+- **Ohmic (linear) materials.** The calculator assumes constant resistance independent of applied voltage and current. Non-ohmic devices (semiconductors, gas tubes, superconductors) will produce inaccurate results.
+- **Ideal components with zero source impedance.** The calculator does not account for battery internal resistance, wire resistance, or contact resistance. In real circuits, these reduce the voltage available at the load.
+- **Steady-state conditions.** Results apply to the continuous operating condition, not to transient events like switch-on inrush current, which can be 5–15× higher than steady-state current.
+- **Single load analysis.** The calculator solves for one element at a time. For complex multi-resistor networks (series, parallel, or series-parallel combinations), calculate the equivalent resistance first, then enter it here.
+- **Positive values only.** Voltage polarity and current direction conventions (conventional vs. electron flow) are not modeled. All inputs must be positive non-zero values.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is Ohm's Law in simple terms?
+
+Ohm's Law states that the voltage across a conductor equals the current through it multiplied by its resistance: V = I × R. In practical terms, it means that pushing more voltage across a fixed resistance forces more current to flow, and increasing resistance while holding voltage constant reduces current. Georg Ohm published this relationship in 1827 after measuring current through wires of varying lengths and thicknesses. It is the single most fundamental equation in electrical circuit analysis.
+
+### How do I calculate watts from volts and amps?
+
+Multiply volts by amps: P = V × I. A device running on 120 volts and drawing 10 amps consumes 120 × 10 = 1,200 watts. This formula is the electrical power equation, sometimes called Joule's Law. It works for any DC circuit and for purely resistive AC loads when using RMS values. For a quick reference: a US household outlet at 120 V on a 15-amp circuit can deliver a maximum of 1,800 watts, though the continuous load should not exceed 1,440 watts (80% of breaker rating per the National Electrical Code).
+
+### What is the difference between Ohm's Law and Joule's Law?
+
+Ohm's Law (V = IR) defines the relationship between voltage, current, and resistance. Joule's Law (P = IV) defines electrical power as the product of voltage and current. The two laws are complementary: Ohm's Law tells you how much current flows for a given voltage and resistance, while Joule's Law tells you how much energy per second (power) that current delivers. Combining them produces the derived formulas P = I²R and P = V²/R, which let you calculate power without knowing all three of the original Ohm's Law variables.
+
+### Does Ohm's Law apply to AC circuits?
+
+Ohm's Law applies directly to AC circuits with purely resistive loads (heaters, incandescent bulbs, toasters). For circuits containing capacitors or inductors, the concept extends to V = IZ, where Z is impedance — a complex quantity combining resistance, capacitive reactance, and inductive reactance. In a purely resistive 120 V AC circuit drawing 5 amps, R = 24 Ω and P = 600 W, exactly as with DC. But a 120 V AC motor with 24 Ω of impedance may have only 4 Ω of wire resistance — the remaining impedance comes from the magnetic field interactions in the motor windings.
+
+### Why does my measured current not match the calculated value?
+
+The most common cause is internal resistance in the power source, which reduces the terminal voltage under load. A 12 V battery with 0.1 Ω of internal resistance delivering 10 A actually provides only 11 V at its terminals (12 − 10 × 0.1). Other causes include wire resistance in long cable runs, contact resistance at connectors, temperature-dependent resistance changes in the load, and measurement error in the multimeter itself. If your measured current is significantly lower than calculated, measure the actual voltage directly across the load — it is almost certainly lower than the source's no-load voltage.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies Ohm's law (V = IR) and the power equation (P = IV) to solve for voltage, current, resistance, or power from any two known values. The twelve possible combinations are derived algebraically from these two base formulas. The calculator validates that resistance and power values are positive and flags short-circuit conditions when resistance approaches zero.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

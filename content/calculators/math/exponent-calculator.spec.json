@@ -1,0 +1,149 @@
+{
+  "id": "exponent-calculator",
+  "title": "Exponent Calculator",
+  "slug": "exponent-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "exponent calculator",
+  "metaTitle": "Exponent Calculator — Powers & Roots Made Easy",
+  "metaDescription": "Calculate powers and nth roots instantly. Supports negative exponents, fractional powers, and special cases like 0^0. Step-by-step solutions. Free, no signup.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "power",
+      "options": [
+        {
+          "value": "power",
+          "label": "Power (base^exponent)"
+        },
+        {
+          "value": "root",
+          "label": "Root (ⁿ√value)"
+        }
+      ],
+      "helpText": "Choose between raising to a power or taking a root"
+    },
+    {
+      "id": "base",
+      "label": "Base",
+      "type": "number",
+      "required": false,
+      "defaultValue": 2,
+      "step": 0.01,
+      "placeholder": "e.g. 2",
+      "helpText": "The base number to raise to a power"
+    },
+    {
+      "id": "exponent",
+      "label": "Exponent",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "step": 0.01,
+      "placeholder": "e.g. 10",
+      "helpText": "The power to raise the base to"
+    },
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": false,
+      "defaultValue": 27,
+      "step": 0.01,
+      "placeholder": "e.g. 27",
+      "helpText": "The value to take the root of"
+    },
+    {
+      "id": "rootIndex",
+      "label": "Root Index (n)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3,
+      "step": 1,
+      "min": 1,
+      "placeholder": "e.g. 3",
+      "helpText": "The degree of the root (2 = square root, 3 = cube root, etc.)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Result",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6,
+      "highlight": true
+    },
+    {
+      "id": "intermediateSteps",
+      "label": "Step-by-Step Solution",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "power",
+      "label": "Power",
+      "description": "Calculate base raised to an exponent",
+      "defaultInputOverrides": {
+        "mode": "power"
+      },
+      "visibleInputs": [
+        "base",
+        "exponent"
+      ]
+    },
+    {
+      "id": "root",
+      "label": "Root",
+      "description": "Calculate the nth root of a value",
+      "defaultInputOverrides": {
+        "mode": "root"
+      },
+      "visibleInputs": [
+        "value",
+        "rootIndex"
+      ]
+    }
+  ],
+  "formula": "exponents",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "percentage-calculator",
+    "fraction-calculator",
+    "logarithm-calculator",
+    "standard-deviation-calculator",
+    "ratio-calculator",
+    "circle-calculator",
+    "gcf-lcm-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard exponentiation rules from algebra (Stewart's Calculus; Blitzer's Precalculus)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Power: result = base^exponent; Root: result = value^(1/n); Laws of exponents from standard algebra",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 67,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

@@ -1,0 +1,178 @@
+{
+  "id": "gpa-calculator",
+  "title": "GPA Calculator",
+  "slug": "gpa-calculator",
+  "category": "everyday",
+  "subcategory": "education",
+  "primaryKeyword": "gpa calculator",
+  "metaTitle": "GPA Calculator — Calculate Your Grade Point Average",
+  "metaDescription": "Calculate your GPA by entering courses, credit hours, and letter grades. Includes college cumulative GPA calculator. Free, instant results.",
+  "inputs": [
+    {
+      "id": "courses",
+      "label": "Courses",
+      "type": "number",
+      "required": true,
+      "helpText": "Add your courses with credit hours and grades. This field represents the dynamic course list."
+    },
+    {
+      "id": "gradeScale",
+      "label": "Grade Scale",
+      "type": "select",
+      "required": true,
+      "defaultValue": "4.0",
+      "options": [
+        {
+          "value": "4.0",
+          "label": "4.0 Scale (Standard)"
+        },
+        {
+          "value": "4.3",
+          "label": "4.3 Scale (Plus/Minus)"
+        }
+      ],
+      "helpText": "Most US colleges use the 4.0 scale"
+    },
+    {
+      "id": "currentGPA",
+      "label": "Current Cumulative GPA",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 4.3,
+      "step": 0.01,
+      "helpText": "Enter your existing GPA to calculate new cumulative (College tab)"
+    },
+    {
+      "id": "currentCredits",
+      "label": "Credits Completed",
+      "type": "number",
+      "required": false,
+      "min": 0,
+      "max": 300,
+      "step": 1,
+      "helpText": "Total credit hours already completed (College tab)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "semesterGPA",
+      "label": "Semester GPA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "totalCredits",
+      "label": "Total Credits",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalGradePoints",
+      "label": "Total Grade Points",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "cumulativeGPA",
+      "label": "Cumulative GPA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "courseBreakdown",
+      "label": "Course Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "course",
+          "label": "Course"
+        },
+        {
+          "key": "credits",
+          "label": "Credits"
+        },
+        {
+          "key": "grade",
+          "label": "Grade"
+        },
+        {
+          "key": "gradePoints",
+          "label": "Grade Points",
+          "format": "number"
+        },
+        {
+          "key": "qualityPoints",
+          "label": "Quality Points",
+          "format": "number"
+        }
+      ]
+    }
+  ],
+  "formula": "gpa",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "tabs": [
+    {
+      "id": "semester",
+      "label": "Semester GPA",
+      "description": "Calculate GPA for a single semester",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "courses",
+        "gradeScale"
+      ]
+    },
+    {
+      "id": "college",
+      "label": "College Cumulative",
+      "description": "Calculate cumulative GPA including previous semesters",
+      "defaultInputOverrides": {},
+      "visibleInputs": [
+        "courses",
+        "gradeScale",
+        "currentGPA",
+        "currentCredits"
+      ]
+    }
+  ],
+  "relatedCalculators": [
+    "grade-calculator",
+    "final-grade-calculator",
+    "percentage-calculator",
+    "fraction-calculator",
+    "standard-deviation-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "American Association of Collegiate Registrars and Admissions Officers (AACRAO)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "GPA = Σ(credit hours × grade points) / Σ(credit hours), per AACRAO standards",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "grade-calculator"
+  ],
+  "qualityScore": 98,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": "semester"
+}

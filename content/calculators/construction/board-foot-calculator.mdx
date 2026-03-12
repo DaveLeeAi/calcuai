@@ -1,0 +1,127 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Twenty-four pieces of 2x6x8 lumber contain 192 board feet — at \$5.50 per board foot for construction-grade Douglas fir, that totals \$1,056 in material cost. A board foot is the standard pricing unit for hardwood and dimensional lumber in the United States, equaling a volume of 144 cubic inches (12 inches long × 12 inches wide × 1 inch thick). Enter your lumber dimensions and quantity below to calculate total board feet and estimated cost.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Lumber in the United States is priced per board foot at sawmills, hardwood dealers, and many lumberyards. Understanding board footage lets you compare prices across different lumber sizes, calculate project costs accurately, and verify invoices from suppliers. A board foot is a volumetric measure — one square foot of wood that is one inch thick — not a linear measure, which is why a single 2x12x10 board (20 board feet) costs more than a single 2x4x10 board (6.67 board feet) even though both are the same length.
+
+This calculator uses nominal dimensions (the size printed on the label, such as "2x6") rather than actual dimensions (the milled size, such as 1.5 × 5.5 inches) because the lumber industry prices board footage on nominal sizes. This is an important distinction: if you calculate board feet using actual dimensions, your result will be roughly 20–30% lower than what the supplier charges. The calculator also handles total project cost by multiplying board feet by your price per board foot, so you can compare quotes from different suppliers instantly.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the nominal thickness** — this is the first number in the lumber label. A "2x6" has a nominal thickness of 2 inches. Common values are 1 inch (for boards), 2 inches (for dimensional lumber), and 4 inches (for timbers and posts).
+
+2. **Enter the nominal width** — this is the second number. A "2x6" has a nominal width of 6 inches. Common widths are 4, 6, 8, 10, and 12 inches.
+
+3. **Enter the board length** — measured in feet. Standard lumber lengths are 8, 10, 12, 14, and 16 feet. Enter the actual length you are purchasing.
+
+4. **Enter the quantity** — the number of identical boards. If you are buying 24 pieces of 2x6x8 for deck framing, enter 24.
+
+5. **Enter the price per board foot** — check your supplier's current pricing. Softwood construction lumber (pine, fir, spruce) runs \$3–\$7/bf. Hardwoods range from \$5/bf (poplar) to \$15+/bf (walnut, cherry).
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The board foot formula converts nominal lumber dimensions into a standard volumetric pricing unit:
+
+$$\text{Board Feet} = \frac{T \times W \times L}{12}$$
+
+$$\text{Total Board Feet} = \text{Board Feet per piece} \times Q$$
+
+$$\text{Total Cost} = \text{Total Board Feet} \times P$$
+
+Where:
+
+- **T** = nominal thickness (inches)
+- **W** = nominal width (inches)
+- **L** = length (feet)
+- **12** = conversion constant (12 board-inches per board-foot)
+- **Q** = quantity of identical boards
+- **P** = price per board foot (dollars)
+
+One board foot equals **144 cubic inches** of wood measured at nominal dimensions: 12 inches × 12 inches × 1 inch. The formula divides by 12 (not 144) because the length is already in feet, effectively handling one dimension of the conversion.
+
+**Nominal vs. actual dimensions:** The lumber industry uses nominal sizes for pricing. A nominal "2x6" actually measures 1.5 × 5.5 inches after milling. Board foot calculations always use the larger nominal dimensions, which is why a 2x6x8 is priced as 8 board feet even though its actual volume is smaller.
+
+**Source:** Board foot measurement standards per the **American Lumber Standard Committee (ALSC)**, PS 20-20 "American Softwood Lumber Standard." Nominal-to-actual dimension conversions follow **National Institute of Standards and Technology (NIST)** Voluntary Product Standard PS 20. Pricing conventions reference the **National Hardwood Lumber Association (NHLA)** grading and measurement rules.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Deck Framing — 24 Pieces of 2x6x8
+
+A homeowner is purchasing Douglas fir joists for a deck frame. The project requires 24 boards, each a nominal 2x6 at 8 feet long, priced at \$5.50 per board foot.
+
+**Inputs:**
+- Thickness: 2 in (nominal)
+- Width: 6 in (nominal)
+- Length: 8 ft
+- Quantity: 24
+- Price: \$5.50/bf
+
+**Step-by-step:**
+
+1. Board feet per piece: (2 × 6 × 8) / 12 = 96 / 12 = **8.0 bf**
+2. Total board feet: 8.0 × 24 = **192 bf**
+3. Total cost: 192 × $5.50 = **$1,056.00**
+
+**Interpretation:** At 192 board feet, this deck framing package costs \$1,056 in lumber alone. For comparison, buying the same boards by the piece at a big-box retailer (typically \$8–\$12 per board for a 2x6x8) would run \$192–\$288 — significantly less because retail pricing on dimensional softwood already includes a lower effective board-foot rate. Board-foot pricing is most relevant when purchasing from lumberyards and hardwood dealers, where per-piece pricing is less common.
+
+### Example 2: Shelving Project — 8 Pieces of 1x12x6 Red Oak
+
+A woodworker is buying red oak boards for custom shelves. Eight boards at 1x12, 6 feet long, priced at \$9.75 per board foot from a hardwood dealer.
+
+**Inputs:**
+- Thickness: 1 in (nominal)
+- Width: 12 in (nominal)
+- Length: 6 ft
+- Quantity: 8
+- Price: \$9.75/bf
+
+**Step-by-step:**
+
+1. Board feet per piece: (1 × 12 × 6) / 12 = 72 / 12 = **6.0 bf**
+2. Total board feet: 6.0 × 8 = **48 bf**
+3. Total cost: 48 × $9.75 = **$468.00**
+
+**Interpretation:** Eight red oak shelf boards total 48 board feet at \$468. This is where the board foot calculator proves essential — a 1x12x6 and a 2x6x6 both cost \$9.75 per board foot, but the 1x12 is 6.0 board feet per piece while the 2x6 is also 6.0 board feet per piece. They contain the same board footage because 1 × 12 = 2 × 6. Understanding this equivalence helps you evaluate whether wider, thinner stock or narrower, thicker stock offers better value for your application.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Lumber species drives price per board foot more than any other factor.** Construction softwoods (SPF — spruce, pine, fir) range from \$3–\$7 per board foot. Common domestic hardwoods like red oak and maple run \$6–\$12/bf. Premium species command higher prices: walnut at \$10–\$18/bf, cherry at \$8–\$14/bf, and exotic imports like teak or mahogany at \$15–\$30/bf. The same project in poplar versus walnut can differ by 300% in lumber cost alone.
+
+**Lumber grade affects both price and usable yield.** FAS (First and Seconds) grade hardwood — the highest quality with minimal defects — costs 20–40% more per board foot than #1 Common grade. However, lower grades contain knots, splits, and sapwood that must be cut around, reducing usable yield by 15–30%. A lower per-board-foot price does not always mean a lower final project cost after accounting for waste from defects.
+
+**Nominal dimensions overstate actual wood volume by 20–35%.** A nominal 2x4 actually measures 1.5 × 3.5 inches — only 68% of its nominal cross-section. This matters for design purposes (a "2x4" only provides 1.5 inches of bearing surface) but does not affect board-foot pricing, which always uses nominal dimensions. Always design structural elements using actual dimensions, not nominal.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses **nominal dimensions** for board-foot calculations, matching industry pricing convention. Actual milled dimensions are smaller (a nominal 2x4 is 1.5 × 3.5 inches actual).
+- Assumes **standard American lumber sizing**. Rough-sawn lumber (common at sawmills) is closer to true nominal size and may yield slightly more actual wood per board foot.
+- **Does not include waste factor.** Woodworking projects typically require 15–20% extra lumber to account for defects, grain matching, and cut-off waste. Add this manually to the calculated board footage before ordering.
+- **Price per board foot varies** by species, grade, region, supplier, and order volume. The calculator uses a single user-entered price — get current quotes from your specific supplier for accurate cost estimates.
+- Board foot pricing is standard for **hardwoods and specialty softwoods**. Big-box retailers often sell dimensional construction lumber by the piece or by the linear foot rather than by the board foot, in which case this calculator is useful for cost comparison but not for matching the retailer's price format.
+- Plywood, MDF, and sheet goods are **not measured in board feet** — they are priced per sheet (4×8 ft) or per square foot.
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+The board foot formula (thickness × width × length ÷ 12) is the standard lumber measurement unit defined by the **American Lumber Standard Committee (ALSC)** in Voluntary Product Standard **PS 20-20**, published by the **National Institute of Standards and Technology (NIST)**. Nominal-to-actual dimension conversion tables follow PS 20 specifications. Hardwood grading and measurement conventions reference the **National Hardwood Lumber Association (NHLA)** Rules for the Measurement and Inspection of Hardwood and Cypress. Species pricing data reflects 2025–2026 market averages from **Hardwood Market Report** and **Random Lengths** publications.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

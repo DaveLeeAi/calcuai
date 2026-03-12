@@ -1,0 +1,244 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate your monthly loan payment and total interest for any loan type — personal, auto, student, or other. A \$25,000 loan at 6.5% APR for 60 months requires a monthly payment of \$489.15, with \$4,349 paid in total interest. Adding just \$50/month in extra payments cuts 6 months off your term and saves \$481 in interest. Enter your numbers below to see your exact payment, full amortization schedule, and early payoff savings.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+Your monthly loan payment determines how much of your income is locked into debt service each month. This calculator breaks that payment into its two core components — principal and interest — and shows you exactly how they shift over the life of your loan through a full amortization schedule.
+
+The **amortization schedule** reveals the hidden cost structure of any loan. On a \$25,000 personal loan at 6.5% for 5 years, your first payment sends \$135.42 to interest and \$353.73 to principal. By month 30, the split is roughly equal. By the final months, nearly the entire payment goes to principal. This front-loading of interest is why early extra payments have such outsized impact — every dollar of extra principal in year one saves you from paying interest on that dollar for the remaining 4 years.
+
+The **extra payment analysis** is where this calculator delivers its most actionable insight. Adding \$100/month to a \$25,000 loan at 6.5% eliminates 11 months from your repayment timeline and saves \$865 in interest. The calculator shows both scenarios side by side — standard payoff versus accelerated payoff — so you can make an informed decision about whether to allocate extra cash toward debt reduction or other financial goals.
+
+The **payment breakdown pie chart** gives you an instant visual of how much of your total cost goes to the lender versus paying down your actual balance. On a 5-year loan at 6.5%, roughly 15% of your total payments are pure interest. On a 30-year loan at the same rate, interest can exceed the original loan amount. Use the [Mortgage Calculator](/calculators/finance/mortgage-calculator) if you are specifically evaluating a home purchase with taxes, insurance, and PMI.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Loan Amount** — this is the total amount you are borrowing (the principal). For an auto loan, enter the vehicle price minus your down payment and trade-in value. For a personal loan, enter the total disbursement. The default is \$25,000. Switch to the **Auto Loan** tab for pre-configured car loan defaults.
+
+2. **Set the Interest Rate (APR)** — enter your annual percentage rate. Personal loan rates typically range from 6% to 36% depending on credit score. Auto loan rates average 5% to 7% for new cars and 7% to 10% for used vehicles (2026 averages). The rate you enter should match the APR from your lender's offer, not the base rate.
+
+3. **Enter the Loan Term in Months** — this is the total repayment period. Common terms: 24 months (2 years), 36 months (3 years), 60 months (5 years), 72 months (6 years). Longer terms mean lower monthly payments but significantly more total interest. A 72-month auto loan costs \$907 more in interest than a 36-month loan on the same \$30,000 balance at 5.5%.
+
+4. **Add Extra Monthly Payments (Optional)** — enter any additional amount you plan to pay each month beyond the required minimum. This amount goes directly to principal, reducing your balance faster. Even \$25 or \$50 per month can save hundreds in interest and shorten your loan by several months. Leave at \$0 if you plan to make only minimum payments.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The standard fixed-rate loan payment is calculated using the annuity formula used by all U.S. consumer lenders:
+
+$$M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$$
+
+Where:
+
+- **M** = monthly payment amount (dollars)
+- **P** = loan principal — the total amount borrowed (dollars)
+- **r** = monthly interest rate — annual rate divided by 12 (decimal, so 6.5% becomes 0.065/12 = 0.005417)
+- **n** = total number of monthly payments (e.g., 60 for a 5-year loan)
+
+When the interest rate is 0%, the formula simplifies to:
+
+$$M = \frac{P}{n}$$
+
+**Extra payment impact:** When you make an extra payment of **E** dollars per month, the effective principal reduction each month becomes:
+
+$$\text{Principal Paid}_i = (M - B_i \times r) + E$$
+
+Where **B_i** is the remaining balance at month **i**. The extra payment shortens the total number of payments required, and the loan terminates when the remaining balance reaches zero — which will be fewer months than the original term **n**.
+
+**Source:** Standard loan amortization formula per the Consumer Financial Protection Bureau (CFPB). This formula is the basis for all Truth in Lending Act (TILA) Regulation Z disclosures required of U.S. consumer lenders.
+
+For a deeper explanation of how the loan amortization formula is derived, see our [methodology page on mortgage amortization](/methodology/mortgage-amortization).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Personal Loan — \$25,000 at 6.5% for 5 Years
+
+**Inputs:**
+- Loan Amount: \$25,000
+- Interest Rate: 6.5% APR
+- Loan Term: 60 months
+- Extra Payment: \$0
+
+**Step-by-step:**
+
+1. Monthly rate: 6.5% ÷ 12 = **0.005417**
+2. Number of payments: **60**
+3. Rate factor: (1 + 0.005417)^60 = **1.3829**
+4. Numerator: 0.005417 × 1.3829 = **0.007492**
+5. Denominator: 1.3829 − 1 = **0.3829**
+6. Monthly payment: $25,000 × (0.007492 ÷ 0.3829) = **$489.15/mo**
+7. Total paid: $489.15 × 60 = **$29,349.22**
+8. Total interest: \$29,349.22 − $25,000 = **$4,349.22**
+
+**Interpretation:** Over 5 years you pay \$4,349 in interest — roughly 17.4% of the original loan amount. Your first payment allocates \$135.42 to interest and \$353.73 to principal. By month 30, interest drops to \$72.19 per payment while principal rises to \$416.96. The total cost of borrowing \$25,000 is \$29,349.
+
+### Example 2: Auto Loan — \$35,000 at 5.5% for 6 Years
+
+**Inputs:**
+- Loan Amount: \$35,000 (vehicle price minus \$5,000 down payment)
+- Interest Rate: 5.5% APR
+- Loan Term: 72 months
+- Extra Payment: \$0
+
+**Step-by-step:**
+
+1. Monthly rate: 5.5% ÷ 12 = **0.004583**
+2. Number of payments: **72**
+3. Rate factor: (1 + 0.004583)^72 = **1.3894**
+4. Monthly payment: $35,000 × (0.004583 × 1.3894) ÷ (1.3894 − 1) = **$571.83/mo**
+5. Total paid: $571.83 × 72 = **$41,171.48**
+6. Total interest: \$41,171.48 − $35,000 = **$6,171.48**
+
+**Interpretation:** A 6-year auto loan at 5.5% adds \$6,171 in interest to the cost of the vehicle. That is 17.6% on top of the \$35,000 financed amount. If you can afford a 48-month term instead, the monthly payment rises to approximately \$813 but total interest drops to roughly \$4,000 — saving over \$2,100. Consider whether the \$241/month difference in cash flow justifies \$2,100 in extra cost.
+
+### Example 3: Extra Payment Impact — \$25,000 Loan with \$100/Month Extra
+
+**Inputs:**
+- Loan Amount: \$25,000
+- Interest Rate: 6.5% APR
+- Loan Term: 60 months
+- Extra Payment: \$100/month
+
+**Step-by-step:**
+
+1. Base monthly payment (same as Example 1): **\$489.15/mo**
+2. Total monthly outlay: \$489.15 + $100 = **$589.15/mo**
+3. Month 1 interest: $25,000 × 0.005417 = **$135.42**
+4. Month 1 principal (base): \$489.15 − $135.42 = **$353.73**
+5. Month 1 principal (with extra): \$353.73 + $100 = **$453.73**
+6. Month 1 ending balance: \$25,000 − $453.73 = **$24,546.27** (vs \$24,646.27 without extra)
+
+The \$100 extra payment each month accelerates principal reduction. The loan balance hits zero at **month 49** instead of month 60.
+
+**Results comparison:**
+
+| | Without Extra | With \$100 Extra |
+|---|---|---|
+| Monthly outlay | \$489.15 | \$589.15 |
+| Months to payoff | 60 | 49 |
+| Total interest | \$4,349 | \$3,484 |
+| Total cost | \$29,349 | \$28,484 |
+| **Interest saved** | — | **\$865** |
+| **Months saved** | — | **11 months** |
+
+**Interpretation:** An extra \$100/month saves \$865 in interest and eliminates 11 months of payments. That is a guaranteed return on the \$100/month commitment — equivalent to earning 6.5% on your money risk-free. Compare this to the [Compound Interest Calculator](/calculators/finance/compound-interest-calculator) to weigh debt payoff against investing.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Interest Rate** — This is the single most powerful variable in your loan cost. On a \$25,000 loan for 60 months, the difference between 5% and 10% APR is \$130/month and \$3,845 in total interest. For personal loans, borrowers with credit scores above 720 typically qualify for rates under 10%, while scores below 640 may see rates above 25%. Always get pre-qualified with at least three lenders before accepting any rate.
+
+**Loan Term** — Longer terms reduce monthly payments but dramatically increase total cost. A \$30,000 auto loan at 5.5% costs \$2,612 in interest over 36 months but \$5,290 over 72 months — more than double the interest for the same car. The sweet spot for most borrowers is the shortest term where the monthly payment stays below 10–15% of monthly take-home pay.
+
+**Extra Payments** — Even small extra payments create outsized savings because they eliminate future interest charges on the prepaid principal. On a \$25,000 loan at 6.5% for 60 months, \$50/month extra saves \$481 and cuts 6 months off the term. \$200/month extra saves \$1,476 and eliminates 18 months. There is no minimum — any amount above the required payment accelerates payoff.
+
+**Origination Fees** — Many personal loans charge origination fees of 1–8% of the loan amount, deducted from your disbursement. A \$25,000 loan with a 5% origination fee only deposits \$23,750 into your account, but you repay the full \$25,000 plus interest. Factor this into your true cost of borrowing by comparing the APR (which includes fees) rather than the base interest rate.
+
+**Prepayment Penalties** — Some lenders charge a fee if you pay off the loan early, which can offset the savings from extra payments. Federal credit unions are prohibited from charging prepayment penalties on any loan. Most online personal loan lenders also do not charge them. Always confirm before committing to an accelerated payoff strategy.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Focusing only on the monthly payment.** A \$30,000 auto loan at 5.5% costs \$906/month over 36 months or \$490/month over 72 months. The lower payment looks attractive, but the 72-month loan costs \$2,678 more in total interest. Always check the "Total Cost" in the loan summary — that is the real price you pay.
+
+**Ignoring total interest paid over the loan's life.** On longer-term loans, interest can approach or exceed the principal itself. A \$500,000 loan at 4% for 30 years generates \$359,348 in total interest — 72% of the original amount borrowed. Run the calculator with your actual numbers and let the total interest figure guide your term decision.
+
+**Not shopping rates across multiple lenders.** Interest rates for the same borrower profile can vary by 2–5 percentage points across lenders. On a \$25,000 personal loan for 5 years, the difference between 8% and 12% APR is \$57/month and \$3,395 in total interest. Get quotes from at least a bank, a credit union, and an online lender before accepting any offer.
+
+**Extending the loan term just to lower the monthly payment.** Choosing a 72-month auto loan over a 48-month term because you want a lower payment costs thousands in extra interest and means you may owe more than the car is worth (negative equity) for the first 2–3 years. If the monthly payment on a shorter term is unaffordable, the loan amount may be too high.
+
+**Not considering extra payments as a debt reduction strategy.** Many borrowers set up automatic minimum payments and never revisit the loan. Adding even \$25–\$50/month in extra payments can save hundreds of dollars and shorten the loan term by several months. Set up automatic extra payments through your lender's portal to make it effortless.
+
+{/* Section 12: Comparison Table */}
+## Auto Loan Term Comparison: 36 vs. 60 vs. 72 Months
+
+Choosing the right loan term is the most impactful financial decision after the interest rate itself. Here is a side-by-side comparison on a \$30,000 auto loan at 5.5% APR:
+
+| | **36 Months** | **60 Months** | **72 Months** |
+|---|---|---|---|
+| Monthly Payment | \$906 | \$573 | \$490 |
+| Total Interest | \$2,612 | \$4,382 | \$5,290 |
+| Total Cost | \$32,612 | \$34,382 | \$35,290 |
+| Interest vs. 36-Month | — | +\$1,770 | +\$2,678 |
+| Monthly Savings vs. 36-Month | — | \$333/mo less | \$416/mo less |
+
+**When to choose 36 months:** You can comfortably afford the higher payment and want to minimize interest cost. Best for borrowers who want to own the vehicle outright quickly and avoid negative equity. Total savings versus 72 months: \$2,678.
+
+**When to choose 60 months:** You want a balance between affordable payments and reasonable total cost. The 60-month term is the most popular auto loan term in the U.S., accounting for approximately 35% of all auto loans originated in 2025. You pay \$1,770 more in interest than 36 months but gain \$333/month in cash flow.
+
+**When to choose 72 months:** You need the lowest possible payment and understand the trade-off. The monthly savings of \$416 versus 36 months comes at a cost of \$2,678 in additional interest. You also face higher risk of negative equity — owing more than the car is worth — during the first 2–3 years of the loan.
+
+## Paying Down Debt Faster vs. Investing the Difference
+
+The extra payment feature shows you how much you save by accelerating loan payoff. But the real question is harder: should that $100/month go toward extra loan payments or into an investment account?
+
+**The math is straightforward.** If your loan rate is 6.5% and you can earn 8% investing (after taxes and fees), the $100/month theoretically grows faster in the market. Over 5 years, $100/month at 8% compounds to roughly $7,348, while the loan interest saved from extra payments is approximately $865. The investment "wins" by $6,483.
+
+**But the math lies about risk.** The loan payoff is a guaranteed 6.5% return — you eliminate that interest with certainty. The 8% investment return is an average that includes years of -20% and +30%. If you invest the $100/month and the market drops 30% in year 3, you're stuck with both the investment loss and the loan payment. Extra loan payments can never lose value.
+
+**The decision framework:**
+- Loan rate above 7%: almost always pay extra — guaranteed high return
+- Loan rate 4-7%: split the difference, especially if you have employer 401(k) matching
+- Loan rate below 4%: invest the surplus — the spread is wide enough to justify the risk
+- High-interest debt (credit cards, 20%+): always pay this down first, no exceptions
+
+This isn't a pure math problem — it's a risk tolerance decision. Use the extra payment feature here to see the guaranteed savings, then compare against the [Compound Interest Calculator](/calculators/finance/compound-interest-calculator) to model the investment alternative.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **fixed interest rate** for the entire loan term. Variable-rate loans will produce different monthly payments after the initial fixed period.
+- Assumes **equal monthly payments** made on the same date each month. Bi-weekly payment plans or irregular schedules will change the payoff timeline.
+- Does **not include origination fees**, processing fees, or other upfront loan costs. These reduce your actual disbursement but are included in the APR your lender quotes.
+- Does **not account for prepayment penalties**. If your loan has an early payoff fee, the actual savings from extra payments may be less than shown.
+- Does **not include payment holidays** or deferment periods. If your lender offers a skip-a-payment option, using it extends the term and increases total interest.
+- The extra payment feature assumes the **full extra amount is applied to principal every month** from the first payment. Some lenders require you to specify that extra payments go toward principal (not future payments).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How is a loan payment calculated?
+
+A fixed-rate loan payment is calculated using the standard amortization formula: M = P × [r(1+r)^n] / [(1+r)^n - 1], where P is the loan amount, r is the monthly interest rate (annual rate divided by 12), and n is the total number of monthly payments. For example, a \$25,000 loan at 6.5% APR for 60 months produces a monthly payment of \$489.15. The formula ensures that each equal payment covers that month's interest charge and a portion of principal, with the principal portion growing each month as the balance decreases.
+
+### How much is a \$25,000 loan payment per month?
+
+A \$25,000 loan at 6.5% APR for 60 months (5 years) has a monthly payment of \$489.15. Over the full term, you pay \$29,349 — meaning \$4,349 goes to interest. At a lower rate of 5%, the same loan costs \$471.78/month with \$3,307 in total interest. At a higher rate of 10%, the payment jumps to \$531.18/month with \$6,871 in total interest. The rate and term are the two variables that most significantly affect your monthly payment — use the calculator above to test different scenarios.
+
+### Should I pay off my loan early?
+
+Paying off a loan early saves money on interest and is almost always financially beneficial, provided your loan has no prepayment penalty. On a \$25,000 loan at 6.5% for 60 months, adding \$100/month in extra payments saves \$865 in interest and eliminates 11 months of payments. However, if you have higher-interest debt (such as credit cards at 20%+), direct your extra cash there first — the mathematical savings are greater. Also ensure you have an adequate emergency fund (3–6 months of expenses) before aggressively paying down low-rate debt.
+
+### What is a good interest rate for a personal loan?
+
+As of early 2026, personal loan rates range from approximately 6% to 36% depending primarily on credit score and lender. Borrowers with excellent credit (740+) typically qualify for rates of 6–10%. Good credit (670–739) usually gets 10–16%. Fair credit (580–669) may see 16–24%. Below 580, rates can exceed 25%. Credit unions often offer the lowest rates — the National Credit Union Administration reports average personal loan rates of 9.5% at credit unions versus 11.5% at banks. Always compare APR (which includes fees) rather than the base interest rate.
+
+### How does loan term affect total cost?
+
+Longer loan terms lower your monthly payment but significantly increase total interest paid. On a \$30,000 loan at 5.5%, a 36-month term costs \$2,612 in total interest while a 72-month term costs \$5,290 — more than double. The reason: interest accrues on the outstanding balance each month, and a longer term means the balance stays higher for more months. A 72-month auto loan at 5.5% generates \$5,290 in interest versus \$2,612 for 36 months, a difference of \$2,678. Choose the shortest term where the monthly payment is comfortably below 10–15% of your take-home pay.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard fixed-rate loan amortization formula as defined by the **Consumer Financial Protection Bureau (CFPB)** and codified under the Truth in Lending Act (TILA), Regulation Z. The formula is the same annuity calculation used by all major U.S. consumer lenders for personal loans, auto loans, and student loans. Interest rate benchmarks reference the **Federal Reserve's G.19 Consumer Credit statistical release**, which publishes average rates for auto loans and personal loans monthly. Auto loan term distribution data is sourced from **Experian's State of the Automotive Finance Market** report (Q4 2025). Credit union rate comparisons reference the **National Credit Union Administration (NCUA)** quarterly data. The extra payment calculations follow standard principal prepayment methodology — all extra amounts are applied directly to principal reduction in the month received.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

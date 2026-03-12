@@ -1,0 +1,86 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+2^10 = 1,024 — and this exponent calculator computes any power or root instantly. Enter a base and exponent to calculate powers (including negative and fractional exponents), or switch to root mode to find square roots, cube roots, or any nth root. The calculator handles special cases like 0^0 (= 1 by convention), negative exponents (reciprocals), and even roots of negative numbers (not real). Every result includes a step-by-step breakdown showing the rules applied.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Exponentiation is one of the fundamental arithmetic operations — it extends multiplication the same way multiplication extends addition. While 3 × 4 means "add 3 four times," 3^4 means "multiply 3 by itself four times" (3 × 3 × 3 × 3 = 81). Roots are the inverse operation: the cube root of 81 asks "what number, multiplied by itself 3 times, gives 81?"
+
+**Power mode** computes base^exponent for any real-valued inputs. This includes positive integer exponents (2^10 = 1,024), zero exponents (any nonzero number to the 0th power equals 1), negative exponents (2^(-3) = 1/8 = 0.125), and fractional exponents (8^(1/3) = 2, the cube root of 8). The calculator shows which exponent rules were applied at each step.
+
+**Root mode** computes the nth root of a value, equivalent to raising the value to the power of 1/n. The square root (n = 2) is the most common, but cube roots (n = 3), fourth roots, and higher are used throughout science, engineering, and finance. Even roots of negative numbers produce non-real (complex) results and are flagged accordingly.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select Power or Root mode.** Power mode computes base^exponent. Root mode computes the nth root of a value.
+
+2. **Enter your values.** In Power mode, enter the base and exponent. In Root mode, enter the value and the root index (2 for square root, 3 for cube root, etc.).
+
+3. **Read the result.** The calculator displays the numeric result and a step-by-step solution showing which exponent rules were applied, including intermediate computations for negative and fractional exponents.
+
+4. **Handle special cases.** The calculator explains its reasoning for edge cases — 0^0 returns 1 by convention, negative exponents show the reciprocal step, and even roots of negative numbers return "Not a real number."
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Power (Exponentiation)
+
+$$b^n = \underbrace{b \times b \times \cdots \times b}_{n \text{ times}}$$
+
+**Key exponent rules:**
+
+$$b^0 = 1 \quad \text{(for any } b \text{, including } 0^0 = 1 \text{ by convention)}$$
+
+$$b^{-n} = \frac{1}{b^n}$$
+
+$$b^{m/n} = \sqrt[n]{b^m} = \left(\sqrt[n]{b}\right)^m$$
+
+### Root (Radical)
+
+$$\sqrt[n]{a} = a^{1/n}$$
+
+Where **n** is the root index (degree) and **a** is the radicand (value under the radical sign).
+
+- Square root: $\sqrt{a} = a^{1/2}$
+- Cube root: $\sqrt[3]{a} = a^{1/3}$
+- nth root: $\sqrt[n]{a} = a^{1/n}$
+
+For negative values: odd roots are real ($\sqrt[3]{-8} = -2$), but even roots are not real ($\sqrt{-4}$ is undefined in the reals).
+
+**Source:** Standard laws of exponents as formalized in pre-calculus and calculus textbooks, including Stewart's *Calculus: Early Transcendentals* and Blitzer's *Precalculus* (Pearson).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example: Compound Growth — Powers in Finance
+
+**Scenario:** An investment of \$1,000 grows at 7% annually for 10 years. The future value formula uses exponentiation: FV = PV × (1 + r)^n.
+
+**Calculation:**
+
+1. Base: 1 + 0.07 = **1.07**
+2. Exponent: **10** (years)
+3. Compute: 1.07^10 = **1.967151**
+4. Future value: $1,000 × 1.967151 = **$1,967.15**
+
+**Interpretation:** At 7% annual return, \$1,000 nearly doubles in 10 years. The exponent (10) drives the compounding effect — each year's growth builds on the previous year's total, not just the original \$1,000. This is why compound growth is described as "exponential." Doubling the time period to 20 years does not double the result — 1.07^20 = 3.8697, nearly quadrupling the original investment. Use our [Percentage Calculator](/calculators/math/percentage-calculator) to convert between growth rates and dollar amounts.
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator evaluates expressions of the form bⁿ using JavaScript's built-in Math.pow() function, which handles integer exponents, fractional exponents (roots), negative exponents (reciprocals), and zero exponents. Special cases — 0⁰ returns 1 by convention, and negative bases with fractional exponents return NaN when the result would be complex. Results are displayed to 10 significant digits.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

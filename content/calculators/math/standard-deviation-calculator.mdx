@@ -1,0 +1,251 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+For the data set \{2, 4, 4, 4, 5, 5, 7, 9\}, the population standard deviation is exactly 2.0 and the sample standard deviation is 2.1381. Standard deviation measures how spread out values are from their average — a low standard deviation means data points cluster tightly around the mean, while a high one signals wide dispersion. Enter your data set below to see the standard deviation, variance, mean, range, and a full step-by-step deviation breakdown for each value.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Standard deviation is the most widely used measure of statistical dispersion — it quantifies how much individual data points deviate from the arithmetic mean. In concrete terms, if a class of students scores an average of 75 on an exam with a standard deviation of 10, roughly 68% of students scored between 65 and 85 (within one standard deviation of the mean), assuming a normal distribution.
+
+This calculator computes both the **population standard deviation (σ)** and the **sample standard deviation (s)**, and the distinction matters. When your data set represents every member of a group — all employees' salaries at a company, every measurement from a machine run, every student in a class — use population. When your data is a subset drawn from a larger group — a survey of 500 people representing millions, or 30 test batches from a production line of thousands — use sample. The sample formula divides by n−1 instead of n (Bessel's correction) to compensate for the bias that arises when estimating a population parameter from limited data.
+
+Beyond the headline number, this calculator provides a **step-by-step deviation table** showing each data point's distance from the mean and its squared deviation. This transparency lets you identify which specific values contribute most to the spread — critical for outlier detection in quality control, risk analysis, and experimental research. The **variance** (standard deviation squared) is also reported, since many statistical tests — ANOVA, regression, chi-square — work directly with variance rather than standard deviation.
+
+Use this alongside our [Mean, Median, Mode Calculator](/calculators/math/mean-median-mode-calculator) for a complete descriptive statistics profile, or our [Probability Calculator](/calculators/math/probability-calculator) to apply standard deviation in probability distributions and confidence intervals.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your data values** — type or paste your numbers into the data field, separated by commas. For example: `85, 90, 78, 92, 88`. The calculator accepts integers, decimals, and negative numbers. Non-numeric entries are automatically filtered out.
+
+2. **Choose Population or Sample** — select "Population (σ)" if your data represents the complete set you care about. Select "Sample (s)" if your data is a subset drawn from a larger population. When in doubt, use Sample — it is the more conservative choice and the standard in most research contexts.
+
+3. **Read your results** — the calculator displays the standard deviation (highlighted), variance, mean, count, sum, and range. The deviation table below shows the step-by-step calculation for every data point: its value, its deviation from the mean, and the squared deviation. The sorted data section shows your values in ascending order with minimum and maximum identified.
+
+4. **Interpret the output** — a standard deviation of 0 means all values are identical. A small standard deviation relative to the mean indicates tight clustering. To compare spread across data sets with different units or scales, divide the standard deviation by the mean to get the **coefficient of variation** (CV = σ/μ × 100%). A CV below 15% is generally considered low variability; above 30% indicates high variability.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Standard deviation is calculated in two forms depending on whether your data represents an entire population or a sample drawn from a larger population.
+
+**Population Standard Deviation:**
+
+$$\sigma = \sqrt{\frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}}$$
+
+**Sample Standard Deviation (Bessel's Correction):**
+
+$$s = \sqrt{\frac{\sum_{i=1}^{n}(x_i - \bar{x})^2}{n - 1}}$$
+
+Where:
+
+- **σ** (sigma) = population standard deviation
+- **s** = sample standard deviation
+- **xᵢ** = each individual data value
+- **μ** (mu) = population mean = Σxᵢ / N
+- **x̄** (x-bar) = sample mean = Σxᵢ / n
+- **N** = total number of values in the population
+- **n** = number of values in the sample
+- **Σ** = summation across all values
+
+**Why n−1 instead of n?** This is Bessel's correction, and it exists because a sample mean is not the true population mean. When you compute deviations from a sample mean, the deviations are constrained — they must sum to zero — which means you effectively have only n−1 independent pieces of information (degrees of freedom). Dividing by n would systematically underestimate the true population variance. Friedrich Bessel proved in 1818 that dividing by n−1 produces an unbiased estimator of the population variance. The effect is most pronounced with small samples: for n=2, dividing by n underestimates variance by 50%, while dividing by n−1 gives an unbiased estimate.
+
+**Variance** is the square of the standard deviation:
+
+$$\text{Variance} = \sigma^2 = \frac{\sum_{i=1}^{N}(x_i - \mu)^2}{N}$$
+
+**Source:** Standard statistical formulas as defined in the CFA Institute quantitative methods curriculum, NIST/SEMATECH e-Handbook of Statistical Methods, and foundational statistics texts including Wackerly, Mendenhall, and Scheaffer's *Mathematical Statistics with Applications*.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Student Test Scores — Sample Standard Deviation
+
+**Context:** A teacher wants to understand the spread of scores on a midterm exam from a class of 5 students. Since this class is a subset of all students who could take the exam, we use sample standard deviation.
+
+**Data:** \{85, 90, 78, 92, 88\}
+
+**Step-by-step:**
+
+1. Count (n): **5**
+2. Sum: 85 + 90 + 78 + 92 + 88 = **433**
+3. Mean (x̄): 433 ÷ 5 = **86.6**
+4. Deviations from mean:
+   - 85 − 86.6 = **−1.6**
+   - 90 − 86.6 = **3.4**
+   - 78 − 86.6 = **−8.6**
+   - 92 − 86.6 = **5.4**
+   - 88 − 86.6 = **1.4**
+5. Squared deviations:
+   - (−1.6)² = **2.56**
+   - (3.4)² = **11.56**
+   - (−8.6)² = **73.96**
+   - (5.4)² = **29.16**
+   - (1.4)² = **1.96**
+6. Sum of squared deviations: 2.56 + 11.56 + 73.96 + 29.16 + 1.96 = **119.20**
+7. Sample variance: 119.20 ÷ (5 − 1) = 119.20 ÷ 4 = **29.80**
+8. Sample standard deviation: √29.80 = **5.4589**
+
+**Interpretation:** The sample standard deviation of 5.46 points tells the teacher that most scores fall within about 5.5 points of the 86.6 average. The score of 78 is the primary outlier, sitting 1.58 standard deviations below the mean. In a normal distribution, about 68% of scores would fall between 81.1 and 92.1. This relatively modest spread suggests the class performed consistently.
+
+### Example 2: Manufacturing Quality Control — Population Standard Deviation
+
+**Context:** A factory measures the diameter of every bolt in a production run of 6 bolts. Since this is the entire population of interest (every bolt in the run), we use population standard deviation.
+
+**Data:** \{10.2, 10.1, 10.3, 10.0, 10.2, 10.1\} mm
+
+**Step-by-step:**
+
+1. Count (N): **6**
+2. Sum: 10.2 + 10.1 + 10.3 + 10.0 + 10.2 + 10.1 = **60.9**
+3. Mean (μ): 60.9 ÷ 6 = **10.15**
+4. Deviations from mean:
+   - 10.2 − 10.15 = **0.05**
+   - 10.1 − 10.15 = **−0.05**
+   - 10.3 − 10.15 = **0.15**
+   - 10.0 − 10.15 = **−0.15**
+   - 10.2 − 10.15 = **0.05**
+   - 10.1 − 10.15 = **−0.05**
+5. Squared deviations: 0.0025 + 0.0025 + 0.0225 + 0.0225 + 0.0025 + 0.0025 = **0.055**
+6. Population variance: 0.055 ÷ 6 = **0.009167**
+7. Population standard deviation: √0.009167 = **0.09574** mm
+
+**Interpretation:** A standard deviation of 0.096 mm on bolts with a mean diameter of 10.15 mm represents a coefficient of variation (CV) of just 0.94% — excellent precision. If the engineering tolerance is ±0.3 mm (10.15 ± 0.3), all bolts fall well within specification. The 10.0 mm and 10.3 mm bolts are the extremes, sitting 1.57 standard deviations from the mean. In Six Sigma terms, this process has roughly 5σ capability relative to ±0.3 mm tolerance — highly capable.
+
+### Example 3: Investment Returns — Sample Standard Deviation (Risk Measurement)
+
+**Context:** An investor analyzes 6 years of annual returns for a mutual fund to understand its volatility. Since these 6 years are a sample of all possible years, we use sample standard deviation. In finance, standard deviation of returns is the standard measure of investment risk.
+
+**Data:** \{8.2%, −3.1%, 12.5%, 5.8%, −1.2%, 9.4%\}
+
+**Step-by-step:**
+
+1. Count (n): **6**
+2. Sum: 8.2 + (−3.1) + 12.5 + 5.8 + (−1.2) + 9.4 = **31.6**
+3. Mean (x̄): 31.6 ÷ 6 = **5.2667%**
+4. Deviations from mean:
+   - 8.2 − 5.2667 = **2.9333**
+   - −3.1 − 5.2667 = **−8.3667**
+   - 12.5 − 5.2667 = **7.2333**
+   - 5.8 − 5.2667 = **0.5333**
+   - −1.2 − 5.2667 = **−6.4667**
+   - 9.4 − 5.2667 = **4.1333**
+5. Squared deviations: 8.604 + 69.001 + 52.321 + 0.284 + 41.818 + 17.084 = **189.113**
+6. Sample variance: 189.113 ÷ (6 − 1) = 189.113 ÷ 5 = **37.823**
+7. Sample standard deviation: √37.823 = **6.150%**
+
+**Interpretation:** This fund has an average annual return of 5.27% with a standard deviation of 6.15%. The standard deviation exceeding the mean return is a warning sign — it means in any given year, there is roughly a 16% chance (one standard deviation below the mean) of a negative return (5.27% − 6.15% = −0.88%). By comparison, the S&P 500's long-run annual standard deviation is approximately 15–16%, making this fund moderately less volatile than the broad market. The Sharpe ratio (excess return per unit of risk) can be calculated by dividing the risk premium by this standard deviation. Use our [Percentage Calculator](/calculators/math/percentage-calculator) to convert these figures to dollar amounts on your specific investment.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Population vs. Sample Choice** — This is the single most important decision. For the same data set \{2, 4, 4, 4, 5, 5, 7, 9\}, the population standard deviation is 2.0 while the sample standard deviation is 2.138 — a 6.9% difference. With smaller data sets, the gap widens dramatically: for just 2 data points, the sample SD is 41.4% larger than the population SD. Always use sample unless you are certain your data represents the complete population.
+
+**Bessel's Correction (n−1)** — Dividing by n−1 instead of n corrects for the bias introduced by using a sample mean. The intuition: your sample mean is calculated from the same data points, so the deviations are not fully independent. With n observations and a computed mean, you have n−1 degrees of freedom. As n grows large, the difference between dividing by n and n−1 becomes negligible — at n=30, it is only a 3.4% adjustment; at n=1000, just 0.1%.
+
+**Outlier Impact** — Standard deviation is highly sensitive to outliers because deviations are squared. In the data set \{10, 10, 10, 10, 100\}, the single outlier of 100 produces a population SD of 36.0, whereas \{10, 10, 10, 10, 12\} has a population SD of just 0.8. Before calculating, always check for data entry errors and consider whether extreme values are legitimate. The interquartile range (IQR) is a more robust measure of spread when outliers are present.
+
+**Data Set Size** — Standard deviation estimates become more reliable as sample size increases. With n=5, your sample SD could easily be 30–50% off from the true population value. By n=30, the estimate is typically within 15%. For precise estimates, n=100 or more is recommended. The standard error of the standard deviation itself decreases proportionally to 1/√(2n).
+
+**Coefficient of Variation** — Raw standard deviation is hard to interpret without context. A SD of 5 means something very different for test scores (mean 80, CV = 6.25%) versus for ages (mean 25, CV = 20%). The coefficient of variation (CV = SD/mean × 100%) normalizes the spread relative to the mean, making it possible to compare variability across different scales and units.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Using population SD when you should use sample SD.** This is the most frequent error in statistics homework and real-world analysis alike. If you surveyed 200 people out of a city of 500,000, your 200 responses are a sample — use n−1. The only time to use population SD is when you have data for literally every member of the group you are studying.
+
+**Forgetting to square the deviations.** If you simply sum the deviations from the mean without squaring them, you always get zero (positive and negative deviations cancel out). Squaring ensures all deviations contribute positively and gives extra weight to larger deviations, which is mathematically desirable for measuring spread.
+
+**Confusing standard deviation with variance.** Variance is the standard deviation squared. They measure the same thing — spread — but in different units. If your data is in meters, variance is in square meters. Standard deviation is in the original units, making it more interpretable. Always report standard deviation unless a specific formula requires variance (such as ANOVA sum of squares).
+
+**Using n instead of n−1 for sample calculations.** In spreadsheets, `STDEV.P()` (or `STDEVP()`) uses n (population), while `STDEV.S()` (or `STDEV()`) uses n−1 (sample). Excel's default `STDEV()` function uses n−1, which is correct for most use cases. Using the wrong function systematically underestimates the true population spread when working with samples.
+
+**Not checking for outliers before interpreting results.** A single extreme value can inflate standard deviation dramatically. Before drawing conclusions, sort your data and inspect the extremes. If an outlier is a data entry error, remove it. If it is a legitimate extreme observation, consider reporting the median and IQR alongside the standard deviation for a more complete picture.
+
+## When Standard Deviation Misleads
+
+Standard deviation is the default measure of spread, but several common data patterns make it actively misleading.
+
+**Bimodal or multimodal distributions.** If a company pays junior employees $40,000 and senior employees $120,000 with nobody in between, the mean is $80,000 and the standard deviation is $40,000. The SD suggests a smooth spread around $80K, but no employee actually earns anywhere near the mean. Reporting "average salary $80K ± $40K" paints a completely false picture. When your data has distinct clusters, report the clusters separately — standard deviation on the combined set obscures the actual structure.
+
+**Heavily skewed data.** Home prices in most U.S. cities are right-skewed: the median might be $350,000 while a handful of $5M+ properties pull the mean to $450,000 and inflate the SD to $300,000. The SD implies prices routinely dip to $150K or spike to $750K, when in reality 80% of homes cluster between $280K and $450K. For skewed data, the median and interquartile range (IQR) describe the distribution far more honestly than mean ± SD.
+
+**Data with a hard boundary.** Test scores capped at 100, reaction times floored at 0, and percentages bounded between 0–100 all violate the implicit assumption that data can spread symmetrically around the mean. A class averaging 92 with SD = 8 would imply some students scored 100+ (impossible) or below 76 (unlikely if the test was easy). The SD is technically correct but the "68% within one SD" interpretation fails because the distribution is compressed against the ceiling.
+
+**Very small samples.** With n = 3 data points, the sample standard deviation has enormous uncertainty — it could easily be 50–200% of the true population value. A single additional data point can change the SD by a factor of 2. If you are working with fewer than 10 observations, treat the SD as a rough order-of-magnitude estimate rather than a precise measurement. The confidence interval around the SD itself is wide until about n = 30.
+
+**Time-series data with trends.** If your company's quarterly revenue is growing (e.g., $1M, $1.5M, $2M, $2.5M), the SD is $559K — but that "spread" is entirely explained by the upward trend, not by random variation. Computing SD on trended data without detrending first makes the data look more variable than it actually is. Remove the trend first, then compute SD on the residuals to measure genuine variability.
+
+{/* Section 12: Comparison Table */}
+## Population vs. Sample Standard Deviation
+
+The choice between population (σ) and sample (s) standard deviation depends on what your data represents relative to the group you want to describe.
+
+| | **Population (σ)** | **Sample (s)** |
+|---|---|---|
+| Formula denominator | N (total count) | n − 1 (Bessel's correction) |
+| When to use | Data = the entire group of interest | Data = a subset drawn from a larger group |
+| Result | Exact standard deviation | Estimate of the population SD |
+| Always smaller? | Yes — dividing by N instead of n−1 produces a smaller result | No — the correction makes it slightly larger |
+| Symbol | σ (lowercase sigma) | s |
+| Excel function | `STDEV.P()` | `STDEV.S()` or `STDEV()` |
+| Python (NumPy) | `np.std(data, ddof=0)` | `np.std(data, ddof=1)` |
+| Typical contexts | Census data, complete machine run, all students in a class | Survey results, experimental samples, financial return samples |
+| Bias | None (exact parameter) | Unbiased estimator of σ² (but slightly biased estimator of σ) |
+
+**Rule of thumb:** If you are unsure, use sample (s). It is the more conservative and more commonly correct choice. Using population SD on a sample systematically underestimates variability, which can lead to overconfident conclusions in hypothesis testing and quality control.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Standard deviation assumes your data is **measured on an interval or ratio scale** — it is meaningless for ordinal or categorical data (you cannot compute SD of "strongly agree, agree, disagree").
+- The formula treats all data points as **equally weighted**. For weighted data (e.g., portfolio returns with different position sizes), you need weighted standard deviation.
+- Standard deviation is **not robust to outliers** — a single extreme value can distort the result. For skewed distributions or data with outliers, consider the median absolute deviation (MAD) or interquartile range (IQR) as alternative spread measures.
+- The "68-95-99.7 rule" (empirical rule) only applies to **normally distributed data**. For non-normal distributions, the percentage of data within 1, 2, or 3 standard deviations will differ.
+- Bessel's correction produces an **unbiased estimator of variance** (σ²) but not of standard deviation (σ) itself. The square root of an unbiased estimator is slightly biased, though the bias is negligible for n > 10.
+- This calculator assumes **no rounding during intermediate steps**. If you compute by hand and round intermediate values, your final answer may differ slightly from the calculator's result.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between standard deviation and variance?
+
+Standard deviation is the square root of variance — they measure the same concept (data spread) but in different units. Variance is in squared units of the original data, making it harder to interpret directly. Standard deviation is in the same units as your data, so it is more intuitive. For a data set with mean 50 and standard deviation 10, the variance is 100. Most reporting uses standard deviation because it directly answers "how far, on average, do values fall from the mean." However, variance is used internally by many statistical formulas (ANOVA, regression, chi-square tests) because squared values have more convenient mathematical properties.
+
+### When should I use population vs. sample standard deviation?
+
+Use population standard deviation (σ) when your data includes every member of the group you are analyzing — for example, the heights of all 30 students in a specific classroom, or every transaction in a completed fiscal quarter. Use sample standard deviation (s) when your data is a subset drawn from a larger group — for example, a survey of 500 customers representing your entire customer base of 50,000, or 10 randomly selected products from a production line of 10,000. If uncertain, default to sample. In practice, sample SD is used far more often because truly complete population data is rare outside of controlled environments.
+
+### What does the 68-95-99.7 rule mean?
+
+For data that follows a normal (bell-curve) distribution, approximately 68% of values fall within 1 standard deviation of the mean, 95% within 2 standard deviations, and 99.7% within 3 standard deviations. For example, if exam scores have a mean of 75 and standard deviation of 8, then about 68% of students scored between 67 and 83, about 95% scored between 59 and 91, and nearly all scored between 51 and 99. This rule only applies to normally distributed data — for skewed distributions, the actual percentages will differ. It is also called the empirical rule.
+
+### How does standard deviation relate to standard error?
+
+Standard error (SE) measures the precision of a sample mean as an estimate of the population mean, while standard deviation measures the spread of individual data points. The formula is SE = s / √n, where s is the sample standard deviation and n is the sample size. As your sample gets larger, SE shrinks (your mean estimate becomes more precise), but the standard deviation itself does not necessarily change. For example, if SD = 10 and n = 100, SE = 1.0; increase the sample to n = 400, and SE drops to 0.5, even though SD remains 10.
+
+### Can standard deviation be negative?
+
+No, standard deviation can never be negative. It is defined as the square root of variance, and variance is the average of squared deviations — squared values are always non-negative, so variance is always zero or positive, and its square root is always zero or positive. A standard deviation of exactly zero means every value in the data set is identical. If your calculation produces a negative result, there is an error in your computation — most likely a sign error when computing deviations or an incorrect formula.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes both population and sample standard deviation. It finds the mean, calculates the squared deviation of each value from the mean, then averages those squared deviations (dividing by N for population, N−1 for sample) and takes the square root. Variance, range, and coefficient of variation are also returned. Results are displayed to 4 decimal places.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

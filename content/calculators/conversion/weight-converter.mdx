@@ -1,0 +1,98 @@
+---
+title: "Weight Converter"
+description: "Convert between all weight and mass units: kilograms, pounds, ounces, stone, grams, metric tons. Metric and imperial with full conversion table."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Convert any weight or mass value between metric and imperial units instantly. One kilogram equals exactly 2.20462 pounds, one pound equals exactly 453.592 grams, and one stone equals exactly 14 pounds (6.35029 kg). Enter your value, select source and target units, and get precise results with a full conversion table across all 9 supported weight units.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Conversion Works
+
+This converter translates weight and mass values across all commonly used unit systems in a single step. Instead of memorizing individual conversion factors, enter any value and see it expressed across every supported unit in the conversion table below the result.
+
+The converter supports **metric** units (metric ton, kilogram, gram, milligram), **imperial/US customary** units (long ton, short ton, stone, pound, ounce), and handles the differences between US short tons (2,000 lb) and imperial long tons (2,240 lb). All conversion factors trace back to the international avoirdupois pound defined as exactly 0.45359237 kg by NIST. For body composition analysis beyond simple weight, try our [BMI Calculator](/calculators/health/bmi-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the value** -- type the weight you want to convert. Decimals are supported (e.g., 2.5, 0.75, 1500.25).
+2. **Select "From" unit** -- choose the unit your value is currently in from the dropdown (e.g., Kilogram).
+3. **Select "To" unit** -- choose the target unit you want to convert to (e.g., Pound).
+4. **Read the result** -- the converted value appears instantly below the inputs.
+5. **Check the conversion table** -- scroll down to see your value converted to all 9 weight units simultaneously for quick reference.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+All weight conversions use a **base-unit intermediary** pattern. Every weight unit has an exact conversion factor to the base unit (kilograms). To convert between any two units:
+
+$$
+\text{Result} = \text{Value} \times \frac{\text{fromUnit.toBase}}{\text{toUnit.toBase}}
+$$
+
+For example, converting pounds to ounces:
+
+$$
+\text{ounces} = \text{pounds} \times \frac{0.45359237 \text{ kg/lb}}{0.028349523 \text{ kg/oz}} = \text{pounds} \times 16
+$$
+
+**Key conversion factors (to kilograms):**
+
+| Unit | Exact Factor to Kilograms |
+|:--|:--|
+| 1 metric ton | 1,000 kg |
+| 1 kilogram | 1 kg (base) |
+| 1 gram | 0.001 kg |
+| 1 milligram | 0.000001 kg |
+| 1 pound | 0.45359237 kg |
+| 1 ounce | 0.028349523 kg |
+| 1 stone | 6.35029318 kg |
+| 1 US short ton | 907.18474 kg |
+| 1 imperial long ton | 1,016.0469 kg |
+
+*Source: National Institute of Standards and Technology (NIST) -- Handbook 44, Specifications for Weighing Devices (2023 Edition). The international avoirdupois pound is defined as exactly 0.45359237 kg.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Cooking -- Converting 500 Grams of Flour to Ounces
+
+A European recipe calls for 500 grams of flour. How many ounces is that?
+
+**Conversion:**
+- From grams to kilograms: 500 x 0.001 = 0.5 kg
+- From kilograms to ounces: 0.5 / 0.028349523 = **17.637 ounces**
+
+*Interpretation:* 500 grams of flour is approximately 17.6 oz, which is just over 1 pound (16 oz). Most US measuring cups hold about 4.25 oz of all-purpose flour, so 500 g is roughly 4 cups -- though weighing ingredients is always more accurate than volume measurement.
+
+### Example 2: International Shipping -- Luggage Limit of 23 kg to Pounds
+
+An airline allows 23 kg per checked bag. You packed 50 pounds of luggage. Are you over the limit?
+
+**Conversion:**
+- From pounds to kilograms: 50 x 0.45359237 = **22.6796 kg**
+
+*Interpretation:* At 22.68 kg, you are just under the 23 kg limit by 0.32 kg (about 0.7 lb). That leaves room for roughly one paperback book before hitting the threshold. Most airlines charge \$50-\$100 per overweight bag, so staying under 23 kg saves real money.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All conversions use the international avoirdupois system (the standard for everyday weight measurement in the US and UK)
+- Does not cover troy ounces (used for precious metals) -- 1 troy oz = 31.1035 g vs. 1 avoirdupois oz = 28.3495 g
+- Does not handle apothecary weight units (grains, scruples, drams)
+- Maximum input value limited by JavaScript floating-point precision (~15 significant digits)
+- "Weight" and "mass" are used interchangeably here; technically, weight varies with gravity while mass does not
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter multiplies or divides by fixed conversion factors between mass/weight units (grams, kilograms, pounds, ounces, stones, metric tons, short tons). All conversions route through grams as the base unit. Conversion factors use exact definitions — for example, 1 pound = 453.59237 grams exactly, as defined by the international yard and pound agreement of 1959. Results are displayed to 6 decimal places.

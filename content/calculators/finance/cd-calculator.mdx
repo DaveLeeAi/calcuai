@@ -1,0 +1,147 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A \$10,000 certificate of deposit at 5.00% APR for 12 months earns \$512.67 in interest with daily compounding, maturing at \$10,512.67 — yielding an effective APY of 5.13%. CDs guarantee a fixed rate for the full term, protecting your return even if market rates drop. This calculator shows your exact maturity value, interest earned, and effective APY for any deposit amount, rate, term, and compounding frequency. Enter your CD details below to see precisely what your certificate will be worth at maturity.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Projection Shows
+
+This CD calculator computes the maturity value of a certificate of deposit — a time-locked savings instrument issued by banks and credit unions that pays a guaranteed fixed interest rate. It answers the essential CD question: "How much will my money grow by the end of the term, and what is the effective annual yield after compounding?"
+
+**The difference between APR and APY matters.** A CD advertised at 5.00% APR with daily compounding actually yields 5.13% APY — \$12.67 more per \$10,000 over 12 months than simple 5.00% interest would produce. This difference grows with higher rates and longer terms. A 5-year CD at 5.00% APR with daily compounding earns an APY of 5.13%, producing \$2,840 in interest on \$10,000 rather than the \$2,500 that simple interest would suggest. The Truth in Savings Act requires banks to disclose APY precisely because it is the only number that accurately reflects your actual return.
+
+**CDs trade liquidity for certainty.** Unlike a savings account where the rate can change tomorrow, a CD locks your rate for the entire term. This makes CDs particularly valuable when interest rates are expected to decline — you can lock in today's high rate for 2–5 years. The tradeoff is an early withdrawal penalty, typically 3–12 months of interest, that makes CDs unsuitable for money you might need before maturity. To compare the flexibility of a savings account against a CD's guaranteed rate, see our [Savings Calculator](/calculators/finance/savings-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Deposit Amount** — the principal you're placing into the CD. Most CDs have minimum deposits ranging from \$500 to \$10,000 depending on the institution. Some jumbo CDs offer higher rates for deposits of \$100,000 or more.
+
+2. **Set the Annual Interest Rate** — the stated APR offered by the bank. As of March 2025, top CD rates range from 4.00% (short-term) to 4.75% (1-year) to 4.25% (5-year). Enter the rate exactly as quoted by the bank.
+
+3. **Choose the CD Term** — the lock-up period. Common terms are 3, 6, 12, 18, 24, 36, 48, and 60 months. Longer terms typically offer slightly higher rates, but the premium for going long has been historically small — often 0.25–0.50% between a 1-year and 5-year CD.
+
+4. **Select the Compounding Frequency** — how often interest is calculated and added to the balance. Daily compounding (365 times/year) produces the highest yield, followed by monthly (12) and quarterly (4). Most online banks compound daily; traditional banks may compound monthly or quarterly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The CD maturity value uses the standard compound interest formula:
+
+$$A = P \times \left(1 + \frac{r}{n}\right)^{n \times t}$$
+
+Where:
+
+- **A** = maturity value — the total amount you receive when the CD matures (dollars)
+- **P** = principal — the initial deposit amount (dollars)
+- **r** = annual interest rate (decimal, e.g., 5% = 0.05)
+- **n** = compounding frequency per year (365 for daily, 12 for monthly, 4 for quarterly)
+- **t** = term in years (e.g., 12 months = 1.0 years, 18 months = 1.5 years)
+
+The Annual Percentage Yield (APY) — the effective annual return accounting for compounding — is:
+
+$$APY = \left(1 + \frac{r}{n}\right)^{n} - 1$$
+
+A 5.00% APR compounded daily yields an APY of $(1 + 0.05/365)^{365} - 1 = 5.13\%$. Compounded monthly, the same rate yields $(1 + 0.05/12)^{12} - 1 = 5.12\%$. The difference between daily and monthly compounding is typically less than 0.02% — negligible for most depositors.
+
+**Source:** FDIC; Truth in Savings Act (12 CFR Part 1030 — Regulation DD); Federal Reserve Board APY calculation methodology.
+
+For a deeper explanation of how compounding frequency affects CD returns, see our [methodology page on compound interest](/methodology/compound-interest).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 12-Month CD at 5.00% with Daily Compounding
+
+**Inputs:**
+- Deposit: \$10,000
+- Annual Rate: 5.00%
+- Term: 12 months
+- Compounding: Daily (365)
+
+**Step-by-step:**
+
+1. Daily rate: 5.00% / 365 = **0.00013699**
+2. Total compounding periods: 365 x 1 = **365**
+3. Compound factor: (1 + 0.00013699)^365 = **1.05127**
+4. Maturity value: $10,000 x 1.05127 = **$10,512.67**
+5. Interest earned: \$10,512.67 - $10,000 = **$512.67**
+6. APY: (1 + 0.05/365)^365 - 1 = **5.13%**
+
+**Interpretation:** The daily compounding earns \$12.67 more than simple 5% interest (\$500) would produce. The APY of 5.13% reflects this compounding benefit, and it is the number you should use when comparing CDs across institutions.
+
+### Example 2: 5-Year CD at 4.25% with Monthly Compounding
+
+**Inputs:**
+- Deposit: \$25,000
+- Annual Rate: 4.25%
+- Term: 60 months
+- Compounding: Monthly (12)
+
+**Step-by-step:**
+
+1. Monthly rate: 4.25% / 12 = **0.003542**
+2. Total periods: 12 x 5 = **60**
+3. Compound factor: (1 + 0.003542)^60 = **1.23609**
+4. Maturity value: $25,000 x 1.23609 = **$30,902.25**
+5. Interest earned: \$30,902.25 - $25,000 = **$5,902.25**
+6. APY: (1 + 0.0425/12)^12 - 1 = **4.33%**
+
+**Interpretation:** A \$25,000 deposit earns \$5,902 over 5 years — a 23.6% total return. However, this return does not account for inflation: at 3% annual inflation, the \$30,902 maturity value has roughly \$26,656 in today's purchasing power — a real gain of only \$1,656.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Interest Rate** — The quoted APR is the primary driver of CD returns, and rates vary significantly between institutions. In March 2025, the spread between the highest and lowest 1-year CD rates from FDIC-insured banks exceeds 4 percentage points (some large banks still offer 0.50% while online banks offer 4.75%). Shopping across 3–5 banks before locking in a CD can add hundreds of dollars to your return.
+
+**Term Length** — Longer terms lock in your rate for more time but carry higher opportunity cost if rates rise. A CD ladder — splitting your deposit across multiple maturities (e.g., \$5,000 each in 1-year, 2-year, 3-year, 4-year, and 5-year CDs) — provides both higher average rates and regular liquidity as each rung matures.
+
+**Compounding Frequency** — Daily compounding produces the highest effective yield, but the difference from monthly compounding is small — typically 0.01–0.02% APY. The compounding frequency matters more for large deposits and long terms. On \$100,000 for 5 years at 5%, daily versus quarterly compounding adds approximately \$64 in extra interest.
+
+**Early Withdrawal Penalties** — Breaking a CD before maturity typically costs 3–6 months of interest for short-term CDs and 6–12 months for long-term CDs. On a 5-year CD earning \$1,180/year in interest, a 6-month penalty costs \$590 — potentially wiping out an entire year's earnings. Only lock money in a CD if you're confident you won't need it before maturity.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes the CD is held to **full maturity** with no early withdrawal. Penalties for early withdrawal are not modeled but typically range from 3 to 12 months of interest.
+- Assumes **no additional deposits** after the initial deposit. Most CDs do not allow additional contributions during the term (add-on CDs are a less common exception).
+- The interest rate is **fixed for the entire term**. Variable-rate CDs exist but are uncommon; this calculator models fixed-rate CDs only.
+- Does **not account for taxes** on interest income. CD interest is taxed as ordinary income in the year it is earned (even if the CD hasn't matured), unless held in a tax-advantaged account like an IRA.
+- Does **not account for inflation**. A 5% CD in a 3% inflation environment yields roughly 1.94% in real purchasing power growth (using the Fisher equation).
+- FDIC insurance covers up to **\$250,000 per depositor, per institution**. Deposits above this limit are not insured. Split large deposits across institutions for full coverage.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between APR and APY on a CD?
+
+APR (Annual Percentage Rate) is the stated interest rate before compounding. APY (Annual Percentage Yield) is the effective annual rate after compounding — the number that tells you exactly how much you'll earn. A 5.00% APR compounded daily yields a 5.13% APY, meaning you earn \$513 per year on \$10,000 rather than \$500. Banks are required by the Truth in Savings Act to disclose APY, and you should always compare CDs using APY, not APR. If a bank advertises only the APR, calculate the APY yourself using this calculator's output, or ask the bank directly.
+
+### Are CDs worth it in 2025?
+
+CDs are worth considering in 2025 if you want guaranteed returns on money you won't need for 6–60 months. With top 1-year CD rates at 4.50–5.00% APY, a \$50,000 deposit earns \$2,250–\$2,500 in guaranteed, FDIC-insured interest — risk-free. CDs become especially attractive if you believe the Federal Reserve will cut rates soon, because locking in today's rate protects you from future declines. However, if you need liquidity, a high-yield savings account at 4.0–4.5% APY provides nearly the same return without early withdrawal penalties. CDs are not appropriate for money you might need unexpectedly or for long-term growth goals where stocks historically outperform by a wide margin.
+
+### How does a CD ladder work?
+
+A CD ladder divides your total deposit evenly across multiple CD terms — for example, \$50,000 split into five \$10,000 CDs at 1, 2, 3, 4, and 5 year terms. Each year when the shortest CD matures, you reinvest it into a new 5-year CD (typically the highest-yielding term). After the initial 5-year setup period, you have one CD maturing every year while earning the higher rates of longer-term CDs. This strategy balances yield and liquidity: you're never more than 12 months from accessing \$10,000, while the bulk of your money earns the 5-year rate.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard compound interest formula and APY calculation as defined by the **Truth in Savings Act (12 CFR Part 1030 — Regulation DD)**, which mandates how depository institutions calculate and disclose yields on deposit accounts. The APY formula is specified in Appendix A of Regulation DD. CD rate benchmarks reference the **FDIC Weekly National Rates and Rate Caps** publication, updated weekly. FDIC insurance coverage limits (\$250,000) are per the **Federal Deposit Insurance Act** as administered by the FDIC. CD rate comparisons and market data reflect conditions as of March 2025, sourced from **Bankrate's** weekly CD rate survey and **DepositAccounts.com** rate tracker.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

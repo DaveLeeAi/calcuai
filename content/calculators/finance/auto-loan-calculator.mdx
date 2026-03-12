@@ -1,0 +1,153 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On a $35,000 vehicle with $5,000 down at 6.5% APR for 60 months, your monthly car payment is approximately $587 — with $5,192 paid in total interest over the life of the loan. Adding 6% sales tax on the vehicle increases the financed amount by $1,800 and your monthly payment by about $35. This calculator factors in trade-in value, down payment, sales tax, and loan term to show your exact monthly payment, total interest, and full amortization schedule.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payment Breakdown Means */}
+## What Your Payment Breakdown Means
+
+This auto loan calculator shows the true monthly cost of financing a vehicle purchase, including the often-overlooked impact of sales tax on your financed amount. It breaks down every dollar into principal, interest, and tax so you can compare dealer offers with confidence.
+
+**The loan term decision is the biggest lever on total cost.** Extending from 60 months to 72 months on a $30,000 loan at 6.5% APR drops your monthly payment by $67 (from $587 to $520), but adds $1,618 in total interest — $4,843 for the shorter term versus $6,461 for the longer one. Stretching to 84 months saves another $52/month but costs $8,098 in total interest, a 67% increase over the 60-month option. The sweetest spot for most buyers is 48–60 months, balancing affordable payments with reasonable total cost.
+
+**Trade-in value delivers a double tax benefit.** In 44 of 50 U.S. states, your trade-in reduces the taxable purchase price. Trading in a $10,000 vehicle on a $35,000 purchase means you pay sales tax on $25,000, not $35,000 — saving $350–$600 in tax depending on your state rate. This calculator applies that deduction automatically. For a broader view of loan payoff strategies, see our [Debt Payoff Calculator](/calculators/finance/debt-payoff-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Vehicle Price** — the sticker price or negotiated purchase price of the car, truck, or SUV. This is the "out-the-door" price before tax and fees but after any dealer discount. Use Kelley Blue Book or Edmunds for fair market pricing — the average new car transaction price was $48,528 in Q4 2024 per Cox Automotive.
+
+2. **Enter your Down Payment** — the cash you'll put toward the purchase. Financial advisors recommend 20% down on new cars and 10% on used cars to avoid being "upside down" (owing more than the car is worth). On a $35,000 car, that's $7,000 down.
+
+3. **Enter Trade-In Value** — the amount the dealer offers for your current vehicle. Get quotes from CarMax, Carvana, and the dealer to negotiate the best number. The trade-in reduces both your loan amount and your sales tax in most states.
+
+4. **Set the Interest Rate (APR)** — your annual percentage rate from the lender. Average rates in 2025: new cars 6.5–7.5%, used cars 9.5–11.5%, excellent credit (750+) 4.5–5.5%. Get pre-approved at your bank or credit union before visiting the dealer — their rate is often 1–2% lower than dealer financing.
+
+5. **Choose your Loan Term** — 24 to 84 months. Shorter terms mean higher monthly payments but dramatically less total interest. The 60-month term is the most popular choice in the U.S.
+
+6. **Enter your Sales Tax Rate** — your combined state and local sales tax rate. Ranges from 0% (Montana, Oregon, New Hampshire, Delaware, Alaska) to over 10% in parts of Tennessee, Louisiana, and Arkansas.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Auto loan payments use the standard fixed-rate amortization formula:
+
+$$M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
+
+Where:
+
+- **M** = monthly payment (dollars)
+- **P** = financed amount = Vehicle Price − Trade-In − Down Payment + Sales Tax (dollars)
+- **r** = monthly interest rate = annual APR ÷ 12 (decimal)
+- **n** = loan term in months
+
+Sales tax is calculated on the net price after trade-in (in most states):
+
+$$\text{Sales Tax} = (\text{Vehicle Price} - \text{Trade-In Value}) \times \text{Tax Rate}$$
+
+At 0% APR (promotional financing), the formula simplifies to: $M = P / n$.
+
+**Source:** Consumer Financial Protection Bureau (CFPB) auto lending disclosure guidelines; Federal Reserve G.19 Consumer Credit statistical release for average auto loan rates.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: New Car — $35,000, $5K Down, No Trade-In, 6.5% for 60 Months
+
+**Inputs:**
+- Vehicle Price: $35,000
+- Down Payment: $5,000
+- Trade-In: $0
+- APR: 6.5%
+- Term: 60 months
+- Sales Tax: 6%
+
+**Step-by-step:**
+
+1. Taxable amount: $35,000 − $0 = **$35,000**
+2. Sales tax: $35,000 × 0.06 = **$2,100**
+3. Financed amount: $35,000 − $0 − $5,000 + $2,100 = **$32,100**
+4. Monthly rate: 6.5% / 12 = **0.005417**
+5. Factor: (1.005417)^60 = **1.3829**
+6. Monthly payment: $32,100 × (0.005417 × 1.3829) / (1.3829 − 1) = **$627.53**
+7. Total payments: $627.53 × 60 = **$37,652**
+8. Total interest: $37,652 − $32,100 = **$5,552**
+
+**Interpretation:** You pay $5,552 in interest over 5 years, and the $2,100 sales tax is folded into your loan. Your true total cost is $42,652 ($5,000 down + $37,652 in payments). The first month, $174 of your $628 payment goes to interest; by month 60, only $3 does.
+
+### Example 2: Used Car with Trade-In — $22,000, $8K Trade-In, 9% for 48 Months
+
+**Inputs:**
+- Vehicle Price: $22,000
+- Trade-In: $8,000
+- Down Payment: $2,000
+- APR: 9%
+- Term: 48 months
+- Sales Tax: 7%
+
+**Step-by-step:**
+
+1. Taxable amount: $22,000 − $8,000 = **$14,000**
+2. Sales tax: $14,000 × 0.07 = **$980**
+3. Financed amount: $22,000 − $8,000 − $2,000 + $980 = **$12,980**
+4. Monthly rate: 9% / 12 = **0.0075**
+5. Monthly payment: **$323.01**
+6. Total interest: $323.01 × 48 − $12,980 = **$2,525**
+
+**Interpretation:** The $8,000 trade-in saved $560 in sales tax (versus no trade-in). Total interest of $2,525 on a 48-month term is manageable. Extending to 60 months would drop the payment to $269/month but add $1,180 in interest.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Credit Score Determines Your Rate** — The single biggest factor in your monthly payment isn't the car price — it's the interest rate, which is driven by your credit score. A buyer with a 750+ score might qualify for 4.5% on a new car; a 620-score buyer faces 12%+ or higher. On a $30,000 loan for 60 months, the difference between 4.5% and 12% is $117/month ($560 vs $677) and $7,000 in total interest ($3,598 vs $10,620).
+
+**Loan Term Length** — Longer terms reduce monthly payments but increase total cost dramatically. The 72- and 84-month terms that have become popular create "negative equity" risk — owing more than the car is worth — because vehicles depreciate faster than these slow payment schedules reduce the balance.
+
+**Down Payment** — Putting 20% down on a new car ($7,000 on $35,000) keeps you right-side-up on equity from day one. The average new car loses 20% of its value in the first year, so a smaller down payment means you'll owe more than the car is worth within months.
+
+**Sales Tax Financing** — Rolling sales tax into the loan is common but costly. On $2,100 in tax financed at 6.5% for 60 months, you pay an additional $366 in interest just on the tax portion. If you can pay tax upfront, do it.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **fixed interest rate** for the entire loan term. Variable-rate auto loans exist but are uncommon for consumer purchases.
+- Does **not include dealer fees** (documentation fee, registration, title). These typically add $300–$1,000 to the total cost and vary by state and dealer.
+- Applies sales tax **after trade-in deduction**, which is the standard in 44 of 50 U.S. states. In Hawaii, Kentucky, Maryland, Michigan, Montana, and Virginia, rules differ — check your state's DMV.
+- Does **not account for gap insurance or extended warranties** that may be financed into the loan.
+- Assumes **no early payoff or extra payments**. For early payoff modeling, use our [Loan Calculator](/calculators/finance/loan-calculator) with the extra payment feature.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much car can I afford on my salary?
+
+The 20/4/10 rule provides a reliable guideline: put at least 20% down, finance for no more than 4 years (48 months), and keep total transportation costs (payment + insurance + fuel) below 10% of gross monthly income. On a $60,000 salary ($5,000/month gross), that's $500/month for everything. With insurance at $150 and fuel at $100, you have $250/month for the car payment — which supports roughly a $12,000 financed amount at 6.5% for 48 months, or about a $15,000 car with $3,000 down.
+
+### Is a longer auto loan term worth it?
+
+A longer term lowers your monthly payment but almost always costs more overall. On a $30,000 loan at 6.5%: a 48-month term costs $4,114 in interest; 60 months costs $5,192; 72 months costs $6,303; and 84 months costs $7,447. The 84-month loan costs $3,333 more than the 48-month loan — that's an extra 11% of the car's price paid purely in interest. Only extend the term if the monthly savings prevents you from carrying high-interest credit card debt.
+
+### Should I finance through the dealer or my bank?
+
+Get pre-approved at your bank or credit union first, then let the dealer try to beat that rate. Credit unions often offer rates 1–2% lower than dealer financing. However, manufacturers sometimes offer 0% or low-rate promotional financing (usually on new cars only, for well-qualified buyers). Compare the total cost: a $2,000 manufacturer rebate with bank financing at 5% may cost less overall than 0% financing with no rebate, depending on the loan amount and term.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard fixed-rate amortization formula per **Consumer Financial Protection Bureau (CFPB)** auto lending disclosure requirements. Average auto loan rate data references the **Federal Reserve Board G.19 Consumer Credit** statistical release (updated monthly). Vehicle transaction price data is from **Cox Automotive / Kelley Blue Book** quarterly market reports. The 20/4/10 affordability rule is recommended by the **National Foundation for Credit Counseling (NFCC)**. Sales tax treatment of trade-ins varies by state; the 44-state trade-in deduction figure is per the **Federation of Tax Administrators** 2024 survey. Credit score-to-rate mapping references **Experian State of the Automotive Finance Market** Q4 2024 report.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

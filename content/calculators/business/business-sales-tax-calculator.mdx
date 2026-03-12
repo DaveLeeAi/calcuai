@@ -1,0 +1,164 @@
+---
+title: "Business Sales Tax Calculator"
+description: "Calculate sales tax from the merchant perspective. Compare tax-inclusive vs tax-exclusive pricing, see monthly tax liability, and understand how sales tax impacts your profit margins."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate how much sales tax your business should charge and how it affects your bottom line. A product costing \$20 with a 40% markup lists at \$28.00 tax-exclusive — with an 8.25% combined sales tax rate, customers pay \$30.31, and you collect \$2.31 in tax per unit. At 500 units per month, that is \$1,155 in monthly sales tax to remit to your state revenue department.
+
+</section>
+
+{/* Section 6: What Your Tax Estimate Shows */}
+## What Your Tax Estimate Shows
+
+This calculator answers the merchant's core tax question: "How should I price my products to account for sales tax, and how much tax do I owe each month?" It separates your revenue from the tax you collect on behalf of the state, so you can see exactly what you keep versus what you remit.
+
+The two pricing strategies produce different customer experiences but identical tax obligations. In **tax-exclusive** pricing (the US default), you set a list price and tax is added at checkout — the customer sees \$28.00 on the shelf and pays \$30.31 at the register. In **tax-inclusive** pricing, you set a sticker price of \$30.31 and the tax is embedded — the customer pays exactly what they see. Either way, you collect and remit the same \$2.31 per unit.
+
+The monthly tax liability figure is what you will owe your state revenue department. For businesses collecting more than \$300 per month in sales tax, most states require monthly filing. For a broader view of how tax impacts your pricing strategy, use our [Markup Calculator](/calculators/business/markup-calculator) to compare pre-tax margins across products.
+
+## How to Use This Calculator
+
+1. **Select Pricing Strategy** — choose "Tax-Exclusive" if you add tax at checkout (standard for most US retail) or "Tax-Inclusive" if you want to build tax into your displayed price (common for food service, international sales, or cash businesses).
+2. **Enter Unit Cost** — your cost to produce or acquire one unit. Include materials, manufacturing, and direct labor but not fixed overhead.
+3. **Enter Desired Markup %** — the percentage above cost that sets your list price. A 40% markup on a \$20 cost produces a \$28 list price.
+4. **Enter Sales Tax Rate** — your combined state plus local tax rate. Find your exact rate at your state revenue department's website. The US average is approximately 7.12%, but rates range from 0% (Oregon, Montana, Delaware, New Hampshire) to 10.25% (parts of Louisiana and Tennessee).
+5. **Enter Monthly Sales Volume** — how many units you sell per month. This drives the monthly tax liability and profit calculations.
+6. **If tax-inclusive:** Enter the all-in sticker price the customer sees. The calculator will extract the pre-tax price and show how much of that sticker price is tax versus your revenue.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Tax-Exclusive Pricing (customer pays tax on top):**
+
+$$
+\text{List Price} = \text{Unit Cost} \times \left(1 + \frac{\text{Markup \%}}{100}\right)
+$$
+
+$$
+\text{Tax per Unit} = \text{List Price} \times \frac{\text{Tax Rate}}{100}
+$$
+
+$$
+\text{Customer Pays} = \text{List Price} + \text{Tax per Unit}
+$$
+
+**Tax-Inclusive Pricing (tax embedded in sticker price):**
+
+$$
+\text{Pre-Tax Price} = \frac{\text{Sticker Price}}{1 + \frac{\text{Tax Rate}}{100}}
+$$
+
+$$
+\text{Tax per Unit} = \text{Sticker Price} - \text{Pre-Tax Price}
+$$
+
+**Monthly Tax Liability:**
+
+$$
+\text{Monthly Tax Liability} = \text{Tax per Unit} \times \text{Monthly Sales Volume}
+$$
+
+Where:
+- **Unit Cost** = your cost to produce or acquire one item
+- **Markup %** = desired percentage above cost (markup, not margin)
+- **Tax Rate** = combined state + local sales tax rate
+- **Sticker Price** = all-in price the customer sees (tax-inclusive mode only)
+- **Monthly Sales Volume** = average number of units sold per month
+
+*Source: State revenue department guidelines — standard sales tax computation methods as codified in Streamlined Sales Tax (SST) agreement and individual state tax codes (2024).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Tax-Exclusive Pricing (Standard US Retail)
+
+A retailer buys phone cases for \$8 each and wants a 75% markup. The combined sales tax rate in their city is 8.875% (New York City rate).
+
+**Step 1: List Price**
+- List Price = $8.00 x (1 + 75/100) = $8.00 x 1.75 = **\$14.00**
+
+**Step 2: Tax per Unit**
+- Tax = $14.00 x 0.08875 = **$1.24** (rounded)
+
+**Step 3: Customer Pays**
+- Total = \$14.00 + $1.24 = **$15.24**
+
+**Step 4: Monthly Figures (at 800 units/month)**
+- Monthly Tax Liability = $1.24 x 800 = **$992.00**
+- Monthly Revenue = $14.00 x 800 = **$11,200.00**
+- Monthly Profit = (\$14.00 - $8.00) x 800 = **$4,800.00**
+
+*Interpretation:* The retailer keeps \$14.00 per case and remits \$1.24 to New York State and City. At \$992/month in collected tax, this business would file monthly (quarterly threshold in NY is roughly \$300/quarter). The actual profit margin is 42.86% (\$6/\$14), not 75% — markup and margin are different metrics.
+
+### Example 2: Tax-Inclusive Pricing (Restaurant Menu)
+
+A restaurant sets menu prices that include tax. A sandwich is priced at \$12.99 on the menu, and the restaurant's combined tax rate is 9.5%. The sandwich costs \$3.50 in ingredients.
+
+**Step 1: Extract Pre-Tax Price**
+- Pre-Tax Price = $12.99 / (1 + 9.5/100) = $12.99 / 1.095 = **\$11.86** (rounded)
+
+**Step 2: Tax per Sandwich**
+- Tax = \$12.99 - $11.86 = **$1.13**
+
+**Step 3: Profit per Sandwich**
+- Profit = \$11.86 - $3.50 = **$8.36**
+- Margin = \$8.36 / \$11.86 = **70.5%**
+
+**Step 4: Monthly Figures (at 3,000 sandwiches/month)**
+- Monthly Tax Liability = $1.13 x 3,000 = **$3,390.00**
+- Monthly Revenue = $11.86 x 3,000 = **$35,580.00**
+
+*Interpretation:* The restaurant collects \$3,390/month in sales tax embedded in menu prices. Customers see \$12.99 and pay \$12.99 — no surprise at checkout. The true revenue is \$11.86 per sandwich, not \$12.99. Tax-inclusive pricing simplifies the customer experience but requires careful bookkeeping to separate tax from revenue.
+
+## Key Factors That Affect Your Results
+
+1. **Combined Tax Rate Varies Widely** — State sales tax rates range from 0% to 7.25%, but local rates (county, city, transit district) add 0.5%–5.25% on top. The same product in Portland, Oregon (0%) versus Chicago, Illinois (10.25%) results in a \$0 versus \$2.87 tax difference on a \$28 item. Always verify your exact combined rate.
+
+2. **Nexus and Remote Selling** — Since the 2018 *South Dakota v. Wayfair* Supreme Court ruling, businesses with economic nexus (typically \$100,000 in sales or 200 transactions in a state) must collect that state's sales tax even without physical presence. An online business selling in 20 states may need to calculate and remit tax at 20 different rates.
+
+3. **Product Taxability** — Not everything is taxable. Most states exempt groceries (unprepared food), prescription drugs, and clothing (in some states). If 30% of your products are tax-exempt, your actual monthly tax liability is 30% lower than a blanket calculation.
+
+4. **Filing Frequency Thresholds** — States assign filing frequency based on tax collected: monthly (typically \$300+/month), quarterly (\$100–\$300/month), or annually (under \$100/month). Missing a filing deadline triggers penalties of 5%–25% of the tax due, plus interest.
+
+5. **Marketplace Facilitator Laws** — If you sell through Amazon, Etsy, or Shopify, the marketplace may collect and remit tax on your behalf under marketplace facilitator laws (active in 46 states plus DC). This reduces your direct filing obligation but not your record-keeping responsibility.
+
+## Assumptions & Limitations
+
+- Assumes a single, uniform tax rate across all sales (does not account for multi-state selling)
+- Does not factor in tax-exempt products, customers, or resale certificates
+- Markup percentage is applied to unit cost only — does not include fixed overhead allocation
+- Monthly figures assume consistent sales volume (no seasonal variation)
+- Does not calculate filing penalties, interest on late payments, or use tax obligations
+- Tax-inclusive extraction assumes the stated sticker price is final (no additional fees)
+- Rounding may cause minor differences versus actual register-calculated tax (which is computed per transaction, not per unit)
+
+## Frequently Asked Questions
+
+### Should I use tax-inclusive or tax-exclusive pricing?
+
+Most US retailers use tax-exclusive pricing, where the listed price does not include tax and the tax amount appears as a separate line item at checkout. Tax-inclusive pricing is more common in restaurants, food trucks, cash businesses, and companies selling internationally (EU and most other countries mandate tax-inclusive prices). Tax-inclusive pricing creates a cleaner customer experience — the price on the menu is the price you pay — but requires more careful bookkeeping because you must extract the tax portion from each sale. Neither strategy changes your tax obligation; the same amount is owed to the state either way.
+
+### How often do I need to remit sales tax?
+
+Filing frequency depends on how much tax you collect. Most states assign monthly filing if you collect more than \$300 per month in sales tax (roughly \$3,600/year), quarterly filing for \$100–\$300 per month, and annual filing for less than \$100 per month. States reassess your frequency annually. Filing late triggers penalties — typically 5% of the unpaid tax per month, up to 25%, plus interest at the state's statutory rate (usually 4%–12% annually). Some states like Texas and California require electronic filing once you exceed certain thresholds.
+
+### What is sales tax nexus?
+
+Sales tax nexus is a legal connection between your business and a state that creates an obligation to collect and remit that state's sales tax. Physical nexus exists if you have an office, warehouse, employee, or inventory in a state. Economic nexus, established by the 2018 *South Dakota v. Wayfair* ruling, triggers when you exceed a sales threshold — typically \$100,000 in revenue or 200 separate transactions in a state within a calendar year. Once nexus is established, you must register for a sales tax permit in that state, collect tax on applicable sales, and file returns at the assigned frequency. Currently, 45 states plus DC impose sales tax (Oregon, Montana, New Hampshire, Delaware, and Alaska have no state-level sales tax, though some Alaska localities do).
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Streamlined Sales Tax Governing Board** — SST Agreement and uniform sales tax computation rules across 24 member states (2024)
+- **State revenue department guidelines** — Standard tax computation: Tax = Taxable Sale x Rate, applied per-transaction with rounding rules per state statute
+- **Tax Foundation** — "State and Local Sales Tax Rates, 2024" — combined rate data for all US jurisdictions
+- **South Dakota v. Wayfair, Inc.** — 585 U.S. ___ (2018) — economic nexus standard for remote sellers
+
+The calculator applies sales tax as a flat percentage of the pre-tax sale price. Tax-inclusive extraction uses the algebraic inverse: Pre-Tax = Total / (1 + Rate). All monetary values are rounded to 2 decimal places. Actual register-level tax is computed per transaction and may differ slightly from per-unit estimates due to rounding.

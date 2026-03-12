@@ -1,0 +1,154 @@
+---
+title: "Markup Calculator"
+description: "Calculate selling price from cost and markup percentage, or find your markup from cost and selling price. Includes markup vs margin conversion table."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your selling price from cost and desired markup, or reverse-calculate your markup percentage from a known cost and price. A product costing \$50 with a 60% markup sells for \$80, generating \$30 in gross profit — equivalent to a 37.5% profit margin. Markup is the pricing lens: it answers "how much should I add to my cost?"
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Markup tells you the percentage added on top of your cost to arrive at a selling price. A 50% markup on a \$100 cost means you charge \$150 — your \$50 profit is 50% of your cost, but only 33.33% of your revenue (that's your margin). This distinction matters because markup drives pricing decisions while margin measures profitability.
+
+The calculator operates in two modes. **Cost-to-Price** mode takes your known cost and desired markup percentage, then calculates the selling price and resulting profit. **Price-to-Markup** mode works backward — enter your cost and the price you charge to discover your actual markup percentage. Both modes show the equivalent margin percentage so you can switch between the two perspectives without manual conversion.
+
+The reference table at the bottom maps common markup percentages to their margin equivalents. A 100% markup equals a 50% margin. A 200% markup equals a 66.67% margin. This non-linear relationship frequently trips up business owners who use the terms interchangeably. For profitability analysis from the revenue side, use our [Margin Calculator](/calculators/business/margin-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your Calculation Mode** — choose "Cost to Selling Price" if you know your cost and want to set a price, or "Price to Markup %" if you already know your selling price and want to find out your markup.
+2. **Enter your Cost** — the amount you pay to purchase or produce the item. Include all direct costs: wholesale price, materials, manufacturing labor, and inbound shipping.
+3. **Enter Markup Percentage** (Cost-to-Price mode) — the percentage you want to add above cost. A 50% markup on a \$100 item sets the price at \$150.
+4. **Enter Selling Price** (Price-to-Markup mode) — the actual price you charge customers. The calculator will determine what markup percentage that represents.
+5. **Review your results** — the calculator shows selling price, markup %, gross profit, equivalent margin %, and a reference table comparing common markup and margin levels.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Cost-to-Price (calculating selling price):**
+
+$$
+\text{Selling Price} = \text{Cost} \times \left(1 + \frac{\text{Markup \%}}{100}\right)
+$$
+
+**Price-to-Markup (finding markup percentage):**
+
+$$
+\text{Markup \%} = \frac{\text{Selling Price} - \text{Cost}}{\text{Cost}} \times 100
+$$
+
+**Gross Profit and Margin Equivalent:**
+
+$$
+\text{Gross Profit} = \text{Selling Price} - \text{Cost}
+$$
+
+$$
+\text{Margin \%} = \frac{\text{Gross Profit}}{\text{Selling Price}} \times 100
+$$
+
+Where:
+- **Cost** = the amount paid to acquire or produce the item (purchase price, materials, direct labor)
+- **Markup %** = the percentage added on top of cost
+- **Selling Price** = the price charged to customers
+- **Gross Profit** = revenue minus cost (the dollar amount you keep)
+- **Margin %** = profit expressed as a percentage of revenue (not cost)
+
+**Converting between markup and margin:**
+
+$$
+\text{Margin \%} = \frac{\text{Markup \%}}{100 + \text{Markup \%}} \times 100
+$$
+
+$$
+\text{Markup \%} = \frac{\text{Margin \%}}{100 - \text{Margin \%}} \times 100
+$$
+
+*Source: Corporate Finance Institute (CFI) — Markup percentage and cost-plus pricing formulas (2024).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Retail Store Pricing a Handbag
+
+A boutique owner purchases handbags wholesale at \$85 each and wants a 65% markup.
+
+**Selling Price:**
+- Selling Price = $85 x (1 + 65/100) = $85 x 1.65 = **\$140.25**
+
+**Gross Profit:**
+- Gross Profit = \$140.25 - $85.00 = **$55.25**
+
+**Equivalent Margin:**
+- Margin % = \$55.25 / \$140.25 x 100 = **39.39%**
+
+*Interpretation:* Each handbag generates \$55.25 in gross profit. The 65% markup translates to a 39.39% margin — meaning just under 40 cents of every sales dollar is gross profit. This is within the typical retail markup range of 50-100% for accessories.
+
+### Example 2: Hardware Distributor Finding Their Markup
+
+A building supply distributor buys power drills at \$72 and sells them at \$119.
+
+**Markup %:**
+- Markup % = (\$119 - \$72) / $72 x 100 = $47 / \$72 x 100 = **65.28%**
+
+**Gross Profit:**
+- Gross Profit = \$119 - $72 = **$47.00**
+
+**Equivalent Margin:**
+- Margin % = \$47 / \$119 x 100 = **39.50%**
+
+*Interpretation:* The distributor applies a 65.28% markup, yielding \$47 profit per unit. At a 39.50% margin, nearly \$0.40 of every revenue dollar covers overhead, marketing, and net profit. If the distributor needs to cover \$15 in per-unit operating costs, their net profit is \$32 per drill.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Cost Accuracy** — Your markup percentage is only meaningful if your cost figure is complete. A \$100 item with \$12 in shipping and \$3 in packaging has a true cost of \$115. Applying a 50% markup to \$100 (selling at \$150) yields a real markup of only 30.4% on the true \$115 cost.
+
+2. **Industry Markup Norms** — Markup varies widely by industry. Grocery retail typically operates at 15-25% markup. Clothing retail averages 100-200%. Restaurants mark up food 200-300%. Jewelry can exceed 300%. Pricing significantly above industry norms reduces competitiveness; pricing below leaves profit on the table.
+
+3. **Markup vs. Margin Confusion** — A 50% markup is not a 50% margin. A 50% markup yields a 33.33% margin. At 100% markup, margin is 50%. Confusing the two can lead to pricing errors of 15-25% in either direction. The reference table in the calculator results maps common markup-to-margin conversions.
+
+4. **Volume Considerations** — Higher markups work for low-volume specialty goods. Lower markups require high volume to generate adequate total profit. A 20% markup on 1,000 units at \$50 cost generates \$10,000 in gross profit. A 200% markup on 50 units at the same cost generates \$15,000 — fewer sales, higher total profit.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Calculates markup on a single product or unit cost — does not account for mixed product lines or weighted average costs
+- Assumes cost is fully loaded (includes all direct costs); if shipping, handling, or duties are excluded from your cost input, the true markup will be lower than displayed
+- Does not include operating expenses, taxes, or overhead — gross profit is not net profit
+- The "Sell \$1 Cost At" column in the reference table uses a \$1.00 base cost for simplicity
+- For margin-based profitability analysis, use the [Margin Calculator](/calculators/business/margin-calculator) which works from the revenue perspective
+- Does not model quantity discounts, tiered pricing, or promotional pricing strategies
+
+## Frequently Asked Questions
+
+### What is the difference between markup and margin?
+
+Markup is profit expressed as a percentage of cost. Margin is profit expressed as a percentage of selling price (revenue). A product bought for \$60 and sold for \$100 has a 66.67% markup (\$40/\$60) but only a 40% margin (\$40/\$100). Both describe the same \$40 profit — the difference is the denominator. Markup uses cost. Margin uses revenue. A 100% markup always equals a 50% margin; the conversion is non-linear beyond that.
+
+### What is a good markup percentage for retail?
+
+Retail markup percentages typically range from 50% to 200%, depending on the product category. Grocery stores operate at 15-25% markup due to high volume and perishability. Clothing retailers commonly use 100-150% markup (known as "keystone" pricing when exactly 100%). Specialty and luxury goods often exceed 200%. The right markup depends on your operating costs, competitor pricing, and volume expectations — a 50% markup is acceptable only if it covers all overhead and leaves adequate net profit.
+
+### How do I convert markup to margin?
+
+Use the formula: Margin % = Markup % / (100% + Markup%). For example, a 75% markup equals 75 / 175 = 42.86% margin. To convert the other direction: Markup % = Margin % / (100% - Margin%). A 40% margin equals 40 / 60 = 66.67% markup. Quick reference: 25% markup = 20% margin, 50% markup = 33.33% margin, 100% markup = 50% margin, 200% markup = 66.67% margin.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Corporate Finance Institute (CFI)** — Markup definition, cost-plus pricing formulas, and markup vs. margin conversion methodology (2024)
+- **IRS Publication 334** — Tax Guide for Small Business, cost of goods sold accounting standards (2024)
+- **National Retail Federation (NRF)** — Retail industry average markup benchmarks by product category (2024)
+
+All formulas follow standard managerial accounting conventions. Markup percentage is calculated as profit divided by cost. Margin percentage is calculated as profit divided by selling price. The two metrics describe the same underlying profit from different reference points.

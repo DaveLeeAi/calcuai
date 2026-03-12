@@ -1,0 +1,245 @@
+{
+  "id": "drywall-calculator",
+  "title": "Drywall Calculator",
+  "slug": "drywall-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "drywall calculator",
+  "metaTitle": "Drywall Calculator — Sheets, Joint Compound & Tape Needed",
+  "metaDescription": "Calculate how many drywall sheets, gallons of joint compound, rolls of tape, and pounds of screws you need. Deducts doors and windows, includes ceiling option.",
+  "inputs": [
+    {
+      "id": "roomLength",
+      "label": "Room Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 14,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "roomWidth",
+      "label": "Room Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 4,
+      "max": 20,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "doors",
+      "label": "Number of Doors",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 20,
+      "helpText": "Standard door = 21 sq ft (3 × 7 ft)"
+    },
+    {
+      "id": "windows",
+      "label": "Number of Windows",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 20,
+      "helpText": "Standard window = 15 sq ft (3 × 5 ft)"
+    },
+    {
+      "id": "includeCeiling",
+      "label": "Include Ceiling",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "Add ceiling drywall to the calculation"
+    },
+    {
+      "id": "sheetSize",
+      "label": "Sheet Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "4x8",
+      "options": [
+        {
+          "value": "4x8",
+          "label": "4 × 8 ft (32 sq ft)"
+        },
+        {
+          "value": "4x10",
+          "label": "4 × 10 ft (40 sq ft)"
+        },
+        {
+          "value": "4x12",
+          "label": "4 × 12 ft (48 sq ft)"
+        }
+      ]
+    },
+    {
+      "id": "rooms",
+      "label": "Number of Identical Rooms",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 20,
+      "helpText": "For multiple rooms of the same size"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sheets",
+      "label": "Drywall Sheets",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalArea",
+      "label": "Total Drywall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "jointCompoundGallons",
+      "label": "Joint Compound (gallons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "tapeRolls",
+      "label": "Tape Rolls (375 ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "screwsLbs",
+      "label": "Screws (lbs)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "materialBreakdown",
+      "label": "Material Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "drywall",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "paint-calculator",
+    "square-footage-calculator",
+    "flooring-calculator",
+    "board-foot-calculator",
+    "concrete-calculator",
+    "gravel-calculator",
+    "roofing-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Gypsum Association (GA-216) and US Gypsum (USG)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Wall/ceiling area with opening deductions. Joint compound coverage (0.053 gal/sq ft) and tape/screw ratios per Gypsum Association GA-216 application guidelines and USG installation manuals.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "paint-calculator"
+  ],
+  "qualityScore": 86,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "square-footage"
+  ]
+}

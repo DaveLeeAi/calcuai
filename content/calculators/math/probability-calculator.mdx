@@ -1,0 +1,174 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Drawing one ace from a standard 52-card deck has a probability of 4/52 = 0.0769, or 7.69%. This probability calculator handles seven modes: single event probability, complement, union (A or B), independent intersection (A and B), conditional probability, permutations (nPr), and combinations (nCr). Select the type of calculation, enter your values, and get the result as a decimal, percentage, and fraction.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Probability quantifies uncertainty on a scale from 0 (impossible) to 1 (certain). This calculator covers the seven most common probability calculations that students, analysts, and professionals encounter.
+
+**Single Event Probability** answers the most basic question: if there are 6 sides on a die and you want a 4, the probability is 1/6 = 0.1667. Enter favorable outcomes and total outcomes to get the result.
+
+**Complement** tells you the probability that an event does NOT happen. If there is a 30% chance of rain, the complement — the probability of no rain — is 70%. This is simply 1 minus the original probability.
+
+**Union (A or B)** calculates the probability that at least one of two events occurs. The formula P(A) + P(B) - P(A and B) subtracts the overlap to avoid double-counting. If P(heart) = 13/52 and P(king) = 4/52 and P(king of hearts) = 1/52, then P(heart or king) = 13/52 + 4/52 - 1/52 = 16/52 = 0.3077.
+
+**Independent Intersection** gives the probability that both events occur when they do not influence each other. Flipping heads AND rolling a 6: (1/2) x (1/6) = 1/12 = 0.0833.
+
+**Conditional Probability** answers "What is the probability of A, given that B has already occurred?" This is foundational to Bayesian reasoning and diagnostic testing.
+
+**Permutations (nPr)** count the number of ordered arrangements — how many ways can 3 books be arranged on a shelf from a collection of 10? The answer is 10P3 = 720.
+
+**Combinations (nCr)** count unordered selections — how many ways can you choose 5 lottery numbers from 49? The answer is 49C5 = 1,906,884.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the calculation type** — use the tabs to choose from Single Event, Complement, Union, Intersection, Conditional, Permutation, or Combination.
+
+2. **Enter the required values** — each mode shows only the relevant input fields. For Single Event, enter favorable and total outcomes. For Union, enter P(A), P(B), and P(A and B). For Permutation/Combination, enter n and r.
+
+3. **Read the results** — the calculator displays the result as a decimal, a percentage, and (where applicable) a fraction. For permutations and combinations, the result is the count of arrangements or selections.
+
+4. **Check the expression** — the Expression output shows the formula used with your specific values, so you can verify or reproduce the calculation by hand.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Single Event Probability
+
+$$P(A) = \frac{\text{favorable outcomes}}{\text{total outcomes}}$$
+
+### Complement
+
+$$P(A') = 1 - P(A)$$
+
+### Union (Addition Rule)
+
+$$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
+
+### Independent Intersection (Multiplication Rule)
+
+$$P(A \cap B) = P(A) \times P(B)$$
+
+This applies only when events A and B are independent — the occurrence of one does not affect the probability of the other.
+
+### Conditional Probability
+
+$$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+
+Where P(B) > 0. This formula is the foundation of Bayes' theorem.
+
+### Permutation
+
+$$nPr = \frac{n!}{(n - r)!}$$
+
+Counts ordered arrangements of r items chosen from n distinct items.
+
+### Combination
+
+$$nCr = \frac{n!}{r!(n - r)!}$$
+
+Counts unordered selections of r items from n distinct items. Also written as "n choose r."
+
+Where:
+
+- **P(A)** = probability of event A occurring
+- **P(A')** = probability of event A NOT occurring (complement)
+- **P(A and B)** = probability that both A and B occur (intersection)
+- **P(A or B)** = probability that at least one of A or B occurs (union)
+- **P(A|B)** = probability of A given that B has occurred
+- **n!** = n factorial = n x (n-1) x (n-2) x ... x 1, with 0! = 1 by convention
+- **n** = total number of items
+- **r** = number of items being chosen or arranged
+
+**Source:** Classical probability theory established by Blaise Pascal and Pierre de Fermat in their 1654 correspondence. Combination notation formalized in Pascal's *Traite du triangle arithmetique* (1654). Axiomatic foundation by Andrey Kolmogorov, *Foundations of the Theory of Probability* (1933).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Drawing a Face Card from a Deck (Single Event)
+
+What is the probability of drawing a face card (Jack, Queen, or King) from a standard 52-card deck?
+
+**Step-by-step:**
+
+1. Count favorable outcomes: 4 Jacks + 4 Queens + 4 Kings = **12 face cards**
+2. Count total outcomes: **52 cards**
+3. Apply the formula: P(face card) = 12 / 52
+4. Simplify: 12/52 = **3/13**
+5. As a decimal: 3/13 = **0.2308**
+6. As a percentage: **23.08%**
+
+**Practical interpretation:** You have roughly a 1-in-4.3 chance of drawing a face card. In a game where face cards score higher, you can expect to draw about 23 face cards per 100 draws on average.
+
+### Example 2: Choosing a Committee (Combination)
+
+A club has 15 members and needs to form a committee of 4. How many different committees are possible?
+
+**Step-by-step:**
+
+1. This is a combination problem because the order of selection does not matter (choosing Alice then Bob gives the same committee as Bob then Alice).
+2. n = **15** (total members), r = **4** (committee size)
+3. Apply the formula: 15C4 = 15! / (4! x 11!)
+4. Compute: (15 x 14 x 13 x 12) / (4 x 3 x 2 x 1) = 32,760 / 24 = **1,365**
+
+**Practical interpretation:** There are 1,365 distinct committees possible. If instead the positions were President, VP, Secretary, and Treasurer (order matters), you would use permutation: 15P4 = 32,760 — twenty-four times more because each committee of 4 can be arranged in 4! = 24 ways.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Independent vs. Dependent Events.** The multiplication rule P(A and B) = P(A) x P(B) only applies to independent events. Drawing two cards with replacement is independent; drawing without replacement is not. For dependent events, use P(A and B) = P(A) x P(B|A). Drawing two aces from a deck without replacement: (4/52) x (3/51) = 12/2652 = 0.00452, not (4/52) x (4/52) = 0.00592.
+
+**With vs. Without Replacement.** Sampling with replacement keeps the total outcomes constant across draws. Sampling without replacement changes the denominator each time. This distinction is the single most common source of probability errors in homework and real-world analysis.
+
+**Permutation vs. Combination.** If order matters (rankings, arrangements, sequences), use permutation. If order does not matter (committees, groups, selections), use combination. The ratio is always nPr = nCr x r! — permutations are r-factorial times larger than combinations for the same n and r.
+
+**Factorial Growth.** Factorials grow astronomically fast: 10! = 3,628,800, but 20! = 2.43 x 10^18. This calculator caps at n = 170 because 171! exceeds JavaScript's maximum representable number. For combinatorial problems with larger n, logarithmic or approximation methods (Stirling's formula) are needed.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Equal likelihood assumed.** The single event formula assumes all outcomes are equally likely (e.g., fair coins, fair dice, well-shuffled decks). For biased events, probabilities must be assigned empirically rather than by counting.
+- **Independence required for multiplication.** The intersection mode multiplies P(A) x P(B), which is valid only when A and B are independent. For dependent events, you need P(A) x P(B|A), which requires the conditional mode.
+- **Factorial cap at n = 170.** JavaScript's `Number` type overflows above 170!, so permutation and combination inputs are limited to n &le; 170. This covers the vast majority of practical problems.
+- **Probabilities must be between 0 and 1.** The calculator validates inputs and rejects probabilities outside this range. A probability greater than 1 is mathematically impossible under Kolmogorov's axioms.
+- **No support for dependent intersection.** The intersection mode assumes independence. For P(A and B) when events are dependent, compute it as P(A) x P(B|A) using two separate calculations.
+- **Fractions are approximated.** The fraction output uses rational approximation and may not simplify perfectly for all irrational results.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between permutation and combination?
+
+A permutation counts ordered arrangements and a combination counts unordered selections. Choosing 3 books from 10 to place on a shelf (order matters) uses permutations: 10P3 = 720. Choosing 3 books from 10 to take on vacation (order irrelevant) uses combinations: 10C3 = 120. The relationship is nPr = nCr x r! — permutations are always larger by a factor of r-factorial because each combination can be rearranged in r! ways.
+
+### How do I know if events are independent?
+
+Two events are independent if the occurrence of one does not change the probability of the other. Flipping a coin and rolling a die are independent — the coin result does not affect the die. Drawing two cards from a deck without replacing the first is NOT independent — removing one card changes the composition of the deck and alters the probability of the second draw. A formal test: events A and B are independent if and only if P(A and B) = P(A) x P(B).
+
+### What does conditional probability mean in practice?
+
+Conditional probability P(A|B) is the probability of A occurring given that B has already happened. In medical testing, if a disease affects 1% of the population and a test has 95% sensitivity (detects 95% of true cases), the probability that a person who tests positive actually has the disease (positive predictive value) is calculated using conditional probability and Bayes' theorem — and is often surprisingly low, around 16% if the test has a 5% false positive rate.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator evaluates probability using combinatorial formulas: permutations (n!/(n−r)!), combinations (n!/r!(n−r)!), and basic probability rules (complement, union, intersection, conditional). Factorials are computed iteratively to avoid stack overflow on large inputs. The calculator caps inputs to prevent computation of factorials exceeding JavaScript's safe integer range.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

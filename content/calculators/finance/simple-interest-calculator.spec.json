@@ -1,0 +1,138 @@
+{
+  "id": "simple-interest-calculator",
+  "title": "Simple Interest Calculator",
+  "slug": "simple-interest-calculator",
+  "category": "finance",
+  "subcategory": "investment",
+  "primaryKeyword": "simple interest calculator",
+  "metaTitle": "Simple Interest Calculator — Free Interest & Total Amount Calculator",
+  "metaDescription": "Calculate simple interest earned on any principal amount. See total interest, monthly earnings, and growth timeline. I = P × r × t formula. Free, no signup.",
+  "inputs": [
+    {
+      "id": "principal",
+      "label": "Principal Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "The initial amount of money invested or borrowed."
+    },
+    {
+      "id": "annualRate",
+      "label": "Annual Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 100,
+      "step": 0.1,
+      "helpText": "The yearly interest rate as a percentage."
+    },
+    {
+      "id": "years",
+      "label": "Time Period (Years)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 100,
+      "step": 1
+    },
+    {
+      "id": "months",
+      "label": "Additional Months",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 11,
+      "step": 1,
+      "helpText": "Optional months beyond the full years above."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalAmount",
+      "label": "Total Amount",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest Earned",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyInterest",
+      "label": "Monthly Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "dailyInterest",
+      "label": "Daily Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Interest Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Principal vs Interest",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#1A6FA0", "#2ECC71"]
+      }
+    },
+    {
+      "id": "growthOverTime",
+      "label": "Balance Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": ["#1A6FA0", "#2ECC71"]
+      }
+    }
+  ],
+  "formula": "simple-interest",
+  "features": ["chart"],
+  "relatedCalculators": [
+    "compound-interest-calculator",
+    "savings-calculator",
+    "loan-calculator",
+    "cd-calculator",
+    "investment-calculator",
+    "interest-rate-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "CFPB / Truth in Lending Act (Regulation Z)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Simple interest formula I = P × r × t per CFPB Truth in Lending Act (Regulation Z) disclosure standards",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["compound-interest-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null,
+  "glossaryTerms": ["simple-interest", "principal", "interest-rate", "compound-interest"],
+  "methodologyTopics": ["simple-interest"]
+}

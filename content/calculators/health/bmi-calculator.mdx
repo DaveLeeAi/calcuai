@@ -1,0 +1,227 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate your Body Mass Index from your height and weight using the WHO-standard formula. A person who is 5'9" and weighs 154 pounds has a BMI of 22.7, placing them squarely in the Normal Weight category (18.5–24.9). Enter your measurements below to see your BMI, your WHO classification, your BMI Prime ratio, and the healthy weight range for your height.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Your BMI is a screening index — not a diagnosis — that estimates whether your body weight is proportionate to your height. The World Health Organization defines eight BMI categories ranging from Severely Underweight (below 16.0) to Obese Class III (40.0 and above). A BMI between 18.5 and 24.9 is classified as Normal Weight, the range associated with the lowest statistical risk for weight-related chronic diseases.
+
+Beyond the raw number, this calculator shows your **BMI Prime**, which is the ratio of your BMI to 25 (the upper boundary of normal weight). A BMI Prime of 1.00 means you are exactly at the cutoff; values below 1.00 are in the normal-to-underweight range, and values above 1.00 indicate overweight-to-obese territory. BMI Prime makes it easy to see how far you are from the threshold — for example, a BMI Prime of 0.91 means you are 9% below the upper normal limit.
+
+This calculator also displays the **healthy weight range** for your specific height. However, BMI does not distinguish between lean mass and fat mass. A muscular athlete and a sedentary individual can share the same BMI with very different health profiles. For a more complete assessment, pair this result with our [Body Fat Calculator](/calculators/health/body-fat-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your Unit System** — choose Imperial (pounds and inches) or Metric (kilograms and centimeters). The calculator defaults to Imperial. All results are identical regardless of unit system; the conversion is handled automatically.
+
+2. **Enter your Weight** — step on a scale and enter the number. For the most consistent result, weigh yourself in the morning before eating, wearing minimal clothing. Enter weight in whole pounds (Imperial) or kilograms (Metric). The default is 154 lbs, which is close to the U.S. adult average for men.
+
+3. **Enter your Height** — measure your height without shoes. If using Imperial, enter your total height in inches (for example, 5'9" = 69 inches). If using Metric, enter height in centimeters (e.g., 175 cm). The default is 69 inches.
+
+4. **Read your results** — the calculator displays your BMI value, WHO category, a visual gauge showing where you fall on the scale, your BMI Prime ratio, and the healthy weight range (BMI 18.5–24.9) for your height. Use these together to interpret your result in context.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+BMI was developed by Belgian mathematician Adolphe Quetelet in the 1830s and adopted by the World Health Organization as a population-level screening metric. Two formulas exist — one for metric units and one for imperial — but both produce the same result.
+
+**Metric formula:**
+
+$$\text{BMI} = \frac{w}{h^2}$$
+
+Where:
+
+- **w** = body weight in kilograms (kg)
+- **h** = height in meters (m)
+
+**Imperial formula:**
+
+$$\text{BMI} = 703 \times \frac{w}{h^2}$$
+
+Where:
+
+- **w** = body weight in pounds (lbs)
+- **h** = height in inches (in)
+- **703** = conversion factor that accounts for the unit difference between pounds/inches and kilograms/meters
+
+The factor 703 is derived from the exact conversion: 1 kg = 2.20462 lbs and 1 m = 39.3701 in. Algebraically, $703 \approx \frac{39.3701^2}{2.20462}$.
+
+**BMI Prime** extends the base formula as a ratio to the upper normal limit:
+
+$$\text{BMI Prime} = \frac{\text{BMI}}{25}$$
+
+A BMI Prime of exactly 1.00 corresponds to a BMI of 25.0 (the overweight threshold). Values below 1.00 fall in the normal or underweight range; values above 1.00 indicate overweight or obese classifications.
+
+**Source:** BMI formula and classification thresholds per the World Health Organization (WHO) Global Database on Body Mass Index and the U.S. Centers for Disease Control and Prevention (CDC) Adult BMI guidelines.
+
+For a deeper explanation of BMI's history, ethnic-specific adjustments, and known limitations, see our [methodology page on BMI](/methodology/bmi-formula).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Average American Male — 5'9", 154 lbs (Imperial)
+
+**Inputs:**
+- Weight: 154 lbs
+- Height: 69 inches (5'9")
+- Unit System: Imperial
+
+**Step-by-step:**
+
+1. Square the height: $69^2 = 4{,}761$
+2. Divide weight by height squared: $154 \div 4{,}761 = 0.03234$
+3. Multiply by 703: $0.03234 \times 703 = 22.7$
+4. BMI Prime: $22.7 \div 25 = 0.91$
+
+**Result:** BMI = **22.7** — **Normal Weight** (18.5–24.9)
+
+**Interpretation:** This person falls comfortably within the normal range with a BMI Prime of 0.91, meaning they are 9% below the overweight threshold. For a height of 69 inches, the healthy weight range (BMI 18.5–24.9) spans from 128 lbs to 169 lbs, giving this person about 15 lbs of margin before crossing into the overweight category.
+
+### Example 2: Overweight Classification — 170 cm, 92 kg (Metric)
+
+**Inputs:**
+- Weight: 92 kg
+- Height: 170 cm (1.70 m)
+- Unit System: Metric
+
+**Step-by-step:**
+
+1. Convert height to meters: $170 \div 100 = 1.70$ m
+2. Square the height: $1.70^2 = 2.89$
+3. Divide weight by height squared: $92 \div 2.89 = 31.8$
+4. BMI Prime: $31.8 \div 25 = 1.27$
+
+**Result:** BMI = **31.8** — **Obese Class I** (30.0–34.9)
+
+**Interpretation:** A BMI Prime of 1.27 means this person's weight is 27% above the upper normal limit. For a height of 1.70 m, the healthy weight range is 53.5 kg to 72.2 kg. Reaching the top of the normal range (BMI 24.9) would require a weight loss of approximately 19.8 kg (about 44 lbs). Even reducing BMI to 29.9 (overweight but not obese) would require losing about 5.5 kg (12 lbs), which may be a more realistic initial goal.
+
+### Example 3: Underweight Classification — 5'6", 105 lbs (Imperial)
+
+**Inputs:**
+- Weight: 105 lbs
+- Height: 66 inches (5'6")
+- Unit System: Imperial
+
+**Step-by-step:**
+
+1. Square the height: $66^2 = 4{,}356$
+2. Divide weight by height squared: $105 \div 4{,}356 = 0.02411$
+3. Multiply by 703: $0.02411 \times 703 = 16.9$
+4. BMI Prime: $16.9 \div 25 = 0.68$
+
+**Result:** BMI = **16.9** — **Moderately Underweight** (16.0–16.9)
+
+**Interpretation:** With a BMI Prime of 0.68, this person's weight is 32% below the upper normal limit. The healthy weight range for 66 inches is 115 lbs to 155 lbs. Reaching the lower boundary of normal weight (BMI 18.5) would require gaining approximately 10 lbs. A BMI below 17.0 is associated with increased health risks including nutrient deficiencies, weakened immune function, and reduced bone density — this result warrants a conversation with a healthcare provider.
+
+## Who Should Track BMI — and Who Needs Something Else
+
+BMI is a blunt tool, and knowing when it's useful (and when it's not) saves you from either false alarm or false reassurance.
+
+**BMI is most useful for:** sedentary to moderately active adults between 20 and 65 who don't carry unusual amounts of muscle mass. For this population — the vast majority of adults — BMI correlates reasonably well with body fat percentage and provides a quick, no-equipment health screening. If your BMI is 22 and you don't weight-train, you're almost certainly in a healthy body composition range.
+
+**BMI is least useful for:** strength athletes and regular weight trainers (BMI overestimates fat), adults over 65 (BMI underestimates fat due to muscle loss), anyone of South or East Asian descent (health risks begin at lower BMIs), and pregnant women. If you fall into any of these groups, pair BMI with at least one additional measurement — waist circumference is the simplest addition, since abdominal fat is a stronger predictor of cardiometabolic risk than total body weight.
+
+**BMI is actively misleading for:** competitive bodybuilders and powerlifters. A male at 5'10" and 215 lbs registers a BMI of 30.9 (Obese Class I) regardless of whether that weight is muscle or fat. If this describes you, skip BMI entirely and use the [Body Fat Calculator](/calculators/health/body-fat-calculator) or get a DEXA scan.
+
+**The practical test:** If you don't lift weights more than twice a week and aren't over 65, BMI is a reasonable first-pass screening tool. If your result surprises you in either direction, follow up with a body fat measurement before making any health decisions based on the number alone.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Muscle Mass vs. Fat Mass** — BMI cannot distinguish between lean tissue and adipose tissue. A 5'10" bodybuilder weighing 210 lbs has a BMI of 30.1 (Obese Class I) despite potentially carrying 10–12% body fat. Research published in the *International Journal of Obesity* found that BMI misclassifies approximately 18% of men and 6% of women as obese when their body fat percentage is actually in the healthy range. For individuals with significant muscle mass, a [Body Fat Calculator](/calculators/health/body-fat-calculator) using skinfold or circumference measurements provides a more accurate assessment.
+
+**Age** — BMI thresholds were designed for adults aged 20 and older. In adults over 65, a BMI of 23–30 is associated with the lowest mortality rates, which is higher than the standard 18.5–24.9 range. The CDC recommends that BMI for children and teens be interpreted using age- and sex-specific percentile charts rather than the fixed adult categories.
+
+**Sex** — Women naturally carry a higher percentage of body fat than men at the same BMI. A woman and a man who both register a BMI of 24.0 may have body fat percentages of 30% and 18%, respectively. The WHO categories do not adjust for sex, making BMI a blunter tool for women, particularly in the 25–30 range. Pairing your BMI with a waist circumference measurement (risk threshold: >35 inches for women, >40 inches for men) adds diagnostic value.
+
+**Ethnicity** — BMI-related health risks differ across populations. The WHO notes that Asian populations experience elevated cardiometabolic risk at BMIs as low as 23, leading several countries (including Japan, China, and India) to adopt lower overweight cutoffs of 23–24 rather than 25. Conversely, some Polynesian and Pacific Islander populations may have lower health risk at the same BMI compared to European-descent populations.
+
+**Hydration and Timing** — Body weight can fluctuate 2–5 lbs (1–2.3 kg) within a single day due to water intake, food, and exercise. For a person at 5'9", a 4-lb fluctuation changes BMI by approximately 0.6 points — enough to shift from 24.7 (Normal) to 25.3 (Overweight). Weigh yourself at the same time each day (ideally morning, before eating) for the most consistent reading.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Entering height in the wrong unit.** If you are 5'9", your height in inches is 69, not 59. The most frequent error is using feet alone (5) or mixing formats (entering "5.9" instead of 69 inches). A height of 59 inches instead of 69 would inflate your BMI from 22.7 to 31.8 — a two-category jump from Normal to Obese.
+
+**Treating BMI as a body fat measurement.** BMI is a weight-to-height ratio, not a direct measure of adiposity. Two people with a BMI of 27 can have body fat percentages ranging from 15% (athletic) to 35% (sedentary). Never use BMI alone to make clinical decisions about health — it is a screening tool, not a diagnostic one.
+
+**Ignoring the healthy weight range for your height.** Focusing solely on the BMI number misses practical context. Knowing that the healthy range for your height is 136–179 lbs gives you a concrete target, while "BMI 22" is abstract. Always reference the weight range alongside the BMI value.
+
+**Using child or adolescent measurements with adult cutoffs.** The WHO and CDC adult BMI categories (18.5–24.9 = Normal) apply only to adults aged 20+. For children and teens, BMI must be plotted on age-and-sex-specific growth charts, where the 5th to 85th percentile is considered healthy weight.
+
+**Comparing BMI across different populations without context.** A BMI of 24 does not carry the same cardiometabolic risk for a person of South Asian descent as for a person of Northern European descent. The WHO recommends lower action thresholds for Asian populations (overweight at 23, obese at 27.5).
+
+{/* Section 12: Comparison Table */}
+## WHO BMI Classification Table
+
+The World Health Organization defines eight BMI categories for adults aged 20 and older. These thresholds are based on epidemiological data linking BMI ranges to population-level health outcomes:
+
+| BMI Range | Classification | BMI Prime | Health Risk |
+|---|---|---|---|
+| Below 16.0 | Severely Underweight | < 0.64 | Very High (nutritional deficiency, immune compromise) |
+| 16.0–16.9 | Moderately Underweight | 0.64–0.68 | High (osteoporosis, anemia risk) |
+| 17.0–18.4 | Mildly Underweight | 0.68–0.74 | Moderate (may need nutritional assessment) |
+| 18.5–24.9 | Normal Weight | 0.74–1.00 | Average (lowest weight-related disease risk) |
+| 25.0–29.9 | Overweight | 1.00–1.20 | Increased (elevated risk of hypertension, type 2 diabetes) |
+| 30.0–34.9 | Obese Class I | 1.20–1.40 | High (significant cardiovascular and metabolic risk) |
+| 35.0–39.9 | Obese Class II | 1.40–1.60 | Very High (strong association with comorbidities) |
+| 40.0+ | Obese Class III | > 1.60 | Extremely High (severe obesity, highest morbidity risk) |
+
+The Normal Weight range (18.5–24.9) is the reference standard. For a person who is 5'7" (170 cm), this corresponds to a weight range of 118–159 lbs (53.5–72.2 kg). Each category shift of one BMI unit corresponds to roughly 5–7 lbs for an average-height adult.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes the subject is an **adult aged 20 or older**. Pediatric BMI requires age- and sex-specific percentile charts.
+- Uses a **single height and weight snapshot** — BMI does not account for body composition, fat distribution, or changes over time.
+- WHO classification thresholds are calibrated primarily from **European-descent population data** and may underestimate risk in Asian populations or overestimate risk in some Black and Polynesian populations.
+- Does not measure **visceral fat**, which is a stronger predictor of cardiometabolic disease than total body weight.
+- Assumes measurements are taken **without shoes and in light clothing**. Heavy clothing can add 2–4 lbs, shifting BMI by 0.3–0.6 points.
+- BMI does not differentiate between **fat mass and lean mass** — it systematically misclassifies some muscular individuals as overweight or obese.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a healthy BMI for my age?
+
+For adults aged 20–65, a BMI of 18.5–24.9 is classified as Normal Weight by the WHO and CDC, and this range is associated with the lowest risk of weight-related disease. For adults over 65, research published in the *American Journal of Clinical Nutrition* suggests a slightly higher range of 23–30 is associated with the lowest all-cause mortality. BMI is not used as a fixed-cutoff measure for children and teens — instead, the CDC recommends age-and-sex-specific growth chart percentiles, where the 5th–85th percentile is considered healthy weight.
+
+### Is BMI accurate for athletes and muscular people?
+
+No — BMI systematically overestimates body fatness in individuals with above-average muscle mass. A 2016 study in the *International Journal of Obesity* found that 18% of men classified as obese by BMI had body fat percentages in the healthy range. If you train with weights regularly or carry significant muscle, supplement your BMI with a body fat measurement using skinfold calipers, bioelectrical impedance, or DEXA scan. Our [Body Fat Calculator](/calculators/health/body-fat-calculator) uses the U.S. Navy circumference method as a practical alternative.
+
+### What BMI do I need to lose weight to reach the normal range?
+
+You need a BMI below 25.0 to enter the Normal Weight category. To find your target weight, multiply $25 \times h^2$ (metric) or $(25 \times h^2) \div 703$ (imperial), where $h$ is your height. For example, at 5'10" (70 inches): $(25 \times 4{,}900) \div 703 = 174.3$ lbs. If you currently weigh 210 lbs (BMI 30.1), you would need to lose approximately 36 lbs to reach BMI 25.0. A safe rate of weight loss is 1–2 lbs per week, making this an 18–36 week goal. Use our [Calorie Calculator](/calculators/health/calorie-calculator) to determine the daily caloric deficit needed.
+
+### Why do different countries use different BMI cutoffs?
+
+The WHO's standard cutoffs (overweight at 25, obese at 30) were derived primarily from studies of European-descent populations. However, large-scale studies across Asian populations — including data from Japan, China, India, and Southeast Asia — consistently show that cardiometabolic risk (type 2 diabetes, hypertension, cardiovascular disease) begins to increase at BMIs as low as 23. In response, the WHO published a 2004 expert consultation recommending that Asian countries consider "public health action points" at BMI 23 (increased risk) and BMI 27.5 (high risk). Japan officially uses 25 as the obesity cutoff (vs. 30 internationally), and India classifies overweight beginning at 23.
+
+### Does BMI predict health risks accurately?
+
+BMI is a useful population-level screening tool but a limited individual predictor. A 2016 meta-analysis in the *International Journal of Obesity* analyzing 40,420 adults found that 47% of individuals classified as overweight by BMI and 29% of those classified as obese were metabolically healthy by cardiometabolic markers (blood pressure, blood glucose, cholesterol, triglycerides). Conversely, 30% of normal-weight individuals were metabolically unhealthy. BMI does not capture fat distribution — waist circumference (risk thresholds: >40 inches for men, >35 inches for women) and waist-to-hip ratio are stronger predictors of cardiovascular risk. For the most complete picture, combine BMI with body fat percentage, waist circumference, and blood work.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the Body Mass Index formula as defined by the **World Health Organization (WHO)** Global Database on Body Mass Index and the **U.S. Centers for Disease Control and Prevention (CDC)** Adult BMI guidelines. Classification thresholds follow the WHO International Classification (1995, revised 2000 and 2004). BMI Prime ratio methodology follows the convention established by the **WHO Expert Consultation on BMI in Asian Populations** (2004). Age-adjusted recommendations reference the **American Journal of Clinical Nutrition** (2001) and the **CDC Growth Charts** (2000) for pediatric context.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

@@ -1,0 +1,130 @@
+---
+title: "Sales Tax Calculator"
+description: "Calculate sales tax on any purchase or reverse-calculate the pre-tax price from a tax-inclusive total. Supports any state and local tax rate."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+On a \$500 purchase in Texas (8.25% combined rate), you will pay \$41.25 in sales tax for a total of \$541.25. Reverse that: if your receipt says \$541.25 total, the pre-tax price was \$500.00 and \$41.25 went to tax. Sales tax rates in the United States range from 0% (Delaware, Montana, Oregon, New Hampshire, Alaska at the state level) to a combined 9.55% in Tennessee — and the difference adds up fast on big-ticket purchases like appliances, furniture, and electronics.
+
+</section>
+
+{/* Section 6: What Your Tax Estimate Shows */}
+## What Your Tax Estimate Shows
+
+This calculator handles two scenarios. In **Add Tax** mode, enter a pre-tax price and your local sales tax rate to see the tax amount and final total. In **Extract Tax** mode, enter a tax-inclusive total to reverse-calculate the original price and the embedded tax — useful for reconciling receipts, expense reports, or splitting costs.
+
+The results show the tax amount, the pre-tax (effective) price, and the total. This is especially valuable when comparing prices across states with different tax rates, budgeting for large purchases, or verifying that a retailer charged the correct rate.
+
+For federal and state income tax calculations, see the [Income Tax Calculator](/calculators/finance/income-tax-calculator). To determine the tip amount on a restaurant bill, try the [Tip Calculator](/calculators/finance/tip-calculator).
+
+## How to Use This Calculator
+
+1. **Choose your mode** — "Add Tax to Price" if you know the pre-tax price, or "Extract Tax from Total" if you have a receipt total and want to know how much was tax.
+2. **Enter the price or total** — the pre-tax price (add mode) or the final receipt amount (extract mode).
+3. **Enter the sales tax rate** — your combined state + local rate. Find yours at your state's department of revenue website. The default of 8.25% reflects the Texas combined rate.
+4. **Read the results** — the calculator shows the tax amount, pre-tax price, and total price instantly.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Add Tax (pre-tax price known):**
+
+$$
+\text{Tax} = \text{Price} \times \frac{\text{Rate}}{100}
+$$
+
+$$
+\text{Total} = \text{Price} + \text{Tax}
+$$
+
+**Extract Tax (total known):**
+
+$$
+\text{Pre-Tax Price} = \frac{\text{Total}}{1 + \frac{\text{Rate}}{100}}
+$$
+
+$$
+\text{Tax} = \text{Total} - \text{Pre-Tax Price}
+$$
+
+Where:
+- **Price** = the purchase price before sales tax
+- **Rate** = the combined sales tax rate as a percentage (e.g., 8.25)
+- **Total** = the final amount including tax
+- **Tax** = the sales tax amount
+
+*Source: State revenue departments. Sales tax is a standard ad valorem percentage applied at the point of sale, codified in each state's tax code (e.g., Texas Tax Code §151.051).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Adding Sales Tax to a Laptop Purchase
+
+You are buying a \$1,299 laptop in California, where the combined state and local sales tax rate is 8.75%.
+
+**Step 1:** Calculate the tax
+- Tax = $1,299 × (8.75 / 100) = $1,299 × 0.0875 = **\$113.66**
+
+**Step 2:** Calculate the total
+- Total = \$1,299 + $113.66 = **$1,412.66**
+
+*Interpretation:* The sales tax on this laptop is \$113.66, bringing the total cost to \$1,412.66. Buying the same laptop in Oregon (0% sales tax) would save the full \$113.66 — a meaningful difference on high-ticket electronics.
+
+### Example 2: Extracting Tax from a Receipt Total
+
+Your restaurant receipt shows a total of \$86.40 (food only, before tip). The local sales tax rate is 7.5%. How much was tax?
+
+**Step 1:** Calculate the pre-tax price
+- Pre-Tax Price = $86.40 / (1 + 0.075) = $86.40 / 1.075 = **\$80.37**
+
+**Step 2:** Calculate the embedded tax
+- Tax = \$86.40 − $80.37 = **$6.03**
+
+*Interpretation:* Of the \$86.40 total, \$6.03 was sales tax and \$80.37 was the food subtotal. This is useful for expense reports that require separating tax from the base amount.
+
+## Key Factors That Affect Your Results
+
+1. **State Base Rate** — State-level sales tax ranges from 0% (Delaware, Montana, New Hampshire, Oregon) to 7.25% (California). This is the floor; local taxes add to it.
+2. **Local Add-On Rates** — Counties, cities, and special districts can add their own tax. In some areas of Louisiana, the combined rate reaches 12.95%. Always use the combined rate for your specific location.
+3. **Tax-Exempt Items** — Most states exempt groceries, prescription drugs, and clothing (in some states) from sales tax. This calculator assumes the item is fully taxable.
+4. **Use Tax** — If you buy online from a seller that does not collect tax, you technically owe "use tax" at the same rate. Most states now require online sellers to collect sales tax under the 2018 *South Dakota v. Wayfair* Supreme Court decision.
+5. **Rounding Rules** — States use different rounding methods (bracket system vs. standard rounding). Results may differ by \$0.01 from your actual receipt due to rounding conventions.
+
+## Assumptions & Limitations
+
+- Assumes the entire purchase amount is subject to sales tax at a single rate
+- Does not account for tax-exempt items (groceries, medications, clothing in some states)
+- Does not handle tiered tax rates (e.g., different rates for different item categories)
+- Rounding may differ from your state's official bracket schedule by up to \$0.01
+- Does not include excise taxes, luxury taxes, or special assessments
+- Rates change; verify your current combined rate at your state's department of revenue
+
+## Frequently Asked Questions
+
+### How do I find my local sales tax rate?
+
+Your combined sales tax rate includes state, county, city, and special district taxes. The easiest way to find it is to search "[your city] sales tax rate" or visit your state's department of revenue website. Most state revenue departments offer a rate lookup tool by address or ZIP code. You can also check a recent receipt from a local store — the tax rate is typically printed on it.
+
+### Which states have no sales tax?
+
+Five states have no statewide sales tax: Delaware, Montana, New Hampshire, Oregon, and Alaska. However, Alaska allows local municipalities to impose their own sales tax, so some Alaska cities and boroughs charge up to 7.5%. The other four states have no state or local sales tax at all.
+
+### How do I reverse-calculate the pre-tax price from a total?
+
+Divide the total by (1 + tax rate as a decimal). For example, if the total is \$107.50 and the tax rate is 7.5%, the pre-tax price is $107.50 / 1.075 = $100.00. The tax portion is \$107.50 - $100.00 = $7.50. A common mistake is multiplying the total by the tax rate — that gives the wrong answer because the tax rate applies to the pre-tax price, not the total.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Tax Foundation** — "State and Local Sales Tax Rates, 2025." Comprehensive state-by-state rate tables updated annually.
+- **State Revenue Departments** — Official combined rate lookup tools (e.g., Texas Comptroller, California CDTFA).
+- **South Dakota v. Wayfair, Inc. (2018)** — U.S. Supreme Court decision enabling states to require online sellers to collect sales tax.
+- **Sales Tax Institute** — Rate tables and exemption guides by state.
+
+The add-tax formula multiplies the pre-tax price by the rate. The extract-tax formula divides the total by (1 + rate) to isolate the pre-tax amount. Both are standard algebraic operations codified in state tax codes.

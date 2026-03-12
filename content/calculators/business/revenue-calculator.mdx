@@ -1,0 +1,103 @@
+---
+title: "Revenue Calculator"
+description: "Calculate total revenue from price and units sold. Project future revenue with growth rates for any time period — monthly, quarterly, or annual."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A business selling 500 units at \$29.99 each generates \$14,995 in monthly revenue — or \$179,940 annually. At 5% monthly growth, that same revenue stream reaches \$26,929 per month within 12 months. This calculator projects your top-line revenue from price and volume, then forecasts how growth compounds over time. Revenue is the starting point of every financial model: it tells you how much money is coming in before costs, taxes, or profit enter the picture.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Revenue measures total income from sales — price multiplied by quantity. Unlike profit, which subtracts costs, revenue is strictly the top line. This distinction matters: a business with \$500,000 in revenue might earn \$50,000 in profit or lose \$100,000, depending on its cost structure.
+
+This calculator answers four questions: how much revenue you generate per period, what that annualizes to, what your daily run rate is, and where revenue lands after compounding growth across multiple periods. The projection chart shows the compounding trajectory, making it easy to see how even modest growth rates create exponential curves over 12-24 months.
+
+For cost analysis and bottom-line calculations, use the [Profit Calculator](/calculators/business/profit-calculator). To find the sales volume needed to cover your costs, use the [Break Even Calculator](/calculators/business/break-even-calculator).
+
+## How to Use This Calculator
+
+1. **Enter Price per Unit** — the selling price for one unit of your product or service. For subscription businesses, this is your monthly plan price. For e-commerce, it's the average order value.
+2. **Enter Units Sold** — the number of units sold in one period. For SaaS, this is active subscribers. For retail, it's items sold per month.
+3. **Select Time Period** — choose monthly, quarterly, or annual. The calculator converts to annual revenue automatically.
+4. **Set Growth Rate** — enter the expected growth rate per period. Leave at 0% for a flat projection.
+5. **Set Projection Periods** — how many periods to project forward (up to 60). For monthly periods, 12 gives you a one-year outlook.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Total Revenue:**
+
+$$
+\text{Total Revenue} = \text{Price per Unit} \times \text{Units Sold}
+$$
+
+**Annual Revenue:**
+
+$$
+\text{Annual Revenue} = \text{Total Revenue} \times \text{Periods per Year}
+$$
+
+Where Periods per Year = 12 (monthly), 4 (quarterly), or 1 (annual).
+
+**Revenue per Day:**
+
+$$
+\text{Revenue per Day} = \frac{\text{Annual Revenue}}{365}
+$$
+
+**Projected Revenue (with growth):**
+
+$$
+\text{Projected Revenue} = \text{Total Revenue} \times \left(1 + \frac{\text{Growth Rate}}{100}\right)^{n}
+$$
+
+Where:
+- **Price per Unit** = selling price for one unit ($)
+- **Units Sold** = number of units sold in one period
+- **Growth Rate** = expected growth per period (%)
+- **n** = number of projection periods
+
+*Source: Harvard Business Review — Revenue forecasting and growth projection models (2023). Compound growth methodology follows standard geometric progression.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### SaaS Subscription Business
+
+A project management SaaS has 500 active subscribers paying \$29.99/month. The product team expects 5% monthly subscriber growth (from marketing and organic referrals). What does revenue look like over the next 12 months?
+
+**Current Monthly Revenue:**
+- Revenue = $29.99 × 500 = **$14,995/month**
+
+**Annual Revenue (current rate):**
+- Annual = $14,995 × 12 = **$179,940/year**
+
+**Daily Revenue Run Rate:**
+- Daily = $179,940 / 365 = **$493.01/day**
+
+**Projected Monthly Revenue After 12 Months:**
+- Month 12 Revenue = \$14,995 × (1.05)^12
+- = \$14,995 × 1.7959
+- = **\$26,929/month**
+
+**Interpretation:** Starting at \$14,995/month, a steady 5% monthly growth rate nearly doubles the monthly revenue within a year. The annual run rate at month 12 would be $26,929 × 12 = $323,148 — a 79.6% increase from the starting annual rate. This projection assumes consistent growth and stable pricing. In practice, growth rates typically decelerate as the subscriber base scales, so conservative forecasts might use 3-4% monthly growth after the first 6 months.
+
+Note that this is revenue only — the top line. To find out how much of this revenue becomes profit, subtract your costs using the [Profit Calculator](/calculators/business/profit-calculator). To understand your margins as a percentage, use the [Margin Calculator](/calculators/business/margin-calculator).
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Harvard Business Review** — Revenue forecasting and growth projection models (2023); standard compound growth methodology for recurring revenue businesses
+- **U.S. Small Business Administration (SBA)** — Revenue classification and financial statement guidelines for small businesses (2024)
+- **GAAP (ASC 606)** — Revenue recognition standards that define when and how revenue is recorded
+
+Revenue is calculated as the simple product of price and quantity — the most fundamental equation in business finance. The growth projection uses geometric compounding: each period's revenue equals the prior period multiplied by (1 + growth rate). This model assumes a constant growth rate, which provides a useful baseline but should be adjusted for seasonal variations, market saturation, and pricing changes in real-world forecasting.

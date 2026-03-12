@@ -1,0 +1,201 @@
+{
+  "id": "ratio-calculator",
+  "title": "Ratio Calculator",
+  "slug": "ratio-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "ratio calculator",
+  "metaTitle": "Ratio Calculator — Simplify Ratios & Solve Proportions",
+  "metaDescription": "Simplify ratios, solve for missing values in proportions, and scale ratios instantly. Step-by-step solutions with GCD method. Free, no signup.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "simplify",
+      "options": [
+        {
+          "value": "simplify",
+          "label": "Simplify Ratio"
+        },
+        {
+          "value": "solve",
+          "label": "Solve Proportion"
+        },
+        {
+          "value": "scale",
+          "label": "Scale Ratio"
+        }
+      ],
+      "helpText": "Choose how you want to work with ratios"
+    },
+    {
+      "id": "valueA",
+      "label": "Value A",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "step": 0.01,
+      "placeholder": "e.g. 15",
+      "helpText": "First value in the ratio (a)"
+    },
+    {
+      "id": "valueB",
+      "label": "Value B",
+      "type": "number",
+      "required": true,
+      "defaultValue": 20,
+      "step": 0.01,
+      "placeholder": "e.g. 20",
+      "helpText": "Second value in the ratio (b)"
+    },
+    {
+      "id": "valueC",
+      "label": "Value C",
+      "type": "number",
+      "required": false,
+      "defaultValue": 6,
+      "step": 0.01,
+      "placeholder": "e.g. 6",
+      "helpText": "Third value in the proportion (a:b = c:x)"
+    },
+    {
+      "id": "scaleFactor",
+      "label": "Scale Factor",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3,
+      "step": 0.01,
+      "min": 0.01,
+      "placeholder": "e.g. 3",
+      "helpText": "Factor to multiply both ratio terms by"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ratioString",
+      "label": "Simplified Ratio",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "gcdUsed",
+      "label": "GCD Used",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "decimal",
+      "label": "Decimal Equivalent",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "missingValue",
+      "label": "Missing Value (x)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "scaledA",
+      "label": "Scaled A",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "scaledB",
+      "label": "Scaled B",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "stepByStep",
+      "label": "Step-by-Step Solution",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "simplify",
+      "label": "Simplify",
+      "description": "Reduce a ratio to its simplest form",
+      "defaultInputOverrides": {
+        "mode": "simplify"
+      },
+      "visibleInputs": [
+        "valueA",
+        "valueB"
+      ]
+    },
+    {
+      "id": "solve",
+      "label": "Solve Proportion",
+      "description": "Find the missing value in a:b = c:x",
+      "defaultInputOverrides": {
+        "mode": "solve"
+      },
+      "visibleInputs": [
+        "valueA",
+        "valueB",
+        "valueC"
+      ]
+    },
+    {
+      "id": "scale",
+      "label": "Scale",
+      "description": "Multiply both terms by a factor",
+      "defaultInputOverrides": {
+        "mode": "scale"
+      },
+      "visibleInputs": [
+        "valueA",
+        "valueB",
+        "scaleFactor"
+      ]
+    }
+  ],
+  "formula": "ratio",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "fraction-calculator",
+    "percentage-calculator",
+    "gcf-lcm-calculator",
+    "mean-median-mode-calculator",
+    "probability-calculator",
+    "exponent-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Ratio simplification via the Euclidean algorithm (GCD); cross-multiplication for solving proportions",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Ratio = a:b simplified by dividing both by GCD(a,b); Proportion solving: a/b = c/x → x = bc/a",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 81,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null
+}

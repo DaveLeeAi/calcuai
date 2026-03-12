@@ -1,0 +1,150 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Running a 5K in 25 minutes requires a pace of 8:03 per mile (5:00 per kilometer), equivalent to a speed of 7.46 mph — use this calculator to find your target pace, predict finish times, or plan race splits for any distance. Enter two of three values (distance, time, pace) and the calculator solves for the third, with automatic conversions between miles and kilometers and split projections for 5K, 10K, half marathon, and marathon distances.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+This pace calculator solves the relationship between distance, time, and pace — the three variables that define every run or walk. Given any two, it calculates the third. It works in three modes: **find your pace** (you know the distance and time), **find your finish time** (you know the distance and pace), or **find your distance** (you know the time and pace).
+
+Beyond the primary calculation, the tool provides pace conversions between min/mile and min/km, speed in both mph and kph, and projected finish times for six standard race distances: 1 mile, 1 kilometer, 5K, 10K, half marathon, and marathon. These split projections assume you maintain a constant pace — a useful baseline for training plans, even though most runners run negative splits (faster second half) or positive splits (slower second half) in actual races.
+
+Whether you are training for your first 5K, pacing a marathon, planning walk intervals, or comparing running speeds across metric and imperial units, this calculator gives you the numbers you need to set realistic goals and track improvement.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your calculation mode.** Choose "Find my pace" if you completed a run and know the distance and time. Choose "Find my finish time" if you know your pace and want to predict how long a specific distance will take. Choose "Find my distance" if you ran for a set time at a known pace and want to see how far you went.
+
+2. **Enter the known values.** For pace mode, enter your distance and total time (hours, minutes, seconds). For time mode, enter the distance and your pace (minutes, seconds per mile or km). For distance mode, enter your total time and pace. Select miles or kilometers for your distance unit and min/mile or min/km for your pace unit.
+
+3. **Review the results.** The calculator displays your pace in both min/mile and min/km, your speed in mph and kph, your finish time, and a split table showing projected finish times for 1 mile, 1 km, 5K, 10K, half marathon, and marathon at your current pace. Use the compare-scenarios feature to see how small pace changes affect your race times.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Pace, distance, and time are related by three rearrangements of the same equation:
+
+**Find Pace:**
+
+$$\text{Pace (seconds per unit)} = \frac{\text{Total Time (seconds)}}{\text{Distance}}$$
+
+**Find Time:**
+
+$$\text{Total Time (seconds)} = \text{Pace (seconds per unit)} \times \text{Distance}$$
+
+**Find Distance:**
+
+$$\text{Distance} = \frac{\text{Total Time (seconds)}}{\text{Pace (seconds per unit)}}$$
+
+**Pace Conversion:**
+
+$$\text{Pace (min/km)} = \frac{\text{Pace (min/mile)}}{1.60934}$$
+
+$$\text{Pace (min/mile)} = \text{Pace (min/km)} \times 1.60934$$
+
+**Speed:**
+
+$$\text{Speed (mph)} = \frac{3600}{\text{Pace (seconds/mile)}}$$
+
+$$\text{Speed (kph)} = \frac{3600}{\text{Pace (seconds/km)}}$$
+
+Where:
+
+- **Pace** = time per unit distance, expressed as minutes and seconds (e.g., 8:03 min/mile)
+- **Distance** = total distance covered, in miles or kilometers
+- **Total Time** = elapsed time in hours, minutes, and seconds
+- **1.60934** = kilometers per mile (exact conversion factor)
+- **3600** = seconds per hour (for speed conversion)
+
+Pace is the inverse of speed: a faster pace means a shorter time per unit distance. An 8:00 min/mile pace equals 7.5 mph, while a 5:00 min/km pace equals 12.0 kph.
+
+**Source:** Distance-speed-time relationships per standard physics. Race distance standards per World Athletics (formerly IAAF). Exercise intensity classifications per ACSM's Guidelines for Exercise Testing and Prescription (11th ed., 2022).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Finding Pace for a 5K
+
+**Inputs:**
+- Distance: 3.10686 miles (5K)
+- Time: 25 minutes 0 seconds (1,500 seconds)
+
+**Step-by-step:**
+
+1. Pace per mile: 1,500 / 3.10686 = 482.8 seconds = **8:03 min/mile**
+2. Pace per km: 482.8 / 1.60934 = 299.9 seconds = **5:00 min/km**
+3. Speed: 3,600 / 482.8 = **7.46 mph** (12.00 kph)
+
+**Interpretation:** A 25-minute 5K places you at a solid recreational runner pace. At this pace, your projected half marathon time would be approximately 1:45:07 and your marathon time approximately 3:30:14, assuming you could maintain the same pace (which requires significantly more training for longer distances). Most running coaches recommend adding 15-30 seconds per mile when extrapolating from 5K pace to marathon pace.
+
+### Example 2: Predicting Marathon Finish Time
+
+**Inputs:**
+- Distance: 26.2188 miles (marathon)
+- Pace: 9:00 min/mile (540 seconds/mile)
+
+**Step-by-step:**
+
+1. Total time: 540 seconds/mile * 26.2188 miles = 14,158.2 seconds
+2. Convert: 14,158 seconds = 3 hours, 55 minutes, 58 seconds = **3:55:58**
+3. Speed: 3,600 / 540 = **6.67 mph**
+
+**Interpretation:** A 9:00/mile pace puts you under the common 4-hour marathon goal with about 4 minutes of cushion. This translates to 5:35/km. For reference, the average US marathon finish time is approximately 4:32 for men and 5:01 for women (Running USA, 2023), so a sub-4:00 finish places you well above average. Your 5K split at this pace would be 27:57 and your half marathon split would be 1:57:59.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Constant Pace Assumption** — The calculator assumes a uniform pace throughout the entire distance. In practice, most runners speed up or slow down. Elite marathoners often run negative splits (second half faster), while recreational runners typically run positive splits (second half slower by 5-15%). Split projections from short-distance paces tend to be optimistic for longer races because fatigue compounds.
+
+**Terrain and Elevation** — Running on hills, trails, or soft surfaces (sand, grass) significantly increases energy cost per mile compared to flat pavement. Uphill running adds approximately 12-15 seconds per mile per 1% average gradient. Treadmill running is generally 1-3% easier than outdoor running due to lack of wind resistance, which is why many coaches recommend setting a 1% incline on the treadmill.
+
+**Weather and Conditions** — Heat adds roughly 1.5-3% to finish time per 10 degrees Fahrenheit above 55 degrees F (the optimal running temperature per ACSM guidelines). Headwind of 10 mph can add 10-15 seconds per mile. Altitude above 5,000 feet reduces oxygen availability and slows pace by 3-8% for unacclimatized runners.
+
+**Walking vs. Running** — Average walking pace ranges from 15:00 to 20:00 min/mile (3-4 mph). Brisk walking (12:00-15:00 min/mile) is the intensity recommended by the CDC for moderate exercise. Running typically starts below 12:00 min/mile. The calculator works for both — the same physics apply regardless of gait.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **perfectly constant pace** across the entire distance. Real-world pacing varies due to terrain, fatigue, and race strategy.
+- Split projections for longer races are **theoretical minimums** — most runners cannot maintain 5K pace through a marathon without specific endurance training.
+- Does not account for **elevation, wind, temperature, or surface type**, all of which affect actual performance.
+- Distance conversions use the standard factor of **1 mile = 1.60934 km**. Race distances follow World Athletics standards (marathon = 42.195 km).
+- This is a **mathematical tool, not a training plan**. Consult a running coach or ACSM-certified exercise professional for personalized training guidance.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a good running pace for beginners?
+
+A comfortable beginner running pace is typically 10:00-13:00 min/mile (6:13-8:05 min/km), equivalent to 4.6-6.0 mph. The American College of Sports Medicine classifies running as vigorous-intensity exercise above 6.0 mph (10:00 min/mile) and moderate-intensity below that threshold. Most running coaches recommend beginners start with a "conversational pace" — slow enough to speak in complete sentences — which is usually 11:00-13:00 min/mile. As fitness improves over 8-12 weeks of consistent training, most runners see pace improve by 30-60 seconds per mile.
+
+### How do I convert my treadmill speed to outdoor pace?
+
+Treadmill speed is displayed in mph (or kph), and the conversion is straightforward: divide 60 by the speed in mph to get your pace in minutes per mile. For example, 6.0 mph = 10:00 min/mile, 7.0 mph = 8:34 min/mile, and 8.0 mph = 7:30 min/mile. However, treadmill running is generally 1-3% easier than outdoor running because the belt assists leg turnover and there is no wind resistance. Setting a 1% incline on the treadmill approximates the effort of flat outdoor running, according to a 1996 study by Jones and Doust in the *Journal of Sports Sciences*.
+
+### Can I predict my marathon time from my 5K time?
+
+A common rule of thumb is to multiply your 5K time by 9.8-10.0 for an estimated marathon time, assuming proper marathon training. A 25-minute 5K roughly predicts a 4:05-4:10 marathon. However, the accuracy depends heavily on training volume — a 25-minute 5K runner with 50+ mile training weeks will run a faster marathon than a 25-minute 5K runner with 20-mile weeks. More precise prediction models (Riegel formula, VDOT tables from Jack Daniels' Running Formula) account for distance-specific endurance factors and typically yield predictions within 3-5% for well-trained runners.
+
+</div>
+
+{/* Section 13: Related Calculators — auto-rendered from spec */}
+
+{/* Section 14: Sources & Methodology */}
+## Methodology & Sources
+
+Pace-distance-time calculations follow standard kinematic equations. Race distances use **World Athletics** (formerly IAAF) official standards. Exercise intensity classifications and the moderate-vigorous threshold of 6.0 mph are per **ACSM's Guidelines for Exercise Testing and Prescription** (11th ed., 2022). Treadmill-outdoor equivalence data from Jones AM, Doust JH, "A 1% treadmill grade most accurately reflects the energetic cost of outdoor running," *Journal of Sports Sciences* 14(4):321-327 (1996). Marathon finish time averages from **Running USA** 2023 Annual Report.
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

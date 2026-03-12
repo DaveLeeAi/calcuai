@@ -1,0 +1,166 @@
+{
+  "id": "revenue-calculator",
+  "title": "Revenue Calculator",
+  "slug": "revenue-calculator",
+  "category": "business",
+  "subcategory": "sales",
+  "primaryKeyword": "revenue calculator",
+  "metaTitle": "Revenue Calculator — Sales Revenue Projection Tool",
+  "metaDescription": "Calculate total revenue from price and units sold. Project future revenue with growth rates. Simple sales forecasting for any business. Free calculator.",
+  "inputs": [
+    {
+      "id": "pricePerUnit",
+      "label": "Price per Unit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 29.99,
+      "min": 0,
+      "max": 1000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Selling price for one unit of your product or service"
+    },
+    {
+      "id": "unitsSold",
+      "label": "Units Sold",
+      "type": "number",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 100000000,
+      "step": 1,
+      "helpText": "Number of units sold per period"
+    },
+    {
+      "id": "timePeriod",
+      "label": "Time Period",
+      "type": "select",
+      "required": true,
+      "defaultValue": "monthly",
+      "options": [
+        {
+          "value": "monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "quarterly",
+          "label": "Quarterly"
+        },
+        {
+          "value": "annual",
+          "label": "Annual"
+        }
+      ],
+      "helpText": "The time period for your sales figures"
+    },
+    {
+      "id": "growthRate",
+      "label": "Growth Rate per Period",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": -100,
+      "max": 1000,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Expected growth rate per period (optional)"
+    },
+    {
+      "id": "projectionPeriods",
+      "label": "Projection Periods",
+      "type": "number",
+      "required": false,
+      "defaultValue": 12,
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "helpText": "Number of periods to project forward"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalRevenue",
+      "label": "Total Revenue (per period)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualRevenue",
+      "label": "Annual Revenue",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "revenuePerDay",
+      "label": "Revenue per Day",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "projectedRevenue",
+      "label": "Projected Revenue (end of projection)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "revenueProjection",
+      "label": "Revenue Projection Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Period",
+        "yLabel": "Revenue ($)",
+        "colors": [
+          "#2ECC71"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Revenue Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "revenue",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "profit-calculator",
+    "break-even-calculator",
+    "margin-calculator",
+    "roi-calculator",
+    "business-sales-tax-calculator",
+    "commission-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Harvard Business Review — Revenue forecasting and growth projection models (2023)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total Revenue = Price per Unit × Units Sold; Annual Revenue = Period Revenue × Periods per Year; Projected Revenue = Revenue × (1 + Growth Rate)^periods",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "profit-calculator"
+  ],
+  "qualityScore": 84,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": null,
+  "glossaryTerms": [
+    "commission"
+  ]
+}

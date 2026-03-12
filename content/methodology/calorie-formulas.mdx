@@ -1,0 +1,131 @@
+---
+title: "How Calorie and BMR Formulas Work"
+slug: "calorie-formulas"
+relatedCalculators: ["calorie-calculator", "bmr-calculator", "macro-calculator", "body-fat-calculator"]
+---
+
+## BMR vs. TDEE: The Foundation
+
+**Basal Metabolic Rate (BMR)** is the number of calories your body burns at complete rest — lying still, awake, in a temperature-neutral environment, in a post-absorptive state (12+ hours after eating). It represents the energy required for basic life functions: breathing, circulation, cell production, and thermoregulation. BMR accounts for roughly 60–75% of total daily energy expenditure.
+
+**Total Daily Energy Expenditure (TDEE)** is BMR multiplied by an activity factor:
+
+$$\text{TDEE} = \text{BMR} \times \text{Activity Multiplier}$$
+
+TDEE is the total number of calories you burn per day including all physical activity. Eating above TDEE causes weight gain; eating below causes weight loss. All calorie calculators are fundamentally TDEE estimators.
+
+## The Mifflin-St Jeor Equation (1990)
+
+The Mifflin-St Jeor equation is the current clinical standard for estimating BMR, recommended by the Academy of Nutrition and Dietetics (formerly the American Dietetic Association) as the most accurate predictive equation for healthy individuals.
+
+**For men:**
+
+$$\text{BMR} = 10 \times \text{weight (kg)} + 6.25 \times \text{height (cm)} - 5 \times \text{age (years)} + 5$$
+
+**For women:**
+
+$$\text{BMR} = 10 \times \text{weight (kg)} + 6.25 \times \text{height (cm)} - 5 \times \text{age (years)} - 161$$
+
+**Example:** A 35-year-old male, 180 cm (5'11"), 82 kg (181 lb):
+
+$$\text{BMR} = 10(82) + 6.25(180) - 5(35) + 5 = 820 + 1125 - 175 + 5 = 1{,}775 \text{ kcal/day}$$
+
+The equation was derived from a study of 498 healthy subjects (248 men, 250 women) aged 19–78, using indirect calorimetry (measuring oxygen consumption) as the reference standard. It predicted BMR within ±10% for approximately 82% of subjects.
+
+## The Harris-Benedict Equation (1919, Revised 1984)
+
+The original Harris-Benedict equation was published in 1919 by James Arthur Harris and Francis Gano Benedict, based on measurements of 239 subjects. It was the gold standard for decades before being superseded by Mifflin-St Jeor.
+
+**Revised (Roza & Shizgal, 1984) — for men:**
+
+$$\text{BMR} = 13.397 \times \text{weight (kg)} + 4.799 \times \text{height (cm)} - 5.677 \times \text{age} + 88.362$$
+
+**Revised — for women:**
+
+$$\text{BMR} = 9.247 \times \text{weight (kg)} + 3.098 \times \text{height (cm)} - 4.330 \times \text{age} + 447.593$$
+
+For the same 35-year-old male, 180 cm, 82 kg:
+
+$$\text{BMR} = 13.397(82) + 4.799(180) - 5.677(35) + 88.362 = 1{,}098.55 + 863.82 - 198.70 + 88.36 = 1{,}852 \text{ kcal/day}$$
+
+Harris-Benedict estimates 1,852 kcal/day vs. Mifflin-St Jeor's 1,775 kcal/day — a 4.3% difference. The Harris-Benedict equation tends to overestimate BMR by 5–15% compared to indirect calorimetry measurements, which is why Mifflin-St Jeor is now preferred for clinical use.
+
+## Side-by-Side Comparison
+
+When do these formulas diverge most significantly?
+
+| Profile | Mifflin-St Jeor | Harris-Benedict | Difference |
+|---------|----------------|-----------------|------------|
+| Male, 25, 70 kg, 175 cm | 1,699 kcal | 1,724 kcal | +1.5% |
+| Female, 25, 60 kg, 165 cm | 1,370 kcal | 1,413 kcal | +3.1% |
+| Male, 55, 90 kg, 178 cm | 1,738 kcal | 1,831 kcal | +5.4% |
+| Female, 55, 70 kg, 163 cm | 1,302 kcal | 1,370 kcal | +5.2% |
+| Male, 25, 120 kg, 180 cm | 2,105 kcal | 2,175 kcal | +3.3% |
+
+The discrepancy grows with age and with higher body weight. For most practical purposes — setting initial calorie targets for weight management — the difference between the two formulas is smaller than the error margin inherent in estimating activity levels.
+
+## Activity Multipliers
+
+Both BMR formulas require an activity multiplier to estimate TDEE. The standard multipliers used in most calorie calculators originate from the WHO/FAO/UNU report on human energy requirements:
+
+| Activity Level | Description | Multiplier |
+|---------------|-------------|------------|
+| Sedentary | Desk job, no exercise | 1.2 |
+| Lightly active | Light exercise 1–3 days/week | 1.375 |
+| Moderately active | Moderate exercise 3–5 days/week | 1.55 |
+| Very active | Hard exercise 6–7 days/week | 1.725 |
+| Extra active | Athlete or very physical job + exercise | 1.9 |
+
+For the example male with a Mifflin-St Jeor BMR of 1,775:
+
+- **Sedentary TDEE:** $1{,}775 \times 1.2 = 2{,}130$ kcal/day
+- **Moderately active TDEE:** $1{,}775 \times 1.55 = 2{,}751$ kcal/day
+- **Very active TDEE:** $1{,}775 \times 1.725 = 3{,}062$ kcal/day
+
+The activity multiplier is the largest source of error in any calorie calculator. Most people overestimate their activity level. A "moderately active" person who exercises 3 times per week but sits at a desk the remaining 160+ waking hours may be closer to the sedentary or lightly active category in actual energy expenditure.
+
+## The Katch-McArdle Formula
+
+For individuals who know their body fat percentage, the Katch-McArdle formula provides a more accurate estimate by using lean body mass (LBM) instead of total weight:
+
+$$\text{BMR} = 370 + 21.6 \times \text{LBM (kg)}$$
+
+Where:
+
+$$\text{LBM} = \text{weight} \times \left(1 - \frac{\text{body fat \%}}{100}\right)$$
+
+The Katch-McArdle equation is sex-neutral — it doesn't separate formulas for men and women because the sex-based differences in metabolic rate are largely explained by differences in lean body mass. For the same 82 kg male at 18% body fat:
+
+$$\text{LBM} = 82 \times (1 - 0.18) = 67.24 \text{ kg}$$
+
+$$\text{BMR} = 370 + 21.6 \times 67.24 = 1{,}822 \text{ kcal/day}$$
+
+This falls between the Mifflin-St Jeor (1,775) and Harris-Benedict (1,852) estimates. The Katch-McArdle formula is particularly useful for muscular individuals who would be overestimated by weight-based formulas, or for individuals with high body fat percentages who would be underestimated.
+
+## The 3,500 Calorie Rule — and Why It's an Oversimplification
+
+The widely cited rule that "3,500 calories equals one pound of body fat" comes from a 1958 paper by Max Wishnofsky. The math: one pound of human adipose tissue contains approximately 3,500 kcal of stored energy. Therefore, a deficit of 500 kcal/day should produce 1 lb/week of fat loss ($500 \times 7 = 3{,}500$).
+
+This rule is a reasonable rough approximation for the first few weeks of a dietary change, but it breaks down over time because:
+
+1. **Metabolic adaptation** — as you lose weight, your BMR decreases because there is less body mass to maintain. The same 500 kcal/day deficit that initially produced 1 lb/week of loss produces progressively less weight loss over time.
+2. **Not all weight loss is fat** — calorie restriction causes loss of both fat and lean tissue. The ratio depends on the size of the deficit, protein intake, and exercise. Larger deficits lose proportionally more lean tissue.
+3. **The body is not a closed calorimeter** — hormonal responses, gut microbiome changes, thermic effect of food, and non-exercise activity thermogenesis (NEAT) all shift in response to calorie restriction, partially offsetting the planned deficit.
+
+More accurate models like the NIH Body Weight Planner (based on the Hall et al. 2011 mathematical model) account for metabolic adaptation and predict approximately 50% of the weight loss that the 3,500-calorie rule would predict over 12 months.
+
+## Assumptions and Limitations
+
+1. **Population averages** — all BMR formulas predict the average metabolic rate for people with a given set of characteristics. Individual variation is ±200–300 kcal/day even among people matched for weight, height, age, and sex.
+2. **Rest conditions** — BMR assumes a resting state. Factors like caffeine, medications (thyroid hormones, beta-blockers), ambient temperature, and recent meals can increase or decrease measured metabolic rate by 5–15%.
+3. **Body composition not accounted for** — Mifflin-St Jeor and Harris-Benedict use total body weight, which means they overestimate BMR for high-fat, low-muscle individuals and underestimate it for lean, muscular individuals. Use Katch-McArdle when body fat data is available.
+4. **Formulas derived from specific populations** — Mifflin-St Jeor was derived from healthy American adults. Accuracy may vary for populations with different genetic backgrounds, chronic conditions, or extreme ages.
+5. **Activity multipliers are coarse** — the five-level activity scale is an imprecise tool. True energy expenditure is best measured with wearable devices (accelerometers) or the doubly labeled water method, which is the gold standard but impractical for consumer use.
+
+## Sources
+
+- **Mifflin, M.D., et al.** "A new predictive equation for resting energy expenditure in healthy individuals." *American Journal of Clinical Nutrition*, 51(2), 241–247, 1990.
+- **Harris, J.A. & Benedict, F.G.** "A Biometric Study of Basal Metabolism in Man." Carnegie Institution of Washington, Publication No. 279, 1919.
+- **Roza, A.M. & Shizgal, H.M.** "The Harris Benedict equation reevaluated." *American Journal of Clinical Nutrition*, 40(1), 168–182, 1984.
+- **WHO/FAO/UNU.** "Human Energy Requirements." Report of a Joint Expert Consultation. FAO Food and Nutrition Technical Report Series No. 1, 2001.
+- **Hall, K.D., et al.** "Quantification of the effect of energy imbalance on bodyweight." *The Lancet*, 378(9793), 826–837, 2011.

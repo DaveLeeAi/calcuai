@@ -1,0 +1,225 @@
+{
+  "id": "salary-calculator",
+  "title": "Salary Calculator",
+  "slug": "salary-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "salary calculator",
+  "metaTitle": "Salary Calculator — Annual, Monthly, Biweekly & Hourly",
+  "metaDescription": "Convert salary to hourly, biweekly, monthly, and annual. Calculate your take-home pay equivalent across all frequencies. Includes PTO adjustment. Free.",
+  "inputs": [
+    {
+      "id": "inputMode",
+      "label": "I know my...",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "annual",
+      "options": [
+        {
+          "value": "annual",
+          "label": "Annual Salary"
+        },
+        {
+          "value": "hourly",
+          "label": "Hourly Rate"
+        }
+      ]
+    },
+    {
+      "id": "annualSalary",
+      "label": "Annual Salary",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 55000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Your gross annual salary before taxes",
+      "dependsOn": "inputMode"
+    },
+    {
+      "id": "hourlyRate",
+      "label": "Hourly Rate",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 25,
+      "min": 0,
+      "max": 10000,
+      "step": 0.25,
+      "prefix": "$",
+      "helpText": "Your hourly wage before taxes",
+      "dependsOn": "inputMode"
+    },
+    {
+      "id": "hoursPerWeek",
+      "label": "Hours per Week",
+      "type": "number",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "max": 168,
+      "step": 1,
+      "helpText": "Standard full-time is 40 hours"
+    },
+    {
+      "id": "weeksPerYear",
+      "label": "Weeks per Year",
+      "type": "number",
+      "required": true,
+      "defaultValue": 52,
+      "min": 1,
+      "max": 52,
+      "step": 1
+    },
+    {
+      "id": "vacationDays",
+      "label": "Vacation / PTO Days",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 365,
+      "step": 1,
+      "helpText": "Paid time off days per year"
+    },
+    {
+      "id": "holidays",
+      "label": "Paid Holidays",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 365,
+      "step": 1,
+      "helpText": "Company-observed paid holidays per year"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSalary",
+      "label": "Annual Salary",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "hourlyRate",
+      "label": "Hourly Rate",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "salaryBreakdown",
+      "label": "Salary Breakdown",
+      "type": "table",
+      "columns": [
+        {
+          "key": "frequency",
+          "label": "Frequency"
+        },
+        {
+          "key": "unadjusted",
+          "label": "Unadjusted",
+          "format": "currency"
+        },
+        {
+          "key": "adjusted",
+          "label": "Adjusted (w/ PTO)",
+          "format": "currency"
+        }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Pay Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "salary-convert",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "tabs": [
+    {
+      "id": "annual-to-hourly",
+      "label": "Salary Calculator",
+      "description": "Convert annual salary to hourly, biweekly, and monthly",
+      "defaultInputOverrides": {
+        "inputMode": "annual"
+      },
+      "visibleInputs": [
+        "inputMode",
+        "annualSalary",
+        "hoursPerWeek",
+        "weeksPerYear",
+        "vacationDays",
+        "holidays"
+      ]
+    },
+    {
+      "id": "hourly-to-salary",
+      "label": "Hourly to Salary",
+      "description": "Convert hourly wage to annual salary and other frequencies",
+      "defaultInputOverrides": {
+        "inputMode": "hourly"
+      },
+      "visibleInputs": [
+        "inputMode",
+        "hourlyRate",
+        "hoursPerWeek",
+        "weeksPerYear",
+        "vacationDays",
+        "holidays"
+      ]
+    }
+  ],
+  "relatedCalculators": [
+    "income-tax-calculator",
+    "payroll-calculator",
+    "overtime-calculator",
+    "commission-calculator",
+    "inflation-calculator",
+    "employee-cost-calculator",
+    "hours-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Bureau of Labor Statistics (BLS) — Occupational Employment and Wage Statistics (2024). Standard: 2,080 hours/year.",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual = Hourly × Hours/Week × Weeks/Year; Hourly = Annual / (Hours/Week × Weeks/Year); Monthly = Annual / 12; Biweekly = Annual / 26",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "hourly-to-salary-calculator"
+  ],
+  "qualityScore": 93,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null,
+  "glossaryTerms": [
+    "commission",
+    "gross-income",
+    "overtime",
+    "payroll",
+    "tax-bracket"
+  ],
+  "methodologyTopics": [
+    "progressive-taxation"
+  ]
+}

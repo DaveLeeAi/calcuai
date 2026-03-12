@@ -1,0 +1,146 @@
+{
+  "id": "fraction-calculator",
+  "title": "Fraction Calculator",
+  "slug": "fraction-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "fraction calculator",
+  "metaTitle": "Fraction Calculator — Add, Subtract, Multiply, Divide",
+  "metaDescription": "Add, subtract, multiply, and divide fractions instantly. See step-by-step solutions, simplified results, and mixed number conversions. Free, no signup.",
+  "inputs": [
+    {
+      "id": "numerator1",
+      "label": "Numerator 1",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 3",
+      "step": 1,
+      "defaultValue": 3
+    },
+    {
+      "id": "denominator1",
+      "label": "Denominator 1",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 4",
+      "min": 1,
+      "step": 1,
+      "defaultValue": 4
+    },
+    {
+      "id": "operation",
+      "label": "Operation",
+      "type": "select",
+      "required": true,
+      "defaultValue": "add",
+      "options": [
+        {
+          "value": "add",
+          "label": "+ Add"
+        },
+        {
+          "value": "subtract",
+          "label": "− Subtract"
+        },
+        {
+          "value": "multiply",
+          "label": "× Multiply"
+        },
+        {
+          "value": "divide",
+          "label": "÷ Divide"
+        }
+      ]
+    },
+    {
+      "id": "numerator2",
+      "label": "Numerator 2",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 1",
+      "step": 1,
+      "defaultValue": 1
+    },
+    {
+      "id": "denominator2",
+      "label": "Denominator 2",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 2",
+      "min": 1,
+      "step": 1,
+      "defaultValue": 2
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Result",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "simplifiedResult",
+      "label": "Simplified",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "decimalResult",
+      "label": "Decimal",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "mixedNumber",
+      "label": "Mixed Number",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "stepByStep",
+      "label": "Step-by-Step Solution",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "fractions",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "percentage-calculator",
+    "ratio-calculator",
+    "gcf-lcm-calculator",
+    "standard-deviation-calculator",
+    "mean-median-mode-calculator",
+    "gpa-calculator",
+    "exponent-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard arithmetic operations on rational numbers (Euclid's Elements, Book VII)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard arithmetic operations on rational numbers: a/b ± c/d = (ad ± bc)/bd; a/b × c/d = ac/bd; a/b ÷ c/d = ad/bc; simplified via GCD (Euclidean algorithm)",
+  "formulaAuditDate": "2026-03-10",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-10",
+  "seasonality": null
+}

@@ -1,0 +1,93 @@
+{
+  "id": "countdown-calculator",
+  "title": "Countdown Calculator",
+  "slug": "countdown-calculator",
+  "category": "everyday",
+  "subcategory": "date-time",
+  "primaryKeyword": "countdown calculator",
+  "metaTitle": "Countdown Calculator — Days Until Any Date",
+  "metaDescription": "Count the days, weeks, and months until any future date. Enter a target date and see exactly how long you have left. Free, instant countdown calculator.",
+  "inputs": [
+    {
+      "id": "startDate",
+      "label": "From Date",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-03-12",
+      "helpText": "Starting date (defaults to today)"
+    },
+    {
+      "id": "endDate",
+      "label": "Target Date",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-12-31",
+      "helpText": "The date you are counting down to"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalDays",
+      "label": "Days Until Target",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "dateBreakdown",
+      "label": "Time Breakdown",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "totalWeeks",
+      "label": "Total Weeks",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalHours",
+      "label": "Total Hours",
+      "type": "single-value",
+      "format": "number"
+    }
+  ],
+  "formula": "date-diff",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "date-calculator",
+    "age-calculator",
+    "time-calculator",
+    "conception-calculator",
+    "due-date-calculator",
+    "time-zone-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Gregorian calendar system (Pope Gregory XIII, 1582) — ISO 8601 date arithmetic.",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "totalDays = (endDate - startDate) in milliseconds / 86,400,000. Year/month/day decomposition via Gregorian calendar arithmetic.",
+  "formulaAuditDate": "2026-03-11",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "date-calculator",
+    "age-calculator"
+  ],
+  "qualityScore": 77,
+  "lastContentUpdate": "2026-03-11",
+  "seasonality": "Q4"
+}
