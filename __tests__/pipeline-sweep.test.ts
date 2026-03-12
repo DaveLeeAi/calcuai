@@ -126,6 +126,10 @@ describe('Calculator Pipeline Sweep — Default Inputs', () => {
       const modeBasedCalcs = new Set([
         'percentage-calculator',  // 3 modes: percent-of, percent-change, percent-difference
         'date-calculator',        // tabs: days-between vs add/subtract
+        'significant-figures-calculator', // count mode returns null roundedValue
+        'scientific-notation-calculator', // tabs: to-scientific vs from-scientific
+        'pythagorean-theorem-calculator', // tabs: find-c, find-a, find-b
+        'p-value-calculator',     // z-test mode returns null degreesOfFreedom
       ]);
       const isModeBasedCalc = modeBasedCalcs.has(spec.slug);
 
@@ -185,6 +189,7 @@ describe('Calculator Pipeline Sweep — Input Sensitivity', () => {
     'date-calculator',
     'gpa-calculator',
     'final-grade-calculator',
+    'significant-figures-calculator', // primary input is text (string-based counting), not numeric
   ]);
 
   // For each calculator, verify that changing a key numeric input changes at least one output

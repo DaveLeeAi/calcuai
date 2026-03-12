@@ -1,0 +1,139 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+The square root of 50 is 5√2, which equals approximately 7.071. This square root calculator computes exact roots, simplifies radical expressions, and handles nth roots for any positive number. Enter a value and root index to get both the decimal approximation and the simplified radical form — for example, √72 simplifies to 6√2 because 72 = 36 × 2 and √36 = 6. The calculator also identifies perfect squares and cubes instantly.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The result displays two forms of your answer: the **decimal value** (rounded to six significant figures) and the **simplified radical form** when one exists. A simplified radical pulls out the largest perfect square factor from under the radical sign, making the expression cleaner and exact. For instance, √200 = 10√2 because 200 = 100 × 2 and √100 = 10. If the input is a perfect square like 144, the radical simplifies completely to the integer 12.
+
+For nth roots (cube root, fourth root, etc.), the same principle applies — the calculator extracts the largest perfect nth power. The cube root of 250, for example, simplifies to 5∛2 because 250 = 125 × 2 and ∛125 = 5. When no simplification is possible, the calculator returns the decimal approximation alone. For exponential computations, see our [Exponent Calculator](/calculators/math/exponent-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the number (radicand)** — the value you want to take the root of. For example, enter **72** to compute √72.
+
+2. **Select the root index** — choose 2 for square root (default), 3 for cube root, 4 for fourth root, or enter any positive integer. The root index determines which root operation is performed.
+
+3. **Read the decimal result** — the calculator displays the numerical value. For √72, this is approximately **8.4853**.
+
+4. **Check the simplified radical** — if the radicand contains a perfect square (or perfect nth power) factor, the simplified form appears. For √72, this is **6√2** because 72 = 36 × 2.
+
+5. **Verify with perfect square detection** — the calculator flags whether your input is a perfect square (or perfect nth power), so you know if the result is an exact integer.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Square Root
+
+$$\sqrt{x} = x^{1/2}$$
+
+Where **x** is the radicand (the number under the radical sign) and **x** must be non-negative for real-valued results.
+
+### Nth Root
+
+$$\sqrt[n]{x} = x^{1/n}$$
+
+Where **n** is the root index (a positive integer) and **x** is the radicand. For even values of n, x must be non-negative. For odd values of n (cube root, fifth root, etc.), x can be negative — for example, $\sqrt[3]{-27} = -3$.
+
+### Radical Simplification
+
+To simplify $\sqrt{x}$, find the largest perfect square factor $k^2$ that divides x:
+
+$$\sqrt{x} = \sqrt{k^2 \cdot m} = k\sqrt{m}$$
+
+Where $x = k^2 \cdot m$ and m has no perfect square factors (m is "square-free"). The same logic extends to nth roots:
+
+$$\sqrt[n]{x} = k \cdot \sqrt[n]{m}$$
+
+Where $x = k^n \cdot m$ and m has no perfect nth power factors.
+
+### Key Properties
+
+$$\sqrt{a \cdot b} = \sqrt{a} \cdot \sqrt{b} \quad \text{(product rule)}$$
+
+$$\sqrt{\frac{a}{b}} = \frac{\sqrt{a}}{\sqrt{b}} \quad \text{(quotient rule, } b \neq 0\text{)}$$
+
+$$\left(\sqrt[n]{a}\right)^n = a$$
+
+**Source:** Standard radical and exponent identities from pre-algebra and algebra curricula, as documented in Sullivan's *Algebra & Trigonometry* (Pearson) and the National Council of Teachers of Mathematics (NCTM) Principles and Standards.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Simplify √72
+
+**Goal:** Find the square root of 72 in simplified radical form.
+
+**Step 1:** Factor 72 and identify the largest perfect square factor.
+72 = 36 × 2, and 36 = 6². So the largest perfect square factor is **36**.
+
+**Step 2:** Apply the product rule for radicals.
+$$\sqrt{72} = \sqrt{36 \times 2} = \sqrt{36} \times \sqrt{2} = 6\sqrt{2}$$
+
+**Step 3:** Compute the decimal value.
+$6\sqrt{2} = 6 \times 1.41421 = \mathbf{8.4853}$
+
+**Interpretation:** The exact answer is 6√2. This is more precise than saying "approximately 8.49" because 6√2 carries no rounding error. In geometry, construction, and engineering, keeping the radical form preserves full precision through intermediate calculations. Only convert to a decimal at the final step.
+
+### Example 2: Cube Root of 250
+
+**Goal:** Find ∛250 in simplified form.
+
+**Step 1:** Factor 250 and identify the largest perfect cube factor.
+250 = 125 × 2, and 125 = 5³. So the largest perfect cube factor is **125**.
+
+**Step 2:** Apply the product rule.
+$$\sqrt[3]{250} = \sqrt[3]{125 \times 2} = \sqrt[3]{125} \times \sqrt[3]{2} = 5\sqrt[3]{2}$$
+
+**Step 3:** Compute the decimal value.
+$5 \times \sqrt[3]{2} = 5 \times 1.25992 = \mathbf{6.2996}$
+
+**Interpretation:** The simplified form 5∛2 is exact. Cube roots appear in volume-related problems — if a cube has volume 250 cm³, each side measures exactly 5∛2 ≈ 6.30 cm.
+
+### Example 3: Perfect Square Check — √144
+
+**Step 1:** 144 = 12². This is a perfect square.
+**Step 2:** $\sqrt{144} = 12$ exactly. No radical remains.
+
+This confirms 144 is a perfect square. The first 15 perfect squares worth memorizing are: 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+**Perfect vs. non-perfect inputs.** A perfect square (like 49, 64, or 225) yields a clean integer result with no remainder under the radical. Non-perfect squares (like 50, 72, or 200) always produce irrational numbers — their decimal expansions never terminate or repeat. This distinction matters in exact calculations: if you are computing a length in geometry, √50 meters is exact while 7.071 meters is an approximation. Keep the radical form through intermediate steps and convert to decimal only for the final answer.
+
+**Factoring strategy for simplification.** The key to simplifying a radical is finding the largest perfect square (or perfect nth power) factor. For √180, you might first notice 180 = 4 × 45 and write 2√45. But 45 = 9 × 5, so √45 = 3√5, giving 2 × 3√5 = 6√5. The shortcut: factor completely (180 = 2² × 3² × 5), then pull out pairs. Every pair of identical prime factors contributes one factor outside the radical. Two 2s and two 3s contribute 2 × 3 = 6, leaving √5 inside.
+
+**Even vs. odd root index.** Even roots (square root, fourth root, sixth root) of negative numbers are undefined in the real number system. The square root of −9 does not exist as a real number — it requires imaginary numbers (3i). Odd roots (cube root, fifth root) of negative numbers are perfectly valid: ∛(−8) = −2, because (−2)³ = −8. This distinction is critical in solving equations: x² = −4 has no real solution, but x³ = −27 has exactly one real solution (x = −3).
+
+**Nested radicals and compound expressions.** Some problems involve radicals within radicals, such as √(6 + √5). These cannot always be simplified further, but in specific cases (when the expression equals a sum of simpler radicals), denesting is possible. The calculator handles the numerical evaluation directly, but for symbolic simplification of nested radicals, algebraic techniques are required. For related work with exponents and fractional powers, try the [Exponent Calculator](/calculators/math/exponent-calculator).
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes real-number results only — does not compute complex/imaginary roots (e.g., √(−1) returns undefined)
+- Radical simplification works with integer radicands; decimal inputs return decimal results without simplified radical form
+- The root index must be a positive integer (no fractional root indices like the 2.5th root)
+- Very large radicands (beyond 10¹⁵) may produce results with reduced decimal precision due to floating-point limits
+- Simplification identifies the largest perfect nth power factor through prime factorization, which is computationally intensive for very large numbers
+- Results are displayed to 6 significant figures; the exact radical form carries infinite precision
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes roots using JavaScript's Math.pow(x, 1/n) for the decimal value, then performs integer prime factorization on the radicand to find the largest perfect nth power factor for radical simplification. The factorization algorithm divides by primes up to √x, groups prime factors into sets of n, and extracts complete groups as the coefficient outside the radical. The remaining product stays under the radical sign.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

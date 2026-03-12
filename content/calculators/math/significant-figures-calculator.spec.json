@@ -1,0 +1,95 @@
+{
+  "id": "significant-figures-calculator",
+  "title": "Significant Figures Calculator",
+  "slug": "significant-figures-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "significant figures calculator",
+  "metaTitle": "Significant Figures Calculator — Count & Round Sig Figs",
+  "metaDescription": "Count significant figures or round any number to a specific number of sig figs. Shows scientific notation and digit-by-digit breakdown. Free online tool.",
+  "inputs": [
+    {
+      "id": "number",
+      "label": "Number",
+      "type": "text",
+      "required": true,
+      "defaultValue": "0.00450",
+      "placeholder": "e.g. 0.00450 or 12300",
+      "helpText": "Enter any number — trailing zeros and decimal points affect sig fig count"
+    },
+    {
+      "id": "mode",
+      "label": "Mode",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "count",
+      "options": [
+        { "value": "count", "label": "Count Sig Figs" },
+        { "value": "round", "label": "Round to Sig Figs" }
+      ],
+      "helpText": "Count the sig figs in your number, or round it to a specific number of sig figs"
+    },
+    {
+      "id": "roundTo",
+      "label": "Round To (sig figs)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3,
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "placeholder": "e.g. 3",
+      "helpText": "Number of significant figures to round to (only used in Round mode)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "significantFigures",
+      "label": "Significant Figures",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "scientificNotation",
+      "label": "Scientific Notation",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "roundedValue",
+      "label": "Rounded Value",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "significant-figures",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "scientific-notation-calculator",
+    "logarithm-calculator",
+    "percentage-calculator",
+    "fraction-calculator",
+    "standard-deviation-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NIST Guide for the Use of the International System of Units (SI), Appendix B",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Sig fig rules: non-zero always significant; zeros between non-zeros significant; leading zeros not significant; trailing zeros after decimal significant",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["scientific-notation-calculator"],
+  "qualityScore": 76,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null
+}

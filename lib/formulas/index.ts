@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 87 modules, 89 formula IDs
+ * 95 modules, 97 formula IDs
  * Generated: 2026-03-12
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -43,6 +43,7 @@ import { FORMULA_REGISTRY as everyday_final_grade } from './everyday/final-grade
 import { FORMULA_REGISTRY as everyday_fuel_cost } from './everyday/fuel-cost';
 import { FORMULA_REGISTRY as everyday_gpa } from './everyday/gpa';
 import { FORMULA_REGISTRY as everyday_grade } from './everyday/grade';
+import { FORMULA_REGISTRY as everyday_test_grade } from './everyday/test-grade';
 import { FORMULA_REGISTRY as everyday_time_math } from './everyday/time-math';
 import { FORMULA_REGISTRY as everyday_timezone } from './everyday/timezone';
 import { FORMULA_REGISTRY as everyday_tip_calc } from './everyday/tip-calc';
@@ -93,14 +94,21 @@ import { FORMULA_REGISTRY as health_pregnancy } from './health/pregnancy';
 // Math
 import { FORMULA_REGISTRY as math_central_tendency } from './math/central-tendency';
 import { FORMULA_REGISTRY as math_circle } from './math/circle';
+import { FORMULA_REGISTRY as math_confidence_interval } from './math/confidence-interval';
 import { FORMULA_REGISTRY as math_exponents } from './math/exponents';
 import { FORMULA_REGISTRY as math_fractions } from './math/fractions';
 import { FORMULA_REGISTRY as math_gcf_lcm } from './math/gcf-lcm';
 import { FORMULA_REGISTRY as math_logarithm } from './math/logarithm';
+import { FORMULA_REGISTRY as math_p_value } from './math/p-value';
 import { FORMULA_REGISTRY as math_percentage } from './math/percentage';
 import { FORMULA_REGISTRY as math_probability } from './math/probability';
+import { FORMULA_REGISTRY as math_pythagorean_theorem } from './math/pythagorean-theorem';
 import { FORMULA_REGISTRY as math_quadratic } from './math/quadratic';
 import { FORMULA_REGISTRY as math_ratio } from './math/ratio';
+import { FORMULA_REGISTRY as math_scientific_notation } from './math/scientific-notation';
+import { FORMULA_REGISTRY as math_significant_figures } from './math/significant-figures';
+import { FORMULA_REGISTRY as math_slope } from './math/slope';
+import { FORMULA_REGISTRY as math_square_root } from './math/square-root';
 import { FORMULA_REGISTRY as math_standard_deviation } from './math/standard-deviation';
 import { FORMULA_REGISTRY as math_triangle_solver } from './math/triangle-solver';
 
@@ -144,6 +152,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...everyday_fuel_cost,
   ...everyday_gpa,
   ...everyday_grade,
+  ...everyday_test_grade,
   ...everyday_time_math,
   ...everyday_timezone,
   ...everyday_tip_calc,
@@ -191,14 +200,21 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   // Math
   ...math_central_tendency,
   ...math_circle,
+  ...math_confidence_interval,
   ...math_exponents,
   ...math_fractions,
   ...math_gcf_lcm,
   ...math_logarithm,
+  ...math_p_value,
   ...math_percentage,
   ...math_probability,
+  ...math_pythagorean_theorem,
   ...math_quadratic,
   ...math_ratio,
+  ...math_scientific_notation,
+  ...math_significant_figures,
+  ...math_slope,
+  ...math_square_root,
   ...math_standard_deviation,
   ...math_triangle_solver,
   // Science

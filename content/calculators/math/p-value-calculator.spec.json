@@ -1,0 +1,137 @@
+{
+  "id": "p-value-calculator",
+  "title": "P-Value Calculator",
+  "slug": "p-value-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "p-value calculator",
+  "metaTitle": "P-Value Calculator — Z, T & Chi-Square Tests",
+  "metaDescription": "Calculate p-values from z-scores, t-statistics, or chi-square values. Supports one-tailed and two-tailed tests. Instant significance testing. Free online tool.",
+  "inputs": [
+    {
+      "id": "distribution",
+      "label": "Distribution",
+      "type": "select",
+      "required": true,
+      "defaultValue": "z",
+      "options": [
+        { "value": "z", "label": "Z (Normal)" },
+        { "value": "t", "label": "T (Student's t)" },
+        { "value": "chi-square", "label": "Chi-Square (\u03c7\u00b2)" }
+      ],
+      "helpText": "Choose the distribution for your test statistic"
+    },
+    {
+      "id": "testStatistic",
+      "label": "Test Statistic",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1.96,
+      "step": 0.001,
+      "placeholder": "e.g. 1.96",
+      "helpText": "Your calculated test statistic (z-score, t-value, or chi-square value)"
+    },
+    {
+      "id": "degreesOfFreedom",
+      "label": "Degrees of Freedom",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "min": 1,
+      "max": 10000,
+      "step": 1,
+      "placeholder": "e.g. 10",
+      "helpText": "Required for t-test and chi-square. Not used for z-test."
+    },
+    {
+      "id": "testType",
+      "label": "Test Type",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "two-tailed",
+      "options": [
+        { "value": "two-tailed", "label": "Two-Tailed" },
+        { "value": "right-tailed", "label": "Right-Tailed (Upper)" },
+        { "value": "left-tailed", "label": "Left-Tailed (Lower)" }
+      ],
+      "helpText": "Two-tailed tests for any difference; one-tailed tests for a specific direction."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pValue",
+      "label": "P-Value",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6,
+      "highlight": true
+    },
+    {
+      "id": "interpretation",
+      "label": "Interpretation",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "significantAt05",
+      "label": "Significant at \u03b1 = 0.05?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "significantAt01",
+      "label": "Significant at \u03b1 = 0.01?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "significantAt001",
+      "label": "Significant at \u03b1 = 0.001?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "testStatistic",
+      "label": "Test Statistic",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "degreesOfFreedom",
+      "label": "Degrees of Freedom",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    }
+  ],
+  "formula": "p-value",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "confidence-interval-calculator",
+    "standard-deviation-calculator",
+    "probability-calculator",
+    "mean-median-mode-calculator",
+    "percentage-calculator",
+    "significant-figures-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Abramowitz & Stegun, Handbook of Mathematical Functions (1964); NIST/SEMATECH e-Handbook of Statistical Methods",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Z: p = 2(1 - \u03a6(|z|)); T: via regularized incomplete beta function I_x(df/2, 1/2); Chi-square: via regularized incomplete gamma P(k/2, x/2)",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["probability-calculator"],
+  "qualityScore": 78,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null
+}

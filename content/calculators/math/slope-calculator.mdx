@@ -1,0 +1,138 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Given two points (1, 2) and (5, 10), the slope is m = 2, meaning y increases by 2 units for every 1-unit increase in x. This slope calculator finds the slope, y-intercept, line equation, and distance between any two points in the coordinate plane. Enter your two points and get the complete linear relationship — including whether the line rises, falls, or is horizontal, and the exact distance between the points using the distance formula.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The result includes four key values. The **slope (m)** tells you the rate of change — how many units y moves for each unit x moves. A positive slope means the line rises from left to right; a negative slope means it falls. The **y-intercept (b)** is where the line crosses the y-axis (the value of y when x = 0). Together these form the **line equation** in slope-intercept form: y = mx + b. Finally, the **distance** between the two points tells you how far apart they are in a straight line.
+
+A slope of 0 means a perfectly horizontal line. An undefined slope (when both points share the same x-coordinate) indicates a vertical line, which cannot be expressed in y = mx + b form — it is instead written as x = constant. For angle and triangle computations involving slopes, try the [Triangle Calculator](/calculators/math/triangle-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Point 1 coordinates** — type the x₁ and y₁ values for your first point. For example, x₁ = **2**, y₁ = **3**.
+
+2. **Enter Point 2 coordinates** — type the x₂ and y₂ values for your second point. For example, x₂ = **8**, y₂ = **15**.
+
+3. **Read the slope** — the calculator displays m = (y₂ − y₁) / (x₂ − x₁). For these points, m = (15 − 3) / (8 − 2) = 12/6 = **2**.
+
+4. **Read the y-intercept and equation** — using the slope and one point, the calculator solves for b and displays the full line equation y = 2x − 1.
+
+5. **Read the distance** — the straight-line distance between the two points, computed via the distance formula.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Slope Formula
+
+$$m = \frac{y_2 - y_1}{x_2 - x_1}$$
+
+Where:
+- **m** = slope (rise over run)
+- **(x₁, y₁)** = coordinates of the first point
+- **(x₂, y₂)** = coordinates of the second point
+
+The slope is undefined when $x_2 = x_1$ (vertical line — division by zero).
+
+### Slope-Intercept Form
+
+$$y = mx + b$$
+
+Solve for the y-intercept **b** by substituting any point and the slope:
+
+$$b = y_1 - m \cdot x_1$$
+
+### Distance Formula
+
+$$d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$$
+
+This is a direct application of the Pythagorean theorem: the horizontal difference $(x_2 - x_1)$ and vertical difference $(y_2 - y_1)$ form the legs of a right triangle, and the distance $d$ is the hypotenuse.
+
+### Point-Slope Form (Alternate)
+
+$$y - y_1 = m(x - x_1)$$
+
+This form is algebraically equivalent to slope-intercept form and is often more convenient when you know one point and the slope.
+
+**Source:** Coordinate geometry fundamentals from Euclidean geometry, as presented in Stewart's *Calculus: Early Transcendentals* (Cengage) and the College Board's AP Mathematics curriculum.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Complete Line Analysis — Points (2, 3) and (8, 15)
+
+**Goal:** Find the slope, y-intercept, line equation, and distance.
+
+**Step 1: Calculate the slope.**
+$$m = \frac{15 - 3}{8 - 2} = \frac{12}{6} = \mathbf{2}$$
+
+The line rises 2 units for every 1 unit of horizontal movement.
+
+**Step 2: Find the y-intercept.**
+$$b = y_1 - m \cdot x_1 = 3 - 2 \times 2 = 3 - 4 = \mathbf{-1}$$
+
+**Step 3: Write the equation.**
+$$y = 2x - 1$$
+
+**Verification:** Plug in point 2 — y = 2(8) − 1 = 15. Correct.
+
+**Step 4: Calculate the distance.**
+$$d = \sqrt{(8-2)^2 + (15-3)^2} = \sqrt{36 + 144} = \sqrt{180} = 6\sqrt{5} \approx \mathbf{13.416}$$
+
+**Interpretation:** These two points define a line with slope 2 and y-intercept −1. They are approximately 13.42 units apart. The positive slope means the line rises from left to right — for every step of 1 unit to the right, the line climbs 2 units. A slope of 2 is steeper than 45° (which has slope 1).
+
+### Example 2: Horizontal Line — Points (−3, 7) and (5, 7)
+
+**Step 1:** Slope = (7 − 7) / (5 − (−3)) = 0/8 = **0**.
+**Step 2:** y-intercept: b = 7 − 0 × (−3) = **7**.
+**Step 3:** Equation: **y = 7** (a horizontal line at height 7).
+**Step 4:** Distance = √((5−(−3))² + 0²) = √64 = **8**.
+
+A slope of zero means the line is perfectly flat. Both points sit at the same height (y = 7), so the distance between them equals the horizontal gap.
+
+### Example 3: Vertical Line — Points (4, 1) and (4, 9)
+
+**Step 1:** Slope = (9 − 1) / (4 − 4) = 8/0 = **undefined**.
+
+A vertical line has no slope in the real-number sense. Its equation is **x = 4**, not expressible in y = mx + b form. The distance is simply |9 − 1| = **8** (pure vertical gap).
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+**Vertical lines produce undefined slope.** When both points share the same x-coordinate, the denominator in the slope formula becomes zero. This is not an error — vertical lines genuinely have undefined slope. They are infinitely steep. The equation takes the form x = constant rather than y = mx + b. Recognize this case before attempting further calculations: a y-intercept and slope-intercept equation do not exist for vertical lines.
+
+**Parallel and perpendicular relationships.** Two lines are parallel if and only if they have equal slopes (m₁ = m₂). Two lines are perpendicular if and only if their slopes are negative reciprocals (m₁ × m₂ = −1). A line with slope 3 is perpendicular to a line with slope −1/3. This relationship is fundamental in geometry, computer graphics, and physics — for example, the normal to a surface at a point is perpendicular to the tangent line at that point. To check if two lines are perpendicular, multiply their slopes and verify the product is −1.
+
+**Slope as rate of change.** Beyond geometry, slope represents any rate of change. In physics, the slope of a position-time graph is velocity. In economics, the slope of a cost curve is marginal cost. In medicine, the slope of a drug concentration curve over time indicates the absorption or elimination rate. The units of slope always equal the units of y divided by the units of x. If y is in dollars and x is in years, a slope of 500 means "$500 per year." Understanding slope as rate makes it one of the most applied concepts in mathematics.
+
+**Coordinate precision matters.** Small changes in input coordinates can produce large changes in slope, particularly when the two points are close together horizontally. Points (3.00, 5.00) and (3.01, 5.50) yield slope = 0.50/0.01 = 50 — a dramatic value from tiny coordinate differences. In real-world data, measurement error in closely spaced points amplifies slope uncertainty. For robust slope estimation from noisy data, linear regression across many points is preferred over the two-point formula. For statistical calculations, see the [Standard Deviation Calculator](/calculators/math/standard-deviation-calculator).
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes two distinct points in a 2D Cartesian coordinate plane
+- Returns "undefined" slope for vertical lines (x₁ = x₂) — this is mathematically correct, not an error
+- Does not compute the angle of inclination directly (use arctan(m) to convert slope to angle)
+- The y-intercept is not computed for vertical lines since it may not exist or may be infinite
+- Input coordinates are treated as exact values; no measurement uncertainty is modeled
+- Distance is Euclidean (straight-line) — not arc length, taxicab distance, or geodesic distance
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the slope formula m = (y₂ − y₁)/(x₂ − x₁) directly. When x₂ = x₁, the slope is returned as undefined and the equation is expressed as x = x₁. For all other cases, the y-intercept is computed as b = y₁ − m × x₁, and the distance is computed via the Pythagorean-based distance formula √((x₂−x₁)² + (y₂−y₁)²). Results are displayed to 6 significant figures.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

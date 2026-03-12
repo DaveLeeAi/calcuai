@@ -1,0 +1,151 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Scoring 42 out of 50 on a test gives you 84%, which is a B on the standard grading scale. This test grade calculator converts raw scores (correct answers out of total questions) to percentages and letter grades instantly. Enter the number of correct answers and total questions to see your percentage, letter grade, and GPA points — or enter how many you got wrong instead and the calculator works backward. It supports standard, plus-minus, and pass-fail grading scales.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The result displays three values: your **percentage score** (correct divided by total, times 100), your **letter grade** (mapped from the percentage using the selected grading scale), and the corresponding **GPA points** (on a 4.0 scale). The percentage is the universal measurement — it tells you what fraction of available points you earned regardless of whether the test had 20 questions or 200.
+
+The letter grade depends on which grading scale your institution uses. Under the standard 10-point scale, 90-100% is an A, 80-89% is a B, 70-79% is a C, 60-69% is a D, and below 60% is an F. The plus-minus scale subdivides each letter: 93-100% is an A, 90-92% is an A−, 87-89% is a B+, and so on. Always check your syllabus for the exact cutoffs your instructor uses. For calculating your overall course grade from weighted categories, see the [Grade Calculator](/calculators/everyday/grade-calculator). For cumulative GPA tracking, try the [GPA Calculator](/calculators/everyday/gpa-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the number of correct answers** — how many questions you answered correctly on the test. For example, **38**.
+
+2. **Enter the total number of questions** — the total questions on the test. For example, **50**.
+
+3. **Select your grading scale** — choose Standard (A/B/C/D/F), Plus-Minus (A/A−/B+/B/B−/etc.), or Pass-Fail.
+
+4. **Read your results** — the calculator displays your percentage (76%), letter grade (C+), and GPA points (2.33).
+
+5. **Explore grade thresholds** — the calculator also shows how many questions you needed to reach each letter grade boundary, so you can see exactly how close you were to the next grade up.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Percentage Score
+
+$$\text{Percentage} = \frac{\text{Correct Answers}}{\text{Total Questions}} \times 100$$
+
+Where:
+- **Correct Answers** = number of questions answered correctly (0 to Total)
+- **Total Questions** = total number of questions on the test (must be > 0)
+
+### Score from Wrong Answers
+
+$$\text{Correct} = \text{Total} - \text{Wrong}$$
+
+Then apply the percentage formula above. This is a convenience conversion for when you know how many you missed rather than how many you got right.
+
+### Letter Grade Mapping (Standard Scale)
+
+| Percentage Range | Letter Grade | GPA Points |
+|-----------------|-------------|------------|
+| 93–100%         | A           | 4.0        |
+| 90–92%          | A−          | 3.7        |
+| 87–89%          | B+          | 3.3        |
+| 83–86%          | B           | 3.0        |
+| 80–82%          | B−          | 2.7        |
+| 77–79%          | C+          | 2.3        |
+| 73–76%          | C           | 2.0        |
+| 70–72%          | C−          | 1.7        |
+| 67–69%          | D+          | 1.3        |
+| 63–66%          | D           | 1.0        |
+| 60–62%          | D−          | 0.7        |
+| Below 60%       | F           | 0.0        |
+
+### Minimum Correct for a Target Grade
+
+$$\text{Minimum Correct} = \left\lceil \frac{\text{Threshold\%} \times \text{Total Questions}}{100} \right\rceil$$
+
+Where **Threshold%** is the minimum percentage for the desired letter grade (e.g., 90% for an A−) and the ceiling function ⌈ ⌉ rounds up because you cannot get a fractional question correct.
+
+**Source:** Standard US academic grading scale. The plus-minus GPA values follow the most common university mapping as documented by AACRAO (American Association of Collegiate Registrars and Admissions Officers).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Test — 38 out of 50
+
+**Given:** 38 correct answers out of 50 total questions, using the plus-minus grading scale.
+
+**Step 1:** Calculate the percentage.
+$$\frac{38}{50} \times 100 = \mathbf{76.0\%}$$
+
+**Step 2:** Map to letter grade.
+76% falls in the 73–76% range on the plus-minus scale → **C**
+
+**Step 3:** Determine GPA points.
+C = **2.0** on a 4.0 scale.
+
+**Step 4:** Calculate threshold distances.
+- To reach C+ (77%): need 77% × 50 / 100 = 38.5 → round up to **39 correct** (you needed 1 more)
+- To reach B− (80%): need 80% × 50 / 100 = **40 correct** (you needed 2 more)
+- To reach B (83%): need 83% × 50 / 100 = 41.5 → **42 correct** (you needed 4 more)
+
+**Interpretation:** At 76%, you are 1 question away from a C+ and 2 questions away from a B−. This kind of margin analysis helps prioritize study time — on a 50-question test, each question is worth 2 percentage points, so a single additional correct answer would have bumped you up a grade tier.
+
+### Example 2: High-Stakes Exam — 95 out of 100
+
+**Given:** 95 correct out of 100 questions, standard scale.
+
+**Step 1:** Percentage = 95/100 × 100 = **95.0%**
+**Step 2:** Letter grade = **A** (93–100% range)
+**Step 3:** GPA points = **4.0**
+
+At 95%, you could have missed 2 more questions (scoring 93/100) and still earned an A. Missing 6 questions (89/100) would drop you to a B+ on the plus-minus scale.
+
+### Example 3: Using Wrong Answers — Missed 7 out of 40
+
+**Given:** 7 wrong answers on a 40-question test.
+
+**Step 1:** Correct = 40 − 7 = **33**
+**Step 2:** Percentage = 33/40 × 100 = **82.5%**
+**Step 3:** Letter grade = **B−** (80–82% range on plus-minus scale)
+**Step 4:** GPA points = **2.7**
+
+Missing 7 out of 40 puts you at the lower end of the B range. Each question on a 40-question test is worth 2.5 percentage points — significantly more impact per question than on a 100-question test where each is worth only 1 point.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+**Grading scale differences change outcomes dramatically.** The same 91% score can be an A on a standard 10-point scale (A = 90–100%) or an A− on a plus-minus scale (A = 93–100%, A− = 90–92%). This one-notch difference affects GPA: 4.0 vs. 3.7. Over a full semester with five courses, consistent A− grades instead of A grades drops your semester GPA from 4.0 to 3.7, which can affect dean's list eligibility (typically 3.5+ or 3.75+), Latin honors, scholarship maintenance, and graduate school competitiveness. Always verify your instructor's exact scale — some professors use 92% as the A cutoff, others use 94%.
+
+**Test length magnifies or shrinks each question's impact.** On a 10-question quiz, each question is worth 10 percentage points. Missing just 1 question drops you from 100% to 90% — potentially a full letter grade. On a 100-question exam, each question is worth only 1 percentage point, so missing 1 has minimal impact. This is why longer tests are generally considered more fair: they reduce the penalty for individual mistakes and provide a more reliable measurement of knowledge. A single careless error on a 10-question quiz has 10 times the grade impact of the same error on a 100-question final.
+
+**Rounding and boundary effects.** Most grading systems do not round 89.5% up to 90%. A score of 89.4% rounds to 89% and stays in the B+ range — you do not get the A−. However, policies vary by instructor. Some round at 0.5%, some never round, and some use "grading thresholds" that are firm regardless of decimal values. The calculator shows exact percentages to one decimal place so you can see precisely where you stand relative to each boundary. If your percentage ends in .4 or .5 near a grade boundary, talk to your instructor about their rounding policy.
+
+**GPA point values are not standardized nationally.** While most US universities assign 4.0 to an A and 0.0 to an F, the intermediate values differ. Some schools give B+ = 3.5 (not 3.3), A− = 3.67 (not 3.7), and some do not use plus-minus grades at all (only A = 4.0, B = 3.0, C = 2.0, D = 1.0). The calculator uses the most common mapping, but always check your institution's official GPA scale. Community colleges, state universities, and private colleges frequently differ on these intermediate values, which compounds across multiple courses.
+
+**Pass-fail grading.** Under pass-fail, any score at or above the passing threshold (typically 60% or 70%, depending on the institution) receives a Pass with no GPA impact. Scores below the threshold receive a Fail, which some institutions factor into GPA as 0.0 and others exclude entirely. Pass-fail is commonly used for electives, study-abroad courses, and during unusual academic circumstances. The calculator's pass-fail mode lets you quickly check whether you cleared the threshold.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes all questions are weighted equally (each question worth the same number of points)
+- Does not account for partial credit, extra credit, or bonus questions
+- Letter grade cutoffs follow the most common US academic scale; your institution may use different thresholds
+- GPA point values use the standard 4.0 mapping; some institutions use alternate point values for plus-minus grades
+- The calculator treats "correct" and "total" as integers — it does not support fractional points per question
+- Does not factor in curves, drops (lowest score removed), or other grade adjustment policies
+- Pass-fail threshold defaults to 60%; some institutions set it at 65%, 70%, or another value
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator divides the number of correct answers by the total number of questions and multiplies by 100 to produce the percentage. The letter grade is determined by comparing the percentage against the boundaries of the selected grading scale (standard, plus-minus, or pass-fail). GPA points are assigned from a lookup table mapping each letter grade to its standard 4.0-scale value. Threshold calculations use ceiling division to determine the minimum number of correct answers needed for each grade boundary.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

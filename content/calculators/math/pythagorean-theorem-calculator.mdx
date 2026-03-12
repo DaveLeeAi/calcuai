@@ -1,0 +1,157 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A right triangle with legs of 3 and 4 has a hypotenuse of exactly 5. This Pythagorean theorem calculator solves for any missing side of a right triangle — enter two known sides and it returns the third, along with the triangle's area, perimeter, and angle measures. It also checks whether three given side lengths form a valid right triangle, identifying Pythagorean triples like 3-4-5, 5-12-13, and 8-15-17 instantly.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The result shows the **missing side length** computed from the Pythagorean theorem, whether you are solving for the hypotenuse or either leg. The hypotenuse is always the longest side and sits opposite the right angle. If you enter both legs (a and b), the calculator solves for c. If you enter one leg and the hypotenuse, it solves for the remaining leg using the rearranged formula.
+
+Beyond the missing side, the calculator displays the triangle's **area** (½ × a × b), **perimeter** (a + b + c), and the two **non-right angles** in degrees (computed via inverse trigonometry). It also flags whether the three sides form a Pythagorean triple — a set of three positive integers satisfying a² + b² = c² exactly. Common triples include 3-4-5, 5-12-13, 7-24-25, and 8-15-17. Any multiple of a triple is also a triple: 6-8-10 is just 2 × (3-4-5). For more triangle computations, see the [Triangle Calculator](/calculators/math/triangle-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose your solve mode** — select whether you want to find the hypotenuse (given both legs) or find a missing leg (given one leg and the hypotenuse).
+
+2. **Enter the two known sides** — for finding the hypotenuse, enter leg a and leg b. For finding a missing leg, enter one leg and the hypotenuse c. All values must be positive numbers.
+
+3. **Read the missing side** — the calculator displays the exact value. For legs 3 and 4, the hypotenuse is exactly **5.000**.
+
+4. **Review additional results** — area, perimeter, and both acute angles (in degrees) are displayed below the primary result.
+
+5. **Check for Pythagorean triple** — if all three sides are integers (or within rounding tolerance of integers), the calculator flags the result as a Pythagorean triple.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Pythagorean Theorem
+
+$$a^2 + b^2 = c^2$$
+
+Where:
+- **a** and **b** = the two legs (shorter sides adjacent to the right angle)
+- **c** = the hypotenuse (the longest side, opposite the right angle)
+
+### Solving for Each Side
+
+**Find the hypotenuse:**
+$$c = \sqrt{a^2 + b^2}$$
+
+**Find a missing leg:**
+$$a = \sqrt{c^2 - b^2}$$
+
+For this to have a real solution, the hypotenuse must be strictly greater than the known leg ($c > b$).
+
+### Triangle Area
+
+$$A = \frac{1}{2} \times a \times b$$
+
+For a right triangle, the two legs serve as the base and height, making the area calculation straightforward.
+
+### Acute Angles
+
+$$\alpha = \arctan\left(\frac{a}{b}\right) \quad \text{and} \quad \beta = \arctan\left(\frac{b}{a}\right)$$
+
+These two angles always sum to 90°, since the third angle is the right angle (90°).
+
+### Right Triangle Verification
+
+Given three sides, the triangle is a right triangle if and only if:
+
+$$\max(a, b, c)^2 = \text{sum of squares of the other two sides}$$
+
+**Source:** Euclid's *Elements*, Book I, Proposition 47 (circa 300 BCE). The theorem is one of the oldest proven results in mathematics, with independent proofs documented in ancient Babylonian, Chinese, and Indian mathematical traditions.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Find the Hypotenuse — Classic 3-4-5
+
+**Given:** Leg a = 3, Leg b = 4.
+
+**Step 1:** Square both legs.
+$a^2 = 3^2 = 9$, $b^2 = 4^2 = 16$
+
+**Step 2:** Sum the squares.
+$a^2 + b^2 = 9 + 16 = 25$
+
+**Step 3:** Take the square root.
+$c = \sqrt{25} = \mathbf{5}$
+
+**Additional results:**
+- Area = ½ × 3 × 4 = **6 square units**
+- Perimeter = 3 + 4 + 5 = **12 units**
+- Angles: α = arctan(3/4) = **36.87°**, β = arctan(4/3) = **53.13°**
+- Pythagorean triple: **Yes** (3-4-5 is the smallest primitive Pythagorean triple)
+
+**Interpretation:** The 3-4-5 triangle is the most commonly encountered right triangle. Builders use it to verify right angles — measure 3 feet along one wall, 4 feet along the adjacent wall, and if the diagonal measures exactly 5 feet, the corner is square. This technique dates back thousands of years to ancient Egyptian construction.
+
+### Example 2: Find a Missing Leg — 5-?-13
+
+**Given:** Leg b = 12 (unknown), Hypotenuse c = 13, and we are solving for leg a given b = 12.
+
+Actually, let's set it up correctly: Hypotenuse c = 13, Leg b = 12, find leg a.
+
+**Step 1:** Rearrange the formula.
+$a = \sqrt{c^2 - b^2}$
+
+**Step 2:** Compute.
+$a = \sqrt{13^2 - 12^2} = \sqrt{169 - 144} = \sqrt{25} = \mathbf{5}$
+
+**Additional results:**
+- Area = ½ × 5 × 12 = **30 square units**
+- Perimeter = 5 + 12 + 13 = **30 units**
+- Angles: α = arctan(5/12) = **22.62°**, β = arctan(12/5) = **67.38°**
+- Pythagorean triple: **Yes** (5-12-13)
+
+**Interpretation:** The 5-12-13 triangle is the second most common primitive Pythagorean triple after 3-4-5. Notice that the area and perimeter happen to be numerically equal (both 30) — this is a coincidence specific to this triple and is not a general property.
+
+### Example 3: Non-Integer Result — Legs 7 and 10
+
+**Given:** Leg a = 7, Leg b = 10.
+
+**Step 1:** $a^2 + b^2 = 49 + 100 = 149$
+**Step 2:** $c = \sqrt{149} \approx \mathbf{12.2066}$
+
+This is not a Pythagorean triple because √149 is irrational. The angles are α = arctan(7/10) ≈ 34.99° and β ≈ 55.01°.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+**The hypotenuse must be the largest side.** A common input error is entering a "hypotenuse" that is shorter than one of the legs. If c < a or c < b, the expression under the square root becomes negative, and no real solution exists. This means the three lengths cannot form a right triangle. If you receive an error, double-check that the hypotenuse value is the longest of the three sides. The calculator validates this constraint before computing.
+
+**Pythagorean triples and their multiples.** A primitive Pythagorean triple is one where a, b, and c share no common factor greater than 1. The first several primitive triples are: 3-4-5, 5-12-13, 7-24-25, 8-15-17, 9-40-41, 11-60-61, and 12-35-37. Any scalar multiple of a triple is also a valid right triangle: 6-8-10 is 2×(3-4-5), and 15-36-39 is 3×(5-12-13). Euclid's formula generates all primitive triples: for integers m > n > 0 where m and n are coprime and not both odd, the triple is (m² − n², 2mn, m² + n²).
+
+**Checking if a triangle is right-angled.** Given three side lengths, you can verify whether the triangle contains a 90° angle by checking whether the square of the longest side equals the sum of the squares of the other two. If 7² + 24² = 49 + 576 = 625 = 25², then 7-24-25 is a right triangle. If the sum exceeds the square of the longest side, the triangle is acute. If the sum falls short, the triangle is obtuse. This test works for any triangle and is a direct consequence of the law of cosines.
+
+**Real-world applications.** The Pythagorean theorem appears everywhere: calculating the diagonal of a TV screen (a 48" × 27" screen has a 55" diagonal because √(48² + 27²) = √3033 ≈ 55.07"), finding the straight-line distance between two GPS coordinates over short distances, determining ladder reach against a wall, computing the diagonal brace length for construction framing, and measuring sight distances in surveying. In 3D, the theorem extends to $d = \sqrt{x^2 + y^2 + z^2}$ for the space diagonal. For more on distance calculations, see the [Slope Calculator](/calculators/math/slope-calculator), which uses the distance formula derived directly from this theorem.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a right triangle (one 90° angle) — the theorem does not apply to non-right triangles (use the law of cosines instead)
+- All side lengths must be positive real numbers
+- The hypotenuse must be strictly greater than either leg; otherwise no real solution exists
+- Pythagorean triple detection uses a tolerance of 10⁻⁹ to account for floating-point precision
+- Angle calculations assume a Euclidean (flat) plane — not valid for spherical geometry over large distances
+- Does not handle 3D right triangles directly (decompose into 2D projections first)
+- Area calculation uses the leg-leg formula (½ab) which only applies to right triangles
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the Pythagorean theorem (a² + b² = c²) directly, solving for whichever side is unknown. The missing side is computed using JavaScript's Math.sqrt() and Math.pow() functions. Angles are derived via Math.atan2() and converted from radians to degrees. The Pythagorean triple check tests whether all three computed sides round to integers within a tolerance of 10⁻⁹.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

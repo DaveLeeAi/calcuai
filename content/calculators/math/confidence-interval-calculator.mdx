@@ -1,0 +1,194 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+For a sample with mean 100, standard deviation 15, and 25 observations, the 95% confidence interval is [94.12, 105.88], with a margin of error of 5.88. This means you can be 95% confident that the true population mean falls within this range. Enter your sample mean, standard deviation, and sample size below to compute the confidence interval at any level from 80% to 99.9%, along with the margin of error, standard error, and critical z-score.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+A confidence interval provides a range of plausible values for a population parameter based on sample data. Unlike a single point estimate (the sample mean), the confidence interval communicates precision — a narrow interval means your estimate is precise, while a wide interval signals substantial uncertainty.
+
+The **confidence level** (90%, 95%, 99%) specifies how often the procedure would capture the true population parameter if you repeated the sampling many times. A 95% confidence interval does not mean there is a 95% probability that the true mean lies within your specific interval — the true mean is a fixed value, not a random variable. Rather, 95% of all confidence intervals constructed from random samples of the same size will contain the true mean.
+
+The **margin of error** is the half-width of the interval: the distance from the sample mean to either bound. It is determined by three factors — the z-score (set by confidence level), the standard deviation (spread of the data), and the sample size. The **standard error** (SE = sigma / sqrt(n)) quantifies how much the sample mean varies from sample to sample. Use our [P-Value Calculator](/calculators/math/p-value-calculator) to test specific hypotheses about the population parameter, or our [Standard Deviation Calculator](/calculators/math/standard-deviation-calculator) to compute the standard deviation from raw data.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the sample mean** — this is the average of your sample data. If you have raw data and need to compute the mean, use our [Mean, Median, Mode Calculator](/calculators/math/mean-median-mode-calculator) first.
+
+2. **Enter the standard deviation** — use the sample standard deviation (s) if computed from the sample, or the population standard deviation (sigma) if known. For most real-world applications, this will be the sample standard deviation.
+
+3. **Enter the sample size** — the total number of observations in your sample. Larger samples produce narrower confidence intervals.
+
+4. **Select the confidence level** — 95% is the standard in most fields. Use 90% for a narrower (less conservative) interval, or 99% for a wider (more conservative) interval. Medical research often uses 95%; engineering tolerances may require 99% or higher.
+
+5. **Read the results** — the calculator displays the margin of error, lower and upper bounds of the confidence interval, standard error, critical z-score used, and the total interval width.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Confidence Interval for a Population Mean
+
+$$CI = \bar{x} \pm z^* \cdot \frac{\sigma}{\sqrt{n}}$$
+
+This can be written as two bounds:
+
+$$\text{Lower Bound} = \bar{x} - z^* \cdot \frac{\sigma}{\sqrt{n}}$$
+
+$$\text{Upper Bound} = \bar{x} + z^* \cdot \frac{\sigma}{\sqrt{n}}$$
+
+### Margin of Error
+
+$$E = z^* \cdot \frac{\sigma}{\sqrt{n}}$$
+
+### Standard Error
+
+$$SE = \frac{\sigma}{\sqrt{n}}$$
+
+Where:
+
+- **$\bar{x}$** (x-bar) = the sample mean
+- **$z^*$** = the critical z-score corresponding to the confidence level
+- **$\sigma$** = the standard deviation (population or sample)
+- **n** = the sample size
+- **SE** = the standard error of the mean
+- **E** = the margin of error (half-width of the interval)
+
+### Critical Z-Scores by Confidence Level
+
+| Confidence Level | z* |
+|---|---|
+| 80% | 1.28155 |
+| 85% | 1.43953 |
+| 90% | 1.64485 |
+| 95% | 1.95996 |
+| 99% | 2.57583 |
+| 99.9% | 3.29053 |
+
+The z-score comes from the standard normal distribution: for a 95% CI, 95% of the area lies between -1.96 and +1.96, leaving 2.5% in each tail.
+
+**Source:** NIST/SEMATECH e-Handbook of Statistical Methods, Section 7.1.4; Casella & Berger, *Statistical Inference* (2nd ed., 2002), Chapter 9.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 95% Confidence Interval for Test Scores
+
+**Context:** A school surveys 25 randomly selected students and finds an average math score of 100 with a standard deviation of 15. What is the 95% confidence interval for the true average score of all students?
+
+**Step-by-step:**
+
+1. Sample mean ($\bar{x}$): **100**
+2. Standard deviation ($\sigma$): **15**
+3. Sample size (n): **25**
+4. Confidence level: **95%** → z* = **1.96**
+5. Standard error: SE = 15 / sqrt(25) = 15 / 5 = **3.0**
+6. Margin of error: E = 1.96 x 3.0 = **5.88**
+7. Lower bound: 100 - 5.88 = **94.12**
+8. Upper bound: 100 + 5.88 = **105.88**
+9. Confidence interval: **[94.12, 105.88]**
+
+**Interpretation:** We are 95% confident that the true average math score for all students falls between 94.12 and 105.88. The margin of error of 5.88 points means our estimate of 100 could be off by roughly 6 points in either direction. If the school needs a more precise estimate, they should test more students — doubling the sample to n = 50 would reduce the margin of error to 4.16.
+
+### Example 2: 99% Confidence Interval for Manufacturing
+
+**Context:** A factory measures the weight of 100 randomly sampled widgets and finds a mean weight of 50.2 grams with a standard deviation of 2.5 grams. What is the 99% confidence interval?
+
+**Step-by-step:**
+
+1. Sample mean ($\bar{x}$): **50.2 g**
+2. Standard deviation ($\sigma$): **2.5 g**
+3. Sample size (n): **100**
+4. Confidence level: **99%** → z* = **2.576**
+5. Standard error: SE = 2.5 / sqrt(100) = 2.5 / 10 = **0.25 g**
+6. Margin of error: E = 2.576 x 0.25 = **0.644 g**
+7. Lower bound: 50.2 - 0.644 = **49.556 g**
+8. Upper bound: 50.2 + 0.644 = **50.844 g**
+9. Confidence interval: **[49.556, 50.844]**
+
+**Interpretation:** With 99% confidence, the true mean widget weight is between 49.56 g and 50.84 g. The tight interval (width of 1.29 g) reflects the large sample size. If the specification requires widgets between 49.0 g and 51.0 g, this interval falls entirely within spec, providing strong assurance that the process is centered correctly.
+
+### Example 3: Comparing 90% vs. 95% vs. 99% Intervals
+
+**Context:** Using the same data (mean = 100, SD = 15, n = 25), how does changing the confidence level affect the interval?
+
+| Confidence Level | z* | Margin of Error | Interval |
+|---|---|---|---|
+| 90% | 1.645 | 4.93 | [95.07, 104.93] |
+| 95% | 1.960 | 5.88 | [94.12, 105.88] |
+| 99% | 2.576 | 7.73 | [92.27, 107.73] |
+
+**Interpretation:** Higher confidence demands wider intervals. The 99% interval is 56% wider than the 90% interval. This illustrates the fundamental tradeoff: more confidence requires accepting less precision. For most applications, 95% strikes the best balance between reliability and usefulness.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Sample Size (n).** This is the most controllable factor. The margin of error decreases proportionally to $1/\sqrt{n}$, so quadrupling the sample size cuts the margin of error in half. Going from n = 25 to n = 100 reduces the margin by 50%. Going from n = 100 to n = 400 reduces it by another 50%. The diminishing returns mean that extremely large samples provide only marginal precision gains — n = 10,000 is only 10 times more precise than n = 100, not 100 times.
+
+**Standard Deviation.** Higher variability in the underlying data produces wider confidence intervals. You cannot control the population standard deviation, but you can reduce measurement error through better instruments, standardized procedures, or more homogeneous sampling conditions. If the standard deviation of blood pressure measurements is 20 mmHg with one technician but 12 mmHg with a trained specialist, using the specialist shrinks the confidence interval by 40% at no cost in sample size.
+
+**Confidence Level.** Moving from 95% to 99% increases the z-score from 1.96 to 2.576 — a 31% increase in the margin of error. Moving from 95% to 90% decreases z from 1.96 to 1.645, shrinking the margin by 16%. The choice of confidence level should reflect the consequences of being wrong: clinical trials typically use 95% or 99%; preliminary surveys may accept 90%.
+
+**Normal Distribution Assumption.** This z-based formula assumes the sampling distribution of the mean is approximately normal. By the Central Limit Theorem, this holds for n > 30 regardless of the population distribution. For small samples (n < 30), use a t-distribution confidence interval instead, which produces wider intervals to account for the additional uncertainty in estimating the standard deviation. At n = 10, the t-based interval is roughly 15% wider than the z-based interval.
+
+**Population vs. Sample Standard Deviation.** If you use the sample standard deviation (s) as an estimate for sigma, the formula is technically an approximation. For large samples (n > 30), the difference is negligible. For small samples, the t-interval formula — which replaces z* with t* from the t-distribution — is more appropriate and accounts for the extra uncertainty in estimating sigma from the data.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Misinterpreting the confidence level.** A 95% confidence interval does not mean there is a 95% probability that the true parameter lies within your calculated interval. The true parameter is fixed — it either is or is not inside the interval. The 95% refers to the long-run success rate of the procedure: if you repeated the experiment 100 times, about 95 of the resulting intervals would contain the true value. Your specific interval is one realization of that procedure.
+
+**Using the wrong standard deviation.** Entering the population standard deviation when you only have the sample standard deviation (or vice versa) changes the interval. For large samples the difference is minor, but for small samples it matters. If you computed the standard deviation from the same sample, it is a sample SD, and strictly speaking you should use a t-interval rather than a z-interval.
+
+**Ignoring sample size requirements.** The z-based confidence interval formula relies on the Central Limit Theorem, which requires a sufficiently large sample for the sampling distribution to be approximately normal. For highly skewed populations, n > 30 may not be enough — you might need n > 50 or more. For symmetric populations, even n = 10 may suffice.
+
+**Confusing margin of error with standard error.** Standard error is sigma / sqrt(n). Margin of error is z* times the standard error. The standard error measures sampling variability; the margin of error incorporates the desired confidence level. Reporting the standard error as if it were the margin of error understates the uncertainty.
+
+**Assuming narrower is always better.** A very narrow confidence interval from a massive sample may be precisely estimating an irrelevant quantity. An interval of [49.998, 50.002] for widget weight is impressive precision but may be unnecessary if the tolerance is 49-51. Consider whether the interval width is practically meaningful for your decision, not just statistically impressive.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- This calculator uses the **z-distribution** (standard normal). For small samples (n < 30) with unknown population standard deviation, a t-distribution confidence interval is more appropriate and produces wider intervals.
+- The formula assumes the data come from a **random sample** of the population. Non-random sampling (convenience samples, voluntary response) invalidates the confidence interval interpretation regardless of sample size.
+- The **Central Limit Theorem** justifies using the normal distribution for the sampling distribution of the mean, but it requires a sufficiently large n. For highly skewed or heavy-tailed populations, n = 30 may not be sufficient.
+- The confidence interval applies to the **population mean** only. For proportions, medians, or other parameters, different formulas are required.
+- The formula assumes **independent observations**. Clustered or repeated-measures data require specialized confidence interval methods (e.g., mixed-effects models).
+- Confidence intervals are **frequentist constructs**. For probability statements about the parameter itself, Bayesian credible intervals are needed.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a confidence interval?
+
+A confidence interval is a range of values, computed from sample data, that is likely to contain the true population parameter. For a 95% confidence interval, if you were to repeat the sampling procedure many times and construct a new interval each time, approximately 95% of those intervals would contain the true population mean. The interval is defined by a lower bound and an upper bound, centered on the sample mean, with the width determined by the sample size, data variability, and chosen confidence level. It is the standard way to express uncertainty in a statistical estimate — more informative than a point estimate alone.
+
+### How does sample size affect the confidence interval?
+
+Increasing the sample size makes the confidence interval narrower. Specifically, the margin of error is proportional to $1/\sqrt{n}$, so you must quadruple the sample size to cut the margin of error in half. With mean = 100, SD = 15, and 95% confidence: n = 25 gives a margin of 5.88, n = 100 gives 2.94, and n = 400 gives 1.47. This square-root relationship means early increases in sample size yield large precision gains, but the returns diminish as n grows. Going from n = 10 to n = 100 is transformative; going from n = 1,000 to n = 10,000 provides only modest improvement.
+
+### What is the difference between 95% and 99% confidence intervals?
+
+A 99% confidence interval is wider than a 95% interval for the same data because greater confidence requires a larger z-score (2.576 vs. 1.960), which increases the margin of error by about 31%. The tradeoff is precision for reliability: a 95% interval is wrong 5% of the time (in the long run), while a 99% interval is wrong only 1% of the time — but the 99% interval gives a less precise estimate. In practice, 95% is the standard in most social sciences, medicine, and business analytics. Use 99% when the cost of missing the true value is high (safety engineering, pharmaceutical dosing) and 90% when a rough estimate suffices (preliminary surveys, exploratory analysis).
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes the standard error as sigma divided by the square root of n, then multiplies by the critical z-score for the selected confidence level to get the margin of error. The lower and upper bounds are the sample mean minus and plus the margin of error, respectively. The critical z-score is obtained from the inverse of the standard normal cumulative distribution function at (1 + confidence level) / 2.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

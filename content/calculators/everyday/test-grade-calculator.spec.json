@@ -1,0 +1,119 @@
+{
+  "id": "test-grade-calculator",
+  "title": "Test Grade Calculator",
+  "slug": "test-grade-calculator",
+  "category": "everyday",
+  "subcategory": "academic",
+  "primaryKeyword": "test grade calculator",
+  "metaTitle": "Test Grade Calculator \u2014 Score to Letter Grade",
+  "metaDescription": "Convert test scores to letter grades and GPA points instantly. Supports standard, plus/minus, and pass/fail grading scales. Free online grade calculator.",
+  "inputs": [
+    {
+      "id": "correctAnswers",
+      "label": "Correct Answers",
+      "type": "number",
+      "required": true,
+      "defaultValue": 42,
+      "min": 0,
+      "step": 1,
+      "placeholder": "e.g. 42",
+      "helpText": "Number of questions answered correctly"
+    },
+    {
+      "id": "totalQuestions",
+      "label": "Total Questions",
+      "type": "number",
+      "required": true,
+      "defaultValue": 50,
+      "min": 1,
+      "step": 1,
+      "placeholder": "e.g. 50",
+      "helpText": "Total number of questions on the test"
+    },
+    {
+      "id": "gradingScale",
+      "label": "Grading Scale",
+      "type": "select",
+      "required": true,
+      "defaultValue": "plus-minus",
+      "options": [
+        { "value": "plus-minus", "label": "Plus/Minus (A+, A, A-, B+...)" },
+        { "value": "standard", "label": "Standard (A, B, C, D, F)" },
+        { "value": "pass-fail", "label": "Pass/Fail" }
+      ],
+      "helpText": "Choose the grading scale used by your school"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "percentage",
+      "label": "Percentage",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "letterGrade",
+      "label": "Letter Grade",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "gpaPoints",
+      "label": "GPA Points",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "correctAnswers",
+      "label": "Correct",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "incorrectAnswers",
+      "label": "Incorrect",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "isPassing",
+      "label": "Passing?",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "test-grade",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "grade-calculator",
+    "final-grade-calculator",
+    "gpa-calculator",
+    "percentage-calculator",
+    "standard-deviation-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard US academic grading scale",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Percentage = (correct / total) x 100; Letter grade via standard US scale thresholds",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["grade-calculator", "final-grade-calculator"],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": "back-to-school"
+}

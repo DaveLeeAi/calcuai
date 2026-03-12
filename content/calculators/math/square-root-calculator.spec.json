@@ -1,0 +1,98 @@
+{
+  "id": "square-root-calculator",
+  "title": "Square Root Calculator",
+  "slug": "square-root-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "square root calculator",
+  "metaTitle": "Square Root Calculator — \u221ax & Nth Roots",
+  "metaDescription": "Calculate square roots and nth roots instantly. Shows simplified radical form, perfect root detection, and step-by-step results. Free online calculator.",
+  "inputs": [
+    {
+      "id": "number",
+      "label": "Number",
+      "type": "number",
+      "required": true,
+      "defaultValue": 50,
+      "step": "any",
+      "placeholder": "e.g. 50",
+      "helpText": "The number to find the root of"
+    },
+    {
+      "id": "nthRoot",
+      "label": "Root Index",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "placeholder": "2 for square root, 3 for cube root",
+      "helpText": "2 = square root, 3 = cube root, 4 = fourth root, etc."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Result",
+      "type": "single-value",
+      "format": "number",
+      "precision": 10,
+      "highlight": true
+    },
+    {
+      "id": "simplified",
+      "label": "Simplified Form",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "isPerfect",
+      "label": "Perfect Root?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "squared",
+      "label": "Number Squared",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "cubed",
+      "label": "Number Cubed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    }
+  ],
+  "formula": "square-root",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "exponent-calculator",
+    "logarithm-calculator",
+    "pythagorean-theorem-calculator",
+    "quadratic-formula-calculator",
+    "scientific-notation-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard mathematical root extraction",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "nth root: x^(1/n); Simplified radical: extract perfect square factors",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["exponent-calculator"],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null
+}

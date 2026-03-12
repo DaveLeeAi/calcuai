@@ -1,0 +1,146 @@
+{
+  "id": "scientific-notation-calculator",
+  "title": "Scientific Notation Calculator",
+  "slug": "scientific-notation-calculator",
+  "category": "math",
+  "subcategory": "basic",
+  "primaryKeyword": "scientific notation calculator",
+  "metaTitle": "Scientific Notation Calculator — Convert To & From",
+  "metaDescription": "Convert numbers to and from scientific notation instantly. Shows coefficient, exponent, engineering notation, and e-notation. Free online calculator.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Conversion Direction",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "to-scientific",
+      "options": [
+        { "value": "to-scientific", "label": "Decimal \u2192 Scientific" },
+        { "value": "from-scientific", "label": "Scientific \u2192 Decimal" }
+      ],
+      "helpText": "Convert a decimal number to scientific notation, or vice versa"
+    },
+    {
+      "id": "decimalNumber",
+      "label": "Decimal Number",
+      "type": "number",
+      "required": false,
+      "defaultValue": 12345,
+      "step": "any",
+      "placeholder": "e.g. 12345 or 0.00567",
+      "helpText": "The number to convert to scientific notation"
+    },
+    {
+      "id": "coefficient",
+      "label": "Coefficient (a)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 6.022,
+      "step": "any",
+      "placeholder": "e.g. 6.022",
+      "helpText": "The coefficient in a \u00d7 10^n"
+    },
+    {
+      "id": "exponent",
+      "label": "Exponent (n)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 23,
+      "step": 1,
+      "placeholder": "e.g. 23",
+      "helpText": "The power of 10"
+    }
+  ],
+  "tabs": [
+    {
+      "id": "to-scientific",
+      "label": "To Scientific",
+      "description": "Convert decimal number to scientific notation",
+      "defaultInputOverrides": { "mode": "to-scientific" },
+      "visibleInputs": ["decimalNumber"]
+    },
+    {
+      "id": "from-scientific",
+      "label": "From Scientific",
+      "description": "Convert scientific notation to decimal number",
+      "defaultInputOverrides": { "mode": "from-scientific" },
+      "visibleInputs": ["coefficient", "exponent"]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "scientificNotation",
+      "label": "Scientific Notation",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "decimalForm",
+      "label": "Decimal Form",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "coefficient",
+      "label": "Coefficient",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "exponent",
+      "label": "Exponent",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "engineeringNotation",
+      "label": "Engineering Notation",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "ePlusNotation",
+      "label": "E-Notation",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "significantFigures",
+      "label": "Significant Figures",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    }
+  ],
+  "formula": "scientific-notation",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "significant-figures-calculator",
+    "logarithm-calculator",
+    "exponent-calculator",
+    "percentage-calculator",
+    "square-root-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IEEE 754 floating-point standard; NIST SI notation guidelines",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Scientific: a x 10^n where 1 <= |a| < 10; Engineering: a x 10^n where n is a multiple of 3",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["significant-figures-calculator"],
+  "qualityScore": 76,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null
+}

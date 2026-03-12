@@ -1,0 +1,131 @@
+{
+  "id": "slope-calculator",
+  "title": "Slope Calculator",
+  "slug": "slope-calculator",
+  "category": "math",
+  "subcategory": "geometry",
+  "primaryKeyword": "slope calculator",
+  "metaTitle": "Slope Calculator — Find Slope, Distance & Equation",
+  "metaDescription": "Calculate slope, y-intercept, distance, and line equation from two points. Shows midpoint and angle. Step-by-step solution. Free online calculator.",
+  "inputs": [
+    {
+      "id": "x1",
+      "label": "X\u2081",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "step": "any",
+      "placeholder": "e.g. 1",
+      "helpText": "X-coordinate of the first point"
+    },
+    {
+      "id": "y1",
+      "label": "Y\u2081",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "step": "any",
+      "placeholder": "e.g. 2",
+      "helpText": "Y-coordinate of the first point"
+    },
+    {
+      "id": "x2",
+      "label": "X\u2082",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "step": "any",
+      "placeholder": "e.g. 5",
+      "helpText": "X-coordinate of the second point"
+    },
+    {
+      "id": "y2",
+      "label": "Y\u2082",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "step": "any",
+      "placeholder": "e.g. 10",
+      "helpText": "Y-coordinate of the second point"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "slope",
+      "label": "Slope (m)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6,
+      "highlight": true
+    },
+    {
+      "id": "yIntercept",
+      "label": "Y-Intercept (b)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "equation",
+      "label": "Line Equation",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "angle",
+      "label": "Angle (\u00b0)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "midpointX",
+      "label": "Midpoint X",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "midpointY",
+      "label": "Midpoint Y",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    }
+  ],
+  "formula": "slope",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "pythagorean-theorem-calculator",
+    "triangle-calculator",
+    "circle-calculator",
+    "quadratic-formula-calculator",
+    "percentage-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Euclidean geometry, standard coordinate geometry",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Slope: m = (y2-y1)/(x2-x1); Distance: d = sqrt((x2-x1)^2 + (y2-y1)^2); Y-intercept: b = y1 - m*x1",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null
+}

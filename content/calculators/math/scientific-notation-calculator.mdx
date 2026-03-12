@@ -1,0 +1,204 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+The number 12,345 in scientific notation is $1.2345 \times 10^4$ — the decimal moves 4 places to the left, giving a coefficient between 1 and 10 with an exponent of 4. Conversely, $6.022 \times 10^{23}$ (Avogadro's number) expands to 602,200,000,000,000,000,000,000 in standard form. Enter any decimal number to convert it to scientific notation, or enter a coefficient and exponent to convert back. The calculator also shows engineering notation, e-notation, and the significant figure count.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Scientific notation expresses any number as a product of two parts: a **coefficient** (a number between 1 and 10) and a **power of 10**. This representation is essential for working with extremely large numbers (the distance to the nearest star: $3.99 \times 10^{13}$ km) and extremely small numbers (the mass of an electron: $9.109 \times 10^{-31}$ kg) without writing dozens of zeros.
+
+This calculator provides six outputs. The **scientific notation** form ($a \times 10^n$) is the standard representation. The **decimal form** shows the fully expanded number. The **coefficient** and **exponent** are separated for use in further calculations. **Engineering notation** adjusts the exponent to the nearest multiple of 3, aligning with metric prefixes (kilo = $10^3$, mega = $10^6$, nano = $10^{-9}$). **E-notation** (e.g., 1.2345E+4) is the format used by calculators, spreadsheets, and programming languages. The **significant figures** count tells you the precision of the original number.
+
+The calculator works in both directions. Use the "Decimal to Scientific" tab to convert standard numbers, or the "Scientific to Decimal" tab to expand a coefficient-exponent pair. For determining the precision of a number, use our [Significant Figures Calculator](/calculators/math/significant-figures-calculator). For calculations involving powers and exponents, see our [Exponent Calculator](/calculators/math/exponent-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the conversion direction** — choose "Decimal to Scientific" if you have a standard number and want it in scientific notation. Choose "Scientific to Decimal" if you have a coefficient and exponent and want the expanded number.
+
+2. **Enter your values** — for decimal-to-scientific, type the number (e.g., 0.00567 or 12345000). For scientific-to-decimal, enter the coefficient (e.g., 6.022) and the exponent (e.g., 23).
+
+3. **Read the results** — the calculator displays the scientific notation form, decimal form, separated coefficient and exponent, engineering notation, e-notation, and significant figure count.
+
+4. **Use engineering notation** when working with metric prefixes — if your result shows $4.7 \times 10^6$, you can read this directly as 4.7 megahertz, 4.7 megapascals, or 4.7 million of whatever unit applies.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Scientific Notation
+
+$$N = a \times 10^n$$
+
+Where:
+
+- **N** = the original number
+- **a** = the coefficient, satisfying $1 \leq |a| < 10$
+- **n** = the exponent (an integer), representing the number of places the decimal point was moved
+- **n > 0** means the original number is 10 or greater (decimal moves left)
+- **n < 0** means the original number is between -1 and 1 (decimal moves right)
+- **n = 0** means the original number is already between 1 and 10
+
+### Converting Decimal to Scientific Notation
+
+1. Move the decimal point until the coefficient is between 1 and 10.
+2. Count the number of places moved — this is the absolute value of the exponent.
+3. If you moved the decimal to the **left**, the exponent is **positive**.
+4. If you moved the decimal to the **right**, the exponent is **negative**.
+
+### Engineering Notation
+
+$$N = a \times 10^m \quad \text{where } m \equiv 0 \pmod{3}$$
+
+Engineering notation restricts the exponent to multiples of 3 (... -6, -3, 0, 3, 6, 9 ...), allowing the coefficient to range from 1 to 999.999. This maps directly to SI prefixes:
+
+| Exponent | Prefix | Symbol |
+|---|---|---|
+| $10^{12}$ | tera | T |
+| $10^{9}$ | giga | G |
+| $10^{6}$ | mega | M |
+| $10^{3}$ | kilo | k |
+| $10^{0}$ | (none) | — |
+| $10^{-3}$ | milli | m |
+| $10^{-6}$ | micro | $\mu$ |
+| $10^{-9}$ | nano | n |
+| $10^{-12}$ | pico | p |
+
+### E-Notation
+
+$$a\text{E}n \quad \text{(equivalent to } a \times 10^n \text{)}$$
+
+Used in calculators, spreadsheets (Excel, Google Sheets), and programming languages (C, Python, JavaScript). The "E" (or "e") stands for "exponent" or "times 10 to the power of."
+
+**Source:** IEEE 754 floating-point standard; NIST Guide for the Use of the International System of Units (SI), Section 7.1.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Convert 0.00567 to Scientific Notation
+
+**Step-by-step:**
+
+1. Original number: **0.00567**
+2. Move the decimal point to the right until the coefficient is between 1 and 10:
+   - 0.00567 → 0.0567 → 0.567 → 5.67 (moved **3 places** to the right)
+3. Since we moved **right**, the exponent is **negative**: n = -3
+4. Scientific notation: $5.67 \times 10^{-3}$
+5. Engineering notation: $5.67 \times 10^{-3}$ (already a multiple of 3)
+6. E-notation: 5.67E-3
+7. Significant figures: **3** (5, 6, and 7)
+
+**Verification:** $5.67 \times 10^{-3} = 5.67 \times 0.001 = 0.00567$ ✓
+
+### Example 2: Convert $6.022 \times 10^{23}$ to Decimal Form
+
+**Context:** Avogadro's number — the number of atoms or molecules in one mole of a substance.
+
+**Step-by-step:**
+
+1. Coefficient: **6.022**, Exponent: **23**
+2. Move the decimal point 23 places to the right:
+   - Start: 6.022
+   - After moving 23 places: 602,200,000,000,000,000,000,000
+3. Decimal form: **602,200,000,000,000,000,000,000**
+4. Engineering notation: $602.2 \times 10^{21}$ (exponent adjusted to multiple of 3, coefficient = 602.2)
+5. E-notation: 6.022E+23
+6. Significant figures: **4** (6, 0, 2, 2 — the zero between 6 and 2 is a captive zero)
+
+**Note:** In practice, nobody writes Avogadro's number in decimal form. Scientific notation exists precisely for numbers like this, where the expanded form has 20+ zeros and is both impractical and error-prone.
+
+### Example 3: Convert 47,300,000 to Scientific and Engineering Notation
+
+**Step-by-step:**
+
+1. Original number: **47,300,000**
+2. Move the decimal point left until coefficient is between 1 and 10:
+   - 47,300,000 → 4,730,000.0 → ... → 4.73 (moved **7 places** left)
+3. Scientific notation: $4.73 \times 10^7$
+4. For engineering notation, adjust exponent to nearest multiple of 3:
+   - $10^7$ → adjust to $10^6$: coefficient becomes $47.3$
+   - Engineering notation: $47.3 \times 10^6$
+5. With SI prefix: 47.3 megahertz (if the unit is Hz), or 47.3 million
+6. E-notation: 4.73E+7
+7. Significant figures: **3** (trailing zeros in 47,300,000 are ambiguous without a decimal point)
+
+### Example 4: Working with Negative Exponents — Mass of a Proton
+
+**Context:** The mass of a proton is approximately 0.000000000000000000000000001673 kg.
+
+**Step-by-step:**
+
+1. Count the leading zeros after the decimal: **27 zeros** before the 1
+2. Move the decimal point 27 places to the right: coefficient = 1.673
+3. Scientific notation: $1.673 \times 10^{-27}$ kg
+4. Engineering notation: $1673 \times 10^{-30}$ kg, or equivalently 1.673 femtograms ($10^{-15}$ g)
+5. E-notation: 1.673E-27
+6. Significant figures: **4**
+
+**Interpretation:** Writing 27 zeros is impractical and error-prone. Scientific notation reduces the representation to 4 meaningful digits plus an exponent, making the number easy to read, write, and compute with.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Coefficient Range.** In proper scientific notation, the coefficient must satisfy $1 \leq |a| < 10$. Writing $12.3 \times 10^4$ or $0.45 \times 10^{-2}$ is technically incorrect scientific notation — though both are valid mathematical expressions. The standard form would be $1.23 \times 10^5$ and $4.5 \times 10^{-3}$, respectively. This convention ensures every number has a unique scientific notation representation.
+
+**Significant Figures Preservation.** Converting between decimal and scientific notation should preserve all significant figures. The number 0.004500 (4 sig figs) becomes $4.500 \times 10^{-3}$ — not $4.5 \times 10^{-3}$ (which has only 2). When converting back to decimal, restore all digits from the coefficient. Dropping trailing zeros during conversion silently reduces the stated precision of the measurement.
+
+**Negative Numbers.** Scientific notation handles negative values by placing the minus sign before the coefficient: $-3.14 \times 10^2$ = -314. The exponent can also be negative independently: $-5.0 \times 10^{-3}$ = -0.005. Be careful not to confuse a negative coefficient (the number itself is negative) with a negative exponent (the number is a small fraction).
+
+**Engineering Notation vs. Scientific Notation.** Engineering notation restricts exponents to multiples of 3, which aligns with the SI prefix system (kilo, mega, giga, milli, micro, nano). This makes engineering notation more practical in applied contexts: $47.3 \times 10^6$ Hz is immediately readable as 47.3 MHz, while $4.73 \times 10^7$ Hz requires an extra mental conversion step. Electrical engineering, telecommunications, and mechanical engineering fields routinely use engineering notation over scientific notation.
+
+**Floating-Point Precision.** Computers store numbers in binary floating-point (IEEE 754), which introduces tiny rounding errors for most decimal values. The number 0.1 cannot be represented exactly in binary floating-point, which is why 0.1 + 0.2 = 0.30000000000000004 in most programming languages. This calculator uses string-based parsing for the input and arbitrary-precision arithmetic where needed to avoid such artifacts.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Confusing the direction of the exponent.** When converting 0.0045 to scientific notation, students often write $4.5 \times 10^3$ instead of $4.5 \times 10^{-3}$. The rule: if the original number is less than 1, the exponent is negative. If the original number is 10 or greater, the exponent is positive. A quick check — multiply your result out and verify you get the original number.
+
+**Dropping significant trailing zeros.** Converting 4.500 to scientific notation as $4.5 \times 10^0$ loses two significant figures. The correct conversion is $4.500 \times 10^0$. Every significant digit in the original number must appear in the coefficient.
+
+**Misreading e-notation.** In calculators and code, "2.5E3" means $2.5 \times 10^3 = 2500$, not $2.5 \times E \times 3$. The "E" is not Euler's number — it is shorthand for "times ten to the power of." Similarly, "1E-4" means $10^{-4} = 0.0001$, not a negative number.
+
+**Coefficient outside [1, 10).** Writing $0.45 \times 10^{-2}$ or $45 \times 10^3$ is not proper scientific notation. The coefficient must be at least 1 and less than 10. Adjust the coefficient and exponent together: $0.45 \times 10^{-2}$ becomes $4.5 \times 10^{-3}$, and $45 \times 10^3$ becomes $4.5 \times 10^4$.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- The calculator uses **string parsing** to preserve trailing zeros and decimal points in the input. Entering "100" and "100.0" will produce different significant figure counts.
+- For very large or very small exponents (beyond $\pm308$), the result may exceed the range of JavaScript's 64-bit floating-point numbers. Results at these extremes are displayed in scientific notation only.
+- The calculator follows the **standard convention** that trailing zeros in whole numbers without a decimal point are not significant. Some scientific contexts treat them differently.
+- **Engineering notation** adjusts the exponent to the nearest multiple of 3. For numbers already between 1 and 999, the engineering exponent is 0 and the coefficient equals the original number.
+- The **e-notation** output uses uppercase E (e.g., 4.5E+3). Some programming languages use lowercase e. Both are equivalent.
+- This calculator does not perform arithmetic operations in scientific notation (addition, multiplication, etc.). For those, convert both numbers first and apply the algebraic rules for exponents.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is engineering notation and how does it differ from scientific notation?
+
+Engineering notation is a variant of scientific notation where the exponent is always a multiple of 3 (such as 3, 6, 9, -3, -6, -9). This means the coefficient can range from 1 to 999.999, rather than being restricted to 1-9.999 as in standard scientific notation. The advantage is direct alignment with SI metric prefixes: $47.3 \times 10^6$ Hz is immediately readable as 47.3 megahertz, $3.3 \times 10^{-9}$ farads is 3.3 nanofarads, and $22.1 \times 10^3$ ohms is 22.1 kilohms. Engineering notation is the standard in electrical engineering, manufacturing, and any field that routinely works with metric-prefixed quantities.
+
+### When should I use scientific notation?
+
+Scientific notation is most useful when working with numbers that are very large (greater than about 10,000) or very small (less than about 0.001), where writing all the digits becomes impractical and error-prone. It is required in physics, chemistry, astronomy, and biology for expressing fundamental constants, atomic-scale measurements, and astronomical distances. It is also valuable for clearly communicating the precision of a measurement — $3.00 \times 10^2$ unambiguously has 3 significant figures, while 300 is ambiguous. In everyday contexts (prices, dates, temperatures), standard decimal notation is more readable and appropriate.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator converts between decimal and scientific notation by parsing the input as a string to preserve significant trailing zeros. For decimal-to-scientific conversion, it shifts the decimal point until the coefficient is between 1 and 10 and counts the shifts to determine the exponent. For engineering notation, it adjusts the exponent to the nearest multiple of 3 and scales the coefficient accordingly. E-notation is formatted directly from the coefficient and exponent.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

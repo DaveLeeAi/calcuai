@@ -1,0 +1,159 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A z-score of 1.96 produces a two-tailed p-value of exactly 0.0500, the universal threshold for statistical significance at the 95% confidence level. A larger z-score of 2.5 drops the p-value to 0.0124, meaning there is only a 1.24% probability that a result this extreme occurred by chance alone. Enter your test statistic (z-score, t-value, or chi-square value), select one-tailed or two-tailed, and this calculator returns the exact p-value with significance assessments at the 0.05, 0.01, and 0.001 levels.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The p-value is the probability of observing a test statistic as extreme as (or more extreme than) the one you calculated, assuming the null hypothesis is true. It does not tell you the probability that the null hypothesis is correct — a common and consequential misinterpretation. A p-value of 0.03 means that if the null hypothesis were true, you would see a result this extreme in only 3 out of 100 identical experiments.
+
+This calculator supports three distributions. The **z-test** (standard normal) applies when you know the population standard deviation or your sample size exceeds 30. The **t-test** (Student's t) applies for smaller samples with unknown population standard deviation — it requires degrees of freedom (typically n-1). The **chi-square test** applies for categorical data and goodness-of-fit tests, also requiring degrees of freedom.
+
+The **test type** — two-tailed vs. one-tailed — determines whether you are testing for any difference (two-tailed) or a difference in a specific direction (one-tailed). Two-tailed tests are more conservative and more commonly appropriate. Use our [Confidence Interval Calculator](/calculators/math/confidence-interval-calculator) to complement p-value testing with interval estimation, or our [Standard Deviation Calculator](/calculators/math/standard-deviation-calculator) to compute the input statistics from raw data.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the distribution** — choose Z (Normal) for z-scores, T (Student's t) for t-statistics, or Chi-Square for chi-square values. If your research paper or homework problem specifies a z-test or t-test, match that selection.
+
+2. **Enter your test statistic** — type the numeric value of your calculated z-score, t-statistic, or chi-square value. For z and t tests, the value can be positive or negative. For chi-square, the value must be non-negative.
+
+3. **Enter degrees of freedom** (if applicable) — required for t-tests and chi-square tests. For a one-sample t-test, degrees of freedom = n - 1. For a chi-square goodness-of-fit test, df = number of categories - 1. This field is ignored for z-tests.
+
+4. **Select the test type** — choose Two-Tailed if you are testing for any difference from the null (most common). Choose Right-Tailed if you are testing whether the parameter is greater than the null value. Choose Left-Tailed if testing whether it is less.
+
+5. **Read the results** — the calculator displays the exact p-value, whether the result is significant at the 0.05, 0.01, and 0.001 levels, and an interpretation of the finding.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Two-Tailed Z-Test P-Value
+
+$$p = 2 \cdot \left(1 - \Phi(|z|)\right)$$
+
+### One-Tailed Z-Test (Right-Tailed)
+
+$$p = 1 - \Phi(z)$$
+
+### One-Tailed Z-Test (Left-Tailed)
+
+$$p = \Phi(z)$$
+
+Where:
+
+- **p** = the p-value (probability under the null hypothesis)
+- **z** = the z-score (test statistic from the standard normal distribution)
+- **|z|** = the absolute value of the z-score
+- **$\Phi(z)$** = the cumulative distribution function (CDF) of the standard normal distribution, representing the probability that a standard normal variable is less than or equal to z
+
+For **t-tests**, the same structure applies but $\Phi$ is replaced by the CDF of the Student's t-distribution with the specified degrees of freedom. For **chi-square tests**, the p-value is computed from the upper tail of the chi-square CDF: $p = 1 - F_{\chi^2}(x; k)$, where $k$ is the degrees of freedom.
+
+**The standard normal CDF** $\Phi(z)$ has no closed-form expression and is computed numerically. For z = 1.96, $\Phi(1.96) = 0.97500$, so the two-tailed p-value is $2 \times (1 - 0.97500) = 0.0500$.
+
+**Source:** Abramowitz & Stegun, *Handbook of Mathematical Functions* (1964), Chapter 26; NIST/SEMATECH e-Handbook of Statistical Methods, Section 1.3.6.7.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Two-Tailed Z-Test (z = 2.5)
+
+**Context:** A researcher tests whether a new teaching method changes test scores. The null hypothesis is that there is no difference. After analysis, the z-score is 2.5. Using a two-tailed test at alpha = 0.05.
+
+**Step-by-step:**
+
+1. Test statistic: z = **2.5**
+2. Absolute value: |z| = **2.5**
+3. Look up the CDF: $\Phi(2.5) = 0.99379$
+4. Compute right tail: $1 - 0.99379 = 0.00621$
+5. Two-tailed p-value: $2 \times 0.00621 = **0.01242**$
+6. Compare to alpha: 0.01242 < 0.05 → **Statistically significant**
+7. Also significant at alpha = 0.05? **Yes**. At alpha = 0.01? **No** (0.01242 > 0.01).
+
+**Interpretation:** There is only a 1.24% probability of observing a z-score of 2.5 or more extreme under the null hypothesis. This is strong evidence against the null. The teaching method appears to have a statistically significant effect on test scores at the 5% significance level, though it falls just short of the more stringent 1% level.
+
+### Example 2: One-Tailed Z-Test (z = 1.645)
+
+**Context:** A pharmaceutical company claims a drug lowers blood pressure. The one-sided alternative hypothesis is that the mean reduction is greater than zero. The z-score from the trial data is 1.645.
+
+**Step-by-step:**
+
+1. Test statistic: z = **1.645** (right-tailed test)
+2. Look up the CDF: $\Phi(1.645) = 0.95002$
+3. Right-tailed p-value: $1 - 0.95002 = **0.04998**$
+4. Compare to alpha = 0.05: 0.04998 < 0.05 → **Barely significant**
+
+**Interpretation:** The p-value of 0.050 is right at the conventional boundary. The result is technically significant at alpha = 0.05, but the evidence is marginal. A slightly smaller z-score of 1.64 would yield p = 0.0505, which would not be significant. Results this close to the boundary warrant caution — reporting the exact p-value is more informative than a simple "significant/not significant" label.
+
+### Example 3: Two-Tailed Z-Test (z = 0.8, Not Significant)
+
+**Context:** A marketing team tests whether a website redesign changes conversion rates. After collecting data, z = 0.8.
+
+**Step-by-step:**
+
+1. Test statistic: z = **0.8**
+2. Absolute value: |z| = **0.8**
+3. Look up the CDF: $\Phi(0.8) = 0.78814$
+4. Two-tailed p-value: $2 \times (1 - 0.78814) = 2 \times 0.21186 = **0.42371**$
+5. Compare to alpha = 0.05: 0.42371 > 0.05 → **Not significant**
+
+**Interpretation:** A p-value of 0.424 means there is a 42.4% chance of seeing a result this extreme by random chance alone. This provides no evidence against the null hypothesis. The redesign does not appear to have a meaningful effect on conversion rates. Note that "not significant" does not prove the null is true — it means the data are insufficient to reject it.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Sample Size and Statistical Power.** Larger samples produce more extreme test statistics for the same effect size, which pushes p-values lower. A treatment that changes the mean by 2 points might yield z = 1.2 (p = 0.23) with n = 30 but z = 3.0 (p = 0.003) with n = 200. Before running a study, conduct a power analysis to determine the sample size needed to detect a meaningful effect at your target significance level. A study that is underpowered may fail to detect real effects (Type II error), while an overpowered study can flag trivially small effects as "significant."
+
+**One-Tailed vs. Two-Tailed Tests.** A one-tailed test is exactly half the p-value of a two-tailed test for the same z-score — z = 1.96 gives p = 0.050 (two-tailed) but p = 0.025 (one-tailed). One-tailed tests are more powerful for detecting effects in the predicted direction but cannot detect effects in the opposite direction. Use a one-tailed test only when you have a strong prior reason to test a specific direction and a result in the opposite direction would be scientifically meaningless. If in doubt, use two-tailed — it is the more conservative and more widely accepted default.
+
+**Choice of Significance Level (Alpha).** The conventional alpha of 0.05 is a historical convention, not a scientific law. Ronald Fisher originally proposed it as a convenient cutoff; Neyman and Pearson formalized it into hypothesis testing. Different fields use different thresholds: particle physics requires p < 0.0000003 (5-sigma), genome-wide association studies use p < 5 x 10^-8, and exploratory social science may accept p < 0.10. Always state your alpha before looking at the data — choosing alpha after seeing the p-value is a form of p-hacking.
+
+**Multiple Comparisons Problem.** If you test 20 hypotheses at alpha = 0.05, you expect 1 false positive on average even if all null hypotheses are true. Running multiple tests without correction inflates the family-wise error rate. Apply the Bonferroni correction (divide alpha by the number of tests) or use the Benjamini-Hochberg procedure to control the false discovery rate. A single "significant" result among many tests is far less convincing than a single pre-registered test that reaches significance.
+
+**Effect Size vs. Statistical Significance.** A tiny, practically meaningless difference can be "statistically significant" with a large enough sample. A medication that lowers blood pressure by 0.1 mmHg might achieve p < 0.001 with n = 50,000, but 0.1 mmHg is clinically irrelevant. Always report the effect size (Cohen's d, correlation coefficient, odds ratio) alongside the p-value. Statistical significance without practical significance is misleading.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- The z-test assumes the **population standard deviation is known** or the sample size is large enough (n > 30) for the Central Limit Theorem to apply. For small samples with unknown population SD, use the t-test.
+- P-values assume the **null hypothesis is correctly specified**. If the null model is wrong (e.g., assuming normality when data are skewed), the p-value may be inaccurate.
+- This calculator computes p-values from test statistics — it does **not compute the test statistic itself** from raw data. You must calculate your z-score, t-value, or chi-square value separately.
+- The chi-square distribution is **one-sided by nature** (values are always non-negative), so chi-square p-values are always computed from the right tail.
+- P-values are **not the probability that the null hypothesis is true**. They are the probability of seeing data as extreme as yours, assuming the null is true. Bayesian methods are needed for the former.
+- This calculator uses **numerical approximation** for the normal CDF. Results are accurate to at least 6 decimal places for typical test statistics.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What does a p-value actually mean?
+
+A p-value is the probability of observing a test statistic as extreme as yours (or more extreme) under the assumption that the null hypothesis is true. If p = 0.03, it means there is a 3% chance of getting your result — or something more extreme — if the null hypothesis is correct. It does not mean there is a 3% chance the null is true, nor a 97% chance that your alternative hypothesis is true. The p-value measures the compatibility of your data with the null hypothesis: a small p-value (typically below 0.05) suggests the data are unlikely under the null, providing evidence to reject it.
+
+### How do I interpret the p-value in my research?
+
+Compare the p-value to your pre-specified significance level (alpha). If p is less than or equal to alpha, reject the null hypothesis — the result is statistically significant at that level. If p > alpha, you fail to reject the null. Common thresholds are 0.05 (significant), 0.01 (highly significant), and 0.001 (very highly significant). However, do not treat 0.05 as a magic line — a p-value of 0.049 is not meaningfully different from 0.051. Report the exact p-value and let readers assess the strength of evidence. Pair the p-value with an effect size measure and a confidence interval for a complete picture.
+
+### What is the difference between one-tailed and two-tailed tests?
+
+A two-tailed test checks for any difference from the null hypothesis in either direction (greater or less), while a one-tailed test checks for a difference in only one specific direction. For the same test statistic, a one-tailed p-value is exactly half the two-tailed p-value. Use two-tailed when you want to detect effects in either direction — for example, "does the drug change blood pressure?" Use one-tailed only when a result in the opposite direction would be meaningless — for example, "does the drug lower blood pressure?" and an increase would be treated the same as no effect. Two-tailed tests are the default in most research because they are more conservative and do not require a directional prediction in advance.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes p-values by evaluating the cumulative distribution function (CDF) of the selected distribution at the given test statistic. For z-tests, it uses the standard normal CDF computed via numerical approximation. For t-tests, it evaluates the regularized incomplete beta function. For chi-square tests, it uses the regularized incomplete gamma function. Two-tailed p-values double the single-tail probability; one-tailed p-values use the appropriate tail directly.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}
