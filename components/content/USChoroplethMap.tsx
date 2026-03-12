@@ -238,12 +238,14 @@ export default function USChoroplethMap({
         {/* SVG Map */}
         <div
           ref={containerRef}
-          className="relative"
+          className="relative w-full"
+          style={{ aspectRatio: '975 / 610' }}
           onMouseMove={handleMouseMove}
         >
           <svg
             viewBox="0 0 975 610"
-            className="w-full h-auto"
+            className="w-full h-full block"
+            preserveAspectRatio="xMidYMid meet"
             role="img"
             aria-label={`US map showing ${legend}`}
           >

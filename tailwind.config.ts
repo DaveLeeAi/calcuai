@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss';
+import typography from '@tailwindcss/typography';
 
 const config: Config = {
   darkMode: 'class',
@@ -44,9 +45,27 @@ const config: Config = {
         page: '1200px',
         'page-wide': '1440px',
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            '--tw-prose-links': '#1A6FA0',
+            a: {
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            },
+            table: {
+              borderCollapse: 'collapse',
+              borderRadius: '0.5rem',
+              overflow: 'hidden',
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [typography],
 };
 
 export default config;

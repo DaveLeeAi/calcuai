@@ -42,7 +42,7 @@ export default function StickyCalculator({ spec }: StickyCalculatorProps) {
       {/* Calculator widget — sticky on desktop via CSS, normal flow on mobile */}
       <div
         ref={calcRef}
-        className="lg:sticky lg:top-20 lg:self-start"
+        className="xl:sticky xl:top-20 xl:self-start max-w-[360px]"
         id="calculator-widget"
       >
         <CalculatorRenderer spec={spec} compact />
@@ -52,7 +52,7 @@ export default function StickyCalculator({ spec }: StickyCalculatorProps) {
       {showBackButton && (
         <button
           onClick={scrollToCalculator}
-          className="lg:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-brand-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-brand-600 active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2"
+          className="xl:hidden fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-brand-500 px-4 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:bg-brand-600 active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2"
           aria-label="Back to calculator"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -77,14 +77,13 @@
   }
   @media (min-width: 1280px) {
     .flagship-layout {
-      /* TOC (200px max) | Article (flex, max 720px) | Calculator+sidebar (380px) */
-      grid-template-columns: minmax(160px, 200px) minmax(0, 1fr) 380px;
+      /* TOC (200px max) | Article (flex) | Calculator+sidebar (360px) */
+      grid-template-columns: minmax(160px, 200px) minmax(0, 1fr) 360px;
     }
   }
 
-  /* ─── Article section spacing (48px gap between H2 sections) ─── */
+  /* ─── Article section spacing (48px gap handled by parent space-y-12) ─── */
   .article-section {
-    @apply py-6;
   }
 
   /* ─── Collapsible <details> sections ─── */
@@ -118,7 +117,7 @@
 
   /* ─── Prose table polish ─── */
   .prose table {
-    @apply w-full text-sm;
+    @apply w-full text-sm border-collapse rounded-lg overflow-hidden border border-gray-200 dark:border-slate-700;
   }
   .prose thead {
     @apply bg-gray-50 dark:bg-slate-800/80;
@@ -128,6 +127,12 @@
   }
   .prose td,
   .prose th {
-    @apply px-3 py-2 border-b border-gray-100 dark:border-slate-700;
+    @apply px-3 py-2.5 border-b border-gray-100 dark:border-slate-700;
+  }
+  .prose tbody tr:last-child td {
+    @apply border-b-0;
+  }
+  .prose tbody tr:hover {
+    @apply bg-gray-50/50 dark:bg-slate-700/30;
   }
 }
