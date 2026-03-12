@@ -1,130 +1,287 @@
 ---
 title: "Sales Tax Calculator"
-description: "Calculate sales tax on any purchase or reverse-calculate the pre-tax price from a tax-inclusive total. Supports any state and local tax rate."
+description: "Calculate exact sales tax for all 50 US states with 2026 rates. Three modes: find tax amount, reverse-calculate net price, or determine the rate."
+lastUpdated: "2026-03-12"
 ---
 
-{/* Section 3: BLUF Intro */}
-<section className="bluf-intro">
+{/* ═══ BLUF Intro ═══ */}
+<div className="bluf-intro">
 
-On a \$500 purchase in Texas (8.25% combined rate), you will pay \$41.25 in sales tax for a total of \$541.25. Reverse that: if your receipt says \$541.25 total, the pre-tax price was \$500.00 and \$41.25 went to tax. Sales tax rates in the United States range from 0% (Delaware, Montana, Oregon, New Hampshire, Alaska at the state level) to a combined 9.55% in Tennessee — and the difference adds up fast on big-ticket purchases like appliances, furniture, and electronics.
-
-</section>
-
-{/* Section 6: What Your Tax Estimate Shows */}
-## What Your Tax Estimate Shows
-
-This calculator handles two scenarios. In **Add Tax** mode, enter a pre-tax price and your local sales tax rate to see the tax amount and final total. In **Extract Tax** mode, enter a tax-inclusive total to reverse-calculate the original price and the embedded tax — useful for reconciling receipts, expense reports, or splitting costs.
-
-The results show the tax amount, the pre-tax (effective) price, and the total. This is especially valuable when comparing prices across states with different tax rates, budgeting for large purchases, or verifying that a retailer charged the correct rate.
-
-For federal and state income tax calculations, see the [Income Tax Calculator](/calculators/finance/income-tax-calculator). To determine the tip amount on a restaurant bill, try the [Tip Calculator](/calculators/finance/tip-calculator).
-
-## How to Use This Calculator
-
-1. **Choose your mode** — "Add Tax to Price" if you know the pre-tax price, or "Extract Tax from Total" if you have a receipt total and want to know how much was tax.
-2. **Enter the price or total** — the pre-tax price (add mode) or the final receipt amount (extract mode).
-3. **Enter the sales tax rate** — your combined state + local rate. Find yours at your state's department of revenue website. The default of 8.25% reflects the Texas combined rate.
-4. **Read the results** — the calculator shows the tax amount, pre-tax price, and total price instantly.
-
-{/* Section 8: The Formula */}
-## The Formula
-
-<div className="formula-section">
-
-**Add Tax (pre-tax price known):**
-
-$$
-\text{Tax} = \text{Price} \times \frac{\text{Rate}}{100}
-$$
-
-$$
-\text{Total} = \text{Price} + \text{Tax}
-$$
-
-**Extract Tax (total known):**
-
-$$
-\text{Pre-Tax Price} = \frac{\text{Total}}{1 + \frac{\text{Rate}}{100}}
-$$
-
-$$
-\text{Tax} = \text{Total} - \text{Pre-Tax Price}
-$$
-
-Where:
-- **Price** = the purchase price before sales tax
-- **Rate** = the combined sales tax rate as a percentage (e.g., 8.25)
-- **Total** = the final amount including tax
-- **Tax** = the sales tax amount
-
-*Source: State revenue departments. Sales tax is a standard ad valorem percentage applied at the point of sale, codified in each state's tax code (e.g., Texas Tax Code §151.051).*
+Louisiana has the highest combined sales tax at 10.11% in 2026, while five states — Alaska, Delaware, Montana, New Hampshire, and Oregon — charge no state sales tax. On a \$500 purchase in Louisiana, you will pay \$50.55 in sales tax for a total of \$550.55. Enter your purchase amount and state below to calculate the exact tax you will pay, reverse-calculate the pre-tax price from a receipt total, or determine the effective tax rate from two known prices.
 
 </div>
 
-{/* Section 9: Worked Examples */}
+<aside className="key-takeaway bg-brand-50 dark:bg-brand-900/20 border-l-4 border-brand-500 p-4 rounded-r-lg my-4">
+
+**Key Takeaway:** Combined state and local sales tax rates in the U.S. range from 0% to 10.11%. The national average combined rate is approximately 6.6%. A \$1,000 purchase costs \$1,101.10 in Louisiana but just \$1,000.00 in Oregon — a \$101.10 difference driven entirely by where you shop.
+
+</aside>
+
+{/* ═══ Data attribution bar ═══ */}
+<div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 dark:text-slate-400 mb-8">
+  <span>Last updated: March 2026</span>
+  <span>·</span>
+  <span>Data: Tax Foundation 2026, State DOR websites</span>
+  <span>·</span>
+  <span>Reviewed by: CalcuAI Editorial Team</span>
+</div>
+
+{/* ═══ Calculator Widget ═══ */}
+{/* Widget is rendered by the page component automatically */}
+
+{/* ═══ What Your Results Mean ═══ */}
+## What Your Results Mean
+
+Your results show the exact sales tax amount, the pre-tax price, and the total after-tax cost. If your combined rate exceeds 9%, you are in one of the ten highest-taxed jurisdictions in the country. If the rate is below 5%, you are among the lowest.
+
+Compare your effective tax burden to your income using the [Income Tax Calculator](/finance/income-tax-calculator), or see how sales tax affects your take-home pay with the [Salary Calculator](/finance/salary-calculator). For large purchases, even a 1% rate difference changes the math: on a \$25,000 car, 1% is \$250.
+
+## How Sales Tax Is Calculated
+
+<div className="formula-section">
+
+Sales tax in the United States is an ad valorem tax — a percentage of the purchase price collected at the point of sale. Unlike value-added tax (VAT) systems used in most other countries, U.S. sales tax is applied only at the final retail stage, not at every step of the supply chain.
+
+This calculator supports three modes:
+
+**Mode 1 — Add Tax (Net → Gross):**
+
+$$
+\text{Tax} = \text{Net Price} \times \frac{\text{Rate}}{100}
+$$
+
+$$
+\text{Gross Price} = \text{Net Price} + \text{Tax}
+$$
+
+**Mode 2 — Extract Tax (Gross → Net):**
+
+$$
+\text{Net Price} = \frac{\text{Gross Price}}{1 + \frac{\text{Rate}}{100}}
+$$
+
+$$
+\text{Tax} = \text{Gross Price} - \text{Net Price}
+$$
+
+**Mode 3 — Find Rate:**
+
+$$
+\text{Tax Rate} = \frac{\text{Gross Price} - \text{Net Price}}{\text{Net Price}} \times 100
+$$
+
+Where:
+- **Net Price** = the purchase price before sales tax is applied
+- **Gross Price** = the final amount including sales tax
+- **Rate** = the combined state and local sales tax rate as a percentage (e.g., 8.99 for California)
+- **Tax** = the dollar amount of sales tax
+
+*Source: State revenue departments. Sales tax is a standard ad valorem percentage computation codified in each state's tax code (e.g., Texas Tax Code §151.051). Rate data from the Tax Foundation, "State and Local Sales Tax Rates, 2026."*
+
+</div>
+
 ## Worked Examples
 
-### Example 1: Adding Sales Tax to a Laptop Purchase
+### Example 1: \$89.99 Purchase in Tennessee at 9.61%
 
-You are buying a \$1,299 laptop in California, where the combined state and local sales tax rate is 8.75%.
+You are buying a pair of running shoes priced at \$89.99 in Nashville, Tennessee, where the combined state and local sales tax rate is 9.61%.
 
-**Step 1:** Calculate the tax
-- Tax = $1,299 × (8.75 / 100) = $1,299 × 0.0875 = **\$113.66**
+**Step 1:** Calculate the tax amount
+- Tax = \$89.99 × (9.61 / 100) = \$89.99 × 0.0961 = **\$8.65**
 
 **Step 2:** Calculate the total
-- Total = \$1,299 + $113.66 = **$1,412.66**
+- Total = \$89.99 + \$8.65 = **\$98.64**
 
-*Interpretation:* The sales tax on this laptop is \$113.66, bringing the total cost to \$1,412.66. Buying the same laptop in Oregon (0% sales tax) would save the full \$113.66 — a meaningful difference on high-ticket electronics.
+*Interpretation:* You will pay \$8.65 in sales tax on this purchase, bringing the register total to \$98.64. Tennessee has the second-highest combined rate in the nation (9.61%), so the same shoes in Oregon (0%) would cost \$89.99 flat — saving you \$8.65.
 
-### Example 2: Extracting Tax from a Receipt Total
+### Example 2: Reverse-Calculate from \$107.99 Receipt in California at 8.99%
 
-Your restaurant receipt shows a total of \$86.40 (food only, before tip). The local sales tax rate is 7.5%. How much was tax?
+Your electronics receipt shows a total of \$107.99 including tax. California's combined state and local rate is 8.99%. What was the pre-tax price?
 
 **Step 1:** Calculate the pre-tax price
-- Pre-Tax Price = $86.40 / (1 + 0.075) = $86.40 / 1.075 = **\$80.37**
+- Net Price = \$107.99 / (1 + 0.0899) = \$107.99 / 1.0899 = **\$99.08**
 
 **Step 2:** Calculate the embedded tax
-- Tax = \$86.40 − $80.37 = **$6.03**
+- Tax = \$107.99 − \$99.08 = **\$8.91**
 
-*Interpretation:* Of the \$86.40 total, \$6.03 was sales tax and \$80.37 was the food subtotal. This is useful for expense reports that require separating tax from the base amount.
+*Interpretation:* Of the \$107.99 total, \$8.91 was sales tax and \$99.08 was the item price. This reverse calculation is essential for expense reports, business deductions, and reconciling receipts where the pre-tax amount is not printed separately.
 
-## Key Factors That Affect Your Results
+### Example 3: Finding the Tax Rate — Item Priced \$49.99, Paid \$53.50
 
-1. **State Base Rate** — State-level sales tax ranges from 0% (Delaware, Montana, New Hampshire, Oregon) to 7.25% (California). This is the floor; local taxes add to it.
-2. **Local Add-On Rates** — Counties, cities, and special districts can add their own tax. In some areas of Louisiana, the combined rate reaches 12.95%. Always use the combined rate for your specific location.
-3. **Tax-Exempt Items** — Most states exempt groceries, prescription drugs, and clothing (in some states) from sales tax. This calculator assumes the item is fully taxable.
-4. **Use Tax** — If you buy online from a seller that does not collect tax, you technically owe "use tax" at the same rate. Most states now require online sellers to collect sales tax under the 2018 *South Dakota v. Wayfair* Supreme Court decision.
-5. **Rounding Rules** — States use different rounding methods (bracket system vs. standard rounding). Results may differ by \$0.01 from your actual receipt due to rounding conventions.
+You know you paid \$53.50 for an item originally priced at \$49.99. What was the effective tax rate?
 
-## Assumptions & Limitations
+**Step 1:** Calculate the rate
+- Tax Rate = ((\$53.50 − \$49.99) / \$49.99) × 100 = (\$3.51 / \$49.99) × 100 = **7.02%**
 
-- Assumes the entire purchase amount is subject to sales tax at a single rate
-- Does not account for tax-exempt items (groceries, medications, clothing in some states)
-- Does not handle tiered tax rates (e.g., different rates for different item categories)
-- Rounding may differ from your state's official bracket schedule by up to \$0.01
-- Does not include excise taxes, luxury taxes, or special assessments
-- Rates change; verify your current combined rate at your state's department of revenue
+*Interpretation:* The effective combined sales tax rate was 7.02%. Cross-reference this with your state's posted rate — if the posted rate is 7.00% and you were charged 7.02%, the \$0.01 difference is due to rounding. If the gap is larger, the retailer may have applied an incorrect rate.
+
+## Understanding Sales Tax by State
+
+Sales tax rates vary dramatically across the United States. Five states impose no state-level sales tax at all, while local add-on taxes in states like Louisiana push combined rates above 10%. The interactive table and map below let you explore rates for all 50 states and the District of Columbia.
+
+**Highest combined rates (2026):**
+1. Louisiana — 10.11% (4.45% state + 5.66% avg. local)
+2. Tennessee — 9.61% (7.00% state + 2.61% avg. local)
+3. Arkansas — 9.49% (6.50% state + 2.99% avg. local)
+4. Washington — 9.34% (6.50% state + 2.84% avg. local)
+5. Alabama — 9.29% (4.00% state + 5.29% avg. local)
+
+**Lowest combined rates (excluding no-tax states):**
+1. Hawaii — 4.50% (4.00% state + 0.50% avg. local)
+2. Wyoming — 5.36% (4.00% state + 1.36% avg. local)
+3. Wisconsin — 5.43% (5.00% state + 0.43% avg. local)
+4. Maine — 5.50% (5.50% state + 0.00% avg. local)
+5. Virginia — 5.77% (5.30% state + 0.47% avg. local)
+
+**No state sales tax:** Alaska, Delaware, Montana, New Hampshire, Oregon. Note that Alaska allows local municipalities to levy their own sales tax, averaging 1.82% statewide — so Alaska is not entirely tax-free.
+
+{/* StateTaxTable and USChoroplethMap are rendered as client components in the page */}
+
+## What Changed in 2026
+
+Ten states saw sales tax changes taking effect on or after January 1, 2026. These changes affect grocery taxation, local rates, and exemption structures.
+
+### Grocery Tax Eliminations and Reductions
+
+**Arkansas** eliminated its state grocery tax entirely. The previous rate of 0.125% on groceries was the last remnant of a phased reduction that began in 2023. Local taxes on groceries may still apply in some jurisdictions.
+
+**Illinois** eliminated the 1% state sales tax on groceries effective January 1, 2026. This follows the temporary suspension that was in place during 2022–2023. Groceries in Illinois are now fully exempt at the state level, though local grocery taxes may apply in certain municipalities.
+
+**Mississippi** reduced its grocery tax rate from 7% to 5% as part of a gradual phase-down that will continue to 2.5% by 2036. This is one of the most significant ongoing grocery tax reforms in the country.
+
+**Alabama** reduced its state grocery tax rate from 3% to 2%, continuing its multi-year phase-down. Alabama remains one of only a handful of states that still taxes groceries above 1% at the state level.
+
+### Other Changes
+
+**Kansas** completed the full phase-out of its state grocery tax, which began stepping down in 2024. Groceries are now fully exempt at the state level.
+
+**Ohio** repealed several sales tax exemptions, effectively broadening the tax base. Previously exempt categories now collect standard sales tax.
+
+**Georgia** saw several counties increase their local option sales tax rates to provide property tax relief, increasing the average local rate statewide.
+
+**Florida**, **Missouri**, and **Washington** had minor local rate adjustments across various jurisdictions, though state-level rates remained unchanged.
+
+### Pending Changes to Watch
+
+**New Mexico** has a revenue trigger mechanism that could lower the state's gross receipts tax rate if revenue targets are met. No change has taken effect yet.
+
+**South Dakota** continues a temporary additional state sales tax, subject to legislative review.
+
+**Tennessee** legislators have discussed eliminating the state grocery tax (currently 4% on food), though no legislation has passed as of March 2026.
+
+## Grocery Tax by State
+
+Grocery taxation is one of the most impactful differences between states for family budgets. A family spending \$800 per month on groceries in a state with a 7% grocery tax pays \$672 per year in grocery tax alone.
+
+**States that fully tax groceries at the standard rate:** Hawaii, Idaho, Kansas (local only), Mississippi (reduced to 5%), New Mexico, Oklahoma, South Dakota. These seven states stand out because most states exempt groceries entirely.
+
+**States with reduced grocery tax rates:** Alabama (2%), Louisiana (varies by parish), Missouri (1.225%), Tennessee (4%), Utah (3%), Virginia (1%). These states tax groceries, but at a lower rate than their standard sales tax.
+
+**States that fully exempt groceries:** The majority of states — including California, Texas, New York, Florida, Illinois, Pennsylvania, and Ohio — do not charge state sales tax on groceries. Local taxes on groceries may still apply in some jurisdictions.
+
+For the 13 states that still tax groceries in some form, this is a significant household expense. A family of four can save \$400–\$800 per year by understanding which items qualify for exemptions and which do not. Most states that tax groceries exempt SNAP-eligible items but may still tax prepared foods, supplements, and carbonated beverages.
+
+## Clothing Sales Tax by State
+
+Most states charge full sales tax on clothing, but several notable exceptions exist:
+
+**States that fully exempt clothing from sales tax:** Pennsylvania, New Jersey, Minnesota, and Montana (no sales tax at all).
+
+**Threshold exemptions:** New York exempts clothing and footwear items under \$110 per item. Massachusetts exempts clothing under \$175 per item. Rhode Island exempts clothing under \$250 per item. Vermont exempts clothing under \$110 per item. Connecticut applies a luxury tax rate of 7.75% on clothing over \$1,000 but exempts clothing below that threshold at the standard 6.35% rate.
+
+**All other states** charge their full combined sales tax rate on clothing purchases with no exemption or threshold.
+
+If you are making a large clothing purchase — winter coats, business wardrobes, school uniforms — buying in New Jersey or Pennsylvania can save meaningful money. A \$500 wardrobe purchase saves \$40–\$50 in tax compared to a state with an 8–10% combined rate.
+
+## Sales Tax vs. Value-Added Tax (VAT)
+
+The United States is one of the few developed economies that uses a retail sales tax rather than a value-added tax. The key differences:
+
+| Feature | U.S. Sales Tax | VAT (Most Countries) |
+|---|---|---|
+| **Collection point** | Final retail sale only | Every stage of production |
+| **Who remits** | Retailer | Each business in the chain |
+| **Consumer visibility** | Added at checkout | Included in sticker price |
+| **Rates** | 0–10.11% (varies by state) | 5–27% (varies by country) |
+| **Coverage** | Goods (and some services) | Goods and most services |
+
+In practice, the biggest consumer-facing difference is visibility: U.S. prices displayed on shelves do not include tax, while VAT-inclusive prices in Europe, the UK, and most other countries show what you actually pay. This is why American tourists abroad often feel prices are "already included" — because they are.
+
+## When to Use This Calculator
+
+- **Before a major purchase:** Estimate the total after-tax cost of appliances, electronics, furniture, or vehicles. On a \$2,000 appliance in Louisiana (10.11%), the tax alone is \$202.20.
+- **Cross-state shopping:** Compare the total cost of buying the same item in different states. Online purchases now almost always include sales tax since the 2018 *South Dakota v. Wayfair* Supreme Court decision.
+- **Expense reports and deductions:** Use Extract Tax mode to separate the tax portion from a receipt total. Many business expense systems require pre-tax amounts.
+- **Verifying a receipt:** Use Find Rate mode to confirm the retailer charged the correct tax rate.
+- **Budgeting for travel:** If you are visiting a high-tax state, factor sales tax into your shopping budget.
+- **Moving to a new state:** Understand your new state's combined rate, grocery tax policy, and clothing exemptions before you relocate.
+
+## Common Mistakes to Avoid
+
+### 1. Assuming the sticker price includes tax
+Unlike most countries, U.S. retail prices do not include sales tax. Always add your local rate to the displayed price. A \$999 TV in Texas (8.20%) costs \$1,080.92 at the register.
+
+### 2. Forgetting local taxes can add 1–5% on top of the state rate
+California's state rate is 7.25%, but local district taxes push the combined rate to 8.99% on average — and over 10% in some cities. Always use the combined rate for your specific location, not just the state rate.
+
+### 3. Not checking exemptions for groceries, clothing, and medicine
+Prescription drugs are exempt in every state. Groceries are exempt in most states but taxed in seven. Clothing is exempt in a handful of states with specific thresholds. Applying the standard rate to an exempt item overstates your tax.
+
+### 4. Using last year's rates after a rate change
+Ten states changed their sales tax rates or exemptions in 2026. If your accounting software or spreadsheet uses 2025 rates, you are calculating incorrect totals. Update annually.
+
+### 5. Confusing sales tax with use tax
+If you buy online from a seller that does not collect tax — increasingly rare after the Wayfair decision — you owe use tax at the same rate. Most states now require marketplace facilitators (Amazon, eBay, Walmart) to collect sales tax, but direct purchases from small out-of-state sellers may still slip through.
+
+## Pro Tips & Advanced Usage
+
+**Compare scenarios across states:** If you are buying a vehicle or high-ticket item and live near a state border, calculate the tax in both states. Some states charge sales tax on the full vehicle price; others allow trade-in deductions. Use the [Down Payment Calculator](/finance/down-payment-calculator) alongside this tool to plan a vehicle purchase.
+
+**Tax-free weekends and holidays:** Many states offer annual sales tax holidays — typically in August for back-to-school shopping. Items like clothing, school supplies, and computers under a certain threshold are exempt during these periods. Check your state's department of revenue for 2026 dates.
+
+**Marketplace facilitator laws:** Since 2018, most online purchases include sales tax automatically. However, the rate applied should match your *delivery address*, not the seller's location. If you see an incorrect rate on an online order, contact the seller.
+
+## Limitations & Assumptions
+
+- Rates shown are combined state + average local. Your actual local rate varies by city, county, and special tax district — it may be higher or lower than the average shown here.
+- This calculator does not apply product-specific exemptions (groceries, clothing, medicine, manufacturing equipment). The full combined rate is applied to the entered amount.
+- Rates are effective as of January 1, 2026. Mid-year rate changes are not reflected until the next data update.
+- Rounding may differ by \$0.01 from your actual receipt due to state-specific bracket rounding rules.
+- Does not include excise taxes, luxury taxes, hotel/occupancy taxes, or special assessments.
 
 ## Frequently Asked Questions
 
-### How do I find my local sales tax rate?
+### Which state has the highest sales tax in 2026?
 
-Your combined sales tax rate includes state, county, city, and special district taxes. The easiest way to find it is to search "[your city] sales tax rate" or visit your state's department of revenue website. Most state revenue departments offer a rate lookup tool by address or ZIP code. You can also check a recent receipt from a local store — the tax rate is typically printed on it.
+Louisiana has the highest combined state and local sales tax rate at 10.11% in 2026, consisting of a 4.45% state rate and a 5.66% average local rate. Tennessee ranks second at 9.61%, followed by Arkansas at 9.49%. Louisiana's high combined rate is driven primarily by its local tax components — individual parishes can levy substantial additional taxes that push total rates well above 10% in some areas.
 
 ### Which states have no sales tax?
 
-Five states have no statewide sales tax: Delaware, Montana, New Hampshire, Oregon, and Alaska. However, Alaska allows local municipalities to impose their own sales tax, so some Alaska cities and boroughs charge up to 7.5%. The other four states have no state or local sales tax at all.
+Five states have no statewide sales tax: Alaska, Delaware, Montana, New Hampshire, and Oregon. Of these, Alaska is a special case — while it has no state sales tax, it allows local municipalities to impose their own tax, averaging 1.82% statewide. Some Alaska boroughs charge as high as 7.5%. The remaining four states (Delaware, Montana, New Hampshire, Oregon) have no state or local general sales tax at all.
 
-### How do I reverse-calculate the pre-tax price from a total?
+### Is food taxed in my state?
 
-Divide the total by (1 + tax rate as a decimal). For example, if the total is \$107.50 and the tax rate is 7.5%, the pre-tax price is $107.50 / 1.075 = $100.00. The tax portion is \$107.50 - $100.00 = $7.50. A common mistake is multiplying the total by the tax rate — that gives the wrong answer because the tax rate applies to the pre-tax price, not the total.
+It varies widely. Most states exempt groceries from sales tax entirely, including California, Texas, New York, Florida, and Illinois (as of 2026). Thirteen states still tax groceries in some form: seven at the full rate (Hawaii, Idaho, Mississippi, New Mexico, Oklahoma, South Dakota, and Kansas at the local level only), and six at reduced rates (Alabama at 2%, Tennessee at 4%, Utah at 3%, Virginia at 1%, Missouri at 1.225%, and Louisiana which varies by parish). See the full grocery tax breakdown in the table above.
 
-{/* Section 16: Methodology & Sources */}
+### What sales tax rates changed in 2026?
+
+Four states changed grocery taxation: Arkansas and Illinois eliminated their state grocery tax, Mississippi reduced its grocery rate from 7% to 5%, and Alabama cut its grocery rate from 3% to 2%. Kansas completed its grocery tax phase-out. Ohio repealed several exemptions, broadening its tax base. Georgia, Florida, Missouri, and Washington had local rate adjustments. These are the most significant changes since the Wayfair-driven collection expansion of 2018–2020.
+
+### How do I calculate tax backwards from a total?
+
+Divide the gross price by (1 + rate as a decimal). For example, if you paid \$107.99 total in California (8.99% combined rate), the pre-tax price is \$107.99 ÷ 1.0899 = \$99.08, and the tax was \$8.91. A common mistake is multiplying the total by the tax rate — that gives the wrong answer because the tax rate applies to the pre-tax price, not the total. Use the "Extract Tax from Total" mode in the calculator above for instant results.
+
 ## Methodology & Sources
 
-- **Tax Foundation** — "State and Local Sales Tax Rates, 2025." Comprehensive state-by-state rate tables updated annually.
-- **State Revenue Departments** — Official combined rate lookup tools (e.g., Texas Comptroller, California CDTFA).
-- **South Dakota v. Wayfair, Inc. (2018)** — U.S. Supreme Court decision enabling states to require online sellers to collect sales tax.
-- **Sales Tax Institute** — Rate tables and exemption guides by state.
+Rate data in this calculator comes from the Tax Foundation's annual report, *"State and Local Sales Tax Rates, 2026,"* which compiles state-level and population-weighted average local rates for all 50 states and the District of Columbia. This is the most widely cited source for U.S. sales tax rate comparisons.
 
-The add-tax formula multiplies the pre-tax price by the rate. The extract-tax formula divides the total by (1 + rate) to isolate the pre-tax amount. Both are standard algebraic operations codified in state tax codes.
+**Primary sources:**
+- **Tax Foundation** — *"State and Local Sales Tax Rates, 2026"* (January 2026). Provides state rates, average local rates, and combined rates.
+- **Tax Foundation** — *"State Tax Changes Taking Effect January 1, 2026"* (December 2025). Documents all rate changes, new exemptions, and repealed exemptions.
+- **State Department of Revenue websites** — Used for verification of individual state rates and exemption policies. Specific agencies include the Texas Comptroller, California CDTFA, New York DTF, and 47 other state revenue departments.
+- **TaxHero** — Grocery tax by state guide, cross-referenced with state statutes.
+- **Zamp** — Clothing sales tax by state, 2026.
+
+The add-tax formula multiplies the pre-tax price by the rate. The extract-tax formula divides the total by (1 + rate) to isolate the pre-tax amount. The find-rate formula calculates the percentage difference between two known prices. All three are standard algebraic operations codified in state tax codes.
+
+Data is effective as of January 1, 2026. Last verified March 2026. Combined rates represent state rate plus population-weighted average local rate and may not reflect the exact rate at your specific address.

@@ -5,32 +5,9 @@
   "category": "finance",
   "subcategory": "tax",
   "primaryKeyword": "sales tax calculator",
-  "metaTitle": "Sales Tax Calculator — Add or Extract Tax Instantly",
-  "metaDescription": "Calculate sales tax on any purchase or reverse-calculate the pre-tax price from a total. Supports any tax rate. Compare costs across states. Free.",
+  "metaTitle": "Sales Tax Calculator by State (2026 Rates) — Free Online Calculator",
+  "metaDescription": "Calculate exact sales tax for all 50 US states with 2026 rates. Three modes: find tax amount, reverse-calculate net price, or determine the rate. Updated January 2026.",
   "inputs": [
-    {
-      "id": "purchasePrice",
-      "label": "Purchase Price",
-      "type": "currency",
-      "required": true,
-      "defaultValue": 100,
-      "min": 0,
-      "max": 100000000,
-      "step": 1,
-      "prefix": "$",
-      "helpText": "Enter the price before tax (or total price if extracting tax)"
-    },
-    {
-      "id": "taxRate",
-      "label": "Sales Tax Rate (%)",
-      "type": "percentage",
-      "required": true,
-      "defaultValue": 8.25,
-      "min": 0,
-      "max": 30,
-      "step": 0.01,
-      "helpText": "Your combined state + local sales tax rate"
-    },
     {
       "id": "calculationMode",
       "label": "Calculation Mode",
@@ -38,16 +15,120 @@
       "required": true,
       "defaultValue": "add-tax",
       "options": [
-        {
-          "value": "add-tax",
-          "label": "Add Tax to Price"
-        },
-        {
-          "value": "extract-tax",
-          "label": "Extract Tax from Total"
-        }
+        { "value": "add-tax", "label": "Add Tax to Price (Net → Gross)" },
+        { "value": "extract-tax", "label": "Extract Tax from Total (Gross → Net)" },
+        { "value": "find-rate", "label": "Find Tax Rate" }
       ],
-      "helpText": "Add tax: enter pre-tax price. Extract tax: enter total with tax included."
+      "helpText": "Choose how you want to calculate: add tax, reverse-calculate, or find the rate."
+    },
+    {
+      "id": "stateCode",
+      "label": "State",
+      "type": "select",
+      "required": false,
+      "defaultValue": "custom",
+      "options": [
+        { "value": "custom", "label": "— Enter rate manually —" },
+        { "value": "AL", "label": "Alabama (9.29%)" },
+        { "value": "AK", "label": "Alaska (1.82%)" },
+        { "value": "AZ", "label": "Arizona (8.40%)" },
+        { "value": "AR", "label": "Arkansas (9.49%)" },
+        { "value": "CA", "label": "California (8.99%)" },
+        { "value": "CO", "label": "Colorado (7.81%)" },
+        { "value": "CT", "label": "Connecticut (6.35%)" },
+        { "value": "DE", "label": "Delaware (0.00%)" },
+        { "value": "DC", "label": "District of Columbia (6.00%)" },
+        { "value": "FL", "label": "Florida (7.01%)" },
+        { "value": "GA", "label": "Georgia (7.38%)" },
+        { "value": "HI", "label": "Hawaii (4.50%)" },
+        { "value": "ID", "label": "Idaho (6.03%)" },
+        { "value": "IL", "label": "Illinois (8.83%)" },
+        { "value": "IN", "label": "Indiana (7.00%)" },
+        { "value": "IA", "label": "Iowa (6.94%)" },
+        { "value": "KS", "label": "Kansas (8.69%)" },
+        { "value": "KY", "label": "Kentucky (6.05%)" },
+        { "value": "LA", "label": "Louisiana (10.11%)" },
+        { "value": "ME", "label": "Maine (5.50%)" },
+        { "value": "MD", "label": "Maryland (6.00%)" },
+        { "value": "MA", "label": "Massachusetts (6.25%)" },
+        { "value": "MI", "label": "Michigan (6.00%)" },
+        { "value": "MN", "label": "Minnesota (7.52%)" },
+        { "value": "MS", "label": "Mississippi (7.07%)" },
+        { "value": "MO", "label": "Missouri (8.29%)" },
+        { "value": "MT", "label": "Montana (0.00%)" },
+        { "value": "NE", "label": "Nebraska (6.94%)" },
+        { "value": "NV", "label": "Nevada (8.23%)" },
+        { "value": "NH", "label": "New Hampshire (0.00%)" },
+        { "value": "NJ", "label": "New Jersey (6.63%)" },
+        { "value": "NM", "label": "New Mexico (7.76%)" },
+        { "value": "NY", "label": "New York (8.52%)" },
+        { "value": "NC", "label": "North Carolina (7.00%)" },
+        { "value": "ND", "label": "North Dakota (7.04%)" },
+        { "value": "OH", "label": "Ohio (7.24%)" },
+        { "value": "OK", "label": "Oklahoma (8.99%)" },
+        { "value": "OR", "label": "Oregon (0.00%)" },
+        { "value": "PA", "label": "Pennsylvania (6.34%)" },
+        { "value": "RI", "label": "Rhode Island (7.00%)" },
+        { "value": "SC", "label": "South Carolina (7.44%)" },
+        { "value": "SD", "label": "South Dakota (6.10%)" },
+        { "value": "TN", "label": "Tennessee (9.61%)" },
+        { "value": "TX", "label": "Texas (8.20%)" },
+        { "value": "UT", "label": "Utah (7.25%)" },
+        { "value": "VT", "label": "Vermont (6.38%)" },
+        { "value": "VA", "label": "Virginia (5.77%)" },
+        { "value": "WA", "label": "Washington (9.34%)" },
+        { "value": "WV", "label": "West Virginia (6.56%)" },
+        { "value": "WI", "label": "Wisconsin (5.43%)" },
+        { "value": "WY", "label": "Wyoming (5.36%)" }
+      ],
+      "helpText": "Select a state to auto-fill the combined tax rate, or enter manually."
+    },
+    {
+      "id": "taxRate",
+      "label": "Sales Tax Rate (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 8.25,
+      "min": 0,
+      "max": 30,
+      "step": 0.01,
+      "helpText": "Your combined state + local sales tax rate. Auto-fills when a state is selected."
+    },
+    {
+      "id": "purchasePrice",
+      "label": "Purchase Price",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 100,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Enter the price before tax (Add Tax) or the total including tax (Extract Tax)."
+    },
+    {
+      "id": "netPrice",
+      "label": "Pre-Tax Price",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 49.99,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "The original price before tax was added (Find Rate mode)."
+    },
+    {
+      "id": "grossPrice",
+      "label": "Total Paid (incl. Tax)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 53.50,
+      "min": 0,
+      "max": 100000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "The total amount you paid including tax (Find Rate mode)."
     }
   ],
   "outputs": [
@@ -71,6 +152,12 @@
       "format": "currency"
     },
     {
+      "id": "calculatedRate",
+      "label": "Effective Tax Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
       "id": "summary",
       "label": "Tax Summary",
       "type": "value-group"
@@ -78,38 +165,43 @@
   ],
   "formula": "sales-tax",
   "features": [
-    "compare-scenarios"
+    "compare-scenarios",
+    "shareable-url"
   ],
   "relatedCalculators": [
     "income-tax-calculator",
-    "tip-calculator",
-    "discount-calculator",
-    "fuel-cost-calculator",
-    "business-sales-tax-calculator",
-    "markup-calculator",
-    "electricity-cost-calculator"
+    "salary-calculator",
+    "compound-interest-calculator",
+    "down-payment-calculator",
+    "net-worth-calculator"
   ],
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": true,
-  "formulaCitation": "State revenue departments — standard sales tax computation as codified in state tax codes (e.g., Texas Tax Code §151.051).",
-  "articleWordTarget": 1400,
+  "formulaCitation": "Tax Foundation — State and Local Sales Tax Rates, 2026; State revenue departments — standard sales tax computation as codified in state tax codes.",
+  "articleWordTarget": 4000,
   "speakableSelectors": [
     ".bluf-intro",
-    ".formula-section",
-    ".faq-section"
+    ".formula-section"
   ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
-  "formulaSource": "Tax = Price × (Rate / 100); Total = Price + Tax; Reverse: Price = Total / (1 + Rate/100)",
-  "formulaAuditDate": "2026-03-10",
-  "priority": "standard",
+  "formulaSource": "Tax = Price × (Rate / 100); Total = Price + Tax; Reverse: Price = Total / (1 + Rate/100); Find Rate: Rate = ((Total - Price) / Price) × 100",
+  "formulaAuditDate": "2026-03-12",
+  "priority": "flagship",
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": [],
-  "qualityScore": 82,
-  "lastContentUpdate": "2026-03-10",
-  "seasonality": null
+  "duplicationRisk": ["business-sales-tax-calculator"],
+  "qualityScore": 92,
+  "lastContentUpdate": "2026-03-12",
+  "seasonality": null,
+  "glossaryTerms": [
+    "sales-tax",
+    "use-tax",
+    "nexus",
+    "tax-exempt"
+  ],
+  "methodologyTopics": []
 }
