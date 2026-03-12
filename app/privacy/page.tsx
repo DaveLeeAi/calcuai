@@ -26,8 +26,8 @@ export default function PrivacyPage() {
   return (
     <div className="max-w-content mx-auto">
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Privacy Policy' }]} />
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
-      <div className="prose prose-gray max-w-none">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Privacy Policy</h1>
+      <div className="prose prose-gray dark:prose-invert max-w-none">
         <p>
           <strong>Last updated:</strong> March 2026
         </p>

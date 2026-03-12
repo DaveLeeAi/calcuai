@@ -63,11 +63,11 @@ export default function MethodologyIndexPage() {
         ]}
       />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-4">
         Methodology
       </h1>
 
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl">
+      <p className="text-lg text-gray-600 dark:text-slate-400 mb-8 max-w-3xl">
         Deep-dives into the formulas, derivations, and assumptions behind our
         calculators. Each article explains not just <em>what</em> the formula
         is, but <em>why</em> it works, where it breaks down, and how different
@@ -90,11 +90,11 @@ export default function MethodologyIndexPage() {
               href={`/methodology/${topic.slug}`}
               className="category-card group"
             >
-              <h2 className="font-semibold text-lg text-gray-900 group-hover:text-brand-500 transition-colors mb-2">
+              <h2 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors mb-2">
                 {topic.title}
               </h2>
               {relatedCalcNames.length > 0 && (
-                <p className="text-sm text-gray-500">
+                <p className="text-sm text-gray-500 dark:text-slate-400">
                   Used by: {relatedCalcNames.join(', ')}
                 </p>
               )}
@@ -107,7 +107,7 @@ export default function MethodologyIndexPage() {
       </div>
 
       {topics.length === 0 && (
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-slate-400">
           Methodology articles are coming soon.
         </p>
       )}

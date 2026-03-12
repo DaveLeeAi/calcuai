@@ -28,19 +28,19 @@ export function FormulaBlock({ formula, variables, citation }: FormulaBlockProps
   }
 
   return (
-    <div className="formula-section my-8 rounded-lg border border-blue-100 bg-blue-50/50 p-6">
+    <div className="formula-section my-8 rounded-lg border border-blue-100 dark:border-blue-800 bg-blue-50/50 dark:bg-blue-900/20 p-6">
       <div
         className="text-center overflow-x-auto py-4"
         dangerouslySetInnerHTML={{ __html: renderedFormula }}
       />
 
       {variables && variables.length > 0 && (
-        <div className="mt-4 border-t border-blue-100 pt-4">
-          <p className="text-sm font-medium text-gray-700 mb-2">Where:</p>
-          <ul className="space-y-1 text-sm text-gray-600">
+        <div className="mt-4 border-t border-blue-100 dark:border-blue-800 pt-4">
+          <p className="text-sm font-medium text-gray-700 dark:text-slate-300 mb-2">Where:</p>
+          <ul className="space-y-1 text-sm text-gray-600 dark:text-slate-300">
             {variables.map((v) => (
               <li key={v.symbol}>
-                <span className="font-mono font-medium text-gray-800">{v.symbol}</span>
+                <span className="font-mono font-medium text-gray-800 dark:text-slate-200">{v.symbol}</span>
                 {' = '}
                 {v.description}
               </li>
@@ -50,7 +50,7 @@ export function FormulaBlock({ formula, variables, citation }: FormulaBlockProps
       )}
 
       {citation && (
-        <p className="mt-4 border-t border-blue-100 pt-3 text-xs text-gray-500 italic">
+        <p className="mt-4 border-t border-blue-100 dark:border-blue-800 pt-3 text-xs text-gray-500 dark:text-slate-400 italic">
           Source: {citation}
         </p>
       )}

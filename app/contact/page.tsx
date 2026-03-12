@@ -26,8 +26,8 @@ export default function ContactPage() {
   return (
     <div className="max-w-content mx-auto">
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Contact' }]} />
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Contact</h1>
-      <div className="prose prose-gray max-w-none">
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Contact</h1>
+      <div className="prose prose-gray dark:prose-invert max-w-none">
         <p>
           Found an error? Have a suggestion? We take accuracy seriously.
         </p>

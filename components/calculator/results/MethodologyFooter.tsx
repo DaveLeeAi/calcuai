@@ -27,11 +27,11 @@ export default function MethodologyFooter({
   slug,
 }: MethodologyFooterProps) {
   return (
-    <div className="space-y-2 border-t border-gray-200 pt-3 text-xs text-gray-500">
+    <div className="space-y-2 border-t border-gray-200 dark:border-slate-700 pt-3 text-xs text-gray-500 dark:text-slate-400">
       {formulaSource && (
         <div className="flex items-start gap-1.5">
           <svg
-            className="mt-0.5 h-3 w-3 shrink-0 text-gray-400"
+            className="mt-0.5 h-3 w-3 shrink-0 text-gray-400 dark:text-slate-500"
             viewBox="0 0 16 16"
             fill="currentColor"
             aria-hidden="true"
@@ -39,7 +39,7 @@ export default function MethodologyFooter({
             <path d="M2 4a2 2 0 012-2h8a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm3 1a.5.5 0 000 1h6a.5.5 0 000-1H5zm0 3a.5.5 0 000 1h6a.5.5 0 000-1H5zm0 3a.5.5 0 000 1h4a.5.5 0 000-1H5z" />
           </svg>
           <span>
-            <span className="font-medium text-gray-600">Formula: </span>
+            <span className="font-medium text-gray-600 dark:text-slate-300">Formula: </span>
             {formulaSource}
             {formulaCitation && (
               <span>
@@ -50,7 +50,7 @@ export default function MethodologyFooter({
           </span>
         </div>
       )}
-      <p className="leading-relaxed text-gray-400">
+      <p className="leading-relaxed text-gray-400 dark:text-slate-500">
         {DISCLAIMER_TEXT[disclaimer]}
       </p>
     </div>

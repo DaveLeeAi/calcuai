@@ -164,7 +164,7 @@ function ArticleSection({
   icon,
 }: ArticleSectionProps) {
   const proseClasses =
-    'prose prose-gray prose-headings:scroll-mt-20 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-table:text-sm prose-td:py-2 prose-td:px-3 prose-th:py-2 prose-th:px-3 max-w-none';
+    'prose prose-gray dark:prose-invert prose-headings:scroll-mt-20 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-table:text-sm prose-td:py-2 prose-td:px-3 prose-th:py-2 prose-th:px-3 max-w-none';
 
   const cardClasses = style.card
     ? `rounded-lg border-l-4 ${style.accentClass} ${style.bgClass} px-5 py-5 sm:px-6`
@@ -179,9 +179,9 @@ function ArticleSection({
         className={`article-section-details group ${style.card ? `rounded-lg border-l-4 ${style.accentClass} ${style.bgClass}` : ''}`}
         open={behavior.defaultOpen || undefined}
       >
-        <summary className={`flex cursor-pointer items-center gap-2.5 select-none list-none px-5 py-4 sm:px-6 ${!style.card ? 'border-b border-gray-100' : ''}`}>
+        <summary className={`flex cursor-pointer items-center gap-2.5 select-none list-none px-5 py-4 sm:px-6 ${!style.card ? 'border-b border-gray-100 dark:border-slate-700' : ''}`}>
           <svg
-            className="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-90"
+            className="h-4 w-4 shrink-0 text-gray-400 dark:text-slate-500 transition-transform duration-200 group-open:rotate-90"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -190,7 +190,7 @@ function ArticleSection({
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
           {icon && <SectionIconSvg icon={icon} />}
-          <h2 className="text-xl font-bold text-gray-900">{heading}</h2>
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white">{heading}</h2>
         </summary>
         <div className={`${proseClasses} px-5 pb-5 pt-2 sm:px-6`}>
           <MDXRemote source={content} options={mdxOptions} />
@@ -204,7 +204,7 @@ function ArticleSection({
     <section className={wrapperClasses}>
       <div className="flex items-center gap-2.5 mb-4">
         {icon && <SectionIconSvg icon={icon} />}
-        <h2 className="text-2xl font-bold text-gray-900">{heading}</h2>
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{heading}</h2>
       </div>
       <div className={proseClasses}>
         <MDXRemote source={content} options={mdxOptions} />
@@ -231,19 +231,19 @@ function FaqSection({ section, heading }: FaqSectionProps) {
     <section className="article-section">
       <div className="flex items-center gap-2.5 mb-4">
         {icon && <SectionIconSvg icon={icon} />}
-        <h2 className="text-2xl font-bold text-gray-900">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
           {heading}
         </h2>
       </div>
-      <div className="divide-y divide-gray-100 rounded-lg border border-gray-200">
+      <div className="divide-y divide-gray-100 dark:divide-slate-700 rounded-lg border border-gray-200 dark:border-slate-700">
         {items.map((item, i) => (
           <details key={i} className="group faq-item">
             <summary className="flex cursor-pointer items-center justify-between gap-3 select-none list-none px-5 py-4">
-              <span className="text-base font-medium text-gray-900 text-left">
+              <span className="text-base font-medium text-gray-900 dark:text-white text-left">
                 {item.question}
               </span>
               <svg
-                className="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open:rotate-180"
+                className="h-4 w-4 shrink-0 text-gray-400 dark:text-slate-500 transition-transform duration-200 group-open:rotate-180"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -252,7 +252,7 @@ function FaqSection({ section, heading }: FaqSectionProps) {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-            <div className="prose prose-gray prose-sm max-w-none px-5 pb-4 pt-0 text-gray-600">
+            <div className="prose prose-gray dark:prose-invert prose-sm max-w-none px-5 pb-4 pt-0 text-gray-600 dark:text-slate-300">
               <MDXRemote source={item.answer} options={mdxOptions} />
             </div>
           </details>

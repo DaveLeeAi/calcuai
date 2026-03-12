@@ -27,7 +27,7 @@ export default function PercentageInput({ field, value, error, onChange }: Input
 
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="text-sm font-medium text-gray-700 dark:text-slate-300">
         {field.label}
         {field.required && <span className="text-danger-500 ml-0.5">*</span>}
       </label>
@@ -44,10 +44,10 @@ export default function PercentageInput({ field, value, error, onChange }: Input
           className={`h-10 w-full rounded-lg border pl-3 pr-8 text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
-              : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30'
+              : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200'
           }`}
         />
-        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-500">
+        <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-sm text-gray-500 dark:text-slate-400">
           {field.suffix ?? '%'}
         </span>
       </div>
@@ -57,7 +57,7 @@ export default function PercentageInput({ field, value, error, onChange }: Input
         </p>
       )}
       {!error && field.helpText && (
-        <p id={`${id}-help`} className="text-xs text-gray-500">
+        <p id={`${id}-help`} className="text-xs text-gray-500 dark:text-slate-400">
           {field.helpText}
         </p>
       )}

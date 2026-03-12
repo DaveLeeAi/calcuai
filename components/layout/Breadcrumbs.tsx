@@ -31,11 +31,11 @@ export function Breadcrumbs({ items }: BreadcrumbsProps) {
       <nav className="breadcrumb" aria-label="Breadcrumb">
         {items.map((item, index) => (
           <span key={index} className="flex items-center gap-2">
-            {index > 0 && <span className="text-gray-300">/</span>}
+            {index > 0 && <span className="text-gray-300 dark:text-slate-600">/</span>}
             {item.href ? (
               <Link href={item.href}>{item.label}</Link>
             ) : (
-              <span className="text-gray-700 font-medium">{item.label}</span>
+              <span className="text-gray-700 dark:text-slate-300 font-medium">{item.label}</span>
             )}
           </span>
         ))}

@@ -23,7 +23,7 @@ export function DisclaimerBlock({ type }: DisclaimerBlockProps) {
   const text = DISCLAIMERS[type] || DISCLAIMERS.general;
 
   return (
-    <div className="max-w-content mx-auto mt-12 rounded-lg border border-amber-200 bg-amber-50 px-5 py-4 text-sm text-amber-800">
+    <div className="max-w-content mx-auto mt-12 rounded-lg border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-900/20 px-5 py-4 text-sm text-amber-800 dark:text-amber-300">
       <p className="font-medium mb-1">Disclaimer</p>
       <p>{text}</p>
     </div>

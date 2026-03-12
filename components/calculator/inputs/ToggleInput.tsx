@@ -14,7 +14,7 @@ export default function ToggleInput({ field, value, error, onChange }: InputComp
   return (
     <div className="flex flex-col gap-1">
       <div className="flex items-center justify-between">
-        <label htmlFor={id} className="text-sm font-medium text-gray-700">
+        <label htmlFor={id} className="text-sm font-medium text-gray-700 dark:text-slate-300">
           {field.label}
         </label>
         <button
@@ -25,7 +25,7 @@ export default function ToggleInput({ field, value, error, onChange }: InputComp
           aria-describedby={field.helpText ? `${id}-help` : undefined}
           onClick={handleChange}
           className={`relative inline-flex h-6 w-11 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 ${
-            checked ? 'bg-brand-500' : 'bg-gray-300'
+            checked ? 'bg-brand-500' : 'bg-gray-300 dark:bg-slate-600'
           }`}
         >
           <span
@@ -41,7 +41,7 @@ export default function ToggleInput({ field, value, error, onChange }: InputComp
         </p>
       )}
       {!error && field.helpText && (
-        <p id={`${id}-help`} className="text-xs text-gray-500">
+        <p id={`${id}-help`} className="text-xs text-gray-500 dark:text-slate-400">
           {field.helpText}
         </p>
       )}

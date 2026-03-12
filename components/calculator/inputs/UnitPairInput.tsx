@@ -37,7 +37,7 @@ export default function UnitPairInput({ field, value, error, onChange }: InputCo
 
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="text-sm font-medium text-gray-700 dark:text-slate-300">
         {field.label}
         {field.required && <span className="text-danger-500 ml-0.5">*</span>}
       </label>
@@ -54,14 +54,14 @@ export default function UnitPairInput({ field, value, error, onChange }: InputCo
           className={`h-10 flex-1 rounded-lg border px-3 text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
-              : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30'
+              : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200'
           }`}
         />
         <select
           aria-label={`${field.label} unit`}
           value={pairValue.unit}
           onChange={handleUnitChange}
-          className="h-10 rounded-lg border border-gray-300 bg-white px-2 text-sm outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30"
+          className="h-10 rounded-lg border border-gray-300 bg-white px-2 text-sm outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
         >
           {field.units?.map((u) => (
             <option key={u.value} value={u.value}>
@@ -76,7 +76,7 @@ export default function UnitPairInput({ field, value, error, onChange }: InputCo
         </p>
       )}
       {!error && field.helpText && (
-        <p id={`${id}-help`} className="text-xs text-gray-500">
+        <p id={`${id}-help`} className="text-xs text-gray-500 dark:text-slate-400">
           {field.helpText}
         </p>
       )}

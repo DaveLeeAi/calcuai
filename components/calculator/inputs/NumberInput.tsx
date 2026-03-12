@@ -43,7 +43,7 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
 
   return (
     <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="text-sm font-medium text-gray-700">
+      <label htmlFor={id} className="text-sm font-medium text-gray-700 dark:text-slate-300">
         {field.label}
         {field.required && <span className="text-danger-500 ml-0.5">*</span>}
       </label>
@@ -51,7 +51,7 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
         <button
           type="button"
           aria-label={`Decrease ${field.label}`}
-          className="flex h-10 w-10 items-center justify-center rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 transition-colors"
+          className="flex h-10 w-10 items-center justify-center rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:active:bg-slate-500 transition-colors"
           onClick={() => handleStep(-1)}
           tabIndex={-1}
         >
@@ -69,13 +69,13 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
           className={`h-10 w-full border-y px-3 text-center text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
-              : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30'
+              : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-brand-500 dark:focus:ring-brand-500/30'
           }`}
         />
         <button
           type="button"
           aria-label={`Increase ${field.label}`}
-          className="flex h-10 w-10 items-center justify-center rounded-r-lg border border-l-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 transition-colors"
+          className="flex h-10 w-10 items-center justify-center rounded-r-lg border border-l-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:active:bg-slate-500 transition-colors"
           onClick={() => handleStep(1)}
           tabIndex={-1}
         >
@@ -88,7 +88,7 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
         </p>
       )}
       {!error && field.helpText && (
-        <p id={`${id}-help`} className="text-xs text-gray-500">
+        <p id={`${id}-help`} className="text-xs text-gray-500 dark:text-slate-400">
           {field.helpText}
         </p>
       )}

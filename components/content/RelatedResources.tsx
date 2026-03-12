@@ -38,7 +38,7 @@ export function RelatedResources({
       {/* Related Calculators */}
       {hasCalcs && (
         <section>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Related Calculators
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -46,7 +46,7 @@ export function RelatedResources({
               <Link
                 key={calc.id}
                 href={calc.href}
-                className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm font-medium text-brand-600 shadow-sm transition-all hover:shadow-md hover:border-brand-300 hover:-translate-y-0.5"
+                className="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 text-sm font-medium text-brand-600 dark:text-brand-400 shadow-sm transition-all hover:shadow-md hover:border-brand-300 hover:-translate-y-0.5"
               >
                 <span className="text-brand-400">→</span>
                 {calc.title}
@@ -59,7 +59,7 @@ export function RelatedResources({
       {/* Related Glossary Terms */}
       {hasGlossary && (
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
             Key Terms
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -67,7 +67,7 @@ export function RelatedResources({
               <Link
                 key={term.id}
                 href={term.href}
-                className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm text-gray-700 hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors"
+                className="inline-flex items-center gap-1.5 rounded-full border border-gray-200 dark:border-slate-600 bg-gray-50 dark:bg-slate-800 px-3 py-1.5 text-sm text-gray-700 dark:text-slate-300 hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors"
               >
                 <span className="text-gray-400 text-xs">📖</span>
                 {term.title}
@@ -80,7 +80,7 @@ export function RelatedResources({
       {/* Related Methodology Topics */}
       {hasMethodology && (
         <section>
-          <h2 className="text-xl font-bold text-gray-900 mb-3">
+          <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
             Formula Deep-Dives
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -88,7 +88,7 @@ export function RelatedResources({
               <Link
                 key={topic.id}
                 href={topic.href}
-                className="flex items-center gap-2 rounded-lg border border-indigo-100 bg-indigo-50/50 px-4 py-3 text-sm font-medium text-indigo-700 transition-all hover:bg-indigo-50 hover:border-indigo-200 hover:shadow-sm"
+                className="flex items-center gap-2 rounded-lg border border-indigo-100 dark:border-indigo-800 bg-indigo-50/50 dark:bg-indigo-900/20 px-4 py-3 text-sm font-medium text-indigo-700 dark:text-indigo-300 transition-all hover:bg-indigo-50 hover:border-indigo-200 hover:shadow-sm"
               >
                 <span className="text-indigo-400 text-xs">∑</span>
                 {topic.title}

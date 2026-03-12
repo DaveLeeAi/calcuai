@@ -57,8 +57,8 @@ export default function GaugeIndicator({ field, data }: OutputComponentProps) {
   const currentRange = ranges.find((r) => clampedValue >= r.min && clampedValue <= r.max);
 
   return (
-    <div className="rounded-lg bg-gray-50 p-4">
-      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-2">
+    <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-4">
+      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-2">
         {field.label}
       </h4>
       <div className="flex flex-col items-center">
@@ -97,7 +97,7 @@ export default function GaugeIndicator({ field, data }: OutputComponentProps) {
           </text>
         </svg>
         <div className="mt-1 text-center">
-          <span className="text-2xl font-bold text-gray-900">
+          <span className="text-2xl font-bold text-gray-900 dark:text-white">
             {formatValue(value, field.format, field.precision)}
           </span>
           {currentRange && (
@@ -112,7 +112,7 @@ export default function GaugeIndicator({ field, data }: OutputComponentProps) {
         {/* Range legend */}
         <div className="mt-3 flex flex-wrap justify-center gap-2">
           {ranges.map((r, i) => (
-            <span key={i} className="flex items-center gap-1 text-xs text-gray-600">
+            <span key={i} className="flex items-center gap-1 text-xs text-gray-600 dark:text-slate-300">
               <span
                 className="inline-block h-2.5 w-2.5 rounded-full"
                 style={{ backgroundColor: r.color }}

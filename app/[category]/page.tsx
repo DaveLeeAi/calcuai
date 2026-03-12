@@ -36,8 +36,8 @@ export default function CategoryHubPage({ params }: Props) {
         { label: cat.name },
       ]} />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">{cat.name}</h1>
-      <p className="text-lg text-gray-600 mb-8 max-w-content">{cat.description}</p>
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">{cat.name}</h1>
+      <p className="text-lg text-gray-600 dark:text-slate-400 mb-8 max-w-content">{cat.description}</p>
 
       {/* Subcategory sections */}
       {cat.subcategories.length > 0 && (
@@ -46,8 +46,8 @@ export default function CategoryHubPage({ params }: Props) {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {cat.subcategories.map((sub) => (
               <div key={sub.id} className="category-card">
-                <h3 className="font-semibold text-lg text-gray-900 mb-2">{sub.name}</h3>
-                <p className="text-sm text-gray-500 mb-3">{sub.description}</p>
+                <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">{sub.name}</h3>
+                <p className="text-sm text-gray-500 dark:text-slate-400 mb-3">{sub.description}</p>
                 <ul className="space-y-1">
                   {sub.calculators.slice(0, 5).map((calcId) => {
                     const spec = specs.find(s => s.id === calcId);
@@ -59,7 +59,7 @@ export default function CategoryHubPage({ params }: Props) {
                             {label}
                           </Link>
                         ) : (
-                          <span className="text-sm text-gray-400">{label}</span>
+                          <span className="text-sm text-gray-400 dark:text-slate-500">{label}</span>
                         )}
                       </li>
                     );
@@ -85,7 +85,7 @@ export default function CategoryHubPage({ params }: Props) {
           ))}
         </div>
         {specs.length === 0 && (
-          <p className="text-gray-500">No calculators published in this category yet. Coming soon.</p>
+          <p className="text-gray-500 dark:text-slate-400">No calculators published in this category yet. Coming soon.</p>
         )}
       </section>
     </div>

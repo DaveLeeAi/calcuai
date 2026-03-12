@@ -159,7 +159,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
 
   return (
     <div className="mx-auto max-w-calculator">
-      <div className="rounded-xl border border-gray-200 bg-white shadow-sm">
+      <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
         {/* Tabs */}
         {spec.tabs && spec.tabs.length > 0 && (
           <div className="px-4 pt-4 sm:px-6 sm:pt-6">
@@ -193,7 +193,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
           <div className="mt-6">
             <button
               onClick={handleCalculate}
-              className="w-full rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 sm:w-auto"
+              className="w-full rounded-lg bg-brand-500 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800 sm:w-auto"
             >
               Calculate
             </button>
@@ -202,7 +202,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
 
         {/* Results */}
         {hasCalculated && results && (
-          <div className="border-t border-gray-200 bg-gray-50/50 p-4 sm:p-6">
+          <div className="border-t border-gray-200 dark:border-slate-700 bg-gray-50/50 dark:bg-slate-800/50 p-4 sm:p-6">
             {/* Result header with formula source */}
             <ResultHeader
               formulaCitation={isFlagship ? spec.formulaCitation : undefined}

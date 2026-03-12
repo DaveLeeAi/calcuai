@@ -19,7 +19,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
   return (
     <div className="max-w-content mx-auto">
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Search Calculators</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Search Calculators</h1>
       <SearchResults items={items} initialQuery={query} />
     </div>
   );

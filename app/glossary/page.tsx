@@ -76,11 +76,11 @@ export default function GlossaryIndexPage() {
         ]}
       />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-4">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-4">
         Calculator Glossary
       </h1>
 
-      <p className="text-lg text-gray-600 mb-8 max-w-3xl">
+      <p className="text-lg text-gray-600 dark:text-slate-400 mb-8 max-w-3xl">
         Clear, concise definitions of financial, mathematical, health, and
         construction terms used across our calculators. Each term links to the
         calculators where it applies most.
@@ -92,7 +92,7 @@ export default function GlossaryIndexPage() {
           <a
             key={letter}
             href={`#letter-${letter}`}
-            className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-100 text-sm font-semibold text-brand-600 hover:bg-brand-50 hover:text-brand-700 transition-colors"
+            className="w-9 h-9 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-slate-800 text-sm font-semibold text-brand-600 dark:text-brand-400 hover:bg-brand-50 dark:hover:bg-slate-700 hover:text-brand-700 transition-colors"
           >
             {letter}
           </a>
@@ -103,7 +103,7 @@ export default function GlossaryIndexPage() {
       <div className="space-y-8">
         {sortedLetters.map((letter) => (
           <section key={letter} id={`letter-${letter}`}>
-            <h2 className="text-2xl font-bold text-gray-900 border-b border-gray-200 pb-2 mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b border-gray-200 dark:border-slate-700 pb-2 mb-4">
               {letter}
             </h2>
             <ul className="space-y-2">
@@ -111,11 +111,11 @@ export default function GlossaryIndexPage() {
                 <li key={term.slug}>
                   <Link
                     href={`/glossary/${term.slug}`}
-                    className="text-brand-600 hover:text-brand-700 hover:underline font-medium"
+                    className="text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 hover:underline font-medium"
                   >
                     {term.title}
                   </Link>
-                  <span className="text-sm text-gray-500 ml-2">
+                  <span className="text-sm text-gray-500 dark:text-slate-500 ml-2">
                     — {term.relatedCalculators.length} calculator
                     {term.relatedCalculators.length !== 1 ? 's' : ''}
                   </span>

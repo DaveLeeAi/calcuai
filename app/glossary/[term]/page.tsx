@@ -128,11 +128,11 @@ export default function GlossaryTermPage({ params }: Props) {
         ]}
       />
 
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-6">
+      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
         {frontmatter.title}
       </h1>
 
-      <div className="max-w-content mx-auto prose prose-gray prose-headings:scroll-mt-20 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4">
+      <div className="max-w-content mx-auto prose prose-gray dark:prose-invert prose-headings:scroll-mt-20 prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-8 prose-h2:mb-4">
         <MDXRemote source={content} />
       </div>
 

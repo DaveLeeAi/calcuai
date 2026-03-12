@@ -177,7 +177,7 @@ export default function SlugPage({ params }: Props) {
         />
 
         {/* Section 2: H1 Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mt-4 mb-6">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
           {spec.title}
         </h1>
 
@@ -248,10 +248,10 @@ export default function SlugPage({ params }: Props) {
           ]}
         />
 
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
           {sub.name}
         </h1>
-        <p className="text-lg text-gray-600 mb-8">{sub.description}</p>
+        <p className="text-lg text-gray-600 dark:text-slate-400 mb-8">{sub.description}</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {sub.calculators.map((calcId) => {
@@ -304,7 +304,7 @@ function BlufContent({ source }: BlufContentProps) {
   const blufContent = blufMatch[1].trim();
 
   return (
-    <div className="bluf-intro text-lg text-gray-700 leading-relaxed">
+    <div className="bluf-intro text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
       <MDXRemote
         source={blufContent}
         options={{

@@ -22,23 +22,23 @@ export default function ValueGroup({ field, data }: OutputComponentProps) {
   }
 
   return (
-    <div className="rounded-lg bg-gray-50 p-4">
-      <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">
+    <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-4">
+      <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-3">
         {field.label}
       </h4>
       {field.description && (
-        <p className="text-xs text-gray-400 mb-3 -mt-1">{field.description}</p>
+        <p className="text-xs text-gray-400 dark:text-slate-500 mb-3 -mt-1">{field.description}</p>
       )}
       <div className="grid grid-cols-2 gap-2.5 sm:gap-3 lg:grid-cols-4">
         {items.map((item, i) => (
           <div
             key={i}
-            className="flex flex-col rounded-lg border border-gray-100 bg-white p-3 shadow-sm transition-shadow hover:shadow-md"
+            className="flex flex-col rounded-lg border border-gray-100 dark:border-slate-600 bg-white dark:bg-slate-800 p-3 shadow-sm transition-shadow hover:shadow-md"
           >
-            <span className="text-[11px] font-medium uppercase tracking-wide text-gray-400 mb-1">
+            <span className="text-[11px] font-medium uppercase tracking-wide text-gray-400 dark:text-slate-500 mb-1">
               {item.label}
             </span>
-            <span className="text-base font-semibold text-gray-900 sm:text-lg">
+            <span className="text-base font-semibold text-gray-900 dark:text-white sm:text-lg">
               {formatValue(item.value, field.format, field.precision)}
             </span>
           </div>

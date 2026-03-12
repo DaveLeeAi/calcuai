@@ -70,10 +70,10 @@ export default function HomePage() {
     <div>
       {/* Hero */}
       <section className="text-center py-12 sm:py-16">
-        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+        <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
           Free Online Calculators
         </h1>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        <p className="text-lg text-gray-600 dark:text-slate-400 max-w-2xl mx-auto mb-8">
           Accurate, fast, and free calculators for finance, health, math, construction, and more. No signup required.
         </p>
         <div className="max-w-xl mx-auto">
@@ -94,10 +94,10 @@ export default function HomePage() {
                 height={32}
                 className="mb-3"
               />
-              <h3 className="font-semibold text-lg text-gray-900 group-hover:text-brand-500 transition-colors">
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">
                 {cat.name}
               </h3>
-              <p className="text-sm text-gray-500 mt-1 line-clamp-2">{cat.description}</p>
+              <p className="text-sm text-gray-500 dark:text-slate-400 mt-1 line-clamp-2">{cat.description}</p>
               <p className="text-xs text-brand-500 mt-3 font-medium">
                 {getTotalCalculatorCount(cat)} calculators &rarr;
               </p>
@@ -111,7 +111,7 @@ export default function HomePage() {
         <h2 className="section-heading text-center mb-8">Popular Calculators</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-content mx-auto">
           {POPULAR_CALCULATORS.map((calc) => (
-            <Link key={calc.href} href={calc.href} className="related-calc-link text-brand-600 font-medium hover:text-brand-700">
+            <Link key={calc.href} href={calc.href} className="related-calc-link text-brand-600 dark:text-brand-400 font-medium hover:text-brand-700 dark:hover:text-brand-300">
               {calc.title}
             </Link>
           ))}
@@ -122,7 +122,7 @@ export default function HomePage() {
       {methodologyTopics.length > 0 && (
         <section className="mb-16">
           <h2 className="section-heading text-center mb-4">Understand the Math</h2>
-          <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-center text-gray-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
             Deep-dives into the formulas, derivations, and assumptions behind our calculators.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-content mx-auto">
@@ -137,11 +137,11 @@ export default function HomePage() {
                   href={`/methodology/${topic.slug}`}
                   className="category-card group"
                 >
-                  <h3 className="font-semibold text-gray-900 group-hover:text-brand-500 transition-colors">
+                  <h3 className="font-semibold text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">
                     {topic.title}
                   </h3>
                   {relatedNames.length > 0 && (
-                    <p className="text-xs text-gray-500 mt-1 line-clamp-1">
+                    <p className="text-xs text-gray-500 dark:text-slate-400 mt-1 line-clamp-1">
                       Used by: {relatedNames.join(', ')}
                     </p>
                   )}
@@ -150,7 +150,7 @@ export default function HomePage() {
             })}
           </div>
           <div className="text-center mt-4">
-            <Link href="/methodology" className="text-sm text-brand-500 hover:text-brand-600 font-medium">
+            <Link href="/methodology" className="text-sm text-brand-500 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 font-medium">
               View all methodology articles &rarr;
             </Link>
           </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
       {glossaryTerms.length > 0 && (
         <section className="mb-16">
           <h2 className="section-heading text-center mb-4">Glossary</h2>
-          <p className="text-center text-gray-500 mb-8 max-w-2xl mx-auto">
+          <p className="text-center text-gray-500 dark:text-slate-400 mb-8 max-w-2xl mx-auto">
             Clear definitions of key terms used across our calculators.
           </p>
           <div className="flex flex-wrap gap-2 justify-center max-w-content mx-auto">
@@ -171,14 +171,14 @@ export default function HomePage() {
                 <Link
                   key={term.slug}
                   href={`/glossary/${term.slug}`}
-                  className="inline-flex items-center rounded-full border border-gray-200 bg-gray-50 px-3 py-1.5 text-sm text-gray-700 hover:bg-brand-50 hover:border-brand-200 hover:text-brand-700 transition-colors"
+                  className="inline-flex items-center rounded-full border border-gray-200 dark:border-slate-600 bg-gray-50 dark:bg-slate-800 px-3 py-1.5 text-sm text-gray-700 dark:text-slate-300 hover:bg-brand-50 dark:hover:bg-brand-900/30 hover:border-brand-200 dark:hover:border-brand-500 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
                 >
                   {term.title}
                 </Link>
               ))}
           </div>
           <div className="text-center mt-4">
-            <Link href="/glossary" className="text-sm text-brand-500 hover:text-brand-600 font-medium">
+            <Link href="/glossary" className="text-sm text-brand-500 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 font-medium">
               Browse full glossary &rarr;
             </Link>
           </div>

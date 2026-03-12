@@ -42,18 +42,18 @@ export default function DataTable({ field, data }: OutputComponentProps) {
   };
 
   return (
-    <div className="rounded-lg bg-gray-50 p-4">
-      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-3">
+    <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-4">
+      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-3">
         {field.label}
       </h4>
-      <div className="overflow-x-auto rounded-lg border border-gray-200">
+      <div className="overflow-x-auto rounded-lg border border-gray-200 dark:border-slate-600">
         <table className="w-full text-sm">
           <thead>
-            <tr className="border-b border-gray-200 bg-gray-100">
+            <tr className="border-b border-gray-200 dark:border-slate-600 bg-gray-100 dark:bg-slate-700">
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className="cursor-pointer select-none px-3 py-2 text-left font-medium text-gray-600 hover:text-gray-900"
+                  className="cursor-pointer select-none px-3 py-2 text-left font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white"
                   onClick={() => handleSort(col.key)}
                 >
                   {col.label}
@@ -68,10 +68,10 @@ export default function DataTable({ field, data }: OutputComponentProps) {
             {pageRows.map((row, i) => (
               <tr
                 key={i}
-                className={`border-b border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50/50'}`}
+                className={`border-b border-gray-100 dark:border-slate-700 ${i % 2 === 0 ? 'bg-white dark:bg-slate-800' : 'bg-gray-50/50 dark:bg-slate-700/30'}`}
               >
                 {columns.map((col) => (
-                  <td key={col.key} className="px-3 py-2 text-gray-800 whitespace-nowrap">
+                  <td key={col.key} className="px-3 py-2 text-gray-800 dark:text-slate-200 whitespace-nowrap">
                     {formatValue(
                       row[col.key],
                       col.format as 'currency' | 'percentage' | 'number' | undefined
@@ -84,7 +84,7 @@ export default function DataTable({ field, data }: OutputComponentProps) {
         </table>
       </div>
       {totalPages > 1 && (
-        <div className="mt-3 flex items-center justify-between text-xs text-gray-500">
+        <div className="mt-3 flex items-center justify-between text-xs text-gray-500 dark:text-slate-400">
           <span>
             Showing {page * ROWS_PER_PAGE + 1}–{Math.min((page + 1) * ROWS_PER_PAGE, sorted.length)} of{' '}
             {sorted.length}
@@ -93,14 +93,14 @@ export default function DataTable({ field, data }: OutputComponentProps) {
             <button
               onClick={() => setPage((p) => Math.max(0, p - 1))}
               disabled={page === 0}
-              className="rounded border border-gray-300 px-2 py-1 hover:bg-gray-100 disabled:opacity-40"
+              className="rounded border border-gray-300 dark:border-slate-600 px-2 py-1 hover:bg-gray-100 dark:hover:bg-slate-700 disabled:opacity-40"
             >
               Prev
             </button>
             <button
               onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
               disabled={page >= totalPages - 1}
-              className="rounded border border-gray-300 px-2 py-1 hover:bg-gray-100 disabled:opacity-40"
+              className="rounded border border-gray-300 dark:border-slate-600 px-2 py-1 hover:bg-gray-100 dark:hover:bg-slate-700 disabled:opacity-40"
             >
               Next
             </button>

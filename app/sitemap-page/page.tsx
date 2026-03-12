@@ -40,7 +40,7 @@ export default function SitemapPage() {
       <JsonLd data={webPageSchema} />
       <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Sitemap' }]} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-8">Sitemap</h1>
+      <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Sitemap</h1>
 
       {/* Calculators by Category */}
       {categories.map((cat) => {
@@ -62,14 +62,14 @@ export default function SitemapPage() {
 
         return (
           <section key={cat.slug} className="mb-10">
-            <h2 className="text-xl font-semibold text-gray-900 mb-4">
+            <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
               <Link href={`/${cat.slug}`} className="hover:text-brand-500 transition-colors">
                 {cat.name}
               </Link>
             </h2>
             {Array.from(subcatMap.entries()).map(([subSlug, subSpecs]) => (
               <div key={subSlug} className="mb-4 ml-4">
-                <h3 className="text-sm font-medium text-gray-600 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-medium text-gray-600 dark:text-slate-400 uppercase tracking-wide mb-2">
                   {subcatNames.get(subSlug) || subSlug}
                 </h3>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 ml-2">
@@ -77,7 +77,7 @@ export default function SitemapPage() {
                     <li key={spec.slug}>
                       <Link
                         href={`/${spec.category}/${spec.slug}`}
-                        className="text-sm text-brand-600 hover:text-brand-700 transition-colors"
+                        className="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
                       >
                         {spec.title}
                       </Link>
@@ -103,7 +103,7 @@ export default function SitemapPage() {
               <li key={term.slug}>
                 <Link
                   href={`/glossary/${term.slug}`}
-                  className="text-sm text-brand-600 hover:text-brand-700 transition-colors"
+                  className="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
                 >
                   {term.title}
                 </Link>
@@ -116,13 +116,13 @@ export default function SitemapPage() {
       {/* Methodology */}
       {methodologyTopics.length > 0 && (
         <section className="mb-10">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Methodology</h2>
+          <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Methodology</h2>
           <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-1 ml-4">
             {methodologyTopics.map((topic) => (
               <li key={topic.slug}>
                 <Link
                   href={`/methodology/${topic.slug}`}
-                  className="text-sm text-brand-600 hover:text-brand-700 transition-colors"
+                  className="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors"
                 >
                   {topic.title}
                 </Link>
@@ -134,15 +134,15 @@ export default function SitemapPage() {
 
       {/* Other Pages */}
       <section className="mb-10">
-        <h2 className="text-xl font-semibold text-gray-900 mb-4">Other Pages</h2>
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Other Pages</h2>
         <ul className="flex flex-col gap-1 ml-4">
           <li>
-            <Link href="/about" className="text-sm text-brand-600 hover:text-brand-700 transition-colors">
+            <Link href="/about" className="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
               About {siteConfig.name}
             </Link>
           </li>
           <li>
-            <Link href="/glossary" className="text-sm text-brand-600 hover:text-brand-700 transition-colors">
+            <Link href="/glossary" className="text-sm text-brand-600 dark:text-brand-400 hover:text-brand-700 dark:hover:text-brand-300 transition-colors">
               Glossary Index
             </Link>
           </li>

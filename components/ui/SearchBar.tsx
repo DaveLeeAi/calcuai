@@ -106,7 +106,7 @@ export default function SearchBar({
     <div ref={containerRef} className="relative w-full">
       <div className="relative">
         <svg
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 pointer-events-none"
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400 dark:text-slate-500 pointer-events-none"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -140,7 +140,7 @@ export default function SearchBar({
         {query.length > 0 && (
           <button
             onClick={clearSearch}
-            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100"
+            className="absolute right-3 top-1/2 -translate-y-1/2 p-1 text-gray-400 dark:text-slate-500 hover:text-gray-600 dark:hover:text-slate-300 rounded-full hover:bg-gray-100 dark:hover:bg-slate-700"
             aria-label="Clear search"
             type="button"
           >
@@ -156,10 +156,10 @@ export default function SearchBar({
         <ul
           id="search-results"
           role="listbox"
-          className="absolute z-50 mt-1 w-full bg-white border border-gray-200 rounded-xl shadow-lg max-h-[400px] overflow-y-auto"
+          className="absolute z-50 mt-1 w-full bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl shadow-lg max-h-[400px] overflow-y-auto"
         >
           {results.length === 0 ? (
-            <li className="px-4 py-3 text-gray-500 text-sm">
+            <li className="px-4 py-3 text-gray-500 dark:text-slate-400 text-sm">
               No results found for &ldquo;{query}&rdquo;
             </li>
           ) : (
@@ -169,14 +169,14 @@ export default function SearchBar({
                 id={`search-result-${i}`}
                 role="option"
                 aria-selected={i === activeIndex}
-                className={`px-4 py-3 cursor-pointer border-b border-gray-100 last:border-0 transition-colors ${
-                  i === activeIndex ? 'bg-brand-50' : 'hover:bg-gray-50'
+                className={`px-4 py-3 cursor-pointer border-b border-gray-100 dark:border-slate-700 last:border-0 transition-colors ${
+                  i === activeIndex ? 'bg-brand-50 dark:bg-brand-900/30' : 'hover:bg-gray-50 dark:hover:bg-slate-700'
                 }`}
                 onMouseEnter={() => setActiveIndex(i)}
                 onClick={() => navigateTo(item.href)}
               >
                 <div className="flex items-center justify-between gap-3">
-                  <span className="font-medium text-gray-900 truncate">{item.title}</span>
+                  <span className="font-medium text-gray-900 dark:text-white truncate">{item.title}</span>
                   <span className={`shrink-0 text-xs font-medium px-2 py-0.5 rounded-full ${
                     item.itemType === 'glossary'
                       ? 'bg-amber-100 text-amber-700'
@@ -187,7 +187,7 @@ export default function SearchBar({
                     {CATEGORY_LABELS[item.category] ?? item.category}
                   </span>
                 </div>
-                <p className="text-sm text-gray-500 mt-0.5 line-clamp-1">{item.metaDescription}</p>
+                <p className="text-sm text-gray-500 dark:text-slate-400 mt-0.5 line-clamp-1">{item.metaDescription}</p>
               </li>
             ))
           )}

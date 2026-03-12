@@ -54,16 +54,16 @@ export default function AssumptionsBar({ inputs, values }: AssumptionsBarProps) 
   const rest = filledInputs.slice(previewCount);
 
   return (
-    <div className="rounded-lg border border-gray-150 bg-gray-50/80 px-3 py-2.5 text-xs text-gray-600">
+    <div className="rounded-lg border border-gray-150 bg-gray-50/80 dark:bg-slate-700/50 px-3 py-2.5 text-xs text-gray-600 dark:text-slate-300">
       <div className="flex flex-wrap items-center gap-x-1 gap-y-1">
-        <span className="font-medium text-gray-500 mr-1">Based on:</span>
+        <span className="font-medium text-gray-500 dark:text-slate-400 mr-1">Based on:</span>
         {preview.map((field, i) => (
           <span key={field.id} className="inline-flex items-center">
-            <span className="font-medium text-gray-700">{field.label}</span>
+            <span className="font-medium text-gray-700 dark:text-slate-300">{field.label}</span>
             <span className="mx-0.5">=</span>
             <span>{formatInputValue(field, values[field.id])}</span>
             {(i < preview.length - 1 || rest.length > 0) && (
-              <span className="mx-1 text-gray-300">|</span>
+              <span className="mx-1 text-gray-300 dark:text-slate-600">|</span>
             )}
           </span>
         ))}
@@ -78,11 +78,11 @@ export default function AssumptionsBar({ inputs, values }: AssumptionsBarProps) 
         {expanded &&
           rest.map((field, i) => (
             <span key={field.id} className="inline-flex items-center">
-              <span className="font-medium text-gray-700">{field.label}</span>
+              <span className="font-medium text-gray-700 dark:text-slate-300">{field.label}</span>
               <span className="mx-0.5">=</span>
               <span>{formatInputValue(field, values[field.id])}</span>
               {i < rest.length - 1 && (
-                <span className="mx-1 text-gray-300">|</span>
+                <span className="mx-1 text-gray-300 dark:text-slate-600">|</span>
               )}
             </span>
           ))}

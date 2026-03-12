@@ -40,14 +40,14 @@ export default function SearchResults({ items, initialQuery }: SearchResultsProp
       </div>
 
       {initialQuery.length < 2 ? (
-        <p className="text-gray-500">Type at least 2 characters to search.</p>
+        <p className="text-gray-500 dark:text-slate-400">Type at least 2 characters to search.</p>
       ) : results.length === 0 ? (
-        <p className="text-gray-500">
+        <p className="text-gray-500 dark:text-slate-400">
           No results found for &ldquo;{initialQuery}&rdquo;. Try a different search term.
         </p>
       ) : (
         <div>
-          <p className="text-sm text-gray-500 mb-4">
+          <p className="text-sm text-gray-500 dark:text-slate-400 mb-4">
             {results.length} result{results.length !== 1 ? 's' : ''} for &ldquo;{initialQuery}&rdquo;
           </p>
           <div className="space-y-3">
@@ -55,15 +55,15 @@ export default function SearchResults({ items, initialQuery }: SearchResultsProp
               <Link
                 key={item.slug}
                 href={item.href}
-                className="block bg-white border border-gray-200 rounded-xl p-5 hover:shadow-md hover:border-brand-300 transition-all"
+                className="block bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-xl p-5 hover:shadow-md hover:border-brand-300 dark:hover:border-brand-500 transition-all"
               >
                 <div className="flex items-center gap-3 mb-1">
-                  <h2 className="font-semibold text-gray-900 text-lg">{item.title}</h2>
-                  <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded-full bg-brand-100 text-brand-600">
+                  <h2 className="font-semibold text-gray-900 dark:text-white text-lg">{item.title}</h2>
+                  <span className="shrink-0 text-xs font-medium px-2 py-0.5 rounded-full bg-brand-100 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400">
                     {CATEGORY_LABELS[item.category]}
                   </span>
                 </div>
-                <p className="text-sm text-gray-500 line-clamp-2">{item.metaDescription}</p>
+                <p className="text-sm text-gray-500 dark:text-slate-400 line-clamp-2">{item.metaDescription}</p>
               </Link>
             ))}
           </div>
