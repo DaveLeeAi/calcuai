@@ -4,7 +4,6 @@ import type { Metadata } from 'next';
 import { getSpec } from '@/lib/content-loader';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
-import StickyCalculator from '@/components/calculator/StickyCalculator';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { siteConfig } from '@/lib/site-config';
 import FeedbackWidget from '@/components/ui/FeedbackWidget';
@@ -509,12 +508,12 @@ export default function StateSalesTaxPage({ params }: Props) {
       />
 
       {/* H1 */}
-      <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-4">
+      <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mt-4 mb-4">
         {title}
       </h1>
 
       {/* BLUF intro */}
-      <div className="bluf-intro text-lg text-gray-700 dark:text-slate-300 leading-relaxed mb-8" data-speakable="true">
+      <div className="bluf-intro text-base text-gray-700 dark:text-slate-300 leading-relaxed mb-8" data-speakable="true">
         {isNoTaxState ? (
           <p>
             <strong>{stateName} has no state sales tax and no local sales tax</strong> — making it
@@ -560,16 +559,19 @@ export default function StateSalesTaxPage({ params }: Props) {
         )}
       </div>
 
-      {/* ─── Mobile: calculator above article ─── */}
-      <div className="lg:hidden my-8">
+      {/* Calculator Widget — centered, hero position */}
+      <div className="my-8">
         <CalculatorRenderer spec={stateSpec} />
       </div>
 
-      {/* ─── Desktop: 2-column layout ─── */}
-      <div className="lg:grid lg:grid-cols-[1fr_380px] lg:gap-10 lg:items-start">
+      {/* Feedback */}
+      <FeedbackWidget
+        calculatorSlug={`${stateCode.toLowerCase()}-sales-tax`}
+        calculatorTitle={`${stateName} Sales Tax Calculator`}
+      />
 
-        {/* Left: article content */}
-        <div className="min-w-0 space-y-8">
+      {/* Article content */}
+      <div className="space-y-8">
 
           {/* Section 1: What is the sales tax rate? */}
           <section id="rate">
@@ -945,17 +947,6 @@ export default function StateSalesTaxPage({ params }: Props) {
             </div>
           </section>
 
-          {/* Feedback */}
-          <FeedbackWidget
-            calculatorSlug={`${stateCode.toLowerCase()}-sales-tax`}
-            calculatorTitle={`${stateName} Sales Tax Calculator`}
-          />
-        </div>
-
-        {/* Right: Sticky calculator (desktop only) */}
-        <div className="hidden lg:block min-w-0">
-          <StickyCalculator spec={stateSpec} />
-        </div>
       </div>
     </article>
   );

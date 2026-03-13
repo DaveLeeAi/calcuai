@@ -1,18 +1,14 @@
 'use client';
 
-import { useState, useCallback, useMemo, useRef } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import { CalculatorSpec, InputField as InputFieldType } from '@/lib/types';
 import { getFormula } from '@/lib/formulas';
 import InputField from './InputField';
 import OutputDisplay from './OutputDisplay';
 import TabSwitcher from './features/TabSwitcher';
 import { ResultHeader, AssumptionsBar, MethodologyFooter } from './results';
-import ShareButton from '@/components/ui/ShareButton';
-
 interface CalculatorRendererProps {
   spec: CalculatorSpec;
-  /** Compact mode for sidebar — removes max-width, share button, and assumptions bar */
-  compact?: boolean;
 }
 
 function getDefaults(spec: CalculatorSpec, tabId?: string | null): Record<string, unknown> {
@@ -77,16 +73,13 @@ function validateInputs(
   return errors;
 }
 
-export default function CalculatorRenderer({ spec, compact = false }: CalculatorRendererProps) {
+export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
   const [activeTab, setActiveTab] = useState<string | null>(spec.tabs?.[0]?.id ?? null);
   const [inputs, setInputs] = useState<Record<string, unknown>>(() => getDefaults(spec, activeTab));
   const [results, setResults] = useState<Record<string, unknown> | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [hasCalculated, setHasCalculated] = useState(false);
   const [calculatedInputs, setCalculatedInputs] = useState<Record<string, unknown>>({});
-
-  // Ref to always point to the latest handleCalculate (avoids stale closures in auto-calc)
-  const handleCalculateRef = useRef<() => void>(() => {});
 
   // Determine which inputs are visible based on active tab and visibleWhen conditions
   const visibleInputs = useMemo(() => {
@@ -152,6 +145,9 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
 
         return next;
       });
+      // Clear previous results when any input changes
+      setResults(null);
+      setHasCalculated(false);
       // Clear error for this field on change
       setErrors((prev) => {
         if (!prev[fieldId]) return prev;
@@ -159,12 +155,6 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
         delete next[fieldId];
         return next;
       });
-      // Auto-calculate when state is selected (sales tax pattern)
-      if (fieldId === 'stateCode' && value !== 'custom' && value !== '') {
-        setTimeout(() => {
-          handleCalculateRef.current();
-        }, 100);
-      }
     },
     [spec]
   );
@@ -209,11 +199,8 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
     }
   }, [spec.formula, inputs, visibleInputs]);
 
-  // Keep ref current so auto-calc in handleInputChange always calls latest version
-  handleCalculateRef.current = handleCalculate;
-
-  // Determine grid layout: 2 columns if 6+ inputs (never in compact mode)
-  const useGrid = !compact && visibleInputs.length >= 6;
+  // Determine grid layout: 2 columns if 6+ inputs
+  const useGrid = visibleInputs.length >= 6;
 
   // Separate highlighted outputs from the rest for visual hierarchy
   const highlightedOutputs = spec.outputs.filter((o) => o.highlight);
@@ -222,14 +209,8 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
   const isFlagship = spec.priority === 'flagship';
 
   return (
-    <div className={compact ? 'w-full' : 'max-w-calculator'}>
+    <div className="mx-auto max-w-calculator">
       <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
-        {/* Share button — top right */}
-        {!compact && (
-          <div className="flex justify-end px-4 pt-3 sm:px-6 sm:pt-4">
-            <ShareButton title={spec.title} />
-          </div>
-        )}
         {/* Tabs */}
         {spec.tabs && spec.tabs.length > 0 && (
           <div className="px-4 pt-3 sm:px-5 sm:pt-4">
@@ -264,14 +245,14 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
             />
 
             {/* Assumptions bar */}
-            {isFlagship && !compact && (
+            {isFlagship && (
               <div className="mt-3">
                 <AssumptionsBar inputs={visibleInputs} values={calculatedInputs} />
               </div>
             )}
 
             {/* Methodology footer */}
-            {isFlagship && !compact && (
+            {isFlagship && (
               <div className="mt-4">
                 <MethodologyFooter
                   formulaCitation={spec.formulaCitation}

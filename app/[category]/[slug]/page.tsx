@@ -40,6 +40,7 @@ import {
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
 import SalesTaxVisualizations from '@/components/content/SalesTaxVisualizations';
 import FeedbackWidget from '@/components/ui/FeedbackWidget';
+import InlineTableOfContents from '@/components/content/InlineTableOfContents';
 import { siteConfig } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════
@@ -225,6 +226,9 @@ export default function SlugPage({ params }: Props) {
 
         {/* Feedback */}
         <FeedbackWidget calculatorSlug={spec.slug} calculatorTitle={spec.title} />
+
+        {/* Table of Contents — inline, scrolls with content */}
+        <InlineTableOfContents containerSelector="article" />
 
         {/* Article Content */}
         {mdxSource && (
