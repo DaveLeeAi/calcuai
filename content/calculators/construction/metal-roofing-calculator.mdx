@@ -1,0 +1,199 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 40 x 30-foot gable roof (2,400 sq ft total) needs 74 standing-seam panels at 16-inch coverage width including 15% waste — material and installation costs $19,200-$33,600 for standing seam, or $9,600-$19,200 for corrugated. That same roof requires approximately 3,600 screws, 24 rolls of underlayment, and 40 linear feet of ridge cap. Enter your roof dimensions below for exact panel counts, accessory quantities, and installed cost by panel type.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Calculates */}
+## What This Calculates
+
+This calculator determines exactly how many metal roofing panels you need for a specific roof, along with all the accessories required for a complete installation. It differs from the general roofing calculator by focusing specifically on metal panel systems — standing seam, corrugated, R-panel (PBR), and stone-coated steel — with panel-width-based calculations instead of shingle-bundle math.
+
+The **panel count** is the core output. Metal panels are manufactured in specific widths (typically 12 to 36 inches of coverage) and cut to length to match your roof width from ridge to eave. The calculator determines how many panels fit across your roof length based on the effective coverage width (panel width minus overlap), then multiplies by the number of roof sides and applies a waste factor.
+
+**Accessories** are where metal roofing projects get overlooked. Ridge cap runs the full length of the ridge line. Trim protects the edges and transitions. Screws — typically #10 or #12 self-drilling hex-head screws with neoprene washers — are needed at approximately 1.5 per square foot. Underlayment (synthetic felt or ice-and-water shield) goes down before the panels at one roll per 100 square feet.
+
+The **cost estimate** provides installed price ranges per panel type, including both materials and professional labor. Metal roofing costs vary significantly by profile — standing seam is the premium option at $8-$14 per square foot installed, while corrugated and R-panel come in at $4-$8 per square foot.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter roof length** — this is the eave-to-eave measurement along the ridge line. For a gable roof, it is the same as the building length. Measure to the nearest foot.
+
+2. **Enter roof width** — this is the distance from the ridge to the eave (one side only). If you cannot access the roof, calculate it from the building width: half the building width divided by the cosine of the roof angle. For a standard 4/12 pitch, the multiplier is approximately 1.054.
+
+3. **Select roof sides** — choose 2 for a standard gable roof (the most common residential type) or 1 for a shed-style lean-to roof. For hip roofs, use 2 sides and add 10% extra waste.
+
+4. **Select panel type** — each type has different coverage widths, overlaps, and cost ranges. Standing seam (16-18 inch panels) is the most common residential choice. Corrugated and R-panel (26-36 inch panels) are more economical and common on agricultural and commercial buildings.
+
+5. **Set panel width and overlap** — defaults match the most common specifications for your selected panel type. Standing seam typically uses 16-inch panels with 1-inch overlap. Corrugated uses 26-inch panels with 2-inch overlap. Adjust if your supplier specifies different dimensions.
+
+6. **Adjust waste factor** — 15% is standard for metal roofing on simple gable roofs. Use 20% for roofs with valleys, dormers, or skylights. Use 10% only for perfectly rectangular roofs with no penetrations.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Metal roofing panel calculations work from the panel coverage width and roof dimensions.
+
+**Effective panel width:**
+
+$$W_{eff} = \frac{W_{panel} - W_{overlap}}{12}$$
+
+**Panels per row:**
+
+$$P_{row} = \left\lceil \frac{L_{roof}}{W_{eff}} \right\rceil$$
+
+**Total panels (with waste):**
+
+$$P_{total} = \left\lceil P_{row} \times S \times \left(1 + \frac{W_f}{100}\right) \right\rceil$$
+
+**Accessories:**
+
+$$\text{Ridge Cap} = L_{roof} \text{ (linear feet)}$$
+
+$$\text{Trim} = 2 \times W_{roof} \times S + L_{roof} \text{ (linear feet)}$$
+
+$$\text{Screws} = A_{total} \times 1.5$$
+
+$$\text{Underlayment} = \left\lceil \frac{A_{total}}{100} \right\rceil \text{ (rolls)}$$
+
+Where:
+
+- **W_panel** = panel coverage width in inches
+- **W_overlap** = side overlap between adjacent panels in inches
+- **L_roof** = roof length in feet (eave to eave)
+- **W_roof** = roof width in feet (ridge to eave, one side)
+- **S** = number of roof sides (1 for shed, 2 for gable)
+- **W_f** = waste factor as a percentage
+- **A_total** = total roof area in square feet (L x W x S)
+
+**Source:** Panel coverage calculations per manufacturer specifications. Screw density of 1.5 per sq ft per **Metal Roofing Alliance (MRA)** installation guidelines. Trim and ridge cap formulas per **Metal Construction Association (MCA)** best practices.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 40 x 30-Foot Gable Roof with Standing Seam
+
+A homeowner is installing standing-seam metal roofing on a standard gable roof — 40 feet long, 30 feet ridge-to-eave per side, with 16-inch panels and 1-inch overlap.
+
+**Step-by-step:**
+
+1. Total roof area: 40 x 30 x 2 sides = **2,400 sq ft**
+2. Roofing squares: 2,400 / 100 = **24 squares**
+3. Effective panel width: (16 - 1) / 12 = **1.25 feet**
+4. Panels per row: ceil(40 / 1.25) = **32 panels**
+5. Panel length (cut to width): **30 feet**
+6. Panels without waste: 32 x 2 = **64 panels**
+7. Panels with 15% waste: ceil(64 x 1.15) = **74 panels**
+8. Ridge cap: **40 linear feet**
+9. Trim: 2 x 30 x 2 + 40 = **160 linear feet**
+10. Screws: 2,400 x 1.5 = **3,600 screws**
+11. Underlayment: ceil(2,400 / 100) = **24 rolls**
+12. Cost (standing seam): $19,200 - $33,600 installed
+
+**Interpretation:** At 74 panels of 30-foot length, this project requires ordering custom-cut panels from a supplier (not available off-the-shelf at big-box stores for this length). The 10 extra panels from the 15% waste factor cover cutting waste at valleys and edges. Budget $19,200 on the low end for a basic standing-seam system with minimal trim, or up to $33,600 for premium panels with concealed fasteners and full trim detailing.
+
+{/* Section 10: Metal Roofing Types Compared */}
+## Metal Roofing Types Compared
+
+| Feature | Standing Seam | Corrugated | R-Panel / PBR | Stone-Coated Steel |
+|---|---|---|---|---|
+| **Coverage width** | 12-18 in | 24-36 in | 36 in | 12-16 in |
+| **Installed cost/sq ft** | $8-$14 | $4-$8 | $4-$7 | $8-$12 |
+| **Lifespan** | 40-70 years | 25-50 years | 25-50 years | 40-70 years |
+| **Fasteners** | Concealed clips | Exposed screws | Exposed screws | Concealed nails |
+| **Wind rating** | 110-160 mph | 90-120 mph | 90-130 mph | 110-150 mph |
+| **Best for** | Residential premium | Agricultural, budget | Commercial, barns | Residential (shingle look) |
+| **Maintenance** | Very low | Low (check screws) | Low (check screws) | Very low |
+| **Noise** | Low (solid deck) | Moderate | Moderate | Low (stone dampens) |
+
+Standing seam is the premium residential choice: concealed fasteners eliminate leak points, and the clean vertical lines add curb appeal. Corrugated and R-panel cost half as much but require exposed fastener maintenance every 10-15 years. Stone-coated steel mimics the look of asphalt shingles or clay tiles while delivering metal durability.
+
+{/* Section 11: Metal vs Asphalt Shingles */}
+## Metal vs. Asphalt Shingles
+
+Metal roofing costs 2 to 3 times more than architectural asphalt shingles upfront ($8-$14 vs. $3-$5 per square foot installed), but the lifecycle economics favor metal for homeowners who plan to stay long-term.
+
+**Lifespan:** Metal roofs last 40-70 years versus 15-30 years for asphalt shingles. A homeowner installing a metal roof at age 40 may never need another roof. An asphalt roof installed at the same age will need replacement at least once, possibly twice.
+
+**Energy savings:** Metal roofs with reflective coatings reduce cooling costs by 10-25% in warm climates, saving $100-$300 per year on air conditioning. Over 40 years, that is $4,000-$12,000 in energy savings alone.
+
+**Insurance discounts:** Many insurers offer 5-35% discounts on homeowner premiums for metal roofs due to their superior fire, wind, and impact resistance. On a $2,000 annual premium, that is $100-$700 per year in savings.
+
+**Resale value:** Metal roofs recover 85-95% of their cost at resale (per Remodeling Magazine), compared to 60-70% for asphalt shingles. A $25,000 standing-seam roof adds $21,000-$24,000 to home value.
+
+{/* Section 12: Accessories Checklist */}
+## Metal Roofing Accessories Checklist
+
+- **Ridge cap** — covers the peak where two roof planes meet. Order in matching color. Typical cost: $3-$8 per linear foot.
+- **Drip edge / eave flashing** — directs water into gutters. Runs the full eave length on all sides.
+- **Gable trim / rake edge** — finishes the sloped edges of gable roofs. Two pieces per side.
+- **Valley flashing** — W-shaped metal that lines roof valleys. Only needed if your roof has valleys.
+- **Pipe boots / vent flashing** — seals around plumbing vents, exhaust pipes, and other roof penetrations. Count your penetrations and order one boot per pipe.
+- **Self-drilling screws** — #10 or #12 hex-head with neoprene washer. Budget 1.5 per square foot plus 10% extra.
+- **Underlayment** — synthetic felt or ice-and-water shield. One roll per roofing square (100 sq ft). Ice-and-water shield required at eaves in cold climates.
+- **Closure strips** — foam or rubber strips that seal the corrugation profile at eaves and ridges. Required for corrugated and R-panel profiles.
+- **Touch-up paint** — matching color for cut edges and minor scratches. One can per project.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **simple rectangular roof** — gable (2 planes) or shed (1 plane). For hip roofs, add 10% to the panel count. For complex rooflines with multiple valleys, dormers, or turrets, consult a roofing contractor for precise takeoff.
+- **Panel width** defaults represent the most common specifications per panel type. Your supplier may stock different widths — always confirm coverage width (not total width) before ordering.
+- **Waste factor** of 15% is appropriate for simple rectangular roofs. Increase to 20-25% for complex rooflines with valleys, skylights, or roof-mounted equipment. Reduce to 10% only for perfectly rectangular roofs with zero penetrations.
+- **Cost estimates** are 2025-2026 national averages for materials plus professional installation. Prices vary significantly by region: coastal and urban areas typically run 20-40% above national averages. Material costs fluctuate with steel commodity pricing.
+- **Screw density** of 1.5 per square foot is an approximation. Actual screw patterns depend on panel profile, wind zone, and manufacturer specifications — high-wind zones may require 2+ screws per square foot.
+- This calculator does not include **pitch adjustment**. The roof width input should be the actual slope distance from ridge to eave, not the horizontal projection. If you only have the horizontal distance, multiply by your roof pitch factor.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many metal roofing panels do I need?
+
+The panel count depends on your roof length and panel coverage width. For a 40-foot-long gable roof with 16-inch standing-seam panels (1-inch overlap, effective width 1.25 feet), you need 32 panels per side or 64 panels total before waste. Add 15% waste for a final count of 74 panels. Wider corrugated panels (26-inch, 2-inch overlap) would require only 20 panels per side, or 46 total with waste.
+
+### How much does metal roofing cost per square foot?
+
+Installed costs range from $4-$8 per square foot for corrugated and R-panel, $8-$14 for standing seam, and $8-$12 for stone-coated steel. For a 2,400 sq ft roof, that translates to $9,600-$19,200 for corrugated or $19,200-$33,600 for standing seam. Material-only costs are roughly 40-50% of the installed price.
+
+### What is the difference between standing seam and corrugated metal roofing?
+
+Standing seam uses concealed clip fasteners hidden beneath interlocking seams, eliminating exposed screw holes that can leak over time. Corrugated uses exposed screws with neoprene washers directly through the panel face. Standing seam costs roughly twice as much ($8-$14 vs. $4-$8/sq ft installed) but lasts longer (40-70 vs. 25-50 years) and requires less maintenance.
+
+### How much waste factor should I add for metal roofing?
+
+Use 15% for standard gable roofs with minimal penetrations. Use 20% for roofs with valleys, dormers, or skylights. Use 25% for complex rooflines with multiple angles and transitions. Metal panels cannot be reused like shingles — every cut creates scrap, and matching panels from different production runs may have slight color variations.
+
+### How long do metal roofing panels last?
+
+Standing seam and stone-coated steel roofs last 40-70 years with minimal maintenance. Corrugated and R-panel systems last 25-50 years, with the main maintenance being exposed fastener replacement at 10-15 year intervals. All metal roofs outlast asphalt shingles (15-30 years) by at least a factor of two.
+
+### Do I need underlayment under metal roofing?
+
+Yes. Underlayment is required by building code under all metal roofing installations. Synthetic underlayment (felt or polypropylene) is standard at approximately one roll per 100 square feet (one roofing square). In cold climates, building codes require ice-and-water shield membrane at eaves, valleys, and around penetrations to prevent ice dam damage.
+
+### How many screws per square foot for metal roofing?
+
+Standard fastener density is approximately 1.5 screws per square foot for field panels (the flat area), with additional screws at overlaps, eaves, ridges, and flashings. A 2,400 sq ft roof needs roughly 3,600 field screws plus 200-400 additional screws for trim and transitions. High-wind zones (coastal, mountain) may require 2+ screws per square foot.
+
+### Can I install metal roofing over existing shingles?
+
+In most jurisdictions, yes — you can install metal roofing over one layer of existing asphalt shingles without tear-off, saving $1-$2 per square foot in removal costs. Check your local building code: most allow a maximum of two total roofing layers. The existing shingles must be flat (no curling) and the roof deck must be structurally sound. Add furring strips for an air gap if installing over shingles.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses panel-coverage-width geometry to determine panel counts. Effective panel width is calculated as the nominal coverage width minus the side overlap, converted from inches to feet. The panel-per-row count is the roof length divided by effective width, rounded up to the nearest whole panel. Waste factors are applied multiplicatively to the raw panel count. Cost ranges reflect 2025-2026 installed prices (materials plus professional labor) compiled from **HomeAdvisor**, **Angi**, and **Fixr** national databases. Panel specifications — coverage widths, overlap requirements, and screw densities — follow manufacturer guidelines aggregated by the **Metal Roofing Alliance (MRA)**. Trim and accessory estimating formulas follow **Metal Construction Association (MCA)** installation best practices. Underlayment coverage at one roll per 100 sq ft follows standard synthetic felt specifications per **ASTM D226**.
+
+{/* Section 17: Disclaimer — auto-rendered */}

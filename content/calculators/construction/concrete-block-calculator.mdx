@@ -1,0 +1,178 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20 x 8-foot wall using standard 8x8x16 CMU blocks with 3/8-inch mortar joints needs 177 blocks (including 5% waste), 7 bags of mortar, and 5.24 cubic yards of fill concrete -- material cost between $336 and $601. Standard CMU blocks require approximately 1.05 blocks per square foot of wall area. Enter your wall dimensions, block size, mortar joint width, and number of openings below to get an accurate block count with mortar, fill, rebar, and cost estimates.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Block Estimate Shows
+
+Ordering the wrong quantity of concrete blocks means either a costly second delivery from a different production run -- with blocks that may not match the color and texture of your first batch -- or pallets of unused blocks taking up space on your property. This calculator gives you the accurate count that avoids both problems, factoring in wall dimensions, block size, mortar joint width, openings, waste buffer, and structural requirements.
+
+The **total blocks** figure is the net count after deducting window and door openings and adding your waste margin. The waste factor covers cuts at wall ends, corners, bond beam courses, and breakage during handling. For straight walls with few cuts, 5% is standard. For walls with many openings, pilasters, or corbelling, increase to 10-15%.
+
+The **courses** count tells you how many horizontal rows of blocks your wall will have. Standard 8-inch CMU with 3/8-inch mortar joints stack at approximately 8.375 inches per course. An 8-foot wall requires 12 courses. This number is critical for ordering bond beam blocks (typically every 4 courses for reinforced walls) and for estimating scaffolding height requirements.
+
+The **mortar bags** estimate covers 80-pound bags of Type S or Type N mortar mix. The industry standard is approximately 3.5 bags per 100 blocks at 3/8-inch joints. Type S mortar (1,800 PSI) is the default for load-bearing CMU walls, retaining walls, and below-grade applications. Type N (750 PSI) is acceptable for non-load-bearing partitions and above-grade veneer.
+
+The **fill concrete** figure represents the cubic yards needed to fill all block cores with grout. Solid-grouted walls require this for every core; partially grouted walls fill only cells containing rebar. Standard 8-inch CMU takes approximately 0.8 cubic feet of grout per block. For a 20-foot wall, that translates to roughly 5 cubic yards -- a significant material consideration that many estimators overlook.
+
+The **rebar count** indicates vertical reinforcement bars spaced at 48 inches on center -- the most common spacing for residential CMU walls per IRC Section R608. Check your local building code for specific requirements; seismic zones and retaining walls often require 32-inch or 24-inch spacing.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the wall** -- measure the total length and height of the wall in feet. For walls with varying heights (stepped retaining walls, gable ends), break the wall into rectangular sections, calculate each separately, and add the totals.
+
+2. **Select block size** -- choose from four standard CMU sizes. The 8x8x16 (standard) is the most common for residential and commercial construction. The 12x8x16 (thick wall) is used for load-bearing foundation walls. The 6x8x16 (thin wall) works for non-structural partitions. The 8x4x16 (half-height) is used for decorative courses and cap blocks.
+
+3. **Set the mortar joint** -- standard joints are 3/8 inch (0.375 inches). CMU walls almost always use 3/8-inch joints because the blocks are manufactured to modular dimensions that assume this joint width. Unlike brick, wider or thinner joints in CMU construction are uncommon.
+
+4. **Enter openings** -- count windows, doors, and other openings. Enter the average area per opening in square feet. Standard windows average 12-15 square feet, standard doors 20-21 square feet, and garage doors 120-160 square feet.
+
+5. **Choose waste factor** -- use 5% for simple straight walls, 7-10% for walls with moderate openings and corners, and 10-15% for complex layouts with many cuts, angles, or decorative patterns.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Concrete block quantity calculations convert wall area and block face dimensions to a coverage ratio, then apply a waste multiplier:
+
+**Net wall area:**
+
+$$\text{Wall Area} = (\text{Wall Length} \times \text{Wall Height}) - (\text{Openings} \times \text{Avg Opening Area})$$
+
+**Blocks per square foot:**
+
+$$\text{Blocks/sq ft} = \frac{144}{(\text{Block Length} + \text{Mortar}) \times (\text{Block Height} + \text{Mortar})}$$
+
+**Total blocks:**
+
+$$\text{Blocks} = \left\lceil \text{Wall Area} \times \text{Blocks/sq ft} \times (1 + W) \right\rceil$$
+
+**Mortar bags (80 lb):**
+
+$$\text{Mortar Bags} = \left\lceil \frac{\text{Total Blocks} \times 3.5}{100} \times \frac{\text{Mortar Joint}}{0.375} \right\rceil$$
+
+**Fill concrete (cubic yards):**
+
+$$\text{Fill (cu yd)} = \frac{\text{Total Blocks} \times 0.8 \times D_{\text{scale}}}{27}$$
+
+Where:
+
+- **Wall Length** and **Wall Height** = wall dimensions in feet
+- **Block Length** and **Block Height** = block face dimensions in inches (16" and 8" for standard CMU)
+- **Mortar** = mortar joint width in inches (standard: 0.375" for 3/8")
+- **W** = waste factor as a decimal (0.05 for 5%)
+- **144** = square inches per square foot (conversion constant)
+- **D_scale** = block depth / 8 (depth ratio relative to standard 8-inch block)
+- **27** = cubic feet per cubic yard
+
+**Source:** National Concrete Masonry Association (NCMA) *TEK 4-1A — Productivity and Modular Coordination in Concrete Masonry Construction*; NCMA *TEK 3-8A — Mortar for Concrete Masonry*.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 20 x 8-Foot Wall with Standard CMU Blocks
+
+A homeowner is building a retaining wall measuring 20 feet long by 8 feet high using standard 8x8x16 CMU blocks with 3/8-inch mortar joints and no openings.
+
+**Inputs:**
+- Wall: 20 ft x 8 ft
+- Block size: Standard CMU (8" x 8" x 16")
+- Mortar joint: 0.375" (3/8 inch)
+- Openings: 0
+- Waste factor: 5%
+
+**Step-by-step:**
+
+1. Calculate gross wall area: 20 x 8 = **160 sq ft**
+2. Deduct openings: 0 openings -> net area = **160 sq ft**
+3. Calculate effective block face: (16 + 0.375) x (8 + 0.375) = 16.375 x 8.375 = **137.14 sq in**
+4. Convert to sq ft: 137.14 / 144 = **0.9524 sq ft** per block
+5. Blocks per sq ft: 1 / 0.9524 = **1.05 blocks/sq ft**
+6. Blocks without waste: ceil(160 x 1.05) = **168 blocks**
+7. Apply 5% waste: ceil(168 x 1.05) = **177 blocks**
+8. Mortar bags: ceil(177 x 3.5 / 100) = **7 bags** (80-lb bags)
+9. Fill concrete: 177 x 0.8 / 27 = **5.24 cu yd**
+10. Rebar bars: ceil(240 / 48) = **5 vertical bars**
+
+**Interpretation:** You need 177 standard CMU blocks, 7 bags of 80-pound mortar, and 5.24 cubic yards of fill concrete for the 160-square-foot wall with 5% waste. At $1.50 to $3.00 per block, material cost ranges from $266 to $531 for blocks alone, plus $70 for mortar ($10 per bag). The 9 extra blocks cover cuts at corners and provide spares. Budget an additional $150-$200 for rebar and concrete fill at typical retail prices.
+
+{/* Section 10: Key Factors */}
+## CMU Block Size Comparison
+
+| Block Size (H x D x L) | Blocks Per Sq Ft (3/8" joint) | Weight Each | Best For |
+|:--|:--|:--|:--|
+| **8" x 8" x 16"** (Standard) | ~1.05 | 35-38 lbs | Foundation walls, retaining walls, general construction |
+| **8" x 4" x 16"** (Half-Height) | ~1.05 | 18-22 lbs | Decorative courses, cap blocks, partitions |
+| **12" x 8" x 16"** (Thick Wall) | ~1.05 | 55-60 lbs | Heavy load-bearing walls, tall retaining walls |
+| **6" x 8" x 16"** (Thin Wall) | ~1.05 | 25-28 lbs | Non-structural partitions, interior walls |
+
+All four block types share the same face dimensions (16" length x 8" height) -- the only difference is depth (4", 6", 8", or 12"). This means they all require the same number of blocks per square foot. The choice between them depends on structural requirements, not coverage rate.
+
+## Mortar Type Selection
+
+| Mortar Type | Compressive Strength | Application |
+|:--|:--|:--|
+| **Type S** | 1,800 PSI | Load-bearing walls, retaining walls, below-grade, seismic zones |
+| **Type N** | 750 PSI | Above-grade non-load-bearing walls, partitions, veneer |
+| **Type M** | 2,500 PSI | Foundation walls below grade, heavy structural applications |
+
+For most residential CMU construction, Type S mortar is the correct default choice. It provides the bond strength needed for reinforced masonry and is required by the IRC for below-grade and load-bearing applications.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **single-wythe wall** (one block thick). Double-wythe or composite walls require separate calculations for each wythe.
+- Mortar estimate uses the **NCMA standard of 3.5 bags (80 lb) per 100 blocks** for 3/8-inch joints. Actual mortar consumption varies by mason skill, block absorption rate, and environmental conditions -- expect plus or minus 15% variation.
+- **Fill concrete assumes all cores are grouted.** Partially grouted walls (grouting only cells with rebar) use significantly less fill. For partial grouting, multiply the fill estimate by the ratio of grouted cells to total cells.
+- Opening deduction uses a **flat average area per opening.** Measure each opening individually for best accuracy. Note that lintels over openings require additional bond beam blocks not accounted for in this calculator.
+- Does not calculate **lintels, bond beam blocks, pilasters, control joints, anchor bolts, or labor costs.** These are structural and project-specific items that depend on engineering requirements and local building codes.
+- Rebar spacing assumes **48 inches on center** per IRC Section R608. Seismic zones, retaining walls, and engineered designs may require closer spacing -- always check local code requirements.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many concrete blocks do I need per square foot?
+
+Standard 8x8x16 CMU blocks with 3/8-inch mortar joints require approximately 1.05 blocks per square foot of wall area. This is calculated from the effective face area: (16.375" x 8.375") / 144 = 0.952 sq ft per block, so 1 / 0.952 = 1.05 blocks per sq ft. This number is the same for all CMU block depths (4", 6", 8", 12") because they share the same face dimensions. Always add 5-10% for waste.
+
+### What is the difference between CMU and cinder blocks?
+
+CMU (Concrete Masonry Unit) is the correct industry term for what most people call "cinder blocks." True cinder blocks -- made with coal cinders as aggregate -- have not been manufactured widely since the 1960s. Modern CMU blocks are made with Portland cement, aggregate (sand, gravel, crushed stone), and water. They are heavier and stronger than historic cinder blocks. When purchasing, ask for "CMU" or "concrete block" at the supply yard.
+
+### How much mortar do I need for 100 concrete blocks?
+
+For 100 standard CMU blocks laid with 3/8-inch mortar joints, you need approximately 3.5 bags of 80-pound mortar mix. This translates to about 280 pounds of dry mortar. The NCMA estimates 8.5 cubic feet of mortar per 100 blocks at 3/8-inch joint width. Actual consumption varies by plus or minus 15% depending on mason technique, block absorption rate, and joint tooling method.
+
+### Do I need to fill all the cores with concrete?
+
+Not always. Building codes distinguish between solid-grouted walls (all cores filled) and partially grouted walls (only cells containing rebar are filled). Residential retaining walls and foundation walls typically require solid grouting. Non-load-bearing partition walls often need no core fill at all. Load-bearing walls in seismic zones require grouting at least every 48 inches. Check your structural drawings and local building code -- IRC Section R608 covers residential requirements.
+
+### How much does a concrete block wall cost per square foot?
+
+Material cost for a single-wythe CMU wall ranges from $3.50 to $8.00 per square foot -- including blocks ($1.50-$3.00 each at 1.05 per sq ft = $1.58-$3.15), mortar ($0.35-$0.50 per sq ft), fill concrete ($0.50-$1.00 per sq ft), and rebar ($0.25-$0.50 per sq ft). Professional installation adds $10 to $18 per square foot for skilled mason labor. Total installed cost: $13.50 to $26.00 per square foot. A 20 x 8-foot wall (160 sq ft) costs $560 to $1,280 in materials or $2,160 to $4,160 fully installed.
+
+### What is the standard mortar joint width for CMU blocks?
+
+The standard mortar joint width for CMU construction is 3/8 inch (0.375 inches). Unlike brick, where joint widths of 1/4 inch to 1/2 inch are common for aesthetic reasons, CMU blocks are manufactured to nominal dimensions that assume a 3/8-inch joint. A standard 8x8x16 CMU block actually measures 7-5/8" x 7-5/8" x 15-5/8" -- the 3/8-inch mortar joint brings each dimension to its nominal 8" or 16" modular size.
+
+</div>
+
+{/* Section 15: Related Calculators -- auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses block estimating formulas from the **National Concrete Masonry Association (NCMA)** *TEK 4-1A -- Productivity and Modular Coordination in Concrete Masonry Construction*. The effective face area per block includes the mortar joint width added to the length and height dimensions, converting each block's footprint into square feet. Mortar bag estimates follow **NCMA TEK 3-8A** at approximately 3.5 bags (80 lb) per 100 blocks at standard 3/8-inch joints. Fill concrete volume uses 0.8 cubic feet per standard 8-inch CMU core, scaled proportionally for different block depths. Rebar spacing follows **IRC Section R608** at 48 inches on center for standard residential construction. Block dimensions conform to **ASTM C90** specifications for load-bearing concrete masonry units. Cost ranges reflect 2025-2026 national average retail pricing for standard-weight CMU blocks ($1.50-$3.00 per unit) and pre-mixed mortar ($9-$11 per 80-lb bag).
+
+{/* Section 17: Disclaimer -- auto-rendered from spec.disclaimer = "construction" */}

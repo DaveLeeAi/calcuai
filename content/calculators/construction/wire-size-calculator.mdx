@@ -1,0 +1,232 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20-amp, 120-volt circuit with a 50-foot wire run needs 10 AWG copper — not the 12 AWG that ampacity alone would suggest — because 12 AWG produces a 3.3% voltage drop at that distance, exceeding the NEC-recommended 3% maximum. Undersized wire causes flickering lights, overheating, and tripped breakers. Enter your circuit's amperage, voltage, and wire run distance below to find the correct AWG gauge that satisfies both ampacity and voltage drop limits.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Calculates */}
+## What This Calculates
+
+This calculator determines the correct American Wire Gauge (AWG) size for an electrical circuit by checking two independent requirements: **ampacity** (the wire's current-carrying capacity) and **voltage drop** (the voltage lost over the wire run distance). The recommended gauge is whichever requirement demands the larger wire.
+
+**Ampacity** is the maximum current a wire can carry continuously without exceeding its temperature rating. NEC Table 310.16 lists ampacity values for each gauge at 60°C, 75°C, and 90°C. This calculator uses the 75°C column, which applies to the most common residential and commercial wire types (THWN, THHN, XHHW).
+
+**Voltage drop** is the reduction in voltage from the panel to the load due to wire resistance. The NEC recommends total voltage drop not exceed 3% for branch circuits and 5% for combined feeder plus branch circuits. A 120V circuit with 3% drop delivers only 116.4V at the outlet — enough for most equipment, but higher drops cause visible dimming, motor overheating, and appliance damage.
+
+The calculator also shows total wire length needed (hot + neutral for single-phase, or 3 conductors for three-phase), estimated wire cost, and the full wire specification sheet for the recommended gauge. For power consumption analysis, use our [Electricity Cost Calculator](/everyday/electricity-cost-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the circuit amperage** — this is the breaker size or the rated load. A typical kitchen outlet circuit is 20A, a dryer is 30A, and an electric range is 40–50A.
+
+2. **Select the voltage** — 120V for standard outlets, 240V for dryers, ranges, and HVAC equipment, 208V or 480V for commercial and industrial circuits.
+
+3. **Enter the wire run distance** — measure from the electrical panel to the furthest outlet or device on the circuit. This is the one-way distance, not the round trip; the calculator accounts for the return conductor automatically.
+
+4. **Select wire material** — copper is standard for most residential wiring. Aluminum is used in larger feeder circuits (100A+) where cost savings justify the larger required gauge.
+
+5. **Select phase** — single-phase for residential, three-phase for commercial motor loads and industrial equipment.
+
+6. **Set the maximum voltage drop** — the NEC-recommended limit is 3% for branch circuits. Some sensitive equipment (medical, data centers) requires 1–2%. Outdoor and non-critical circuits may tolerate up to 5%.
+
+7. **Select conduit type** — PVC, EMT, or MC cable. Conduit type affects ampacity derating in some installations.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Wire sizing depends on two independent checks: ampacity (current capacity) and voltage drop (voltage loss over distance).
+
+**Voltage drop — single-phase:**
+
+$$V_d = \frac{2 \times L \times I \times R}{1000}$$
+
+**Voltage drop — three-phase:**
+
+$$V_d = \frac{1.732 \times L \times I \times R}{1000}$$
+
+**Voltage drop percentage:**
+
+$$V_{d\%} = \frac{V_d}{V} \times 100$$
+
+Where:
+
+- **V_d** = voltage drop (volts)
+- **L** = one-way wire run distance (feet)
+- **I** = circuit current (amps)
+- **R** = wire resistance (ohms per 1,000 feet, from NEC Chapter 9 Table 8)
+- **V** = circuit voltage (volts)
+- **1.732** = √3 (three-phase factor)
+- **2** = single-phase round-trip factor (hot + neutral)
+- **1000** = unit conversion (resistance is per 1,000 feet)
+
+The calculator selects the smallest gauge that satisfies **both** ampacity (NEC Table 310.16) and voltage drop (≤ user-specified %). If the ampacity gauge differs from the voltage drop gauge, the larger wire wins.
+
+**Source:** Ampacity from **NEC (NFPA 70) Table 310.16** at 75°C. Resistance from **NEC Chapter 9, Table 8**. Voltage drop formula per **IEEE Std 141 (Red Book)**.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 30A Dryer Circuit at 100 Feet (240V, Copper)
+
+A homeowner is running a dedicated 240V dryer circuit from the panel to a laundry room 100 feet away.
+
+**Inputs:**
+- Amperage: 30A
+- Voltage: 240V
+- Distance: 100 ft
+- Wire: Copper, Single-Phase
+- Max Voltage Drop: 3%
+
+**Step-by-step:**
+
+1. **Ampacity check:** 30A requires minimum 10 AWG (rated 30A at 75°C).
+2. **Voltage drop at 10 AWG:** Vd = (2 × 100 × 30 × 1.24) / 1000 = **7.44V** → 7.44 / 240 = **3.10%** → exceeds 3%.
+3. **Voltage drop at 8 AWG:** Vd = (2 × 100 × 30 × 0.778) / 1000 = **4.67V** → 4.67 / 240 = **1.95%** → under 3%.
+4. **Recommended gauge:** 8 AWG (upsized from 10 AWG for voltage drop).
+5. **Wire length:** 2 × 100 = **200 feet** total.
+6. **Cost estimate:** 8 AWG THHN copper at ~$0.55/ft × 200 ft = **~$110**.
+
+**Interpretation:** Even though 10 AWG technically handles 30 amps, the 100-foot distance creates enough resistance to push voltage drop over 3%. Upsizing to 8 AWG costs roughly $55 more in wire but prevents the dryer from underperforming due to low voltage at the outlet.
+
+### Example 2: 15A Bedroom Circuit at 25 Feet (120V, Copper)
+
+A short residential circuit — panel to a nearby bedroom.
+
+**Inputs:**
+- Amperage: 15A
+- Voltage: 120V
+- Distance: 25 ft
+- Wire: Copper, Single-Phase
+- Max Voltage Drop: 3%
+
+**Step-by-step:**
+
+1. **Ampacity check:** 15A requires minimum 14 AWG (rated 15A).
+2. **Voltage drop at 14 AWG:** Vd = (2 × 25 × 15 × 3.14) / 1000 = **2.36V** → 2.36 / 120 = **1.96%** → under 3%.
+3. **Recommended gauge:** 14 AWG — ampacity and voltage drop both satisfied.
+4. **Wire length:** 2 × 25 = **50 feet** total.
+5. **Cost estimate:** 14 AWG at ~$0.15/ft × 50 ft = **~$7.50**.
+
+**Interpretation:** Short runs rarely have voltage drop problems. At 25 feet, even the minimum ampacity wire (14 AWG) keeps voltage drop under 2%, so no upsizing is needed.
+
+{/* Section 10: AWG Wire Size Chart */}
+## AWG Wire Size Reference Chart
+
+| AWG Gauge | Copper Ampacity (75°C) | Resistance (Ω/1000ft) | Common Uses |
+|:---|:---|:---|:---|
+| **14 AWG** | 15A | 3.14 | Lighting circuits, 15A outlets |
+| **12 AWG** | 20A | 1.98 | Kitchen/bathroom outlets, 20A circuits |
+| **10 AWG** | 30A | 1.24 | Dryers, water heaters (short runs) |
+| **8 AWG** | 40A | 0.778 | Ranges, large appliances |
+| **6 AWG** | 55A | 0.491 | Central A/C, subpanels |
+| **4 AWG** | 70A | 0.308 | Large subpanels, EV chargers |
+| **3 AWG** | 85A | 0.245 | Service entrance |
+| **2 AWG** | 95A | 0.194 | Service entrance, large subpanel feeders |
+| **1 AWG** | 110A | 0.154 | Service entrance |
+| **1/0 AWG** | 125A | 0.122 | 100A–125A service feeders |
+| **2/0 AWG** | 145A | 0.0967 | 150A service feeders |
+| **3/0 AWG** | 165A | 0.0766 | 150A–175A service feeders |
+| **4/0 AWG** | 195A | 0.0608 | 200A service entrance |
+
+Source: NEC Table 310.16, conductors in raceway at 75°C ambient. Ampacity may be derated for bundled conductors or high ambient temperatures.
+
+{/* Section 11: Copper vs Aluminum */}
+## Copper vs. Aluminum Wire
+
+**Copper** is the default choice for residential branch circuits (14–10 AWG). It has lower resistance, higher ampacity per gauge, and easier termination. Most outlet and switch terminals are rated for copper only — using aluminum on a copper-rated terminal creates a fire risk from oxidation and thermal expansion mismatch.
+
+**Aluminum** costs roughly 60% less per foot than copper and is the standard choice for large feeder circuits (4 AWG and larger), service entrance conductors, and utility drops. For a 200A service entrance, 4/0 aluminum costs about $3.50/ft versus $5.80/ft for copper — saving over $400 on a 200-foot run. Aluminum requires anti-oxidant compound at every connection and CO/ALR-rated devices.
+
+**When to choose each:**
+
+| Factor | Copper | Aluminum |
+|:---|:---|:---|
+| **Best for** | Branch circuits, 14–10 AWG | Feeders 4 AWG+, service entrance |
+| **Cost per ft (10 AWG)** | ~$0.35 | ~$0.21 |
+| **Ampacity (8 AWG)** | 40A | 32A |
+| **Resistance (8 AWG)** | 0.778 Ω/1000ft | 1.245 Ω/1000ft |
+| **Connection requirements** | Standard | Anti-oxidant + AL-rated devices |
+| **Fire risk** | Lower | Higher if improperly terminated |
+
+{/* Section 12: Voltage Drop Explained */}
+## Why Voltage Drop Matters
+
+Voltage drop is the single most overlooked factor in wire sizing. A wire that passes the ampacity check can still deliver dangerously low voltage if the run is too long.
+
+**What happens with excessive voltage drop:**
+- **Lighting dims visibly** — a 10% drop on a 120V circuit delivers 108V, causing incandescent and some LED fixtures to flicker or dim noticeably.
+- **Motors overheat** — electric motors draw more current to compensate for low voltage, increasing winding temperature and shortening motor life. A/C compressors and refrigerators are particularly sensitive.
+- **Appliances underperform** — electric heaters produce less heat, chargers take longer, and sensitive electronics may shut down or malfunction.
+- **Code compliance** — while NEC voltage drop recommendations (3% for branch, 5% for total) are informational notes rather than mandatory code, many jurisdictions and inspectors enforce them as requirements.
+
+**Distance is the key variable.** A 20A 120V circuit on 12 AWG wire works perfectly at 25 feet (1.98% voltage drop) but exceeds 3% at just 38 feet. The same circuit on 240V can run 76 feet before hitting 3%, because the same voltage drop in volts represents a smaller percentage of the higher supply voltage.
+
+{/* Section 13: Safety Warning */}
+## Safety Warning
+
+Electrical work can cause **fire, electrocution, and death**. This calculator provides wire sizing guidance based on NEC tables, but it does not replace a licensed electrician's judgment for your specific installation.
+
+**Always:**
+- Hire a **licensed electrician** for all electrical work
+- Obtain required **electrical permits** before starting any wiring project
+- Verify the wire size recommendation with **local code requirements** (which may be stricter than NEC minimums)
+- Use wire rated for the **installation environment** (wet, dry, underground, outdoor)
+- Never use wire smaller than the calculated size — oversizing wire is safe, undersizing is not
+
+NEC code requirements vary by jurisdiction. Some states and municipalities amend the NEC with additional restrictions. Always check with your local building department or Authority Having Jurisdiction (AHJ).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What size wire do I need for a 20-amp circuit?
+
+A 20-amp circuit requires a minimum of 12 AWG copper wire for ampacity per NEC Table 310.16. However, if the wire run exceeds approximately 38 feet at 120V, voltage drop will push past 3%, and you should upsize to 10 AWG. At 240V, 12 AWG handles runs up to about 76 feet within the 3% voltage drop limit. Always check both ampacity and voltage drop — ampacity alone is not sufficient for long runs.
+
+### What wire size do I need for a 30-amp dryer circuit?
+
+A 30-amp 240V dryer circuit requires 10 AWG copper minimum for ampacity. For runs up to about 77 feet, 10 AWG keeps voltage drop under 3%. Beyond 77 feet, upsize to 8 AWG. Most residential dryer circuits are 30–50 feet, so 10 AWG typically works, but measure the actual distance from panel to outlet before purchasing wire.
+
+### What is the 3% voltage drop rule?
+
+NEC Section 210.19(A) Informational Note No. 4 recommends that branch circuit voltage drop not exceed 3%, and total voltage drop (feeder plus branch) not exceed 5%. On a 120V circuit, 3% means no more than 3.6 volts lost between the panel and the outlet. On a 240V circuit, 3% allows up to 7.2 volts of drop. While technically a recommendation rather than a hard code requirement, most inspectors enforce it as a standard.
+
+### Is aluminum wire safe to use?
+
+Aluminum wire is safe when properly installed with compatible devices, anti-oxidant compound, and correct torque on connections. Modern aluminum wire (AA-8000 alloy) is the standard for service entrance conductors and large feeders in both residential and commercial installations. The problems historically associated with aluminum wiring (1960s–1970s) were caused by older AA-1350 alloy used on 15A and 20A branch circuits with incompatible copper-rated devices. Today, aluminum is not recommended for branch circuits but is perfectly safe for feeders 4 AWG and larger.
+
+### How do I measure wire run distance?
+
+Measure the actual wire path from the electrical panel to the farthest outlet or device on the circuit — not the straight-line distance. Wire runs follow walls, go through attics or crawlspaces, and turn corners. Add 10–15% to your measured distance to account for turns, junction boxes, and service loops. The calculator only needs the one-way distance; it automatically doubles it for the return conductor (single-phase) or triples it for three-phase.
+
+### Can I use a wire gauge larger than recommended?
+
+Yes. Using a larger wire gauge than the minimum required is always safe and reduces voltage drop further. The only downside is cost and the difficulty of working with thicker wire in tight junction boxes. Many electricians routinely upsize by one gauge as a best practice, particularly for circuits that may see increased load in the future — for example, running 10 AWG for a 20A kitchen circuit that might eventually supply higher-wattage appliances.
+
+### What is the difference between single-phase and three-phase?
+
+Single-phase power uses two conductors (hot and neutral) and is standard in residential homes. Three-phase power uses three conductors and delivers 1.732 times the power at the same voltage and current — it is used in commercial and industrial settings for large motors, HVAC systems, and heavy machinery. Three-phase circuits have lower voltage drop per conductor because the multiplier is 1.732 instead of 2, meaning the same wire size can run farther in a three-phase system.
+
+### Does conduit type affect wire size?
+
+Conduit type affects **ampacity derating**, not the voltage drop calculation. Conductors in conduit have lower ampacity than conductors in free air because the conduit restricts heat dissipation. NEC Table 310.16 provides ampacity values for conductors in raceway (conduit), which this calculator uses. If more than 3 current-carrying conductors share a conduit, additional derating factors from NEC Table 310.15(C)(1) apply — consult an electrician for bundled conductor calculations.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses ampacity ratings from **NEC (NFPA 70) Table 310.16** for insulated conductors rated 0–2000 volts in raceway at 75°C ambient temperature. Wire resistance values are from **NEC Chapter 9, Table 8** (DC resistance at 75°C for uncoated copper and aluminum conductors). The voltage drop formula follows **IEEE Std 141 (Red Book)** — the industry standard reference for electrical power distribution. Aluminum ampacity derating uses the 75°C column of NEC Table 310.16 for aluminum or copper-clad aluminum conductors. Wire cost estimates reflect 2025–2026 retail pricing from **Cerrowire** and major electrical distributors. Aluminum cost discount (60% of copper) is based on commodity price averages from the **U.S. Bureau of Labor Statistics** Producer Price Index for nonferrous wire and cable.
+
+{/* Section 17: Disclaimer — auto-rendered */}

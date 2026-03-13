@@ -1,0 +1,196 @@
+{
+  "id": "hvac-size-calculator",
+  "title": "HVAC Size Calculator",
+  "slug": "hvac-size-calculator",
+  "category": "construction",
+  "subcategory": "measurement",
+  "primaryKeyword": "HVAC size calculator",
+  "metaTitle": "HVAC Size Calculator | BTU & Tonnage for Your Home",
+  "metaDescription": "Calculate the right HVAC size for your home. Enter square footage, climate zone, and insulation to find BTU, tonnage, and cost estimates for AC and heat pumps.",
+  "inputs": [
+    {
+      "id": "squareFootage",
+      "label": "Square Footage",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1500,
+      "min": 100,
+      "max": 10000,
+      "step": 100,
+      "suffix": "sq ft",
+      "helpText": "Total conditioned floor area"
+    },
+    {
+      "id": "ceilingHeight",
+      "label": "Ceiling Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 8,
+      "min": 7,
+      "max": 20,
+      "step": 0.5,
+      "suffix": "feet",
+      "helpText": "Average ceiling height in feet"
+    },
+    {
+      "id": "climate",
+      "label": "Climate Zone",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mixed",
+      "options": [
+        { "value": "hot-humid", "label": "Hot & Humid (FL, TX Gulf, LA)" },
+        { "value": "hot-dry", "label": "Hot & Dry (AZ, NV, NM)" },
+        { "value": "mixed", "label": "Mixed / Moderate (NC, TN, MO)" },
+        { "value": "cold", "label": "Cold (NY, OH, PA)" },
+        { "value": "very-cold", "label": "Very Cold (MN, WI, MT)" }
+      ],
+      "helpText": "Select the climate closest to your region"
+    },
+    {
+      "id": "insulation",
+      "label": "Insulation Quality",
+      "type": "select",
+      "required": true,
+      "defaultValue": "average",
+      "options": [
+        { "value": "poor", "label": "Poor (old/minimal insulation)" },
+        { "value": "average", "label": "Average (standard builder grade)" },
+        { "value": "good", "label": "Good (upgraded insulation)" },
+        { "value": "excellent", "label": "Excellent (spray foam, high R-value)" }
+      ],
+      "helpText": "Overall insulation quality of the home"
+    },
+    {
+      "id": "stories",
+      "label": "Number of Stories",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1",
+      "options": [
+        { "value": "1", "label": "1 Story" },
+        { "value": "2", "label": "2 Stories" },
+        { "value": "3", "label": "3 Stories" }
+      ],
+      "helpText": "Number of above-ground floors"
+    },
+    {
+      "id": "windows",
+      "label": "Window Coverage",
+      "type": "select",
+      "required": true,
+      "defaultValue": "average",
+      "options": [
+        { "value": "few", "label": "Few (small or few windows)" },
+        { "value": "average", "label": "Average" },
+        { "value": "many", "label": "Many (large or floor-to-ceiling)" }
+      ],
+      "helpText": "Relative amount of window area"
+    },
+    {
+      "id": "sunExposure",
+      "label": "Sun Exposure",
+      "type": "select",
+      "required": true,
+      "defaultValue": "partial",
+      "options": [
+        { "value": "shaded", "label": "Mostly Shaded (trees, north-facing)" },
+        { "value": "partial", "label": "Partial Sun" },
+        { "value": "full-sun", "label": "Full Sun (south/west-facing, no shade)" }
+      ],
+      "helpText": "How much direct sunlight hits the home"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "btuRequired",
+      "label": "BTU/Hour Required",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "tons",
+      "label": "Exact Tonnage",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "recommendedTons",
+      "label": "Recommended Size (Tons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "recommendedUnit",
+      "label": "Recommended System",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Home Volume (cu ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "cfmAirflow",
+      "label": "Required Airflow (CFM)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Equipment Cost Estimate",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "energyEstimate",
+      "label": "Annual Energy Cost",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "hvac-size",
+  "features": [
+    "shareable-url",
+    "print-results",
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "insulation-calculator",
+    "electricity-cost-calculator",
+    "square-footage-calculator",
+    "solar-panel-calculator",
+    "energy-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "ACCA Manual J (Residential Load Calculation), ENERGY STAR HVAC sizing guidelines, U.S. Department of Energy.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base load: 20 BTU/sq ft rule of thumb. Multipliers for climate, insulation, ceiling height, stories, windows, and sun exposure per ACCA Manual J simplified methodology. Equipment sizing rounded to nearest 0.5-ton increment per industry standard. Cost data from HomeAdvisor/Angi 2025 national averages.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "summer"
+}

@@ -1,0 +1,187 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 40 x 12-foot driveway with 3 inches of hot-mix asphalt needs 9.57 tons of material (including 10% waste) — approximately $766–$1,148 for materials alone or $1,440–$3,360 fully installed. That same area at 4 inches jumps to 12.76 tons. Asphalt is ordered by the ton, not by the yard, because delivery trucks weigh their loads. Enter your project dimensions below for exact tonnage, volume, area, and a side-by-side cost comparison of materials versus installed pricing.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Calculates
+
+This calculator converts your paving dimensions into the exact amount of hot-mix asphalt (HMA) needed — in tons (the standard U.S. ordering unit), cubic yards, cubic feet, and area in both square feet and square yards. It provides a four-way cost comparison: material-only at low and high per-ton rates, and fully installed at low and high per-square-foot rates.
+
+The **tonnage calculation** works in three steps. First, it computes volume as a rectangular prism: length times width times thickness (converted to feet). Second, it multiplies volume by the standard HMA compacted density of 145 pounds per cubic foot — the industry planning figure published by the National Asphalt Pavement Association. Third, it divides by 2,000 to convert pounds to US short tons. Asphalt suppliers price and deliver by the ton because truck scales are the final measure; volume figures are useful for planning but tons are what you order and pay for.
+
+The **waste factor** accounts for material lost during hauling, spreading, compaction, and edge trimming. The National Asphalt Pavement Association recommends 5–10% for machine-paved rectangular areas and up to 15–20% for hand-raked patches, irregular shapes, or areas with many edges and transitions. This calculator defaults to 10% and clamps the range between 5% and 20%.
+
+The **cost estimates** are split into two views: material-only pricing at $80–$120 per ton (the range you would pay an asphalt plant for pickup or delivery) and fully installed pricing at $3–$7 per square foot (which includes base preparation, paving, and compaction labor). For a standard residential driveway, installed cost is the more useful number because almost no homeowner self-installs asphalt — it requires a paving machine and roller compactor.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the area length** — measure the longest dimension of the area to be paved. For driveways, measure from the street apron to the garage. For parking lots, measure the full length including any turnout areas. You can enter feet or meters.
+
+2. **Enter the area width** — measure the shorter dimension. A single-car driveway is typically 10–12 feet wide; a two-car driveway is 20–24 feet. For irregular shapes, calculate each rectangular section separately and add the results.
+
+3. **Set the asphalt thickness** — this is the single most important variable. Residential driveways typically use 2–3 inches over a prepared gravel base. Parking lots use 3–4 inches. Roads and heavy-traffic areas use 4–6 inches. Going from 3 inches to 4 inches increases tonnage by 33%.
+
+4. **Choose the asphalt type** — hot-mix asphalt (HMA) is the standard for new paving and major resurfacing. Cold patch is for small repairs and potholes. Recycled asphalt millings (RAP) can be used as a base layer or for rural driveways at lower cost. All three use the same 145 lbs/cu ft density for planning.
+
+5. **Adjust the waste factor** — leave at 10% for most machine-paved rectangular areas. Increase to 15–20% for hand-raked areas, irregular edges, or thin overlays where material spreads unevenly. The minimum is 5% (precision paving) and maximum is 20%.
+
+6. **Read your results** — tons is your ordering unit when calling an asphalt plant. The cost section shows material-only and installed price ranges. Use the installed figure for budgeting a contractor quote.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Asphalt tonnage is calculated using volume times density, then converted from pounds to tons.
+
+**Volume in cubic feet:**
+
+$$V = L \times W \times \frac{T}{12}$$
+
+**Weight in tons (with waste):**
+
+$$\text{Tons} = \frac{V \times 145 \times \left(1 + \frac{W_f}{100}\right)}{2000}$$
+
+**Volume in cubic yards:**
+
+$$V_{yd} = \frac{V \times \left(1 + \frac{W_f}{100}\right)}{27}$$
+
+Where:
+
+- **L** = area length in feet
+- **W** = area width in feet
+- **T** = asphalt thickness in inches (divided by 12 to convert to feet)
+- **145** = compacted hot-mix asphalt density in lbs/cu ft (NAPA standard)
+- **2000** = pounds per US short ton
+- **W_f** = waste factor as a percentage (e.g., 10 for 10%)
+- **27** = cubic feet per cubic yard
+
+**Source:** Density of 145 lbs/cu ft per **National Asphalt Pavement Association (NAPA)** — *Information Series 128: HMA Pavement Mix Type Selection Guide* and **Asphalt Institute** — *MS-2 Mix Design Methods*. Actual compacted density varies from 140–150 lbs/cu ft depending on mix design and aggregate type.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: Standard Residential Driveway
+
+A homeowner is paving a new driveway — 40 feet long, 12 feet wide, 3 inches of hot-mix asphalt — with 10% waste.
+
+**Step-by-step:**
+
+1. Convert thickness to feet: 3 in / 12 = **0.25 ft**
+2. Calculate base volume: 40 × 12 × 0.25 = **120 cu ft**
+3. Calculate base weight: 120 × 145 = **17,400 lbs**
+4. Convert to tons: 17,400 / 2,000 = **8.70 tons**
+5. Apply 10% waste: 8.70 × 1.10 = **9.57 tons**
+6. Volume with waste: 120 × 1.10 = **132 cu ft** = **4.89 cu yd**
+7. Area: 40 × 12 = **480 sq ft** = **53.33 sq yd**
+
+**Cost estimates:**
+- Material only (low): 9.57 × $80 = **$766**
+- Material only (high): 9.57 × $120 = **$1,148**
+- Installed (low): 480 × $3 = **$1,440**
+- Installed (high): 480 × $7 = **$3,360**
+
+**Interpretation:** At 9.57 tons, this is a standard single-truck delivery for most asphalt plants (minimum load is typically 2–3 tons). The material cost of $766–$1,148 is only part of the picture — the installed price of $1,440–$3,360 includes base grading, tack coat, paving, and compaction. For comparison, the same driveway in concrete would cost $2,880–$5,760 installed but last 30–50 years versus asphalt's 15–20 years with proper maintenance.
+
+{/* Section 10: Asphalt Thickness Guide */}
+## Asphalt Thickness Guide
+
+| Application | Recommended Thickness | Typical Area | Approximate Tons |
+|---|---|---|---|
+| Driveway (residential) | 2–3 inches | 40 × 12 ft | 6.4–9.6 |
+| Parking lot (light use) | 3–4 inches | 100 × 60 ft | 130.5–174.0 |
+| Parking lot (heavy use) | 4–6 inches | 100 × 60 ft | 174.0–261.0 |
+| Road overlay | 1.5–2 inches | varies | — |
+| Pathway / bike path | 2 inches | 100 × 8 ft | 9.3 |
+
+All figures shown with 10% waste. Thickness assumes a prepared aggregate base — not raw subgrade. Always consult a paving contractor for site-specific recommendations.
+
+{/* Section 11: Types of Asphalt */}
+## Types of Asphalt
+
+**Hot-Mix Asphalt (HMA)** is the standard material for driveways, parking lots, and roads. It is mixed at 300°F and must be placed while hot, which is why you need a paving crew with a spreader and roller. HMA produces the smoothest, most durable surface and is the only option for high-traffic areas. Cost: $80–$120 per ton delivered, $3–$7 per square foot installed.
+
+**Cold Patch** is a pre-mixed asphalt product sold in bags at hardware stores. It does not require heating and can be applied by hand into potholes and small repair areas. Cold patch is a temporary fix — it does not bond as strongly as HMA and will need replacement within 1–3 years. It is useful for emergency pothole repairs in winter when hot plants are closed. Cost: $10–$20 per 50-lb bag.
+
+**Recycled Asphalt (RAP)** is milled asphalt from old roads and parking lots, crushed and re-sold as aggregate. It compacts into a semi-hard surface and costs significantly less than new HMA. RAP works well for rural driveways, farm roads, and as a base layer under new HMA. It will not produce a smooth sealed surface like new hot-mix. Cost: $10–$25 per ton delivered.
+
+{/* Section 12: Asphalt vs Concrete Comparison */}
+## Asphalt vs. Concrete: Driveway Comparison
+
+| Factor | Asphalt | Concrete |
+|---|---|---|
+| Installed cost (per sq ft) | $3–$7 | $6–$12 |
+| Lifespan | 15–20 years | 30–50 years |
+| Maintenance | Sealcoat every 3–5 years ($0.15–$0.25/sq ft) | Minimal (seal joints, occasional crack repair) |
+| Cure time before driving | 24–48 hours | 7 days |
+| Installation time | 1–2 days | 3–7 days |
+| Climate suitability | Flexes with freeze-thaw; softens in extreme heat | Cracks in freeze-thaw; stable in heat |
+| Repair | Easy — patch, overlay, or resurface | Harder — must remove and repour sections |
+| Appearance | Black/dark gray, utilitarian | Light gray, more design options |
+| Resale value impact | Moderate | Higher |
+
+**Bottom line:** Asphalt costs 40–60% less upfront than concrete and installs faster. Concrete lasts 2–3 times longer and requires less maintenance. For cold climates with frequent freeze-thaw cycles, asphalt flexes better. For hot climates, concrete stays more stable. Most homeowners choose asphalt for budget and concrete for longevity.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **flat rectangular area** on a prepared aggregate base. For irregular or curved areas, calculate each rectangular section separately and add the tonnage.
+- **Density of 145 lbs/cu ft** is the compacted planning figure for standard HMA. Actual density varies from 140–150 lbs/cu ft depending on mix design, aggregate type, and compaction level. Your paving contractor's actual tonnage may differ by 3–5%.
+- **Cost estimates** reflect 2025–2026 U.S. national averages. Asphalt prices fluctuate with crude oil prices and can vary 20–30% by region. Material cost is significantly higher in rural areas with long haul distances from the plant.
+- The calculator does not account for **base preparation** (gravel subbase, grading, compaction), **drainage**, **edging**, or **removal of existing pavement** — these are additional costs typically included in the installed price range.
+- **Waste factor** is clamped to 5–20%. Projects with extensive hand-raking or tight edges near structures may exceed 20% waste in practice.
+- For thin overlays under 2 inches, actual material usage can vary more widely because small thickness variations represent a larger percentage of total volume.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many tons of asphalt do I need for a driveway?
+
+A typical single-car driveway (40 × 12 feet, 3 inches thick) needs approximately 9.57 tons of hot-mix asphalt including 10% waste. A two-car driveway (40 × 24 feet, 3 inches thick) needs roughly 19.14 tons. Tonnage scales linearly with area and thickness — doubling the width doubles the tons. Always order by the ton when calling an asphalt plant; they price and weigh by the ton, not by volume.
+
+### How thick should asphalt be for a driveway?
+
+Residential driveways should have 2–3 inches of hot-mix asphalt over a compacted aggregate base of 6–8 inches. The Asphalt Institute recommends a minimum of 2 inches for light residential use and 3 inches for driveways that will support heavier vehicles like trucks or RVs. Going from 2 to 3 inches increases material cost by 50% but significantly extends pavement life.
+
+### How much does an asphalt driveway cost?
+
+An asphalt driveway costs $3–$7 per square foot installed, or $1,440–$3,360 for a standard 480-square-foot single-car driveway. Material alone runs $80–$120 per ton. The total installed price includes base preparation, tack coat application, HMA paving, and compaction. Costs vary by region, oil prices, and proximity to an asphalt plant. Rural areas typically pay 15–30% more due to longer haul distances.
+
+### How long does an asphalt driveway last?
+
+A properly installed and maintained asphalt driveway lasts 15–20 years. Maintenance means sealcoating every 3–5 years ($0.15–$0.25 per square foot), filling cracks promptly, and ensuring proper drainage. Without sealcoating, oxidation and UV exposure degrade the binder, reducing lifespan to 10–12 years. Climate matters: freeze-thaw cycles accelerate cracking, while extreme heat can cause softening and rutting.
+
+### What is the difference between hot-mix and cold-patch asphalt?
+
+Hot-mix asphalt (HMA) is produced at 300°F, delivered in a heated truck, and placed with a paving machine and roller. It creates a smooth, durable, permanent surface. Cold patch is a bagged product available at hardware stores that requires no heating — you shovel it into potholes and tamp it down. Cold patch is a temporary repair lasting 1–3 years; HMA is a permanent installation lasting 15–20 years.
+
+### When is the best time to pave an asphalt driveway?
+
+The best time to pave is late spring through early fall when ambient temperatures are consistently above 50°F. Hot-mix asphalt must be compacted while still hot; cold weather causes it to cool too quickly, resulting in poor compaction and reduced density. Most asphalt plants close or reduce operations from November through March in northern climates. Paving in warm weather also gives the asphalt time to cure before winter freeze-thaw cycles begin.
+
+### How much does asphalt weigh per cubic foot?
+
+Compacted hot-mix asphalt weighs approximately 145 pounds per cubic foot, or about 3,915 pounds per cubic yard. This is the standard planning density used by the National Asphalt Pavement Association (NAPA). Loose or uncompacted asphalt weighs less — around 110–120 lbs/cu ft. The 145 lbs/cu ft figure assumes the material has been properly compacted to 92–96% of maximum theoretical density.
+
+### Can I install asphalt myself?
+
+Hot-mix asphalt is not a viable DIY project. It requires a paving machine (spreader), a vibratory roller compactor, and a crew of 3–5 people working quickly before the material cools below compaction temperature (approximately 185°F). The equipment alone costs $500–$1,000+ per day to rent. Cold patch is DIY-friendly for small pothole repairs, and recycled asphalt millings can be spread by hand for informal driveways or paths, but neither produces the smooth sealed surface of a professionally paved HMA driveway.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard rectangular prism volume formula (V = L x W x T) to compute asphalt volume, then multiplies by the compacted density of 145 lbs/cu ft and divides by 2,000 to convert to US short tons. The 145 lbs/cu ft density figure follows the **National Asphalt Pavement Association (NAPA)** — *Information Series 128: HMA Pavement Mix Type Selection Guide* and the **Asphalt Institute** — *MS-2 Mix Design Methods* (7th Edition). Actual compacted densities range from 140–150 lbs/cu ft depending on mix design and aggregate; 145 is the standard planning value used by contractors and engineers. Material pricing of $80–$120 per ton and installed pricing of $3–$7 per square foot reflect 2025–2026 U.S. national averages from **HomeAdvisor** and **Angi**. Thickness recommendations follow **Asphalt Institute** guidelines for residential and commercial applications. The waste factor range of 5–20% aligns with NAPA best practices for machine-paved and hand-raked applications.
+
+{/* Section 17: Disclaimer — auto-rendered */}

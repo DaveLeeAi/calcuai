@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 147 modules, 149 formula IDs
+ * 158 modules, 160 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -27,20 +27,26 @@ import { FORMULA_REGISTRY as business_roi } from './business/roi';
 import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary-to-hourly';
 
 // Construction
+import { FORMULA_REGISTRY as construction_asphalt } from './construction/asphalt';
 import { FORMULA_REGISTRY as construction_board_foot } from './construction/board-foot';
 import { FORMULA_REGISTRY as construction_brick } from './construction/brick';
 import { FORMULA_REGISTRY as construction_carpet } from './construction/carpet';
+import { FORMULA_REGISTRY as construction_concrete_block } from './construction/concrete-block';
 import { FORMULA_REGISTRY as construction_concrete_footing } from './construction/concrete-footing';
 import { FORMULA_REGISTRY as construction_concrete_slab } from './construction/concrete-slab';
 import { FORMULA_REGISTRY as construction_concrete_volume } from './construction/concrete-volume';
 import { FORMULA_REGISTRY as construction_cubic_yard } from './construction/cubic-yard';
 import { FORMULA_REGISTRY as construction_deck } from './construction/deck';
+import { FORMULA_REGISTRY as construction_driveway_cost } from './construction/driveway-cost';
 import { FORMULA_REGISTRY as construction_drywall } from './construction/drywall';
 import { FORMULA_REGISTRY as construction_fence } from './construction/fence';
 import { FORMULA_REGISTRY as construction_flooring } from './construction/flooring';
+import { FORMULA_REGISTRY as construction_hvac_size } from './construction/hvac-size';
 import { FORMULA_REGISTRY as construction_insulation } from './construction/insulation';
+import { FORMULA_REGISTRY as construction_metal_roofing } from './construction/metal-roofing';
 import { FORMULA_REGISTRY as construction_paint_coverage } from './construction/paint-coverage';
 import { FORMULA_REGISTRY as construction_paver } from './construction/paver';
+import { FORMULA_REGISTRY as construction_pool_volume } from './construction/pool-volume';
 import { FORMULA_REGISTRY as construction_rafter_length } from './construction/rafter-length';
 import { FORMULA_REGISTRY as construction_retaining_wall } from './construction/retaining-wall';
 import { FORMULA_REGISTRY as construction_roof_pitch } from './construction/roof-pitch';
@@ -52,8 +58,10 @@ import { FORMULA_REGISTRY as construction_tile } from './construction/tile';
 import { FORMULA_REGISTRY as construction_topsoil } from './construction/topsoil';
 import { FORMULA_REGISTRY as construction_volume_material } from './construction/volume-material';
 import { FORMULA_REGISTRY as construction_wallpaper } from './construction/wallpaper';
+import { FORMULA_REGISTRY as construction_wire_size } from './construction/wire-size';
 
 // Conversion
+import { FORMULA_REGISTRY as conversion_square_meter } from './conversion/square-meter';
 import { FORMULA_REGISTRY as conversion_unit_convert } from './conversion/unit-convert';
 
 // Everyday
@@ -65,6 +73,7 @@ import { FORMULA_REGISTRY as everyday_fuel_cost } from './everyday/fuel-cost';
 import { FORMULA_REGISTRY as everyday_gas_mileage } from './everyday/gas-mileage';
 import { FORMULA_REGISTRY as everyday_gpa } from './everyday/gpa';
 import { FORMULA_REGISTRY as everyday_grade } from './everyday/grade';
+import { FORMULA_REGISTRY as everyday_solar_panel } from './everyday/solar-panel';
 import { FORMULA_REGISTRY as everyday_test_grade } from './everyday/test-grade';
 import { FORMULA_REGISTRY as everyday_time_math } from './everyday/time-math';
 import { FORMULA_REGISTRY as everyday_timezone } from './everyday/timezone';
@@ -92,11 +101,13 @@ import { FORMULA_REGISTRY as finance_debt_snowball } from './finance/debt-snowba
 import { FORMULA_REGISTRY as finance_debt_to_income } from './finance/debt-to-income';
 import { FORMULA_REGISTRY as finance_down_payment } from './finance/down-payment';
 import { FORMULA_REGISTRY as finance_emergency_fund } from './finance/emergency-fund';
+import { FORMULA_REGISTRY as finance_estimated_tax } from './finance/estimated-tax';
 import { FORMULA_REGISTRY as finance_fire_number } from './finance/fire-number';
 import { FORMULA_REGISTRY as finance_future_value } from './finance/future-value';
 import { FORMULA_REGISTRY as finance_heloc } from './finance/heloc';
 import { FORMULA_REGISTRY as finance_home_affordability } from './finance/home-affordability';
 import { FORMULA_REGISTRY as finance_home_equity } from './finance/home-equity';
+import { FORMULA_REGISTRY as finance_home_insurance } from './finance/home-insurance';
 import { FORMULA_REGISTRY as finance_income_tax } from './finance/income-tax';
 import { FORMULA_REGISTRY as finance_inflation } from './finance/inflation';
 import { FORMULA_REGISTRY as finance_interest_rate_solve } from './finance/interest-rate-solve';
@@ -190,20 +201,26 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_roi,
   ...business_salary_to_hourly,
   // Construction
+  ...construction_asphalt,
   ...construction_board_foot,
   ...construction_brick,
   ...construction_carpet,
+  ...construction_concrete_block,
   ...construction_concrete_footing,
   ...construction_concrete_slab,
   ...construction_concrete_volume,
   ...construction_cubic_yard,
   ...construction_deck,
+  ...construction_driveway_cost,
   ...construction_drywall,
   ...construction_fence,
   ...construction_flooring,
+  ...construction_hvac_size,
   ...construction_insulation,
+  ...construction_metal_roofing,
   ...construction_paint_coverage,
   ...construction_paver,
+  ...construction_pool_volume,
   ...construction_rafter_length,
   ...construction_retaining_wall,
   ...construction_roof_pitch,
@@ -215,7 +232,9 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...construction_topsoil,
   ...construction_volume_material,
   ...construction_wallpaper,
+  ...construction_wire_size,
   // Conversion
+  ...conversion_square_meter,
   ...conversion_unit_convert,
   // Everyday
   ...everyday_date_diff,
@@ -226,6 +245,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...everyday_gas_mileage,
   ...everyday_gpa,
   ...everyday_grade,
+  ...everyday_solar_panel,
   ...everyday_test_grade,
   ...everyday_time_math,
   ...everyday_timezone,
@@ -252,11 +272,13 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_debt_to_income,
   ...finance_down_payment,
   ...finance_emergency_fund,
+  ...finance_estimated_tax,
   ...finance_fire_number,
   ...finance_future_value,
   ...finance_heloc,
   ...finance_home_affordability,
   ...finance_home_equity,
+  ...finance_home_insurance,
   ...finance_income_tax,
   ...finance_inflation,
   ...finance_interest_rate_solve,

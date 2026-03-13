@@ -1,0 +1,168 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+For a $300,000 home with standard HO-3 coverage, a $1,000 deductible, and good credit, the estimated annual homeowners insurance premium is $1,050 — or $87.50 per month. Florida homeowners pay the most at roughly $2,400/year ($8.00 per $1,000 of coverage), while states like Minnesota average $1,050/year ($3.50 per $1,000). Your actual premium depends on your state, deductible, coverage level, claims history, and credit-based insurance score. This calculator uses 2025 average state rates from NAIC and Insurance Information Institute data to estimate your cost.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Estimate Shows */}
+## What Your Home Insurance Estimate Shows
+
+Your result includes an **estimated annual premium** based on five pricing factors that every insurer considers. The starting point is your state's average rate per $1,000 of dwelling coverage — this varies dramatically. Texas averages $5.50 per $1,000 due to hailstorm and wind exposure, while Minnesota averages $3.50 per $1,000 thanks to lower catastrophe risk. On a $300,000 home, that difference alone is $600/year.
+
+The **deductible adjustment** reflects the insurance pricing principle that higher deductibles lower premiums. Choosing a $5,000 deductible instead of $1,000 reduces your annual premium by approximately 28% — on a $1,050 base premium, that saves $294/year. However, you accept $4,000 more out-of-pocket risk per claim. Most insurance advisors recommend a deductible you could comfortably pay from an emergency fund.
+
+The **coverage type** determines what perils are covered. HO-1 (basic) covers only named perils like fire and lightning — it costs 20% less but leaves significant gaps. HO-3 (standard) is the most common policy, covering all perils except those specifically excluded. HO-5 (premium) provides open-peril coverage on both dwelling and personal property — it costs 30% more but offers the broadest protection.
+
+Your **claims history** and **credit-based insurance score** are the two factors most within your control. A single claim in the past 5 years increases premiums by about 20%, while two or more claims add 45%. Credit score tiers range from an excellent-credit discount of 15% to a poor-credit surcharge of 35%.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your home value** — use the dwelling replacement cost, not the market value. Replacement cost is what it would cost to rebuild your home at current construction prices. It is typically 80–100% of market value but excludes land. Your insurer or a local contractor can provide an estimate.
+
+2. **Select your state** — the calculator includes rates for the 10 most expensive or notable states. If your state is not listed, select "Other / National Average" which uses the $3.50 per $1,000 national average rate.
+
+3. **Choose your deductible** — this is your out-of-pocket cost before insurance pays. Higher deductibles mean lower premiums. The most common choice is $1,000 or $2,500.
+
+4. **Select your coverage type** — HO-3 (standard) is the default for most homeowners. Choose HO-5 (premium) for broader personal property coverage, or HO-1 (basic) for minimum coverage.
+
+5. **Enter your claims history** — the number of insurance claims you have filed in the past 5 years. Claims-free discounts are significant, so even one claim affects pricing.
+
+6. **Select your credit score range** — insurers in most states use credit-based insurance scores to set premiums. Better credit consistently results in lower premiums.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Step 1 — Base premium by state rate:**
+
+$$\text{Base Premium} = \frac{\text{Home Value}}{1{,}000} \times \text{State Rate per \$1,000}$$
+
+Example: $300,000 home in Texas → 300 × $5.50 = **$1,650 base premium**.
+
+**Step 2 — Deductible adjustment:**
+
+$$\text{After Deductible} = \text{Base Premium} \times \text{Deductible Multiplier}$$
+
+| Deductible | Multiplier | Effect |
+|------------|-----------|--------|
+| $500 | 1.15× | +15% surcharge |
+| $1,000 | 1.00× | Baseline |
+| $2,000 | 0.87× | −13% discount |
+| $2,500 | 0.82× | −18% discount |
+| $5,000 | 0.72× | −28% discount |
+
+**Step 3 — Coverage type adjustment:**
+
+$$\text{After Coverage} = \text{After Deductible} \times \text{Coverage Multiplier}$$
+
+| Coverage | Multiplier | Policy |
+|----------|-----------|--------|
+| Basic | 0.80× | HO-1 |
+| Standard | 1.00× | HO-3 |
+| Premium | 1.30× | HO-5 |
+
+**Step 4 — Claims and credit adjustments:**
+
+$$\text{Annual Premium} = \text{After Coverage} \times \text{Claims Mult} \times \text{Credit Mult}$$
+
+**Source:** NAIC — Homeowners Insurance Report; Insurance Information Institute (III) — Facts + Statistics; Bankrate — Average Homeowners Insurance Rates by State (2025).
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: $350,000 Home in Texas, $2,000 Deductible, 1 Claim
+
+**Inputs:**
+- Home value: $350,000
+- State: Texas (rate: $5.50 per $1,000)
+- Deductible: $2,000 (multiplier: 0.87)
+- Coverage type: Standard / HO-3 (multiplier: 1.00)
+- Claims history: 1 claim (multiplier: 1.20)
+- Credit score: Good (multiplier: 1.00)
+
+**Step-by-step:**
+
+1. **Base premium:** $350,000 / 1,000 × $5.50 = **$1,925.00**
+2. **Deductible adjustment:** $1,925.00 × 0.87 = **$1,674.75**
+3. **Coverage adjustment:** $1,674.75 × 1.00 = **$1,674.75**
+4. **Claims adjustment:** $1,674.75 × 1.20 = **$2,009.70**
+5. **Credit adjustment:** $2,009.70 × 1.00 = **$2,009.70**
+6. **Monthly cost:** $2,009.70 / 12 = **$167.48**
+
+**Interpretation:** The single claim adds $334.95/year (20%) to what would otherwise be a $1,674.75 premium. If you maintain a claims-free record for 3–5 years, that surcharge typically drops off. Raising the deductible from $1,000 to $2,000 saves $250.25/year — a worthwhile trade if you can cover $2,000 out of pocket in an emergency.
+
+## Home Insurance Cost by State (2025 Averages)
+
+| State | Rate per $1,000 | $200k Home | $300k Home | $400k Home |
+|-------|-----------------|-----------|-----------|-----------|
+| Florida | $8.00 | $1,600 | $2,400 | $3,200 |
+| Louisiana | $7.50 | $1,500 | $2,250 | $3,000 |
+| Oklahoma | $6.00 | $1,200 | $1,800 | $2,400 |
+| Kansas | $5.80 | $1,160 | $1,740 | $2,320 |
+| Texas | $5.50 | $1,100 | $1,650 | $2,200 |
+| Nebraska | $5.00 | $1,000 | $1,500 | $2,000 |
+| Colorado | $4.50 | $900 | $1,350 | $1,800 |
+| Connecticut | $3.80 | $760 | $1,140 | $1,520 |
+| Minnesota | $3.50 | $700 | $1,050 | $1,400 |
+| National Avg | $3.50 | $700 | $1,050 | $1,400 |
+
+These are base rates with a $1,000 deductible, standard HO-3 coverage, no claims, and good credit. Your actual premium will differ based on the adjustments this calculator applies.
+
+## Coverage Types Explained: HO-1 vs HO-3 vs HO-5
+
+**HO-1 (Basic Form)** covers only named perils: fire, lightning, windstorm, hail, explosion, riot, aircraft, vehicle damage, smoke, vandalism, theft, and volcanic eruption. It does not cover water damage, falling objects, or weight of ice/snow. HO-1 is the cheapest option but rarely recommended — most mortgage lenders require at least HO-3.
+
+**HO-3 (Special Form)** is the standard homeowners policy. It covers your dwelling on an open-peril basis (everything except specific exclusions like floods and earthquakes) and your personal property on a named-peril basis. Roughly 80% of U.S. homeowners carry HO-3 policies. It balances coverage breadth with affordability.
+
+**HO-5 (Comprehensive Form)** provides open-peril coverage on both your dwelling and personal property. It covers accidental damage, mysterious disappearance, and other losses that HO-3 excludes for personal property. HO-5 costs approximately 30% more than HO-3 but is worth considering if you own high-value electronics, jewelry, or collectibles.
+
+## 5 Ways to Lower Your Home Insurance Premium
+
+1. **Raise your deductible** — increasing from $1,000 to $2,500 saves roughly 18% annually. On a $1,050 policy, that is $189/year in savings for $1,500 more risk per claim.
+
+2. **Bundle with auto insurance** — most insurers offer 10–25% multi-policy discounts. On a $1,050 home policy, bundling could save $105–$262/year.
+
+3. **Improve your credit score** — moving from "fair" to "excellent" credit changes your multiplier from 1.15× to 0.85×, a 26% premium reduction on the same home.
+
+4. **Install protective devices** — deadbolt locks, smoke detectors, burglar alarms, and water leak sensors can earn 5–15% discounts depending on the insurer.
+
+5. **Maintain a claims-free record** — every filed claim increases your premium by 20–45% for 3–5 years. Before filing a small claim, compare the claim amount to the potential premium increase. A $1,500 claim is rarely worth a $300+/year surcharge.
+
+## Frequently Asked Questions
+
+### How much does homeowners insurance cost per month?
+The national average homeowners insurance premium is $1,050 per year, or $87.50 per month, for a $300,000 home with standard HO-3 coverage and a $1,000 deductible. However, costs vary widely by state — from $700/year in Minnesota to $2,400/year in Florida. Your deductible, coverage level, claims history, and credit score also affect your rate.
+
+### What does homeowners insurance cover?
+A standard HO-3 homeowners policy covers your dwelling against all perils except specific exclusions (floods, earthquakes, normal wear). It covers personal property against 16 named perils including fire, theft, and windstorm. It also includes liability coverage ($100,000 standard) if someone is injured on your property and medical payments coverage ($5,000 standard) for minor injuries regardless of fault.
+
+### How much homeowners insurance do I need?
+You need enough dwelling coverage to rebuild your home at current construction costs — not its market value. A common guideline is $100–$200 per square foot for reconstruction. Personal property coverage is typically 50% of dwelling coverage. Most experts recommend at least $100,000 in liability coverage, with $300,000–$500,000 recommended if you have significant assets.
+
+### Does homeowners insurance cover flooding?
+No. Standard homeowners insurance policies (HO-1, HO-3, HO-5) explicitly exclude flood damage. You need a separate flood insurance policy through the National Flood Insurance Program (NFIP) or a private flood insurer. NFIP policies cost an average of $700/year. If your home is in a FEMA-designated flood zone, your mortgage lender will require flood insurance.
+
+### How does my credit score affect home insurance rates?
+In 47 states (all except California, Maryland, and Massachusetts), insurers use credit-based insurance scores to set premiums. Excellent credit (750+) can reduce your premium by 15% compared to good credit, while poor credit (below 580) can increase it by 35%. The difference between excellent and poor credit on a $1,050 base premium is $525/year. Improving your credit score is one of the most effective ways to lower your insurance cost.
+
+### What is the difference between replacement cost and actual cash value?
+Replacement cost pays to rebuild or replace damaged property at current prices with no deduction for depreciation. Actual cash value (ACV) pays the replacement cost minus depreciation — so a 10-year-old roof with a 20-year lifespan would be valued at roughly 50% of replacement. HO-3 policies typically cover the dwelling at replacement cost and personal property at ACV unless you upgrade to replacement cost on contents.
+
+### Should I file a small homeowners insurance claim?
+Generally, no. Filing a claim of $1,000–$2,000 can increase your premium by 20% ($210/year on a $1,050 policy) for 3–5 years — potentially $630–$1,050 in total surcharges. A good rule: only file claims that exceed your deductible by at least $2,000–$3,000. For smaller losses, pay out of pocket to protect your claims-free discount.
+
+### How often should I review my homeowners insurance?
+Review your policy annually and after any major home improvement. Construction costs have risen 30–40% since 2020, meaning many homeowners are underinsured. If you have added a room, renovated a kitchen, or replaced a roof, update your dwelling coverage amount. Also review after paying off your mortgage — you may want to adjust your deductible or coverage type when a lender no longer dictates minimums.
+
+## Sources & Methodology
+
+- National Association of Insurance Commissioners (NAIC). "Homeowners Insurance Report." 2023 Data (published 2024).
+- Insurance Information Institute (III). "Facts + Statistics: Homeowners and Renters Insurance." Updated 2025.
+- Bankrate. "Average Homeowners Insurance Rates by State." January 2025.
+- Federal Emergency Management Agency (FEMA). "National Flood Insurance Program." 2025 Rate Tables.
+- Consumer Financial Protection Bureau (CFPB). "What Is Homeowner's Insurance?" Updated 2024.

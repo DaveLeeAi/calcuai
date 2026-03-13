@@ -1,0 +1,169 @@
+{
+  "id": "asphalt-calculator",
+  "title": "Asphalt Calculator",
+  "slug": "asphalt-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "asphalt calculator",
+  "metaTitle": "Asphalt Calculator | Tons, Volume & Cost Estimate",
+  "metaDescription": "Calculate asphalt tonnage for driveways, parking lots, and roads. Get tons needed, cubic yards, and installed cost estimates. Free asphalt calculator.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 40,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Driveway/area length"
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Driveway/area width"
+    },
+    {
+      "id": "thickness",
+      "label": "Thickness",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 3,
+      "min": 1,
+      "max": 12,
+      "step": 0.5,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Asphalt thickness — 2–3\" for driveways, 3–4\" for parking lots, 4–6\" for heavy traffic"
+    },
+    {
+      "id": "asphaltType",
+      "label": "Asphalt Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "hot-mix",
+      "options": [
+        { "value": "hot-mix", "label": "Hot-Mix Asphalt (HMA)" },
+        { "value": "cold-patch", "label": "Cold Patch" },
+        { "value": "recycled", "label": "Recycled Asphalt (RAP)" }
+      ],
+      "helpText": "Hot-mix is standard for new paving; cold-patch for repairs; recycled for eco-friendly base"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 20,
+      "helpText": "Extra material for waste/compaction — 10% recommended for most projects"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "tons",
+      "label": "Asphalt Needed (tons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicYards",
+      "label": "Volume (cubic yards)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "squareFeet",
+      "label": "Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "squareYards",
+      "label": "Area (sq yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "costEstimate",
+      "label": "Cost Estimate",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "tonsWithoutWaste",
+      "label": "Tons Before Waste",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    }
+  ],
+  "formula": "asphalt",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-slab-calculator",
+    "concrete-calculator",
+    "driveway-cost-calculator",
+    "square-footage-calculator",
+    "gravel-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "National Asphalt Pavement Association (NAPA) — Information Series 128; Asphalt Institute — MS-2 Mix Design Methods",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Hot-mix asphalt density of 145 lbs/cu ft per NAPA and Asphalt Institute standards. Cost data from HomeAdvisor/Angi 2025-2026 national averages.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "driveway-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

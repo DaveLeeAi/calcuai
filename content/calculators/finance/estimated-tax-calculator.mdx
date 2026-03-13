@@ -1,0 +1,189 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On $80,000 of self-employment income as a single filer, your estimated quarterly tax payment is $5,237 — that is $11,304 in self-employment tax plus $9,646 in federal income tax, totaling $20,948 for the year. If you have already made two quarterly payments of $5,000 each, your next payment drops to $5,474 for the remaining two quarters. This estimated tax calculator uses 2025 IRS brackets, the $15,000 standard deduction, and the 15.3% SE tax rate to compute your quarterly obligation — plus safe harbor thresholds and penalty risk assessment.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Estimate Shows */}
+## What Your Estimated Tax Payment Shows
+
+Your result starts with the **total tax liability** — the sum of federal income tax and self-employment tax (if applicable) for the full year. Self-employment tax is calculated as 15.3% of 92.35% of your SE income, which covers both the employer and employee shares of Social Security (12.4%) and Medicare (2.9%). The 92.35% adjustment simulates the employer-share deduction that W-2 workers receive automatically.
+
+The **quarterly payment** divides your remaining tax owed by the number of quarters left in the year. If you have already made payments or had W-2 taxes withheld, the calculator subtracts those amounts before dividing. For example, if your total tax is $20,948 and you have already paid $10,000, the remaining $10,948 is split across whichever quarters remain.
+
+The **safe harbor amount** shows 90% of your current-year tax liability divided by 4. Paying at least this amount each quarter — or 100% of your prior-year tax divided by 4 (110% if AGI exceeded $150,000) — protects you from underpayment penalties regardless of your final tax bill. The safe harbor is the single most important number for penalty avoidance.
+
+The **penalty risk indicator** flags whether your remaining balance exceeds the $1,000 IRS threshold. If you owe more than $1,000 at filing time and did not meet safe harbor, the IRS charges an underpayment penalty calculated at the federal short-term rate plus 3 percentage points, compounded daily on each missed quarterly amount.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your expected annual income** — include all income sources: 1099 freelance payments, investment income, rental income, and any other non-wage income. If you also have a W-2 job, include the W-2 wages here too.
+
+2. **Select your income type** — choose "Self-Employment" if all income is 1099/freelance, "Investment" if it is dividends, capital gains, or rental income with no SE tax, or "Mixed" if you have both SE and investment income.
+
+3. **Select your filing status** — this determines your standard deduction and tax bracket thresholds. Married Filing Jointly gets the largest deduction ($30,000) and widest low-rate brackets.
+
+4. **Enter W-2 taxes withheld** — if you have a W-2 job, enter the total federal income tax your employer withholds for the year. This reduces your estimated payments dollar for dollar.
+
+5. **Enter self-employment income** — the portion of your income subject to SE tax. If all income is self-employment, this equals your annual income. For mixed income, enter only the 1099/freelance portion.
+
+6. **Enter quarters paid and amount** — how many quarterly payments you have already made and the total dollar amount. The calculator adjusts your per-quarter obligation for the remaining period.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Step 1 — Determine deduction:**
+
+$$\text{Deduction} = \text{Standard Deduction (by filing status) or Itemized Amount}$$
+
+| Filing Status | 2025 Standard Deduction |
+|---------------|------------------------|
+| Single | $15,000 |
+| Married Filing Jointly | $30,000 |
+| Married Filing Separately | $15,000 |
+| Head of Household | $22,500 |
+
+**Step 2 — Self-employment tax (if applicable):**
+
+$$\text{SE Tax} = \text{SE Income} \times 0.9235 \times 0.153$$
+$$\text{SE Tax Deduction} = \text{SE Tax} \times 0.50$$
+
+**Step 3 — Taxable income:**
+
+$$\text{Taxable Income} = \text{Annual Income} - \text{Deduction} - \text{SE Tax Deduction}$$
+
+**Step 4 — Federal income tax (2025 progressive brackets):**
+
+| Bracket (Single) | Rate |
+|-------------------|------|
+| $0 – $11,925 | 10% |
+| $11,925 – $48,475 | 12% |
+| $48,475 – $103,350 | 22% |
+| $103,350 – $197,300 | 24% |
+| $197,300 – $250,525 | 32% |
+| $250,525 – $626,350 | 35% |
+| $626,350+ | 37% |
+
+**Step 5 — Total tax and quarterly payment:**
+
+$$\text{Total Tax} = \text{Federal Income Tax} + \text{SE Tax}$$
+$$\text{Total Owed} = \text{Total Tax} - \text{Withheld} - \text{Paid}$$
+$$\text{Quarterly Payment} = \max\!\left(0,\ \frac{\text{Total Owed}}{4 - \text{Quarters Paid}}\right)$$
+
+**Step 6 — Safe harbor (90% current year):**
+
+$$\text{Safe Harbor} = \frac{\text{Total Tax} \times 0.90}{4}$$
+
+**Source:** IRS Form 1040-ES — Estimated Tax for Individuals (2025); IRS Publication 505 — Tax Withholding and Estimated Tax; IRS Revenue Procedure 2024-40 (2025 bracket adjustments).
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: $100,000 Freelance Income, Single Filer
+
+**Inputs:**
+- Annual income: $100,000
+- Income type: Self-employment
+- Filing status: Single
+- W-2 taxes withheld: $0
+- Self-employment income: $100,000
+- Quarters paid: 0
+- Amount paid: $0
+
+**Step-by-step:**
+
+1. **SE tax:** $100,000 × 0.9235 × 0.153 = **$14,129.56**
+2. **SE tax deduction:** $14,129.56 × 0.50 = **$7,064.78**
+3. **Taxable income:** $100,000 − $15,000 − $7,064.78 = **$77,935.22**
+4. **Federal income tax:** 10% on $11,925 + 12% on $36,550 + 22% on $29,460.22 = $1,192.50 + $4,386.00 + $6,481.25 = **$12,059.75**
+5. **Total tax:** $14,129.56 + $12,059.75 = **$26,189.31**
+6. **Quarterly payment:** $26,189.31 / 4 = **$6,547.33**
+7. **Safe harbor (90%):** $26,189.31 × 0.90 / 4 = **$5,892.60**
+8. **Effective rate:** $26,189.31 / $100,000 = **26.19%**
+
+**Interpretation:** A freelancer earning $100,000 owes $26,189 in combined federal taxes — roughly $6,547 per quarter. The SE tax component ($14,130) exceeds the income tax ($12,060) at this income level. Paying the safe harbor amount of $5,893 per quarter guarantees no underpayment penalty even if your actual income turns out higher. Set aside 26–27% of every payment you receive into a dedicated tax savings account.
+
+## Quarterly Due Dates for 2025
+
+| Quarter | Income Period | Due Date | What Happens If Late |
+|---------|--------------|----------|---------------------|
+| Q1 | January 1 – March 31 | April 15, 2025 | Penalty accrues from April 16 |
+| Q2 | April 1 – May 31 | June 16, 2025 | Penalty accrues from June 17 |
+| Q3 | June 1 – August 31 | September 15, 2025 | Penalty accrues from September 16 |
+| Q4 | September 1 – December 31 | January 15, 2026 | Penalty accrues from January 16 |
+
+If a due date falls on a weekend or federal holiday, the deadline shifts to the next business day. You can also avoid the Q4 payment entirely by filing your return and paying any balance by January 31.
+
+## Safe Harbor Rules: How to Avoid Penalties
+
+The IRS waives underpayment penalties if you meet either safe harbor threshold:
+
+**Option A — 90% of current-year tax:** Pay at least 90% of your final tax liability through withholding and estimated payments. On a $26,189 total tax bill, that means paying at least $23,570 during the year.
+
+**Option B — 100% of prior-year tax:** Pay at least 100% of your prior-year total tax liability (110% if your AGI exceeded $150,000). This is the safer option if your income fluctuates — you know last year's tax amount with certainty.
+
+Most tax advisors recommend the prior-year method for freelancers with variable income. If your income is growing rapidly, the current-year method may result in lower quarterly payments.
+
+## Who Needs to Pay Estimated Taxes?
+
+You generally must make quarterly estimated tax payments if you expect to owe $1,000 or more when you file your return and your withholding will not cover the liability. This includes:
+
+- **Freelancers and 1099 contractors** — no employer withholds taxes on your behalf
+- **Self-employed business owners** — sole proprietors, single-member LLCs, and partners
+- **Investors** — with significant dividend, interest, or capital gains income not subject to withholding
+- **Rental property owners** — net rental income is not subject to payroll withholding
+- **Retirees** — with pension or IRA distributions where withholding is insufficient
+- **Gig workers** — rideshare drivers, delivery couriers, marketplace sellers
+
+If you have a W-2 job that withholds enough to cover your total tax liability (including side income), you may not need to make estimated payments. Use this calculator to check.
+
+## Penalty Avoidance: 4 Practical Steps
+
+1. **Calculate early** — run this calculator in January with your best income estimate. Adjust quarterly as actual income becomes clearer.
+
+2. **Pay the safe harbor amount** — if unsure, pay 100% of last year's total tax divided by 4. This eliminates penalty risk regardless of income changes.
+
+3. **Increase W-2 withholding** — if you have both W-2 and 1099 income, submit a new W-4 to your employer requesting additional withholding. This is often simpler than mailing quarterly checks.
+
+4. **Use IRS Direct Pay or EFTPS** — pay quarterly estimates electronically at irs.gov/payments. Schedule payments in advance so you never miss a deadline. Keep confirmation numbers as proof of payment.
+
+## Frequently Asked Questions
+
+### How much should I pay in estimated taxes each quarter?
+Divide your total expected tax liability for the year by four. For an $80,000 freelancer filing as single, the quarterly payment is approximately $5,237. If you have already made payments or had W-2 taxes withheld, subtract those amounts first and divide the remainder by the quarters left. To be safe, pay at least 100% of your prior-year tax liability divided by four.
+
+### What happens if I miss a quarterly estimated tax payment?
+The IRS charges an underpayment penalty on the missed amount from the due date until you pay it. The penalty rate is the federal short-term rate plus 3 percentage points, compounded daily. For 2025, this is approximately 8% annualized. Missing one $5,000 quarterly payment by 3 months costs roughly $100 in penalties. The penalty is calculated separately for each quarter.
+
+### Do I need to pay estimated taxes if I have a W-2 job?
+Only if your W-2 withholding does not cover your total tax liability. If you have side income (freelance, investment, rental) on top of your W-2 salary, check whether your withholding plus any estimated payments will be at least 90% of your total tax or 100% of last year's tax. If not, you need estimated payments on the difference.
+
+### What is the safe harbor rule for estimated taxes?
+The safe harbor protects you from underpayment penalties. You avoid penalties if your total payments (withholding + estimated) equal at least 90% of your current-year tax or 100% of your prior-year tax (110% if prior-year AGI exceeded $150,000). Most freelancers use the prior-year method because it provides certainty.
+
+### How do I calculate self-employment tax for estimated payments?
+Multiply your net self-employment income by 0.9235 (the IRS adjustment factor), then multiply by 0.153 (the combined 12.4% Social Security + 2.9% Medicare rate). On $80,000 of SE income, that is $80,000 x 0.9235 x 0.153 = $11,304. Half of this ($5,652) is deductible, reducing your taxable income for income tax purposes.
+
+### Can I pay all my estimated taxes at once instead of quarterly?
+Technically, yes — you can pay your full estimated liability with your Q1 payment in April. However, there is no benefit to paying early, and if you overpay, your money is tied up with the IRS interest-free until you file. Most financial advisors recommend paying quarterly to preserve cash flow and adjust estimates as your income becomes clearer.
+
+### What IRS form do I use for estimated tax payments?
+Use Form 1040-ES to calculate and submit estimated tax payments. You can pay online at irs.gov/payments via Direct Pay (free), EFTPS (free, requires enrollment), or credit/debit card (processing fee). You can also mail a check with the 1040-ES payment voucher. Keep all confirmation numbers and receipts.
+
+### How does filing status affect my estimated tax payments?
+Filing status determines your standard deduction and tax bracket thresholds. Married Filing Jointly gets a $30,000 standard deduction versus $15,000 for Single — on $80,000 income, that difference alone saves $3,300 in taxes. It also affects bracket widths: the 12% bracket for MFJ extends to $96,950 versus $48,475 for Single, keeping more income in lower brackets.
+
+## Sources & Methodology
+
+- Internal Revenue Service. "Form 1040-ES: Estimated Tax for Individuals." 2025.
+- Internal Revenue Service. "Publication 505: Tax Withholding and Estimated Tax." 2025 Edition.
+- Internal Revenue Service. "Revenue Procedure 2024-40: 2025 Tax Year Adjustments." October 2024.
+- Internal Revenue Service. "Topic No. 306 — Penalty for Underpayment of Estimated Tax." Updated January 2025.
+- Internal Revenue Service. "Publication 334 — Tax Guide for Small Business." 2025 Edition.
+- Social Security Administration. "Contribution and Benefit Base for 2025: $168,600." October 2024.

@@ -1,0 +1,219 @@
+{
+  "id": "concrete-block-calculator",
+  "title": "Concrete Block Calculator",
+  "slug": "concrete-block-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "concrete block calculator",
+  "metaTitle": "Concrete Block Calculator — How Many CMU Blocks Do You Need?",
+  "metaDescription": "Calculate how many concrete blocks (CMU) you need for any wall. Enter wall dimensions, block size, mortar joint width, and openings to get an accurate block count with mortar, fill concrete, and cost estimates.",
+  "inputs": [
+    {
+      "id": "wallLength",
+      "label": "Wall Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total length of the wall"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Height of the wall"
+    },
+    {
+      "id": "blockSize",
+      "label": "Block Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "8x8x16",
+      "options": [
+        { "value": "8x8x16", "label": "Standard CMU (8\" x 8\" x 16\")" },
+        { "value": "8x4x16", "label": "Half-Height CMU (8\" x 4\" x 16\")" },
+        { "value": "12x8x16", "label": "Thick Wall CMU (12\" x 8\" x 16\")" },
+        { "value": "6x8x16", "label": "Thin Wall CMU (6\" x 8\" x 16\")" }
+      ],
+      "helpText": "Height x Depth x Length in inches"
+    },
+    {
+      "id": "mortarJoint",
+      "label": "Mortar Joint Width",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0.375,
+      "min": 0.25,
+      "max": 0.5,
+      "step": 0.125,
+      "suffix": "in",
+      "helpText": "Mortar joint width in inches (standard: 3/8\")"
+    },
+    {
+      "id": "openings",
+      "label": "Number of Openings",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "helpText": "Number of window/door openings to deduct"
+    },
+    {
+      "id": "openingArea",
+      "label": "Average Opening Area",
+      "type": "number",
+      "required": false,
+      "defaultValue": 15,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "suffix": "sq ft",
+      "helpText": "Average area per opening in sq ft"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "number",
+      "required": false,
+      "defaultValue": 5,
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "5% for straight walls, 10-15% for complex layouts"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalBlocks",
+      "label": "Blocks Needed (with Waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "blocksWithoutWaste",
+      "label": "Blocks (No Waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "wallArea",
+      "label": "Net Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "courses",
+      "label": "Courses (Rows)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "blocksPerCourse",
+      "label": "Blocks Per Course",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "mortarBags",
+      "label": "Mortar Bags (80 lb)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "fillConcrete",
+      "label": "Fill Concrete (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "rebarBars",
+      "label": "Vertical Rebar Bars",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "blockSummary",
+      "label": "Block Size Details",
+      "type": "value-group",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Block Estimate Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "concrete-block",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "concrete-slab-calculator",
+    "brick-calculator",
+    "retaining-wall-calculator",
+    "drywall-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Concrete Masonry Association (NCMA) TEK 4-1A",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Block count calculations based on National Concrete Masonry Association (NCMA) TEK 4-1A — Productivity and Modular Coordination in Concrete Masonry Construction. Effective face area includes mortar joint added to length and height of each block. Mortar estimate of 3.5 bags (80 lb) per 100 blocks based on NCMA TEK 3-8A standard for 3/8\" joints. Fill concrete at 0.8 cu ft per standard 8\" CMU core.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "concrete-calculator",
+    "brick-calculator",
+    "retaining-wall-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

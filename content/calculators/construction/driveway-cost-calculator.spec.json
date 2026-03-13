@@ -1,0 +1,178 @@
+{
+  "id": "driveway-cost-calculator",
+  "title": "Driveway Cost Calculator",
+  "slug": "driveway-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "driveway cost calculator",
+  "metaTitle": "Driveway Cost Calculator | Compare Materials & Get Estimates",
+  "metaDescription": "Estimate driveway costs for concrete, asphalt, gravel, pavers, and stamped concrete. Compare materials, conditions, and grading. Free driveway cost calculator.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Driveway Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 40,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total driveway length from street to garage"
+    },
+    {
+      "id": "width",
+      "label": "Driveway Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Driveway width — 10–12 ft for single car, 20–24 ft for double"
+    },
+    {
+      "id": "material",
+      "label": "Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "concrete",
+      "options": [
+        { "value": "concrete", "label": "Concrete" },
+        { "value": "asphalt", "label": "Asphalt" },
+        { "value": "gravel", "label": "Gravel" },
+        { "value": "pavers", "label": "Pavers" },
+        { "value": "stamped-concrete", "label": "Stamped Concrete" }
+      ],
+      "helpText": "Driveway material — each has different cost, durability, and maintenance"
+    },
+    {
+      "id": "condition",
+      "label": "Project Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "new-install",
+      "options": [
+        { "value": "new-install", "label": "New Installation" },
+        { "value": "replacement", "label": "Replacement (remove old)" },
+        { "value": "resurfacing", "label": "Resurfacing / Overlay" }
+      ],
+      "helpText": "New install is baseline; replacement adds demolition cost; resurfacing is cheapest"
+    },
+    {
+      "id": "grading",
+      "label": "Terrain",
+      "type": "select",
+      "required": true,
+      "defaultValue": "flat",
+      "options": [
+        { "value": "flat", "label": "Flat (no grading needed)" },
+        { "value": "slight-slope", "label": "Slight Slope (+$1/sq ft)" },
+        { "value": "steep", "label": "Steep Grade (+$3/sq ft)" }
+      ],
+      "helpText": "Sloped driveways cost more due to extra grading, drainage, and material"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Driveway Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "costLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "costHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "costMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "materialComparison",
+      "label": "Material Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "conditionNote",
+      "label": "Project Type Details",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "driveway-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-slab-calculator",
+    "asphalt-calculator",
+    "paver-calculator",
+    "gravel-calculator",
+    "concrete-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; Concrete Network; Asphalt Institute",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Condition multipliers based on Concrete Network demolition/resurfacing cost surveys. Grading adjustments from HomeAdvisor landscaping data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "asphalt-calculator",
+    "concrete-slab-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

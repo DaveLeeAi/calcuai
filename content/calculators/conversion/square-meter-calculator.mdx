@@ -1,0 +1,117 @@
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 5 x 4-meter room is 20 square meters -- that is 215.28 square feet. To convert square feet to square meters, divide by 10.7639. To convert square meters to square feet, multiply by 10.7639. This calculator computes area in square meters from length and width dimensions, or converts between square feet, square meters, square yards, acres, and hectares with a complete conversion table.
+
+</section>
+
+{/* Section 6: How This Conversion Works */}
+## How This Calculator Works
+
+This tool operates in two modes. **Dimensions mode** multiplies length by width to compute area directly in square meters, then converts to all other area units. **Convert mode** takes an existing area value in any supported unit and converts it to square meters and all other units simultaneously.
+
+The critical conversion factor between the two most commonly searched units is: **1 square meter = 10.7639 square feet**. This factor is not intuitive because it is the square of the linear conversion (1 meter = 3.28084 feet, and 3.28084 squared = 10.7639). Many people mistakenly divide by 3.28 instead of 10.76 when converting area, producing a result that is off by a factor of 3.3.
+
+For calculating area from room dimensions in feet with shape options (rectangle, circle, triangle, trapezoid), use our [Square Footage Calculator](/calculators/construction/square-footage-calculator). For converting between all 10 area unit types including square kilometers and square miles, see the [Area Converter](/calculators/conversion/area-converter).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose your mode** -- select "Calculate from Dimensions" to compute area from length and width, or "Convert Area Units" to convert an existing area value.
+2. **Dimensions mode** -- enter the length and width in meters or feet. The calculator multiplies them and shows the result in square meters plus all other units.
+3. **Convert mode** -- enter the area value and select the unit it is currently in (sq ft, sq m, sq yd, acres, or hectares). The calculator converts to all other units.
+4. **Read the conversion table** -- all six area units are displayed for quick reference.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Dimensions mode:**
+
+$$\text{Area (m}^2\text{)} = \text{Length (m)} \times \text{Width (m)}$$
+
+If inputs are in feet, convert first: length (m) = length (ft) x 0.3048
+
+**Convert mode:**
+
+$$\text{Square Meters} = \text{Area Value} \times \text{Conversion Factor to m}^2$$
+
+**Conversion factors to square meters:**
+
+| From | Multiply by |
+|:--|:--|
+| Square Feet (ft²) | 0.09290304 |
+| Square Yards (yd²) | 0.83612736 |
+| Acres | 4,046.8564224 |
+| Hectares | 10,000 |
+
+**From square meters to other units:**
+
+$$\text{sq ft} = \text{m}^2 \times 10.7639 \qquad \text{sq yd} = \text{sq ft} \div 9 \qquad \text{sq in} = \text{sq ft} \times 144$$
+
+$$\text{acres} = \text{m}^2 \div 4{,}046.86 \qquad \text{hectares} = \text{m}^2 \div 10{,}000$$
+
+*Source: NIST Special Publication 330, "The International System of Units (SI)" (2019 Edition). Linear factor: 1 foot = 0.3048 m exactly per the International Yard and Pound Agreement (1959). Area factors derived by squaring linear factors.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Room Dimensions in Meters
+
+A European apartment listing describes a living room as 6.5 meters by 4.2 meters. How large is that in square feet?
+
+**Calculation:**
+- Area in m²: 6.5 x 4.2 = **27.3 square meters**
+- Convert to sq ft: 27.3 x 10.7639 = **293.85 square feet**
+
+*Interpretation:* A 27.3 m² living room is about 294 sq ft -- comparable to a medium-sized living room in a US apartment. For reference, the US median living room is approximately 330 sq ft (National Association of Home Builders, 2021).
+
+### Example 2: Converting Square Feet to Square Meters
+
+A US property listing shows a 1,500 sq ft condo. What is that in square meters?
+
+**Calculation:**
+- 1,500 x 0.09290304 = **139.35 square meters**
+
+*Interpretation:* A 1,500 sq ft condo is 139 m². In European real estate terms, this is a spacious three-bedroom apartment. Note that US and European measurement standards differ: US measurements often include garage and unfinished basement; European measurements typically cover only heated living space.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses the exact international definition: 1 foot = 0.3048 meters (squared for area: 1 sq ft = 0.09290304 sq m)
+- Dimensions mode computes rectangular area only (length x width). For triangles, circles, or trapezoids, use the [Square Footage Calculator](/calculators/construction/square-footage-calculator)
+- Negative dimensions are clamped to zero
+- Precision: square meters to 4 decimal places, square feet to 2, acres and hectares to 6
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How do I convert square feet to square meters?
+
+Divide the square footage by 10.7639 to get square meters. For example, 200 sq ft / 10.7639 = 18.58 square meters. The conversion factor 10.7639 is the square of the linear factor 3.28084 (feet per meter). A common mistake is dividing by 3.28 instead of 10.76, which produces a result that is 3.28 times too large.
+
+### How many square feet is 1 square meter?
+
+One square meter equals exactly 10.7639 square feet. Visualize it as a square roughly 3 feet 3 inches on each side. For quick mental math, multiply square meters by 10.76 or, for a rougher estimate, multiply by 11 and subtract 2%.
+
+### How do I calculate square meters from feet measurements?
+
+If your room is measured in feet, first convert each dimension to meters by multiplying by 0.3048, then multiply length by width. For a 12 x 10-foot room: (12 x 0.3048) x (10 x 0.3048) = 3.6576 x 3.048 = 11.15 square meters. Alternatively, calculate square footage first (120 sq ft), then divide by 10.7639 to get 11.15 m².
+
+### What is the difference between this calculator and the area converter?
+
+This calculator focuses on computing area in square meters from room dimensions (length x width) and converting between the five most common area units. The [Area Converter](/calculators/conversion/area-converter) is a general-purpose converter that supports 10 area units including square millimeters, square centimeters, square kilometers, and square miles, but does not calculate area from dimensions.
+
+</div>
+
+{/* Section 15: Related Calculators -- auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses standard Euclidean geometry (Area = length x width) with unit conversion factors defined by the **International System of Units (SI)** and the **International Yard and Pound Agreement (1959)**. The exact linear conversion factor is 1 foot = 0.3048 meters, which yields 1 square foot = 0.09290304 square meters and 1 square meter = 10.76391 square feet. Acre and hectare conversions use NIST-defined exact factors: 1 acre = 4,046.8564224 m², 1 hectare = 10,000 m² exactly.

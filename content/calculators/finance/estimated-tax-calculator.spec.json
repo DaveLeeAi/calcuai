@@ -1,0 +1,228 @@
+{
+  "id": "estimated-tax-calculator",
+  "title": "Estimated Tax Calculator",
+  "slug": "estimated-tax-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "estimated tax calculator",
+  "metaTitle": "Estimated Tax Calculator | 2025 Quarterly Tax Payments",
+  "metaDescription": "Calculate quarterly estimated tax payments for freelancers, self-employed, and investors. Includes SE tax, income tax brackets, safe harbor, and penalty risk. 2025 rates.",
+  "inputs": [
+    {
+      "id": "annualIncome",
+      "label": "Expected Annual Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 80000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Expected total income for the year"
+    },
+    {
+      "id": "incomeType",
+      "label": "Income Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "self-employment",
+      "options": [
+        { "value": "self-employment", "label": "Self-Employment" },
+        { "value": "investment", "label": "Investment" },
+        { "value": "mixed", "label": "Mixed (SE + Investment)" }
+      ]
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        { "value": "single", "label": "Single" },
+        { "value": "married-jointly", "label": "Married Filing Jointly" },
+        { "value": "married-separately", "label": "Married Filing Separately" },
+        { "value": "head-of-household", "label": "Head of Household" }
+      ]
+    },
+    {
+      "id": "taxWithheld",
+      "label": "W-2 Taxes Withheld",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "W-2 taxes already withheld this year"
+    },
+    {
+      "id": "deductions",
+      "label": "Deduction Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard",
+      "options": [
+        { "value": "standard", "label": "Standard Deduction" },
+        { "value": "itemized", "label": "Itemized Deductions" }
+      ]
+    },
+    {
+      "id": "itemizedAmount",
+      "label": "Itemized Deduction Amount",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Total itemized deductions if applicable",
+      "visibleWhen": { "deductions": ["itemized"] }
+    },
+    {
+      "id": "selfEmploymentIncome",
+      "label": "Self-Employment Income",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Self-employment income portion (for SE tax calculation)",
+      "visibleWhen": { "incomeType": ["self-employment", "mixed"] }
+    },
+    {
+      "id": "quartersPaid",
+      "label": "Quarters Already Paid",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 3,
+      "step": 1,
+      "helpText": "Number of quarterly payments already made this year"
+    },
+    {
+      "id": "amountPaid",
+      "label": "Estimated Tax Already Paid",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Total estimated tax already paid this year"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "quarterlyPayment",
+      "label": "Quarterly Payment Due",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalTaxLiability",
+      "label": "Total Tax Liability",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalOwed",
+      "label": "Total Remaining Owed",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveRate",
+      "label": "Effective Tax Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 2
+    },
+    {
+      "id": "selfEmploymentTax",
+      "label": "Self-Employment Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "federalIncomeTax",
+      "label": "Federal Income Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "safeHarbor90",
+      "label": "Safe Harbor (90% / 4)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "penaltyRisk",
+      "label": "Penalty Risk",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "taxBreakdown",
+      "label": "Tax Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "quarterlySchedule",
+      "label": "Quarterly Due Dates",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "estimated-tax",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "self-employment-tax-calculator",
+    "income-tax-calculator",
+    "tax-bracket-calculator",
+    "paycheck-calculator",
+    "capital-gains-tax-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IRS Form 1040-ES — Estimated Tax for Individuals (2025); IRS Publication 505 — Tax Withholding and Estimated Tax",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Quarterly Payment = max(0, (Total Tax − Withheld − Paid) / (4 − Quarters Paid)). SE Tax = SE Income × 0.9235 × 15.3%. Federal tax via 2025 progressive brackets. Safe harbor = 90% of current year / 4. Per IRS Form 1040-ES, Pub 505.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "self-employment-tax-calculator",
+    "income-tax-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "tax-season",
+  "glossaryTerms": [
+    "net-pay",
+    "gross-income"
+  ],
+  "methodologyTopics": []
+}

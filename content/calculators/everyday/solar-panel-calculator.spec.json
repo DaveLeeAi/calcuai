@@ -1,0 +1,185 @@
+{
+  "id": "solar-panel-calculator",
+  "title": "Solar Panel Calculator",
+  "slug": "solar-panel-calculator",
+  "category": "everyday",
+  "subcategory": "money",
+  "primaryKeyword": "solar panel calculator",
+  "metaTitle": "Solar Panel Calculator — How Many Panels Do You Need?",
+  "metaDescription": "Calculate how many solar panels you need based on your electric bill, sun hours, and panel size. See system cost, federal tax credit, payback period, and 25-year savings.",
+  "inputs": [
+    {
+      "id": "monthlyBill",
+      "label": "Monthly Electricity Bill",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 150,
+      "min": 0,
+      "max": 2000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Average monthly electricity bill"
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0.15,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "Cost per kWh (check your utility bill)"
+    },
+    {
+      "id": "sunHours",
+      "label": "Peak Sun Hours",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 1,
+      "max": 8,
+      "step": 0.5,
+      "suffix": "hours/day",
+      "helpText": "Average peak sun hours per day for your area"
+    },
+    {
+      "id": "panelWattage",
+      "label": "Panel Wattage",
+      "type": "number",
+      "required": true,
+      "defaultValue": 400,
+      "min": 200,
+      "max": 600,
+      "step": 25,
+      "suffix": "watts",
+      "helpText": "Wattage per solar panel"
+    },
+    {
+      "id": "systemEfficiency",
+      "label": "System Efficiency",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 80,
+      "min": 50,
+      "max": 95,
+      "step": 5,
+      "suffix": "%",
+      "helpText": "System efficiency accounting for inverter losses, shading, etc."
+    },
+    {
+      "id": "electricityOffset",
+      "label": "Electricity Offset Target",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 100,
+      "min": 50,
+      "max": 100,
+      "step": 5,
+      "suffix": "%",
+      "helpText": "Percentage of usage to offset with solar"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "numberOfPanels",
+      "label": "Number of Panels",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "systemSizeKW",
+      "label": "System Size (kW)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "annualProduction",
+      "label": "Annual Production (kWh)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "monthlyUsage",
+      "label": "Current Monthly Usage (kWh)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "annualSavings",
+      "label": "Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "paybackYears",
+      "label": "Payback Period (Years)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "federalTaxCredit",
+      "label": "Federal Tax Credit (30%)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "costEstimate",
+      "label": "System Cost Estimate",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "twentyFiveYearSavings",
+      "label": "25-Year Savings",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "solar-panel",
+  "features": [
+    "shareable-url",
+    "print-results",
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "electricity-cost-calculator",
+    "gas-mileage-calculator",
+    "fuel-cost-calculator",
+    "roi-calculator",
+    "hvac-size-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Solar Energy Industries Association (SEIA) market data, NREL PVWatts methodology, IRS Investment Tax Credit (IRC §48) — 30% through 2032.",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "System sizing: kW = daily kWh / sun hours / efficiency. Panel count = system kW × 1000 / panel wattage. Federal ITC: 30% of installed cost (IRC §48, effective through 2032). Cost data: $2.50–$3.50/W national average per EnergySage 2024-2025 marketplace data. Sun hours from NREL solar resource maps.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

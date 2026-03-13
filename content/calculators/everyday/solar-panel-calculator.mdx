@@ -1,0 +1,187 @@
+---
+title: "Solar Panel Calculator"
+description: "Calculate how many solar panels you need based on your electric bill, sun hours, and panel size. See system cost, federal tax credit, payback period, and 25-year savings."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+To offset a $150/month electric bill in an area with 5 peak sun hours, you need approximately an 8.4 kW system — about 21 solar panels at 400 watts each. Before incentives, the system costs $21,000–$29,400. After the 30% federal tax credit ($6,300–$8,820), the net cost drops to $14,700–$20,580, with a payback period of 8–11 years. Over the 25-year panel warranty, you save $30,300–$36,180 net after recouping the full system cost. This calculator sizes your system, estimates costs, and shows your break-even timeline based on your specific bill, location, and panel choice.
+
+</section>
+
+{/* Section 6: What Your Result Shows */}
+## What Your Result Shows
+
+The primary output is **number of panels** — the whole-panel count needed to offset your target percentage of electricity usage. Because you cannot install a fraction of a panel, the calculator rounds up to the next whole panel, which means your actual system size may slightly exceed the minimum required.
+
+The **system size (kW)** reflects the actual capacity based on the rounded panel count multiplied by per-panel wattage. This is the number you will see on installer quotes. The **annual production (kWh)** shows how much electricity the system generates per year, factoring in your sun hours and system efficiency. Production is capped at your actual annual usage — overproducing beyond your consumption does not increase savings in this model (net metering policies vary by state and utility).
+
+The **cost estimate** uses the national average range of $2.50–$3.50 per watt before incentives. The 30% federal Investment Tax Credit (ITC) — available through 2032 under the Inflation Reduction Act — applies to the full installed cost. State and local incentives are not included but can reduce costs further. The **payback period** divides net cost by annual savings to show when the system pays for itself. The **25-year savings** projects total energy savings minus system cost over the standard panel warranty period.
+
+To understand your current electricity consumption, try the [Electricity Cost Calculator](/calculators/everyday/electricity-cost-calculator). For estimating how much you might save on gas with an EV charged by solar, see the [Gas Mileage Calculator](/calculators/everyday/gas-mileage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your monthly electricity bill** — use your average bill, not your highest month. Most utilities show a 12-month average on the bill itself. If your bill varies seasonally, average the last 12 months.
+
+2. **Enter your electricity rate** — this is the cost per kWh listed on your utility bill. The U.S. national average is about $0.15/kWh, but rates range from $0.10 (Idaho) to $0.36+ (Hawaii, Connecticut). Use your blended rate if your utility has tiered pricing.
+
+3. **Enter peak sun hours** — this is the equivalent number of hours per day your location receives full-intensity sunlight. It is NOT total daylight hours. The U.S. Southwest averages 6–7 peak sun hours; the Pacific Northwest averages 3–4. Use the NREL PVWatts tool or the table below to find your area's value.
+
+4. **Set panel wattage** — residential panels in 2024–2025 typically range from 350W to 450W. The default of 400W represents a mid-range modern panel. Premium panels (like SunPower or REC Alpha) reach 430–450W.
+
+5. **Adjust system efficiency** — the default 80% accounts for inverter losses (~3%), wiring losses (~2%), soiling (~3%), temperature derating (~5%), and shade (~7%). If your roof has no shading and faces due south, increase to 85%. Heavy shading may drop below 70%.
+
+6. **Set electricity offset** — 100% offsets your entire bill. Some homeowners target 80–90% to avoid oversizing. Some utilities cap net metering credits, making 100% offset unnecessary.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{Monthly kWh} = \frac{\text{Monthly Bill}}{\text{Rate per kWh}}
+$$
+
+$$
+\text{System Size (kW)} = \frac{\text{Monthly kWh} \times 12 \times \frac{\text{Offset\%}}{100}}{365 \times \text{Sun Hours} \times \frac{\text{Efficiency\%}}{100}}
+$$
+
+$$
+\text{Number of Panels} = \left\lceil \frac{\text{System Size (kW)} \times 1{,}000}{\text{Panel Wattage}} \right\rceil
+$$
+
+$$
+\text{Annual Savings} = \min(\text{Annual Production}, \text{Annual Usage}) \times \text{Rate per kWh}
+$$
+
+$$
+\text{Net Cost} = \text{System Cost} - (\text{System Cost} \times 0.30)
+$$
+
+$$
+\text{Payback (years)} = \frac{\text{Net Cost}}{\text{Annual Savings}}
+$$
+
+Where:
+- **Monthly Bill** = average monthly electricity bill ($)
+- **Rate per kWh** = electricity cost per kilowatt-hour
+- **Sun Hours** = average peak sun hours per day for the location
+- **Efficiency%** = system efficiency after inverter, wiring, soiling, and shading losses
+- **Offset%** = target percentage of electricity usage to cover with solar
+- **0.30** = federal Investment Tax Credit rate (30% through 2032)
+
+*Source: System sizing methodology based on NREL PVWatts. Federal ITC rate per IRS IRC §48 as extended by the Inflation Reduction Act of 2022. National cost data from EnergySage 2024–2025 marketplace reports ($2.50–$3.50/W installed).*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+A homeowner in Charlotte, NC pays $180/month for electricity at $0.13/kWh. The area receives approximately 5 peak sun hours per day. They want 400W panels with an 80% system efficiency and 100% offset.
+
+**Step 1:** Monthly kWh = $180 / $0.13 = **1,384.62 kWh/month**
+**Step 2:** Annual kWh = 1,384.62 × 12 = **16,615.38 kWh/year**
+**Step 3:** Daily kWh needed = 16,615.38 / 365 = **45.52 kWh/day**
+**Step 4:** System size = 45.52 / 5 / 0.80 = **11.38 kW**
+**Step 5:** Number of panels = ⌈11.38 × 1,000 / 400⌉ = ⌈28.45⌉ = **29 panels**
+**Step 6:** Actual system size = 29 × 400 / 1,000 = **11.6 kW**
+**Step 7:** Annual production = 11.6 × 5 × 365 × 0.80 = **16,936 kWh/year**
+**Step 8:** System cost = 11,600W × $2.50–$3.50 = **$29,000–$40,600**
+**Step 9:** Federal credit = 30% = **$8,700–$12,180**
+**Step 10:** Net cost = **$20,300–$28,420**
+**Step 11:** Annual savings = 16,615.38 × $0.13 = **$2,160/year**
+**Step 12:** Payback = $24,360 (midpoint) / $2,160 = **11.3 years**
+
+*Interpretation:* This homeowner needs a 11.6 kW system (29 panels) costing $20,300–$28,420 after the federal tax credit. At $2,160 in annual savings, the system pays for itself in about 11 years. Over 25 years, net savings total $29,640–$33,700 — a strong return considering electricity rates typically increase 2–3% annually (not factored into this conservative estimate).
+
+## Solar Panel Cost by System Size
+
+| System Size | Panels (400W) | Cost Range (Before ITC) | Federal Credit (30%) | Net Cost Range |
+|:---|:---|:---|:---|:---|
+| **4 kW** | 10 | $10,000–$14,000 | $3,000–$4,200 | $7,000–$9,800 |
+| **6 kW** | 15 | $15,000–$21,000 | $4,500–$6,300 | $10,500–$14,700 |
+| **8 kW** | 20 | $20,000–$28,000 | $6,000–$8,400 | $14,000–$19,600 |
+| **10 kW** | 25 | $25,000–$35,000 | $7,500–$10,500 | $17,500–$24,500 |
+| **12 kW** | 30 | $30,000–$42,000 | $9,000–$12,600 | $21,000–$29,400 |
+| **15 kW** | 38 | $37,500–$52,500 | $11,250–$15,750 | $26,250–$36,750 |
+
+*Source: EnergySage 2024–2025 marketplace data. Actual costs vary by installer, equipment brand, roof complexity, and local permitting fees.*
+
+## Federal Tax Credit Explained
+
+The federal Investment Tax Credit (ITC) provides a 30% credit on the total installed cost of a residential solar energy system. This includes panels, inverters, racking, wiring, labor, permitting, and battery storage if installed. The credit applies to your federal income tax liability — you must owe at least the credit amount in taxes to use it fully in one year, though unused credit rolls forward.
+
+The Inflation Reduction Act of 2022 extended the 30% ITC through **2032**. It steps down to 26% in 2033 and 22% in 2034. There is **no cap** on the credit amount for residential systems. A $30,000 system qualifies for a $9,000 credit regardless of system size. Note: the ITC is a **tax credit**, not a rebate — it reduces your federal tax bill dollar-for-dollar but does not result in a cash refund beyond your tax liability.
+
+## Peak Sun Hours by Region
+
+| Region | States | Avg. Peak Sun Hours |
+|:---|:---|:---|
+| **Southwest** | AZ, NV, NM, Southern CA | 6.0–7.5 |
+| **South** | TX, FL, GA, SC, AL, MS, LA | 5.0–6.0 |
+| **Mid-Atlantic** | NC, VA, MD, DE, NJ | 4.5–5.5 |
+| **Midwest** | OH, IN, IL, MO, KS | 4.0–5.0 |
+| **Northeast** | NY, PA, CT, MA, ME | 3.5–4.5 |
+| **Pacific Northwest** | WA, OR | 3.0–4.0 |
+| **Mountain** | CO, UT, ID, MT | 5.0–6.5 |
+
+*Source: NREL National Solar Radiation Database and PVWatts Calculator.*
+
+## Factors That Affect Production
+
+**Roof orientation matters more than most homeowners expect.** A south-facing roof at 30° tilt captures 100% of available solar energy. East- or west-facing roofs capture roughly 80–85%. North-facing roofs in the northern hemisphere are generally not suitable. Ground-mounted systems can be tilted optimally but cost 10–20% more to install.
+
+**Shading from a single tree can reduce output by 20–40%.** Modern panels with microinverters or power optimizers mitigate shading losses by isolating affected panels. String inverter systems without optimizers see disproportionate output drops when even one panel is shaded because panels are wired in series.
+
+**Panel degradation is real but modest.** Most manufacturers guarantee at least 80% of rated output at year 25. Typical degradation is 0.5% per year — a 400W panel produces about 350W at year 25. Premium panels (SunPower, LG, REC) degrade at 0.25% per year.
+
+**Temperature reduces efficiency.** Solar panels lose 0.3–0.5% efficiency per degree Celsius above 25°C (77°F). In Phoenix at 45°C (113°F) panel temperature, output drops 6–10% from rated capacity. This is already partially accounted for in the system efficiency input.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many solar panels do I need for a 2,000 sq ft house?
+
+A 2,000-square-foot house typically uses 10,000–14,000 kWh per year, requiring a 7–10 kW system, or 18–25 panels at 400 watts each. The actual number depends on your electricity usage (not square footage directly), local sun hours, and panel efficiency. A home with electric heating and an EV charger may need 30+ panels regardless of size.
+
+### How much do solar panels cost in 2025?
+
+The average residential solar installation costs $2.50–$3.50 per watt before incentives, or $15,000–$35,000 for a typical 6–10 kW system. After the 30% federal tax credit, net costs range from $10,500–$24,500. Prices vary significantly by state, installer, and equipment quality. Battery storage adds $10,000–$15,000.
+
+### What is the 30% federal solar tax credit?
+
+The federal Investment Tax Credit (ITC) provides a 30% credit on the total installed cost of a solar energy system, including panels, inverters, labor, and battery storage. The 30% rate is available through 2032, then steps down to 26% in 2033 and 22% in 2034. There is no maximum credit amount for residential systems.
+
+### How long does it take for solar panels to pay for themselves?
+
+Most residential solar systems pay for themselves in 7–12 years depending on electricity rates, sun hours, and system cost. Homeowners in high-rate states like California, Connecticut, and Massachusetts see payback periods of 5–8 years. States with low electricity rates and fewer sun hours may see 10–15 year payback periods.
+
+### Do solar panels work on cloudy days?
+
+Solar panels produce electricity on cloudy days, but at reduced output — typically 10–25% of full capacity. Overcast skies reduce direct sunlight significantly. However, solar panels respond to all light wavelengths, not just direct sunlight. Annual production calculations already account for average cloud cover in the peak sun hours metric.
+
+### What are peak sun hours?
+
+Peak sun hours measure the intensity of sunlight at a specific location, expressed as the equivalent number of hours per day at 1,000 W/m² irradiance. A location with 5 peak sun hours does not necessarily have 5 hours of sunshine — it means the total daily solar energy equals what 5 hours of full-intensity sun would produce. The U.S. Southwest averages 6–7 peak sun hours; the Pacific Northwest averages 3–4.
+
+### Should I get a battery with solar panels?
+
+A battery (like Tesla Powerwall or Enphase IQ) stores excess solar energy for use at night or during outages. Batteries add $10,000–$15,000 to system cost and are most valuable if your utility has time-of-use rates, poor net metering policies, or frequent power outages. In states with 1:1 net metering (where the grid acts as a free battery), batteries often do not improve ROI.
+
+### How long do solar panels last?
+
+Solar panels last 25–30 years with minimal maintenance. Most manufacturers warranty at least 80% power output at year 25. Inverters typically last 10–15 years and may need replacement once during the panel lifespan. Microinverters (one per panel) generally last longer than central string inverters — 25 years vs. 10–12 years.
+
+</div>
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+System sizing follows the methodology used by the **NREL PVWatts Calculator**, the industry-standard tool maintained by the National Renewable Energy Laboratory. The base formula divides annual energy needs by available solar resource (peak sun hours × 365 × system efficiency). Panel counts are rounded up to whole units per standard installer practice.
+
+Cost estimates use the national residential average of **$2.50–$3.50 per installed watt** from the **EnergySage Solar Marketplace** (2024–2025 data, covering 100,000+ installer quotes). The 30% federal Investment Tax Credit follows **IRS IRC §48** as amended by the **Inflation Reduction Act of 2022** (P.L. 117-169). Peak sun hour data is sourced from the **NREL National Solar Radiation Database**. The **Solar Energy Industries Association (SEIA)** provides industry growth, cost trend, and market share data supporting cost range validation.

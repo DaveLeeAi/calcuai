@@ -1,0 +1,185 @@
+---
+title: "HVAC Size Calculator"
+description: "Calculate the right HVAC size for your home. Enter square footage, climate zone, and insulation to find BTU, tonnage, and cost estimates for AC and heat pumps."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 1,500-square-foot home with average insulation in a mixed climate needs approximately 30,000 BTU (2.5 tons) of cooling capacity. A properly sized central air conditioner costs $3,000–$5,500 for the unit, or $4,500–$7,500 with a heat pump. Add poor insulation and the load jumps to 39,000 BTU (3.5 tons); add a hot-humid climate and it reaches 36,000 BTU (3 tons). Oversizing wastes energy and causes humidity problems, while undersizing leaves rooms uncomfortable. Enter your home's details below for a load estimate matched to standard equipment sizes.
+
+</section>
+
+{/* Section 6: What This Calculates */}
+## What This Calculates
+
+This calculator estimates the heating and cooling load for a residential space using the rule-of-thumb method based on square footage and multiplier adjustments. The primary output is **BTU/hour** — the standard unit for measuring HVAC capacity. One ton of cooling equals 12,000 BTU/hour, and residential equipment is manufactured in 0.5-ton increments (1.5, 2, 2.5, 3, 3.5, 4, and 5 tons).
+
+The **recommended tonnage** rounds the exact calculation to the nearest 0.5-ton increment, matching available equipment sizes. The **CFM airflow** estimate shows the approximate cubic feet per minute of air movement needed, calculated at roughly 400 CFM per ton (or 1 CFM per 30 BTU). This helps size ductwork — undersized ducts cause noise, poor airflow, and efficiency loss regardless of equipment capacity.
+
+The **cost estimate** shows ranges for both central air conditioner units and heat pump systems, plus installation labor. Heat pumps cost more upfront but provide both heating and cooling, eliminating the need for a separate furnace in moderate climates. The **energy estimate** approximates annual operating costs based on national average electricity rates and typical seasonal run hours.
+
+For measuring your home's floor area accurately, use the [Square Footage Calculator](/calculators/construction/square-footage-calculator). To estimate insulation improvements that reduce HVAC load, see the [Insulation Calculator](/calculators/construction/insulation-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your total conditioned square footage** — this is the livable floor area, not including garages, unconditioned attics, or unfinished basements. For multi-story homes, enter total floor area across all conditioned floors (e.g., a 2-story home at 1,000 sq ft per floor = 2,000 sq ft).
+
+2. **Enter ceiling height** — standard is 8 feet. Cathedral or vaulted ceilings (10–12+ feet) increase the air volume to condition. The calculator adjusts proportionally — a 10-foot ceiling adds 25% more load than an 8-foot ceiling.
+
+3. **Select your climate zone** — this is the most impactful factor after square footage. Hot-humid climates (Florida, Gulf Coast) need 20% more capacity than mixed climates, while very cold regions (Minnesota, Montana) need 25% more for heating capacity.
+
+4. **Select insulation quality** — "Poor" applies to homes built before 1980 with minimal insulation; "Average" is standard builder-grade (R-13 walls, R-30 attic); "Good" means upgraded insulation; "Excellent" means spray foam and high R-value throughout.
+
+5. **Select stories, windows, and sun exposure** — each adjusts the load by 10–15%. Multi-story homes have more envelope area. Large windows admit more solar heat gain. Full sun exposure adds to cooling load.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{Base BTU} = \text{Square Footage} \times 20 \;\text{BTU/sq ft}
+$$
+
+$$
+\text{Total BTU} = \text{Base BTU} \times M_{\text{climate}} \times M_{\text{insulation}} \times M_{\text{ceiling}} \times M_{\text{stories}} \times M_{\text{windows}} \times M_{\text{sun}}
+$$
+
+$$
+M_{\text{ceiling}} = \frac{\text{Ceiling Height}}{8}
+$$
+
+$$
+\text{Tons} = \frac{\text{Total BTU}}{12{,}000}
+$$
+
+$$
+\text{Recommended Tons} = \text{round to nearest 0.5 ton}
+$$
+
+$$
+\text{CFM} \approx \frac{\text{Total BTU}}{30}
+$$
+
+Where:
+- **20 BTU/sq ft** = standard residential cooling load factor (rule of thumb)
+- **M_climate** = 0.9–1.25 depending on climate zone
+- **M_insulation** = 0.75–1.3 depending on insulation quality
+- **M_ceiling** = ceiling height / 8 (proportional volume adjustment)
+- **M_stories** = 1.0–1.15 based on number of floors
+- **M_windows** = 0.9–1.15 based on window coverage
+- **M_sun** = 0.9–1.1 based on sun exposure
+- **12,000** = BTU per ton of cooling capacity
+- **30** = approximate BTU per CFM ratio
+
+*Source: ACCA Manual J (Residential Load Calculation) simplified methodology. The 20 BTU/sq ft baseline and multiplier ranges represent industry rule-of-thumb estimates validated against full Manual J calculations for typical residential structures. Equipment sizing to 0.5-ton increments is standard industry practice.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+A 2,000-square-foot, 2-story home in Houston, TX (hot-humid) with average insulation, 9-foot ceilings, average windows, and partial sun exposure.
+
+**Step 1:** Base BTU = 2,000 × 20 = **40,000 BTU**
+**Step 2:** Climate multiplier (hot-humid) = **1.2**
+**Step 3:** Insulation multiplier (average) = **1.0**
+**Step 4:** Ceiling multiplier = 9 / 8 = **1.125**
+**Step 5:** Stories multiplier (2-story) = **1.1**
+**Step 6:** Windows multiplier (average) = **1.0**
+**Step 7:** Sun multiplier (partial) = **1.0**
+**Step 8:** Total BTU = 40,000 × 1.2 × 1.0 × 1.125 × 1.1 × 1.0 × 1.0 = **59,400 BTU**
+**Step 9:** Exact tonnage = 59,400 / 12,000 = **4.95 tons**
+**Step 10:** Recommended size = round to nearest 0.5 = **5.0 tons**
+**Step 11:** CFM = 59,400 / 30 = **1,980 CFM**
+
+*Interpretation:* This Houston home needs a 5-ton system. In hot-humid climates, the penalty for undersizing is severe — the unit runs continuously without adequately dehumidifying. A 5-ton central AC unit costs $5,500–$9,000 with installation. A 5-ton heat pump costs $7,500–$11,000 installed but eliminates the gas furnace — a significant advantage in Houston where heating demand is minimal.
+
+## HVAC Sizing Chart by Home Size
+
+| Home Size (sq ft) | Mixed Climate | Hot-Humid | Cold | Very Cold |
+|:---|:---|:---|:---|:---|
+| **800** | 1.5 ton | 1.5 ton | 1.5 ton | 2.0 ton |
+| **1,000** | 1.5 ton | 2.0 ton | 2.0 ton | 2.0 ton |
+| **1,200** | 2.0 ton | 2.5 ton | 2.5 ton | 2.5 ton |
+| **1,500** | 2.5 ton | 3.0 ton | 2.5 ton | 3.0 ton |
+| **1,800** | 3.0 ton | 3.5 ton | 3.0 ton | 3.5 ton |
+| **2,000** | 3.5 ton | 4.0 ton | 3.5 ton | 4.0 ton |
+| **2,500** | 4.0 ton | 5.0 ton | 4.5 ton | 5.0 ton |
+| **3,000** | 5.0 ton | 6.0 ton | 5.0 ton | 6.0 ton |
+
+*Based on average insulation, 8-foot ceilings, standard windows. Adjust up for poor insulation, high ceilings, or many windows. Actual loads should be verified with a full ACCA Manual J calculation.*
+
+## Understanding Tons & BTU
+
+A "ton" of cooling capacity equals 12,000 BTU/hour. The term comes from the amount of energy needed to melt one ton of ice in 24 hours. Residential HVAC equipment is sold in half-ton increments: 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, and 5.0 tons. Equipment above 5 tons is considered commercial.
+
+**BTU** stands for British Thermal Unit — the energy required to raise the temperature of one pound of water by one degree Fahrenheit. An air conditioner rated at 30,000 BTU/hour can remove 30,000 BTU of heat from your home every hour. A furnace rated at 60,000 BTU outputs 60,000 BTU of heat per hour (input BTU is higher due to combustion efficiency — a 96% AFUE furnace uses 62,500 BTU of gas to deliver 60,000 BTU of heat).
+
+**SEER (Seasonal Energy Efficiency Ratio)** measures cooling efficiency. The federal minimum is SEER 14 (SEER 15 in southern states as of 2023). SEER 16–20 is considered high-efficiency. A SEER 16 unit uses 25% less electricity than a SEER 12 unit for the same cooling output.
+
+## Over-Sizing vs. Under-Sizing Problems
+
+**Oversized systems** short-cycle — they cool the air quickly but shut off before adequately dehumidifying. In humid climates, this creates a cold-but-clammy feeling and promotes mold growth. Short-cycling also increases wear on the compressor, reducing equipment lifespan. An oversized system costs more upfront and operates less efficiently than a properly sized unit.
+
+**Undersized systems** run continuously without reaching the thermostat setpoint during extreme weather. They cannot maintain comfort on the hottest or coldest days, lead to uneven temperatures between rooms, and use more energy despite lower capacity because they never cycle off. Undersizing is especially problematic in hot-humid climates where continuous operation without adequate capacity fails to control both temperature and humidity.
+
+**The sweet spot** is slight undersizing rather than oversizing. ACCA guidelines recommend sizing to within 100% of the calculated load for cooling and 100–140% for heating. Modern variable-speed (inverter) systems avoid the oversizing problem entirely by modulating output from 30% to 100% of rated capacity — they run longer at lower speeds, providing superior dehumidification and more even temperatures.
+
+## Climate Zone Guide
+
+**Hot-Humid (Zone 1A/2A):** Florida, Gulf Coast Texas, Louisiana, southern Georgia. High cooling loads and humidity make proper sizing critical. Oversizing causes humidity problems. Consider a two-stage or variable-speed system. Heat pumps are excellent here due to minimal heating demand.
+
+**Hot-Dry (Zone 2B/3B):** Arizona, Nevada, southern California, New Mexico. High cooling loads but low humidity means oversizing is less problematic. Evaporative coolers work in some areas. Ensure adequate duct insulation in attics where temperatures reach 150°F+.
+
+**Mixed (Zone 3A/4A):** Mid-Atlantic, Tennessee, Missouri, Kansas. Balanced heating and cooling loads. Heat pumps with auxiliary electric heat work well. Standard two-stage systems handle seasonal transitions efficiently.
+
+**Cold (Zone 4C/5A):** New York, Ohio, Pennsylvania, northern Midwest. Heating load usually exceeds cooling load. Heat pumps may need supplemental heating below 30°F. Dual-fuel systems (heat pump + gas furnace) are popular. Prioritize heating capacity in equipment selection.
+
+**Very Cold (Zone 6A/7):** Minnesota, Wisconsin, Montana, Maine. Heating load dominates. Cold-climate heat pumps (rated to -15°F) have improved significantly but gas furnaces remain common. Ensure equipment is rated for your area's design temperature — the coldest temperature expected 99% of the time.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What size AC do I need for a 1,500 sq ft house?
+
+A 1,500-square-foot house with average insulation in a mixed climate needs approximately 2.5 tons (30,000 BTU) of cooling capacity. In hot-humid climates, the same house needs 3.0 tons (36,000 BTU). In very cold climates where heating drives the sizing, you may need a 3.0-ton system to handle the heating load. Always have an HVAC contractor perform a Manual J load calculation for precise sizing.
+
+### How many BTU per square foot do I need?
+
+The standard rule of thumb is 20 BTU per square foot for cooling in a moderate climate with 8-foot ceilings and average insulation. This baseline adjusts upward for hot climates (24 BTU/sq ft), poor insulation (26 BTU/sq ft), or high ceilings (25 BTU/sq ft). In practice, the range is 15–30 BTU per square foot depending on all factors combined.
+
+### What happens if my AC is too big?
+
+An oversized AC unit short-cycles — it cools the air quickly but shuts off before removing adequate humidity. This leads to a cold, clammy interior and potential mold growth. Short-cycling also increases compressor wear, raises energy bills (startup uses more power than running), and causes uneven temperatures. A unit that is one size too large (e.g., 3 tons instead of 2.5) is worse than one size too small.
+
+### What is a Manual J load calculation?
+
+Manual J is the ACCA (Air Conditioning Contractors of America) standard for calculating residential heating and cooling loads. It considers 8+ factors: square footage, insulation R-values, window area and type (single vs. double-pane), orientation, air leakage rate, occupant count, appliance heat, and ductwork location. A full Manual J costs $100–$400 and takes 2–4 hours. This calculator uses a simplified version for estimation.
+
+### Is a heat pump better than an AC unit?
+
+A heat pump provides both cooling and heating using the same equipment, eliminating the need for a separate furnace. In mild-to-moderate climates (USDA zones 7–9), heat pumps are more efficient and cost-effective than AC + gas furnace combinations. In very cold climates (below 15°F design temperature), cold-climate heat pumps or dual-fuel systems are recommended. Heat pumps cost $1,000–$3,000 more upfront but save on annual heating costs.
+
+### How much does a new HVAC system cost?
+
+A complete residential HVAC system costs $4,000–$12,000 installed, depending on size and type. A 2.5-ton central AC costs $3,000–$5,500. A 2.5-ton heat pump costs $4,500–$7,500. Installation adds $1,500–$3,000 for standard replacement, or $3,000–$7,000 if ductwork modifications are needed. High-efficiency (SEER 18+) and variable-speed systems cost 30–50% more than base models.
+
+### What SEER rating should I choose?
+
+The federal minimum SEER rating is 14 (15 in southern U.S. states). SEER 16 is a good balance of efficiency and cost. SEER 18–20+ provides premium efficiency but costs significantly more. Each SEER point above 14 saves approximately 7% on cooling energy. In hot climates where AC runs 2,000+ hours/year, high-SEER units pay back the premium faster — typically in 5–8 years for SEER 18 vs. SEER 14.
+
+### How often should I replace my HVAC system?
+
+Central AC units and heat pumps typically last 15–20 years. Gas furnaces last 20–25 years. If your system is over 15 years old, uses R-22 refrigerant (phased out), needs repairs costing more than 50% of replacement, or your energy bills have increased significantly, replacement is likely more cost-effective than repair. Modern systems are 30–50% more efficient than units from 2005 due to higher SEER ratings and variable-speed technology.
+
+</div>
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the **20 BTU per square foot** rule-of-thumb method with multiplier adjustments for climate, insulation, ceiling height, stories, windows, and sun exposure. This simplified approach provides estimates within 10–20% of a full **ACCA Manual J** load calculation for typical residential buildings. The multiplier values are derived from ranges published in **ENERGY STAR** HVAC sizing guidance and **U.S. Department of Energy** residential energy efficiency references. Equipment cost ranges reflect 2025 national averages from **HomeAdvisor** and **Angi**. Energy cost estimates use SEER 16 cooling efficiency and HSPF 9 heating efficiency at the national average electricity rate of $0.16/kWh from the **U.S. Energy Information Administration (EIA)**. For a precise load calculation, consult a licensed HVAC contractor who performs full Manual J calculations per **ACCA** standards.

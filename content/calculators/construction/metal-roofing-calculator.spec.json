@@ -1,0 +1,208 @@
+{
+  "id": "metal-roofing-calculator",
+  "title": "Metal Roofing Calculator",
+  "slug": "metal-roofing-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "metal roofing calculator",
+  "metaTitle": "Metal Roofing Calculator — Panels, Screws & Installed Cost",
+  "metaDescription": "Calculate metal roofing panels, screws, underlayment, and installed cost for standing seam, corrugated, R-panel, and stone-coated steel roofs.",
+  "inputs": [
+    {
+      "id": "roofLength",
+      "label": "Roof Length (eave to eave)",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "step": 1,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Roof length along the ridge line (eave to eave)"
+    },
+    {
+      "id": "roofWidth",
+      "label": "Roof Width (ridge to eave)",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 30,
+      "min": 1,
+      "step": 1,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Roof width from ridge to eave (one side)"
+    },
+    {
+      "id": "roofSides",
+      "label": "Roof Sides",
+      "type": "select",
+      "required": true,
+      "defaultValue": "2",
+      "options": [
+        { "value": "1", "label": "1 Side (Shed / Lean-to)" },
+        { "value": "2", "label": "2 Sides (Gable)" }
+      ],
+      "helpText": "Number of roof planes to cover"
+    },
+    {
+      "id": "panelType",
+      "label": "Panel Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standing-seam",
+      "options": [
+        { "value": "standing-seam", "label": "Standing Seam" },
+        { "value": "corrugated", "label": "Corrugated" },
+        { "value": "r-panel", "label": "R-Panel / PBR" },
+        { "value": "stone-coated", "label": "Stone-Coated Steel" }
+      ],
+      "helpText": "Metal panel profile type"
+    },
+    {
+      "id": "panelWidth",
+      "label": "Panel Width (inches)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 16,
+      "min": 6,
+      "max": 48,
+      "step": 1,
+      "helpText": "Coverage width of one panel in inches"
+    },
+    {
+      "id": "overlap",
+      "label": "Panel Overlap (inches)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 4,
+      "step": 0.5,
+      "helpText": "Side overlap between adjacent panels"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 15,
+      "min": 10,
+      "max": 25,
+      "helpText": "15% is standard for metal roofing; increase for complex rooflines"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalPanels",
+      "label": "Total Panels (with waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "panelsWithoutWaste",
+      "label": "Panels (without waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "totalArea",
+      "label": "Total Roof Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "squares",
+      "label": "Roofing Squares",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "ridgeCap",
+      "label": "Ridge Cap (linear ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "screws",
+      "label": "Screws (approx.)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "underlayment",
+      "label": "Underlayment Rolls",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "trim",
+      "label": "Trim (linear ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Installed Cost Estimate",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "panelDetails",
+      "label": "Panel Details",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "metal-roofing",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "roofing-calculator",
+    "roof-pitch-calculator",
+    "rafter-length-calculator",
+    "square-footage-calculator",
+    "siding-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Metal Roofing Alliance (MRA) and Metal Construction Association (MCA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Panel coverage calculations per manufacturer specifications. Cost ranges from HomeAdvisor/Angi 2025-2026 national averages. Screw density and trim estimates per MRA installation guidelines.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "roofing-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

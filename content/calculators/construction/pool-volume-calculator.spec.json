@@ -1,0 +1,190 @@
+{
+  "id": "pool-volume-calculator",
+  "title": "Swimming Pool Volume Calculator",
+  "slug": "pool-volume-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "pool volume calculator",
+  "metaTitle": "Pool Volume Calculator — Gallons, Liters & Fill Time",
+  "metaDescription": "Calculate swimming pool volume in gallons and liters for rectangular, circular, oval, and kidney pools. Includes chemical estimates, fill time, and water cost.",
+  "inputs": [
+    {
+      "id": "poolShape",
+      "label": "Pool Shape",
+      "type": "select",
+      "required": true,
+      "defaultValue": "rectangular",
+      "options": [
+        { "value": "rectangular", "label": "Rectangular" },
+        { "value": "circular", "label": "Circular" },
+        { "value": "oval", "label": "Oval" },
+        { "value": "kidney", "label": "Kidney" }
+      ],
+      "helpText": "Select the shape closest to your pool"
+    },
+    {
+      "id": "length",
+      "label": "Pool Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 30,
+      "min": 0,
+      "step": 1,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Pool length (longest dimension)",
+      "visibleWhen": { "poolShape": ["rectangular", "oval", "kidney"] }
+    },
+    {
+      "id": "width",
+      "label": "Pool Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0,
+      "step": 1,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Pool width (shortest dimension)",
+      "visibleWhen": { "poolShape": ["rectangular", "oval", "kidney"] }
+    },
+    {
+      "id": "diameter",
+      "label": "Pool Diameter",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0,
+      "step": 1,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Diameter for circular pools",
+      "visibleWhen": { "poolShape": ["circular"] }
+    },
+    {
+      "id": "shallowDepth",
+      "label": "Shallow End Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Depth at the shallow end"
+    },
+    {
+      "id": "deepDepth",
+      "label": "Deep End Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Depth at the deep end (same as shallow for uniform depth)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "gallons",
+      "label": "Total Volume (gallons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "liters",
+      "label": "Total Volume (liters)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "cubicMeters",
+      "label": "Volume (cubic meters)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "poolSummary",
+      "label": "Pool Dimensions",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "chemicalEstimate",
+      "label": "Chemical & Fill Estimates",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "waterCost",
+      "label": "Water Cost Estimate",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "pool-volume",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "cubic-yard-calculator",
+    "concrete-calculator",
+    "square-footage-calculator",
+    "water-intake-calculator",
+    "concrete-slab-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Association of Pool & Spa Professionals / Pool & Hot Tub Alliance (PHTA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard geometric volume formulas. Gallon conversion factor (7.48052 gal/cu ft) per NIST. Chemical dosage guidelines per PHTA/APSP recommendations.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "cubic-yard-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}
