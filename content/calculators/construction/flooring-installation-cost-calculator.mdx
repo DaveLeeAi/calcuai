@@ -1,0 +1,195 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Installing hardwood flooring in a 180-square-foot room (15 x 12) costs $1,350–$3,726 at national average rates, including 10% material waste and baseboard trim. Laminate runs $756–$1,746 for the same room, while luxury vinyl plank costs $954–$2,142. Adding old carpet removal and minor subfloor repair adds $450–$900 to the total. Enter your room dimensions, flooring type, and prep work below for a personalized estimate with a side-by-side comparison of all six flooring types.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator provides installed cost ranges for six flooring types — hardwood, laminate, vinyl plank, tile, carpet, and engineered hardwood — based on your room dimensions and project specifics. It produces a low/mid/high estimate, a cost-per-square-foot figure, and a comparison table showing what the same room would cost in every flooring type.
+
+The **base cost** splits into material (~45%) and labor (~55%). Material cost covers the flooring product itself. Labor cost covers installation, cutting, fitting, and standard cleanup. These rates reflect 2025–2026 national averages from HomeAdvisor, Angi, and the National Wood Flooring Association.
+
+The **waste factor** adds extra material to account for cuts, fitting around obstacles, and pattern matching. The standard 10% waste factor is appropriate for rectangular rooms with straight-lay patterns. Diagonal installations, complex room shapes, or wide-plank hardwood may require 15–20% waste.
+
+**Prep costs** — removal, subfloor repair, and underlayment — use the raw room area (not the waste-adjusted area) because they apply to the floor surface, not the material purchase. **Trim cost** estimates baseboard and transition strip replacement based on room perimeter at $3 per linear foot.
+
+The **regional multiplier** adjusts labor costs only. Material costs are relatively consistent nationwide, but installation labor varies 15–25% between regions.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter room length** — measure the longest wall of the room in feet. For L-shaped rooms, calculate each section separately and add the results.
+
+2. **Enter room width** — measure the wall perpendicular to the length. For irregular rooms, use the average width.
+
+3. **Choose your flooring type** — hardwood is the premium solid-wood option. Engineered hardwood offers a real wood surface on a plywood core for better moisture resistance. Laminate is the budget wood-look option. Vinyl plank is waterproof and suitable for basements and bathrooms. Tile is best for kitchens and wet areas. Carpet is the most affordable option for bedrooms and living areas.
+
+4. **Select old floor removal** — if existing flooring needs to come out first. Carpet removal is cheapest ($1–$2/sq ft). Hardwood removal is moderate ($2–$4/sq ft). Tile removal is most expensive ($3–$5/sq ft) because tile and thinset mortar must be chipped off the subfloor.
+
+5. **Select subfloor preparation** — choose "none" if the subfloor is level and structurally sound. Minor repair ($1.50–$3/sq ft) covers patching low spots and securing loose boards. Full leveling ($3–$6/sq ft) covers self-leveling compound over the entire surface for tile or hardwood.
+
+6. **Select underlayment** — required for laminate and engineered hardwood floating installations. Standard underlayment ($0.50–$1.50/sq ft) provides basic cushion and vapor barrier. Premium underlayment ($1.50–$3/sq ft) adds moisture barrier and sound dampening — recommended for upper floors and condos.
+
+7. **Set the waste factor** — 10% is standard for rectangular rooms. Increase to 15% for rooms with many doorways or closets. Use 20% for diagonal patterns, herringbone, or wide-plank hardwood.
+
+8. **Choose your region** — adjusts labor rates for local market conditions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Flooring installation cost uses separate material and labor rates applied to waste-adjusted area, plus prep costs applied to raw area.
+
+**Area and material area:**
+
+$$A = L \times W$$
+
+$$A_{mat} = A \times (1 + \frac{W_f}{100})$$
+
+**Installed cost:**
+
+$$C_{mat} = A_{mat} \times R_{mat}$$
+
+$$C_{lab} = A_{mat} \times R_{lab} \times M_{region}$$
+
+**Prep costs:**
+
+$$C_{removal} = A \times R_{removal}$$
+
+$$C_{subfloor} = A \times R_{subfloor}$$
+
+$$C_{underlay} = A \times R_{underlay}$$
+
+$$C_{trim} = 2 \times (L + W) \times \$3$$
+
+**Total:**
+
+$$C_{total} = C_{mat} + C_{lab} + C_{removal} + C_{subfloor} + C_{underlay} + C_{trim}$$
+
+Where:
+
+- **L** = room length in feet
+- **W** = room width in feet
+- **W_f** = waste factor (default 10%)
+- **R_mat** = material cost per square foot
+- **R_lab** = labor cost per square foot
+- **M_region** = regional labor multiplier (0.85–1.25)
+- **R_removal / R_subfloor / R_underlay** = prep rates per square foot
+
+**Installed cost rates per sq ft (2025-2026):**
+
+| Flooring Type | Material/sq ft | Labor/sq ft | Total Installed |
+|---|---|---|---|
+| Carpet | $1.35–$3.60 | $1.65–$4.40 | $3–$8 |
+| Laminate | $1.35–$3.60 | $1.65–$4.40 | $3–$8 |
+| Vinyl Plank | $1.80–$4.50 | $2.20–$5.50 | $4–$10 |
+| Engineered Hardwood | $2.25–$6.30 | $2.75–$7.70 | $5–$14 |
+| Hardwood | $2.70–$8.10 | $3.30–$9.90 | $6–$18 |
+| Tile | $3.15–$7.20 | $3.85–$8.80 | $7–$16 |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and the **National Wood Flooring Association (NWFA)**.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 15 x 12 Hardwood, Carpet Removal, Minor Subfloor Repair, Standard Underlayment, National
+
+A homeowner is installing hardwood flooring in a 15 x 12-foot living room. The existing carpet needs removal, the subfloor has a few soft spots needing minor repair, and standard underlayment will be added.
+
+**Step-by-step:**
+
+1. Calculate area: 15 × 12 = **180 sq ft**
+2. Material area (10% waste): 180 × 1.10 = **198 sq ft**
+3. Material cost (low): 198 × $2.70 = **$534.60**
+4. Material cost (high): 198 × $8.10 = **$1,603.80**
+5. Labor cost (low): 198 × $3.30 × 1.0 = **$653.40**
+6. Labor cost (high): 198 × $9.90 × 1.0 = **$1,960.20**
+7. Carpet removal: 180 × $1 = $180 (low), 180 × $2 = $360 (high)
+8. Subfloor repair: 180 × $1.50 = $270 (low), 180 × $3.00 = $540 (high)
+9. Underlayment: 180 × $0.50 = $90 (low), 180 × $1.50 = $270 (high)
+10. Trim: 2 × (15 + 12) × $3 = **$162**
+11. Total low: $534.60 + $653.40 + $180 + $270 + $90 + $162 = **$1,890**
+12. Total high: $1,603.80 + $1,960.20 + $360 + $540 + $270 + $162 = **$4,896**
+13. Total mid: ($1,890 + $4,896) / 2 = **$3,393**
+14. Cost per sq ft: $3,393 / 180 = **$18.85/sq ft**
+
+**Interpretation:** At $3,393 midpoint, the hardwood flooring itself (material + labor) accounts for $2,538, while prep work adds $855. Skipping the underlayment saves $180, but it voids most hardwood warranties. Choosing laminate instead of hardwood for the same room with the same prep work would cost $1,953 — a 42% savings. The room's hardwood floor will last 25–50 years with periodic refinishing.
+
+{/* Section 10: Flooring Cost by Material */}
+## Flooring Cost by Material
+
+| Flooring | Cost/sq ft | 180 sq ft room | 500 sq ft room | Lifespan | Best For |
+|---|---|---|---|---|---|
+| Carpet | $3–$8 | $756–$1,746 | $1,812–$4,162 | 5–15 years | Bedrooms, living rooms |
+| Laminate | $3–$8 | $756–$1,746 | $1,812–$4,162 | 15–25 years | Budget wood-look |
+| Vinyl Plank | $4–$10 | $954–$2,142 | $2,262–$5,162 | 15–25 years | Basements, bathrooms |
+| Eng. Hardwood | $5–$14 | $1,152–$2,934 | $2,762–$7,162 | 20–40 years | Over concrete, radiant heat |
+| Hardwood | $6–$18 | $1,350–$3,726 | $3,162–$9,162 | 25–50+ years | Living rooms, dining rooms |
+| Tile | $7–$16 | $1,548–$3,330 | $3,612–$8,162 | 50–100 years | Kitchens, bathrooms, entries |
+
+All costs include 10% waste factor, trim, and labor at national average rates. Room costs include trim at $3 per linear foot of perimeter. Prices vary 20–40% by region.
+
+{/* Section 12: Factors That Affect Cost */}
+## Factors That Affect Flooring Cost
+
+**Flooring type** is the primary cost driver. The same 180-square-foot room ranges from $756 in carpet to $3,726 in hardwood — a 5x difference. Choose based on the room's function, moisture exposure, desired lifespan, and your budget.
+
+**Room size** scales costs linearly. A 500-square-foot open-concept living area costs roughly 2.8x more than a 180-square-foot bedroom in the same material. Larger rooms may qualify for volume discounts from contractors — most flooring installers reduce their per-square-foot rate for projects over 500 square feet.
+
+**Old floor removal** can add 15–30% to the project. Carpet removal is relatively quick and cheap ($1–$2/sq ft). Tile removal is the most labor-intensive ($3–$5/sq ft) because thinset mortar must be chipped from the subfloor. Some contractors offer discounted removal when bundled with installation.
+
+**Subfloor condition** is a hidden cost driver. Homes built before 1990 often have uneven subfloors that need leveling. Full leveling with self-leveling compound ($3–$6/sq ft) is required for tile, glue-down hardwood, and any flooring where height transitions must be precise. Skipping subfloor prep leads to squeaks, uneven surfaces, and premature wear.
+
+**Underlayment** is required for floating installations (laminate, vinyl plank, engineered hardwood) and recommended for most other types. Premium underlayment with moisture barrier is essential in basements, over concrete slabs, and on upper floors where sound transmission matters.
+
+**Regional labor rates** adjust the labor portion by 15–25%. A project costing $2,000 in labor at national average runs $2,500 on the West Coast or $1,700 in the South.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including standard labor, materials, and basic trim. Premium patterns (herringbone, chevron, border inlays) cost 30–50% more and are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and the NWFA. Your local market may be 20–40% higher or lower.
+- The calculator assumes a **rectangular room**. L-shaped, irregular, or multi-room projects should be calculated per section.
+- **Trim cost** ($3 per linear foot of perimeter) covers standard baseboard replacement and transitions. Custom millwork, stair nosing, and reducers cost more.
+- The **waste factor** covers standard cuts and fitting. Complex room shapes, diagonal patterns, and wide-plank hardwood may require more.
+- **Furniture moving**, appliance disconnection, and door trimming are not included. These typically add $100–$400 per room.
+- **Radiant heat systems** under flooring are not included. These add $8–$16 per square foot.
+- The regional multiplier applies to **labor only**. Material costs are relatively consistent nationwide.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does flooring installation cost per square foot?
+
+Flooring installation costs $3–$18 per square foot installed, depending on material. Carpet and laminate are the most affordable at $3–$8 per square foot. Vinyl plank runs $4–$10. Engineered hardwood costs $5–$14. Solid hardwood is $6–$18. Tile ranges from $7–$16. These are fully installed prices including labor and standard materials at 2025–2026 national average rates. Add $1–$5 per square foot if old flooring needs removal, and $1.50–$6 if the subfloor needs repair.
+
+### Is it cheaper to install flooring yourself?
+
+DIY installation saves 45–55% of the total cost by eliminating labor charges. For a 180-square-foot room of laminate flooring, DIY material cost is approximately $267–$713 versus $756–$1,746 installed professionally. However, DIY is only practical for floating floors (laminate, vinyl plank, engineered hardwood) that snap together without adhesive or nailing. Hardwood nail-down, tile with thinset, and carpet stretching require specialized tools and training. A poorly installed floor voids the manufacturer warranty, creates uneven surfaces, and may need to be redone — potentially costing more than professional installation.
+
+### How long does flooring installation take?
+
+Professional installation takes 1–7 days for a single room depending on flooring type. Carpet installs in 1 day. Vinyl plank and laminate take 1–3 days. Engineered hardwood takes 2–4 days. Solid hardwood takes 3–5 days plus acclimation time (3–5 days before installation for the wood to adjust to room humidity). Tile takes 3–7 days including mortar set time and grouting. Old floor removal adds half a day to a full day. Subfloor leveling adds 1–2 days including drying time.
+
+### Do I need underlayment?
+
+Underlayment is required for all floating floor installations — laminate, vinyl plank, and floating engineered hardwood. It provides a moisture barrier between the subfloor and flooring, cushions minor subfloor imperfections, and reduces sound transmission. Standard underlayment ($0.50–$1.50/sq ft) is sufficient for most ground-floor installations. Premium underlayment ($1.50–$3/sq ft) with built-in moisture barrier is essential for installations over concrete slabs, in basements, and on upper floors where impact noise matters. Nail-down hardwood and glue-down floors do not use underlayment. Carpet uses a separate carpet pad instead.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates flooring installation costs using installed cost-per-square-foot rates for six flooring types, with separate material and labor components. A regional multiplier adjusts labor costs for local market conditions. The waste factor adds extra material to the purchase quantity to account for cuts, fitting, and pattern waste. Prep costs (removal, subfloor repair, underlayment) apply to raw room area, not waste-adjusted area. Trim cost estimates baseboard and transition replacement at $3 per linear foot of perimeter. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by **National Wood Flooring Association (NWFA)** industry data. The 45/55 material-to-labor split reflects NWFA industry standard ratios. Removal and subfloor prep costs from HomeAdvisor contractor surveys. All prices are installed costs including standard labor, materials, and basic trim. Regional variation of 20–40% is expected.
+
+{/* Section 17: Disclaimer — auto-rendered */}

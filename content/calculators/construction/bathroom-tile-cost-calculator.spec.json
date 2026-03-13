@@ -1,0 +1,282 @@
+{
+  "id": "bathroom-tile-cost-calculator",
+  "title": "Bathroom Tile Cost Calculator",
+  "slug": "bathroom-tile-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "bathroom tile cost calculator",
+  "metaTitle": "Bathroom Tile Cost Calculator | Shower, Floor & Full Bath Estimates",
+  "metaDescription": "Estimate bathroom tiling costs for shower walls, floors, tub surrounds, and full bathrooms. Compare ceramic, porcelain, stone, and glass tile by region.",
+  "inputs": [
+    {
+      "id": "projectType",
+      "label": "Project Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "shower-walls",
+      "options": [
+        {
+          "value": "shower-walls",
+          "label": "Shower Walls (~80 sq ft)"
+        },
+        {
+          "value": "shower-floor",
+          "label": "Shower Floor (~15 sq ft)"
+        },
+        {
+          "value": "bathroom-floor",
+          "label": "Bathroom Floor (~50 sq ft)"
+        },
+        {
+          "value": "tub-surround",
+          "label": "Tub Surround (~60 sq ft)"
+        },
+        {
+          "value": "full-bathroom",
+          "label": "Full Bathroom (~180 sq ft)"
+        }
+      ],
+      "helpText": "Select project scope — default area auto-fills based on typical project size"
+    },
+    {
+      "id": "area",
+      "label": "Tile Area (sq ft)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 80,
+      "min": 1,
+      "max": 1000,
+      "step": 1,
+      "helpText": "Total tile area in sq ft — or use default for selected project type"
+    },
+    {
+      "id": "tileType",
+      "label": "Tile Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "ceramic",
+      "options": [
+        {
+          "value": "ceramic",
+          "label": "Ceramic ($10–$20/sq ft installed)"
+        },
+        {
+          "value": "porcelain",
+          "label": "Porcelain ($12–$25/sq ft installed)"
+        },
+        {
+          "value": "natural-stone",
+          "label": "Natural Stone ($20–$40/sq ft installed)"
+        },
+        {
+          "value": "glass",
+          "label": "Glass ($18–$35/sq ft installed)"
+        },
+        {
+          "value": "large-format",
+          "label": "Large-Format ($15–$30/sq ft installed)"
+        }
+      ],
+      "helpText": "Tile material — each has different cost, durability, and maintenance needs"
+    },
+    {
+      "id": "demoOldTile",
+      "label": "Remove Old Tile?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Demolition Needed"
+        },
+        {
+          "value": "yes",
+          "label": "Yes — Remove Existing ($4–$8/sq ft)"
+        }
+      ],
+      "helpText": "Removing old tile adds $4–$8 per square foot for demolition and disposal"
+    },
+    {
+      "id": "waterproofing",
+      "label": "Waterproofing",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None (dry areas only)"
+        },
+        {
+          "value": "standard",
+          "label": "Standard ($2–$4/sq ft)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium — Schluter/Kerdi ($4–$7/sq ft)"
+        }
+      ],
+      "helpText": "Waterproofing membrane for wet areas — standard liquid-applied or premium sheet systems"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "helpText": "Extra material for cuts and breakage — 10% standard, 15% for diagonal patterns"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Tile Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "effectiveArea",
+      "label": "Material Area with Waste (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "demoCost",
+      "label": "Demolition Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "waterproofingCost",
+      "label": "Waterproofing Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "suppliesCost",
+      "label": "Supplies (Grout, Thin-Set, Backer Board)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "tileComparison",
+      "label": "Tile Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "projectNote",
+      "label": "Project Description",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "bathroom-tile-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "tile-calculator",
+    "bathroom-remodel-calculator",
+    "backsplash-tile-cost-calculator",
+    "flooring-calculator",
+    "paint-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; National Tile Contractors Association (NTCA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for tile and stone setters. Waterproofing costs based on NTCA membrane installation guidelines. Supplies costs based on Tile Council of North America material quantity standards.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "tile-calculator",
+    "bathroom-remodel-calculator"
+  ],
+  "qualityScore": 80,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -1,0 +1,305 @@
+{
+  "id": "deck-replacement-cost-calculator",
+  "title": "Deck Replacement Cost Calculator",
+  "slug": "deck-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "deck replacement cost calculator",
+  "metaTitle": "Deck Replacement Cost Calculator | Compare Materials & Estimates",
+  "metaDescription": "Estimate deck replacement costs for pressure-treated, cedar, composite, PVC, and hardwood decking. Includes demolition, substructure, railing, and regional labor.",
+  "inputs": [
+    {
+      "id": "deckLength",
+      "label": "Deck Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 16,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Deck length from house to edge"
+    },
+    {
+      "id": "deckWidth",
+      "label": "Deck Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Deck width along the house"
+    },
+    {
+      "id": "deckingMaterial",
+      "label": "Decking Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "pressure-treated",
+      "options": [
+        {
+          "value": "pressure-treated",
+          "label": "Pressure-Treated Lumber ($15–$25/sq ft)"
+        },
+        {
+          "value": "cedar",
+          "label": "Cedar ($20–$35/sq ft)"
+        },
+        {
+          "value": "composite",
+          "label": "Composite ($25–$45/sq ft)"
+        },
+        {
+          "value": "pvc",
+          "label": "PVC ($30–$50/sq ft)"
+        },
+        {
+          "value": "tropical-hardwood",
+          "label": "Tropical Hardwood ($35–$60/sq ft)"
+        }
+      ],
+      "helpText": "Decking material — price ranges include installation labor"
+    },
+    {
+      "id": "substructureWork",
+      "label": "Substructure Work",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none-boards-only",
+      "options": [
+        {
+          "value": "none-boards-only",
+          "label": "None — Boards Only (existing frame OK)"
+        },
+        {
+          "value": "partial-repair",
+          "label": "Partial Repair (+$5–$10/sq ft)"
+        },
+        {
+          "value": "full-replacement",
+          "label": "Full Replacement (+$15–$25/sq ft)"
+        }
+      ],
+      "helpText": "Does the deck frame (joists, beams, posts) need work?"
+    },
+    {
+      "id": "railingLength",
+      "label": "Railing Length (linear ft)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 500,
+      "step": 1,
+      "helpText": "Linear feet of new railing — enter 0 if keeping existing or no railing"
+    },
+    {
+      "id": "railingType",
+      "label": "Railing Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "wood",
+      "options": [
+        {
+          "value": "wood",
+          "label": "Wood ($20–$40/lin ft)"
+        },
+        {
+          "value": "composite",
+          "label": "Composite ($35–$60/lin ft)"
+        },
+        {
+          "value": "metal",
+          "label": "Metal ($50–$80/lin ft)"
+        },
+        {
+          "value": "cable",
+          "label": "Cable ($60–$100/lin ft)"
+        }
+      ],
+      "helpText": "Railing material — only applies if railing length > 0"
+    },
+    {
+      "id": "stairCount",
+      "label": "Stair Treads to Replace",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10,
+      "step": 1,
+      "helpText": "Number of stair treads to replace — enter 0 if no stairs"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Deck Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "demolitionCost",
+      "label": "Demolition & Haul-Away",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "deckingMaterialCost",
+      "label": "Decking Material Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "deckingLaborCost",
+      "label": "Decking Labor Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "substructureCost",
+      "label": "Substructure Work",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "railingCost",
+      "label": "Railing Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "stairCost",
+      "label": "Stair Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "materialComparison",
+      "label": "Material Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "deck-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "deck-calculator",
+    "flooring-installation-cost-calculator",
+    "siding-replacement-cost-calculator",
+    "concrete-patio-cost-calculator",
+    "renovation-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; North American Deck and Railing Association (NADRA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Cost-per-square-foot data split into material (~45%) and labor (~55%) from HomeAdvisor and Angi 2025-2026 national averages. Demolition flat rate of $5/sq ft from NADRA industry surveys. Railing, stair, and substructure rates from HomeAdvisor contractor cost guides. Regional labor multipliers from BLS Occupational Employment and Wage Statistics.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "deck-calculator"
+  ],
+  "qualityScore": 81,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

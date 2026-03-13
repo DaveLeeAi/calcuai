@@ -1,0 +1,231 @@
+{
+  "id": "gutter-replacement-cost-calculator",
+  "title": "Gutter Replacement Cost Calculator",
+  "slug": "gutter-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "gutter replacement cost calculator",
+  "metaTitle": "Gutter Replacement Cost Calculator | Compare Materials & Estimates",
+  "metaDescription": "Estimate gutter replacement costs for aluminum, vinyl, steel, copper, and zinc gutters. Includes gutter guards, downspouts, and regional labor rates.",
+  "inputs": [
+    {
+      "id": "gutterLength",
+      "label": "Gutter Length (linear ft)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 150,
+      "min": 10,
+      "max": 1000,
+      "step": 1,
+      "helpText": "Total linear feet of gutters — average home is 150-250 linear feet"
+    },
+    {
+      "id": "gutterMaterial",
+      "label": "Gutter Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "aluminum",
+      "options": [
+        { "value": "aluminum", "label": "Aluminum ($6–$12/lin ft installed)" },
+        { "value": "vinyl", "label": "Vinyl ($3–$7/lin ft installed)" },
+        { "value": "steel", "label": "Steel ($8–$15/lin ft installed)" },
+        { "value": "copper", "label": "Copper ($18–$35/lin ft installed)" },
+        { "value": "zinc", "label": "Zinc ($15–$25/lin ft installed)" }
+      ],
+      "helpText": "Material affects cost, durability, and appearance"
+    },
+    {
+      "id": "gutterStyle",
+      "label": "Gutter Style",
+      "type": "select",
+      "required": true,
+      "defaultValue": "k-style",
+      "options": [
+        { "value": "k-style", "label": "K-Style (standard residential)" },
+        { "value": "half-round", "label": "Half-Round (+25% — traditional/upscale)" }
+      ],
+      "helpText": "K-style is the most common residential gutter profile"
+    },
+    {
+      "id": "downspoutCount",
+      "label": "Number of Downspouts",
+      "type": "number",
+      "required": true,
+      "defaultValue": 4,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "helpText": "Typically one downspout per 30–40 feet of gutter"
+    },
+    {
+      "id": "gutterGuards",
+      "label": "Gutter Guards",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "basic-screen", "label": "Basic Screen ($4–$6/lin ft)" },
+        { "value": "micro-mesh", "label": "Micro-Mesh ($6–$10/lin ft)" },
+        { "value": "reverse-curve", "label": "Reverse Curve ($7–$12/lin ft)" }
+      ],
+      "helpText": "Guards reduce leaf and debris clogs — micro-mesh is the most effective"
+    },
+    {
+      "id": "oldGutterRemoval",
+      "label": "Old Gutter Removal",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "None (new install)" },
+        { "value": "yes", "label": "Remove Old Gutters ($1.50–$3/lin ft)" }
+      ],
+      "helpText": "Includes removal, disposal, and fascia inspection"
+    },
+    {
+      "id": "stories",
+      "label": "Home Height",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1-story",
+      "options": [
+        { "value": "1-story", "label": "1-Story" },
+        { "value": "2-story", "label": "2-Story (+$1.50/lin ft)" },
+        { "value": "3-story", "label": "3-Story (+$4/lin ft)" }
+      ],
+      "helpText": "Taller homes require more ladder work and safety equipment"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "gutterLength",
+      "label": "Gutter Length (lin ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "gutterCost",
+      "label": "Gutter Cost (material + labor)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "downspoutCost",
+      "label": "Downspout Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "guardCost",
+      "label": "Gutter Guard Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "removalCost",
+      "label": "Old Gutter Removal Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Total (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Total (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Total (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerLinFt",
+      "label": "Cost per Linear Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "materialComparison",
+      "label": "Material Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "gutter-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "roofing-calculator",
+    "siding-replacement-cost-calculator",
+    "metal-roofing-calculator",
+    "renovation-cost-calculator",
+    "deck-replacement-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; Gutter Helmet; LeafFilter",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Cost-per-linear-foot data from HomeAdvisor and Angi 2025-2026 national averages. Material/labor split based on industry standard 40/60 ratio. Style multipliers from Gutter Helmet pricing guides. Guard costs from LeafFilter and HomeAdvisor surveys.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 79,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

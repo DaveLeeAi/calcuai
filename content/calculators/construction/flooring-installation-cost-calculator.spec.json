@@ -1,0 +1,264 @@
+{
+  "id": "flooring-installation-cost-calculator",
+  "title": "Flooring Installation Cost Calculator",
+  "slug": "flooring-installation-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "flooring installation cost calculator",
+  "metaTitle": "Flooring Installation Cost Calculator | Compare Materials & Estimates",
+  "metaDescription": "Estimate flooring installation costs for hardwood, laminate, vinyl plank, tile, carpet, and engineered hardwood. Includes removal, subfloor prep, and regional labor.",
+  "inputs": [
+    {
+      "id": "roomLength",
+      "label": "Room Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Room length in feet"
+    },
+    {
+      "id": "roomWidth",
+      "label": "Room Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Room width in feet"
+    },
+    {
+      "id": "flooringType",
+      "label": "Flooring Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "hardwood",
+      "options": [
+        { "value": "hardwood", "label": "Hardwood ($6–$18/sq ft installed)" },
+        { "value": "laminate", "label": "Laminate ($3–$8/sq ft installed)" },
+        { "value": "vinyl-plank", "label": "Vinyl Plank ($4–$10/sq ft installed)" },
+        { "value": "tile", "label": "Tile ($7–$16/sq ft installed)" },
+        { "value": "carpet", "label": "Carpet ($3–$8/sq ft installed)" },
+        { "value": "engineered-hardwood", "label": "Engineered Hardwood ($5–$14/sq ft installed)" }
+      ],
+      "helpText": "Material type — each has different cost, durability, and maintenance requirements"
+    },
+    {
+      "id": "removeOldFloor",
+      "label": "Old Floor Removal",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "None (bare subfloor)" },
+        { "value": "carpet-removal", "label": "Carpet Removal ($1–$2/sq ft)" },
+        { "value": "hardwood-removal", "label": "Hardwood Removal ($2–$4/sq ft)" },
+        { "value": "tile-removal", "label": "Tile Removal ($3–$5/sq ft)" }
+      ],
+      "helpText": "Removing existing flooring adds to the project cost"
+    },
+    {
+      "id": "subfloorPrep",
+      "label": "Subfloor Preparation",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "None (subfloor is level and sound)" },
+        { "value": "minor-repair", "label": "Minor Repair ($1.50–$3/sq ft)" },
+        { "value": "full-leveling", "label": "Full Leveling ($3–$6/sq ft)" }
+      ],
+      "helpText": "Uneven or damaged subfloors need repair before new flooring"
+    },
+    {
+      "id": "underlayment",
+      "label": "Underlayment",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "standard", "label": "Standard ($0.50–$1.50/sq ft)" },
+        { "value": "premium", "label": "Premium ($1.50–$3/sq ft — moisture barrier + sound dampening)" }
+      ],
+      "helpText": "Underlayment protects flooring and reduces noise — required for laminate and engineered hardwood"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "helpText": "Extra material for cuts and waste — 10% is standard, 15-20% for diagonal patterns"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Room Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialArea",
+      "label": "Material Needed (with waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "removalCost",
+      "label": "Old Floor Removal Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "subfloorCost",
+      "label": "Subfloor Prep Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "underlaymentCost",
+      "label": "Underlayment Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "trimCost",
+      "label": "Trim & Transitions",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Total (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Total (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Total (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "flooringComparison",
+      "label": "Flooring Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "flooring-installation-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "flooring-calculator",
+    "carpet-calculator",
+    "tile-calculator",
+    "bathroom-tile-cost-calculator",
+    "renovation-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; National Wood Flooring Association (NWFA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Installed cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Material/labor split based on NWFA industry standard 45/55 ratio. Removal, subfloor, and underlayment costs from HomeAdvisor contractor surveys. Trim costs based on industry-standard baseboard and transition strip pricing.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "flooring-calculator",
+    "carpet-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

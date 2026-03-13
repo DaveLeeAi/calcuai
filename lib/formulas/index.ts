@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 210 modules, 212 formula IDs
+ * 218 modules, 220 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -36,20 +36,26 @@ import { FORMULA_REGISTRY as business_working_capital } from './business/working
 
 // Construction
 import { FORMULA_REGISTRY as construction_asphalt } from './construction/asphalt';
+import { FORMULA_REGISTRY as construction_backsplash_tile_cost } from './construction/backsplash-tile-cost';
 import { FORMULA_REGISTRY as construction_bathroom_remodel } from './construction/bathroom-remodel';
+import { FORMULA_REGISTRY as construction_bathroom_tile_cost } from './construction/bathroom-tile-cost';
 import { FORMULA_REGISTRY as construction_board_foot } from './construction/board-foot';
 import { FORMULA_REGISTRY as construction_brick } from './construction/brick';
 import { FORMULA_REGISTRY as construction_carpet } from './construction/carpet';
 import { FORMULA_REGISTRY as construction_concrete_block } from './construction/concrete-block';
 import { FORMULA_REGISTRY as construction_concrete_footing } from './construction/concrete-footing';
+import { FORMULA_REGISTRY as construction_concrete_patio_cost } from './construction/concrete-patio-cost';
 import { FORMULA_REGISTRY as construction_concrete_slab } from './construction/concrete-slab';
 import { FORMULA_REGISTRY as construction_concrete_volume } from './construction/concrete-volume';
 import { FORMULA_REGISTRY as construction_cubic_yard } from './construction/cubic-yard';
+import { FORMULA_REGISTRY as construction_deck_replacement_cost } from './construction/deck-replacement-cost';
 import { FORMULA_REGISTRY as construction_deck } from './construction/deck';
 import { FORMULA_REGISTRY as construction_driveway_cost } from './construction/driveway-cost';
 import { FORMULA_REGISTRY as construction_drywall } from './construction/drywall';
 import { FORMULA_REGISTRY as construction_fence } from './construction/fence';
+import { FORMULA_REGISTRY as construction_flooring_installation_cost } from './construction/flooring-installation-cost';
 import { FORMULA_REGISTRY as construction_flooring } from './construction/flooring';
+import { FORMULA_REGISTRY as construction_gutter_replacement_cost } from './construction/gutter-replacement-cost';
 import { FORMULA_REGISTRY as construction_hvac_size } from './construction/hvac-size';
 import { FORMULA_REGISTRY as construction_insulation } from './construction/insulation';
 import { FORMULA_REGISTRY as construction_kitchen_remodel } from './construction/kitchen-remodel';
@@ -58,10 +64,12 @@ import { FORMULA_REGISTRY as construction_paint_coverage } from './construction/
 import { FORMULA_REGISTRY as construction_paver } from './construction/paver';
 import { FORMULA_REGISTRY as construction_pool_volume } from './construction/pool-volume';
 import { FORMULA_REGISTRY as construction_rafter_length } from './construction/rafter-length';
+import { FORMULA_REGISTRY as construction_regrouting_cost } from './construction/regrouting-cost';
 import { FORMULA_REGISTRY as construction_renovation_cost } from './construction/renovation-cost';
 import { FORMULA_REGISTRY as construction_retaining_wall } from './construction/retaining-wall';
 import { FORMULA_REGISTRY as construction_roof_pitch } from './construction/roof-pitch';
 import { FORMULA_REGISTRY as construction_roofing } from './construction/roofing';
+import { FORMULA_REGISTRY as construction_siding_replacement_cost } from './construction/siding-replacement-cost';
 import { FORMULA_REGISTRY as construction_siding } from './construction/siding';
 import { FORMULA_REGISTRY as construction_square_footage } from './construction/square-footage';
 import { FORMULA_REGISTRY as construction_stair } from './construction/stair';
@@ -262,20 +270,26 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_working_capital,
   // Construction
   ...construction_asphalt,
+  ...construction_backsplash_tile_cost,
   ...construction_bathroom_remodel,
+  ...construction_bathroom_tile_cost,
   ...construction_board_foot,
   ...construction_brick,
   ...construction_carpet,
   ...construction_concrete_block,
   ...construction_concrete_footing,
+  ...construction_concrete_patio_cost,
   ...construction_concrete_slab,
   ...construction_concrete_volume,
   ...construction_cubic_yard,
+  ...construction_deck_replacement_cost,
   ...construction_deck,
   ...construction_driveway_cost,
   ...construction_drywall,
   ...construction_fence,
+  ...construction_flooring_installation_cost,
   ...construction_flooring,
+  ...construction_gutter_replacement_cost,
   ...construction_hvac_size,
   ...construction_insulation,
   ...construction_kitchen_remodel,
@@ -284,10 +298,12 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...construction_paver,
   ...construction_pool_volume,
   ...construction_rafter_length,
+  ...construction_regrouting_cost,
   ...construction_renovation_cost,
   ...construction_retaining_wall,
   ...construction_roof_pitch,
   ...construction_roofing,
+  ...construction_siding_replacement_cost,
   ...construction_siding,
   ...construction_square_footage,
   ...construction_stair,

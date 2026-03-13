@@ -1,0 +1,245 @@
+{
+  "id": "backsplash-tile-cost-calculator",
+  "title": "Backsplash Tile Cost Calculator",
+  "slug": "backsplash-tile-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "backsplash tile cost calculator",
+  "metaTitle": "Backsplash Tile Cost Calculator | Compare Materials & Get Estimates",
+  "metaDescription": "Estimate kitchen backsplash tile costs for ceramic, glass mosaic, natural stone, porcelain, and peel-and-stick. Compare materials and labor by region.",
+  "inputs": [
+    {
+      "id": "backsplashLength",
+      "label": "Backsplash Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Linear feet of backsplash from end to end"
+    },
+    {
+      "id": "backsplashHeight",
+      "label": "Backsplash Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 1.5,
+      "min": 0.1,
+      "step": 0.25,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Height from countertop to upper cabinets — typically 15-18 inches"
+    },
+    {
+      "id": "tileType",
+      "label": "Tile Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "ceramic-subway",
+      "options": [
+        {
+          "value": "ceramic-subway",
+          "label": "Ceramic Subway ($10–$20/sq ft installed)"
+        },
+        {
+          "value": "glass-mosaic",
+          "label": "Glass Mosaic ($18–$35/sq ft installed)"
+        },
+        {
+          "value": "natural-stone",
+          "label": "Natural Stone ($22–$40/sq ft installed)"
+        },
+        {
+          "value": "porcelain",
+          "label": "Porcelain ($12–$28/sq ft installed)"
+        },
+        {
+          "value": "peel-and-stick",
+          "label": "Peel-and-Stick ($5–$12/sq ft installed)"
+        }
+      ],
+      "helpText": "Tile material — each has different cost, look, and durability"
+    },
+    {
+      "id": "demoOldBacksplash",
+      "label": "Remove Old Backsplash?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Demolition Needed"
+        },
+        {
+          "value": "yes",
+          "label": "Yes — Remove Existing ($3–$6/sq ft)"
+        }
+      ],
+      "helpText": "Removing old tile or backsplash adds $3–$6 per square foot"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 25,
+      "step": 1,
+      "helpText": "Extra material for cuts and breakage — 10% standard, 15% for diagonal patterns"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Backsplash Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "demoCost",
+      "label": "Demolition Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "suppliesCost",
+      "label": "Supplies (Grout, Thin-Set, Trim)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "tileComparison",
+      "label": "Tile Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "backsplash-tile-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "tile-calculator",
+    "kitchen-remodel-calculator",
+    "flooring-calculator",
+    "bathroom-remodel-calculator",
+    "bathroom-tile-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; Tile Council of North America",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for tile and stone setters. Supplies costs based on Tile Council of North America material quantity guidelines.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "tile-calculator",
+    "kitchen-remodel-calculator"
+  ],
+  "qualityScore": 78,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

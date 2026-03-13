@@ -1,0 +1,284 @@
+{
+  "id": "concrete-patio-cost-calculator",
+  "title": "Concrete Patio Cost Calculator",
+  "slug": "concrete-patio-cost-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "concrete patio cost calculator",
+  "metaTitle": "Concrete Patio Cost Calculator | Compare Finishes & Get Estimates",
+  "metaDescription": "Estimate concrete patio costs for broom finish, stamped, exposed aggregate, colored, and polished concrete. Includes demolition, extras, and regional labor.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Patio Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 16,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Patio length in feet"
+    },
+    {
+      "id": "width",
+      "label": "Patio Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Patio width in feet"
+    },
+    {
+      "id": "thickness",
+      "label": "Slab Thickness",
+      "type": "select",
+      "required": true,
+      "defaultValue": "4-inch",
+      "options": [
+        {
+          "value": "4-inch",
+          "label": "4-inch (standard)"
+        },
+        {
+          "value": "6-inch",
+          "label": "6-inch (+$1/sq ft — heavy furniture/hot tub)"
+        }
+      ],
+      "helpText": "4-inch is standard for patios; 6-inch recommended for hot tubs, heavy furniture, or vehicle traffic"
+    },
+    {
+      "id": "finishType",
+      "label": "Finish Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "broom-finish",
+      "options": [
+        {
+          "value": "broom-finish",
+          "label": "Broom Finish ($6–$12/sq ft)"
+        },
+        {
+          "value": "stamped",
+          "label": "Stamped Concrete ($12–$20/sq ft)"
+        },
+        {
+          "value": "exposed-aggregate",
+          "label": "Exposed Aggregate ($10–$18/sq ft)"
+        },
+        {
+          "value": "colored-stained",
+          "label": "Colored/Stained ($8–$16/sq ft)"
+        },
+        {
+          "value": "polished",
+          "label": "Polished ($10–$20/sq ft)"
+        }
+      ],
+      "helpText": "Decorative finishes add to the cost but increase curb appeal and property value"
+    },
+    {
+      "id": "demolition",
+      "label": "Old Patio Demolition",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Demolition (new build)"
+        },
+        {
+          "value": "remove-old-patio",
+          "label": "Remove Old Patio (+$3–$6/sq ft)"
+        }
+      ],
+      "helpText": "Includes breaking up, removing, and hauling away existing concrete or pavers"
+    },
+    {
+      "id": "extras",
+      "label": "Extras",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Extras"
+        },
+        {
+          "value": "steps-1",
+          "label": "1 Step (+$400)"
+        },
+        {
+          "value": "steps-2",
+          "label": "2 Steps (+$750)"
+        },
+        {
+          "value": "seating-wall",
+          "label": "Seating Wall (+$1,500)"
+        }
+      ],
+      "helpText": "Optional additions — steps for elevation changes, seating wall for built-in perimeter seating"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Patio Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "demoCost",
+      "label": "Demolition Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "extrasCost",
+      "label": "Extras Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "finishComparison",
+      "label": "Finish Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "concrete-patio-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "concrete-slab-calculator",
+    "paver-calculator",
+    "retaining-wall-calculator",
+    "deck-replacement-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; Concrete Network; American Concrete Institute",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Material and labor cost splits from HomeAdvisor and Angi 2025-2026 national averages. Finish type pricing from Concrete Network 2025 contractor surveys. Thickness adjustments from American Concrete Institute residential slab guidelines. Regional multipliers from HomeAdvisor regional cost index.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "concrete-slab-calculator",
+    "paver-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

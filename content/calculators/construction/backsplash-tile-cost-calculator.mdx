@@ -1,0 +1,187 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 15-square-foot ceramic subway backsplash costs $150–$300 installed at national average rates, including materials, labor, grout, and trim. Glass mosaic runs $270–$530 for the same area, while peel-and-stick is the budget option at $83–$198. Removing an old backsplash adds $45–$90, and regional labor rates can shift labor costs by 15–25% above or below the national average. Enter your backsplash dimensions, tile type, and region below for a personalized estimate with a side-by-side comparison of all five common backsplash materials.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides installed cost ranges for five common backsplash tile materials — ceramic subway, glass mosaic, natural stone, porcelain, and peel-and-stick — based on your backsplash dimensions, demolition needs, waste factor, and region. It produces a low/mid/high estimate for your selected tile, a cost-per-square-foot figure, and a comparison table showing what the same backsplash would cost in every material.
+
+The **material cost** covers the tile itself, calculated on your area plus the waste factor (default 10%) to account for cuts, breakage, and pattern matching. Material rates reflect 2025–2026 wholesale-to-retail pricing from HomeAdvisor and Angi national surveys.
+
+The **labor cost** covers professional tile installation — surface preparation, layout, cutting, setting, grouting, and cleanup. Labor is the larger portion of backsplash cost (roughly 60%) and varies significantly by region. The calculator applies a regional multiplier to labor only: the South is 15% below the national average, while the West Coast is 25% above.
+
+The **supplies cost** covers grout, thin-set mortar, spacers, and edge trim at a flat $2.50 per square foot of backsplash area. This is a consistent cost across all tile types.
+
+The **demolition cost** applies only if you are removing an existing backsplash. Removing old tile, adhesive, and drywall damage typically runs $3–$6 per square foot depending on the existing material and wall condition.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the backsplash length** — measure the total linear distance from one end of the backsplash to the other. For L-shaped or U-shaped kitchens, add up all sections. A typical kitchen backsplash runs 8–15 linear feet.
+
+2. **Enter the backsplash height** — measure from the countertop surface to the bottom of the upper cabinets. Standard backsplash height is 15–18 inches (1.25–1.5 feet). Full-height backsplashes that extend to the ceiling are 36–48 inches (3–4 feet).
+
+3. **Choose your tile type** — ceramic subway is the most popular and affordable option. Glass mosaic offers premium aesthetics. Natural stone is the highest cost. Porcelain is a durable mid-range choice. Peel-and-stick is the lowest cost for DIY or temporary installations.
+
+4. **Select demolition** — choose "Yes" if you have an existing backsplash that needs removal before new tile installation. Demolition adds $3–$6 per square foot for tile removal, adhesive scraping, and wall repair.
+
+5. **Set the waste factor** — 10% is standard for straight-laid subway tile. Use 15% for diagonal or herringbone patterns that require more cuts. Use 20–25% for complex mosaic patterns or small tile sizes with many cuts around outlets and corners.
+
+6. **Select your region** — this adjusts labor costs for regional pricing differences. The South and Midwest have below-average labor rates. The Northeast and West Coast have above-average rates. The national average is the baseline.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Backsplash tile cost is estimated using area times material and labor rates, with a waste factor for extra tile and a regional multiplier for labor.
+
+**Area:**
+
+$$A = L \times H$$
+
+**Material area (with waste):**
+
+$$A_m = A \times \left(1 + \frac{W}{100}\right)$$
+
+**Cost range:**
+
+$$C_{low} = A_m \times R_{mat,low} + A_m \times R_{lab,low} \times M_r + D_{low} + S$$
+
+$$C_{high} = A_m \times R_{mat,high} + A_m \times R_{lab,high} \times M_r + D_{high} + S$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **L** = backsplash length in feet
+- **H** = backsplash height in feet
+- **W** = waste factor percentage (5–25%)
+- **R_mat** = material cost per square foot (low/high range)
+- **R_lab** = labor cost per square foot (low/high range)
+- **M_r** = regional labor multiplier (0.85–1.25)
+- **D** = demolition cost (area × $3–$6 if applicable)
+- **S** = supplies cost (area × $2.50)
+
+**Material rates per sq ft (2025-2026):**
+
+| Tile Type | Material | Labor | Total Installed |
+|---|---|---|---|
+| Ceramic Subway | $4–$8 | $6–$12 | $10–$20 |
+| Glass Mosaic | $7–$14 | $11–$21 | $18–$35 |
+| Natural Stone | $9–$16 | $13–$24 | $22–$40 |
+| Porcelain | $5–$11 | $7–$17 | $12–$28 |
+| Peel-and-Stick | $2–$5 | $3–$7 | $5–$12 |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and **Tile Council of North America**.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 10 × 1.5 ft Ceramic Subway Backsplash (National Average, No Demo)
+
+A homeowner is installing a ceramic subway backsplash in a standard kitchen — 10 linear feet, 1.5 feet tall (18 inches), no demolition needed, 10% waste factor, national average labor rates.
+
+**Step-by-step:**
+
+1. Calculate area: 10 × 1.5 = **15 sq ft**
+2. Calculate material area with 10% waste: 15 × 1.10 = **16.5 sq ft**
+3. Look up ceramic subway material rate: $4–$8/sq ft
+4. Look up ceramic subway labor rate: $6–$12/sq ft
+5. Material cost low: 16.5 × $4 = **$66** | high: 16.5 × $8 = **$132**
+6. Labor cost low: 16.5 × $6 × 1.0 = **$99** | high: 16.5 × $12 × 1.0 = **$198**
+7. Supplies: 15 × $2.50 = **$37.50**
+8. Total low: $66 + $99 + $0 + $37.50 = **$202.50**
+9. Total high: $132 + $198 + $0 + $37.50 = **$367.50**
+10. Total mid: ($202.50 + $367.50) / 2 = **$285.00**
+11. Cost per sq ft: $285 / 15 = **$19.00/sq ft**
+
+**Interpretation:** At $285 midpoint, a 15-square-foot ceramic subway backsplash is one of the most cost-effective kitchen upgrades. The same area in glass mosaic would cost roughly $475, and natural stone would run about $549. Peel-and-stick at $178 is the cheapest option but is generally considered temporary. For a kitchen with 20 linear feet of counter space and a full 18-inch backsplash (30 sq ft), expect to roughly double these figures.
+
+{/* Section 10: Backsplash Cost by Material */}
+## Backsplash Cost by Material
+
+| Tile Type | Cost/sq ft | 15 sq ft | 30 sq ft | Best For | Durability |
+|---|---|---|---|---|---|
+| Peel-and-Stick | $5–$12 | $83–$198 | $165–$396 | Rentals, temporary, DIY | 3–5 years |
+| Ceramic Subway | $10–$20 | $203–$368 | $405–$735 | Most kitchens, classic look | 20–30 years |
+| Porcelain | $12–$28 | $236–$500 | $471–$999 | High-moisture areas, modern look | 25–50 years |
+| Glass Mosaic | $18–$35 | $335–$615 | $669–$1,230 | Accent walls, premium kitchens | 20–30 years |
+| Natural Stone | $22–$40 | $401–$698 | $801–$1,395 | Luxury kitchens, unique patterns | 30–50 years |
+
+All costs include materials, labor, grout, and standard trim at national average rates. Costs include 10% waste factor. Regional variation of 15–25% on labor is expected.
+
+{/* Section 11: Factors That Affect Backsplash Cost */}
+## Factors That Affect Backsplash Cost
+
+**Backsplash size** directly determines total cost. A standard 15-square-foot backsplash (10 ft × 18 in) is the most common residential project. Full-height backsplashes extending from counter to ceiling (30–40 sq ft) cost 2–3x more but create a dramatic visual impact and are easier to clean than painted drywall above the backsplash line.
+
+**Tile material** creates the largest cost swing. The same 15-square-foot backsplash ranges from $83 in peel-and-stick to $698 in natural stone — an 8x difference. Ceramic subway tile at $10–$20 per square foot installed is the sweet spot for most homeowners: affordable, durable, and available in hundreds of colors and finishes.
+
+**Pattern complexity** affects both waste and labor. Straight-laid subway tile is the most efficient layout. Herringbone patterns require 15% extra material and add $2–$4 per square foot in labor for the additional cuts and layout time. Diagonal and chevron patterns fall in between.
+
+**Demolition** of an existing backsplash adds $3–$6 per square foot. Tile on drywall is the easiest to remove. Tile on cement board is harder. If the underlying drywall is damaged during removal, expect an additional $1–$2 per square foot for drywall patching before new tile installation.
+
+**Regional labor rates** vary 15–25% from the national average. A $285 backsplash in the South (0.85x labor) would cost $270, while the same job on the West Coast (1.25x labor) would cost $322. The material cost is the same everywhere; only labor shifts by region.
+
+**Outlets and obstacles** increase labor time. Each electrical outlet, switch, or window requires precise tile cuts. Expect $25–$75 per outlet for custom cutting and fitting, which is not included in the per-square-foot estimate.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including standard labor, materials, grout, and basic trim. Decorative edge trim, accent strips, and custom medallions are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor and Angi. Your local market may be 15–25% higher or lower depending on regional labor rates and material availability.
+- The calculator assumes a **flat, standard drywall surface** in good condition. If the wall needs cement board installation, moisture barrier, or significant patching, add $2–$5 per square foot.
+- The **waste factor** covers standard cuts and breakage. Complex patterns (herringbone, chevron) or small areas with many obstacles may require 15–20% waste.
+- **Supplies cost** ($2.50/sq ft) is an average covering grout, thin-set mortar, spacers, and basic edge trim. Premium grout (epoxy) or decorative trim will increase this cost.
+- This calculator does not account for **electrical work** (moving outlets, adding under-cabinet lighting), **plumbing modifications**, or **countertop adjustments**.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does a backsplash cost?
+
+A kitchen backsplash costs $150–$700 for a standard 15-square-foot area, depending on tile material. Ceramic subway tile is the most popular choice at $10–$20 per square foot installed ($150–$300 for 15 sq ft). Glass mosaic costs $18–$35 per square foot ($270–$525). Natural stone is the most expensive at $22–$40 per square foot ($330–$600). Peel-and-stick is the budget option at $5–$12 per square foot ($75–$180). All prices include materials, labor, and standard supplies.
+
+### What is the cheapest backsplash option?
+
+Peel-and-stick tile is the cheapest backsplash option at $5–$12 per square foot installed — roughly $75–$180 for a standard 15-square-foot backsplash. It requires no grout, no thin-set, and minimal tools, making it ideal for DIY installation and renters. However, peel-and-stick typically lasts only 3–5 years and may not withstand high heat behind a stove. For a permanent installation, ceramic subway tile at $10–$20 per square foot is the most affordable traditional option.
+
+### How long does backsplash installation take?
+
+Professional backsplash installation takes 1–2 days for a standard 15-square-foot kitchen backsplash. Day one covers surface preparation, layout, tile setting, and cutting around outlets. Day two covers grouting, cleanup, and caulking. Larger projects (30+ sq ft), complex patterns (herringbone, mosaic), or projects requiring old tile demolition may take 2–3 days. Peel-and-stick backsplash can be installed in 2–4 hours by a homeowner.
+
+### Do I need to remove old backsplash before installing new?
+
+You should remove the old backsplash before installing new tile in most cases. Tiling over existing tile creates a thick, uneven surface that may not bond properly and can look bulky where it meets the countertop and cabinets. Removal costs $3–$6 per square foot ($45–$90 for a 15 sq ft area). The only exception is peel-and-stick tile, which can sometimes be applied over existing smooth tile if the surface is clean, flat, and well-bonded to the wall.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates kitchen backsplash tiling costs using separate material and labor rates per square foot for five tile types, adjusted for waste factor and regional labor differences. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by **Tile Council of North America** material pricing guidelines. Material costs (40% of installed price) cover tile only at wholesale-to-retail rates. Labor costs (60% of installed price) cover professional installation including surface prep, cutting, setting, grouting, and cleanup. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for tile and stone setters (SOC 47-2044). Supplies cost of $2.50 per square foot covers grout, thin-set mortar, spacers, and basic edge trim per TCNA installation guidelines. Demolition rates of $3–$6 per square foot are based on HomeAdvisor tile removal cost data. All prices are fully installed costs. Regional variation of 15–25% on labor is expected.
+
+{/* Section 16: Disclaimer — auto-rendered */}

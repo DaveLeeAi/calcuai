@@ -1,0 +1,196 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Replacing a 192-square-foot deck (16 x 12) with pressure-treated lumber costs $3,840–$5,760 including demolition at national average rates. Composite decking runs $5,760–$9,600, while PVC decking costs $6,720–$10,560 for the same area. These estimates cover tear-off, haul-away, and new decking installation — but not substructure, railing, or stairs. Add $960–$1,920 for partial joist repair, $560–$1,120 for 28 feet of wood railing, and $1,000–$1,800 for 4 stair treads. Enter your deck dimensions, material, and options below to get a personalized replacement estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator estimates the total cost to tear off an existing deck and replace it with new decking. It produces a low/mid/high cost range for your selected material, broken down into six line items: demolition, decking material, decking labor, substructure work, railing, and stairs. It also shows a side-by-side comparison of all five decking materials at national rates.
+
+**Demolition** is charged at a flat $5 per square foot, covering tear-off of existing decking boards, disposal, and haul-away. This rate assumes standard residential demolition — a deck with built-in features (hot tub platforms, integrated planters, multi-level transitions) may cost more to demo.
+
+**Decking cost** is split into material (~45%) and labor (~55%). Material rates cover the decking boards themselves. Labor rates cover cutting, fastening, and finishing. The regional multiplier applies to labor only — material prices are relatively consistent nationally, but labor rates vary 15–25% by region.
+
+**Substructure work** ranges from $0 (boards-only replacement on a sound frame) to $15–$25 per square foot for full frame replacement including joists, beams, ledger board, and posts. A boards-only replacement is appropriate when the existing frame passes inspection — no rot, no structural sag, no code violations.
+
+**Railing and stairs** are priced per linear foot and per tread, respectively. Enter 0 for either if you are keeping existing railing or have no stairs.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the deck length** — measure from the house wall to the outer edge of the deck. For irregular shapes, use the longest dimension or estimate the rectangle that most closely approximates the footprint.
+
+2. **Enter the deck width** — measure along the house wall. A typical single-door deck is 10–12 feet wide; a sliding-door entertaining deck is 14–20 feet wide.
+
+3. **Choose your decking material** — pressure-treated is the budget option with 10–15 year board life. Cedar offers natural beauty and 15–20 years. Composite and PVC are low-maintenance options lasting 25–50 years. Tropical hardwood (ipe, cumaru) is the premium choice at 40+ years.
+
+4. **Select the substructure work level** — "boards only" means the existing frame is sound and you are replacing surface boards only. "Partial repair" covers replacing some damaged joists or beams. "Full replacement" means all-new framing from posts up.
+
+5. **Enter railing length** — measure the total linear feet of new railing needed. A 16 x 12 deck attached to the house on one side typically needs 28–40 feet of railing. Enter 0 if keeping existing railing.
+
+6. **Select railing type** — wood is the budget option, composite matches composite decking, metal offers a modern look, and cable railing provides unobstructed views.
+
+7. **Enter stair tread count** — count the individual treads (steps), not the total rise. A 3-foot deck height typically requires 4–5 treads.
+
+8. **Select your region** — this adjusts labor costs. The South and Midwest are 10–15% below national average; the Northeast and West Coast are 20–25% above.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Deck replacement cost combines demolition, decking (material + labor), substructure, railing, and stairs.
+
+**Area:**
+
+$$A = L \times W$$
+
+**Demolition:**
+
+$$D = A \times \$5$$
+
+**Decking cost:**
+
+$$C_{mat} = A \times R_{mat}$$
+
+$$C_{lab} = A \times R_{lab} \times M_{region}$$
+
+**Substructure:**
+
+$$C_{sub} = A \times R_{sub}$$
+
+**Railing:**
+
+$$C_{rail} = L_{rail} \times R_{rail}$$
+
+**Stairs:**
+
+$$C_{stair} = N_{treads} \times R_{stair}$$
+
+**Totals:**
+
+$$C_{low} = D + C_{mat,low} + C_{lab,low} + C_{sub,low} + C_{rail,low} + C_{stair,low}$$
+
+$$C_{high} = D + C_{mat,high} + C_{lab,high} + C_{sub,high} + C_{rail,high} + C_{stair,high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **L, W** = deck length and width in feet
+- **R_mat** = material cost per sq ft (varies by decking type)
+- **R_lab** = labor cost per sq ft (varies by decking type)
+- **M_region** = regional labor multiplier (0.85–1.25)
+- **R_sub** = substructure rate per sq ft (none: $0, partial: $5–$10, full: $15–$25)
+- **R_rail** = railing rate per linear foot (wood: $20–$40, composite: $35–$60, metal: $50–$80, cable: $60–$100)
+- **R_stair** = stair rate per tread ($250–$450)
+
+**Decking material/labor rates per sq ft (2025-2026):**
+
+| Material | Material Cost | Labor Cost | Installed Total |
+|---|---|---|---|
+| Pressure-Treated | $6.75–$11.25 | $8.25–$13.75 | $15–$25 |
+| Cedar | $9–$15.75 | $11–$19.25 | $20–$35 |
+| Composite | $11.25–$20.25 | $13.75–$24.75 | $25–$45 |
+| PVC | $13.50–$22.50 | $16.50–$27.50 | $30–$50 |
+| Tropical Hardwood | $15.75–$27 | $19.25–$33 | $35–$60 |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and **NADRA** industry surveys.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 16 x 12 Composite Deck Replacement
+
+A homeowner is replacing a 16 x 12-foot deck with composite decking. The substructure needs partial joist repair. They want 28 feet of wood railing and 4 new stair treads. Location: national average.
+
+**Step-by-step:**
+
+1. Calculate area: 16 x 12 = **192 sq ft**
+2. Demolition: 192 x $5 = **$960**
+3. Composite material low: 192 x $11.25 = **$2,160** | high: 192 x $20.25 = **$3,888**
+4. Composite labor low: 192 x $13.75 x 1.0 = **$2,640** | high: 192 x $24.75 x 1.0 = **$4,752**
+5. Partial substructure low: 192 x $5 = **$960** | high: 192 x $10 = **$1,920**
+6. Wood railing low: 28 x $20 = **$560** | high: 28 x $40 = **$1,120**
+7. Stair treads low: 4 x $250 = **$1,000** | high: 4 x $450 = **$1,800**
+8. Total low: $960 + $2,160 + $2,640 + $960 + $560 + $1,000 = **$8,280**
+9. Total high: $960 + $3,888 + $4,752 + $1,920 + $1,120 + $1,800 = **$14,440**
+10. Total mid: ($8,280 + $14,440) / 2 = **$11,360**
+11. Cost per sq ft: $11,360 / 192 = **$59.17/sq ft**
+
+**Interpretation:** At $11,360 midpoint, this composite deck replacement delivers a low-maintenance surface that should last 25–50 years without staining or sealing. The same project in pressure-treated lumber would cost roughly $8,280 midpoint — 27% less — but requires staining every 2–3 years and board replacement after 10–15 years. Over a 30-year ownership period, composite typically costs less in total when maintenance is factored in.
+
+{/* Section 10: Deck Replacement Cost by Material */}
+## Deck Replacement Cost by Material
+
+| Material | Installed/sq ft | 192 sq ft (demo incl.) | 400 sq ft (demo incl.) | Board Lifespan | Annual Maintenance |
+|---|---|---|---|---|---|
+| Pressure-Treated | $15–$25 | $3,840–$5,760 | $8,000–$12,000 | 10–15 years | $200–$400 (stain/seal yearly) |
+| Cedar | $20–$35 | $4,800–$7,680 | $10,000–$16,000 | 15–20 years | $150–$350 (stain every 2–3 yr) |
+| Composite | $25–$45 | $5,760–$9,600 | $12,000–$20,000 | 25–50 years | $50–$100 (wash annually) |
+| PVC | $30–$50 | $6,720–$10,560 | $14,000–$22,000 | 25–50 years | $50–$100 (wash annually) |
+| Tropical Hardwood | $35–$60 | $7,680–$12,480 | $16,000–$26,000 | 40–75 years | $100–$250 (oil annually) |
+
+All costs include $5/sq ft demolition. Substructure, railing, and stairs are additional. Prices reflect 2025–2026 national averages and vary 15–25% by region.
+
+{/* Section 11: Factors That Affect Deck Replacement Cost */}
+## Factors That Affect Deck Replacement Cost
+
+**Decking material** is the largest cost variable. Pressure-treated lumber at $15–$25/sq ft installed is one-third the price of tropical hardwood at $35–$60/sq ft. However, lifetime cost tells a different story — pressure-treated boards need replacement every 10–15 years, while composite and hardwood last 25–75 years with minimal maintenance.
+
+**Substructure condition** can double the project cost. A boards-only replacement on a sound frame is straightforward. Full substructure replacement — new joists, beams, ledger board, and posts — adds $15–$25 per square foot, essentially rebuilding the entire deck. Have a structural inspection before committing to boards-only replacement.
+
+**Railing** adds $560–$2,800 for a typical 28-foot perimeter in wood to cable. Code requires railing on any deck 30 inches or more above grade, and most jurisdictions require 36-inch minimum height with balusters spaced no more than 4 inches apart.
+
+**Stairs** cost $250–$450 per tread installed, including stringers and risers. A deck 3–4 feet above grade requires 4–6 treads. Stair railing is typically priced separately from deck railing.
+
+**Regional labor rates** vary 15–25% from the national average. The South and Midwest run 10–15% below national average due to lower cost of living and larger labor pools. The Northeast and West Coast run 20–25% above due to higher wages and permitting complexity.
+
+**Permits** are required in most jurisdictions for deck replacement, especially when substructure work is involved. Permit fees range from $100 to $500. Some municipalities require engineered drawings for decks over a certain size or height.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including standard labor, fasteners, and finishing. Premium features (built-in benches, planters, lighting, multi-level transitions) are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and NADRA. Your local market may be 15–25% higher or lower.
+- The calculator assumes a **rectangular, single-level deck** attached to the house on one side. Multi-level, freestanding, or wraparound decks require custom estimating.
+- **Demolition rate** of $5/sq ft assumes standard residential deck without hazardous materials. Decks with lead paint or treated lumber requiring special disposal may cost more.
+- **Regional multiplier** applies to decking labor only. Railing, stair, and substructure costs are shown at national rates regardless of region selection.
+- This calculator does not account for **deck design upgrades** (curves, inlays, picture framing), **electrical work** (outlets, lighting), **permit fees**, or **engineering drawings**.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to replace a deck?
+
+Replacing a 192-square-foot deck costs $3,840–$12,480 depending on material — from $3,840–$5,760 for pressure-treated lumber to $7,680–$12,480 for tropical hardwood. These figures include demolition at $5 per square foot and new decking installation at national average rates. Add $960–$4,800 for substructure work if the frame needs repair, plus $560–$2,800 for new railing and $250–$450 per stair tread.
+
+### Should I repair or replace my deck?
+
+Replace if the substructure shows significant rot, structural sag, or code violations — repair costs escalate quickly once framing is compromised. Replace if more than 25% of decking boards are damaged — spot-replacing boards creates an uneven appearance and does not reset the maintenance clock. Repair is worthwhile when the frame is sound and only surface boards need attention. A structural inspection ($200–$400) before deciding saves money by preventing unnecessary full replacement.
+
+### Is composite decking worth the extra cost?
+
+Composite decking costs 60–80% more upfront than pressure-treated lumber ($25–$45 vs $15–$25 per square foot installed). However, composite requires no staining, sealing, or board replacement for 25–50 years. Pressure-treated lumber needs $200–$400 in annual maintenance and full board replacement every 10–15 years. Over a 30-year period, the total cost of ownership for composite is typically 10–20% lower than pressure-treated when maintenance and replacement cycles are included.
+
+### How long does deck replacement take?
+
+A standard 192-square-foot deck replacement with pressure-treated or cedar boards takes 3–5 days — 1 day for demolition and 2–4 days for building. Composite and PVC take 4–7 days due to hidden fastener systems. Tropical hardwood takes 5–10 days because every fastener hole must be pre-drilled. Add 1–3 days for substructure repair or full replacement. Weather delays, permit inspections, and complex designs can extend the timeline further.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates deck replacement costs by combining demolition, decking material, decking labor, substructure work, railing, and stair components. Installed cost-per-square-foot rates are split into material (~45%) and labor (~55%) based on **HomeAdvisor** and **Angi** 2025–2026 national average surveys. The $5/sq ft demolition rate reflects residential deck tear-off and haul-away costs per **NADRA** (North American Deck and Railing Association) industry data. Railing costs per linear foot come from HomeAdvisor contractor cost guides. Stair costs per tread reflect contractor pricing surveys for standard stringer-and-tread construction. Regional labor multipliers are based on **Bureau of Labor Statistics** Occupational Employment and Wage Statistics for construction trades. All prices are installed costs and vary 15–25% by region.
+
+{/* Section 16: Disclaimer — auto-rendered */}

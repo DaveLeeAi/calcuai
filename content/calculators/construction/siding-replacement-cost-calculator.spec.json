@@ -1,0 +1,259 @@
+{
+  "id": "siding-replacement-cost-calculator",
+  "title": "Siding Replacement Cost Calculator",
+  "slug": "siding-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "siding replacement cost calculator",
+  "metaTitle": "Siding Replacement Cost Calculator | Compare Materials & Estimates",
+  "metaDescription": "Estimate siding replacement costs for vinyl, fiber cement, wood, engineered wood, aluminum, and stone veneer. Includes removal, housewrap, and regional labor.",
+  "inputs": [
+    {
+      "id": "wallArea",
+      "label": "Exterior Wall Area (sq ft)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1500,
+      "min": 100,
+      "max": 10000,
+      "step": 50,
+      "helpText": "Total exterior wall area minus windows/doors — average home is 1,500–2,500 sq ft"
+    },
+    {
+      "id": "sidingType",
+      "label": "Siding Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "vinyl",
+      "options": [
+        {
+          "value": "vinyl",
+          "label": "Vinyl ($3–$7/sq ft installed)"
+        },
+        {
+          "value": "fiber-cement",
+          "label": "Fiber Cement ($6–$13/sq ft installed)"
+        },
+        {
+          "value": "wood",
+          "label": "Wood ($6–$12/sq ft installed)"
+        },
+        {
+          "value": "engineered-wood",
+          "label": "Engineered Wood ($5–$10/sq ft installed)"
+        },
+        {
+          "value": "aluminum",
+          "label": "Aluminum ($3–$6/sq ft installed)"
+        },
+        {
+          "value": "stone-veneer",
+          "label": "Stone Veneer ($12–$30/sq ft installed)"
+        }
+      ],
+      "helpText": "Siding material — price ranges include material and installation labor"
+    },
+    {
+      "id": "stories",
+      "label": "Home Stories",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1-story",
+      "options": [
+        {
+          "value": "1-story",
+          "label": "1-Story (standard labor)"
+        },
+        {
+          "value": "2-story",
+          "label": "2-Story (+20% labor — scaffolding)"
+        },
+        {
+          "value": "3-story",
+          "label": "3-Story (+40% labor — scaffolding + rigging)"
+        }
+      ],
+      "helpText": "Higher stories increase labor cost due to scaffolding and safety equipment"
+    },
+    {
+      "id": "oldSidingRemoval",
+      "label": "Old Siding Removal",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None (installing over or new construction)"
+        },
+        {
+          "value": "standard-removal",
+          "label": "Standard Removal ($1.50–$3/sq ft)"
+        },
+        {
+          "value": "asbestos-abatement",
+          "label": "Asbestos Abatement ($5–$15/sq ft)"
+        }
+      ],
+      "helpText": "Old siding removal type — asbestos requires licensed abatement contractors"
+    },
+    {
+      "id": "housewrap",
+      "label": "Housewrap / Weather Barrier",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None (existing barrier OK)"
+        },
+        {
+          "value": "standard",
+          "label": "Standard Housewrap ($0.50–$1.50/sq ft)"
+        }
+      ],
+      "helpText": "Tyvek or equivalent weather barrier — recommended when removing old siding"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "wallArea",
+      "label": "Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "materialCost",
+      "label": "Siding Material Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "removalCost",
+      "label": "Old Siding Removal",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "housewrapCost",
+      "label": "Housewrap / Weather Barrier",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "trimCost",
+      "label": "Trim & Accessories",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "sidingComparison",
+      "label": "Siding Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "siding-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "siding-calculator",
+    "paint-calculator",
+    "gutter-replacement-cost-calculator",
+    "insulation-calculator",
+    "renovation-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; Vinyl Siding Institute; James Hardie Industries",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Cost-per-square-foot data split into material (~40%) and labor (~60%) from HomeAdvisor and Angi 2025-2026 national averages. Story multipliers from scaffolding rental and labor premium surveys. Removal rates from HomeAdvisor demolition cost guides. Housewrap rates from Tyvek and building envelope industry data. Regional labor multipliers from BLS Occupational Employment and Wage Statistics.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "siding-calculator"
+  ],
+  "qualityScore": 80,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}
