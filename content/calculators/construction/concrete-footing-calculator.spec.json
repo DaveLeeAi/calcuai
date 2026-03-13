@@ -1,0 +1,200 @@
+{
+  "id": "concrete-footing-calculator",
+  "title": "Concrete Footing Calculator",
+  "slug": "concrete-footing-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "concrete footing calculator",
+  "metaTitle": "Concrete Footing Calculator | Pads, Piers & Strip Footings",
+  "metaDescription": "Calculate concrete for footings — continuous strip, rectangular pad, or round pier. Get cubic yards, bag counts, and cost estimates. Free calculator.",
+  "inputs": [
+    {
+      "id": "footingType",
+      "label": "Footing Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "continuous",
+      "options": [
+        { "value": "continuous", "label": "Continuous / Strip" },
+        { "value": "rectangular", "label": "Rectangular Pad" },
+        { "value": "round", "label": "Round Pier" }
+      ],
+      "helpText": "Select the type of footing you are pouring"
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 40,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total length of continuous footing, or length of rectangular footing",
+      "visibleWhen": { "footingType": ["continuous", "rectangular"] }
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 1,
+      "step": 1,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "ft", "label": "Feet", "conversionFactor": 12 },
+        { "value": "m", "label": "Meters", "conversionFactor": 39.3701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Width of the footing",
+      "visibleWhen": { "footingType": ["continuous", "rectangular"] }
+    },
+    {
+      "id": "depth",
+      "label": "Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "max": 72,
+      "step": 1,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Depth/thickness of the footing — must reach below frost line"
+    },
+    {
+      "id": "diameter",
+      "label": "Diameter",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 12,
+      "min": 4,
+      "max": 48,
+      "step": 1,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Diameter for round pier footings (Sonotube or post hole)",
+      "visibleWhen": { "footingType": ["round"] }
+    },
+    {
+      "id": "quantity",
+      "label": "Number of Footings",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 100,
+      "helpText": "Number of identical footings (for rectangular or round types)"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 25,
+      "helpText": "Extra material for waste — 10% for formed footings, 15% for hand-dug holes"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cubicYards",
+      "label": "Concrete Needed (cubic yards)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "bags80lb",
+      "label": "80-lb Bags Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "bags60lb",
+      "label": "60-lb Bags Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "volumePerFooting",
+      "label": "Volume per Footing (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "costEstimate",
+      "label": "Cost Estimate",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "yardWithoutWaste",
+      "label": "Volume Before Waste (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    }
+  ],
+  "formula": "concrete-footing",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "concrete-slab-calculator",
+    "deck-calculator",
+    "fence-calculator",
+    "square-footage-calculator",
+    "stair-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "International Residential Code (IRC) Section R403, ACI 318",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Standard geometric volume formulas for rectangular prisms and cylinders. Footing sizing per International Residential Code (IRC) Section R403 and ACI 318. Bag yield per Portland Cement Association. Cost data from HomeAdvisor/Angi 2025-2026.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "concrete-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

@@ -1,0 +1,172 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 15 × 12-foot room needs 22 square yards of carpet (including 10% waste) — that's 198 square feet of material. Budget $396–$1,584 for carpet alone plus $198–$594 for professional installation, and add $11–$33 for carpet padding. Carpet is sold by the square yard in the US, so converting your room's square footage correctly is essential to avoid buying too much or — worse — running short mid-installation. Enter your room dimensions, roll width, closets, and waste factor below for an exact material estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Carpet Estimate Shows
+
+Carpet purchasing involves three conversions that trip up most homeowners: square feet to square yards, total area to roll widths, and material quantity to seam placement. Get any one wrong and you end up with visible seams across your living room, a roll that's 6 inches too short, or 30% more material than you needed. This calculator handles all three.
+
+**Square yards** is the standard carpet purchase unit in the US. All pricing at carpet stores — from budget polyester at $2–$4 per square foot to premium wool at $8–$15 per square foot — ultimately converts to a per-square-yard total on your invoice. The formula is simple: divide total square feet by 9. A 180-square-foot room (15 × 12) equals 20 square yards before waste, or 22 square yards with a 10% buffer.
+
+**Linear feet** tells you how many feet of carpet roll you need. Standard residential carpet comes in 12-foot and 15-foot widths. The calculator rounds up to full roll widths because you cannot buy partial strips — if your room needs 198 square feet and your roll is 12 feet wide, you need 17 strips at 12 feet each, totaling 204 linear feet of roll.
+
+**Seam count** matters for appearance and durability. Every time the room width exceeds the carpet roll width, you need a seam. A 12-foot-wide room with 12-foot carpet has zero seams. An 18-foot-wide room requires one seam. Seams are the weakest point of any carpet installation — they can separate, show visible lines, and wear faster — so minimizing them by choosing the right roll width is critical.
+
+**Padding** goes underneath every carpeted surface and is purchased in the same square yardage as the carpet. Standard padding runs $0.50–$1.50 per square yard. Higher-density padding (8 lb) extends carpet life by 2–3 years compared to builder-grade 6 lb padding, making it worth the upgrade in high-traffic areas.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the room** — use a tape measure to get the longest length and widest width in feet. Measure wall-to-wall at floor level, not at waist height (walls can lean). For L-shaped rooms, measure each rectangular section separately and add the total square footage.
+
+2. **Choose your roll width** — standard residential carpet comes in 12-foot and 15-foot rolls. If your room is 13 feet wide, a 15-foot roll eliminates seams entirely. If your room is 11 feet wide, a 12-foot roll works perfectly. The calculator shows how many seams each width requires.
+
+3. **Add closets** — walk-in closets (average 24 sq ft), reach-in closets (average 6 sq ft), and pantries count as separate carpet areas. Enter the number of closets and average closet size. The calculator adds this to your room area before applying the waste factor.
+
+4. **Set the waste factor** — use 10% for simple rectangular rooms, 15% for rooms with bay windows, alcoves, or angled walls, and 20% for stairs or rooms with many doorways and corners. The Carpet and Rug Institute (CRI) recommends never going below 10% waste.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Carpet quantity calculations convert room area to the industry-standard square yard purchase unit, then account for closets and waste:
+
+**Total area with waste:**
+
+$$\text{Total} = \left(\text{Length} \times \text{Width} + \text{Closets} \times \text{Closet Area}\right) \times \left(1 + \frac{W}{100}\right)$$
+
+**Square yards (purchase unit):**
+
+$$\text{Square Yards} = \frac{\text{Total}}{9}$$
+
+**Linear feet of roll:**
+
+$$\text{Linear Feet} = \left\lceil \frac{\text{Total}}{\text{Roll Width}} \right\rceil \times \text{Roll Width}$$
+
+**Seams:**
+
+$$\text{Seams} = \max\left(0,\ \left\lceil \frac{\text{Room Width}}{\text{Roll Width}} \right\rceil - 1\right)$$
+
+Where:
+
+- **Length** and **Width** = room dimensions in feet
+- **Closets** = number of closets to include
+- **Closet Area** = average area per closet in sq ft
+- **W** = waste factor as a percentage (10 for 10%)
+- **Roll Width** = carpet roll width (12 or 15 feet)
+
+**Source:** Carpet and Rug Institute (CRI) — *CRI 104/105 Standard for Installation of Residential Carpet*. Square yard convention per US carpet industry standard.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 15 × 12 Foot Living Room with One Closet
+
+A homeowner is carpeting a living room measuring 15 feet long by 12 feet wide, with one reach-in closet (6 sq ft). They are using standard 12-foot-wide carpet with a 10% waste factor.
+
+**Inputs:**
+- Room: 15 ft × 12 ft
+- Carpet roll width: 12 ft
+- Closets: 1 (6 sq ft each)
+- Waste factor: 10%
+
+**Step-by-step:**
+
+1. Calculate room area: 15 × 12 = **180 sq ft**
+2. Add closet area: 180 + (1 × 6) = **186 sq ft**
+3. Apply 10% waste: 186 × 1.10 = **204.6 sq ft**
+4. Convert to square yards: 204.6 / 9 = **22.73 sq yd**
+5. Calculate linear feet: ceil(204.6 / 12) × 12 = 18 × 12 = **216 linear ft**
+6. Calculate seams: ceil(12 / 12) − 1 = 1 − 1 = **0 seams**
+
+**Interpretation:** You need approximately 22.73 square yards of carpet and padding. At $4–$8 per square foot (mid-range nylon), the carpet material costs $818–$1,637. With zero seams required (the 12-foot roll perfectly spans the 12-foot room width), this is an ideal scenario for a clean installation. The one closet adds only 6.6 square feet after waste — a small addition that is easy to miss but creates a visible mismatch if you run short.
+
+{/* Section 10: Key Factors */}
+## Carpet Cost by Type
+
+| Carpet Type | Material Cost (per sq ft) | Durability | Best For |
+|---|---|---|---|
+| **Polyester** | $2–$4 | 5–10 years | Bedrooms, low-traffic areas |
+| **Nylon** | $4–$8 | 10–15 years | Living rooms, hallways, stairs |
+| **Wool** | $8–$15 | 15–25 years | Formal rooms, luxury homes |
+| **Triexta (SmartStrand)** | $3–$6 | 10–15 years | Families with kids/pets |
+| **Olefin (Polypropylene)** | $1.50–$3 | 3–7 years | Basements, outdoor areas |
+
+Prices reflect material only. Add $1–$3 per square foot for professional installation and $0.50–$1.50 per square yard for padding. Source: HomeAdvisor / Angi 2025-2026 national averages.
+
+## Roll Width & Seam Planning
+
+Choosing the right roll width can eliminate seams entirely. Standard residential carpet comes in two widths:
+
+**12-foot rolls** are the most common and least expensive option. They work perfectly for rooms up to 12 feet wide. For rooms between 12 and 15 feet, you will have one seam running the length of the room — place it in a low-traffic zone or under furniture if possible.
+
+**15-foot rolls** cost slightly more but cover rooms up to 15 feet wide without seams. For a 14 × 20-foot room, a 15-foot roll eliminates the seam that a 12-foot roll would require, producing a cleaner look that lasts longer. The material premium is typically 5–10% more, but the installation cost drops because the installer spends less time cutting and seaming.
+
+**Seam placement rules:** Always run seams parallel to the primary light source (usually the largest window). Never place seams in high-traffic paths — doorways, hallway centers, or in front of sofas. Cross-seams (perpendicular to carpet direction) are weaker than lengthwise seams and should be avoided in residential installations.
+
+## Padding Guide
+
+Carpet padding is not optional — it extends carpet life by 50–100%, improves comfort, provides thermal insulation (R-value 1.0–2.5), and reduces noise transmission between floors. The Carpet and Rug Institute (CRI) requires padding under all residential carpet to maintain warranty coverage.
+
+**Standard padding (6 lb, 7/16" thick):** Adequate for bedrooms and light-traffic rooms. Cost: $0.50–$0.75 per square yard.
+
+**Premium padding (8 lb, 1/2" thick):** Recommended for living rooms, family rooms, and stairs. Adds 2–3 years of carpet life. Cost: $0.75–$1.25 per square yard.
+
+**Memory foam padding (10 lb, 1/2" thick):** Maximum comfort and durability. Best for master bedrooms and media rooms. Cost: $1.00–$1.50 per square yard.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much carpet do I need for a 12×12 room?
+
+A 12 × 12-foot room has 144 square feet of floor area. With a standard 10% waste factor, you need 158.4 square feet or 17.6 square yards of carpet. At $4–$8 per square foot for mid-range nylon, that is $634–$1,267 for material. Using a 12-foot-wide roll, the room requires zero seams because the roll width exactly matches the room width.
+
+### Why is carpet sold by the square yard?
+
+The US carpet industry has used square yards as the standard unit since the 1950s when broadloom carpet replaced area rugs as the dominant flooring. One square yard equals 9 square feet (3 ft × 3 ft). While some retailers now quote per-square-foot prices for easier comparison with hard flooring, invoices and manufacturer specs still use square yards. To convert: divide your total square footage by 9.
+
+### How do I minimize seams in carpet?
+
+Choose a roll width that matches or exceeds your room width. If your room is 13 feet wide, use a 15-foot roll instead of a 12-foot roll — the extra 2 feet of waste costs far less than a visible seam running the length of the room. If seams are unavoidable, place them in low-traffic areas, under furniture, or parallel to the room's primary light source so they are less visible.
+
+### How much extra carpet should I order?
+
+Order at least 10% more than the calculated area for rectangular rooms with standard installation. Increase to 15% for stairs (each step wastes material), 15% for patterned carpet (pattern matching requires more cuts), and 20% for rooms with many corners or alcoves. The Carpet and Rug Institute recommends saving leftover carpet for future patch repairs — matching dye lots years later is nearly impossible.
+
+### Do I need to replace carpet padding when replacing carpet?
+
+Yes, in most cases. The CRI and most carpet manufacturers require new padding under new carpet to maintain warranty coverage. Reusing old padding — even if it looks intact — can void your carpet warranty, cause premature wear, and create uneven spots. The only exception is rubber slab padding, which can sometimes be reused if it passes a compression test. New padding costs $0.50–$1.50 per square yard, a minor expense compared to the carpet itself.
+
+### How long does carpet installation take?
+
+A professional installer can carpet a standard 15 × 12-foot room in 1–2 hours including furniture removal, tack strip placement, padding, carpet stretching, and seaming. A full home (1,500 sq ft) typically takes 1–2 days. DIY installation adds significant time — expect 4–6 hours for a single room without prior experience. Power stretchers (required for professional results) cost $40–$60 per day to rent.
+
+### What is the best carpet for high-traffic areas?
+
+Nylon (type 6,6) is the most durable residential carpet fiber, with a 10–15 year lifespan in hallways and living rooms. It resists matting, crushing, and soil better than polyester or olefin. For homes with pets or young children, Triexta (branded as SmartStrand by Mohawk) offers comparable durability with superior stain resistance at a lower price point ($3–$6 per sq ft vs. $4–$8 for nylon).
+
+### Can I install carpet over existing carpet?
+
+No. Installing new carpet over old carpet creates a soft, unstable surface that accelerates wear, traps moisture, promotes mold growth, and voids all warranty coverage. Always remove the existing carpet, inspect the subfloor for damage or moisture, and install fresh padding before laying new carpet. The removal cost is typically $1–$2 per square foot for professional tear-out and disposal.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses area-based carpet estimation formulas per the **Carpet and Rug Institute (CRI)** *CRI 104/105 Standard for Installation of Residential Carpet*. Square yard conversion follows the US carpet industry convention (1 sq yd = 9 sq ft). Roll width and seam planning calculations account for standard 12-foot and 15-foot broadloom widths per CRI installation guidelines. Waste factor recommendations follow CRI best practices: 10% for rectangular rooms, 15% for patterned carpet or complex room shapes. Cost estimates reflect 2025-2026 national material price ranges per HomeAdvisor and Angi.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

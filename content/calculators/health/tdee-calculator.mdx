@@ -1,0 +1,291 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 30-year-old male, 5'10", 170 lbs with moderate activity burns approximately 2,693 calories per day — that is his Total Daily Energy Expenditure (TDEE). To lose 1 pound per week, he would target 2,193 calories daily, splitting into roughly 165g protein, 220g carbs, and 73g fat. TDEE is the single most important number for any nutrition plan because it represents the total energy your body uses in 24 hours: your resting metabolism plus every step, workout, and fidget throughout the day. This calculator computes TDEE using your choice of the Mifflin-St Jeor or Harris-Benedict BMR equation, applies a validated activity multiplier, and adjusts for your weight goal — all in one step.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What TDEE Means and Why It Matters
+
+Total Daily Energy Expenditure is the total number of calories your body burns in a 24-hour period. It is composed of three components:
+
+1. **Basal Metabolic Rate (BMR)** — the energy required to maintain basic life functions at complete rest. BMR typically accounts for 60–75% of TDEE.
+2. **Thermic Effect of Food (TEF)** — the energy spent digesting, absorbing, and metabolizing nutrients. TEF accounts for roughly 10% of total calories consumed.
+3. **Physical Activity** — everything from structured exercise to non-exercise activity thermogenesis (NEAT) like walking, fidgeting, and standing. This is the most variable component and the one you directly control.
+
+Your TDEE is the number you eat at to maintain your current weight. Eating below it creates a deficit (weight loss); eating above it creates a surplus (weight gain). The standard guideline is that a 500-calorie daily deficit produces approximately 1 pound of weight loss per week, since 1 pound of body fat stores roughly 3,500 calories of energy.
+
+Unlike the [BMR Calculator](/calculators/health/bmr-calculator), which isolates resting metabolism only, TDEE gives you the actionable number for daily nutrition planning. And unlike the [Calorie Calculator](/calculators/health/calorie-calculator), which uses a fixed Mifflin-St Jeor equation and three broad goal categories, this TDEE calculator lets you choose your BMR formula and select from six granular goal adjustments — from mild loss (250 kcal/day deficit) to extreme loss (1,000 kcal/day deficit) to weight gain.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your unit system** — choose Imperial (pounds, inches) or Metric (kilograms, centimeters). The calculator converts internally; your results are the same either way.
+
+2. **Enter your age** — BMR decreases with age as lean mass gradually declines. The Mifflin-St Jeor equation subtracts 5 calories per year of age; Harris-Benedict subtracts 5.677 (males) or 4.330 (females).
+
+3. **Select your sex** — males have a higher BMR constant than females at the same height and weight, reflecting average differences in body composition. Mifflin-St Jeor uses a 166-calorie built-in difference between sexes.
+
+4. **Enter your weight** — use your morning weight measured consistently for best accuracy. If tracking over time, use a 7-day average to smooth daily fluctuations from water, food volume, and sodium intake.
+
+5. **Enter your height** — stand straight against a wall for an accurate measurement. Height contributes significantly to the BMR formula through the 6.25 coefficient in Mifflin-St Jeor.
+
+6. **Select your activity level** — be honest here. Most people with desk jobs who exercise 3–4 times per week are "Moderately Active." Only select "Very Active" or "Extra Active" if you train intensely 6–7 days per week or have a physically demanding job like construction or warehouse work.
+
+7. **Choose your BMR formula** — Mifflin-St Jeor (1990) is recommended as the default. A 2005 validation study found it predicted measured resting metabolic rate within 10% for 82% of subjects. Harris-Benedict (revised 1984) tends to estimate slightly higher, particularly for overweight individuals.
+
+8. **Select your goal** — "Maintain" keeps calories at TDEE. Loss options subtract 250, 500, or 1,000 calories per day. Gain options add 250 or 500 calories. Extreme loss is capped at a minimum of 1,200 calories per day for safety.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formulas
+
+This calculator applies a two-step process: first compute BMR, then multiply by an activity factor to get TDEE.
+
+**Step 1 — Basal Metabolic Rate**
+
+You choose one of two validated BMR equations:
+
+**Mifflin-St Jeor Equation (1990):**
+
+$$BMR_{male} = (10 \times W) + (6.25 \times H) - (5 \times A) + 5$$
+
+$$BMR_{female} = (10 \times W) + (6.25 \times H) - (5 \times A) - 161$$
+
+**Harris-Benedict Equation (Revised by Roza & Shizgal, 1984):**
+
+$$BMR_{male} = (13.397 \times W) + (4.799 \times H) - (5.677 \times A) + 88.362$$
+
+$$BMR_{female} = (9.247 \times W) + (3.098 \times H) - (4.330 \times A) + 447.593$$
+
+Where:
+- **$W$** = body weight in kilograms (kg)
+- **$H$** = height in centimeters (cm)
+- **$A$** = age in years
+
+**Step 2 — Total Daily Energy Expenditure**
+
+$$TDEE = BMR \times Activity\;Multiplier$$
+
+| Activity Level | Multiplier | Description |
+|---------------|-----------|-------------|
+| Sedentary | 1.200 | Office job, little or no exercise |
+| Lightly Active | 1.375 | Light exercise 1–3 days per week |
+| Moderately Active | 1.550 | Moderate exercise 3–5 days per week |
+| Very Active | 1.725 | Hard exercise 6–7 days per week |
+| Extra Active | 1.900 | Very hard exercise, physical job, or training 2× daily |
+
+**Step 3 — Goal Adjustment**
+
+$$Goal\;Calories = TDEE + Adjustment$$
+
+| Goal | Daily Adjustment | Weekly Change | Est. lb/week |
+|------|-----------------|---------------|--------------|
+| Maintain | 0 kcal | 0 kcal | 0 |
+| Mild Loss | −250 kcal | −1,750 kcal | −0.5 lb |
+| Loss | −500 kcal | −3,500 kcal | −1.0 lb |
+| Extreme Loss | −1,000 kcal | −7,000 kcal | −2.0 lb |
+| Mild Gain | +250 kcal | +1,750 kcal | +0.5 lb |
+| Gain | +500 kcal | +3,500 kcal | +1.0 lb |
+
+Goal calories are floored at 1,200 kcal/day regardless of the calculated deficit to prevent unsafe energy restriction.
+
+**Macro Split:**
+
+$$Protein = Goal\;Calories \times 0.30 \div 4\;(g)$$
+$$Carbohydrates = Goal\;Calories \times 0.40 \div 4\;(g)$$
+$$Fat = Goal\;Calories \times 0.30 \div 9\;(g)$$
+
+**Sources:** Mifflin MD, St Jeor ST, et al. "A new predictive equation for resting energy expenditure in healthy individuals." *American Journal of Clinical Nutrition*, 1990;51(2):241–247. Roza AM, Shizgal HM. "The Harris Benedict equation reevaluated." *American Journal of Clinical Nutrition*, 1984;40(1):168–182.
+
+For a deeper comparison of Mifflin-St Jeor, Harris-Benedict, and Katch-McArdle formulas, see our [methodology page on calorie and BMR formulas](/methodology/calorie-formulas).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 30-Year-Old Male — Weight Loss Goal
+
+**Inputs:**
+- Sex: Male | Age: 30 | Weight: 170 lb (77.11 kg) | Height: 70 in (177.8 cm)
+- Activity: Moderate | Formula: Mifflin-St Jeor | Goal: Loss (−500 kcal/day)
+
+**Step 1 — BMR (Mifflin-St Jeor):**
+
+1. $(10 \times 77.11) + (6.25 \times 177.8) - (5 \times 30) + 5$
+2. $771.1 + 1,111.3 - 150 + 5 = $ **1,737 kcal/day**
+
+**Step 2 — TDEE:**
+
+3. $1,737 \times 1.55 = $ **2,693 kcal/day**
+
+**Step 3 — Goal Calories:**
+
+4. $2,693 - 500 = $ **2,193 kcal/day**
+
+**Macros at 2,193 kcal:**
+- Protein (30%): $2,193 \times 0.30 \div 4 = $ **165g**
+- Carbs (40%): $2,193 \times 0.40 \div 4 = $ **220g**
+- Fat (30%): $2,193 \times 0.30 \div 9 = $ **73g**
+
+**Interpretation:** This person burns about 2,693 calories per day at moderate activity. Eating 2,193 calories creates a 500-calorie daily deficit — approximately 3,500 calories per week, which corresponds to roughly 1 pound of weight loss per week. At 165g of protein per day, he preserves lean muscle mass while losing fat.
+
+### Example 2: 45-Year-Old Female — Maintenance with Harris-Benedict
+
+**Inputs:**
+- Sex: Female | Age: 45 | Weight: 140 lb (63.50 kg) | Height: 65 in (165.1 cm)
+- Activity: Lightly Active | Formula: Harris-Benedict | Goal: Maintain
+
+**Step 1 — BMR (Harris-Benedict, revised 1984):**
+
+1. $(9.247 \times 63.50) + (3.098 \times 165.1) - (4.330 \times 45) + 447.593$
+2. $587.2 + 511.5 - 194.9 + 447.6 = $ **1,351 kcal/day**
+
+**Step 2 — TDEE:**
+
+3. $1,351 \times 1.375 = $ **1,858 kcal/day**
+
+**Step 3 — Goal Calories:**
+
+4. Maintain = TDEE = **1,858 kcal/day**
+
+**Macros at 1,858 kcal:**
+- Protein (30%): $1,858 \times 0.30 \div 4 = $ **139g**
+- Carbs (40%): $1,858 \times 0.40 \div 4 = $ **186g**
+- Fat (30%): $1,858 \times 0.30 \div 9 = $ **62g**
+
+**Interpretation:** With light exercise 1–3 days per week, this person burns about 1,858 calories daily. Note how the 15-year age difference from Example 1 reduces BMR via the formula's age penalty, and the sex difference accounts for the remainder of the gap. At maintenance calories, there is no expected weight change — use the [Macro Calculator](/calculators/health/macro-calculator) if you want to customize your protein/carb/fat split for a specific diet preference.
+
+{/* Section 10: Activity Level Guide */}
+## Activity Level Guide
+
+Choosing the correct activity level is the most common source of TDEE error. Here is a detailed breakdown with real-world examples:
+
+| Level | Multiplier | Who This Fits | Weekly Activity |
+|-------|-----------|---------------|-----------------|
+| **Sedentary** | 1.2 | Desk worker, no structured exercise, drives everywhere | 0–1 days of exercise, <4,000 daily steps |
+| **Lightly Active** | 1.375 | Office worker who walks 30 min/day or does light yoga 2–3× per week | 1–3 days light exercise, 5,000–7,000 steps |
+| **Moderately Active** | 1.55 | 3–5 gym sessions per week (45–60 min each), active commute | 3–5 days moderate exercise, 7,000–10,000 steps |
+| **Very Active** | 1.725 | Daily intense training, competitive athlete in-season, CrossFit 5–6× per week | 6–7 days hard exercise, 10,000–15,000 steps |
+| **Extra Active** | 1.9 | Professional athlete, military training, physical laborer who also exercises | Twice-daily training or heavy manual job + exercise |
+
+**Common mistake:** Selecting "Very Active" because you go to the gym 3 times a week. If you sit at a desk for 8 hours and drive to the gym for a 45-minute session three times a week, you are **Moderately Active** at most. Overestimating activity level is the #1 reason TDEE calculations fail to produce expected weight changes.
+
+{/* Section 11: TDEE by Goal */}
+## TDEE by Goal — What the Numbers Mean
+
+For a moderately active 170 lb male with a TDEE of 2,693 kcal/day:
+
+| Goal | Daily Calories | Weekly Deficit/Surplus | Monthly Change |
+|------|---------------|----------------------|----------------|
+| Extreme Loss | 1,693 | −7,000 kcal | −8.6 lbs |
+| Loss | 2,193 | −3,500 kcal | −4.3 lbs |
+| Mild Loss | 2,443 | −1,750 kcal | −2.1 lbs |
+| **Maintain** | **2,693** | **0** | **0 lbs** |
+| Mild Gain | 2,943 | +1,750 kcal | +2.1 lbs |
+| Gain | 3,193 | +3,500 kcal | +4.3 lbs |
+
+These are estimates based on the 3,500-calorie-per-pound rule. In practice, weight loss slows over time as your body adapts — metabolic adaptation, reduced NEAT, and lower body weight all decrease TDEE. Recalculate every 10–15 pounds lost, or whenever weight plateaus for more than 2 weeks.
+
+{/* Section 12: Understanding Your Macros */}
+## Understanding Your Macros
+
+This calculator uses a 30/40/30 macro split (protein/carbs/fat), which aligns with general sports nutrition guidelines from the American College of Sports Medicine (ACSM). Here is what each macro does and why the ratio matters:
+
+**Protein (30% of calories, 4 kcal/gram):** Protein supports muscle repair and preservation, especially important during a calorie deficit. At 30% of a 2,193-calorie target, you get 165g of protein — about 0.97g per pound of body weight for a 170 lb person. Research from the International Society of Sports Nutrition recommends 0.7–1.0g per pound for active individuals.
+
+**Carbohydrates (40% of calories, 4 kcal/gram):** Carbs are the primary fuel source for moderate-to-high intensity exercise. At 40%, a 2,193-calorie target provides 220g of carbs — sufficient to fuel 3–5 weekly training sessions and maintain glycogen stores. Endurance athletes may need a higher carb percentage (50–60%).
+
+**Fat (30% of calories, 9 kcal/gram):** Dietary fat is essential for hormone production (including testosterone and estrogen), vitamin absorption, and cell membrane integrity. At 30%, you get 73g of fat — well within the 20–35% range recommended by the Dietary Guidelines for Americans. Going below 20% of calories from fat can impair hormonal function.
+
+If you need a custom macro split — such as high-protein, low-carb, or ketogenic — use our [Macro Calculator](/calculators/health/macro-calculator) which supports four preset diet patterns.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect TDEE
+
+**Body composition** — Both BMR formulas estimate based on total body weight, not lean mass. A muscular 170 lb person has a higher actual TDEE than a 170 lb person with more body fat. Muscle tissue burns approximately 6 kcal/lb/day at rest versus 2 kcal/lb/day for fat tissue. If you know your body fat percentage, the Katch-McArdle formula (which this calculator does not include) may be more accurate. Use our [Body Fat Calculator](/calculators/health/body-fat-calculator) to estimate your composition.
+
+**Non-exercise activity thermogenesis (NEAT)** — NEAT includes all the calories you burn through daily movement that is not structured exercise: walking, standing, fidgeting, typing, cooking, cleaning. NEAT can vary by 500–2,000 kcal/day between individuals. A "sedentary" person who fidgets constantly may burn more total calories than a "lightly active" person who sits still between gym sessions.
+
+**Metabolic adaptation** — When you sustain a calorie deficit, your body gradually reduces energy expenditure through hormonal changes (lower thyroid output, reduced leptin). After 10–15% weight loss, your actual TDEE may be 5–15% lower than predicted by the formula. This is why weight loss plateaus occur and why periodic recalculation is important.
+
+**Age** — BMR declines approximately 1–2% per decade after age 20, primarily from progressive loss of lean tissue. Between ages 20 and 60, the Mifflin-St Jeor equation predicts a 200-calorie reduction in BMR. Resistance training can partially offset this decline by preserving and building muscle mass.
+
+**Formula accuracy** — No predictive equation is perfect. Mifflin-St Jeor predicts within ±10% for about 82% of healthy adults, but individual genetic variation, thyroid function, medications, and body composition can cause real BMR to differ by up to 15% from the estimate.
+
+{/* Section 11: Common Mistakes */}
+## Common Mistakes
+
+**Overestimating activity level** — This is the most frequent error. A 30-minute gym session three times a week does not make you "Very Active." Most recreational exercisers should select "Moderately Active" or lower. When in doubt, choose the lower activity level and adjust upward if you are losing weight faster than expected.
+
+**Not recalculating after weight change** — Your TDEE changes as your weight changes. A person who loses 20 pounds has a lower BMR and therefore a lower TDEE. Failing to recalculate leads to stalled progress. Recalculate every 10–15 pounds or every 4–6 weeks.
+
+**Using TDEE as an exact number** — TDEE is an estimate, not a measurement. Treat it as a starting point. Track your weight for 2–3 weeks at the calculated intake. If your weight is stable, your TDEE estimate is accurate. If you are gaining or losing, adjust by 100–200 calories.
+
+**Ignoring the minimum calorie floor** — This calculator floors goal calories at 1,200 kcal/day. Very low calorie diets below this threshold increase risk of muscle loss, nutrient deficiencies, gallstones, and metabolic slowdown. Consult a healthcare provider before sustaining any intake below 1,200 calories.
+
+**Counting exercise calories twice** — Activity multipliers already account for your exercise. If you also add back "calories burned" from your fitness tracker, you are double-counting. Use the TDEE number as-is — it already includes your workout energy expenditure.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Both BMR formulas assume **average body composition** for a given height, weight, and sex. They do not account for individual lean mass versus fat mass ratios.
+- Accuracy is highest for **non-obese adults aged 19–78**. Results may be less reliable for adolescents under 18, adults over 80, or individuals with BMI above 40.
+- Activity multipliers are **population averages** derived from doubly labeled water studies. Individual variation in NEAT, exercise intensity, and movement efficiency means your true multiplier may differ.
+- Does not account for **metabolic conditions** (hypothyroidism, hyperthyroidism, PCOS, Cushing's syndrome) or **medications** that alter metabolic rate (beta-blockers, corticosteroids, stimulants).
+- The **3,500 kcal = 1 lb** rule is a simplification. Actual weight change depends on macronutrient composition, metabolic adaptation, water retention, and individual variability.
+- The 30/40/30 macro split is a **general guideline**. Optimal ratios vary by individual goals, training type, medical conditions, and food preferences.
+- The 1,200 kcal/day floor is a **general safety threshold** for adults. Some individuals (particularly smaller females) may have a TDEE near or below this level; consult a registered dietitian for personalized guidance.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between TDEE and BMR?
+
+BMR (Basal Metabolic Rate) is the number of calories your body burns at complete rest to sustain basic life functions — breathing, circulation, cell production, and temperature regulation. TDEE (Total Daily Energy Expenditure) is your BMR multiplied by an activity factor that accounts for all daily movement and exercise. TDEE is always higher than BMR. For a moderately active person, TDEE is approximately 55% higher than BMR (multiplier of 1.55). Use BMR to understand your resting metabolism; use TDEE to plan your actual daily calorie intake.
+
+### How accurate is the TDEE calculation?
+
+The Mifflin-St Jeor equation predicts resting metabolic rate within 10% for approximately 82% of healthy, non-obese adults, according to a 2005 validation study in the *Journal of the American Dietetic Association*. The activity multiplier adds another layer of estimation. In practice, most TDEE estimates are within 200–300 calories of actual expenditure. Treat your result as a starting point and adjust based on 2–3 weeks of weight tracking.
+
+### Should I use the Mifflin-St Jeor or Harris-Benedict formula?
+
+Use Mifflin-St Jeor as your default. It was developed in 1990 using modern study participants and has been validated more extensively against measured metabolic rates. Harris-Benedict, originally from 1919 and revised in 1984, tends to overestimate BMR slightly — especially in overweight individuals — because it was derived from a leaner population. The two formulas typically differ by 50–100 calories; try both and use the average if you want maximum precision.
+
+### How many calories should I eat to lose weight?
+
+Eat at a deficit of 250–500 calories below your TDEE for sustainable weight loss of 0.5–1 pound per week. For a person with a TDEE of 2,693, that means eating 2,193–2,443 calories per day. Deficits larger than 500 calories per day increase risk of muscle loss, fatigue, and metabolic adaptation. Never go below 1,200 calories per day without medical supervision.
+
+### Why is my TDEE different from my fitness tracker?
+
+Fitness trackers estimate calorie burn using heart rate, accelerometer data, and manufacturer-specific algorithms. These estimates have their own error margins (often 15–30% for calorie burn) and use different methodology than validated BMR equations. Neither is perfectly accurate. If the two numbers differ, use the TDEE calculator as your baseline for nutrition planning and adjust based on real-world weight changes over 2–3 weeks.
+
+### How often should I recalculate my TDEE?
+
+Recalculate every time your weight changes by 10–15 pounds, your activity level changes significantly, or your weight loss has plateaued for more than 2 weeks. As you lose weight, your BMR decreases because there is less body mass to maintain. A 20-pound weight loss typically reduces TDEE by 150–200 calories per day.
+
+### Can I eat below my BMR?
+
+Technically yes, but it is not recommended for extended periods without medical supervision. Eating below your BMR means your body does not have enough energy for basic life functions, which triggers aggressive metabolic adaptation, muscle catabolism, hormonal disruption, and nutrient deficiencies. This calculator enforces a minimum of 1,200 calories per day. If your calculated goal calories hit this floor, consider increasing activity level rather than further reducing intake.
+
+### What is the best macro split for weight loss?
+
+The 30% protein / 40% carbs / 30% fat split used in this calculator is a solid general-purpose ratio supported by sports nutrition research. Higher protein (30%+) preserves muscle mass during a deficit. If you prefer a different approach, research supports a range of effective splits: high-protein (40/30/30), moderate low-carb (35/25/40), and ketogenic (25/5/70). The most important factor for weight loss is total calorie intake relative to TDEE — macro ratios affect body composition and satiety but have less impact on scale weight than the overall deficit.
+
+</div>
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the **Mifflin-St Jeor equation** (Mifflin MD, St Jeor ST, et al., *American Journal of Clinical Nutrition*, 1990;51(2):241–247) and the **Harris-Benedict equation** as revised by **Roza and Shizgal** (*American Journal of Clinical Nutrition*, 1984;40(1):168–182). Activity multipliers are based on the **Katch-McArdle activity factor scale**, widely adopted in sports nutrition and endorsed by the **American College of Sports Medicine** (*ACSM's Guidelines for Exercise Testing and Prescription*, 11th edition, 2021). Accuracy validation from Frankenfield DC, et al., "Comparison of predictive equations for resting metabolic rate in healthy nonobese and obese adults," *Journal of the American Dietetic Association*, 2005;105(5):775–789. Macro recommendations align with the **International Society of Sports Nutrition** position stand on protein and energy availability (Jäger R, et al., *JISSN*, 2017;14:20).
+
+For a deeper comparison of BMR formulas, see our [methodology page on calorie and BMR formulas](/methodology/calorie-formulas).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

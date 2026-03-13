@@ -1,0 +1,193 @@
+{
+  "id": "home-equity-calculator",
+  "title": "Home Equity Calculator",
+  "slug": "home-equity-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "home equity calculator",
+  "metaTitle": "Home Equity Calculator | Check Your Equity, LTV & Borrowing Power",
+  "metaDescription": "Calculate your home equity, loan-to-value ratio, and borrowable equity at 80% and 90% LTV. See appreciation, return on investment, and HELOC eligibility. Free calculator.",
+  "inputs": [
+    {
+      "id": "homeValue",
+      "label": "Current Home Value",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 400000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Current estimated market value"
+    },
+    {
+      "id": "mortgageBalance",
+      "label": "Mortgage Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 250000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Remaining mortgage balance"
+    },
+    {
+      "id": "secondMortgage",
+      "label": "Second Mortgage / HELOC Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "HELOC or second mortgage balance"
+    },
+    {
+      "id": "otherLiens",
+      "label": "Other Liens",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Tax liens, mechanic's liens, etc."
+    },
+    {
+      "id": "originalPrice",
+      "label": "Original Purchase Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Original purchase price"
+    },
+    {
+      "id": "downPaymentOriginal",
+      "label": "Original Down Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 60000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Original down payment amount"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "equity",
+      "label": "Home Equity",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "equityPercent",
+      "label": "Equity Percentage",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "ltv",
+      "label": "Loan-to-Value (LTV)",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "cltv",
+      "label": "Combined LTV (CLTV)",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "borrowableEquity80",
+      "label": "Borrowable Equity (80% LTV)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "borrowableEquity90",
+      "label": "Borrowable Equity (90% LTV)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "appreciation",
+      "label": "Home Appreciation",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "appreciationPercent",
+      "label": "Appreciation %",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "totalInvested",
+      "label": "Total Invested",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "returnOnEquity",
+      "label": "Return on Investment",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "equityBreakdown",
+      "label": "Equity Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "home-equity",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "heloc-calculator",
+    "mortgage-calculator",
+    "home-affordability-calculator",
+    "refinance-calculator",
+    "property-tax-calculator",
+    "closing-cost-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Equity = Home Value - Total Liens; LTV = Total Debt / Home Value; Borrowable Equity = Home Value × LTV Limit - Total Debt",
+  "formulaCitation": "Federal Housing Finance Agency (FHFA); Freddie Mac Home Equity Guidelines; Consumer Financial Protection Bureau (CFPB)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["heloc-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "equity",
+    "pmi"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
+}

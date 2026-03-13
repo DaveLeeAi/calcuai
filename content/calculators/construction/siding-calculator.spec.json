@@ -1,0 +1,221 @@
+{
+  "id": "siding-calculator",
+  "title": "Siding Calculator",
+  "slug": "siding-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "siding calculator",
+  "metaTitle": "Siding Calculator — Squares, Panels & Cost by Material Type",
+  "metaDescription": "Calculate how much siding you need in squares and panels. Supports vinyl, fiber-cement, wood, engineered wood, and metal. Deducts windows and doors with cost estimates.",
+  "inputs": [
+    {
+      "id": "wallLength",
+      "label": "Total Linear Wall Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "step": 1,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total linear feet of exterior walls"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 9,
+      "min": 4,
+      "max": 30,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "gableArea",
+      "label": "Total Gable Area",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 2000,
+      "suffix": "sq ft",
+      "helpText": "Total gable area in sq ft (triangular wall sections above eaves)"
+    },
+    {
+      "id": "windows",
+      "label": "Number of Windows",
+      "type": "number",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0,
+      "max": 30,
+      "helpText": "Total number of windows on all exterior walls"
+    },
+    {
+      "id": "windowArea",
+      "label": "Average Window Area",
+      "type": "number",
+      "required": false,
+      "defaultValue": 15,
+      "min": 0,
+      "max": 60,
+      "suffix": "sq ft",
+      "helpText": "Average window area in sq ft (standard: 15 sq ft)"
+    },
+    {
+      "id": "doors",
+      "label": "Number of Doors",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 10,
+      "helpText": "Total number of exterior doors"
+    },
+    {
+      "id": "doorArea",
+      "label": "Average Door Area",
+      "type": "number",
+      "required": false,
+      "defaultValue": 21,
+      "min": 0,
+      "max": 60,
+      "suffix": "sq ft",
+      "helpText": "Average door area in sq ft (standard: 21 sq ft)"
+    },
+    {
+      "id": "sidingType",
+      "label": "Siding Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "vinyl",
+      "options": [
+        { "value": "vinyl", "label": "Vinyl" },
+        { "value": "fiber-cement", "label": "Fiber-Cement (HardiePlank)" },
+        { "value": "wood", "label": "Wood (Clapboard/Shingle)" },
+        { "value": "engineered-wood", "label": "Engineered Wood (LP SmartSide)" },
+        { "value": "metal", "label": "Metal (Aluminum/Steel)" }
+      ]
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 20,
+      "helpText": "10% standard for rectangular walls, 15% for complex geometry"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "squares",
+      "label": "Squares Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true,
+      "description": "1 square = 100 sq ft"
+    },
+    {
+      "id": "netArea",
+      "label": "Net Siding Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "grossArea",
+      "label": "Gross Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "areaWithWaste",
+      "label": "Total with Waste (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "panelsOrPlanks",
+      "label": "Panels / Planks Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "jChannel",
+      "label": "J-Channel (linear ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "starterStrip",
+      "label": "Starter Strip (linear ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Cost (Installed)",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "siding",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "paint-calculator",
+    "drywall-calculator",
+    "square-footage-calculator",
+    "roofing-calculator",
+    "fence-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Vinyl Siding Institute (VSI), James Hardie Installation Guide, US Census Bureau — Characteristics of New Housing",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Wall area with opening deductions. Siding measured in 'squares' (100 sq ft) per industry convention. Vinyl panel coverage per Vinyl Siding Institute (VSI) installation manual. Fiber-cement plank coverage per James Hardie HardiePlank technical specifications. J-channel and starter strip estimates per VSI trim guidelines.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "paint-calculator",
+    "drywall-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [
+    "square-footage"
+  ]
+}

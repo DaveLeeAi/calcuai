@@ -1,0 +1,241 @@
+{
+  "id": "retaining-wall-calculator",
+  "title": "Retaining Wall Calculator",
+  "slug": "retaining-wall-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "retaining wall calculator",
+  "metaTitle": "Retaining Wall Calculator — Blocks, Gravel, Drainage & Cost",
+  "metaDescription": "Calculate retaining wall materials: blocks, cap stones, gravel backfill, drain pipe, and base material. Supports standard, large, and natural stone blocks with cost estimates.",
+  "inputs": [
+    {
+      "id": "wallLength",
+      "label": "Wall Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 1,
+      "step": 1,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total length of the retaining wall"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 4,
+      "min": 1,
+      "max": 10,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Exposed wall height (walls over 6 ft typically require engineering)"
+    },
+    {
+      "id": "blockType",
+      "label": "Block Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard (16\" × 6\")"
+        },
+        {
+          "value": "large",
+          "label": "Large (18\" × 6\")"
+        },
+        {
+          "value": "natural-stone",
+          "label": "Natural Stone (12\" × 6\")"
+        }
+      ],
+      "helpText": "Block size affects block count and cost"
+    },
+    {
+      "id": "blockLength",
+      "label": "Block Length",
+      "type": "number",
+      "required": false,
+      "defaultValue": 16,
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Block length in inches"
+    },
+    {
+      "id": "blockHeight",
+      "label": "Block Height",
+      "type": "number",
+      "required": false,
+      "defaultValue": 6,
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Block height in inches"
+    },
+    {
+      "id": "blockDepth",
+      "label": "Block Depth",
+      "type": "number",
+      "required": false,
+      "defaultValue": 12,
+      "min": 4,
+      "max": 24,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Block depth (front to back) in inches"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 15,
+      "helpText": "Extra material for cuts and breakage (10% standard, 15% natural stone)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalBlocks",
+      "label": "Total Blocks (with waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "blocksWithoutWaste",
+      "label": "Blocks (without waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "rows",
+      "label": "Courses (rows)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "blocksPerRow",
+      "label": "Blocks per Course",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "capBlocks",
+      "label": "Cap Blocks",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "gravelBackfill",
+      "label": "Gravel Backfill (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "drainPipe",
+      "label": "Drain Pipe (linear ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "baseMaterial",
+      "label": "Base Material (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "landscapeFabric",
+      "label": "Landscape Fabric (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "wallArea",
+      "label": "Wall Face Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "retaining-wall",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "gravel-calculator",
+    "cubic-yard-calculator",
+    "fence-calculator",
+    "square-footage-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "National Concrete Masonry Association (NCMA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Block count per NCMA TEK 15-5B design guide. Backfill and drainage per ICC/IBC residential retaining wall standards. Cost ranges from HomeAdvisor/Angi 2025-2026 averages.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

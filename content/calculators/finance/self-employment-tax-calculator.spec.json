@@ -1,0 +1,183 @@
+{
+  "id": "self-employment-tax-calculator",
+  "title": "Self-Employment Tax Calculator",
+  "slug": "self-employment-tax-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "self employment tax calculator",
+  "metaTitle": "Self-Employment Tax Calculator | 2025 SE Tax Estimate",
+  "metaDescription": "Calculate self-employment tax (Social Security + Medicare) for freelancers and 1099 contractors. See quarterly estimates and deductions. 2025 rates.",
+  "inputs": [
+    {
+      "id": "netEarnings",
+      "label": "Net Self-Employment Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 75000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Net self-employment income (after business expenses)"
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        { "value": "single", "label": "Single" },
+        { "value": "married-jointly", "label": "Married Filing Jointly" },
+        { "value": "married-separately", "label": "Married Filing Separately" },
+        { "value": "head-of-household", "label": "Head of Household" }
+      ]
+    },
+    {
+      "id": "otherIncome",
+      "label": "Other W-2 / Wage Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "W-2 or other wage income subject to FICA"
+    },
+    {
+      "id": "businessExpenses",
+      "label": "Additional Business Expenses",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Additional deductible business expenses"
+    },
+    {
+      "id": "quarterlyPayments",
+      "label": "Quarterly Estimated Taxes Paid",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Quarterly estimated taxes already paid this year"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "selfEmploymentTax",
+      "label": "Total Self-Employment Tax",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "socialSecurityTax",
+      "label": "Social Security Tax (12.4%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "medicareTax",
+      "label": "Medicare Tax (2.9%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "additionalMedicareTax",
+      "label": "Additional Medicare Tax (0.9%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "seTaxDeduction",
+      "label": "SE Tax Deduction (50%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "estimatedIncomeTax",
+      "label": "Estimated Income Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalTaxLiability",
+      "label": "Total Tax Liability",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "quarterlyEstimate",
+      "label": "Quarterly Estimated Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "remainingDue",
+      "label": "Remaining Balance Due",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "SE Tax Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "taxBreakdown",
+      "label": "Tax Composition",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#2563eb", "#10b981", "#f59e0b", "#8b5cf6"]
+      }
+    }
+  ],
+  "formula": "self-employment-tax",
+  "features": ["chart"],
+  "relatedCalculators": [
+    "income-tax-calculator",
+    "tax-bracket-calculator",
+    "paycheck-calculator",
+    "capital-gains-tax-calculator",
+    "budget-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IRS Publication 334 — Tax Guide for Small Business; IRS Schedule SE (Form 1040); SSA 2025 wage base",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "SE Tax = (Net Earnings × 0.9235) × (12.4% SS + 2.9% Medicare) + Additional Medicare (0.9%). Deductible half = SE Tax × 50%. Per IRS Pub 334, Schedule SE, SSA 2025 wage base $168,600.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "paycheck-calculator",
+    "income-tax-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "tax-season",
+  "glossaryTerms": [
+    "net-pay",
+    "gross-income"
+  ]
+}

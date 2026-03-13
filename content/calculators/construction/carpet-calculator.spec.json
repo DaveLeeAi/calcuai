@@ -1,0 +1,177 @@
+{
+  "id": "carpet-calculator",
+  "title": "Carpet Calculator",
+  "slug": "carpet-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "carpet calculator",
+  "metaTitle": "Carpet Calculator — Square Yards, Roll Length & Cost Estimate",
+  "metaDescription": "Calculate how much carpet you need in square yards and linear feet. Accounts for closets, waste factor, seam planning, and padding. Free carpet calculator with cost estimates.",
+  "inputs": [
+    {
+      "id": "roomLength",
+      "label": "Room Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 15,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "roomWidth",
+      "label": "Room Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "carpetWidth",
+      "label": "Carpet Roll Width",
+      "type": "select",
+      "required": true,
+      "defaultValue": "12",
+      "options": [
+        { "value": "12", "label": "12 ft (Standard)" },
+        { "value": "15", "label": "15 ft (Wide)" }
+      ],
+      "helpText": "Standard carpet roll width in feet"
+    },
+    {
+      "id": "closets",
+      "label": "Number of Closets",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 5,
+      "helpText": "Number of closets to include in coverage"
+    },
+    {
+      "id": "closetArea",
+      "label": "Average Closet Area",
+      "type": "number",
+      "required": false,
+      "defaultValue": 6,
+      "min": 0,
+      "max": 50,
+      "suffix": "sq ft",
+      "helpText": "Average closet area in sq ft"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 20,
+      "helpText": "10% standard for rectangular rooms, 15% for irregular layouts"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "squareYards",
+      "label": "Carpet Needed (sq yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "squareFeet",
+      "label": "Total Area with Waste (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "roomArea",
+      "label": "Room Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "linearFeet",
+      "label": "Carpet Roll Length (linear ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "seams",
+      "label": "Seams Required",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "paddingSqYd",
+      "label": "Padding Needed (sq yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Cost",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "carpet",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "flooring-calculator",
+    "tile-calculator",
+    "square-footage-calculator",
+    "paint-calculator",
+    "wallpaper-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Carpet and Rug Institute (CRI) — CRI 104/105 Carpet Installation Standard",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Area calculation with waste factor per Carpet and Rug Institute (CRI) installation standards. Square yard conversion is the US carpet industry standard purchase unit. Roll width planning follows CRI 104/105 seam placement guidelines.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "flooring-calculator",
+    "square-footage-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [
+    "square-footage"
+  ]
+}

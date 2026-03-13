@@ -1,0 +1,194 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On $75,000 in net self-employment income, you owe $10,597 in self-employment tax (Social Security + Medicare) — an effective SE rate of 14.13%. Your deductible half is $5,299, reducing your adjusted gross income and saving roughly $1,272 in income tax. After combining SE tax and federal income tax, your total estimated quarterly payment is $4,687. This self-employment tax calculator uses 2025 IRS rates — including the $168,600 Social Security wage base and the 0.9% Additional Medicare Tax for high earners — to estimate your full tax picture as a freelancer, independent contractor, or sole proprietor.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your SE Tax Estimate Shows */}
+## What Your Self-Employment Tax Estimate Shows
+
+Your result breaks down the two components of self-employment tax separately: **Social Security (12.4%)** and **Medicare (2.9%)**. Together, these total 15.3% of your taxable self-employment income — but not 15.3% of your gross earnings. The IRS first reduces your net earnings by 7.65% (the "92.35% adjustment"), which simulates the employer-share deduction that W-2 workers receive automatically. On $75,000 in net earnings, your taxable SE base is $69,263, not $75,000.
+
+The **SE tax deduction** is particularly valuable. You deduct 50% of your self-employment tax as an above-the-line deduction on Form 1040. This reduces your adjusted gross income before the standard deduction is applied, lowering both your income tax and potentially qualifying you for other AGI-dependent benefits. A $10,597 SE tax yields a $5,299 deduction — at a 22% marginal rate, that saves $1,166 in income tax.
+
+The **quarterly estimated payment** divides your total tax liability (SE tax plus income tax) by four. The IRS expects self-employed individuals to pay estimated taxes quarterly — by April 15, June 15, September 15, and January 15 — to avoid underpayment penalties. If you have already made quarterly payments this year, the calculator shows your remaining balance due.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your net self-employment income** — this is your gross revenue minus ordinary and necessary business expenses, as reported on Schedule C (or Schedule K-1 for partnerships). If your net profit is $100,000 after deducting supplies, home office, mileage, and other expenses, enter $100,000. Do not enter gross revenue.
+
+2. **Select your filing status** — this determines your Additional Medicare Tax threshold ($200,000 for Single and Head of Household, $250,000 for Married Filing Jointly, $125,000 for Married Filing Separately) and your income tax brackets.
+
+3. **Enter other W-2 or wage income** — if you also have a W-2 job, enter your gross W-2 wages. This matters because Social Security tax has a combined wage base of $168,600 for 2025. If your W-2 employer already withholds Social Security on $120,000, only $48,600 of your SE income is subject to the 12.4% Social Security portion.
+
+4. **Enter additional business expenses** — any remaining deductible business expenses not yet subtracted from your net income. Leave at $0 if your net income already reflects all deductions.
+
+5. **Enter quarterly payments already made** — estimated tax payments you have already submitted to the IRS this year via Form 1040-ES. The calculator shows your remaining balance.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Step 1 — Taxable self-employment income (the 92.35% adjustment):**
+
+$$\text{Taxable SE Income} = \text{Net SE Income} \times 0.9235$$
+
+This adjustment accounts for the employer-equivalent portion of FICA. W-2 employees only pay 7.65% (their half); self-employed individuals pay both halves but get this reduction on the base.
+
+**Step 2 — Social Security tax (12.4%, capped):**
+
+$$\text{SS Tax} = \min(\text{Taxable SE Income},\ \$168{,}600 - \text{Other Wages}) \times 0.124$$
+
+The $168,600 is the 2025 Social Security wage base. If W-2 wages already exceed this amount, the SE Social Security portion is $0.
+
+**Step 3 — Medicare tax (2.9%, no cap):**
+
+$$\text{Medicare Tax} = \text{Taxable SE Income} \times 0.029$$
+
+**Step 4 — Additional Medicare tax (0.9% above threshold):**
+
+$$\text{Additional Medicare} = \max(0,\ \text{Total Income} - \text{Threshold}) \times 0.009$$
+
+| Filing Status | Threshold |
+|---------------|-----------|
+| Single | $200,000 |
+| Married Filing Jointly | $250,000 |
+| Married Filing Separately | $125,000 |
+| Head of Household | $200,000 |
+
+**Step 5 — Total SE tax and deduction:**
+
+$$\text{Total SE Tax} = \text{SS Tax} + \text{Medicare Tax} + \text{Additional Medicare Tax}$$
+$$\text{SE Tax Deduction} = \text{Total SE Tax} \times 0.50$$
+
+**Step 6 — Quarterly estimate:**
+
+$$\text{Quarterly Payment} = \frac{\text{Total Tax Liability}}{4}$$
+
+**Source:** IRS Publication 334 — Tax Guide for Small Business (2025); IRS Schedule SE (Form 1040); SSA wage base announcement for 2025.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: $100,000 Freelance Income, Single Filer
+
+**Inputs:**
+- Net self-employment income: $100,000
+- Filing status: Single
+- Other W-2 income: $0
+- Business expenses: $0
+- Quarterly payments made: $0
+
+**Step-by-step:**
+
+1. **Taxable SE income:** $100,000 × 0.9235 = **$92,350**
+2. **Social Security tax:** min($92,350, $168,600) × 0.124 = $92,350 × 0.124 = **$11,451.40**
+3. **Medicare tax:** $92,350 × 0.029 = **$2,678.15**
+4. **Additional Medicare tax:** max(0, $100,000 − $200,000) × 0.009 = **$0** (below threshold)
+5. **Total SE tax:** $11,451.40 + $2,678.15 + $0 = **$14,129.55**
+6. **SE tax deduction:** $14,129.55 × 0.50 = **$7,064.78**
+7. **AGI:** $100,000 − $7,064.78 = **$92,935.22**
+8. **Taxable income:** $92,935.22 − $15,000 (standard deduction) = **$77,935.22**
+9. **Estimated income tax:** 10% on first $11,925 + 12% on next $36,550 + 22% on remaining $29,460.22 = $1,192.50 + $4,386 + $6,481.25 = **$12,059.75**
+10. **Total tax liability:** $14,129.55 + $12,059.75 = **$26,189.30**
+11. **Quarterly estimate:** $26,189.30 ÷ 4 = **$6,547.33**
+12. **Effective SE rate:** $14,129.55 ÷ $100,000 = **14.13%**
+13. **Effective total rate:** $26,189.30 ÷ $100,000 = **26.19%**
+
+**Interpretation:** At $100,000 in freelance income, self-employment tax alone consumes $14,130 — more than many freelancers expect. The 50% SE deduction saves approximately $1,554 in income tax (at the 22% marginal rate). Quarterly estimated payments of $6,547 keep you on track to avoid the IRS underpayment penalty, which applies if you owe more than $1,000 at filing time.
+
+## SE Tax Rate Breakdown by Income Level
+
+| Net SE Income | SS Tax | Medicare Tax | Additional Medicare | Total SE Tax | Effective SE Rate |
+|---------------|--------|-------------|---------------------|-------------|-------------------|
+| $25,000 | $2,863 | $669 | $0 | $3,532 | 14.13% |
+| $50,000 | $5,726 | $1,339 | $0 | $7,065 | 14.13% |
+| $75,000 | $8,589 | $2,009 | $0 | $10,597 | 14.13% |
+| $100,000 | $11,451 | $2,678 | $0 | $14,130 | 14.13% |
+| $150,000 | $17,177 | $4,017 | $0 | $21,194 | 14.13% |
+| $200,000 | $20,906 | $5,356 | $0 | $26,263 | 13.13% |
+| $300,000 | $20,906 | $8,035 | $900 | $29,841 | 9.95% |
+
+Note how the effective SE rate drops above $168,600 as the Social Security portion caps out. The 12.4% SS rate stops applying once taxable SE income exceeds the wage base, significantly lowering the overall rate for high earners.
+
+## Quarterly Estimated Tax Payments
+
+The IRS requires self-employed individuals to make estimated tax payments if they expect to owe $1,000 or more when filing their return. The four quarterly deadlines for the 2025 tax year are:
+
+| Quarter | Period Covered | Due Date |
+|---------|---------------|----------|
+| Q1 | January 1 – March 31 | April 15, 2025 |
+| Q2 | April 1 – May 31 | June 16, 2025 |
+| Q3 | June 1 – August 31 | September 15, 2025 |
+| Q4 | September 1 – December 31 | January 15, 2026 |
+
+Missing a quarterly payment triggers an underpayment penalty calculated at the federal short-term rate plus 3 percentage points, compounded daily. The safe harbor rule: pay at least 100% of last year's total tax (110% if AGI exceeded $150,000) to avoid penalties entirely, even if you owe more at filing.
+
+## Deductions That Reduce Your Self-Employment Tax Bill
+
+Self-employed individuals have access to deductions that directly reduce the income subject to SE tax:
+
+**Above-the-line deductions (reduce AGI):**
+- 50% of self-employment tax (automatic — the calculator applies this)
+- Self-employed health insurance premiums (100% deductible)
+- SEP-IRA or Solo 401(k) contributions (up to $69,000 for 2025)
+- Student loan interest (up to $2,500)
+
+**Schedule C deductions (reduce net SE income):**
+- Home office deduction ($5 per square foot, up to 300 sq ft, or actual expenses)
+- Vehicle mileage ($0.70/mile for 2025) or actual auto expenses
+- Business equipment and supplies
+- Professional services (accounting, legal, software subscriptions)
+- Business insurance premiums
+
+Every $1,000 in Schedule C deductions reduces your SE tax by approximately $141 (at the 14.13% effective rate).
+
+## Common Mistakes Self-Employed Taxpayers Make
+
+**Confusing gross revenue with net earnings.** SE tax applies to your net profit (Schedule C, line 31), not your gross receipts. A freelancer earning $120,000 in gross revenue with $45,000 in legitimate expenses has $75,000 in net SE income — and $45,000 less in SE tax liability.
+
+**Forgetting the 92.35% adjustment.** Many freelancers estimate SE tax as 15.3% of their full net income. The actual taxable base is 92.35% of net income, making the true effective rate 14.13% (15.3% × 92.35%). On $100,000, this saves $765 compared to the naive 15.3% calculation.
+
+**Not accounting for W-2 income against the SS cap.** If you have both W-2 wages and SE income, your employer already withholds Social Security on your wages. You only owe the 12.4% SS portion on SE income up to the remaining wage base. A freelancer with $120,000 in W-2 wages and $80,000 in SE income only pays SS tax on $48,600 of SE income ($168,600 − $120,000).
+
+**Skipping quarterly payments.** The underpayment penalty is not optional. Setting aside 25–30% of each payment received into a dedicated tax savings account is the simplest way to stay current.
+
+## Frequently Asked Questions
+
+### What is the self-employment tax rate for 2025?
+The self-employment tax rate is 15.3% — composed of 12.4% for Social Security and 2.9% for Medicare. However, the IRS applies a 92.35% adjustment to your net earnings before calculating the tax, making the effective rate 14.13% of your net self-employment income. High earners (above $200,000 for single filers) also owe an additional 0.9% Medicare tax on income above the threshold.
+
+### Who has to pay self-employment tax?
+Anyone with net self-employment earnings of $400 or more in a tax year must pay self-employment tax. This includes freelancers, independent contractors (1099 workers), sole proprietors, gig workers, and general partners. It does not apply to S-corp distributions, rental income (in most cases), or investment income. You report SE tax on Schedule SE attached to your Form 1040.
+
+### Can I deduct self-employment tax?
+You can deduct 50% of your self-employment tax as an above-the-line deduction on Form 1040. This reduces your adjusted gross income (AGI), which lowers your income tax — but it does not reduce the SE tax itself. On a $14,130 SE tax bill, the $7,065 deduction saves approximately $1,554 in income tax at a 22% marginal rate.
+
+### How do I calculate quarterly estimated tax payments?
+Divide your total expected tax liability (self-employment tax plus federal income tax, minus any withholding from W-2 jobs) by four. Pay each quarter by the IRS deadline using Form 1040-ES. Most freelancers who owe more than $1,000 at tax time are required to make quarterly payments to avoid underpayment penalties.
+
+### Is self-employment tax the same as income tax?
+No. Self-employment tax is the self-employed person's equivalent of FICA (Social Security + Medicare). It is separate from and in addition to federal income tax. A freelancer earning $75,000 owes approximately $10,597 in SE tax plus approximately $8,152 in federal income tax — a combined $18,749. W-2 employees pay FICA too, but their employer covers half (7.65%), so the employee only sees 7.65% on their paycheck.
+
+### What is the Social Security wage base for 2025?
+The Social Security wage base for 2025 is $168,600. You pay the 12.4% Social Security portion of SE tax only on net self-employment earnings (after the 92.35% adjustment) up to this cap. Earnings above $168,600 are exempt from Social Security tax but still subject to the 2.9% Medicare tax. If you also have W-2 wages, your employer's Social Security withholding counts toward this cap.
+
+### What triggers the Additional Medicare Tax?
+The 0.9% Additional Medicare Tax applies to combined earnings (W-2 wages plus net SE income) exceeding $200,000 for single filers, $250,000 for married filing jointly, or $125,000 for married filing separately. This is in addition to the standard 2.9% Medicare tax. Unlike regular SE tax, you cannot deduct 50% of the Additional Medicare Tax.
+
+### How does self-employment tax differ from payroll tax for employees?
+W-2 employees pay 7.65% of their wages in FICA taxes (6.2% Social Security + 1.45% Medicare), and their employer pays a matching 7.65%. Self-employed individuals pay both halves — the full 15.3%. To compensate, the IRS allows the 92.35% adjustment and the 50% deduction. The net effect: self-employed workers pay roughly 2% more in total FICA-equivalent taxes than W-2 employees on the same income.
+
+## Sources & Methodology
+
+- Internal Revenue Service. "Publication 334 — Tax Guide for Small Business." 2025 Edition.
+- Internal Revenue Service. "Schedule SE (Form 1040): Self-Employment Tax." 2025.
+- Internal Revenue Service. "Revenue Procedure 2024-40: 2025 Tax Year Adjustments." October 2024.
+- Social Security Administration. "Contribution and Benefit Base for 2025: $168,600." October 2024.
+- Internal Revenue Service. "Topic No. 554 — Self-Employment Tax." Updated January 2025.
+- Internal Revenue Service. "Form 1040-ES: Estimated Tax for Individuals." 2025.

@@ -1,0 +1,207 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20-foot long, 4-foot high retaining wall using standard 16 × 6-inch blocks needs 132 blocks (including 10% waste), 15 cap blocks, 2.96 cubic yards of gravel backfill, and 20 feet of drain pipe — material cost between \$636 and \$1,644. Natural stone walls cost 40–60% more due to smaller block sizes and higher waste. Enter your wall dimensions below to get exact block counts, drainage materials, and cost estimates for your project.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+Retaining walls hold back soil using gravity and interlocking blocks. This calculator converts your wall dimensions into a complete materials list: blocks for the wall face, cap blocks for the top course, gravel backfill for drainage, perforated drain pipe, compacted base material, and landscape fabric. It also estimates material cost ranges based on 2025–2026 national pricing.
+
+The **block count** uses wall face area divided by individual block face area. A standard retaining wall block measures 16 inches long by 6 inches high — each block covers 96 square inches, or 1.5 blocks per square foot of wall face. The calculator adds a waste factor (default 10%) for cuts at ends and corners. Natural stone requires 15% waste due to irregular shapes and more trimming.
+
+The **drainage materials** are not optional. Water pressure behind a retaining wall is the primary cause of failure. The calculator includes gravel backfill (1-foot wide zone behind the wall), a perforated drain pipe at the base, and landscape fabric to prevent soil from clogging the gravel. Skipping drainage to save \$100–\$200 on a wall that costs \$1,000+ in blocks is the most common and most expensive retaining wall mistake.
+
+The **base material** is compacted gravel beneath the first course. A retaining wall built on bare soil will settle unevenly and lean forward within 2–3 years. The industry standard is a 6-inch compacted gravel base extending 6 inches beyond the block depth on each side. This calculator uses the block depth plus 6 inches as the base width.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the wall length** — measure the full run of the wall in feet or meters. For curved walls, measure along the curve or break it into straight segments and calculate each separately.
+
+2. **Enter the wall height** — this is the exposed height of the wall, not including the buried base course. Most residential retaining walls are 2–4 feet high. Walls over 4 feet typically require a building permit, and walls over 6 feet almost always require engineered design — the calculator flags this with a note.
+
+3. **Select the block type** — standard blocks (16 × 6 × 12 inches) are the most common and cost-effective. Large-format blocks (18 × 6 × 12) cover more area per block, reducing labor. Natural stone blocks (12 × 6 × 8) give a traditional look but require more blocks and higher waste.
+
+4. **Adjust block dimensions** — if your blocks differ from the presets, override the length, height, and depth fields. Measure the actual exposed face dimensions, not including any interlocking lip or pin slot.
+
+5. **Set the waste factor** — 10% is standard for manufactured blocks with clean cuts. Use 15% for natural stone or walls with many corners. For straight runs with no corners, 5% is sufficient.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Retaining wall block quantities are calculated from wall face area and individual block face area.
+
+**Wall face area:**
+
+$$A_{wall} = L \times H$$
+
+**Blocks per square foot:**
+
+$$B_{sqft} = \frac{144}{b_L \times b_H}$$
+
+**Total blocks (with waste):**
+
+$$B_{total} = \left\lceil A_{wall} \times B_{sqft} \times \left(1 + \frac{W}{100}\right) \right\rceil$$
+
+**Courses (rows):**
+
+$$R = \left\lceil \frac{H \times 12}{b_H} \right\rceil$$
+
+**Cap blocks:**
+
+$$C = \left\lceil \frac{L \times 12}{b_L} \right\rceil$$
+
+**Gravel backfill (cubic yards):**
+
+$$G = \frac{L \times 1 \times H}{27}$$
+
+**Base material (cubic yards):**
+
+$$M = \frac{L \times \left(\frac{b_D}{12} + 0.5\right) \times 0.5}{27}$$
+
+Where:
+
+- **L** = wall length (feet)
+- **H** = wall height (feet)
+- **b_L** = block length (inches)
+- **b_H** = block height (inches)
+- **b_D** = block depth (inches)
+- **W** = waste factor (percentage)
+- **144** = square inches per square foot
+
+**Source:** Block layout calculations per National Concrete Masonry Association (NCMA) TEK 15-5B. Drainage and base requirements per International Code Council (ICC) residential retaining wall standards.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 20-Foot Wall, 4 Feet High, Standard Blocks
+
+A homeowner is building a retaining wall along the back property line to create a level garden bed. The wall runs 20 feet with a 4-foot exposed height using standard 16 × 6-inch retaining wall blocks.
+
+**Inputs:**
+- Wall Length: 20 ft
+- Wall Height: 4 ft
+- Block Type: Standard (16" × 6" × 12")
+- Waste Factor: 10%
+
+**Step-by-step:**
+
+1. Wall face area: 20 × 4 = **80 sq ft**
+2. Blocks per sq ft: 144 / (16 × 6) = 144 / 96 = **1.5 blocks/sq ft**
+3. Blocks without waste: ceil(80 × 1.5) = **120 blocks**
+4. Blocks with 10% waste: ceil(80 × 1.5 × 1.10) = **132 blocks**
+5. Courses: ceil(48 / 6) = **8 rows**
+6. Blocks per row: ceil(240 / 16) = **15 blocks**
+7. Cap blocks: **15** (one row on top)
+8. Gravel backfill: 20 × 1 × 4 / 27 = **2.96 cu yd**
+9. Drain pipe: **20 linear ft**
+10. Base material: 20 × (12/12 + 0.5) × 0.5 / 27 = **0.56 cu yd**
+11. Landscape fabric: 20 × (4 + 2) = **120 sq ft**
+
+**Cost estimate:** Blocks at \$3–\$8 each = \$396–\$1,056. Cap blocks at \$5–\$12 each = \$75–\$180. Gravel backfill ≈ \$104. Base material ≈ \$20. Drain pipe ≈ \$30. **Total: \$636–\$1,644.**
+
+**Interpretation:** This is a manageable DIY project for an experienced homeowner. At 4 feet, most jurisdictions do not require a permit or engineered plans, though it is always worth checking with your local building department. The 132 blocks weigh approximately 4,600 lbs total (standard blocks average 35 lbs each), so plan for delivery — that is 2+ pickup truck loads of blocks alone.
+
+{/* Section 10: Block Types Compared */}
+## Block Types Compared
+
+| Feature | Standard (16" × 6") | Large (18" × 6") | Natural Stone (12" × 6") |
+|---|---|---|---|
+| Blocks per sq ft | 1.5 | 1.33 | 2.0 |
+| Cost per block | \$3–\$8 | \$5–\$10 | \$5–\$12 |
+| Weight per block | 30–40 lbs | 40–60 lbs | 25–50 lbs |
+| Recommended waste | 10% | 10% | 15% |
+| Best for | Most residential walls | Long straight runs | Natural/rustic look |
+| Interlocking system | Pin or lip | Pin or lip | Friction/gravity only |
+| DIY difficulty | Moderate | Moderate–Hard | Hard |
+
+Standard manufactured blocks are the best choice for most homeowners. They interlock with a consistent setback (typically 1 inch per course), creating a stable batter angle that resists soil pressure. Natural stone looks best but is harder to stack level, requires more cutting, and does not have a built-in interlock system.
+
+{/* Materials Checklist */}
+## Complete Materials Checklist
+
+Beyond blocks, a proper retaining wall requires these materials:
+
+- **Gravel backfill** — clean 3/4" crushed stone, placed in 1-foot wide zone behind the wall, compacted in 6–8 inch lifts as you build up
+- **Perforated drain pipe** — 4" rigid or flexible perforated PVC, laid at the base behind the wall with perforations facing down, sloped 1/8" per foot to an outlet
+- **Landscape fabric** — non-woven geotextile fabric, wraps the gravel zone to prevent soil infiltration and clogging
+- **Compacted base material** — 3/4" crushed stone or road base (not pea gravel), 6" deep, compacted with a hand tamper or plate compactor
+- **Cap adhesive** — polyurethane construction adhesive, one tube per 20 linear feet of cap, secures top course permanently
+- **Backfill soil** — clean fill dirt for behind the gravel zone (never use topsoil or organic soil directly behind the wall)
+
+{/* Building Codes & Permits */}
+## Building Codes & Permits
+
+Retaining wall regulations vary by jurisdiction, but these thresholds are common across most U.S. building codes:
+
+- **Under 4 feet exposed height** — generally no permit required, but always verify with your local building department
+- **4 to 6 feet** — most jurisdictions require a building permit; some require engineered drawings
+- **Over 6 feet** — almost universally requires a building permit AND engineered design by a licensed structural or geotechnical engineer. The engineering alone costs \$500–\$2,000
+- **Surcharge loads** — walls supporting a slope, driveway, structure, or heavy equipment may require engineering regardless of height
+- **Setback requirements** — many jurisdictions require the wall to be set back 2–5 feet from the property line; check before you dig
+
+The International Residential Code (IRC) Section R404 governs foundation walls, and local amendments often apply the same standards to retaining walls. A wall that fails structurally can damage neighboring property, making code compliance both a safety and liability issue.
+
+{/* Drainage Requirements */}
+## Why Drainage Is Non-Negotiable
+
+Hydrostatic pressure — water trapped behind the wall — is the number one cause of retaining wall failure. A saturated soil zone behind a 4-foot wall can exert over 1,200 pounds per linear foot of lateral pressure. Proper drainage reduces this force by 60–80%.
+
+Every retaining wall needs three drainage components: gravel backfill to let water flow freely downward, a perforated drain pipe at the base to collect and route water away, and landscape fabric to keep soil from clogging the gravel over time. The drain pipe must slope at least 1/8 inch per foot toward a daylight outlet (where the pipe exits at grade) or a catch basin.
+
+Walls built without drainage may look fine for the first year, then lean, crack, or collapse after a heavy rain season. The repair cost for a failed wall is typically 2–3 times the original build cost because you must demolish the old wall, re-excavate, install drainage, and rebuild.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many blocks do I need for a retaining wall?
+
+A standard 16 × 6-inch retaining wall block covers 0.67 square feet of wall face, meaning you need approximately 1.5 blocks per square foot. For a 20-foot long, 4-foot high wall, that is 120 blocks before waste — add 10% for cuts and breakage, bringing the total to 132 blocks. Larger blocks (18" wide) reduce the count to about 1.33 per square foot, while natural stone (12" wide) requires roughly 2.0 per square foot.
+
+### How deep should a retaining wall base be?
+
+The base trench should be 6 inches deep filled with compacted crushed stone, plus the height of one buried block course. For a 6-inch-tall block, the total trench depth is 12 inches. The base width should extend at least 6 inches beyond the block depth on both sides. For a 12-inch-deep block, the base trench width should be at least 24 inches. Compact the base in 3-inch lifts with a plate compactor until it does not move underfoot.
+
+### Do I need a permit for a retaining wall?
+
+In most U.S. jurisdictions, retaining walls under 4 feet of exposed height do not require a building permit. Walls between 4 and 6 feet typically require a permit, and walls over 6 feet almost always require both a permit and engineered drawings from a licensed professional engineer. However, permit thresholds vary by city and county — always check with your local building department before starting work.
+
+### How much gravel do I need behind a retaining wall?
+
+Plan for a 12-inch-wide gravel backfill zone running the full height and length of the wall. For a 20-foot long, 4-foot high wall, that equals 20 × 1 × 4 = 80 cubic feet, or about 2.96 cubic yards of 3/4-inch crushed stone. At approximately 2,700 lbs per cubic yard, that is roughly 8,000 lbs (4 tons) of gravel — enough to fill a standard dump truck delivery.
+
+### Can I build a retaining wall without drainage?
+
+No. Omitting drainage is the single most common cause of retaining wall failure. Water trapped behind the wall creates hydrostatic pressure that can exceed the wall's design load after a single heavy rain. Every retaining wall — regardless of height — needs gravel backfill, a perforated drain pipe at the base, and landscape fabric. The drainage materials cost \$100–\$300 for a typical residential wall, a fraction of the \$2,000–\$5,000 cost to demolish and rebuild a failed wall.
+
+### How much does a retaining wall cost per linear foot?
+
+Material cost for a standard block retaining wall runs \$15–\$40 per linear foot per foot of height, depending on block type and local pricing. A 4-foot-high wall costs roughly \$60–\$160 per linear foot for materials alone. Professional installation adds \$20–\$50 per square foot of wall face, bringing total installed cost to \$25–\$75 per square foot. Natural stone walls are 40–60% more expensive than manufactured block walls.
+
+### What is the maximum height for a DIY retaining wall?
+
+Most building codes allow homeowners to build retaining walls up to 4 feet of exposed height without a permit or engineered design. This is also a practical DIY threshold — walls up to 4 feet can use gravity-type block construction without geogrid reinforcement. Above 4 feet, the soil loads increase significantly and the wall typically needs geogrid layers, engineered design, and a building permit. Attempting a wall over 4 feet without engineering risks structural failure and potential liability.
+
+### How long does a retaining wall last?
+
+A properly built retaining wall with adequate drainage lasts 50–100 years for manufactured concrete blocks and 100+ years for natural stone. The most critical factor is drainage, not block material. A wall with poor drainage may begin to lean or crack within 5–10 years regardless of block quality. Manufactured blocks resist freeze-thaw cycles better than poured concrete in northern climates because the segmental design allows minor movement without cracking.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+Block quantities are calculated using wall face area divided by individual block face area, a standard method published by the **National Concrete Masonry Association (NCMA)** in TEK 15-5B, *Segmental Retaining Wall Design*. Drainage and base material specifications follow **International Code Council (ICC)** guidelines and **ASTM D6270** (lightweight fill behind retaining structures). Cost estimates reflect 2025–2026 national averages from **HomeAdvisor/Angi** contractor surveys and **RSMeans** construction cost data. Material weights are based on manufacturer specifications from **Belgard**, **Pavestone**, and **Allan Block**. Permit thresholds reference the **International Residential Code (IRC) Section R404** and common local code amendments. The 1-foot gravel backfill width and 6-inch compacted base depth follow industry best practices documented by the **Interlocking Concrete Pavement Institute (ICPI)** and **NCMA** installation guides.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

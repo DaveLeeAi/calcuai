@@ -1,0 +1,265 @@
+{
+  "id": "tdee-calculator",
+  "title": "TDEE Calculator",
+  "slug": "tdee-calculator",
+  "category": "health",
+  "subcategory": "fitness",
+  "primaryKeyword": "TDEE calculator",
+  "metaTitle": "TDEE Calculator — Total Daily Energy Expenditure Calculator",
+  "metaDescription": "Calculate your Total Daily Energy Expenditure using the Mifflin-St Jeor or Harris-Benedict equation. See BMR, TDEE by activity level, goal calories, and macros.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "imperial",
+      "options": [
+        {
+          "value": "imperial",
+          "label": "Imperial (lbs, inches)"
+        },
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        }
+      ]
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 15,
+      "max": 100,
+      "step": 1,
+      "helpText": "Your current age in years"
+    },
+    {
+      "id": "gender",
+      "label": "Sex",
+      "type": "radio",
+      "required": true,
+      "defaultValue": "male",
+      "options": [
+        {
+          "value": "male",
+          "label": "Male"
+        },
+        {
+          "value": "female",
+          "label": "Female"
+        }
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 170,
+      "min": 50,
+      "max": 700,
+      "step": 1,
+      "helpText": "Enter weight in pounds (imperial) or kilograms (metric)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 70,
+      "min": 36,
+      "max": 300,
+      "step": 1,
+      "helpText": "Enter height in inches (imperial) or centimeters (metric)"
+    },
+    {
+      "id": "activityLevel",
+      "label": "Activity Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "moderate",
+      "options": [
+        {
+          "value": "sedentary",
+          "label": "Sedentary (little or no exercise)"
+        },
+        {
+          "value": "light",
+          "label": "Lightly Active (1-3 days/week)"
+        },
+        {
+          "value": "moderate",
+          "label": "Moderately Active (3-5 days/week)"
+        },
+        {
+          "value": "active",
+          "label": "Very Active (6-7 days/week)"
+        },
+        {
+          "value": "veryActive",
+          "label": "Extra Active (athlete / physical job)"
+        }
+      ]
+    },
+    {
+      "id": "formula",
+      "label": "BMR Formula",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mifflin",
+      "helpText": "BMR formula to use for the calculation",
+      "options": [
+        {
+          "value": "mifflin",
+          "label": "Mifflin-St Jeor (recommended)"
+        },
+        {
+          "value": "harris",
+          "label": "Harris-Benedict (revised 1984)"
+        }
+      ]
+    },
+    {
+      "id": "goal",
+      "label": "Goal",
+      "type": "select",
+      "required": true,
+      "defaultValue": "maintain",
+      "options": [
+        {
+          "value": "maintain",
+          "label": "Maintain Weight"
+        },
+        {
+          "value": "mildLoss",
+          "label": "Mild Weight Loss (0.5 lb/week)"
+        },
+        {
+          "value": "loss",
+          "label": "Weight Loss (1 lb/week)"
+        },
+        {
+          "value": "extremeLoss",
+          "label": "Extreme Weight Loss (2 lb/week)"
+        },
+        {
+          "value": "mildGain",
+          "label": "Mild Weight Gain (0.5 lb/week)"
+        },
+        {
+          "value": "gain",
+          "label": "Weight Gain (1 lb/week)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "tdee",
+      "label": "Total Daily Energy Expenditure (TDEE)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true,
+      "description": "Total calories burned per day including all activity"
+    },
+    {
+      "id": "bmr",
+      "label": "Basal Metabolic Rate (BMR)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "goalCalories",
+      "label": "Daily Calorie Target",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "description": "Adjusted calorie target based on your selected goal"
+    },
+    {
+      "id": "macroBreakdown",
+      "label": "Macro Breakdown",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "caloriesByMeal",
+      "label": "Calories by Meal",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "activityMultiplier",
+      "label": "Activity Multiplier",
+      "type": "single-value",
+      "format": "number",
+      "precision": 3
+    },
+    {
+      "id": "monthlyWeightChange",
+      "label": "Est. Monthly Weight Change",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "description": "Estimated monthly weight change in pounds"
+    },
+    {
+      "id": "weeklyDeficit",
+      "label": "Weekly Calorie Deficit/Surplus",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    }
+  ],
+  "formula": "tdee",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "bmr-calculator",
+    "calorie-calculator",
+    "macro-calculator",
+    "ideal-weight-calculator",
+    "body-fat-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Mifflin MD et al. A new predictive equation for resting energy expenditure. Am J Clin Nutr. 1990",
+  "articleWordTarget": 2000,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Mifflin MD, St Jeor ST, et al. American Journal of Clinical Nutrition, 1990;51(2):241-247. Roza AM, Shizgal HM. American Journal of Clinical Nutrition, 1984;40(1):168-182. ACSM Guidelines for Exercise Testing and Prescription, 11th ed., 2021.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "calorie-calculator",
+    "bmr-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "bmi"
+  ],
+  "methodologyTopics": [
+    "calorie-formulas"
+  ]
+}

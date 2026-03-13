@@ -1,0 +1,215 @@
+{
+  "id": "paver-calculator",
+  "title": "Paver Calculator",
+  "slug": "paver-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "paver calculator",
+  "metaTitle": "Paver Calculator — How Many Pavers Do You Need?",
+  "metaDescription": "Calculate exactly how many pavers you need for a patio, driveway, or walkway. Enter area dimensions, paver size, pattern, and waste factor to get an accurate count with base material estimates.",
+  "inputs": [
+    {
+      "id": "areaLength",
+      "label": "Area Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Length of the area to pave"
+    },
+    {
+      "id": "areaWidth",
+      "label": "Area Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Width of the area to pave"
+    },
+    {
+      "id": "paverLength",
+      "label": "Paver Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 1,
+      "max": 48,
+      "step": 0.5,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Individual paver length"
+    },
+    {
+      "id": "paverWidth",
+      "label": "Paver Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 4,
+      "min": 1,
+      "max": 48,
+      "step": 0.5,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Individual paver width"
+    },
+    {
+      "id": "jointWidth",
+      "label": "Joint Width",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0.25,
+      "min": 0,
+      "max": 1,
+      "step": 0.125,
+      "suffix": "in",
+      "helpText": "Gap between pavers in inches"
+    },
+    {
+      "id": "pattern",
+      "label": "Lay Pattern",
+      "type": "select",
+      "required": true,
+      "defaultValue": "running-bond",
+      "options": [
+        { "value": "running-bond", "label": "Running Bond" },
+        { "value": "herringbone", "label": "Herringbone" },
+        { "value": "basketweave", "label": "Basketweave" },
+        { "value": "stack-bond", "label": "Stack Bond" }
+      ],
+      "helpText": "Lay pattern affects waste — herringbone adds ~5% more cuts"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "5% stack bond, 10% running bond, 15% herringbone"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "paversNeeded",
+      "label": "Pavers Needed (with Waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "paversWithoutWaste",
+      "label": "Pavers (No Waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "totalArea",
+      "label": "Total Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "paverAreaEach",
+      "label": "Paver Face Area (sq in)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "gravelBase",
+      "label": "Gravel Base (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "sandBase",
+      "label": "Leveling Sand (cu yd)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "polymericSand",
+      "label": "Polymeric Sand (50-lb bags)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Paver Estimate Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "paver",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "gravel-calculator",
+    "square-footage-calculator",
+    "brick-calculator",
+    "mulch-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Interlocking Concrete Pavement Institute (ICPI)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Paver coverage calculations based on Interlocking Concrete Pavement Institute (ICPI) installation guidelines. Effective coverage accounts for joint spacing added to each paver dimension. Pattern waste multipliers per ICPI recommendations: 5% for stack bond, 10% for running bond, 15% for herringbone. Base material depths follow ICPI Pavements for Patios and Pedestrian Applications (4\" gravel, 1\" sand).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "concrete-calculator",
+    "square-footage-calculator",
+    "brick-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

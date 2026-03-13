@@ -1,0 +1,184 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A typical home with 1,200 sq ft of exterior wall area (after deducting 8 windows and 2 doors) needs 13.2 squares of siding — that's 1,320 sq ft of material including 10% waste. Vinyl siding costs $3,960–$9,240 installed; fiber-cement (HardiePlank) runs $6,600–$17,160 installed. Siding is measured in "squares" (1 square = 100 sq ft), so converting your wall area correctly is essential for accurate material orders and contractor bids. Enter your wall dimensions, openings, and siding type below for a complete material and cost estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Siding Estimate Shows
+
+Ordering siding materials involves three calculations that contractors and homeowners frequently get wrong: gross wall area, opening deductions, and material-specific unit conversion. Overestimate by 20% and you waste hundreds of dollars on unused panels. Underestimate by 5% and your project stalls while you wait for a rush backorder — in a different dye lot that never quite matches.
+
+**Net siding area** is your total wall area minus all openings (windows, doors, garage doors). The calculator subtracts each opening based on the average area you provide — 15 sq ft per standard window (3 × 5 ft) and 21 sq ft per standard door (3 × 7 ft). For oversized windows or French doors, adjust the average area input upward. Gable area (the triangular wall sections above your eave line) is added separately because it requires different cutting patterns and generates more waste.
+
+**Squares** is the siding industry's standard measurement unit. One square equals 100 square feet of coverage. When contractors quote siding jobs, they reference squares — not panels, not planks, not linear feet. A typical 2,000 sq ft home with standard openings needs 12–15 squares of siding. The calculator divides your total area (with waste) by 100 to give this figure directly.
+
+**Panels or planks** converts squares into the actual unit count for your chosen material. Vinyl siding panels cover approximately 16.8 sq ft each (double-4" profile, 12.5 ft long). Fiber-cement planks cover approximately 5.33 sq ft each (12 ft × 8.25" exposure). This number tells you exactly how many pieces to order.
+
+**J-channel and starter strip** are trim components that vinyl siding installations require. J-channel frames every window and door opening (approximately 3 pieces per window, 2 per door, each 12.5 ft long). Starter strip runs along the bottom of every wall to anchor the first row of siding. These are easy to forget when ordering materials and create project delays.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure total wall length** — walk the perimeter of your house and add up the length of all exterior walls in feet. A 30 × 50-foot rectangular home has 160 linear feet of wall (30 + 50 + 30 + 50). For multi-story homes, measure each story separately.
+
+2. **Measure wall height** — measure from the foundation line (where siding starts) to the eave line (where the roof overhang begins). Standard single-story homes are 8–9 feet, two-story homes are 17–19 feet. Do not include the gable — that is measured separately.
+
+3. **Calculate gable area** — for each gable end, measure the width (base) and height (from eave to ridge). Gable area = 0.5 × base × height. A 30-foot-wide gable with an 8-foot rise has 120 sq ft of area. Add all gable areas together and enter the total.
+
+4. **Count openings** — walk around the house and count every window and door on the exterior. Include sliding glass doors, garage doors (enter as a large door with 160+ sq ft area), and basement windows. Each opening reduces your net siding area.
+
+5. **Choose siding type** — this changes the material unit count and cost estimate. Vinyl is the most popular residential siding in the US (33% market share per US Census Bureau). Fiber-cement is the fastest-growing segment. The calculator adjusts panel/plank counts and costs per material.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Siding calculations work from gross wall area down to net area, then convert to industry-standard squares:
+
+**Gross wall area:**
+
+$$\text{Gross} = \text{Wall Length} \times \text{Wall Height} + \text{Gable Area}$$
+
+**Net siding area:**
+
+$$\text{Net} = \max\left(0,\ \text{Gross} - (\text{Windows} \times A_w) - (\text{Doors} \times A_d)\right)$$
+
+**Area with waste:**
+
+$$\text{Total} = \text{Net} \times \left(1 + \frac{W}{100}\right)$$
+
+**Squares:**
+
+$$\text{Squares} = \frac{\text{Total}}{100}$$
+
+**Panels or planks:**
+
+$$\text{Units} = \left\lceil \frac{\text{Total}}{C} \right\rceil$$
+
+Where:
+
+- **Wall Length** = total linear feet of exterior walls
+- **Wall Height** = height from foundation to eave in feet
+- **Gable Area** = total triangular gable area in sq ft
+- **A_w** = average window area (default 15 sq ft)
+- **A_d** = average door area (default 21 sq ft)
+- **W** = waste factor percentage (10 for 10%)
+- **C** = coverage per panel/plank in sq ft (vinyl: 16.8, fiber-cement: 5.33)
+
+**Source:** Vinyl Siding Institute (VSI) installation manual; James Hardie HardiePlank installation guide; US Census Bureau — Characteristics of New Housing.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 2,000 sq ft Ranch Home — Vinyl Siding
+
+A homeowner is re-siding a single-story ranch home with 160 linear feet of exterior walls, 9-foot wall height, two gable ends (120 sq ft total), 10 windows, and 3 doors. They chose vinyl siding with a 10% waste factor.
+
+**Inputs:**
+- Wall length: 160 ft, Wall height: 9 ft
+- Gable area: 120 sq ft
+- Windows: 10 (15 sq ft each), Doors: 3 (21 sq ft each)
+- Siding type: Vinyl, Waste: 10%
+
+**Step-by-step:**
+
+1. Gross wall area: (160 × 9) + 120 = **1,560 sq ft**
+2. Opening deductions: (10 × 15) + (3 × 21) = 150 + 63 = **213 sq ft**
+3. Net siding area: 1,560 − 213 = **1,347 sq ft**
+4. Apply 10% waste: 1,347 × 1.10 = **1,481.7 sq ft**
+5. Squares: 1,481.7 / 100 = **14.82 squares**
+6. Vinyl panels: ceil(1,481.7 / 16.8) = ceil(88.2) = **89 panels**
+7. J-channel: ceil(10 × 3 + 3 × 2) × 12.5 = 36 × 12.5 = **450 linear ft**
+8. Starter strip: **160 linear ft**
+
+**Interpretation:** You need 14.82 squares of vinyl siding — order 15 squares. At $3–$7 per square foot installed, the total project cost is $4,445–$10,372. The 89 vinyl panels are sold in cartons (typically 2 panels per carton), so order 45 cartons. Do not forget the 450 linear feet of J-channel (36 pieces at 12.5 ft each) and 160 feet of starter strip (13 pieces at 12.5 ft each). Add outside corner posts, undersill trim, and soffit materials separately.
+
+{/* Section 10: Key Factors */}
+## Siding Types Compared
+
+| Siding Type | Installed Cost (per sq ft) | Lifespan | Maintenance | Best For |
+|---|---|---|---|---|
+| **Vinyl** | $3–$7 | 20–40 years | Low (wash annually) | Budget-conscious, most climates |
+| **Fiber-Cement** | $5–$13 | 30–50 years | Medium (repaint every 10–15 yr) | Fire zones, coastal, high-end |
+| **Wood (Clapboard)** | $6–$12 | 15–40 years | High (paint/stain every 3–7 yr) | Historic homes, custom looks |
+| **Engineered Wood** | $4–$9 | 20–30 years | Medium (repaint every 8–12 yr) | Wood look, lower budget |
+| **Metal (Aluminum/Steel)** | $7–$15 | 40–60 years | Low (no painting needed) | Modern design, commercial |
+
+Source: HomeAdvisor / Angi 2025-2026 national averages; US Census Bureau — Characteristics of New Housing.
+
+## How to Measure Your House
+
+**Rectangular homes:** Measure the length and width of the footprint. Multiply each wall length by the wall height. Add all four walls. A 30 × 50 home with 9-foot walls: (30 × 9) + (50 × 9) + (30 × 9) + (50 × 9) = 1,440 sq ft of wall area. Or use the shortcut: 2 × (30 + 50) × 9 = 1,440 sq ft.
+
+**L-shaped or complex homes:** Break the footprint into rectangles. Measure each wall section separately and add them. For bump-outs (bay windows, chimneys), measure the three exposed faces of each projection and add to the total.
+
+**Gables:** Measure the width (base) and height (from eave to peak). Area = 0.5 × base × height. A standard 30-foot gable with a 6:12 pitch has a rise of 7.5 feet and an area of 112.5 sq ft. Most homes have 2 gable ends — measure each separately because they may differ.
+
+**Multi-story homes:** Measure each floor level as a separate wall section. The second story may have a different wall height than the first. Add the areas for each level together. Band boards between floors add 6–12 inches of height that needs siding.
+
+## J-Channel & Trim Accessories
+
+Vinyl siding requires trim accessories that contractors often underestimate. Budget 10–15% of your total siding cost for trim materials:
+
+**J-channel** frames every window and door. Each opening needs 3–4 pieces (top, bottom, and sides). Standard J-channel is 12.5 feet long. For 10 windows and 3 doors, you need approximately 36 pieces — 450 linear feet total.
+
+**Starter strip** anchors the bottom row of siding to the wall. You need one continuous strip along the bottom of every wall. A 160-foot perimeter needs 13 pieces of 12.5-foot starter strip.
+
+**Outside corner posts** cover the vertical corners of the house. Each corner post is 10 feet long. A single-story home with 4 corners needs 4 posts. A two-story home needs 8 posts (or 4 double-length posts if available).
+
+**Undersill trim** (also called finish trim) goes under windows and at the top of walls under soffits. Estimate the same linear footage as your J-channel order.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many squares of siding do I need for a 1,500 sq ft house?
+
+A 1,500 sq ft house (footprint, not living area) typically has 1,200–1,600 sq ft of exterior wall area after deducting windows and doors. That is 12–16 squares of siding. The exact number depends on wall height, number of stories, window count, and gable area. A single-story ranch with 8-foot walls needs fewer squares than a two-story colonial with the same footprint. Always measure wall area — not living area — when estimating siding.
+
+### What is the cheapest siding option?
+
+Vinyl siding is the most affordable option at $3–$7 per sq ft installed (2025-2026 national average). A 1,500 sq ft wall area project costs $4,500–$10,500 for vinyl versus $7,500–$19,500 for fiber-cement. Engineered wood ($4–$9 per sq ft) offers a middle ground with a real-wood appearance at 30–40% less than natural wood clapboard. Prices include materials and professional installation.
+
+### How long does siding installation take?
+
+Professional siding installation on a typical 1,500–2,000 sq ft home takes 1–2 weeks for vinyl, 2–3 weeks for fiber-cement, and 2–4 weeks for wood. Factors that extend the timeline include second stories (scaffolding setup), old siding removal, rotted sheathing repair, and weather delays. A crew of 3–4 installers can hang 15–20 squares of vinyl per day or 8–12 squares of fiber-cement per day.
+
+### Do I need to remove old siding before installing new?
+
+It depends on the old siding condition and local building code. Vinyl can be installed over existing vinyl or aluminum siding if the wall surface is flat and the underlying sheathing is sound. Fiber-cement typically requires removal of old siding because it needs a flat, rigid nailing surface. Wood siding with rot or insect damage must be removed. Most building codes allow a maximum of two siding layers — if you already have two layers, removal is mandatory.
+
+### What is the most durable siding material?
+
+Fiber-cement (HardiePlank) is the most durable mainstream residential siding, lasting 30–50 years with minimal structural maintenance. It resists fire (non-combustible, Class A fire rating), termites, rot, and hail impact better than vinyl or wood. Metal siding (aluminum or steel) lasts 40–60 years but dents more easily. Vinyl siding lasts 20–40 years but becomes brittle in extreme cold and can melt near heat sources like grills.
+
+### How do I calculate siding for gable ends?
+
+Gable area = 0.5 × base width × gable height. Measure the base width at the eave line and the height from the eave to the ridge peak. A 30-foot-wide gable end with a 6:12 roof pitch has a rise of 7.5 feet: area = 0.5 × 30 × 7.5 = 112.5 sq ft. Add 15% waste for gables because the angled cuts at the roofline generate more scrap than rectangular wall sections.
+
+### What is a square in siding?
+
+One square equals 100 square feet of siding coverage. It is the standard measurement unit used by siding manufacturers, distributors, and contractors throughout the US. When a contractor quotes "15 squares of vinyl siding," they mean 1,500 square feet of material. This unit simplifies ordering because manufacturers package siding in known quantities per square — typically 2 cartons of vinyl panels per square or about 19 fiber-cement planks per square.
+
+### Should I hire a contractor or DIY siding?
+
+Vinyl siding is the most DIY-friendly option — it requires basic tools (tin snips, snap lock punch, zip tool, level) and moderate skill. A homeowner can install 3–5 squares per day. Fiber-cement requires specialized cutting tools (shear cutter or diamond blade saw), weighs 2.5 lbs per sq ft (vs. 0.5 lbs for vinyl), and produces silica dust that requires respiratory protection. Wood siding demands carpentry skills for proper caulking, priming, and nailing patterns. For two-story homes, scaffolding rental ($150–$300/week) and fall risk make professional installation the safer and often more cost-effective choice.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses wall area estimation methods per the **Vinyl Siding Institute (VSI)** installation manual and **James Hardie** HardiePlank installation guide. Siding is measured in "squares" (100 sq ft) per US industry convention. Standard opening deductions use 15 sq ft per window (3 × 5 ft) and 21 sq ft per door (3 × 7 ft) per residential construction norms. Vinyl panel coverage (16.8 sq ft per panel) is based on standard double-4" profile dimensions. Fiber-cement plank coverage (5.33 sq ft per plank) reflects HardiePlank 12' × 8.25" exposure specifications. J-channel and starter strip estimates follow VSI trim accessory guidelines. Market share data from the **US Census Bureau** — Characteristics of New Housing survey. Cost estimates reflect 2025-2026 national installed price ranges per HomeAdvisor and Angi.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

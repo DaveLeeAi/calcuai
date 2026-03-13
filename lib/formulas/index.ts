@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 135 modules, 137 formula IDs
+ * 147 modules, 149 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -16,6 +16,7 @@ import { FORMULA_REGISTRY as business_employee_cost } from './business/employee-
 import { FORMULA_REGISTRY as business_gross_margin } from './business/gross-margin';
 import { FORMULA_REGISTRY as business_hourly_to_salary } from './business/hourly-to-salary';
 import { FORMULA_REGISTRY as business_markup } from './business/markup';
+import { FORMULA_REGISTRY as business_net_income } from './business/net-income';
 import { FORMULA_REGISTRY as business_overtime } from './business/overtime';
 import { FORMULA_REGISTRY as business_payroll } from './business/payroll';
 import { FORMULA_REGISTRY as business_profit } from './business/profit';
@@ -27,16 +28,24 @@ import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary
 
 // Construction
 import { FORMULA_REGISTRY as construction_board_foot } from './construction/board-foot';
+import { FORMULA_REGISTRY as construction_brick } from './construction/brick';
+import { FORMULA_REGISTRY as construction_carpet } from './construction/carpet';
+import { FORMULA_REGISTRY as construction_concrete_footing } from './construction/concrete-footing';
+import { FORMULA_REGISTRY as construction_concrete_slab } from './construction/concrete-slab';
 import { FORMULA_REGISTRY as construction_concrete_volume } from './construction/concrete-volume';
+import { FORMULA_REGISTRY as construction_cubic_yard } from './construction/cubic-yard';
 import { FORMULA_REGISTRY as construction_deck } from './construction/deck';
 import { FORMULA_REGISTRY as construction_drywall } from './construction/drywall';
 import { FORMULA_REGISTRY as construction_fence } from './construction/fence';
 import { FORMULA_REGISTRY as construction_flooring } from './construction/flooring';
 import { FORMULA_REGISTRY as construction_insulation } from './construction/insulation';
 import { FORMULA_REGISTRY as construction_paint_coverage } from './construction/paint-coverage';
+import { FORMULA_REGISTRY as construction_paver } from './construction/paver';
 import { FORMULA_REGISTRY as construction_rafter_length } from './construction/rafter-length';
+import { FORMULA_REGISTRY as construction_retaining_wall } from './construction/retaining-wall';
 import { FORMULA_REGISTRY as construction_roof_pitch } from './construction/roof-pitch';
 import { FORMULA_REGISTRY as construction_roofing } from './construction/roofing';
+import { FORMULA_REGISTRY as construction_siding } from './construction/siding';
 import { FORMULA_REGISTRY as construction_square_footage } from './construction/square-footage';
 import { FORMULA_REGISTRY as construction_stair } from './construction/stair';
 import { FORMULA_REGISTRY as construction_tile } from './construction/tile';
@@ -87,6 +96,7 @@ import { FORMULA_REGISTRY as finance_fire_number } from './finance/fire-number';
 import { FORMULA_REGISTRY as finance_future_value } from './finance/future-value';
 import { FORMULA_REGISTRY as finance_heloc } from './finance/heloc';
 import { FORMULA_REGISTRY as finance_home_affordability } from './finance/home-affordability';
+import { FORMULA_REGISTRY as finance_home_equity } from './finance/home-equity';
 import { FORMULA_REGISTRY as finance_income_tax } from './finance/income-tax';
 import { FORMULA_REGISTRY as finance_inflation } from './finance/inflation';
 import { FORMULA_REGISTRY as finance_interest_rate_solve } from './finance/interest-rate-solve';
@@ -110,6 +120,7 @@ import { FORMULA_REGISTRY as finance_salary_convert } from './finance/salary-con
 import { FORMULA_REGISTRY as finance_sales_tax } from './finance/sales-tax';
 import { FORMULA_REGISTRY as finance_savings_goal } from './finance/savings-goal';
 import { FORMULA_REGISTRY as finance_savings_growth } from './finance/savings-growth';
+import { FORMULA_REGISTRY as finance_self_employment_tax } from './finance/self-employment-tax';
 import { FORMULA_REGISTRY as finance_simple_interest } from './finance/simple-interest';
 import { FORMULA_REGISTRY as finance_tax_brackets } from './finance/tax-brackets';
 
@@ -128,6 +139,7 @@ import { FORMULA_REGISTRY as health_one_rep_max } from './health/one-rep-max';
 import { FORMULA_REGISTRY as health_ovulation } from './health/ovulation';
 import { FORMULA_REGISTRY as health_pace } from './health/pace';
 import { FORMULA_REGISTRY as health_pregnancy } from './health/pregnancy';
+import { FORMULA_REGISTRY as health_tdee } from './health/tdee';
 import { FORMULA_REGISTRY as health_water_intake } from './health/water-intake';
 
 // Math
@@ -168,6 +180,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_gross_margin,
   ...business_hourly_to_salary,
   ...business_markup,
+  ...business_net_income,
   ...business_overtime,
   ...business_payroll,
   ...business_profit,
@@ -178,16 +191,24 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_salary_to_hourly,
   // Construction
   ...construction_board_foot,
+  ...construction_brick,
+  ...construction_carpet,
+  ...construction_concrete_footing,
+  ...construction_concrete_slab,
   ...construction_concrete_volume,
+  ...construction_cubic_yard,
   ...construction_deck,
   ...construction_drywall,
   ...construction_fence,
   ...construction_flooring,
   ...construction_insulation,
   ...construction_paint_coverage,
+  ...construction_paver,
   ...construction_rafter_length,
+  ...construction_retaining_wall,
   ...construction_roof_pitch,
   ...construction_roofing,
+  ...construction_siding,
   ...construction_square_footage,
   ...construction_stair,
   ...construction_tile,
@@ -235,6 +256,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_future_value,
   ...finance_heloc,
   ...finance_home_affordability,
+  ...finance_home_equity,
   ...finance_income_tax,
   ...finance_inflation,
   ...finance_interest_rate_solve,
@@ -258,6 +280,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_sales_tax,
   ...finance_savings_goal,
   ...finance_savings_growth,
+  ...finance_self_employment_tax,
   ...finance_simple_interest,
   ...finance_tax_brackets,
   // Health
@@ -275,6 +298,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...health_ovulation,
   ...health_pace,
   ...health_pregnancy,
+  ...health_tdee,
   ...health_water_intake,
   // Math
   ...math_central_tendency,

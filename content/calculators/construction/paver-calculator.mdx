@@ -1,0 +1,175 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20 × 15-foot patio using standard 8 × 4-inch pavers in a running bond pattern needs approximately 1,355 pavers (including 10% waste), plus 3.70 cubic yards of gravel base, 0.93 cubic yards of leveling sand, and 4 bags of polymeric sand. Material cost ranges from $780 to $2,880 depending on paver quality. Enter your area dimensions, paver size, joint width, and lay pattern below to get an accurate paver count with full base material estimates.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Paver Estimate Shows
+
+Ordering too few pavers forces a second delivery — and risks a color-batch mismatch that creates visible shade differences across your patio. Ordering too many wastes money on pallets you cannot return. This calculator gives you the precise count between those two extremes, factoring in area dimensions, paver size, joint spacing, lay pattern, and waste buffer.
+
+The **total area** is the square footage you need to cover — length times width. For L-shaped patios or curved walkways, measure each rectangular section separately and add the areas together before entering the total.
+
+The **pavers needed** count reflects the actual number of whole pavers required when you account for joint spacing. Joint gaps effectively increase each paver's footprint (paver dimension plus one joint width per direction), which means the effective coverage per paver is slightly larger than the paver itself. A 1/4-inch joint on an 8 × 4-inch paver adds roughly 3% to the effective coverage area.
+
+The **pattern multiplier** adjusts for cutting waste inherent to specific lay patterns. Running bond, basketweave, and stack bond use a 1.0 multiplier (no extra cuts beyond the waste factor). Herringbone uses a 1.05 multiplier because the 45-degree or 90-degree interlocking pattern creates more partial cuts along edges — the Interlocking Concrete Pavement Institute (ICPI) recommends an additional 5% for herringbone installations.
+
+The **base material estimates** cover the three layers beneath your pavers: a 4-inch compacted gravel base (typically #57 or #2 crushed stone), a 1-inch leveling sand layer (coarse concrete sand or manufactured sand), and polymeric sand to fill the joints after pavers are set. These depths follow ICPI specifications for pedestrian and light vehicular applications.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the area** — use a tape measure to get the length and width of the area to be paved in feet. Measure at the longest and widest points. For irregular shapes, divide into rectangles, calculate each area separately, and enter the combined total.
+
+2. **Enter paver dimensions** — check the paver packaging or spec sheet for the face dimensions in inches. Common sizes include 4 × 8, 6 × 6, 6 × 9, 8 × 8, and 12 × 12. Enter the actual paver face size — not the nominal size, which includes the joint.
+
+3. **Set the joint width** — standard paver joints are 1/4 inch (0.25") for interlocking pavers with built-in spacer nibs. Use 1/8 inch for tight-fit applications or 3/8 inch for a wider joint aesthetic. The joint width affects your paver count because each paver's effective footprint includes one joint on two sides.
+
+4. **Choose your pattern** — running bond is the most common and uses the least waste (10%). Herringbone is the strongest for driveways and adds approximately 5% more material. Basketweave and stack bond use the same waste as running bond.
+
+5. **Set the waste factor** — use 5% for large, simple rectangular areas with stack bond, 10% for running bond or basketweave, and 15% for herringbone or areas with many cuts around curves, borders, or obstacles.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Paver quantity calculations convert area dimensions and paver size to a coverage ratio, then apply pattern and waste multipliers:
+
+**Pavers needed (before waste):**
+
+$$\text{Pavers} = \left\lceil \frac{\text{Area Length} \times \text{Area Width}}{\frac{(\text{Paver Length} + \text{Joint})}{12} \times \frac{(\text{Paver Width} + \text{Joint})}{12}} \times P \right\rceil$$
+
+**Pavers with waste:**
+
+$$\text{Pavers (with waste)} = \left\lceil \text{Pavers} \times (1 + W) \right\rceil$$
+
+**Base materials:**
+
+$$\text{Gravel (cu yd)} = \frac{\text{Area} \times \frac{4}{12}}{27} \qquad \text{Sand (cu yd)} = \frac{\text{Area} \times \frac{1}{12}}{27}$$
+
+Where:
+
+- **Area Length** and **Area Width** = area dimensions in feet
+- **Paver Length** and **Paver Width** = paver dimensions in inches
+- **Joint** = joint width in inches (typically 0.25" for 1/4")
+- **P** = pattern multiplier (1.0 for running bond, 1.05 for herringbone)
+- **W** = waste factor as a decimal (0.10 for 10%, 0.15 for 15%)
+
+The denominator converts paver-plus-joint dimensions from inches to feet, giving each paver's effective coverage area in square feet. The ceiling function (round up) ensures you always have enough whole pavers.
+
+**Source:** Interlocking Concrete Pavement Institute (ICPI) — *Pavements for Patios and Pedestrian Applications* and *Tech Spec 2: Construction of Interlocking Concrete Pavements*.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 20 × 15-Foot Patio with 8 × 4-Inch Pavers
+
+A homeowner is building a backyard patio measuring 20 feet long by 15 feet wide using standard 8 × 4-inch concrete pavers in a running bond pattern with 1/4-inch joints and a 10% waste factor.
+
+**Inputs:**
+- Area: 20 ft × 15 ft
+- Paver size: 8" × 4"
+- Joint width: 0.25" (1/4 inch)
+- Pattern: Running bond (multiplier: 1.0)
+- Waste factor: 10%
+
+**Step-by-step:**
+
+1. Calculate area: 20 × 15 = **300 sq ft**
+2. Calculate effective paver dimensions: (8 + 0.25) / 12 = 0.6875 ft; (4 + 0.25) / 12 = 0.3542 ft
+3. Calculate effective paver area: 0.6875 × 0.3542 = **0.2435 sq ft** per paver (including joint)
+4. Apply pattern multiplier: 300 / 0.2435 × 1.0 = **1,232 pavers** (rounded up)
+5. Apply 10% waste: ceil(1,232 × 1.10) = **1,356 pavers**
+6. Gravel base: 300 × (4/12) / 27 = **3.70 cu yd**
+7. Leveling sand: 300 × (1/12) / 27 = **0.93 cu yd**
+8. Polymeric sand: ceil(300 / 75) = **4 bags** (50-lb bags)
+
+**Interpretation:** You need 1,356 pavers to cover the 300-square-foot patio with a comfortable waste margin. At $0.50 to $2.00 per paver, material cost ranges from $678 to $2,712 for pavers alone. Add approximately $130 for gravel, $33 for leveling sand, and $100 for polymeric sand. The 124 extra pavers give you a buffer for edge cuts and 10–15 spares for future repairs — matching pavers from different production runs can show visible color variation.
+
+{/* Section 10: Key Factors */}
+## Pattern Guide
+
+| Pattern | Description | Waste % | Best For | Strength |
+|---------|-------------|---------|----------|----------|
+| **Running Bond** | Offset rows, like a brick wall | 10% | Patios, walkways, pool decks | Good — interlock resists lateral shifting |
+| **Herringbone** | 45° or 90° interlocking V-shape | 15% | Driveways, high-traffic areas | Excellent — strongest interlock pattern |
+| **Basketweave** | Pairs of pavers alternating direction | 10% | Patios, garden paths | Moderate — decorative but less interlock |
+| **Stack Bond** | Aligned grid, no offset | 5% | Accent borders, low-traffic areas | Low — no interlock, can shift under load |
+
+ICPI recommends herringbone for any surface that bears vehicular traffic. Running bond is the most popular residential choice because it balances aesthetics, structural interlock, and material efficiency. Stack bond is the simplest to install but offers no mechanical interlock — use it only for decorative borders or areas with permanent edge restraint.
+
+## Material Checklist
+
+Every paver installation requires four material layers. Skipping any layer risks settling, shifting, or weed growth within the first season.
+
+**Gravel base (4–6 inches compacted):** Use #57 crushed stone or road base (3/4-inch minus) compacted in 2-inch lifts with a plate compactor. The gravel provides drainage and load distribution. For driveways, increase to 6–8 inches. Budget approximately $30–$40 per cubic yard delivered.
+
+**Leveling sand (1 inch):** Use coarse concrete sand (ASTM C33) or manufactured sand — never play sand or masonry sand, which are too fine and settle unevenly. Screed to exactly 1 inch using pipe rails and a straight board. Budget $35–$50 per cubic yard.
+
+**Polymeric sand (joint fill):** Sweep into joints after pavers are set and compacted. Activate with water mist per manufacturer directions. Polymeric sand hardens to resist weed growth and ant tunneling while remaining flexible enough for freeze-thaw cycles. One 50-lb bag covers approximately 75 square feet with 1/4-inch joints. Budget $20–$30 per bag.
+
+**Edge restraint:** Aluminum or plastic L-shaped edging staked into the gravel base along every exposed paver edge. Without edge restraint, pavers migrate outward over time and joints open up. Budget $1.50–$3.00 per linear foot.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **rectangular area**. For curved patios, L-shaped areas, or irregular shapes, measure each rectangular section separately and add the total areas. The calculator does not subtract area for fire pits, built-in planters, or other obstacles — measure the paveable area only.
+- Joint width is applied to **two sides** of each paver (one length side, one width side). This models the standard grid where each paver contributes one joint in each direction. Edge pavers against restraints may not have a joint on the edge side, but the difference is negligible at scale.
+- Base material depths use **ICPI standard specifications** — 4 inches of gravel and 1 inch of sand for pedestrian applications. Driveways and areas with vehicular traffic require 6–8 inches of gravel. Adjust the base depth for your specific application.
+- **Polymeric sand coverage** assumes 50-lb bags covering ~75 sq ft at 1/4-inch joints with standard 8 × 4 pavers. Larger pavers with wider joints use more sand per bag. Check the manufacturer's coverage chart for your specific paver and joint size.
+- Does not calculate **edge restraint, geotextile fabric, or labor costs.** These vary by project scope, site conditions, and regional labor rates.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many pavers do I need per square foot?
+
+The number of pavers per square foot depends on paver size and joint width. Standard 8 × 4-inch pavers with 1/4-inch joints cover approximately 0.24 square feet each, so you need about 4.1 pavers per square foot. Larger 12 × 12-inch pavers cover roughly 1.04 square feet each (accounting for joints), so you need about 1 paver per square foot. Always calculate based on effective paver area (paver dimensions plus joint) rather than nominal paver size alone.
+
+### How much sand do I need under pavers?
+
+You need approximately 1 inch of leveling sand over the compacted gravel base — this works out to about 0.003 cubic yards per square foot, or roughly 1 cubic yard per 324 square feet. For a 300-square-foot patio, that is about 0.93 cubic yards (roughly 1 ton) of coarse concrete sand. Use ASTM C33 concrete sand or manufactured sand — never play sand or masonry sand, which compact unevenly and can cause pavers to settle.
+
+### How deep should the gravel base be for pavers?
+
+The standard gravel base depth is 4 inches compacted for patios and walkways (pedestrian traffic only). Driveways and areas with vehicular traffic need 6 to 8 inches of compacted gravel. In areas with poor drainage or clay soil, increase the base depth by 2 inches. Compact the gravel in 2-inch lifts with a plate compactor, achieving at least 95% compaction. One cubic yard of gravel covers 81 square feet at 4 inches deep.
+
+### What is the best paver pattern for a driveway?
+
+Herringbone (either 45-degree or 90-degree) is the strongest pattern for driveways and the only one recommended by ICPI for vehicular traffic. The interlocking V-shape distributes load across multiple pavers and resists lateral shifting under tire forces. Running bond is acceptable for light residential driveways (passenger cars only) but is not recommended for heavy vehicles. Stack bond and basketweave should never be used for driveways — they offer no mechanical interlock and will shift under repeated traffic loads.
+
+### How much do pavers cost per square foot?
+
+Concrete pavers cost $0.50 to $2.00 per paver for standard sizes, which translates to approximately $2 to $8 per square foot for pavers alone. Budget an additional $1 to $3 per square foot for base materials (gravel, sand, polymeric sand, and edge restraint). Total material cost for a DIY installation typically ranges from $3 to $11 per square foot. Professional installation adds $8 to $15 per square foot for labor — so a 300-square-foot patio costs $900 to $3,300 in materials or $3,300 to $7,800 installed.
+
+### How many extra pavers should I buy?
+
+Buy at least 10% more than the calculated quantity for running bond, basketweave, or stack bond patterns. Increase to 15% for herringbone, which requires more angled cuts along edges. If your area has many curves, borders, or obstacles (fire pit, planter boxes), add an extra 5% beyond the pattern waste factor. Keep 10–15 spare pavers for future repairs — matching pavers from different production batches often shows visible color differences because pigment ratios vary between manufacturing runs.
+
+### Can I install pavers over existing concrete?
+
+You can install pavers over existing concrete if the slab is structurally sound (no major cracks or heaving), the surface drains properly, and you can accommodate the additional 2–3 inches of height. Lay a 1/2-inch sand bed directly on the concrete (skip the gravel base since the concrete serves as the foundation). Ensure proper edge restraint and drainage — water must be able to escape through the joints or at the edges. This method is faster and cheaper than removing the concrete, but any future concrete settling will telegraph through to the paver surface.
+
+### Do I need a permit to install a paver patio?
+
+Permit requirements vary by municipality, but most jurisdictions do not require a building permit for at-grade patios and walkways that are not attached to the house structure. However, if your paver project involves a raised patio (more than 30 inches above grade), retaining walls, or is located within setback zones, a permit may be required. Always check with your local building department before starting. HOA communities may also require architectural review approval regardless of permit requirements.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses paver coverage formulas from the **Interlocking Concrete Pavement Institute (ICPI)** — *Pavements for Patios and Pedestrian Applications* and *Tech Spec 2: Construction of Interlocking Concrete Pavements*. The effective coverage per paver includes the joint width added to two sides of each paver, converting the paver-plus-joint footprint into square feet. Pattern multipliers follow ICPI recommendations: 1.0 for running bond, basketweave, and stack bond; 1.05 for herringbone. Base material depths use ICPI specifications: 4 inches of compacted gravel and 1 inch of leveling sand for pedestrian applications. Polymeric sand coverage is based on manufacturer averages of approximately 75 square feet per 50-lb bag at standard joint widths. Cost ranges reflect 2025–2026 national retail pricing for standard concrete pavers ($0.50–$2.00 each).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

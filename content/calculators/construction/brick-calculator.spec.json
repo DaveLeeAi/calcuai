@@ -1,0 +1,197 @@
+{
+  "id": "brick-calculator",
+  "title": "Brick Calculator",
+  "slug": "brick-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "brick calculator",
+  "metaTitle": "Brick Calculator — How Many Bricks Do You Need?",
+  "metaDescription": "Calculate exactly how many bricks you need for any wall. Enter wall dimensions, brick size, mortar joint width, and openings to get an accurate brick count with mortar and cost estimates.",
+  "inputs": [
+    {
+      "id": "wallLength",
+      "label": "Wall Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total length of the wall"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Height of the wall"
+    },
+    {
+      "id": "brickSize",
+      "label": "Brick Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "modular",
+      "options": [
+        { "value": "standard", "label": "Standard (8\" × 2¼\" × 3⅝\")" },
+        { "value": "modular", "label": "Modular (7⅝\" × 2¼\" × 3⅝\")" },
+        { "value": "queen", "label": "Queen (7⅝\" × 2¾\" × 3⅛\")" },
+        { "value": "king", "label": "King (9⅝\" × 2¾\" × 3⅝\")" }
+      ],
+      "helpText": "Brick type determines face dimensions"
+    },
+    {
+      "id": "mortarJoint",
+      "label": "Mortar Joint Width",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0.375,
+      "min": 0.25,
+      "max": 0.5,
+      "step": 0.125,
+      "suffix": "in",
+      "helpText": "Mortar joint width in inches (standard: 3/8\")"
+    },
+    {
+      "id": "openings",
+      "label": "Number of Openings",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "helpText": "Number of standard window/door openings to deduct"
+    },
+    {
+      "id": "openingArea",
+      "label": "Average Opening Area",
+      "type": "number",
+      "required": false,
+      "defaultValue": 15,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "suffix": "sq ft",
+      "helpText": "Average area per opening in sq ft"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "number",
+      "required": false,
+      "defaultValue": 5,
+      "min": 3,
+      "max": 15,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "3-5% for straight walls, 10-15% for arches or curves"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "bricksNeeded",
+      "label": "Bricks Needed (with Waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "bricksWithoutWaste",
+      "label": "Bricks (No Waste)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "wallArea",
+      "label": "Net Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "bricksPerSqFt",
+      "label": "Bricks Per Sq Ft",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "mortarBags",
+      "label": "Mortar Bags (60 lb)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "brickSummary",
+      "label": "Brick Size Details",
+      "type": "value-group",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Brick Estimate Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "brick",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "paver-calculator",
+    "drywall-calculator",
+    "fence-calculator",
+    "square-footage-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Brick Industry Association (BIA) Technical Note 10",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Brick count calculations based on Brick Industry Association (BIA) Technical Note 10 — Dimensioning and Estimating Brick Masonry. Effective face area includes mortar joint added to length and height of each brick. Mortar estimate of 7 bags per 100 sq ft based on The Masonry Society (TMS) 402 standard for 3/8\" joints.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "paver-calculator",
+    "concrete-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

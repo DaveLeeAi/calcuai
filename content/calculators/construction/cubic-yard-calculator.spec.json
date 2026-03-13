@@ -1,0 +1,225 @@
+{
+  "id": "cubic-yard-calculator",
+  "title": "Cubic Yard Calculator",
+  "slug": "cubic-yard-calculator",
+  "category": "construction",
+  "subcategory": "measurement",
+  "primaryKeyword": "cubic yard calculator",
+  "metaTitle": "Cubic Yard Calculator — Volume, Weight & Truckloads",
+  "metaDescription": "Convert dimensions to cubic yards for any construction project. Supports rectangular, circular, and triangular shapes with weight estimates and truckload counts.",
+  "inputs": [
+    {
+      "id": "shape",
+      "label": "Area Shape",
+      "type": "select",
+      "required": true,
+      "defaultValue": "rectangular",
+      "options": [
+        {
+          "value": "rectangular",
+          "label": "Rectangular"
+        },
+        {
+          "value": "circular",
+          "label": "Circular"
+        },
+        {
+          "value": "triangular",
+          "label": "Triangular"
+        }
+      ],
+      "helpText": "Shape of the area to fill"
+    },
+    {
+      "id": "length",
+      "label": "Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Length of the area (not used for circular shapes)",
+      "visibleWhen": {
+        "shape": ["rectangular", "triangular"]
+      }
+    },
+    {
+      "id": "width",
+      "label": "Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Width of the area (not used for circular shapes)",
+      "visibleWhen": {
+        "shape": ["rectangular", "triangular"]
+      }
+    },
+    {
+      "id": "diameter",
+      "label": "Diameter",
+      "type": "unit-pair",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Diameter of the circular area",
+      "visibleWhen": {
+        "shape": ["circular"]
+      }
+    },
+    {
+      "id": "depth",
+      "label": "Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 4,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 12
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Depth or height of the fill"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cubicYards",
+      "label": "Cubic Yards",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Cubic Feet",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "cubicMeters",
+      "label": "Cubic Meters",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "cubicInches",
+      "label": "Cubic Inches",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "area",
+      "label": "Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "weightEstimate",
+      "label": "Weight by Material",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "loads",
+      "label": "How Many Loads",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "cubic-yard",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "gravel-calculator",
+    "mulch-calculator",
+    "topsoil-calculator",
+    "square-footage-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard geometric volume formulas; NIST SP 811 (unit conversions)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard geometric volume formulas for prisms and cylinders. Unit conversions per NIST SP 811. Material densities from PCA and USDA NRCS.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["concrete-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

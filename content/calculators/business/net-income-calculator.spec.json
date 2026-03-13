@@ -1,0 +1,209 @@
+{
+  "id": "net-income-calculator",
+  "title": "Net Income Calculator",
+  "slug": "net-income-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "net income calculator",
+  "metaTitle": "Net Income Calculator | Estimate Your Take-Home Pay After Taxes",
+  "metaDescription": "Calculate your net income after federal, state, and local taxes plus FICA, 401(k), and health insurance. See annual, monthly, biweekly, and weekly take-home pay.",
+  "inputs": [
+    {
+      "id": "grossIncome",
+      "label": "Gross Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 65000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Annual gross salary or income"
+    },
+    {
+      "id": "payFrequency",
+      "label": "Pay Frequency",
+      "type": "select",
+      "required": true,
+      "defaultValue": "annual",
+      "options": [
+        { "value": "annual", "label": "Annual" },
+        { "value": "monthly", "label": "Monthly" },
+        { "value": "biweekly", "label": "Biweekly" },
+        { "value": "weekly", "label": "Weekly" }
+      ],
+      "helpText": "How often you receive your income"
+    },
+    {
+      "id": "federalTaxRate",
+      "label": "Federal Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 37,
+      "step": 1,
+      "helpText": "Effective federal tax rate"
+    },
+    {
+      "id": "stateTaxRate",
+      "label": "State Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 13.3,
+      "step": 0.1,
+      "helpText": "State income tax rate"
+    },
+    {
+      "id": "localTaxRate",
+      "label": "Local Tax Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "helpText": "City/local income tax rate"
+    },
+    {
+      "id": "socialSecurity",
+      "label": "Social Security Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 6.2,
+      "min": 0,
+      "max": 100,
+      "step": 0.1,
+      "helpText": "Social Security rate (6.2% up to wage base)"
+    },
+    {
+      "id": "medicare",
+      "label": "Medicare Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 1.45,
+      "min": 0,
+      "max": 100,
+      "step": 0.01,
+      "helpText": "Medicare rate"
+    },
+    {
+      "id": "retirement401k",
+      "label": "401(k) Contribution",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "helpText": "401(k) or retirement contribution %"
+    },
+    {
+      "id": "healthInsurance",
+      "label": "Health Insurance (Monthly)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 5000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Monthly health insurance premium"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualNet",
+      "label": "Annual Net Income",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "monthlyNet",
+      "label": "Monthly Net Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "biweeklyNet",
+      "label": "Biweekly Net Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "weeklyNet",
+      "label": "Weekly Net Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalTaxes",
+      "label": "Total Taxes",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalDeductions",
+      "label": "Total Deductions",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveTaxRate",
+      "label": "Effective Tax Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "takeHomePercent",
+      "label": "Take-Home Percentage",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "deductionBreakdown",
+      "label": "Deduction Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "net-income",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "salary-calculator",
+    "paycheck-calculator",
+    "hourly-to-salary-calculator",
+    "income-tax-calculator",
+    "salary-to-hourly-calculator",
+    "tax-bracket-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Income = Gross Income - Federal Tax - State Tax - Local Tax - Social Security - Medicare - 401(k) - Health Insurance; SS capped at $168,600 wage base (2025)",
+  "formulaCitation": "IRS Publication 15-T (2025 Federal Income Tax Withholding); SSA FICA Rates (2025)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["paycheck-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "glossaryTerms": [
+    "net-pay",
+    "payroll"
+  ]
+}

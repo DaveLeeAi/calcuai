@@ -1,0 +1,179 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20 × 8-foot wall using modular bricks with 3/8-inch mortar joints needs 1,152 bricks (including 5% waste) and 12 bags of mortar — material cost between $672 and $1,824. Modular bricks require approximately 6.9 bricks per square foot of wall area. Enter your wall dimensions, brick type, mortar joint width, and number of openings below to get an accurate brick count with mortar and cost estimates.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Brick Estimate Shows
+
+Under-ordering brick means a second delivery from a different kiln run — and visible color variation that brands your wall with a patchwork appearance permanently. Over-ordering by more than 10% wastes money on pallets of bricks that take up garage space for years. This calculator gives you the accurate count between those extremes, factoring in wall dimensions, brick size, mortar joint width, openings, and waste buffer.
+
+The **wall area** is the net square footage after deducting windows and doors. Gross area (length × height) minus the total opening area gives you the actual brickwork surface. For walls with arches, curved sections, or corbelling, add 10% to the waste factor rather than trying to subtract irregular areas.
+
+The **bricks per square foot** number depends on brick size and mortar joint width. Modular bricks (7-5/8" × 2-1/4") with standard 3/8-inch joints yield approximately 6.9 bricks per square foot — this is the industry standard reference number published by the Brick Industry Association (BIA). Larger king bricks drop to about 4.6 per square foot, reducing both material and labor costs.
+
+The **mortar bags** estimate covers 60-pound bags of Type N or Type S mortar mix. The industry rule of thumb is 7 bags per 100 square feet of wall area at standard 3/8-inch joints. Wider joints (1/2 inch) increase mortar consumption proportionally. Type N is standard for above-grade walls; Type S is required for below-grade and structural applications.
+
+The **cost estimate** provides a low-to-high range based on national average brick pricing ($0.50–$1.50 per brick) plus mortar cost. This covers material only — budget separately for wall ties, flashing, lintels, and labor ($12–$22 per square foot installed).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the wall** — measure the total length and height of the wall face in feet. For walls that change height (gable ends, stepped foundations), break the wall into rectangular and triangular sections, calculate each separately, and enter the combined area.
+
+2. **Select brick size** — choose from four standard sizes: standard (8" × 2-1/4"), modular (7-5/8" × 2-1/4"), queen (7-5/8" × 2-3/4"), or king (9-5/8" × 2-3/4"). The size determines how many bricks fit per square foot. Modular is the most common residential brick in the United States.
+
+3. **Set the mortar joint** — standard joints are 3/8 inch (0.375"). Wider joints (1/2 inch) create a more rustic appearance and require more mortar. Thinner joints (1/4 inch) are used for precision work with ground-face brick. The joint width affects your brick count because each brick's effective face area includes one joint on the length and height sides.
+
+4. **Enter openings** — count the number of windows and doors in the wall and enter the average opening area. Standard windows average 12–15 square feet, standard doors 20–21 square feet, and sliding glass doors 40–50 square feet. The calculator deducts this area from the gross wall area before computing brick count.
+
+5. **Choose waste factor** — use 5% for straight walls with few cuts, 7% for walls with moderate openings and corners, and 10–15% for walls with arches, curves, angled cuts, or complex bond patterns. The BIA recommends keeping at least 2% of total brick count as spares for future repairs.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Brick quantity calculations convert wall area and brick face dimensions to a coverage ratio, then apply a waste multiplier:
+
+**Net wall area:**
+
+$$\text{Wall Area} = (\text{Wall Length} \times \text{Wall Height}) - (\text{Openings} \times \text{Avg Opening Area})$$
+
+**Bricks per square foot:**
+
+$$\text{Bricks/sq ft} = \frac{144}{(\text{Brick Length} + \text{Mortar}) \times (\text{Brick Height} + \text{Mortar})}$$
+
+**Bricks needed:**
+
+$$\text{Bricks} = \left\lceil \text{Wall Area} \times \text{Bricks/sq ft} \times (1 + W) \right\rceil$$
+
+**Mortar bags:**
+
+$$\text{Mortar Bags (60 lb)} = \left\lceil \frac{\text{Wall Area} \times 7}{100} \times \frac{\text{Mortar Joint}}{0.375} \right\rceil$$
+
+Where:
+
+- **Wall Length** and **Wall Height** = wall dimensions in feet
+- **Brick Length** and **Brick Height** = brick face dimensions in inches
+- **Mortar** = mortar joint width in inches (standard: 0.375" for 3/8")
+- **W** = waste factor as a decimal (0.05 for 5%)
+- **144** = square inches per square foot (conversion constant)
+
+The mortar formula scales the base rate (7 bags per 100 sq ft at 3/8" joints) proportionally by the actual joint width. Wider joints consume more mortar; narrower joints consume less.
+
+**Source:** Brick Industry Association (BIA) *Technical Note 10 — Dimensioning and Estimating Brick Masonry*; The Masonry Society (TMS) *402/602 Building Code Requirements and Specification for Masonry Structures*.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 20 × 8-Foot Wall with Modular Bricks
+
+A homeowner is building a garden wall measuring 20 feet long by 8 feet high using modular bricks (7-5/8" × 2-1/4") with standard 3/8-inch mortar joints and no openings.
+
+**Inputs:**
+- Wall: 20 ft × 8 ft
+- Brick size: Modular (7.625" × 2.25")
+- Mortar joint: 0.375" (3/8 inch)
+- Openings: 0
+- Waste factor: 5%
+
+**Step-by-step:**
+
+1. Calculate gross wall area: 20 × 8 = **160 sq ft**
+2. Deduct openings: 0 openings → net area = **160 sq ft**
+3. Calculate effective brick face: (7.625 + 0.375) × (2.25 + 0.375) = 8.0 × 2.625 = **21.0 sq in**
+4. Convert to sq ft: 21.0 / 144 = **0.14583 sq ft** per brick
+5. Bricks per sq ft: 1 / 0.14583 = **6.86 bricks/sq ft**
+6. Bricks without waste: ceil(160 × 6.86) = **1,098 bricks**
+7. Apply 5% waste: ceil(1,098 × 1.05) = **1,153 bricks**
+8. Mortar bags: ceil(160 × 7 / 100) = **12 bags** (60-lb bags)
+
+**Interpretation:** You need 1,153 modular bricks and 12 bags of mortar to build the 160-square-foot wall with a 5% waste margin. At $0.50 to $1.50 per brick, material cost ranges from $577 to $1,730 for bricks alone, plus approximately $96 for mortar ($8 per bag). The 55 extra bricks cover cuts at wall ends, corners, and provide spares for future repairs. If adding a window opening (15 sq ft), the count drops to approximately 1,059 bricks — saving roughly 94 bricks.
+
+{/* Section 10: Key Factors */}
+## Brick Size Comparison
+
+| Brick Type | Dimensions (L × H × W) | Bricks Per Sq Ft (3/8" joint) | Weight Each | Best For |
+|-----------|------------------------|-------------------------------|-------------|----------|
+| **Standard** | 8" × 2¼" × 3⅝" | ~6.55 | 4.5 lbs | Commercial, industrial walls |
+| **Modular** | 7⅝" × 2¼" × 3⅝" | ~6.86 | 4.2 lbs | Residential walls — most common US size |
+| **Queen** | 7⅝" × 2¾" × 3⅛" | ~5.76 | 5.0 lbs | Decorative walls, taller courses |
+| **King** | 9⅝" × 2¾" × 3⅝" | ~4.61 | 5.8 lbs | Feature walls, reduced labor (fewer units) |
+
+Modular brick is the default choice for residential construction because it coordinates with 4-inch and 8-inch modular dimensions — three courses of modular brick with mortar equal exactly 8 inches in height, simplifying layout around doors and windows.
+
+## Mortar Estimating
+
+Mortar joint width determines both aesthetic appearance and material consumption. Here is how joint width affects mortar usage per 100 square feet of wall:
+
+| Joint Width | Mortar Bags (60 lb) per 100 sq ft | Visual Effect |
+|-------------|-----------------------------------|--------------|
+| 1/4" (0.25") | ~5 bags | Tight, modern appearance |
+| 3/8" (0.375") | ~7 bags | Standard residential — most common |
+| 1/2" (0.50") | ~9 bags | Rustic, traditional appearance |
+
+Always use the correct mortar type for your application. **Type N** (general purpose, 750 PSI) is standard for above-grade exterior and interior walls. **Type S** (structural, 1,800 PSI) is required for below-grade walls, retaining walls, and high-wind or seismic zones. **Type M** (heavy-duty, 2,500 PSI) is used for foundations and below-grade structural elements. Using the wrong type can result in premature joint failure or cracking.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **single-wythe wall** (one brick thick). Double-wythe or cavity walls require roughly double the brick count. This calculator estimates veneer or single-wythe garden wall applications.
+- Mortar estimate uses the **industry standard of 7 bags per 100 sq ft** for 3/8-inch joints, scaled proportionally for other joint widths. Actual mortar consumption varies by mason skill, brick absorption rate, and tooling technique — expect ±10% variation from the estimate.
+- **Waste factor covers cuts, breakage, and spares.** It does not account for defective bricks in the delivery (typically 1–3% of shipped brick). Inspect every pallet on delivery and reject chipped, cracked, or over-fired brick before starting.
+- Opening deduction uses a **flat average area per opening.** Actual window and door openings vary in size — for best accuracy, measure each opening individually and sum the total deducted area.
+- Does not calculate **lintels, wall ties, flashing, weep holes, reinforcement, or labor costs.** These are structural and project-specific items that depend on building code requirements, wall height, and seismic zone.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many bricks do I need per square foot?
+
+Modular bricks (7-5/8" × 2-1/4") with standard 3/8-inch mortar joints require approximately 6.9 bricks per square foot of wall area — this is the most commonly cited figure in the industry. Standard bricks (8" × 2-1/4") require about 6.55 per square foot, queen bricks about 5.76, and king bricks about 4.61. These numbers include mortar joints but not waste. Always add 5–10% for waste depending on the complexity of the wall.
+
+### How much mortar do I need for 1,000 bricks?
+
+For 1,000 modular bricks laid with standard 3/8-inch mortar joints, you need approximately 10 to 12 bags of 60-pound mortar mix. The exact amount depends on joint width, brick absorption rate, and mason technique. A general rule is 7 bags of mortar per 100 square feet of wall, and 1,000 modular bricks cover approximately 145 square feet (at 6.9 bricks per sq ft). So: 145 × 7 / 100 = 10.2 bags, rounded up to 11 bags with a small buffer.
+
+### What is the difference between modular and standard brick?
+
+Modular bricks (7-5/8" × 2-1/4" × 3-5/8") are 3/8 inch shorter in length than standard bricks (8" × 2-1/4" × 3-5/8"). This 3/8-inch difference equals one mortar joint width — so three courses of modular brick including mortar equal exactly 8 inches vertically, aligning perfectly with standard construction modules. Modular brick is the most common residential brick in the United States because of this dimensional coordination. Standard brick is more common in commercial and industrial applications.
+
+### How do I estimate brick for a wall with many windows?
+
+Measure each window and door opening individually, calculate the total opening area, and deduct it from the gross wall area before computing brick count. A standard 3 × 5-foot window is 15 square feet, a standard 3 × 7-foot door is 21 square feet, and a sliding glass door is typically 40–50 square feet. For a 20 × 8-foot wall (160 sq ft) with two windows and one door, net area = 160 − (2 × 15) − 21 = 109 square feet. At 6.9 bricks per sq ft × 1.05 waste = 790 bricks.
+
+### What type of mortar should I use for brickwork?
+
+Type N mortar (750 PSI compressive strength) is the standard choice for above-grade exterior and interior walls — it offers good workability and flexibility. Type S mortar (1,800 PSI) is required for below-grade walls, retaining walls, and areas with high wind or seismic activity. Type M mortar (2,500 PSI) is used for foundations, retaining walls below grade, and heavy load-bearing applications. Using mortar that is too strong (Type M where Type N is appropriate) can cause bricks to crack before the mortar joints, because the mortar is harder than the brick.
+
+### How much does a brick wall cost per square foot?
+
+Material cost for a single-wythe brick wall ranges from $4 to $12 per square foot — including bricks ($0.50–$1.50 each at 6.9 per sq ft = $3.45–$10.35), mortar ($0.50–$0.80 per sq ft), and wall ties/accessories ($0.25–$0.50 per sq ft). Professional installation adds $12 to $22 per square foot for skilled mason labor. Total installed cost: $16 to $34 per square foot. A 20 × 8-foot wall (160 sq ft) costs $640 to $1,920 in materials or $2,560 to $5,440 fully installed.
+
+### Should I wet bricks before laying them?
+
+Wetting clay bricks before laying is generally recommended for high-absorption bricks (those that absorb more than 20 grams of water per minute in the IRA test). Dry, high-absorption bricks suck moisture from the mortar before it can cure, creating weak joints that crumble within a few years. However, do not saturate bricks — surface dampening is sufficient. Low-absorption bricks (engineered or extruded bricks) should be laid dry. Your brick supplier can provide the Initial Rate of Absorption (IRA) value for your specific brick, which determines whether pre-wetting is necessary.
+
+### How many bricks are on a pallet?
+
+A standard pallet of modular bricks contains 500 to 534 bricks, depending on the manufacturer and pallet configuration. Face bricks are typically palletized in cube-stacked layers. At 6.9 bricks per square foot, one pallet covers approximately 72–77 square feet of wall before waste. For a 160-square-foot wall needing ~1,153 bricks (with waste), you would order 3 pallets. Most brick suppliers sell by the pallet with a delivery charge of $100–$300 per load — ordering full pallets avoids broken-pallet surcharges.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses brick estimating formulas from the **Brick Industry Association (BIA)** *Technical Note 10 — Dimensioning and Estimating Brick Masonry*. The effective face area per brick includes the mortar joint width added to the length and height dimensions, converting each brick's footprint into square feet. Mortar bag estimates follow the **TMS 402/602** standard rate of approximately 7 bags (60 lb) per 100 square feet of wall at standard 3/8-inch joints, scaled proportionally for other joint widths. Brick dimensions conform to **ASTM C652** (hollow brick) and **ASTM C216** (facing brick) standards. Cost ranges reflect 2025–2026 national average retail pricing for clay face brick ($0.50–$1.50 per unit) and pre-mixed mortar ($7–$9 per 60-lb bag).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

@@ -1,0 +1,164 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 10 × 10-foot area filled to 4 inches deep equals 1.23 cubic yards — that is 33.3 cubic feet, roughly one pickup truck load, or 11 wheelbarrow trips. If you filled it with concrete, that volume weighs about 5,000 lbs; with gravel, about 3,333 lbs; with mulch, about 1,500 lbs. Enter your project dimensions below to convert any rectangular, circular, or triangular area to cubic yards with weight estimates and load counts.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Cubic Yards Measure */}
+## What Cubic Yards Measure
+
+A cubic yard is a volume measurement equal to 27 cubic feet — picture a cube 3 feet long, 3 feet wide, and 3 feet tall. It is the standard ordering unit for bulk construction materials in the United States: concrete, gravel, mulch, topsoil, sand, and fill dirt are all priced and delivered by the cubic yard.
+
+This calculator converts your project area and depth into cubic yards, then provides weight estimates for five common materials and load counts for wheelbarrows, pickup trucks, and dump trucks. It handles three shapes: rectangular (the most common), circular (for round patios, fire pits, tree rings), and triangular (for wedge-shaped fills and slopes).
+
+The key insight most people miss: depth is the biggest cost driver. Doubling the depth from 4 inches to 8 inches doubles the material needed — and the cost. Always measure depth carefully and use the minimum required for your application.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the shape** — rectangular for standard areas (patios, driveways, garden beds), circular for round features, triangular for wedge fills.
+
+2. **Enter dimensions** — length and width for rectangular/triangular, diameter for circular. You can enter in feet or meters.
+
+3. **Enter the depth** — in inches, feet, or centimeters. Common depths: 2–3 inches for mulch, 4 inches for gravel walkways, 4–6 inches for concrete slabs, 6–8 inches for driveways.
+
+4. **Read your results** — the primary result is cubic yards. Below it, you will see cubic feet, cubic meters, weight by material type, and how many wheelbarrow, pickup, or dump truck loads you need.
+
+{/* Section 8: The Formulas */}
+<div className="formula-section">
+
+## The Formulas
+
+Three volume formulas, all converted to cubic yards by dividing by 27 cubic feet per yard.
+
+**Rectangular area:**
+
+$$V = \frac{L \times W \times D}{27}$$
+
+**Circular area:**
+
+$$V = \frac{\pi \times \left(\frac{d}{2}\right)^2 \times D}{27}$$
+
+**Triangular area:**
+
+$$V = \frac{0.5 \times L \times W \times D}{27}$$
+
+Where:
+
+- **L** = length (feet)
+- **W** = width (feet)
+- **d** = diameter (feet)
+- **D** = depth (feet) — if entered in inches, divide by 12 first
+- **V** = volume (cubic yards)
+- **27** = cubic feet per cubic yard (3 × 3 × 3)
+
+**Unit conversions:**
+
+$$\text{Cubic Meters} = \text{Cubic Yards} \times 0.764555$$
+
+$$\text{Cubic Inches} = \text{Cubic Feet} \times 1{,}728$$
+
+**Source:** Standard geometric volume formulas; unit conversion factors per NIST SP 811.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 10 × 10-Foot Patio Base, 4 Inches Deep
+
+A homeowner is preparing a paver patio base. The area is 10 feet long by 10 feet wide, and they need 4 inches of compacted gravel base.
+
+**Inputs:**
+- Shape: Rectangular
+- Length: 10 ft
+- Width: 10 ft
+- Depth: 4 in
+
+**Step-by-step:**
+
+1. Convert depth to feet: 4 ÷ 12 = **0.3333 ft**
+2. Calculate volume: 10 × 10 × 0.3333 = **33.33 cu ft**
+3. Convert to cubic yards: 33.33 ÷ 27 = **1.23 cu yd**
+4. Gravel weight: 33.33 × 100 = **3,333 lbs** (1.67 tons)
+5. Wheelbarrow loads: ceil(33.33 ÷ 3) = **12 loads**
+6. Pickup truck loads: ceil(1.23 ÷ 1.5) = **1 load**
+
+**Interpretation:** At 1.23 cubic yards, this fits in a single pickup truck load (a standard full-size truck bed holds about 1.5 cubic yards struck level). However, gravel at 3,333 lbs may exceed some truck payload ratings — check your owner's manual. A bulk delivery from a landscape supplier (typically \$50–\$100 delivery fee) is often more practical for anything over 1 cubic yard.
+
+{/* Quick Reference Table */}
+## Quick Reference: Common Areas and Depths
+
+| Area (ft) | Depth | Cubic Feet | Cubic Yards | Wheelbarrow Loads |
+|---|---|---|---|---|
+| 10 × 10 | 2 in | 16.7 | 0.62 | 6 |
+| 10 × 10 | 4 in | 33.3 | 1.23 | 12 |
+| 10 × 10 | 6 in | 50.0 | 1.85 | 17 |
+| 12 × 12 | 4 in | 48.0 | 1.78 | 16 |
+| 20 × 20 | 4 in | 133.3 | 4.94 | 45 |
+| 20 × 20 | 6 in | 200.0 | 7.41 | 67 |
+| 10 × 50 | 4 in | 166.7 | 6.17 | 56 |
+| 100 × 100 | 4 in | 3,333 | 123.5 | 1,111 |
+
+{/* Material Weight Table */}
+## Material Weight per Cubic Yard
+
+| Material | Weight per cu yd | Weight per cu ft | Tons per cu yd |
+|---|---|---|---|
+| Concrete (wet) | 4,050 lbs | 150 lbs | 2.03 |
+| Gravel / Crushed Stone | 2,700 lbs | 100 lbs | 1.35 |
+| Sand (dry) | 2,700 lbs | 100 lbs | 1.35 |
+| Topsoil (dry) | 2,025 lbs | 75 lbs | 1.01 |
+| Mulch (wood) | 1,215 lbs | 45 lbs | 0.61 |
+
+These are dry-weight averages. Wet materials weigh 10–30% more. Always factor moisture into your truck payload calculation — a pickup rated for 1,500 lbs payload can safely carry about 0.5 cubic yards of gravel, not the 1.5 cubic yards that physically fit in the bed.
+
+{/* How Many Truckloads */}
+## How Many Truckloads Do I Need?
+
+| Vehicle | Capacity | Best For |
+|---|---|---|
+| Wheelbarrow | 3 cu ft (0.11 cu yd) | Small quantities, tight access |
+| Pickup truck (full-size) | ~1.5 cu yd (struck level) | Under 2 cu yd, lightweight materials |
+| Single-axle dump truck | ~5 cu yd | 2–5 cu yd, residential deliveries |
+| Tandem dump truck | ~10 cu yd | 5–10 cu yd, large projects |
+| Tri-axle dump truck | ~16 cu yd | 10+ cu yd, commercial scale |
+
+For pickup trucks, the volume capacity (1.5 cu yd) often exceeds the weight capacity (1,000–2,000 lbs payload). One cubic yard of gravel weighs 2,700 lbs — more than most half-ton trucks can safely carry. Check your vehicle's GVWR (Gross Vehicle Weight Rating) before loading.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many cubic feet are in a cubic yard?
+
+There are exactly 27 cubic feet in one cubic yard. A cubic yard is a cube measuring 3 feet on each side: 3 × 3 × 3 = 27. To convert cubic feet to cubic yards, divide by 27. To convert cubic yards to cubic feet, multiply by 27. This is the most fundamental conversion in construction material estimation.
+
+### How much does a cubic yard of gravel weigh?
+
+A cubic yard of gravel weighs approximately 2,700 pounds (1.35 tons) when dry. Crushed stone, pea gravel, and river rock all fall in the 2,500–2,800 lbs per cubic yard range. Wet gravel can weigh 10–20% more. One cubic yard of gravel will fill approximately 1.5 standard wheelbarrow loads or cover a 10 × 10-foot area about 3 inches deep.
+
+### How many wheelbarrow loads in a cubic yard?
+
+A standard contractor wheelbarrow holds about 3 cubic feet, so one cubic yard (27 cu ft) equals 9 wheelbarrow loads filled to the brim. In practice, most people fill to about 80% capacity to prevent spillage, making it closer to 11–12 loads per cubic yard. For heavy materials like gravel or concrete, fill to 50–60% capacity to keep the weight manageable — about 15–18 loads per cubic yard.
+
+### How do I convert inches of depth to cubic yards?
+
+Multiply your area in square feet by the depth in inches, divide by 12 to get cubic feet, then divide by 27 to get cubic yards. The shortcut formula: Area (sq ft) × Depth (inches) ÷ 324 = Cubic Yards. For example, a 10 × 10-foot area at 4 inches deep: 100 × 4 ÷ 324 = 1.23 cubic yards.
+
+### How much area does one cubic yard cover?
+
+One cubic yard covers 324 square feet at 1 inch deep, 162 square feet at 2 inches, 108 square feet at 3 inches, 81 square feet at 4 inches, and 54 square feet at 6 inches. The formula: Coverage (sq ft) = 324 ÷ Depth (inches). This is the most useful quick reference for estimating material needs when you know the area and desired depth.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses standard geometric volume formulas — rectangular prism, cylinder, and triangular prism — taught in construction mathematics and codified in **NIST Special Publication 811** for unit conversions. The 27 cubic feet per cubic yard conversion is the U.S. construction standard. Material weight densities are industry averages compiled from the **Portland Cement Association (PCA)** for concrete (150 lbs/cu ft), the **USDA Natural Resources Conservation Service (NRCS)** for soil and organic materials, and landscape supplier industry data for gravel and stone. Vehicle load capacities are based on standard manufacturer specifications for wheelbarrows (3 cu ft), full-size pickup trucks (1.5 cu yd struck level), and dump trucks (5–16 cu yd by axle configuration).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

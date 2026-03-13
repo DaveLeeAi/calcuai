@@ -1,0 +1,199 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 40-foot continuous footing, 20 inches wide and 12 inches deep, needs 2.47 cubic yards of concrete before waste — or 2.72 cubic yards with a standard 10% waste factor, roughly $408 for ready-mix delivery. Eight round pier footings (12-inch diameter, 36 inches deep) require 0.77 cubic yards with waste — about 35 eighty-pound bags at $228. Enter your footing type, dimensions, and quantity below for exact volume, bag counts, and a cost comparison between ready-mix and bagged concrete.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Calculates
+
+This calculator determines the concrete volume needed for three types of footings: **continuous (strip) footings** for foundation walls and stem walls, **rectangular pad footings** for column bases and isolated loads, and **round pier footings** for deck posts, fence posts, and Sonotube pours. Each type uses a different geometric formula, but the output is the same: cubic yards, cubic feet, bag counts, and cost estimates.
+
+**Continuous footings** run the full perimeter of a foundation — a single long pour measured by total length, width, and depth. The calculator treats the entire length as one section because continuous footings are poured as a single monolithic unit. The width input defaults to inches because footing widths are typically specified that way in building codes — 12 inches, 16 inches, 20 inches, or 24 inches depending on the wall load and soil bearing capacity.
+
+**Rectangular pad footings** are isolated pads that support point loads — columns, posts, or equipment. You enter the length and width of one pad, set the depth, and specify how many identical pads you need. The calculator multiplies the single-pad volume by your quantity.
+
+**Round pier footings** are cylindrical holes — either Sonotube forms or hand-dug post holes filled with concrete. Volume is calculated using the cylinder formula (pi times radius squared times depth). Like rectangular pads, you set the quantity for multiple identical piers.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your footing type** — choose Continuous/Strip for foundation wall footings that run along a perimeter, Rectangular Pad for isolated square or rectangular pads supporting columns, or Round Pier for Sonotube or post hole footings.
+
+2. **Enter the length** — for continuous footings, this is the total run in feet (e.g., the full perimeter of a foundation). For rectangular pads, this is the length of one pad. This field is not used for round piers.
+
+3. **Enter the width** — for continuous footings, this is the footing width in inches (typically 12, 16, 20, or 24 inches per code). For rectangular pads, this is the pad width. The default unit is inches for continuous footings and feet for rectangular pads.
+
+4. **Set the depth** — how deep the footing extends. This must reach below the local frost line to prevent heaving. In the northern United States, frost depth ranges from 36 to 60 inches. In the South, 12 to 24 inches is typical. Default is 12 inches.
+
+5. **Set the diameter** (round piers only) — the inside diameter of your Sonotube or the diameter of your dug hole. Common sizes are 8, 10, 12, 16, and 24 inches.
+
+6. **Enter the quantity** — number of identical footings for rectangular and round types. For continuous footings, quantity is ignored because the length already represents the total run.
+
+7. **Adjust the waste factor** — 10% for formed footings (Sonotube, wooden forms). 15% for hand-dug holes where the sides are irregular.
+
+{/* Section 8: The Formulas */}
+<div className="formula-section">
+
+## The Formulas
+
+Footing volume depends on the shape: rectangular prism for strip and pad footings, cylinder for round piers.
+
+**Continuous / Strip Footing:**
+
+$$V = L \times \frac{W_{in}}{12} \times \frac{D_{in}}{12}$$
+
+**Rectangular Pad Footing (with quantity):**
+
+$$V = L \times W \times \frac{D_{in}}{12} \times Q$$
+
+**Round Pier Footing (with quantity):**
+
+$$V = \pi \times \left(\frac{d_{in}}{24}\right)^2 \times \frac{D_{in}}{12} \times Q$$
+
+**Cubic yards (with waste):**
+
+$$V_{yd} = \frac{V_{ft^3}}{27} \times \left(1 + \frac{W_f}{100}\right)$$
+
+Where:
+
+- **L** = footing length in feet
+- **W** = footing width (feet for rectangular, inches for continuous — converted internally)
+- **W_in** = footing width in inches (for continuous)
+- **D_in** = footing depth in inches
+- **d_in** = pier diameter in inches (divided by 24 to get radius in feet)
+- **Q** = quantity of identical footings
+- **W_f** = waste factor percentage
+
+**Source:** Footing sizing requirements per **International Residential Code (IRC)** Section R403 and **ACI 318** — Building Code Requirements for Structural Concrete. Bag yield per **Portland Cement Association (PCA)**.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Continuous Foundation Footing — 40 ft, 20" wide, 12" deep
+
+A homeowner is pouring a continuous strip footing for a garage foundation wall — 40 feet of total perimeter, 20 inches wide, 12 inches deep.
+
+**Step-by-step:**
+
+1. Convert width to feet: 20 in / 12 = **1.667 ft**
+2. Convert depth to feet: 12 in / 12 = **1.0 ft**
+3. Base volume: 40 x 1.667 x 1.0 = **66.67 cu ft**
+4. Convert to cubic yards: 66.67 / 27 = **2.47 cu yd**
+5. Apply 10% waste: 2.47 x 1.10 = **2.72 cu yd**
+6. 80-lb bags: ceil(73.33 / 0.60) = **123 bags**
+7. 60-lb bags: ceil(73.33 / 0.45) = **163 bags**
+
+**Cost comparison:**
+- Ready-mix: 2.72 x $150 = **$408**
+- 80-lb bags: 123 x $6.50 = **$800**
+- 60-lb bags: 163 x $5.50 = **$897**
+
+**Interpretation:** At 2.72 cubic yards, ready-mix delivery saves $400 to $490 over bagged concrete and completes the pour in under an hour. Continuous footings must be poured monolithically — no cold joints — so the speed of ready-mix is a structural advantage, not just a convenience.
+
+### Example 2: Round Pier Footings — 8 Deck Piers, 12" dia, 36" deep
+
+A deck builder needs 8 round pier footings using 12-inch Sonotube forms, each 36 inches deep (for a frost line in the mid-Atlantic region).
+
+**Step-by-step:**
+
+1. Diameter to feet: 12 in / 12 = 1.0 ft, radius = **0.5 ft**
+2. Depth to feet: 36 in / 12 = **3.0 ft**
+3. Volume per pier: pi x 0.5^2 x 3.0 = pi x 0.25 x 3 = **2.356 cu ft**
+4. 8 piers: 2.356 x 8 = **18.85 cu ft**
+5. With 10% waste: 18.85 x 1.10 = **20.74 cu ft = 0.77 cu yd**
+6. 80-lb bags: ceil(20.74 / 0.60) = **35 bags**
+
+**Cost comparison:**
+- Ready-mix: 0.77 x $150 = **$115** (but minimum delivery fees may apply)
+- 80-lb bags: 35 x $6.50 = **$228**
+
+**Interpretation:** At under 1 cubic yard, this project works well with bagged concrete. Thirty-five 80-lb bags weigh 2,800 pounds total — manageable in a half-day with a wheelbarrow and mixer. You can pour each pier individually, which gives you flexibility to work in stages. If your concrete plant has no minimum, the $115 ready-mix option is cheaper, but most plants charge a short-load fee that pushes the real cost to $200 or more for sub-1-yard deliveries.
+
+{/* Section 10: Footing Size Guide */}
+## Footing Size Guide by Region
+
+| Region | Frost Depth | Min. Footing Depth | Typical Continuous Width |
+|---|---|---|---|
+| Southern US (FL, TX, LA) | 0–12 inches | 12 inches | 12–16 inches |
+| Mid-Atlantic (VA, NC, TN) | 18–24 inches | 24 inches | 16–20 inches |
+| Midwest (OH, IL, IN) | 36–42 inches | 42 inches | 20–24 inches |
+| Northern US (MN, WI, MI) | 42–60 inches | 48–60 inches | 20–24 inches |
+| Northeast (NY, PA, MA) | 36–48 inches | 42–48 inches | 20–24 inches |
+| Mountain West (CO, MT) | 36–48 inches | 42 inches | 20–24 inches |
+
+Footing width depends on soil bearing capacity and wall load. The IRC Table R403.1(1) specifies minimum widths: 12 inches for single-story on 2,000 psf soil, up to 24 inches for three-story on 1,500 psf soil.
+
+{/* Section 11: Building Code Requirements */}
+## Building Code Requirements
+
+**Footing depth:** Must extend below the frost line per IRC R403.1.4. This is the single most common inspection failure for residential footings — inspectors measure depth before the pour. Check your local frost depth map or call the building department before digging.
+
+**Footing width:** IRC Table R403.1(1) sets minimums based on the number of stories and soil bearing capacity. For a typical single-story home on 2,000 psf soil, the minimum footing width is 12 inches. Two-story on the same soil requires 15 inches. Three-story requires 23 inches. Wider footings spread the load across more soil area.
+
+**Reinforcement:** IRC R403.1.3 requires at least two continuous #4 rebar bars running the length of continuous footings, with no splices in the corners. For round pier footings supporting decks, most jurisdictions require at least one vertical #4 or #5 bar centered in the pier. Check with your local building department — requirements vary.
+
+**Inspection timing:** Most jurisdictions require a footing inspection after excavation and rebar placement but before the concrete pour. The inspector verifies depth (below frost line), width (meets code for wall load), rebar placement (proper size, spacing, cover), and soil condition (undisturbed bearing soil, no standing water). Schedule the inspection at least 48 hours in advance.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **uniform depth** along the entire footing. If your trench has varying depths due to sloped terrain, calculate sections separately or use the average depth with a 15% waste factor.
+- **Continuous footings** ignore the quantity field — the length input represents the total run. For multiple separate strip footings, add them as a single total length or run the calculator multiple times.
+- **Round pier** volume uses the inside diameter of the form or hole. Hand-dug holes are rarely perfectly cylindrical — add 15% waste instead of 10% for unformed holes.
+- **Cost estimates** use a $150/yard national average for ready-mix. Actual prices vary from $110 to $220 depending on mix design (standard 3,000 PSI vs. 4,000 PSI), delivery distance, and regional pricing.
+- This calculator does not estimate **form materials**, **rebar quantity**, **anchor bolts**, or **gravel sub-base** — only the concrete volume.
+- For **stepped footings** on sloped sites, calculate each level section separately and sum the volumes.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How deep should footings be?
+
+Footings must extend below the local frost line to prevent frost heave — the expansion of frozen soil that can lift and crack a foundation. Frost depth ranges from 12 inches in southern states to 60 inches in northern Minnesota. The IRC Section R403.1.4 requires footings to bear on undisturbed soil below the frost line. Contact your local building department for the exact frost depth requirement in your jurisdiction. For deck pier footings, the same frost depth applies.
+
+### How wide should a footing be for a house foundation?
+
+The IRC Table R403.1(1) sets minimum footing widths based on building height and soil bearing capacity. For a single-story house on typical 2,000 psf soil, the minimum is 12 inches. Two-story requires 15 inches. Three-story requires 23 inches. On weaker soils (1,500 psf), widths increase to 16, 21, and 32 inches respectively. Most residential builders default to 16 or 20-inch continuous footings for standard two-story construction.
+
+### How much concrete for a 12-inch Sonotube?
+
+A single 12-inch diameter Sonotube at 36 inches deep needs 2.36 cubic feet of concrete (0.087 cubic yards). With 10% waste, that is roughly 5 eighty-pound bags per pier. For 8 piers, you need about 35 bags total. At 48 inches deep, the volume increases to 3.14 cubic feet per pier — about 6 bags each. Sonotube is the most material-efficient footing type because the rigid form prevents over-fill and waste.
+
+### Do footings need rebar?
+
+Yes. The IRC R403.1.3 requires at least two continuous #4 (1/2-inch) rebar bars running lengthwise in continuous footings, positioned in the lower third of the footing depth. Rebar prevents cracking from soil movement and temperature changes. For round pier footings, most codes require at least one vertical #4 or #5 bar centered in the pour. Corner footings and T-intersections need additional bent bars to maintain continuity.
+
+### Can I pour footings in cold weather?
+
+Concrete can be poured in cold weather if the ambient temperature stays above 40 degrees Fahrenheit for at least 48 hours after placement. Below 40 degrees, concrete curing slows dramatically. Below 25 degrees, the water in fresh concrete can freeze before it gains enough strength, causing permanent damage. Use hot water in the mix, insulated blankets over the pour, and never pour on frozen ground. Most concrete plants offer cold-weather admixtures that accelerate curing.
+
+### What is the difference between a footing and a foundation?
+
+A footing is the base — the widened concrete pad that sits directly on undisturbed soil and distributes the building load across a larger area. A foundation wall sits on top of the footing and extends up to the floor level. Think of the footing as the shoe and the foundation wall as the leg. This calculator estimates concrete for the footing only. The foundation wall above it is a separate pour, typically 8 to 10 inches wide and calculated using our [Concrete Calculator](/construction/concrete-calculator).
+
+### How long before I can build on footings?
+
+Concrete reaches approximately 70% of its design strength in 7 days and 99% in 28 days under normal curing conditions (50 to 70 degrees Fahrenheit, kept moist). Most building codes allow form removal and foundation wall construction after 7 days. Some fast-track projects strip forms after 3 days for 3,000 PSI concrete, but this requires careful monitoring. Never backfill against foundation walls until the first-floor deck is in place to brace the wall, regardless of concrete age.
+
+### Do I need a permit for footings?
+
+Almost always, yes. Any footing that supports a structure — house foundation, garage, room addition, or any deck attached to a house — requires a building permit in virtually all U.S. jurisdictions. The permit triggers a footing inspection before the concrete pour, which verifies depth, width, rebar, and soil conditions. Working without a permit risks code violations, fines, and the worst-case scenario: being required to demolish and rebuild the footing at your expense.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses standard geometric volume formulas — rectangular prism for continuous and pad footings, cylinder for round piers — with unit conversions for mixed imperial and metric inputs. Bag yield values (0.45 cu ft per 60-lb bag, 0.60 cu ft per 80-lb bag) follow **Portland Cement Association (PCA)** manufacturer specifications. Footing depth and width requirements reference **International Residential Code (IRC)** Section R403 — Footings (2021 Edition), Table R403.1(1) for minimum footing sizes, and Section R403.1.4 for frost protection. Reinforcement guidelines reference **ACI 318** — Building Code Requirements for Structural Concrete. Cost data reflects 2025–2026 U.S. national averages from **HomeAdvisor** and **Angi**. Frost depth data from the **NOAA National Weather Service** frost depth maps and **ASHRAE** Fundamentals.
+
+{/* Section 17: Disclaimer — auto-rendered */}
