@@ -48,7 +48,7 @@ export default function CurrencyInput({ field, value, error, onChange }: InputCo
           placeholder={field.placeholder ?? '0'}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : field.helpText ? `${id}-help` : undefined}
-          className={`h-10 w-full rounded-lg border pl-7 pr-3 text-sm outline-none transition-colors ${
+          className={`h-9 w-full rounded-lg border pl-7 pr-3 text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
               : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200'

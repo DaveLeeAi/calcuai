@@ -247,7 +247,7 @@ export default function StateTaxTable({ data, onStateClick }: StateTaxTableProps
                   <td className="sticky left-0 bg-white dark:bg-slate-800 px-3 py-2.5 text-sm font-medium whitespace-nowrap z-10">
                     <span className="inline-flex items-center gap-2">
                       <Link
-                        href={`/calculators/finance/${stateNameToSlug(state.stateName)}`}
+                        href={`/finance/${stateNameToSlug(state.stateName)}`}
                         className="text-brand-600 dark:text-brand-400 hover:underline"
                         onClick={(e) => e.stopPropagation()}
                       >

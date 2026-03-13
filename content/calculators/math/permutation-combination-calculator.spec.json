@@ -1,0 +1,122 @@
+{
+  "id": "permutation-combination-calculator",
+  "title": "Permutation & Combination Calculator",
+  "slug": "permutation-combination-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "permutation and combination calculator",
+  "metaTitle": "Permutation & Combination Calculator — nPr, nCr with Repetition",
+  "metaDescription": "Calculate permutations and combinations with or without repetition. Step-by-step formulas for P(n,r) and C(n,r). Supports values up to n = 170. Free.",
+  "inputs": [
+    {
+      "id": "n",
+      "label": "Total Items (n)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 170,
+      "step": 1,
+      "placeholder": "e.g. 10",
+      "helpText": "Total number of items to choose from. Maximum 170 to avoid overflow."
+    },
+    {
+      "id": "r",
+      "label": "Items Chosen (r)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 170,
+      "step": 1,
+      "placeholder": "e.g. 3",
+      "helpText": "Number of items to select. Must be ≤ n when repetition is not allowed."
+    },
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "both",
+      "options": [
+        { "value": "permutation", "label": "Permutation (order matters)" },
+        { "value": "combination", "label": "Combination (order doesn't matter)" },
+        { "value": "both", "label": "Both" }
+      ]
+    },
+    {
+      "id": "repetition",
+      "label": "Allow Repetition",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "Allow the same item to be chosen more than once"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "permutation",
+      "label": "Permutations P(n,r)",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "combination",
+      "label": "Combinations C(n,r)",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "permutationFormula",
+      "label": "Permutation Formula",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "combinationFormula",
+      "label": "Combination Formula",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Results Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "permutation-combination",
+  "features": [],
+  "relatedCalculators": [
+    "probability-calculator",
+    "percentage-calculator",
+    "standard-deviation-calculator",
+    "fraction-calculator",
+    "ratio-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Combinatorics — Rosen, Discrete Mathematics and Its Applications",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "P(n,r) = n!/(n-r)!; C(n,r) = n!/(r!(n-r)!); P_rep(n,r) = n^r; C_rep(n,r) = (n+r-1)!/(r!(n-1)!)",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "probability-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

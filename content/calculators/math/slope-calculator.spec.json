@@ -10,7 +10,7 @@
   "inputs": [
     {
       "id": "x1",
-      "label": "X\u2081",
+      "label": "X₁",
       "type": "number",
       "required": true,
       "defaultValue": 1,
@@ -20,7 +20,7 @@
     },
     {
       "id": "y1",
-      "label": "Y\u2081",
+      "label": "Y₁",
       "type": "number",
       "required": true,
       "defaultValue": 2,
@@ -30,7 +30,7 @@
     },
     {
       "id": "x2",
-      "label": "X\u2082",
+      "label": "X₂",
       "type": "number",
       "required": true,
       "defaultValue": 5,
@@ -40,7 +40,7 @@
     },
     {
       "id": "y2",
-      "label": "Y\u2082",
+      "label": "Y₂",
       "type": "number",
       "required": true,
       "defaultValue": 10,
@@ -80,7 +80,7 @@
     },
     {
       "id": "angle",
-      "label": "Angle (\u00b0)",
+      "label": "Angle (°)",
       "type": "single-value",
       "format": "number",
       "precision": 4
@@ -101,7 +101,10 @@
     }
   ],
   "formula": "slope",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "pythagorean-theorem-calculator",
     "triangle-calculator",
@@ -115,8 +118,11 @@
   "requiresSources": false,
   "formulaCitation": "Euclidean geometry, standard coordinate geometry",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Slope: m = (y2-y1)/(x2-x1); Distance: d = sqrt((x2-x1)^2 + (y2-y1)^2); Y-intercept: b = y1 - m*x1",
   "formulaAuditDate": "2026-03-12",
@@ -125,7 +131,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 75,
+  "qualityScore": 82,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null
 }

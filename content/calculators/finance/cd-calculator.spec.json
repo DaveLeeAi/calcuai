@@ -133,7 +133,8 @@
     "compound-interest-calculator",
     "investment-calculator",
     "inflation-calculator",
-    "net-worth-calculator"
+    "net-worth-calculator",
+    "emergency-fund-calculator"
   ],
   "disclaimer": "finance",
   "hasFAQ": true,

@@ -5,7 +5,7 @@
   "category": "everyday",
   "subcategory": "academic",
   "primaryKeyword": "test grade calculator",
-  "metaTitle": "Test Grade Calculator \u2014 Score to Letter Grade",
+  "metaTitle": "Test Grade Calculator — Score to Letter Grade",
   "metaDescription": "Convert test scores to letter grades and GPA points instantly. Supports standard, plus/minus, and pass/fail grading scales. Free online grade calculator.",
   "inputs": [
     {
@@ -37,9 +37,18 @@
       "required": true,
       "defaultValue": "plus-minus",
       "options": [
-        { "value": "plus-minus", "label": "Plus/Minus (A+, A, A-, B+...)" },
-        { "value": "standard", "label": "Standard (A, B, C, D, F)" },
-        { "value": "pass-fail", "label": "Pass/Fail" }
+        {
+          "value": "plus-minus",
+          "label": "Plus/Minus (A+, A, A-, B+...)"
+        },
+        {
+          "value": "standard",
+          "label": "Standard (A, B, C, D, F)"
+        },
+        {
+          "value": "pass-fail",
+          "label": "Pass/Fail"
+        }
       ],
       "helpText": "Choose the grading scale used by your school"
     }
@@ -89,7 +98,10 @@
     }
   ],
   "formula": "test-grade",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "grade-calculator",
     "final-grade-calculator",
@@ -103,8 +115,11 @@
   "requiresSources": false,
   "formulaCitation": "Standard US academic grading scale",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Percentage = (correct / total) x 100; Letter grade via standard US scale thresholds",
   "formulaAuditDate": "2026-03-12",
@@ -112,8 +127,11 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["grade-calculator", "final-grade-calculator"],
-  "qualityScore": 75,
+  "duplicationRisk": [
+    "grade-calculator",
+    "final-grade-calculator"
+  ],
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-12",
   "seasonality": "back-to-school"
 }

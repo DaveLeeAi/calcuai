@@ -475,7 +475,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Elapsed = endTime - startTime (add 24h if overnight). Net hours = elapsed - break. Decimal hours = total seconds / 3600.",
   "formulaAuditDate": "2026-03-11",
@@ -486,7 +486,7 @@
   "duplicationRisk": [
     "time-calculator"
   ],
-  "qualityScore": 76,
+  "qualityScore": 80,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null,
   "glossaryTerms": [

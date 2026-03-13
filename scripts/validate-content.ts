@@ -32,6 +32,8 @@ interface SpecFile {
   hasFAQ: boolean;
   requiresSources?: boolean;
   priority?: string;
+  editorialStatus?: string;
+  qualityScore?: number;
   [key: string]: unknown;
 }
 
@@ -144,6 +146,11 @@ function main() {
           error(`${label} Formula-only calculator missing "## How This Is Calculated" section`);
         }
       }
+
+      // Gate A — hasFAQ Cross-Validation
+      if (spec.hasFAQ === true && !mdxContent.includes('## Frequently Asked Questions')) {
+        error(`hasFAQ mismatch: ${spec.slug} claims hasFAQ: true but MDX has no FAQ section`);
+      }
     }
 
     // 7. Related calculators
@@ -181,6 +188,19 @@ function main() {
     const catCalcIds = categories[spec.category] || [];
     if (!catCalcIds.includes(spec.id)) {
       warn(`${label} Not registered in category JSON: content/categories/${spec.category}.json`);
+    }
+
+    // Gate B — Draft Spec Indexing Warning
+    if (spec.editorialStatus === 'draft') {
+      warn(`DRAFT spec excluded from build: ${spec.category}/${spec.slug}`);
+    }
+
+    // Gate C — Published Spec Quality Floor
+    if (spec.editorialStatus === 'published') {
+      const score = typeof spec.qualityScore === 'number' ? spec.qualityScore : 0;
+      if (score < 60) {
+        error(`Quality score too low to publish: ${spec.slug} has score ${score} (minimum 60)`);
+      }
     }
   }
 

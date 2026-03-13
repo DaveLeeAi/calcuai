@@ -189,7 +189,8 @@
     "paint-calculator",
     "drywall-calculator",
     "concrete-calculator",
-    "board-foot-calculator"
+    "board-foot-calculator",
+    "tile-calculator"
   ],
   "disclaimer": "construction",
   "hasFAQ": true,

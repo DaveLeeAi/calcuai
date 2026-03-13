@@ -26,7 +26,7 @@ export default function SelectInput({ field, value, error, onChange }: InputComp
         onChange={handleChange}
         aria-invalid={!!error}
         aria-describedby={error ? `${id}-error` : field.helpText ? `${id}-help` : undefined}
-        className={`h-10 w-full appearance-none rounded-lg border bg-white px-3 pr-8 text-sm outline-none transition-colors dark:bg-slate-800 dark:text-slate-200 ${
+        className={`h-9 w-full appearance-none rounded-lg border bg-white px-3 pr-8 text-sm outline-none transition-colors dark:bg-slate-800 dark:text-slate-200 ${
           error
             ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
             : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600'

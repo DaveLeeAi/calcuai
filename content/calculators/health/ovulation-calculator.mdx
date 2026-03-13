@@ -1,0 +1,144 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Ovulation typically occurs 14 days before your next period — not 14 days after your last one. For a 28-day cycle starting January 1, ovulation falls around January 15, with your most fertile window spanning January 10-16. This calculator estimates your ovulation date, 7-day fertile window, and next expected period for up to 6 upcoming cycles based on your last menstrual period and average cycle length.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Interpretation */}
+## Understanding Your Fertile Window
+
+Your fertile window is the 7-day span during which pregnancy is biologically possible: the 5 days before ovulation, the day of ovulation itself, and 1 day after. This window exists because sperm can survive up to 5 days in the female reproductive tract, while the released egg remains viable for only 12-24 hours after ovulation.
+
+The single most fertile day is the day before ovulation, not the day of ovulation itself. Studies by Wilcox et al. published in the *New England Journal of Medicine* (1995) found that the probability of conception peaks when intercourse occurs 1-2 days before ovulation, because sperm are already present in the fallopian tube when the egg is released.
+
+The "Next Ovulation Date" output is your estimated ovulation for the current cycle. The cycle calendar below it projects forward through multiple cycles, showing when each future fertile window opens and closes. If your cycles are regular (varying by 2 days or fewer month to month), these projections are reasonably accurate. If your cycles are irregular, the first cycle's estimate is most reliable — later projections accumulate error.
+
+Your "Next Expected Period" is calculated as the first day of your last period plus your cycle length. If your period arrives earlier or later than predicted, update the calculator with your actual period start date for a more accurate next-cycle projection.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the first day of your last period.** This is the day menstrual bleeding began — not the day it ended. If you're unsure, your best estimate is sufficient.
+
+2. **Enter your average cycle length.** Count the number of days from the first day of one period to the first day of the next. The average is 28 days, but normal cycles range from 21 to 45 days. If your cycles vary, use the average of your last 3-6 cycles.
+
+3. **Select how many cycles to display.** Choose 1 cycle for a quick ovulation estimate, 3 cycles for near-term planning, or 6 cycles for a longer fertility calendar.
+
+4. **Review the results.** The highlighted "Next Ovulation Date" is your primary output. The fertile window dates show when conception is possible. The cycle calendar table projects these dates across multiple upcoming cycles.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Ovulation timing is based on the luteal phase — the interval between ovulation and the next period. The luteal phase is relatively constant at approximately 14 days across most women, while the follicular phase (before ovulation) varies with cycle length.
+
+$$\text{Ovulation Day of Cycle} = \text{Cycle Length} - 14$$
+
+$$\text{Ovulation Date} = \text{LMP} + (\text{Cycle Length} - 14)$$
+
+$$\text{Fertile Window Start} = \text{Ovulation Date} - 5 \text{ days}$$
+
+$$\text{Fertile Window End} = \text{Ovulation Date} + 1 \text{ day}$$
+
+$$\text{Next Period} = \text{LMP} + \text{Cycle Length}$$
+
+Where:
+
+- **LMP** = first day of the last menstrual period
+- **Cycle Length** = average number of days from one period to the next
+- **14 days** = assumed luteal phase length (the relatively constant interval from ovulation to next period)
+- **5 days** = maximum sperm survival in the reproductive tract
+- **1 day** = approximate egg survival after ovulation (12-24 hours)
+
+The key insight: the 14-day constant is measured backward from the *next* period, not forward from the *last* period. A woman with a 35-day cycle ovulates on day 21, not day 14.
+
+**Source:** American College of Obstetricians and Gynecologists (ACOG). Luteal phase constancy data from Lenton EA, Landgren BM, Sexton L, "Normal variation in the length of the luteal phase of the menstrual cycle," *British Journal of Obstetrics and Gynaecology* 91(7):681-684 (1984).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard 28-Day Cycle
+
+**Inputs:**
+- Last menstrual period: January 1, 2026
+- Cycle length: 28 days
+
+**Step-by-step:**
+
+1. Ovulation day of cycle: 28 - 14 = **Day 14**
+2. Ovulation date: January 1 + 14 = **January 15, 2026**
+3. Fertile window start: January 15 - 5 = **January 10**
+4. Fertile window end: January 15 + 1 = **January 16**
+5. Next period: January 1 + 28 = **January 29**
+
+**Interpretation:** The most fertile days are January 13-15 (the 2 days before and the day of ovulation). Intercourse during January 10-16 has pregnancy potential, with probability peaking on January 14.
+
+### Example 2: Longer 35-Day Cycle
+
+**Inputs:**
+- Last menstrual period: January 1, 2026
+- Cycle length: 35 days
+
+**Step-by-step:**
+
+1. Ovulation day of cycle: 35 - 14 = **Day 21**
+2. Ovulation date: January 1 + 21 = **January 22, 2026**
+3. Fertile window start: January 22 - 5 = **January 17**
+4. Fertile window end: January 22 + 1 = **January 23**
+5. Next period: January 1 + 35 = **February 5**
+
+**Interpretation:** With a 35-day cycle, ovulation occurs a full week later than the commonly assumed "day 14." Using a generic ovulation calculator that assumes day 14 would place the fertile window 7 days too early — missing the actual window entirely. This is why entering your true cycle length is critical for accuracy.
+
+{/* Section 10: Key Factors That Affect Ovulation */}
+## Key Factors That Affect Ovulation
+
+**Cycle Irregularity** — If your cycles vary by more than 5 days month to month, the predicted ovulation date has a wider margin of error. Cycle length variation is the single largest source of inaccuracy in calendar-based ovulation prediction. Women with irregular cycles should consider ovulation predictor kits (OPKs), which detect the LH surge 24-36 hours before ovulation, or basal body temperature (BBT) charting for retrospective confirmation.
+
+**Stress and Illness** — Physical or emotional stress can delay ovulation by suppressing the hormonal cascade (GnRH → FSH → LH) that triggers egg release. A stressful month may push ovulation later by days or even weeks, while the luteal phase remains at its usual 14 days. This means stress delays your period by delaying ovulation, not by extending the luteal phase.
+
+**Age** — Cycle length tends to shorten slightly with age. Women in their 20s average 28-30 day cycles, while women approaching perimenopause (late 30s to 40s) may see cycles shorten to 24-26 days. Shorter cycles mean earlier ovulation, which changes the fertile window timing.
+
+**Hormonal Contraception** — Recent use of hormonal birth control (pill, patch, ring, IUD) can affect cycle regularity for 1-3 months after discontinuation. Ovulation may be delayed or irregular during this transition period. Wait for 2-3 natural cycles before relying on this calculator for conception planning.
+
+**Weight and Exercise** — Very low body fat (below ~17%) or extreme exercise can suppress ovulation entirely (hypothalamic amenorrhea). Conversely, obesity is associated with irregular ovulation due to excess estrogen production in fat tissue. Both extremes make calendar-based ovulation prediction less reliable.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **constant 14-day luteal phase**. In reality, luteal phases range from 10 to 16 days across individuals, though they remain fairly consistent cycle to cycle for the same person. A luteal phase 2 days shorter or longer shifts the true ovulation date accordingly.
+- Assumes **regular cycles**. Women with PCOS, thyroid conditions, or other hormonal disorders may ovulate unpredictably or not at all in some cycles. This calculator cannot detect anovulatory cycles (cycles where no egg is released).
+- This is a **calendar-based estimate**, not a medical diagnosis. Ovulation predictor kits (measuring LH surge), basal body temperature tracking, and transvaginal ultrasound provide more precise ovulation confirmation.
+- **Not a contraceptive method.** Calendar-based fertility awareness has a typical-use failure rate of approximately 12-24% per year. If used for contraception, combine with other fertility awareness indicators and consult a healthcare provider.
+- Multi-cycle projections **assume constant cycle length**. If your cycles vary, later projections become progressively less accurate.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### When is the best time to conceive?
+
+The 2-3 days immediately before ovulation offer the highest probability of conception. According to Wilcox et al. (*NEJM*, 1995), the per-cycle probability of pregnancy peaks when intercourse occurs 1-2 days before ovulation, at roughly 25-30% per cycle for healthy couples under 35. Intercourse on ovulation day itself is slightly less optimal because the egg has a limited 12-24 hour viability window and sperm need several hours to reach the fallopian tube. For maximum probability, plan intercourse every 1-2 days throughout your fertile window (5 days before through 1 day after ovulation).
+
+### How accurate are ovulation calculators?
+
+Calendar-based ovulation calculators are most accurate for women with regular cycles (variation of 2 days or fewer). For regular cycles, the estimated ovulation date falls within plus or minus 1-2 days of actual ovulation approximately 70-80% of the time. Accuracy drops significantly for irregular cycles. Ovulation predictor kits (OPKs), which detect the LH surge in urine 24-36 hours before ovulation, are more reliable for timing. Basal body temperature charting confirms ovulation retrospectively (a 0.4-0.8 degree Fahrenheit rise after ovulation) but cannot predict it in advance. For the highest accuracy, combine this calculator with OPK testing starting 3-4 days before your estimated ovulation date.
+
+### Can ovulation timing change month to month?
+
+Yes, ovulation timing can shift by several days between cycles even in women with generally regular periods. The follicular phase (before ovulation) is the variable portion of the cycle — it responds to stress, illness, travel, sleep disruption, and hormonal fluctuations. The luteal phase (after ovulation) stays relatively constant at 12-16 days for a given individual. This means a 30-day cycle one month and a 26-day cycle the next likely reflects ovulation occurring 4 days earlier, not a shorter luteal phase. Tracking 3-6 cycles gives you a more reliable average cycle length to input into this calculator.
+
+</div>
+
+{/* Section 14: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the luteal phase timing model endorsed by the **American College of Obstetricians and Gynecologists (ACOG)**: ovulation occurs approximately 14 days before the onset of the next menstrual period. The 14-day luteal phase constant is supported by Lenton EA, Landgren BM, Sexton L, "Normal variation in the length of the luteal phase of the menstrual cycle," *British Journal of Obstetrics and Gynaecology* 91(7):681-684 (1984). Fertile window duration (6 days) is based on Wilcox AJ, Weinberg CR, Baird DD, "Timing of sexual intercourse in relation to ovulation — effects on the probability of conception, survival of the pregnancy, and sex of the baby," *New England Journal of Medicine* 333(23):1517-1521 (1995), which demonstrated that pregnancy is possible from intercourse occurring up to 5 days before and 1 day after ovulation.
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

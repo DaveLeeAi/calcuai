@@ -1,0 +1,117 @@
+---
+title: "How Capital Gains Taxes Work: Short-Term vs. Long-Term Rates"
+slug: "capital-gains-taxation"
+relatedCalculators: ["capital-gains-tax-calculator", "income-tax-calculator", "tax-bracket-calculator", "investment-calculator", "roth-conversion-calculator"]
+---
+
+## Two Tax Regimes for Investment Profits
+
+The U.S. tax code applies different rates to investment gains depending on how long the asset was held before sale. This two-tier structure creates one of the most significant tax planning opportunities available to individual investors.
+
+**Short-term capital gains** (assets held ≤ 1 year) are taxed at your ordinary income tax rate — the same rates applied to wages, from 10% to 37%.
+
+**Long-term capital gains** (assets held > 1 year) receive preferential rates of **0%, 15%, or 20%**, with thresholds tied to your total taxable income.
+
+## 2025 Long-Term Capital Gains Brackets
+
+### Single Filers
+
+| Taxable Income | Long-Term Rate |
+|---------------|---------------|
+| $0 – $48,350 | 0% |
+| $48,351 – $533,400 | 15% |
+| Over $533,400 | 20% |
+
+### Married Filing Jointly
+
+| Taxable Income | Long-Term Rate |
+|---------------|---------------|
+| $0 – $96,700 | 0% |
+| $96,701 – $600,050 | 15% |
+| Over $600,050 | 20% |
+
+### Head of Household
+
+| Taxable Income | Long-Term Rate |
+|---------------|---------------|
+| $0 – $64,750 | 0% |
+| $64,751 – $566,700 | 15% |
+| Over $566,700 | 20% |
+
+*Source: IRS Revenue Procedure 2024-40*
+
+## The Calculation
+
+Capital gains tax involves two steps: determine the gain, then apply the appropriate rate.
+
+### Step 1: Calculate the Gain
+
+$$\text{Capital Gain} = \text{Sale Price} - \text{Cost Basis}$$
+
+The **cost basis** includes the original purchase price plus qualifying expenses:
+- Brokerage commissions (buy and sell sides)
+- Transfer taxes
+- Improvement costs (for real estate)
+
+For assets acquired through gifts, the basis is generally the donor's original cost basis. For inherited assets, the basis "steps up" to the fair market value on the date of death — potentially eliminating decades of unrealized gains.
+
+### Step 2: Apply the Rate
+
+**Short-term gains** stack on top of your ordinary income and are taxed at the marginal rate for the combined total.
+
+**Long-term gains** are taxed separately. The rate depends on your total taxable income (ordinary income + long-term gains):
+
+$$\text{Tax} = \sum_{i=1}^{k} r_i \times \min(w_i,\ \max(0,\ G - L_i))$$
+
+Where $G$ is the total long-term gain, $r_i$ is the rate for bracket $i$, $w_i$ is the bracket width remaining after accounting for ordinary income, and $L_i$ is the effective lower bound for gains.
+
+### Worked Example: Single Filer, $80,000 Salary, $30,000 Long-Term Gain
+
+1. Standard deduction: $15,000
+2. Taxable ordinary income: $80,000 − $15,000 = $65,000
+3. Ordinary income fills brackets up to $65,000
+4. Long-term gain starts at $65,000 in the bracket structure
+5. Since $65,000 > $48,350, the entire $30,000 gain falls in the 15% bracket
+6. Long-term capital gains tax: $30,000 × 15% = **$4,500**
+
+If the same gain were short-term:
+1. Total taxable: $65,000 + $30,000 = $95,000
+2. The $30,000 gain spans the 22% bracket ($48,476–$103,350)
+3. Short-term tax on the gain: ~$6,600
+
+**Tax savings from holding > 1 year: $2,100**
+
+## Net Investment Income Tax (NIIT)
+
+High-income taxpayers face an additional 3.8% surtax on net investment income under IRC §1411. This applies to single filers with modified AGI above $200,000 and married filers above $250,000. The NIIT is applied on top of the capital gains rate:
+
+- A single filer earning $300,000 with $50,000 in long-term gains pays 15% + 3.8% = **18.8%** on those gains
+- The same gain for someone earning $40,000 pays **0%** (within the 0% bracket, below NIIT threshold)
+
+## Capital Losses: Offsetting Gains
+
+Capital losses offset gains dollar-for-dollar:
+
+1. **Short-term losses** first offset short-term gains
+2. **Long-term losses** first offset long-term gains
+3. Remaining losses cross-offset the other type
+4. Up to **$3,000** of net losses ($1,500 if married filing separately) can deduct from ordinary income per year
+5. Excess losses carry forward indefinitely
+
+**Tax-loss harvesting** — selling losing positions to realize losses — is a common strategy to offset gains. The IRS wash-sale rule prevents repurchasing a "substantially identical" security within 30 days before or after the sale.
+
+## Assumptions and Limitations
+
+1. **Federal only** — many states tax capital gains as ordinary income (California at up to 13.3%). Nine states have no income tax on gains.
+2. **Collectibles exception** — gains on art, coins, precious metals, and other collectibles held long-term are taxed at a maximum 28% rate, not the standard 0/15/20%.
+3. **Real estate exclusion** — up to $250,000 ($500,000 MFJ) of gain on a primary residence is excluded if you've lived there 2 of the last 5 years.
+4. **Qualified Small Business Stock (QSBS)** — Section 1202 allows up to 100% exclusion on gains from qualifying small business stock held 5+ years, up to $10 million.
+5. **Depreciation recapture** — for real estate, depreciation taken is "recaptured" at 25% upon sale, regardless of the asset's holding period.
+6. **AMT impact** — the Alternative Minimum Tax can affect the effective rate on capital gains for some taxpayers.
+
+## Sources
+
+- **Internal Revenue Service.** Topic No. 409: Capital Gains and Losses. [irs.gov](https://www.irs.gov/taxtopics/tc409)
+- **Internal Revenue Service.** Revenue Procedure 2024-40: 2025 Tax Year Inflation Adjustments.
+- **Internal Revenue Service.** Publication 550: Investment Income and Expenses (2024).
+- **Tax Foundation.** "2025 Capital Gains Tax Rates." [taxfoundation.org](https://taxfoundation.org/data/all/federal/2025-tax-brackets/)

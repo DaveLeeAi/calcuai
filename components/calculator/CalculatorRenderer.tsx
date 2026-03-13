@@ -6,6 +6,7 @@ import { getFormula } from '@/lib/formulas';
 import InputField from './InputField';
 import OutputDisplay from './OutputDisplay';
 import TabSwitcher from './features/TabSwitcher';
+import ScenarioPanel from './ScenarioPanel';
 import { ResultHeader, AssumptionsBar, MethodologyFooter } from './results';
 interface CalculatorRendererProps {
   spec: CalculatorSpec;
@@ -80,6 +81,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [hasCalculated, setHasCalculated] = useState(false);
   const [calculatedInputs, setCalculatedInputs] = useState<Record<string, unknown>>({});
+  const [calculatedFlatInputs, setCalculatedFlatInputs] = useState<Record<string, unknown>>({});
 
   // Determine which inputs are visible based on active tab and visibleWhen conditions
   const visibleInputs = useMemo(() => {
@@ -192,6 +194,7 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
       const output = formula(flatInputs);
       setResults(output);
       setCalculatedInputs({ ...inputs });
+      setCalculatedFlatInputs({ ...flatInputs });
       setHasCalculated(true);
     } catch (err) {
       console.error('Formula execution error:', err);
@@ -230,13 +233,25 @@ export default function CalculatorRenderer({ spec }: CalculatorRendererProps) {
               </div>
             )}
 
-            {/* Remaining outputs */}
+            {/* Detailed breakdown section */}
             {remainingOutputs.length > 0 && (
-              <div className={`space-y-3 ${highlightedOutputs.length > 0 ? 'mt-3' : ''}`}>
-                {remainingOutputs.map((output) => (
-                  <OutputDisplay key={output.id} field={output} data={results} />
-                ))}
+              <div className={highlightedOutputs.length > 0 ? 'mt-4' : ''}>
+                {highlightedOutputs.length > 0 && (
+                  <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-slate-500 mb-3">
+                    Detailed Results
+                  </h4>
+                )}
+                <div className="space-y-3">
+                  {remainingOutputs.map((output) => (
+                    <OutputDisplay key={output.id} field={output} data={results} />
+                  ))}
+                </div>
               </div>
+            )}
+
+            {/* Scenario comparison panel */}
+            {spec.features?.includes('compare-scenarios') && (
+              <ScenarioPanel spec={spec} baseInputs={calculatedFlatInputs} />
             )}
 
             {/* Result header with formula source */}

@@ -60,12 +60,14 @@
       "label": "Monthly Payment",
       "type": "single-value",
       "format": "currency",
-      "highlight": true
+      "highlight": true,
+      "description": "Base monthly payment of principal and interest. Does not include insurance or taxes."
     },
     {
       "id": "paymentBreakdown",
-      "label": "Payment Breakdown",
+      "label": "Principal vs. Total Interest",
       "type": "chart-pie",
+      "description": "Proportion of your total payments that goes to paying back the original loan versus the cost of borrowing.",
       "chartConfig": {
         "colors": [
           "#1A6FA0",
@@ -75,14 +77,44 @@
     },
     {
       "id": "summary",
-      "label": "Loan Summary",
+      "label": "Loan Cost Summary",
       "type": "value-group",
-      "format": "currency"
+      "format": "currency",
+      "description": "Key totals over the life of the loan. If extra payments are entered, savings are shown here."
+    },
+    {
+      "id": "yearlyBreakdown",
+      "label": "Annual Principal vs. Interest",
+      "type": "chart-bar",
+      "description": "How your payments split between principal reduction and interest each year. Extra payments shift this ratio toward principal.",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Amount ($)",
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C"
+        ]
+      }
+    },
+    {
+      "id": "balanceOverTime",
+      "label": "Loan Balance Over Time",
+      "type": "chart-line",
+      "description": "Remaining balance month by month. When extra payments are applied, a second line shows the faster payoff trajectory.",
+      "chartConfig": {
+        "xLabel": "Month",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
+      }
     },
     {
       "id": "amortizationSchedule",
-      "label": "Amortization Schedule",
+      "label": "Full Amortization Schedule",
       "type": "table",
+      "description": "Every payment listed month by month with the principal, interest, any extra payment applied, and remaining balance.",
       "columns": [
         {
           "key": "month",
@@ -114,19 +146,6 @@
           "format": "currency"
         }
       ]
-    },
-    {
-      "id": "balanceOverTime",
-      "label": "Balance Over Time",
-      "type": "chart-line",
-      "chartConfig": {
-        "xLabel": "Month",
-        "yLabel": "Balance ($)",
-        "colors": [
-          "#1A6FA0",
-          "#2ECC71"
-        ]
-      }
     }
   ],
   "formula": "loan-payment",
@@ -187,7 +206,7 @@
     "payment-calculator",
     "mortgage-calculator"
   ],
-  "qualityScore": 100,
+  "qualityScore": 90,
   "lastContentUpdate": "2026-03-10",
   "seasonality": null,
   "glossaryTerms": [

@@ -83,6 +83,7 @@ export function calculateSalesTax(inputs: Record<string, unknown>): Record<strin
         calculatedRate: 0,
         stateInfo,
         summary: [],
+        taxBreakdown: [],
       };
     }
 
@@ -105,6 +106,10 @@ export function calculateSalesTax(inputs: Record<string, unknown>): Record<strin
       calculatedRate,
       stateInfo,
       summary,
+      taxBreakdown: [
+        { name: 'Pre-Tax Price', value: netPrice },
+        { name: 'Sales Tax', value: taxAmount },
+      ],
     };
   }
 
@@ -119,6 +124,7 @@ export function calculateSalesTax(inputs: Record<string, unknown>): Record<strin
       calculatedRate: taxRatePercent,
       stateInfo,
       summary: [],
+      taxBreakdown: [],
     };
   }
 
@@ -161,6 +167,10 @@ export function calculateSalesTax(inputs: Record<string, unknown>): Record<strin
     calculatedRate: taxRatePercent,
     stateInfo,
     summary,
+    taxBreakdown: [
+      { name: 'Pre-Tax Price', value: effectivePrice },
+      { name: 'Sales Tax', value: taxAmount },
+    ],
   };
 }
 

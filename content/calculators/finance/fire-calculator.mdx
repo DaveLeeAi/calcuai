@@ -1,0 +1,172 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+With \$40,000 in annual expenses and a 4% safe withdrawal rate, your FIRE number is \$1,000,000. Earning \$80,000 after tax and saving \$40,000 per year at a 7% return, you reach financial independence in approximately 14 years starting from \$100,000 in savings. Use this FIRE calculator to find your personal financial independence number, see how savings rate accelerates the timeline, and chart your path to early retirement.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your FIRE Number Shows */}
+## What Your FIRE Number Shows
+
+Your **FIRE number** is the portfolio size that generates enough passive income to cover your annual expenses permanently through investment returns alone. The formula is elegantly simple: divide your annual expenses by your safe withdrawal rate. At the standard 4% withdrawal rate, you need 25 times your annual expenses. At a more conservative 3.5%, you need 28.6 times. At an aggressive 5%, you need only 20 times.
+
+The **years to FIRE** figure is the answer to the central FIRE question: "When can I quit?" This calculator projects your savings growing through compound returns plus annual contributions until the portfolio crosses your FIRE number. The math is exponential, not linear — meaning the last few years accelerate dramatically. A portfolio that takes 10 years to grow from \$0 to \$400,000 might need only 4 more years to reach \$800,000 at 7% returns, because compound growth on the larger base produces bigger absolute gains each year.
+
+Your **savings rate** is the most controllable variable in the entire equation and the one that matters most. A person earning \$100,000 and spending \$70,000 (30% savings rate) reaches FIRE in approximately 28 years at 7% return. Cutting spending to \$50,000 (50% savings rate) reduces the timeline to roughly 17 years — not just because you save more per year, but because your FIRE number itself drops from \$1,750,000 to \$1,250,000. Every dollar cut from expenses works twice: it goes into savings AND it lowers the target.
+
+For a detailed analysis of how your FIRE portfolio holds up during retirement, use our [Retirement Withdrawal Calculator](/finance/retirement-withdrawal-calculator) to model different withdrawal scenarios.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Annual Living Expenses** — your total spending per year including housing, food, transportation, healthcare, insurance, entertainment, and all other costs. Be honest and thorough. The default is \$40,000. Use your bank statements from the past 12 months for the most accurate number.
+
+2. **Enter Annual Income (After Tax)** — your take-home pay after federal, state, and payroll taxes. Include salary, freelance income, side hustles, and any other recurring income. The default is \$80,000.
+
+3. **Enter Current Invested Savings** — the total across all investment and retirement accounts: 401(k), IRA, Roth IRA, brokerage, HSA. Only count invested assets, not checking accounts or home equity. The default is \$100,000.
+
+4. **Set Expected Annual Return** — the average annual growth rate on your invested portfolio. The default of 7% reflects a diversified stock-heavy portfolio (roughly the S&P 500 historical average after inflation). Use 5-6% for a conservative estimate with bonds, or 8-9% for an all-equity portfolio before inflation.
+
+5. **Set Safe Withdrawal Rate** — the percentage of your portfolio you plan to withdraw annually in retirement. The default 4% comes from the Trinity Study and is standard for 30-year retirements. For early retirees planning 40-50+ year retirements, consider 3.0-3.5% for extra safety.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The FIRE calculation combines a simple target formula with compound growth projection.
+
+### FIRE Number
+
+$$\text{FIRE Number} = \frac{\text{Annual Expenses}}{\text{Safe Withdrawal Rate}}$$
+
+At the standard 4% SWR: FIRE Number = Annual Expenses × 25.
+
+### Savings Rate
+
+$$\text{Savings Rate} = \frac{\text{Annual Income} - \text{Annual Expenses}}{\text{Annual Income}} \times 100\%$$
+
+### Years to FIRE (iterative)
+
+For each year *t*, the portfolio grows by investment returns and new savings:
+
+$$P_{t+1} = P_t \times (1 + r) + S$$
+
+Where:
+
+- **P_t** = portfolio value at start of year *t* (dollars)
+- **r** = expected annual rate of return (decimal)
+- **S** = annual savings (Annual Income minus Annual Expenses, in dollars)
+
+FIRE is reached when *P_t* ≥ FIRE Number.
+
+### Closed-Form Approximation
+
+When annual return *r* > 0:
+
+$$n = \frac{\ln\left(\frac{F \cdot r + S}{P_0 \cdot r + S}\right)}{\ln(1 + r)}$$
+
+Where:
+
+- **n** = years to FIRE
+- **F** = FIRE Number (dollars)
+- **P_0** = current savings (dollars)
+- **S** = annual savings (dollars)
+- **r** = annual return rate (decimal)
+
+This calculator uses the iterative method for precision, particularly for edge cases where the closed-form approximation may diverge.
+
+**Source:** FIRE methodology derived from Vicki Robin and Joe Dominguez, *Your Money or Your Life* (1992). Safe withdrawal rate per the Trinity Study: Cooley, Hubbard, and Walz (1998). The 4% rule originates from Bengen (1994).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Classic FIRE — \$40K Expenses, \$80K Income
+
+**Inputs:**
+- Annual Expenses: \$40,000
+- Annual Income: \$80,000 (after tax)
+- Current Savings: \$100,000
+- Expected Return: 7%
+- Safe Withdrawal Rate: 4%
+
+**Step-by-step:**
+
+1. FIRE Number: \$40,000 / 0.04 = **\$1,000,000**
+2. Annual Savings: \$80,000 - \$40,000 = **\$40,000**
+3. Savings Rate: \$40,000 / \$80,000 = **50%**
+4. Year 1: \$100,000 × 1.07 + \$40,000 = **\$147,000**
+5. Year 5: Portfolio reaches approximately **\$383,662**
+6. Year 10: Portfolio reaches approximately **\$793,421**
+7. Year 14: Portfolio crosses \$1,000,000 → **FIRE achieved**
+
+**Interpretation:** A 50% savings rate is the sweet spot in FIRE planning — high enough to reach independence in under 15 years, achievable with moderate income and disciplined spending. The \$100,000 head start saves roughly 2 years compared to starting from zero.
+
+### Example 2: Lean FIRE — \$25K Expenses, Starting from Zero
+
+**Inputs:**
+- Annual Expenses: \$25,000
+- Annual Income: \$50,000
+- Current Savings: \$0
+- Expected Return: 7%
+- Safe Withdrawal Rate: 4%
+
+**Calculation:**
+
+1. FIRE Number: \$25,000 / 0.04 = **\$625,000**
+2. Annual Savings: \$50,000 - \$25,000 = **\$25,000**
+3. Savings Rate: **50%**
+4. Starting from zero, saving \$25K/year at 7% → reaches \$625K in approximately **15 years**
+
+**Interpretation:** Lean FIRE trades lifestyle for speed. By keeping expenses at \$25,000 (achievable in low cost-of-living areas, with roommates, or through geographic arbitrage), the target drops to \$625,000 — reachable on a modest salary. The risk: \$25,000/year leaves very little margin for unexpected expenses, healthcare costs, or lifestyle inflation.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Timeline
+
+**Savings Rate Over Income Level** — A person earning \$60,000 and spending \$30,000 (50% savings rate) reaches FIRE faster than someone earning \$150,000 and spending \$120,000 (20% rate). The higher earner has a FIRE number of \$3,000,000 and saves \$30,000/year; the lower earner targets \$750,000 and saves \$30,000/year. Same savings, but the lower spender finishes decades earlier. Savings rate is more powerful than income.
+
+**Current Savings** — Starting with \$200,000 already invested vs. \$0 can cut 3-5 years off your FIRE timeline. Every dollar already invested compounds for the full duration. Prioritize maxing out tax-advantaged accounts (401k, IRA, HSA) early.
+
+**Safe Withdrawal Rate Choice** — The difference between 3.5% and 4.5% SWR changes your FIRE number by hundreds of thousands. At \$40K expenses: 3.5% SWR = \$1,142,857 target; 4% = \$1,000,000; 4.5% = \$888,889. For retirements lasting 40+ years, the more conservative rate provides critical safety margin against sequence-of-returns risk and unexpected expenses.
+
+**Investment Returns** — Every percentage point matters. At a 50% savings rate starting from \$100K: 5% return reaches \$1M in ~16 years; 7% return in ~14 years; 9% return in ~12 years. However, chasing higher returns means accepting higher volatility, which can be psychologically challenging and introduces sequence risk.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is FIRE?
+
+FIRE stands for Financial Independence, Retire Early. It is a movement focused on aggressive saving and investing — typically 50-70% of income — to accumulate enough wealth to live off investment returns permanently, allowing retirement decades earlier than the traditional age of 65. The core principle is that once your portfolio equals 25 times your annual expenses (the "FIRE number"), you can withdraw 4% per year indefinitely without depleting your savings, based on historical stock and bond market returns.
+
+### What is a good savings rate for FIRE?
+
+A savings rate of 50% or higher is the standard benchmark in the FIRE community. At 50% savings with a 7% return, you can retire in approximately 17 years regardless of income level. At 60%, the timeline drops to about 12 years. At 70%, roughly 8-9 years. The key insight is that savings rate matters more than absolute income because it simultaneously increases the amount you invest AND decreases your FIRE number by reducing expenses.
+
+### What is the difference between Lean FIRE and Fat FIRE?
+
+Lean FIRE targets annual expenses below \$40,000 per person (FIRE number under \$1,000,000), requiring significant lifestyle frugality but achievable on moderate incomes. Fat FIRE targets annual expenses of \$100,000 or more (FIRE number of \$2,500,000+), maintaining a comfortable or luxury lifestyle but requiring much higher income or longer timelines. Regular FIRE falls in between at \$40,000-\$100,000 in expenses. Coast FIRE is a variant where you have saved enough that compound growth alone will reach your FIRE number by traditional retirement age, so you only need to cover current expenses.
+
+### Is the 4% rule safe for early retirement?
+
+The 4% rule was designed for 30-year retirements and has a 95-96% historical success rate over that horizon. For 40-50 year retirements common in early FIRE, the failure rate increases to 10-15%. Many early retirees use a 3.0-3.5% withdrawal rate for added safety, or use flexible withdrawal strategies that reduce spending during market downturns. Building in part-time income, maintaining geographic flexibility, or having a "one more year" buffer all reduce the risk of portfolio depletion over very long time horizons.
+
+### How do I calculate my savings rate?
+
+Divide your annual savings (income minus all expenses including taxes) by your gross or after-tax income. The FIRE community typically uses after-tax income for consistency. If you earn \$80,000 after tax and spend \$40,000, your savings rate is 50%. Include all savings: 401(k) contributions, IRA deposits, brokerage investments, extra mortgage principal payments, and HSA contributions. Do not count employer 401(k) matches in your income unless you also count them in your savings.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator implements FIRE methodology derived from **Vicki Robin and Joe Dominguez, *Your Money or Your Life* (1992)**, the foundational text of the financial independence movement. The safe withdrawal rate framework follows **Bengen, W. P. (1994), "Determining Withdrawal Rates Using Historical Data," *Journal of Financial Planning*** and the **Trinity Study: Cooley, Hubbard, and Walz (1998), "Retirement Savings: Choosing a Withdrawal Rate That Is Sustainable," *AAII Journal***. Portfolio growth projections use standard future value of annuity formulas per **Brealey, Myers & Allen, *Principles of Corporate Finance***. Historical return assumptions reference the S&P 500 inflation-adjusted average per **Damodaran, NYU Stern** and **Shiller, CAPE data**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

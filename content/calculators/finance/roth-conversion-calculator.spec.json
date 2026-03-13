@@ -1,0 +1,159 @@
+{
+  "id": "roth-conversion-calculator",
+  "title": "Roth Conversion Calculator",
+  "slug": "roth-conversion-calculator",
+  "category": "finance",
+  "subcategory": "retirement",
+  "primaryKeyword": "Roth conversion calculator",
+  "metaTitle": "Roth Conversion Calculator — Free Roth Conversion Calculator | CalcuAI",
+  "metaDescription": "Compare converting Traditional IRA to Roth IRA. See tax cost now vs. tax savings later, net benefit analysis, and year-by-year growth comparison chart.",
+  "inputs": [
+    {
+      "id": "conversionAmount",
+      "label": "Conversion Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 100000,
+      "min": 0,
+      "max": 10000000,
+      "step": 5000,
+      "prefix": "$",
+      "helpText": "Amount to convert from Traditional to Roth"
+    },
+    {
+      "id": "currentTaxRate",
+      "label": "Current Marginal Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 24,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "helpText": "Your current marginal federal tax rate"
+    },
+    {
+      "id": "retirementTaxRate",
+      "label": "Expected Retirement Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "helpText": "Expected tax rate in retirement"
+    },
+    {
+      "id": "yearsUntilRetirement",
+      "label": "Years Until Retirement",
+      "type": "number",
+      "required": true,
+      "defaultValue": 20,
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "helpText": "Years until you start withdrawing"
+    },
+    {
+      "id": "expectedReturn",
+      "label": "Expected Annual Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 20,
+      "step": 0.1,
+      "helpText": "Expected annual investment return"
+    },
+    {
+      "id": "payTaxFromOutside",
+      "label": "Pay Tax from Non-Retirement Funds",
+      "type": "toggle",
+      "required": true,
+      "defaultValue": true,
+      "helpText": "Pay conversion tax from non-retirement funds"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "rothValueAtRetirement",
+      "label": "Roth Value at Retirement",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "traditionalAfterTax",
+      "label": "Traditional Value After Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "taxCostNow",
+      "label": "Tax Cost of Conversion",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "netBenefit",
+      "label": "Net Benefit of Converting",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Analysis",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "growthComparison",
+      "label": "Roth vs Traditional Growth",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "After-Tax Value ($)",
+        "colors": ["#10b981", "#6366f1"]
+      }
+    }
+  ],
+  "formula": "roth-conversion",
+  "features": ["compare-scenarios"],
+  "relatedCalculators": [
+    "401k-calculator",
+    "retirement-calculator",
+    "income-tax-calculator",
+    "tax-bracket-calculator",
+    "investment-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IRS Publication 590-A (Contributions to IRAs); Roth IRA conversion rules",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Roth vs Traditional comparison: Roth = Amount * (1+r)^n (tax-free); Traditional = Amount * (1+r)^n * (1 - retirementTaxRate) per IRS Pub 590-A",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "401k-calculator",
+    "tax-bracket-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "interest-rate",
+    "compound-interest"
+  ],
+  "methodologyTopics": []
+}

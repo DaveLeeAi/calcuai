@@ -1,0 +1,124 @@
+{
+  "id": "ovulation-calculator",
+  "title": "Ovulation Calculator",
+  "slug": "ovulation-calculator",
+  "category": "health",
+  "subcategory": "pregnancy",
+  "primaryKeyword": "ovulation calculator",
+  "metaTitle": "Ovulation Calculator — Find Your Fertile Window & Ovulation Date",
+  "metaDescription": "Calculate your ovulation date and fertile window based on your last period and cycle length. Track multiple cycles with a detailed fertility calendar. Free.",
+  "inputs": [
+    {
+      "id": "lastPeriodDate",
+      "label": "First Day of Last Period",
+      "type": "date",
+      "required": true,
+      "defaultValue": "2026-01-01",
+      "helpText": "The first day of your most recent menstrual period"
+    },
+    {
+      "id": "cycleLength",
+      "label": "Average Cycle Length",
+      "type": "number",
+      "required": true,
+      "defaultValue": 28,
+      "min": 21,
+      "max": 45,
+      "step": 1,
+      "suffix": "days",
+      "helpText": "Average number of days between periods (21-45 days, typical is 28)"
+    },
+    {
+      "id": "cyclesToShow",
+      "label": "Cycles to Show",
+      "type": "select",
+      "required": true,
+      "defaultValue": "3",
+      "options": [
+        { "value": "1", "label": "1 cycle" },
+        { "value": "3", "label": "3 cycles" },
+        { "value": "6", "label": "6 cycles" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "ovulationDate",
+      "label": "Next Ovulation Date",
+      "type": "single-value",
+      "format": "date",
+      "highlight": true
+    },
+    {
+      "id": "fertileWindowStart",
+      "label": "Fertile Window Starts",
+      "type": "single-value",
+      "format": "date"
+    },
+    {
+      "id": "fertileWindowEnd",
+      "label": "Fertile Window Ends",
+      "type": "single-value",
+      "format": "date"
+    },
+    {
+      "id": "nextPeriodDate",
+      "label": "Next Expected Period",
+      "type": "single-value",
+      "format": "date"
+    },
+    {
+      "id": "summary",
+      "label": "Cycle Summary",
+      "type": "value-group"
+    },
+    {
+      "id": "cycleCalendar",
+      "label": "Upcoming Cycles",
+      "type": "table",
+      "columns": [
+        { "key": "cycle", "label": "Cycle" },
+        { "key": "periodStart", "label": "Period Start", "format": "date" },
+        { "key": "fertileStart", "label": "Fertile Window Start", "format": "date" },
+        { "key": "ovulation", "label": "Ovulation", "format": "date" },
+        { "key": "fertileEnd", "label": "Fertile Window End", "format": "date" },
+        { "key": "nextPeriod", "label": "Next Period", "format": "date" }
+      ]
+    }
+  ],
+  "formula": "ovulation",
+  "features": [],
+  "relatedCalculators": [
+    "conception-calculator",
+    "due-date-calculator",
+    "pregnancy-calculator",
+    "date-calculator",
+    "bmi-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "American College of Obstetricians and Gynecologists (ACOG)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "American College of Obstetricians and Gynecologists (ACOG) — luteal phase and ovulation timing guidelines.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "conception-calculator",
+    "due-date-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

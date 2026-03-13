@@ -5,7 +5,7 @@
   "category": "math",
   "subcategory": "basic",
   "primaryKeyword": "square root calculator",
-  "metaTitle": "Square Root Calculator — \u221ax & Nth Roots",
+  "metaTitle": "Square Root Calculator — √x & Nth Roots",
   "metaDescription": "Calculate square roots and nth roots instantly. Shows simplified radical form, perfect root detection, and step-by-step results. Free online calculator.",
   "inputs": [
     {
@@ -68,7 +68,10 @@
     }
   ],
   "formula": "square-root",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "exponent-calculator",
     "logarithm-calculator",
@@ -82,7 +85,10 @@
   "requiresSources": false,
   "formulaCitation": "Standard mathematical root extraction",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "nth root: x^(1/n); Simplified radical: extract perfect square factors",
@@ -91,8 +97,10 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["exponent-calculator"],
-  "qualityScore": 75,
+  "duplicationRisk": [
+    "exponent-calculator"
+  ],
+  "qualityScore": 77,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null
 }

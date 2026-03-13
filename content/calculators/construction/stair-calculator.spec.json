@@ -1,0 +1,137 @@
+{
+  "id": "stair-calculator",
+  "title": "Stair Calculator",
+  "slug": "stair-calculator",
+  "category": "construction",
+  "subcategory": "measurement",
+  "primaryKeyword": "stair calculator",
+  "metaTitle": "Stair Calculator — Risers, Treads & Stringer Length",
+  "metaDescription": "Calculate stair dimensions: number of risers, tread depth, riser height, total run, and stringer length. Checks IRC building code compliance automatically.",
+  "inputs": [
+    {
+      "id": "totalRise",
+      "label": "Total Rise",
+      "type": "number",
+      "required": true,
+      "defaultValue": 108,
+      "min": 1,
+      "max": 600,
+      "step": 0.25,
+      "suffix": "in",
+      "helpText": "Total vertical height from bottom floor to top floor in inches (9 ft = 108 in)"
+    },
+    {
+      "id": "stairWidth",
+      "label": "Stair Width",
+      "type": "number",
+      "required": false,
+      "defaultValue": 36,
+      "min": 24,
+      "max": 120,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Width of staircase. IRC minimum is 36 inches."
+    },
+    {
+      "id": "maxRiserHeight",
+      "label": "Max Riser Height",
+      "type": "number",
+      "required": false,
+      "defaultValue": 7.75,
+      "min": 5,
+      "max": 9,
+      "step": 0.25,
+      "suffix": "in",
+      "helpText": "Maximum riser height per code. IRC max is 7.75 inches."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "numberOfRisers",
+      "label": "Number of Risers",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "numberOfTreads",
+      "label": "Number of Treads",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "actualRiserHeight",
+      "label": "Riser Height (in)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "treadDepth",
+      "label": "Recommended Tread Depth (in)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "totalRun",
+      "label": "Total Run (in)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "stringerLength",
+      "label": "Stringer Length (in)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "meetsCode",
+      "label": "Meets IRC Code",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Stair Dimensions Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "stair",
+  "features": [],
+  "relatedCalculators": [
+    "square-footage-calculator",
+    "concrete-calculator",
+    "board-foot-calculator",
+    "flooring-calculator",
+    "fence-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "International Residential Code (IRC) Section R311.7",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Stair geometry calculations per International Residential Code (IRC) Section R311.7. Riser/tread relationship uses the 2R+T=25 comfort rule. Stringer length via Pythagorean theorem. IRC maximums: 7.75-inch riser, 10-inch minimum tread depth, 36-inch minimum width.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

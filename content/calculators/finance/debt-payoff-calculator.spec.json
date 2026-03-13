@@ -223,7 +223,7 @@
   "relatedCalculators": [
     "loan-calculator",
     "compound-interest-calculator",
-    "net-worth-calculator",
+    "credit-card-payoff-calculator",
     "mortgage-calculator",
     "savings-calculator",
     "payment-calculator"

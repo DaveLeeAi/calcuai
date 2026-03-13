@@ -15,9 +15,18 @@
       "required": true,
       "defaultValue": "z",
       "options": [
-        { "value": "z", "label": "Z (Normal)" },
-        { "value": "t", "label": "T (Student's t)" },
-        { "value": "chi-square", "label": "Chi-Square (\u03c7\u00b2)" }
+        {
+          "value": "z",
+          "label": "Z (Normal)"
+        },
+        {
+          "value": "t",
+          "label": "T (Student's t)"
+        },
+        {
+          "value": "chi-square",
+          "label": "Chi-Square (χ²)"
+        }
       ],
       "helpText": "Choose the distribution for your test statistic"
     },
@@ -50,9 +59,18 @@
       "required": true,
       "defaultValue": "two-tailed",
       "options": [
-        { "value": "two-tailed", "label": "Two-Tailed" },
-        { "value": "right-tailed", "label": "Right-Tailed (Upper)" },
-        { "value": "left-tailed", "label": "Left-Tailed (Lower)" }
+        {
+          "value": "two-tailed",
+          "label": "Two-Tailed"
+        },
+        {
+          "value": "right-tailed",
+          "label": "Right-Tailed (Upper)"
+        },
+        {
+          "value": "left-tailed",
+          "label": "Left-Tailed (Lower)"
+        }
       ],
       "helpText": "Two-tailed tests for any difference; one-tailed tests for a specific direction."
     }
@@ -74,19 +92,19 @@
     },
     {
       "id": "significantAt05",
-      "label": "Significant at \u03b1 = 0.05?",
+      "label": "Significant at α = 0.05?",
       "type": "single-value",
       "format": "text"
     },
     {
       "id": "significantAt01",
-      "label": "Significant at \u03b1 = 0.01?",
+      "label": "Significant at α = 0.01?",
       "type": "single-value",
       "format": "text"
     },
     {
       "id": "significantAt001",
-      "label": "Significant at \u03b1 = 0.001?",
+      "label": "Significant at α = 0.001?",
       "type": "single-value",
       "format": "text"
     },
@@ -106,7 +124,10 @@
     }
   ],
   "formula": "p-value",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "confidence-interval-calculator",
     "standard-deviation-calculator",
@@ -121,17 +142,23 @@
   "requiresSources": false,
   "formulaCitation": "Abramowitz & Stegun, Handbook of Mathematical Functions (1964); NIST/SEMATECH e-Handbook of Statistical Methods",
   "articleWordTarget": 1600,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
-  "formulaSource": "Z: p = 2(1 - \u03a6(|z|)); T: via regularized incomplete beta function I_x(df/2, 1/2); Chi-square: via regularized incomplete gamma P(k/2, x/2)",
+  "formulaSource": "Z: p = 2(1 - Φ(|z|)); T: via regularized incomplete beta function I_x(df/2, 1/2); Chi-square: via regularized incomplete gamma P(k/2, x/2)",
   "formulaAuditDate": "2026-03-12",
   "priority": "standard",
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["probability-calculator"],
-  "qualityScore": 78,
+  "duplicationRisk": [
+    "probability-calculator"
+  ],
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null
 }

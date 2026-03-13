@@ -51,7 +51,7 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
         <button
           type="button"
           aria-label={`Decrease ${field.label}`}
-          className="flex h-10 w-10 items-center justify-center rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:active:bg-slate-500 transition-colors"
+          className="flex h-9 w-10 items-center justify-center rounded-l-lg border border-r-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:active:bg-slate-500 transition-colors"
           onClick={() => handleStep(-1)}
           tabIndex={-1}
         >
@@ -66,7 +66,7 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
           placeholder={field.placeholder ?? ''}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : field.helpText ? `${id}-help` : undefined}
-          className={`h-10 w-full border-y px-3 text-center text-sm outline-none transition-colors ${
+          className={`h-9 w-full border-y px-3 text-center text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
               : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 dark:focus:border-brand-500 dark:focus:ring-brand-500/30'
@@ -75,7 +75,7 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
         <button
           type="button"
           aria-label={`Increase ${field.label}`}
-          className="flex h-10 w-10 items-center justify-center rounded-r-lg border border-l-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:active:bg-slate-500 transition-colors"
+          className="flex h-9 w-10 items-center justify-center rounded-r-lg border border-l-0 border-gray-300 bg-gray-50 text-gray-600 hover:bg-gray-100 active:bg-gray-200 dark:border-slate-600 dark:bg-slate-700 dark:text-slate-300 dark:hover:bg-slate-600 dark:active:bg-slate-500 transition-colors"
           onClick={() => handleStep(1)}
           tabIndex={-1}
         >

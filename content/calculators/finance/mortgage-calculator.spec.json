@@ -104,16 +104,17 @@
   "outputs": [
     {
       "id": "monthlyPayment",
-      "label": "Monthly Payment",
+      "label": "Monthly Payment (PITI)",
       "type": "single-value",
       "format": "currency",
       "highlight": true,
-      "description": "Estimated total monthly payment including principal, interest, property tax, and insurance (PITI)"
+      "description": "Total monthly payment including principal & interest, property tax, home insurance, and PMI if applicable."
     },
     {
       "id": "paymentBreakdown",
-      "label": "Payment Breakdown",
+      "label": "Monthly Payment Breakdown",
       "type": "chart-pie",
+      "description": "How each dollar of your monthly payment is allocated between principal & interest, taxes, insurance, and PMI.",
       "chartConfig": {
         "colors": [
           "#1A6FA0",
@@ -125,15 +126,43 @@
     },
     {
       "id": "loanSummary",
-      "label": "Loan Summary",
+      "label": "Loan Cost Summary",
       "type": "value-group",
       "format": "currency",
-      "description": "Total amounts paid over the full loan term"
+      "description": "Total amounts paid over the full loan term, including all interest and fees."
+    },
+    {
+      "id": "yearlyBreakdown",
+      "label": "Annual Principal vs. Interest",
+      "type": "chart-bar",
+      "description": "Year-by-year view of how your payments split between reducing principal and paying interest. In early years most of each payment is interest; this flips as the loan matures.",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Amount ($)",
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C"
+        ]
+      }
+    },
+    {
+      "id": "balanceOverTime",
+      "label": "Remaining Balance Over Time",
+      "type": "chart-line",
+      "description": "How your outstanding loan balance declines year by year as you make regular payments.",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#1A6FA0"
+        ]
+      }
     },
     {
       "id": "amortizationSchedule",
-      "label": "Amortization Schedule",
+      "label": "Full Amortization Schedule",
       "type": "table",
+      "description": "Month-by-month breakdown of every payment showing principal paid, interest charged, and remaining balance.",
       "columns": [
         {
           "key": "month",
@@ -160,18 +189,6 @@
           "format": "currency"
         }
       ]
-    },
-    {
-      "id": "balanceOverTime",
-      "label": "Balance Over Time",
-      "type": "chart-line",
-      "chartConfig": {
-        "xLabel": "Year",
-        "yLabel": "Balance ($)",
-        "colors": [
-          "#1A6FA0"
-        ]
-      }
     }
   ],
   "formula": "mortgage-payment",
@@ -188,8 +205,7 @@
     "home-affordability-calculator",
     "down-payment-calculator",
     "loan-calculator",
-    "rent-vs-buy-calculator",
-    "compound-interest-calculator"
+    "debt-to-income-calculator"
   ],
   "disclaimer": "finance",
   "hasFAQ": true,
@@ -214,7 +230,7 @@
     "home-affordability-calculator",
     "payment-calculator"
   ],
-  "qualityScore": 98,
+  "qualityScore": 90,
   "lastContentUpdate": "2026-03-10",
   "seasonality": null,
   "glossaryTerms": [

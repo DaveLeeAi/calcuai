@@ -192,9 +192,8 @@
     "body-fat-calculator",
     "macro-calculator",
     "bmr-calculator",
-    "heart-rate-zone-calculator",
-    "conception-calculator",
-    "one-rep-max-calculator"
+    "water-intake-calculator",
+    "heart-rate-zone-calculator"
   ],
   "disclaimer": "health",
   "hasFAQ": true,
@@ -218,7 +217,7 @@
   "duplicationRisk": [
     "bmr-calculator"
   ],
-  "qualityScore": 100,
+  "qualityScore": 90,
   "lastContentUpdate": "2026-03-10",
   "seasonality": "new-year",
   "glossaryTerms": [

@@ -1,0 +1,166 @@
+{
+  "id": "credit-card-payoff-calculator",
+  "title": "Credit Card Payoff Calculator",
+  "slug": "credit-card-payoff-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "credit card payoff calculator",
+  "metaTitle": "Credit Card Payoff Calculator — How Long to Pay Off & Total Interest",
+  "metaDescription": "Calculate how long it takes to pay off your credit card and how much interest you'll pay. See your payoff schedule month by month. Free credit card payoff calculator.",
+  "inputs": [
+    {
+      "id": "balance",
+      "label": "Credit Card Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Your current credit card balance."
+    },
+    {
+      "id": "annualRate",
+      "label": "Annual Interest Rate (APR)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 40,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Your card's annual percentage rate (APR). Average is 22–24%."
+    },
+    {
+      "id": "monthlyPayment",
+      "label": "Monthly Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 100000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Fixed amount you'll pay each month. Must exceed minimum payment."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthsToPayoff",
+      "label": "Months to Pay Off",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "totalPaid",
+      "label": "Total Amount Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Payment Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "balanceOverTime",
+      "label": "Balance Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Month",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#2563eb",
+          "#dc2626"
+        ]
+      }
+    },
+    {
+      "id": "payoffSchedule",
+      "label": "Payoff Schedule",
+      "type": "table",
+      "columns": [
+        {
+          "key": "month",
+          "label": "Month"
+        },
+        {
+          "key": "payment",
+          "label": "Payment",
+          "format": "currency"
+        },
+        {
+          "key": "principal",
+          "label": "Principal",
+          "format": "currency"
+        },
+        {
+          "key": "interest",
+          "label": "Interest",
+          "format": "currency"
+        },
+        {
+          "key": "balance",
+          "label": "Balance",
+          "format": "currency"
+        }
+      ]
+    }
+  ],
+  "formula": "credit-card-payoff",
+  "features": [
+    "chart",
+    "amortization-table"
+  ],
+  "relatedCalculators": [
+    "debt-payoff-calculator",
+    "loan-calculator",
+    "compound-interest-calculator",
+    "savings-calculator",
+    "payment-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Iterative amortization with fixed payment per CFPB credit card payoff disclosure requirements (TILA Section 127(b)(11))",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "debt-payoff-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "apr",
+    "principal",
+    "interest-rate",
+    "compound-interest",
+    "amortization"
+  ],
+  "methodologyTopics": [
+    "amortization"
+  ]
+}

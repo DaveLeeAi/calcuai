@@ -163,6 +163,28 @@ All 25 flagship calculators pass all 6 quality gates. Manual review completed on
 ### Milestone 3: Full 94 Live
 All 94 standalone calculators + 6 tab/mode features live. Full `npm run qa` passes. Sitemap submitted to GSC.
 
+### Milestone 4: Hardening ✅ COMPLETE
+- [x] Fix 3 broken formula references
+- [ ] Expand 2 thin content pages to meet word minimums
+- [x] Wire up quality scoring system and evaluate all 28 draft specs
+- [x] Build auto-discovery formula registry (replace manual imports)
+- [x] Add missing infrastructure (robots.txt, URL middleware, HTML sitemap, OG images)
+- [x] Build glossary pages (terms referenced by 3+ calculators)
+- [x] Build methodology pages (complex formula deep-dives)
+- [x] Audit hasFAQ consistency (81 specs claim FAQ — verify MDX matches)
+- [x] Fix sitemap lastmod to use spec.lastContentUpdate
+- [ ] Prepare for 1,000+ scale (split sitemap, CI/CD pipeline)
+
+### Milestone 5: Pre-Launch (CURRENT)
+- [ ] Filter draft specs from sitemap and routes (age-calc, exponent-calc)
+- [ ] Migrate state tax URLs from /calculators/finance/ to /finance/
+- [ ] Add Sales Tax by State section to finance category hub
+- [ ] Domain setup + Vercel deployment
+- [ ] Google Search Console submission
+- [ ] Analytics integration
+- [ ] AdSense integration
+- [ ] Final cross-browser + mobile QA
+
 ## Code Style
 - TypeScript strict mode, no `any` types in formula modules
 - Functional components with hooks (no class components)

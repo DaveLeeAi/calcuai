@@ -45,7 +45,7 @@ export function calculateCompoundInterest(inputs: Record<string, unknown>): Reco
   const principal = Number(inputs.initialDeposit) || 0;
   const monthlyContribution = Number(inputs.monthlyContribution) || 0;
   const annualRate = (Number(inputs.annualRate) || 0) / 100;
-  const compFreq = parseInt(String(inputs.compoundingFrequency) || '12', 10);
+  const compFreq = Math.max(1, parseInt(String(inputs.compoundingFrequency) || '12', 10) || 1);
   const years = Number(inputs.years) || 0;
 
   // Convert monthly contribution to per-compounding-period contribution

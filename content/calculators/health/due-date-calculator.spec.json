@@ -169,6 +169,7 @@
   "relatedCalculators": [
     "pregnancy-calculator",
     "conception-calculator",
+    "ovulation-calculator",
     "age-calculator",
     "date-calculator",
     "countdown-calculator"

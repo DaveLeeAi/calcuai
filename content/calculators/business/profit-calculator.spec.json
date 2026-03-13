@@ -145,7 +145,7 @@
     ".bluf-intro",
     ".formula-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Gross Profit = Revenue − COGS; Operating Profit = Gross Profit − Operating Expenses; Net Profit = Operating Profit − (Operating Profit × Tax Rate); Profit per Unit = Net Profit / Units Sold",
   "formulaAuditDate": "2026-03-11",
@@ -157,7 +157,7 @@
     "margin-calculator",
     "revenue-calculator"
   ],
-  "qualityScore": 85,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null,
   "glossaryTerms": [

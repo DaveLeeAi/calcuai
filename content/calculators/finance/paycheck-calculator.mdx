@@ -1,0 +1,142 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On a \$5,000 biweekly gross paycheck, a single filer in a 5% state tax state with a 6% 401(k) contribution and \$200 health insurance premium takes home approximately \$3,450 — meaning about 31% of every paycheck goes to taxes and deductions before you see a dollar. This paycheck calculator estimates your take-home pay after federal income tax, state income tax, Social Security (6.2%), Medicare (1.45%), 401(k) contributions, and health insurance premiums using 2025 IRS tax brackets.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Paycheck Breakdown Shows */}
+## What Your Paycheck Breakdown Shows
+
+Your paycheck breakdown reveals exactly where every dollar goes before it reaches your bank account. The **federal income tax** withholding is calculated using the 2025 progressive bracket system — not a flat rate. This means your first dollars of taxable income are taxed at 10%, with higher portions taxed at progressively higher rates up to 37%. Your pre-tax deductions (401(k) and health insurance) reduce the income subject to federal tax, which is why increasing your 401(k) contribution lowers your tax bill.
+
+**FICA taxes** (Social Security and Medicare) are flat-rate and unavoidable. Social Security takes 6.2% of every dollar up to the 2025 wage base of \$176,100. Medicare takes 1.45% with no cap. Combined, FICA consumes 7.65% of your gross pay — on a \$5,000 paycheck, that is \$382.50 before any income tax is calculated. Your employer pays a matching 7.65% on top of your share, meaning the true FICA burden is 15.3% of your wages.
+
+The **pie chart** shows the proportional split between take-home pay and each deduction category. For most middle-income earners, take-home pay represents 65–75% of gross pay. If your take-home percentage is below 60%, you may be over-withholding federal tax (check your W-4 allowances) or carrying a heavy state tax burden. Use the [income tax calculator](/finance/income-tax-calculator) to verify your annual federal tax liability and compare it to your total withholding.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your gross pay per paycheck** — this is the amount before any deductions, shown at the top of your pay stub. If you only know your annual salary, divide by the number of pay periods (26 for biweekly, 24 for semimonthly, 12 for monthly). A \$75,000 annual salary equals \$2,884.62 per biweekly paycheck.
+
+2. **Select your pay frequency** — choose Weekly (52 paychecks/year), Bi-Weekly (26), Semi-Monthly (24), or Monthly (12). This affects the annualized income used for federal tax bracket calculations. A \$5,000 biweekly paycheck annualizes to \$130,000, while a \$5,000 semimonthly paycheck annualizes to \$120,000 — different tax outcomes.
+
+3. **Choose your filing status** — Single, Married Filing Jointly, or Head of Household. This determines your standard deduction (\$15,000 Single, \$30,000 MFJ, \$22,500 HOH in 2025) and which tax bracket thresholds apply. Married Filing Jointly generally produces the lowest tax for couples.
+
+4. **Enter your state income tax rate** — enter 0% if you live in a no-income-tax state (Alaska, Florida, Nevada, New Hampshire, South Dakota, Tennessee, Texas, Washington, Wyoming). Otherwise, enter your state's marginal rate. State rates vary from 1% (North Dakota lowest bracket) to 13.3% (California top bracket).
+
+5. **Set your 401(k) contribution percentage** — this is your pre-tax contribution as a percentage of gross pay. The 2025 employee contribution limit is \$23,500 (under age 50) or \$31,000 (age 50+). A 6% contribution on a \$5,000 paycheck equals \$300 per paycheck — and reduces your federal taxable income by \$7,800 annually.
+
+6. **Enter your health insurance premium** — the per-paycheck amount deducted for employer-sponsored health insurance. This is a pre-tax deduction that reduces your taxable income. Average employee-only premium is approximately \$130/paycheck for biweekly pay in 2024 (KFF Employer Health Benefits Survey).
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Take-home pay is gross pay minus all deductions:
+
+$$\text{Net Pay} = \text{Gross Pay} - \text{Federal Tax} - \text{State Tax} - \text{SS} - \text{Medicare} - \text{401(k)} - \text{Health Ins.}$$
+
+**Federal tax** uses the progressive bracket system. First, calculate taxable income:
+
+$$\text{Annual Taxable} = (\text{Gross Pay} - \text{401(k)} - \text{Health Ins.}) \times \text{Periods/Year} - \text{Std. Deduction}$$
+
+Then apply progressive brackets and divide by pay periods:
+
+$$\text{Federal Tax/Paycheck} = \frac{\sum_{i=1}^{7} r_i \times \min(\max(\text{Taxable} - B_{i-1}, 0),\; B_i - B_{i-1})}{\text{Periods per Year}}$$
+
+**FICA taxes** are flat-rate:
+
+$$\text{Social Security} = \text{Gross Pay} \times 0.062 \quad (\text{annual cap: } \$176{,}100)$$
+$$\text{Medicare} = \text{Gross Pay} \times 0.0145$$
+
+**State tax** applies to taxable pay per paycheck:
+
+$$\text{State Tax} = (\text{Gross Pay} - \text{401(k)} - \text{Health Ins.}) \times \frac{\text{State Rate}}{100}$$
+
+**Source:** 2025 federal tax brackets and standard deductions per IRS Revenue Procedure 2024-40. FICA rates per SSA Publication No. 05-10003 (2025).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Single Filer — \$5,000 Biweekly, 5% State, 6% 401(k)
+
+**Inputs:**
+- Gross Pay: \$5,000 biweekly
+- Filing Status: Single
+- State Tax Rate: 5%
+- 401(k): 6%
+- Health Insurance: \$200/paycheck
+
+**Step-by-step:**
+
+1. Pre-tax deductions per paycheck: 401(k) = \$5,000 × 6% = **\$300**; Health = **\$200**
+2. Annual gross: \$5,000 × 26 = **\$130,000**
+3. Annual pre-tax deductions: (\$300 + \$200) × 26 = **\$13,000**
+4. AGI: \$130,000 − \$13,000 = **\$117,000**
+5. Taxable income: \$117,000 − \$15,000 (std. deduction) = **\$102,000**
+6. Federal tax (annual): 10% on \$11,925 + 12% on \$36,550 + 22% on \$53,525 = \$1,192.50 + \$4,386 + \$11,775.50 = **\$17,354**
+7. Federal tax per paycheck: \$17,354 ÷ 26 = **\$667.46**
+8. Social Security: \$5,000 × 6.2% = **\$310.00**
+9. Medicare: \$5,000 × 1.45% = **\$72.50**
+10. State tax: (\$5,000 − \$300 − \$200) × 5% = **\$225.00**
+11. Net pay: \$5,000 − \$667.46 − \$225 − \$310 − \$72.50 − \$300 − \$200 = **\$3,225.04**
+
+**Interpretation:** This worker keeps about 64.5% of their gross pay. The combined tax burden (federal + state + FICA) is \$1,274.96, while voluntary deductions (401k + health) add \$500. Increasing the 401(k) contribution to 10% would reduce take-home by \$200 but save approximately \$44 in federal tax per paycheck, making the true cost of the extra savings only \$156.
+
+### Example 2: Married Filing Jointly — \$8,000 Monthly, No State Tax
+
+**Inputs:**
+- Gross Pay: \$8,000 monthly
+- Filing Status: Married Filing Jointly
+- State Tax Rate: 0% (Texas)
+- 401(k): 0%
+- Health Insurance: \$0
+
+**Step-by-step:**
+
+1. Annual gross: \$8,000 × 12 = **\$96,000**
+2. Taxable: \$96,000 − \$30,000 = **\$66,000**
+3. Federal tax: 10% on \$23,850 + 12% on \$42,150 = \$2,385 + \$5,058 = **\$7,443**
+4. Federal per paycheck: \$7,443 ÷ 12 = **\$620.25**
+5. Social Security: \$8,000 × 6.2% = **\$496.00**
+6. Medicare: \$8,000 × 1.45% = **\$116.00**
+7. Net pay: \$8,000 − \$620.25 − \$0 − \$496 − \$116 = **\$6,767.75**
+
+**Interpretation:** Living in a no-income-tax state saves this couple \$330/month in state taxes (compared to a 5% state). Their effective federal rate is only 7.75% of gross income — well below the 12% marginal bracket — thanks to the \$30,000 MFJ standard deduction sheltering a substantial portion of income.
+
+## Key Factors That Affect Your Take-Home Pay
+
+**Filing status** has a major impact. The 2025 Married Filing Jointly standard deduction (\$30,000) is double the Single deduction (\$15,000), and the bracket thresholds are roughly doubled through the 32% tier. A single filer earning \$130,000 pays approximately \$20,321 in federal tax, while a married couple filing jointly on the same income pays only \$12,254 — a \$8,067 annual difference.
+
+**Pre-tax contributions** reduce taxable income at your highest marginal rate. A 6% 401(k) contribution on a \$130,000 salary saves \$7,800 in taxable income. At a 22% marginal rate, that is \$1,716 in annual federal tax savings — meaning the true cost of saving \$7,800 is only \$6,084 out of pocket.
+
+**State taxes** vary widely. Nine states have no income tax at all. California's top rate reaches 13.3%. For a \$130,000 earner, the difference between Texas (0%) and California (~9.3% effective) is approximately \$12,000 per year — equivalent to more than two extra paychecks.
+
+**Pay frequency** affects withholding precision. Biweekly (26 paychecks) annualizes to a slightly higher income than semimonthly (24 paychecks) for the same per-paycheck amount, which can push you into a marginally higher bracket.
+
+## Frequently Asked Questions
+
+### How much of my paycheck goes to taxes?
+For most American workers, total taxes (federal, state, Social Security, and Medicare) consume 20–35% of gross pay. A single filer earning \$130,000 annually in a 5% state tax state loses approximately 25% to all taxes combined. Federal income tax is the largest component (10–15% for middle-income earners), followed by FICA (7.65%), then state tax. Increasing your 401(k) contribution reduces your federal and state tax burden.
+
+### Why is my take-home pay lower than expected?
+The most common reasons are: (1) your W-4 withholding is set to a higher rate than necessary — check if you claimed zero allowances, (2) you forgot to account for FICA (7.65% combined), (3) health insurance premiums were higher than expected, and (4) your annual salary annualizes differently depending on whether you are paid biweekly (26 periods) vs. semimonthly (24 periods). Use this calculator to model your exact deductions.
+
+### How does increasing my 401(k) contribution affect my paycheck?
+Every dollar contributed to a pre-tax 401(k) reduces your federal taxable income. At a 22% marginal rate, contributing an additional \$100/paycheck costs only \$78 in reduced take-home pay — because \$22 would have gone to federal tax anyway. The "true cost" formula is: additional contribution × (1 - marginal tax rate). State tax savings provide an additional reduction if your state has income tax.
+
+### What are FICA taxes?
+FICA (Federal Insurance Contributions Act) includes two separate payroll taxes: Social Security at 6.2% of gross wages (capped at \$176,100 in 2025) and Medicare at 1.45% of all wages (no cap). Your employer pays a matching 6.2% + 1.45%, making the combined rate 15.3%. Self-employed individuals pay both halves (15.3%) through self-employment tax. These taxes fund Social Security retirement benefits and Medicare health coverage.
+
+## Sources & Methodology
+
+- Internal Revenue Service. "Revenue Procedure 2024-40: 2025 Tax Brackets and Standard Deductions." Published October 2024.
+- Internal Revenue Service. "Publication 15-T: Federal Income Tax Withholding Methods." 2025 Edition.
+- Social Security Administration. "2025 Social Security Changes — FICA Tax Rates and Wage Base." Publication No. 05-10003.
+- Kaiser Family Foundation. "2024 Employer Health Benefits Survey." Published October 2024.

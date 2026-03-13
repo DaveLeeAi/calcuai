@@ -177,7 +177,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Conversion via base unit (square meters): result = value × (fromUnit.toBase / toUnit.toBase). NIST exact conversion factors.",
   "formulaAuditDate": "2026-03-11",
@@ -186,7 +186,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 87,
+  "qualityScore": 77,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

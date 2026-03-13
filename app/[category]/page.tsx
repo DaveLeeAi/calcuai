@@ -5,6 +5,7 @@ import { getAllCategories, getCategory, getSpecsByCategory } from '@/lib/content
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { buildCategoryMetadata, buildCollectionPageSchema } from '@/components/seo/MetaTags';
+import salesTaxData from '@/content/data/us-sales-tax-2026.json';
 
 interface Props {
   params: { category: string };
@@ -75,7 +76,7 @@ export default function CategoryHubPage({ params }: Props) {
       )}
 
       {/* All calculators in this category */}
-      <section>
+      <section className="mb-12">
         <h2 className="section-heading">All {cat.name}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
           {specs.map((spec) => (
@@ -88,6 +89,31 @@ export default function CategoryHubPage({ params }: Props) {
           <p className="text-gray-500 dark:text-slate-400">No calculators published in this category yet. Coming soon.</p>
         )}
       </section>
+
+      {/* State Sales Tax Calculators — finance category only */}
+      {params.category === 'finance' && (
+        <section>
+          <h2 className="section-heading">State Sales Tax Calculators</h2>
+          <p className="text-gray-600 dark:text-slate-400 mb-6">
+            Find the exact sales tax rate for your state, with worked examples, local rate breakdowns, and grocery and clothing exemptions.
+          </p>
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-2">
+            {salesTaxData.states.map((state) => {
+              const slug = state.stateName.toLowerCase().replace(/\s+/g, '-') + '-sales-tax';
+              return (
+                <li key={state.stateCode}>
+                  <Link
+                    href={`/finance/${slug}`}
+                    className="text-sm text-brand-500 hover:text-brand-600 dark:text-brand-400 dark:hover:text-brand-300 hover:underline"
+                  >
+                    Calculate sales tax in {state.stateName}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
     </div>
   );
 }

@@ -250,7 +250,8 @@
     "mean-median-mode-calculator",
     "standard-deviation-calculator",
     "ratio-calculator",
-    "logarithm-calculator"
+    "logarithm-calculator",
+    "permutation-combination-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": true,

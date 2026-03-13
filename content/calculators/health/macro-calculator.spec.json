@@ -204,7 +204,8 @@
     "bmr-calculator",
     "body-fat-calculator",
     "ideal-weight-calculator",
-    "one-rep-max-calculator"
+    "one-rep-max-calculator",
+    "water-intake-calculator"
   ],
   "disclaimer": "health",
   "hasFAQ": true,

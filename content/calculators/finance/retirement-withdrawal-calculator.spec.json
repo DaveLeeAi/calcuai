@@ -1,0 +1,160 @@
+{
+  "id": "retirement-withdrawal-calculator",
+  "title": "Retirement Withdrawal Calculator",
+  "slug": "retirement-withdrawal-calculator",
+  "category": "finance",
+  "subcategory": "retirement",
+  "primaryKeyword": "retirement withdrawal calculator",
+  "metaTitle": "Retirement Withdrawal Calculator — Free Retirement Withdrawal Calculator | CalcuAI",
+  "metaDescription": "Calculate how long your retirement savings will last. Model withdrawal rates, inflation adjustments, and investment returns. See your year-by-year balance projection.",
+  "inputs": [
+    {
+      "id": "portfolioBalance",
+      "label": "Portfolio Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1000000,
+      "min": 0,
+      "max": 100000000,
+      "step": 10000,
+      "prefix": "$",
+      "helpText": "Total retirement savings at start"
+    },
+    {
+      "id": "annualWithdrawal",
+      "label": "Annual Withdrawal",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 40000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Amount to withdraw each year"
+    },
+    {
+      "id": "expectedReturn",
+      "label": "Expected Annual Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 6,
+      "min": 0,
+      "max": 20,
+      "step": 0.1,
+      "helpText": "Expected annual investment return"
+    },
+    {
+      "id": "inflationRate",
+      "label": "Inflation Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "Expected annual inflation rate"
+    },
+    {
+      "id": "adjustForInflation",
+      "label": "Adjust Withdrawals for Inflation",
+      "type": "toggle",
+      "required": true,
+      "defaultValue": true,
+      "helpText": "Increase withdrawals annually for inflation"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "yearsPortfolioLasts",
+      "label": "Years Portfolio Lasts",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "totalWithdrawn",
+      "label": "Total Amount Withdrawn",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "withdrawalRate",
+      "label": "Initial Withdrawal Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1
+    },
+    {
+      "id": "summary",
+      "label": "Withdrawal Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "balanceOverTime",
+      "label": "Portfolio Balance Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": ["#2563eb", "#ef4444"]
+      }
+    },
+    {
+      "id": "yearByYear",
+      "label": "Year-by-Year Breakdown",
+      "type": "table",
+      "columns": [
+        { "key": "year", "label": "Year" },
+        { "key": "startBalance", "label": "Start Balance", "format": "currency" },
+        { "key": "withdrawal", "label": "Withdrawal", "format": "currency" },
+        { "key": "growth", "label": "Growth", "format": "currency" },
+        { "key": "endBalance", "label": "End Balance", "format": "currency" }
+      ]
+    }
+  ],
+  "formula": "retirement-withdrawal",
+  "features": ["compare-scenarios", "chart"],
+  "relatedCalculators": [
+    "retirement-calculator",
+    "401k-calculator",
+    "fire-calculator",
+    "investment-calculator",
+    "inflation-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "William Bengen, Journal of Financial Planning (1994); Trinity Study",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Year-by-year withdrawal simulation: B(t+1) = (B(t) - W(t)) * (1 + r); W(t) = W0 * (1 + i)^t per Bengen (1994)",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "retirement-calculator",
+    "fire-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "compound-interest",
+    "inflation",
+    "interest-rate"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

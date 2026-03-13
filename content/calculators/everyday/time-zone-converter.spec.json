@@ -338,7 +338,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "targetTime = sourceTime - sourceUTCOffset + targetUTCOffset. Offsets from IANA Time Zone Database.",
   "formulaAuditDate": "2026-03-11",
@@ -347,7 +347,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 76,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

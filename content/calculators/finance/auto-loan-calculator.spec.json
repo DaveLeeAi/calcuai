@@ -61,12 +61,30 @@
       "required": true,
       "defaultValue": "60",
       "options": [
-        { "value": "24", "label": "24 months (2 years)" },
-        { "value": "36", "label": "36 months (3 years)" },
-        { "value": "48", "label": "48 months (4 years)" },
-        { "value": "60", "label": "60 months (5 years)" },
-        { "value": "72", "label": "72 months (6 years)" },
-        { "value": "84", "label": "84 months (7 years)" }
+        {
+          "value": "24",
+          "label": "24 months (2 years)"
+        },
+        {
+          "value": "36",
+          "label": "36 months (3 years)"
+        },
+        {
+          "value": "48",
+          "label": "48 months (4 years)"
+        },
+        {
+          "value": "60",
+          "label": "60 months (5 years)"
+        },
+        {
+          "value": "72",
+          "label": "72 months (6 years)"
+        },
+        {
+          "value": "84",
+          "label": "84 months (7 years)"
+        }
       ]
     },
     {
@@ -118,7 +136,11 @@
       "label": "Cost Breakdown",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#1A6FA0", "#E74C3C", "#F39C12"]
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C",
+          "#F39C12"
+        ]
       }
     },
     {
@@ -128,7 +150,9 @@
       "chartConfig": {
         "xLabel": "Month",
         "yLabel": "Balance ($)",
-        "colors": ["#1A6FA0"]
+        "colors": [
+          "#1A6FA0"
+        ]
       }
     },
     {
@@ -136,16 +160,38 @@
       "label": "Amortization Schedule",
       "type": "table",
       "columns": [
-        { "key": "month", "label": "Month" },
-        { "key": "payment", "label": "Payment", "format": "currency" },
-        { "key": "principal", "label": "Principal", "format": "currency" },
-        { "key": "interest", "label": "Interest", "format": "currency" },
-        { "key": "balance", "label": "Balance", "format": "currency" }
+        {
+          "key": "month",
+          "label": "Month"
+        },
+        {
+          "key": "payment",
+          "label": "Payment",
+          "format": "currency"
+        },
+        {
+          "key": "principal",
+          "label": "Principal",
+          "format": "currency"
+        },
+        {
+          "key": "interest",
+          "label": "Interest",
+          "format": "currency"
+        },
+        {
+          "key": "balance",
+          "label": "Balance",
+          "format": "currency"
+        }
       ]
     }
   ],
   "formula": "auto-loan",
-  "features": ["chart", "amortization-table"],
+  "features": [
+    "chart",
+    "amortization-table"
+  ],
   "relatedCalculators": [
     "loan-calculator",
     "payment-calculator",
@@ -160,8 +206,12 @@
   "requiresSources": true,
   "formulaCitation": "CFPB / Federal Reserve consumer credit data",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Standard fixed-rate amortization formula M = P[r(1+r)^n]/[(1+r)^n-1] per CFPB auto lending disclosure requirements",
   "formulaAuditDate": "2026-03-12",
@@ -169,10 +219,21 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["loan-calculator", "payment-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "loan-calculator",
+    "payment-calculator"
+  ],
+  "qualityScore": 96,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null,
-  "glossaryTerms": ["amortization", "apr", "principal", "interest-rate", "compound-interest"],
-  "methodologyTopics": ["amortization"]
+  "glossaryTerms": [
+    "amortization",
+    "apr",
+    "principal",
+    "interest-rate",
+    "compound-interest"
+  ],
+  "methodologyTopics": [
+    "amortization"
+  ]
 }

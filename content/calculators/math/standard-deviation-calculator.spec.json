@@ -114,10 +114,9 @@
     "percentage-calculator",
     "mean-median-mode-calculator",
     "probability-calculator",
+    "permutation-combination-calculator",
     "fraction-calculator",
-    "final-grade-calculator",
-    "gpa-calculator",
-    "exponent-calculator"
+    "gpa-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": true,
@@ -141,7 +140,7 @@
   "duplicationRisk": [
     "mean-median-mode-calculator"
   ],
-  "qualityScore": 98,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-10",
   "seasonality": null
 }

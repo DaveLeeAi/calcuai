@@ -1,0 +1,139 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Consolidating \$25,000 in credit card debt from 18% APR to an 8% personal loan for 5 years drops your monthly payment from \$750 to \$506.91 — saving \$243.09 per month and over \$5,500 in total interest. Debt consolidation replaces multiple high-rate debts with a single, lower-rate loan, simplifying payments and often cutting your total cost significantly. Enter your current debt details and the consolidation offer below to see if the numbers work in your favor.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Show */}
+## What Your Consolidation Results Show
+
+The **monthly savings** figure is the immediate cash flow impact. If your current monthly debt payments total \$750 and a consolidation loan payment is \$507, you free up \$243 per month. That is money you can redirect toward an emergency fund, retirement contributions, or accelerated debt payoff.
+
+The **total interest saved** reveals the true long-term benefit of consolidation. High-interest debt — especially credit card debt averaging 18–25% APR — generates enormous interest charges over time. A \$25,000 credit card balance at 18% with \$750/month payments accrues approximately \$8,600 in interest before payoff. The same balance at 8% for 5 years costs only \$5,415 in interest — a savings of over \$3,100. The larger the rate gap between your current debts and the consolidation loan, the greater your savings.
+
+The **current vs consolidation comparison** puts both paths side by side so you can verify that consolidation actually saves money. This is critical because consolidation is not always better. If the new loan carries a longer term, origination fees, or a rate that is not meaningfully lower than your current weighted average, you could end up paying more in total despite a lower monthly payment. Always check total interest paid, not just the monthly number.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your total debt balance** — add up all the balances you plan to consolidate. Include credit cards, personal loans, medical debt, or any other accounts you would roll into a single loan.
+
+2. **Enter your current average interest rate** — calculate the weighted average APR across all your debts. If you have two cards at 18% and 22% with equal balances, your average is 20%. For a rough estimate, use the rate on your highest-balance card.
+
+3. **Enter your current monthly payment** — add up the total monthly payments you currently make across all the debts being consolidated. Include minimum payments and any extra amounts you regularly pay.
+
+4. **Enter the consolidation loan rate** — this is the APR offered by the consolidation lender. Personal loan rates for debt consolidation typically range from 6% to 20% depending on credit score and lender. Balance transfer cards may offer 0% for 12–21 months.
+
+5. **Select the consolidation term** — choose the repayment period for the new loan. Shorter terms mean higher monthly payments but less total interest. A 3-year term is aggressive, 5 years is standard, and 7 years extends repayment but increases total cost.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## How This Is Calculated
+
+**Current debt path** — the calculator iterates monthly until the balance reaches zero:
+
+$$B_{i+1} = B_i \times (1 + r_{current}/12) - P_{current}$$
+
+Where **B** is the balance, **r** is the annual rate, and **P** is the monthly payment. The iteration continues until **B** reaches zero or the 600-month safety cap.
+
+**Consolidation loan path** — standard amortization formula:
+
+$$M_{new} = D \times \frac{r_{new}(1 + r_{new})^n}{(1 + r_{new})^n - 1}$$
+
+Where:
+
+- **D** = total debt balance being consolidated (dollars)
+- **r_new** = monthly interest rate on consolidation loan (annual rate / 12)
+- **n** = consolidation loan term in months
+
+**Savings calculations:**
+
+$$\text{Monthly Savings} = P_{current} - M_{new}$$
+
+$$\text{Total Interest Saved} = I_{current} - I_{consolidation}$$
+
+**Source:** Consumer Financial Protection Bureau (CFPB) — debt management and consolidation guidelines.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Credit Card Debt Consolidation — \$25,000 at 18% to 8%
+
+**Inputs:**
+- Total debt: \$25,000
+- Current average rate: 18% APR
+- Current monthly payment: \$750
+- Consolidation rate: 8%
+- Consolidation term: 60 months
+
+**Step-by-step:**
+
+1. **Current path:** At 18% with \$750/month, the \$25,000 balance takes approximately 43 months to pay off
+2. **Current total interest:** Approximately \$7,114
+3. **Consolidation payment:** \$25,000 at 8%/12 for 60 months = **\$506.91/mo**
+4. **Consolidation total interest:** (\$506.91 × 60) − \$25,000 = **\$5,415**
+5. **Monthly savings:** \$750 − \$506.91 = **\$243.09/mo**
+6. **Total interest saved:** \$7,114 − \$5,415 = **\$1,699**
+
+**Interpretation:** Consolidation saves \$243/month in cash flow and approximately \$1,699 in total interest. The trade-off: your payoff timeline extends from 43 months to 60 months. If minimizing total cost is your priority, consider a 36-month term at 8% — the payment rises to \$783/month but total interest drops to \$3,189, saving \$3,925 versus the current path.
+
+### Example 2: Mixed Debt Consolidation — \$50,000 at 22% to 9%
+
+**Inputs:**
+- Total debt: \$50,000 (cards + personal loan)
+- Current average rate: 22%
+- Current monthly payment: \$1,500
+- Consolidation rate: 9%
+- Consolidation term: 60 months
+
+**Step-by-step:**
+
+1. **Current path:** At 22% with \$1,500/month, payoff takes approximately 52 months
+2. **Current total interest:** Approximately \$27,600
+3. **Consolidation payment:** \$50,000 at 9%/12 for 60 months = **\$1,037.92/mo**
+4. **Consolidation total interest:** (\$1,037.92 × 60) − \$50,000 = **\$12,275**
+5. **Monthly savings:** \$1,500 − \$1,037.92 = **\$462.08/mo**
+6. **Total interest saved:** \$27,600 − \$12,275 = **\$15,325**
+
+**Interpretation:** This is a strong consolidation case. The 13-point rate drop saves over \$15,000 in total interest and frees up \$462/month. At this scale, even accounting for a 3–5% origination fee (\$1,500–\$2,500), the consolidation loan is decisively cheaper.
+
+## Key Factors That Affect Your Results
+
+**Rate Gap** — The difference between your current average rate and the consolidation rate is the primary driver of savings. A \$25,000 consolidation saves approximately \$1,700 when the gap is 10 percentage points (18% to 8%) and over \$4,500 when the gap is 15 points (23% to 8%). If the gap is less than 3 points, the savings may not justify origination fees.
+
+**Loan Term** — A longer consolidation term lowers your monthly payment but increases total interest. On \$25,000 at 8%, a 3-year term costs \$3,189 in interest while a 7-year term costs \$7,587. Choose the shortest term you can comfortably afford.
+
+**Origination Fees** — Many consolidation loans charge 1–8% of the loan amount upfront, deducted from your disbursement. A 5% fee on \$25,000 is \$1,250. Subtract this from your total interest saved to find your real net benefit.
+
+**Behavior Change** — The Federal Reserve Bank of New York found that 70% of borrowers who consolidate credit card debt run balances back up within 12 months. Consolidation only works long-term if you stop using the cards. Consider closing or freezing the consolidated accounts.
+
+## Frequently Asked Questions
+
+### Is debt consolidation always a good idea?
+
+No. Consolidation saves money only when the new loan rate is meaningfully lower than your current weighted average rate — typically by at least 3 percentage points after accounting for fees. If the consolidation loan extends your repayment timeline significantly, you may pay more in total interest despite a lower rate. Always check both the monthly payment and the total interest figures.
+
+### What credit score do I need for a consolidation loan?
+
+Most lenders require a minimum score of 580–620 for a debt consolidation personal loan, but rates below 10% typically require scores above 700. Credit unions often offer lower rates than online lenders for borrowers in the 640–700 range. Rates above 15% may not provide enough savings to justify consolidation.
+
+### Should I use a balance transfer card instead of a loan?
+
+A 0% APR balance transfer card can be superior to a loan if you can pay off the full balance within the promotional period (typically 12–21 months). The key risk: any remaining balance after the promo period reverts to the card's standard rate (often 20–25%), which can erase all savings. Only use this strategy if you can realistically pay the balance to zero before the promo expires.
+
+### Does debt consolidation hurt my credit score?
+
+Short-term, consolidation may cause a small dip from the hard inquiry and new account opening. Long-term, it typically helps your score by lowering your credit utilization ratio (consolidated loan balances do not count against revolving utilization) and simplifying on-time payments. Closing credit card accounts after consolidation can temporarily reduce your available credit and raise utilization — consider keeping them open but unused.
+
+## Sources & Methodology
+
+- **Loan amortization formula:** Standard fixed-rate amortization per CFPB Regulation Z disclosures.
+- **CFPB guidance:** "What you should know about debt consolidation" — Consumer Financial Protection Bureau.
+- **Consolidation rate data:** Average personal loan rates per Federal Reserve G.19 statistical release (2026).
+- **Post-consolidation behavior:** Federal Reserve Bank of New York — "Redefault Risk in the Aftermath of Consumer Bankruptcy" and consumer credit panel data on balance reloading.

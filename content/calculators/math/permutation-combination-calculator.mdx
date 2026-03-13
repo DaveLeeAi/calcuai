@@ -1,0 +1,167 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Permutations count arrangements where order matters; combinations count selections where it doesn't. From 52 cards, the number of possible 5-card poker hands is C(52,5) = 2,598,960 — but the number of ordered arrangements P(52,5) = 311,875,200. This calculator computes both P(n,r) and C(n,r) with or without repetition for values up to n = 170.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Understanding Permutations vs. Combinations
+
+The distinction between permutations and combinations hinges on a single question: does order matter?
+
+**Permutations** count the number of ways to arrange items in a specific order. If you are awarding gold, silver, and bronze medals to 3 of 10 athletes, the order of selection matters — giving gold to Alice and silver to Bob is a different outcome than gold to Bob and silver to Alice. The number of arrangements is P(10,3) = 10 × 9 × 8 = 720.
+
+**Combinations** count the number of ways to select items without regard to order. If you are choosing 3 players from 10 to form a team, it does not matter who is picked first. The number of selections is C(10,3) = 120 — exactly 720 / 3! = 720 / 6 = 120, because each group of 3 can be rearranged in 3! = 6 ways.
+
+**Repetition** adds another dimension. Without repetition, each item can appear at most once in the selection. With repetition, items can be reused — like choosing 3 scoops of ice cream from 5 flavors where you can repeat a flavor. With repetition, permutations become n^r (5^3 = 125 arrangements) and combinations use the "stars and bars" formula C(n+r-1, r).
+
+Real-world applications span nearly every field. Cryptographers use permutations to calculate password complexity — an 8-character password from 62 alphanumeric characters has 62^8 = 218 trillion permutations. Statisticians use combinations to determine sample sizes. Lottery odds are pure combinations: picking 6 numbers from 49 yields C(49,6) = 13,983,816 possible tickets.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the total number of items (n)** — this is the pool you are selecting from. For a standard deck, n = 52. For a class of students, n = the class size. Maximum is 170 to stay within JavaScript's number precision.
+
+2. **Enter the number of items to choose (r)** — this is how many items you want to select or arrange. When repetition is off, r must be less than or equal to n.
+
+3. **Select the calculation mode** — choose "Permutation" if order matters, "Combination" if it does not, or "Both" to see both results side by side.
+
+4. **Toggle repetition if needed** — enable "Allow Repetition" when the same item can be chosen more than once, such as selecting digits for a combination lock or scoops of ice cream where flavors can repeat.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Permutation (without repetition)
+
+$$P(n,r) = \frac{n!}{(n-r)!}$$
+
+The number of ordered arrangements of r items chosen from n distinct items.
+
+### Combination (without repetition)
+
+$$C(n,r) = \binom{n}{r} = \frac{n!}{r!(n-r)!}$$
+
+The number of unordered selections of r items from n distinct items. Also written as "n choose r."
+
+### Permutation (with repetition)
+
+$$P_{\text{rep}}(n,r) = n^r$$
+
+Each of the r positions can be filled by any of the n items, independently.
+
+### Combination (with repetition)
+
+$$C_{\text{rep}}(n,r) = \binom{n+r-1}{r} = \frac{(n+r-1)!}{r!(n-1)!}$$
+
+Also called "stars and bars" — the number of ways to choose r items from n types when repetition is allowed and order does not matter.
+
+Where:
+
+- **n** = total number of distinct items in the pool
+- **r** = number of items being chosen or arranged
+- **n!** = n factorial = n × (n−1) × (n−2) × … × 1, with 0! = 1 by convention
+- **P(n,r)** = number of permutations (ordered arrangements)
+- **C(n,r)** = number of combinations (unordered selections)
+
+The relationship between the two: P(n,r) = C(n,r) × r! — permutations are always r-factorial times larger because each combination can be internally rearranged in r! ways.
+
+**Source:** Kenneth H. Rosen, *Discrete Mathematics and Its Applications*, 8th edition, McGraw-Hill, Chapters 6.1–6.3. Combinatorial formulas trace to Blaise Pascal's *Traité du triangle arithmétique* (1654).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Arranging Books on a Shelf (Permutation)
+
+How many ways can you arrange 3 books on a shelf chosen from a collection of 10?
+
+**Step-by-step:**
+
+1. Order matters — placing *Book A* first and *Book B* second is a different arrangement than *Book B* first and *Book A* second.
+2. n = **10** (total books), r = **3** (shelf positions)
+3. Apply the permutation formula: P(10,3) = 10! / (10−3)! = 10! / 7!
+4. Cancel common factors: 10 × 9 × 8 = **720**
+
+**Practical interpretation:** There are 720 distinct ways to fill 3 shelf positions from 10 books. If instead you only cared about which 3 books to take on a trip (order irrelevant), you would use combinations: C(10,3) = 720 / 6 = 120.
+
+### Example 2: Lottery Odds (Combination)
+
+A lottery requires you to pick 6 numbers from 1 to 49. How many possible tickets exist?
+
+**Step-by-step:**
+
+1. Order does not matter — picking 3, 17, 22, 31, 40, 45 is the same ticket regardless of the order you choose the numbers.
+2. n = **49** (available numbers), r = **6** (numbers per ticket)
+3. Apply the combination formula: C(49,6) = 49! / (6! × 43!)
+4. Compute numerator: 49 × 48 × 47 × 46 × 45 × 44 = 10,068,347,520
+5. Compute denominator: 6! = 720
+6. Result: 10,068,347,520 / 720 = **13,983,816**
+
+**Practical interpretation:** Your odds of matching all 6 numbers are 1 in 13,983,816 — roughly 1 in 14 million. This is why jackpots accumulate over many drawings before a winner emerges.
+
+### Example 3: Ice Cream Scoops (Combination with Repetition)
+
+You can choose 3 scoops from 5 flavors, and you are allowed to repeat flavors. How many different selections are possible?
+
+**Step-by-step:**
+
+1. Order does not matter and repetition is allowed.
+2. n = **5** (flavors), r = **3** (scoops)
+3. Apply the stars-and-bars formula: C(5+3−1, 3) = C(7,3)
+4. Compute: C(7,3) = 7! / (3! × 4!) = 210 / 6 = **35**
+
+**Practical interpretation:** There are 35 different scoop selections, including options like "3 vanilla" or "2 chocolate, 1 strawberry."
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Order sensitivity is the defining distinction.** If switching the positions of any two selected items creates a new outcome, use permutations. If not, use combinations. A common test: would swapping the first and second selection give a different result? If yes, permutation. If no, combination.
+
+**Repetition dramatically increases counts.** With repetition, permutations grow as n^r — exponentially — rather than as a falling factorial. For a 4-digit PIN from 10 digits: without repetition, P(10,4) = 5,040; with repetition, 10^4 = 10,000. The repetition option nearly doubles the possibilities in this case.
+
+**Factorial growth limits input range.** Factorials grow astronomically: 20! = 2.43 × 10^18, and 170! ≈ 7.26 × 10^306. This calculator caps n at 170 because 171! exceeds JavaScript's maximum representable number (approximately 1.8 × 10^308). For problems requiring larger values, use logarithmic methods or arbitrary-precision libraries.
+
+**The P-to-C ratio equals r-factorial.** For any given n and r, permutations outnumber combinations by exactly r! — because each unordered selection of r items can be internally rearranged in r! distinct ways. This means P(n,r) = C(n,r) × r!, a useful identity for checking your work.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Distinct items assumed.** The standard formulas assume all n items are distinguishable. If items are identical (e.g., 3 red balls and 2 blue balls), multiset or multinomial formulas are needed instead.
+- **No conditional constraints.** The calculator does not handle restricted selections such as "choose 3 from 10, but items A and B cannot both be selected." For constrained counting, subtract the forbidden configurations manually.
+- **n capped at 170.** JavaScript's 64-bit floating-point numbers overflow above 170! Values beyond this range require arbitrary-precision arithmetic not supported in this calculator.
+- **Integer precision limits.** For very large results (above 2^53 ≈ 9 × 10^15), JavaScript loses integer precision. Results remain accurate for the vast majority of practical problems, but combinatorial values exceeding 9 quadrillion may show rounding artifacts.
+- **With-repetition combinations assume indistinguishable copies.** Choosing 3 scoops of vanilla is treated as one outcome, not three — consistent with the stars-and-bars model.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between a permutation and a combination?
+
+A permutation counts ordered arrangements where the sequence of selection matters, while a combination counts unordered selections where only the group membership matters. Choosing a president, vice president, and secretary from 10 candidates is a permutation problem (P(10,3) = 720) because the roles are distinct. Choosing 3 committee members from 10 is a combination problem (C(10,3) = 120) because all members have equal standing. The two are related by P(n,r) = C(n,r) × r!.
+
+### When do I use permutations vs. combinations?
+
+Use permutations when the arrangement or position of each selected item creates a distinct outcome — rankings, seating orders, PIN codes, license plates, race finishes, and award assignments. Use combinations when you only care about which items are selected, not the order — lottery tickets, committee formation, card hands, sample groups, and menu selections. If swapping any two items in your selection produces a different result, use permutations; if the swap changes nothing, use combinations.
+
+### How many lottery combinations are possible?
+
+The number depends on the specific lottery format. For a "pick 6 from 49" lottery, C(49,6) = 13,983,816 possible tickets. For Powerball (5 from 69 plus 1 from 26), the total is C(69,5) × 26 = 292,201,338 possible combinations. For Mega Millions (5 from 70 plus 1 from 25), the total is C(70,5) × 25 = 302,575,350. These numbers explain why jackpot odds are so small — you have a roughly 1 in 292 million chance of winning Powerball with a single ticket.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes permutations and combinations using iterative multiplication rather than full factorial computation to maximize numerical range. For permutations without repetition, it multiplies the falling sequence n × (n−1) × … × (n−r+1) directly. For combinations, it uses the multiplicative formula C(n,r) = ∏(n−i)/(i+1) for i = 0 to min(r, n−r)−1, which avoids intermediate overflow. With-repetition permutations use simple exponentiation (n^r), and with-repetition combinations apply the same combination algorithm to C(n+r−1, r). All inputs are floored to integers before calculation. The maximum supported input is n = 170, beyond which factorial values exceed JavaScript's floating-point range.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

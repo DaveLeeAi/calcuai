@@ -225,7 +225,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Wall/ceiling area with opening deductions. Joint compound coverage (0.053 gal/sq ft) and tape/screw ratios per Gypsum Association GA-216 application guidelines and USG installation manuals.",
   "formulaAuditDate": "2026-03-11",
@@ -236,7 +236,7 @@
   "duplicationRisk": [
     "paint-calculator"
   ],
-  "qualityScore": 86,
+  "qualityScore": 76,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null,
   "glossaryTerms": [

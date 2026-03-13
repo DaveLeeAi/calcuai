@@ -1,0 +1,158 @@
+{
+  "id": "emergency-fund-calculator",
+  "title": "Emergency Fund Calculator",
+  "slug": "emergency-fund-calculator",
+  "category": "finance",
+  "subcategory": "savings",
+  "primaryKeyword": "emergency fund calculator",
+  "metaTitle": "Emergency Fund Calculator — How Much Do You Need & How Long to Save",
+  "metaDescription": "Calculate your emergency fund target based on monthly expenses. See how long it takes to build your safety net with monthly savings. Free emergency fund calculator.",
+  "inputs": [
+    {
+      "id": "monthlyExpenses",
+      "label": "Monthly Essential Expenses",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 4500,
+      "min": 0,
+      "max": 100000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total essential monthly expenses (housing, food, insurance, utilities, transportation)."
+    },
+    {
+      "id": "monthsOfCoverage",
+      "label": "Months of Coverage",
+      "type": "select",
+      "required": true,
+      "defaultValue": "6",
+      "options": [
+        {
+          "value": "3",
+          "label": "3 months"
+        },
+        {
+          "value": "6",
+          "label": "6 months (recommended)"
+        },
+        {
+          "value": "9",
+          "label": "9 months"
+        },
+        {
+          "value": "12",
+          "label": "12 months"
+        }
+      ]
+    },
+    {
+      "id": "currentSavings",
+      "label": "Current Emergency Savings",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 1000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Current emergency fund balance."
+    },
+    {
+      "id": "monthlySavingsContribution",
+      "label": "Monthly Savings Contribution",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 100000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Amount you can save toward emergency fund each month."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "targetFund",
+      "label": "Emergency Fund Target",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "currentGap",
+      "label": "Amount Still Needed",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthsToGoal",
+      "label": "Months to Reach Goal",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "percentFunded",
+      "label": "Current Progress",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "summary",
+      "label": "Emergency Fund Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "savingsProgress",
+      "label": "Savings Progress",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Month",
+        "yLabel": "Savings ($)",
+        "colors": [
+          "#10b981",
+          "#6b7280"
+        ]
+      }
+    }
+  ],
+  "formula": "emergency-fund",
+  "features": [
+    "chart"
+  ],
+  "relatedCalculators": [
+    "savings-calculator",
+    "cd-calculator",
+    "retirement-calculator",
+    "salary-calculator",
+    "compound-interest-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Federal Reserve — Report on the Economic Well-Being of U.S. Households",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Target = Monthly Expenses × Months of Coverage per Federal Reserve emergency savings guidelines and CFPB financial well-being framework",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "emergency-fund",
+    "compound-interest"
+  ],
+  "methodologyTopics": []
+}

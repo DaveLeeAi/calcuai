@@ -36,6 +36,10 @@ Exponentiation is one of the fundamental arithmetic operations — it extends mu
 
 $$b^n = \underbrace{b \times b \times \cdots \times b}_{n \text{ times}}$$
 
+Where:
+- **b** = base (any real number being raised to a power)
+- **n** = exponent (positive, negative, zero, or fractional; the degree of the power)
+
 **Key exponent rules:**
 
 $$b^0 = 1 \quad \text{(for any } b \text{, including } 0^0 = 1 \text{ by convention)}$$
@@ -48,7 +52,9 @@ $$b^{m/n} = \sqrt[n]{b^m} = \left(\sqrt[n]{b}\right)^m$$
 
 $$\sqrt[n]{a} = a^{1/n}$$
 
-Where **n** is the root index (degree) and **a** is the radicand (value under the radical sign).
+Where:
+- **n** = root index (degree): 2 for square root, 3 for cube root, any positive integer for nth root
+- **a** = radicand: the value under the radical sign (must be ≥ 0 for even roots in the reals)
 
 - Square root: $\sqrt{a} = a^{1/2}$
 - Cube root: $\sqrt[3]{a} = a^{1/3}$
@@ -75,6 +81,29 @@ For negative values: odd roots are real ($\sqrt[3]{-8} = -2$), but even roots ar
 4. Future value: $1,000 × 1.967151 = **$1,967.15**
 
 **Interpretation:** At 7% annual return, \$1,000 nearly doubles in 10 years. The exponent (10) drives the compounding effect — each year's growth builds on the previous year's total, not just the original \$1,000. This is why compound growth is described as "exponential." Doubling the time period to 20 years does not double the result — 1.07^20 = 3.8697, nearly quadrupling the original investment. Use our [Percentage Calculator](/calculators/math/percentage-calculator) to convert between growth rates and dollar amounts.
+
+### Example 2: Finding a Compound Annual Growth Rate — Root Mode
+
+**Scenario:** A \$5,000 investment grew to \$8,954 over 6 years. What was the annual growth rate (CAGR)?
+
+**Calculation:**
+
+1. The CAGR formula uses the nth root: CAGR = ⁶√(end ÷ start) − 1
+2. Growth ratio: 8,954 ÷ 5,000 = **1.7908**
+3. Root index: **6** (number of years)
+4. Enter in Root mode: value = 1.7908, root index = 6
+5. Result: 1.7908^(1/6) = **1.1016**
+6. CAGR: 1.1016 − 1 = **10.16% per year**
+
+**Interpretation:** The portfolio compounded at 10.16% annually. The 6th root reverses 6 years of compounding to isolate the equivalent per-year rate. As a check: 1.1016^6 ≈ 1.7908 ✓. This inverse relationship — root undoes power, power undoes root — appears throughout finance (CAGR), physics (finding wave amplitudes), and geometry (finding side lengths from areas or volumes).
+
+## Assumptions & Limitations
+
+- Uses JavaScript's `Math.pow(b, n)` for all calculations, which follows IEEE 754 double-precision floating-point arithmetic. Results are accurate to approximately 15 significant digits for typical inputs.
+- **0^0 returns 1** by convention. This is the standard definition used in combinatorics, power series, and most programming environments. Some branches of mathematics consider 0^0 indeterminate; consult your course materials for context.
+- **Even roots of negative numbers** are not real numbers. Inputs such as √(−4) return "Not a real number." Complex (imaginary) results are not displayed.
+- **Overflow**: exponents that produce values beyond ~1.8 × 10^308 (e.g., 2^1024) return `Infinity` due to floating-point limits. For arbitrary-precision results, use a computer algebra system.
+- **Root index** must be a positive integer ≥ 1 in Root mode. Entering 0 is undefined. Fractional root indices (e.g., the 1.5th root) can be computed in Power mode using a fractional exponent.
 
 {/* Section 15: Related Calculators — auto-rendered from spec */}
 

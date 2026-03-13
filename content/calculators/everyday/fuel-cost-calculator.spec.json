@@ -115,7 +115,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "gallonsUsed = distance / MPG; totalCost = gallonsUsed × pricePerGallon; costPerMile = totalCost / distance.",
   "formulaAuditDate": "2026-03-11",
@@ -124,7 +124,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 78,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

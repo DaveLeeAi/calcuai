@@ -167,7 +167,8 @@
     "down-payment-calculator",
     "refinance-calculator",
     "loan-calculator",
-    "rent-vs-buy-calculator"
+    "rent-vs-buy-calculator",
+    "debt-to-income-calculator"
   ],
   "disclaimer": "finance",
   "hasFAQ": true,

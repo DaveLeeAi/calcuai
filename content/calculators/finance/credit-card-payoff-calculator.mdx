@@ -1,0 +1,128 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate exactly how long it will take to pay off your credit card. A $5,000 balance at 22% APR with $200 monthly payments takes 34 months and costs approximately $1,680 in total interest — that's 34% extra on top of what you originally charged. Increasing your payment by just $100 to $300 per month cuts the payoff time to 20 months and saves over $800 in interest. This calculator shows your exact payoff timeline, total interest cost, and a month-by-month schedule so you can see where every dollar goes.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Payoff Timeline Shows */}
+## What Your Payoff Timeline Shows
+
+This credit card payoff calculator reveals the true cost of carrying a balance by projecting every monthly payment into principal and interest components. The payoff schedule makes one pattern immediately obvious: early payments are heavily weighted toward interest, and the balance shrinks slowly at first.
+
+**The minimum payment trap is the most expensive lesson in personal finance.** On a $5,000 balance at 22% APR, making only the minimum payment (typically 2% of the balance or $25, whichever is greater) takes over 14 years to pay off and costs $4,311 in interest — nearly doubling what you originally charged. Switching to a fixed $200/month payment cuts that to 30 months and $918 in interest. The difference: $3,393 saved by paying $200 instead of the minimum.
+
+**Every extra dollar above the minimum goes entirely to principal.** Your monthly interest charge is fixed by your balance and APR — on a $5,000 balance at 22%, that's $91.67 per month in interest regardless of your payment amount. If you pay $100, only $8.33 goes to principal. Pay $200, and $108.33 goes to principal — 13 times more principal reduction. This is why small payment increases have outsized effects on payoff time. For a broader view of all your debts, see our [Debt Payoff Calculator](/finance/debt-payoff-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Current Balance** — the total amount owed on the card. Find this on your most recent statement or your card's mobile app. If you have multiple cards, run this calculator separately for each one — APRs vary, and the optimal payoff order depends on rates. The average American household carries $7,951 in credit card debt per TransUnion (Q4 2024).
+
+2. **Enter your APR** — the annual percentage rate on your card. This is not the same as the interest rate on a single statement. Find it on your statement under "Interest Charge Calculation" or call your card issuer. The average credit card APR in 2025 is 22.76% per the Federal Reserve G.19 release. If you have a promotional 0% APR, enter 0 — but note the promotional period end date, because deferred interest may apply.
+
+3. **Set your Monthly Payment** — the fixed dollar amount you'll pay each month. This must exceed the monthly interest charge (balance times APR divided by 12), or the balance will never decrease. For a $5,000 balance at 22% APR, the monthly interest is $91.67, so your payment must exceed that amount to make progress.
+
+4. **Review your results** — the calculator shows months to payoff, total interest, and a complete schedule. Try increasing your payment by $25–$50 increments to see the impact on total interest and payoff time.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The number of months to pay off a credit card balance with fixed payments uses the logarithmic payoff formula:
+
+$$n = \frac{-\log\left(1 - \frac{B \cdot r}{P}\right)}{\log(1 + r)}$$
+
+Where:
+
+- **n** = number of months to pay off the balance
+- **B** = current credit card balance (dollars)
+- **r** = monthly interest rate = APR ÷ 12 (decimal)
+- **P** = fixed monthly payment (dollars)
+
+The total interest paid is:
+
+$$\text{Total Interest} = (n \times P) - B$$
+
+This formula requires that **P > B × r** (your payment exceeds the monthly interest charge). If your payment equals or is less than the monthly interest, the balance never decreases — it either stays flat or grows.
+
+At 0% APR, the formula simplifies to: $n = \lceil B / P \rceil$ (balance divided by payment, rounded up).
+
+**Source:** Consumer Financial Protection Bureau (CFPB) credit card payoff disclosure requirements under the Truth in Lending Act (TILA), Section 127(b)(11), which mandates that card issuers disclose how long it will take to pay off a balance with minimum payments.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### $5,000 Balance at 22% APR, $200/Month
+
+**Inputs:**
+- Balance: $5,000
+- APR: 22%
+- Monthly Payment: $200
+
+**Step-by-step:**
+
+1. Monthly interest rate: 22% ÷ 12 = **0.01833** (1.833% per month)
+2. First month interest: $5,000 × 0.01833 = **$91.67**
+3. First month principal: $200 − $91.67 = **$108.33**
+4. Balance after month 1: $5,000 − $108.33 = **$4,891.67**
+5. The iterative process continues — each month the interest shrinks as the balance decreases
+6. Months to payoff: **34 months** (iterative calculation)
+7. Total paid: approximately **$6,680** (last payment is smaller than $200)
+8. Total interest: approximately **$1,680**
+
+**Interpretation:** You pay roughly $1,680 in interest over 34 months — a 34% premium on your original $5,000 balance. In the first month, 46% of your $200 payment goes to interest. By month 30, that drops below 10%. The balance-over-time chart shows the classic curve that accelerates as you get closer to payoff, because each month more of your payment goes to principal and less to interest.
+
+{/* Section 10: Key Factors That Affect Your Payoff Timeline */}
+## Key Factors That Affect Your Payoff Timeline
+
+**APR Is the Price of Carrying a Balance** — The difference between a 16% APR (good credit) and a 28% APR (fair credit) on a $5,000 balance with $200 payments is 5 months and $497 in interest. At 16%: 28 months, $554 interest. At 28%: 33 months, $1,051 interest. If your credit has improved since you opened the card, call your issuer to request a rate reduction — a 2024 LendingTree survey found that 76% of cardholders who asked received a lower rate.
+
+**Payment Amount Has the Biggest Impact** — On a $5,000 balance at 22%, increasing your monthly payment from $150 to $300 dramatically cuts both payoff time and total interest cost. Doubling the payment more than halves the payoff time because the interest component shrinks with each payment as the principal balance decreases faster.
+
+**Balance Size Creates Inertia** — Larger balances generate more monthly interest, making it harder for payments to reduce the principal. On a $20,000 balance at 22%, the monthly interest charge is $366.67. A $400 payment only reduces the principal by $33.33 per month — which is why the minimum payment trap is so dangerous at higher balances.
+
+**New Charges Reset the Clock** — This calculator assumes no new charges. Adding $200 in new charges while paying $200/month at 22% APR means you're effectively paying only the interest. Stop using the card while paying it off, or the payoff timeline becomes meaningless.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **fixed monthly payment** and **no new charges** added to the card during the payoff period.
+- Uses a **fixed APR** for the entire payoff period. Variable-rate cards (most credit cards) may see rate changes when the Federal Reserve adjusts rates.
+- Does **not account for late fees, annual fees, or penalty APRs** that may increase the effective cost.
+- Does **not model minimum payment formulas** (typically 1–3% of balance or $25, whichever is greater). This calculator uses a fixed payment amount.
+- Assumes **no promotional 0% APR periods** — if you have a promotional rate, model separately for the promo period and post-promo period.
+- Does **not include balance transfer fees** (typically 3–5% of the transferred amount) if you plan to consolidate.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How long does it take to pay off a $5,000 credit card?
+
+At the average credit card APR of 22%, a $5,000 balance takes 30 months to pay off with $200 monthly payments, costing $918 in total interest. With $150 payments it takes 46 months ($1,817 interest); with $300 payments it takes 19 months ($578 interest). Making only minimum payments extends payoff to over 14 years with $4,311 in interest — nearly doubling the original balance. The single biggest factor is your monthly payment amount, not the APR.
+
+### Should I pay more than the minimum payment?
+
+Yes — paying only the minimum is the most expensive way to carry credit card debt. The minimum payment (typically 2% of balance or $25) is designed to maximize interest revenue for the card issuer, not to help you pay off the debt. On a $5,000 balance at 22% APR, minimum payments cost $4,311 in interest over 14+ years. A fixed $200/month costs $918 in interest over 30 months — saving $3,393. Even an extra $25 per month above the minimum makes a meaningful difference in total cost and payoff time.
+
+### Does paying off credit cards save money?
+
+Every dollar of credit card debt costs you the APR rate in annual interest. At 22% APR, a $5,000 balance costs $1,100 per year in interest if unpaid. Paying off the card eliminates that cost entirely — it's equivalent to earning a guaranteed 22% return on your money, which exceeds the historical average stock market return of 10%. Financially, paying off high-APR credit card debt is almost always the highest-return use of available cash, ahead of investing, savings accounts (currently 4–5% APY), or other debt with lower interest rates.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## How This Is Calculated
+
+This calculator uses iterative amortization to compute each month's interest charge, principal reduction, and remaining balance. The payoff formula is based on the **Consumer Financial Protection Bureau (CFPB)** credit card payoff disclosure requirements under the **Truth in Lending Act (TILA)**, which requires card issuers to show how long minimum payments take to pay off a balance. Average credit card APR data references the **Federal Reserve Board G.19 Consumer Credit** statistical release (updated monthly). The average household credit card balance figure is from **TransUnion** Q4 2024 Industry Insights Report. The minimum payment trap analysis follows CFPB consumer education guidelines on credit card debt management.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

@@ -174,7 +174,7 @@ function ArticleSection({
   components,
 }: ArticleSectionProps) {
   const proseClasses =
-    'prose prose-gray dark:prose-invert prose-headings:scroll-mt-20 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-table:text-sm prose-td:py-2 prose-td:px-3 prose-th:py-2 prose-th:px-3 max-w-none';
+    'prose prose-sm prose-gray dark:prose-invert prose-headings:scroll-mt-20 prose-h3:text-lg prose-h3:font-semibold prose-h3:mt-6 prose-h3:mb-2 prose-table:text-sm prose-td:py-2 prose-td:px-3 prose-th:py-2 prose-th:px-3 max-w-none';
 
   const cardClasses = style.card
     ? `rounded-lg border-l-4 ${style.accentClass} ${style.bgClass} px-5 py-5 sm:px-6`

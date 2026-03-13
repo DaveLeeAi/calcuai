@@ -241,7 +241,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Standard perimeter-based wall area formula. Coverage rates from manufacturer data sheets (Benjamin Moore, Sherwin-Williams). Opening deductions use residential standard door (21 sq ft) and window (15 sq ft) sizes.",
   "formulaAuditDate": "2026-03-11",
@@ -250,7 +250,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 86,
+  "qualityScore": 76,
   "lastContentUpdate": "2026-03-11",
   "seasonality": "spring-summer",
   "glossaryTerms": [

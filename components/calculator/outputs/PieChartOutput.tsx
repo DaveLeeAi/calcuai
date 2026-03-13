@@ -21,11 +21,16 @@ export default function PieChartOutput({ field, data }: OutputComponentProps) {
   const chartData = (data[field.id] as SliceItem[]) ?? [];
   const colors = field.chartConfig?.colors ?? DEFAULT_COLORS;
 
+  if (chartData.length === 0) return null;
+
   return (
-    <div className="rounded-lg bg-gray-50 p-4">
-      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-3">
+    <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-4">
+      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-1">
         {field.label}
       </h4>
+      {field.description && (
+        <p className="text-xs text-gray-400 dark:text-slate-500 mb-3">{field.description}</p>
+      )}
       <div className="h-64 sm:h-72">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
@@ -52,6 +57,7 @@ export default function PieChartOutput({ field, data }: OutputComponentProps) {
                 borderRadius: '8px',
                 border: '1px solid #e5e7eb',
                 fontSize: '13px',
+                backgroundColor: 'white',
               }}
             />
             <Legend

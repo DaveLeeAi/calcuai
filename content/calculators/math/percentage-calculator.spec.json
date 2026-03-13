@@ -101,7 +101,8 @@
       "type": "single-value",
       "format": "number",
       "precision": 4,
-      "highlight": true
+      "highlight": true,
+      "description": "The calculated value of the percentage applied to your base number."
     },
     {
       "id": "percentChange",
@@ -109,14 +110,16 @@
       "type": "single-value",
       "format": "percentage",
       "precision": 4,
-      "highlight": true
+      "highlight": true,
+      "description": "Positive values indicate an increase; negative values indicate a decrease from the original."
     },
     {
       "id": "absoluteChange",
       "label": "Absolute Change",
       "type": "single-value",
       "format": "number",
-      "precision": 4
+      "precision": 4,
+      "description": "The raw numeric difference between the new and original values."
     },
     {
       "id": "percentDifference",
@@ -124,21 +127,30 @@
       "type": "single-value",
       "format": "percentage",
       "precision": 4,
-      "highlight": true
+      "highlight": true,
+      "description": "Symmetric measure of relative difference between two values, expressed as a percentage of their average."
     },
     {
       "id": "absoluteDifference",
       "label": "Absolute Difference",
       "type": "single-value",
       "format": "number",
-      "precision": 4
+      "precision": 4,
+      "description": "The raw numeric gap between the two values being compared."
     },
     {
       "id": "average",
       "label": "Average of Both Values",
       "type": "single-value",
       "format": "number",
-      "precision": 4
+      "precision": 4,
+      "description": "The midpoint between the two values, used as the denominator in the percentage difference formula."
+    },
+    {
+      "id": "calculationBreakdown",
+      "label": "Step-by-Step Breakdown",
+      "type": "value-group",
+      "description": "Each intermediate step of the calculation shown with its formula and numeric result."
     }
   ],
   "tabs": [
@@ -204,7 +216,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Standard percentage formulas: P% of V = (P/100) × V; % Change = ((New − Old) / |Old|) × 100; % Difference = (|V1 − V2| / ((V1 + V2) / 2)) × 100",
   "formulaAuditDate": "2026-03-10",
@@ -213,7 +225,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 88,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-10",
   "seasonality": null
 }

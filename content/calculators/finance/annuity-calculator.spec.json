@@ -15,10 +15,22 @@
       "required": true,
       "defaultValue": "pv-to-payment",
       "options": [
-        { "value": "pv-to-payment", "label": "Payment from Present Value (Loan/Payout)" },
-        { "value": "fv-to-payment", "label": "Payment from Future Value (Savings Goal)" },
-        { "value": "payment-to-pv", "label": "Present Value from Payment" },
-        { "value": "payment-to-fv", "label": "Future Value from Payment" }
+        {
+          "value": "pv-to-payment",
+          "label": "Payment from Present Value (Loan/Payout)"
+        },
+        {
+          "value": "fv-to-payment",
+          "label": "Payment from Future Value (Savings Goal)"
+        },
+        {
+          "value": "payment-to-pv",
+          "label": "Present Value from Payment"
+        },
+        {
+          "value": "payment-to-fv",
+          "label": "Future Value from Payment"
+        }
       ],
       "helpText": "Choose what you want to calculate."
     },
@@ -29,8 +41,14 @@
       "required": true,
       "defaultValue": "ordinary",
       "options": [
-        { "value": "ordinary", "label": "Ordinary Annuity (end of period)" },
-        { "value": "due", "label": "Annuity Due (start of period)" }
+        {
+          "value": "ordinary",
+          "label": "Ordinary Annuity (end of period)"
+        },
+        {
+          "value": "due",
+          "label": "Annuity Due (start of period)"
+        }
       ],
       "helpText": "Ordinary = payments at end of period. Due = payments at start."
     },
@@ -97,12 +115,30 @@
       "required": true,
       "defaultValue": "12",
       "options": [
-        { "value": "1", "label": "Annually (1)" },
-        { "value": "2", "label": "Semi-Annually (2)" },
-        { "value": "4", "label": "Quarterly (4)" },
-        { "value": "12", "label": "Monthly (12)" },
-        { "value": "26", "label": "Bi-Weekly (26)" },
-        { "value": "52", "label": "Weekly (52)" }
+        {
+          "value": "1",
+          "label": "Annually (1)"
+        },
+        {
+          "value": "2",
+          "label": "Semi-Annually (2)"
+        },
+        {
+          "value": "4",
+          "label": "Quarterly (4)"
+        },
+        {
+          "value": "12",
+          "label": "Monthly (12)"
+        },
+        {
+          "value": "26",
+          "label": "Bi-Weekly (26)"
+        },
+        {
+          "value": "52",
+          "label": "Weekly (52)"
+        }
       ]
     }
   ],
@@ -149,7 +185,10 @@
       "label": "Payment Breakdown",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#1A6FA0", "#2ECC71"]
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
       }
     },
     {
@@ -159,12 +198,16 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "Balance ($)",
-        "colors": ["#1A6FA0"]
+        "colors": [
+          "#1A6FA0"
+        ]
       }
     }
   ],
   "formula": "annuity",
-  "features": ["chart"],
+  "features": [
+    "chart"
+  ],
   "relatedCalculators": [
     "present-value-calculator",
     "future-value-calculator",
@@ -179,8 +222,12 @@
   "requiresSources": true,
   "formulaCitation": "CFA Institute / Actuarial Standards Board",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Annuity present and future value formulas per CFA Institute Level I Quantitative Methods curriculum and Actuarial Standards Board guidelines",
   "formulaAuditDate": "2026-03-12",
@@ -188,10 +235,22 @@
   "targetIntent": "informational",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["present-value-calculator", "retirement-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "present-value-calculator",
+    "retirement-calculator"
+  ],
+  "qualityScore": 96,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null,
-  "glossaryTerms": ["annuity", "present-value", "future-value", "compound-interest", "amortization"],
-  "methodologyTopics": ["annuity", "time-value-of-money"]
+  "glossaryTerms": [
+    "annuity",
+    "present-value",
+    "future-value",
+    "compound-interest",
+    "amortization"
+  ],
+  "methodologyTopics": [
+    "annuity",
+    "time-value-of-money"
+  ]
 }

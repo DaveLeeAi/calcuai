@@ -5,7 +5,7 @@
   "category": "math",
   "subcategory": "geometry",
   "primaryKeyword": "pythagorean theorem calculator",
-  "metaTitle": "Pythagorean Theorem Calculator \u2014 a\u00b2 + b\u00b2 = c\u00b2",
+  "metaTitle": "Pythagorean Theorem Calculator — a² + b² = c²",
   "metaDescription": "Solve for any side of a right triangle using the Pythagorean theorem. Shows hypotenuse, missing leg, area, perimeter, and angles. Free online calculator.",
   "inputs": [
     {
@@ -15,9 +15,18 @@
       "required": true,
       "defaultValue": "find-c",
       "options": [
-        { "value": "find-c", "label": "Find Hypotenuse (c)" },
-        { "value": "find-a", "label": "Find Side a" },
-        { "value": "find-b", "label": "Find Side b" }
+        {
+          "value": "find-c",
+          "label": "Find Hypotenuse (c)"
+        },
+        {
+          "value": "find-a",
+          "label": "Find Side a"
+        },
+        {
+          "value": "find-b",
+          "label": "Find Side b"
+        }
       ],
       "helpText": "Choose which side to solve for"
     },
@@ -59,22 +68,37 @@
       "id": "find-c",
       "label": "Find Hypotenuse",
       "description": "Given sides a and b, find c",
-      "defaultInputOverrides": { "mode": "find-c" },
-      "visibleInputs": ["sideA", "sideB"]
+      "defaultInputOverrides": {
+        "mode": "find-c"
+      },
+      "visibleInputs": [
+        "sideA",
+        "sideB"
+      ]
     },
     {
       "id": "find-a",
       "label": "Find Side a",
       "description": "Given side b and hypotenuse c, find a",
-      "defaultInputOverrides": { "mode": "find-a" },
-      "visibleInputs": ["sideB", "hypotenuse"]
+      "defaultInputOverrides": {
+        "mode": "find-a"
+      },
+      "visibleInputs": [
+        "sideB",
+        "hypotenuse"
+      ]
     },
     {
       "id": "find-b",
       "label": "Find Side b",
       "description": "Given side a and hypotenuse c, find b",
-      "defaultInputOverrides": { "mode": "find-b" },
-      "visibleInputs": ["sideA", "hypotenuse"]
+      "defaultInputOverrides": {
+        "mode": "find-b"
+      },
+      "visibleInputs": [
+        "sideA",
+        "hypotenuse"
+      ]
     }
   ],
   "outputs": [
@@ -116,21 +140,24 @@
     },
     {
       "id": "angleA",
-      "label": "Angle A (\u00b0)",
+      "label": "Angle A (°)",
       "type": "single-value",
       "format": "number",
       "precision": 4
     },
     {
       "id": "angleB",
-      "label": "Angle B (\u00b0)",
+      "label": "Angle B (°)",
       "type": "single-value",
       "format": "number",
       "precision": 4
     }
   ],
   "formula": "pythagorean-theorem",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "slope-calculator",
     "triangle-calculator",
@@ -144,8 +171,11 @@
   "requiresSources": false,
   "formulaCitation": "Euclid's Elements, Book I, Proposition 47",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "a^2 + b^2 = c^2; Area = (1/2)ab; Perimeter = a + b + c",
   "formulaAuditDate": "2026-03-12",
@@ -153,8 +183,10 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["triangle-calculator"],
-  "qualityScore": 75,
+  "duplicationRisk": [
+    "triangle-calculator"
+  ],
+  "qualityScore": 82,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null
 }

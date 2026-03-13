@@ -1,0 +1,164 @@
+{
+  "id": "debt-to-income-calculator",
+  "title": "Debt-to-Income Ratio Calculator",
+  "slug": "debt-to-income-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "debt to income ratio calculator",
+  "metaTitle": "Debt-to-Income Ratio Calculator — Free DTI Calculator for Mortgages",
+  "metaDescription": "Calculate your debt-to-income ratio instantly. See if you qualify for a mortgage with front-end and back-end DTI analysis. Free DTI calculator with rating.",
+  "inputs": [
+    {
+      "id": "monthlyIncome",
+      "label": "Gross Monthly Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 6000,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Gross monthly income before taxes."
+    },
+    {
+      "id": "mortgageRent",
+      "label": "Monthly Housing Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1500,
+      "min": 0,
+      "max": 100000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Monthly housing payment including mortgage/rent."
+    },
+    {
+      "id": "carPayment",
+      "label": "Car Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 400,
+      "min": 0,
+      "max": 100000,
+      "step": 25,
+      "prefix": "$"
+    },
+    {
+      "id": "studentLoanPayment",
+      "label": "Student Loan Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 300,
+      "min": 0,
+      "max": 100000,
+      "step": 25,
+      "prefix": "$"
+    },
+    {
+      "id": "creditCardPayment",
+      "label": "Credit Card Payments",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 150,
+      "min": 0,
+      "max": 100000,
+      "step": 25,
+      "prefix": "$",
+      "helpText": "Minimum monthly credit card payments."
+    },
+    {
+      "id": "otherDebt",
+      "label": "Other Monthly Debt",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000,
+      "step": 25,
+      "prefix": "$",
+      "helpText": "Other recurring monthly debt payments."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "dtiRatio",
+      "label": "Debt-to-Income Ratio",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "rating",
+      "label": "DTI Rating",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "totalMonthlyDebt",
+      "label": "Total Monthly Debt",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "DTI Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "debtBreakdown",
+      "label": "Debt Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#2563eb",
+          "#10b981",
+          "#f59e0b",
+          "#ef4444",
+          "#8b5cf6"
+        ]
+      }
+    }
+  ],
+  "formula": "debt-to-income",
+  "features": [
+    "chart"
+  ],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "home-affordability-calculator",
+    "loan-calculator",
+    "payment-calculator",
+    "salary-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "DTI = Total Monthly Debt / Gross Monthly Income per CFPB Qualified Mortgage (QM) rules and Fannie Mae Selling Guide B3-6-02",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "debt-to-income-ratio",
+    "principal",
+    "interest-rate"
+  ],
+  "methodologyTopics": []
+}

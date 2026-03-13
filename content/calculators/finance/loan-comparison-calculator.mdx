@@ -1,0 +1,141 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Compare two loan options instantly to find the better deal. A \$250,000 mortgage at 6.5% for 30 years costs \$1,580.17/month and \$318,861 in total interest, while the same amount at 5.75% for 15 years costs \$2,076.09/month but only \$123,497 in total interest — saving you \$195,364 over the life of the loan despite a higher monthly payment. Enter your two loan scenarios below to see monthly payments, total cost, and a year-by-year balance comparison chart.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Comparison Shows */}
+## What Your Loan Comparison Shows
+
+The core insight from any loan comparison is the tradeoff between monthly cash flow and total cost. A longer term always means a lower monthly payment — but it almost always means a higher total cost. This calculator quantifies that tradeoff precisely so you can make an informed decision rather than guessing.
+
+The **monthly payment difference** tells you how much more or less you would pay each month by choosing one loan over the other. On a \$250,000 loan, the difference between a 30-year at 6.5% and a 15-year at 5.75% is roughly \$496/month. That is the monthly budget question: can you afford the higher payment, and is the interest savings worth it?
+
+The **total interest saved** is where the real cost difference lives. Interest is the price you pay for borrowing money, and it compounds dramatically over longer terms. On a 30-year \$250,000 loan at 6.5%, you pay \$318,861 in interest — more than the original loan amount. Drop to 15 years at 5.75%, and total interest falls to \$123,497. That \$195,364 difference is money that stays in your pocket instead of going to the lender.
+
+The **balance over time chart** shows how quickly each loan's principal declines. You will notice that the shorter-term loan drops much faster, especially in the first few years when the longer loan is heavily front-loaded with interest payments. This visual makes it immediately clear why shorter terms build equity faster — every payment puts more money toward the actual balance.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Loan Amount** — this is the total principal you plan to borrow. For a mortgage, enter the home price minus your down payment. For a personal or auto loan, enter the financed amount after trade-in or down payment. The calculator uses the same amount for both loans so you can isolate the impact of rate and term differences.
+
+2. **Set Loan A's Interest Rate** — enter the APR for your first loan option. This might be the rate quoted by your primary lender, or the rate on your current loan if you are considering refinancing. Rates are entered as annual percentages (e.g., 6.5 for 6.5%).
+
+3. **Select Loan A's Term** — choose the repayment period for the first loan. Common terms range from 5 years (60 months) to 30 years (360 months). Longer terms lower the monthly payment but increase total interest.
+
+4. **Set Loan B's Interest Rate and Term** — repeat for your second scenario. This might be a different lender's offer, a shorter term at the same rate, or a refinance option you are evaluating. The calculator will compare both side by side.
+
+5. **Review the Results** — the highlighted monthly payment difference shows your cash flow impact. Check the total interest saved to understand the long-term cost difference. Use the balance chart to visualize how quickly each loan pays down.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## How This Is Calculated
+
+Both loans use the standard fixed-rate amortization formula:
+
+$$M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$$
+
+Where:
+
+- **M** = monthly payment (dollars)
+- **P** = loan principal — the amount borrowed (dollars)
+- **r** = monthly interest rate (annual rate / 12, as a decimal)
+- **n** = total number of monthly payments
+
+When the interest rate is 0%, the formula simplifies to:
+
+$$M = \frac{P}{n}$$
+
+The comparison metrics are derived as:
+
+$$\text{Monthly Savings} = |M_A - M_B|$$
+
+$$\text{Total Interest Saved} = |I_A - I_B|$$
+
+Where **I** = total interest = (M × n) − P for each loan.
+
+**Source:** Standard amortization formula per the Actuarial Standards Board and CFPB Regulation Z (Truth in Lending Act).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 30-Year vs 15-Year Mortgage at Different Rates
+
+**Inputs:**
+- Loan Amount: \$250,000
+- Loan A: 6.5% for 30 years (360 months)
+- Loan B: 5.75% for 15 years (180 months)
+
+**Step-by-step:**
+
+1. **Loan A monthly rate:** 6.5% ÷ 12 = **0.005417**
+2. **Loan A factor:** (1 + 0.005417)^360 = **6.9913**
+3. **Loan A payment:** \$250,000 × (0.005417 × 6.9913) ÷ (6.9913 − 1) = **\$1,580.17/mo**
+4. **Loan A total interest:** (\$1,580.17 × 360) − \$250,000 = **\$318,861**
+5. **Loan B monthly rate:** 5.75% ÷ 12 = **0.004792**
+6. **Loan B factor:** (1 + 0.004792)^180 = **2.3649**
+7. **Loan B payment:** \$250,000 × (0.004792 × 2.3649) ÷ (2.3649 − 1) = **\$2,076.09/mo**
+8. **Loan B total interest:** (\$2,076.09 × 180) − \$250,000 = **\$123,697**
+9. **Monthly difference:** \$2,076.09 − \$1,580.17 = **\$495.92/mo**
+10. **Total interest saved:** \$318,861 − \$123,697 = **\$195,164**
+
+**Interpretation:** The 15-year loan costs \$496 more per month but saves \$195,164 in total interest. That is equivalent to earning a guaranteed 5.75% return on the extra \$496/month payment. If you can comfortably afford the higher payment, the 15-year loan is the financially superior choice. If cash flow is tight, the 30-year provides flexibility at a steep long-term cost.
+
+### Example 2: Same Term, Different Rates — Comparing Lender Offers
+
+**Inputs:**
+- Loan Amount: \$200,000
+- Loan A: 7.0% for 30 years
+- Loan B: 5.5% for 30 years
+
+**Step-by-step:**
+
+1. **Loan A payment:** \$200,000 at 7.0%/12 for 360 months = **\$1,330.60/mo**
+2. **Loan A total interest:** (\$1,330.60 × 360) − \$200,000 = **\$279,017**
+3. **Loan B payment:** \$200,000 at 5.5%/12 for 360 months = **\$1,135.58/mo**
+4. **Loan B total interest:** (\$1,135.58 × 360) − \$200,000 = **\$208,808**
+5. **Monthly savings:** \$1,330.60 − \$1,135.58 = **\$195.02/mo**
+6. **Total interest saved:** \$279,017 − \$208,808 = **\$70,209**
+
+**Interpretation:** A 1.5% rate difference on a \$200,000 30-year loan amounts to \$195/month and \$70,209 over the life of the loan. This is why shopping multiple lenders is critical — even a 0.25% rate reduction on this loan saves approximately \$11,700 in total interest.
+
+## Key Factors That Affect Your Comparison
+
+**Interest Rate** — Even small rate differences create massive total cost differences over long terms. On a \$250,000 30-year loan, the difference between 6% and 7% is \$166/month and \$59,860 in total interest. Always compare APR (which includes fees) rather than the base interest rate.
+
+**Loan Term** — The term is the second-most powerful variable. Shortening from 30 to 15 years roughly doubles the monthly payment but cuts total interest by 55–65%. The key question is whether the monthly payment fits your budget without sacrificing emergency reserves or retirement contributions.
+
+**Total Cost vs Monthly Payment** — The loan with the lower monthly payment is almost never the cheaper loan overall. A 30-year \$250,000 mortgage at 6.5% costs \$568,861 total. A 15-year at the same rate costs \$437,547 total — \$131,314 less. The monthly payment is \$597 higher, but the total savings dwarf the short-term cost.
+
+**Opportunity Cost** — If the difference in monthly payments could earn a higher return invested elsewhere (e.g., in a diversified index fund averaging 8–10% long-term), the lower-payment loan might actually be better financially despite higher total interest. Use the [Compound Interest Calculator](/finance/compound-interest-calculator) to model this scenario.
+
+## Frequently Asked Questions
+
+### Is a shorter loan term always better?
+
+A shorter term saves significantly on total interest — a 15-year \$250,000 loan at 6% saves over \$153,000 compared to a 30-year at the same rate. However, the higher monthly payment reduces cash flow flexibility. A shorter term is better only if the payment fits comfortably within your budget without depleting emergency savings or retirement contributions.
+
+### How much does a 0.25% rate difference actually cost?
+
+On a \$300,000 30-year mortgage, a 0.25% rate reduction saves approximately \$15,600 in total interest and \$43/month. Over the full 30-year term, that quarter-point translates to significant savings, which is why rate shopping across at least 3 lenders is consistently recommended by the CFPB.
+
+### Should I compare APR or interest rate?
+
+Always compare APR. The annual percentage rate includes origination fees, discount points, and other lender charges that the base interest rate does not reflect. A loan with a lower interest rate but higher fees could have a higher APR — and a higher true cost — than a loan with a slightly higher base rate and no fees.
+
+### Can I use this calculator for refinancing decisions?
+
+Yes. Enter your current loan rate and remaining term as Loan A, and the refinance offer rate and new term as Loan B. The total interest saved shows whether the refinance is worth it. Be sure to factor in closing costs (typically 2–5% of the loan amount) — the refinance only makes sense if total interest saved exceeds closing costs.
+
+## Sources & Methodology
+
+- **Amortization formula:** Standard fixed-rate loan amortization per the Actuarial Standards Board and CFPB Regulation Z (Truth in Lending Act) disclosures.
+- **Rate data context:** Average 30-year fixed mortgage rates per Freddie Mac Primary Mortgage Market Survey (2026).
+- **CFPB guidance:** Consumer Financial Protection Bureau — "Shopping for a Mortgage" guide, recommending comparison of at least 3 lender offers.

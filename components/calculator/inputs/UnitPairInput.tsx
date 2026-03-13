@@ -51,7 +51,7 @@ export default function UnitPairInput({ field, value, error, onChange }: InputCo
           placeholder={field.placeholder ?? '0'}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : field.helpText ? `${id}-help` : undefined}
-          className={`h-10 flex-1 rounded-lg border px-3 text-sm outline-none transition-colors ${
+          className={`h-9 flex-1 rounded-lg border px-3 text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
               : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200'
@@ -61,7 +61,7 @@ export default function UnitPairInput({ field, value, error, onChange }: InputCo
           aria-label={`${field.label} unit`}
           value={pairValue.unit}
           onChange={handleUnitChange}
-          className="h-10 rounded-lg border border-gray-300 bg-white px-2 text-sm outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
+          className="h-9 rounded-lg border border-gray-300 bg-white px-2 text-sm outline-none transition-colors focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200"
         >
           {field.units?.map((u) => (
             <option key={u.value} value={u.value}>

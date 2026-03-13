@@ -48,7 +48,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       }))
   );
 
-  const calculatorPages: MetadataRoute.Sitemap = specs.map((spec) => ({
+  const calculatorPages: MetadataRoute.Sitemap = specs
+    .filter((spec) => spec.editorialStatus !== 'draft')
+    .map((spec) => ({
     url: `${baseUrl}/${spec.category}/${spec.slug}`,
     ...(spec.lastContentUpdate ? { lastModified: new Date(spec.lastContentUpdate) } : {}),
     changeFrequency: 'monthly' as const,
@@ -89,7 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const stateSalesTaxPages: MetadataRoute.Sitemap = (
     salesTaxData.states as { stateName: string }[]
   ).map((state) => ({
-    url: `${baseUrl}/calculators/finance/${stateNameToSlug(state.stateName)}`,
+    url: `${baseUrl}/finance/${stateNameToSlug(state.stateName)}`,
     lastModified: new Date(salesTaxData.lastVerified),
     changeFrequency: 'yearly' as const,
     priority: 0.7,

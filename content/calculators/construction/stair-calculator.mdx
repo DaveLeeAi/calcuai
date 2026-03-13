@@ -1,0 +1,130 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate the number of stairs, riser height, and tread depth for any staircase. A standard 9-foot ceiling (108-inch rise) requires 14 risers at 7.71 inches each with 13 treads at 10 inches deep — for a total run of about 10 feet 10 inches and a stringer length of 14 feet 1 inch. Enter your total rise and maximum riser height below to get code-compliant stair dimensions instantly.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Stair Dimensions Show
+
+Building stairs without calculating the rise-run relationship first leads to uneven steps, code violations, and uncomfortable or dangerous staircases. This calculator divides your total vertical height into equal risers, calculates a comfortable tread depth using the industry-standard 2R+T=25 rule, and checks every dimension against the International Residential Code (IRC) Section R311.7 requirements.
+
+The **number of risers** is the total vertical steps from the bottom floor to the top floor. The calculator divides the total rise by the maximum riser height you set and rounds up to ensure no single riser exceeds the limit. The **actual riser height** is the total rise divided evenly across all risers — this number must be uniform throughout the staircase (IRC requires no more than 3/8-inch variation between risers).
+
+The **tread depth** uses the comfort formula 2R + T = 25, where R is the riser height and T is the tread depth. This formula produces stairs that feel natural to walk up and down. The IRC sets a hard minimum of 10 inches for tread depth, which this calculator enforces automatically.
+
+The **stringer length** is the diagonal measurement from the bottom landing to the top landing — the hypotenuse of the rise-run triangle. This tells you how long your stair stringers (the angled boards supporting the treads) need to be, which determines the lumber you need to purchase.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the total rise** — this is the vertical distance from the finished floor at the bottom to the finished floor at the top, measured in inches. A standard 9-foot ceiling with typical floor framing results in approximately 108 inches of total rise. Measure after finished flooring is installed (or account for its thickness) because even a 1-inch difference changes the riser height calculation.
+
+2. **Set the stair width** — the IRC minimum is 36 inches clear width between walls or handrails. Many builders prefer 42–48 inches for comfort, and accessibility standards (ADA) require at least 36 inches. Enter the width to check code compliance.
+
+3. **Set the maximum riser height** — the IRC default maximum is 7.75 inches. Some local codes are stricter (7.5 inches in some jurisdictions). The calculator will use enough risers so that no single step exceeds this height.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Stair dimensions are calculated from the total vertical rise and the maximum allowable riser height:
+
+**Number of risers:**
+
+$$\text{Risers} = \left\lceil \frac{\text{Total Rise}}{\text{Max Riser Height}} \right\rceil$$
+
+**Actual riser height:**
+
+$$\text{Riser Height} = \frac{\text{Total Rise}}{\text{Risers}}$$
+
+**Tread depth (2R + T = 25 comfort rule):**
+
+$$T = \max\left(10,\; 25 - 2R\right)$$
+
+**Total run:**
+
+$$\text{Total Run} = (\text{Risers} - 1) \times T$$
+
+**Stringer length (Pythagorean theorem):**
+
+$$\text{Stringer} = \sqrt{\text{Total Rise}^2 + \text{Total Run}^2}$$
+
+Where:
+
+- **Total Rise** = vertical height in inches from finished floor to finished floor
+- **Max Riser Height** = maximum allowable riser per code (IRC default: 7.75")
+- **R** = actual riser height after even division
+- **T** = tread depth in inches (IRC minimum: 10")
+- **Risers - 1** = number of treads (top riser lands on the upper floor, no tread needed)
+
+The ceiling function ensures the riser count is always rounded up so that the actual riser height never exceeds the maximum. The 2R+T=25 rule is the most widely used stair comfort formula in residential construction.
+
+**Source:** International Residential Code (IRC) Section R311.7 — Stairways.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Standard 9-Foot Ceiling — 108-Inch Total Rise
+
+A homeowner is building an interior staircase from the first floor to the second floor with a 9-foot ceiling height (108-inch total rise) and standard 36-inch stair width.
+
+**Inputs:**
+- Total Rise: 108 inches
+- Max Riser Height: 7.75 inches (IRC maximum)
+- Stair Width: 36 inches
+
+**Step-by-step:**
+
+1. Risers: ceil(108 / 7.75) = ceil(13.94) = **14 risers**
+2. Actual riser height: 108 / 14 = **7.71 inches** (within IRC max of 7.75")
+3. Tread depth: max(10, 25 - 2 × 7.71) = max(10, 9.58) = **10.00 inches**
+4. Treads: 14 - 1 = **13 treads**
+5. Total run: 13 × 10.00 = **130.0 inches (10 ft 10 in)**
+6. Stringer length: sqrt(108² + 130²) = sqrt(28,564) = **169.0 inches (14 ft 1 in)**
+7. Code compliance: riser 7.71" ≤ 7.75", tread 10.00" ≥ 10", width 36" ≥ 36" — **Passes IRC**
+
+**Interpretation:** This staircase needs 14 risers and 13 treads, with a total horizontal run of just under 11 feet. You will need at least three 2×12×14-foot boards for stringers (cut to 169 inches each). The 10-inch tread depth is the IRC minimum — if floor space allows, increasing the total run gives you deeper treads (11 inches or more), which most people find more comfortable to descend.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **straight-run staircase** with uniform riser heights. L-shaped, U-shaped, and spiral staircases have the same riser/tread math per straight section but require additional calculations for landings, winders, and turning platforms.
+- Uses the **2R + T = 25 comfort rule**, which is the most common residential guideline. Some codes and references use 2R + T = 24 or 2R + T = 26 — check your local building code for the specific requirement.
+- **IRC Section R311.7** sets maximums and minimums: max riser 7.75 inches, min tread 10 inches, min width 36 inches. Your local jurisdiction may enforce stricter limits — always verify with your building department before construction.
+- Does not account for **headroom clearance** (IRC requires minimum 6 feet 8 inches measured vertically from the stair nosing to any overhead obstruction) or **handrail requirements** (required on at least one side for four or more risers).
+- Stringer length assumes the stringer runs the **full diagonal** without landings. Staircases with intermediate landings have shorter individual stringer sections.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the ideal riser height for comfortable stairs?
+
+The most comfortable riser height for residential stairs is between 7 and 7.5 inches. The IRC allows up to 7.75 inches, but risers above 7.5 inches start to feel steep, especially when descending. Risers below 6 inches feel uncomfortably shallow and create a shuffling gait. A riser height of 7.25 inches paired with a 10.5-inch tread (2R + T = 25) is widely considered the ideal residential balance between comfort and space efficiency.
+
+### How much horizontal space does a staircase need?
+
+A staircase with a 108-inch rise (9-foot ceiling) and IRC-compliant dimensions needs approximately 130 inches (10 feet 10 inches) of horizontal run, plus at least 36 inches of landing space at both the top and bottom. Total floor space required is roughly 11 feet × 3 feet, or about 33 square feet. Reducing the riser height to 7 inches increases the horizontal run to approximately 143 inches (nearly 12 feet) because more treads are required.
+
+### Do I need a permit to build stairs?
+
+Most jurisdictions require a building permit for new staircase construction or major stair modifications because stairs are a structural and life-safety element. The permit process typically requires a plan showing riser height, tread depth, width, headroom clearance, handrail details, and landing dimensions — all of which must meet IRC Section R311.7 (or your local code). An inspector will verify measurements before the project can be closed out. Replacing treads or refinishing existing stairs usually does not require a permit.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator implements stair geometry formulas from the **International Residential Code (IRC) Section R311.7** — the standard residential building code adopted (with local amendments) by most U.S. jurisdictions. The riser-tread comfort relationship uses the **2R + T = 25** rule, the most widely cited stair proportion formula in residential construction references including the *Graphic Guide to Frame Construction* (Thallon) and *Carpentry and Building Construction* (Feirer). Stringer length is calculated via the Pythagorean theorem. IRC code limits referenced: maximum riser height 7.75 inches, minimum tread depth 10 inches, minimum stair width 36 inches, maximum riser variation 3/8 inch.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

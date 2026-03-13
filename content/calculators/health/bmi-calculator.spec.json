@@ -62,7 +62,8 @@
       "id": "category",
       "label": "BMI Category",
       "type": "single-value",
-      "format": "text"
+      "format": "text",
+      "description": "Weight classification per World Health Organization (WHO) standards for adults."
     },
     {
       "id": "bmiGauge",
@@ -121,7 +122,8 @@
       "id": "healthyWeightRange",
       "label": "Healthy Weight Range",
       "type": "value-group",
-      "format": "number"
+      "format": "number",
+      "description": "The weight range corresponding to a BMI of 18.5–24.9 at your height, per WHO guidelines."
     },
     {
       "id": "primeRatio",
@@ -130,6 +132,12 @@
       "format": "number",
       "precision": 2,
       "description": "Ratio of your BMI to the upper normal limit (25). Values below 1.0 indicate normal weight."
+    },
+    {
+      "id": "bmiMetrics",
+      "label": "Additional Metrics",
+      "type": "value-group",
+      "description": "Healthy weight bounds and derived indices including BMI Prime and Ponderal Index (a height-cubed alternative to BMI)."
     }
   ],
   "formula": "bmi",
@@ -169,7 +177,7 @@
   "duplicationRisk": [
     "ideal-weight-calculator"
   ],
-  "qualityScore": 98,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-10",
   "seasonality": "new-year",
   "glossaryTerms": [

@@ -1,0 +1,115 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+At a 7% annual return, the Rule of 72 estimates your money doubles in approximately 10.3 years — the exact mathematical answer is 10.24 years. This 500-year-old shortcut, first documented by Luca Pacioli in 1494, divides 72 by the interest rate to estimate doubling time. It's accurate within 0.5 years for rates between 4% and 15%. Enter your rate below to see both the Rule of 72 estimate and the exact result, or switch modes to find the rate required to double your money in a target number of years.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Doubling Estimate Shows
+
+This calculator applies the Rule of 72 — the most widely used mental-math shortcut in finance — and compares it to the exact doubling time calculated with logarithms. It works in both directions: give it a rate and it tells you years, or give it a target timeframe and it tells you the rate required.
+
+**The Rule of 72 is remarkably accurate for typical investment rates.** At 8%, it predicts 9.0 years to double; the exact answer is 9.01 years — an error of just 0.01 years. At 6%, it predicts 12.0 years; the exact answer is 11.90 years — off by 0.10 years. The approximation works best between 6% and 10%, the range where most long-term investments fall. Outside that range, the error grows: at 2%, the Rule of 72 says 36 years while the exact answer is 35.0 years. At 24%, it predicts 3.0 years versus the exact 3.22 years.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose the Calculation Mode** — "Rate to Years" estimates how long it takes to double at a known rate. "Years to Rate" calculates what rate you need to double within a target timeframe.
+
+2. **Enter the Annual Interest Rate** — the annual return rate on your investment or savings. Common references: high-yield savings accounts (4–5%), bonds (3–5%), balanced portfolio (6–7%), S&P 500 historical average (10%), aggressive growth stocks (12–15%).
+
+3. **Enter Target Years (Years to Rate mode only)** — the number of years in which you want your money to double. The calculator returns both the Rule of 72 approximation and the exact rate needed.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Rule of 72 (approximation):**
+
+$$\text{Years to Double} \approx \frac{72}{r}$$
+
+$$\text{Required Rate} \approx \frac{72}{\text{Years}}$$
+
+**Exact formula (using natural logarithms):**
+
+$$\text{Years to Double} = \frac{\ln(2)}{\ln(1 + r)}$$
+
+$$\text{Required Rate} = 2^{1/\text{Years}} - 1$$
+
+Where:
+
+- **r** = annual interest rate (as a percentage for Rule of 72, as a decimal for exact formula)
+- **ln** = natural logarithm
+- **72** = the constant chosen because it has many small divisors (2, 3, 4, 6, 8, 9, 12) making mental math easy
+
+The number 72 is not derived from the exact formula — it's an empirical constant that minimizes error across common interest rates. The mathematically "correct" constant would be $100 \times \ln(2) \approx 69.3$, but 72 is easier to divide mentally and happens to be more accurate in the 6–10% range due to a favorable cancellation of higher-order terms.
+
+**Source:** Luca Pacioli, *Summa de Arithmetica, Geometria, Proportioni et Proportionalita* (1494); CFA Institute Level I curriculum; Investopedia Rule of 72 methodology.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: S&P 500 Average Return (10%)
+
+**Input:** Annual rate = 10%, Mode = Rate to Years
+
+1. Rule of 72: $72 / 10 = \textbf{7.2 years}$
+2. Exact: $\ln(2) / \ln(1.10) = 0.6931 / 0.09531 = \textbf{7.27 years}$
+3. Error: $7.2 - 7.27 = -0.07$ years (underestimates by about 1 month)
+
+**Interpretation:** An investment earning the S&P 500's historical average doubles in roughly 7.2 years. Starting with \$10,000, you'd have \$20,000 in 7.2 years, \$40,000 in 14.4 years, and \$80,000 in 21.6 years — an 8x increase in just over two decades.
+
+### Example 2: How Fast Must You Grow to Double in 5 Years?
+
+**Input:** Target Years = 5, Mode = Years to Rate
+
+1. Rule of 72: $72 / 5 = \textbf{14.4\%}$
+2. Exact: $2^{1/5} - 1 = 0.14870 = \textbf{14.87\%}$
+3. Error: $14.4\% - 14.87\% = -0.47\%$ (underestimates the required rate)
+
+**Interpretation:** To double your money in 5 years, you need a 14.87% annual return — achievable in strong equity markets but well above average long-term returns. If that seems aggressive, extending to 7 years drops the requirement to 10.41%, much closer to the historical stock market average.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Doubling Time
+
+**Interest Rate** — The relationship is inverse: doubling the rate halves the doubling time. At 4%, money doubles in 18 years. At 8%, 9 years. At 12%, 6 years. This is why even small improvements in investment return have dramatic long-term effects.
+
+**Compounding vs. Simple Interest** — The Rule of 72 assumes compound interest. With simple interest (no compounding), doubling always takes exactly $100/r$ years. At 8%, simple interest doubles in 12.5 years versus compound interest's 9.0 years — a 3.5-year difference that reflects the power of compounding.
+
+**Accuracy Range** — The Rule of 72 is most accurate between 4% and 15%. Below 4%, it slightly overestimates doubling time (use the Rule of 69.3 for better accuracy). Above 15%, it underestimates doubling time. For rates above 20%, consider using the exact logarithmic formula.
+
+**Inflation Adjustment** — To estimate how long it takes for your money to double in real (inflation-adjusted) terms, subtract inflation from your nominal rate before dividing into 72. A 10% nominal return with 3% inflation gives a real rate of 7%, doubling purchasing power in roughly 10.3 years — not the 7.2 years the nominal rate suggests.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Why is 72 used instead of another number?
+
+The number 72 is used because it has many factors (1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36, 72), making mental division easy for common interest rates. The mathematically optimal constant is closer to 69.3 (which equals 100 times the natural log of 2), but 72 provides a better approximation in the 6–10% range that covers most investment returns, and it's far easier to divide in your head.
+
+### How accurate is the Rule of 72?
+
+For interest rates between 4% and 15%, the Rule of 72 is accurate within about 0.5 years of the exact doubling time. At 8%, the error is just 0.01 years (about 4 days). At 2%, the error grows to about 1 year. At 24%, the error is about 0.22 years. For everyday financial planning, the approximation is more than sufficient.
+
+### Can I use the Rule of 72 for inflation or debt?
+
+Yes. Divide 72 by the annual inflation rate to estimate how long it takes for prices to double and your purchasing power to halve. At 3% inflation, prices double in 24 years. For debt, divide 72 by your credit card APR to see how quickly unpaid debt doubles: at 20% APR, your balance doubles in just 3.6 years if you make no payments.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+The Rule of 72 was first published by **Luca Pacioli** in *Summa de Arithmetica, Geometria, Proportioni et Proportionalita* (1494), though the concept may predate the publication. The exact doubling time formula uses the natural logarithm identity $t = \ln(2)/\ln(1+r)$, which is standard in the **CFA Institute** Level I curriculum and any corporate finance textbook. The choice of 72 as the constant (rather than the mathematically exact 69.3) is discussed in **Investopedia's** Rule of 72 methodology article and in *A Mathematician's Apology* by G.H. Hardy. Historical S&P 500 return data (approximately 10% nominal annual average) references **NYU Stern** (Damodaran) annual returns dataset.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

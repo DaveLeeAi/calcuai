@@ -1,0 +1,150 @@
+{
+  "id": "capital-gains-tax-calculator",
+  "title": "Capital Gains Tax Calculator",
+  "slug": "capital-gains-tax-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "capital gains tax calculator",
+  "metaTitle": "Capital Gains Tax Calculator — Free Capital Gains Tax Calculator | CalcuAI",
+  "metaDescription": "Calculate your federal capital gains tax on stock, real estate, or investment sales. Compare short-term vs. long-term rates by income and filing status. Free.",
+  "inputs": [
+    {
+      "id": "purchasePrice",
+      "label": "Purchase Price (Cost Basis)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Original purchase price (cost basis)"
+    },
+    {
+      "id": "salePrice",
+      "label": "Sale Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 80000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Sale price or current value"
+    },
+    {
+      "id": "holdingPeriod",
+      "label": "Holding Period",
+      "type": "select",
+      "required": true,
+      "defaultValue": "long",
+      "options": [
+        { "value": "short", "label": "Short-Term (\u2264 1 Year)" },
+        { "value": "long", "label": "Long-Term (> 1 Year)" }
+      ]
+    },
+    {
+      "id": "annualIncome",
+      "label": "Annual Taxable Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 80000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Your annual taxable income (excluding gains)"
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        { "value": "single", "label": "Single" },
+        { "value": "married", "label": "Married Filing Jointly" },
+        { "value": "head", "label": "Head of Household" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "taxOwed",
+      "label": "Estimated Capital Gains Tax",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "capitalGain",
+      "label": "Capital Gain",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveRate",
+      "label": "Effective Tax Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1
+    },
+    {
+      "id": "netProceeds",
+      "label": "Net Proceeds After Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Capital Gains Summary",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "taxBreakdown",
+      "label": "Proceeds Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#10b981", "#ef4444", "#f59e0b"]
+      }
+    }
+  ],
+  "formula": "capital-gains-tax",
+  "features": ["compare-scenarios"],
+  "relatedCalculators": [
+    "income-tax-calculator",
+    "tax-bracket-calculator",
+    "investment-calculator",
+    "compound-interest-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IRS Topic No. 409 — Capital Gains and Losses; IRS Revenue Procedure 2024-40",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Short-term: taxed as ordinary income via progressive brackets. Long-term: 0%/15%/20% based on total taxable income. Per IRS Topic 409 and Rev. Proc. 2024-40.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "income-tax-calculator",
+    "tax-bracket-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": "tax-season",
+  "glossaryTerms": [
+    "interest-rate"
+  ]
+}

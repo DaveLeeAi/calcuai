@@ -49,7 +49,8 @@
   "formula": "age-calc",
   "features": [
     "shareable-url",
-    "print-results"
+    "print-results",
+    "compare-scenarios"
   ],
   "relatedCalculators": [
     "date-calculator",
@@ -70,7 +71,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Gregorian calendar date arithmetic with leap year rules (divisible by 4, except centuries unless divisible by 400)",
   "formulaAuditDate": "2026-03-10",
@@ -81,7 +82,7 @@
   "duplicationRisk": [
     "date-calculator"
   ],
-  "qualityScore": 78,
-  "lastContentUpdate": "2026-03-10",
+  "qualityScore": 70,
+  "lastContentUpdate": "2026-03-13",
   "seasonality": null
 }

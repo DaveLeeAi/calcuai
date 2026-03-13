@@ -121,8 +121,7 @@
     "logarithm-calculator",
     "standard-deviation-calculator",
     "ratio-calculator",
-    "circle-calculator",
-    "gcf-lcm-calculator"
+    "circle-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": false,
@@ -134,7 +133,7 @@
     ".bluf-intro",
     ".formula-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Power: result = base^exponent; Root: result = value^(1/n); Laws of exponents from standard algebra",
   "formulaAuditDate": "2026-03-11",
@@ -143,7 +142,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 67,
-  "lastContentUpdate": "2026-03-11",
+  "qualityScore": 83,
+  "lastContentUpdate": "2026-03-13",
   "seasonality": null
 }

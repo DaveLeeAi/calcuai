@@ -211,7 +211,7 @@ export default function USChoroplethMap({
       if (d && onStateClick) onStateClick(d);
       const stateName = FIPS_TO_STATE[paddedFips];
       if (stateName) {
-        router.push(`/calculators/finance/${stateNameToSlug(stateName)}`);
+        router.push(`/finance/${stateNameToSlug(stateName)}`);
       }
     },
     [dataByFips, onStateClick, router]

@@ -1,0 +1,145 @@
+{
+  "id": "budget-calculator",
+  "title": "Budget Calculator",
+  "slug": "budget-calculator",
+  "category": "finance",
+  "subcategory": "savings",
+  "primaryKeyword": "budget calculator",
+  "metaTitle": "Budget Calculator — Free Budget Planner | CalcuAI",
+  "metaDescription": "Create a monthly budget using the 50/30/20 rule or custom percentages. See how to split your income between needs, wants, and savings. Free, no signup required.",
+  "inputs": [
+    {
+      "id": "monthlyIncome",
+      "label": "Monthly Take-Home Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Your monthly take-home (after-tax) income"
+    },
+    {
+      "id": "budgetMethod",
+      "label": "Budget Method",
+      "type": "select",
+      "required": true,
+      "defaultValue": "50-30-20",
+      "options": [
+        { "value": "50-30-20", "label": "50/30/20 Rule" },
+        { "value": "60-20-20", "label": "60/20/20 Rule" },
+        { "value": "70-20-10", "label": "70/20/10 Rule" },
+        { "value": "custom", "label": "Custom Percentages" }
+      ]
+    },
+    {
+      "id": "customNeeds",
+      "label": "Needs Percentage",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "helpText": "Percentage for needs/essentials",
+      "visibleWhen": { "budgetMethod": ["custom"] }
+    },
+    {
+      "id": "customWants",
+      "label": "Wants Percentage",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 30,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "helpText": "Percentage for wants/discretionary",
+      "visibleWhen": { "budgetMethod": ["custom"] }
+    },
+    {
+      "id": "customSavings",
+      "label": "Savings Percentage",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "helpText": "Percentage for savings/debt repayment",
+      "visibleWhen": { "budgetMethod": ["custom"] }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "needsAmount",
+      "label": "Needs (Essentials)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "wantsAmount",
+      "label": "Wants (Discretionary)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "savingsAmount",
+      "label": "Savings & Debt Repayment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Budget Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "budgetBreakdown",
+      "label": "Budget Allocation",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#2563eb", "#f59e0b", "#10b981"]
+      }
+    }
+  ],
+  "formula": "budget",
+  "features": ["chart"],
+  "relatedCalculators": [
+    "salary-calculator",
+    "savings-calculator",
+    "debt-payoff-calculator",
+    "paycheck-calculator",
+    "debt-to-income-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Elizabeth Warren & Amelia Warren Tyagi, All Your Worth (2005) — 50/30/20 budgeting rule",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "50/30/20 budget rule: Needs = Income × 0.50, Wants = Income × 0.30, Savings = Income × 0.20. Per Elizabeth Warren & Amelia Warren Tyagi, All Your Worth (2005)",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "savings-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "gross-income"
+  ]
+}

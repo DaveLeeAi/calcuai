@@ -124,12 +124,25 @@ function getBMICategory(bmi: number): string {
 
 // Wrapper for the formula registry (takes Record<string, unknown>)
 export function calculateBMIFromInputs(inputs: Record<string, unknown>): Record<string, unknown> {
+  const unitSystem = (inputs.unitSystem as string) === 'imperial' ? 'imperial' : 'metric';
   const result = calculateBMI({
     weight: inputs.weight as number,
     height: inputs.height as number,
-    unitSystem: (inputs.unitSystem as string) === 'imperial' ? 'imperial' : 'metric',
+    unitSystem,
   });
-  return result as unknown as Record<string, unknown>;
+
+  // Build a nicely-labeled metrics value-group from calculated values
+  const unitLabel = unitSystem === 'metric' ? 'kg' : 'lbs';
+  const bmiMetrics: { label: string; value: string | number }[] = result.bmi > 0
+    ? [
+        { label: `Min Healthy (${unitLabel})`, value: result.healthyWeightRange.min },
+        { label: `Max Healthy (${unitLabel})`, value: result.healthyWeightRange.max },
+        { label: 'BMI Prime', value: result.primeRatio },
+        { label: 'Ponderal Index', value: `${result.ponderal} kg/m³` },
+      ]
+    : [];
+
+  return { ...(result as unknown as Record<string, unknown>), bmiMetrics };
 }
 
 /** @formulaRegistry */

@@ -1,0 +1,172 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Converting \$100,000 from a Traditional IRA to a Roth IRA at a 24% marginal tax rate costs \$24,000 in taxes today — but if your retirement tax rate drops to 22%, the Roth account grows to \$386,968 tax-free over 20 years at 7% return, compared to \$301,835 after-tax from the Traditional path. The net benefit depends on whether you pay the conversion tax from outside funds and how many years remain until retirement. Use this Roth conversion calculator to compare both paths side by side.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Conversion Analysis Shows */}
+## What Your Conversion Analysis Shows
+
+A **Roth conversion** moves money from a pre-tax Traditional IRA or 401(k) into a post-tax Roth IRA. You pay income tax on the converted amount now, but all future growth and withdrawals from the Roth are completely tax-free. The core question is whether paying tax today produces a better outcome than paying tax later on the larger, grown balance.
+
+The **Roth value at retirement** represents your converted funds after years of tax-free compound growth. Because Roth withdrawals are tax-free, this is the full amount available to you — no further deductions. The **Traditional value after tax** shows what the same money would be worth if left in the Traditional account and taxed at your retirement rate upon withdrawal. The difference between these two numbers, minus the opportunity cost of the tax you paid, gives you the **net benefit of converting**.
+
+The **opportunity cost** is a critical and often overlooked factor. When you pay \$24,000 in conversion taxes from your taxable savings account, that \$24,000 can no longer earn investment returns. Over 20 years at 7%, that \$24,000 would have grown to \$92,839. A proper Roth conversion analysis must subtract this lost growth. This is why conversions are most beneficial when the tax rate differential is large, the time horizon is long, or you have non-investment cash available to pay the tax bill.
+
+To understand how your current tax bracket affects the conversion decision, see our [Tax Bracket Calculator](/finance/tax-bracket-calculator). For projecting your overall retirement picture, use our [Retirement Calculator](/finance/retirement-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Conversion Amount** — the dollar amount you plan to convert from your Traditional IRA or 401(k) to a Roth IRA. This can be a partial conversion. The default is \$100,000. Many advisors recommend converting in tranches over several years to stay within lower tax brackets.
+
+2. **Enter Current Marginal Tax Rate** — your current federal marginal tax rate. For 2025, the brackets are 10%, 12%, 22%, 24%, 32%, 35%, and 37%. The conversion amount is added on top of your existing income, so use the rate that applies to the additional income. The default is 24%.
+
+3. **Enter Expected Retirement Tax Rate** — the marginal rate you expect to pay on Traditional IRA withdrawals in retirement. If you anticipate lower income in retirement, this is typically lower than your current rate. The default is 22%.
+
+4. **Set Years Until Retirement** — the number of years your converted funds will grow before you begin withdrawals. Longer horizons favor Roth conversion because tax-free compound growth has more time to outpace the tax cost. The default is 20 years.
+
+5. **Set Expected Annual Return** — the average annual growth rate on your investments. The default of 7% reflects a diversified portfolio. Higher returns amplify the benefit of tax-free Roth growth.
+
+6. **Toggle Pay Tax from Outside** — when ON (default), you pay the conversion tax from non-retirement funds (checking, savings, brokerage), keeping the full conversion amount in the Roth. When OFF, the tax is deducted from the conversion itself, reducing the amount that enters the Roth.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The Roth conversion comparison models two parallel investment paths over the same time horizon and compares their after-tax terminal values.
+
+### Tax Cost of Conversion
+
+$$\text{Tax Cost} = \text{Conversion Amount} \times \frac{\text{Current Tax Rate}}{100}$$
+
+### Roth Path (Tax-Free Growth)
+
+If tax is paid from outside funds:
+
+$$\text{Roth Value} = \text{Conversion Amount} \times (1 + r)^n$$
+
+If tax is paid from the conversion:
+
+$$\text{Roth Value} = (\text{Conversion Amount} - \text{Tax Cost}) \times (1 + r)^n$$
+
+### Traditional Path (Taxed at Withdrawal)
+
+$$\text{Traditional After Tax} = \text{Conversion Amount} \times (1 + r)^n \times \left(1 - \frac{\text{Retirement Tax Rate}}{100}\right)$$
+
+### Opportunity Cost (When Tax Paid from Outside)
+
+$$\text{Opportunity Cost} = \text{Tax Cost} \times (1 + r)^n$$
+
+### Net Benefit
+
+$$\text{Net Benefit} = \text{Roth Value} - \text{Traditional After Tax} - \text{Opportunity Cost}$$
+
+Where:
+
+- **r** = expected annual return (decimal)
+- **n** = years until retirement
+
+A positive net benefit means converting is advantageous. A negative value means keeping the Traditional account is better.
+
+**Source:** IRS Publication 590-A (Contributions to Individual Retirement Arrangements); IRS Publication 590-B (Distributions from IRAs); Roth IRA conversion rules under the Tax Cuts and Jobs Act of 2017.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Lower Retirement Tax Rate — \$100K Conversion, Tax Paid from Outside
+
+**Inputs:**
+- Conversion Amount: \$100,000
+- Current Tax Rate: 24%
+- Retirement Tax Rate: 22%
+- Years Until Retirement: 20
+- Expected Return: 7%
+- Pay Tax from Outside: Yes
+
+**Step-by-step:**
+
+1. Tax cost now: \$100,000 × 0.24 = **\$24,000**
+2. Roth starting balance: **\$100,000** (full amount, tax paid externally)
+3. Roth at retirement: \$100,000 × 1.07²⁰ = **\$386,968**
+4. Traditional growth: \$100,000 × 1.07²⁰ = \$386,968
+5. Traditional after tax: \$386,968 × 0.78 = **\$301,835**
+6. Opportunity cost of tax: \$24,000 × 1.07²⁰ = **\$92,872**
+7. Net benefit: \$386,968 - \$301,835 - \$92,872 = **−\$7,739**
+
+**Interpretation:** Despite a lower retirement tax rate, the net benefit is slightly negative because the opportunity cost of paying \$24,000 in taxes now (which could have grown to \$92,872) outweighs the 2-percentage-point tax rate difference. The conversion becomes beneficial at roughly a 5+ percentage-point tax rate differential or with a longer time horizon.
+
+### Example 2: Higher Retirement Tax Rate — Roth Wins
+
+**Inputs:**
+- Conversion Amount: \$100,000
+- Current Tax Rate: 22%
+- Retirement Tax Rate: 32%
+- Years Until Retirement: 25
+- Expected Return: 7%
+- Pay Tax from Outside: Yes
+
+**Calculation:**
+
+1. Tax cost: \$100,000 × 0.22 = **\$22,000**
+2. Roth at retirement: \$100,000 × 1.07²⁵ = **\$542,743**
+3. Traditional after tax: \$542,743 × 0.68 = **\$369,065**
+4. Opportunity cost: \$22,000 × 1.07²⁵ = **\$119,403**
+5. Net benefit: \$542,743 − \$369,065 − \$119,403 = **\$54,275**
+
+**Interpretation:** When the retirement tax rate is significantly higher (32% vs. 22%), the Roth conversion produces a clear \$54,275 benefit. This scenario is common for high earners who expect tax rates to rise, have substantial required minimum distributions (RMDs), or anticipate higher income in retirement from pensions, Social Security, or rental income.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Decision
+
+**Tax Rate Differential** — The conversion is most beneficial when your current rate is significantly lower than your expected retirement rate. Scenarios where this occurs: you are in a temporarily low-income year (job change, sabbatical, early career), tax rates are expected to rise legislatively, or your Traditional IRA balance is so large that RMDs will push you into higher brackets.
+
+**Time Horizon** — Longer time until retirement amplifies the benefit of tax-free compound growth. A 10-year horizon rarely justifies conversion unless the tax rate differential is large (10+ points). A 25-30 year horizon makes conversion attractive even at identical tax rates because the opportunity cost of the tax payment has less relative impact versus decades of tax-free growth.
+
+**Paying Tax from Outside vs. Inside** — Paying conversion tax from non-retirement funds (checking, savings) is dramatically better than paying from the conversion itself. Paying from inside effectively reduces your Roth contribution by the tax amount, eliminating the primary advantage. If you cannot afford to pay the tax from outside funds, the conversion may not be worthwhile.
+
+**Required Minimum Distributions (RMDs)** — Large Traditional IRA balances force RMDs starting at age 73, which can push you into higher tax brackets involuntarily. Converting in your 50s and 60s (before RMDs begin) reduces your future Traditional balance and the associated tax bomb. Roth IRAs have no RMDs during the owner's lifetime, providing valuable tax planning flexibility.
+
+**State Taxes** — This calculator models federal taxes only. If you live in a high-tax state now (California, New York, New Jersey) but plan to retire in a no-income-tax state (Florida, Texas, Nevada), the effective tax rate differential widens significantly in favor of waiting to withdraw in the lower-tax state.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### When does a Roth conversion make sense?
+
+A Roth conversion makes the most financial sense when your current marginal tax rate is lower than your expected retirement tax rate, you have 15 or more years until retirement, and you can pay the conversion tax from non-retirement funds. It is also advantageous during temporarily low-income years (job transition, early retirement before Social Security), when you want to reduce future RMDs, or when you believe tax rates will increase legislatively. At identical tax rates, the conversion is roughly neutral — neither beneficial nor harmful.
+
+### How much tax do I pay on a Roth conversion?
+
+The converted amount is added to your ordinary income for the year and taxed at your marginal federal rate. A \$100,000 conversion at a 24% marginal rate costs \$24,000 in federal taxes. State income taxes may apply additionally. To minimize the tax hit, many advisors recommend converting in smaller amounts over multiple years to stay within lower tax brackets — for example, converting \$30,000-\$50,000 per year instead of \$200,000 at once.
+
+### Can I undo a Roth conversion?
+
+No. As of 2018, the Tax Cuts and Jobs Act eliminated the ability to recharacterize (undo) Roth conversions. Once you convert, the decision is permanent. This makes careful planning essential — model the numbers before converting, consider partial conversions to test the impact, and consult a tax professional for conversions exceeding \$50,000.
+
+### Should I convert all at once or spread it out?
+
+Spreading conversions over multiple years is almost always more tax-efficient than a single large conversion. A \$500,000 conversion in one year could push you into the 35% or 37% bracket. The same amount converted at \$100,000 per year over 5 years might stay entirely within the 24% bracket, saving tens of thousands in taxes. The optimal annual conversion amount fills the gap between your current income and the top of your current tax bracket.
+
+### What is the 5-year rule for Roth conversions?
+
+Each Roth conversion has its own 5-year clock. You must wait 5 years from the conversion date before withdrawing the converted principal tax-free if you are under age 59.5 — otherwise a 10% early withdrawal penalty applies to the converted amount (though not to the growth, which has its own 5-year rule). After age 59.5, you can withdraw converted amounts at any time with no penalty. The 5-year rule is per-conversion, so staggering conversions creates staggered access dates.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator implements the Roth conversion analysis framework using standard time-value-of-money formulas and the opportunity cost methodology described in **Kitces, M. E., "Evaluating Roth Conversions Using an Opportunity Cost Framework," *Journal of Financial Planning***. Tax rate assumptions reference the **2025 federal income tax brackets per IRS Revenue Procedure 2024-40**. Roth IRA conversion rules and eligibility per **IRS Publication 590-A (Contributions to Individual Retirement Arrangements)** and **IRS Publication 590-B (Distributions from Individual Retirement Arrangements)**. The Tax Cuts and Jobs Act of 2017 provisions affecting Roth conversions (elimination of recharacterization) per **Public Law 115-97, Section 13611**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

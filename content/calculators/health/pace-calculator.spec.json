@@ -62,7 +62,6 @@
       "type": "number",
       "required": false,
       "defaultValue": 0,
-
       "min": 0,
       "max": 99,
       "step": 1,
@@ -85,7 +84,6 @@
       "type": "number",
       "required": false,
       "defaultValue": 0,
-
       "min": 0,
       "max": 59,
       "step": 1,

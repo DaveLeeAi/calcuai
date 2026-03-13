@@ -1,0 +1,162 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+To save \$50,000 in 10 years starting with \$5,000 already set aside, you need to contribute approximately \$249 per month — assuming a 6% annual return with monthly compounding. Of the \$45,000 gap between your current savings and your goal, roughly \$29,900 comes from your monthly contributions and \$15,100 from compound interest earned along the way. This calculator shows exactly how much to save each month for any target amount, timeframe, and expected return rate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Savings Plan Shows
+
+This calculator answers the fundamental savings question: "How much do I need to set aside each month to reach my financial goal on time?" It factors in money you've already saved, the expected growth rate on that balance, and the compounding effect on every future deposit — giving you a single monthly contribution number that gets you to your target.
+
+**The math works in your favor.** When you invest your savings at even a moderate return, compound interest does a meaningful share of the heavy lifting. For example, reaching \$50,000 in 10 years at 6% requires only \$249/month — but without any return, you'd need \$375/month. That's \$126/month less, or \$15,100 in total interest earned over the decade. The longer your timeframe, the more dramatic the compounding advantage: saving \$1 million over 30 years at 7% requires roughly \$820/month, while stuffing cash under a mattress would demand \$2,778/month.
+
+**Starting early changes everything.** A 25-year-old saving for retirement at 65 needs only \$381/month to reach \$1 million at 7% average annual returns. Wait until 35, and the required contribution jumps to \$820/month — more than double. Every year you delay costs you exponentially more because the most powerful compounding happens at the end of the timeline, on the largest balance. This calculator shows you exactly what starting today versus waiting will cost in monthly savings.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Your Savings Goal** — the total amount you're targeting. Common goals include an emergency fund (3–6 months of expenses, typically \$10,000–\$30,000), a home down payment (\$20,000–\$80,000), a car purchase (\$5,000–\$40,000), or a long-term wealth target (\$500,000–\$1,000,000+).
+
+2. **Enter Your Current Savings** — the amount you've already saved toward this goal. Include only funds specifically allocated to this target, not your overall net worth. If you're starting from scratch, enter \$0.
+
+3. **Set the Timeframe in Years** — how many years until you need the money. Be realistic: stretching the timeframe lowers your monthly payment but delays your goal. For reference, most financial planners recommend at least 5 years for investment-based savings to smooth out market volatility.
+
+4. **Set the Expected Annual Return** — the growth rate you expect on your savings. Conservative estimates: 1–2% for high-yield savings accounts, 4–5% for CDs and bonds, 6–8% for a diversified stock/bond portfolio, 8–10% for an aggressive equity portfolio. The S&P 500 has returned approximately 10% annually before inflation over the past 50 years.
+
+5. **Choose the Compounding Frequency** — how often interest is calculated. Monthly (12) is the most common default for investment accounts. Daily (365) slightly increases returns. Annual (1) is the most conservative assumption and easiest to verify by hand.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The required monthly savings uses the future value annuity formula, solved for the periodic payment:
+
+$$PMT = \frac{FV_{target} - PV \times \left(1 + \frac{r}{n}\right)^{nt}}{} \times \frac{r_{eff}}{\left(1 + r_{eff}\right)^{m} - 1}$$
+
+Simplified: first, compute the future value of your current savings. Then find the monthly payment needed to fill the remaining gap.
+
+**Step 1 — Future value of current savings:**
+
+$$FV_{current} = PV \times \left(1 + \frac{r}{n}\right)^{n \times t}$$
+
+**Step 2 — Remaining amount needed from contributions:**
+
+$$Remaining = FV_{target} - FV_{current}$$
+
+**Step 3 — Required monthly payment (annuity payment formula):**
+
+$$PMT = Remaining \times \frac{r_{eff}}{\left(1 + r_{eff}\right)^{m} - 1}$$
+
+Where:
+
+- **PMT** = required monthly contribution (dollars)
+- **FV_target** = your savings goal (dollars)
+- **PV** = current savings balance (dollars)
+- **r** = annual return rate (decimal, e.g., 6% = 0.06)
+- **n** = compounding periods per year (12 monthly, 365 daily)
+- **t** = timeframe in years
+- **r_eff** = effective monthly rate = $(1 + r/n)^{n/12} - 1$
+- **m** = total months = $12 \times t$
+
+If $Remaining \leq 0$, your current savings already grow to meet the goal — no additional monthly contributions needed.
+
+**Source:** FINRA Investor Education Foundation; CFA Institute financial mathematics; standard annuity formulas from any corporate finance textbook (Brealey, Myers & Allen).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Emergency Fund — \$25,000 in 3 Years
+
+**Inputs:**
+- Savings Goal: \$25,000
+- Current Savings: \$3,000
+- Timeframe: 3 years
+- Annual Return: 4.5% (high-yield savings account)
+- Compounding: Monthly
+
+**Step-by-step:**
+
+1. Effective monthly rate: $(1 + 0.045/12)^{12/12} - 1 = 0.00375$
+2. FV of current savings: $3{,}000 \times (1.00375)^{36} = \$3,432.61$
+3. Remaining: $25{,}000 - 3{,}432.61 = \$21,567.39$
+4. Monthly payment: $21{,}567.39 \times 0.00375 / ((1.00375)^{36} - 1) = \$564.94$
+5. Total contributions: $564.94 \times 36 = \$20,337.84$
+6. Interest earned: $25{,}000 - 3{,}000 - 20{,}337.84 = \$1,662.16$
+
+**Interpretation:** You need \$565/month to build a \$25,000 emergency fund in 3 years. The 4.5% return saves you roughly \$46/month compared to earning no interest. If that monthly amount feels steep, extending to 4 years drops it to \$405/month.
+
+### Example 2: House Down Payment — \$80,000 in 7 Years
+
+**Inputs:**
+- Savings Goal: \$80,000
+- Current Savings: \$15,000
+- Timeframe: 7 years
+- Annual Return: 6% (balanced investment portfolio)
+- Compounding: Monthly
+
+**Step-by-step:**
+
+1. Effective monthly rate: $0.005$
+2. FV of current savings: $15{,}000 \times (1.005)^{84} = \$22,789.94$
+3. Remaining: $80{,}000 - 22{,}789.94 = \$57,210.06$
+4. Monthly payment: $57{,}210.06 \times 0.005 / ((1.005)^{84} - 1) = \$544.25$
+5. Total contributions: $544.25 \times 84 = \$45,717.00$
+6. Interest earned: $80{,}000 - 15{,}000 - 45{,}717 = \$19,283$
+
+**Interpretation:** At \$544/month, compound interest contributes \$19,283 — nearly a quarter of your \$65,000 gap. If your current savings are in a checking account earning 0%, you'd need \$774/month instead — \$230 more each month.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Savings Plan
+
+**Timeframe** — The single most powerful variable. Doubling your timeframe from 10 to 20 years doesn't halve your monthly contribution — it reduces it by roughly 65–70% because compound interest has far more time to work. A \$100,000 goal at 7% requires \$576/month over 10 years but only \$189/month over 20 years.
+
+**Expected Return Rate** — Even small differences in return compound dramatically. At 4% over 20 years, reaching \$500,000 requires \$1,362/month. At 8%, only \$845/month — a 38% reduction. However, higher-return investments carry more volatility. Use conservative estimates (4–5%) for goals under 5 years and moderate estimates (6–8%) for goals over 10 years.
+
+**Current Savings** — Money already invested earns compound returns from day one. \$10,000 already saved at 7% for 20 years grows to \$38,697 on its own — reducing a \$200,000 goal by nearly 20% before you contribute a single additional dollar.
+
+**Compounding Frequency** — The difference between monthly and daily compounding is typically negligible (less than 0.05% per year). Annual compounding can cost you slightly more — roughly 0.1–0.3% per year depending on the rate. For most savings goals, monthly compounding is the appropriate default.
+
+**Inflation** — This calculator shows nominal (pre-inflation) results. If your goal is 10 years away and inflation averages 3%, a \$50,000 target in today's dollars is actually a \$67,196 target in future dollars. Consider inflating your goal amount if you're planning in today's purchasing power.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much should I save each month to reach my goal?
+
+The required monthly savings depends on three factors: your goal amount, your timeframe, and your expected return rate. As a rule of thumb, saving \$500/month at 7% annual returns grows to approximately \$86,500 in 10 years, \$260,000 in 20 years, or \$605,000 in 30 years. This calculator gives you the exact monthly figure for your specific situation, factoring in any savings you already have.
+
+### What's a realistic expected return rate to use?
+
+For a high-yield savings account or money market fund, use 4–5% (as of 2025). For a balanced portfolio of stocks and bonds, use 6–7%. For an all-equity index fund portfolio, historical average returns have been approximately 10% before inflation and 7% after inflation over the past 50 years. Use the lower end of any range for goals within 5 years and the higher end for goals beyond 10 years.
+
+### Should I include my emergency fund in current savings?
+
+No. Your emergency fund serves a different purpose — it protects against unexpected expenses and income loss. Only enter savings that are specifically dedicated to the goal you're calculating. Mixing emergency reserves into a down payment savings plan, for example, leaves you unprotected if an emergency occurs before you reach your target.
+
+### How does compounding frequency affect my savings goal?
+
+The impact is small but real. At 6% annual return, the difference between annual and daily compounding on a \$50,000 goal over 10 years is roughly \$1.50/month in required savings. Monthly compounding is the standard default for most investment and savings accounts. Choose daily if your account compounds daily (most high-yield savings accounts do), and annual for the most conservative estimate.
+
+### What if I can't afford the monthly contribution this calculator shows?
+
+You have three options: extend your timeframe (the most effective lever), reduce your goal amount, or increase your expected return by choosing higher-growth investments. You can also start with a smaller contribution and increase it annually — even a 3% annual increase in contributions significantly reduces the initial monthly requirement.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator uses the standard future value annuity payment formula as taught in the **CFA Institute** curriculum and documented by the **FINRA Investor Education Foundation**. The annuity formula solves for the periodic payment required to accumulate a target future value, accounting for compound growth on both the initial balance and each subsequent contribution. Historical market return references cite the **S&P 500 Total Return Index** (10.0% nominal annual average, 1974–2024, per NYU Stern). High-yield savings account rate references are based on **FDIC** rate survey data as of March 2025.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

@@ -90,7 +90,10 @@
       "label": "Principal vs Interest",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#1A6FA0", "#2ECC71"]
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
       }
     },
     {
@@ -100,12 +103,17 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "Balance ($)",
-        "colors": ["#1A6FA0", "#2ECC71"]
+        "colors": [
+          "#1A6FA0",
+          "#2ECC71"
+        ]
       }
     }
   ],
   "formula": "simple-interest",
-  "features": ["chart"],
+  "features": [
+    "chart"
+  ],
   "relatedCalculators": [
     "compound-interest-calculator",
     "savings-calculator",
@@ -120,8 +128,12 @@
   "requiresSources": true,
   "formulaCitation": "CFPB / Truth in Lending Act (Regulation Z)",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Simple interest formula I = P × r × t per CFPB Truth in Lending Act (Regulation Z) disclosure standards",
   "formulaAuditDate": "2026-03-12",
@@ -129,10 +141,19 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["compound-interest-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "compound-interest-calculator"
+  ],
+  "qualityScore": 96,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null,
-  "glossaryTerms": ["simple-interest", "principal", "interest-rate", "compound-interest"],
-  "methodologyTopics": ["simple-interest"]
+  "glossaryTerms": [
+    "simple-interest",
+    "principal",
+    "interest-rate",
+    "compound-interest"
+  ],
+  "methodologyTopics": [
+    "simple-interest"
+  ]
 }

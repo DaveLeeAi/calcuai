@@ -46,7 +46,7 @@ export function calculateMortgage(inputs: Record<string, unknown>): Record<strin
   const annualInsurance = Number(inputs.homeInsurance) || 0;
   const includePMI = inputs.includePMI !== false;
 
-  const principal = homePrice - downPayment;
+  const principal = Math.max(0, homePrice - downPayment);
   const monthlyRate = annualRate / 12;
 
   // P&I calculation
@@ -106,12 +106,26 @@ export function calculateMortgage(inputs: Record<string, unknown>): Record<strin
     { label: 'Payoff Date', value: termYears },
   ];
 
+  // Yearly principal vs interest breakdown (for stacked bar chart)
+  const yearlyBreakdown: { year: number; principal: number; interest: number }[] = [];
+  for (let y = 0; y < termYears; y++) {
+    const yearRows = schedule.slice(y * 12, (y + 1) * 12);
+    yearlyBreakdown.push({
+      year: y + 1,
+      principal: parseFloat(yearRows.reduce((s, r) => s + r.principal, 0).toFixed(2)),
+      interest: parseFloat(yearRows.reduce((s, r) => s + r.interest, 0).toFixed(2)),
+    });
+  }
+
   return {
     monthlyPayment: parseFloat(monthlyPayment.toFixed(2)),
+    totalInterest: parseFloat(totalInterest.toFixed(2)),
+    totalCost: parseFloat(totalPayment.toFixed(2)),
     loanSummary,
     paymentBreakdown,
     amortizationSchedule: schedule,
     balanceOverTime,
+    yearlyBreakdown,
   };
 }
 

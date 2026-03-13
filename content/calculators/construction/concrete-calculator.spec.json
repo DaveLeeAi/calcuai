@@ -238,7 +238,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Standard geometric volume formulas for rectangular prisms and cylinders, bag yield data per Portland Cement Association (PCA)",
   "formulaAuditDate": "2026-03-10",
@@ -247,7 +247,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 88,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-10",
   "seasonality": "spring-summer"
 }

@@ -30,6 +30,7 @@ export interface InputField {
   dependsOn?: string;
   maxDependency?: string;
   helpText?: string;
+  visibleWhen?: Record<string, string[]>;
 }
 
 export interface OutputField {

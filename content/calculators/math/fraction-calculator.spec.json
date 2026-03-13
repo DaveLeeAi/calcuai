@@ -131,7 +131,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Standard arithmetic operations on rational numbers: a/b ± c/d = (ad ± bc)/bd; a/b × c/d = ac/bd; a/b ÷ c/d = ad/bc; simplified via GCD (Euclidean algorithm)",
   "formulaAuditDate": "2026-03-10",
@@ -140,7 +140,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 83,
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-10",
   "seasonality": null
 }

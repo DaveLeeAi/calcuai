@@ -24,8 +24,14 @@
       "required": true,
       "defaultValue": "count",
       "options": [
-        { "value": "count", "label": "Count Sig Figs" },
-        { "value": "round", "label": "Round to Sig Figs" }
+        {
+          "value": "count",
+          "label": "Count Sig Figs"
+        },
+        {
+          "value": "round",
+          "label": "Round to Sig Figs"
+        }
       ],
       "helpText": "Count the sig figs in your number, or round it to a specific number of sig figs"
     },
@@ -65,7 +71,10 @@
     }
   ],
   "formula": "significant-figures",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "scientific-notation-calculator",
     "logarithm-calculator",
@@ -79,8 +88,12 @@
   "requiresSources": false,
   "formulaCitation": "NIST Guide for the Use of the International System of Units (SI), Appendix B",
   "articleWordTarget": 1500,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Sig fig rules: non-zero always significant; zeros between non-zeros significant; leading zeros not significant; trailing zeros after decimal significant",
   "formulaAuditDate": "2026-03-12",
@@ -88,8 +101,10 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["scientific-notation-calculator"],
-  "qualityScore": 76,
+  "duplicationRisk": [
+    "scientific-notation-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null
 }

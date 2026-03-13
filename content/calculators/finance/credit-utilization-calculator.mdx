@@ -1,0 +1,105 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Your credit utilization ratio — the percentage of available credit you are currently using — is the second-most important factor in your FICO score, accounting for roughly 30% of the total. Carrying a \$5,000 balance on \$20,000 in total credit limits puts you at 25% utilization, which FICO considers "Good." Dropping below 10% (under \$2,000 on that same \$20,000 limit) pushes you into the "Excellent" range. Enter your balances and limits below to see your ratio, your credit impact rating, and exactly how much to pay down to hit your target.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Utilization Ratio Shows */}
+## What Your Utilization Ratio Shows
+
+The **utilization ratio** is a single number that tells credit scoring models how much of your available revolving credit you are using. FICO and VantageScore both weight this metric heavily — it is second only to payment history in its impact on your score. A ratio of 25% means you are using \$1 of every \$4 available, which falls in the "Good" range and is unlikely to drag your score down.
+
+The **credit impact rating** translates your raw percentage into a FICO-aligned category. Below 10% is Excellent — this is where maximal score benefit occurs. Between 10% and 29% is Good. Once you cross 30%, scoring models begin penalizing you progressively, with 50%+ creating meaningful score damage and 75%+ signaling financial distress to lenders.
+
+The **amount to pay down** is the actionable output. If your current ratio is 40% and your target is 30%, the calculator tells you the exact dollar amount to pay down to reach that threshold. This is more useful than abstract percentage targets because it converts the goal into a specific financial action.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your total credit limit** — add up the credit limits across all your revolving accounts (credit cards, store cards, lines of credit). Check your card statements or online accounts for each limit. Do not include installment loans (auto, mortgage, student) — utilization only applies to revolving credit.
+
+2. **Enter your total current balances** — add up all current balances on those same revolving accounts. Use the statement balance or current balance, not the minimum payment due.
+
+3. **Set your target utilization rate** — the default is 30%, which is the commonly cited threshold for "good" credit. For optimal FICO scores, set this to 10% or lower. Choose a target that is realistic for your financial situation.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## How This Is Calculated
+
+$$\text{Utilization Ratio} = \frac{\text{Total Balances}}{\text{Total Credit Limit}} \times 100$$
+
+$$\text{Target Balance} = \text{Total Credit Limit} \times \frac{\text{Target Utilization}}{100}$$
+
+$$\text{Amount to Pay Down} = \max(0,\ \text{Total Balances} - \text{Target Balance})$$
+
+**Rating thresholds** (based on FICO scoring model analysis by Experian, TransUnion, and Equifax):
+
+| Utilization | Rating | Score Impact |
+|---|---|---|
+| 0–9% | Excellent | Maximum positive impact |
+| 10–29% | Good | Minimal negative impact |
+| 30–49% | Fair | Moderate negative impact |
+| 50–74% | Poor | Significant negative impact |
+| 75%+ | Very Poor | Severe negative impact |
+
+**Source:** FICO Score model documentation; Experian, TransUnion, and Equifax credit reporting standards.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Typical Credit Card User — 25% Utilization
+
+**Inputs:**
+- Total credit limit: \$20,000 (across 3 cards)
+- Total balances: \$5,000
+- Target utilization: 30%
+
+**Calculation:**
+1. Utilization: \$5,000 ÷ \$20,000 × 100 = **25%**
+2. Rating: **Good** (10–29% range)
+3. Available credit: \$20,000 − \$5,000 = **\$15,000**
+4. Target balance at 30%: \$20,000 × 0.30 = **\$6,000**
+5. Amount to pay down: \$5,000 − \$6,000 = **\$0** (already below target)
+
+**Interpretation:** At 25% utilization you are already below the 30% target. To move from Good to Excellent, you would need to get below 10% — which means paying your balances down to under \$2,000, a reduction of \$3,000 from your current \$5,000.
+
+### Example 2: High Utilization — Calculating Paydown Target
+
+**Inputs:**
+- Total credit limit: \$15,000
+- Total balances: \$9,000
+- Target utilization: 30%
+
+**Calculation:**
+1. Utilization: \$9,000 ÷ \$15,000 × 100 = **60%**
+2. Rating: **Poor** (50–74% range)
+3. Target balance at 30%: \$15,000 × 0.30 = **\$4,500**
+4. Amount to pay down: \$9,000 − \$4,500 = **\$4,500**
+
+**Interpretation:** Paying down \$4,500 moves you from 60% (Poor) to 30% (Fair). Paying down \$7,500 to reach a \$1,500 balance (10%) pushes you into the Excellent range. Even partial progress — paying \$2,000 to reach 46.7% — moves you from the Poor tier into Fair territory.
+
+## Frequently Asked Questions
+
+### What is a good credit utilization ratio?
+
+Below 30% is considered acceptable, but for the highest FICO scores, keep utilization under 10%. Consumers with FICO scores above 800 average 7% utilization according to Experian data. Zero percent utilization is not optimal either — having at least one card with a small balance shows active credit use.
+
+### Does utilization matter per card or across all cards?
+
+Both. FICO calculates your overall utilization across all revolving accounts and your per-card utilization. Maxing out a single card hurts your score even if your overall utilization is low. Distribute balances across multiple cards when possible.
+
+### How quickly does paying down balances improve my score?
+
+Utilization has no memory in FICO models. Your score recalculates based on the balance reported by your card issuer, typically once per billing cycle. Pay down your balance before the statement closing date, and the lower utilization appears on your credit report within 30 days.
+
+## Sources & Methodology
+
+- **FICO Score model:** Utilization weighting per FICO's published scoring factor breakdown (30% of total score).
+- **Threshold data:** Experian, TransUnion, and Equifax consumer credit education resources.
+- **Average utilization for 800+ scores:** Experian consumer credit review data (2025).

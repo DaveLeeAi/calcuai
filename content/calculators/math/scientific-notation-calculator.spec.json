@@ -15,8 +15,14 @@
       "required": true,
       "defaultValue": "to-scientific",
       "options": [
-        { "value": "to-scientific", "label": "Decimal \u2192 Scientific" },
-        { "value": "from-scientific", "label": "Scientific \u2192 Decimal" }
+        {
+          "value": "to-scientific",
+          "label": "Decimal → Scientific"
+        },
+        {
+          "value": "from-scientific",
+          "label": "Scientific → Decimal"
+        }
       ],
       "helpText": "Convert a decimal number to scientific notation, or vice versa"
     },
@@ -38,7 +44,7 @@
       "defaultValue": 6.022,
       "step": "any",
       "placeholder": "e.g. 6.022",
-      "helpText": "The coefficient in a \u00d7 10^n"
+      "helpText": "The coefficient in a × 10^n"
     },
     {
       "id": "exponent",
@@ -56,15 +62,24 @@
       "id": "to-scientific",
       "label": "To Scientific",
       "description": "Convert decimal number to scientific notation",
-      "defaultInputOverrides": { "mode": "to-scientific" },
-      "visibleInputs": ["decimalNumber"]
+      "defaultInputOverrides": {
+        "mode": "to-scientific"
+      },
+      "visibleInputs": [
+        "decimalNumber"
+      ]
     },
     {
       "id": "from-scientific",
       "label": "From Scientific",
       "description": "Convert scientific notation to decimal number",
-      "defaultInputOverrides": { "mode": "from-scientific" },
-      "visibleInputs": ["coefficient", "exponent"]
+      "defaultInputOverrides": {
+        "mode": "from-scientific"
+      },
+      "visibleInputs": [
+        "coefficient",
+        "exponent"
+      ]
     }
   ],
   "outputs": [
@@ -116,7 +131,10 @@
     }
   ],
   "formula": "scientific-notation",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "significant-figures-calculator",
     "logarithm-calculator",
@@ -130,8 +148,12 @@
   "requiresSources": false,
   "formulaCitation": "IEEE 754 floating-point standard; NIST SI notation guidelines",
   "articleWordTarget": 1500,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Scientific: a x 10^n where 1 <= |a| < 10; Engineering: a x 10^n where n is a multiple of 3",
   "formulaAuditDate": "2026-03-12",
@@ -139,8 +161,10 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["significant-figures-calculator"],
-  "qualityScore": 76,
+  "duplicationRisk": [
+    "significant-figures-calculator"
+  ],
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null
 }

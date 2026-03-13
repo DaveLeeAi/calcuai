@@ -163,8 +163,7 @@
     "cd-calculator",
     "401k-calculator",
     "investment-calculator",
-    "down-payment-calculator",
-    "debt-payoff-calculator",
+    "emergency-fund-calculator",
     "inflation-calculator"
   ],
   "disclaimer": "finance",
@@ -189,7 +188,7 @@
   "duplicationRisk": [
     "compound-interest-calculator"
   ],
-  "qualityScore": 96,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-10",
   "seasonality": null,
   "glossaryTerms": [

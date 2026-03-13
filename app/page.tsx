@@ -29,6 +29,7 @@ export const metadata: Metadata = {
 
 /** Curated list of popular calculator slugs shown on the homepage */
 const POPULAR_SLUGS = [
+  'sales-tax-calculator',
   'mortgage-calculator',
   'bmi-calculator',
   'percentage-calculator',

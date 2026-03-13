@@ -108,7 +108,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "published",
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Mean = Σxᵢ/n; Median = middle value (sorted); Mode = most frequent value",
   "formulaAuditDate": "2026-03-11",
@@ -119,7 +119,7 @@
   "duplicationRisk": [
     "standard-deviation-calculator"
   ],
-  "qualityScore": 88,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

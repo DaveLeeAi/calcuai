@@ -1,0 +1,174 @@
+{
+  "id": "tile-calculator",
+  "title": "Tile Calculator",
+  "slug": "tile-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "tile calculator",
+  "metaTitle": "Tile Calculator — How Many Tiles Do You Need?",
+  "metaDescription": "Calculate exactly how many tiles you need for any room. Enter room dimensions, tile size, grout gap, and waste factor to get an accurate tile count with cost estimate.",
+  "inputs": [
+    {
+      "id": "roomLength",
+      "label": "Room Length",
+      "type": "number",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0.1,
+      "max": 1000,
+      "step": 0.1,
+      "suffix": "ft",
+      "helpText": "Length of the area to tile in feet"
+    },
+    {
+      "id": "roomWidth",
+      "label": "Room Width",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "max": 1000,
+      "step": 0.1,
+      "suffix": "ft",
+      "helpText": "Width of the area to tile in feet"
+    },
+    {
+      "id": "tileLength",
+      "label": "Tile Length",
+      "type": "number",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "max": 48,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Length of each tile in inches"
+    },
+    {
+      "id": "tileWidth",
+      "label": "Tile Width",
+      "type": "number",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "max": 48,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Width of each tile in inches"
+    },
+    {
+      "id": "gapSize",
+      "label": "Grout Gap",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0.125,
+      "min": 0,
+      "max": 1,
+      "step": 0.0625,
+      "suffix": "in",
+      "helpText": "Width of grout lines between tiles (standard: 1/8 inch)"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "Extra tiles for cuts and breakage. 10% for simple layouts, 15% for diagonal."
+    },
+    {
+      "id": "costPerTile",
+      "label": "Cost Per Tile (Optional)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Cost per tile for budget estimate"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalArea",
+      "label": "Total Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "tilesNeeded",
+      "label": "Tiles Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "tilesWithWaste",
+      "label": "Tiles with Waste",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "tileAreaSqFt",
+      "label": "Coverage Per Tile (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "estimatedCost",
+      "label": "Estimated Material Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Tile Estimate Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "tile",
+  "features": [],
+  "relatedCalculators": [
+    "flooring-calculator",
+    "square-footage-calculator",
+    "paint-calculator",
+    "concrete-calculator",
+    "gravel-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Tile Council of North America (TCNA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Tile coverage calculations based on Tile Council of North America (TCNA) installation guidelines. Effective coverage accounts for grout joint width added to each tile dimension. Waste factors per TCNA recommendations: 10% for straight layouts, 15% for diagonal or complex patterns.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "flooring-calculator",
+    "square-footage-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

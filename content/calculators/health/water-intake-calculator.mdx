@@ -1,0 +1,103 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate your personal daily water intake based on body weight, activity level, and climate. A moderately active 160-pound person needs approximately 99 ounces (about 2.9 liters) of water per day — that's roughly 12 glasses or 5.9 standard water bottles. Your actual needs shift significantly with exercise intensity, heat exposure, pregnancy, and breastfeeding.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Interpretation */}
+## What Your Water Intake Recommendation Shows
+
+This calculator estimates your daily fluid needs by applying a weight-based baseline — half your body weight in ounces — then adjusting for physical activity, climate, and physiological factors like pregnancy. The output converts your total into ounces, liters, 8-oz glasses, and standard 16.9-oz water bottles so you can track intake with whatever vessel you use.
+
+Activity level drives the largest adjustment. Moving from sedentary to extremely active increases your recommendation by 50% because sweat losses during prolonged exercise can exceed 1 liter per hour. Climate adds a secondary adjustment: hot or humid environments increase insensible water loss through sweat and respiration, adding roughly 16 oz (about 2 glasses) to your daily target.
+
+The pregnancy and breastfeeding toggles add fixed amounts per the Institute of Medicine recommendations — 10 oz for pregnancy and 32 oz for breastfeeding — reflecting the increased blood volume, amniotic fluid production, and milk output these conditions require.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your body weight** in pounds. This is the primary driver of your hydration baseline.
+2. **Select your activity level.** Choose the option that best matches your average weekly exercise frequency. If you exercise intensely 3-5 days per week, "Moderately Active" is appropriate.
+3. **Select your climate.** Choose "Hot/Humid" if you live in a warm region or during summer months. Choose "Cold/Dry" for winter or arid environments where you may not feel thirsty but still lose moisture.
+4. **Toggle pregnancy or breastfeeding** if applicable. These add fixed amounts based on IOM guidelines.
+5. **Read your results.** The highlighted number is your daily ounce target. Use the glasses or bottles count for practical daily tracking.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$\text{Daily Oz} = (\text{Weight in lbs} \times 0.5) \times \text{Activity Multiplier} + \text{Climate Adjustment}$$
+
+Where:
+
+- **Weight x 0.5** = baseline hydration in ounces (a widely cited guideline: drink half your body weight in ounces)
+- **Activity Multiplier**: Sedentary = 1.0x, Light = 1.12x, Moderate = 1.24x, Active = 1.36x, Extreme = 1.5x
+- **Climate Adjustment**: Cold = -4 oz, Temperate = 0 oz, Hot = +16 oz
+- **Pregnancy**: adds 10 oz (~300 mL per IOM)
+- **Breastfeeding**: adds 32 oz (~1 L per IOM)
+
+Unit conversions:
+
+$$\text{Liters} = \text{Ounces} \times 0.0295735$$
+
+$$\text{Glasses} = \text{Ounces} \div 8$$
+
+$$\text{Bottles} = \text{Ounces} \div 16.9$$
+
+**Source:** National Academies of Sciences, Engineering, and Medicine — *Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate* (2005). Pregnancy and lactation adjustments per Institute of Medicine recommendations.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+**Inputs:** 160 lbs, moderately active, temperate climate
+
+1. Base hydration: 160 × 0.5 = **80 oz**
+2. Activity multiplier: 80 × 1.24 = **99.2 oz**
+3. Climate adjustment: 99.2 + 0 = **99.2 oz**
+4. Rounded total: **99 oz per day**
+5. In liters: 99 × 0.0295735 = **2.9 L**
+6. In glasses: 99 ÷ 8 = **12 glasses** (rounded)
+7. In bottles: 99 ÷ 16.9 = **5.9 bottles**
+
+**Interpretation:** At 99 oz per day, spacing intake across waking hours means drinking roughly one 8-oz glass per hour over a 12-hour day. Front-loading intake in the morning and around workouts helps maintain steady hydration without uncomfortable evening consumption.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- The "half your body weight in ounces" rule is a **general guideline**, not a clinically precise measurement. Individual needs vary based on metabolism, kidney function, medications, and health conditions.
+- This calculator estimates **total fluid intake**, not just plain water. Approximately 20% of daily water intake comes from food (fruits, vegetables, soups), and beverages like coffee and tea contribute to hydration despite mild diuretic effects.
+- Activity multipliers are **population averages**. Actual sweat rates vary significantly between individuals — some people sweat twice as much as others during identical exercise.
+- The calculator does not account for **altitude**, which increases respiratory water loss, or **illness** (fever, vomiting, diarrhea), which can dramatically increase fluid needs.
+- Pregnancy and breastfeeding additions are **fixed estimates** from IOM guidelines. Individual needs should be discussed with a healthcare provider.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much water should I drink a day?
+
+The general recommendation is approximately half your body weight (in pounds) in ounces of water daily, adjusted for activity and climate. For a 160-pound moderately active adult, that works out to about 99 ounces or 2.9 liters per day. The National Academies set the Adequate Intake at 3.7 L/day for men and 2.7 L/day for women, including water from all beverages and food. These figures serve as population-level guidelines — individual needs depend on body size, exercise habits, climate, and health conditions.
+
+### Does coffee count toward water intake?
+
+Yes, coffee and tea contribute to your daily hydration despite containing caffeine. Research published in *PLOS ONE* (2014) found that moderate coffee consumption (up to about 4 cups per day) does not cause dehydration and provides hydration comparable to water. The mild diuretic effect of caffeine is offset by the volume of water in the beverage. However, heavily sweetened or high-caffeine energy drinks may have different effects and should not be your primary hydration source.
+
+### What are signs I'm not drinking enough water?
+
+The most reliable indicator is urine color — pale yellow indicates adequate hydration, while dark yellow or amber suggests you need more fluids. Other signs of mild dehydration include thirst, dry mouth, fatigue, headache, and decreased urine output. By the time you feel thirsty, you may already be mildly dehydrated (1-2% body water loss). For exercise, weighing yourself before and after a workout reveals fluid loss: each pound lost equals approximately 16 oz of water to replace.
+
+</div>
+
+{/* Section 14: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the widely cited "half your bodyweight in ounces" hydration guideline, refined with activity and climate multipliers derived from exercise science literature. The base recommendation aligns with the **National Academies of Sciences, Engineering, and Medicine** *Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate* (2005), which established Adequate Intake levels of 3.7 L/day for adult men and 2.7 L/day for adult women from all sources. Pregnancy (+300 mL) and breastfeeding (+1 L) adjustments follow the **Institute of Medicine** guidelines for increased fluid needs during these physiological states.
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

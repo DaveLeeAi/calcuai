@@ -15,11 +15,19 @@
       "required": true,
       "defaultValue": "add-tax",
       "options": [
-        { "value": "add-tax", "label": "Add Tax to Price (Net → Gross)" },
-        { "value": "extract-tax", "label": "Extract Tax from Total (Gross → Net)" },
-        { "value": "find-rate", "label": "Find Tax Rate" }
-      ],
-      "helpText": "Choose how you want to calculate: add tax, reverse-calculate, or find the rate."
+        {
+          "value": "add-tax",
+          "label": "Add Tax to Price (Net → Gross)"
+        },
+        {
+          "value": "extract-tax",
+          "label": "Extract Tax from Total (Gross → Net)"
+        },
+        {
+          "value": "find-rate",
+          "label": "Find Tax Rate"
+        }
+      ]
     },
     {
       "id": "stateCode",
@@ -28,107 +36,285 @@
       "required": false,
       "defaultValue": "custom",
       "options": [
-        { "value": "custom", "label": "— Enter rate manually —" },
-        { "value": "AL", "label": "Alabama (9.29%)" },
-        { "value": "AK", "label": "Alaska (1.82%)" },
-        { "value": "AZ", "label": "Arizona (8.40%)" },
-        { "value": "AR", "label": "Arkansas (9.49%)" },
-        { "value": "CA", "label": "California (8.99%)" },
-        { "value": "CO", "label": "Colorado (7.81%)" },
-        { "value": "CT", "label": "Connecticut (6.35%)" },
-        { "value": "DE", "label": "Delaware (0.00%)" },
-        { "value": "DC", "label": "District of Columbia (6.00%)" },
-        { "value": "FL", "label": "Florida (7.01%)" },
-        { "value": "GA", "label": "Georgia (7.38%)" },
-        { "value": "HI", "label": "Hawaii (4.50%)" },
-        { "value": "ID", "label": "Idaho (6.03%)" },
-        { "value": "IL", "label": "Illinois (8.83%)" },
-        { "value": "IN", "label": "Indiana (7.00%)" },
-        { "value": "IA", "label": "Iowa (6.94%)" },
-        { "value": "KS", "label": "Kansas (8.69%)" },
-        { "value": "KY", "label": "Kentucky (6.05%)" },
-        { "value": "LA", "label": "Louisiana (10.11%)" },
-        { "value": "ME", "label": "Maine (5.50%)" },
-        { "value": "MD", "label": "Maryland (6.00%)" },
-        { "value": "MA", "label": "Massachusetts (6.25%)" },
-        { "value": "MI", "label": "Michigan (6.00%)" },
-        { "value": "MN", "label": "Minnesota (7.52%)" },
-        { "value": "MS", "label": "Mississippi (7.07%)" },
-        { "value": "MO", "label": "Missouri (8.29%)" },
-        { "value": "MT", "label": "Montana (0.00%)" },
-        { "value": "NE", "label": "Nebraska (6.94%)" },
-        { "value": "NV", "label": "Nevada (8.23%)" },
-        { "value": "NH", "label": "New Hampshire (0.00%)" },
-        { "value": "NJ", "label": "New Jersey (6.63%)" },
-        { "value": "NM", "label": "New Mexico (7.76%)" },
-        { "value": "NY", "label": "New York (8.52%)" },
-        { "value": "NC", "label": "North Carolina (7.00%)" },
-        { "value": "ND", "label": "North Dakota (7.04%)" },
-        { "value": "OH", "label": "Ohio (7.24%)" },
-        { "value": "OK", "label": "Oklahoma (8.99%)" },
-        { "value": "OR", "label": "Oregon (0.00%)" },
-        { "value": "PA", "label": "Pennsylvania (6.34%)" },
-        { "value": "RI", "label": "Rhode Island (7.00%)" },
-        { "value": "SC", "label": "South Carolina (7.44%)" },
-        { "value": "SD", "label": "South Dakota (6.10%)" },
-        { "value": "TN", "label": "Tennessee (9.61%)" },
-        { "value": "TX", "label": "Texas (8.20%)" },
-        { "value": "UT", "label": "Utah (7.25%)" },
-        { "value": "VT", "label": "Vermont (6.38%)" },
-        { "value": "VA", "label": "Virginia (5.77%)" },
-        { "value": "WA", "label": "Washington (9.34%)" },
-        { "value": "WV", "label": "West Virginia (6.56%)" },
-        { "value": "WI", "label": "Wisconsin (5.43%)" },
-        { "value": "WY", "label": "Wyoming (5.36%)" }
+        {
+          "value": "custom",
+          "label": "— Enter rate manually —"
+        },
+        {
+          "value": "AL",
+          "label": "Alabama (9.29%)"
+        },
+        {
+          "value": "AK",
+          "label": "Alaska (1.82%)"
+        },
+        {
+          "value": "AZ",
+          "label": "Arizona (8.40%)"
+        },
+        {
+          "value": "AR",
+          "label": "Arkansas (9.49%)"
+        },
+        {
+          "value": "CA",
+          "label": "California (8.99%)"
+        },
+        {
+          "value": "CO",
+          "label": "Colorado (7.81%)"
+        },
+        {
+          "value": "CT",
+          "label": "Connecticut (6.35%)"
+        },
+        {
+          "value": "DE",
+          "label": "Delaware (0.00%)"
+        },
+        {
+          "value": "DC",
+          "label": "District of Columbia (6.00%)"
+        },
+        {
+          "value": "FL",
+          "label": "Florida (7.01%)"
+        },
+        {
+          "value": "GA",
+          "label": "Georgia (7.38%)"
+        },
+        {
+          "value": "HI",
+          "label": "Hawaii (4.50%)"
+        },
+        {
+          "value": "ID",
+          "label": "Idaho (6.03%)"
+        },
+        {
+          "value": "IL",
+          "label": "Illinois (8.83%)"
+        },
+        {
+          "value": "IN",
+          "label": "Indiana (7.00%)"
+        },
+        {
+          "value": "IA",
+          "label": "Iowa (6.94%)"
+        },
+        {
+          "value": "KS",
+          "label": "Kansas (8.69%)"
+        },
+        {
+          "value": "KY",
+          "label": "Kentucky (6.05%)"
+        },
+        {
+          "value": "LA",
+          "label": "Louisiana (10.11%)"
+        },
+        {
+          "value": "ME",
+          "label": "Maine (5.50%)"
+        },
+        {
+          "value": "MD",
+          "label": "Maryland (6.00%)"
+        },
+        {
+          "value": "MA",
+          "label": "Massachusetts (6.25%)"
+        },
+        {
+          "value": "MI",
+          "label": "Michigan (6.00%)"
+        },
+        {
+          "value": "MN",
+          "label": "Minnesota (7.52%)"
+        },
+        {
+          "value": "MS",
+          "label": "Mississippi (7.07%)"
+        },
+        {
+          "value": "MO",
+          "label": "Missouri (8.29%)"
+        },
+        {
+          "value": "MT",
+          "label": "Montana (0.00%)"
+        },
+        {
+          "value": "NE",
+          "label": "Nebraska (6.94%)"
+        },
+        {
+          "value": "NV",
+          "label": "Nevada (8.23%)"
+        },
+        {
+          "value": "NH",
+          "label": "New Hampshire (0.00%)"
+        },
+        {
+          "value": "NJ",
+          "label": "New Jersey (6.63%)"
+        },
+        {
+          "value": "NM",
+          "label": "New Mexico (7.76%)"
+        },
+        {
+          "value": "NY",
+          "label": "New York (8.52%)"
+        },
+        {
+          "value": "NC",
+          "label": "North Carolina (7.00%)"
+        },
+        {
+          "value": "ND",
+          "label": "North Dakota (7.04%)"
+        },
+        {
+          "value": "OH",
+          "label": "Ohio (7.24%)"
+        },
+        {
+          "value": "OK",
+          "label": "Oklahoma (8.99%)"
+        },
+        {
+          "value": "OR",
+          "label": "Oregon (0.00%)"
+        },
+        {
+          "value": "PA",
+          "label": "Pennsylvania (6.34%)"
+        },
+        {
+          "value": "RI",
+          "label": "Rhode Island (7.00%)"
+        },
+        {
+          "value": "SC",
+          "label": "South Carolina (7.44%)"
+        },
+        {
+          "value": "SD",
+          "label": "South Dakota (6.10%)"
+        },
+        {
+          "value": "TN",
+          "label": "Tennessee (9.61%)"
+        },
+        {
+          "value": "TX",
+          "label": "Texas (8.20%)"
+        },
+        {
+          "value": "UT",
+          "label": "Utah (7.25%)"
+        },
+        {
+          "value": "VT",
+          "label": "Vermont (6.38%)"
+        },
+        {
+          "value": "VA",
+          "label": "Virginia (5.77%)"
+        },
+        {
+          "value": "WA",
+          "label": "Washington (9.34%)"
+        },
+        {
+          "value": "WV",
+          "label": "West Virginia (6.56%)"
+        },
+        {
+          "value": "WI",
+          "label": "Wisconsin (5.43%)"
+        },
+        {
+          "value": "WY",
+          "label": "Wyoming (5.36%)"
+        }
       ],
-      "helpText": "Select a state to auto-fill the combined tax rate, or enter manually."
+      "helpText": "Auto-fills the combined tax rate."
     },
     {
       "id": "taxRate",
       "label": "Sales Tax Rate (%)",
       "type": "percentage",
       "required": false,
-      "defaultValue": 8.25,
+      "defaultValue": 0,
       "min": 0,
       "max": 30,
       "step": 0.01,
-      "helpText": "Your combined state + local sales tax rate. Auto-fills when a state is selected."
+      "placeholder": "0.00",
+      "visibleWhen": {
+        "calculationMode": [
+          "add-tax",
+          "extract-tax"
+        ]
+      }
     },
     {
       "id": "purchasePrice",
       "label": "Purchase Price",
       "type": "currency",
       "required": false,
-      "defaultValue": 100,
+      "defaultValue": "",
       "min": 0,
       "max": 100000000,
       "step": 0.01,
       "prefix": "$",
-      "helpText": "Enter the price before tax (Add Tax) or the total including tax (Extract Tax)."
+      "placeholder": "Enter amount",
+      "visibleWhen": {
+        "calculationMode": [
+          "add-tax",
+          "extract-tax"
+        ]
+      }
     },
     {
       "id": "netPrice",
       "label": "Pre-Tax Price",
       "type": "currency",
       "required": false,
-      "defaultValue": 49.99,
+      "defaultValue": "",
       "min": 0,
       "max": 100000000,
       "step": 0.01,
       "prefix": "$",
-      "helpText": "The original price before tax was added (Find Rate mode)."
+      "placeholder": "Enter pre-tax price",
+      "visibleWhen": {
+        "calculationMode": [
+          "find-rate"
+        ]
+      }
     },
     {
       "id": "grossPrice",
       "label": "Total Paid (incl. Tax)",
       "type": "currency",
       "required": false,
-      "defaultValue": 53.50,
+      "defaultValue": "",
       "min": 0,
       "max": 100000000,
       "step": 0.01,
       "prefix": "$",
-      "helpText": "The total amount you paid including tax (Find Rate mode)."
+      "placeholder": "Enter total paid",
+      "visibleWhen": {
+        "calculationMode": [
+          "find-rate"
+        ]
+      }
     }
   ],
   "outputs": [
@@ -137,30 +323,47 @@
       "label": "Sales Tax",
       "type": "single-value",
       "format": "currency",
-      "highlight": true
+      "highlight": true,
+      "description": "The exact dollar amount of sales tax owed on this purchase."
     },
     {
       "id": "totalPrice",
-      "label": "Total Price",
+      "label": "Total Price (with Tax)",
       "type": "single-value",
-      "format": "currency"
+      "format": "currency",
+      "description": "Final amount due including all sales tax."
     },
     {
       "id": "effectivePrice",
       "label": "Pre-Tax Price",
       "type": "single-value",
-      "format": "currency"
+      "format": "currency",
+      "description": "The price of the item before any tax is applied."
     },
     {
       "id": "calculatedRate",
       "label": "Effective Tax Rate",
       "type": "single-value",
-      "format": "percentage"
+      "format": "percentage",
+      "description": "The combined state + local sales tax rate applied to this transaction."
+    },
+    {
+      "id": "taxBreakdown",
+      "label": "Price vs. Tax Breakdown",
+      "type": "chart-pie",
+      "description": "Visual split between the pre-tax price and the sales tax portion of your total payment.",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C"
+        ]
+      }
     },
     {
       "id": "summary",
-      "label": "Tax Summary",
-      "type": "value-group"
+      "label": "Transaction Summary",
+      "type": "value-group",
+      "description": "Complete breakdown of pre-tax price, tax rate, tax amount, and total. State and local rate components shown when a state is selected."
     }
   ],
   "formula": "sales-tax",
@@ -193,8 +396,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["business-sales-tax-calculator"],
-  "qualityScore": 92,
+  "duplicationRisk": [
+    "business-sales-tax-calculator"
+  ],
+  "qualityScore": 87,
   "lastContentUpdate": "2026-03-12",
   "seasonality": null,
   "glossaryTerms": [

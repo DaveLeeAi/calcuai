@@ -193,6 +193,18 @@ export function calculateLoanPayment(inputs: Record<string, unknown>): Record<st
     { name: 'Interest', value: parseFloat(actualTotalInterest.toFixed(2)) },
   ];
 
+  // Yearly principal vs interest breakdown (for stacked bar chart)
+  const totalYears = Math.ceil(schedule.length / 12);
+  const yearlyBreakdown: { year: number; principal: number; interest: number }[] = [];
+  for (let y = 0; y < totalYears; y++) {
+    const yearRows = schedule.slice(y * 12, (y + 1) * 12);
+    yearlyBreakdown.push({
+      year: y + 1,
+      principal: parseFloat(yearRows.reduce((s, r) => s + r.principal, 0).toFixed(2)),
+      interest: parseFloat(yearRows.reduce((s, r) => s + r.interest, 0).toFixed(2)),
+    });
+  }
+
   return {
     monthlyPayment: parseFloat(monthlyPayment.toFixed(2)),
     totalPayment: parseFloat(actualTotalPayment.toFixed(2)),
@@ -202,6 +214,7 @@ export function calculateLoanPayment(inputs: Record<string, unknown>): Record<st
     paymentBreakdown,
     amortizationSchedule: schedule,
     balanceOverTime,
+    yearlyBreakdown,
   };
 }
 

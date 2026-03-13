@@ -1,0 +1,160 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A \$1,000,000 portfolio with \$40,000 annual withdrawals at a 6% return and 3% inflation lasts approximately 33 years — but increase the withdrawal to \$60,000 and the same portfolio depletes in just 19 years. Use this retirement withdrawal calculator to model how long your savings will last, test different withdrawal rates, and see the year-by-year impact of inflation on your retirement income.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Show */}
+## What Your Withdrawal Analysis Shows
+
+Your **years portfolio lasts** is the single most critical number in retirement planning. It tells you whether your savings will outlive you — or the other way around. This calculator models each year of retirement individually, subtracting your withdrawal (adjusted upward for inflation if enabled), applying investment growth on the remaining balance, and tracking when the balance hits zero.
+
+The **initial withdrawal rate** — your first-year withdrawal divided by your starting portfolio — is the number most financial planners focus on. William Bengen's landmark 1994 study found that a 4% initial withdrawal rate, adjusted annually for inflation, survived every 30-year historical period from 1926 to 1992 using a 50/50 stock/bond portfolio. The subsequent Trinity Study confirmed this finding across multiple asset allocations. A rate above 5% dramatically increases the risk of portfolio depletion within 20 years. A rate below 3% is very conservative and likely leaves significant wealth unspent.
+
+The **year-by-year breakdown** reveals how inflation silently accelerates spending. At 3% inflation, your \$40,000 withdrawal in year one becomes \$53,757 by year 10 and \$72,244 by year 20. The portfolio must generate enough growth to offset these escalating withdrawals — which is why the expected return rate matters as much as the withdrawal amount. Even small changes compound dramatically: reducing your withdrawal by \$5,000/year can extend portfolio life by 5-10 years.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Portfolio Balance** — the total value of all retirement accounts you plan to draw from: 401(k), IRA, Roth IRA, brokerage accounts. Add them together from your most recent statements. The default is \$1,000,000.
+
+2. **Set your Annual Withdrawal** — the amount you need from your portfolio each year. This should exclude Social Security, pensions, or other guaranteed income. If you need \$60,000 total and expect \$20,000 from Social Security, enter \$40,000.
+
+3. **Set Expected Annual Return** — the average return your portfolio will earn during retirement. The default of 6% reflects a balanced portfolio (60/40 stocks/bonds). A conservative retiree might use 4-5%; an aggressive allocation might justify 7-8%.
+
+4. **Set Inflation Rate** — the expected annual increase in living costs. The default 3% matches the long-run U.S. average. Recent years (2021-2023) saw 5-8%, but historically inflation reverts to 2-3%.
+
+5. **Toggle Inflation Adjustment** — when ON (default), withdrawals increase each year by the inflation rate to maintain purchasing power. When OFF, withdrawals stay flat, meaning your real purchasing power declines over time. Most retirees need inflation-adjusted withdrawals.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+This calculator uses a year-by-year iterative simulation that models portfolio depletion under specified withdrawal and return assumptions.
+
+### Year-by-Year Balance
+
+For each year *t* of retirement:
+
+$$B_{t+1} = (B_t - W_t) \times (1 + r)$$
+
+Where:
+
+- **B_t** = portfolio balance at the start of year *t* (dollars)
+- **W_t** = withdrawal amount in year *t* (dollars)
+- **r** = expected annual rate of return (decimal)
+
+### Inflation-Adjusted Withdrawal
+
+When inflation adjustment is enabled:
+
+$$W_t = W_0 \times (1 + i)^{t-1}$$
+
+Where:
+
+- **W_0** = initial annual withdrawal amount (dollars)
+- **i** = annual inflation rate (decimal)
+- **t** = year number (starting at 1)
+
+### Initial Withdrawal Rate
+
+$$\text{Withdrawal Rate} = \frac{W_0}{B_0} \times 100\%$$
+
+The portfolio is depleted when *B_t* reaches zero. If the balance remains positive through 100 years, the withdrawal plan is deemed sustainable for practical purposes.
+
+**Source:** Bengen, W. P. (1994), "Determining Withdrawal Rates Using Historical Data," *Journal of Financial Planning*, 7(1), 171-180. Confirmed by Cooley, Hubbard, and Walz (1998), "Retirement Savings: Choosing a Withdrawal Rate That Is Sustainable," *AAII Journal* (the Trinity Study).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Classic 4% Rule — \$1M Portfolio
+
+**Inputs:**
+- Portfolio Balance: \$1,000,000
+- Annual Withdrawal: \$40,000
+- Expected Return: 6%
+- Inflation Rate: 3%
+- Adjust for Inflation: Yes
+
+**Step-by-step (first 3 years):**
+
+1. **Year 1:** Start = \$1,000,000. Withdrawal = \$40,000. Remaining = \$960,000. Growth = \$960,000 × 0.06 = \$57,600. End balance = **\$1,017,600**
+2. **Year 2:** Withdrawal = \$40,000 × 1.03 = \$41,200. Remaining = \$976,400. Growth = \$58,584. End = **\$1,034,984**
+3. **Year 3:** Withdrawal = \$40,000 × 1.03² = \$42,436. Remaining = \$992,548. Growth = \$59,553. End = **\$1,052,101**
+
+In the early years, the portfolio actually grows because the 6% return exceeds the 4% withdrawal rate. The balance peaks around year 10-12 before inflation-adjusted withdrawals begin outpacing growth. The portfolio lasts approximately **33 years**.
+
+**Interpretation:** The classic 4% rule works well for a 30-year retirement horizon. A 65-year-old retiree planning to age 95-98 has adequate coverage.
+
+### Example 2: Aggressive 6% Withdrawal — \$500K Portfolio
+
+**Inputs:**
+- Portfolio Balance: \$500,000
+- Annual Withdrawal: \$30,000
+- Expected Return: 5%
+- Inflation Rate: 3%
+- Adjust for Inflation: Yes
+
+**Calculation:**
+- Withdrawal rate: \$30,000 / \$500,000 = **6%**
+- Year 1: Remaining after withdrawal = \$470,000. Growth = \$23,500. End = \$493,500
+- The portfolio declines from year 1 because withdrawals exceed growth
+
+With a 6% withdrawal rate and only 5% return, the portfolio shrinks every year, accelerating as inflation pushes withdrawals higher. The portfolio depletes in approximately **19 years**.
+
+**Interpretation:** A 6% withdrawal rate is unsustainable for retirements longer than 20 years. Either reduce spending by \$10,000/year or find supplemental income (Social Security, part-time work) to drop the portfolio withdrawal rate below 4%.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+**Withdrawal Rate** — This is the single most powerful lever. The difference between a 3% and 5% withdrawal rate on a \$1M portfolio is the difference between the money lasting 50+ years or depleting in 22 years. Every percentage point matters enormously over multi-decade horizons.
+
+**Sequence of Returns Risk** — This calculator uses a constant average return, but real-world markets fluctuate. A major crash in your first 5 years of retirement can permanently impair your portfolio because you are withdrawing from a depressed balance. The standard mitigation is keeping 2-3 years of expenses in cash or short-term bonds to avoid selling stocks during downturns.
+
+**Inflation Rate** — At 3% inflation, your \$40,000 withdrawal becomes \$72,244 in year 20 and \$97,087 in year 30. Higher inflation (4-5%) can cut portfolio life by 5-10 years compared to the 2-3% range. Turning off inflation adjustment preserves the portfolio longer but erodes your living standard.
+
+**Portfolio Allocation** — Your expected return reflects your asset mix. A 100% stock portfolio has historically returned ~10% but with crushing volatility. A 60/40 stock/bond mix returns ~7-8% with less drawdown risk. Most retirees gradually shift toward bonds, accepting lower returns for stability.
+
+**Taxes** — This calculator models pre-tax withdrawals. If you withdraw from a traditional 401(k) or IRA, you owe ordinary income tax on every dollar. Withdrawing \$40,000 may require \$48,000-\$52,000 gross to net \$40,000 after taxes. Roth IRA withdrawals are tax-free, so your actual situation depends on your account mix.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a safe withdrawal rate for retirement?
+
+The widely accepted safe withdrawal rate is 4% of your initial portfolio balance, adjusted annually for inflation. This rate was established by William Bengen in 1994 and confirmed by the Trinity Study, which found that a 4% rate survived every 30-year historical period from 1926 onward with at least a 50/50 stock/bond allocation. For retirements longer than 30 years (such as early retirees), many advisors recommend 3.0-3.5% to provide additional safety margin.
+
+### How long will \$1 million last in retirement?
+
+At a 4% withdrawal rate (\$40,000/year) with 6% average returns and 3% inflation, \$1 million lasts approximately 33 years. At 3% withdrawal (\$30,000/year), it lasts over 50 years. At 5% (\$50,000/year), it depletes in about 22 years. The exact duration depends on your investment returns, inflation, and whether you adjust withdrawals for inflation. Social Security benefits can supplement your withdrawal, effectively reducing the rate you need from your portfolio.
+
+### Should I adjust withdrawals for inflation?
+
+Yes, most retirees should adjust withdrawals for inflation. Without adjustment, a flat \$40,000 annual withdrawal buys 45% less in year 20 at 3% inflation — equivalent to living on \$22,000 in today's dollars. Inflation adjustment ensures your purchasing power stays constant, which is essential for maintaining your lifestyle over a 20-30 year retirement. The tradeoff is that inflation-adjusted withdrawals deplete the portfolio faster than flat withdrawals.
+
+### What is the 4% rule?
+
+The 4% rule is a retirement withdrawal guideline stating that you can withdraw 4% of your portfolio in the first year of retirement, then adjust that dollar amount for inflation each subsequent year, and your money will last at least 30 years. On a \$1,000,000 portfolio, you would withdraw \$40,000 in year one, \$41,200 in year two (at 3% inflation), and so on. The rule was developed by financial planner William Bengen using historical U.S. market data from 1926 to 1992 and assumes a diversified stock-and-bond portfolio.
+
+### How does investment return affect how long my money lasts?
+
+Each additional percentage point of return extends portfolio life significantly. On a \$1M portfolio with \$40,000 annual inflation-adjusted withdrawals and 3% inflation: at 4% return, the money lasts ~23 years; at 6% return, ~33 years; at 8% return, it lasts indefinitely because growth outpaces withdrawals. However, higher returns typically require more aggressive (and volatile) portfolios, which introduces sequence-of-returns risk that a constant-return model does not capture.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator implements the systematic withdrawal methodology established by **Bengen, W. P. (1994), "Determining Withdrawal Rates Using Historical Data," *Journal of Financial Planning*, 7(1), 171-180** — the foundational paper behind the 4% rule. The Trinity Study — **Cooley, P. L., Hubbard, C. M., & Walz, D. T. (1998), "Retirement Savings: Choosing a Withdrawal Rate That Is Sustainable," *AAII Journal*** — extended this analysis across multiple asset allocations and time horizons. Inflation methodology uses the long-run U.S. CPI average per the **U.S. Bureau of Labor Statistics (BLS)**. Social Security reference data from the **Social Security Administration (SSA)** 2026 annual statistical supplement.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

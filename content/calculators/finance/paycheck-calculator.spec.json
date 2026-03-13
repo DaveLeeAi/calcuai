@@ -1,0 +1,174 @@
+{
+  "id": "paycheck-calculator",
+  "title": "Paycheck Calculator",
+  "slug": "paycheck-calculator",
+  "category": "finance",
+  "subcategory": "tax",
+  "primaryKeyword": "paycheck calculator",
+  "metaTitle": "Paycheck Calculator — Free Paycheck Calculator | CalcuAI",
+  "metaDescription": "Estimate your take-home pay after federal tax, state tax, Social Security, Medicare, 401(k), and health insurance deductions. Free paycheck calculator, no signup.",
+  "inputs": [
+    {
+      "id": "grossPay",
+      "label": "Gross Pay (per paycheck)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Gross pay per paycheck before deductions"
+    },
+    {
+      "id": "payFrequency",
+      "label": "Pay Frequency",
+      "type": "select",
+      "required": true,
+      "defaultValue": "biweekly",
+      "options": [
+        { "value": "weekly", "label": "Weekly" },
+        { "value": "biweekly", "label": "Bi-Weekly (Every 2 Weeks)" },
+        { "value": "semimonthly", "label": "Semi-Monthly (Twice a Month)" },
+        { "value": "monthly", "label": "Monthly" }
+      ]
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        { "value": "single", "label": "Single" },
+        { "value": "married", "label": "Married Filing Jointly" },
+        { "value": "head", "label": "Head of Household" }
+      ]
+    },
+    {
+      "id": "stateTaxRate",
+      "label": "State Income Tax Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "Your state income tax rate (0% for no state tax)"
+    },
+    {
+      "id": "retirement401k",
+      "label": "401(k) Contribution",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 6,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "helpText": "Pre-tax 401(k) contribution as % of gross"
+    },
+    {
+      "id": "healthInsurance",
+      "label": "Health Insurance Premium",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 5000,
+      "step": 25,
+      "prefix": "$",
+      "helpText": "Pre-tax health insurance premium per paycheck"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netPay",
+      "label": "Take-Home Pay",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "federalTax",
+      "label": "Federal Income Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "stateTax",
+      "label": "State Income Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "socialSecurity",
+      "label": "Social Security (6.2%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "medicare",
+      "label": "Medicare (1.45%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "retirementDeduction",
+      "label": "401(k) Contribution",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Paycheck Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "deductionBreakdown",
+      "label": "Deductions Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": ["#10b981", "#2563eb", "#8b5cf6", "#f59e0b", "#ef4444", "#6366f1"]
+      }
+    }
+  ],
+  "formula": "paycheck",
+  "features": ["chart"],
+  "relatedCalculators": [
+    "salary-calculator",
+    "income-tax-calculator",
+    "tax-bracket-calculator",
+    "budget-calculator",
+    "retirement-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IRS Publication 15-T (2025 Federal Income Tax Withholding Methods); SSA FICA rates",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Pay = Gross Pay - Federal Tax - State Tax - Social Security (6.2%) - Medicare (1.45%) - 401(k) - Health Insurance. Per IRS Pub 15-T and SSA 2025 rates.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "salary-calculator",
+    "income-tax-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "gross-income"
+  ]
+}

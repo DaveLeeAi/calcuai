@@ -6,6 +6,7 @@ import {
   XAxis,
   YAxis,
   Tooltip,
+  Legend,
   ResponsiveContainer,
   CartesianGrid,
 } from 'recharts';
@@ -24,15 +25,24 @@ export default function LineChartOutput({ field, data }: OutputComponentProps) {
   const xKey = allKeys[0]; // first key is x-axis
   const lineKeys = allKeys.slice(1);
 
+  // Readable labels for known keys
+  const keyLabels: Record<string, string> = {
+    balance: 'Standard Payoff',
+    balanceWithExtra: 'With Extra Payments',
+  };
+
   return (
-    <div className="rounded-lg bg-gray-50 p-4">
-      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 mb-3">
+    <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-4">
+      <h4 className="text-xs font-medium uppercase tracking-wider text-gray-500 dark:text-slate-400 mb-1">
         {field.label}
       </h4>
+      {field.description && (
+        <p className="text-xs text-gray-400 dark:text-slate-500 mb-3">{field.description}</p>
+      )}
       <div className="h-64 sm:h-72">
         <ResponsiveContainer width="100%" height="100%">
           <LineChart data={chartData} margin={{ top: 5, right: 20, bottom: 20, left: 10 }}>
-            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <CartesianGrid strokeDasharray="3 3" stroke="#9ca3af" opacity={0.3} />
             <XAxis
               dataKey={xKey}
               tick={{ fontSize: 11 }}
@@ -57,21 +67,36 @@ export default function LineChartOutput({ field, data }: OutputComponentProps) {
               }
             />
             <Tooltip
-              formatter={(value: number) => formatValue(value, field.format, field.precision)}
+              formatter={(value: number, name: string) => [
+                formatValue(value, field.format, field.precision),
+                keyLabels[name] ?? name,
+              ]}
               contentStyle={{
                 borderRadius: '8px',
                 border: '1px solid #e5e7eb',
                 fontSize: '13px',
+                backgroundColor: 'white',
               }}
             />
+            {lineKeys.length > 1 && (
+              <Legend
+                verticalAlign="top"
+                align="center"
+                iconType="line"
+                iconSize={14}
+                wrapperStyle={{ fontSize: '12px', paddingBottom: '8px' }}
+                formatter={(value: string) => keyLabels[value] ?? value}
+              />
+            )}
             {lineKeys.map((key, i) => (
               <Line
                 key={key}
                 type="monotone"
                 dataKey={key}
+                name={key}
                 stroke={colors[i % colors.length]}
                 strokeWidth={2}
-                dot={chartData.length <= 30}
+                dot={false}
                 activeDot={{ r: 5 }}
               />
             ))}

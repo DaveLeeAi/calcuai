@@ -1,0 +1,132 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Calculate exactly how many tiles you need for any room, including waste. A standard 12×10 foot room with 12×12 inch tiles requires approximately 130 tiles after accounting for 10% waste and 1/8-inch grout lines — that's 12 extra tiles for cuts, breakage, and future repairs. Enter your room dimensions, tile size, grout gap width, and waste percentage below to get an accurate tile count and optional cost estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Tile Estimate Shows
+
+Buying too few tiles means a second trip to the store — and risking a dye-lot mismatch that creates visible color differences across your floor. Buying too many wastes money on materials you cannot return once the boxes are opened. This calculator gives you the precise count between those two extremes, factoring in room area, tile dimensions, grout joint width, and a configurable waste buffer.
+
+The **total area** is your room's square footage — length times width. This is the raw coverage number before accounting for tile size or grout joints. For L-shaped rooms or rooms with alcoves, measure each rectangular section separately and add the areas together before entering the total.
+
+The **tiles needed** count reflects the actual number of whole tiles required when you account for grout lines. Grout joints effectively make each tile slightly larger (tile dimension plus one gap width on each side), which means you need fewer tiles than a simple area-divided-by-tile-area calculation suggests. A 1/8-inch grout gap on a 12×12 tile reduces the count by roughly 2% compared to a no-gap estimate.
+
+The **tiles with waste** count adds your chosen waste percentage on top of the base tile count. The Tile Council of North America (TCNA) recommends 10% waste for straight (grid) layouts and 15% for diagonal or herringbone patterns. Complex rooms with many corners, columns, or doorways should use the higher end. The extra tiles also serve as future repair stock — matching tiles years later is often impossible because manufacturers discontinue colors and glazes regularly.
+
+The **estimated cost** multiplies your tile-with-waste count by the per-tile price you enter. This covers tile material only — budget separately for thinset mortar ($15–$25 per 50-lb bag, covering roughly 60–70 square feet), grout ($10–$15 per 25-lb bag), tile spacers ($3–$8 per bag), and backer board if tiling over a wood subfloor.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the room** — use a tape measure to get the room length and width in feet. Measure at the longest and widest points. For irregularly shaped rooms, divide the floor into rectangles, calculate each area separately, and enter the total combined dimensions.
+
+2. **Enter tile dimensions** — check the tile box label for the nominal tile size in inches. Common sizes include 6×6, 12×12, 12×24, and 24×24 inches. Enter the actual tile face dimensions, not the box size — some manufacturers list slightly different numbers.
+
+3. **Set the grout gap** — standard grout joints are 1/8 inch (0.125") for rectified (precision-cut) tiles and 3/16 inch (0.1875") for natural-edge tiles. Mosaic tiles typically use 1/16 inch gaps. The grout gap affects your tile count because each tile's effective footprint includes one gap width on two sides.
+
+4. **Choose your waste factor** — use 10% for simple rectangular rooms with a straight grid layout, 15% for diagonal or herringbone patterns, and 20% for rooms with many cuts around cabinets, doorways, or curved walls. The waste factor accounts for cut pieces, breakage during installation, and spare tiles for future repairs.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Tile quantity calculations convert room area and tile dimensions to a coverage ratio, then apply a waste multiplier:
+
+**Tiles needed (before waste):**
+
+$$\text{Tiles} = \left\lceil \frac{\text{Room Length} \times \text{Room Width}}{\frac{(\text{Tile Length} + \text{Gap})}{12} \times \frac{(\text{Tile Width} + \text{Gap})}{12}} \right\rceil$$
+
+**Tiles with waste:**
+
+$$\text{Tiles (with waste)} = \left\lceil \text{Tiles} \times (1 + W) \right\rceil$$
+
+Where:
+
+- **Room Length** and **Room Width** = room dimensions in feet
+- **Tile Length** and **Tile Width** = tile dimensions in inches
+- **Gap** = grout joint width in inches (typically 0.125" for 1/8")
+- **W** = waste factor as a decimal (0.10 for 10%, 0.15 for 15%)
+
+The denominator converts tile-plus-gap dimensions from inches to feet, giving each tile's effective coverage area in square feet. The ceiling function (round up) ensures you always have enough whole tiles — you cannot buy a fraction of a tile.
+
+**Source:** Tile Council of North America (TCNA) *Handbook for Ceramic, Glass, and Stone Tile Installation* — coverage calculation methodology and recommended waste allowances.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 12×10 Foot Room with 12" × 12" Tiles
+
+A homeowner is tiling a kitchen floor measuring 12 feet long by 10 feet wide using standard 12×12 inch porcelain tiles with 1/8-inch grout lines and a 10% waste factor.
+
+**Inputs:**
+- Room: 12 ft × 10 ft
+- Tile size: 12" × 12"
+- Grout gap: 0.125" (1/8 inch)
+- Waste factor: 10%
+
+**Step-by-step:**
+
+1. Calculate room area: 12 × 10 = **120 sq ft**
+2. Calculate effective tile dimensions: (12 + 0.125) / 12 = 1.0104 ft per side
+3. Calculate effective tile area: 1.0104 × 1.0104 = **1.0209 sq ft** per tile (including grout)
+4. Calculate tiles needed: ceil(120 / 1.0209) = ceil(117.5) = **118 tiles**
+5. Apply 10% waste: ceil(118 × 1.10) = ceil(129.8) = **130 tiles**
+6. Extra tiles for waste: 130 − 118 = **12 extra tiles**
+
+**Interpretation:** You need 130 tiles to cover the 120-square-foot kitchen with comfortable waste margin. At $2.50 per tile (mid-range porcelain), that is $325 in tile material. The 12 extra tiles give you a safety net for cuts along walls and around cabinets, plus 2–3 spares for future repairs. If you are installing diagonally (45-degree pattern), increase the waste factor to 15%, which bumps the total to 136 tiles.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Tile Count
+
+**Tile size has the biggest impact on total count and installation time.** Larger tiles (18×18 or 24×24) cover more area per piece, meaning fewer tiles, fewer grout lines, and faster installation — but they are harder to handle, require a more perfectly level subfloor, and generate more waste per broken piece. A 12×10 room needs 120 tiles at 12×12 but only 30 tiles at 24×24 — reducing installation labor by roughly 60%. However, large-format tiles on uneven surfaces can "lip" (one edge sits higher than the adjacent tile), creating trip hazards.
+
+**Layout pattern changes waste significantly.** A straight grid layout wastes 5–10% because cuts along walls produce reusable half-tiles. A diagonal (45-degree) layout wastes 12–18% because the angled cuts along walls create triangular offcuts that are rarely reusable. Herringbone and chevron patterns waste 15–20% due to the number of angled cuts required at every row end. Always test-lay a few rows dry (without adhesive) before committing to a pattern.
+
+**Room shape and obstacles increase cuts.** A simple rectangle has 4 straight wall cuts. Add a doorway, a closet alcove, or a kitchen island and you may double the number of cuts — each cut risks breaking a tile. Rooms with curved walls (bay windows, rounded corners) require even more precise cuts with a wet saw and generate higher waste. Budget an extra 5% beyond the standard waste factor for rooms with more than 4 corners.
+
+**Grout gap width affects aesthetics and count.** Wider grout lines (3/16" or 1/4") create a more rustic, traditional look and allow more flexibility in tile placement — useful for slightly irregular handmade tiles. Narrower lines (1/16" or 1/8") give a modern, seamless appearance but demand precision-cut (rectified) tiles and a perfectly flat substrate. The gap width difference between 1/8" and 1/4" changes tile count by 2–4% on a typical room.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **rectangular room**. For L-shaped, U-shaped, or irregular rooms, measure each rectangular section separately and add the total areas. The calculator does not subtract area for islands, columns, or built-in fixtures — measure the tileable floor area only.
+- Grout gap is applied to **two sides** of each tile (one length side, one width side). This models the standard grid where each tile contributes one gap in each direction. Edge tiles against walls may not have a gap on the wall side, but the difference is negligible at scale.
+- **Waste factor covers cuts, breakage, and spare tiles.** It does not account for defective tiles in the box (typically 1–3% of shipped tiles). Inspect every box on delivery and reject damaged tiles before starting installation.
+- Does not calculate **thinset mortar, grout, backer board, or labor costs.** These vary by substrate type, tile size, and regional labor rates. Budget roughly $3–$5 per square foot for installation materials beyond the tile itself.
+- Tile sizes are **nominal dimensions** — the actual face size may differ by up to 1/8 inch from the labeled size. Rectified tiles are precision-ground to exact dimensions; non-rectified tiles have slight size variation that wider grout lines accommodate.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much extra tile should I buy?
+
+Buy at least 10% more tiles than the calculated quantity for a standard straight-lay installation. Increase to 15% for diagonal layouts, 20% for herringbone or chevron patterns, and 20–25% for rooms with many obstacles (columns, curved walls, multiple doorways). The Tile Council of North America (TCNA) recommends keeping leftover tiles for future repairs, since matching exact dye lots later is often impossible — manufacturers rotate glazes and discontinue colors regularly. A box of 10–15 spare tiles stored flat in a dry area can save hundreds of dollars in future repair costs.
+
+### How do I tile around obstacles like toilets and cabinets?
+
+Measure the obstacle's footprint and subtract that area from your total room area before entering dimensions — or keep the full room area and let the waste factor absorb the extra cuts. For toilet flanges, use a tile nipper or angle grinder to cut a semicircle. For kitchen cabinets and islands, measure the exposed floor area only (tile does not go under permanent cabinetry). Around door frames, undercut the door casing with an oscillating tool so the tile slides underneath for a clean finish. Each obstacle typically wastes 2–4 additional tiles in cut pieces.
+
+### What size grout lines should I use?
+
+Use 1/8 inch (3mm) grout lines for rectified (precision-cut) porcelain and ceramic tiles — this is the most common residential choice. Use 3/16 inch (5mm) for non-rectified or handmade tiles that have slight size variations. Use 1/16 inch (1.5mm) for seamless-look installations with perfectly calibrated rectified tiles only. Wider joints (1/4 inch or more) suit rustic or handmade looks and allow more flexibility during installation. The grout joint width must remain consistent across the entire floor — use plastic tile spacers (available in every standard size) to maintain uniform spacing.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses tile coverage formulas from the **Tile Council of North America (TCNA)** *Handbook for Ceramic, Glass, and Stone Tile Installation*. The effective coverage per tile includes the grout joint width added to two sides of each tile, converting the tile-plus-gap footprint into square feet. Waste factor recommendations follow TCNA guidelines: 10% for grid layouts, 15% for diagonal, and 20% for complex patterns. Tile dimensions use nominal sizing per manufacturer labeling conventions standardized by **ANSI A137.1** (American National Standard Specifications for Ceramic Tile). Cost estimates reflect tile material only and do not include installation materials or labor.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

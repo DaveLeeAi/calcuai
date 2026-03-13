@@ -97,7 +97,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "requiredFinalGrade = (desiredGrade - currentGrade × (1 - finalWeight)) / finalWeight",
   "formulaAuditDate": "2026-03-11",
@@ -108,7 +108,7 @@
   "duplicationRisk": [
     "final-grade-calculator"
   ],
-  "qualityScore": 76,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-11",
   "seasonality": "Q2"
 }

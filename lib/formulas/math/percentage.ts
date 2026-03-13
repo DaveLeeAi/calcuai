@@ -65,6 +65,7 @@ export function calculatePercentage(inputs: Record<string, unknown>): Record<str
     percentDifference: null,
     absoluteDifference: null,
     average: null,
+    calculationBreakdown: [],
   };
 
   switch (mode) {
@@ -73,10 +74,18 @@ export function calculatePercentage(inputs: Record<string, unknown>): Record<str
       const baseValue = Number(inputs.baseValue) || 0;
 
       const result = (percentValue / 100) * baseValue;
+      const pOver100 = parseFloat((percentValue / 100).toFixed(6));
 
       return {
         ...base,
         result: parseFloat(result.toFixed(10)),
+        calculationBreakdown: [
+          { label: 'Formula', value: '(P ÷ 100) × V' },
+          { label: 'Percentage (P)', value: percentValue },
+          { label: 'Base Value (V)', value: baseValue },
+          { label: `${percentValue} ÷ 100`, value: pOver100 },
+          { label: `${pOver100} × ${baseValue}`, value: parseFloat(result.toFixed(6)) },
+        ],
       };
     }
 
@@ -101,6 +110,14 @@ export function calculatePercentage(inputs: Record<string, unknown>): Record<str
         ...base,
         percentChange: parseFloat(percentChange.toFixed(10)),
         absoluteChange: parseFloat(absoluteChange.toFixed(10)),
+        calculationBreakdown: [
+          { label: 'Formula', value: '((New − Old) ÷ |Old|) × 100' },
+          { label: 'Original Value', value: originalValue },
+          { label: 'New Value', value: newValue },
+          { label: 'Change (New − Old)', value: parseFloat(absoluteChange.toFixed(6)) },
+          { label: `÷ |${originalValue}|`, value: parseFloat((absoluteChange / Math.abs(originalValue)).toFixed(6)) },
+          { label: '× 100 = % Change', value: `${parseFloat(percentChange.toFixed(4))}%` },
+        ],
       };
     }
 
@@ -128,6 +145,14 @@ export function calculatePercentage(inputs: Record<string, unknown>): Record<str
         percentDifference: parseFloat(percentDifference.toFixed(10)),
         absoluteDifference: parseFloat(absoluteDifference.toFixed(10)),
         average: parseFloat(average.toFixed(10)),
+        calculationBreakdown: [
+          { label: 'Formula', value: '|V1 − V2| ÷ ((V1 + V2) ÷ 2) × 100' },
+          { label: 'Value 1', value: value1 },
+          { label: 'Value 2', value: value2 },
+          { label: 'Average ((V1+V2) ÷ 2)', value: parseFloat(average.toFixed(6)) },
+          { label: '|Difference|', value: parseFloat(absoluteDifference.toFixed(6)) },
+          { label: '÷ Average × 100', value: `${parseFloat(percentDifference.toFixed(4))}%` },
+        ],
       };
     }
 

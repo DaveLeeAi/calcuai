@@ -144,7 +144,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Total seconds = h × 3600 + m × 60 + s. Add or subtract total seconds, then convert back to HH:MM:SS.",
   "formulaAuditDate": "2026-03-11",
@@ -155,7 +155,7 @@
   "duplicationRisk": [
     "hours-calculator"
   ],
-  "qualityScore": 76,
+  "qualityScore": 80,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

@@ -1,0 +1,134 @@
+{
+  "id": "water-intake-calculator",
+  "title": "Water Intake Calculator",
+  "slug": "water-intake-calculator",
+  "category": "health",
+  "subcategory": "nutrition",
+  "primaryKeyword": "water intake calculator",
+  "metaTitle": "Water Intake Calculator — How Much Water Should You Drink Daily?",
+  "metaDescription": "Calculate your daily water intake based on body weight, activity level, and climate. Personalized hydration recommendations in ounces, liters, and glasses. Free.",
+  "inputs": [
+    {
+      "id": "weight",
+      "label": "Body Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 160,
+      "min": 50,
+      "max": 500,
+      "step": 1,
+      "suffix": "lbs",
+      "helpText": "Your current body weight in pounds"
+    },
+    {
+      "id": "activityLevel",
+      "label": "Activity Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "moderate",
+      "options": [
+        { "value": "sedentary", "label": "Sedentary (little or no exercise)" },
+        { "value": "light", "label": "Lightly Active (1-3 days/week)" },
+        { "value": "moderate", "label": "Moderately Active (3-5 days/week)" },
+        { "value": "active", "label": "Very Active (6-7 days/week)" },
+        { "value": "extreme", "label": "Extremely Active (athlete/physical job)" }
+      ]
+    },
+    {
+      "id": "climate",
+      "label": "Climate",
+      "type": "select",
+      "required": true,
+      "defaultValue": "temperate",
+      "options": [
+        { "value": "cold", "label": "Cold/Dry Climate" },
+        { "value": "temperate", "label": "Temperate Climate" },
+        { "value": "hot", "label": "Hot/Humid Climate" }
+      ]
+    },
+    {
+      "id": "pregnant",
+      "label": "Pregnant",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "Pregnancy increases fluid needs by about 10 oz/day"
+    },
+    {
+      "id": "breastfeeding",
+      "label": "Breastfeeding",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "Breastfeeding increases fluid needs by about 32 oz/day"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "dailyOunces",
+      "label": "Daily Water Intake (oz)",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 0
+    },
+    {
+      "id": "dailyLiters",
+      "label": "Daily Water Intake (L)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "dailyCups",
+      "label": "Glasses (8 oz)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "dailyBottles",
+      "label": "Water Bottles (16.9 oz)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "summary",
+      "label": "Hydration Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "water-intake",
+  "features": [],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "bmr-calculator",
+    "bmi-calculator",
+    "macro-calculator",
+    "pace-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Academies of Sciences — Dietary Reference Intakes for Water",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "National Academies of Sciences, Engineering, and Medicine — Dietary Reference Intakes for Water, Potassium, Sodium, Chloride, and Sulfate (2005).",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

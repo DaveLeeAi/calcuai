@@ -179,6 +179,7 @@
   "relatedCalculators": [
     "due-date-calculator",
     "conception-calculator",
+    "ovulation-calculator",
     "bmi-calculator",
     "calorie-calculator",
     "age-calculator"
