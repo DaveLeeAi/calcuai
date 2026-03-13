@@ -1,6 +1,16 @@
 import type { MetadataRoute } from 'next';
 import { getAllCategories, getAllSpecs, getAllGlossaryTerms, getAllMethodologyTopics } from '@/lib/content-loader';
 import { siteConfig } from '@/lib/site-config';
+import salesTaxData from '@/content/data/us-sales-tax-2026.json';
+
+function stateNameToSlug(stateName: string): string {
+  return (
+    stateName
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '') + '-sales-tax'
+  );
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const categories = getAllCategories();
@@ -75,5 +85,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
   ];
 
-  return [...staticPages, ...categoryPages, ...subcategoryPages, ...calculatorPages, ...glossaryPages, ...methodologyPages];
+  // Programmatic state sales tax pages (51 entries)
+  const stateSalesTaxPages: MetadataRoute.Sitemap = (
+    salesTaxData.states as { stateName: string }[]
+  ).map((state) => ({
+    url: `${baseUrl}/calculators/finance/${stateNameToSlug(state.stateName)}`,
+    lastModified: new Date(salesTaxData.lastVerified),
+    changeFrequency: 'yearly' as const,
+    priority: 0.7,
+  }));
+
+  return [
+    ...staticPages,
+    ...categoryPages,
+    ...subcategoryPages,
+    ...calculatorPages,
+    ...glossaryPages,
+    ...methodologyPages,
+    ...stateSalesTaxPages,
+  ];
 }
