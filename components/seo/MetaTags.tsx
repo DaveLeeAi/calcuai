@@ -210,7 +210,8 @@ export function buildFAQSchema(
   let currentAnswer = '';
 
   for (const line of lines) {
-    if (line.match(/^##\s+Frequently Asked Questions/)) {
+    // Match common FAQ heading variants: "Frequently Asked Questions", "Common Questions", "FAQ"
+    if (line.match(/^##\s+(?:Frequently Asked Questions?|Common Questions|FAQ)\s*$/i)) {
       inFaqSection = true;
       continue;
     }
@@ -234,7 +235,9 @@ export function buildFAQSchema(
         trimmed &&
         !trimmed.startsWith('{/*') &&
         !trimmed.startsWith('<div') &&
-        !trimmed.startsWith('</div')
+        !trimmed.startsWith('</div') &&
+        !trimmed.startsWith('<section') &&
+        !trimmed.startsWith('</section')
       ) {
         currentAnswer += (currentAnswer ? ' ' : '') + trimmed;
       }

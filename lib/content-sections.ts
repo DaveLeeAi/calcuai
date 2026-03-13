@@ -322,15 +322,15 @@ export function parseArticleSections(mdxSource: string): ParsedSection[] {
   // Normalize line endings to LF (handles CRLF from Windows)
   let source = mdxSource.replace(/\r\n/g, '\n');
 
-  // Strip BLUF section
+  // Strip BLUF section (handles div, section, article, aside wrappers)
   source = source.replace(
-    /\{\/\*\s*Section 3:.*?\*\/\}\s*<div className="bluf-intro">[\s\S]*?<\/div>/,
+    /\{\/\*\s*Section 3:.*?\*\/\}\s*<(?:div|section|article|aside) className="bluf-intro">[\s\S]*?<\/(?:div|section|article|aside)>/,
     ''
   );
 
   // Also strip BLUF when comment doesn't match "Section 3:" pattern
   source = source.replace(
-    /<div className="bluf-intro">[\s\S]*?<\/div>/,
+    /<(?:div|section|article|aside) className="bluf-intro">[\s\S]*?<\/(?:div|section|article|aside)>/,
     ''
   );
 
@@ -340,11 +340,11 @@ export function parseArticleSections(mdxSource: string): ParsedSection[] {
   // Strip section comments
   source = source.replace(/\{\/\*\s*Sections?\s+[^*]*\*\/\}/g, '');
 
-  // Strip formula/faq wrapper divs (preserve inner content)
-  source = source.replace(/<div className="(formula|faq)-section">\s*/g, '');
-  // Remove closing </div> tags that were part of wrapper divs
-  // Match </div> that is followed by whitespace then an H2, section comment, or EOF
-  source = source.replace(/<\/div>\s*(?=\n\n##|\n*\{\/\*|\n*$)/g, '');
+  // Strip formula/faq wrapper divs/sections (preserve inner content)
+  source = source.replace(/<(?:div|section) className="(formula|faq)-section">\s*/g, '');
+  // Remove closing tags that were part of wrapper elements
+  // Match </div> or </section> followed by whitespace then an H2, section comment, or EOF
+  source = source.replace(/<\/(?:div|section)>\s*(?=\n\n##|\n*\{\/\*|\n*$)/g, '');
 
   // Find all H2 headings and their positions
   const h2Pattern = /^## (.+)$/gm;

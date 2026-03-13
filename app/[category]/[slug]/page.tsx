@@ -173,7 +173,7 @@ function resolveRelatedCalculators(
 
 function extractBlufText(mdxSource: string): string | undefined {
   const match = mdxSource.match(
-    /<div className="bluf-intro">([\s\S]*?)<\/div>/
+    /<(?:div|section|article|aside) className="bluf-intro">([\s\S]*?)<\/(?:div|section|article|aside)>/
   );
   if (!match) return undefined;
   // Strip MDX/HTML tags to get plain text
@@ -1230,7 +1230,7 @@ interface BlufContentProps {
 
 function BlufContent({ source }: BlufContentProps) {
   const blufMatch = source.match(
-    /<div className="bluf-intro">([\s\S]*?)<\/div>/
+    /<(?:div|section|article|aside) className="bluf-intro">([\s\S]*?)<\/(?:div|section|article|aside)>/
   );
   if (!blufMatch) return null;
   const blufContent = blufMatch[1].trim();

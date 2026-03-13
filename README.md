@@ -2,7 +2,7 @@
 
 A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **198 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
 
-**203 test suites · 4,777 passing tests · 182 formula modules · 34 glossary terms · 9 methodology pages**
+**203 test suites · 4,777 passing tests · 187 formula modules · 34 glossary terms · 9 methodology pages**
 
 ## Tech Stack
 
@@ -53,7 +53,7 @@ content/
   calculators/{category}/     .spec.json + .mdx per calculator
   categories/                 8 category definition JSONs
 lib/
-  formulas/{category}/        182 pure TypeScript formula modules
+  formulas/{category}/        187 pure TypeScript formula modules
   types.ts                    All TypeScript interfaces
   content-loader.ts           Build-time spec + MDX loader
   search-index.ts             Fuse.js index builder

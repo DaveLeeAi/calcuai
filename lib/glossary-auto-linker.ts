@@ -70,10 +70,13 @@ function isInProtectedRegion(source: string, matchIndex: number): boolean {
   const codeBlockCount = (beforeStr.match(/```/g) || []).length;
   if (codeBlockCount % 2 !== 0) return true;
 
-  // Check if inside BLUF intro
-  const blufStart = source.indexOf('<div className="bluf-intro">');
-  const blufEnd = source.indexOf('</div>', blufStart);
-  if (blufStart >= 0 && matchIndex > blufStart && matchIndex < blufEnd) return true;
+  // Check if inside BLUF intro (handles div, section, article, aside wrappers)
+  const blufMatch = source.match(/<(?:div|section|article|aside) className="bluf-intro">/);
+  if (blufMatch && blufMatch.index !== undefined) {
+    const blufStart = blufMatch.index;
+    const blufEnd = source.indexOf('</', blufStart + blufMatch[0].length);
+    if (blufStart >= 0 && matchIndex > blufStart && matchIndex < blufEnd) return true;
+  }
 
   // Check if inside an HTML tag
   const lastOpenTag = before.lastIndexOf('<');

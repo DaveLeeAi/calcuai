@@ -137,19 +137,26 @@ function main() {
       }
 
       // 5b. Methodology section check (conditional on requiresSources)
+      // Accepts common heading variants used across categories
       if (spec.requiresSources === true) {
-        if (!mdxContent.includes('## Methodology & Sources')) {
-          error(`${label} Data-dependent calculator missing "## Methodology & Sources" section`);
+        const hasMethodology = /^## (?:Methodology\s*[&+]\s*Sources?|Sources?\s*[&+]\s*Methodology|Standards?\s*[&+]\s*References)/m.test(mdxContent);
+        if (!hasMethodology) {
+          error(`${label} Data-dependent calculator missing methodology section (e.g. "## Methodology & Sources")`);
         }
       } else if (spec.requiresSources === false) {
-        if (!mdxContent.includes('## How This Is Calculated')) {
-          error(`${label} Formula-only calculator missing "## How This Is Calculated" section`);
+        const hasFormula = /^## (?:How This Is Calculated|The Formula|Formula\s*[&+]\s*Method|How It Works|Conversion Formulas?)/m.test(mdxContent);
+        if (!hasFormula) {
+          error(`${label} Formula-only calculator missing formula section (e.g. "## How This Is Calculated")`);
         }
       }
 
       // Gate A — hasFAQ Cross-Validation
-      if (spec.hasFAQ === true && !mdxContent.includes('## Frequently Asked Questions')) {
-        error(`hasFAQ mismatch: ${spec.slug} claims hasFAQ: true but MDX has no FAQ section`);
+      // Accepts heading variants: "Frequently Asked Questions", "Common Questions", "FAQ"
+      if (spec.hasFAQ === true) {
+        const hasFaqSection = /^## (?:Frequently Asked Questions?|Common Questions|FAQ)\s*$/m.test(mdxContent);
+        if (!hasFaqSection) {
+          error(`hasFAQ mismatch: ${spec.slug} claims hasFAQ: true but MDX has no FAQ section`);
+        }
       }
     }
 

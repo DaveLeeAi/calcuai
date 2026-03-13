@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 182 modules, 184 formula IDs
+ * 187 modules, 189 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -45,12 +45,12 @@ import { FORMULA_REGISTRY as construction_flooring } from './construction/floori
 import { FORMULA_REGISTRY as construction_hvac_size } from './construction/hvac-size';
 import { FORMULA_REGISTRY as construction_insulation } from './construction/insulation';
 import { FORMULA_REGISTRY as construction_kitchen_remodel } from './construction/kitchen-remodel';
-import { FORMULA_REGISTRY as construction_renovation_cost } from './construction/renovation-cost';
 import { FORMULA_REGISTRY as construction_metal_roofing } from './construction/metal-roofing';
 import { FORMULA_REGISTRY as construction_paint_coverage } from './construction/paint-coverage';
 import { FORMULA_REGISTRY as construction_paver } from './construction/paver';
 import { FORMULA_REGISTRY as construction_pool_volume } from './construction/pool-volume';
 import { FORMULA_REGISTRY as construction_rafter_length } from './construction/rafter-length';
+import { FORMULA_REGISTRY as construction_renovation_cost } from './construction/renovation-cost';
 import { FORMULA_REGISTRY as construction_retaining_wall } from './construction/retaining-wall';
 import { FORMULA_REGISTRY as construction_roof_pitch } from './construction/roof-pitch';
 import { FORMULA_REGISTRY as construction_roofing } from './construction/roofing';
@@ -76,12 +76,12 @@ import { FORMULA_REGISTRY as everyday_date_diff } from './everyday/date-diff';
 import { FORMULA_REGISTRY as everyday_discount } from './everyday/discount';
 import { FORMULA_REGISTRY as everyday_electricity_cost } from './everyday/electricity-cost';
 import { FORMULA_REGISTRY as everyday_ev_charging_cost } from './everyday/ev-charging-cost';
-import { FORMULA_REGISTRY as everyday_home_energy_usage } from './everyday/home-energy-usage';
 import { FORMULA_REGISTRY as everyday_final_grade } from './everyday/final-grade';
 import { FORMULA_REGISTRY as everyday_fuel_cost } from './everyday/fuel-cost';
 import { FORMULA_REGISTRY as everyday_gas_mileage } from './everyday/gas-mileage';
 import { FORMULA_REGISTRY as everyday_gpa } from './everyday/gpa';
 import { FORMULA_REGISTRY as everyday_grade } from './everyday/grade';
+import { FORMULA_REGISTRY as everyday_home_energy_usage } from './everyday/home-energy-usage';
 import { FORMULA_REGISTRY as everyday_solar_panel } from './everyday/solar-panel';
 import { FORMULA_REGISTRY as everyday_test_grade } from './everyday/test-grade';
 import { FORMULA_REGISTRY as everyday_time_math } from './everyday/time-math';
@@ -121,8 +121,8 @@ import { FORMULA_REGISTRY as finance_home_equity } from './finance/home-equity';
 import { FORMULA_REGISTRY as finance_home_insurance } from './finance/home-insurance';
 import { FORMULA_REGISTRY as finance_home_sale_profit } from './finance/home-sale-profit';
 import { FORMULA_REGISTRY as finance_income_tax } from './finance/income-tax';
-import { FORMULA_REGISTRY as finance_interest_only_loan } from './finance/interest-only-loan';
 import { FORMULA_REGISTRY as finance_inflation } from './finance/inflation';
+import { FORMULA_REGISTRY as finance_interest_only_loan } from './finance/interest-only-loan';
 import { FORMULA_REGISTRY as finance_interest_rate_solve } from './finance/interest-rate-solve';
 import { FORMULA_REGISTRY as finance_investment_growth } from './finance/investment-growth';
 import { FORMULA_REGISTRY as finance_loan_comparison } from './finance/loan-comparison';
@@ -172,8 +172,8 @@ import { FORMULA_REGISTRY as health_tdee } from './health/tdee';
 import { FORMULA_REGISTRY as health_water_intake } from './health/water-intake';
 
 // Math
-import { FORMULA_REGISTRY as math_chi_square } from './math/chi-square';
 import { FORMULA_REGISTRY as math_central_tendency } from './math/central-tendency';
+import { FORMULA_REGISTRY as math_chi_square } from './math/chi-square';
 import { FORMULA_REGISTRY as math_circle } from './math/circle';
 import { FORMULA_REGISTRY as math_confidence_interval } from './math/confidence-interval';
 import { FORMULA_REGISTRY as math_exponents } from './math/exponents';
@@ -248,12 +248,12 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...construction_hvac_size,
   ...construction_insulation,
   ...construction_kitchen_remodel,
-  ...construction_renovation_cost,
   ...construction_metal_roofing,
   ...construction_paint_coverage,
   ...construction_paver,
   ...construction_pool_volume,
   ...construction_rafter_length,
+  ...construction_renovation_cost,
   ...construction_retaining_wall,
   ...construction_roof_pitch,
   ...construction_roofing,
@@ -277,12 +277,12 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...everyday_discount,
   ...everyday_electricity_cost,
   ...everyday_ev_charging_cost,
-  ...everyday_home_energy_usage,
   ...everyday_final_grade,
   ...everyday_fuel_cost,
   ...everyday_gas_mileage,
   ...everyday_gpa,
   ...everyday_grade,
+  ...everyday_home_energy_usage,
   ...everyday_solar_panel,
   ...everyday_test_grade,
   ...everyday_time_math,
@@ -321,8 +321,8 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_home_insurance,
   ...finance_home_sale_profit,
   ...finance_income_tax,
-  ...finance_interest_only_loan,
   ...finance_inflation,
+  ...finance_interest_only_loan,
   ...finance_interest_rate_solve,
   ...finance_investment_growth,
   ...finance_loan_comparison,
@@ -370,8 +370,8 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...health_tdee,
   ...health_water_intake,
   // Math
-  ...math_chi_square,
   ...math_central_tendency,
+  ...math_chi_square,
   ...math_circle,
   ...math_confidence_interval,
   ...math_exponents,
