@@ -15,8 +15,7 @@ import {
 } from '@/lib/content-loader';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
-import StickyCalculator from '@/components/calculator/StickyCalculator';
-import InlineTableOfContents from '@/components/content/InlineTableOfContents';
+import ShareButton from '@/components/ui/ShareButton';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { AIDiscovery } from '@/components/seo/AIDiscovery';
 import {
@@ -40,6 +39,7 @@ import {
 } from '@/lib/content-linker';
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
 import SalesTaxVisualizations from '@/components/content/SalesTaxVisualizations';
+import FeedbackWidget from '@/components/ui/FeedbackWidget';
 import { siteConfig } from '@/lib/site-config';
 
 // ═══════════════════════════════════════════════════════
@@ -160,14 +160,11 @@ export default function SlugPage({ params }: Props) {
     const cat = getCategory(spec.category);
     const catName = cat?.name || spec.category;
     const allSpecs = getAllSpecs();
-    const isFlagship = spec.priority === 'flagship';
 
-    // Load MDX source and auto-link glossary terms
     const rawMdx = getCalculatorMDX(spec.category, spec.slug);
     const glossaryTerms = getAllGlossaryTerms();
     const mdxSource = rawMdx ? autoLinkGlossaryTerms(rawMdx, glossaryTerms) : null;
 
-    // Build schemas
     const webPageSchema = buildWebPageSchema(spec);
     const faqSchema = mdxSource ? buildFAQSchema(spec, mdxSource) : null;
     const breadcrumbSchema = buildBreadcrumbSchema([
@@ -177,138 +174,19 @@ export default function SlugPage({ params }: Props) {
     ]);
     const softwareAppSchema = buildSoftwareApplicationSchema(spec);
 
-    // Resolve related calculators
-    const relatedCalcs = resolveRelatedCalculators(
-      spec.relatedCalculators,
-      allSpecs
-    );
-
-    // Resolve cross-content-type links
+    const relatedCalcs = resolveRelatedCalculators(spec.relatedCalculators, allSpecs);
     const glossaryLinks = getGlossaryTermsForCalculator(spec);
     const methodologyLinks = getMethodologyTopicsForCalculator(spec);
-
-    // Extract BLUF text for AI discovery
     const blufText = mdxSource ? extractBlufText(mdxSource) : undefined;
 
-    // ─── Flagship: 3-column layout ───────────────────
-    if (isFlagship) {
-      return (
-        <article className="max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Schema: WebPage + Speakable */}
-          <JsonLd data={webPageSchema} id="schema-webpage" />
-          {/* Schema: BreadcrumbList */}
-          <JsonLd data={breadcrumbSchema} id="schema-breadcrumb" />
-          {/* Schema: SoftwareApplication */}
-          <JsonLd data={softwareAppSchema} id="schema-software-app" />
-          {/* Schema: FAQPage */}
-          {faqSchema && <JsonLd data={faqSchema} id="schema-faq" />}
-
-          {/* AI Discovery meta tags */}
-          <AIDiscovery spec={spec} blufText={blufText} />
-
-          {/* KaTeX CSS */}
-          <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
-            crossOrigin="anonymous"
-          />
-
-          {/* Breadcrumbs */}
-          <Breadcrumbs
-            items={[
-              { label: 'Home', href: '/' },
-              { label: catName, href: `/${spec.category}` },
-              { label: spec.title },
-            ]}
-          />
-
-          {/* H1 Title */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
-            {spec.title}
-          </h1>
-
-          {/* BLUF intro (always full width above the 3-col grid) */}
-          {mdxSource && (
-            <div className="mb-8" data-speakable="true">
-              <BlufContent source={mdxSource} />
-            </div>
-          )}
-
-          {/* ═══ 2-Column Flagship Layout ═══
-               Mobile/Tablet (<1024px): Calculator full-width above article
-               Desktop (≥1024px): Article left (60%) | Calculator right (40%, max 380px, sticky)
-          */}
-
-          {/* Calculator: full-width on mobile/tablet, above the article */}
-          <div className="lg:hidden my-8">
-            <CalculatorRenderer spec={spec} />
-          </div>
-
-          <div className="flagship-layout">
-            {/* Left column: Article content */}
-            <div className="min-w-0 max-w-[720px]">
-              {/* Inline Table of Contents — hidden on desktop flagship, visible on mobile/tablet */}
-              <div className="lg:hidden">
-                <InlineTableOfContents containerSelector="article" />
-              </div>
-
-              {/* Article sections */}
-              {mdxSource && (
-                <ArticleContent
-                  mdxSource={mdxSource}
-                  tier={spec.priority}
-                  category={spec.category}
-                  disclaimer={spec.disclaimer}
-                  calculatorId={spec.id}
-                  sectionHeadings={{
-                    ...(spec.sectionHeadings || {}),
-                    ...(spec.interpretationHeading
-                      ? { interpretation: spec.interpretationHeading }
-                      : {}),
-                  }}
-                />
-              )}
-
-              {/* Data visualizations for calculators with requiresSources */}
-              {spec.id === 'sales-tax-calculator' && (
-                <div className="mt-8">
-                  <SalesTaxVisualizations />
-                </div>
-              )}
-
-              {/* Related Resources */}
-              <RelatedResources
-                calculators={relatedCalcs}
-                glossaryTerms={glossaryLinks}
-                methodologyTopics={methodologyLinks}
-              />
-
-              {/* Disclaimer */}
-              <DisclaimerBlock type={spec.disclaimer} />
-            </div>
-
-            {/* Right column: Sticky calculator (desktop ≥1024px) */}
-            <div className="hidden lg:block min-w-0">
-              <StickyCalculator spec={spec} />
-            </div>
-          </div>
-        </article>
-      );
-    }
-
-    // ─── Standard / Utility: 2-column layout (existing) ──
     return (
       <article>
-        {/* Schema */}
         <JsonLd data={webPageSchema} id="schema-webpage" />
         <JsonLd data={breadcrumbSchema} id="schema-breadcrumb" />
         <JsonLd data={softwareAppSchema} id="schema-software-app" />
         {faqSchema && <JsonLd data={faqSchema} id="schema-faq" />}
-
-        {/* AI Discovery */}
         <AIDiscovery spec={spec} blufText={blufText} />
 
-        {/* KaTeX CSS */}
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css"
@@ -324,22 +202,29 @@ export default function SlugPage({ params }: Props) {
           ]}
         />
 
-        {/* H1 Title */}
-        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mt-4 mb-6">
           {spec.title}
         </h1>
 
         {/* BLUF intro */}
         {mdxSource && (
-          <div className="max-w-content mx-auto mb-8" data-speakable="true">
+          <div className="mb-8" data-speakable="true">
             <BlufContent source={mdxSource} />
           </div>
         )}
 
-        {/* Calculator Widget */}
+        {/* Calculator Widget — centered, hero position */}
         <div className="my-8">
           <CalculatorRenderer spec={spec} />
         </div>
+
+        {/* Share */}
+        <div className="mx-auto max-w-calculator mt-4">
+          <ShareButton title={spec.title} />
+        </div>
+
+        {/* Feedback */}
+        <FeedbackWidget calculatorSlug={spec.slug} calculatorTitle={spec.title} />
 
         {/* Article Content */}
         {mdxSource && (
@@ -348,6 +233,7 @@ export default function SlugPage({ params }: Props) {
             tier={spec.priority}
             category={spec.category}
             disclaimer={spec.disclaimer}
+            calculatorId={spec.id}
             sectionHeadings={{
               ...(spec.sectionHeadings || {}),
               ...(spec.interpretationHeading
@@ -355,6 +241,13 @@ export default function SlugPage({ params }: Props) {
                 : {}),
             }}
           />
+        )}
+
+        {/* Sales tax visualizations (map + table) — renders as article sections */}
+        {spec.id === 'sales-tax-calculator' && (
+          <div className="mt-8">
+            <SalesTaxVisualizations />
+          </div>
         )}
 
         {/* Related Resources */}
@@ -452,7 +345,7 @@ function BlufContent({ source }: BlufContentProps) {
   const blufContent = blufMatch[1].trim();
 
   return (
-    <div className="bluf-intro text-lg text-gray-700 dark:text-slate-300 leading-relaxed">
+    <div className="bluf-intro text-base text-gray-700 dark:text-slate-300 leading-relaxed">
       <MDXRemote
         source={blufContent}
         options={{

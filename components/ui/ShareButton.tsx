@@ -210,7 +210,7 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
         <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20 transition-transform group-hover:scale-110">
           <ShareIcon className="w-3.5 h-3.5" />
         </span>
-        Share result
+        Share Result
       </button>
 
       {/* Share options panel */}
