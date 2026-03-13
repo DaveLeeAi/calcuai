@@ -59,9 +59,10 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline
 
   const storageKey = `calcuai-feedback-${calculatorSlug}`;
 
-  // Check localStorage for existing feedback on mount
+  // Check localStorage for existing feedback on mount (non-inline only)
   useEffect(() => {
     setIsHydrated(true);
+    if (inline) return;
     try {
       const existing = localStorage.getItem(storageKey);
       if (existing) {
@@ -70,7 +71,7 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline
     } catch {
       // localStorage unavailable — proceed as idle
     }
-  }, [storageKey]);
+  }, [storageKey, inline]);
 
   const saveFeedback = useCallback(
     (vote: 'yes' | 'no', reasons?: string[], userComment?: string) => {
@@ -83,10 +84,12 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline
         timestamp: new Date().toISOString(),
       };
 
-      try {
-        localStorage.setItem(storageKey, JSON.stringify(data));
-      } catch {
-        // localStorage full or unavailable
+      if (!inline) {
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(data));
+        } catch {
+          // localStorage full or unavailable
+        }
       }
 
       // Dispatch custom event for analytics (GTM, GA, etc.)
@@ -98,7 +101,7 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline
 
       setStep('submitted');
     },
-    [calculatorSlug, calculatorTitle, storageKey]
+    [calculatorSlug, calculatorTitle, storageKey, inline]
   );
 
   const handleYes = useCallback(() => {
