@@ -7,6 +7,7 @@ import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
 import { JsonLd } from '@/components/seo/JsonLd';
 import { siteConfig } from '@/lib/site-config';
 import FeedbackWidget from '@/components/ui/FeedbackWidget';
+import ShareButton from '@/components/ui/ShareButton';
 import type { CalculatorSpec } from '@/lib/types';
 import salesTaxData from '@/content/data/us-sales-tax-2026.json';
 
@@ -564,11 +565,11 @@ export default function StateSalesTaxPage({ params }: Props) {
         <CalculatorRenderer spec={stateSpec} />
       </div>
 
-      {/* Feedback */}
-      <FeedbackWidget
-        calculatorSlug={`${stateCode.toLowerCase()}-sales-tax`}
-        calculatorTitle={`${stateName} Sales Tax Calculator`}
-      />
+      {/* Share + Feedback — compact utility row */}
+      <div className="mx-auto max-w-calculator mt-3 mb-8 flex items-center justify-between">
+        <ShareButton title={title} />
+        <FeedbackWidget calculatorSlug={`${stateCode.toLowerCase()}-sales-tax`} calculatorTitle={title} inline />
+      </div>
 
       {/* Article content */}
       <div className="space-y-8">

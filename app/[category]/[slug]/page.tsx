@@ -219,13 +219,11 @@ export default function SlugPage({ params }: Props) {
           <CalculatorRenderer spec={spec} />
         </div>
 
-        {/* Share */}
-        <div className="mx-auto max-w-calculator mt-4">
+        {/* Share + Feedback — compact utility row */}
+        <div className="mx-auto max-w-calculator mt-3 mb-8 flex items-center justify-between">
           <ShareButton title={spec.title} />
+          <FeedbackWidget calculatorSlug={spec.slug} calculatorTitle={spec.title} inline />
         </div>
-
-        {/* Feedback */}
-        <FeedbackWidget calculatorSlug={spec.slug} calculatorTitle={spec.title} />
 
         {/* Table of Contents — inline, scrolls with content */}
         <InlineTableOfContents containerSelector="article" />

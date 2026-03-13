@@ -5,6 +5,7 @@ import { useState, useEffect, useCallback } from 'react';
 interface FeedbackWidgetProps {
   calculatorSlug: string;
   calculatorTitle: string;
+  inline?: boolean;
 }
 
 type FeedbackStep = 'idle' | 'positive' | 'negative' | 'submitted';
@@ -50,7 +51,7 @@ function CheckCircleIcon({ className }: { className?: string }) {
   );
 }
 
-export default function FeedbackWidget({ calculatorSlug, calculatorTitle }: FeedbackWidgetProps) {
+export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline = false }: FeedbackWidgetProps) {
   const [step, setStep] = useState<FeedbackStep>('idle');
   const [selectedReasons, setSelectedReasons] = useState<string[]>([]);
   const [comment, setComment] = useState('');
@@ -133,6 +134,14 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle }: Feed
 
   // Already submitted
   if (step === 'submitted') {
+    if (inline) {
+      return (
+        <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+          <CheckCircleIcon className="w-3.5 h-3.5" />
+          Thanks!
+        </div>
+      );
+    }
     return (
       <div className="mx-auto max-w-calculator mt-6">
         <div className="flex items-center gap-3 rounded-xl border border-green-200 dark:border-green-800/50 bg-green-50 dark:bg-green-900/20 px-5 py-4">
@@ -147,11 +156,36 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle }: Feed
 
   // Initial question
   if (step === 'idle') {
+    if (inline) {
+      return (
+        <div className="flex items-center gap-3">
+          <span className="text-sm text-gray-500 dark:text-slate-400">Helpful?</span>
+          <button
+            onClick={handleYes}
+            className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-sm text-gray-500 dark:text-slate-400 hover:bg-green-50 dark:hover:bg-green-900/20 hover:text-green-600 dark:hover:text-green-400 transition-colors"
+            type="button"
+            aria-label="Yes, this was helpful"
+          >
+            <ThumbsUpIcon className="w-3.5 h-3.5" />
+            Yes
+          </button>
+          <button
+            onClick={handleNo}
+            className="inline-flex items-center gap-1 rounded-md px-2 py-1 text-sm text-gray-500 dark:text-slate-400 hover:bg-red-50 dark:hover:bg-red-900/20 hover:text-red-600 dark:hover:text-red-400 transition-colors"
+            type="button"
+            aria-label="No, this was not helpful"
+          >
+            <ThumbsDownIcon className="w-3.5 h-3.5" />
+            No
+          </button>
+        </div>
+      );
+    }
     return (
       <div className="mx-auto max-w-calculator mt-6">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-5 py-4 shadow-sm">
           <p className="text-sm font-medium text-gray-700 dark:text-slate-300">
-            Did we solve your problem today?
+            Was this calculator helpful?
           </p>
           <div className="flex items-center gap-3">
             <button
@@ -178,6 +212,10 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle }: Feed
 
   // Positive follow-up
   if (step === 'positive') {
+    if (inline) {
+      saveFeedback('yes');
+      return null;
+    }
     return (
       <div className="mx-auto max-w-calculator mt-6">
         <div className="rounded-xl border border-green-200 dark:border-green-800/50 bg-green-50/50 dark:bg-green-900/10 p-5 shadow-sm">
@@ -224,6 +262,10 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle }: Feed
 
   // Negative follow-up
   if (step === 'negative') {
+    if (inline) {
+      saveFeedback('no');
+      return null;
+    }
     return (
       <div className="mx-auto max-w-calculator mt-6">
         <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-5 shadow-sm">

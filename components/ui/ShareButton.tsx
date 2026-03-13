@@ -203,13 +203,11 @@ export default function ShareButton({ title, url }: ShareButtonProps) {
       {/* Main trigger button */}
       <button
         onClick={handleMainClick}
-        className="group inline-flex items-center gap-2.5 rounded-xl bg-gradient-to-r from-brand-500 to-brand-600 px-5 py-2.5 text-sm font-semibold text-white shadow-md shadow-brand-500/20 transition-all hover:from-brand-600 hover:to-brand-700 hover:shadow-lg hover:shadow-brand-500/30 active:scale-[0.98]"
+        className="inline-flex items-center gap-1.5 rounded-md px-2 py-1 text-sm text-gray-500 dark:text-slate-400 hover:bg-gray-100 dark:hover:bg-slate-700 hover:text-gray-700 dark:hover:text-slate-200 transition-colors"
         aria-label="Share this result"
         type="button"
       >
-        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-white/20 transition-transform group-hover:scale-110">
-          <ShareIcon className="w-3.5 h-3.5" />
-        </span>
+        <ShareIcon className="w-3.5 h-3.5" />
         Share Result
       </button>
 
