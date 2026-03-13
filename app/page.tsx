@@ -101,12 +101,12 @@ export default function HomePage() {
                 alt=""
                 width={32}
                 height={32}
-                className="mb-3"
+                className="mb-3 dark:invert dark:opacity-70"
               />
               <h3 className="font-semibold text-lg text-gray-900 dark:text-white group-hover:text-brand-500 transition-colors">
                 {cat.name}
               </h3>
-              <p className="text-sm text-gray-500 dark:text-slate-400 mt-1 line-clamp-2">{cat.description}</p>
+              <p className="text-sm text-gray-500 dark:text-zinc-400 mt-1 line-clamp-2">{cat.description}</p>
               <p className="text-xs text-brand-500 mt-3 font-medium">
                 {getTotalCalculatorCount(cat)} calculators &rarr;
               </p>
