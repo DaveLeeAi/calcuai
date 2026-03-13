@@ -213,8 +213,31 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline
   // Positive follow-up
   if (step === 'positive') {
     if (inline) {
-      saveFeedback('yes');
-      return null;
+      return (
+        <div className="relative">
+          <div className="absolute bottom-full right-0 mb-2 w-72 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-lg p-4 z-50">
+            <div className="flex items-center gap-2 mb-2">
+              <CheckCircleIcon className="w-4 h-4 text-green-600 dark:text-green-400" />
+              <p className="text-sm font-medium text-green-800 dark:text-green-300">Glad we could help!</p>
+            </div>
+            <textarea
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              placeholder="What did you find most helpful? (optional)"
+              rows={2}
+              className="w-full rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-sm text-gray-700 dark:text-slate-200 placeholder:text-gray-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 resize-none"
+            />
+            <div className="flex items-center justify-end gap-2 mt-2">
+              <button onClick={handlePositiveSkip} className="text-xs text-gray-500 hover:text-gray-700 dark:text-slate-400 dark:hover:text-slate-200" type="button">Skip</button>
+              <button onClick={handlePositiveSubmit} className="rounded-md bg-brand-500 px-3 py-1.5 text-xs font-medium text-white hover:bg-brand-600" type="button">Send</button>
+            </div>
+          </div>
+          <div className="flex items-center gap-2 text-sm text-green-600 dark:text-green-400">
+            <CheckCircleIcon className="w-3.5 h-3.5" />
+            Thanks!
+          </div>
+        </div>
+      );
     }
     return (
       <div className="mx-auto max-w-calculator mt-6">
@@ -263,8 +286,44 @@ export default function FeedbackWidget({ calculatorSlug, calculatorTitle, inline
   // Negative follow-up
   if (step === 'negative') {
     if (inline) {
-      saveFeedback('no');
-      return null;
+      return (
+        <div className="relative">
+          <div className="absolute bottom-full right-0 mb-2 w-80 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-lg p-4 z-50">
+            <p className="text-sm font-medium text-gray-800 dark:text-slate-200 mb-3">What could be better?</p>
+            <div className="space-y-1.5 mb-3">
+              {NEGATIVE_REASONS.map((reason) => (
+                <label key={reason} className="flex items-center gap-2 cursor-pointer">
+                  <span className={`flex items-center justify-center w-4 h-4 rounded border-2 transition-colors shrink-0 ${
+                    selectedReasons.includes(reason) ? 'border-brand-500 bg-brand-500' : 'border-gray-300 dark:border-slate-500'
+                  }`}>
+                    {selectedReasons.includes(reason) && (
+                      <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={3}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </span>
+                  <input type="checkbox" checked={selectedReasons.includes(reason)} onChange={() => toggleReason(reason)} className="sr-only" />
+                  <span className="text-xs text-gray-700 dark:text-slate-300">{reason}</span>
+                </label>
+              ))}
+            </div>
+            <textarea
+              value={comment}
+              onChange={(e) => setComment(e.target.value)}
+              placeholder="Any details? (optional)"
+              rows={2}
+              className="w-full rounded-lg border border-gray-200 dark:border-slate-600 bg-white dark:bg-slate-700 px-3 py-2 text-xs text-gray-700 dark:text-slate-200 placeholder:text-gray-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 resize-none"
+            />
+            <div className="flex items-center justify-end mt-2">
+              <button onClick={handleNegativeSubmit} className="rounded-md bg-brand-500 px-3 py-1.5 text-xs font-medium text-white hover:bg-brand-600" type="button">Send</button>
+            </div>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-gray-500 dark:text-slate-400">Helpful?</span>
+            <span className="text-sm text-red-500">👎</span>
+          </div>
+        </div>
+      );
     }
     return (
       <div className="mx-auto max-w-calculator mt-6">
