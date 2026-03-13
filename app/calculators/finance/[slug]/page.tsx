@@ -8,6 +8,7 @@ import { JsonLd } from '@/components/seo/JsonLd';
 import { siteConfig } from '@/lib/site-config';
 import FeedbackWidget from '@/components/ui/FeedbackWidget';
 import ShareButton from '@/components/ui/ShareButton';
+import InlineTableOfContents from '@/components/content/InlineTableOfContents';
 import type { CalculatorSpec } from '@/lib/types';
 import salesTaxData from '@/content/data/us-sales-tax-2026.json';
 
@@ -570,6 +571,9 @@ export default function StateSalesTaxPage({ params }: Props) {
         <ShareButton title={title} />
         <FeedbackWidget calculatorSlug={`${stateCode.toLowerCase()}-sales-tax`} calculatorTitle={title} inline />
       </div>
+
+      {/* Table of Contents */}
+      <InlineTableOfContents containerSelector="article" />
 
       {/* Article content */}
       <div className="space-y-8">
