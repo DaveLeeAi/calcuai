@@ -10,7 +10,12 @@ export default function PercentageInput({ field, value, error, onChange }: Input
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const raw = e.target.value;
-      if (raw === '' || raw === '.') {
+      if (raw === '' || raw === '-') {
+        onChange(raw as unknown as number);
+        return;
+      }
+      // Allow trailing decimal point or trailing zeros after decimal (e.g. "6.", "6.0", "6.03")
+      if (raw.endsWith('.') || /\.\d*0$/.test(raw)) {
         onChange(raw as unknown as number);
         return;
       }
@@ -23,7 +28,8 @@ export default function PercentageInput({ field, value, error, onChange }: Input
   );
 
   const displayValue =
-    typeof numValue === 'number' && !isNaN(numValue) ? String(numValue) : (value as string) ?? '';
+    typeof value === 'string' ? value :
+    (typeof numValue === 'number' && !isNaN(numValue) ? String(numValue) : '');
 
   return (
     <div className="flex flex-col gap-1">
@@ -41,7 +47,7 @@ export default function PercentageInput({ field, value, error, onChange }: Input
           placeholder={field.placeholder ?? '0'}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : field.helpText ? `${id}-help` : undefined}
-          className={`h-10 w-full rounded-lg border pl-3 pr-8 text-sm outline-none transition-colors ${
+          className={`h-9 w-full rounded-lg border pl-3 pr-8 text-sm outline-none transition-colors ${
             error
               ? 'border-danger-500 focus:ring-2 focus:ring-danger-500/30'
               : 'border-gray-300 focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200'

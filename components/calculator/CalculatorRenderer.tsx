@@ -1,12 +1,13 @@
 'use client';
 
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo, useRef } from 'react';
 import { CalculatorSpec, InputField as InputFieldType } from '@/lib/types';
 import { getFormula } from '@/lib/formulas';
 import InputField from './InputField';
 import OutputDisplay from './OutputDisplay';
 import TabSwitcher from './features/TabSwitcher';
 import { ResultHeader, AssumptionsBar, MethodologyFooter } from './results';
+import ShareButton from '@/components/ui/ShareButton';
 
 interface CalculatorRendererProps {
   spec: CalculatorSpec;
@@ -84,13 +85,32 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
   const [hasCalculated, setHasCalculated] = useState(false);
   const [calculatedInputs, setCalculatedInputs] = useState<Record<string, unknown>>({});
 
-  // Determine which inputs are visible based on active tab
+  // Ref to always point to the latest handleCalculate (avoids stale closures in auto-calc)
+  const handleCalculateRef = useRef<() => void>(() => {});
+
+  // Determine which inputs are visible based on active tab and visibleWhen conditions
   const visibleInputs = useMemo(() => {
-    if (!activeTab || !spec.tabs) return spec.inputs;
-    const tab = spec.tabs.find((t) => t.id === activeTab);
-    if (!tab?.visibleInputs) return spec.inputs;
-    return spec.inputs.filter((inp) => tab.visibleInputs!.includes(inp.id));
-  }, [spec.inputs, spec.tabs, activeTab]);
+    let fields = spec.inputs;
+
+    // Filter by tab visibility
+    if (activeTab && spec.tabs) {
+      const tab = spec.tabs.find((t) => t.id === activeTab);
+      if (tab?.visibleInputs) {
+        fields = fields.filter((inp) => tab.visibleInputs!.includes(inp.id));
+      }
+    }
+
+    // Filter by visibleWhen conditions (conditional visibility based on other field values)
+    fields = fields.filter((field) => {
+      if (!field.visibleWhen) return true;
+      return Object.entries(field.visibleWhen).every(([condFieldId, allowedValues]) => {
+        const currentVal = String(inputs[condFieldId] ?? '');
+        return allowedValues.includes(currentVal);
+      });
+    });
+
+    return fields;
+  }, [spec.inputs, spec.tabs, activeTab, inputs]);
 
   const handleTabChange = useCallback(
     (tabId: string) => {
@@ -105,7 +125,33 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
 
   const handleInputChange = useCallback(
     (fieldId: string, value: unknown) => {
-      setInputs((prev) => ({ ...prev, [fieldId]: value }));
+      setInputs((prev) => {
+        const next = { ...prev, [fieldId]: value };
+
+        // Cross-field update: when state is selected, auto-fill tax rate
+        if (fieldId === 'stateCode' && value && value !== 'custom') {
+          try {
+            const stateOption = spec.inputs
+              .find((i) => i.id === 'stateCode')
+              ?.options?.find((o) => o.value === value);
+            if (stateOption) {
+              // Extract rate from label like "Idaho (6.03%)"
+              const match = stateOption.label.match(/\((\d+\.?\d*)%\)/);
+              if (match) {
+                next['taxRate'] = parseFloat(match[1]);
+              }
+            }
+          } catch (e) {
+            // Fallback: don't update taxRate
+          }
+        }
+        // If state is set back to custom, clear the auto-filled rate
+        if (fieldId === 'stateCode' && value === 'custom') {
+          next['taxRate'] = 0;
+        }
+
+        return next;
+      });
       // Clear error for this field on change
       setErrors((prev) => {
         if (!prev[fieldId]) return prev;
@@ -113,8 +159,14 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
         delete next[fieldId];
         return next;
       });
+      // Auto-calculate when state is selected (sales tax pattern)
+      if (fieldId === 'stateCode' && value !== 'custom' && value !== '') {
+        setTimeout(() => {
+          handleCalculateRef.current();
+        }, 100);
+      }
     },
-    []
+    [spec]
   );
 
   const handleReset = useCallback(() => {
@@ -157,6 +209,9 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
     }
   }, [spec.formula, inputs, visibleInputs]);
 
+  // Keep ref current so auto-calc in handleInputChange always calls latest version
+  handleCalculateRef.current = handleCalculate;
+
   // Determine grid layout: 2 columns if 6+ inputs (never in compact mode)
   const useGrid = !compact && visibleInputs.length >= 6;
 
@@ -167,18 +222,24 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
   const isFlagship = spec.priority === 'flagship';
 
   return (
-    <div className={compact ? 'w-full' : 'mx-auto max-w-calculator'}>
+    <div className={compact ? 'w-full' : 'max-w-calculator'}>
       <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 shadow-sm">
+        {/* Share button — top right */}
+        {!compact && (
+          <div className="flex justify-end px-4 pt-3 sm:px-6 sm:pt-4">
+            <ShareButton title={spec.title} />
+          </div>
+        )}
         {/* Tabs */}
         {spec.tabs && spec.tabs.length > 0 && (
-          <div className="px-4 pt-4 sm:px-6 sm:pt-6">
+          <div className="px-4 pt-3 sm:px-5 sm:pt-4">
             <TabSwitcher tabs={spec.tabs} activeTab={activeTab} onChange={handleTabChange} />
           </div>
         )}
 
         {/* Results — shown ABOVE inputs after calculation */}
         {hasCalculated && results && (
-          <div className="bg-brand-50/60 dark:bg-brand-900/20 p-4 sm:p-6">
+          <div className="bg-brand-50/60 dark:bg-brand-900/20 p-4 sm:p-5">
             {/* Primary result(s) — large, bold numbers */}
             {highlightedOutputs.length > 0 && (
               <div className="space-y-3">
@@ -243,12 +304,12 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
         )}
 
         {/* Inputs */}
-        <div className="p-4 sm:p-6">
+        <div className="p-4 sm:p-5">
           <div
             className={
               useGrid
-                ? 'grid gap-4 md:grid-cols-2'
-                : 'flex flex-col gap-4'
+                ? 'grid gap-3 md:grid-cols-2'
+                : 'flex flex-col gap-3'
             }
             role={spec.tabs ? 'tabpanel' : undefined}
             id={activeTab ? `tabpanel-${activeTab}` : undefined}
@@ -265,10 +326,10 @@ export default function CalculatorRenderer({ spec, compact = false }: Calculator
           </div>
 
           {/* Calculate button — full width, prominent */}
-          <div className="mt-6">
+          <div className="mt-4">
             <button
               onClick={handleCalculate}
-              className="w-full rounded-lg bg-brand-500 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
+              className="w-full rounded-lg bg-brand-500 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-brand-600 active:bg-brand-700 focus:outline-none focus:ring-2 focus:ring-brand-500/30 focus:ring-offset-2 dark:focus:ring-offset-slate-800"
             >
               Calculate
             </button>
