@@ -1,0 +1,116 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+1 kilowatt-hour equals 3,600,000 joules, 3,412.14 BTU, or 860.421 kilocalories. The joule — the SI unit of energy defined as one kilogram-meter-squared per second-squared — serves as the universal base for converting between mechanical, thermal, electrical, and atomic energy units. Enter any energy value below for instant conversion across 10 common units with a full comparison table.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Energy Conversion Shows
+
+Energy conversion uses the joule (J) as the base unit — the SI standard defined as the work done when a force of one newton moves an object one meter. The calculator converts your input to joules first, then divides by the target unit's factor.
+
+**Converted value** is the direct result. Enter 1 kilowatt-hour and convert to BTU: 3,600,000 / 1,055.06 = 3,412.14 BTU. Six decimal places handle both large utility-scale energy (megawatt-hours in power grids) and subatomic measurements (electronvolts in particle physics).
+
+**Conversion rate** shows the fixed multiplier between units. The rate from kilocalories to joules is 4,184, meaning 1 kcal = 4,184 J. The inverse rate (0.000239) means 1 J = 0.000239 kcal. These factors derive from the thermochemical calorie definition established by NIST and the International Bureau of Weights and Measures (BIPM).
+
+**Conversion table** displays your energy in all ten units simultaneously. Enter 1 kWh and see: 3,600,000 J, 3,600 kJ, 860,420.65 cal, 860.421 kcal, 1,000 Wh, 3,412.14 BTU, and more. This multi-unit view is essential for engineers comparing electrical billing (kWh) with heating specifications (BTU) or nutritional energy (kcal).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the energy value** — type the number you want to convert. Decimals supported (e.g., 3.6 kJ, 100.5 BTU).
+
+2. **Select the source unit** — choose from: joule, kilojoule, calorie, kilocalorie, watt-hour, kilowatt-hour, BTU, electronvolt, erg, or foot-pound.
+
+3. **Select the target unit** — choose the unit you need. Results appear instantly.
+
+4. **Review the conversion table** — see your energy in all ten units for quick cross-referencing between electrical, thermal, mechanical, and atomic energy systems.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$\text{Converted Value} = \text{Value} \times \frac{\text{From Factor}}{\text{To Factor}}$$
+
+Where each unit's factor converts to joules (J):
+
+- **Joule (J)** = 1
+- **Kilojoule (kJ)** = 1,000
+- **Calorie (cal)** = 4.184
+- **Kilocalorie (kcal)** = 4,184
+- **Watt-hour (Wh)** = 3,600
+- **Kilowatt-hour (kWh)** = 3,600,000
+- **BTU** = 1,055.06
+- **Electronvolt (eV)** = 1.602176634 x 10^-19
+- **Erg** = 1 x 10^-7
+- **Foot-pound (ft-lbf)** = 1.355818
+
+**Key relationship:** 1 kWh = 3,600,000 J = 3,600 kJ = 860,420.65 cal = 860.421 kcal = 3,412.14 BTU.
+
+**Source:** NIST Special Publication 330, The International System of Units (SI), 2019 Edition.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Converting a Monthly Electricity Bill to BTU
+
+A homeowner uses 900 kWh of electricity in a month and wants to compare this with their natural gas usage, which is measured in BTU (or therms, where 1 therm = 100,000 BTU).
+
+**Step 1 — Convert to base (joules):**
+
+900 kWh x 3,600,000 = **3,240,000,000 J** (3.24 GJ)
+
+**Step 2 — Convert to BTU:**
+
+3,240,000,000 / 1,055.06 = **3,070,927 BTU** (approximately 30.7 therms)
+
+**Step 3 — Convert to kilocalories (for comparison):**
+
+3,240,000,000 / 4,184 = **774,378.6 kcal**
+
+The 900 kWh of electricity equals about 3.07 million BTU or 30.7 therms. If natural gas costs $1.20 per therm, the equivalent gas energy would cost $36.84 — far less than the typical $120+ electric bill, illustrating why gas heating is often cheaper per unit of energy delivered.
+
+{/* Section 10: Key Factors */}
+## Key Factors in Energy Conversion
+
+**kWh and BTU dominate practical energy discussions.** In the US, electricity is billed in kilowatt-hours (the energy consumed by a 1,000-watt appliance running for one hour). Heating and cooling capacity uses BTU (British Thermal Units). The key conversion — 1 kWh = 3,412.14 BTU — bridges electrical and thermal energy for HVAC sizing, energy audits, and utility cost comparisons.
+
+**Calories measure food energy; joules measure everything else.** The "calorie" on nutrition labels is actually a kilocalorie (kcal). One food Calorie (capital C) = 4,184 joules. When comparing dietary energy to physical work, this conversion matters: burning 100 kcal (a banana) releases 418,400 joules — enough to power a 100-watt light bulb for about 70 minutes.
+
+**Electronvolts operate at atomic scale.** One electronvolt (1.602 x 10^-19 J) is the energy gained by a single electron crossing a 1-volt potential difference. Particle physicists use MeV and GeV rather than joules because atomic-scale energies in joules produce unwieldy numbers. The proton rest mass energy, for instance, is 938.272 MeV — far more practical than writing 1.503 x 10^-10 J.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between a calorie and a kilocalorie?
+
+A calorie (cal) is the energy needed to raise 1 gram of water by 1 degree Celsius — equal to 4.184 joules. A kilocalorie (kcal) equals 1,000 calories or 4,184 joules. Nutrition labels use "Calorie" (capital C) to mean kilocalorie, so a 200-Calorie snack actually contains 200,000 small calories or 836,800 joules. This naming convention causes frequent confusion, but the scientific and food-label meanings are well established.
+
+### How many BTU are in a kilowatt-hour?
+
+One kilowatt-hour equals 3,412.14 BTU. This conversion is critical for comparing electricity costs with natural gas costs. A 100,000-BTU furnace running for one hour consumes the equivalent of 29.31 kWh of energy. Since electricity typically costs $0.12-0.16 per kWh and natural gas costs roughly $1.00-1.50 per therm (100,000 BTU), gas heating usually costs less per unit of energy delivered.
+
+### Why do scientists use joules instead of calories?
+
+The joule is the official SI unit of energy, adopted internationally to provide a single consistent standard across all branches of science and engineering. Calories are still common in nutrition and chemistry, but the joule unifies mechanical energy (work = force x distance), electrical energy (watt-seconds), and thermal energy under one measurement system. Using joules eliminates conversion errors when working across disciplines.
+
+### What is an electronvolt used for?
+
+An electronvolt (eV) measures energy at the atomic and subatomic scale. It equals the kinetic energy gained by one electron accelerating through a 1-volt electric potential — approximately 1.602 x 10^-19 joules. Physicists use eV, keV (thousands), MeV (millions), and GeV (billions) to describe particle energies, photon energies, and nuclear binding energies because expressing these quantities in joules would require cumbersome powers of ten.
+
+</div>
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **NIST Special Publication 330** — [The International System of Units (SI)](https://www.nist.gov/pml/special-publication-330) (2019 Edition)
+- **NIST Special Publication 811** — [Guide for the Use of the International System of Units](https://www.nist.gov/pml/special-publication-811) (conversion factors)
+- **BIPM** — Bureau International des Poids et Mesures, SI Brochure (9th edition, 2019) — defines the joule in terms of base SI units

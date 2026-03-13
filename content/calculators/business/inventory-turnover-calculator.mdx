@@ -1,0 +1,135 @@
+---
+title: "Inventory Turnover Calculator"
+description: "Calculate inventory turnover ratio, days sales of inventory (DSI), and monthly turns. Measure how efficiently your business converts inventory into sales."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A business with \$500,000 in cost of goods sold and an average inventory of \$90,000 turns its inventory 5.56 times per year — or once every 65.7 days. The median inventory turnover ratio across U.S. retailers is 8.0 according to CSIMarket (2024), meaning most retailers sell through their entire inventory roughly every 46 days. This calculator computes your turnover ratio, days sales of inventory (DSI), and monthly turns so you can benchmark your inventory efficiency against industry standards.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Inventory Turnover Ratio** measures how many times your business sells and replaces its entire inventory during a period (typically one year). Higher turnover generally indicates strong sales and efficient inventory management. Lower turnover may signal overstocking, obsolete inventory, or weak demand.
+
+**Average Inventory** is the midpoint between your beginning and ending inventory values, smoothing out seasonal fluctuations. It serves as the denominator in the turnover calculation to avoid bias from timing.
+
+**Days Sales of Inventory (DSI)** converts the turnover ratio into calendar days, answering "how many days does it take to sell through your inventory?" A DSI of 45 days means your current inventory will last 45 days at the current sales pace. Lower DSI is generally better, but going too low risks stockouts.
+
+**Turns per Month** divides the annual turnover by 12, showing the monthly equivalent. This is useful for businesses that review inventory on a monthly cycle.
+
+## How to Use This Calculator
+
+1. **Enter Cost of Goods Sold (COGS)** — the total direct cost of products sold during the year. Find this on your income statement. Do not use total revenue — COGS excludes markup.
+2. **Enter Beginning Inventory** — the inventory value at the start of the period (typically January 1 for annual calculation). Use cost basis, not retail value.
+3. **Enter Ending Inventory** — the inventory value at the end of the period. This appears on your balance sheet.
+4. **Read your results** — compare your turnover ratio and DSI to industry benchmarks. Grocery stores target 14-20 turns; general retail targets 6-10 turns; manufacturing targets 4-8 turns.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Average Inventory:**
+
+$$
+\text{Average Inventory} = \frac{\text{Beginning Inventory} + \text{Ending Inventory}}{2}
+$$
+
+**Inventory Turnover Ratio:**
+
+$$
+\text{Inventory Turnover} = \frac{\text{Cost of Goods Sold}}{\text{Average Inventory}}
+$$
+
+**Days Sales of Inventory (DSI):**
+
+$$
+\text{DSI} = \frac{365}{\text{Inventory Turnover Ratio}}
+$$
+
+**Monthly Turns:**
+
+$$
+\text{Turns per Month} = \frac{\text{Inventory Turnover Ratio}}{12}
+$$
+
+Where:
+- **COGS** = cost of goods sold for the period (from income statement)
+- **Beginning Inventory** = inventory value at period start (balance sheet)
+- **Ending Inventory** = inventory value at period end (balance sheet)
+
+*Source: Financial Accounting Standards Board (FASB) ASC 330 — Inventory. DSI calculation follows standard financial analysis methodology used by CFA Institute.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Retail Clothing Store
+
+A clothing boutique has \$360,000 in COGS for the year. Beginning inventory was \$75,000 and ending inventory is \$65,000.
+
+**Average Inventory = (\$75,000 + \$65,000) / 2 = \$70,000**
+**Turnover Ratio = \$360,000 / \$70,000 = 5.14x**
+**DSI = 365 / 5.14 = 71.0 days**
+**Monthly Turns = 5.14 / 12 = 0.43x**
+
+*Interpretation:* The store sells through its inventory roughly every 71 days — about 2.4 months. For specialty retail, the typical benchmark is 4-6 turns per year (DSI of 61-91 days), so 5.14 is healthy. The declining inventory (from \$75K to \$65K) suggests the business is tightening its purchasing, which is positive for cash flow.
+
+### Example 2: Grocery Chain
+
+A regional grocery chain reports \$8,000,000 in COGS. Beginning inventory was \$600,000 and ending inventory is \$550,000.
+
+**Average Inventory = (\$600,000 + \$550,000) / 2 = \$575,000**
+**Turnover Ratio = \$8,000,000 / \$575,000 = 13.91x**
+**DSI = 365 / 13.91 = 26.2 days**
+**Monthly Turns = 13.91 / 12 = 1.16x**
+
+*Interpretation:* At 13.91 turns per year, the grocery chain is within the industry benchmark of 14-20 turns. The 26-day DSI means the entire inventory is replaced roughly once a month. For perishable goods, this turnover rate is essential to minimize spoilage — perishable categories like dairy and produce may turn at 2-3x per week internally.
+
+## Key Factors That Affect Your Results
+
+1. **Seasonality** — Retail businesses see inventory swell before peak seasons (holiday inventory build-up in Q3) and deplete during sales periods (Q4/Q1). Using a single beginning/ending inventory point can misrepresent the true average. For seasonal businesses, use quarterly averages or monthly data points.
+
+2. **Product Mix** — Fast-moving items (basics, consumables) have much higher turnover than slow-moving items (luxury goods, seasonal specialties). Blended turnover hides these differences. Segment your inventory by category: if basics turn 12x/year but specialty items turn 2x/year, the blended 7x average doesn't tell you that specialty items are tying up capital.
+
+3. **COGS vs. Revenue** — Always use COGS, not revenue, in the numerator. Revenue includes markup, which inflates the turnover ratio and produces misleading comparisons between businesses with different margins. A company with 50% gross margin using revenue would show double the turnover of the same company using COGS.
+
+4. **Inventory Valuation Method** — FIFO, LIFO, and weighted average cost produce different inventory values, affecting the turnover ratio. LIFO tends to show lower inventory values during inflation, artificially inflating the turnover ratio. Compare only businesses using the same valuation method.
+
+## Assumptions & Limitations
+
+- Average inventory uses only two data points (beginning and ending), which may not represent the true average during the period
+- Assumes COGS and inventory are measured at cost, not retail value
+- Does not distinguish between raw materials, work-in-progress, and finished goods — manufacturing businesses should calculate turnover for each category separately
+- Industry benchmarks vary significantly by sub-sector: fast fashion turns 10-15x, luxury fashion turns 2-4x
+- A very high turnover ratio is not always positive — it may indicate chronic understocking and lost sales
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### What is a good inventory turnover ratio?
+
+A good inventory turnover ratio depends on your industry. According to CSIMarket (2024), the median ratios are: grocery stores 14-20, general retail 6-10, apparel 4-8, electronics 6-12, automotive 8-12, and manufacturing 4-8. A turnover below your industry median may indicate overstocking or obsolete inventory. A turnover significantly above the median could mean you are running lean, which is efficient but risks stockouts during demand spikes.
+
+### What does a low inventory turnover ratio mean?
+
+A low inventory turnover ratio (below your industry median) typically indicates one or more issues: excess inventory from over-purchasing, slow-moving or obsolete products that are not selling, weak customer demand, or pricing that is too high for the market. It directly impacts cash flow because capital is tied up in unsold goods. To improve turnover, conduct an ABC analysis to identify which SKUs are underperforming, implement markdown strategies for slow movers, and tighten purchasing to align with actual demand.
+
+### How is inventory turnover different from sell-through rate?
+
+Inventory turnover measures how many times total inventory is sold and replaced over a period, using COGS and average inventory from the income statement and balance sheet. Sell-through rate measures the percentage of a specific product batch that sells within a defined period — for example, 80% of a 500-unit shipment sold in 4 weeks. Turnover is a backward-looking annual metric for overall efficiency; sell-through rate is a forward-looking metric for individual product or batch performance. Both are useful: turnover for strategic planning, sell-through for operational purchasing decisions.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Financial Accounting Standards Board (FASB)** — ASC 330: Inventory, inventory valuation and measurement standards
+- **CFA Institute** — Financial Statement Analysis, inventory turnover and DSI methodology
+- **CSIMarket** — Industry Financial Ratios (2024), inventory turnover benchmarks by sector
+- **Harvard Business Review** — "The Bullwhip Effect in Supply Chains" (Lee, Padmanabhan & Whang), inventory management frameworks
+
+Inventory turnover divides cost of goods sold by the average of beginning and ending inventory. DSI inverts the ratio to express turnover in calendar days. Both metrics use cost-basis values to ensure consistent comparisons across businesses with different pricing strategies.

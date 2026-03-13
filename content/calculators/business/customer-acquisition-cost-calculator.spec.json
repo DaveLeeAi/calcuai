@@ -1,0 +1,125 @@
+{
+  "id": "customer-acquisition-cost-calculator",
+  "title": "Customer Acquisition Cost Calculator",
+  "slug": "customer-acquisition-cost-calculator",
+  "category": "business",
+  "subcategory": "sales",
+  "primaryKeyword": "customer acquisition cost calculator",
+  "metaTitle": "Customer Acquisition Cost Calculator — CAC Calculator",
+  "metaDescription": "Calculate your customer acquisition cost (CAC) and payback period. Enter marketing spend, sales costs, and new customers to see your true CAC. Free, instant results.",
+  "inputs": [
+    {
+      "id": "marketingSpend",
+      "label": "Marketing Spend",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total marketing spend in period"
+    },
+    {
+      "id": "salesSpend",
+      "label": "Sales Team Cost",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 100000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total sales team cost in period"
+    },
+    {
+      "id": "newCustomers",
+      "label": "New Customers Acquired",
+      "type": "number",
+      "required": true,
+      "defaultValue": 50,
+      "min": 1,
+      "max": 10000000,
+      "step": 1,
+      "helpText": "New customers acquired in period"
+    },
+    {
+      "id": "monthlyRevenuePerCustomer",
+      "label": "Monthly Revenue per Customer",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 100,
+      "min": 0,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Average monthly revenue per customer"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cac",
+      "label": "Customer Acquisition Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "cacPaybackMonths",
+      "label": "CAC Payback Period",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "CAC Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "customer-acquisition-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "customer-lifetime-value-calculator",
+    "conversion-rate-calculator",
+    "roi-calculator",
+    "break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "CAC = Total Marketing & Sales Spend / New Customers Acquired; Payback = CAC / Monthly Revenue per Customer",
+  "formulaCitation": "SaaS Metrics 2.0 — David Skok, Matrix Partners (2023)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "customer-lifetime-value-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "glossaryTerms": [
+    "cac",
+    "clv"
+  ]
+}

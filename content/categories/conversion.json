@@ -2,7 +2,7 @@
   "id": "conversion",
   "name": "Unit Converters",
   "slug": "conversion",
-  "description": "Free unit converters for length, weight, temperature, area, volume, and data storage.",
+  "description": "Free unit converters for length, weight, temperature, area, volume, data storage, energy, fuel economy, and data transfer rates.",
   "icon": "/icons/conversion.svg",
   "metaTitle": "Unit Converters — Free Online Tools",
   "metaDescription": "Convert between metric and imperial units for length, weight, area, volume, temperature, and data storage. Instant unit converters, no signup.",
@@ -83,7 +83,28 @@
       "slug": "pressure",
       "description": "Convert between units of pressure and atmospheric measurement.",
       "calculators": ["pressure-converter"]
+    },
+    {
+      "id": "energy",
+      "name": "Energy",
+      "slug": "energy",
+      "description": "Convert between units of energy including joules, calories, kWh, and BTU.",
+      "calculators": ["energy-converter"]
+    },
+    {
+      "id": "fuel-economy",
+      "name": "Fuel Economy",
+      "slug": "fuel-economy",
+      "description": "Convert between fuel economy units including MPG, km/L, and L/100km.",
+      "calculators": ["fuel-economy-converter"]
+    },
+    {
+      "id": "data-transfer-rate",
+      "name": "Data Transfer Rate",
+      "slug": "data-transfer-rate",
+      "description": "Convert between data transfer rate units including Mbps, Gbps, and MB/s.",
+      "calculators": ["data-transfer-rate-converter"]
     }
   ],
-  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter", "speed-converter", "currency-converter", "time-converter", "angle-converter", "pressure-converter"]
+  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter", "speed-converter", "currency-converter", "time-converter", "angle-converter", "pressure-converter", "energy-converter", "fuel-economy-converter", "data-transfer-rate-converter"]
 }

@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 187 modules, 189 formula IDs
+ * 200 modules, 202 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -12,12 +12,17 @@ import type { FormulaFunction } from '@/lib/types';
 import { FORMULA_REGISTRY as business_break_even } from './business/break-even';
 import { FORMULA_REGISTRY as business_business_sales_tax } from './business/business-sales-tax';
 import { FORMULA_REGISTRY as business_commission } from './business/commission';
+import { FORMULA_REGISTRY as business_conversion_rate } from './business/conversion-rate';
+import { FORMULA_REGISTRY as business_customer_acquisition_cost } from './business/customer-acquisition-cost';
+import { FORMULA_REGISTRY as business_customer_lifetime_value } from './business/customer-lifetime-value';
 import { FORMULA_REGISTRY as business_employee_cost } from './business/employee-cost';
 import { FORMULA_REGISTRY as business_gross_margin } from './business/gross-margin';
 import { FORMULA_REGISTRY as business_hourly_to_salary } from './business/hourly-to-salary';
+import { FORMULA_REGISTRY as business_inventory_turnover } from './business/inventory-turnover';
 import { FORMULA_REGISTRY as business_markup } from './business/markup';
 import { FORMULA_REGISTRY as business_net_income } from './business/net-income';
 import { FORMULA_REGISTRY as business_overtime } from './business/overtime';
+import { FORMULA_REGISTRY as business_payback_period } from './business/payback-period';
 import { FORMULA_REGISTRY as business_payroll } from './business/payroll';
 import { FORMULA_REGISTRY as business_profit } from './business/profit';
 import { FORMULA_REGISTRY as business_pto_payout } from './business/pto-payout';
@@ -66,6 +71,9 @@ import { FORMULA_REGISTRY as construction_wire_size } from './construction/wire-
 // Conversion
 import { FORMULA_REGISTRY as conversion_angle_convert } from './conversion/angle-convert';
 import { FORMULA_REGISTRY as conversion_currency_convert } from './conversion/currency-convert';
+import { FORMULA_REGISTRY as conversion_data_rate_convert } from './conversion/data-rate-convert';
+import { FORMULA_REGISTRY as conversion_energy_convert } from './conversion/energy-convert';
+import { FORMULA_REGISTRY as conversion_fuel_economy_convert } from './conversion/fuel-economy-convert';
 import { FORMULA_REGISTRY as conversion_pressure_convert } from './conversion/pressure-convert';
 import { FORMULA_REGISTRY as conversion_square_meter } from './conversion/square-meter';
 import { FORMULA_REGISTRY as conversion_time_convert } from './conversion/time-convert';
@@ -157,6 +165,7 @@ import { FORMULA_REGISTRY as finance_tax_brackets } from './finance/tax-brackets
 import { FORMULA_REGISTRY as health_bmi } from './health/bmi';
 import { FORMULA_REGISTRY as health_bmr } from './health/bmr';
 import { FORMULA_REGISTRY as health_body_fat } from './health/body-fat';
+import { FORMULA_REGISTRY as health_body_surface_area } from './health/body-surface-area';
 import { FORMULA_REGISTRY as health_calorie_needs } from './health/calorie-needs';
 import { FORMULA_REGISTRY as health_conception } from './health/conception';
 import { FORMULA_REGISTRY as health_due_date } from './health/due-date';
@@ -199,10 +208,14 @@ import { FORMULA_REGISTRY as math_z_score } from './math/z-score';
 
 // Science
 import { FORMULA_REGISTRY as science_acceleration } from './science/acceleration';
+import { FORMULA_REGISTRY as science_coulombs_law } from './science/coulombs-law';
 import { FORMULA_REGISTRY as science_density } from './science/density';
 import { FORMULA_REGISTRY as science_energy } from './science/energy';
 import { FORMULA_REGISTRY as science_force } from './science/force';
 import { FORMULA_REGISTRY as science_frequency } from './science/frequency';
+import { FORMULA_REGISTRY as science_gravitational_force } from './science/gravitational-force';
+import { FORMULA_REGISTRY as science_heat_transfer } from './science/heat-transfer';
+import { FORMULA_REGISTRY as science_lens_equation } from './science/lens-equation';
 import { FORMULA_REGISTRY as science_momentum } from './science/momentum';
 import { FORMULA_REGISTRY as science_ohms_law } from './science/ohms-law';
 import { FORMULA_REGISTRY as science_power } from './science/power';
@@ -216,12 +229,17 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_break_even,
   ...business_business_sales_tax,
   ...business_commission,
+  ...business_conversion_rate,
+  ...business_customer_acquisition_cost,
+  ...business_customer_lifetime_value,
   ...business_employee_cost,
   ...business_gross_margin,
   ...business_hourly_to_salary,
+  ...business_inventory_turnover,
   ...business_markup,
   ...business_net_income,
   ...business_overtime,
+  ...business_payback_period,
   ...business_payroll,
   ...business_profit,
   ...business_pto_payout,
@@ -268,6 +286,9 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   // Conversion
   ...conversion_angle_convert,
   ...conversion_currency_convert,
+  ...conversion_data_rate_convert,
+  ...conversion_energy_convert,
+  ...conversion_fuel_economy_convert,
   ...conversion_pressure_convert,
   ...conversion_square_meter,
   ...conversion_time_convert,
@@ -356,6 +377,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...health_bmi,
   ...health_bmr,
   ...health_body_fat,
+  ...health_body_surface_area,
   ...health_calorie_needs,
   ...health_conception,
   ...health_due_date,
@@ -396,10 +418,14 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...math_z_score,
   // Science
   ...science_acceleration,
+  ...science_coulombs_law,
   ...science_density,
   ...science_energy,
   ...science_force,
   ...science_frequency,
+  ...science_gravitational_force,
+  ...science_heat_transfer,
+  ...science_lens_equation,
   ...science_momentum,
   ...science_ohms_law,
   ...science_power,

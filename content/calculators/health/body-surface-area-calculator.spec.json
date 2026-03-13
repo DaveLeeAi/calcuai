@@ -1,0 +1,163 @@
+{
+  "id": "body-surface-area-calculator",
+  "title": "Body Surface Area (BSA) Calculator",
+  "slug": "body-surface-area-calculator",
+  "category": "health",
+  "subcategory": "body-metrics",
+  "primaryKeyword": "body surface area calculator",
+  "metaTitle": "Body Surface Area Calculator — DuBois, Mosteller & More",
+  "metaDescription": "Calculate body surface area using DuBois, Mosteller, Haycock, and Boyd formulas. Enter weight and height for instant BSA in square meters. Free BSA calculator.",
+  "inputs": [
+    {
+      "id": "unitSystem",
+      "label": "Unit System",
+      "type": "select",
+      "required": true,
+      "defaultValue": "metric",
+      "options": [
+        {
+          "value": "metric",
+          "label": "Metric (kg, cm)"
+        },
+        {
+          "value": "imperial",
+          "label": "Imperial (lb, in)"
+        }
+      ]
+    },
+    {
+      "id": "weight",
+      "label": "Weight",
+      "type": "number",
+      "required": true,
+      "defaultValue": 70,
+      "min": 1,
+      "max": 500,
+      "step": 0.1,
+      "suffix": "kg",
+      "helpText": "Body weight in kilograms (metric) or pounds (imperial)"
+    },
+    {
+      "id": "height",
+      "label": "Height",
+      "type": "number",
+      "required": true,
+      "defaultValue": 170,
+      "min": 30,
+      "max": 300,
+      "step": 0.1,
+      "suffix": "cm",
+      "helpText": "Height in centimeters (metric) or inches (imperial)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "duboisBSA",
+      "label": "DuBois & DuBois BSA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true,
+      "description": "Body surface area calculated using the DuBois & DuBois (1916) formula, the most widely used clinical BSA equation."
+    },
+    {
+      "id": "mostellerBSA",
+      "label": "Mosteller BSA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "description": "BSA via the simplified Mosteller (1987) formula — commonly used for quick clinical estimates."
+    },
+    {
+      "id": "haycockBSA",
+      "label": "Haycock BSA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "description": "BSA via the Haycock (1978) formula, often preferred for pediatric patients."
+    },
+    {
+      "id": "boydBSA",
+      "label": "Boyd BSA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "description": "BSA via the Boyd (1935) formula."
+    },
+    {
+      "id": "averageBSA",
+      "label": "Average BSA",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "description": "Mean BSA across all four formulas for a consensus estimate."
+    },
+    {
+      "id": "comparisonTable",
+      "label": "Formula Comparison",
+      "type": "table",
+      "tableConfig": {
+        "columns": [
+          {
+            "key": "formula",
+            "label": "Formula",
+            "format": "text"
+          },
+          {
+            "key": "bsa",
+            "label": "BSA (m²)",
+            "format": "number"
+          },
+          {
+            "key": "year",
+            "label": "Year",
+            "format": "text"
+          }
+        ]
+      }
+    }
+  ],
+  "formula": "body-surface-area",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "bmi-calculator",
+    "body-fat-calculator",
+    "ideal-weight-calculator",
+    "lean-body-mass-calculator",
+    "bmr-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "DuBois D, DuBois EF. A formula to estimate approximate surface area. Archives of Internal Medicine. 1916;17:863-871",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "DuBois: BSA = 0.007184 × W^0.425 × H^0.725; Mosteller: BSA = √(W×H/3600); Haycock: BSA = 0.024265 × W^0.5378 × H^0.3964; Boyd: BSA = 0.0003207 × W^(0.7285 − 0.0188×log10(W)) × H^0.3",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "bmi-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "evergreen",
+  "glossaryTerms": [
+    "bmi"
+  ],
+  "methodologyTopics": []
+}

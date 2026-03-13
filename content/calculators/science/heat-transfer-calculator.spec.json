@@ -1,0 +1,137 @@
+{
+  "id": "heat-transfer-calculator",
+  "title": "Heat Transfer Calculator",
+  "slug": "heat-transfer-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "heat transfer calculator",
+  "metaTitle": "Heat Transfer Calculator — Q = mcDT Specific Heat Formula",
+  "metaDescription": "Calculate heat energy, mass, specific heat, or temperature change using Q = mcDT. Includes presets for water, aluminum, copper, and more materials.",
+  "inputs": [
+    {
+      "id": "heatEnergy",
+      "label": "Heat Energy",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 41860",
+      "step": "any",
+      "suffix": "J",
+      "helpText": "Heat energy in joules (leave blank to calculate)"
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 1",
+      "min": 0,
+      "step": "any",
+      "suffix": "kg",
+      "defaultValue": 1,
+      "helpText": "Mass of the substance in kilograms"
+    },
+    {
+      "id": "specificHeat",
+      "label": "Specific Heat Capacity",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 4186",
+      "min": 0,
+      "step": "any",
+      "suffix": "J/(kg*K)",
+      "defaultValue": 4186,
+      "helpText": "Specific heat capacity (default is water: 4186 J/kg*K)"
+    },
+    {
+      "id": "materialPreset",
+      "label": "Material Preset",
+      "type": "select",
+      "required": false,
+      "options": [
+        { "label": "Custom", "value": "custom" },
+        { "label": "Water (4186)", "value": "4186" },
+        { "label": "Ice (2090)", "value": "2090" },
+        { "label": "Steam (2010)", "value": "2010" },
+        { "label": "Aluminum (897)", "value": "897" },
+        { "label": "Copper (385)", "value": "385" },
+        { "label": "Iron (449)", "value": "449" },
+        { "label": "Glass (840)", "value": "840" },
+        { "label": "Wood (1700)", "value": "1700" },
+        { "label": "Air (1005)", "value": "1005" },
+        { "label": "Concrete (880)", "value": "880" },
+        { "label": "Ethanol (2440)", "value": "2440" },
+        { "label": "Olive Oil (1970)", "value": "1970" }
+      ],
+      "defaultValue": "4186",
+      "helpText": "Select a material to auto-fill specific heat capacity"
+    },
+    {
+      "id": "temperatureChange",
+      "label": "Temperature Change",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "step": "any",
+      "suffix": "°C / K",
+      "defaultValue": 10,
+      "helpText": "Temperature change in degrees Celsius or Kelvin (same magnitude)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "heatEnergy",
+      "label": "Heat Energy",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "conversions",
+      "label": "Energy Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "heat-transfer",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "energy-calculator",
+    "density-calculator",
+    "pressure-calculator",
+    "force-calculator",
+    "power-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Joseph Black, Lectures on the Elements of Chemistry (1803); NIST thermophysical data",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Heat transfer: Q = m * c * DT, where Q = heat (J), m = mass (kg), c = specific heat (J/kg*K), DT = temperature change (K or C)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -1,0 +1,143 @@
+---
+title: "Customer Lifetime Value Calculator"
+description: "Calculate customer lifetime value (CLV) using simple or subscription models. See net CLV, CLV:CAC ratio, and annual customer value for smarter acquisition decisions."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A customer spending \$50 per transaction, 12 times a year, over a 5-year relationship generates \$3,000 in lifetime value. Subtract \$200 in acquisition cost and the net CLV is \$2,800 — a 15:1 CLV-to-CAC ratio that signals highly profitable growth. This calculator computes CLV for both transaction-based and subscription businesses, so you can set acquisition budgets, forecast revenue, and identify which customer segments deserve the most investment.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Customer Lifetime Value (CLV)** is the total revenue a single customer generates over their entire relationship with your business. It is the most important metric for determining how much you can afford to spend acquiring customers.
+
+**Net CLV** subtracts your customer acquisition cost (CAC) from the lifetime value. A negative net CLV means you are losing money on every customer you acquire — a warning sign that either your pricing, retention, or acquisition strategy needs adjustment.
+
+**CLV:CAC Ratio** divides lifetime value by acquisition cost. A ratio below 1:1 means you are spending more to acquire customers than they generate. A ratio of 3:1 is the widely cited SaaS benchmark — for every dollar spent on acquisition, you receive three dollars in lifetime value. Ratios above 5:1 may indicate you are under-investing in growth.
+
+**Annual Customer Value** shows the revenue a customer generates per year, useful for cash flow planning and comparing customer segments.
+
+## How to Use This Calculator
+
+1. **Choose your model** — Select "Simple CLV" for transaction-based businesses (retail, e-commerce, restaurants) or "Subscription CLV" for recurring revenue models (SaaS, memberships, subscriptions).
+2. **For Simple CLV** — Enter average purchase value (per transaction), purchase frequency (times per year), and customer lifespan (in years). Use your actual data if available; otherwise estimate conservatively.
+3. **For Subscription CLV** — Enter monthly revenue per customer (ARPU), gross margin percentage, and monthly churn rate. Churn is the percentage of customers who cancel each month.
+4. **Enter acquisition cost** — The total cost to acquire one customer, including marketing and sales spend. This applies to both models.
+5. **Read your results** — Focus on the CLV:CAC ratio. Below 3:1, prioritize retention. Above 5:1, consider increasing acquisition spend.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Simple CLV:**
+
+$$
+\text{CLV} = \text{Average Purchase Value} \times \text{Purchase Frequency} \times \text{Customer Lifespan}
+$$
+
+**Subscription CLV:**
+
+$$
+\text{CLV} = \frac{\text{ARPU} \times \text{Gross Margin \%}}{\text{Monthly Churn Rate}}
+$$
+
+**Net CLV:**
+
+$$
+\text{Net CLV} = \text{CLV} - \text{CAC}
+$$
+
+**CLV:CAC Ratio:**
+
+$$
+\text{CLV:CAC} = \frac{\text{CLV}}{\text{CAC}}
+$$
+
+Where:
+- **Average Purchase Value** = average revenue per transaction
+- **Purchase Frequency** = number of transactions per year
+- **Customer Lifespan** = average relationship duration in years
+- **ARPU** = average revenue per user per month
+- **Gross Margin %** = percentage of revenue retained after cost of goods sold
+- **Monthly Churn Rate** = percentage of customers who leave each month
+- **CAC** = customer acquisition cost
+
+*Source: Harvard Business Review — "The Value of Keeping the Right Customers" (2014). Subscription CLV formula follows the standard SaaS valuation model used by SaaS Capital and OpenView Partners.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: E-Commerce Retailer (Simple CLV)
+
+An online clothing store finds that the average customer spends \$65 per order, orders 4 times per year, and remains a customer for 3 years. Customer acquisition cost is \$40 through paid social ads.
+
+**CLV = \$65 x 4 x 3 = \$780**
+
+- Net CLV = \$780 - \$40 = **\$740**
+- CLV:CAC Ratio = \$780 / \$40 = **19.5:1**
+- Annual Value = \$65 x 4 = **\$260/year**
+
+*Interpretation:* A 19.5:1 ratio is exceptionally strong — this business could afford to spend significantly more on acquisition and still be profitable. If paid social ad costs increase to \$100, the ratio drops to 7.8:1, which is still healthy.
+
+### Example 2: SaaS Company (Subscription CLV)
+
+A project management SaaS charges \$79/month per customer. Gross margin is 85% after hosting and support costs. Monthly churn is 3%. Acquisition cost is \$400 through content marketing and sales demos.
+
+**CLV = (\$79 x 0.85) / 0.03 = \$67.15 / 0.03 = \$2,238.33**
+
+- Net CLV = \$2,238.33 - \$400 = **\$1,838.33**
+- CLV:CAC Ratio = \$2,238.33 / \$400 = **5.6:1**
+- Average Lifespan = 1 / 0.03 = **33.3 months (2.8 years)**
+- Annual Value = \$79 x 12 = **\$948/year**
+
+*Interpretation:* A 5.6:1 ratio exceeds the 3:1 benchmark, indicating the SaaS company has room to invest more in acquisition. Reducing churn from 3% to 2% would increase CLV to \$3,357.50 — a 50% increase from a single percentage point improvement in retention.
+
+## Key Factors That Affect Your Results
+
+1. **Churn Rate Dominates Subscription CLV** — In the subscription formula, churn rate is the denominator. Cutting churn in half doubles CLV. A SaaS company with 5% monthly churn (CLV = \$1,386 at \$99 ARPU, 70% margin) that reduces churn to 2.5% sees CLV jump to \$2,772 — double the value from the same customers paying the same price.
+
+2. **Purchase Frequency Varies by Segment** — Not all customers buy at the same rate. Segment your customers into high, medium, and low frequency. The top 20% of customers often generate 60-80% of revenue (the Pareto principle), so their CLV may be 3-5x the average.
+
+3. **Customer Lifespan Is Hard to Measure** — Most businesses overestimate customer lifespan because they count inactive customers as "retained." Use a clear definition: a customer who has not purchased in 2x their average purchase interval is churned. For subscriptions, the cancellation date is definitive.
+
+4. **Acquisition Cost Includes Hidden Costs** — CAC should include all marketing spend, sales salaries, commissions, tools, and overhead allocated to acquisition. Many businesses understate CAC by 30-50% by counting only ad spend.
+
+## Assumptions & Limitations
+
+- Simple CLV assumes constant purchase behavior over the entire lifespan — in reality, purchase frequency often declines over time
+- Subscription CLV assumes constant churn rate and ARPU — both change as the customer base matures
+- Does not account for the time value of money (a dollar received in year 5 is worth less than a dollar received today)
+- Does not factor in upsell/cross-sell revenue, which can increase CLV by 20-40% in mature businesses
+- Gross margin for subscription businesses should include customer success and support costs, not just hosting
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### What is a good CLV:CAC ratio?
+
+A CLV:CAC ratio of 3:1 is the most widely cited benchmark for healthy unit economics, meaning each customer generates three times what they cost to acquire. Ratios below 1:1 indicate unsustainable losses. Ratios between 1:1 and 3:1 suggest the business may be viable but needs improved retention or pricing. Ratios above 5:1 often indicate underinvestment in acquisition — the business could grow faster by spending more on marketing. The benchmark originated in David Skok's SaaS Metrics 2.0 framework and has been adopted across industries.
+
+### How do I reduce churn rate to increase CLV?
+
+The highest-impact retention strategies vary by business model: for SaaS, improving onboarding to ensure customers reach their "aha moment" within the first 7 days reduces early-stage churn by 20-40% (according to Amplitude's 2023 Product Benchmarks report). For e-commerce, loyalty programs and post-purchase email sequences increase repeat purchase rates. For subscription boxes, offering pause-instead-of-cancel options reduces churn by 10-15%. The common thread is proactive engagement before the customer decides to leave.
+
+### Should I use simple CLV or subscription CLV?
+
+Use simple CLV for any business where customers make discrete, individual purchases — retail stores, e-commerce, restaurants, consulting services, and one-time project-based businesses. Use subscription CLV for any business with recurring monthly or annual billing — SaaS, memberships, subscription boxes, insurance, and managed services. If your business has a mix (a SaaS product with one-time setup fees), calculate both and add them together for total CLV.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Harvard Business Review** — "The Value of Keeping the Right Customers" (2014), foundational CLV framework
+- **SaaS Metrics 2.0** — David Skok, Matrix Partners (2023), CLV:CAC ratio benchmarks
+- **OpenView Partners** — SaaS Benchmarks Report (2024), churn and ARPU benchmarks
+- **Amplitude** — Product Benchmarks Report (2023), onboarding and retention data
+
+Simple CLV multiplies average transaction value by frequency and lifespan. Subscription CLV divides monthly gross profit by monthly churn rate, producing the total expected revenue per customer before they cancel. Both models assume constant behavior, which is a simplification — real-world CLV benefits from cohort analysis and discounting.

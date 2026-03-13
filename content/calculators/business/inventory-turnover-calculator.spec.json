@@ -1,0 +1,121 @@
+{
+  "id": "inventory-turnover-calculator",
+  "title": "Inventory Turnover Calculator",
+  "slug": "inventory-turnover-calculator",
+  "category": "business",
+  "subcategory": "sales",
+  "primaryKeyword": "inventory turnover calculator",
+  "metaTitle": "Inventory Turnover Calculator — Ratio, DSI & Turns per Month",
+  "metaDescription": "Calculate inventory turnover ratio, days sales of inventory (DSI), and monthly turns. Enter COGS and inventory values to measure efficiency. Free, instant results.",
+  "inputs": [
+    {
+      "id": "cogs",
+      "label": "Cost of Goods Sold (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500000,
+      "min": 0,
+      "max": 10000000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Cost of goods sold for the period"
+    },
+    {
+      "id": "beginningInventory",
+      "label": "Beginning Inventory",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 100000,
+      "min": 0,
+      "max": 10000000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Inventory value at start of period"
+    },
+    {
+      "id": "endingInventory",
+      "label": "Ending Inventory",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 80000,
+      "min": 0,
+      "max": 10000000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Inventory value at end of period"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "turnoverRatio",
+      "label": "Inventory Turnover Ratio",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "averageInventory",
+      "label": "Average Inventory",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "daysSalesOfInventory",
+      "label": "Days Sales of Inventory (DSI)",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "inventoryTurnsPerMonth",
+      "label": "Inventory Turns per Month",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "summary",
+      "label": "Inventory Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "inventory-turnover",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "break-even-calculator",
+    "margin-calculator",
+    "roi-calculator",
+    "revenue-calculator",
+    "profit-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Inventory Turnover = COGS / Average Inventory; Average Inventory = (Beginning + Ending) / 2; DSI = 365 / Turnover Ratio",
+  "formulaCitation": "Financial Accounting Standards Board (FASB) ASC 330 — Inventory",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "inventory-turnover",
+    "cogs",
+    "dsi"
+  ]
+}

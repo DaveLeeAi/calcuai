@@ -1,0 +1,129 @@
+{
+  "id": "payback-period-calculator",
+  "title": "Payback Period Calculator",
+  "slug": "payback-period-calculator",
+  "category": "business",
+  "subcategory": "margins",
+  "primaryKeyword": "payback period calculator",
+  "metaTitle": "Payback Period Calculator — Simple & Discounted Payback",
+  "metaDescription": "Calculate how long it takes to recoup an investment. See simple payback period, discounted payback, and year-by-year cash flow table. Free, instant results.",
+  "inputs": [
+    {
+      "id": "initialInvestment",
+      "label": "Initial Investment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Total upfront investment or project cost"
+    },
+    {
+      "id": "annualCashFlow",
+      "label": "Annual Cash Flow",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 100000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Expected annual net cash inflow"
+    },
+    {
+      "id": "discountRate",
+      "label": "Discount Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 50,
+      "step": 0.5,
+      "suffix": "%",
+      "helpText": "Discount rate for discounted payback (0 for simple payback)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "paybackPeriod",
+      "label": "Simple Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "discountedPaybackPeriod",
+      "label": "Discounted Payback Period",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalReturn",
+      "label": "Total Return over Payback Period",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "yearByYearTable",
+      "label": "Year-by-Year Cash Flow",
+      "type": "table",
+      "columns": [
+        { "key": "year", "label": "Year" },
+        { "key": "cashFlow", "label": "Cash Flow", "format": "currency" },
+        { "key": "discountedCashFlow", "label": "Discounted Cash Flow", "format": "currency" },
+        { "key": "cumulative", "label": "Cumulative", "format": "currency" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Payback Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "payback-period",
+  "features": [
+    "chart",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "roi-calculator",
+    "break-even-calculator",
+    "investment-calculator",
+    "customer-lifetime-value-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Simple Payback = Initial Investment / Annual Cash Flow; Discounted Payback uses present value of cash flows at the given discount rate",
+  "formulaCitation": "Brealey, Myers & Allen, Principles of Corporate Finance (13th ed., 2020)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "roi-calculator",
+    "break-even-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "payback-period",
+    "npv",
+    "discount-rate"
+  ]
+}

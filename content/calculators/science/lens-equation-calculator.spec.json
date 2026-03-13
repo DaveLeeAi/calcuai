@@ -1,0 +1,105 @@
+{
+  "id": "lens-equation-calculator",
+  "title": "Lens Equation Calculator",
+  "slug": "lens-equation-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "lens equation calculator",
+  "metaTitle": "Lens Equation Calculator — Thin Lens Formula (1/f = 1/do + 1/di)",
+  "metaDescription": "Calculate focal length, object distance, or image distance using the thin lens equation. Find magnification, image type, and orientation instantly.",
+  "inputs": [
+    {
+      "id": "focalLength",
+      "label": "Focal Length",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "step": "any",
+      "suffix": "cm",
+      "helpText": "Positive for converging lens, negative for diverging lens"
+    },
+    {
+      "id": "objectDistance",
+      "label": "Object Distance",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 30",
+      "min": 0.001,
+      "step": "any",
+      "suffix": "cm",
+      "helpText": "Distance from object to lens center (must be positive)"
+    },
+    {
+      "id": "imageDistance",
+      "label": "Image Distance",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 15",
+      "step": "any",
+      "suffix": "cm",
+      "helpText": "Positive for real image, negative for virtual image"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "magnification",
+      "label": "Magnification",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "imageType",
+      "label": "Image Type",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "lens-equation",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "frequency-calculator",
+    "wave-speed-calculator",
+    "velocity-calculator",
+    "energy-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Gauss thin lens equation; Rene Descartes, Dioptrique (1637)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Thin lens equation: 1/f = 1/do + 1/di, magnification M = -di/do",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

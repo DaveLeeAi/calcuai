@@ -1,0 +1,189 @@
+{
+  "id": "customer-lifetime-value-calculator",
+  "title": "Customer Lifetime Value Calculator",
+  "slug": "customer-lifetime-value-calculator",
+  "category": "business",
+  "subcategory": "sales",
+  "primaryKeyword": "customer lifetime value calculator",
+  "metaTitle": "Customer Lifetime Value Calculator — CLV & LTV Calculator",
+  "metaDescription": "Calculate customer lifetime value with simple or subscription models. See CLV, net CLV, CLV:CAC ratio, and annual customer value. Free, instant results.",
+  "inputs": [
+    {
+      "id": "calculationMode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "simple",
+      "options": [
+        { "value": "simple", "label": "Simple CLV" },
+        { "value": "subscription", "label": "Subscription CLV" }
+      ],
+      "helpText": "Choose simple for transaction-based or subscription for recurring revenue"
+    },
+    {
+      "id": "avgPurchaseValue",
+      "label": "Average Purchase Value",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Average revenue per transaction",
+      "visibleWhen": { "field": "calculationMode", "value": "simple" }
+    },
+    {
+      "id": "purchaseFrequency",
+      "label": "Purchase Frequency (per year)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 12,
+      "min": 0,
+      "max": 10000,
+      "step": 1,
+      "helpText": "Number of purchases per year",
+      "visibleWhen": { "field": "calculationMode", "value": "simple" }
+    },
+    {
+      "id": "customerLifespan",
+      "label": "Customer Lifespan",
+      "type": "number",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0.1,
+      "max": 100,
+      "step": 0.5,
+      "suffix": "years",
+      "helpText": "Average customer relationship in years",
+      "visibleWhen": { "field": "calculationMode", "value": "simple" }
+    },
+    {
+      "id": "monthlyRevenue",
+      "label": "Monthly Revenue per Customer (ARPU)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 99,
+      "min": 0,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Monthly revenue per customer (ARPU)",
+      "visibleWhen": { "field": "calculationMode", "value": "subscription" }
+    },
+    {
+      "id": "grossMarginPercent",
+      "label": "Gross Margin",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 70,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "Gross margin percentage",
+      "visibleWhen": { "field": "calculationMode", "value": "subscription" }
+    },
+    {
+      "id": "monthlyChurnRate",
+      "label": "Monthly Churn Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0.1,
+      "max": 100,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Monthly customer churn rate",
+      "visibleWhen": { "field": "calculationMode", "value": "subscription" }
+    },
+    {
+      "id": "acquisitionCost",
+      "label": "Customer Acquisition Cost (CAC)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Cost to acquire one customer (CAC)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "clv",
+      "label": "Customer Lifetime Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "netCLV",
+      "label": "Net CLV (After Acquisition Cost)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "clvToCAC",
+      "label": "CLV:CAC Ratio",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "annualValue",
+      "label": "Annual Customer Value",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "CLV Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "customer-lifetime-value",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "roi-calculator",
+    "break-even-calculator",
+    "conversion-rate-calculator",
+    "customer-acquisition-cost-calculator",
+    "revenue-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Simple CLV = Avg Purchase Value x Purchase Frequency x Customer Lifespan; Subscription CLV = (ARPU x Gross Margin%) / Churn Rate",
+  "formulaCitation": "Harvard Business Review — \"The Value of Keeping the Right Customers\" (2014)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "customer-acquisition-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "clv",
+    "churn-rate",
+    "cac"
+  ]
+}

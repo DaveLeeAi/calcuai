@@ -1,0 +1,119 @@
+{
+  "id": "data-transfer-rate-converter",
+  "title": "Data Transfer Rate Converter",
+  "slug": "data-transfer-rate-converter",
+  "category": "conversion",
+  "subcategory": "data-transfer-rate",
+  "primaryKeyword": "data transfer rate converter",
+  "metaTitle": "Data Transfer Rate Converter — Mbps, Gbps, MB/s & KB/s",
+  "metaDescription": "Convert between data transfer rate units: bps, kbps, Mbps, Gbps, Tbps, bytes/s, KB/s, MB/s, and GB/s. Bits to bytes and back. Free instant converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 100,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Data transfer rate value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mbps",
+      "options": [
+        { "value": "bps", "label": "Bits/s (bps)" },
+        { "value": "kbps", "label": "Kilobits/s (kbps)" },
+        { "value": "mbps", "label": "Megabits/s (Mbps)" },
+        { "value": "gbps", "label": "Gigabits/s (Gbps)" },
+        { "value": "tbps", "label": "Terabits/s (Tbps)" },
+        { "value": "bytes-per-sec", "label": "Bytes/s (B/s)" },
+        { "value": "kb-per-sec", "label": "Kilobytes/s (KB/s)" },
+        { "value": "mb-per-sec", "label": "Megabytes/s (MB/s)" },
+        { "value": "gb-per-sec", "label": "Gigabytes/s (GB/s)" }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mb-per-sec",
+      "options": [
+        { "value": "bps", "label": "Bits/s (bps)" },
+        { "value": "kbps", "label": "Kilobits/s (kbps)" },
+        { "value": "mbps", "label": "Megabits/s (Mbps)" },
+        { "value": "gbps", "label": "Gigabits/s (Gbps)" },
+        { "value": "tbps", "label": "Terabits/s (Tbps)" },
+        { "value": "bytes-per-sec", "label": "Bytes/s (B/s)" },
+        { "value": "kb-per-sec", "label": "Kilobytes/s (KB/s)" },
+        { "value": "mb-per-sec", "label": "Megabytes/s (MB/s)" },
+        { "value": "gb-per-sec", "label": "Gigabytes/s (GB/s)" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "convertedValue",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 6
+    },
+    {
+      "id": "conversionDisplay",
+      "label": "Conversion",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "inverseRate",
+      "label": "Inverse Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Data Rate Conversions",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "data-rate-convert",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["data-storage-converter", "speed-converter", "time-converter"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "IEEE 802.3 Standard; IEC 80000-13:2008",
+  "articleWordTarget": 800,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "convertedValue = value x (fromFactor / toFactor); base unit = bits per second (bps). 1 kbps = 1000 bps, 1 Mbps = 1000000 bps, 1 Gbps = 1000000000 bps, 1 Tbps = 1000000000000 bps, 1 B/s = 8 bps, 1 KB/s = 8000 bps, 1 MB/s = 8000000 bps, 1 GB/s = 8000000000 bps. Uses SI decimal prefixes (IEC 80000-13).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}

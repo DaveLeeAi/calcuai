@@ -1,0 +1,109 @@
+{
+  "id": "fuel-economy-converter",
+  "title": "Fuel Economy Converter",
+  "slug": "fuel-economy-converter",
+  "category": "conversion",
+  "subcategory": "fuel-economy",
+  "primaryKeyword": "fuel economy converter",
+  "metaTitle": "Fuel Economy Converter — MPG, km/L & L/100km",
+  "metaDescription": "Convert between fuel economy units: MPG (US), MPG (Imperial), km/L, and L/100km. Handles the inverse L/100km relationship. Free instant converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 25,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Fuel economy value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mpg-us",
+      "options": [
+        { "value": "mpg-us", "label": "MPG (US)" },
+        { "value": "mpg-imperial", "label": "MPG (Imperial)" },
+        { "value": "km-per-liter", "label": "km/L" },
+        { "value": "liters-per-100km", "label": "L/100km" }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "km-per-liter",
+      "options": [
+        { "value": "mpg-us", "label": "MPG (US)" },
+        { "value": "mpg-imperial", "label": "MPG (Imperial)" },
+        { "value": "km-per-liter", "label": "km/L" },
+        { "value": "liters-per-100km", "label": "L/100km" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "convertedValue",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 6
+    },
+    {
+      "id": "conversionDisplay",
+      "label": "Conversion",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "inverseRate",
+      "label": "Inverse Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Fuel Economy Conversions",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "fuel-economy-convert",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["gas-mileage-calculator", "trip-cost-calculator", "speed-converter", "length-converter"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "US EPA Fuel Economy Guide, 2024",
+  "articleWordTarget": 800,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base unit: MPG (US). mpg-us = 1, mpg-imperial = 1.20095, km-per-liter = value x 0.425144. L/100km is inverse: L/100km = 235.215 / mpg-us. Conversion constant 235.215 from NIST Handbook 44.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}

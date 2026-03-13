@@ -1,0 +1,154 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A converging lens with a focal length of 10 cm forms a real, inverted image at 15 cm when the object is placed at 30 cm, with a magnification of negative 0.5 (half the object size). This is calculated using the thin lens equation: 1/f = 1/do + 1/di, which gives 1/10 = 1/30 + 1/15. This lens equation calculator solves for any one of three variables — focal length, object distance, or image distance — when you provide the other two. It also computes magnification, image type (real or virtual), orientation (upright or inverted), and lens power in diopters for optics coursework, photography, and optical instrument design.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The thin lens equation relates the focal length of a lens to the positions of an object and its image. A positive focal length indicates a converging (convex) lens, while a negative focal length indicates a diverging (concave) lens. The sign of the image distance tells you whether the image is real (positive, formed on the opposite side of the lens from the object) or virtual (negative, formed on the same side as the object).
+
+Magnification M = negative di/do reveals both the size and orientation of the image. A magnification of negative 0.5 means the image is inverted and half the size of the object. A magnification of positive 2.0 means the image is upright and twice the size of the object. When the object is placed beyond twice the focal length from a converging lens, the image is real, inverted, and reduced in size — this is how cameras and the human eye form images. When the object is between the focal point and the lens, the image is virtual, upright, and enlarged — this is how a magnifying glass works.
+
+Lens power in diopters (1/f in meters) is the standard measurement used in eyeglass prescriptions. A +2.0 diopter lens has a focal length of 50 cm and is used to correct farsightedness. A negative 3.0 diopter lens has a focal length of negative 33.3 cm and corrects nearsightedness. For related optics calculations, the [Frequency Calculator](/calculators/science/frequency-calculator) computes wave properties, and the [Wave Speed Calculator](/calculators/science/wave-speed-calculator) handles electromagnetic wave propagation through different media.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the two values you know.** You need exactly two of the three quantities: Focal Length (cm), Object Distance (cm), or Image Distance (cm). Check your problem statement or optical setup specifications.
+2. **Enter the first known value.** Use the sign convention: positive focal length for converging lenses, negative for diverging. Object distance is always positive for real objects. Image distance is positive for real images and negative for virtual images.
+3. **Enter the second known value** in its field. Leave the third field empty.
+4. **Read the results.** The calculator displays all three values, magnification, image type (Real or Virtual), orientation (Inverted or Upright), relative size (Enlarged, Reduced, or Same size), and lens power in diopters.
+5. **Verify reasonableness.** For a converging lens: objects beyond 2f produce reduced real images, objects at 2f produce same-size real images, objects between f and 2f produce enlarged real images, and objects inside f produce enlarged virtual images. A diverging lens always produces reduced virtual images regardless of object position.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Thin Lens Equation
+
+$$\frac{1}{f} = \frac{1}{d_o} + \frac{1}{d_i}$$
+
+Where:
+
+- **f** = focal length, in centimeters (cm) — positive for converging lens, negative for diverging
+- **do** = object distance, in centimeters (cm) — always positive for real objects
+- **di** = image distance, in centimeters (cm) — positive for real image, negative for virtual
+
+### Solving for Image Distance
+
+$$d_i = \frac{f \times d_o}{d_o - f}$$
+
+### Solving for Object Distance
+
+$$d_o = \frac{f \times d_i}{d_i - f}$$
+
+### Solving for Focal Length
+
+$$f = \frac{d_o \times d_i}{d_o + d_i}$$
+
+### Magnification
+
+$$M = -\frac{d_i}{d_o} = \frac{h_i}{h_o}$$
+
+Where **hi** is the image height and **ho** is the object height. Negative magnification means the image is inverted. The absolute value of M gives the size ratio: |M| greater than 1 means enlarged, |M| less than 1 means reduced, |M| = 1 means same size.
+
+### Lens Power (Diopters)
+
+$$P = \frac{1}{f_{\text{meters}}} = \frac{100}{f_{\text{cm}}}$$
+
+The diopter (D) is the unit used in optometry and ophthalmology. Positive diopters indicate converging lenses (for farsightedness correction); negative diopters indicate diverging lenses (for nearsightedness correction).
+
+**Source:** Gauss thin lens equation, derived from Snell's law of refraction applied to thin curved surfaces. Historical attribution: Rene Descartes, *Dioptrique* (1637); refined by Carl Friedrich Gauss in his optical treatise (1841).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Camera Lens Forming a Real Image
+
+A camera lens with a focal length of 50 mm (5 cm) photographs an object 200 cm away. Where does the image form, and what is the magnification?
+
+**Step-by-step:**
+
+1. Known values: f = **5 cm**, do = **200 cm**
+2. Apply the formula: 1/di = 1/f minus 1/do = 1/5 minus 1/200 = 40/200 minus 1/200 = 39/200
+3. di = 200/39 = **5.128 cm**
+4. Magnification: M = negative di/do = negative 5.128/200 = **negative 0.0256**
+5. Image type: di is positive → **Real, Inverted**
+6. Image size: |M| = 0.0256 → **Reduced (0.03x)**
+
+**Result:** The image forms at **5.13 cm** behind the lens, real and inverted, at **0.026x** the original size.
+
+**Practical interpretation:** When the object is very far from the lens (do much greater than f), the image forms very close to the focal point. A 200 cm tall person photographed from 200 cm away produces an image only 5.13 mm tall on the sensor. This is why photographers use longer focal length lenses (telephoto, 200 mm+) to make distant subjects appear larger — a 50 cm focal length lens at the same distance produces an image of 1.28 cm, about 5 times bigger. The [Velocity Calculator](/calculators/science/velocity-calculator) can help with motion-blur calculations when photographing moving subjects.
+
+### Example 2: Magnifying Glass (Virtual Image)
+
+A magnifying glass with a focal length of 10 cm is held 7 cm from a coin. Where does the image appear, and how large is it?
+
+**Step-by-step:**
+
+1. Known values: f = **10 cm**, do = **7 cm** (inside the focal length)
+2. Apply the formula: 1/di = 1/f minus 1/do = 1/10 minus 1/7 = 7/70 minus 10/70 = negative 3/70
+3. di = negative 70/3 = **negative 23.33 cm**
+4. Magnification: M = negative (negative 23.33)/7 = **positive 3.33**
+5. Image type: di is negative → **Virtual, Upright**
+6. Image size: |M| = 3.33 → **Enlarged (3.33x)**
+
+**Result:** The image appears **23.33 cm** on the same side as the coin (virtual), upright, and **3.33 times larger**.
+
+**Practical interpretation:** This is exactly how a magnifying glass works. Placing the object inside the focal length creates a virtual image that appears larger and farther away than the actual object. The closer the object gets to the focal point (without reaching it), the larger the virtual image becomes — at do = 9 cm (just inside the 10 cm focal length), the magnification jumps to 10x. At do = f exactly, the image theoretically forms at infinity and the magnification becomes infinite, which is the principle behind the Galilean telescope's eyepiece. In practice, aberrations and the finite size of the lens limit useful magnification to about 2.5 times the focal length in centimeters.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Object position relative to the focal point determines image type.** For a converging lens, the focal point is the critical boundary: objects beyond f produce real images on the opposite side; objects inside f produce virtual images on the same side. At exactly f, the emerging rays are parallel and the image forms at infinity — this is how projectors and lighthouses create nearly parallel beams.
+
+**Focal length determines lens power and application.** Short focal lengths (strong lenses, high diopters) bend light more and are used for microscope objectives, reading glasses, and macro photography. Long focal lengths (weak lenses, low diopters) are used for telescopes, telephoto photography, and correcting mild vision problems. A typical eyeglass prescription ranges from negative 8 D to positive 6 D, corresponding to focal lengths of negative 12.5 cm to 16.7 cm.
+
+**Lens thickness affects accuracy of the thin lens approximation.** The thin lens equation assumes the lens has negligible thickness compared to the focal length and distances involved. For thick lenses (such as compound camera lenses), principal planes replace the single lens plane, and the formula uses distances measured from these principal planes rather than from the lens center. For most single-element lenses where thickness is less than 10% of the focal length, the thin lens equation is accurate to within 1-2%.
+
+**Chromatic and spherical aberrations limit real-world performance.** Real lenses do not focus all wavelengths to the same point (chromatic aberration) and do not perfectly focus rays far from the optical axis (spherical aberration). Camera and telescope designers use multi-element lens systems, aspherical surfaces, and special glass types to minimize these effects. The thin lens equation gives the ideal paraxial result — the behavior of rays close to the optical axis.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Thin lens approximation.** The formula assumes lens thickness is negligible compared to focal length and object/image distances. For thick or compound lenses, use the thick lens formula with principal planes.
+- **Paraxial (small angle) rays only.** The equation assumes all light rays make small angles with the optical axis. Wide-angle rays experience spherical aberration and focus at different points than predicted by this formula.
+- **Single wavelength assumed.** The formula uses a single focal length. Real lenses have different focal lengths for different wavelengths (chromatic dispersion), typically specified at a reference wavelength of 587.6 nm (helium d-line).
+- **Real objects only.** Object distance must be positive in this calculator. Virtual objects (convergent light entering the lens) are a valid physical scenario but require careful sign convention handling.
+- **No diffraction effects.** The geometric optics behind the thin lens equation ignores wave effects. For very small apertures or very short focal lengths, diffraction limits resolution according to the Rayleigh criterion.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between a real image and a virtual image?
+
+A real image forms where light rays actually converge after passing through the lens. It can be projected onto a screen, which is how movie projectors and cameras work. A virtual image forms where light rays appear to diverge from — no actual light converges there. You can see a virtual image by looking through the lens (like a magnifying glass), but you cannot project it onto a screen. In the thin lens equation, positive image distance indicates a real image formed on the opposite side of the lens from the object, while negative image distance indicates a virtual image on the same side as the object.
+
+### What do diopters mean in an eyeglass prescription?
+
+Diopters measure lens power, defined as the reciprocal of focal length in meters. A prescription of negative 2.00 D means a diverging lens with a focal length of negative 50 cm, used to correct myopia (nearsightedness) by spreading light rays so they focus on the retina instead of in front of it. A prescription of positive 1.50 D means a converging lens with a focal length of 66.7 cm, used to correct hyperopia (farsightedness) by converging light rays to focus on the retina instead of behind it. The higher the absolute diopter value, the stronger the correction and the thicker the lens at its center (for positive) or edge (for negative).
+
+### Why does a magnifying glass only work when the object is close?
+
+A magnifying glass (converging lens) produces an enlarged virtual image only when the object is closer to the lens than the focal length. At this distance, the diverging light from the object is partially converged by the lens but not enough to form a real image — instead, the rays appear to come from a larger, more distant virtual image behind the object. When the object moves beyond the focal point, the lens converges the light enough to form a real (inverted) image, which is not useful for magnification. For a typical magnifying glass with f = 10 cm, the maximum useful working distance is about 9 cm, producing roughly 3.3x magnification.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the thin lens equation (1/f = 1/do + 1/di) to solve for any one of three variables — focal length, object distance, or image distance — given the other two. When image distance is unknown, it computes 1/di = 1/f minus 1/do and inverts. When focal length is unknown, it computes f = do times di / (do + di). When object distance is unknown, it computes 1/do = 1/f minus 1/di and inverts. Magnification is calculated as M = negative di/do. Image type is determined by the sign of di (positive = real, negative = virtual) and the sign of M (negative = inverted, positive = upright). Lens power in diopters equals 100/f where f is in centimeters.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

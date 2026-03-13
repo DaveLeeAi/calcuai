@@ -1,0 +1,167 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 70 kg, 170 cm adult has a body surface area of approximately 1.81 m² using the DuBois & DuBois formula — the most widely cited BSA equation in clinical medicine. Body surface area quantifies the total outer area of the human body in square meters and is used to calculate drug dosages (especially chemotherapy), estimate metabolic rate, determine burn severity, and index cardiac output. Enter your weight and height below to see your BSA calculated by four established formulas: DuBois (1916), Mosteller (1987), Haycock (1978), and Boyd (1935).
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+Your BSA result represents the estimated total surface area of your skin in square meters (m²). The average adult BSA ranges from approximately 1.7 to 2.0 m², though it varies considerably with body size. A BSA of 1.73 m² is often used as the "standard" reference adult in clinical pharmacology.
+
+This calculator displays results from four different BSA formulas. All four are mathematically validated models, but they use different regression coefficients derived from different study populations. For most adults, the formulas produce values within 5% of each other. The **DuBois & DuBois** formula is the most widely used in clinical practice and pharmacokinetic research. The **Mosteller** formula is favored for its simplicity — it requires only a square root calculation and is commonly used in oncology for quick dosing estimates. The **Haycock** formula was developed with pediatric data and tends to be more accurate for children and infants. The **Boyd** formula is the oldest regression model and may diverge slightly from the others at extreme body sizes.
+
+The **average BSA** shown is the arithmetic mean of all four formulas and provides a reasonable consensus estimate when no single formula is preferred for your situation. If your results are being used for medication dosing, always confirm with your physician which formula your treatment protocol specifies.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your unit system** — choose Metric (kilograms and centimeters) or Imperial (pounds and inches). The calculator converts imperial inputs to metric internally before applying the formulas.
+
+2. **Enter your weight** — weigh yourself without heavy clothing or shoes. Enter the value in kilograms (metric) or pounds (imperial). The default is 70 kg, which is close to the global average adult male weight.
+
+3. **Enter your height** — measure your standing height without shoes. Enter the value in centimeters (metric) or inches (imperial). The default is 170 cm (approximately 5'7").
+
+4. **Read your results** — the calculator displays your BSA from all four formulas, the average across all formulas, and a comparison table. The DuBois result is highlighted as the primary clinical standard. Use the comparison table to see how the formulas differ for your specific measurements.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formulas
+
+Body surface area cannot be measured directly in living patients, so it is estimated from height and weight using empirically derived regression equations. Four of the most established formulas are presented here.
+
+**DuBois & DuBois (1916):**
+
+$$\text{BSA} = 0.007184 \times W^{0.425} \times H^{0.725}$$
+
+Where:
+- **W** = body weight in kilograms (kg)
+- **H** = height in centimeters (cm)
+- **BSA** = body surface area in square meters (m²)
+
+This formula was derived from only 9 subjects but has remained the most cited BSA equation for over a century due to extensive validation in subsequent studies.
+
+**Mosteller (1987):**
+
+$$\text{BSA} = \sqrt{\frac{W \times H}{3600}}$$
+
+This simplified formula was proposed by R.D. Mosteller as a clinically practical alternative that can be computed quickly without logarithms. It agrees closely with DuBois for typical adult body sizes.
+
+**Haycock (1978):**
+
+$$\text{BSA} = 0.024265 \times W^{0.5378} \times H^{0.3964}$$
+
+Developed by Haycock, Schwartz, and Wisotsky using data from infants, children, and adults. This formula is often preferred in pediatric settings because the study population included very young subjects.
+
+**Boyd (1935):**
+
+$$\text{BSA} = 0.0003207 \times W^{(0.7285 - 0.0188 \times \log_{10}W)} \times H^{0.3}$$
+
+The Boyd formula includes a weight-dependent exponent, making it slightly more complex. It was one of the earliest BSA regression models and is still referenced in comparative studies.
+
+**Source:** DuBois D, DuBois EF. Archives of Internal Medicine, 1916;17:863-871. Mosteller RD. N Engl J Med, 1987;317(17):1098. Haycock GB et al. J Pediatr, 1978;93(1):62-66.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Average Adult — 70 kg, 170 cm (Metric)
+
+**Inputs:**
+- Weight: 70 kg
+- Height: 170 cm
+- Unit System: Metric
+
+**DuBois calculation step-by-step:**
+
+1. Raise weight to the 0.425 power: $70^{0.425} = 6.4913$
+2. Raise height to the 0.725 power: $170^{0.725} = 38.774$
+3. Multiply: $0.007184 \times 6.4913 \times 38.774 = 1.8097$
+
+**All formula results:**
+| Formula | BSA (m²) |
+|---|---|
+| DuBois & DuBois | 1.8097 |
+| Mosteller | 1.8181 |
+| Haycock | 1.8257 |
+| Boyd | 1.8347 |
+| **Average** | **1.8220** |
+
+**Interpretation:** This person's BSA is approximately 1.81 m² by the DuBois method, which is slightly above the commonly used 1.73 m² reference standard. All four formulas agree within 1.4% for this body size, producing values between 1.81 and 1.83 m². In oncology, chemotherapy doses are often calculated as mg/m², so a drug prescribed at 100 mg/m² would be dosed at approximately 181 mg for this individual.
+
+### Example 2: Imperial Conversion — 154 lb, 67 in
+
+**Inputs:**
+- Weight: 154 lb
+- Height: 67 in (5'7")
+- Unit System: Imperial
+
+**Conversion step:**
+
+1. Convert pounds to kilograms: $154 \div 2.20462 = 69.85$ kg
+2. Convert inches to centimeters: $67 \times 2.54 = 170.18$ cm
+
+**DuBois calculation:**
+
+1. $69.85^{0.425} = 6.478$
+2. $170.18^{0.725} = 38.82$
+3. $0.007184 \times 6.478 \times 38.82 = 1.809$
+
+**Result:** BSA ≈ **1.81 m²** — virtually identical to the metric example, as expected for equivalent measurements. The Mosteller formula yields 1.817 m² for the same inputs. This confirms that unit conversion does not introduce meaningful rounding error.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Which formula to use** — For routine clinical purposes in adults, the DuBois and Mosteller formulas are interchangeable and both widely accepted. If you are calculating BSA for a child or infant, the Haycock formula is generally recommended because it was validated on a pediatric population. For chemotherapy dosing, use whichever formula your oncology protocol specifies — different drug trials may have used different BSA equations in their pharmacokinetic models, and switching formulas mid-treatment can alter dosing.
+
+**Body composition** — BSA formulas estimate surface area from height and weight alone. They do not account for body composition. A highly muscular individual and an obese individual of the same height and weight will produce identical BSA values, even though their actual skin surface areas may differ. For obese patients (BMI above 30), some oncologists cap BSA at 2.0 m² or use adjusted body weight, because standard BSA-based dosing can lead to excessive drug exposure.
+
+**Clinical applications** — BSA is used to normalize physiological measurements that scale with body size. Cardiac index (cardiac output per m² of BSA) is a standard hemodynamic parameter. Glomerular filtration rate is often reported per 1.73 m² BSA. Burn severity is assessed as percentage of total BSA affected, typically using the Lund-Browder chart or the Rule of Nines (each arm ≈ 9% BSA, each leg ≈ 18%, torso ≈ 36%).
+
+**Pediatric considerations** — Children have a higher BSA-to-weight ratio than adults. A newborn weighing 3.5 kg has a BSA of approximately 0.23 m² — roughly 0.066 m² per kg, compared to about 0.026 m² per kg for a 70 kg adult. This difference is clinically significant for drug dosing, fluid replacement, and thermal regulation.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All four formulas are **empirical regression models** — they estimate BSA from height and weight, not direct measurement. Actual BSA can only be measured precisely using 3D body scanning or coating methods, which are impractical in clinical settings.
+- The DuBois formula was originally derived from only **9 subjects**. While extensively validated since, it may be less accurate at extreme body sizes (very low or very high BMI).
+- Formulas assume a **standard body shape**. Patients with limb amputations, severe edema, or unusual body proportions may have actual BSAs that differ significantly from calculated values.
+- BSA-based drug dosing assumes a **linear relationship** between surface area and drug clearance, which does not hold for all medications. Some drugs are better dosed by weight, renal function, or therapeutic drug monitoring.
+- Imperial-to-metric conversion uses standard factors (1 lb = 0.453592 kg, 1 in = 2.54 cm). Rounding during conversion introduces negligible error (less than 0.1%).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is body surface area used for?
+
+Body surface area is primarily used in medicine to calculate drug dosages, especially for chemotherapy agents where toxicity is closely related to drug concentration per unit of body surface. BSA is also used to compute the cardiac index (cardiac output divided by BSA), normalize glomerular filtration rate (GFR is reported per 1.73 m² BSA), and assess burn extent using the Rule of Nines or Lund-Browder chart. The standard reference adult BSA of 1.73 m² was established by DuBois and DuBois in 1916 and remains the normalization constant used by the National Kidney Foundation for reporting GFR.
+
+### Which BSA formula is most accurate?
+
+No single formula is universally most accurate — each was derived from a different study population. A 2010 systematic review in the journal *Burns* found that for adults with normal BMI, the DuBois, Mosteller, and Haycock formulas all agree within 3-5%. For pediatric patients, the Haycock formula showed the closest agreement with direct BSA measurements. For obese adults (BMI above 35), all formulas tend to underestimate true BSA by 5-10%. In practice, most hospitals and drug protocols default to DuBois or Mosteller. The choice matters most when small percentage differences translate to clinically significant dose changes, such as in narrow therapeutic index drugs.
+
+### How does BSA differ from BMI?
+
+BSA and BMI are fundamentally different measurements despite using the same inputs (height and weight). BMI (Body Mass Index) is a weight-to-height ratio ($\text{kg}/\text{m}^2$) that classifies body weight status — it tells you whether someone is underweight, normal, overweight, or obese. BSA measures the total outer surface area of the body in square meters and is used for clinical dosing calculations, not weight classification. A person with a BMI of 25 and a BSA of 1.9 m² is classified as overweight by BMI standards but has a perfectly normal BSA. The two metrics answer different questions: BMI asks "is this person's weight appropriate for their height?" while BSA asks "how much body surface does this person have for physiological scaling?"
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## How This Is Calculated
+
+This calculator implements four BSA regression equations using the original published coefficients. All formulas take weight in kilograms and height in centimeters as inputs and return BSA in square meters. When imperial units are selected, weight is converted from pounds to kilograms (dividing by 2.20462) and height from inches to centimeters (multiplying by 2.54) before any formula is applied.
+
+The DuBois & DuBois (1916) equation is the primary highlighted result, as it remains the most widely referenced formula in clinical pharmacology and oncology dosing protocols. The Mosteller (1987) simplification produces near-identical results for typical adult body sizes. The Haycock (1978) formula was validated on a broader age range including infants. The Boyd (1935) formula uses a weight-dependent exponent that adapts to body size.
+
+**Sources:** DuBois D, DuBois EF. A formula to estimate the approximate surface area if height and weight be known. *Archives of Internal Medicine*. 1916;17(6):863-871. Mosteller RD. Simplified calculation of body-surface area. *N Engl J Med*. 1987;317(17):1098. Haycock GB, Schwartz GJ, Wisotsky DH. Geometric method for measuring body surface area. *J Pediatr*. 1978;93(1):62-66. Boyd E. *The Growth of the Surface Area of the Human Body*. University of Minnesota Press; 1935.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

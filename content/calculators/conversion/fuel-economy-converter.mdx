@@ -1,0 +1,115 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+25 miles per gallon (US) equals 10.63 km/L, 30.02 MPG (Imperial), or 9.41 liters per 100 km. Fuel economy measurements vary by country — the US uses MPG, Europe uses L/100km, and many other regions use km/L. This converter handles the tricky inverse relationship of L/100km (where lower numbers mean better efficiency) alongside standard linear conversions. Enter your fuel economy value below for instant results.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Fuel Economy Conversion Shows
+
+Fuel economy conversion uses miles per gallon (US) as the internal base unit, but L/100km requires special handling because it measures fuel consumption (liters used) rather than distance per fuel unit (miles driven). Higher MPG means better efficiency; lower L/100km means better efficiency — they move in opposite directions.
+
+**Converted value** is the direct result. Enter 30 MPG (US) and convert to L/100km: 235.215 / 30 = 7.84 L/100km. The constant 235.215 comes from the number of liters in a US gallon (3.78541) multiplied by 100 km per 62.1371 miles. For standard units like MPG Imperial and km/L, conversion uses simple multiplication factors.
+
+**Conversion rate** shows the multiplier between units — or for L/100km conversions, the effective ratio at your specific input value. Between MPG (US) and MPG (Imperial), the fixed rate is 1.20095 because an Imperial gallon (4.546 liters) is about 20% larger than a US gallon (3.785 liters). Between MPG and L/100km, the relationship is hyperbolic rather than linear.
+
+**Conversion table** displays your fuel economy in all four units at once. Enter 30 MPG (US) and see: 30 MPG (US), 36.03 MPG (Imperial), 12.75 km/L, and 7.84 L/100km. This is invaluable when comparing vehicle specifications across American, British, European, and Asian markets.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the fuel economy value** — type the number from your vehicle's specifications or fuel economy sticker. Decimals supported (e.g., 28.5 MPG, 7.2 L/100km).
+
+2. **Select the source unit** — choose from: MPG (US), MPG (Imperial), km/L, or L/100km.
+
+3. **Select the target unit** — choose the unit you need. Results appear instantly, including correct handling of the L/100km inverse relationship.
+
+4. **Review the conversion table** — see your fuel economy in all four units for quick comparison between measurement systems used in different countries.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+For standard units (MPG US, MPG Imperial, km/L):
+
+$$\text{Converted Value} = \text{Value} \times \frac{\text{From Factor}}{\text{To Factor}}$$
+
+For conversions involving L/100km (inverse unit):
+
+$$\text{L/100km} = \frac{235.215}{\text{MPG (US)}}$$
+
+$$\text{MPG (US)} = \frac{235.215}{\text{L/100km}}$$
+
+Unit factors (relative to MPG US):
+
+- **MPG (US)** = 1
+- **MPG (Imperial)** = 1.20095 (Imperial gallon is 20.095% larger)
+- **km/L** = 2.352145 (1 km/L = 2.352145 MPG US)
+- **L/100km** = 235.215 / MPG US (inverse relationship)
+
+**Key relationships:** 1 MPG (US) = 1.20095 MPG (Imperial) = 0.425144 km/L. A vehicle rated at 30 MPG (US) = 36.03 MPG (Imperial) = 12.75 km/L = 7.84 L/100km.
+
+**Source:** US EPA Fuel Economy Guide, 2024; NIST Handbook 44.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Comparing a European Car Spec to US Fuel Economy
+
+A buyer is considering importing a European car rated at 5.2 L/100km and wants to know the equivalent US MPG to compare with domestic models advertising 40+ MPG.
+
+**Step 1 — Convert L/100km to MPG (US):**
+
+235.215 / 5.2 = **45.23 MPG (US)**
+
+**Step 2 — Convert to other units for reference:**
+
+- MPG (Imperial): 45.23 x 1.20095 = **54.32 MPG (Imperial)**
+- km/L: 45.23 / 2.352145 = **19.23 km/L**
+
+The European car at 5.2 L/100km achieves 45.23 MPG (US), which is competitive with US hybrid models. Note: the Imperial MPG figure (54.32) looks even more impressive because the Imperial gallon is 20% larger than the US gallon — a common source of confusion when comparing British and American fuel economy ratings.
+
+{/* Section 10: Key Factors */}
+## Key Factors in Fuel Economy Conversion
+
+**US gallon vs. Imperial gallon creates a 20% gap.** A US gallon is 3.785 liters; an Imperial gallon is 4.546 liters. A car rated 30 MPG in the US would be rated 36 MPG in the UK — same car, same efficiency, different gallon size. Always check which gallon standard is being used before comparing fuel economy claims across American and British sources.
+
+**L/100km is inverse — lower is better.** Unlike MPG (where higher = more efficient), L/100km measures consumption. A car using 5 L/100km is twice as efficient as one using 10 L/100km. This inverse relationship is not linear with MPG: improving from 10 to 20 MPG saves more fuel per mile than improving from 30 to 40 MPG. The EPA has noted this "MPG illusion" as a reason some countries prefer L/100km for comparing vehicles.
+
+**Real-world fuel economy varies from rated figures.** EPA test-cycle ratings typically run 10-20% higher than real-world driving due to differences in speed, acceleration, climate control use, terrain, and driving style. The conversion between units is mathematically exact, but the underlying fuel economy number itself is an estimate that depends heavily on driving conditions.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Why is L/100km used instead of km/L in Europe?
+
+L/100km is the standard fuel consumption metric in Europe, Australia, and much of the world because it more intuitively reflects actual fuel cost. Doubling L/100km means doubling your fuel spending for the same distance. With km/L or MPG, the relationship between the number and fuel cost is non-linear — going from 15 to 30 MPG halves your fuel use, but going from 30 to 45 MPG only saves a third. EU regulations (EC 715/2007) mandate L/100km for vehicle labeling.
+
+### How do I convert between US and Imperial MPG?
+
+Multiply US MPG by 1.20095 to get Imperial MPG, or divide Imperial MPG by 1.20095 to get US MPG. The difference exists because an Imperial gallon (4.546 liters) is about 20% larger than a US gallon (3.785 liters). A car rated 25 MPG (US) equals 30.02 MPG (Imperial). Always verify which gallon standard applies when reading fuel economy data from British vs. American sources.
+
+### What is considered good fuel economy?
+
+In the US, the 2024 fleet average is approximately 25.4 MPG (9.26 L/100km). A non-hybrid car achieving 30+ MPG (7.84 L/100km or less) is considered above average. Hybrids typically achieve 45-55 MPG (4.28-5.23 L/100km), and plug-in hybrids can exceed 100 MPGe in electric mode. Fuel economy standards vary by vehicle class — the EPA rates cars, trucks, and SUVs separately.
+
+### Why does improving from 10 to 15 MPG save more gas than 30 to 35 MPG?
+
+This is the "MPG illusion." At 10 MPG, driving 10,000 miles uses 1,000 gallons. At 15 MPG, it uses 667 gallons — a savings of 333 gallons. At 30 MPG, 10,000 miles uses 333 gallons. At 35 MPG, it uses 286 gallons — a savings of only 47 gallons. L/100km makes this clearer: going from 23.5 to 15.7 L/100km is a larger absolute reduction than going from 7.8 to 6.7 L/100km.
+
+</div>
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **US EPA** — [Fuel Economy Guide](https://www.fueleconomy.gov/) (2024 edition, conversion factors and test procedures)
+- **NIST Handbook 44** — Specifications, Tolerances, and Other Technical Requirements for Weighing and Measuring Devices (gallon definitions)
+- **European Commission** — [EC Regulation 715/2007](https://eur-lex.europa.eu/eli/reg/2007/715/oj) (EU vehicle emissions and fuel consumption labeling standard)

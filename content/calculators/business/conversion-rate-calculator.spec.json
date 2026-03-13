@@ -1,0 +1,97 @@
+{
+  "id": "conversion-rate-calculator",
+  "title": "Conversion Rate Calculator",
+  "slug": "conversion-rate-calculator",
+  "category": "business",
+  "subcategory": "sales",
+  "primaryKeyword": "conversion rate calculator",
+  "metaTitle": "Conversion Rate Calculator — Free Online Conversion Rate Tool",
+  "metaDescription": "Calculate your conversion rate from visitors and conversions. See conversion percentage, visitors per conversion, and non-conversion rate. Free, instant results.",
+  "inputs": [
+    {
+      "id": "totalVisitors",
+      "label": "Total Visitors",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 1,
+      "max": 1000000000,
+      "step": 1,
+      "helpText": "Total visitors, clicks, or impressions"
+    },
+    {
+      "id": "conversions",
+      "label": "Conversions",
+      "type": "number",
+      "required": true,
+      "defaultValue": 250,
+      "min": 0,
+      "max": 1000000000,
+      "step": 1,
+      "helpText": "Number of successful conversions (sales, signups, etc.)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "nonConversionRate",
+      "label": "Non-Conversion Rate",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "visitorsPerConversion",
+      "label": "Visitors per Conversion",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "summary",
+      "label": "Conversion Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "conversion-rate",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "customer-lifetime-value-calculator",
+    "customer-acquisition-cost-calculator",
+    "roi-calculator",
+    "revenue-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Conversion Rate = (Conversions / Total Visitors) x 100",
+  "formulaCitation": "Google Analytics Help Center — Conversion Rate definition",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "glossaryTerms": [
+    "conversion-rate"
+  ]
+}

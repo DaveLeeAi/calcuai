@@ -1,0 +1,116 @@
+{
+  "id": "gravitational-force-calculator",
+  "title": "Gravitational Force Calculator",
+  "slug": "gravitational-force-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "gravitational force calculator",
+  "metaTitle": "Gravitational Force Calculator — Newton's Law of Gravitation",
+  "metaDescription": "Calculate gravitational force between two masses using F = Gm1m2/r2. Solve for force, mass, or distance. Free online physics calculator with unit conversions.",
+  "inputs": [
+    {
+      "id": "mass1",
+      "label": "Mass 1",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 5.972e24",
+      "min": 0,
+      "step": "any",
+      "suffix": "kg",
+      "defaultValue": 5.972e24,
+      "helpText": "First mass in kilograms (default is Earth's mass)"
+    },
+    {
+      "id": "mass2",
+      "label": "Mass 2",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 70",
+      "min": 0,
+      "step": "any",
+      "suffix": "kg",
+      "defaultValue": 70,
+      "helpText": "Second mass in kilograms"
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 6371000",
+      "min": 0.0001,
+      "step": "any",
+      "suffix": "m",
+      "defaultValue": 6371000,
+      "helpText": "Center-to-center distance in meters (default is Earth's radius)"
+    },
+    {
+      "id": "force",
+      "label": "Force",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 686.95",
+      "min": 0,
+      "step": "any",
+      "suffix": "N",
+      "helpText": "Gravitational force in newtons (leave blank to calculate)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "force",
+      "label": "Gravitational Force",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "gravitational-force",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "force-calculator",
+    "acceleration-calculator",
+    "energy-calculator",
+    "momentum-calculator",
+    "velocity-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Isaac Newton, Principia Mathematica (1687); CODATA 2018 value of G",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Newton's law of universal gravitation: F = G * m1 * m2 / r^2",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

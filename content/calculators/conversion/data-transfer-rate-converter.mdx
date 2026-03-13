@@ -1,0 +1,122 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+100 Mbps equals 12.5 MB/s, 100,000 kbps, or 0.1 Gbps. Internet service providers advertise speeds in megabits per second (Mbps), but file downloads display in megabytes per second (MB/s) — an 8:1 ratio that makes advertised speeds look faster than real-world download rates. Enter any data transfer rate below for instant conversion between 9 bit-based and byte-based units with a full comparison table.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Data Rate Conversion Shows
+
+Data rate conversion uses bits per second (bps) as the base unit — the fundamental measure of digital data throughput. The calculator converts your input to bps first, then divides by the target unit's factor. All conversions use SI decimal prefixes (1 kbps = 1,000 bps, not 1,024) as specified by IEC 80000-13.
+
+**Converted value** is the direct result. Enter 100 Mbps and convert to MB/s: 100,000,000 / 8,000,000 = 12.5 MB/s. Six decimal places handle everything from slow serial connections (baud rates in the hundreds) to backbone network speeds (terabits per second).
+
+**Conversion rate** shows the fixed multiplier between units. The rate from Mbps to MB/s is 0.125 (divide by 8), meaning 1 Mbps = 0.125 MB/s. The inverse rate (8) means 1 MB/s = 8 Mbps. The 8:1 bit-to-byte ratio is a physical constant — one byte always contains exactly 8 bits per the IEEE and IEC standards.
+
+**Conversion table** displays your data rate in all nine units at once. Enter 1 Gbps and see: 1,000,000,000 bps, 1,000,000 kbps, 1,000 Mbps, 125,000,000 B/s, 125,000 KB/s, 125 MB/s, and 0.125 GB/s. This multi-unit view clarifies the real-world speed behind ISP marketing numbers.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the data rate value** — type the speed you want to convert. Decimals supported (e.g., 100.5 Mbps, 37.5 MB/s).
+
+2. **Select the source unit** — choose from: bps, kbps, Mbps, Gbps, Tbps (bit-based), or B/s, KB/s, MB/s, GB/s (byte-based).
+
+3. **Select the target unit** — choose the unit you need. Results appear instantly.
+
+4. **Review the conversion table** — see your data rate in all nine units for quick cross-referencing between bit-based (network) and byte-based (storage/download) measurements.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$\text{Converted Value} = \text{Value} \times \frac{\text{From Factor}}{\text{To Factor}}$$
+
+Where each unit's factor converts to bits per second (bps):
+
+- **bps** = 1
+- **kbps** = 1,000
+- **Mbps** = 1,000,000
+- **Gbps** = 1,000,000,000
+- **Tbps** = 1,000,000,000,000
+- **Bytes/s (B/s)** = 8
+- **KB/s** = 8,000
+- **MB/s** = 8,000,000
+- **GB/s** = 8,000,000,000
+
+**Key relationship:** 1 byte = 8 bits. Therefore 1 Mbps = 0.125 MB/s, and 1 MB/s = 8 Mbps.
+
+**Note:** This converter uses SI decimal prefixes (1 kbps = 1,000 bps). Binary prefixes (1 Kibps = 1,024 bps) are sometimes used in computing but are not standard for network speeds.
+
+**Source:** IEEE 802.3 Standard; IEC 80000-13:2008.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### How Fast Can You Download a 4K Movie on a 300 Mbps Connection?
+
+A user has a 300 Mbps internet plan and wants to download a 25 GB (gigabyte) 4K movie file. They need to convert their network speed from Mbps to MB/s to estimate download time.
+
+**Step 1 — Convert 300 Mbps to MB/s:**
+
+300 Mbps x 1,000,000 = 300,000,000 bps
+
+300,000,000 / 8,000,000 = **37.5 MB/s**
+
+**Step 2 — Estimate download time:**
+
+25 GB = 25,000 MB
+
+25,000 / 37.5 = **667 seconds = approximately 11 minutes**
+
+**Step 3 — Cross-reference in other units:**
+
+- 300 Mbps = 300,000 kbps = 0.3 Gbps
+- 37.5 MB/s = 37,500 KB/s = 0.0375 GB/s
+
+At the advertised 300 Mbps, a 25 GB movie takes about 11 minutes to download at theoretical maximum throughput. Real-world speeds are typically 60-80% of advertised rates due to network overhead, congestion, and protocol efficiency — so expect closer to 14-18 minutes in practice.
+
+{/* Section 10: Key Factors */}
+## Key Factors in Data Rate Conversion
+
+**ISPs advertise in bits; downloads show bytes.** Internet service providers quote speeds in Mbps (megabits per second) because the numbers are 8 times larger than the equivalent MB/s (megabytes per second). A "100 Mbps" plan delivers a maximum of 12.5 MB/s in actual file download speed. This is not deceptive — network protocols transmit data in bits — but it regularly confuses consumers comparing advertised speeds with download manager readouts.
+
+**SI vs. binary prefixes cause a 2-7% discrepancy.** Network speeds use SI prefixes: 1 Mbps = 1,000,000 bps exactly. Storage sometimes uses binary prefixes: 1 MiB (mebibyte) = 1,048,576 bytes. A "1 GB" file is 1,000,000,000 bytes in SI but 1,073,741,824 bytes in binary (GiB). This converter uses SI prefixes throughout, which matches how ISPs and most speed tests report data rates.
+
+**Overhead reduces effective throughput.** Protocol headers (TCP/IP, Ethernet framing) consume 3-8% of raw bandwidth. A 1 Gbps Ethernet connection delivers roughly 940-970 Mbps of useful data. WiFi overhead is higher — a WiFi 6 connection rated at 1.2 Gbps may deliver 700-900 Mbps under ideal conditions. The conversion between units is exact, but the underlying speed measurement reflects real-world conditions.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Why is my download speed lower than my internet plan speed?
+
+Your internet plan speed is in megabits per second (Mbps), while download managers typically show megabytes per second (MB/s). Divide your plan speed by 8 to get the theoretical maximum download rate: a 200 Mbps plan = 25 MB/s maximum. Additional reductions come from network overhead (3-8%), WiFi signal loss, server-side throttling, router limitations, and shared bandwidth with other devices on your network.
+
+### What is the difference between Mbps and MB/s?
+
+Mbps (megabits per second) measures data rate in bits — used for network speeds, ISP plans, and speed tests. MB/s (megabytes per second) measures data rate in bytes — used for file downloads, disk writes, and storage transfers. Since 1 byte = 8 bits, 1 MB/s = 8 Mbps. A 100 Mbps connection equals 12.5 MB/s. Network engineers use bits; end users typically see bytes in their download progress bars.
+
+### What internet speed do I need for streaming?
+
+Netflix recommends 5 Mbps (0.625 MB/s) for HD streaming and 25 Mbps (3.125 MB/s) for 4K Ultra HD. Zoom video calls use 3-4 Mbps. Online gaming requires 25-50 Mbps for smooth play. For a household with multiple simultaneous users, the FCC recommends 100+ Mbps. These are per-activity minimums — total household bandwidth should account for all devices streaming, downloading, and browsing concurrently.
+
+### Do I need Gbps internet speed?
+
+Gigabit internet (1 Gbps = 125 MB/s) is beneficial for households with 5+ simultaneous heavy users, frequent large file transfers (video editing, cloud backups), or home servers. A 1 Gbps connection can theoretically download a 50 GB game in under 7 minutes. However, most households with 1-3 users find 200-500 Mbps sufficient. WiFi limitations often bottleneck speeds before the internet connection does — a WiFi 5 router maxes out around 400-600 Mbps in practice.
+
+</div>
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **IEEE 802.3** — Ethernet standard defining bit-rate specifications for wired networking
+- **IEC 80000-13:2008** — [Quantities and Units — Part 13: Information Science and Technology](https://www.iso.org/standard/31898.html) (defines bit, byte, and SI/binary prefixes)
+- **FCC** — [Broadband Speed Guide](https://www.fcc.gov/consumers/guides/broadband-speed-guide) (recommended speeds for common internet activities)

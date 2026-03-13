@@ -1,0 +1,147 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Two point charges of +1 microcoulomb each separated by 10 centimeters experience a repulsive electrostatic force of 0.899 newtons, calculated using Coulomb's law: F = 8.988 times 10 to the 9 times 1 times 10 to the negative 6 times 1 times 10 to the negative 6 divided by 0.1 squared. This Coulomb's law calculator solves for any one of four variables — force, charge 1, charge 2, or distance — when you provide the other three. It handles both attractive and repulsive forces, showing whether charges attract (opposite signs) or repel (same signs) along with unit conversions to microcoulombs, nanocoulombs, and multiple force units.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Coulomb's law describes the electrostatic force between two charged objects. Like gravity, it follows an inverse-square law — force decreases with the square of the distance. Unlike gravity, the electrostatic force can be either attractive or repulsive. Same-sign charges (both positive or both negative) repel each other; opposite-sign charges attract. The force magnitude depends on the product of the absolute values of the charges and Coulomb's constant k = 8.9875517873681764 times 10 to the 9 N times m squared per C squared.
+
+The electrostatic force is extraordinarily strong compared to gravity. Two 1-coulomb charges separated by 1 meter exert nearly 9 billion newtons on each other — roughly the weight of 900,000 metric tons. In practice, charges this large never accumulate on a single object because the enormous forces would tear the material apart. Real-world electrostatic experiments typically involve microcoulomb (10 to the negative 6 C) or nanocoulomb (10 to the negative 9 C) charges, producing forces in the millinewton to newton range.
+
+The direction of the force (attractive or repulsive) is determined by the signs of the charges. A proton (+1.602 times 10 to the negative 19 C) and an electron (negative 1.602 times 10 to the negative 19 C) attract each other with a force of about 8.24 times 10 to the negative 8 N at the Bohr radius (5.292 times 10 to the negative 11 m). This atomic-scale electrostatic force is what holds atoms and molecules together. For related force calculations, the [Force Calculator](/calculators/science/force-calculator) handles Newton's second law, and the [Gravitational Force Calculator](/calculators/science/gravitational-force-calculator) computes gravitational attraction.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the three values you know.** You need exactly three of the four quantities: Force magnitude (N), Charge 1 (C), Charge 2 (C), or Distance (m). Common charge magnitudes: electron charge = 1.602 times 10 to the negative 19 C, typical electrostatic charge = 1 to 100 microcoulombs (10 to the negative 6 to 10 to the negative 4 C).
+2. **Enter the first known value** in its field. Charges can be positive or negative — the sign determines whether the force is attractive or repulsive. Use scientific notation for very small or very large values (e.g., 1e-6 for 1 microcoulomb).
+3. **Enter the second and third known values** in their respective fields. Leave the fourth field empty.
+4. **Read the results.** The calculator displays the force magnitude, force direction (Attractive or Repulsive), all four quantities, and unit conversions for both force (N, kN, lbf, dyn) and charge (C, microcoulombs, nanocoulombs).
+5. **Verify reasonableness.** Two 1 microcoulomb charges at 1 cm apart produce about 89.9 N. At 10 cm apart, the force drops to 0.899 N (100 times less due to inverse-square law). Lightning bolts transfer about 5 coulombs in a fraction of a second.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Electrostatic Force from Two Charges and Distance
+
+$$F = k \times \frac{|q_1| \times |q_2|}{r^2}$$
+
+Where:
+
+- **F** = electrostatic force magnitude, in newtons (N)
+- **k** = Coulomb's constant = 8.9875517873681764 times 10 to the 9 N times m squared per C squared
+- **q1** = first charge, in coulombs (C) — can be positive or negative
+- **q2** = second charge, in coulombs (C) — can be positive or negative
+- **r** = distance between charge centers, in meters (m)
+- **|q|** = absolute value of charge (magnitude only)
+
+### Force Direction
+
+$$\text{Repulsive if } q_1 \times q_2 > 0 \quad ; \quad \text{Attractive if } q_1 \times q_2 < 0$$
+
+### Solving for Charge
+
+$$|q_1| = \frac{F \times r^2}{k \times |q_2|}$$
+
+### Solving for Distance
+
+$$r = \sqrt{\frac{k \times |q_1| \times |q_2|}{F}}$$
+
+Coulomb's constant k is related to the permittivity of free space by k = 1 / (4 times pi times epsilon-naught), where epsilon-naught = 8.8542 times 10 to the negative 12 F/m. The formula applies exactly in a vacuum and is an excellent approximation in air (relative permittivity approximately 1.00059). In materials with higher permittivity (water has relative permittivity approximately 80), the effective force is reduced by that factor.
+
+**Source:** Charles-Augustin de Coulomb, *Memoires de l'Academie Royale des Sciences* (1785). Coulomb's constant value derived from CODATA 2018 recommended value of the vacuum electric permittivity.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Force Between Two Microcoulomb Charges
+
+Two small charged spheres carry charges of +3 microcoulombs and negative 5 microcoulombs. They are separated by 20 cm. What electrostatic force do they exert on each other?
+
+**Step-by-step:**
+
+1. Known values: q1 = **+3 times 10 to the negative 6 C**, q2 = **negative 5 times 10 to the negative 6 C**, r = **0.20 m**
+2. Apply the formula: F = k times |q1| times |q2| / r squared = 8.988 times 10 to the 9 times 3 times 10 to the negative 6 times 5 times 10 to the negative 6 / (0.20) squared
+3. Numerator: 8.988 times 10 to the 9 times 1.5 times 10 to the negative 11 = **0.13481 N times m squared**
+4. Denominator: (0.20) squared = **0.04 m squared**
+5. F = 0.13481 / 0.04 = **3.370 N**
+6. Direction: q1 is positive, q2 is negative → **Attractive**
+
+**Result:** The force magnitude is **3.370 N**, directed as an **attractive** force pulling the charges toward each other.
+
+**Practical interpretation:** A force of 3.37 N is roughly the weight of a 344-gram object — easily noticeable on a sensitive balance. This demonstrates why electrostatic forces matter in manufacturing processes like electrostatic painting, where charged paint particles are attracted to grounded metal surfaces. Even microcoulomb charges at centimeter distances produce measurable forces, which is why electrostatic discharge (ESD) can damage sensitive electronic components.
+
+### Example 2: Electron-Proton Force at the Bohr Radius
+
+What is the electrostatic force between a proton and an electron at the Bohr radius (the most probable distance in a hydrogen atom)?
+
+**Step-by-step:**
+
+1. Known values: q1 = **1.602 times 10 to the negative 19 C** (proton), q2 = **negative 1.602 times 10 to the negative 19 C** (electron), r = **5.292 times 10 to the negative 11 m** (Bohr radius)
+2. Apply the formula: F = 8.988 times 10 to the 9 times 1.602 times 10 to the negative 19 times 1.602 times 10 to the negative 19 / (5.292 times 10 to the negative 11) squared
+3. Numerator: 8.988 times 10 to the 9 times 2.566 times 10 to the negative 38 = **2.307 times 10 to the negative 28 N times m squared**
+4. Denominator: (5.292 times 10 to the negative 11) squared = **2.801 times 10 to the negative 21 m squared**
+5. F = 2.307 times 10 to the negative 28 / 2.801 times 10 to the negative 21 = **8.24 times 10 to the negative 8 N**
+6. Direction: opposite charges → **Attractive**
+
+**Result:** The electrostatic force is **8.24 times 10 to the negative 8 N** (82.4 nanonewtons), attractive.
+
+**Practical interpretation:** This seemingly tiny force produces enormous acceleration on the electron (mass 9.109 times 10 to the negative 31 kg): a = F/m = 9.04 times 10 to the 22 m/s squared — about 9.2 times 10 to the 21 g. The gravitational force between the same proton and electron is only 3.63 times 10 to the negative 47 N, making the electrostatic force 2.27 times 10 to the 39 times stronger. This ratio explains why electromagnetism, not gravity, governs atomic structure and chemistry. Use the [Ohm's Law Calculator](/calculators/science/ohms-law-calculator) for calculations involving current flow that results from these charge interactions.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Distance dominates through the inverse-square law.** Halving the distance between charges quadruples the force. At 1 cm, two 1 microcoulomb charges repel with about 89.9 N. At 10 cm the same charges produce 0.899 N — a 100-fold decrease. This rapid falloff explains why electrostatic effects are strong at contact distances but negligible at room-scale distances for typical charges.
+
+**Charge magnitude scales the force linearly.** Doubling one charge doubles the force; doubling both charges quadruples it. A Van de Graaff generator can accumulate about 20 microcoulombs on its sphere, producing forces of hundreds of newtons against a similar charge at close range. Lightning channels transfer peak currents of 20,000-200,000 amperes with charge transfers of roughly 5 coulombs per flash.
+
+**Medium permittivity reduces the effective force.** Coulomb's law in its standard form applies in vacuum. In a material medium, the force is reduced by the relative permittivity (dielectric constant). In water (permittivity approximately 80), the force between two charges is only 1/80th of the vacuum value. This is why ionic compounds dissolve easily in water — the solvent weakens the attraction between positive and negative ions. Use the [Energy Calculator](/calculators/science/energy-calculator) to compute the electrostatic potential energy stored between charges.
+
+**Superposition applies for multiple charges.** When three or more charges interact, the total force on any charge is the vector sum of all pairwise Coulomb forces. This principle of superposition is exact in classical electrostatics and allows calculation of forces in complex arrangements like crystal lattices, capacitor plates, and electric field distributions.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Point charges assumed.** The formula treats charges as concentrated at single points. For extended charged objects (plates, spheres, rods), the force must be computed by integrating Coulomb's law over the charge distribution.
+- **Vacuum or air medium.** The calculator uses the vacuum value of Coulomb's constant. In other media, divide the result by the relative permittivity of the medium to obtain the effective force.
+- **Static charges only.** Coulomb's law applies to stationary charges. Moving charges generate magnetic fields that produce additional forces (Lorentz force), requiring the full electromagnetic theory for accurate results.
+- **Classical electrostatics only.** At quantum scales (inside atoms), Coulomb's law provides the correct potential energy function, but charge behavior must be described by quantum mechanics rather than classical point particles.
+- **Two charges only.** This calculator handles exactly two charges. For systems with three or more charges, compute pairwise forces separately and add them as vectors.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a coulomb?
+
+A coulomb is the SI unit of electric charge, defined as the amount of charge transported by a constant current of one ampere in one second. One coulomb equals approximately 6.242 times 10 to the 18 elementary charges (protons or electrons). In everyday terms, a coulomb is an enormous amount of charge — a typical lightning bolt transfers about 5 coulombs, and rubbing a balloon on your hair transfers roughly 10 to the negative 7 coulombs (100 nanocoulombs). The unit is named after Charles-Augustin de Coulomb, who published his electrostatic force law in 1785.
+
+### Why is Coulomb's law so similar to Newton's law of gravitation?
+
+Both Coulomb's law and Newton's law of gravitation are inverse-square laws because they describe forces mediated by fields that spread out uniformly in three-dimensional space. As a field radiates from a point source, it spreads over the surface area of an expanding sphere (4 times pi times r squared), causing the field intensity — and therefore the force — to decrease as 1/r squared. However, the two forces differ fundamentally: gravity is always attractive and acts on mass, while the electrostatic force can be attractive or repulsive and acts on charge. Coulomb's constant k is about 10 to the 20 times larger than the gravitational constant G, making electrostatic forces vastly stronger at the same distance.
+
+### Can Coulomb's law be used for magnets?
+
+Coulomb's law in its standard form applies only to electric charges, not to magnetic poles. While an analogous inverse-square law exists for magnetic poles (also discovered by Coulomb), modern physics describes magnetism through moving charges and magnetic fields rather than isolated magnetic poles. Isolated magnetic monopoles have never been observed in nature. For magnetic force calculations involving current-carrying wires or moving charges, use the Biot-Savart law or the Lorentz force equation instead.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies Coulomb's law (F = k|q1||q2|/r squared) to solve for any one of four variables — force, charge 1, charge 2, or distance — given the other three. When force is unknown, it multiplies Coulomb's constant by the product of absolute charge values and divides by distance squared. When a charge is unknown, it rearranges to |q| = Fr squared / (k times |q_other|). When distance is unknown, it takes the square root of k|q1||q2|/F. Force direction is determined by charge signs: same signs produce repulsion, opposite signs produce attraction. Unit conversions use fixed factors: 1 C = 10 to the 6 microcoulombs = 10 to the 9 nanocoulombs, 1 N = 0.224809 lbf = 100,000 dyn.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

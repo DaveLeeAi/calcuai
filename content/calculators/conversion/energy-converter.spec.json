@@ -1,0 +1,121 @@
+{
+  "id": "energy-converter",
+  "title": "Energy Converter",
+  "slug": "energy-converter",
+  "category": "conversion",
+  "subcategory": "energy",
+  "primaryKeyword": "energy converter",
+  "metaTitle": "Energy Converter — Joule, Calorie, kWh, BTU, eV & Erg",
+  "metaDescription": "Convert between energy units: joule, kilojoule, calorie, kilocalorie, watt-hour, kilowatt-hour, BTU, electronvolt, erg, and foot-pound. Free instant converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Energy value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "joule",
+      "options": [
+        { "value": "joule", "label": "Joule (J)" },
+        { "value": "kilojoule", "label": "Kilojoule (kJ)" },
+        { "value": "calorie", "label": "Calorie (cal)" },
+        { "value": "kilocalorie", "label": "Kilocalorie (kcal)" },
+        { "value": "watt-hour", "label": "Watt-hour (Wh)" },
+        { "value": "kilowatt-hour", "label": "Kilowatt-hour (kWh)" },
+        { "value": "btu", "label": "BTU" },
+        { "value": "electronvolt", "label": "Electronvolt (eV)" },
+        { "value": "erg", "label": "Erg" },
+        { "value": "foot-pound", "label": "Foot-pound (ft·lbf)" }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "kilocalorie",
+      "options": [
+        { "value": "joule", "label": "Joule (J)" },
+        { "value": "kilojoule", "label": "Kilojoule (kJ)" },
+        { "value": "calorie", "label": "Calorie (cal)" },
+        { "value": "kilocalorie", "label": "Kilocalorie (kcal)" },
+        { "value": "watt-hour", "label": "Watt-hour (Wh)" },
+        { "value": "kilowatt-hour", "label": "Kilowatt-hour (kWh)" },
+        { "value": "btu", "label": "BTU" },
+        { "value": "electronvolt", "label": "Electronvolt (eV)" },
+        { "value": "erg", "label": "Erg" },
+        { "value": "foot-pound", "label": "Foot-pound (ft·lbf)" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "convertedValue",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 6
+    },
+    {
+      "id": "conversionDisplay",
+      "label": "Conversion",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "inverseRate",
+      "label": "Inverse Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Energy Conversions",
+      "type": "value-group",
+      "format": "text"
+    }
+  ],
+  "formula": "energy-convert",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["temperature-converter", "power-calculator", "electricity-cost-calculator", "pressure-converter"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NIST Special Publication 330, The International System of Units (SI), 2019 Edition",
+  "articleWordTarget": 800,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "convertedValue = value x (fromFactor / toFactor); base unit = joule. 1 kJ = 1000 J, 1 cal = 4.184 J, 1 kcal = 4184 J, 1 Wh = 3600 J, 1 kWh = 3600000 J, 1 BTU = 1055.06 J, 1 eV = 1.602176634e-19 J, 1 erg = 1e-7 J, 1 ft-lbf = 1.355818 J",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}

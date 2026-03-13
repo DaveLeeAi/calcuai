@@ -1,8 +1,8 @@
 # CalcuAI
 
-A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **198 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
+A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **211 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
 
-**203 test suites · 4,777 passing tests · 187 formula modules · 34 glossary terms · 9 methodology pages**
+**217 test suites · 5,139 passing tests · 202 formula IDs · 34 glossary terms · 9 methodology pages**
 
 ## Tech Stack
 
@@ -13,31 +13,31 @@ A spec-driven calculator authority site built for dual-ranking on Google Search 
 - **Math:** KaTeX for formula rendering
 - **Charts:** Recharts for visualizations
 - **Search:** Fuse.js (client-side)
-- **Testing:** Jest + ts-jest (4,777 tests across 203 suites)
+- **Testing:** Jest + ts-jest (5,139 tests across 217 suites)
 - **Hosting:** Vercel
 
 ## Calculators
 
-198 specs across 8 categories:
+211 specs across 8 categories:
 
 | Category | Count | Examples |
 |----------|-------|---------|
 | **Finance** | 62 | Mortgage, Compound Interest, 401(k), Rental Property, HELOC, Debt Snowball/Avalanche, Self-Employment Tax, Home Insurance, Personal Loan, Interest-Only Loan, Home Sale Profit, Student Loan Payoff, Mortgage Prepayment, Rent Increase |
 | **Construction** | 36 | Concrete (Slab, Footing, Block), Roofing (Shingles, Metal), Kitchen Remodel, Bathroom Remodel, Renovation Cost, Asphalt, Driveway Cost, HVAC Size, Wire Size, Pool Volume, Paver, Brick, Siding, Carpet |
 | **Math** | 24 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability, Z-Score, Sample Size, Standard Error, Chi-Square, Confidence Interval, P-Value |
-| **Business** | 16 | ROI, Break-Even, Profit, Payroll, Hourly-to-Salary, Net Income, PTO Payout, Raise, Commission |
-| **Health** | 16 | TDEE, BMI, BMR, Calorie, Body Fat, Macro, Due Date, Ovulation, Water Intake, Heart Rate Zones |
+| **Business** | 21 | ROI, Break-Even, Profit, Payroll, Customer Lifetime Value, Conversion Rate, Customer Acquisition Cost, Payback Period, Inventory Turnover, Hourly-to-Salary, Net Income, Commission |
 | **Everyday** | 20 | Tip, Discount, Gas Mileage, Solar Panel, Fuel Cost, Electricity Cost, Travel Budget, Home Energy Usage, EV Charging Cost, Trip Cost, Age, Date, GPA |
-| **Conversion** | 12 | Length, Weight, Temperature, Volume, Area, Data Storage, Speed, Currency, Time, Angle, Pressure |
-| **Science** | 12 | Ohm's Law, Density, Velocity, Pressure, Energy, Force, Acceleration, Momentum, Work, Power, Frequency, Wave Speed |
+| **Health** | 17 | TDEE, BMI, BMR, Calorie, Body Fat, Body Surface Area, Macro, Due Date, Ovulation, Water Intake, Heart Rate Zones |
+| **Science** | 16 | Ohm's Law, Density, Velocity, Pressure, Energy, Force, Acceleration, Momentum, Work, Power, Frequency, Wave Speed, Gravitational Force, Coulomb's Law, Lens Equation, Heat Transfer |
+| **Conversion** | 15 | Length, Weight, Temperature, Volume, Area, Data Storage, Speed, Currency, Time, Angle, Pressure, Energy, Fuel Economy, Data Transfer Rate |
 
 ### Calculator Tiers
 
 Each calculator has a tier determining content depth:
 
 - **Flagship (~27)** -- 2,000-3,000 words. All 17 article sections. Comparison tables, 2-3 worked examples, 3-5 FAQs.
-- **Standard (~107)** -- 1,000-1,800 words. Core sections + key factors + assumptions + FAQ.
-- **Utility (~64)** -- 600-1,000 words. Core sections only.
+- **Standard (~115)** -- 1,000-1,800 words. Core sections + key factors + assumptions + FAQ.
+- **Utility (~69)** -- 600-1,000 words. Core sections only.
 
 ## Project Structure
 
@@ -53,12 +53,12 @@ content/
   calculators/{category}/     .spec.json + .mdx per calculator
   categories/                 8 category definition JSONs
 lib/
-  formulas/{category}/        187 pure TypeScript formula modules
+  formulas/{category}/        195 pure TypeScript formula modules (202 formula IDs)
   types.ts                    All TypeScript interfaces
   content-loader.ts           Build-time spec + MDX loader
   search-index.ts             Fuse.js index builder
 scripts/                      CLI tools (generate, validate, audit, score)
-__tests__/formulas/           203 test files, 4,777 unit tests
+__tests__/formulas/           217 test files, 5,139 unit tests
 ```
 
 ## Getting Started

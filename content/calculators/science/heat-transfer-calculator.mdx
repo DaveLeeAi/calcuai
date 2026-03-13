@@ -1,0 +1,159 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Heating 1 kilogram of water by 10 degrees Celsius requires exactly 41,860 joules (41.86 kJ or about 10 kilocalories) of energy, calculated using the heat transfer formula Q = 1 times 4,186 times 10. This heat transfer calculator solves for any one of four variables — heat energy, mass, specific heat capacity, or temperature change — when you provide the other three. It includes material presets for 12 common substances (water, aluminum, copper, iron, and more) and converts results between joules, kilojoules, calories, kilocalories, BTU, and watt-hours for thermodynamics coursework, HVAC sizing, cooking science, and industrial process engineering.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The specific heat equation Q = mcDT is the foundation of calorimetry and practical heat transfer engineering. It quantifies how much energy is needed to change the temperature of a known mass of a known material by a specific amount. The key insight is that different materials require vastly different amounts of energy for the same temperature change: water requires 4,186 J per kg per degree, while copper requires only 385 J per kg per degree — nearly 11 times less. This is why water is used as a coolant in engines, nuclear reactors, and data centers: it absorbs enormous amounts of heat with relatively small temperature increases.
+
+A positive Q value means heat is absorbed (the substance gets warmer), while a negative Q value means heat is released (the substance gets cooler). When you heat a 2 kg aluminum pot from 20 degrees C to 100 degrees C, the pot absorbs Q = 2 times 897 times 80 = 143,520 J (143.5 kJ). When that same pot cools back down, it releases the same 143,520 J back into the environment. This principle of energy conservation is used in thermal storage systems, where materials absorb heat during the day and release it at night.
+
+The formula assumes no phase change occurs — the material stays solid, liquid, or gas throughout the temperature change. If a phase change happens (melting ice, boiling water), additional energy called latent heat must be accounted for separately. For example, melting 1 kg of ice at 0 degrees C requires 334,000 J of latent heat before the temperature begins rising. The [Energy Calculator](/calculators/science/energy-calculator) handles kinetic and potential energy calculations, while the [Power Calculator](/calculators/science/power-calculator) can determine how quickly heat must be delivered to achieve a desired temperature change in a given time.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the three values you know.** You need exactly three of: Heat Energy (J), Mass (kg), Specific Heat Capacity (J/kg times K), and Temperature Change (degrees C or K). If you know the material, use the preset dropdown to auto-fill specific heat.
+2. **Select a material preset (optional).** Choose from 12 common materials: water (4,186), ice (2,090), steam (2,010), aluminum (897), copper (385), iron (449), glass (840), wood (1,700), air (1,005), concrete (880), ethanol (2,440), or olive oil (1,970). Select "Custom" to enter your own specific heat value.
+3. **Enter the remaining known values** in their respective fields. Leave the unknown field empty.
+4. **Read the results.** The calculator displays all four quantities along with energy conversions (J, kJ, cal, kcal, BTU, Wh) and mass conversions (g, lb).
+5. **Verify reasonableness.** Boiling a full kettle (1.7 liters of water) from 20 degrees C to 100 degrees C requires about 569,000 J (569 kJ). A 2,000 W kettle takes about 285 seconds (4.75 minutes) to deliver that energy. If your result is much larger or smaller, check your units — a common mistake is entering mass in grams instead of kilograms.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Heat Energy from Mass, Specific Heat, and Temperature Change
+
+$$Q = m \times c \times \Delta T$$
+
+Where:
+
+- **Q** = heat energy, in joules (J)
+- **m** = mass, in kilograms (kg)
+- **c** = specific heat capacity, in joules per kilogram per kelvin (J/(kg times K))
+- **DT** = temperature change, in degrees Celsius or kelvin (same magnitude)
+
+### Solving for Mass
+
+$$m = \frac{Q}{c \times \Delta T}$$
+
+### Solving for Specific Heat Capacity
+
+$$c = \frac{Q}{m \times \Delta T}$$
+
+### Solving for Temperature Change
+
+$$\Delta T = \frac{Q}{m \times c}$$
+
+The temperature change DT is identical in degrees Celsius and kelvin because both scales have the same degree size — they differ only in their zero point (0 degrees C = 273.15 K). A temperature change of 10 degrees C is exactly 10 K. This is why the formula works with either unit for temperature change.
+
+### Common Material Specific Heats (J/(kg times K))
+
+| Material | Specific Heat | Relative to Water |
+|----------|--------------|-------------------|
+| Water | 4,186 | 1.00x |
+| Ethanol | 2,440 | 0.58x |
+| Ice | 2,090 | 0.50x |
+| Steam | 2,010 | 0.48x |
+| Olive Oil | 1,970 | 0.47x |
+| Wood | 1,700 | 0.41x |
+| Air | 1,005 | 0.24x |
+| Aluminum | 897 | 0.21x |
+| Concrete | 880 | 0.21x |
+| Glass | 840 | 0.20x |
+| Iron | 449 | 0.11x |
+| Copper | 385 | 0.09x |
+
+**Source:** Joseph Black, *Lectures on the Elements of Chemistry* (1803), who first distinguished between heat and temperature and introduced the concept of specific heat. Modern values from NIST Standard Reference Data and CRC Handbook of Chemistry and Physics, 102nd Edition (2021).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Energy to Heat Water for a Bath
+
+How much energy is needed to heat 150 liters (150 kg) of water from 15 degrees C (cold tap) to 40 degrees C (comfortable bath)?
+
+**Step-by-step:**
+
+1. Known values: m = **150 kg**, c = **4,186 J/(kg times K)** (water), DT = 40 minus 15 = **25 degrees C**
+2. Apply the formula: Q = m times c times DT = 150 times 4,186 times 25
+3. Q = 150 times 104,650 = **15,697,500 J**
+4. Convert to kJ: 15,697,500 / 1,000 = **15,697.5 kJ**
+5. Convert to kWh: 15,697,500 / 3,600,000 = **4.36 kWh**
+
+**Result:** Heating the bath requires **15,697,500 J** (15.7 MJ, 4.36 kWh, 14,880 BTU).
+
+**Practical interpretation:** At an electricity cost of $0.14 per kWh, this bath costs about $0.61 in energy if heated electrically. A 50,000 BTU gas water heater with 67% efficiency delivers about 33,500 BTU/hr of useful heat, meaning it takes 14,880/33,500 = 26.6 minutes to heat the bath water. This is why a 40-gallon (150 L) tank water heater has a "recovery rate" specification — it tells you how quickly the unit can reheat after depletion. The [Power Calculator](/calculators/science/power-calculator) can help determine the power rating needed for a given heating time.
+
+### Example 2: Identifying an Unknown Metal
+
+A 200-gram metal sample absorbs 3,590 J of heat and its temperature rises from 22 degrees C to 62 degrees C. What metal is it?
+
+**Step-by-step:**
+
+1. Known values: Q = **3,590 J**, m = **0.2 kg** (200 g), DT = 62 minus 22 = **40 degrees C**
+2. Solve for specific heat: c = Q / (m times DT) = 3,590 / (0.2 times 40)
+3. c = 3,590 / 8 = **448.75 J/(kg times K)**
+4. Compare to table: Iron = 449, Aluminum = 897, Copper = 385
+
+**Result:** The specific heat is **449 J/(kg times K)**, identifying the metal as **iron** (or steel, which has a very similar specific heat).
+
+**Practical interpretation:** This is exactly how calorimetry experiments work in chemistry and materials science labs. By measuring the heat absorbed and the resulting temperature change, you can determine the specific heat of an unknown material and identify it by comparison with known values. The technique requires accurate temperature measurement (typically to 0.1 degrees C) and good thermal insulation to prevent heat loss to the surroundings. A polystyrene cup calorimeter with a tight-fitting lid typically achieves 95-98% accuracy. The [Density Calculator](/calculators/science/density-calculator) provides another method for material identification based on mass and volume measurements.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Water's exceptionally high specific heat dominates everyday heat transfer.** At 4,186 J/(kg times K), water absorbs more heat per degree per kilogram than almost any common substance. This property stabilizes coastal climates (oceans absorb and release enormous amounts of heat slowly), makes water ideal for engine cooling systems, and is why water-based central heating is so effective. Copper, by comparison, heats up nearly 11 times faster per kilogram for the same energy input.
+
+**Phase changes require latent heat beyond the Q = mcDT formula.** When ice reaches 0 degrees C, adding more heat does not raise the temperature — instead, it goes into breaking molecular bonds (melting). The latent heat of fusion for water is 334,000 J/kg, meaning melting 1 kg of ice requires 334 kJ of energy at constant temperature. Similarly, vaporizing water at 100 degrees C requires 2,260,000 J/kg. These phase transitions are not captured by the specific heat formula and must be calculated separately.
+
+**Temperature dependence of specific heat.** The values in this calculator are room-temperature approximations. Specific heat varies with temperature, sometimes significantly. Water's specific heat at 0 degrees C is 4,218 J/(kg times K), drops to a minimum of 4,178 at 35 degrees C, and rises to 4,216 at 100 degrees C. For most practical calculations the variation is less than 1%, but for high-precision work or extreme temperature ranges, temperature-dependent values should be used. The [Energy Calculator](/calculators/science/energy-calculator) can handle related thermal energy calculations.
+
+**Heat losses in real systems.** The formula calculates the theoretical minimum energy required. Real heating systems lose energy to radiation, convection, and conduction through container walls, pipes, and insulation. A well-insulated electric water heater is 90-95% efficient, a gas water heater is 60-80% efficient, and a heat pump water heater achieves 200-300% effective efficiency by extracting heat from ambient air.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **No phase change.** The formula applies only within a single phase (solid, liquid, or gas). If the temperature range crosses a melting or boiling point, latent heat must be added separately.
+- **Constant specific heat assumed.** The calculator uses a fixed specific heat value, but real specific heats vary with temperature. For most practical purposes the variation is less than 2% within normal temperature ranges.
+- **No heat losses modeled.** The result is the theoretical energy absorbed or released by the substance. Real systems lose energy to the environment through conduction, convection, and radiation.
+- **Homogeneous material assumed.** The formula assumes uniform composition throughout the substance. Mixtures, alloys, and composite materials have effective specific heats that differ from their pure components.
+- **Pressure assumed constant.** The specific heat values given are at constant pressure (cp). At constant volume (cv), values differ, especially for gases where cp/cv = gamma (1.4 for air). For liquids and solids, the difference is typically less than 1%.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Why does water have such a high specific heat?
+
+Water's specific heat of 4,186 J/(kg times K) is among the highest of all common substances due to hydrogen bonding between water molecules. Each water molecule forms up to four hydrogen bonds with neighboring molecules, creating an extensive network that requires significant energy to disrupt. When heat is added, much of the energy goes into breaking and reforming these hydrogen bonds rather than increasing molecular kinetic energy (temperature). This molecular-level energy absorption mechanism makes water an exceptional thermal buffer, which is why large bodies of water moderate nearby climates and why water-based heating and cooling systems are so effective.
+
+### What is the difference between specific heat and heat capacity?
+
+Specific heat (c) is the amount of heat required to raise the temperature of one kilogram of a substance by one degree — it is an intensive property that depends only on the material type, not its amount. Heat capacity (C) is the amount of heat required to raise the temperature of an entire object by one degree — it is an extensive property equal to mass times specific heat (C = mc). A 5 kg block of copper has a heat capacity of 5 times 385 = 1,925 J/K, while a 1 kg block of the same copper has a heat capacity of 385 J/K. Both have the same specific heat of 385 J/(kg times K).
+
+### How do I calculate energy for heating water from cold tap to boiling?
+
+To heat water from a typical cold tap temperature of 10 degrees C to boiling at 100 degrees C (a temperature change of 90 degrees C), use Q = m times 4,186 times 90. For 1 liter (1 kg) of water: Q = 1 times 4,186 times 90 = 376,740 J (376.7 kJ, 0.1047 kWh). A standard 1,500-watt electric kettle delivers this energy in about 376,740/1,500 = 251 seconds (about 4.2 minutes). A 2,200-watt kettle does it in about 171 seconds (2.9 minutes). Note that this calculation covers only heating — actually boiling the water away (converting liquid to steam) requires an additional 2,260,000 J per kilogram of water vaporized.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the specific heat formula Q = mcDT to solve for any one of four variables — heat energy, mass, specific heat, or temperature change — given the other three. When heat energy is unknown, it multiplies mass times specific heat times temperature change. When mass is unknown, it divides Q by (c times DT). When specific heat is unknown, it divides Q by (m times DT). When temperature change is unknown, it divides Q by (m times c). Material presets auto-fill the specific heat value from a table of 12 common substances. Energy conversions use fixed factors: 1 kJ = 1,000 J, 1 cal = 4.184 J, 1 kcal = 4,184 J, 1 BTU = 1,055.06 J, 1 Wh = 3,600 J.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}
