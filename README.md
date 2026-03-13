@@ -1,6 +1,8 @@
-# CalcAuthority
+# CalcuAI
 
-A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). 97 calculators across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
+A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **168 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
+
+**174 test suites · 3,493 passing tests · 158 formula modules · 34 glossary terms · 9 methodology pages**
 
 ## Tech Stack
 
@@ -11,31 +13,31 @@ A spec-driven calculator authority site built for dual-ranking on Google Search 
 - **Math:** KaTeX for formula rendering
 - **Charts:** Recharts for visualizations
 - **Search:** Fuse.js (client-side)
-- **Testing:** Jest + ts-jest (2,100+ tests)
+- **Testing:** Jest + ts-jest (3,493 tests across 174 suites)
 - **Hosting:** Vercel
 
 ## Calculators
 
-97 specs across 8 categories:
+168 specs across 8 categories:
 
 | Category | Count | Examples |
 |----------|-------|---------|
-| **Finance** | 27 | Mortgage, Compound Interest, 401(k), Amortization, Retirement, Auto Loan |
-| **Health** | 13 | BMI, BMR, Calorie, Body Fat, Macro, Due Date, Heart Rate Zones |
-| **Everyday** | 13 | Tip, Discount, Age, Date, Fuel Cost, Hours, GPA |
-| **Math** | 12 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability |
-| **Business** | 11 | ROI, Break-Even, Profit, Markup, Margin, Payroll, Commission |
-| **Construction** | 10 | Concrete, Square Footage, Roofing, Paint, Drywall, Flooring, Fence |
-| **Conversion** | 6 | Length, Weight, Temperature, Volume, Area, Data Storage |
+| **Finance** | 56 | Mortgage, Compound Interest, 401(k), Rental Property, HELOC, Debt Snowball/Avalanche, Self-Employment Tax, Home Insurance, Estimated Tax, Balance Transfer, Mortgage Points, Property Tax |
+| **Construction** | 35 | Concrete (Slab, Footing, Block), Roofing (Shingles, Metal), Asphalt, Driveway Cost, HVAC Size, Wire Size, Pool Volume, Paver, Brick, Siding, Carpet, Deck, Insulation, Retaining Wall |
+| **Math** | 20 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability, Permutation/Combination |
+| **Business** | 16 | ROI, Break-Even, Profit, Payroll, Hourly-to-Salary, Net Income, PTO Payout, Raise, Commission |
+| **Health** | 16 | TDEE, BMI, BMR, Calorie, Body Fat, Macro, Due Date, Ovulation, Water Intake, Heart Rate Zones |
+| **Everyday** | 16 | Tip, Discount, Gas Mileage, Solar Panel, Fuel Cost, Electricity Cost, Age, Date, GPA |
+| **Conversion** | 7 | Length, Weight, Temperature, Volume, Area, Data Storage, Square Meter |
 | **Science** | 5 | Ohm's Law, Density, Velocity, Pressure, Energy |
 
 ### Calculator Tiers
 
 Each calculator has a tier determining content depth:
 
-- **Flagship (25)** -- 2,000-3,000 words. All 17 article sections. Comparison tables, 2-3 worked examples, 3-5 FAQs.
-- **Standard (45)** -- 1,000-1,800 words. Core sections + key factors + assumptions + FAQ.
-- **Utility (24)** -- 600-1,000 words. Core sections only.
+- **Flagship (~27)** -- 2,000-3,000 words. All 17 article sections. Comparison tables, 2-3 worked examples, 3-5 FAQs.
+- **Standard (~90)** -- 1,000-1,800 words. Core sections + key factors + assumptions + FAQ.
+- **Utility (~51)** -- 600-1,000 words. Core sections only.
 
 ## Project Structure
 
@@ -51,12 +53,12 @@ content/
   calculators/{category}/     .spec.json + .mdx per calculator
   categories/                 8 category definition JSONs
 lib/
-  formulas/{category}/        87 pure TypeScript formula modules
+  formulas/{category}/        158 pure TypeScript formula modules
   types.ts                    All TypeScript interfaces
   content-loader.ts           Build-time spec + MDX loader
   search-index.ts             Fuse.js index builder
 scripts/                      CLI tools (generate, validate, audit, score)
-__tests__/formulas/           104 test files, 2,100+ unit tests
+__tests__/formulas/           174 test files, 3,493 unit tests
 ```
 
 ## Getting Started
