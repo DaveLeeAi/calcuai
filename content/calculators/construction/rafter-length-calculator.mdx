@@ -1,0 +1,171 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 24-foot building span with a 6:12 pitch and 12-inch overhang needs rafters approximately 14.35 feet long — buy 16-foot lumber to account for the birdsmouth cut and overhang. The plumb cut angle is 26.6 degrees and the seat cut is 63.4 degrees. Enter your building span, pitch, and overhang below to calculate exact rafter length, cut angles, and the right lumber size.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Rafter Length Results Show
+
+Calculating rafter length before you buy lumber prevents two common framing problems: buying boards that are too short (requiring costly splice joints or returns) and buying boards that are too long (wasting material and money). This calculator gives you the exact rafter dimensions for a common rafter in a gable or shed roof.
+
+The **rafter length** is the diagonal distance from the outside edge of the top wall plate to the center of the ridge board. This is calculated using the Pythagorean theorem — the rafter is the hypotenuse of a right triangle formed by the run (horizontal) and rise (vertical).
+
+The **total length** adds the eave overhang to the rafter length. The overhang extends past the exterior wall to protect the siding and foundation from water. Standard residential overhangs range from 6 to 24 inches. This total length is what determines the lumber you need to purchase.
+
+The **plumb cut angle** is the angle at which you cut the top of the rafter where it meets the ridge board. The **seat cut angle** is the horizontal cut at the bottom of the rafter where it sits on the wall plate (the bottom cut of the birdsmouth). These two angles always add up to 90 degrees.
+
+The **recommended lumber** rounds your total rafter length up to the nearest standard dimensional lumber length (8, 10, 12, 14, 16, 18, 20, 22, or 24 feet). Always buy the next standard size up — you need the extra length for the birdsmouth notch waste and to ensure full bearing on the wall plate.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the building span** — this is the total width of the building measured from the outside face of one wall to the outside face of the opposite wall. The calculator automatically divides by 2 to get the run for each rafter (since rafters meet at the ridge in the center).
+
+2. **Select the roof pitch** — choose from standard residential pitches (3:12 through 12:12). The pitch determines how steeply the rafter rises from the wall plate to the ridge.
+
+3. **Enter the eave overhang** — this is the horizontal distance the rafter tail extends past the exterior wall. Common values are 12 inches (standard) or 18 to 24 inches (wide overhang for rain protection).
+
+4. **Set the ridge board thickness** — standard 2x ridge boards have an actual thickness of 1.5 inches. The calculator subtracts half the ridge board thickness from each rafter's run to account for the space the ridge board occupies at the peak.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Rafter length is calculated from the Pythagorean theorem applied to the roof triangle:
+
+**Run (adjusted for ridge board):**
+
+$$\text{Run} = \frac{\text{Building Span}}{2} - \frac{\text{Ridge Board}}{2 \times 12}$$
+
+**Rise from pitch:**
+
+$$\text{Rise} = \text{Run} \times \frac{\text{Pitch}}{12}$$
+
+**Rafter length (Pythagorean theorem):**
+
+$$\text{Rafter Length} = \sqrt{\text{Run}^2 + \text{Rise}^2}$$
+
+**Total rafter length:**
+
+$$\text{Total Length} = \text{Rafter Length} + \frac{\text{Overhang (in)}}{12}$$
+
+**Plumb cut angle:**
+
+$$\text{Plumb Cut} = \arctan\!\left(\frac{\text{Rise}}{\text{Run}}\right) \times \frac{180}{\pi}$$
+
+**Seat cut angle:**
+
+$$\text{Seat Cut} = 90° - \text{Plumb Cut}$$
+
+Where:
+
+- **Building Span** = total building width in feet (exterior wall to exterior wall)
+- **Pitch** = rise per 12 inches of run (e.g., 6 for a 6:12 pitch)
+- **Ridge Board** = thickness in inches (standard 2x nominal = 1.5 inches actual)
+- **Overhang** = horizontal eave overhang distance in inches
+- **Run** is in feet; ridge board is converted from inches to feet for subtraction
+
+**Source:** American Wood Council — Span Tables for Joists and Rafters; IRC Section R802.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 24-Foot Span, 6:12 Pitch, 12-Inch Overhang
+
+A carpenter is framing a gable roof on a 24-foot-wide building with a 6:12 pitch, 12-inch eave overhang, and standard 2x ridge board (1.5 inches actual).
+
+**Inputs:**
+- Building Span: 24 feet
+- Roof Pitch: 6:12
+- Overhang: 12 inches
+- Ridge Board: 1.5 inches
+
+**Step-by-step:**
+
+1. Run: (24 / 2) - (1.5 / 2 / 12) = 12 - 0.0625 = **11.9375 feet**
+2. Rise: 11.9375 x (6 / 12) = **5.9688 feet**
+3. Rafter length: sqrt(11.9375² + 5.9688²) = sqrt(142.50 + 35.63) = sqrt(178.13) = **13.35 feet**
+4. Total length: 13.35 + (12 / 12) = **14.35 feet**
+5. Plumb cut angle: atan(5.9688 / 11.9375) x (180/pi) = **26.6 degrees**
+6. Seat cut angle: 90 - 26.6 = **63.4 degrees**
+7. Recommended lumber: 14.35 ft rounds up to **16-foot boards**
+
+**Interpretation:** Each common rafter needs a 16-foot 2x8 (or 2x10, depending on span table requirements and snow load). The plumb cut at the ridge is 26.6 degrees from vertical, and the birdsmouth seat cut is 63.4 degrees from vertical (or 26.6 degrees from horizontal). For this 24-foot building, you will have approximately 1.65 feet of waste per rafter from the 16-foot board — enough to use as blocking or collar ties if you plan cuts carefully.
+
+{/* Section 10: Rafter Length by Span and Pitch */}
+## Rafter Length Quick Reference Table
+
+Total rafter length (feet) including 12-inch overhang, 1.5-inch ridge board:
+
+| Span | 3:12 | 4:12 | 6:12 | 8:12 | 10:12 | 12:12 |
+|------|------|------|------|------|-------|-------|
+| 20 ft | 11.3 | 11.6 | 12.2 | 13.2 | 14.3 | 15.6 |
+| 24 ft | 13.3 | 13.7 | 14.4 | 15.5 | 16.8 | 18.3 |
+| 28 ft | 15.4 | 15.8 | 16.6 | 17.8 | 19.3 | 21.0 |
+| 30 ft | 16.4 | 16.8 | 17.7 | 19.0 | 20.6 | 22.4 |
+| 36 ft | 19.5 | 20.0 | 21.1 | 22.6 | 24.4 | 26.6 |
+
+Values are approximate. Use the calculator above for exact dimensions with your specific ridge board and overhang measurements.
+
+{/* Section 11: Cut Angles Explained */}
+## Cut Angles Explained
+
+Every common rafter requires three cuts:
+
+**Plumb cut (ridge cut):** The angled cut at the top of the rafter where it butts against the ridge board. This cut is vertical when the rafter is in position. The plumb cut angle equals the roof angle measured from vertical — for a 6:12 pitch, mark 26.6 degrees on your speed square or set your miter saw to 26.6 degrees.
+
+**Seat cut (birdsmouth):** The notch cut at the bottom of the rafter where it sits on the wall plate. The birdsmouth consists of two cuts: a horizontal seat cut and a vertical heel cut. The seat cut depth should not exceed one-third of the rafter depth per IRC Section R802.6 — on a 2x8 rafter (7.25 inches actual), the maximum seat cut depth is approximately 2.4 inches.
+
+**Tail cut:** The cut at the end of the rafter tail (overhang). This can be plumb (vertical when installed), square (perpendicular to the rafter), or a combination, depending on how the fascia board is attached.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Calculates **common rafters only** — not hip rafters, valley rafters, or jack rafters. Hip and valley rafters are longer because they run diagonally. Jack rafters are shorter because they terminate at the hip or valley.
+- Assumes a **symmetrical gable roof** where the ridge is centered over the building span. Offset ridges or shed roofs require different run calculations.
+- **Ridge board, not ridge beam.** This calculator assumes a conventional ridge board (non-structural, just a nailing surface) where opposing rafters provide lateral thrust against each other. Ridge beam systems (structural beams that carry the rafter load) may have different geometry at the connection.
+- Does not calculate **rafter size or lumber grade** required for the span, spacing, and load. Rafter size depends on species, grade, spacing (12, 16, or 24 inches on center), live load (snow load), and dead load. Consult the AWC Span Tables or your local building code for sizing.
+- Overhang adds horizontal length only. On steep pitches, the actual rafter tail (measured along the slope) is longer than the horizontal overhang.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How do I measure building span for rafter calculations?
+
+Measure the total distance from the outside face of one exterior wall to the outside face of the opposite exterior wall. Do not measure from the inside of the walls — the rafter run starts at the outer edge of the wall plate where the birdsmouth seat cut bears. For an existing building, measure across the top of the wall plates if accessible, or measure the exterior foundation width and subtract the difference if the framing overhangs the foundation.
+
+### What size ridge board do I need?
+
+The ridge board must be at least 1 inch nominal wider than the rafter lumber. For 2x8 rafters, use a 2x10 ridge board. For 2x10 rafters, use a 2x12 ridge board. This ensures the rafters bear fully against the ridge. The standard thickness is 1.5 inches (actual dimension of a 2x board). If using a structural ridge beam instead of a ridge board, the beam sizing is determined by engineering calculations based on span and load.
+
+### How much overhang should I add to my rafters?
+
+Standard residential overhang is 12 to 18 inches. A 12-inch overhang provides basic protection for windows and siding. An 18 to 24-inch overhang provides better rain protection and shade, which is common in regions with heavy rainfall or hot climates. Building codes generally allow up to 24 inches of overhang without additional structural support, though some jurisdictions allow more. Overhangs longer than 24 inches may require lookout framing or outrigger support.
+
+### What is a birdsmouth cut and why is it needed?
+
+A birdsmouth is a notch cut into the bottom of the rafter where it sits on the wall plate. It consists of a horizontal seat cut (which bears on top of the wall plate) and a vertical plumb cut (which aligns with the outside face of the wall). The birdsmouth allows the rafter to sit flat on the plate and transfers the roof load vertically down into the wall. Without a birdsmouth, the rafter would only contact the plate at a single point, creating a weak and unstable connection. The seat cut depth must not exceed one-third of the rafter depth per IRC R802.6.
+
+### Can I use this calculator for hip or valley rafters?
+
+This calculator computes common rafter length only. Hip rafters run diagonally from the wall plate corner to the ridge end and are longer than common rafters — a hip rafter's run is the hypotenuse of the plan-view triangle formed by the common rafter run. The hip rafter length factor is sqrt(run² + run² + rise²) for a 90-degree hip. Valley rafters follow the same geometry but run in the interior angle where two roof planes meet. For hip and valley rafter calculations, you need a specialized hip/valley rafter calculator or framing square tables.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses the **Pythagorean theorem** — the foundational formula for right triangle geometry — to determine rafter length from the horizontal run and vertical rise. The run is derived by halving the building span and subtracting the half-thickness of the ridge board. The rise is the product of the run and the pitch factor (pitch / 12). Cut angles use the inverse tangent function to convert the rise-over-run ratio to degrees. Lumber recommendations follow standard North American dimensional lumber lengths per the American Wood Council. Birdsmouth guidelines reference IRC Section R802.6 and AWC Connection Design standards.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

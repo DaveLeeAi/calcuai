@@ -1,0 +1,163 @@
+{
+  "id": "rafter-length-calculator",
+  "title": "Rafter Length Calculator",
+  "slug": "rafter-length-calculator",
+  "category": "construction",
+  "subcategory": "measurement",
+  "primaryKeyword": "rafter length calculator",
+  "metaTitle": "Rafter Length Calculator | Common Rafter Size & Cut Angles",
+  "metaDescription": "Calculate rafter length from building span and roof pitch. Get plumb cut angle, seat cut angle, and recommended lumber size. Free calculator.",
+  "inputs": [
+    {
+      "id": "buildingSpan",
+      "label": "Building Span",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 24,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Total building width from exterior wall to exterior wall"
+    },
+    {
+      "id": "roofPitch",
+      "label": "Roof Pitch",
+      "type": "select",
+      "required": true,
+      "defaultValue": "6",
+      "options": [
+        { "value": "3", "label": "3:12" },
+        { "value": "4", "label": "4:12" },
+        { "value": "5", "label": "5:12" },
+        { "value": "6", "label": "6:12" },
+        { "value": "7", "label": "7:12" },
+        { "value": "8", "label": "8:12" },
+        { "value": "9", "label": "9:12" },
+        { "value": "10", "label": "10:12" },
+        { "value": "12", "label": "12:12" }
+      ],
+      "helpText": "Roof pitch expressed as rise per 12 inches of run"
+    },
+    {
+      "id": "overhang",
+      "label": "Eave Overhang",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0,
+      "step": 1,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "ft", "label": "Feet", "conversionFactor": 12 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Horizontal overhang distance past the exterior wall"
+    },
+    {
+      "id": "ridgeBoard",
+      "label": "Ridge Board Thickness",
+      "type": "number",
+      "required": false,
+      "defaultValue": 1.5,
+      "min": 0,
+      "max": 3.5,
+      "step": 0.25,
+      "suffix": "in",
+      "helpText": "Thickness of the ridge board (standard 2× nominal = 1.5 inches)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalLength",
+      "label": "Total Rafter Length (ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "rafterLength",
+      "label": "Rafter Length (ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "run",
+      "label": "Run (ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "rise",
+      "label": "Rise (ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "rafterAngle",
+      "label": "Plumb Cut Angle (\u00b0)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "seatCutAngle",
+      "label": "Seat Cut Angle (\u00b0)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "commonLumber",
+      "label": "Recommended Lumber",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Rafter Dimensions Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "rafter-length",
+  "features": [],
+  "relatedCalculators": [
+    "roof-pitch-calculator",
+    "roofing-calculator",
+    "stair-calculator",
+    "square-footage-calculator",
+    "concrete-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "American Wood Council — Span Tables for Joists and Rafters",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Rafter length via Pythagorean theorem: length = sqrt(run² + rise²). Run = half building span minus half ridge board thickness. Rise = run × (pitch / 12). Cut angles via inverse tangent. Lumber sizing per standard dimensional lumber lengths (8–24 ft). Birdsmouth cut guidance per American Wood Council and IRC Section R802.6.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

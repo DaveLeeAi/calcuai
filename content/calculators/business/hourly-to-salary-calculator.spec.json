@@ -1,0 +1,172 @@
+{
+  "id": "hourly-to-salary-calculator",
+  "title": "Hourly to Salary Calculator",
+  "slug": "hourly-to-salary-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "hourly to salary calculator",
+  "metaTitle": "Hourly to Salary Calculator | Convert Hourly Wage to Annual Pay",
+  "metaDescription": "Convert any hourly rate to annual salary instantly. See monthly, biweekly, and weekly pay breakdowns with optional overtime. Free calculator.",
+  "inputs": [
+    {
+      "id": "hourlyRate",
+      "label": "Hourly Rate",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25,
+      "min": 0,
+      "max": 10000,
+      "step": 0.25,
+      "prefix": "$",
+      "helpText": "Your current hourly wage before taxes"
+    },
+    {
+      "id": "hoursPerWeek",
+      "label": "Hours per Week",
+      "type": "number",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "max": 168,
+      "step": 1,
+      "helpText": "Regular hours worked per week"
+    },
+    {
+      "id": "weeksPerYear",
+      "label": "Weeks per Year",
+      "type": "number",
+      "required": true,
+      "defaultValue": 52,
+      "min": 1,
+      "max": 52,
+      "step": 1,
+      "helpText": "Weeks worked per year (subtract vacation weeks)"
+    },
+    {
+      "id": "overtimeHours",
+      "label": "Overtime Hours per Week",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 80,
+      "step": 0.5,
+      "helpText": "Average weekly overtime hours"
+    },
+    {
+      "id": "overtimeMultiplier",
+      "label": "Overtime Rate",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1.5",
+      "options": [
+        {
+          "value": "1.5",
+          "label": "1.5\u00d7 (Standard)"
+        },
+        {
+          "value": "2",
+          "label": "2\u00d7 (Double Time)"
+        }
+      ],
+      "helpText": "Overtime pay multiplier (1.5\u00d7 is standard under FLSA)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSalary",
+      "label": "Annual Salary",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "monthlyPay",
+      "label": "Monthly Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "biweeklyPay",
+      "label": "Biweekly Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "weeklyPay",
+      "label": "Weekly Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "dailyPay",
+      "label": "Daily Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "overtimePay",
+      "label": "Annual Overtime Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalWithOvertime",
+      "label": "Total Annual Compensation",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveHourlyRate",
+      "label": "Effective Hourly Rate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Pay Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "hourly-to-salary",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "overtime-calculator",
+    "paycheck-calculator",
+    "payroll-calculator",
+    "employee-cost-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Bureau of Labor Statistics — Standard Work Week and Overtime Provisions (Fair Labor Standards Act, 29 U.S.C. \u00a7 207)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual Salary = Hourly Rate \u00d7 Hours/Week \u00d7 Weeks/Year; Overtime = Rate \u00d7 Multiplier \u00d7 OT Hours \u00d7 Weeks/Year; Total = Salary + Overtime",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "salary-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "overtime",
+    "payroll"
+  ]
+}

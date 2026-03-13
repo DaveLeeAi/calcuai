@@ -1,0 +1,183 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Using the avalanche method on \$25,000 in debt with \$200/month extra payments saves \$7,958 in interest compared to minimum-only payments and clears all debt in 46 months instead of 93. On the same debt mix, the avalanche method saves \$1,415 more in interest and finishes 4 months sooner than the snowball method. Enter your debts below to see the mathematically optimal payoff order for your specific balances and rates.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+The debt avalanche calculator shows your fastest, cheapest path to debt freedom by directing every extra dollar to the **highest interest rate first**. This is the mathematically optimal strategy — it minimizes total interest paid across any debt portfolio because every extra dollar attacks the most expensive debt, preventing the maximum possible interest from accruing.
+
+Your **Months to Debt Freedom** is the total payoff timeline using avalanche ordering. Compare it to the minimums-only figure in the summary to see the full impact of your extra payment. The **Interest Saved vs. Minimums Only** is typically the largest number in your results — on a \$25,000 portfolio with mixed rates, extra payments commonly save \$4,000 to \$8,000 in interest.
+
+The **Payoff Order** shows which debt gets eliminated first, second, and third. Unlike the snowball method, this order is determined entirely by interest rate, not balance. A \$500 credit card at 24% gets targeted before a \$20,000 car loan at 5%, even though the car loan is 40 times larger.
+
+The **Interest Saved vs. Snowball** comparison field in the summary quantifies the exact dollar advantage of the avalanche method over the snowball method on your specific debt mix. When this number is small (under \$200), the psychological benefits of snowball may outweigh the math. When it is large (over \$1,000), avalanche is the clear winner.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your debts in any order** — the calculator automatically sorts by interest rate. Input the current balance, annual interest rate (APR), and minimum monthly payment for each debt. Find your APR on your most recent statement or lender's online portal.
+
+2. **Add up to 5 debts** — include credit cards, personal loans, car loans, medical bills, and student loans. Leave unused slots at \$0. If you have more than 5 debts, combine the two lowest-rate debts into a single entry.
+
+3. **Set your Extra Monthly Payment** — this is the additional amount above all minimum payments combined. The avalanche method delivers the greatest absolute savings when the extra payment is large relative to your smallest debt. The default is \$200.
+
+4. **Review the payoff order** — verify the calculator sorted your debts by interest rate (highest first). Check the snowball comparison fields in the summary. If the interest difference is under \$200, consider the [Debt Snowball Calculator](/finance/debt-snowball-calculator) for its motivational benefits instead.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The avalanche method uses iterative monthly amortization with payment cascading. Each month, interest accrues and payments are applied:
+
+$$\text{Interest}_i = B_i \times \frac{r}{12}$$
+
+$$B_{i+1} = B_i + \text{Interest}_i - \text{Payment}_i$$
+
+Where:
+
+- **$B_i$** = remaining balance of debt at month $i$ (dollars)
+- **$r$** = annual interest rate for that debt (decimal, so 22% = 0.22)
+- **$\text{Payment}_i$** = minimum payment + any extra payment applied to this debt
+
+**Avalanche ordering:** Active debts are sorted by interest rate descending. All extra payment goes to the debt with the highest rate. When rates are tied, the smaller balance is targeted first (maximizing cascade speed).
+
+**Payment cascading:** When a debt reaches \$0, its minimum payment is added to the extra payment pool. This cascade effect is identical to the snowball method — the only difference is target selection order. The avalanche's mathematical advantage comes from preventing interest at the highest rate from compounding while you pay off lower-rate debts first.
+
+**Why avalanche minimizes interest:** Every dollar directed at a 22% APR debt prevents \$0.0183 in monthly interest. That same dollar directed at a 5% APR debt prevents only \$0.0042 in monthly interest. Over a 46-month payoff period, those daily differences compound into \$1,000+ in total savings.
+
+**Source:** Consumer Financial Protection Bureau (CFPB) debt management guidelines. The avalanche method's mathematical optimality is proven by the principle that minimizing the time money spends at the highest interest rate minimizes total interest. Behavioral comparison data from Harvard Business Review (2016) and Experian debt analysis reports.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Three Debts — Avalanche with \$200 Extra
+
+**Inputs:**
+- Personal Loan: \$3,000 at 7% APR, \$75 minimum
+- Car Loan: \$12,000 at 9% APR, \$250 minimum
+- Credit Card: \$10,000 at 22% APR, \$225 minimum
+- Extra Monthly Payment: \$200
+
+**Step-by-step:**
+
+1. Total minimum payments: \$75 + \$250 + \$225 = **\$550/month**
+2. Total monthly outlay: \$550 + \$200 extra = **\$750/month**
+3. Avalanche targets the credit card first (22% — highest rate)
+4. Credit card receives: \$225 minimum + \$200 extra = **\$425/month**
+5. Month 1 credit card interest: \$10,000 x 0.22/12 = **\$183.33**
+6. Credit card pays off around **month 32**, costing \$3,207 in interest
+7. After credit card payoff: freed-up \$225 minimum + \$200 extra = **\$425** now targeting car loan (9%)
+8. Car loan receives: \$250 minimum + \$425 = **\$675/month**
+9. Personal loan and car loan both clear around **month 46**
+
+**Results:**
+- Total months to debt freedom: **46**
+- Total interest paid: **\$6,198**
+- Interest saved vs. minimums only: **\$7,958**
+- Interest saved vs. snowball: **\$1,415**
+
+**Interpretation:** The avalanche method saves \$1,415 more than the snowball method on this exact portfolio because it eliminates the 22% credit card before the 7% personal loan. The snowball method would target the \$3,000 personal loan first (quick win in month 12), but the credit card keeps accruing \$183/month in interest the entire time. That delayed attention to the high-rate debt is what costs \$1,415 over the full payoff period.
+
+### Example 2: When Avalanche Equals Snowball
+
+**Inputs (default calculator values):**
+- Debt 1: \$2,000 at 19% APR, \$50 minimum
+- Debt 2: \$8,000 at 6% APR, \$200 minimum
+- Debt 3: \$15,000 at 5% APR, \$300 minimum
+- Extra: \$200/month
+
+When the highest-rate debt also has the smallest balance, both methods produce identical results: **43 months**, \$2,374 total interest, \$1,592 saved versus minimums only. This alignment occurs in roughly 15-20% of real-world debt portfolios. When it happens, choose whichever method resonates with you — the math is the same.
+
+{/* Section 10: Avalanche vs Snowball Comparison */}
+## Avalanche vs. Snowball: The Complete Comparison
+
+| Factor | Avalanche (Highest Rate First) | Snowball (Smallest Balance First) |
+|--------|-------------------------------|----------------------------------|
+| **Payoff order** | Highest interest rate first | Smallest balance first |
+| **Total interest** | Lowest possible (optimal) | Higher (typically \$500–\$2,000 more) |
+| **First debt eliminated** | Often slower (high-rate debts may have large balances) | Faster (small balances clear quickly) |
+| **Motivation style** | "I'm saving the most money" | "I'm eliminating debts quickly" |
+| **Best for** | Disciplined, math-driven repayers | Motivation-driven, multiple small debts |
+| **Research backing** | CFPB: lowest total cost | HBR: highest completion rates |
+| **Identical results when** | Highest rate = smallest balance | Highest rate = smallest balance |
+
+The avalanche method is **always mathematically optimal** — it never costs more than the snowball method. The only question is whether the interest savings justify potentially slower early wins. On the worked example above, avalanche saves \$1,415 over 46 months. That is real money. But if you have tried and failed at debt payoff before, the snowball method's faster wins may keep you on track, and finishing with \$1,415 more interest paid is better than quitting after 6 months. Use the [Debt Snowball Calculator](/finance/debt-snowball-calculator) to compare.
+
+{/* Section 11: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Interest Rate Spread** — The avalanche method's advantage grows as the gap between your highest and lowest rates widens. A portfolio with rates of 22%, 9%, and 7% shows a \$1,415 advantage over snowball. If all your rates are within 2-3 percentage points, the avalanche advantage shrinks below \$200, and the snowball method's psychological benefits may outweigh the math.
+
+**Extra Payment Amount** — Larger extra payments magnify the avalanche advantage because more money goes to the high-rate target each month. On a \$25,000 portfolio with a 22% top rate, increasing extra payment from \$100 to \$300 saves an additional \$3,000+ in interest and compresses the payoff timeline by 15 to 20 months.
+
+**High-Rate Debt Balance** — If your highest-rate debt also has a very large balance, the avalanche method requires patience. A \$20,000 credit card at 24% takes months to eliminate even with \$500/month extra payments. The key is trusting the math: every dollar toward that 24% balance prevents 4 to 5 times more interest than directing it elsewhere.
+
+**Number of Debts** — More debts create more cascading opportunities. Each payoff releases a minimum payment. By the fourth or fifth debt, the avalanche's cascading pool may be \$500+ per month above the original extra payment, producing rapid final payoffs.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **fixed interest rates** for all debts. Variable-rate debts (credit cards, adjustable-rate loans) may change. If rates change significantly, recalculate with updated APRs.
+- Assumes **fixed minimum payments**. Some credit cards calculate minimums as a percentage of balance, decreasing over time. This calculator uses fixed minimums — the more conservative approach.
+- Does **not account for new charges** added to revolving credit. Stop new credit card charges while executing the plan, otherwise your timeline will extend.
+- The extra payment is applied **consistently every month** from month one. Skipping months proportionally extends the payoff timeline.
+- Does **not include balance transfer offers, 0% promo rates, hardship programs, or refinancing**. For single-debt scenarios, use the [Credit Card Payoff Calculator](/finance/credit-card-payoff-calculator).
+- Supports **up to 5 debts**. If you have more, combine your two lowest-rate debts into a single entry or prioritize the top 5 by rate.
+- The snowball comparison is run automatically on the same inputs. No separate calculation needed.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the debt avalanche method?
+
+The debt avalanche method is a debt repayment strategy where you pay minimum payments on all debts and direct all extra money to the debt with the **highest interest rate** first, regardless of balance size. When that debt is paid off, you roll its payment into the next-highest-rate debt. It is called "avalanche" because it attacks the most expensive debt from the top, with cascading payments growing as each debt is eliminated.
+
+### How much more does the avalanche method save than the snowball?
+
+On a typical three-debt portfolio (\$25,000 total, rates from 7% to 22%), the avalanche method saves \$1,415 more in total interest than the snowball method and finishes 4 months sooner. The savings increase as the interest rate spread widens. On portfolios where all rates are within 2-3 percentage points, the difference may be under \$200. On portfolios with rates spanning 5% to 28%, savings can exceed \$3,000.
+
+### Why would anyone choose snowball over avalanche?
+
+A 2016 Harvard Business Review study of 6,000+ debt accounts found that people using the snowball method were more likely to eliminate all their debt, despite paying more total interest. The psychological boost of quickly eliminating a small debt can sustain motivation over a multi-year payoff journey. If you have abandoned debt payoff plans before, the snowball method's faster wins may keep you on track. Finishing with more interest paid is better than quitting early.
+
+### Should I use avalanche for credit card debt?
+
+Yes, the avalanche method is particularly effective for credit card debt because credit cards typically carry the highest interest rates (18-28% APR). Directing extra payments to your highest-rate credit card first prevents the most expensive interest from compounding. Once the highest-rate card is clear, the freed payment cascades to the next-highest card. Use this calculator for multi-card strategies or the [Credit Card Payoff Calculator](/finance/credit-card-payoff-calculator) for single-card analysis.
+
+### What happens if two debts have the same interest rate?
+
+When two debts have identical interest rates, the avalanche calculator breaks the tie by targeting the **smaller balance** first. This maximizes cascade speed — the smaller debt is eliminated faster, freeing its minimum payment sooner. This tiebreaker effectively applies snowball logic within the avalanche framework for equal-rate debts.
+
+### How much extra should I pay each month?
+
+Direct at least 20% of your after-tax income toward debt repayment (the "20" in the 50/30/20 budget rule). On a \$25,000 portfolio, \$200/month extra saves \$7,958 in interest and cuts the payoff from 93 months to 46 months. Test different amounts in the calculator — even \$50/month saves thousands over the full payoff period. Use the [Budget Calculator](/finance/budget-calculator) to find your sustainable extra payment amount.
+
+### Can I combine avalanche with debt consolidation?
+
+Yes. Many people consolidate their highest-rate debts (credit cards) into a lower-rate personal loan, then use the avalanche method on the remaining mixed portfolio. Run the [Debt Consolidation Calculator](/finance/debt-consolidation-calculator) first to see if consolidation lowers your blended rate, then enter the consolidated loan as one debt alongside your remaining debts in this calculator.
+
+### Is the avalanche method always better mathematically?
+
+Yes. The avalanche method produces the lowest total interest cost for any debt portfolio configuration. It can never be worse than snowball, and it is strictly better whenever the highest-rate debt does not also have the smallest balance. In the special case where the highest rate equals the smallest balance, both methods produce identical results.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements iterative monthly amortization with payment cascading, ordering debts by interest rate descending per the **debt avalanche method**. The mathematical optimality of the avalanche approach follows directly from the principle that directing extra payments to the highest-rate debt minimizes accumulated interest at any point in the repayment timeline. Interest calculations use standard monthly compounding consistent with Truth in Lending Act (TILA) Regulation Z disclosures. The comparison with the snowball method uses the same iterative engine with different sort ordering, ensuring an apples-to-apples comparison. Behavioral research from the **Harvard Business Review** (Trudel et al., 2016) analyzed 6,000+ debt repayment accounts and found higher completion rates with the snowball method, despite higher total interest. The **Consumer Financial Protection Bureau (CFPB)** endorses both strategies in its debt management planning resources. The **Experian** 2024 consumer debt analysis provides context on average American debt balances and interest rates. For a detailed methodology comparison of all three primary repayment strategies, see the [Debt Repayment Strategies methodology page](/methodology/debt-repayment-strategies).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

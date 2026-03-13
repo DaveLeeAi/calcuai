@@ -1,0 +1,187 @@
+{
+  "id": "topsoil-calculator",
+  "title": "Topsoil Calculator",
+  "slug": "topsoil-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "topsoil calculator",
+  "metaTitle": "Topsoil Calculator | How Much Topsoil Do I Need?",
+  "metaDescription": "Calculate topsoil needed in cubic yards, tons, and bags. Enter area dimensions and depth for instant material and cost estimates. Free calculator.",
+  "inputs": [
+    {
+      "id": "length",
+      "label": "Area Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "width",
+      "label": "Area Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        },
+        {
+          "value": "yd",
+          "label": "Yards",
+          "conversionFactor": 3
+        }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "depth",
+      "label": "Topsoil Depth",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 4,
+      "min": 0.5,
+      "max": 24,
+      "step": 0.5,
+      "units": [
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 12
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Recommended: 2-4\" for lawns, 6-8\" for gardens, 8-12\" for raised beds"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "cubicYards",
+      "label": "Topsoil Needed (cubic yards)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "cubicFeet",
+      "label": "Volume (cubic feet)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "tons",
+      "label": "Weight (tons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "bags40lb",
+      "label": "40-lb Bags Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "coverage",
+      "label": "Coverage Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    }
+  ],
+  "formula": "topsoil",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "mulch-calculator",
+    "gravel-calculator",
+    "concrete-calculator",
+    "square-footage-calculator",
+    "flooring-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "USDA Natural Resources Conservation Service — Soil Properties and Management",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "https://www.nrcs.usda.gov/",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "mulch-calculator",
+    "gravel-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer",
+  "description": "Calculate how much topsoil you need in cubic yards, tons, or bags. Get delivery cost estimates for your garden or landscaping project."
+}

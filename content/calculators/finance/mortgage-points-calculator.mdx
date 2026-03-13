@@ -1,0 +1,199 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Buying 1 discount point on a \$300,000 mortgage at 7% costs \$3,000 upfront but saves \$52 per month — you'll break even in 58 months (4.8 years) and save \$15,588 in total interest over 30 years. Mortgage points are a way to prepay interest: each point costs 1% of the loan amount and typically reduces the interest rate by 0.25%. Whether buying points makes financial sense depends entirely on how long you plan to keep the loan. Enter your loan amount, rate, and number of points to see your break-even timeline and lifetime savings.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+The **cost of points** is the upfront amount you pay at closing — each point equals 1% of the loan amount. On a \$300,000 loan, 1 point costs \$3,000 and 2 points cost \$6,000. This is cash out of pocket, paid at the closing table alongside your down payment and other closing costs.
+
+**Monthly savings** is the difference between your original monthly payment (at the quoted rate) and the new, lower payment after the rate reduction from buying points. This is the ongoing benefit you receive every month for the life of the loan. On a \$300,000 loan at 7%, buying 1 point reduces the rate to 6.75%, dropping the monthly principal-and-interest payment from \$1,996 to \$1,946 — a savings of approximately \$50 per month.
+
+The **break-even time** is the critical number. It tells you how many months of savings it takes to recoup the upfront cost. If you pay \$3,000 for points and save \$50/month, you break even in 60 months (5 years). Before that point, you've lost money. After that point, every month is pure savings. If you plan to sell or refinance before the break-even date, buying points is a losing proposition.
+
+**Total interest saved** is the cumulative difference in interest payments over the full loan term. This is always larger than the points cost for a 30-year loan held to maturity. **Net savings over loan** subtracts the points cost from the total interest saved — this is your true profit from buying points. The **ROI** expresses this profit as a percentage of the points cost. A typical 1-point purchase on a 30-year loan held to term generates 400%+ ROI, making it one of the highest-return guaranteed investments available — but only if you hold the loan long enough. Use the [Amortization Calculator](/finance/amortization-calculator) to see the full payment schedule at your new rate.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Loan Amount** — the total amount you are borrowing, not the home price. If you are buying a \$400,000 home with 20% down (\$80,000), your loan amount is \$320,000.
+
+2. **Enter your Current Interest Rate** — the rate your lender has quoted you before buying any points. This is the starting rate you are comparing against.
+
+3. **Set the number of Points to Buy** — start with 1 point and experiment. Most borrowers buy 1–2 points. Fractional points (0.25, 0.5, 0.75) are common and let you fine-tune the cost-benefit ratio.
+
+4. **Adjust Rate Reduction per Point** — the default is 0.25% per point, which is the industry standard. Some lenders offer more or less. Check your Loan Estimate for the exact reduction your lender offers.
+
+5. **Select your Loan Term** — 15-year or 30-year. Points are more cost-effective on 30-year loans because you have more months of savings to recoup the upfront cost.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## How Mortgage Points Are Calculated
+
+Each discount point costs 1% of the loan amount:
+
+$$\text{Points Cost} = \text{Loan Amount} \times \frac{\text{Points Purchased}}{100}$$
+
+The new interest rate after buying points:
+
+$$\text{New Rate} = \text{Original Rate} - (\text{Points Purchased} \times \text{Rate Reduction per Point})$$
+
+Monthly payments are calculated using the standard fixed-rate amortization formula:
+
+$$M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$$
+
+Where:
+- **M** = monthly payment (principal and interest)
+- **P** = loan amount (principal)
+- **r** = monthly interest rate (annual rate / 12)
+- **n** = total number of payments (loan term in years × 12)
+
+Break-even timeline:
+
+$$\text{Break-Even Months} = \lceil \frac{\text{Points Cost}}{\text{Monthly Savings}} \rceil$$
+
+Total interest saved over the life of the loan:
+
+$$\text{Interest Saved} = \text{Original Total Interest} - \text{New Total Interest}$$
+
+Net savings:
+
+$$\text{Net Savings} = \text{Interest Saved} - \text{Points Cost}$$
+
+**Source:** Consumer Financial Protection Bureau (CFPB) — "What are discount points and lender credits?" Standard amortization formula per Freddie Mac Seller/Servicer Guide.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: 2 Points on a \$400,000 Loan at 7%
+
+**Inputs:**
+- Loan Amount: \$400,000
+- Interest Rate: 7%
+- Points Purchased: 2
+- Rate Reduction per Point: 0.25%
+- Loan Term: 30 years
+
+**Step-by-step:**
+
+1. Cost of points: \$400,000 × (2 / 100) = **\$8,000**
+2. New rate: 7% − (2 × 0.25%) = **6.5%**
+3. Original monthly payment at 7%: \$400,000 × [0.005833 × (1.005833)^360] / [(1.005833)^360 − 1] = **\$2,661**
+4. New monthly payment at 6.5%: \$400,000 × [0.005417 × (1.005417)^360] / [(1.005417)^360 − 1] = **\$2,528**
+5. Monthly savings: \$2,661 − \$2,528 = **\$133/month**
+6. Break-even: \$8,000 / \$133 = **61 months (5.1 years)**
+7. Total interest saved: (\$2,661 × 360 − \$400,000) − (\$2,528 × 360 − \$400,000) = **\$47,880**
+8. Net savings: \$47,880 − \$8,000 = **\$39,880**
+9. ROI: (\$39,880 / \$8,000) × 100 = **498.5%**
+
+**Interpretation:** Buying 2 points costs \$8,000 upfront but saves nearly \$40,000 over 30 years — a 498% return on investment. However, you must keep the loan for at least 5.1 years to break even. If you sell or refinance before month 61, buying points was a net loss. This makes points most attractive when rates are high, you have a long time horizon, and refinancing is unlikely.
+
+### Example 2: 1 Point on a \$250,000 Loan at 6.5% / 15 Years
+
+**Inputs:**
+- Loan Amount: \$250,000
+- Interest Rate: 6.5%
+- Points: 1
+- Rate Reduction: 0.25%
+- Loan Term: 15 years
+
+**Step-by-step:**
+
+1. Cost of points: \$250,000 × 0.01 = **\$2,500**
+2. New rate: 6.5% − 0.25% = **6.25%**
+3. Original payment (15yr at 6.5%): **\$2,177**
+4. New payment (15yr at 6.25%): **\$2,143**
+5. Monthly savings: **\$34/month**
+6. Break-even: \$2,500 / \$34 = **74 months (6.2 years)**
+7. Total interest saved: \$6,120
+
+**Interpretation:** On a 15-year loan the monthly savings are smaller because the loan term is shorter and rates are already lower. The break-even period of 6.2 years consumes nearly half the loan term. Points are generally less attractive on 15-year loans unless you are certain you will hold the full 15 years.
+
+{/* Section 10: When Buying Points Makes Sense */}
+## When Buying Points Makes Sense
+
+**You plan to stay in the home 7+ years.** The break-even on most point purchases falls between 4 and 7 years. If you are buying your "forever home" or plan to stay at least a decade, the math strongly favors buying points. Every month after break-even is pure savings.
+
+**You have excess cash at closing.** Points are only worth buying if you have the cash available without depleting your emergency fund or raiding other investments. If paying for points means you cannot afford adequate reserves, skip them. Use the [Closing Cost Calculator](/finance/closing-cost-calculator) to budget your total cash needed at closing.
+
+**Interest rates are high.** When rates are 6%+, each 0.25% reduction saves more dollars per month because the base interest amount is larger. At 3%–4% rates, the same point purchase yields much smaller monthly savings, extending the break-even timeline.
+
+**You are maximizing a tax deduction.** Mortgage points paid at closing are generally tax deductible in the year paid, as an itemized deduction. On a \$400,000 loan, 2 points (\$8,000) is a significant deduction that may make itemizing worthwhile. Consult your tax advisor — the IRS requires points to be within customary ranges for your area.
+
+{/* Section 11: When to Skip Points */}
+## When to Skip Points
+
+**You may move or refinance within 5 years.** If there is any chance you will sell, relocate, or refinance before the break-even date, do not buy points. You will have paid cash upfront for a benefit you never fully realized. In a declining rate environment, refinancing becomes likely and points purchased on the original loan are sunk costs.
+
+**You need the cash for other closing costs or reserves.** Do not stretch your budget to buy points. Down payment, closing costs, moving expenses, and a 3–6 month emergency fund all take priority. Points are a long-term optimization, not a necessity. Check your total cash position with the [Home Affordability Calculator](/finance/home-affordability-calculator).
+
+**The lender offers a small rate reduction.** If your lender offers only 0.125% per point instead of the typical 0.25%, the break-even period doubles and the ROI drops significantly. Always compare the cost-per-rate-reduction across at least 3 lenders before committing.
+
+**You could earn more investing the money elsewhere.** If you would invest the \$3,000–\$8,000 in an index fund earning 8–10% annually, the opportunity cost may exceed the guaranteed savings from points. Run the comparison using the [Investment Calculator](/finance/investment-calculator) with the points cost as your initial amount.
+
+{/* Section 12: Key Factors */}
+## Key Factors That Affect Your Decision
+
+**Loan amount matters.** On a \$100,000 loan, 1 point is \$1,000 and saves roughly \$17/month. On a \$500,000 loan, 1 point is \$5,000 and saves roughly \$84/month. The break-even period is the same, but the absolute savings scale with the loan size.
+
+**Rate environment shifts the math.** At 7%+, buying 1 point on a 30-year \$300,000 loan saves \$50+/month and breaks even in under 5 years. At 4%, the same point saves only \$25/month and takes 10+ years to break even. Points deliver the most value in high-rate environments.
+
+**Loan term compresses or extends the payoff.** A 15-year loan gives you only 180 months to recoup the cost versus 360 on a 30-year loan. If the break-even is 60+ months, a 15-year borrower recovers costs for only 10 years of savings versus 25 years on a 30-year loan.
+
+**Points are negotiable.** Lenders set their own rate sheets. One lender may offer 0.25% reduction per point while another offers 0.20%. Some offer fractional points (0.5 or 0.75). Always compare the lender's "par rate" (no points) to the "buy-down rate" and calculate your own break-even.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a mortgage discount point?
+
+A mortgage discount point is an upfront fee equal to 1% of the loan amount that you pay at closing to reduce your interest rate. On a \$300,000 loan, 1 point costs \$3,000. Most lenders reduce the rate by approximately 0.25% per point purchased, though the exact reduction varies by lender and market conditions. Points are listed on Page 2 of the Loan Estimate under "Points" in Section A (Origination Charges).
+
+### How much does 1 point save per month?
+
+On a \$300,000 30-year fixed mortgage at 7%, buying 1 point reduces the rate to 6.75% and saves approximately \$50 per month. The exact savings depend on the loan amount, original rate, and rate reduction offered. Higher loan amounts and higher starting rates produce larger monthly savings for the same 1-point cost.
+
+### Is it better to buy points or make a larger down payment?
+
+It depends on your current down payment percentage. If you are below 20% down, putting extra cash toward the down payment to eliminate PMI (0.5%–1% of the loan annually) almost always saves more than buying points. Once you are at 20% down and PMI is eliminated, buying points becomes the next best use of excess cash if you plan to hold the loan long term. Use the [Mortgage Calculator](/finance/mortgage-calculator) to compare both scenarios.
+
+### Are mortgage points tax deductible?
+
+Yes, mortgage discount points paid on a home purchase loan are generally deductible in full in the year paid, as long as they meet IRS requirements: the points must be customary for your area, paid directly (not financed), and calculated as a percentage of the loan. For refinances, points must be amortized over the life of the loan. The deduction is claimed as mortgage interest on Schedule A. Consult a tax professional for your specific situation.
+
+### Can I buy fractional points?
+
+Yes, most lenders allow you to buy fractional points — 0.25, 0.5, 0.75, 1.5, etc. Fractional points let you fine-tune the cost-benefit ratio. Buying 0.5 points on a \$300,000 loan costs \$1,500 and reduces the rate by approximately 0.125%, producing smaller monthly savings but a faster break-even timeline in some cases.
+
+### What is the difference between discount points and origination points?
+
+Discount points are voluntary fees you choose to pay to reduce your interest rate — they lower your monthly payment. Origination points (origination fees) are lender charges for processing the loan — they do not reduce your rate. Both cost 1% of the loan per point, but only discount points provide a rate reduction. On the Loan Estimate, discount points appear under "Points" and origination fees appear under "Origination Charges."
+
+### How many points can I buy?
+
+Most lenders allow up to 3–4 discount points per loan, though the practical limit depends on the lender's rate sheet and how low they will let the rate go. Buying more than 2 points often has diminishing returns — the additional rate reduction may not justify the increasingly large upfront cost. The IRS also scrutinizes large point purchases that exceed local norms.
+
+### Do points make sense when refinancing?
+
+The same break-even analysis applies to refinances. Calculate the points cost, divide by monthly savings, and compare to how long you expect to keep the new loan. Since refinance borrowers have already demonstrated willingness to refinance, the risk of refinancing again (and losing the points investment) is higher. Points on refinances are tax-deductible but must be amortized over the loan term, not deducted upfront.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard fixed-rate mortgage amortization formula as documented by the **Consumer Financial Protection Bureau (CFPB)** in its "What are discount points and lender credits?" consumer guide. The default rate reduction of 0.25% per point reflects the widely cited industry standard referenced by **Freddie Mac** in its borrower education materials and the **National Association of Realtors (NAR)** home buyer resources. Break-even is calculated as the upfront cost divided by monthly savings, rounded up to the next whole month. Total interest is computed as total payments minus principal over the full loan term. ROI is calculated as (interest saved minus points cost) divided by points cost. Actual rate reductions vary by lender, market, and loan program — always request a Loan Estimate showing the rate with and without points from your lender.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

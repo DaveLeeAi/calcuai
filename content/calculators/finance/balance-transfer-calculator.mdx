@@ -1,0 +1,191 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Transferring a \$5,000 balance from a 22% APR card to a 0% intro rate for 15 months with a 3% fee (\$150) saves approximately \$1,088 in total cost — even after the transfer fee, you come out ahead. The key: you need to pay down as much as possible during the promotional window, because any remaining balance reverts to the regular APR. This calculator compares the full cost of keeping your current card versus transferring, including the fee, promo interest, and post-promo interest so you can see exactly whether the transfer is worth it.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Show */}
+## What Your Balance Transfer Results Show
+
+The **net savings** figure is the bottom line: the total cost of keeping your current card minus the total cost of the balance transfer path (including the transfer fee). A positive number means the transfer saves you money. A negative number means you are better off staying with your current card.
+
+**The transfer fee is a one-time cost that you must recoup through interest savings.** On a \$5,000 balance with a 3% fee, you pay \$150 upfront — added directly to your new balance. At 22% current APR with 0% promo, you save roughly \$91.67 per month in interest during the promo period. That means the fee pays for itself within 2 months. Every month after that is pure savings. The **break-even months** output tells you exactly how long this takes.
+
+**Balance remaining after promo is the critical number most people ignore.** If you transfer \$5,000 and pay \$200/month during a 15-month 0% window, you pay down \$3,000 — leaving \$2,150 (including fee) when the promotional rate expires. That remaining balance immediately starts accruing interest at the post-promo APR, which is often 20–25%. The math only works in your favor if you can pay off a substantial portion during the promo window. Use the [Credit Card Payoff Calculator](/finance/credit-card-payoff-calculator) to model the remaining balance at the post-promo rate.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your current balance** — the total amount you want to transfer. Find this on your latest statement or your card's app. Most balance transfer cards cap how much you can transfer (typically your credit limit minus the fee), so confirm your approved transfer amount before planning.
+
+2. **Enter your current APR** — the annual percentage rate on the card you are transferring from. The average credit card APR in 2025 is 22.76% per the Federal Reserve G.19 release. If your card has a variable rate, use the current rate shown on your statement.
+
+3. **Enter your monthly payment** — the fixed amount you plan to pay each month on either card. This calculator uses the same payment for both the current and transfer scenarios, so you can see the pure interest difference. For the biggest savings, pay as much as you can during the promo period.
+
+4. **Enter the transfer fee** — most balance transfer cards charge 3–5% of the transferred amount. Some cards offer 0% transfer fees as a promotional incentive. Check the offer terms carefully — the fee is usually charged immediately and added to your balance.
+
+5. **Enter the promotional APR and period** — typically 0% for 12, 15, 18, or 21 months. Some offers feature a low rate (like 3–5%) rather than 0%. Enter the exact terms from your offer.
+
+6. **Enter the post-promo APR** — the rate that applies after the promotional period ends. This is usually the card's standard purchase APR, which averages 22–24%. Any remaining balance accrues interest at this rate.
+
+7. **Compare the results** — check net savings, break-even months, and the balance remaining after promo. If net savings is positive and you can pay off most of the balance during the promo window, the transfer is likely worthwhile.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Current card payoff** — iterative monthly amortization at the current APR:
+
+$$B_{i+1} = B_i \times \left(1 + \frac{APR_{current}}{12}\right) - P$$
+
+The iteration continues until the balance reaches zero.
+
+**Balance transfer payoff** — two-phase amortization:
+
+Phase 1 (promo period, months 1 through $n_{promo}$):
+
+$$B_{i+1} = B_i \times \left(1 + \frac{APR_{promo}}{12}\right) - P$$
+
+Phase 2 (post-promo, until balance reaches zero):
+
+$$B_{i+1} = B_i \times \left(1 + \frac{APR_{post}}{12}\right) - P$$
+
+**Transfer fee:**
+
+$$\text{Transfer Fee} = B_0 \times \frac{\text{fee\%}}{100}$$
+
+$$\text{Total Transferred} = B_0 + \text{Transfer Fee}$$
+
+**Net savings:**
+
+$$\text{Net Savings} = \text{Total Cost}_{current} - \text{Total Cost}_{transfer}$$
+
+Where total cost equals the original balance (or total transferred) plus all interest paid.
+
+**Break-even months** (approximate):
+
+$$n_{break\text{-}even} = \left\lceil \frac{\text{Transfer Fee}}{\text{Monthly Interest}_{current} - \text{Monthly Interest}_{promo}} \right\rceil$$
+
+**Source:** Consumer Financial Protection Bureau (CFPB) — balance transfer disclosures under the Truth in Lending Act (TILA) and Credit CARD Act of 2009, which requires issuers to disclose the APR that applies after a promotional period ends.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### \$8,000 Balance: 24% APR to 0% for 18 Months, 3% Fee
+
+**Inputs:**
+- Current balance: \$8,000
+- Current APR: 24%
+- Monthly payment: \$300
+- Transfer fee: 3% (\$240)
+- Promo APR: 0% for 18 months
+- Post-promo APR: 24%
+
+**Step-by-step:**
+
+1. **Transfer fee:** \$8,000 × 3% = **\$240**
+2. **Total transferred:** \$8,000 + \$240 = **\$8,240**
+3. **Current card payoff:** At 24% with \$300/month, the \$8,000 balance takes approximately 36 months to pay off with roughly \$2,651 in interest. Total cost: **\$10,651**.
+4. **Promo period:** 18 months × \$300 = \$5,400 paid. At 0% APR, all \$5,400 goes to principal. Balance after promo: \$8,240 − \$5,400 = **\$2,840**.
+5. **Post-promo payoff:** \$2,840 at 24% with \$300/month takes approximately 11 months, costing roughly \$292 in interest.
+6. **Transfer total cost:** \$8,240 + \$292 = **\$8,532**
+7. **Net savings:** \$10,651 − \$8,532 = **\$2,119**
+8. **Break-even:** \$240 fee ÷ \$160/month interest savings ≈ **2 months**
+
+**Interpretation:** The transfer saves \$2,119 over the life of the debt and pays off 7 months sooner (29 months vs. 36 months). The \$240 fee is recouped within 2 months. Even with \$2,840 remaining at the end of the promo period, the total savings are substantial because 18 months of zero interest eliminated the most expensive phase of repayment. If you could increase payments to \$460/month, you would pay off the entire \$8,240 within the 18-month promo window and pay zero interest.
+
+{/* Section 10: When a Balance Transfer Saves Money */}
+## When a Balance Transfer Saves Money
+
+**The rate gap must be large enough to overcome the fee.** The single most important factor is the difference between your current APR and the promotional rate. A \$5,000 transfer from 22% to 0% saves \$91.67/month in interest — the 3% fee (\$150) is recovered in under 2 months. A transfer from 12% to 0% saves only \$50/month, so it takes 3 months to break even. Below a 5-percentage-point gap, the savings may not justify the fee and the effort.
+
+**You need enough promo months to make a dent.** A 6-month promo on a \$10,000 balance with \$200 payments only pays down \$1,200. The remaining \$9,100 at 22% post-promo APR costs nearly as much as if you had never transferred. The sweet spot for most balances: a promo period long enough to pay off at least 60–70% of the transferred balance.
+
+**The post-promo rate matters more than people think.** Many balance transfer cards carry a standard APR of 22–26% — sometimes higher than the card you transferred from. If you cannot pay off the balance during the promo, you could end up paying more interest on a higher post-promo rate. Always check the post-promo APR before transferring.
+
+{/* Section 11: When a Balance Transfer Doesn't Save Money */}
+## When a Balance Transfer Doesn't Make Sense
+
+**Your current APR is already low.** If you have a personal loan at 8% or a card at 12%, the savings from a 0% transfer are modest and may not justify the 3–5% fee. Run the numbers — a 3% fee on \$5,000 is \$150, and you save only \$50/month against a 12% rate, so you need at least 3 months just to break even.
+
+**You cannot resist using the old card.** The Federal Reserve Bank of New York reports that 70% of consumers who transfer a balance run up new charges on the original card within 12 months. If you transfer \$5,000 and then charge another \$3,000 on the freed-up credit line, you are deeper in debt than before.
+
+**The transfer amount exceeds what you can pay in the promo period with small payments.** Transferring \$15,000 when you can only pay \$200/month means you pay down \$3,600 during an 18-month promo — leaving \$11,850 to accrue interest at 22%+. The net savings may be marginal after accounting for the fee.
+
+**You plan to apply for a mortgage or auto loan soon.** Opening a new credit card triggers a hard inquiry and lowers your average account age, both of which can temporarily reduce your credit score by 10–30 points.
+
+{/* Section 12: How to Maximize Balance Transfer Savings */}
+## How to Maximize Your Savings
+
+**Pay as much as possible during the promo window.** The ideal scenario is paying off 100% of the transferred balance before the promo expires. Divide your total transferred balance by the number of promo months to find the target monthly payment. For \$5,150 over 15 months, that is \$344/month.
+
+**Do not make new purchases on the transfer card.** Most balance transfer cards apply payments to the lowest-rate balance first (the transferred amount at 0%) while new purchases accrue interest at the standard purchase APR from day one. This is required under the Credit CARD Act for minimum payments, but payments above the minimum go to the highest-rate balance.
+
+**Set up autopay for at least the minimum.** Missing a single payment on many balance transfer cards voids the promotional rate entirely, reverting your full balance to the penalty APR (often 29.99%). Autopay eliminates this risk.
+
+**Stack the transfer with additional debt payoff strategies.** If you have multiple debts, use the balance transfer to freeze the interest on your highest-rate balance while directing extra payments at other debts. See our [Debt Avalanche Calculator](/finance/debt-avalanche-calculator) to optimize which debts to prioritize alongside the transfer.
+
+{/* Section 13: Key Factors */}
+## Key Factors That Affect Your Results
+
+**Promotional Period Length** — Standard offers range from 12 to 21 months. The difference between a 12-month and 21-month promo on a \$10,000 balance at \$400/month is \$3,600 more principal paid during the interest-free window — potentially the difference between full payoff and significant remaining balance.
+
+**Transfer Fee Percentage** — The industry standard is 3%, but some cards charge 5% and a few offer 0%. On a \$10,000 transfer, the difference between 0% and 5% is \$500 — a meaningful amount that directly reduces your net savings.
+
+**Payment Amount** — This is the variable you control most directly. Every extra dollar during the promo period goes entirely to principal (at 0% APR), which is far more efficient than the same extra dollar on a card charging 22%.
+
+**Credit Limit on the New Card** — Balance transfer cards may not approve enough credit to transfer your full balance. If you can only transfer \$3,000 of a \$5,000 balance, you are managing two cards simultaneously and the savings calculation changes.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Is a balance transfer worth it for \$5,000?
+
+Yes, in most cases. Transferring \$5,000 from a 22% APR card to a 0% intro offer for 15 months with a 3% fee costs \$150 upfront but saves approximately \$1,088 in total cost compared to keeping the current card. The fee is recovered within 2 months. The transfer becomes even more valuable if you can pay off the full balance during the promo period, eliminating all future interest.
+
+### How much does a 3% balance transfer fee cost?
+
+A 3% balance transfer fee costs \$30 per \$1,000 transferred. On a \$5,000 balance it is \$150, on \$10,000 it is \$300, and on \$20,000 it is \$600. The fee is added to your new card balance immediately. Despite the upfront cost, the fee is typically recouped within 1–3 months through interest savings when transferring from a 20%+ APR card to 0%.
+
+### What happens to the balance after the promotional period?
+
+Any remaining balance begins accruing interest at the card's standard APR, which is typically 20–26%. For example, if you transferred \$5,150 and paid down \$3,000 during a 15-month promo, the remaining \$2,150 immediately starts generating interest at the post-promo rate. This is why paying off as much as possible during the promo window is critical.
+
+### Can I transfer a balance to a card I already have?
+
+Generally no. Most card issuers do not allow balance transfers between cards they issue. You typically need to open a new card with a different issuer. Check the offer terms — some promotions explicitly exclude transfers from the same bank's cards.
+
+### Does a balance transfer hurt my credit score?
+
+Short-term, expect a small dip (5–15 points) from the hard inquiry and new account. Long-term, a balance transfer can help your score by lowering your overall credit utilization ratio, since the new card adds available credit. Avoid closing the old card — keeping it open with a zero balance improves your utilization ratio and average account age.
+
+### Should I transfer to a 0% card or get a personal loan?
+
+A 0% balance transfer card is usually better for balances you can pay off within the promo period (12–21 months). A personal loan at 6–12% is better for larger balances that need 3–5 years to pay off, because the rate is fixed for the entire term with no post-promo rate shock. Compare using our [Debt Consolidation Calculator](/finance/debt-consolidation-calculator).
+
+### What is the best balance transfer card promo period?
+
+The longest widely available promo periods are 21 months at 0% APR. Longer promos give you more time to pay down principal interest-free. However, cards with longer promos sometimes carry higher transfer fees (5% vs. 3%) or higher post-promo APRs. Calculate the total cost for each offer rather than choosing solely on promo length.
+
+### Can I do multiple balance transfers?
+
+Yes, but each transfer typically incurs a separate fee, and each new card application triggers a hard inquiry. Some consumers do "balance transfer churning" — transferring remaining balances to new 0% cards when the promo expires. This strategy works mathematically but requires discipline, good credit, and careful tracking of promotional deadlines.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## How This Is Calculated
+
+This calculator uses iterative month-by-month amortization to model both the current card and the balance transfer path. The current card simulation applies the existing APR to the declining balance with fixed monthly payments until payoff. The transfer simulation runs in two phases: the promotional period at the intro APR, followed by the post-promo period at the standard APR, with the transfer fee added to the starting balance upfront. Net savings is the difference in total cost between the two paths. All calculations follow the **Consumer Financial Protection Bureau (CFPB)** credit card disclosure standards under the **Truth in Lending Act (TILA)** and the **Credit CARD Act of 2009**, which requires clear disclosure of post-promotional rates. Average APR data references the **Federal Reserve Board G.19 Consumer Credit** statistical release. Balance transfer fee ranges and promotional period data are based on 2025 market surveys by Bankrate and NerdWallet. Post-consolidation behavior statistics are from the **Federal Reserve Bank of New York** consumer credit panel data.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

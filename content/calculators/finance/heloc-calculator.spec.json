@@ -1,0 +1,195 @@
+{
+  "id": "heloc-calculator",
+  "title": "HELOC Calculator",
+  "slug": "heloc-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "HELOC calculator",
+  "metaTitle": "HELOC Calculator | Home Equity Line of Credit Estimator",
+  "metaDescription": "Calculate your HELOC borrowing power, monthly payments, and total interest cost. See draw period vs repayment period breakdowns. Free calculator.",
+  "inputs": [
+    {
+      "id": "homeValue",
+      "label": "Home Value",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 400000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "mortgageBalance",
+      "label": "Current Mortgage Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "creditLimit",
+      "label": "Credit Limit (% of Equity)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 80,
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "helpText": "Most lenders allow 80%–85% of your home equity as a HELOC credit line."
+    },
+    {
+      "id": "drawAmount",
+      "label": "Amount to Borrow",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "How much you plan to draw from the HELOC. Capped at your max credit line."
+    },
+    {
+      "id": "interestRate",
+      "label": "Interest Rate (APR)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 8.5,
+      "min": 0,
+      "max": 25,
+      "step": 0.125,
+      "helpText": "HELOC rates are variable. National average: ~8.5% as of 2025."
+    },
+    {
+      "id": "drawPeriod",
+      "label": "Draw Period",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 1,
+      "max": 15,
+      "step": 1,
+      "helpText": "Years you can borrow from the HELOC (typically 5–10 years)."
+    },
+    {
+      "id": "repaymentPeriod",
+      "label": "Repayment Period",
+      "type": "number",
+      "required": true,
+      "defaultValue": 20,
+      "min": 5,
+      "max": 30,
+      "step": 1,
+      "helpText": "Years to repay the balance after the draw period ends."
+    },
+    {
+      "id": "interestOnly",
+      "label": "Interest-Only During Draw",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": true,
+      "helpText": "Interest-only payments during draw period (most common). Turn off for fully amortized draw payments."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "maxCreditLine",
+      "label": "Maximum Credit Line",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "availableCredit",
+      "label": "Available to Borrow",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "homeEquity",
+      "label": "Home Equity",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "combinedLTV",
+      "label": "Combined Loan-to-Value (CLTV)",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "drawPeriodMonthlyPayment",
+      "label": "Draw Period Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "repaymentMonthlyPayment",
+      "label": "Repayment Period Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalCost",
+      "label": "Total Cost (Principal + Interest)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyPaymentBreakdown",
+      "label": "Payment Comparison",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "heloc",
+  "features": [],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "home-affordability-calculator",
+    "refinance-calculator",
+    "closing-cost-calculator",
+    "loan-calculator",
+    "debt-to-income-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Federal Reserve — What You Should Know About Home Equity Lines of Credit; standard amortization formula for repayment period",
+  "formulaCitation": "Federal Reserve — Home Equity Lines of Credit: Consumer Handbook",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["home-affordability-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "equity",
+    "pmi"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
+}

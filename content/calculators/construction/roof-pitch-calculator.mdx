@@ -1,0 +1,168 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A roof with 6 inches of rise per 12 inches of run has a 6:12 pitch — that is a 26.6-degree angle with a roof area multiplier of 1.118, and it is still walkable for most roofers without specialized fall protection. Enter your rise and run measurements below to calculate pitch ratio, angle in degrees, percent grade, and whether your roof slope qualifies as walkable under standard safety guidelines.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Roof Pitch Results Show
+
+Roof pitch is the ratio of vertical rise to horizontal run, traditionally expressed as inches of rise per 12 inches of run. A 6:12 pitch means the roof rises 6 inches for every 12 inches of horizontal distance. This single number determines everything from which roofing materials you can use to whether a roofer can walk on the surface safely.
+
+The **pitch ratio** is the decimal form of rise divided by run. A 6:12 pitch has a ratio of 0.5. This number is used in engineering calculations and is the basis for the angle and grade conversions.
+
+The **angle in degrees** is the actual slope angle measured from horizontal. Most residential roofs fall between 18 and 35 degrees. Roofers, engineers, and building inspectors use degrees when specifying slope requirements in building codes — the IRC requires a minimum slope of 2:12 (9.5 degrees) for most asphalt shingles.
+
+The **roof area multiplier** converts a flat footprint area to actual roof surface area. For a 6:12 pitch, multiply your footprint area by 1.118 to get the true roof area. This multiplier is critical for ordering roofing materials — underestimating means a second trip to the supply house.
+
+The **walkability assessment** follows standard roofing safety practice: slopes below 35 degrees (roughly 8:12) are generally considered walkable, while steeper slopes require toe boards, roof jacks, or harness systems per OSHA guidelines.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your calculation mode.** Choose "Rise & Run" if you have physical measurements, or "Known Angle" if you already know the roof angle in degrees (from a digital level or inclinometer).
+
+2. **Enter the rise** — this is the vertical distance the roof rises over a measured horizontal distance. The standard convention is to measure rise per 12 inches of run. If you measured rise over a different run distance, enter both actual measurements and the calculator normalizes to X:12.
+
+3. **Enter the run** — this is the horizontal distance over which you measured the rise. For standard pitch notation, use 12 inches. If you measured across a longer span (like the full half-span of the roof), enter the actual horizontal distance and the calculator will normalize.
+
+4. **Read your results.** The pitch (X:12), angle, percent grade, roof multiplier, and walkability status all update automatically. Use the roof multiplier to convert your building footprint to actual roof area for material ordering.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Roof pitch is calculated from the rise-over-run ratio:
+
+**Pitch (normalized to 12):**
+
+$$\text{Pitch} = \frac{\text{Rise}}{\text{Run}} \times 12$$
+
+**Angle in degrees:**
+
+$$\theta = \arctan\!\left(\frac{\text{Rise}}{\text{Run}}\right) \times \frac{180}{\pi}$$
+
+**Percent grade:**
+
+$$\text{Grade (\%)} = \frac{\text{Rise}}{\text{Run}} \times 100$$
+
+**Roof area multiplier:**
+
+$$\text{Multiplier} = \frac{1}{\cos(\theta)}$$
+
+Where:
+
+- **Rise** = vertical height measured in inches (or any consistent unit)
+- **Run** = horizontal distance measured in the same unit as rise
+- **Theta** = roof angle in radians, converted to degrees by multiplying by 180/pi
+- **Multiplier** = factor to convert flat footprint area to actual sloped roof area
+
+In angle mode, the calculator reverses the process: Rise = tan(angle) x 12, Run = 12.
+
+**Source:** International Residential Code (IRC) — Roof Slope Requirements, Section R905.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Standard 6:12 Residential Roof
+
+A homeowner needs to determine the pitch of an existing roof for a re-roofing estimate. Using a 2-foot level placed horizontally against the roof surface from inside the attic, they measure 6 inches of rise over 12 inches of horizontal run.
+
+**Inputs:**
+- Rise: 6 inches
+- Run: 12 inches
+
+**Step-by-step:**
+
+1. Pitch: (6 / 12) x 12 = **6:12**
+2. Pitch ratio: 6 / 12 = **0.5**
+3. Angle: atan(0.5) x (180/pi) = **26.57 degrees**
+4. Percent grade: 0.5 x 100 = **50%**
+5. Roof multiplier: 1 / cos(26.57 degrees) = **1.118**
+6. Walkability: 26.57 degrees < 35 degrees = **Yes, walkable**
+
+**Interpretation:** This 6:12 roof is a standard residential slope suitable for asphalt shingles, architectural shingles, metal panels, wood shakes, or tile. The 1.118 multiplier means a house with a 1,500 sq ft footprint has approximately 1,677 sq ft of actual roof surface — roughly 17 roofing squares (one square = 100 sq ft). The slope is walkable for experienced roofers but still requires standard fall protection for workers near edges.
+
+{/* Section 10: Common Roof Pitches Reference Table */}
+## Common Roof Pitches Reference
+
+| Pitch | Angle | Grade | Multiplier | Category | Typical Materials |
+|-------|-------|-------|-----------|----------|-------------------|
+| 0:12 | 0.0° | 0% | 1.000 | Flat | Built-up, TPO, EPDM |
+| 1:12 | 4.8° | 8.3% | 1.003 | Low Slope | Modified bitumen, single-ply |
+| 2:12 | 9.5° | 16.7% | 1.014 | Low Slope | Min. for asphalt shingles |
+| 3:12 | 14.0° | 25% | 1.031 | Low Slope | Asphalt shingles (with underlayment) |
+| 4:12 | 18.4° | 33.3% | 1.054 | Moderate | Standard asphalt shingles |
+| 5:12 | 22.6° | 41.7% | 1.083 | Moderate | Shingles, metal panels |
+| 6:12 | 26.6° | 50% | 1.118 | Standard | Shingles, metal, wood shakes |
+| 8:12 | 33.7° | 66.7% | 1.202 | Standard | Shingles, slate, tile |
+| 10:12 | 39.8° | 83.3% | 1.302 | Steep | Architectural shingles, slate |
+| 12:12 | 45.0° | 100% | 1.414 | Very Steep | Specialty fastening required |
+
+{/* Section 11: Pitch by Roofing Material */}
+## Minimum Pitch by Roofing Material
+
+The IRC and most roofing manufacturers specify minimum slopes for different materials:
+
+- **Built-up / membrane roofing:** 1/4:12 minimum (nearly flat)
+- **Modified bitumen:** 1/4:12 minimum
+- **Asphalt shingles:** 2:12 minimum (with double underlayment below 4:12)
+- **Metal panels (standing seam):** 1/4:12 to 3:12 depending on profile
+- **Metal shingles:** 3:12 minimum
+- **Wood shingles:** 3:12 minimum
+- **Wood shakes:** 4:12 minimum
+- **Clay / concrete tile:** 2.5:12 minimum (varies by profile)
+- **Slate:** 4:12 minimum
+- **Synthetic slate / shake:** 3:12 to 4:12 depending on manufacturer
+
+Choosing a roofing material below its minimum recommended pitch leads to water infiltration, voided warranties, and premature failure. Always verify the specific manufacturer's installation guide for the product you plan to use.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **single uniform slope** across the measured section. Complex roofs with multiple pitches (hip, gambrel, mansard) require measuring each section individually.
+- The **walkability threshold of 35 degrees** is a general industry guideline, not an absolute safety rule. OSHA requires fall protection on any roof with a slope greater than 4:12 (18.4 degrees) when the eave height exceeds 6 feet. Always follow OSHA 1926.501(b)(11) and your local regulations.
+- **Roof multiplier** applies to simple gable or shed roofs. Hip roofs, dormers, valleys, and penetrations require additional area calculations beyond the multiplier.
+- Pitch is expressed as a **ratio, not a percentage** in North American construction. A 6:12 pitch is a 50% grade but is never called a "50% pitch."
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the most common roof pitch for residential homes?
+
+The most common residential roof pitch in the United States is between 4:12 and 6:12. A 4:12 pitch (18.4 degrees) is the minimum slope where standard asphalt shingles can be installed without special underlayment requirements. A 6:12 pitch (26.6 degrees) provides good water runoff, attic ventilation space, and is still walkable for maintenance. Most suburban homes built after 1970 fall in this range.
+
+### How do I measure roof pitch from inside the attic?
+
+Place a level horizontally against a rafter with one end touching the rafter. Measure 12 inches along the level from the point of contact. Then measure the vertical distance from the 12-inch mark straight down to the rafter surface. That vertical measurement is your rise, and the pitch is that number over 12. For example, if you measure 6 inches vertically, your roof is 6:12.
+
+### What roof pitch is considered too steep to walk on?
+
+Roofs steeper than about 8:12 (33.7 degrees) are generally considered unwalkable without safety equipment. At this pitch, most people cannot maintain footing on asphalt shingles, and the risk of sliding increases significantly. OSHA requires fall protection on any roof steeper than 4:12 when working above 6 feet, but in practice, most experienced roofers can walk on pitches up to 8:12 with rubber-soled shoes.
+
+### How does roof pitch affect cost?
+
+Steeper roofs cost more per square foot for several reasons. Labor rates increase because workers need harness systems, roof jacks, and scaffolding above 8:12. Material waste increases on steep slopes because shingles must be hand-sealed and cuts are more frequent. A 12:12 roof typically costs 20 to 50 percent more per square than a 4:12 roof for the same material. The roof area multiplier also means you need more material — a 12:12 pitch has 41.4% more surface area than a flat footprint.
+
+### What is the difference between roof pitch and roof slope?
+
+In everyday use, pitch and slope are used interchangeably to describe how steep a roof is. Technically, **pitch** is the ratio of rise to the full span of the building (rise / span), while **slope** is the ratio of rise to the horizontal run (rise / run). In modern construction practice, the X:12 notation (which is technically slope) is universally called "pitch." This calculator uses the modern convention: pitch = rise per 12 inches of run.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses standard trigonometric relationships to convert between rise/run measurements and angle. The pitch-to-angle conversion uses the inverse tangent function (arctangent), which is the fundamental relationship between a right triangle's opposite side (rise) and adjacent side (run). The roof area multiplier uses the secant function (1/cosine), which gives the ratio of the hypotenuse (sloped roof surface) to the adjacent side (horizontal footprint). Slope classifications and walkability thresholds follow OSHA 1926.501(b)(11) fall protection standards and standard roofing industry practice. Minimum pitch requirements per roofing material type reference IRC Section R905 and individual manufacturer installation specifications.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

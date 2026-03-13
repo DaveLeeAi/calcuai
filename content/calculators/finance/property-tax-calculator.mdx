@@ -1,0 +1,224 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+On a \$300,000 home assessed at full market value with a 1.1% tax rate, your annual property tax is \$3,300 — or \$275 per month. The national average effective property tax rate is 1.07% of home value, but the range is enormous: Hawaii homeowners pay just 0.31% while New Jersey residents face 2.23%. Your actual bill depends on four variables — home value, assessment ratio, local tax rate, and any exemptions you qualify for — all of which this calculator handles.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Calculator Shows */}
+## What This Calculator Shows
+
+Property tax is the single largest recurring cost of homeownership after your mortgage payment. This calculator converts the confusing mix of assessed values, mill rates, and exemptions into a clear annual and monthly dollar amount. It also shows your **effective tax rate** — what you actually pay as a percentage of your home's market value — which is often different from the stated tax rate because of assessment ratios and exemptions.
+
+The **assessed value** is what the county says your home is worth for tax purposes. In many states, the assessed value is a fraction of market value: Georgia assesses at 40%, South Carolina at 4–6% for primary residences, and Ohio at 35%. The **taxable value** is the assessed value minus any exemptions (homestead, senior, veteran, disability). The tax rate is then applied to this taxable value, not your home's full market value.
+
+Understanding your effective rate lets you compare property tax burdens across states and counties on an apples-to-apples basis. A 2.5% stated rate with 40% assessment (effective: 1.0%) is actually cheaper than a 1.2% rate with 100% assessment (effective: 1.2%). Use this calculator alongside the [Mortgage Calculator](/finance/mortgage-calculator) to see your total monthly housing cost, or the [Home Affordability Calculator](/finance/home-affordability-calculator) to factor property tax into your budget.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your home value** — use the current market value (what the home would sell for today), not the purchase price. Check your county assessor's website or a recent appraisal for the most accurate figure.
+2. **Set the assessment rate** — this is the percentage of market value your county uses for tax purposes. Many states assess at 100%, but others use lower ratios (check your county assessor's office). Leave at 100% if your county assesses at full market value.
+3. **Enter the property tax rate** — your local tax rate as a percentage. You can find this on your most recent tax bill, your county treasurer's website, or by dividing the mill rate by 10. A mill rate of 11.0 means a tax rate of 1.1%.
+4. **Add any exemptions** — enter the dollar amount of your homestead exemption or other exemptions you qualify for (senior, veteran, disability). This reduces your taxable value before the tax rate is applied.
+5. **Add special assessments** — if your property is in a special taxing district (flood control, parks, library, fire), enter the annual assessment amount. These are added on top of the base property tax.
+6. **Review your results** — the calculator shows your annual tax, monthly amount, effective rate, and a breakdown of base tax versus special assessments.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Assessed Value:**
+
+$$
+\text{Assessed Value} = \text{Home Value} \times \frac{\text{Assessment Rate}}{100}
+$$
+
+**Taxable Value:**
+
+$$
+\text{Taxable Value} = \max\left(0,\ \text{Assessed Value} - \text{Exemptions}\right)
+$$
+
+**Annual Property Tax:**
+
+$$
+\text{Annual Tax} = \left(\text{Taxable Value} \times \frac{\text{Tax Rate}}{100}\right) + \text{Special Assessments}
+$$
+
+**Effective Tax Rate:**
+
+$$
+\text{Effective Rate} = \frac{\text{Annual Tax}}{\text{Home Value}} \times 100
+$$
+
+**Mill Rate:**
+
+$$
+\text{Mill Rate} = \text{Tax Rate} \times 10
+$$
+
+Where:
+- **Home Value** = current market value of the property (\$)
+- **Assessment Rate** = percentage of market value used for taxation (%)
+- **Exemptions** = homestead or other exemptions that reduce taxable value (\$)
+- **Tax Rate** = local property tax rate as a percentage (%)
+- **Special Assessments** = additional annual charges from special taxing districts (\$)
+- **Mill Rate** = tax rate expressed in mills (1 mill = \$1 per \$1,000 of taxable value)
+
+*Source: Tax Foundation — Property Tax Collections and Rates by State (2024). Assessment ratio data from Lincoln Institute of Land Policy — Significant Features of the Property Tax.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### A \$350,000 Home with 85% Assessment and Homestead Exemption
+
+A homeowner in a county that assesses at 85% of market value has a \$350,000 home, a \$25,000 homestead exemption, and a local tax rate of 1.2%.
+
+**Known figures:**
+- Home Value: \$350,000
+- Assessment Rate: 85%
+- Tax Rate: 1.2%
+- Homestead Exemption: \$25,000
+- Special Assessments: \$0
+
+**Step 1 — Assessed Value:**
+- \$350,000 × (85 / 100) = **\$297,500**
+
+**Step 2 — Taxable Value:**
+- \$297,500 − \$25,000 = **\$272,500**
+
+**Step 3 — Annual Property Tax:**
+- \$272,500 × (1.2 / 100) = **\$3,270**
+
+**Step 4 — Monthly Tax:**
+- \$3,270 / 12 = **\$272.50**
+
+**Step 5 — Supporting Metrics:**
+- Effective Rate: (\$3,270 / \$350,000) × 100 = **0.93%**
+- Mill Rate: 1.2 × 10 = **12.0**
+- Daily Tax: \$3,270 / 365 = **\$8.96**
+
+*Interpretation:* Despite a stated tax rate of 1.2%, the effective rate is only 0.93% because the 85% assessment ratio and \$25,000 exemption reduce the taxable base. This homeowner saves \$630 per year compared to what they would owe at full market value with no exemption (\$3,900). The monthly \$272.50 property tax should be added to the mortgage payment to calculate total monthly housing cost — on a 30-year mortgage at 7%, the combined payment on this home would be roughly \$2,430 per month.
+
+{/* Section 10: Property Tax Rates by State */}
+## Property Tax Rates by State
+
+### Highest Effective Property Tax Rates (2024)
+
+| State | Effective Rate | Avg Annual Tax on \$300k Home |
+|-------|---------------|-------------------------------|
+| New Jersey | 2.23% | \$6,690 |
+| Illinois | 2.08% | \$6,240 |
+| New Hampshire | 1.93% | \$5,790 |
+| Connecticut | 1.79% | \$5,370 |
+| Vermont | 1.78% | \$5,340 |
+
+### Lowest Effective Property Tax Rates (2024)
+
+| State | Effective Rate | Avg Annual Tax on \$300k Home |
+|-------|---------------|-------------------------------|
+| Hawaii | 0.31% | \$930 |
+| Alabama | 0.39% | \$1,170 |
+| Louisiana | 0.51% | \$1,530 |
+| Wyoming | 0.55% | \$1,650 |
+| West Virginia | 0.55% | \$1,650 |
+
+*Source: Tax Foundation, Facts & Figures 2024. Effective rates represent the percentage of home value actually paid in property taxes, accounting for assessment ratios and exemptions.*
+
+The difference is staggering: a \$300,000 home in New Jersey costs \$6,690 per year in property taxes — more than seven times what the same home would cost in Hawaii (\$930). When comparing homes across state lines, property tax can swing your monthly payment by hundreds of dollars.
+
+{/* Section 10b: How Assessment Works */}
+## How Assessment Works
+
+Your county assessor determines your home's assessed value, which may differ from its market value. There are three common approaches:
+
+**Full market value assessment (100%)** — Used by California, Idaho, Montana, and about 20 other states. Your assessed value equals the appraised market value.
+
+**Fractional assessment** — Used by Georgia (40%), South Carolina (4–6% for primary residences), Ohio (35%), and others. The county applies a fixed percentage to market value before calculating your tax. A \$300,000 home in Georgia is assessed at \$120,000.
+
+**Acquisition value** — Used by California under Proposition 13. Your assessed value is based on the purchase price and can increase by no more than 2% per year, regardless of how much the market value rises. A home bought for \$200,000 in 2005 might have a market value of \$600,000 but an assessed value of only \$290,000.
+
+Assessments are typically updated every 1–5 years depending on the jurisdiction. If you believe your assessment is too high, most counties allow you to file a formal appeal — and roughly 30–40% of appeals result in a reduction.
+
+{/* Section 10c: Homestead Exemptions Explained */}
+## Homestead Exemptions Explained
+
+A homestead exemption reduces the taxable value of your primary residence. These exemptions exist in most states and can save hundreds to thousands of dollars per year.
+
+**Common exemption types:**
+- **General homestead** — Available to all homeowners on their primary residence. Ranges from \$5,000 (many states) to \$100,000 (California for seniors).
+- **Senior citizen** — Additional exemption for homeowners over 65. Often \$10,000–\$50,000 in additional reduction.
+- **Veteran/disability** — Partial or full exemption for disabled veterans. Some states offer 100% exemption for service-connected disabilities.
+- **Income-based** — Some states freeze or reduce taxes for low-income homeowners regardless of age.
+
+**You must apply** — homestead exemptions are almost never automatic. Contact your county assessor's office or check their website for the application. Most require proof of primary residence (driver's license, voter registration) and must be filed by a specific deadline (often March 1 or April 1).
+
+{/* Section 11: Key Factors */}
+## Key Factors That Affect Your Property Tax
+
+1. **Local tax rate** — Property taxes fund schools, fire departments, roads, and local services. Districts with newer schools, more services, or less commercial tax base tend to have higher rates. Tax rates can vary significantly even within the same county.
+
+2. **Assessment accuracy** — If your home is over-assessed relative to comparable sales, you are overpaying. Review your assessment notice annually and compare with recent sales of similar homes in your neighborhood. Filing an appeal costs nothing in most jurisdictions.
+
+3. **Exemptions you qualify for** — Many homeowners miss exemptions they are entitled to. Beyond homestead, check for senior, veteran, disability, agricultural, and renewable energy exemptions in your state.
+
+4. **Home improvements** — Adding a room, finishing a basement, or building a pool typically triggers a reassessment that increases your assessed value. Repairs and maintenance generally do not.
+
+5. **Market conditions** — In states with regular reassessments, rising home values lead to higher assessed values and higher taxes — even if the tax rate stays the same. Some states cap annual assessment increases (California: 2%, Texas: 10% for homesteads).
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How is property tax calculated?
+
+Property tax is calculated by multiplying your taxable value by the local tax rate. Taxable value equals your assessed value (home value times the assessment ratio) minus any exemptions. For a \$300,000 home assessed at 100% with a 1.1% tax rate and no exemptions, the annual property tax is \$3,300. Special assessments for local districts are added on top.
+
+### What is a mill rate?
+
+A mill rate is the property tax rate expressed in mills, where 1 mill equals \$1 of tax per \$1,000 of taxable value. To convert a mill rate to a percentage, divide by 10. A mill rate of 15 equals a 1.5% tax rate. To convert a percentage tax rate to mills, multiply by 10. The term comes from the Latin "millesimum" meaning one-thousandth.
+
+### What is the average property tax rate in the US?
+
+The national average effective property tax rate is approximately 1.07% of home value, according to the Tax Foundation (2024). On a \$300,000 home, that equals about \$3,210 per year. However, rates range from 0.31% in Hawaii to 2.23% in New Jersey — a 7x difference that can mean thousands of dollars per year.
+
+### How do I find my local property tax rate?
+
+Check your most recent property tax bill, which lists the tax rate or mill rate. You can also find it on your county treasurer's or assessor's website, or call the county tax office. Many counties publish their rate sheets online, broken down by school district, municipality, and special taxing districts.
+
+### Can I reduce my property tax?
+
+Yes. The most common ways to reduce property tax are: (1) file for all exemptions you qualify for (homestead, senior, veteran, disability), (2) appeal your assessment if your home is over-valued compared to similar recent sales, (3) review your tax bill for errors in property description (lot size, square footage, number of bedrooms). Approximately 30–40% of assessment appeals result in a reduction.
+
+### Are property taxes tax deductible?
+
+Yes, property taxes on your primary residence are deductible on your federal income tax return if you itemize deductions. However, the Tax Cuts and Jobs Act of 2017 caps the total deduction for state and local taxes (SALT) — including property tax, state income tax, and sales tax — at \$10,000 per year (\$5,000 if married filing separately). This cap significantly limits the benefit for homeowners in high-tax states.
+
+### What is the difference between assessed value and market value?
+
+Market value is what your home would sell for on the open market. Assessed value is what the county uses to calculate your property tax, which may be lower than market value. In states with fractional assessment (Georgia: 40%, Ohio: 35%), the assessed value is a fixed percentage of market value. In full-assessment states, assessed value should approximate market value but may lag behind during rapid price changes.
+
+### Do property taxes increase every year?
+
+In most jurisdictions, property taxes can increase when either the assessed value rises (due to reassessment or market appreciation) or the local tax rate increases (due to new levies or bond measures). Some states limit annual increases: California caps assessment growth at 2% per year, Texas caps homestead assessment increases at 10%, and many states have rate caps or voter approval requirements for rate increases.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+- **Tax Foundation** — *Facts & Figures 2024: How Does Your State Compare?* Property tax collections, effective rates, and assessment practices by state.
+- **Lincoln Institute of Land Policy** — *Significant Features of the Property Tax.* Assessment ratios, exemption policies, and rate limitations across all 50 states.
+- **U.S. Census Bureau** — American Community Survey, median property taxes paid by state and county (2023 data).
+- **National Association of Counties (NACo)** — County property tax administration practices and assessment cycle data.
+
+This calculator uses the standard property tax formula: assessed value (home value times assessment ratio) minus exemptions gives taxable value. The tax rate is applied to taxable value, and special assessments are added to produce the total annual tax. The effective rate divides total annual tax by market value to enable cross-jurisdiction comparisons regardless of assessment ratios.

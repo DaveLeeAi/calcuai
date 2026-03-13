@@ -1,0 +1,183 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 12 x 10-foot room with 8-foot ceilings needs 6 single rolls of wallpaper — or 8 rolls if your pattern has a 24-inch repeat. That covers 301 net square feet of wall area after deducting one door and two windows. At budget pricing ($15–$25 per roll), materials run $90–$200; premium designer wallpaper at $75–$150 per roll pushes the same room to $450–$1,200. Enter your room dimensions below for an accurate roll count.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Calculates
+
+This calculator determines how many wallpaper rolls you need based on room dimensions, roll size, door and window deductions, pattern repeat waste, and a configurable waste factor. The output includes both the roll count and a breakdown of wall coverage math — total wall area, net area after openings, usable area per roll, and strips-per-roll calculation.
+
+The **roll count** is the key output. Wallpaper is sold in single rolls (approximately 33 linear feet) or double rolls (approximately 56 linear feet). Most retailers sell in double-roll packaging even when priced per single roll, so always confirm with your supplier. The calculator accounts for **pattern repeat waste** — patterned wallpaper requires aligning the design between adjacent strips, which creates unavoidable cutting waste of approximately 15% per roll for large repeats. For accurate room measurements, our [Square Footage Calculator](/construction/square-footage-calculator) can help.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter room length and width** — measure wall to wall at floor level. For non-rectangular rooms, estimate an equivalent rectangle or calculate each wall section separately.
+
+2. **Enter wall height** — measure from the baseboard top to the ceiling (or to where you want the wallpaper to stop, such as a chair rail).
+
+3. **Enter door and window count** — the calculator deducts 21 sq ft per standard door (3 x 7 ft) and 15 sq ft per standard window (3 x 5 ft). For oversized openings, adjust the count proportionally.
+
+4. **Select roll width and length** — American standard rolls are 20.5 inches wide and 33 feet long (single) or 56 feet long (double). Commercial rolls are 27 inches wide. Wide-format rolls are 36 inches.
+
+5. **Enter pattern repeat** — check the wallpaper product label for the repeat distance in inches. Solid colors and textures without a directional pattern have 0-inch repeat. Geometric and floral patterns typically range from 12 to 24 inches.
+
+6. **Adjust waste factor** — the default 10% covers trimming waste at the top, bottom, and around obstacles. Increase to 15% for your first wallpaper project or rooms with many corners and obstacles.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Wallpaper quantity is calculated from the net wall area (gross area minus openings), divided by the usable coverage per roll after accounting for pattern matching waste.
+
+**Total wall area:**
+
+$$A_{\text{total}} = 2 \times (L + W) \times H$$
+
+**Net wall area:**
+
+$$A_{\text{net}} = A_{\text{total}} - (D \times 21) - (W_n \times 15)$$
+
+**Usable roll area:**
+
+$$A_{\text{roll}} = \frac{R_w}{12} \times R_L$$
+
+**Pattern-adjusted roll area:**
+
+$$A_{\text{adj}} = \begin{cases} A_{\text{roll}} \times 0.85 & \text{if pattern repeat} > 0 \\ A_{\text{roll}} & \text{if no pattern} \end{cases}$$
+
+**Rolls needed:**
+
+$$\text{Rolls} = \left\lceil \frac{A_{\text{net}} \times (1 + W_f / 100)}{A_{\text{adj}}} \right\rceil$$
+
+Where:
+
+- **L** = room length (feet)
+- **W** = room width (feet)
+- **H** = wall height (feet)
+- **D** = number of doors (21 sq ft each)
+- **W_n** = number of windows (15 sq ft each)
+- **R_w** = roll width in inches
+- **R_L** = roll length in feet
+- **W_f** = waste factor percentage (default 10%)
+- **0.85** = 85% usable area (15% lost to pattern matching)
+
+The 15% pattern matching waste applies uniformly to any non-zero repeat. In practice, waste varies: small repeats (6–12 inches) may waste only 10%, while large repeats (24–36 inches) can waste 20%. The calculator uses 15% as a reliable middle estimate.
+
+**Source:** Roll coverage and pattern waste factors per **Wallcovering Association** estimation guidelines and **Wallpaper Installers Association** best practices.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example
+
+### Standard Bedroom — 12 x 10 ft, 8-ft Ceiling, 20.5" Single Rolls, No Pattern
+
+**Inputs:**
+- Length: 12 ft, Width: 10 ft, Height: 8 ft
+- Doors: 1, Windows: 2
+- Roll: 20.5" wide x 33 ft long (single roll)
+- Pattern Repeat: 0 inches
+- Waste Factor: 10%
+
+**Step-by-step:**
+
+1. Perimeter: 2 x (12 + 10) = **44 ft**
+2. Total wall area: 44 x 8 = **352 sq ft**
+3. Door deduction: 1 x 21 = **21 sq ft**
+4. Window deduction: 2 x 15 = **30 sq ft**
+5. Net wall area: 352 - 21 - 30 = **301 sq ft**
+6. Roll coverage: (20.5/12) x 33 = 1.708 x 33 = **56.38 sq ft per roll**
+7. With 10% waste: 301 x 1.10 = **331.1 sq ft** to cover
+8. Rolls needed: 331.1 / 56.38 = 5.87 → **6 rolls**
+
+**With 24-inch pattern repeat:** The adjusted roll coverage drops to 56.38 x 0.85 = 47.92 sq ft per roll. Rolls needed: 331.1 / 47.92 = 6.91 → **7 rolls**. The pattern repeat adds one full extra roll to the project.
+
+{/* Section 10: Single vs Double Rolls */}
+## Single vs Double Rolls
+
+Wallpaper is manufactured in double-roll bolts but historically priced per single roll — a source of confusion for buyers. Here is the distinction:
+
+| Specification | Single Roll | Double Roll |
+|:---|:---|:---|
+| **Length** | ~33 ft (10.05 m) | ~56 ft (17.07 m) |
+| **Usable strips (8-ft walls)** | 4 strips | 7 strips |
+| **Coverage (20.5" wide)** | ~56 sq ft | ~95 sq ft |
+| **How sold** | Priced per single, shipped as double | One physical bolt |
+| **Pricing** | $15–$150 per single roll | Multiply by 2 for bolt price |
+
+When the calculator says you need 6 single rolls, you are purchasing 3 double-roll bolts. Always confirm roll length and packaging with your retailer before ordering.
+
+{/* Section 11: Pattern Repeat Explained */}
+## Pattern Repeat Explained
+
+The **pattern repeat** is the vertical distance between one point in the design and the next identical point. A 24-inch repeat means the pattern repeats every 24 inches up the wall. When hanging consecutive strips, you must shift each strip to align the pattern at the seam, which creates waste at the top and bottom of every strip.
+
+- **0 inches (no repeat):** Solid colors, textures, and random patterns. No matching needed. Zero extra waste from pattern alignment.
+- **6–12 inches (small repeat):** Subtle geometrics and small florals. Approximately 10% extra waste.
+- **12–24 inches (medium repeat):** Most patterned wallpapers. Plan for 15% extra waste.
+- **24–36 inches (large repeat):** Bold florals, large damasks, murals. Up to 20% extra waste. Buy 1–2 extra rolls beyond the calculator estimate.
+
+A **straight match** means every strip starts at the same point in the pattern. A **drop match** (also called half-drop) offsets alternating strips by half the repeat — this creates even more waste because every other strip shifts by half the repeat distance.
+
+{/* Section 12: Cost Guide */}
+## Cost Guide
+
+| Category | Price Per Single Roll | Coverage Per Roll | Cost Per Sq Ft |
+|:---|:---|:---|:---|
+| **Budget** (basic vinyl, peel-and-stick) | $15 – $25 | ~56 sq ft | $0.27 – $0.45 |
+| **Mid-Range** (prepasted, non-woven) | $30 – $60 | ~56 sq ft | $0.53 – $1.07 |
+| **Premium** (designer, grasscloth, hand-printed) | $75 – $150 | ~56 sq ft | $1.34 – $2.68 |
+
+Paste and supplies add $20–$50 per room (unpasted wallpaper). Peel-and-stick wallpaper requires no additional supplies and is the easiest to install and remove — but has a narrower selection and may not adhere well to textured walls.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Deducts **21 sq ft per door** (standard 3 x 7 ft) and **15 sq ft per window** (standard 3 x 5 ft). Oversized openings like sliding glass doors (40+ sq ft) should be counted as 2 door equivalents.
+- Pattern waste estimate of **15%** is an average. Actual waste depends on repeat size, match type (straight vs drop), and installer experience.
+- Does **not account for inside corners** requiring extra overlap or outside corners requiring wrapping waste.
+- Assumes **flat walls** only. Stairwells, cathedral ceilings, and angled walls require separate calculations for each wall section.
+- Roll sizes are **nominal** — actual usable length may be 1–2 feet shorter than the labeled length due to edge trimming and manufacturer variance.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many rolls of wallpaper do I need for a 12 x 10 room?
+
+A 12 x 10-foot room with 8-foot ceilings needs approximately 6 single rolls of standard 20.5-inch-wide wallpaper (no pattern repeat, 10% waste factor). That covers 301 net square feet after deducting one door and two windows. With a 24-inch pattern repeat, plan for 7–8 rolls. Always round up and buy at least one extra roll from the same dye lot for repairs and pattern matching errors.
+
+### What is a wallpaper pattern repeat?
+
+A pattern repeat is the vertical distance between identical points in the wallpaper design — for example, a 24-inch repeat means the pattern repeats every 24 inches. When hanging strips side by side, you must align the pattern at every seam, which wastes material at the top and bottom of each strip. Large repeats (24+ inches) can waste 15–20% of each roll. Solid colors and random textures have no repeat and zero pattern waste.
+
+### Should I buy single or double rolls?
+
+Most wallpaper is sold in double-roll bolts (56 ft) but priced per single roll (33 ft). If a website lists a wallpaper at $40 per roll, you will likely pay $80 for the actual bolt you receive. Double rolls are more efficient — you get 7 usable strips from a double roll versus only 4 from a single roll, reducing waste from 4 unusable strip-ends to 1. Always confirm the actual roll length and packaging with your retailer before ordering.
+
+### How much extra wallpaper should I buy?
+
+Buy at least 10% extra for cutting waste (top and bottom trimming, around outlets and switches). Add another 5–10% if the wallpaper has a pattern repeat. For your first wallpaper project, buy one full extra roll beyond the calculator estimate — mistakes happen, and wallpaper from different manufacturing runs (dye lots) may not match perfectly. Most retailers accept returns of unopened rolls, so buying an extra roll is low-risk insurance.
+
+### Can I wallpaper over textured walls?
+
+Smooth walls are ideal for wallpaper adhesion. Light orange-peel texture can work with thicker non-woven or vinyl wallpapers and extra paste. Heavy knockdown texture, popcorn texture, or heavily textured walls should be skim-coated with joint compound and sanded smooth before wallpapering. Peel-and-stick wallpaper requires the smoothest surface and may not adhere to any textured wall.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses wall area estimation methods published by the **Wallcovering Association** and **Wallpaper Installers Association**. Standard opening deductions (21 sq ft per door, 15 sq ft per window) follow industry convention for 3 x 7-foot doors and 3 x 5-foot windows. Pattern waste of 15% for non-zero repeats is a conservative mid-range estimate per professional installer guidelines. Roll dimensions follow **ANSI/ASTM** wallcovering standards: American standard rolls are 20.5 inches wide by approximately 33 linear feet (single) or 56 linear feet (double). Pricing reflects 2025–2026 U.S. retail from major wallpaper retailers and manufacturer catalogs.
+
+{/* Section 17: Disclaimer — auto-rendered */}

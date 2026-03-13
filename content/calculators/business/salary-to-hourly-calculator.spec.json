@@ -1,0 +1,168 @@
+{
+  "id": "salary-to-hourly-calculator",
+  "title": "Salary to Hourly Calculator",
+  "slug": "salary-to-hourly-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "salary to hourly calculator",
+  "metaTitle": "Salary to Hourly Calculator | Convert Annual Salary to Hourly Rate",
+  "metaDescription": "Convert any annual salary to an hourly rate instantly. Adjust for paid holidays and vacation days. See monthly, biweekly, and weekly breakdowns.",
+  "inputs": [
+    {
+      "id": "annualSalary",
+      "label": "Annual Salary",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 52000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Your annual salary before taxes"
+    },
+    {
+      "id": "hoursPerWeek",
+      "label": "Hours per Week",
+      "type": "number",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "max": 168,
+      "step": 1,
+      "helpText": "Standard hours worked per week (typically 40)"
+    },
+    {
+      "id": "weeksPerYear",
+      "label": "Weeks per Year",
+      "type": "number",
+      "required": true,
+      "defaultValue": 52,
+      "min": 1,
+      "max": 52,
+      "step": 1,
+      "helpText": "Number of work weeks per year (typically 52)"
+    },
+    {
+      "id": "paidHolidays",
+      "label": "Paid Holidays",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "helpText": "Number of paid holidays per year"
+    },
+    {
+      "id": "paidVacationDays",
+      "label": "Paid Vacation Days",
+      "type": "number",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "helpText": "Number of paid vacation days per year"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hourlyRate",
+      "label": "Hourly Rate",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "adjustedHourlyRate",
+      "label": "Adjusted Hourly Rate (with PTO)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyPay",
+      "label": "Monthly Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "biweeklyPay",
+      "label": "Biweekly Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "weeklyPay",
+      "label": "Weekly Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "dailyPay",
+      "label": "Daily Pay",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalWorkHours",
+      "label": "Total Work Hours/Year",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "adjustedWorkHours",
+      "label": "Adjusted Work Hours/Year",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "summary",
+      "label": "Pay Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "salary-to-hourly",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "overtime-calculator",
+    "paycheck-calculator",
+    "payroll-calculator",
+    "employee-cost-calculator",
+    "commission-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Bureau of Labor Statistics — Standard Work Week Conventions (2024)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Hourly Rate = Annual Salary / (Hours/Week × Weeks/Year); Adjusted Rate accounts for PTO days converted to weeks",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "salary-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "salary",
+    "payroll"
+  ]
+}

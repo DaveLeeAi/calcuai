@@ -1,0 +1,199 @@
+{
+  "id": "cap-rate-calculator",
+  "title": "Cap Rate Calculator",
+  "slug": "cap-rate-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "cap rate calculator",
+  "metaTitle": "Cap Rate Calculator | Capitalization Rate for Real Estate",
+  "metaDescription": "Calculate the cap rate on any rental property. Enter income and expenses to find net operating income and capitalization rate. Free real estate calculator.",
+  "inputs": [
+    {
+      "id": "propertyValue",
+      "label": "Property Value",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200000,
+      "min": 0,
+      "max": 100000000,
+      "step": 5000,
+      "prefix": "$",
+      "helpText": "Purchase price or current market value of the property"
+    },
+    {
+      "id": "grossRentalIncome",
+      "label": "Gross Annual Rental Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 24000,
+      "min": 0,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total annual rent collected assuming full occupancy"
+    },
+    {
+      "id": "vacancyRate",
+      "label": "Vacancy Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "Expected percentage of time the property is vacant (5% is typical)"
+    },
+    {
+      "id": "operatingExpenses",
+      "label": "Other Operating Expenses",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Annual operating expenses not listed below (HOA fees, utilities, etc.)"
+    },
+    {
+      "id": "propertyTax",
+      "label": "Annual Property Tax",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 2400,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Annual property tax amount"
+    },
+    {
+      "id": "insurance",
+      "label": "Annual Insurance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1200,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Annual property insurance premium"
+    },
+    {
+      "id": "maintenance",
+      "label": "Annual Maintenance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1200,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Annual maintenance and repair budget"
+    },
+    {
+      "id": "management",
+      "label": "Annual Management Fees",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 1000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Annual property management company fees (if applicable)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "capRate",
+      "label": "Cap Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "netOperatingIncome",
+      "label": "Net Operating Income (NOI)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "effectiveGrossIncome",
+      "label": "Effective Gross Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalExpenses",
+      "label": "Total Annual Expenses",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "expenseRatio",
+      "label": "Expense Ratio",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "monthlyNOI",
+      "label": "Monthly NOI",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "grm",
+      "label": "Gross Rent Multiplier",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "summary",
+      "label": "Investment Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "cap-rate",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "roi-calculator",
+    "mortgage-calculator",
+    "home-affordability-calculator",
+    "investment-calculator",
+    "rent-vs-buy-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Association of Realtors — Real Estate Investment Analysis Standards",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Cap Rate = (NOI / Property Value) × 100; NOI = Effective Gross Income − Total Expenses; EGI = Gross Income × (1 − Vacancy Rate); GRM = Property Value / Gross Rental Income",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["roi-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": ["interest-rate"],
+  "methodologyTopics": []
+}

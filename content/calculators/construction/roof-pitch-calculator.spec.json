@@ -1,0 +1,146 @@
+{
+  "id": "roof-pitch-calculator",
+  "title": "Roof Pitch Calculator",
+  "slug": "roof-pitch-calculator",
+  "category": "construction",
+  "subcategory": "measurement",
+  "primaryKeyword": "roof pitch calculator",
+  "metaTitle": "Roof Pitch Calculator | Find Roof Slope & Angle",
+  "metaDescription": "Calculate roof pitch from rise and run measurements. Convert between pitch ratio, degrees, and percent grade. See if your roof is walkable.",
+  "inputs": [
+    {
+      "id": "rise",
+      "label": "Rise",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 6,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Vertical rise — height the roof rises"
+    },
+    {
+      "id": "run",
+      "label": "Run",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        { "value": "in", "label": "Inches", "conversionFactor": 1 },
+        { "value": "ft", "label": "Feet", "conversionFactor": 12 },
+        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 },
+        { "value": "m", "label": "Meters", "conversionFactor": 39.3701 }
+      ],
+      "defaultUnit": "in",
+      "helpText": "Horizontal run — distance the roof covers horizontally"
+    },
+    {
+      "id": "calculationMode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "rise-run",
+      "options": [
+        { "value": "rise-run", "label": "Rise & Run" },
+        { "value": "angle", "label": "Known Angle (degrees)" }
+      ],
+      "helpText": "Choose rise/run input or enter a known angle"
+    },
+    {
+      "id": "roofAngle",
+      "label": "Roof Angle (degrees)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 89,
+      "step": 0.5,
+      "helpText": "Enter the roof angle in degrees — used when Calculation Mode is set to Known Angle"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pitch",
+      "label": "Roof Pitch (X:12)",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "angleDegrees",
+      "label": "Angle (degrees)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "percentGrade",
+      "label": "Percent Grade (%)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "pitchDescription",
+      "label": "Pitch Category",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "roofMultiplier",
+      "label": "Roof Area Multiplier",
+      "type": "single-value",
+      "format": "number",
+      "precision": 3
+    },
+    {
+      "id": "walkable",
+      "label": "Walkable?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Pitch Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "roof-pitch",
+  "features": [],
+  "relatedCalculators": [
+    "roofing-calculator",
+    "rafter-length-calculator",
+    "square-footage-calculator",
+    "stair-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "International Residential Code (IRC) — Roof Slope Requirements",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Roof pitch geometry: pitch = rise/run normalized to 12-inch base, angle via inverse tangent, roof area multiplier via 1/cos(angle). Slope classifications and walkability thresholds per OSHA 1926.501(b)(11) and industry roofing safety standards. IRC Section R905 for minimum slope requirements by roofing material.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

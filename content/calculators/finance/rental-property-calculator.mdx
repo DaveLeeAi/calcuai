@@ -1,0 +1,262 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Analyze any rental property investment with cash flow, cap rate, and return projections. A \$200,000 rental property with 20% down at 7% interest and \$1,500/month rent produces a 5.75% cap rate and \$11,500 in net operating income — but after debt service, the actual cash flow is negative \$1,274 per year, yielding a -2.8% cash-on-cash return. That gap between NOI and cash flow is exactly why running the numbers matters before buying. Enter your property details below to see whether your deal cash-flows, how leverage affects your returns, and what your 5-year equity buildup looks like.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Calculator Analyzes */}
+## What This Calculator Analyzes
+
+This calculator models a rental property as a financial investment from three angles: **operating income** (how much the property earns before financing), **cash flow** (how much lands in your bank account each month after the mortgage), and **returns** (how your invested capital performs relative to alternatives).
+
+The **Net Operating Income (NOI)** is the property's earnings power independent of how you finance it. It takes your gross rental income, subtracts a vacancy allowance, then subtracts all operating expenses — property tax, insurance, maintenance, management fees, and other costs. NOI is the single most important number in commercial real estate because it drives both the cap rate and the property's appraised value.
+
+**Cash flow** is what matters to your personal finances. It takes NOI and subtracts the mortgage payment (principal and interest). Positive cash flow means the property puts money in your pocket every month. Negative cash flow means you are subsidizing the property from other income — which can still be a viable strategy if appreciation and equity buildup compensate over time.
+
+The **return metrics** — cap rate, cash-on-cash return, DSCR, GRM, and break-even ratio — give you different lenses to evaluate the deal. Cap rate compares the property to other investments regardless of financing. Cash-on-cash return tells you what your actual cash earns. DSCR tells you whether a lender will approve the deal. Together, these metrics form the standard analysis framework used by the [National Association of Realtors](https://www.nar.realtor/) and commercial real estate appraisers.
+
+Use this alongside our [Mortgage Calculator](/finance/mortgage-calculator) for detailed amortization schedules and our [ROI Calculator](/business/roi-calculator) for comparing rental property returns against other investment alternatives.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Purchase Price** — the full acquisition cost of the property. For existing properties, use the contract price. For properties you're evaluating, use the asking price or your offer amount. The default is \$200,000, representing a typical single-family rental in many U.S. markets.
+
+2. **Set the Down Payment** — investment property loans typically require 20-25% down, compared to 3-5% for owner-occupied homes. A 20% down payment on a \$200,000 property is \$40,000. Higher down payments reduce your monthly mortgage but also reduce the leverage that amplifies returns.
+
+3. **Enter the Interest Rate** — investment property rates run 0.5-0.75% higher than primary residence rates. As of early 2026, expect 7.0-7.5% for a 30-year investment property loan with 20% down and good credit. Check with your lender for an exact rate quote.
+
+4. **Choose a Loan Term** — 30 years gives the lowest monthly payment and maximizes cash flow. 15 years builds equity faster and costs far less in total interest, but the higher payment often pushes cash flow negative.
+
+5. **Add Closing Costs** — typically 2-5% of the purchase price for investment properties. Include origination fees, appraisal, title insurance, and transfer taxes. The default is \$5,000.
+
+6. **Enter Monthly Rent** — use current market rents for comparable properties. Check Zillow Rental Manager, Rentometer, or local MLS comps. Be conservative — overestimating rent is the most common mistake in rental property analysis.
+
+7. **Set Operating Assumptions** — vacancy rate (5-8% is standard), property tax (check your county assessor), insurance (get a landlord policy quote), maintenance (1% of property value is the industry standard), management fee (8-12% of rent if using a property manager, 0% if self-managing), and any other recurring expenses like HOA or utilities you cover.
+
+{/* Section 8: The Formulas */}
+<div className="formula-section">
+
+## The Formulas
+
+Rental property analysis uses several interconnected formulas. The mortgage payment uses the standard amortization formula, while the investment metrics follow conventions established by the Appraisal Institute and the National Association of Realtors.
+
+**Monthly Mortgage Payment (P&I):**
+
+$$M = P \times \frac{r(1 + r)^n}{(1 + r)^n - 1}$$
+
+Where:
+
+- **M** = monthly principal and interest payment (dollars)
+- **P** = loan amount — purchase price minus down payment (dollars)
+- **r** = monthly interest rate — annual rate divided by 12 (decimal)
+- **n** = total number of monthly payments — loan term in years times 12
+
+**Net Operating Income (NOI):**
+
+$$\text{NOI} = (\text{Monthly Rent} \times 12 \times (1 - \text{Vacancy Rate})) - \text{Operating Expenses}$$
+
+Operating expenses include property tax, insurance, maintenance, management fees, and other costs. NOI explicitly excludes debt service — it measures the property's performance independent of financing.
+
+**Cap Rate (Capitalization Rate):**
+
+$$\text{Cap Rate} = \frac{\text{NOI}}{\text{Purchase Price}} \times 100$$
+
+**Cash-on-Cash Return:**
+
+$$\text{Cash-on-Cash Return} = \frac{\text{Annual Cash Flow}}{\text{Total Cash Invested}} \times 100$$
+
+Where annual cash flow = NOI minus annual debt service, and total cash invested = down payment plus closing costs.
+
+**Debt Service Coverage Ratio (DSCR):**
+
+$$\text{DSCR} = \frac{\text{NOI}}{\text{Annual Debt Service}}$$
+
+Lenders typically require a DSCR of 1.20 or higher, meaning the property's NOI must exceed the annual mortgage payments by at least 20%.
+
+**Source:** Standard real estate investment analysis formulas per the Appraisal Institute's *The Appraisal of Real Estate* (15th Edition) and the National Association of Realtors' property investment guidelines. Mortgage calculation follows CFPB standard amortization.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Positive Cash Flow Property — \$250,000, 25% Down
+
+**Inputs:**
+- Purchase Price: \$250,000
+- Down Payment: 25% (\$62,500)
+- Interest Rate: 7.0%
+- Loan Term: 30 years
+- Closing Costs: \$6,000
+- Monthly Rent: \$2,200
+- Vacancy Rate: 5%
+- Property Tax: \$3,000/year
+- Insurance: \$1,400/year
+- Maintenance: 1% (\$2,500/year)
+- Management Fee: 0% (self-managed)
+
+**Step-by-step:**
+
+1. Loan amount: \$250,000 - \$62,500 = **\$187,500**
+2. Monthly mortgage: \$187,500 at 7.0%/30yr = **\$1,247.43/mo**
+3. Effective gross income: \$2,200 x 12 x 0.95 = **\$25,080/year**
+4. Operating expenses: \$3,000 + \$1,400 + \$2,500 + \$0 + \$0 = **\$6,900/year**
+5. NOI: \$25,080 - \$6,900 = **\$18,180/year**
+6. Annual debt service: \$1,247.43 x 12 = **\$14,969.16/year**
+7. Annual cash flow: \$18,180 - \$14,969.16 = **\$3,210.84/year**
+8. Monthly cash flow: \$3,210.84 / 12 = **\$267.57/mo**
+9. Total cash invested: \$62,500 + \$6,000 = **\$68,500**
+10. Cap rate: \$18,180 / \$250,000 = **7.27%**
+11. Cash-on-cash return: \$3,210.84 / \$68,500 = **4.69%**
+12. DSCR: \$18,180 / \$14,969.16 = **1.21**
+
+**Interpretation:** This property cash-flows \$268 per month and meets the DSCR threshold of 1.20 that most lenders require. The 7.27% cap rate is solid for most markets. At a 4.69% cash-on-cash return plus 3% annual appreciation, the total first-year return on invested capital is roughly 7.7% — competitive with stock market averages but with tangible asset backing.
+
+### Example 2: Negative Cash Flow — Why the Numbers Still Matter
+
+**Inputs:**
+- Purchase Price: \$350,000
+- Down Payment: 20% (\$70,000)
+- Interest Rate: 7.5%
+- Loan Term: 30 years
+- Closing Costs: \$8,000
+- Monthly Rent: \$2,000
+- Vacancy Rate: 8%
+- Property Tax: \$4,200/year
+- Insurance: \$1,800/year
+- Maintenance: 1.5% (\$5,250/year)
+- Management Fee: 10% (\$2,400/year)
+
+**Step-by-step:**
+
+1. Loan amount: \$350,000 - \$70,000 = **\$280,000**
+2. Monthly mortgage: \$280,000 at 7.5%/30yr = **\$1,958.22/mo**
+3. Effective gross income: \$2,000 x 12 x 0.92 = **\$22,080/year**
+4. Operating expenses: \$4,200 + \$1,800 + \$5,250 + \$2,400 + \$0 = **\$13,650/year**
+5. NOI: \$22,080 - \$13,650 = **\$8,430/year**
+6. Annual debt service: \$1,958.22 x 12 = **\$23,498.64/year**
+7. Annual cash flow: \$8,430 - \$23,498.64 = **-\$15,068.64/year**
+8. Monthly cash flow: **-\$1,255.72/mo**
+9. Cap rate: \$8,430 / \$350,000 = **2.41%**
+10. DSCR: \$8,430 / \$23,498.64 = **0.36**
+
+**Interpretation:** This property loses \$1,256 per month — you would need to cover that gap from personal income every month. The DSCR of 0.36 means no lender will approve this as an investment property loan. A 2.41% cap rate signals the property is overpriced relative to its rental income. Either the rent needs to increase by at least \$1,250/month, or the purchase price needs to drop to roughly \$210,000 for this deal to work at current rates.
+
+{/* Section 10: Understanding Your Results */}
+## Understanding Your Results
+
+**Cap Rate** measures the property's unlevered return — what you would earn if you bought it with all cash. A 5% cap rate means the property generates \$5 of NOI per \$100 of property value. Cap rates vary significantly by market: 3-5% is typical in coastal cities with high appreciation potential, while 7-10% is common in smaller markets. Cap rate is the standard metric for comparing properties because it strips out financing differences.
+
+**Cash-on-Cash Return** measures your actual return on the cash you invested. It accounts for leverage — which is why it can be higher than the cap rate when the deal is structured well, or deeply negative when debt costs exceed income. A 5-8% cash-on-cash return is considered good for most rental property investors.
+
+**DSCR (Debt Service Coverage Ratio)** is the metric lenders care about most. A DSCR of 1.0 means NOI exactly equals the mortgage — no margin of safety. Most investment property lenders require 1.20-1.25, meaning the property's income must exceed the mortgage by 20-25%. A DSCR below 1.0 means the property cannot cover its own mortgage from rental income.
+
+**GRM (Gross Rent Multiplier)** is the quickest screening metric. Divide the price by annual rent. A GRM of 8-12 typically indicates a property worth analyzing further. Above 15, the property is likely overpriced for its income. GRM ignores expenses entirely, so it is a rough filter, not a decision tool.
+
+**Break-Even Ratio** shows the occupancy level required to cover all costs. A break-even ratio of 85% means you need at least 85% occupancy to avoid losing money. Below 85% is healthy; above 100% means you lose money even at full occupancy.
+
+{/* Section 11: Cap Rate vs Cash-on-Cash Return */}
+## Cap Rate vs. Cash-on-Cash Return
+
+These two metrics answer different questions and are commonly confused. Here is when to use each:
+
+| | **Cap Rate** | **Cash-on-Cash Return** |
+|---|---|---|
+| Measures | Property's unlevered yield | Your actual return on cash invested |
+| Includes mortgage? | No | Yes |
+| Affected by financing? | No | Yes — leverage amplifies or reduces it |
+| Best for | Comparing properties against each other | Evaluating your personal investment return |
+| Formula | NOI / Purchase Price | Annual Cash Flow / Total Cash Invested |
+| Typical "good" range | 5-8% (market dependent) | 8-12% for buy-and-hold investors |
+| When higher = better? | Yes (higher income relative to price) | Yes (more return per dollar invested) |
+
+**Key insight:** Leverage can make cash-on-cash return higher than cap rate — or much lower. If you buy a 7% cap rate property with 20% down at 5% interest, leverage amplifies your cash-on-cash return above 7%. But at 8% interest on the same property, leverage destroys returns and pushes cash-on-cash below the cap rate. This is the fundamental risk-reward tradeoff in leveraged real estate.
+
+{/* Section 12: The 1% Rule and 50% Rule */}
+## The 1% Rule and 50% Rule
+
+Before running a full analysis, experienced investors use two quick screening rules to filter properties:
+
+**The 1% Rule:** Monthly rent should be at least 1% of the purchase price. A \$200,000 property should rent for at least \$2,000/month. This rule originated when interest rates were lower; at 7%+ rates, properties that meet the 1% rule are harder to find in most markets. Hitting 0.75% is more realistic in 2025-2026 markets, and properties below 0.7% rarely cash-flow with conventional financing.
+
+**The 50% Rule:** Approximately 50% of gross rental income goes to operating expenses (excluding mortgage). On a \$2,000/month rental (\$24,000/year), expect roughly \$12,000 in expenses — leaving \$12,000 of NOI to cover the mortgage and provide cash flow. This rule is surprisingly accurate for single-family rentals once you account for vacancy, property tax, insurance, maintenance, capital expenditure reserves, and management.
+
+Neither rule replaces a full analysis, but they save time. If a property fails both rules, it is unlikely to cash-flow — skip the deep dive and move on.
+
+{/* Section 13: Key Factors That Affect Rental Returns */}
+## Key Factors That Affect Rental Returns
+
+**Interest Rate** — The most impactful variable after purchase price and rent. On a \$160,000 loan over 30 years, dropping from 7.0% to 6.0% saves \$113/month in debt service — that is \$1,356/year swinging from negative to positive cash flow. At 5%, the same property that loses money at 7% may cash-flow comfortably.
+
+**Vacancy Rate** — Every percentage point of vacancy reduces income by roughly 1% of gross rent. On \$1,500/month rent, 5% vacancy costs \$900/year, while 10% costs \$1,800. Vacancy rates vary dramatically by market, season, and property type. Urban Class A apartments may run 3-4%; rural single-family homes may hit 8-12%.
+
+**Maintenance and CapEx** — The 1% rule for annual maintenance is a minimum. Older homes (pre-1990) should budget 1.5-2%. Properties with aging roofs, HVAC systems, or plumbing should add capital expenditure reserves of 5-10% of gross rent on top of routine maintenance. A \$15,000 roof replacement on a property earning \$18,000/year of gross rent wipes out nearly a full year of income.
+
+**Property Management** — Self-management saves 8-12% of gross rent but costs your time and limits geographic flexibility. A 10% management fee on \$1,500/month rent is \$1,800/year — enough to flip a marginally positive deal into negative cash flow. Factor this in from the start, even if you plan to self-manage initially.
+
+**Property Taxes** — These vary more than any other expense. The effective property tax rate ranges from 0.27% (Hawaii) to 2.23% (New Jersey) of assessed value. On a \$200,000 property, that is the difference between \$540/year and \$4,460/year — a \$3,920 annual swing that directly impacts NOI and cash flow.
+
+{/* Section 14: Common Mistakes in Rental Property Analysis */}
+## Common Mistakes in Rental Property Analysis
+
+**Overestimating rent.** The most common and most costly error. Using "best case" rent instead of conservative market comps inflates every return metric. Always use comparable rental data from Zillow, Rentometer, or local MLS — and then discount by 5-10% as a margin of safety.
+
+**Ignoring vacancy.** Projecting 0% vacancy assumes your property will be rented every day, 365 days a year, forever. That never happens. Even in hot markets, expect 5% vacancy to account for turnover time, unit preparation, and market shifts. In softer markets, budget 8-10%.
+
+**Underestimating maintenance.** New investors often budget \$500/year for maintenance on a \$200,000 property. The reality: a water heater costs \$1,500, an HVAC repair runs \$500-\$2,000, and a broken appliance costs \$300-\$800. The 1% rule (\$2,000/year on a \$200,000 property) is a bare minimum.
+
+**Not accounting for closing costs in returns.** If your down payment is \$40,000 and closing costs are \$8,000, your total cash invested is \$48,000 — not \$40,000. Omitting closing costs inflates your cash-on-cash return by 15-20%.
+
+**Confusing cap rate with cash-on-cash return.** A 7% cap rate does not mean you earn 7% on your money. With leverage, your actual return depends entirely on the financing terms. At high interest rates, a 7% cap rate property can easily produce a negative cash-on-cash return.
+
+{/* Section 15: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a good cap rate for a rental property?
+
+A good cap rate depends on market and risk tolerance, but 5-8% is generally considered solid for most residential rental properties in 2025-2026. In high-demand coastal markets like San Francisco or Miami, cap rates of 3-4% are common because investors expect appreciation. In Midwest and secondary markets, 7-10% cap rates are achievable. A cap rate above 10% may signal higher risk — investigate whether the area has declining population, rising crime, or deferred maintenance that will require capital investment.
+
+### What is a good cash-on-cash return?
+
+Most buy-and-hold rental property investors target 8-12% cash-on-cash return. Returns above 12% are excellent. Below 5% starts to underperform passive index fund investing. Negative cash-on-cash return means the property costs you money each month — which can still be acceptable if appreciation and principal paydown generate strong total returns over a 5-10 year hold.
+
+### How do I estimate vacancy rate?
+
+Use your local market data. The U.S. Census Bureau reports national rental vacancy at approximately 6.6% as of 2024. Your specific vacancy rate depends on property type, location, condition, and price point. Check Zillow rental trends or ask a local property manager. For conservative analysis, use 5% in strong markets and 8-10% in softer ones. Never use 0%.
+
+### Should I include mortgage in cap rate?
+
+No — cap rate explicitly excludes financing. Cap rate measures the property's return as if you bought it with all cash, which is why it is useful for comparing properties regardless of how they are financed. To measure your return including the mortgage, use cash-on-cash return instead.
+
+### What maintenance costs should I budget for a rental?
+
+Budget at least 1% of the property value per year for routine maintenance, plus a separate capital expenditure (CapEx) reserve of 5-10% of gross rent for major replacements. On a \$200,000 property renting for \$1,500/month, that means \$2,000/year in routine maintenance plus \$900-\$1,800/year in CapEx reserves. Older properties or those with aging mechanical systems should budget 1.5-2% for routine maintenance.
+
+### How does leverage affect rental property returns?
+
+Leverage amplifies returns in both directions. With 20% down on a property that appreciates 3% per year, your equity return from appreciation alone is 15% (3% gain on 100% of the property, but you only invested 20%). When the property also cash-flows positively, leverage is working for you. But when the mortgage rate exceeds the cap rate, leverage destroys cash flow — you pay more in debt service than the property earns, subsidizing the investment from personal income.
+
+### What is the 1% rule in real estate?
+
+The 1% rule states that a rental property's monthly rent should be at least 1% of the purchase price. A \$200,000 property should rent for at least \$2,000/month. This rule of thumb was developed when mortgage rates were 4-5%. At current 7%+ rates, the 1% rule is harder to achieve in most markets. A property that meets the 1% rule at today's rates will almost certainly generate positive cash flow.
+
+### Is negative cash flow always bad?
+
+Not necessarily. Negative cash flow means you are subsidizing the property each month, but the total investment return includes appreciation, principal paydown (equity buildup), and tax benefits (depreciation, interest deduction). A property losing \$200/month in cash flow but appreciating \$6,000/year and paying down \$3,000 in principal still generates a positive total return. However, negative cash flow creates financial risk — if rents drop further or a major repair hits, the monthly shortfall can become unmanageable. Most experienced investors prefer at least break-even cash flow as a safety margin.
+
+</div>
+
+{/* Section 16: Related Calculators — auto-rendered from spec */}
+
+{/* Section 17: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard fixed-rate mortgage amortization formula as defined by the **Consumer Financial Protection Bureau (CFPB)** for the mortgage payment calculation. NOI, cap rate, cash-on-cash return, DSCR, and GRM follow real estate investment analysis standards published by the **Appraisal Institute** (*The Appraisal of Real Estate*, 15th Edition) and the **National Association of Realtors**. Operating expense benchmarks reference data from the **National Apartment Association** and **Institute of Real Estate Management (IREM)** annual income/expense surveys. Vacancy rate data references the **U.S. Census Bureau** Housing Vacancy Survey (2024). The 1% and 50% rules are industry conventions widely cited in real estate investment literature, including **BiggerPockets** and **CCIM Institute** educational materials.
+
+{/* Section 18: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

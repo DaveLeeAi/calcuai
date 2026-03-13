@@ -1,0 +1,206 @@
+{
+  "id": "balance-transfer-calculator",
+  "title": "Balance Transfer Calculator",
+  "slug": "balance-transfer-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "balance transfer calculator",
+  "metaTitle": "Balance Transfer Calculator — Is a 0% APR Transfer Worth It?",
+  "metaDescription": "Calculate if a balance transfer saves you money. Compare your current card interest vs. a 0% APR offer including transfer fees. Free calculator.",
+  "inputs": [
+    {
+      "id": "currentBalance",
+      "label": "Current Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 100000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Your current credit card balance."
+    },
+    {
+      "id": "currentAPR",
+      "label": "Current APR",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 40,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Your current card's annual percentage rate. Average is 22–24%."
+    },
+    {
+      "id": "currentMonthlyPayment",
+      "label": "Monthly Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 50000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Fixed amount you'll pay each month on the card."
+    },
+    {
+      "id": "transferFee",
+      "label": "Balance Transfer Fee",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "suffix": "%",
+      "helpText": "Balance transfer fee percentage (typically 3–5%)."
+    },
+    {
+      "id": "promoAPR",
+      "label": "Promotional APR",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Introductory APR on the new card (often 0%)."
+    },
+    {
+      "id": "promoMonths",
+      "label": "Promotional Period",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0,
+      "max": 24,
+      "step": 1,
+      "suffix": "months",
+      "helpText": "How many months the promotional rate lasts."
+    },
+    {
+      "id": "postPromoAPR",
+      "label": "Post-Promo APR",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 22,
+      "min": 0,
+      "max": 40,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "APR after the promotional period ends."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netSavings",
+      "label": "Net Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "transferFeeCost",
+      "label": "Transfer Fee",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthsToPayoff_current",
+      "label": "Current Card Payoff",
+      "type": "single-value",
+      "format": "number",
+      "description": "Months to pay off on current card"
+    },
+    {
+      "id": "monthsToPayoff_transfer",
+      "label": "Transfer Card Payoff",
+      "type": "single-value",
+      "format": "number",
+      "description": "Months to pay off after balance transfer"
+    },
+    {
+      "id": "totalInterest_current",
+      "label": "Current Card Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest_transfer",
+      "label": "Transfer Card Interest",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalCost_current",
+      "label": "Current Card Total Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalCost_transfer",
+      "label": "Transfer Card Total Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "remainingAfterPromo",
+      "label": "Balance After Promo",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Balance remaining when promo period ends"
+    },
+    {
+      "id": "comparisonSummary",
+      "label": "Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "balance-transfer",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "credit-card-payoff-calculator",
+    "debt-consolidation-calculator",
+    "debt-payoff-calculator",
+    "debt-avalanche-calculator",
+    "credit-utilization-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Iterative amortization with two-phase payoff (promo + post-promo) per CFPB balance transfer disclosure requirements under TILA",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "credit-card-payoff-calculator",
+    "debt-consolidation-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [
+    "apr",
+    "principal",
+    "interest-rate",
+    "credit-utilization"
+  ],
+  "methodologyTopics": [
+    "debt-repayment-strategies"
+  ]
+}

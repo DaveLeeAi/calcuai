@@ -1,0 +1,207 @@
+{
+  "id": "wallpaper-calculator",
+  "title": "Wallpaper Calculator",
+  "slug": "wallpaper-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "wallpaper calculator",
+  "metaTitle": "Wallpaper Calculator | How Many Rolls Do You Need?",
+  "metaDescription": "Calculate exactly how many wallpaper rolls you need. Accounts for doors, windows, pattern repeats, and waste. Free wallpaper calculator.",
+  "inputs": [
+    {
+      "id": "roomLength",
+      "label": "Room Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "roomWidth",
+      "label": "Room Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 10,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "wallHeight",
+      "label": "Wall Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 8,
+      "min": 4,
+      "max": 20,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft"
+    },
+    {
+      "id": "doors",
+      "label": "Number of Doors",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 10,
+      "helpText": "Standard door = 21 sq ft (3 x 7 ft)"
+    },
+    {
+      "id": "windows",
+      "label": "Number of Windows",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 20,
+      "helpText": "Standard window = 15 sq ft (3 x 5 ft)"
+    },
+    {
+      "id": "rollWidth",
+      "label": "Roll Width",
+      "type": "select",
+      "required": true,
+      "defaultValue": "20.5",
+      "options": [
+        { "value": "20.5", "label": "20.5\" (American Standard)" },
+        { "value": "27", "label": "27\" (Commercial)" },
+        { "value": "36", "label": "36\" (Wide Format)" }
+      ],
+      "helpText": "Width of wallpaper roll in inches"
+    },
+    {
+      "id": "rollLength",
+      "label": "Roll Length",
+      "type": "select",
+      "required": true,
+      "defaultValue": "33",
+      "options": [
+        { "value": "33", "label": "33 ft (Single Roll)" },
+        { "value": "56", "label": "56 ft (Double Roll)" }
+      ],
+      "helpText": "Length of wallpaper per roll"
+    },
+    {
+      "id": "patternRepeat",
+      "label": "Pattern Repeat",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 36,
+      "step": 1,
+      "suffix": "in",
+      "helpText": "Pattern repeat in inches (0 for solid or no pattern)"
+    },
+    {
+      "id": "wasteFactor",
+      "label": "Waste Factor",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 30,
+      "helpText": "Extra for trimming and mistakes (10% recommended)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "rollsNeeded",
+      "label": "Rolls Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "netWallArea",
+      "label": "Net Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "totalWallArea",
+      "label": "Total Wall Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Cost Estimate by Tier",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "totalStrips",
+      "label": "Total Strips",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "stripsPerRoll",
+      "label": "Strips Per Roll",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    }
+  ],
+  "formula": "wallpaper",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "paint-calculator",
+    "square-footage-calculator",
+    "drywall-calculator",
+    "flooring-calculator",
+    "tile-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Wallcovering Association — Wallpaper Estimation Guidelines",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Wall perimeter area calculation with standard opening deductions (21 sq ft per door, 15 sq ft per window). Roll coverage based on Wallcovering Association estimation guidelines. Pattern repeat waste factor of 15% per industry standard.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "paint-calculator",
+    "drywall-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

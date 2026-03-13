@@ -1,0 +1,191 @@
+{
+  "id": "insulation-calculator",
+  "title": "Insulation Calculator",
+  "slug": "insulation-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "insulation calculator",
+  "metaTitle": "Insulation Calculator | Estimate Materials & Cost by R-Value",
+  "metaDescription": "Calculate how much insulation you need for your attic, walls, or floor. See batts, bags, or board feet needed by R-value with cost estimates.",
+  "inputs": [
+    {
+      "id": "areaLength",
+      "label": "Area Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 30,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Length of the area to insulate"
+    },
+    {
+      "id": "areaWidth",
+      "label": "Area Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Width of the area to insulate"
+    },
+    {
+      "id": "insulationType",
+      "label": "Insulation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "batt",
+      "options": [
+        { "value": "batt", "label": "Fiberglass Batt" },
+        { "value": "blown", "label": "Blown-In (Cellulose)" },
+        { "value": "spray-foam", "label": "Spray Foam" },
+        { "value": "rigid-board", "label": "Rigid Board (Polyiso)" }
+      ],
+      "helpText": "Type of insulation material"
+    },
+    {
+      "id": "rValue",
+      "label": "Target R-Value",
+      "type": "select",
+      "required": true,
+      "defaultValue": "R-30",
+      "options": [
+        { "value": "R-13", "label": "R-13 (Walls)" },
+        { "value": "R-19", "label": "R-19 (Floors / Walls)" },
+        { "value": "R-30", "label": "R-30 (Attic — Zone 1-3)" },
+        { "value": "R-38", "label": "R-38 (Attic — Zone 4-5)" },
+        { "value": "R-49", "label": "R-49 (Attic — Zone 6-7)" }
+      ],
+      "helpText": "Target thermal resistance — higher R-values provide more insulation"
+    },
+    {
+      "id": "applicationArea",
+      "label": "Application Area",
+      "type": "select",
+      "required": true,
+      "defaultValue": "attic",
+      "options": [
+        { "value": "attic", "label": "Attic" },
+        { "value": "walls", "label": "Walls" },
+        { "value": "floor", "label": "Floor" },
+        { "value": "crawlspace", "label": "Crawl Space" }
+      ],
+      "helpText": "Where the insulation will be installed"
+    },
+    {
+      "id": "existingInsulation",
+      "label": "Has Existing Insulation",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "Toggle on if adding to existing insulation"
+    },
+    {
+      "id": "existingRValue",
+      "label": "Existing R-Value",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 60,
+      "step": 1,
+      "helpText": "R-value of existing insulation (if any)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalArea",
+      "label": "Total Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "materialQuantity",
+      "label": "Material Quantity",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "materialUnit",
+      "label": "Material Unit",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "insulationThickness",
+      "label": "Thickness (inches)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "effectiveRValue",
+      "label": "Effective R-Value",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "wasteRecommendation",
+      "label": "Recommended Extra (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    }
+  ],
+  "formula": "insulation",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "drywall-calculator",
+    "square-footage-calculator",
+    "paint-calculator",
+    "roofing-calculator",
+    "concrete-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Department of Energy — Insulation R-Value Recommendations by Climate Zone",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "R-value thickness tables per manufacturer specifications and DOE climate zone recommendations. Coverage rates for batts, blown-in cellulose, spray foam, and rigid board per industry standard installation guides. Cost data from HomeAdvisor/Angi 2025-2026 national averages.",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null
+}

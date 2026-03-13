@@ -1,0 +1,152 @@
+---
+title: "PTO Payout Calculator"
+description: "Calculate the value of your accrued PTO hours. See gross payout, tax withholding, and net amount you'll receive for unused vacation, sick, and personal days."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+With 80 hours of accrued PTO at \$25 per hour, your gross payout is \$2,000. After 22% tax withholding (\$440), you receive approximately \$1,560 — equivalent to 2 full weeks of paid time off. This calculator shows your total PTO value, estimated taxes, and net payout so you know exactly what to expect on your final paycheck or PTO cash-out.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What This Calculator Shows
+
+This calculator converts your accrued PTO balance into a dollar amount. The **gross payout** is the total value of your unused hours before any deductions — calculated by multiplying your total PTO hours by your hourly rate. If you are salaried, divide your annual salary by 2,080 to get your equivalent hourly rate.
+
+The **tax withholding** is an estimate of federal and state income tax withheld from the payout. PTO payouts are taxed as supplemental wages — the IRS flat rate for supplemental wages under \$1 million is 22%, which is the default used here. Your actual withholding depends on your W-4 elections and state tax rules. The **net payout** is the amount deposited to your account after withholding.
+
+Additional outputs include **daily value** (what one PTO day is worth at your rate), **weekly value** (a 5-day work week equivalent), and **total weeks off** so you can see your balance in time rather than dollars. Use the [Paycheck Calculator](/finance/paycheck-calculator) for a more detailed take-home pay estimate or the [Salary Calculator](/finance/salary-calculator) to verify your hourly rate conversion.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your hourly rate** — your base pay per hour. If you earn a salary, divide your annual salary by 2,080 (40 hours times 52 weeks). A \$60,000 salary equals \$28.85 per hour.
+2. **Enter accrued PTO hours** — check your most recent pay stub or HR portal for your current balance. Enter the total hours, not days.
+3. **Add accrued PTO days (optional)** — if your employer tracks some PTO in days rather than hours, enter those separately. They are converted to hours using your work-day length.
+4. **Set hours per work day** — the default is 8. Adjust if your standard shift is longer (e.g., 10-hour shifts for a 4-day week) or shorter (e.g., 6-hour part-time).
+5. **Set your tax withholding rate** — the default 22% matches the IRS supplemental wage flat rate. Adjust for your state or if you expect a different effective rate.
+6. **Select your PTO payout policy** — choose "Full Payout" if your employer pays 100% of unused PTO, "Partial Payout" if only a percentage is paid, or "Use It or Lose It" if accrued PTO is forfeited on separation.
+7. **Review results** — the net payout appears at the top, followed by a full breakdown of gross amount, taxes, time equivalents, and a summary table.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+$$
+\text{Total Hours} = \text{Accrued Hours} + (\text{Accrued Days} \times \text{Hours per Day})
+$$
+
+$$
+\text{Gross Payout} = \text{Total Hours} \times \text{Hourly Rate} \times \frac{\text{Payout \%}}{100}
+$$
+
+$$
+\text{Tax Withholding} = \text{Gross Payout} \times \frac{\text{Tax Rate}}{100}
+$$
+
+$$
+\text{Net Payout} = \text{Gross Payout} - \text{Tax Withholding}
+$$
+
+Where:
+- **Accrued Hours** = total PTO hours accumulated (from pay stubs or HR portal)
+- **Accrued Days** = additional PTO days tracked separately, converted to hours
+- **Hours per Day** = standard work-day length (typically 8 hours)
+- **Hourly Rate** = base hourly pay (salary ÷ 2,080 for salaried employees)
+- **Payout %** = percentage of PTO paid out (100% for full payout, lower for partial)
+- **Tax Rate** = estimated withholding rate (22% is the IRS default for supplemental wages under $1 million)
+
+*Source: IRS Publication 15 (Circular E) — supplemental wage withholding rate of 22% for payments under \$1 million. Bureau of Labor Statistics Employee Benefits Survey (March 2024) — average PTO accrual rates by tenure. U.S. Department of Labor Wage and Hour Division — state PTO payout requirements.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+A marketing manager earns \$40 per hour and has 120 accrued PTO hours plus 5 additional PTO days. The company pays out 100% of unused PTO. She expects a 22% tax withholding rate.
+
+**Step 1 — Calculate total PTO hours:**
+- 120 hours + (5 days × 8 hours/day) = **160 hours**
+
+**Step 2 — Convert to days and weeks:**
+- 160 hours ÷ 8 hours/day = **20 days**
+- 20 days ÷ 5 days/week = **4 weeks**
+
+**Step 3 — Calculate gross payout:**
+- 160 hours × \$40/hour × 100% = **\$6,400**
+
+**Step 4 — Calculate tax withholding:**
+- \$6,400 × 22% = **\$1,408**
+
+**Step 5 — Calculate net payout:**
+- \$6,400 − \$1,408 = **\$4,992**
+
+*Interpretation:* The manager's 160 hours of accrued PTO is worth \$6,400 before taxes. After the standard 22% supplemental wage withholding, she receives \$4,992. This is equivalent to 4 full work weeks of paid time. If she had taken this time off instead, her regular paychecks would have covered the same gross amount — but without the lump-sum tax hit that sometimes pushes PTO payouts into a temporarily higher withholding bracket.
+
+{/* Section 10: PTO Payout Laws by State */}
+## PTO Payout Laws by State
+
+State labor laws vary significantly on whether employers must pay out unused PTO when an employee leaves. The table below summarizes the major categories.
+
+| Category | States | Rule |
+|---|---|---|
+| **Payout Required** | California, Colorado, Illinois, Louisiana, Massachusetts, Montana, Nebraska | Employers must pay out all accrued, unused PTO regardless of company policy |
+| **Payout Required if Policy Promises It** | Alabama, Alaska, Arizona, Connecticut, Delaware, DC, Hawaii, Idaho, Indiana, Iowa, Kentucky, Maine, Maryland, Michigan, Minnesota, New Hampshire, New Jersey, New York, North Carolina, North Dakota, Ohio, Oklahoma, Oregon, Pennsylvania, Rhode Island, South Carolina, Tennessee, Texas, Utah, Vermont, Virginia, Washington, West Virginia, Wyoming | If the employer's written policy or contract states PTO is paid out, they must follow it |
+| **No Payout Required** | Florida, Georgia, Mississippi, Missouri, South Dakota, Wisconsin | No state law requires PTO payout; company policy controls entirely |
+
+**Key points:**
+- In California and Colorado, "use it or lose it" policies are illegal — all accrued PTO is considered earned wages.
+- In most states, an employer's written PTO policy is the governing document. If the handbook says "PTO is forfeited upon separation," that may be enforceable depending on the state.
+- Federal law (FLSA) does not require PTO payout. This is entirely a state-level issue.
+- Always check your employee handbook and consult your state's Department of Labor for current rules.
+
+{/* Section 11: Payout Policy Types */}
+## PTO Payout Policy Types Explained
+
+**Full Payout (100%)** — The employer pays the full dollar value of all accrued, unused PTO hours. This is the most common policy at large companies and is legally required in states like California, Colorado, and Massachusetts. Employees receive a lump sum on their final paycheck.
+
+**Partial Payout** — The employer pays a percentage of accrued PTO, often 50%–75%. Some companies cap the payout at a certain number of hours (e.g., "we pay out up to 80 hours"). This is common in states where payout is not legally mandated but the company wants to offer a benefit.
+
+**Use It or Lose It** — Accrued PTO is forfeited if not used by a deadline (often year-end or termination date). This policy is **illegal in California, Colorado, Montana, and Nebraska**. In many other states, it is permissible if clearly stated in the employee handbook. Under this policy, your PTO has zero cash value at separation.
+
+**Unlimited PTO** — Increasingly common at tech companies, "unlimited" PTO typically means there is no accrual tracking and therefore no balance to pay out. This effectively functions as a use-it-or-lose-it model with no payout obligation, which is one reason employers adopt it.
+
+{/* Section 14: FAQ */}
+<section className="faq-section">
+
+## Frequently Asked Questions
+
+### Is PTO payout taxed differently than regular pay?
+
+PTO payouts are classified as supplemental wages by the IRS. Employers can withhold at a flat 22% rate (for amounts under \$1 million) or use the aggregate method, which adds the payout to your regular pay for the period and withholds based on the combined total. The flat 22% method is more common because it is simpler. Your actual tax liability is determined when you file your annual return — if too much was withheld, you receive a refund.
+
+### How do I find my hourly rate if I am salaried?
+
+Divide your annual salary by 2,080 (40 hours per week times 52 weeks). For example, a \$60,000 salary equals \$28.85 per hour. If you work a non-standard schedule, adjust accordingly: a \$60,000 salary on a 37.5-hour week equals \$60,000 ÷ 1,950 = \$30.77 per hour. Your pay stub or offer letter should confirm the calculation your employer uses.
+
+### Can my employer refuse to pay out my PTO?
+
+It depends on your state. In California, Colorado, Illinois, Louisiana, Massachusetts, Montana, and Nebraska, employers are legally required to pay out all accrued PTO. In most other states, the employer's written policy governs — if the handbook or contract says PTO is forfeited on separation, that may be enforceable. If there is no written policy, courts often side with the employee. Check your state's Department of Labor website for current rules.
+
+### How much PTO does the average American get?
+
+According to the Bureau of Labor Statistics (March 2024), private industry workers receive an average of 11 paid vacation days and 8 paid sick days per year after 1 year of service. After 5 years, the average rises to 15 vacation days. Combined with holidays (typically 8), the average worker receives about 27–31 paid days off per year, or approximately 216–248 hours of total PTO.
+
+### Does unused PTO roll over to the next year?
+
+Rollover policies vary by employer. Some companies allow full rollover, others cap accrual (e.g., "you may not accrue more than 240 hours"), and some require you to use PTO within the calendar year. In California, employers cannot impose a "use it or lose it" deadline but may set a reasonable accrual cap. Check your employee handbook for your company's specific rollover or accrual cap policy.
+
+</section>
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Internal Revenue Service** — Publication 15 (Circular E), Employer's Tax Guide: supplemental wage withholding at 22% flat rate for amounts under \$1 million (2025)
+- **U.S. Bureau of Labor Statistics** — Employee Benefits Survey (March 2024): average PTO accrual rates by tenure, industry, and employer size
+- **U.S. Department of Labor** — Wage and Hour Division: state-by-state PTO payout requirements and "use it or lose it" legality
+- **National Conference of State Legislatures** — Paid Leave legislation tracker (2025)
+
+The gross payout formula multiplies total accrued hours (including day-to-hour conversion) by the hourly rate and applicable payout percentage. Tax withholding uses the IRS flat supplemental rate as a default estimate. Net payout is gross minus withholding. Daily and weekly values represent the earning power of one PTO day or week at the given hourly rate. The calculator does not account for state-specific tax rates, local taxes, or employer-specific withholding elections — use it as an estimate and consult your payroll department for exact figures.

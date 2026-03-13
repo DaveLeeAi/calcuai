@@ -1,0 +1,218 @@
+{
+  "id": "deck-calculator",
+  "title": "Deck Calculator",
+  "slug": "deck-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "deck calculator",
+  "metaTitle": "Deck Calculator | Estimate Decking Materials & Cost",
+  "metaDescription": "Calculate decking boards, joists, posts, and footings for your deck project. Compare material costs for pressure-treated, cedar, and composite. Free calculator.",
+  "inputs": [
+    {
+      "id": "deckLength",
+      "label": "Deck Length",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 16,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Length of the deck (longest dimension)"
+    },
+    {
+      "id": "deckWidth",
+      "label": "Deck Width",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 12,
+      "min": 1,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Width of the deck (shorter dimension)"
+    },
+    {
+      "id": "deckHeight",
+      "label": "Deck Height",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 3,
+      "min": 0,
+      "step": 0.5,
+      "units": [
+        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
+        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
+        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+      ],
+      "defaultUnit": "ft",
+      "helpText": "Height from ground to top of deck surface"
+    },
+    {
+      "id": "boardType",
+      "label": "Decking Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "pressure-treated",
+      "options": [
+        { "value": "pressure-treated", "label": "Pressure-Treated Pine" },
+        { "value": "cedar", "label": "Cedar" },
+        { "value": "composite", "label": "Composite" },
+        { "value": "tropical-hardwood", "label": "Tropical Hardwood (Ipe)" }
+      ],
+      "helpText": "Decking board material"
+    },
+    {
+      "id": "boardWidth",
+      "label": "Board Width",
+      "type": "select",
+      "required": true,
+      "defaultValue": "5.5",
+      "options": [
+        { "value": "5.5", "label": "5.5\" (Nominal 6\")" },
+        { "value": "3.5", "label": "3.5\" (Nominal 4\")" }
+      ],
+      "helpText": "Actual width of decking boards"
+    },
+    {
+      "id": "joistSpacing",
+      "label": "Joist Spacing",
+      "type": "select",
+      "required": true,
+      "defaultValue": "16",
+      "options": [
+        { "value": "12", "label": "12\" on center" },
+        { "value": "16", "label": "16\" on center (standard)" },
+        { "value": "24", "label": "24\" on center" }
+      ],
+      "helpText": "Distance between joist centers"
+    },
+    {
+      "id": "railingLength",
+      "label": "Railing Length",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 500,
+      "step": 1,
+      "suffix": "ft",
+      "helpText": "Linear feet of railing needed (0 if none)"
+    },
+    {
+      "id": "stairCount",
+      "label": "Stair Treads",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "helpText": "Number of stair treads needed"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "deckArea",
+      "label": "Deck Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "deckingBoards",
+      "label": "Decking Boards",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "joists",
+      "label": "Joists",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "posts",
+      "label": "Support Posts",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "concreteFootings",
+      "label": "Concrete Footings",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "screws",
+      "label": "Deck Screws",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "costEstimate",
+      "label": "Estimated Material Cost",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "materialsBreakdown",
+      "label": "Materials Breakdown",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "deck",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "square-footage-calculator",
+    "stair-calculator",
+    "board-foot-calculator",
+    "fence-calculator",
+    "paint-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "American Wood Council — Deck Construction Guide (DCA6)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Joist spacing, post spacing, and beam span tables from the American Wood Council Deck Construction Guide (DCA6-2012). Material cost data from HomeAdvisor/Angi 2025-2026 national averages. Screw count based on deck fastener manufacturers (350 per 100 sq ft).",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "stair-calculator",
+    "concrete-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": "spring-summer"
+}

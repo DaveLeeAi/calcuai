@@ -1,0 +1,201 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 16 x 12-foot pressure-treated deck requires approximately 29 decking boards, 13 joists, 9 support posts, 9 concrete footings, and 672 screws — with material costs ranging from $2,880 to $4,800. Upgrading to composite decking raises that to $5,760–$8,640 for the same footprint, but eliminates annual staining and extends the usable lifespan from 15 years to 25–30 years. Enter your deck dimensions below for a complete materials list and cost estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Calculates
+
+This calculator estimates all structural and surface materials for a rectangular deck: decking boards, joists, beams, support posts, concrete footings, railing components, and deck screws. It generates a complete materials list you can take directly to the lumber yard or home center.
+
+The **decking board count** accounts for the actual board width (5.5 inches for nominal 6-inch boards or 3.5 inches for nominal 4-inch boards) and includes a 10% waste factor for end cuts and defective boards. The **joist count** is calculated from deck length divided by your selected joist spacing (12, 16, or 24 inches on center), plus one — because joists include both the first and last position. Standard residential decks use 16-inch joist spacing; composite decking manufacturers often require 12-inch spacing for diagonal installation patterns.
+
+The **post and footing count** uses an 8-foot grid — one post at every beam-and-span intersection, ensuring the deck meets load-bearing code requirements per the American Wood Council's DCA6 Deck Construction Guide. The **screw count** is based on the industry standard of 350 deck screws per 100 square feet of decking surface. For estimating the concrete volume needed for each footing, use our [Concrete Calculator](/construction/concrete-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter deck length** — the longer dimension of your deck, measured parallel to the house wall in most configurations. For an L-shaped deck, calculate each rectangular section separately.
+
+2. **Enter deck width** — the shorter dimension, typically extending outward from the house. Standard residential decks range from 10 to 16 feet wide.
+
+3. **Enter deck height** — measure from grade (ground level) to the top of the finished deck surface. This determines post length: deck height plus 1 foot for below-grade embedment in concrete footings. Decks over 30 inches above grade typically require building permits and guard rails.
+
+4. **Select decking material** — pressure-treated pine ($15–$25/sq ft installed), cedar ($25–$35/sq ft), composite ($30–$45/sq ft), or tropical hardwood ($40–$60/sq ft). Material choice affects cost but not structural calculations.
+
+5. **Select board width** — 5.5-inch (nominal 6-inch) boards are standard. Narrower 3.5-inch (nominal 4-inch) boards create a different visual pattern but require more boards and take longer to install.
+
+6. **Select joist spacing** — 16 inches on center is standard for most decking. Use 12-inch spacing for diagonal board patterns or per composite manufacturer requirements. 24-inch spacing is acceptable only for certain 2x6 decking installations.
+
+7. **Enter railing length** — total linear feet of railing needed. Measure all sides of the deck that require a guard rail (any edge more than 30 inches above grade). Set to 0 if no railing is needed.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Deck framing follows structural engineering standards from the American Wood Council, with material quantities derived from deck area and spacing requirements.
+
+**Deck area:**
+
+$$A = L \times W$$
+
+**Decking boards (with 10% waste):**
+
+$$B = \left\lceil \frac{W}{W_b / 12} \times 1.1 \right\rceil$$
+
+**Joists:**
+
+$$J = \left\lceil \frac{L}{S_j / 12} \right\rceil + 1$$
+
+**Support posts (8 ft grid):**
+
+$$P = \left(\left\lceil \frac{L}{8} \right\rceil + 1\right) \times \left(\left\lceil \frac{W}{8} \right\rceil + 1\right)$$
+
+**Deck screws:**
+
+$$\text{Screws} = \left\lceil A \times \frac{350}{100} \right\rceil$$
+
+**Railing posts (every 6 ft):**
+
+$$R_p = \left\lceil \frac{R_L}{6} \right\rceil + 1$$
+
+Where:
+
+- **L** = deck length (feet)
+- **W** = deck width (feet)
+- **W_b** = board width in inches (5.5 or 3.5)
+- **S_j** = joist spacing in inches (12, 16, or 24)
+- **R_L** = railing length in linear feet
+- **A** = deck area (square feet)
+- **350** = industry standard deck screws per 100 sq ft
+
+Post count uses minimum 4 for any deck. Concrete footings = 1 per post.
+
+**Source:** Post and beam spacing per **American Wood Council** *DCA6 — Prescriptive Residential Wood Deck Construction Guide*. Screw count per **CAMO** and **GRK** fastener manufacturer guidelines. Cost data from **HomeAdvisor/Angi** 2025–2026 national averages.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Backyard Deck — 16 x 12 ft, Pressure-Treated
+
+A homeowner is building a ground-level deck (3 ft above grade) attached to the back of their house using pressure-treated lumber with 5.5-inch decking boards and standard 16-inch joist spacing.
+
+**Inputs:**
+- Deck Length: 16 ft, Width: 12 ft, Height: 3 ft
+- Material: Pressure-Treated Pine
+- Board Width: 5.5", Joist Spacing: 16" OC
+- Railing Length: 40 ft (three open sides)
+
+**Step-by-step:**
+
+1. Deck area: 16 x 12 = **192 sq ft**
+2. Boards across width: 12 / (5.5/12) = 12 / 0.458 = 26.2 boards × 1.1 waste = **29 boards**
+3. Board linear feet: 29 x 16 ft = **464 linear feet** of decking
+4. Joists: ceil(16 / 1.333) + 1 = 12 + 1 = **13 joists** at 12-ft lengths
+5. Joist linear feet: 13 x 12 = **156 linear feet**
+6. Beams: ceil(12/8) + 1 = 2 + 1 = **3 beams** at 16-ft lengths
+7. Posts: (ceil(16/8)+1) x (ceil(12/8)+1) = 3 x 3 = **9 posts**
+8. Post height: 3 + 1 = **4 ft** each (includes 1 ft below grade)
+9. Concrete footings: **9 footings**
+10. Railing posts: ceil(40/6) + 1 = 7 + 1 = **8 railing posts**
+11. Screws: ceil(192 x 3.5) = **672 deck screws**
+12. Cost: 192 x $15–$25 = **$2,880–$4,800** (materials)
+
+**Interpretation:** This is a mid-size residential deck — large enough for a dining table and grill area. Nine support posts on an 8-foot grid provides code-compliant load bearing. At $2,880–$4,800 for materials, add $2,000–$4,000 for professional labor if not building DIY. The 40 feet of railing covers three open sides (two 12-ft sides + one 16-ft back edge).
+
+### Example 2: Composite Deck — 20 x 14 ft
+
+A homeowner wants a larger composite deck with a diagonal board pattern requiring 12-inch joist spacing.
+
+**Inputs:**
+- Deck Length: 20 ft, Width: 14 ft, Height: 4 ft
+- Material: Composite
+- Board Width: 5.5", Joist Spacing: 12" OC
+- Railing: 48 ft, Stairs: 4 treads
+
+**Step-by-step:**
+
+1. Deck area: 20 x 14 = **280 sq ft**
+2. Boards: ceil(14/0.458 x 1.1) = ceil(30.57 x 1.1) = **34 boards**
+3. Joists: ceil(20/1.0) + 1 = 20 + 1 = **21 joists** (12" OC requires more)
+4. Posts: (ceil(20/8)+1) x (ceil(14/8)+1) = 4 x 3 = **12 posts**
+5. Screws: ceil(280 x 3.5) = **980 screws**
+6. Cost: 280 x $30–$45 = **$8,400–$12,600** (materials)
+
+**Interpretation:** Composite decking at 12-inch joist spacing uses 62% more joists than 16-inch spacing. The material cost is substantially higher than pressure-treated, but composite requires no annual staining or sealing — the 25–30-year warranty with zero maintenance often makes it cheaper over the deck's lifetime.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Material type drives cost but not structure.** A 200-square-foot deck needs the same joists, posts, and footings whether you use $2/linear-foot pressure-treated boards or $5/linear-foot composite. The structural lumber (joists, beams, posts) is always pressure-treated regardless of the decking surface material.
+
+**Joist spacing has an outsized impact on lumber.** Switching from 16-inch to 12-inch joist spacing increases joist count by 33% — and joist lumber is often the largest single material expense. Only use 12-inch spacing when the decking manufacturer requires it (diagonal composite installations) or when building with thinner decking that cannot span 16 inches.
+
+**Post spacing follows an 8-foot grid rule.** The American Wood Council DCA6 guide prescribes maximum beam and post spans based on lumber species and grade. This calculator uses an 8-foot maximum grid, which is appropriate for most residential decks using standard pressure-treated Southern Yellow Pine.
+
+**Deck height triggers code requirements.** Decks more than 30 inches above grade require guardrails in all U.S. jurisdictions per the International Residential Code (IRC R507.3). Decks attached to houses require a ledger board with through-bolts or lag screws — never nails alone. Most jurisdictions require building permits for any deck over 200 sq ft or 30 inches high.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **rectangular deck** attached to a house on one side. L-shaped, wraparound, or multi-level decks should be calculated as separate rectangular sections.
+- Post spacing uses a conservative **8-foot grid**. Local codes and actual lumber spans may allow wider spacing with engineered beams or higher-grade lumber.
+- **Stair treads** are counted but stair stringers, risers, and framing are not. Stairs typically require 3 stringers for widths up to 36 inches.
+- Cost estimates include **surface decking materials only**. Structural lumber (joists, beams, posts, ledger), concrete footings, hardware (joist hangers, post brackets), and railing materials are additional costs.
+- Board count includes **10% waste** for end cuts and defective boards. Complex patterns (herringbone, picture frame) may need 15–20%.
+- Screw count of **350 per 100 sq ft** assumes face-screwing. Hidden fastener systems use fewer screws but are more expensive per unit.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many boards do I need for a 12 x 16-foot deck?
+
+A 16 x 12-foot deck using standard 5.5-inch (nominal 6-inch) decking boards needs approximately 29 boards at 16-foot lengths, including 10% waste. This is calculated by dividing the deck width (12 ft) by the board width (5.5/12 = 0.458 ft per board), which gives 26.2 boards, multiplied by 1.1 for waste. In total linear feet, that is about 464 feet of decking material. If buying 8-foot boards instead of 16-foot, double the board count to 58.
+
+### How much does it cost to build a deck per square foot?
+
+Deck costs range from $15–$25 per square foot for pressure-treated pine, $25–$35 for cedar, $30–$45 for composite, and $40–$60 for tropical hardwood like Ipe. These are material-only costs. Add $15–$35 per square foot for professional labor, bringing total installed cost to $30–$60 for pressure-treated and $45–$80 for composite. A typical 200-square-foot pressure-treated deck costs $6,000–$12,000 total installed.
+
+### How far apart should deck joists be?
+
+Standard joist spacing is 16 inches on center, which is suitable for most 5/4-inch (1-inch actual) and 2-inch decking. Use 12-inch joist spacing if installing composite decking diagonally, if using thinner decking boards, or if building to stricter local codes. Use 24-inch spacing only for 2x6 decking laid flat. The American Wood Council DCA6 guide specifies maximum spans by lumber species and grade — always check local building code requirements.
+
+### How many concrete footings does a deck need?
+
+A deck needs one concrete footing per support post. Posts are typically placed on an 8-foot grid: for a 16 x 12-foot deck, that is 3 rows x 3 columns = 9 footings. Small decks (under 8 x 8 ft) need a minimum of 4 footings. Each footing should extend below the frost line (24–48 inches in most U.S. regions) and be at least 16–24 inches in diameter per local code. Our [Concrete Calculator](/construction/concrete-calculator) can estimate the concrete volume for each footing.
+
+### Do I need a permit to build a deck?
+
+Most U.S. jurisdictions require a building permit for decks that are attached to a house, exceed 200 square feet, or stand more than 30 inches above grade. Free-standing ground-level decks under 200 sq ft are often exempt, but this varies by county and municipality. The permit ensures your deck meets the International Residential Code (IRC Section R507) for structural safety, including footing depth, ledger attachment, guard rail height, and stair requirements. Check with your local building department before starting.
+
+### How long does pressure-treated wood last on a deck?
+
+Pressure-treated Southern Yellow Pine typically lasts 15–20 years with regular maintenance (cleaning and re-staining every 2–3 years). Without maintenance, it may warp, crack, and develop surface checks within 5–10 years, though the structural integrity from the chemical treatment persists. Cedar lasts 15–25 years naturally due to inherent rot resistance. Composite decking carries 25–30-year warranties with no staining or sealing required. Tropical hardwoods like Ipe can last 40–75 years.
+
+### Should I use screws or nails for decking?
+
+Always use screws for decking — never nails. Deck screws (typically #8 x 2.5-inch or #10 x 3-inch) provide superior holding power, resist the expansion and contraction cycles that loosen nails, and allow individual boards to be removed for repair or replacement. Use stainless steel or coated deck screws rated for treated lumber (ACQ-compatible). Budget approximately 350 screws per 100 square feet. Hidden fastener systems create a screw-free surface appearance but cost $100–$200 more per 100 sq ft.
+
+### What size lumber do I need for deck joists?
+
+For 16-inch joist spacing, 2x8 joists span up to 10 feet 6 inches, 2x10 joists span up to 13 feet 5 inches, and 2x12 joists span up to 16 feet 5 inches (Southern Yellow Pine #2 grade). At 12-inch spacing, spans increase by approximately 10%. The deck width determines the required joist span. For a 12-foot-wide deck at 16-inch OC, 2x10 joists are the standard choice. Check the AWC span tables for your specific lumber species and grade.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses structural guidelines from the **American Wood Council (AWC)** *DCA6 — Prescriptive Residential Wood Deck Construction Guide* (2012/2015) for post spacing, beam span, and joist span requirements. Board count includes a 10% waste factor per standard lumber industry practice. Screw count of 350 per 100 sq ft is based on face-screwing guidelines from **CAMO**, **GRK**, and **Simpson Strong-Tie** fastener specifications. Railing post spacing of 6 feet maximum follows **IRC R507.2** guard post requirements. Cost data reflects 2025–2026 U.S. retail materials pricing from **HomeAdvisor** and **Angi** national averages.
+
+{/* Section 17: Disclaimer — auto-rendered */}

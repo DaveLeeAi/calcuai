@@ -1,0 +1,179 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+With \$25,000 in total debt across three accounts and \$200/month in extra payments, the snowball method eliminates your smallest balance in just 12 months, creating momentum that clears all debt in 50 months instead of 93 — saving \$6,551 in interest. When your smallest balance also carries the highest rate, snowball and avalanche produce identical results: 43 months on the default inputs below, saving \$1,592 in interest versus minimum-only payments.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+The debt snowball calculator reveals your complete payoff timeline when you direct every extra dollar to the **smallest balance first**. The key insight is how payment cascading accelerates your progress — once that first debt hits zero, its minimum payment rolls into the next target, creating a growing wave of cash that eliminates debts faster with each payoff.
+
+Your **Months to Debt Freedom** shows the total timeline. Compare this to the minimums-only scenario in the summary to see exactly how many months your extra payment shaves off. On a \$25,000 three-debt portfolio, adding \$200/month extra typically cuts the payoff timeline by 10 to 40 months depending on the interest rate spread.
+
+The **Payoff Order** section shows which debt gets eliminated first, second, and third. In the snowball method, this is always sorted smallest-to-largest by balance, regardless of interest rate. Each payoff triggers a cascade: the freed-up minimum payment adds to your extra payment pool, making the next debt fall even faster.
+
+The **Interest Saved vs. Minimums Only** figure quantifies the dollar benefit of your extra payment. Even \$100/month extra on a \$25,000 debt portfolio can save \$3,000 or more in interest charges. The avalanche comparison fields in the summary show whether switching to highest-rate-first ordering would save additional interest on your specific debt mix.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your smallest debt first** — input the current balance, annual interest rate (APR), and minimum monthly payment for your smallest balance. Organizing debts from smallest to largest helps you see the snowball order immediately.
+
+2. **Add remaining debts** — enter details for up to 5 debts total. Leave unused slots at \$0. Include all debts you want in the payoff plan: credit cards, personal loans, car loans, medical debt, and student loans.
+
+3. **Set your Extra Monthly Payment** — this is the amount above and beyond all minimum payments combined. Start with whatever you can afford consistently. Even \$50/month makes a measurable difference. The default is \$200.
+
+4. **Review the payoff order** — verify the calculator sorted your debts by balance (smallest first). Check the month each debt pays off and the total interest. Compare the avalanche fields in the summary to see if the math-optimal approach would save meaningful additional interest on your specific debts.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The snowball method uses iterative monthly amortization with payment cascading. Each month, interest accrues and payments are applied:
+
+$$\text{Interest}_i = B_i \times \frac{r}{12}$$
+
+$$B_{i+1} = B_i + \text{Interest}_i - \text{Payment}_i$$
+
+Where:
+
+- **$B_i$** = remaining balance of debt at month $i$ (dollars)
+- **$r$** = annual interest rate for that debt (decimal, so 19% = 0.19)
+- **$\text{Payment}_i$** = minimum payment + any extra payment applied to this debt
+
+**Snowball ordering:** Active debts are sorted by balance ascending. All extra payment goes to the debt with the lowest remaining balance.
+
+**Payment cascading:** When a debt reaches \$0, its minimum payment is added to the extra payment pool. This creates the "snowball" effect — each payoff frees up more cash for the next target. On a five-debt portfolio, the fifth debt often receives 3 to 5 times the original extra payment amount.
+
+**Source:** Dave Ramsey, *The Total Money Makeover* (2003). The iterative amortization methodology is consistent with Consumer Financial Protection Bureau (CFPB) debt management guidelines. Behavioral effectiveness data from Northwestern Mutual and Harvard Business Review research.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Three Debts — Snowball with \$200 Extra
+
+**Inputs:**
+- Personal Loan: \$3,000 at 7% APR, \$75 minimum
+- Credit Card: \$10,000 at 22% APR, \$225 minimum
+- Car Loan: \$12,000 at 9% APR, \$250 minimum
+- Extra Monthly Payment: \$200
+
+**Step-by-step:**
+
+1. Total minimum payments: \$75 + \$225 + \$250 = **\$550/month**
+2. Total monthly outlay: \$550 + \$200 extra = **\$750/month**
+3. Snowball targets the personal loan first (\$3,000 — smallest balance)
+4. Personal loan receives: \$75 minimum + \$200 extra = **\$275/month**
+5. Month 1 personal loan interest: \$3,000 x 0.07/12 = **\$17.50**
+6. Personal loan pays off around **month 12**, costing \$109 in interest
+7. After personal loan payoff: freed-up \$75 minimum + \$200 extra = **\$275** now targeting credit card
+8. Credit card receives: \$225 minimum + \$275 = **\$500/month**
+9. Credit card pays off around **month 40**, then all cash hits the car loan
+10. Car loan pays off around **month 50**
+
+**Results:**
+- Total months to debt freedom: **50**
+- Total interest paid: **\$7,613**
+- Interest saved vs. minimums only: **\$6,551**
+
+**Interpretation:** The snowball method's strength shows immediately — the personal loan vanishes in 12 months, giving you a psychological win and freeing \$275/month for the credit card. Without extra payments, this same portfolio takes 93 months and costs \$14,164 in interest. The avalanche method would clear this same debt in 46 months, saving \$1,415 more in interest by targeting the 22% credit card first.
+
+### Example 2: When Snowball Equals Avalanche
+
+**Inputs (default calculator values):**
+- Debt 1: \$2,000 at 19% APR, \$50 minimum
+- Debt 2: \$8,000 at 6% APR, \$200 minimum
+- Debt 3: \$15,000 at 5% APR, \$300 minimum
+- Extra: \$200/month
+
+When the smallest balance also has the highest interest rate, both methods produce identical results: **43 months**, \$2,374 total interest, \$1,592 saved. This happens because both methods target the same debt first. Approximately 15-20% of real-world debt portfolios have this alignment.
+
+{/* Section 10: Snowball vs Avalanche Comparison */}
+## Snowball vs. Avalanche: When to Use Each
+
+| Factor | Snowball (Smallest First) | Avalanche (Highest Rate First) |
+|--------|--------------------------|-------------------------------|
+| **Payoff order** | Smallest balance first | Highest interest rate first |
+| **Total interest** | Higher (typically \$500–\$2,000 more) | Lower (mathematically optimal) |
+| **Motivation** | Quick wins build momentum | Slower initial progress |
+| **Best for** | Multiple small debts, motivation-driven | High-rate debt, math-driven |
+| **Research backing** | HBR: higher completion rates | CFPB: lower total cost |
+| **Identical results when** | Smallest balance = highest rate | Smallest balance = highest rate |
+
+The snowball method trades some interest savings for **faster psychological wins**. A 2016 Harvard Business Review study of 6,000+ debt accounts found that people who used the snowball method were significantly more likely to eliminate all their debt, even though they paid more total interest. If consistency is your challenge, snowball wins. If you are disciplined and want to minimize cost, use the [Debt Avalanche Calculator](/finance/debt-avalanche-calculator).
+
+{/* Section 11: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Extra Payment Amount** — The single most impactful variable. On a \$25,000 three-debt portfolio, increasing extra payment from \$100 to \$300 can cut the payoff timeline by 15 to 25 months and save an additional \$2,000 to \$4,000 in interest. Test different amounts to find your sustainable level.
+
+**Interest Rate Spread** — When there is a large gap between your highest and lowest rates, the snowball method costs more than avalanche because it may delay attacking the high-rate debt. A portfolio with rates of 22%, 9%, and 7% shows a \$1,415 difference between methods. If all rates are within 2-3 points, the difference shrinks below \$200, making snowball the clear choice for its motivational benefits.
+
+**Number of Debts** — More debts mean more "wins" with snowball. Each payoff releases a minimum payment, creating increasingly powerful cascading. With 5 debts, the final debt may receive 4 to 5 times the original extra payment amount.
+
+**Balance Distribution** — The snowball method performs best when you have several small debts that can be eliminated quickly. If your smallest debt is still \$10,000+, the first win takes longer and the psychological advantage diminishes. Consider whether a [Debt Consolidation Calculator](/finance/debt-consolidation-calculator) approach might work better.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes **fixed interest rates** for all debts. Variable-rate debts (credit cards, adjustable-rate loans) may change. Recalculate quarterly if rates change.
+- Assumes **fixed minimum payments**. Some credit cards calculate minimums as a percentage of balance, which decreases over time. This calculator uses a fixed minimum, the more conservative assumption.
+- Does **not account for new charges** added to revolving credit. If you continue using credit cards during payoff, your actual timeline will be longer. Stop new charges for the plan to work.
+- The extra payment is applied **consistently every month** from month one. Any missed extra payments extend the timeline proportionally.
+- Does **not model balance transfer offers, 0% promo rates, or hardship programs**. Use the [Credit Card Payoff Calculator](/finance/credit-card-payoff-calculator) for single-card scenarios with changing rates.
+- Supports **up to 5 debts**. If you have more, combine your two smallest debts into one entry or prioritize the top 5 by balance.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the debt snowball method?
+
+The debt snowball method is a debt repayment strategy where you pay minimum payments on all debts and direct all extra money to the debt with the **smallest balance** first, regardless of interest rate. When that debt is paid off, you roll its payment into the next smallest debt. The "snowball" name comes from the growing payment amount — like a snowball rolling downhill, it gets bigger with each debt eliminated.
+
+### Does the snowball method cost more than avalanche?
+
+Yes, in most cases the snowball method results in higher total interest paid because it does not prioritize high-rate debt. On a typical three-debt portfolio with rates ranging from 5% to 22%, the snowball method costs \$500 to \$2,000 more in total interest than the avalanche method. However, the difference is often less than 10% of total interest, and the snowball method has higher completion rates according to behavioral research.
+
+### How much extra should I pay each month?
+
+Financial advisors recommend directing at least 20% of your after-tax income toward debt repayment (the "20" in the 50/30/20 budget rule). On a \$25,000 debt portfolio, \$200/month extra saves approximately \$1,600 to \$6,500 in interest depending on rate spread and reduces payoff time by 15 to 43 months. Start with whatever you can sustain consistently — \$50 to \$100 is better than an aggressive amount you abandon after three months.
+
+### Should I include my mortgage in the snowball?
+
+Most financial advisors exclude mortgage debt from the snowball because of its low interest rate and long term. The snowball method works best for consumer debt: credit cards, personal loans, car loans, medical bills, and student loans. If your mortgage rate exceeds 7-8%, consider including it. Otherwise, focus the snowball on higher-rate consumer debt first.
+
+### What if I have the same balance on two debts?
+
+When two debts have equal balances, the snowball calculator breaks the tie by targeting the one with the **higher interest rate** first. This maximizes savings when the snowball ordering cannot differentiate by balance. The result is a hybrid of snowball and avalanche at that specific decision point.
+
+### Can I switch from snowball to avalanche mid-payoff?
+
+Yes. Many people start with snowball for early motivation, then switch to avalanche after eliminating 1 to 2 small debts. Recalculate by entering only your remaining debts and using the [Debt Avalanche Calculator](/finance/debt-avalanche-calculator) for the revised plan.
+
+### How does the snowball effect work mathematically?
+
+When you pay off a \$3,000 personal loan with a \$75 minimum, that \$75 gets added to your extra payment pool. If your extra payment was \$200, the next debt now receives \$275 extra per month instead of \$200. After the second payoff, the cascade grows even larger. On a five-debt portfolio, the final debt may receive \$400 to \$600/month in cascaded payments — 2 to 3 times the original extra amount.
+
+### Is the snowball method good for credit card debt?
+
+The snowball method is particularly effective for credit card debt portfolios because credit cards tend to have small revolving balances that can be eliminated quickly. If you have 3 to 5 credit cards with balances under \$5,000 each, snowball generates rapid wins that build momentum. For a single large credit card balance, use the [Credit Card Payoff Calculator](/finance/credit-card-payoff-calculator) instead.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator implements the iterative monthly amortization methodology with payment cascading, ordering debts by balance ascending per the **debt snowball method** popularized by Dave Ramsey in *The Total Money Makeover* (2003). The behavioral effectiveness of the snowball approach is supported by a 2016 study published in the **Harvard Business Review** by Remi Trudel and colleagues, which analyzed over 6,000 debt repayment accounts and found that focusing on small balances first increased the likelihood of complete debt elimination. Interest calculations use standard monthly compounding consistent with Truth in Lending Act (TILA) Regulation Z disclosures. The payment cascading methodology follows **Consumer Financial Protection Bureau (CFPB)** debt management plan guidelines. The 50/30/20 budgeting framework referenced in the FAQ is attributed to Senator Elizabeth Warren's 2005 book *All Your Worth*. For a detailed comparison of all three primary debt repayment strategies, see the [Debt Repayment Strategies methodology page](/methodology/debt-repayment-strategies).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

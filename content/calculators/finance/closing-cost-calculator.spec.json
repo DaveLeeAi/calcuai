@@ -1,0 +1,166 @@
+{
+  "id": "closing-cost-calculator",
+  "title": "Closing Cost Calculator",
+  "slug": "closing-cost-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "closing cost calculator",
+  "metaTitle": "Closing Cost Calculator | Estimate Buyer & Seller Closing Costs",
+  "metaDescription": "Estimate closing costs for buying or selling a home. See a detailed breakdown of fees, taxes, and prepaid items. Free closing cost calculator.",
+  "inputs": [
+    {
+      "id": "homePrice",
+      "label": "Home Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "downPaymentPercent",
+      "label": "Down Payment",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0,
+      "max": 100,
+      "step": 0.5,
+      "helpText": "Percentage of home price. Less than 20% triggers PMI on conventional loans."
+    },
+    {
+      "id": "loanType",
+      "label": "Loan Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "conventional",
+      "options": [
+        { "value": "conventional", "label": "Conventional" },
+        { "value": "fha", "label": "FHA" },
+        { "value": "va", "label": "VA" }
+      ],
+      "helpText": "FHA adds 1.75% upfront MIP. VA adds 2.3% funding fee."
+    },
+    {
+      "id": "isNewConstruction",
+      "label": "New Construction",
+      "type": "toggle",
+      "required": false,
+      "defaultValue": false,
+      "helpText": "New construction requires a survey fee (~$500)."
+    },
+    {
+      "id": "buyerOrSeller",
+      "label": "I Am the...",
+      "type": "select",
+      "required": true,
+      "defaultValue": "buyer",
+      "options": [
+        { "value": "buyer", "label": "Buyer" },
+        { "value": "seller", "label": "Seller" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalClosingCosts",
+      "label": "Total Closing Costs",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Sum of all closing cost line items.",
+      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+    },
+    {
+      "id": "totalSellerCosts",
+      "label": "Total Seller Costs",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "visibleWhen": { "buyerOrSeller": ["seller"] }
+    },
+    {
+      "id": "closingCostPercent",
+      "label": "Closing Costs as % of Price",
+      "type": "single-value",
+      "format": "percentage",
+      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+    },
+    {
+      "id": "sellerCostPercent",
+      "label": "Seller Costs as % of Price",
+      "type": "single-value",
+      "format": "percentage",
+      "visibleWhen": { "buyerOrSeller": ["seller"] }
+    },
+    {
+      "id": "totalCashNeeded",
+      "label": "Total Cash Needed at Closing",
+      "type": "single-value",
+      "format": "currency",
+      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+    },
+    {
+      "id": "netProceeds",
+      "label": "Estimated Net Proceeds",
+      "type": "single-value",
+      "format": "currency",
+      "visibleWhen": { "buyerOrSeller": ["seller"] }
+    },
+    {
+      "id": "loanAmount",
+      "label": "Loan Amount",
+      "type": "single-value",
+      "format": "currency",
+      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "closing-costs",
+  "features": [],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "home-affordability-calculator",
+    "down-payment-calculator",
+    "heloc-calculator",
+    "loan-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Consumer Financial Protection Bureau — Your Loan Estimate explained (closing cost categories and typical fee ranges for residential real estate transactions)",
+  "formulaCitation": "Consumer Financial Protection Bureau — Closing Costs Explained",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["mortgage-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "down-payment",
+    "pmi",
+    "equity"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
+}

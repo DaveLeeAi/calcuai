@@ -12,42 +12,42 @@
       "name": "Mortgage & Home",
       "slug": "mortgage",
       "description": "Calculate monthly mortgage payments, compare renting vs. buying, find your home budget, estimate refinance savings, and plan your down payment timeline.",
-      "calculators": ["mortgage-calculator", "amortization-calculator", "refinance-calculator", "home-affordability-calculator", "down-payment-calculator", "rent-vs-buy-calculator"]
+      "calculators": ["mortgage-calculator", "amortization-calculator", "refinance-calculator", "home-affordability-calculator", "mortgage-points-calculator", "closing-cost-calculator", "heloc-calculator", "down-payment-calculator", "rent-vs-buy-calculator", "rental-property-calculator", "debt-to-income-calculator", "cap-rate-calculator", "property-tax-calculator"]
     },
     {
       "id": "loans",
       "name": "Loans & Debt",
       "slug": "loans",
-      "description": "Calculate monthly loan payments, find your implied interest rate, compare debt payoff strategies, and see total interest costs. Free loan calculators.",
-      "calculators": ["loan-calculator", "payment-calculator", "interest-rate-calculator", "debt-payoff-calculator"]
+      "description": "Calculate monthly loan payments, compare loan offers side by side, find your implied interest rate, explore debt payoff and consolidation strategies, and check your credit utilization.",
+      "calculators": ["loan-calculator", "payment-calculator", "interest-rate-calculator", "debt-payoff-calculator", "debt-snowball-calculator", "debt-avalanche-calculator", "credit-card-payoff-calculator", "balance-transfer-calculator", "auto-loan-calculator", "loan-comparison-calculator", "debt-consolidation-calculator", "credit-utilization-calculator"]
     },
     {
       "id": "investment",
       "name": "Investment & Savings",
       "slug": "investment",
       "description": "Project compound interest growth, calculate investment returns with contributions, track net worth, and measure the impact of inflation over time.",
-      "calculators": ["compound-interest-calculator", "investment-calculator", "net-worth-calculator", "inflation-calculator"]
+      "calculators": ["compound-interest-calculator", "investment-calculator", "net-worth-calculator", "inflation-calculator", "rule-of-72-calculator"]
     },
     {
       "id": "savings",
       "name": "Savings",
       "slug": "savings",
-      "description": "Calculate savings growth, CD returns, and savings goal timelines.",
-      "calculators": ["savings-calculator", "cd-calculator"]
+      "description": "Calculate savings growth, CD returns, savings goal timelines, APY comparisons, and build a monthly budget with the 50/30/20 rule.",
+      "calculators": ["savings-calculator", "cd-calculator", "emergency-fund-calculator", "savings-goal-calculator", "apy-calculator", "budget-calculator"]
     },
     {
       "id": "retirement",
       "name": "Retirement",
       "slug": "retirement",
-      "description": "Plan for retirement with 401k projections and savings calculators.",
-      "calculators": ["retirement-calculator", "401k-calculator"]
+      "description": "Plan for retirement with 401(k) projections, withdrawal planning, FIRE calculations, and Roth conversion analysis.",
+      "calculators": ["retirement-calculator", "401k-calculator", "retirement-withdrawal-calculator", "fire-calculator", "roth-conversion-calculator"]
     },
     {
       "id": "tax",
       "name": "Tax",
       "slug": "tax",
-      "description": "Estimate your 2025 federal income tax, see your tax bracket breakdown, calculate sales tax on any purchase, and convert salary to hourly pay. Free.",
-      "calculators": ["income-tax-calculator", "sales-tax-calculator", "tax-bracket-calculator", "salary-calculator"]
+      "description": "Estimate your 2025 federal income tax, see your tax bracket breakdown, calculate take-home pay, estimate capital gains tax, and convert salary to hourly pay.",
+      "calculators": ["income-tax-calculator", "sales-tax-calculator", "tax-bracket-calculator", "salary-calculator", "paycheck-calculator", "capital-gains-tax-calculator"]
     }
   ],
   "featuredCalculators": [

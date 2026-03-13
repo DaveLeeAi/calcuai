@@ -1,0 +1,184 @@
+{
+  "id": "mortgage-points-calculator",
+  "title": "Mortgage Points Calculator",
+  "slug": "mortgage-points-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "mortgage points calculator",
+  "metaTitle": "Mortgage Points Calculator | Should You Buy Discount Points?",
+  "metaDescription": "Calculate if buying mortgage points is worth it. See your break-even timeline, monthly savings, and total interest saved over the life of the loan.",
+  "inputs": [
+    {
+      "id": "loanAmount",
+      "label": "Loan Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300000,
+      "min": 0,
+      "max": 5000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "interestRate",
+      "label": "Current Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 30,
+      "step": 0.125,
+      "suffix": "%"
+    },
+    {
+      "id": "pointsPurchased",
+      "label": "Points to Buy",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 5,
+      "step": 0.25,
+      "helpText": "Number of discount points to buy. Each point costs 1% of the loan amount."
+    },
+    {
+      "id": "rateReductionPerPoint",
+      "label": "Rate Reduction per Point",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 0.25,
+      "min": 0.1,
+      "max": 0.5,
+      "step": 0.05,
+      "suffix": "%",
+      "helpText": "How much each point reduces your interest rate. Typically 0.25%."
+    },
+    {
+      "id": "loanTerm",
+      "label": "Loan Term",
+      "type": "select",
+      "required": true,
+      "defaultValue": "30",
+      "options": [
+        { "value": "15", "label": "15 Years" },
+        { "value": "30", "label": "30 Years" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "pointsCost",
+      "label": "Cost of Points",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Upfront cost to buy discount points (each point = 1% of loan)."
+    },
+    {
+      "id": "monthlySavings",
+      "label": "Monthly Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "How much less you pay each month after buying points."
+    },
+    {
+      "id": "breakEvenMonths",
+      "label": "Break-Even Time",
+      "type": "single-value",
+      "format": "number",
+      "description": "Months until monthly savings recoup the upfront cost."
+    },
+    {
+      "id": "breakEvenYears",
+      "label": "Break-Even (Years)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "description": "Break-even timeline in years."
+    },
+    {
+      "id": "newPayment",
+      "label": "New Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "originalPayment",
+      "label": "Original Monthly Payment",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalSavingsOverLoan",
+      "label": "Net Savings Over Loan",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Total interest saved minus the cost of points."
+    },
+    {
+      "id": "interestSaved",
+      "label": "Total Interest Saved",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "roi",
+      "label": "Return on Investment",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1
+    },
+    {
+      "id": "newRate",
+      "label": "New Interest Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 3
+    },
+    {
+      "id": "comparisonTable",
+      "label": "Payment Comparison",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "mortgage-points",
+  "features": ["shareable-url", "print-results", "compare-scenarios"],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "refinance-calculator",
+    "closing-cost-calculator",
+    "home-affordability-calculator",
+    "amortization-calculator"
+  ],
+  "glossaryTerms": [
+    "down-payment",
+    "pmi",
+    "equity"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Consumer Financial Protection Bureau — Discount Points and Lender Credits (explains how each point costs 1% of the loan and typically reduces the rate by 0.25%)",
+  "formulaCitation": "Consumer Financial Protection Bureau — Discount Points and Lender Credits",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate+lead-gen",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["mortgage-calculator", "refinance-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ]
+}

@@ -1,0 +1,118 @@
+---
+title: "Gas Mileage Calculator"
+description: "Calculate your car's fuel efficiency in MPG, cost per mile, and estimated annual fuel expenses. Supports US and metric units."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Driving 300 miles on 10 gallons gives you 30 MPG — at \$3.50/gallon, that's \$0.117 per mile or about \$1,400 per year assuming 12,000 annual miles. This calculator finds your car's actual fuel efficiency from odometer readings and fill-up data, plus cost per mile, monthly and annual fuel expenses, and CO2 emissions.
+
+</section>
+
+{/* Section 6: What Your Result Shows */}
+## What Your Result Shows
+
+The calculator returns your fuel efficiency in US MPG, UK MPG, and L/100km so you can compare against any standard. The cost breakdown shows what you're spending per mile, per 100 miles, per month, and per year — useful for budgeting and comparing vehicles. The CO2 output uses the EPA factor of 19.6 lbs per gallon of gasoline burned, so you can estimate your driving footprint.
+
+If you already know your MPG and want to calculate the cost of a specific trip, use the [Fuel Cost Calculator](/everyday/fuel-cost-calculator) instead. To estimate monthly electricity bills, see the [Electricity Cost Calculator](/everyday/electricity-cost-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the distance you drove** — read your trip odometer or calculate from start/end readings. Switch to kilometers if needed.
+2. **Enter the fuel you used** — the gallons (or liters) pumped at your fill-up. For the most accurate reading, fill up completely, drive, then fill up again and record the amount.
+3. **Enter the fuel price** — the price per gallon or per liter you paid.
+4. **Read the results** — MPG, cost per mile, annual cost estimate, efficiency rating, and CO2 emissions appear instantly.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$
+\text{MPG} = \frac{\text{Distance Driven (miles)}}{\text{Fuel Used (gallons)}}
+$$
+
+$$
+\text{Cost Per Mile} = \frac{\text{Fuel Price}}{\text{MPG}}
+$$
+
+$$
+\text{Annual Fuel Cost} = \text{Cost Per Mile} \times 12{,}000
+$$
+
+$$
+\text{L/100km} = \frac{\text{Fuel Used (liters)}}{\text{Distance (km)}} \times 100
+$$
+
+Where:
+- **MPG** = miles per gallon — higher is more efficient
+- **L/100km** = liters per 100 kilometers — lower is more efficient
+- **12,000 miles** = average annual US driving distance (FHWA estimate)
+- **1 US gallon = 3.785 liters**; **1 mile = 1.609 km**
+- **1 UK (imperial) gallon = 1.201 US gallons**, so UK MPG is always higher than US MPG for the same car
+
+*Source: EPA — Fuel Economy Guide and Greenhouse Gas Emissions Standards, fueleconomy.gov.*
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+You fill up your tank, reset the trip odometer, and drive until the next fill-up: 350 miles driven, 11.5 gallons pumped, gas at \$3.40/gallon.
+
+**Step 1:** MPG = 350 / 11.5 = **30.4 MPG**
+**Step 2:** Cost per mile = \$3.40 / 30.4 = **\$0.112/mile**
+**Step 3:** Annual cost = \$0.112 x 12,000 = **\$1,342/year**
+**Step 4:** CO2 = 11.5 x 19.6 = **225.4 lbs** for this tank
+
+*Interpretation:* At 30.4 MPG, your car is in the average range. If gas rises to \$4.50/gallon, your annual cost jumps to \$1,776 — a 32% increase.
+
+## MPG by Vehicle Type
+
+| Vehicle Type | Typical MPG (US) | L/100km | Annual Fuel Cost* |
+|---|---|---|---|
+| Compact sedan | 30–38 | 6.2–7.8 | \$1,105–\$1,400 |
+| Midsize sedan | 27–33 | 7.1–8.7 | \$1,273–\$1,556 |
+| SUV / Crossover | 22–28 | 8.4–10.7 | \$1,500–\$1,909 |
+| Pickup truck | 15–22 | 10.7–15.7 | \$1,909–\$2,800 |
+| Hybrid | 45–58 | 4.1–5.2 | \$724–\$933 |
+| EV (MPGe) | 100–140 | — | \$500–\$700 (electricity) |
+
+*\*Based on 12,000 miles/year at \$3.50/gallon.*
+
+## How to Improve Your Gas Mileage
+
+1. **Keep tires properly inflated.** Underinflated tires increase rolling resistance. Every 1 PSI drop in all four tires costs about 0.2% in fuel economy. Check monthly and fill to the pressure listed on the driver's door jamb — not the tire sidewall maximum.
+2. **Drive at steady speeds.** Aggressive acceleration and braking can reduce highway MPG by 15–30%. Cruise control on flat highways is one of the easiest gains.
+3. **Reduce excess weight.** Every 100 lbs of extra cargo reduces fuel economy by about 1% for midsize cars. Remove roof racks when not in use — they increase aerodynamic drag by 2–25% depending on design.
+4. **Keep up with maintenance.** A clean air filter, fresh spark plugs, and properly spec'd motor oil each contribute small gains that add up. A misfiring spark plug alone can reduce efficiency by up to 30%.
+5. **Plan and combine trips.** A cold engine uses more fuel for the first few miles. Combining short errands into one trip keeps the engine warm and saves 10–20% compared to multiple cold starts.
+
+## Frequently Asked Questions
+
+### How do I calculate my car's MPG?
+
+Fill your tank completely, reset your trip odometer, drive normally until you need to refuel, then fill up again. Divide the miles driven by the gallons pumped. For example, 320 miles on 10.5 gallons = 30.5 MPG. Repeat over 2–3 tanks for a reliable average.
+
+### What is the difference between US MPG and UK MPG?
+
+A US gallon is 3.785 liters; a UK (imperial) gallon is 4.546 liters — about 20% larger. So a car rated 30 US MPG is about 36 UK MPG. Always check which standard is being used when comparing fuel economy figures from different countries.
+
+### What is a good MPG for a car?
+
+For a gasoline car in 2025, 30 MPG or above is considered average, 35–50 MPG is good, and 50+ MPG (typical of hybrids) is excellent. The EPA fleet-wide average for new 2023 model year vehicles was 26.4 MPG. Anything below 20 MPG is below average and significantly more expensive to operate.
+
+### How much does gas cost per mile?
+
+At the national average of roughly \$3.50/gallon and 30 MPG, gas costs about \$0.12 per mile. At 20 MPG, it rises to \$0.175/mile — 46% more. The IRS 2024 standard mileage rate of \$0.67/mile covers all vehicle costs, not just fuel.
+
+### How do I convert MPG to L/100km?
+
+Divide 235.215 by your US MPG. For example: 30 MPG = 235.215 / 30 = 7.84 L/100km. Lower L/100km means better efficiency. A 50 MPG hybrid is 4.7 L/100km; a 15 MPG truck is 15.7 L/100km.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+Fuel efficiency formulas follow the **EPA fuel economy calculation methodology** published at **fueleconomy.gov**. The CO2 emission factor of 19.6 lbs per gallon of gasoline is from the **EPA Greenhouse Gas Equivalencies Calculator**. The 12,000-mile annual driving average is from the **Federal Highway Administration** (FHWA). UK-to-US gallon conversion uses the exact ratio: 1 imperial gallon = 4.54609 liters vs. 1 US gallon = 3.78541 liters. The IRS standard mileage rate is published in **IRS Notice 2024-08**.

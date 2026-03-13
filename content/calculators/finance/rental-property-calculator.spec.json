@@ -1,0 +1,302 @@
+{
+  "id": "rental-property-calculator",
+  "title": "Rental Property Calculator",
+  "slug": "rental-property-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "rental property calculator",
+  "metaTitle": "Rental Property Calculator — Analyze Cash Flow & ROI",
+  "metaDescription": "Analyze any rental property investment. Calculate cash flow, cap rate, cash-on-cash return, and 5-year projections. Free real estate investment calculator.",
+  "inputs": [
+    {
+      "id": "purchasePrice",
+      "label": "Purchase Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 200000,
+      "min": 10000,
+      "max": 10000000,
+      "step": 5000,
+      "prefix": "$"
+    },
+    {
+      "id": "downPaymentPercent",
+      "label": "Down Payment",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "helpText": "Investment properties typically require 20-25% down"
+    },
+    {
+      "id": "interestRate",
+      "label": "Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 30,
+      "step": 0.125
+    },
+    {
+      "id": "loanTerm",
+      "label": "Loan Term",
+      "type": "select",
+      "required": true,
+      "defaultValue": "30",
+      "options": [
+        { "value": "15", "label": "15 years" },
+        { "value": "30", "label": "30 years" }
+      ]
+    },
+    {
+      "id": "closingCosts",
+      "label": "Closing Costs",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 500000,
+      "prefix": "$"
+    },
+    {
+      "id": "monthlyRent",
+      "label": "Monthly Rent",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1500,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "vacancyRate",
+      "label": "Vacancy Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "helpText": "Average vacancy is 5-8% nationally"
+    },
+    {
+      "id": "propertyTax",
+      "label": "Annual Property Tax",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 2400,
+      "min": 0,
+      "max": 500000,
+      "prefix": "$",
+      "helpText": "Annual property tax"
+    },
+    {
+      "id": "insurance",
+      "label": "Annual Insurance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 1200,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$",
+      "helpText": "Annual insurance premium"
+    },
+    {
+      "id": "maintenance",
+      "label": "Maintenance",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 10,
+      "step": 0.25,
+      "helpText": "Annual maintenance as % of property value"
+    },
+    {
+      "id": "managementFee",
+      "label": "Management Fee",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "helpText": "Property management fee as % of rent"
+    },
+    {
+      "id": "otherExpenses",
+      "label": "Other Annual Expenses",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 500000,
+      "prefix": "$",
+      "helpText": "Annual HOA, utilities, or other expenses"
+    },
+    {
+      "id": "appreciationRate",
+      "label": "Appreciation Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 15,
+      "step": 0.5,
+      "helpText": "Expected annual property appreciation"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyCashFlow",
+      "label": "Monthly Cash Flow",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Net monthly income after all expenses and mortgage payment."
+    },
+    {
+      "id": "annualCashFlow",
+      "label": "Annual Cash Flow",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Net annual income from the property after all operating expenses and debt service."
+    },
+    {
+      "id": "capRate",
+      "label": "Cap Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "description": "Net operating income divided by purchase price. Measures the property's return independent of financing."
+    },
+    {
+      "id": "cashOnCashReturn",
+      "label": "Cash-on-Cash Return",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "description": "Annual cash flow divided by total cash invested. Measures your actual return on the cash you put in."
+    },
+    {
+      "id": "netOperatingIncome",
+      "label": "Net Operating Income (NOI)",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Effective gross income minus operating expenses, before debt service."
+    },
+    {
+      "id": "totalCashNeeded",
+      "label": "Total Cash Needed",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Down payment plus closing costs — the total cash required to close."
+    },
+    {
+      "id": "monthlyMortgage",
+      "label": "Monthly Mortgage (P&I)",
+      "type": "single-value",
+      "format": "currency",
+      "description": "Monthly principal and interest payment on the investment property loan."
+    },
+    {
+      "id": "dscr",
+      "label": "Debt Service Coverage",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "description": "NOI divided by annual debt service. Lenders typically require 1.20 or higher."
+    },
+    {
+      "id": "grm",
+      "label": "Gross Rent Multiplier",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "description": "Purchase price divided by gross annual rent. Lower GRM suggests better value relative to income."
+    },
+    {
+      "id": "breakEvenRatio",
+      "label": "Break-Even Ratio",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "description": "Total expenses plus debt service as a percentage of gross rent. Below 85% is generally considered healthy."
+    },
+    {
+      "id": "expenseBreakdown",
+      "label": "Annual Expense Breakdown",
+      "type": "chart-pie",
+      "description": "How annual costs are distributed across property tax, insurance, maintenance, management, other expenses, and mortgage payments.",
+      "chartConfig": {
+        "colors": ["#2ECC71", "#3498DB", "#E67E22", "#9B59B6", "#95A5A6", "#E74C3C"]
+      }
+    },
+    {
+      "id": "fiveYearProjection",
+      "label": "5-Year Investment Projection",
+      "type": "table",
+      "description": "Year-by-year projection of property value, rental income, cash flow, equity buildup, and total return on investment.",
+      "columns": [
+        { "key": "year", "label": "Year" },
+        { "key": "propertyValue", "label": "Property Value", "format": "currency" },
+        { "key": "annualRent", "label": "Annual Rent", "format": "currency" },
+        { "key": "cashFlow", "label": "Cash Flow", "format": "currency" },
+        { "key": "equity", "label": "Equity", "format": "currency" },
+        { "key": "totalReturn", "label": "Total Return", "format": "currency" }
+      ]
+    }
+  ],
+  "formula": "rental-property",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "roi-calculator",
+    "home-affordability-calculator",
+    "investment-calculator",
+    "compound-interest-calculator",
+    "debt-to-income-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Association of Realtors — Real Estate Investment Analysis; Freddie Mac — Rental Income Guidelines",
+  "articleWordTarget": 2000,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Standard fixed-rate mortgage amortization formula (M = P[r(1+r)^n]/[(1+r)^n-1]); NOI, Cap Rate, and Cash-on-Cash Return per NAR investment analysis standards",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "roi-calculator",
+    "mortgage-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": [
+    "amortization",
+    "interest-rate",
+    "equity",
+    "principal",
+    "down-payment"
+  ],
+  "methodologyTopics": []
+}

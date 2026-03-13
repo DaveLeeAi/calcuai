@@ -1,0 +1,157 @@
+{
+  "id": "gas-mileage-calculator",
+  "title": "Gas Mileage Calculator",
+  "slug": "gas-mileage-calculator",
+  "category": "everyday",
+  "subcategory": "money",
+  "primaryKeyword": "gas mileage calculator",
+  "metaTitle": "Gas Mileage Calculator | Calculate MPG & Fuel Cost Per Mile",
+  "metaDescription": "Calculate your car's miles per gallon (MPG), cost per mile, and annual fuel expenses. Enter distance and fuel used for instant results. Free calculator.",
+  "inputs": [
+    {
+      "id": "distanceDriven",
+      "label": "Distance Driven",
+      "type": "number",
+      "required": true,
+      "defaultValue": 300,
+      "min": 0,
+      "max": 100000,
+      "step": 1,
+      "helpText": "Distance driven"
+    },
+    {
+      "id": "distanceUnit",
+      "label": "Distance Unit",
+      "type": "select",
+      "required": true,
+      "defaultValue": "miles",
+      "options": [
+        { "value": "miles", "label": "Miles" },
+        { "value": "km", "label": "Kilometers" }
+      ]
+    },
+    {
+      "id": "fuelUsed",
+      "label": "Fuel Used",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 10000,
+      "step": 0.1,
+      "helpText": "Fuel consumed"
+    },
+    {
+      "id": "fuelUnit",
+      "label": "Fuel Unit",
+      "type": "select",
+      "required": true,
+      "defaultValue": "gallons",
+      "options": [
+        { "value": "gallons", "label": "Gallons (US)" },
+        { "value": "liters", "label": "Liters" }
+      ]
+    },
+    {
+      "id": "fuelPrice",
+      "label": "Fuel Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 3.50,
+      "min": 0,
+      "max": 20,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Price per gallon or liter"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "mpgUS",
+      "label": "Miles Per Gallon (MPG)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "lper100km",
+      "label": "L/100km",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "costPerMile",
+      "label": "Cost Per Mile",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 3
+    },
+    {
+      "id": "annualFuelCost",
+      "label": "Est. Annual Fuel Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyFuelCost",
+      "label": "Est. Monthly Fuel Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "fuelEfficiencyRating",
+      "label": "Efficiency Rating",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "co2Emissions",
+      "label": "CO\u2082 Emissions (lbs)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "gas-mileage",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "fuel-cost-calculator",
+    "electricity-cost-calculator",
+    "discount-calculator",
+    "tip-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "EPA — Fuel Economy Guide and Greenhouse Gas Emissions Standards",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "MPG = distance / fuelUsed; costPerMile = fuelPrice / MPG; annualFuelCost = costPerMile x 12000; CO2 = gallons x 19.6 lbs (EPA factor).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "fuel-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

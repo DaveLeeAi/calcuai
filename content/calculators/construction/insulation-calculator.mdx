@@ -1,0 +1,215 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 600-square-foot attic with R-30 batt insulation needs 20 rolls at 9.5 inches thick — costing between $300 and $900 for materials alone. Blown-in cellulose covers the same attic with 36 bags at 8.25 inches deep, while spray foam runs $900–$2,100 for superior air sealing. The right insulation type, R-value, and quantity depend on your climate zone, application area, and budget. Enter your dimensions below for a complete insulation materials estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Calculates
+
+This calculator estimates insulation material quantities and costs for four common insulation types: fiberglass batt, blown-in cellulose, closed-cell spray foam, and rigid foam board. It accounts for your target R-value, the area to be insulated, and any existing insulation already in place.
+
+The **material quantity** is the primary output — expressed in batts/rolls, bags, board feet, or rigid sheets depending on which insulation type you select. Each type has different coverage rates per unit at each R-value, so selecting the correct type is critical for an accurate estimate. The calculator also shows the **insulation thickness** required to achieve your target R-value, which affects stud cavity depth requirements for wall applications. If your walls have 2x4 framing (3.5-inch cavities), R-13 batt is typically the maximum; 2x6 framing (5.5-inch cavities) accommodates up to R-19.
+
+The **effective R-value** output combines your target R-value with any existing insulation. Adding R-19 batts over existing R-11 insulation yields an effective R-30 — often a cost-effective approach for attic upgrades rather than removing and replacing. For measuring the space accurately, use our [Square Footage Calculator](/construction/square-footage-calculator).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the area dimensions** — measure length and width of the space to insulate. For attics, measure the floor area. For walls, enter the total linear wall length as "length" and ceiling height as "width."
+
+2. **Select insulation type** — choose fiberglass batt (most common DIY), blown-in cellulose (fastest for attics), spray foam (best air sealing), or rigid board (basement walls and exterior sheathing).
+
+3. **Select your target R-value** — this depends on your climate zone and application area. Walls in most zones need R-13 to R-19. Attics need R-30 (zones 1–3), R-38 (zones 4–5), or R-49 (zones 6–7).
+
+4. **Choose the application area** — attic, walls, floor, or crawl space. This helps contextualize the recommendation but does not change the math.
+
+5. **Toggle existing insulation** — if you are adding insulation over existing material, toggle this on and enter the existing R-value. The calculator adds both R-values to show your total effective insulation.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Insulation quantity depends on total area and coverage rate per unit, which varies by insulation type and R-value.
+
+**Total area:**
+
+$$A = L \times W$$
+
+**Material quantity (batt/blown):**
+
+$$Q = \left\lceil \frac{A}{C_{\text{unit}}} \right\rceil$$
+
+**Material quantity (spray foam, in board feet):**
+
+$$Q_{\text{bf}} = \frac{A \times T}{12}$$
+
+**Material quantity (rigid board, in sheets):**
+
+$$Q_{\text{sheets}} = \left\lceil \frac{A}{32} \right\rceil$$
+
+**Effective R-value:**
+
+$$R_{\text{eff}} = R_{\text{target}} + R_{\text{existing}}$$
+
+Where:
+
+- **L** = area length (feet)
+- **W** = area width (feet)
+- **A** = total area (square feet)
+- **C_unit** = coverage per unit (sq ft per batt roll or bag — varies by R-value)
+- **T** = insulation thickness (inches, by R-value and type)
+- **32** = area of one 4 x 8-foot rigid foam sheet (sq ft)
+- **R_target** = R-value of the new insulation
+- **R_existing** = R-value of any existing insulation (0 if none)
+
+Coverage per unit decreases as R-value increases because each unit is thicker and covers less floor area per package. For example, R-13 batt rolls cover approximately 40 sq ft, while R-49 rolls cover only 18 sq ft.
+
+**Source:** R-value thickness tables and coverage rates per **U.S. Department of Energy** insulation recommendations and major manufacturer (Owens Corning, Johns Manville, CertainTeed) product specifications. Cost data from **HomeAdvisor/Angi** 2025–2026 national averages.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Attic — 600 sq ft, R-30 Fiberglass Batt
+
+A homeowner wants to insulate a 30 x 20-foot attic floor with R-30 fiberglass batts (climate zone 3). No existing insulation.
+
+**Inputs:**
+- Length: 30 ft, Width: 20 ft
+- Insulation Type: Fiberglass Batt
+- R-Value: R-30
+- Existing Insulation: No
+
+**Step-by-step:**
+
+1. Area: 30 x 20 = **600 sq ft**
+2. R-30 batt coverage: ~31.25 sq ft per roll
+3. Rolls needed: 600 / 31.25 = 19.2 → **20 rolls**
+4. Thickness: **9.5 inches**
+5. Cost estimate: 600 x $0.50–$1.50/sq ft = **$300–$900**
+6. Recommended extra for waste: 600 x 10% = **60 sq ft** (2 extra rolls)
+
+**Interpretation:** Twenty rolls of R-30 batt insulation covers this attic. At 9.5 inches thick, the batts fit between standard attic joists. Buy 22 rolls to account for cuts around plumbing vents, electrical boxes, and joist intersections.
+
+### Example 2: Wall Insulation — 320 sq ft, R-13 Blown-In
+
+A contractor is insulating exterior walls in an older home by dense-packing cellulose through drill holes. Total wall area is 40 linear feet x 8-foot height = 320 sq ft.
+
+**Inputs:**
+- Length: 40 ft, Width: 8 ft
+- Insulation Type: Blown-In Cellulose
+- R-Value: R-13
+- Existing Insulation: No
+
+**Step-by-step:**
+
+1. Area: 40 x 8 = **320 sq ft**
+2. R-13 blown coverage: ~40 sq ft per bag
+3. Bags needed: 320 / 40 = 8 → **8 bags**
+4. Thickness: **3.5 inches** (fills standard 2x4 cavity)
+5. Cost estimate: 320 x $1.00–$2.50/sq ft = **$320–$800**
+
+**Interpretation:** Eight bags of cellulose fills 320 sq ft of wall cavity to R-13 density. Dense-pack cellulose provides some air sealing in addition to thermal resistance — a significant advantage over batts in older walls with irregular framing.
+
+{/* Section 10: R-Value Guide by Climate Zone */}
+## R-Value Guide by Climate Zone
+
+| Climate Zone | Attic | Walls | Floor | Crawl Space |
+|:---|:---|:---|:---|:---|
+| **Zone 1 (Hot-Humid)** | R-30 | R-13 | R-13 | R-13 |
+| **Zone 2 (Hot)** | R-30 – R-38 | R-13 | R-13 | R-13 |
+| **Zone 3 (Warm-Moderate)** | R-30 – R-38 | R-13 – R-15 | R-19 | R-19 |
+| **Zone 4 (Mixed)** | R-38 – R-49 | R-13 – R-15 | R-19 – R-25 | R-19 – R-25 |
+| **Zone 5 (Cold)** | R-38 – R-49 | R-19 – R-21 | R-25 – R-30 | R-25 – R-30 |
+| **Zone 6 (Very Cold)** | R-49 – R-60 | R-19 – R-21 | R-25 – R-30 | R-25 – R-30 |
+| **Zone 7 (Subarctic)** | R-49 – R-60 | R-21 | R-30 | R-30 |
+
+Source: U.S. Department of Energy and IECC (International Energy Conservation Code) 2021 recommendations.
+
+{/* Section 11: Insulation Types Compared */}
+## Insulation Types Compared
+
+| Feature | Fiberglass Batt | Blown-In Cellulose | Spray Foam (Closed-Cell) | Rigid Board (Polyiso) |
+|:---|:---|:---|:---|:---|
+| **Cost/sq ft** | $0.50 – $1.50 | $1.00 – $2.50 | $1.50 – $3.50 | $0.75 – $2.00 |
+| **R-Value/inch** | R-3.2 – R-3.8 | R-3.2 – R-3.7 | R-6.0 – R-7.0 | R-5.7 – R-6.5 |
+| **Air Sealing** | None | Partial | Excellent | Good (taped seams) |
+| **Moisture Barrier** | No | No | Yes | Yes |
+| **DIY Friendly** | Yes | Moderate (blower needed) | No (professional only) | Yes |
+| **Best For** | Walls, attic floors | Attic floors, wall cavities | Rim joists, crawl spaces | Basement walls, exterior |
+| **Fire Resistance** | Good (fiberglass) | Treated (Class 1) | Requires covering | Foil-faced is Class A |
+
+{/* Section 12: Key Cost Factors */}
+## Key Cost Factors
+
+**Insulation type is the primary cost driver.** Fiberglass batts are the least expensive option at $0.50–$1.50 per square foot for materials. Spray foam costs three to seven times more but provides superior air sealing and moisture resistance. For attics where air sealing is less critical (already sealed at the ceiling plane), batts or blown-in cellulose deliver excellent value. For rim joists, crawl spaces, and basement walls where moisture control matters, spray foam justifies the premium.
+
+**R-value affects material volume.** Higher R-values require thicker insulation and more material per square foot. An R-49 attic needs roughly 2.5 times the material of an R-19 attic because each bag or roll covers less area at the greater thickness.
+
+**Labor changes the total cost dramatically.** Materials represent only 20–40% of installed insulation cost. Professional installation adds $1.00–$3.00 per square foot for batts and blown-in, and spray foam is almost always professionally installed. Factor labor into your budget — the material estimates from this calculator are materials only.
+
+**Access and obstacles increase waste.** Attics with many plumbing vents, ductwork runs, electrical boxes, and knee walls require 15–20% extra material for cutting waste, versus the standard 10% for open attic floors.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Coverage rates assume manufacturer-specified installation density. Under-blown cellulose settles 10–15% over time, reducing effective R-value.
+- Cost estimates reflect **materials only** at 2025–2026 U.S. retail pricing. Professional installation adds $1.00–$3.00/sq ft.
+- Spray foam board-foot output assumes closed-cell foam at approximately R-6.5 per inch. Open-cell spray foam is roughly R-3.7 per inch and requires greater thickness.
+- Rigid board calculation assumes standard 4 x 8-foot sheets (32 sq ft each). Some manufacturers offer 4 x 4 or 4 x 10 sheets.
+- Does **not** account for framing factor — studs, joists, and other framing members reduce the insulated area by approximately 15–25% in walls.
+- The 10% waste recommendation is for typical installations. Add 15–20% for areas with many obstacles, irregular shapes, or cathedral ceilings.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What R-value do I need for my attic?
+
+The Department of Energy recommends R-30 for attics in climate zones 1–3 (Southern U.S.), R-38 to R-49 for zones 4–5 (Central U.S.), and R-49 to R-60 for zones 6–7 (Northern U.S.). These recommendations apply regardless of insulation type. Most existing homes have R-19 or less in the attic, so adding R-19 or R-30 on top of existing insulation is one of the highest-ROI home improvements — the DOE estimates attic insulation upgrades save 10–50% on heating and cooling costs.
+
+### Can I add new insulation over existing insulation?
+
+Yes, you can layer new insulation over existing insulation to increase total R-value. R-values are additive: R-19 existing plus R-19 new equals R-38 effective. The key rule is to never place a vapor barrier between layers — use unfaced batts or blown-in on top of existing material. If the existing insulation is wet, moldy, or severely compressed, remove it first.
+
+### How thick is R-30 insulation?
+
+R-30 fiberglass batt insulation is approximately 9.5 inches thick. Blown-in cellulose achieves R-30 at about 8.25 inches of settled depth. Spray foam reaches R-30 at only 4.6 inches because it has nearly double the R-value per inch (R-6.5 vs. R-3.5). Rigid board polyiso at R-30 is approximately 4.5 inches thick. Choose based on available cavity depth and budget.
+
+### What is the cheapest insulation for an attic?
+
+Blown-in cellulose is typically the cheapest option for attic floors at $1.00–$1.50 per square foot installed (including blower rental), covering large areas quickly with no cutting. Fiberglass batts cost $0.50–$1.50 per square foot for materials but take longer to install and require cutting around every obstacle. For a 1,000-square-foot attic, blown-in cellulose typically costs $1,000–$1,500 for a DIY install with a rented blower (many home centers offer free blower rental with a minimum bag purchase).
+
+### How many bags of blown-in insulation do I need?
+
+The number of bags depends on the area and target R-value. At R-30, one bag of blown-in cellulose covers approximately 17 square feet. A 1,000-square-foot attic needs about 59 bags (1,000 / 17 = 58.8, rounded up). At R-38, coverage drops to 13 sq ft per bag, requiring approximately 77 bags for the same attic. Always check the coverage chart printed on the bag — it varies by manufacturer and product density.
+
+### Is spray foam worth the extra cost?
+
+Spray foam costs 3–7 times more than fiberglass batts but provides both insulation and air sealing in a single application. It is worth the premium in specific applications: rim joists (where air leakage is significant), crawl spaces (where moisture control matters), and cathedral ceilings (where cavity depth is limited). For open attic floors where air sealing can be done separately with caulk and foam, blown-in cellulose offers comparable performance at a fraction of the cost.
+
+### Do I need a vapor barrier with insulation?
+
+In cold climates (zones 5–7), a vapor barrier (kraft-faced batts or polyethylene sheeting) should face the warm side of the wall — toward the interior. In hot-humid climates (zones 1–2), the vapor barrier faces outward. In mixed climates (zones 3–4), unfaced insulation with latex paint (a Class III vapor retarder) is often sufficient. Spray foam and foil-faced rigid board act as their own vapor barriers. Never install two vapor barriers in the same wall assembly — trapped moisture causes mold and rot.
+
+### How long does insulation last?
+
+Fiberglass batts and rigid foam board maintain their R-value indefinitely if they remain dry and uncompressed — 50+ years is typical. Blown-in cellulose settles 10–15% in the first year and then stabilizes; initial installation accounts for this by slightly over-blowing. Spray foam does not settle or degrade and maintains its R-value for the life of the building. The most common reason insulation fails prematurely is moisture intrusion, not material degradation.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses coverage rates published by major insulation manufacturers (**Owens Corning**, **Johns Manville**, **CertainTeed**) for fiberglass batt and blown-in cellulose products. Spray foam thickness assumes closed-cell foam at R-6.0–R-7.0 per inch per **Spray Polyurethane Foam Alliance (SPFA)** technical data. Rigid board calculations use polyiso foam at R-5.7–R-6.5 per inch per **Polyisocyanurate Insulation Manufacturers Association (PIMA)** specifications. R-value recommendations by climate zone follow the **U.S. Department of Energy** and **IECC 2021** guidelines. Cost data reflects 2025–2026 U.S. retail pricing from **HomeAdvisor** and **Angi** national averages.
+
+{/* Section 17: Disclaimer — auto-rendered */}

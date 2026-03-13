@@ -1,0 +1,274 @@
+{
+  "id": "debt-avalanche-calculator",
+  "title": "Debt Avalanche Calculator",
+  "slug": "debt-avalanche-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "debt avalanche calculator",
+  "metaTitle": "Debt Avalanche Calculator | Pay Off Highest Interest First",
+  "metaDescription": "Plan your debt payoff using the avalanche method. Pay highest interest rate first to minimize total interest. See your timeline and savings. Free calculator.",
+  "inputs": [
+    {
+      "id": "debt1Balance",
+      "label": "Debt 1 Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 2000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$",
+      "helpText": "Current balance of your first debt"
+    },
+    {
+      "id": "debt1Rate",
+      "label": "Debt 1 Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 19,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt1MinPayment",
+      "label": "Debt 1 Minimum Payment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt2Balance",
+      "label": "Debt 2 Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 8000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt2Rate",
+      "label": "Debt 2 Interest Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 6,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt2MinPayment",
+      "label": "Debt 2 Minimum Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt3Balance",
+      "label": "Debt 3 Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt3Rate",
+      "label": "Debt 3 Interest Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt3MinPayment",
+      "label": "Debt 3 Minimum Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 300,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt4Balance",
+      "label": "Debt 4 Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt4Rate",
+      "label": "Debt 4 Interest Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt4MinPayment",
+      "label": "Debt 4 Minimum Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt5Balance",
+      "label": "Debt 5 Balance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000000,
+      "prefix": "$"
+    },
+    {
+      "id": "debt5Rate",
+      "label": "Debt 5 Interest Rate",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 50,
+      "step": 0.1
+    },
+    {
+      "id": "debt5MinPayment",
+      "label": "Debt 5 Minimum Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$"
+    },
+    {
+      "id": "extraPayment",
+      "label": "Extra Monthly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 100000,
+      "prefix": "$",
+      "helpText": "Additional amount above all minimums, applied to highest interest rate first"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthsToPayoff",
+      "label": "Months to Debt Freedom",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "totalInterestPaid",
+      "label": "Total Interest Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalPaid",
+      "label": "Total Amount Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "interestSaved",
+      "label": "Interest Saved vs. Minimums Only",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "timeSaved",
+      "label": "Months Saved vs. Minimums Only",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalDebt",
+      "label": "Total Debt",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalMinPayment",
+      "label": "Total Minimum Payments",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "payoffOrder",
+      "label": "Avalanche Payoff Order",
+      "type": "value-group"
+    },
+    {
+      "id": "summary",
+      "label": "Payoff Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "debt-avalanche",
+  "features": [
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "debt-snowball-calculator",
+    "debt-payoff-calculator",
+    "debt-consolidation-calculator",
+    "credit-card-payoff-calculator",
+    "budget-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": true,
+  "requiresSources": true,
+  "formulaCitation": "Harvard Business Review — The Mathematics of Debt Repayment; Experian Debt Payoff Analysis",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Iterative monthly amortization with payment cascading — highest interest rate first per avalanche debt elimination strategy",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "debt-payoff-calculator",
+    "debt-snowball-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": "new-year",
+  "glossaryTerms": [
+    "debt-consolidation",
+    "debt-to-income-ratio",
+    "savings-rate"
+  ],
+  "methodologyTopics": [
+    "debt-repayment-strategies"
+  ]
+}

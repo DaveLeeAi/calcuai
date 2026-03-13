@@ -1,0 +1,152 @@
+{
+  "id": "raise-calculator",
+  "title": "Raise Calculator",
+  "slug": "raise-calculator",
+  "category": "business",
+  "subcategory": "payroll",
+  "primaryKeyword": "pay raise calculator",
+  "metaTitle": "Pay Raise Calculator | See Your New Salary After a Raise",
+  "metaDescription": "Calculate your new salary after a raise. See how a percentage increase affects your annual, monthly, biweekly, and hourly pay. Free calculator.",
+  "inputs": [
+    {
+      "id": "currentSalary",
+      "label": "Current Salary",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Your current annual salary (or enter per-period pay and select frequency below)"
+    },
+    {
+      "id": "raisePercentage",
+      "label": "Raise Percentage",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 200,
+      "step": 0.5,
+      "suffix": "%",
+      "helpText": "The percentage increase you're receiving or negotiating"
+    },
+    {
+      "id": "payFrequency",
+      "label": "Pay Frequency",
+      "type": "select",
+      "required": true,
+      "defaultValue": "annual",
+      "options": [
+        { "value": "annual", "label": "Annual" },
+        { "value": "monthly", "label": "Monthly" },
+        { "value": "biweekly", "label": "Biweekly" },
+        { "value": "weekly", "label": "Weekly" },
+        { "value": "hourly", "label": "Hourly" }
+      ],
+      "helpText": "How the salary amount above is expressed"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "newSalary",
+      "label": "New Annual Salary",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "raiseAmount",
+      "label": "Annual Raise Amount",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "newMonthly",
+      "label": "New Monthly Pay",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "newBiweekly",
+      "label": "New Biweekly Pay",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "newWeekly",
+      "label": "New Weekly Pay",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "newHourly",
+      "label": "New Hourly Rate",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "monthlyDifference",
+      "label": "Monthly Increase",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "biweeklyDifference",
+      "label": "Biweekly Increase",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "summary",
+      "label": "Raise Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "raise-percentage",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "salary-calculator",
+    "payroll-calculator",
+    "overtime-calculator",
+    "paycheck-calculator",
+    "commission-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Bureau of Labor Statistics — Employment Cost Index (2024)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "New Salary = Current Salary × (1 + Raise% / 100); Breakdowns: Monthly = Annual / 12, Biweekly = Annual / 26, Weekly = Annual / 52, Hourly = Annual / 2080",
+  "formulaAuditDate": "2026-03-13",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["salary-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-13",
+  "seasonality": null,
+  "glossaryTerms": ["salary"]
+}
