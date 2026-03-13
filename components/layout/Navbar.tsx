@@ -20,7 +20,7 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <nav className="bg-white dark:bg-slate-800 border-b border-gray-200 dark:border-slate-700 sticky top-0 z-50 shadow-sm dark:shadow-none">
+    <nav className="bg-white dark:bg-zinc-900 border-b border-gray-200 dark:border-zinc-800 sticky top-0 z-50 shadow-sm dark:shadow-none">
       <div className="max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
           <Link href="/" className="font-bold text-xl tracking-tight text-gray-900 dark:text-white">
@@ -33,24 +33,24 @@ export function Navbar() {
               <Link
                 key={cat.slug}
                 href={`/${cat.slug}`}
-                className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+                className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
               >
                 {cat.name}
               </Link>
             ))}
             <Link
               href="/glossary"
-              className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+              className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
             >
               Glossary
             </Link>
             <Link
               href="/methodology"
-              className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg transition-colors"
+              className="px-3 py-2 text-sm font-medium text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
             >
               Methodology
             </Link>
-            <div className="ml-2 border-l border-gray-200 dark:border-slate-600 pl-2">
+            <div className="ml-2 border-l border-gray-200 dark:border-zinc-700 pl-2">
               <ThemeToggle />
             </div>
           </div>
@@ -81,7 +81,7 @@ export function Navbar() {
               <Link
                 key={cat.slug}
                 href={`/${cat.slug}`}
-                className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg"
+                className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg"
                 onClick={() => setMobileOpen(false)}
               >
                 {cat.name}
@@ -89,14 +89,14 @@ export function Navbar() {
             ))}
             <Link
               href="/glossary"
-              className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg"
+              className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg"
               onClick={() => setMobileOpen(false)}
             >
               Glossary
             </Link>
             <Link
               href="/methodology"
-              className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-slate-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-slate-700 rounded-lg"
+              className="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-zinc-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-zinc-800 rounded-lg"
               onClick={() => setMobileOpen(false)}
             >
               Methodology

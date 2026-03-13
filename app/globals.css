@@ -9,7 +9,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply text-gray-800 dark:text-slate-200 antialiased;
+    @apply text-gray-800 dark:text-zinc-200 antialiased;
   }
 
   /* Smooth theme transitions — background and color only to avoid layout shifts */
@@ -28,65 +28,46 @@
 
 @layer components {
   .calculator-container {
-    @apply bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-200 dark:border-slate-700 p-6 max-w-calculator mx-auto;
+    @apply bg-white dark:bg-zinc-900 rounded-xl shadow-sm border border-gray-200 dark:border-zinc-800 p-6 max-w-calculator mx-auto;
   }
   .calculate-button {
-    @apply w-full sm:w-auto px-8 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900;
+    @apply w-full sm:w-auto px-8 py-3 bg-brand-500 hover:bg-brand-600 text-white font-semibold rounded-lg transition-colors duration-150 focus:outline-none focus:ring-2 focus:ring-brand-400 focus:ring-offset-2 dark:focus:ring-offset-zinc-950;
   }
   .result-highlight {
     @apply text-3xl font-bold text-brand-600 dark:text-brand-400;
   }
   .input-label {
-    @apply block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1;
+    @apply block text-sm font-medium text-gray-700 dark:text-zinc-300 mb-1;
   }
   .input-field {
-    @apply w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-brand-400 focus:border-brand-500 transition-colors text-base bg-white dark:bg-slate-800 dark:text-slate-200 dark:placeholder-slate-500;
+    @apply w-full px-3 py-2 border border-gray-300 dark:border-zinc-700 rounded-lg focus:ring-2 focus:ring-brand-400 focus:border-brand-500 transition-colors text-base bg-white dark:bg-zinc-900 dark:text-zinc-200 dark:placeholder-zinc-500;
   }
   .input-error {
     @apply text-sm text-danger-500 mt-1;
   }
   .input-help {
-    @apply text-sm text-gray-500 dark:text-slate-400 mt-1;
+    @apply text-sm text-gray-500 dark:text-zinc-400 mt-1;
   }
   .section-heading {
-    @apply text-2xl font-bold text-gray-900 dark:text-white mb-4;
+    @apply text-xl font-bold text-gray-900 dark:text-white mb-3;
   }
   .content-prose {
-    @apply text-gray-700 dark:text-slate-300 leading-relaxed;
+    @apply text-gray-700 dark:text-zinc-300 leading-relaxed;
   }
   .disclaimer-block {
-    @apply mt-8 p-4 bg-gray-50 dark:bg-slate-800/50 border border-gray-200 dark:border-slate-700 rounded-lg text-sm text-gray-500 dark:text-slate-400;
+    @apply mt-8 p-4 bg-gray-50 dark:bg-zinc-900/50 border border-gray-200 dark:border-zinc-800 rounded-lg text-sm text-gray-500 dark:text-zinc-400;
   }
   .breadcrumb {
-    @apply flex items-center gap-2 text-sm text-gray-500 dark:text-slate-400 mb-6;
+    @apply flex items-center gap-2 text-sm text-gray-500 dark:text-zinc-400 mb-6;
   }
   .breadcrumb a {
     @apply text-brand-500 dark:text-brand-400 hover:text-brand-600 dark:hover:text-brand-300 hover:underline;
   }
   .category-card {
-    @apply bg-white dark:bg-slate-800 rounded-xl border border-gray-200/80 dark:border-slate-700 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-brand-300 dark:hover:border-brand-500 transition-all duration-200;
+    @apply bg-white dark:bg-zinc-900 rounded-xl border border-gray-200/80 dark:border-zinc-800 p-6 shadow-[0_1px_3px_rgba(0,0,0,0.04)] hover:shadow-md hover:border-brand-300 dark:hover:border-brand-500 transition-all duration-200;
   }
   .related-calc-link {
     @apply block p-3 rounded-lg hover:bg-brand-50 dark:hover:bg-brand-900/30 transition-colors;
-  }
-
-  /* ─── Flagship 2-column layout ─── */
-  .flagship-layout {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  @media (min-width: 1024px) {
-    .flagship-layout {
-      grid-template-columns: 1fr 340px;
-      gap: 2.5rem;
-      align-items: start;
-    }
-  }
-  @media (min-width: 1280px) {
-    .flagship-layout {
-      grid-template-columns: 1fr 380px;
-      gap: 3rem;
-    }
   }
 
   /* ─── Article section spacing (48px gap handled by parent space-y-12) ─── */
@@ -114,32 +95,32 @@
     content: '';
   }
   .faq-item[open] {
-    @apply bg-gray-50/50 dark:bg-slate-800/50;
+    @apply bg-gray-50/50 dark:bg-zinc-900/50;
   }
 
   /* ─── FAQ visible items ─── */
   .faq-item-visible + .faq-item-visible {
-    @apply border-t border-gray-100 dark:border-slate-700/50 pt-6;
+    @apply border-t border-gray-100 dark:border-zinc-800/50 pt-6;
   }
 
   /* ─── Prose table polish ─── */
   .prose table {
-    @apply w-full text-sm border-collapse rounded-lg overflow-hidden border border-gray-200 dark:border-slate-700;
+    @apply w-full text-sm border-collapse rounded-lg overflow-hidden border border-gray-200 dark:border-zinc-800;
   }
   .prose thead {
     @apply bg-gray-50 dark:bg-slate-800/80;
   }
   .prose th {
-    @apply text-left font-semibold text-gray-700 dark:text-slate-300;
+    @apply text-left font-semibold text-gray-700 dark:text-zinc-300;
   }
   .prose td,
   .prose th {
-    @apply px-3 py-2.5 border-b border-gray-100 dark:border-slate-700;
+    @apply px-3 py-2.5 border-b border-gray-100 dark:border-zinc-800;
   }
   .prose tbody tr:last-child td {
     @apply border-b-0;
   }
   .prose tbody tr:hover {
-    @apply bg-gray-50/50 dark:bg-slate-700/30;
+    @apply bg-gray-50/50 dark:bg-zinc-800/30;
   }
 }

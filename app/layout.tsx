@@ -63,10 +63,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#F8FAFC] dark:bg-slate-900 font-sans">
+      <body className="min-h-screen flex flex-col bg-[#F8FAFC] dark:bg-zinc-950 font-sans">
         <ThemeProvider>
           <Navbar />
-          <main className="flex-1 w-full max-w-page-wide mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <main className="flex-1 w-full max-w-page mx-auto px-4 sm:px-6 lg:px-8 py-8">
             {children}
           </main>
           <Footer />
