@@ -48,7 +48,14 @@
       "slug": "data-storage",
       "description": "Convert between units of digital data storage.",
       "calculators": ["data-storage-converter"]
+    },
+    {
+      "id": "speed",
+      "name": "Speed",
+      "slug": "speed",
+      "description": "Convert between units of speed and velocity.",
+      "calculators": ["speed-converter"]
     }
   ],
-  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter"]
+  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter", "speed-converter"]
 }

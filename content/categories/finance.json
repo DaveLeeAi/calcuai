@@ -26,7 +26,7 @@
       "name": "Investment & Savings",
       "slug": "investment",
       "description": "Project compound interest growth, calculate investment returns with contributions, track net worth, and measure the impact of inflation over time.",
-      "calculators": ["compound-interest-calculator", "investment-calculator", "net-worth-calculator", "inflation-calculator", "rule-of-72-calculator"]
+      "calculators": ["compound-interest-calculator", "investment-calculator", "net-worth-calculator", "inflation-calculator", "rule-of-72-calculator", "simple-interest-calculator", "future-value-calculator", "present-value-calculator", "annuity-calculator"]
     },
     {
       "id": "savings",
