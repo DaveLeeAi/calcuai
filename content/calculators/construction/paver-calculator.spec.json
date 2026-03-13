@@ -17,8 +17,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Length of the area to pave"
@@ -32,8 +40,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Width of the area to pave"
@@ -48,8 +64,16 @@
       "max": 48,
       "step": 0.5,
       "units": [
-        { "value": "in", "label": "Inches", "conversionFactor": 1 },
-        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
       ],
       "defaultUnit": "in",
       "helpText": "Individual paver length"
@@ -64,8 +88,16 @@
       "max": 48,
       "step": 0.5,
       "units": [
-        { "value": "in", "label": "Inches", "conversionFactor": 1 },
-        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
       ],
       "defaultUnit": "in",
       "helpText": "Individual paver width"
@@ -89,10 +121,22 @@
       "required": true,
       "defaultValue": "running-bond",
       "options": [
-        { "value": "running-bond", "label": "Running Bond" },
-        { "value": "herringbone", "label": "Herringbone" },
-        { "value": "basketweave", "label": "Basketweave" },
-        { "value": "stack-bond", "label": "Stack Bond" }
+        {
+          "value": "running-bond",
+          "label": "Running Bond"
+        },
+        {
+          "value": "herringbone",
+          "label": "Herringbone"
+        },
+        {
+          "value": "basketweave",
+          "label": "Basketweave"
+        },
+        {
+          "value": "stack-bond",
+          "label": "Stack Bond"
+        }
       ],
       "helpText": "Lay pattern affects waste — herringbone adds ~5% more cuts"
     },
@@ -196,7 +240,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Paver coverage calculations based on Interlocking Concrete Pavement Institute (ICPI) installation guidelines. Effective coverage accounts for joint spacing added to each paver dimension. Pattern waste multipliers per ICPI recommendations: 5% for stack bond, 10% for running bond, 15% for herringbone. Base material depths follow ICPI Pavements for Patios and Pedestrian Applications (4\" gravel, 1\" sand).",
   "formulaAuditDate": "2026-03-14",
@@ -209,7 +253,7 @@
     "square-footage-calculator",
     "brick-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

@@ -1,0 +1,169 @@
+{
+  "id": "vo2-max-calculator",
+  "title": "VO2 Max Calculator",
+  "slug": "vo2-max-calculator",
+  "category": "health",
+  "subcategory": "fitness",
+  "primaryKeyword": "vo2 max calculator",
+  "metaTitle": "VO2 Max Calculator — Cooper Test & Heart Rate Method",
+  "metaDescription": "Estimate your VO2 max using the Cooper 12-minute run test or heart rate ratio method. See fitness level, percentile ranking, and what your score means. Free.",
+  "inputs": [
+    {
+      "id": "testMethod",
+      "label": "Test Method",
+      "type": "select",
+      "required": true,
+      "defaultValue": "cooper",
+      "options": [
+        {
+          "value": "cooper",
+          "label": "Cooper 12-Minute Run Test"
+        },
+        {
+          "value": "heart-rate",
+          "label": "Heart Rate Ratio (Uth et al.)"
+        }
+      ]
+    },
+    {
+      "id": "distanceMeters",
+      "label": "Distance Covered",
+      "type": "number",
+      "required": false,
+      "defaultValue": 2400,
+      "min": 0,
+      "max": 10000,
+      "step": 10,
+      "suffix": "m",
+      "helpText": "Total distance covered during the 12-minute run test",
+      "visibleWhen": {
+        "field": "testMethod",
+        "value": "cooper"
+      }
+    },
+    {
+      "id": "distanceUnit",
+      "label": "Distance Unit",
+      "type": "select",
+      "required": false,
+      "defaultValue": "meters",
+      "options": [
+        {
+          "value": "meters",
+          "label": "Meters"
+        },
+        {
+          "value": "miles",
+          "label": "Miles"
+        }
+      ],
+      "visibleWhen": {
+        "field": "testMethod",
+        "value": "cooper"
+      }
+    },
+    {
+      "id": "age",
+      "label": "Age",
+      "type": "number",
+      "required": false,
+      "defaultValue": 30,
+      "min": 15,
+      "max": 100,
+      "step": 1,
+      "suffix": "years",
+      "helpText": "Your current age (used to estimate max heart rate as 220 − age)",
+      "visibleWhen": {
+        "field": "testMethod",
+        "value": "heart-rate"
+      }
+    },
+    {
+      "id": "restingHeartRate",
+      "label": "Resting Heart Rate",
+      "type": "number",
+      "required": false,
+      "defaultValue": 65,
+      "min": 30,
+      "max": 120,
+      "step": 1,
+      "suffix": "bpm",
+      "helpText": "Your resting heart rate in beats per minute. Measure first thing in the morning before getting out of bed.",
+      "visibleWhen": {
+        "field": "testMethod",
+        "value": "heart-rate"
+      }
+    }
+  ],
+  "outputs": [
+    {
+      "id": "vo2Max",
+      "label": "Estimated VO2 Max",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "highlight": true,
+      "description": "Your estimated maximal oxygen uptake in mL/kg/min — the gold standard measure of cardiovascular fitness"
+    },
+    {
+      "id": "fitnessLevel",
+      "label": "Fitness Classification",
+      "type": "single-value",
+      "format": "text",
+      "description": "Fitness classification based on your VO2 max score: Poor, Fair, Good, Excellent, or Superior"
+    },
+    {
+      "id": "percentile",
+      "label": "Population Percentile",
+      "type": "single-value",
+      "format": "text",
+      "description": "Approximate percentile ranking among the general adult population"
+    },
+    {
+      "id": "summary",
+      "label": "VO2 Max Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "vo2-max",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "tdee-calculator",
+    "heart-rate-zone-calculator",
+    "pace-calculator",
+    "bmi-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Cooper KH. A Means of Assessing Maximal Oxygen Intake. JAMA. 1968;203(3):201-204",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Cooper KH. A Means of Assessing Maximal Oxygen Intake. JAMA. 1968;203(3):201-204. Uth N, Sorensen H, Overgaard K, Pedersen PK. Estimation of VO2max from the ratio between HRmax and HRrest. Eur J Appl Physiol. 2004;91(1):111-115.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "heart-rate-zone-calculator",
+    "pace-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "evergreen",
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}

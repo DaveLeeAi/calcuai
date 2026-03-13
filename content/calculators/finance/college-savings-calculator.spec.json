@@ -1,0 +1,196 @@
+{
+  "id": "college-savings-calculator",
+  "title": "College Savings Calculator",
+  "slug": "college-savings-calculator",
+  "category": "finance",
+  "subcategory": "savings",
+  "primaryKeyword": "college savings calculator",
+  "metaTitle": "College Savings Calculator — 529 Plan & Tuition Planner",
+  "metaDescription": "Calculate how much to save for college. A newborn's 4-year degree at $25,000/year costs $190,000+ after inflation. Find your monthly savings target. Free tool.",
+  "inputs": [
+    {
+      "id": "childAge",
+      "label": "Child's Current Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 17,
+      "step": 1,
+      "helpText": "Your child's current age in years"
+    },
+    {
+      "id": "collegeStartAge",
+      "label": "College Start Age",
+      "type": "number",
+      "required": true,
+      "defaultValue": 18,
+      "min": 16,
+      "max": 22,
+      "step": 1,
+      "helpText": "Age when your child will start college"
+    },
+    {
+      "id": "annualCost",
+      "label": "Current Annual Cost",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25000,
+      "min": 1000,
+      "max": 100000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Current annual tuition + room & board"
+    },
+    {
+      "id": "yearsInCollege",
+      "label": "Years in College",
+      "type": "number",
+      "required": true,
+      "defaultValue": 4,
+      "min": 1,
+      "max": 8,
+      "step": 1,
+      "helpText": "Duration including graduate school if applicable"
+    },
+    {
+      "id": "currentSavings",
+      "label": "Current Savings",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 1000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Amount already saved for college (529, savings, etc.)"
+    },
+    {
+      "id": "monthlyContribution",
+      "label": "Monthly Contribution",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300,
+      "min": 0,
+      "max": 10000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Amount you currently save per month"
+    },
+    {
+      "id": "annualReturn",
+      "label": "Expected Annual Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 20,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "Expected investment return (529 plans average 5-8%)"
+    },
+    {
+      "id": "collegeInflation",
+      "label": "College Cost Inflation",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "College costs historically rise ~5% per year"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "projectedTotalCost",
+      "label": "Projected Total College Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Total cost of college in future dollars, accounting for tuition inflation"
+    },
+    {
+      "id": "projectedSavings",
+      "label": "Projected Savings at College Start",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "savingsGap",
+      "label": "Savings Gap",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlySavingsNeeded",
+      "label": "Monthly Savings Needed",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "savingsGrowthChart",
+      "label": "Savings Growth Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#2563eb",
+          "#10b981"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "College Savings Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "college-savings",
+  "features": [
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "savings-calculator",
+    "compound-interest-calculator",
+    "investment-calculator",
+    "savings-goal-calculator",
+    "future-value-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "College Board — Trends in College Pricing and Student Aid (2023); FINRA 529 Plan guidance; standard future value annuity formula (CFA Institute)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "FV_cost = Σ annualCost × (1+i)^(yearsUntil+k); PMT = remaining × r_m / ((1+r_m)^n - 1); College Board Trends in College Pricing (2023), FINRA 529 Plan guidance",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "savings-goal-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [
+    "compound-interest",
+    "future-value",
+    "interest-rate"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

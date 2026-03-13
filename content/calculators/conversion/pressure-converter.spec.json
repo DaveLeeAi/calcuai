@@ -26,13 +26,34 @@
       "required": true,
       "defaultValue": "atmosphere",
       "options": [
-        { "value": "pascal", "label": "Pascal (Pa)" },
-        { "value": "kilopascal", "label": "Kilopascal (kPa)" },
-        { "value": "bar", "label": "Bar" },
-        { "value": "atmosphere", "label": "Atmosphere (atm)" },
-        { "value": "psi", "label": "PSI (lb/in\u00b2)" },
-        { "value": "mmhg", "label": "mmHg (Torr)" },
-        { "value": "inhg", "label": "inHg" }
+        {
+          "value": "pascal",
+          "label": "Pascal (Pa)"
+        },
+        {
+          "value": "kilopascal",
+          "label": "Kilopascal (kPa)"
+        },
+        {
+          "value": "bar",
+          "label": "Bar"
+        },
+        {
+          "value": "atmosphere",
+          "label": "Atmosphere (atm)"
+        },
+        {
+          "value": "psi",
+          "label": "PSI (lb/in²)"
+        },
+        {
+          "value": "mmhg",
+          "label": "mmHg (Torr)"
+        },
+        {
+          "value": "inhg",
+          "label": "inHg"
+        }
       ]
     },
     {
@@ -42,33 +63,94 @@
       "required": true,
       "defaultValue": "psi",
       "options": [
-        { "value": "pascal", "label": "Pascal (Pa)" },
-        { "value": "kilopascal", "label": "Kilopascal (kPa)" },
-        { "value": "bar", "label": "Bar" },
-        { "value": "atmosphere", "label": "Atmosphere (atm)" },
-        { "value": "psi", "label": "PSI (lb/in\u00b2)" },
-        { "value": "mmhg", "label": "mmHg (Torr)" },
-        { "value": "inhg", "label": "inHg" }
+        {
+          "value": "pascal",
+          "label": "Pascal (Pa)"
+        },
+        {
+          "value": "kilopascal",
+          "label": "Kilopascal (kPa)"
+        },
+        {
+          "value": "bar",
+          "label": "Bar"
+        },
+        {
+          "value": "atmosphere",
+          "label": "Atmosphere (atm)"
+        },
+        {
+          "value": "psi",
+          "label": "PSI (lb/in²)"
+        },
+        {
+          "value": "mmhg",
+          "label": "mmHg (Torr)"
+        },
+        {
+          "value": "inhg",
+          "label": "inHg"
+        }
       ]
     }
   ],
   "outputs": [
-    { "id": "convertedValue", "label": "Converted Value", "type": "single-value", "format": "number", "highlight": true, "precision": 6 },
-    { "id": "conversionDisplay", "label": "Conversion", "type": "single-value", "format": "text" },
-    { "id": "conversionRate", "label": "Conversion Rate", "type": "single-value", "format": "number", "precision": 6 },
-    { "id": "inverseRate", "label": "Inverse Rate", "type": "single-value", "format": "number", "precision": 6 },
-    { "id": "conversionTable", "label": "All Pressure Conversions", "type": "value-group", "format": "text" }
+    {
+      "id": "convertedValue",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 6
+    },
+    {
+      "id": "conversionDisplay",
+      "label": "Conversion",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "inverseRate",
+      "label": "Inverse Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Pressure Conversions",
+      "type": "value-group",
+      "format": "text"
+    }
   ],
   "formula": "pressure-convert",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["weight-converter", "temperature-converter", "length-converter"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "weight-converter",
+    "temperature-converter",
+    "length-converter"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "NIST Special Publication 330, The International System of Units (SI), 2019 Edition",
   "articleWordTarget": 800,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "editorial",
   "formulaSource": "convertedValue = value × (fromFactor / toFactor); base unit = pascal. 1 kPa = 1000 Pa, 1 bar = 100000 Pa, 1 atm = 101325 Pa, 1 psi = 6894.757 Pa, 1 mmHg = 133.3224 Pa, 1 inHg = 3386.389 Pa",
@@ -78,7 +160,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 68,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [],

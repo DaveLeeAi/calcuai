@@ -87,7 +87,10 @@
       "label": "Credit Usage Breakdown",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#ef4444", "#10b981"]
+        "colors": [
+          "#ef4444",
+          "#10b981"
+        ]
       }
     }
   ],
@@ -110,7 +113,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Utilization Ratio = (Total Balances / Total Credit Limit) × 100. Rating thresholds per FICO Score model and Experian/TransUnion/Equifax reporting standards",
   "formulaAuditDate": "2026-03-13",
@@ -119,9 +122,11 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["principal"],
+  "glossaryTerms": [
+    "principal"
+  ],
   "methodologyTopics": []
 }

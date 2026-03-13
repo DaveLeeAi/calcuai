@@ -108,12 +108,18 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "Portfolio Value ($)",
-        "colors": ["#10b981", "#f59e0b"]
+        "colors": [
+          "#10b981",
+          "#f59e0b"
+        ]
       }
     }
   ],
   "formula": "fire-number",
-  "features": ["compare-scenarios", "chart"],
+  "features": [
+    "compare-scenarios",
+    "chart"
+  ],
   "relatedCalculators": [
     "retirement-calculator",
     "retirement-withdrawal-calculator",
@@ -132,7 +138,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "FIRE Number = Annual Expenses / SWR; Years to FIRE via iterative compound growth per Trinity Study methodology",
   "formulaAuditDate": "2026-03-13",
@@ -144,7 +150,7 @@
     "retirement-calculator",
     "retirement-withdrawal-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 95,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

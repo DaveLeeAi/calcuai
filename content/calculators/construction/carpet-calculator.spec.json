@@ -17,9 +17,21 @@
       "min": 1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft"
     },
@@ -32,9 +44,21 @@
       "min": 1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft"
     },
@@ -45,8 +69,14 @@
       "required": true,
       "defaultValue": "12",
       "options": [
-        { "value": "12", "label": "12 ft (Standard)" },
-        { "value": "15", "label": "15 ft (Wide)" }
+        {
+          "value": "12",
+          "label": "12 ft (Standard)"
+        },
+        {
+          "value": "15",
+          "label": "15 ft (Wide)"
+        }
       ],
       "helpText": "Standard carpet roll width in feet"
     },
@@ -168,7 +198,7 @@
     "flooring-calculator",
     "square-footage-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

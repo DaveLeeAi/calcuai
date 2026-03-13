@@ -17,8 +17,16 @@
       "min": 0,
       "step": 0.5,
       "units": [
-        { "value": "in", "label": "Inches", "conversionFactor": 1 },
-        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
       ],
       "defaultUnit": "in",
       "helpText": "Vertical rise — height the roof rises"
@@ -32,10 +40,26 @@
       "min": 0,
       "step": 0.5,
       "units": [
-        { "value": "in", "label": "Inches", "conversionFactor": 1 },
-        { "value": "ft", "label": "Feet", "conversionFactor": 12 },
-        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 },
-        { "value": "m", "label": "Meters", "conversionFactor": 39.3701 }
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 12
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 39.3701
+        }
       ],
       "defaultUnit": "in",
       "helpText": "Horizontal run — distance the roof covers horizontally"
@@ -47,8 +71,14 @@
       "required": true,
       "defaultValue": "rise-run",
       "options": [
-        { "value": "rise-run", "label": "Rise & Run" },
-        { "value": "angle", "label": "Known Angle (degrees)" }
+        {
+          "value": "rise-run",
+          "label": "Rise & Run"
+        },
+        {
+          "value": "angle",
+          "label": "Known Angle (degrees)"
+        }
       ],
       "helpText": "Choose rise/run input or enter a known angle"
     },
@@ -131,7 +161,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Roof pitch geometry: pitch = rise/run normalized to 12-inch base, angle via inverse tangent, roof area multiplier via 1/cos(angle). Slope classifications and walkability thresholds per OSHA 1926.501(b)(11) and industry roofing safety standards. IRC Section R905 for minimum slope requirements by roofing material.",
   "formulaAuditDate": "2026-03-13",
@@ -140,7 +170,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null
 }

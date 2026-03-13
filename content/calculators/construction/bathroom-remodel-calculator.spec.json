@@ -8,36 +8,245 @@
   "metaTitle": "Bathroom Remodel Calculator — Estimate Costs by Vanity, Shower & Fixtures",
   "metaDescription": "Estimate your bathroom remodel cost based on size, vanity type, shower/tub, tile, fixtures, and plumbing. Average bathroom remodel: $6,000–$25,000. Free calculator.",
   "inputs": [
-    {"id": "bathroomSize", "label": "Bathroom Size", "type": "number", "required": true, "defaultValue": 75, "min": 25, "max": 250, "step": 5, "suffix": "sq ft", "helpText": "Total bathroom floor area in square feet"},
-    {"id": "bathroomType", "label": "Bathroom Type", "type": "select", "required": true, "defaultValue": "full", "options": [{"value": "half", "label": "Half Bath (toilet + sink)"}, {"value": "full", "label": "Full Bath (toilet + sink + tub/shower)"}, {"value": "master", "label": "Master Bath (double vanity + walk-in shower + tub)"}]},
-    {"id": "vanityType", "label": "Vanity Quality", "type": "select", "required": true, "defaultValue": "mid", "options": [{"value": "stock", "label": "Stock ($200–$800)"}, {"value": "mid", "label": "Mid-Range ($800–$2,500)"}, {"value": "custom", "label": "Custom ($2,500–$6,000)"}]},
-    {"id": "showerTub", "label": "Shower/Tub Work", "type": "select", "required": true, "defaultValue": "replace", "options": [{"value": "none", "label": "No Change"}, {"value": "refinish", "label": "Refinish ($300–$600)"}, {"value": "liner", "label": "Liner/Insert ($1,000–$3,000)"}, {"value": "replace", "label": "Full Replacement ($2,000–$8,000)"}, {"value": "walkin", "label": "Walk-in Shower ($4,000–$12,000)"}]},
-    {"id": "tileArea", "label": "Tile Area", "type": "number", "required": true, "defaultValue": 100, "min": 0, "max": 500, "step": 10, "suffix": "sq ft", "helpText": "Total floor + wall tile area"},
-    {"id": "tileQuality", "label": "Tile Quality", "type": "select", "required": true, "defaultValue": "mid", "options": [{"value": "basic", "label": "Ceramic ($2–$8/sq ft)"}, {"value": "mid", "label": "Porcelain ($5–$15/sq ft)"}, {"value": "premium", "label": "Natural Stone ($10–$30/sq ft)"}]},
-    {"id": "fixtureLevel", "label": "Fixture Level", "type": "select", "required": true, "defaultValue": "mid", "options": [{"value": "basic", "label": "Basic ($200–$500)"}, {"value": "mid", "label": "Mid-Range ($500–$1,500)"}, {"value": "premium", "label": "Premium ($1,500–$3,000)"}]},
-    {"id": "plumbingChanges", "label": "Plumbing Changes", "type": "select", "required": true, "defaultValue": "minor", "options": [{"value": "none", "label": "No Plumbing Changes"}, {"value": "minor", "label": "Minor (fixture swap)"}, {"value": "major", "label": "Major (relocate plumbing)"}]}
+    {
+      "id": "bathroomSize",
+      "label": "Bathroom Size",
+      "type": "number",
+      "required": true,
+      "defaultValue": 75,
+      "min": 25,
+      "max": 250,
+      "step": 5,
+      "suffix": "sq ft",
+      "helpText": "Total bathroom floor area in square feet"
+    },
+    {
+      "id": "bathroomType",
+      "label": "Bathroom Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "full",
+      "options": [
+        {
+          "value": "half",
+          "label": "Half Bath (toilet + sink)"
+        },
+        {
+          "value": "full",
+          "label": "Full Bath (toilet + sink + tub/shower)"
+        },
+        {
+          "value": "master",
+          "label": "Master Bath (double vanity + walk-in shower + tub)"
+        }
+      ]
+    },
+    {
+      "id": "vanityType",
+      "label": "Vanity Quality",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mid",
+      "options": [
+        {
+          "value": "stock",
+          "label": "Stock ($200–$800)"
+        },
+        {
+          "value": "mid",
+          "label": "Mid-Range ($800–$2,500)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom ($2,500–$6,000)"
+        }
+      ]
+    },
+    {
+      "id": "showerTub",
+      "label": "Shower/Tub Work",
+      "type": "select",
+      "required": true,
+      "defaultValue": "replace",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Change"
+        },
+        {
+          "value": "refinish",
+          "label": "Refinish ($300–$600)"
+        },
+        {
+          "value": "liner",
+          "label": "Liner/Insert ($1,000–$3,000)"
+        },
+        {
+          "value": "replace",
+          "label": "Full Replacement ($2,000–$8,000)"
+        },
+        {
+          "value": "walkin",
+          "label": "Walk-in Shower ($4,000–$12,000)"
+        }
+      ]
+    },
+    {
+      "id": "tileArea",
+      "label": "Tile Area",
+      "type": "number",
+      "required": true,
+      "defaultValue": 100,
+      "min": 0,
+      "max": 500,
+      "step": 10,
+      "suffix": "sq ft",
+      "helpText": "Total floor + wall tile area"
+    },
+    {
+      "id": "tileQuality",
+      "label": "Tile Quality",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mid",
+      "options": [
+        {
+          "value": "basic",
+          "label": "Ceramic ($2–$8/sq ft)"
+        },
+        {
+          "value": "mid",
+          "label": "Porcelain ($5–$15/sq ft)"
+        },
+        {
+          "value": "premium",
+          "label": "Natural Stone ($10–$30/sq ft)"
+        }
+      ]
+    },
+    {
+      "id": "fixtureLevel",
+      "label": "Fixture Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mid",
+      "options": [
+        {
+          "value": "basic",
+          "label": "Basic ($200–$500)"
+        },
+        {
+          "value": "mid",
+          "label": "Mid-Range ($500–$1,500)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium ($1,500–$3,000)"
+        }
+      ]
+    },
+    {
+      "id": "plumbingChanges",
+      "label": "Plumbing Changes",
+      "type": "select",
+      "required": true,
+      "defaultValue": "minor",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Plumbing Changes"
+        },
+        {
+          "value": "minor",
+          "label": "Minor (fixture swap)"
+        },
+        {
+          "value": "major",
+          "label": "Major (relocate plumbing)"
+        }
+      ]
+    }
   ],
   "outputs": [
-    {"id": "totalCost", "label": "Estimated Total Cost", "type": "single-value", "format": "currency", "highlight": true},
-    {"id": "costPerSqFt", "label": "Cost Per Square Foot", "type": "single-value", "format": "currency"},
-    {"id": "vanityCost", "label": "Vanity Cost", "type": "single-value", "format": "currency"},
-    {"id": "showerTubCost", "label": "Shower/Tub Cost", "type": "single-value", "format": "currency"},
-    {"id": "tileCost", "label": "Tile & Installation", "type": "single-value", "format": "currency"},
-    {"id": "fixtureCost", "label": "Fixtures (toilet, faucets)", "type": "single-value", "format": "currency"},
-    {"id": "plumbingCost", "label": "Plumbing", "type": "single-value", "format": "currency"},
-    {"id": "laborCost", "label": "Labor & Installation", "type": "single-value", "format": "currency"},
-    {"id": "costBreakdown", "label": "Cost Breakdown", "type": "value-group", "format": "currency"}
+    {
+      "id": "totalCost",
+      "label": "Estimated Total Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost Per Square Foot",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "vanityCost",
+      "label": "Vanity Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "showerTubCost",
+      "label": "Shower/Tub Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "tileCost",
+      "label": "Tile & Installation",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "fixtureCost",
+      "label": "Fixtures (toilet, faucets)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "plumbingCost",
+      "label": "Plumbing",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor & Installation",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
   ],
   "formula": "bathroom-remodel",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["kitchen-remodel-calculator", "tile-calculator", "flooring-calculator", "drywall-calculator", "paint-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "kitchen-remodel-calculator",
+    "tile-calculator",
+    "flooring-calculator",
+    "drywall-calculator",
+    "paint-calculator"
+  ],
   "disclaimer": "construction",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "National Kitchen & Bath Association (NKBA) — Bathroom Planning Guidelines; HomeAdvisor 2024 True Cost Guide; Remodeling Magazine 2024 Cost vs. Value Report",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "editorial",
   "formulaSource": "Cost estimation based on NKBA bathroom planning guidelines. Vanity costs by quality tier, tile per square foot with installation multiplier, fixture packages, plumbing by scope. Labor as percentage of materials.",
@@ -46,10 +255,14 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["kitchen-remodel-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "kitchen-remodel-calculator"
+  ],
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["square-footage"],
+  "glossaryTerms": [
+    "square-footage"
+  ],
   "methodologyTopics": []
 }

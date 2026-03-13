@@ -17,8 +17,16 @@
       "min": 1,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Roof length along the ridge line (eave to eave)"
@@ -32,8 +40,16 @@
       "min": 1,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Roof width from ridge to eave (one side)"
@@ -45,8 +61,14 @@
       "required": true,
       "defaultValue": "2",
       "options": [
-        { "value": "1", "label": "1 Side (Shed / Lean-to)" },
-        { "value": "2", "label": "2 Sides (Gable)" }
+        {
+          "value": "1",
+          "label": "1 Side (Shed / Lean-to)"
+        },
+        {
+          "value": "2",
+          "label": "2 Sides (Gable)"
+        }
       ],
       "helpText": "Number of roof planes to cover"
     },
@@ -57,10 +79,22 @@
       "required": true,
       "defaultValue": "standing-seam",
       "options": [
-        { "value": "standing-seam", "label": "Standing Seam" },
-        { "value": "corrugated", "label": "Corrugated" },
-        { "value": "r-panel", "label": "R-Panel / PBR" },
-        { "value": "stone-coated", "label": "Stone-Coated Steel" }
+        {
+          "value": "standing-seam",
+          "label": "Standing Seam"
+        },
+        {
+          "value": "corrugated",
+          "label": "Corrugated"
+        },
+        {
+          "value": "r-panel",
+          "label": "R-Panel / PBR"
+        },
+        {
+          "value": "stone-coated",
+          "label": "Stone-Coated Steel"
+        }
       ],
       "helpText": "Metal panel profile type"
     },
@@ -191,7 +225,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Panel coverage calculations per manufacturer specifications. Cost ranges from HomeAdvisor/Angi 2025-2026 national averages. Screw density and trim estimates per MRA installation guidelines.",
   "formulaAuditDate": "2026-03-14",
@@ -202,7 +236,7 @@
   "duplicationRisk": [
     "roofing-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

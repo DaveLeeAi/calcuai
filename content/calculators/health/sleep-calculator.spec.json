@@ -1,0 +1,126 @@
+{
+  "id": "sleep-calculator",
+  "title": "Sleep Calculator",
+  "slug": "sleep-calculator",
+  "category": "health",
+  "subcategory": "sleep",
+  "primaryKeyword": "sleep calculator",
+  "metaTitle": "Sleep Calculator — Find Your Ideal Bedtime by Cycles",
+  "metaDescription": "Calculate your ideal bedtime based on 90-minute sleep cycles and wake-up time. See optimal bedtimes for 4, 5, and 6 cycles. Free sleep cycle calculator.",
+  "inputs": [
+    {
+      "id": "wakeUpTime",
+      "label": "Wake-Up Time",
+      "type": "text",
+      "required": true,
+      "defaultValue": "06:30",
+      "helpText": "Enter your desired wake-up time in HH:MM format (e.g., 06:30 or 6:30 AM)"
+    },
+    {
+      "id": "fallAsleepMinutes",
+      "label": "Time to Fall Asleep",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 5,
+      "max": 60,
+      "step": 5,
+      "suffix": "min",
+      "helpText": "Average time it takes you to fall asleep (most adults: 10-20 minutes)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "recommendedBedtime",
+      "label": "Recommended Bedtime",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true,
+      "description": "Your ideal bedtime for 5 complete sleep cycles (7.5 hours of sleep), accounting for fall-asleep time"
+    },
+    {
+      "id": "totalSleepHours",
+      "label": "Total Sleep (Recommended)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "description": "Hours of sleep for the recommended 5-cycle option"
+    },
+    {
+      "id": "bedtimeOptions",
+      "label": "Bedtime Options by Cycle Count",
+      "type": "table",
+      "tableConfig": {
+        "columns": [
+          {
+            "key": "cycles",
+            "label": "Cycles",
+            "format": "number"
+          },
+          {
+            "key": "bedtime",
+            "label": "Bedtime",
+            "format": "text"
+          },
+          {
+            "key": "sleepHours",
+            "label": "Sleep Duration (hrs)",
+            "format": "number"
+          },
+          {
+            "key": "label",
+            "label": "Rating",
+            "format": "text"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sleepQualityTip",
+      "label": "Sleep Quality Tip",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Sleep Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "sleep",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "calorie-calculator",
+    "bmi-calculator",
+    "tdee-calculator",
+    "water-intake-calculator"
+  ],
+  "disclaimer": "health",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "National Sleep Foundation sleep cycle research; Walker, M. Why We Sleep (2017)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "National Sleep Foundation. Sleep Cycle Stages and Duration. Walker, M. Why We Sleep: Unlocking the Power of Sleep and Dreams. Scribner, 2017. Carskadon MA, Dement WC. Normal Human Sleep: An Overview. Principles and Practice of Sleep Medicine, 6th ed., 2017.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "evergreen",
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}

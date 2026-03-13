@@ -26,13 +26,34 @@
       "required": true,
       "defaultValue": "hours",
       "options": [
-        { "value": "seconds", "label": "Seconds (s)" },
-        { "value": "minutes", "label": "Minutes (min)" },
-        { "value": "hours", "label": "Hours (hr)" },
-        { "value": "days", "label": "Days (d)" },
-        { "value": "weeks", "label": "Weeks (wk)" },
-        { "value": "months", "label": "Months (mo)" },
-        { "value": "years", "label": "Years (yr)" }
+        {
+          "value": "seconds",
+          "label": "Seconds (s)"
+        },
+        {
+          "value": "minutes",
+          "label": "Minutes (min)"
+        },
+        {
+          "value": "hours",
+          "label": "Hours (hr)"
+        },
+        {
+          "value": "days",
+          "label": "Days (d)"
+        },
+        {
+          "value": "weeks",
+          "label": "Weeks (wk)"
+        },
+        {
+          "value": "months",
+          "label": "Months (mo)"
+        },
+        {
+          "value": "years",
+          "label": "Years (yr)"
+        }
       ]
     },
     {
@@ -42,33 +63,95 @@
       "required": true,
       "defaultValue": "minutes",
       "options": [
-        { "value": "seconds", "label": "Seconds (s)" },
-        { "value": "minutes", "label": "Minutes (min)" },
-        { "value": "hours", "label": "Hours (hr)" },
-        { "value": "days", "label": "Days (d)" },
-        { "value": "weeks", "label": "Weeks (wk)" },
-        { "value": "months", "label": "Months (mo)" },
-        { "value": "years", "label": "Years (yr)" }
+        {
+          "value": "seconds",
+          "label": "Seconds (s)"
+        },
+        {
+          "value": "minutes",
+          "label": "Minutes (min)"
+        },
+        {
+          "value": "hours",
+          "label": "Hours (hr)"
+        },
+        {
+          "value": "days",
+          "label": "Days (d)"
+        },
+        {
+          "value": "weeks",
+          "label": "Weeks (wk)"
+        },
+        {
+          "value": "months",
+          "label": "Months (mo)"
+        },
+        {
+          "value": "years",
+          "label": "Years (yr)"
+        }
       ]
     }
   ],
   "outputs": [
-    { "id": "convertedValue", "label": "Converted Value", "type": "single-value", "format": "number", "highlight": true, "precision": 6 },
-    { "id": "conversionDisplay", "label": "Conversion", "type": "single-value", "format": "text" },
-    { "id": "conversionRate", "label": "Conversion Rate", "type": "single-value", "format": "number", "precision": 6 },
-    { "id": "inverseRate", "label": "Inverse Rate", "type": "single-value", "format": "number", "precision": 6 },
-    { "id": "conversionTable", "label": "All Time Conversions", "type": "value-group", "format": "text" }
+    {
+      "id": "convertedValue",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 6
+    },
+    {
+      "id": "conversionDisplay",
+      "label": "Conversion",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "inverseRate",
+      "label": "Inverse Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Time Conversions",
+      "type": "value-group",
+      "format": "text"
+    }
   ],
   "formula": "time-convert",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["date-calculator", "hours-calculator", "countdown-calculator", "time-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "date-calculator",
+    "hours-calculator",
+    "countdown-calculator",
+    "time-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "NIST Special Publication 811, Guide for the Use of the International System of Units (SI), 2008 Edition",
   "articleWordTarget": 800,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "editorial",
   "formulaSource": "convertedValue = value × (fromFactor / toFactor); base unit = seconds. 1 min = 60 s, 1 hr = 3600 s, 1 day = 86400 s, 1 wk = 604800 s, 1 mo = 2629746 s (30.44 d), 1 yr = 31557600 s (365.25 d)",
@@ -77,8 +160,11 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["time-calculator", "hours-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "time-calculator",
+    "hours-calculator"
+  ],
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [],

@@ -17,9 +17,21 @@
       "min": 1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Length of the deck (longest dimension)"
@@ -33,9 +45,21 @@
       "min": 1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Width of the deck (shorter dimension)"
@@ -49,9 +73,21 @@
       "min": 0,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Height from ground to top of deck surface"
@@ -63,10 +99,22 @@
       "required": true,
       "defaultValue": "pressure-treated",
       "options": [
-        { "value": "pressure-treated", "label": "Pressure-Treated Pine" },
-        { "value": "cedar", "label": "Cedar" },
-        { "value": "composite", "label": "Composite" },
-        { "value": "tropical-hardwood", "label": "Tropical Hardwood (Ipe)" }
+        {
+          "value": "pressure-treated",
+          "label": "Pressure-Treated Pine"
+        },
+        {
+          "value": "cedar",
+          "label": "Cedar"
+        },
+        {
+          "value": "composite",
+          "label": "Composite"
+        },
+        {
+          "value": "tropical-hardwood",
+          "label": "Tropical Hardwood (Ipe)"
+        }
       ],
       "helpText": "Decking board material"
     },
@@ -77,8 +125,14 @@
       "required": true,
       "defaultValue": "5.5",
       "options": [
-        { "value": "5.5", "label": "5.5\" (Nominal 6\")" },
-        { "value": "3.5", "label": "3.5\" (Nominal 4\")" }
+        {
+          "value": "5.5",
+          "label": "5.5\" (Nominal 6\")"
+        },
+        {
+          "value": "3.5",
+          "label": "3.5\" (Nominal 4\")"
+        }
       ],
       "helpText": "Actual width of decking boards"
     },
@@ -89,9 +143,18 @@
       "required": true,
       "defaultValue": "16",
       "options": [
-        { "value": "12", "label": "12\" on center" },
-        { "value": "16", "label": "16\" on center (standard)" },
-        { "value": "24", "label": "24\" on center" }
+        {
+          "value": "12",
+          "label": "12\" on center"
+        },
+        {
+          "value": "16",
+          "label": "16\" on center (standard)"
+        },
+        {
+          "value": "24",
+          "label": "24\" on center"
+        }
       ],
       "helpText": "Distance between joist centers"
     },
@@ -200,7 +263,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Joist spacing, post spacing, and beam span tables from the American Wood Council Deck Construction Guide (DCA6-2012). Material cost data from HomeAdvisor/Angi 2025-2026 national averages. Screw count based on deck fastener manufacturers (350 per 100 sq ft).",
   "formulaAuditDate": "2026-03-13",
@@ -212,7 +275,7 @@
     "stair-calculator",
     "concrete-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-13",
   "seasonality": "spring-summer"
 }

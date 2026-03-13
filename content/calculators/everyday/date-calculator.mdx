@@ -282,7 +282,26 @@ No, and it does not need to. Daylight Saving Time affects clock time, not calend
 
 It depends on which months are involved. Six months from January 15 is July 15 (181 days in a non-leap year). Six months from July 15 is January 15 (184 days). Six months from August 31 is February 28 or 29 (because there is no February 31). The concept of "N months" is inherently ambiguous because months have 28-31 days. When precision matters, always specify the exact number of calendar days rather than using month-based intervals. Legal contracts often define "month" as 30 days to avoid this ambiguity.
 
+### How do I calculate the number of business days between two dates?
+
+Multiply the total calendar days by 5/7 for a quick estimate, then subtract any holidays in the period. For a precise count: count the full weeks (each has 5 business days), then count the remaining partial-week days, excluding Saturday and Sunday. A 30-calendar-day period contains approximately 22 business days, but the exact count varies by 1-2 days depending on which day of the week you start. Federal holidays reduce the count further — the U.S. observes 11 federal holidays per year.
+
+### Can I use this calculator for historical dates before the Gregorian calendar?
+
+The calculator uses the proleptic Gregorian calendar for all dates, which means it applies modern calendar rules retroactively. For dates before October 15, 1582 (when the Gregorian calendar was adopted), results may not match contemporary records. Britain and its colonies did not switch until September 1752, skipping 11 days. George Washington's birthday is recorded as both February 11, 1731 (Julian/Old Style) and February 22, 1732 (Gregorian/New Style). If historical accuracy is critical, consult a Julian-to-Gregorian conversion reference for the specific country and date.
+
 </div>
+
+{/* Section 10b: Real-World Uses */}
+## Real-World Uses
+
+**Lease and rental period tracking.** Landlords calculating exact lease durations need precise day counts to prorate rent. A tenant moving in on March 15 and out on November 3 occupies the unit for 233 days. At \$1,800/month (\$60/day), the prorated final month (3 days of November) costs \$180, not a full month's rent. Property management software relies on this exact arithmetic.
+
+**Legal deadline compliance.** Statutes of limitations, filing deadlines, and notice periods are measured in calendar days. A 180-day statute of limitations on a personal injury claim filed on April 10, 2026 expires on October 7, 2026. Missing this deadline by even one day forfeits the right to sue. Courts calculate deadlines to the exact day, not by month approximations.
+
+**Project management and sprint planning.** Agile teams running 2-week sprints need to know exactly how many business days fall in each sprint. A sprint from March 16 to March 27 (10 business days) is shorter in working hours than one from April 13 to April 24 if a company holiday falls within the second period. Precise date arithmetic prevents overcommitting the team.
+
+**Age-dependent eligibility verification.** School enrollment cutoffs (often September 1), voting eligibility (18 years before election day), and retirement benefit start dates all require counting exact days between a birth date and a target date. A child born on September 2 misses the kindergarten cutoff by one day and must wait an entire year — a calculation where precision matters enormously to the family.
 
 {/* Section 15: Related Calculators — auto-rendered from spec */}
 

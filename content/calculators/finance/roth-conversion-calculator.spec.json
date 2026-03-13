@@ -112,12 +112,17 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "After-Tax Value ($)",
-        "colors": ["#10b981", "#6366f1"]
+        "colors": [
+          "#10b981",
+          "#6366f1"
+        ]
       }
     }
   ],
   "formula": "roth-conversion",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "401k-calculator",
     "retirement-calculator",
@@ -136,7 +141,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Roth vs Traditional comparison: Roth = Amount * (1+r)^n (tax-free); Traditional = Amount * (1+r)^n * (1 - retirementTaxRate) per IRS Pub 590-A",
   "formulaAuditDate": "2026-03-13",
@@ -148,7 +153,7 @@
     "401k-calculator",
     "tax-bracket-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 95,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

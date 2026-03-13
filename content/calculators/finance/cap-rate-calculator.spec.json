@@ -182,7 +182,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Cap Rate = (NOI / Property Value) × 100; NOI = Effective Gross Income − Total Expenses; EGI = Gross Income × (1 − Vacancy Rate); GRM = Property Value / Gross Rental Income",
   "formulaAuditDate": "2026-03-13",
@@ -190,10 +190,14 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["roi-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "roi-calculator"
+  ],
+  "qualityScore": 82,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["interest-rate"],
+  "glossaryTerms": [
+    "interest-rate"
+  ],
   "methodologyTopics": []
 }

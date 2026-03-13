@@ -1,0 +1,204 @@
+{
+  "id": "moving-cost-calculator",
+  "title": "Moving Cost Calculator",
+  "slug": "moving-cost-calculator",
+  "category": "everyday",
+  "subcategory": "moving",
+  "primaryKeyword": "moving cost calculator",
+  "metaTitle": "Moving Cost Calculator — Local & Long-Distance Estimates",
+  "metaDescription": "Estimate your moving costs for local or long-distance moves. Get an itemized breakdown of labor, transport, packing, and insurance fees. Free moving calculator.",
+  "inputs": [
+    {
+      "id": "moveType",
+      "label": "Move Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "local",
+      "options": [
+        {
+          "value": "local",
+          "label": "Local (Under 100 Miles)"
+        },
+        {
+          "value": "longDistance",
+          "label": "Long Distance (100+ Miles)"
+        }
+      ]
+    },
+    {
+      "id": "numberOfRooms",
+      "label": "Number of Rooms",
+      "type": "number",
+      "required": true,
+      "defaultValue": 3,
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "helpText": "Studio=1, 1BR=2, 2BR=3, 3BR=5, 4BR=7"
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 1,
+      "max": 5000,
+      "step": 10,
+      "suffix": "miles"
+    },
+    {
+      "id": "numberOfMovers",
+      "label": "Number of Movers",
+      "type": "number",
+      "required": false,
+      "defaultValue": 3,
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "helpText": "Crew size for local moves"
+    },
+    {
+      "id": "hourlyRate",
+      "label": "Hourly Rate (Entire Crew)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 150,
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Per hour for the entire crew (local moves)"
+    },
+    {
+      "id": "weightLbs",
+      "label": "Shipment Weight",
+      "type": "number",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 50000,
+      "step": 100,
+      "suffix": "lbs",
+      "helpText": "Leave 0 to auto-estimate from room count (long-distance)"
+    },
+    {
+      "id": "ratePerPound",
+      "label": "Rate Per Pound",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0.50,
+      "min": 0.10,
+      "max": 2.00,
+      "step": 0.05,
+      "prefix": "$",
+      "helpText": "Carrier rate per pound (long-distance moves)"
+    },
+    {
+      "id": "packingSupplies",
+      "label": "Packing Supplies",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 5000,
+      "step": 25,
+      "prefix": "$"
+    },
+    {
+      "id": "insuranceFee",
+      "label": "Insurance / Valuation Fee",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 150,
+      "min": 0,
+      "max": 2000,
+      "step": 25,
+      "prefix": "$",
+      "helpText": "Basic liability or full-value protection"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalCost",
+      "label": "Total Moving Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "transportCost",
+      "label": "Transport Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "suppliesCost",
+      "label": "Packing Supplies",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "insuranceCost",
+      "label": "Insurance Fee",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costPerRoom",
+      "label": "Cost Per Room",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "moving-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "trip-cost-calculator",
+    "budget-calculator",
+    "fuel-cost-calculator",
+    "travel-budget-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "American Moving & Storage Association (AMSA) industry averages; MovingLabor.com rate data (2024)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Local: totalCost = (hourlyRate × estimatedHours) + packingSupplies + insuranceFee. Long-distance: totalCost = (weightLbs × ratePerPound) + packingSupplies + insuranceFee. costPerRoom = totalCost / numberOfRooms.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "trip-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "summer",
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}

@@ -1,0 +1,158 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A person who covers 2,400 meters in 12 minutes has an estimated VO2 max of 42.4 mL/kg/min — placing them in the "Excellent" fitness category for general adults. VO2 max (maximal oxygen uptake) is the single best measure of cardiovascular fitness, reflecting how efficiently your heart, lungs, and muscles use oxygen during intense exercise. This calculator estimates your VO2 max using either the Cooper 12-Minute Run Test or the Uth heart rate ratio method, then classifies your result by fitness level and population percentile.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Interpretation */}
+## What Your Estimate Means
+
+Your VO2 max result represents the maximum volume of oxygen (in milliliters) your body can consume per kilogram of body weight per minute during maximal exertion. Higher values indicate greater aerobic capacity. The average untrained adult male has a VO2 max of approximately 35–40 mL/kg/min, while elite endurance athletes may reach 70–85 mL/kg/min. Women typically have values 15–20% lower than men of the same age and training status due to differences in hemoglobin concentration, body composition, and heart size.
+
+The **fitness classification** maps your VO2 max to a five-tier scale: Poor (below 25), Fair (25–32.9), Good (33–41.9), Excellent (42–51.9), and Superior (52+). These thresholds are simplified general adult values. Age-specific and sex-specific normative tables from the American College of Sports Medicine (ACSM) provide more granular classification — a 50-year-old with a VO2 max of 35 may rank higher relative to their age group than a 20-year-old with the same score.
+
+The **percentile ranking** shows where you fall within the general population. A "Top 20%" result means approximately 80% of adults have a lower VO2 max. Research published in *JAMA* (2018) found that VO2 max is a stronger predictor of all-cause mortality than smoking, diabetes, or hypertension — every 1 mL/kg/min improvement is associated with a 7–17% reduction in cardiovascular mortality risk.
+
+If you used the **heart rate method**, your result is a rough estimate based on the ratio of estimated maximum heart rate to resting heart rate. It does not require physical exertion and is useful as a baseline, but the Cooper test provides a more direct assessment of aerobic capacity. The accuracy of the heart rate method depends on an accurate resting heart rate measurement (taken first thing in the morning, lying down, before caffeine).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your test method.** Choose "Cooper 12-Minute Run Test" if you have run data, or "Heart Rate Ratio" if you prefer a resting estimate.
+
+2. **For the Cooper test:** Enter the total distance you covered running as fast as you can sustain for exactly 12 minutes. Select meters or miles as your distance unit. The test should be performed on a flat, measured surface (a track is ideal). A GPS watch distance also works.
+
+3. **For the heart rate method:** Enter your age and resting heart rate. Measure resting heart rate first thing in the morning while still lying in bed — count beats for 60 seconds using a pulse oximeter or by palpating your radial artery. Sitting heart rate is typically 5–10 bpm higher and will slightly underestimate your VO2 max.
+
+4. **Read your results.** The highlighted VO2 max value is your estimated aerobic capacity. Check the fitness classification and percentile to understand how your score compares to the general population. The summary panel shows the method used and supporting values.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formulas
+
+**Cooper 12-Minute Run Test (1968):**
+
+$$\text{VO}_2\text{max} = \frac{d - 504.9}{44.73}$$
+
+Where:
+
+- **d** = distance covered in 12 minutes, in meters
+- **504.9** and **44.73** = regression constants from Cooper's original validation study
+- Result is in **mL/kg/min** (milliliters of oxygen per kilogram of body weight per minute)
+
+If the input is in miles, convert first: $d_{\text{meters}} = d_{\text{miles}} \times 1609.34$
+
+**Uth et al. Heart Rate Ratio Method (2004):**
+
+$$\text{VO}_2\text{max} = 15.3 \times \frac{\text{HR}_{\text{max}}}{\text{HR}_{\text{rest}}}$$
+
+Where:
+
+- **HR_max** = estimated maximum heart rate = $220 - \text{age}$
+- **HR_rest** = resting heart rate in beats per minute
+- **15.3** = the scaling constant from Uth's regression analysis
+
+**Fitness Classification (general adult, simplified):**
+
+| VO2 Max (mL/kg/min) | Classification |
+|---|---|
+| 52+ | Superior |
+| 42–51.9 | Excellent |
+| 33–41.9 | Good |
+| 25–32.9 | Fair |
+| Below 25 | Poor |
+
+**Sources:** Cooper KH. A Means of Assessing Maximal Oxygen Intake. *JAMA*. 1968;203(3):201-204. Uth N, et al. Estimation of VO2max from the ratio between HRmax and HRrest. *Eur J Appl Physiol*. 2004;91(1):111-115.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Cooper Test — 2,400 meters in 12 minutes
+
+**Inputs:**
+- Test method: Cooper 12-Minute Run
+- Distance: 2,400 meters
+
+**Calculation:**
+
+1. Apply formula: VO2max = (2400 − 504.9) / 44.73
+2. Numerator: 2400 − 504.9 = **1895.1**
+3. Divide: 1895.1 / 44.73 = **42.4 mL/kg/min**
+4. Classification: 42.4 falls in the 42–51.9 range = **Excellent**
+5. Percentile: **Top 30%**
+
+**Interpretation:** A VO2 max of 42.4 places you well above the population average of ~35 mL/kg/min. You have a solid aerobic base suitable for recreational endurance sports. To reach the "Superior" category (52+), you would need to cover approximately 2,830 meters in 12 minutes — an increase of 430 meters that typically requires 3–6 months of structured interval training.
+
+### Example 2: Heart Rate Method — Age 30, Resting HR 65 bpm
+
+**Inputs:**
+- Test method: Heart Rate Ratio
+- Age: 30 years
+- Resting heart rate: 65 bpm
+
+**Calculation:**
+
+1. Estimate max heart rate: 220 − 30 = **190 bpm**
+2. Heart rate ratio: 190 / 65 = **2.923**
+3. VO2 max: 15.3 × 2.923 = **44.7 mL/kg/min**
+4. Classification: **Excellent**
+5. Percentile: **Top 30%**
+
+**Interpretation:** The heart rate method estimates a VO2 max of 44.7 mL/kg/min based on a healthy resting heart rate of 65 bpm. A resting heart rate of 65 is typical for moderately active adults — trained runners often have resting rates of 45–55 bpm, which would produce VO2 max estimates of 53–65 mL/kg/min by this method. This method is convenient but less accurate than the Cooper test because it does not measure actual exercise performance and the "220 − age" max heart rate formula has a standard error of ±10–12 bpm.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your VO2 Max
+
+**Training status is the primary modifiable factor.** Untrained adults can improve VO2 max by 15–20% within 8–12 weeks of structured aerobic training (3–5 sessions per week at 60–85% of max heart rate). High-intensity interval training (HIIT) produces faster VO2 max gains than steady-state cardio in most studies, though both are effective. After 6–12 months of training, improvement rates plateau to 3–5% per year.
+
+**Age causes a progressive decline.** VO2 max decreases approximately 10% per decade after age 30 in sedentary individuals. Active adults lose only 5% per decade. A 60-year-old who maintains regular endurance training can have a higher VO2 max than a sedentary 30-year-old. This is why age-adjusted normative tables are more meaningful than raw thresholds.
+
+**Genetics set the ceiling.** Twin studies estimate that 40–50% of VO2 max variation is genetically determined. The HERITAGE Family Study found that the response to identical training programs varied from 0% to 40% improvement across participants, largely due to genetic factors affecting mitochondrial density, capillary density, and cardiac output capacity.
+
+**Altitude and temperature affect test results.** VO2 max decreases approximately 1–2% for every 1,000 feet above 5,000 feet elevation due to lower oxygen partial pressure. Heat above 85°F (29°C) reduces Cooper test distance by 3–5% because blood flow is diverted to the skin for cooling. For consistent tracking, test under similar conditions each time.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- The Cooper test formula was validated on **young, healthy military personnel** and may overestimate VO2 max for older or untrained individuals who cannot sustain maximal effort for 12 minutes.
+- The "220 − age" formula for max heart rate has a **standard error of ±10–12 bpm**, which directly affects the heart rate method's accuracy. Individuals with naturally high or low max heart rates will get skewed results.
+- The heart rate ratio method assumes a **linear relationship** between the HR ratio and VO2 max, which breaks down at extreme values (very high or very low resting heart rates).
+- This calculator uses **simplified fitness classifications** that do not account for sex or age. A 55-year-old woman with a VO2 max of 33 is in a significantly better fitness percentile than a 25-year-old man with the same score.
+- Neither method replaces a **laboratory cardiopulmonary exercise test** (CPET), which measures VO2 max directly using expired gas analysis and is the clinical gold standard. Lab testing typically differs from field estimates by 5–15%.
+- The Cooper test requires **maximal effort for 12 minutes**. If you paced too conservatively or stopped early, your estimated VO2 max will be lower than your true value.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a good VO2 max for my age?
+
+A "good" VO2 max depends on age and sex. For men aged 30–39, the ACSM classifies VO2 max of 34–38 as "fair," 39–44 as "good," and 45–49 as "excellent." For women in the same age range, the ranges are 28–32 (fair), 33–38 (good), and 39–44 (excellent). VO2 max naturally declines approximately 10% per decade in sedentary adults — a score of 35 at age 60 represents better relative fitness than a 35 at age 25. The simplified thresholds in this calculator (Poor/Fair/Good/Excellent/Superior) use general adult cutoffs and do not adjust for age or sex.
+
+### How can I improve my VO2 max?
+
+Consistent aerobic training is the most effective way to improve VO2 max. A meta-analysis published in *Sports Medicine* (2015) found that high-intensity interval training (HIIT) improved VO2 max by an average of 5.5 mL/kg/min over 4–12 weeks, compared to 3.5 mL/kg/min for moderate-intensity continuous training. A practical HIIT protocol is 4–6 intervals of 3–4 minutes at 85–95% max heart rate with 2–3 minutes recovery, performed 3 times per week. Zone 2 training (60–70% max HR) for 45–90 minutes also builds aerobic base. Most people see the largest gains in the first 8–12 weeks.
+
+### Is the Cooper test or heart rate method more accurate?
+
+The Cooper test is more accurate for most people because it directly measures physical performance, which correlates with actual VO2 max. Cooper's original validation study found a correlation of r = 0.897 between the 12-minute run distance and laboratory VO2 max. The Uth heart rate method has a wider margin of error because it depends on two assumptions — that the "220 − age" formula accurately predicts your max heart rate and that your resting heart rate was measured correctly. For tracking VO2 max changes over time, the Cooper test is preferred because it provides a consistent, repeatable field measure.
+
+### Why does VO2 max matter for health?
+
+VO2 max is the strongest independent predictor of all-cause mortality. A 2018 study in *JAMA Network Open* analyzing 122,007 patients found that low cardiorespiratory fitness was associated with higher mortality risk than smoking, diabetes, or coronary artery disease. Moving from "low" to "moderate" fitness (approximately a 5 mL/kg/min improvement) reduced all-cause mortality risk by 50%. The American Heart Association now considers cardiorespiratory fitness a clinical vital sign and recommends VO2 max assessment as part of routine health evaluations.
+
+</div>
+
+{/* Section 14: How This Is Calculated */}
+## Sources & Methodology
+
+This calculator implements two validated VO2 max estimation methods. The **Cooper 12-Minute Run Test** formula is from Kenneth H. Cooper's original 1968 publication in *JAMA* (vol. 203, no. 3, pp. 201–204), which validated the distance-VO2 max regression equation against laboratory treadmill testing in 115 Air Force personnel. The **Uth heart rate ratio method** is from Uth N, Sorensen H, Overgaard K, Pedersen PK, "Estimation of VO2max from the ratio between HRmax and HRrest — the Heart Rate Ratio Method," *European Journal of Applied Physiology* (2004, vol. 91, no. 1, pp. 111–115). Max heart rate estimation uses the traditional Haskell-Fox formula (220 − age), which despite known limitations remains the most widely used clinical estimate. Fitness classifications are simplified from ACSM's *Guidelines for Exercise Testing and Prescription*, 11th edition (2021), Table 4.8 (cardiorespiratory fitness classifications by age and sex).
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

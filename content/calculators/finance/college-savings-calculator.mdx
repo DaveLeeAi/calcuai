@@ -1,0 +1,182 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 4-year degree at today's average of \$25,000 per year will cost approximately \$191,000 by the time a 5-year-old enters college at 18 — assuming the historical 5% annual tuition inflation rate. Starting with \$10,000 saved and contributing \$300 per month at a 7% return, you'd accumulate roughly \$83,000, leaving a \$108,000 gap. This calculator shows exactly how much you need to save each month to fully cover projected college costs, factoring in tuition inflation, investment growth, and your current savings balance.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Estimate Means
+
+This calculator answers the question every parent asks: "Am I saving enough for college?" It projects the total cost of college in future dollars — not today's prices — then compares that to what your current savings and monthly contributions will grow to by enrollment day. The difference is your savings gap, and the calculator tells you the exact monthly amount needed to close it.
+
+**Tuition inflation is the hidden multiplier.** College costs have risen roughly 5% per year for the past two decades, according to the College Board's annual Trends in College Pricing report. That means a degree costing \$100,000 today will cost \$163,000 in 10 years and \$265,000 in 20 years. Most families underestimate this because they plan using today's sticker price. A 529 plan earning 7% helps, but if tuition inflation runs at 5%, your real net growth is only about 2% — far less than many parents assume.
+
+**Time is the most powerful variable.** A family starting at birth with 18 years to save needs roughly \$450/month to cover a \$200,000 projected cost at 7% returns. Wait until the child is 10 and the same goal requires \$1,100/month — nearly 2.5 times more. Every year of delay costs significantly more because compound interest has less time to work and tuition inflation has more time to accumulate.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your child's current age** — this determines how many years of investment growth you have before college begins. For newborns, enter 0. For planning a second child, you can estimate a future birth year by entering 0 with a later college start age.
+
+2. **Set the college start age** — most students begin at 18, but some start early (16–17) for dual enrollment or later (19–22) for gap years or non-traditional paths. This directly controls your savings timeline.
+
+3. **Enter the current annual cost** — include tuition, room and board, fees, and books. The College Board reports the 2023–24 average as \$23,250 for in-state public universities, \$41,550 for out-of-state public, and \$59,540 for private institutions. Use the figure that matches your target school type.
+
+4. **Set years in college** — 4 years for a bachelor's degree is standard. Enter 5–6 for five-year programs or a master's degree. Enter 6–8 if you're planning through professional or doctoral programs.
+
+5. **Enter your current college savings** — include 529 plan balances, Coverdell ESA funds, UTMA/UGMA accounts, and any savings earmarked specifically for education. Do not include retirement accounts or emergency funds.
+
+6. **Set your monthly contribution** — the amount you currently deposit into college savings each month. If you're not saving yet, enter \$0 and the calculator will show the monthly amount needed to start.
+
+7. **Adjust the expected annual return** — 529 plans invested in age-based portfolios historically return 5–8% depending on the equity allocation. Use 5–6% for conservative portfolios and 7–8% for aggressive ones.
+
+8. **Set the college cost inflation rate** — the 20-year historical average is approximately 5% per year. Use 3–4% for a conservative estimate or 5–6% for a realistic one.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The projected total cost sums each year of college at its inflated price:
+
+$$\text{Total Cost} = \sum_{k=0}^{Y-1} C \times (1 + i)^{(N + k)}$$
+
+Where:
+- **C** = current annual cost of college (dollars)
+- **i** = annual college cost inflation rate (decimal, e.g., 5% = 0.05)
+- **N** = years until college starts
+- **Y** = years in college
+- **k** = each year of enrollment (0 through Y−1)
+
+The projected savings at college start combine the growth of current savings with monthly contributions:
+
+$$\text{Projected Savings} = S \times (1 + r_m)^{n} + PMT \times \frac{(1 + r_m)^{n} - 1}{r_m}$$
+
+Where:
+- **S** = current savings balance (dollars)
+- **PMT** = monthly contribution (dollars)
+- **r_m** = monthly return rate = annual return / 12
+- **n** = months until college = N × 12
+
+The monthly savings needed to close the gap uses the annuity payment formula:
+
+$$PMT_{needed} = \frac{(\text{Total Cost} - FV_{current}) \times r_m}{(1 + r_m)^{n} - 1}$$
+
+Where FV_current is the future value of current savings alone, and the formula solves for the monthly deposit that fills the remaining gap.
+
+**Sources:** College Board — "Trends in College Pricing and Student Aid" (2023); FINRA 529 Plan guidance; standard future value annuity formula per the CFA Institute.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Newborn — \$25,000/Year School, 18 Years to Save
+
+**Inputs:**
+- Child's Age: 0 (newborn)
+- College Start Age: 18
+- Current Annual Cost: \$25,000
+- Years in College: 4
+- Current Savings: \$0
+- Monthly Contribution: \$0 (solving for this)
+- Annual Return: 7%
+- College Inflation: 5%
+
+**Step-by-step:**
+
+1. Projected cost year 1: \$25,000 × (1.05)^18 = \$60,198.36
+2. Projected cost year 2: \$25,000 × (1.05)^19 = \$63,208.28
+3. Projected cost year 3: \$25,000 × (1.05)^20 = \$66,368.69
+4. Projected cost year 4: \$25,000 × (1.05)^21 = \$69,687.13
+5. Total projected cost: \$259,462.46
+6. Monthly return: 0.07 / 12 = 0.005833
+7. Months: 216
+8. PMT = \$259,462.46 × 0.005833 / ((1.005833)^216 − 1) = \$559.42
+
+**Interpretation:** You need approximately \$559/month from birth to fully fund a \$25,000/year college education. Starting when the child is 5 instead of 0 raises the requirement to roughly \$850/month — a 52% increase for just 5 years of delay. A 529 plan with tax-free growth makes this the most efficient vehicle.
+
+### Example 2: 10-Year-Old — In-State Public University
+
+**Inputs:**
+- Child's Age: 10
+- College Start Age: 18
+- Current Annual Cost: \$23,250 (College Board 2023–24 average)
+- Years in College: 4
+- Current Savings: \$25,000 (529 plan)
+- Monthly Contribution: \$400
+- Annual Return: 6%
+- College Inflation: 5%
+
+**Step-by-step:**
+
+1. Years until college: 8
+2. Projected cost: \$23,250 × [(1.05)^8 + (1.05)^9 + (1.05)^10 + (1.05)^11] = \$148,710.81
+3. FV of current savings: \$25,000 × (1.005)^96 = \$40,282.81
+4. FV of \$400/month contributions: \$400 × [(1.005)^96 − 1] / 0.005 = \$49,084.05
+5. Projected savings: \$40,282.81 + \$49,084.05 = \$89,366.86
+6. Savings gap: \$148,710.81 − \$89,366.86 = \$59,343.95
+7. Monthly needed: \$59,343.95 × 0.005 / ((1.005)^96 − 1) = \$483.82
+
+**Interpretation:** With 8 years left and \$25,000 already saved, you'd need to increase your monthly contribution from \$400 to approximately \$484/month to fully cover projected costs. The \$25,000 head start saves you roughly \$328/month compared to starting from zero. Financial aid and scholarships could further reduce the gap.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors
+
+**College cost inflation** — This is the factor most families underestimate. At 5% annual inflation, costs double every 14.4 years. A degree costing \$100,000 today costs \$200,000 for a child born now. Even a 1% difference in assumed inflation (4% vs. 5%) changes the projected total cost by 10–15% over an 18-year horizon.
+
+**Investment return vs. inflation spread** — What matters is the gap between your investment return and tuition inflation. If your 529 plan earns 7% and tuition rises 5%, your real growth rate is only about 2%. Many families assume they're earning 7% without accounting for the fact that their target is also rising at 5%.
+
+**529 plan tax advantages** — Earnings in a 529 plan grow federal tax-free and are not taxed on withdrawal when used for qualified education expenses. In a taxable account earning 7%, a 15% capital gains tax effectively reduces your return to roughly 6%. Over 18 years, the tax savings alone can amount to \$15,000–\$30,000 on a six-figure balance.
+
+**Financial aid impact** — 529 plan assets are counted as parental assets in the FAFSA formula, assessed at a maximum rate of 5.64% — far less than student assets (assessed at 20%). A \$100,000 529 balance reduces financial aid eligibility by roughly \$5,640 per year, not the full \$100,000.
+
+**School type variance** — The gap between in-state public (\$23,250/year) and private (\$59,540/year) is 2.6x today. Over 18 years of inflation, this gap widens in absolute dollars. Saving for the higher figure and having surplus is safer than saving for the lower figure and coming up short.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Constant inflation rate** — College costs may not rise at exactly 5% every year. Individual schools may increase faster or slower. Some years see 3% increases, others 8%.
+- **Constant investment return** — Real portfolio returns fluctuate annually. A 7% average includes years of negative returns that can reduce balances significantly near the withdrawal date.
+- **No financial aid or scholarships** — This calculator shows the full cost without grants, scholarships, or need-based aid. Average net price after aid is typically 30–50% lower than sticker price.
+- **Monthly compounding assumed** — The calculator uses monthly compounding on the investment return. Actual 529 plan returns depend on the underlying fund's NAV changes.
+- **No tax considerations** — 529 tax benefits are not modeled. Actual savings in a 529 plan will grow more than shown if compared to a taxable account.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does college cost in 2024?
+
+The College Board reports the 2023–24 average annual cost (tuition, fees, room, and board) as \$23,250 for in-state public universities, \$41,550 for out-of-state public universities, and \$59,540 for private nonprofit institutions. These figures represent sticker price before financial aid. The average net price after grants is approximately \$15,000 for in-state public and \$33,500 for private institutions.
+
+### How much should I save per month for college?
+
+The amount depends on your child's age, target school cost, and investment returns. As a benchmark: saving \$300/month from birth at 7% returns accumulates approximately \$130,000 by age 18 — enough to cover in-state public tuition at today's prices but potentially short after 18 years of inflation. For a private university, plan for \$500–\$800/month starting at birth, or significantly more if starting later.
+
+### Is a 529 plan the best way to save for college?
+
+For most families, yes. A 529 plan offers federal tax-free growth and tax-free withdrawals for qualified education expenses. Many states also offer state income tax deductions for contributions. The main risk is overfunding — if your child doesn't attend college, withdrawals for non-education purposes incur income tax plus a 10% penalty on earnings. However, since 2024, unused 529 funds can be rolled into a Roth IRA (up to \$35,000 lifetime, subject to annual Roth contribution limits).
+
+### What if college costs rise faster than 5% per year?
+
+Increase the college inflation rate in the calculator to 6–8% to stress-test your plan. At 7% inflation, a \$25,000/year college costs \$338,000 for a newborn's 4-year degree instead of \$259,000 at 5% inflation — a \$79,000 difference. Building a cushion of 10–20% above your projected need protects against this risk.
+
+### Should I stop investing in stocks as college approaches?
+
+Most financial planners recommend shifting to more conservative investments (bonds, money market) starting 3–5 years before enrollment. Many 529 plans offer age-based portfolios that automatically do this. A market downturn in the year before college could reduce an equity-heavy portfolio by 20–30%, which is why the last 3–5 years should prioritize capital preservation.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator uses the **future value annuity formula** as standardized by the CFA Institute, applied to the college savings context. College cost projections use compound inflation on annual costs, summing each year of enrollment at its projected future price. Historical tuition inflation data is sourced from the **College Board's "Trends in College Pricing and Student Aid" (2023)**, which reports a 20-year average annual increase of approximately 5% for in-state public institutions. 529 plan return assumptions reference **FINRA** investor education materials and historical 529 plan performance data. Current cost figures cite the **College Board 2023–24 survey** of undergraduate charges.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

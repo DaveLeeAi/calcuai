@@ -39,8 +39,14 @@
       "required": true,
       "defaultValue": "long",
       "options": [
-        { "value": "short", "label": "Short-Term (\u2264 1 Year)" },
-        { "value": "long", "label": "Long-Term (> 1 Year)" }
+        {
+          "value": "short",
+          "label": "Short-Term (≤ 1 Year)"
+        },
+        {
+          "value": "long",
+          "label": "Long-Term (> 1 Year)"
+        }
       ]
     },
     {
@@ -62,9 +68,18 @@
       "required": true,
       "defaultValue": "single",
       "options": [
-        { "value": "single", "label": "Single" },
-        { "value": "married", "label": "Married Filing Jointly" },
-        { "value": "head", "label": "Head of Household" }
+        {
+          "value": "single",
+          "label": "Single"
+        },
+        {
+          "value": "married",
+          "label": "Married Filing Jointly"
+        },
+        {
+          "value": "head",
+          "label": "Head of Household"
+        }
       ]
     }
   ],
@@ -106,12 +121,18 @@
       "label": "Proceeds Breakdown",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#10b981", "#ef4444", "#f59e0b"]
+        "colors": [
+          "#10b981",
+          "#ef4444",
+          "#f59e0b"
+        ]
       }
     }
   ],
   "formula": "capital-gains-tax",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "income-tax-calculator",
     "tax-bracket-calculator",
@@ -129,7 +150,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Short-term: taxed as ordinary income via progressive brackets. Long-term: 0%/15%/20% based on total taxable income. Per IRS Topic 409 and Rev. Proc. 2024-40.",
   "formulaAuditDate": "2026-03-13",
@@ -141,7 +162,7 @@
     "income-tax-calculator",
     "tax-bracket-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 92,
   "lastContentUpdate": "2026-03-13",
   "seasonality": "tax-season",
   "glossaryTerms": [

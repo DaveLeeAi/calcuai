@@ -146,7 +146,7 @@
     ".bluf-intro",
     ".formula-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "A = πr², C = 2πr, d = 2r. Inverse derivations: r = √(A/π), r = C/(2π). Source: Archimedes, Measurement of a Circle (circa 250 BC)",
   "formulaAuditDate": "2026-03-11",
@@ -155,7 +155,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 72,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

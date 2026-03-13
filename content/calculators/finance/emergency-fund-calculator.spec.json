@@ -138,7 +138,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Target = Monthly Expenses × Months of Coverage per Federal Reserve emergency savings guidelines and CFPB financial well-being framework",
   "formulaAuditDate": "2026-03-13",
@@ -147,7 +147,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 91,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

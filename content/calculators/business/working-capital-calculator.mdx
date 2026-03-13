@@ -1,0 +1,158 @@
+---
+title: "Working Capital Calculator"
+description: "Calculate working capital, current ratio, quick ratio, and days working capital. Assess your business liquidity health and determine if you can cover short-term obligations."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A business with \$180,000 in current assets and \$85,000 in current liabilities has \$95,000 in working capital and a 2.12 current ratio — well above the 1.5 threshold that signals healthy liquidity. Its quick ratio of 1.59 confirms the business can meet obligations even without liquidating inventory. This calculator computes working capital, current ratio, quick ratio, working capital as a percentage of revenue, and days working capital so you can monitor whether your business can pay its bills on time.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Working Capital** is the dollar amount of current assets minus current liabilities. It is the financial cushion that keeps your business operating day to day. Positive working capital means you have enough short-term assets to cover short-term obligations. Negative working capital means you owe more in the near term than you can cover — a liquidity crisis unless managed deliberately (some high-turnover businesses like grocery chains operate with negative working capital by design).
+
+**Current Ratio** divides total current assets by total current liabilities. A ratio of 1.0 means you have exactly enough assets to cover obligations — no margin of safety. A ratio of 1.5 or higher is generally considered healthy. A ratio above 3.0 may indicate excess idle assets that could be deployed more productively.
+
+**Quick Ratio (Acid Test)** is the stricter version of the current ratio. It excludes inventory and other current assets that may take time to convert to cash. For businesses with slow-moving inventory (manufacturers, retailers), the quick ratio is a more realistic measure of immediate liquidity. A quick ratio of 1.0 or higher means the business can cover all current liabilities without selling a single unit of inventory.
+
+**Working Capital Ratio** shows working capital as a percentage of annual revenue — how much of your revenue is tied up in the operating cycle. A ratio of 10-20% is typical; below 5% suggests the business is running lean (efficient or risky), and above 30% suggests capital is being used inefficiently.
+
+**Days Working Capital** converts the ratio to calendar days: how many days of revenue your working capital can support. This metric is especially useful for seasonal businesses planning for slow periods.
+
+**Health Status** provides a quick classification: "Healthy" (current ratio 1.5 or above), "Tight" (1.0 to 1.49), or "Negative" (below 1.0).
+
+## How to Use This Calculator
+
+1. **Enter your current assets** — Cash, accounts receivable, inventory, short-term investments, and any other assets you expect to convert to cash within 12 months.
+2. **Enter your current liabilities** — Accounts payable, short-term debt, accrued expenses (wages, taxes owed), and any other obligations due within 12 months.
+3. **Enter annual revenue** — Used to calculate what percentage of revenue is tied up in working capital and how many days of operations your working capital supports.
+4. **Read your results** — Start with the health status indicator. If it reads "Tight" or "Negative," look at which specific liabilities are largest and whether any current assets can be converted to cash faster.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Working Capital:**
+
+$$
+\text{Working Capital} = \text{Current Assets} - \text{Current Liabilities}
+$$
+
+**Current Ratio:**
+
+$$
+\text{Current Ratio} = \frac{\text{Current Assets}}{\text{Current Liabilities}}
+$$
+
+**Quick Ratio (Acid Test):**
+
+$$
+\text{Quick Ratio} = \frac{\text{Cash} + \text{Accounts Receivable} + \text{Short-Term Investments}}{\text{Current Liabilities}}
+$$
+
+**Working Capital Ratio:**
+
+$$
+\text{WC Ratio} = \frac{\text{Working Capital}}{\text{Revenue}} \times 100
+$$
+
+**Days Working Capital:**
+
+$$
+\text{Days WC} = \frac{\text{Working Capital}}{\text{Revenue}} \times 365
+$$
+
+Where:
+- **Current Assets** = cash + accounts receivable + inventory + short-term investments + other current assets
+- **Current Liabilities** = accounts payable + short-term debt + accrued expenses + other current liabilities
+- **Quick Assets** = cash + accounts receivable + short-term investments (excludes inventory)
+- **Revenue** = annual revenue for ratio and days calculations
+
+*Source: Brealey, Myers & Allen — "Principles of Corporate Finance" (13th ed.). The current ratio and quick ratio are among the most widely used liquidity metrics in corporate finance and credit analysis.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Healthy Retail Business
+
+A specialty retailer reports \$80,000 cash, \$45,000 in accounts receivable, \$60,000 in inventory, and \$15,000 in prepaid expenses. It owes \$50,000 in accounts payable, \$20,000 in short-term debt, and \$10,000 in accrued wages. Annual revenue is \$800,000.
+
+- Current Assets = \$80,000 + \$45,000 + \$60,000 + \$0 + \$15,000 = **\$200,000**
+- Current Liabilities = \$50,000 + \$20,000 + \$10,000 + \$0 = **\$80,000**
+
+**Working Capital = \$200,000 - \$80,000 = \$120,000**
+
+- Current Ratio = \$200,000 / \$80,000 = **2.5**
+- Quick Ratio = (\$80,000 + \$45,000 + \$0) / \$80,000 = **1.56**
+- WC Ratio = (\$120,000 / \$800,000) x 100 = **15%**
+- Days WC = (\$120,000 / \$800,000) x 365 = **54.75 days**
+- Health Status: **Healthy**
+
+*Interpretation:* A current ratio of 2.5 gives this retailer a comfortable cushion. Even the quick ratio of 1.56 — excluding all \$60,000 of inventory — shows the business can cover its obligations. The 15% working capital ratio is efficient, and 55 days of coverage provides a solid buffer for seasonal slowdowns.
+
+### Example 2: Tight Manufacturing Firm
+
+A manufacturer has \$30,000 cash, \$90,000 in receivables, \$120,000 in inventory (raw materials and finished goods), and \$5,000 in prepaid insurance. It owes \$110,000 in accounts payable, \$60,000 on its line of credit, \$25,000 in accrued expenses, and \$5,000 in other current liabilities. Annual revenue is \$1,200,000.
+
+- Current Assets = \$30,000 + \$90,000 + \$120,000 + \$0 + \$5,000 = **\$245,000**
+- Current Liabilities = \$110,000 + \$60,000 + \$25,000 + \$5,000 = **\$200,000**
+
+**Working Capital = \$245,000 - \$200,000 = \$45,000**
+
+- Current Ratio = \$245,000 / \$200,000 = **1.23**
+- Quick Ratio = (\$30,000 + \$90,000 + \$0) / \$200,000 = **0.60**
+- WC Ratio = (\$45,000 / \$1,200,000) x 100 = **3.75%**
+- Days WC = (\$45,000 / \$1,200,000) x 365 = **13.69 days**
+- Health Status: **Tight**
+
+*Interpretation:* The current ratio of 1.23 puts this firm in the "Tight" zone — technically solvent but with thin margins. The quick ratio of 0.60 is the real warning: without selling inventory, the business cannot cover its current liabilities. The manufacturer needs to either collect receivables faster, negotiate longer payment terms with suppliers, or reduce reliance on the credit line.
+
+## Key Factors That Affect Your Results
+
+1. **Inventory Valuation Distorts the Current Ratio** — A retailer with \$500,000 in obsolete inventory looks liquid on paper but cannot actually convert that inventory to cash at full value. The quick ratio corrects for this by excluding inventory. If your current ratio is healthy but your quick ratio is below 1.0, examine your inventory quality.
+
+2. **Accounts Receivable Aging Matters** — A \$100,000 receivables balance where 80% is current (under 30 days) is very different from one where 50% is over 90 days past due. Aged receivables may never convert to cash. Many lenders apply a discount of 10-25% to receivables over 60 days when evaluating working capital.
+
+3. **Seasonal Businesses Swing Dramatically** — A landscaping company may have a current ratio of 3.0 in summer and 0.8 in February. Measure working capital at multiple points throughout the year and plan for the low point, not the average.
+
+4. **Growth Consumes Working Capital** — Every dollar of new revenue typically requires \$0.10-\$0.25 of additional working capital (to fund the gap between paying suppliers and collecting from customers). Rapid growth without adequate working capital financing is the leading cause of business failure among profitable companies.
+
+## Assumptions & Limitations
+
+- All asset values are assumed to reflect realizable (collectible or saleable) amounts — write down uncollectible receivables and obsolete inventory before calculating
+- Current liabilities assume contractual payment dates — actual payment timing may differ
+- The health status thresholds (1.5 for Healthy, 1.0 for Tight) are general guidelines — some industries operate efficiently with lower ratios (grocery, fast food) while others require higher ratios (construction, manufacturing)
+- Does not capture off-balance-sheet obligations like operating leases (under ASC 842, most leases are now on-balance-sheet)
+- Annual revenue is used for ratio calculations — for businesses with significant seasonality, quarterly or monthly revenue may be more appropriate
+
+{/* Section 14: FAQ */}
+## Frequently Asked Questions
+
+### What is a good current ratio?
+
+A current ratio between 1.5 and 2.5 is considered healthy for most industries. Below 1.5 suggests the business may struggle to meet short-term obligations if unexpected expenses arise. Above 3.0 may indicate excess cash or inventory that is not being deployed productively. The ideal ratio varies by industry: retail and food service businesses often operate efficiently at 1.2-1.5 because they collect cash immediately, while construction and manufacturing firms typically need 2.0 or higher due to longer payment cycles.
+
+### What is the difference between the current ratio and the quick ratio?
+
+The current ratio includes all current assets (cash, receivables, inventory, prepaid expenses, and other short-term assets), while the quick ratio excludes inventory and other assets that cannot be converted to cash immediately. The quick ratio is a stricter test of liquidity. For service businesses with little or no inventory, the two ratios are nearly identical. For manufacturers and retailers, the gap between them reveals how much liquidity depends on selling inventory — a slower and less certain source of cash.
+
+### Can a business operate with negative working capital?
+
+Yes, some of the most successful businesses in the world operate with negative working capital by design. Amazon, Walmart, and McDonald's collect cash from customers immediately but pay suppliers on 30-90 day terms. This means their current liabilities exceed current assets — but cash is flowing in faster than flowing out. This is sustainable when the business has high inventory turnover and predictable cash flows. For most businesses, however, negative working capital is a warning sign of liquidity risk.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Brealey, Myers & Allen** — "Principles of Corporate Finance" (13th ed.), working capital and liquidity analysis framework
+- **CFA Institute** — "Financial Statement Analysis" (CFA Program Curriculum), current ratio and quick ratio benchmarks
+- **Federal Reserve** — Survey of Terms of Business Lending, working capital financing data
+- **Sageworks** — Industry financial benchmarks, median current ratios by NAICS code
+
+Working capital is the most fundamental measure of short-term financial health. The current ratio and quick ratio have been standard credit analysis tools since the early 20th century. This calculator uses the textbook definitions from corporate finance literature and applies general health thresholds (1.5 for healthy, 1.0 for tight) that align with typical commercial lending standards.

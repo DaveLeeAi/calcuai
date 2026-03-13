@@ -146,7 +146,10 @@
     }
   ],
   "formula": "mortgage-prepayment",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "mortgage-calculator",
     "amortization-calculator",
@@ -161,8 +164,12 @@
   "requiresSources": false,
   "formulaCitation": "CFPB — Mortgage Prepayment Guide; Federal Reserve — Understanding Amortization; Freddie Mac — Monthly Payment Calculator Methodology",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Month-by-month amortization simulation with extra principal payments applied. Interest = Balance × (Rate/12). Principal = Payment - Interest. Extra payments reduce balance directly.",
   "formulaAuditDate": "2026-03-14",
@@ -170,10 +177,18 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["mortgage-calculator", "amortization-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "mortgage-calculator",
+    "amortization-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["amortization", "interest-rate"],
-  "methodologyTopics": ["mortgage-amortization"]
+  "glossaryTerms": [
+    "amortization",
+    "interest-rate"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
 }

@@ -27,10 +27,22 @@
       "required": true,
       "defaultValue": "mid-range",
       "options": [
-        { "value": "basic", "label": "Basic ($50–$75/sq ft)" },
-        { "value": "mid-range", "label": "Mid-Range ($75–$150/sq ft)" },
-        { "value": "high-end", "label": "High-End ($150–$300/sq ft)" },
-        { "value": "luxury", "label": "Luxury ($300–$500/sq ft)" }
+        {
+          "value": "basic",
+          "label": "Basic ($50–$75/sq ft)"
+        },
+        {
+          "value": "mid-range",
+          "label": "Mid-Range ($75–$150/sq ft)"
+        },
+        {
+          "value": "high-end",
+          "label": "High-End ($150–$300/sq ft)"
+        },
+        {
+          "value": "luxury",
+          "label": "Luxury ($300–$500/sq ft)"
+        }
       ]
     },
     {
@@ -40,8 +52,14 @@
       "required": true,
       "defaultValue": "yes",
       "options": [
-        { "value": "yes", "label": "Yes" },
-        { "value": "no", "label": "No" }
+        {
+          "value": "yes",
+          "label": "Yes"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
       ]
     },
     {
@@ -62,8 +80,14 @@
       "required": true,
       "defaultValue": "no",
       "options": [
-        { "value": "yes", "label": "Yes (wall removal, load-bearing changes)" },
-        { "value": "no", "label": "No" }
+        {
+          "value": "yes",
+          "label": "Yes (wall removal, load-bearing changes)"
+        },
+        {
+          "value": "no",
+          "label": "No"
+        }
       ]
     },
     {
@@ -92,18 +116,67 @@
     }
   ],
   "outputs": [
-    { "id": "totalCost", "label": "Total Renovation Cost", "type": "single-value", "format": "currency", "highlight": true },
-    { "id": "baseCost", "label": "Base Renovation Cost", "type": "single-value", "format": "currency" },
-    { "id": "kitchenCost", "label": "Kitchen Renovation", "type": "single-value", "format": "currency" },
-    { "id": "bathroomCost", "label": "Bathroom Renovation(s)", "type": "single-value", "format": "currency" },
-    { "id": "structuralCost", "label": "Structural Changes", "type": "single-value", "format": "currency" },
-    { "id": "permitCost", "label": "Estimated Permits", "type": "single-value", "format": "currency" },
-    { "id": "contingency", "label": "Contingency Buffer", "type": "single-value", "format": "currency" },
-    { "id": "effectiveCostPerSqFt", "label": "Effective Cost per Sq Ft", "type": "single-value", "format": "currency" },
-    { "id": "costBreakdown", "label": "Cost Breakdown", "type": "value-group", "format": "currency" }
+    {
+      "id": "totalCost",
+      "label": "Total Renovation Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "baseCost",
+      "label": "Base Renovation Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "kitchenCost",
+      "label": "Kitchen Renovation",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "bathroomCost",
+      "label": "Bathroom Renovation(s)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "structuralCost",
+      "label": "Structural Changes",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "permitCost",
+      "label": "Estimated Permits",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "contingency",
+      "label": "Contingency Buffer",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveCostPerSqFt",
+      "label": "Effective Cost per Sq Ft",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
   ],
   "formula": "renovation-cost",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "kitchen-remodel-calculator",
     "bathroom-remodel-calculator",
@@ -118,7 +191,11 @@
   "requiresSources": false,
   "formulaCitation": "HomeAdvisor 2024 True Cost Guide; Remodeling Magazine 2024 Cost vs. Value Report; National Association of Home Builders (NAHB) Remodeling Market Index",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "editorial",
   "formulaSource": "Cost estimation based on national per-square-foot renovation cost ranges by quality tier. Kitchen and bathroom premiums from HomeAdvisor project-level cost guides. Structural surcharge at 20% of base per NAHB contractor surveys. Permit and contingency percentages from industry standard recommendations.",
@@ -127,10 +204,15 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["kitchen-remodel-calculator", "bathroom-remodel-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "kitchen-remodel-calculator",
+    "bathroom-remodel-calculator"
+  ],
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["square-footage"],
+  "glossaryTerms": [
+    "square-footage"
+  ],
   "methodologyTopics": []
 }

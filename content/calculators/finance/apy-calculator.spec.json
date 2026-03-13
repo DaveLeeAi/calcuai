@@ -26,12 +26,30 @@
       "required": true,
       "defaultValue": "12",
       "options": [
-        { "value": "1", "label": "Annually" },
-        { "value": "2", "label": "Semi-Annually" },
-        { "value": "4", "label": "Quarterly" },
-        { "value": "12", "label": "Monthly" },
-        { "value": "365", "label": "Daily" },
-        { "value": "8760", "label": "Continuously (approx)" }
+        {
+          "value": "1",
+          "label": "Annually"
+        },
+        {
+          "value": "2",
+          "label": "Semi-Annually"
+        },
+        {
+          "value": "4",
+          "label": "Quarterly"
+        },
+        {
+          "value": "12",
+          "label": "Monthly"
+        },
+        {
+          "value": "365",
+          "label": "Daily"
+        },
+        {
+          "value": "8760",
+          "label": "Continuously (approx)"
+        }
       ]
     }
   ],
@@ -65,7 +83,9 @@
     }
   ],
   "formula": "apy",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "cd-calculator",
     "savings-calculator",
@@ -78,8 +98,12 @@
   "requiresSources": false,
   "formulaCitation": "FDIC Truth in Savings Act (Regulation DD)",
   "articleWordTarget": 800,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "APY = (1 + r/n)^n - 1 per FDIC Truth in Savings Act (12 CFR Part 1030 — Regulation DD)",
   "formulaAuditDate": "2026-03-13",
@@ -87,10 +111,17 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["cd-calculator", "compound-interest-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "cd-calculator",
+    "compound-interest-calculator"
+  ],
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["apr", "interest-rate", "compound-interest"],
+  "glossaryTerms": [
+    "apr",
+    "interest-rate",
+    "compound-interest"
+  ],
   "methodologyTopics": []
 }

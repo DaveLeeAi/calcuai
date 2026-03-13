@@ -89,6 +89,36 @@ A 1,200-watt window AC unit runs 10 hours/day during summer. Rate: \$0.18/kWh. U
 3. **Time-of-use pricing.** Some utilities charge different rates for peak (afternoon) vs. off-peak (night) hours. Running a dishwasher at 10 PM instead of 2 PM can cut that appliance's cost by 20–40%.
 4. **Phantom load.** Many devices draw 1–5 watts even when "off" (TVs, chargers, gaming consoles). A single device is negligible, but 20 devices at 3W each = 60W × 24h = 1.44 kWh/day = \$84/year at \$0.16/kWh.
 
+{/* Section 9c: Third Worked Example */}
+### Example 3: LED vs. Incandescent Light Bulb — 5-Year Comparison
+
+You are replacing 20 incandescent bulbs (60W each) with LED equivalents (9W each). Bulbs run 5 hours per day. Rate: \$0.16/kWh.
+
+**Incandescent calculation:**
+**Step 1:** Daily kWh = (60 × 20 × 5) / 1,000 = 6.00 kWh
+**Step 2:** Yearly cost = 6.00 × 365 × $0.16 = **$350.40/year**
+**Step 3:** 5-year cost = $350.40 × 5 = **$1,752.00**
+
+**LED calculation:**
+**Step 1:** Daily kWh = (9 × 20 × 5) / 1,000 = 0.90 kWh
+**Step 2:** Yearly cost = 0.90 × 365 × $0.16 = **$52.56/year**
+**Step 3:** 5-year cost = $52.56 × 5 = **$262.80**
+
+**Savings:** \$1,752.00 − \$262.80 = **\$1,489.20 over 5 years**. At \$3 per LED bulb (\$60 total), the switch pays for itself in about 25 days of use.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Using the maximum rated wattage for cycling appliances.** A refrigerator label may say 350W, but the compressor only runs about 30-40% of the time. Using 350W × 24 hours overstates consumption by 2.5-3×. For cycling appliances, use an electricity meter (Kill A Watt) to measure actual kWh over 24 hours, or use the appliance's annual kWh rating from the EnergyGuide label divided by 365.
+
+**Confusing watts and kilowatts.** Entering 1500 when you mean 1,500 watts is fine — but some users enter 1.5 (kilowatts) in a field expecting watts, getting a result 1,000× too low. A 1.5 kW heater is 1,500W. Always check whether the calculator expects watts (W) or kilowatts (kW).
+
+**Ignoring standby (phantom) power.** A TV that draws 100W while on and 3W on standby uses 3W × 19 hours = 57 Wh in standby — more than half its active consumption if you only watch 5 hours per day (100W × 5h = 500 Wh active + 57 Wh standby). Gaming consoles in "instant on" mode draw 10-15W continuously, adding \$14-\$21 per year at \$0.16/kWh.
+
+**Using national average rates instead of your actual rate.** Electricity rates vary from \$0.10/kWh in Idaho to \$0.36/kWh in Hawaii. A space heater that costs \$467/year at the national average (\$0.16/kWh) costs \$1,051/year in Hawaii. Always check your most recent utility bill for your actual rate, including surcharges and delivery fees that raise the effective cost per kWh.
+
+**Forgetting about tiered pricing.** Many utilities charge a higher rate once you exceed a baseline usage threshold. Running a crypto mining rig that pushes your household into Tier 2 pricing may cost more per kWh than this calculator estimates using your Tier 1 rate. Check your utility's rate schedule for tier breakpoints.
+
 {/* Section 13: Assumptions & Limitations */}
 ## Assumptions & Limitations
 
@@ -111,6 +141,14 @@ A kilowatt-hour is the amount of energy consumed by a 1,000-watt appliance runni
 ### How much electricity does a refrigerator use?
 
 A modern ENERGY STAR refrigerator uses about 300–500 kWh per year, or roughly 35–60 watts on average (the compressor cycles on and off). At \$0.16/kWh, that is \$48–\$80 per year. Older models can use 600–1,000 kWh/year.
+
+### How do I read my electricity bill to find my rate?
+
+Look for the line labeled "energy charge," "usage charge," or "$/kWh" on your utility bill. Your effective rate is the total bill amount divided by total kWh consumed. Many bills break charges into delivery, supply, and surcharges — add all components that scale with usage to get your true all-in rate. The average U.S. residential customer pays about \$0.16/kWh all-in, but this varies from \$0.10 in states like Idaho and Louisiana to \$0.36+ in Hawaii and parts of New England.
+
+### Is it cheaper to run appliances at night?
+
+Only if your utility has time-of-use (TOU) pricing. Under TOU plans, off-peak rates (typically 9 PM to 7 AM) can be 30-50% lower than peak rates (2 PM to 7 PM). Running a dishwasher that uses 1.8 kWh per cycle during off-peak hours at \$0.10/kWh instead of peak at \$0.25/kWh saves \$0.27 per cycle — about \$98 per year with daily use. If your utility charges a flat rate, the time of day makes no difference.
 
 {/* Section 16: Methodology & Sources */}
 ## Methodology & Sources

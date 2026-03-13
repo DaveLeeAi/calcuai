@@ -1,0 +1,143 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+If you need to wake up at 6:30 AM and it takes you 15 minutes to fall asleep, your ideal bedtime is 10:45 PM — giving you exactly 5 complete 90-minute sleep cycles and 7.5 hours of total sleep. Sleep researchers have found that waking at the end of a full cycle (rather than mid-cycle) significantly reduces grogginess and sleep inertia. This calculator finds your optimal bedtime for 4, 5, or 6 complete cycles based on your wake-up time and personal fall-asleep latency.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Interpretation */}
+## What Your Estimate Means
+
+This calculator works backward from your desired wake-up time to find bedtimes that align with complete sleep cycles. Each sleep cycle lasts approximately 90 minutes and progresses through four stages: light sleep (N1), deeper sleep (N2), deep slow-wave sleep (N3), and REM (rapid eye movement) sleep. Waking during deep sleep or mid-REM produces the heavy, disoriented feeling known as sleep inertia — even if you have slept 8+ hours. By timing your bedtime to complete whole cycles, you wake during the lightest sleep phase and feel more alert.
+
+The calculator shows three bedtime options. The **4-cycle option** (6 hours) is the minimum for short-term function but falls below the National Sleep Foundation's recommended 7–9 hours for adults aged 18–64. Using 4 cycles consistently leads to cumulative sleep debt. The **5-cycle option** (7.5 hours) is the recommendation for most adults — it meets the lower end of the NSF guideline and allows adequate time in each sleep stage, including the REM-heavy later cycles critical for memory consolidation. The **6-cycle option** (9 hours) is optimal for recovery, athletic performance, and adolescents or young adults who need more sleep.
+
+Your **fall-asleep time** (sleep onset latency) is subtracted before cycle calculation. Most healthy adults fall asleep in 10–20 minutes. If you consistently fall asleep in under 5 minutes, that may indicate sleep deprivation. If it regularly takes more than 30 minutes, consider evaluating your sleep hygiene or discussing insomnia with a provider.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your wake-up time** in HH:MM format. Use 24-hour time (e.g., 06:30) or 12-hour format with AM/PM (e.g., 6:30 AM). This is the time your alarm goes off or when you need to be awake.
+
+2. **Enter your fall-asleep time** in minutes. This is how long it typically takes you from lights-out to actually falling asleep. The default is 15 minutes, which is average for healthy adults. If you are unsure, keep the default.
+
+3. **Read your results.** The highlighted "Recommended Bedtime" is the 5-cycle option (7.5 hours of sleep). The table shows all three options (4, 5, and 6 cycles) so you can choose based on your schedule. The summary panel repeats the key numbers for quick reference.
+
+4. **Plan your evening.** Subtract 30 minutes from your target bedtime to begin your wind-down routine — dim lights, stop screen use, and lower the room temperature to 65–68°F (18–20°C) for optimal sleep conditions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$\text{Bedtime} = \text{Wake Time} - (\text{Cycles} \times 90\text{ min}) - \text{Fall-Asleep Time}$$
+
+Where:
+
+- **Wake Time** = your desired wake-up time (converted to minutes since midnight for calculation)
+- **Cycles** = number of complete sleep cycles (4, 5, or 6)
+- **90 min** = average duration of one complete sleep cycle through all four stages (N1 → N2 → N3 → REM)
+- **Fall-Asleep Time** = your estimated sleep onset latency in minutes (default 15 min)
+
+If the calculated bedtime is negative (before midnight), add 1,440 minutes (24 hours) to wrap to the previous evening.
+
+**Cycle recommendations by age group:**
+
+| Age Group | Recommended Sleep | Cycles |
+|---|---|---|
+| Teenagers (14–17) | 8–10 hours | 5–7 cycles |
+| Adults (18–64) | 7–9 hours | 5–6 cycles |
+| Older Adults (65+) | 7–8 hours | 5 cycles |
+
+**Source:** National Sleep Foundation sleep duration recommendations (2015). Walker, M. *Why We Sleep: Unlocking the Power of Sleep and Dreams*. Scribner, 2017.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Morning Wake-Up (6:30 AM, 15 min fall-asleep)
+
+**Inputs:**
+- Wake-up time: 6:30 AM (= 390 minutes since midnight)
+- Fall-asleep time: 15 minutes
+
+**Calculations:**
+
+1. **4 cycles:** 390 − (4 × 90) − 15 = 390 − 360 − 15 = **15 min = 12:15 AM**
+2. **5 cycles:** 390 − (5 × 90) − 15 = 390 − 450 − 15 = **−75 min → 1440 − 75 = 1365 min = 10:45 PM**
+3. **6 cycles:** 390 − (6 × 90) − 15 = 390 − 540 − 15 = **−165 min → 1440 − 165 = 1275 min = 9:15 PM**
+
+| Cycles | Bedtime | Sleep Duration | Rating |
+|---|---|---|---|
+| 4 | 12:15 AM | 6 hours | Minimum |
+| 5 | 10:45 PM | 7.5 hours | Recommended |
+| 6 | 9:15 PM | 9 hours | Optimal |
+
+**Interpretation:** For a 6:30 AM alarm, going to bed at 10:45 PM and falling asleep by 11:00 PM gives you exactly 5 complete cycles. You will wake at the boundary between your 5th REM phase and light sleep, which minimizes grogginess compared to setting a random bedtime like 11:30 PM (which would interrupt you mid-cycle after about 4.5 cycles).
+
+### Example 2: Early Riser with Slow Sleep Onset (5:00 AM, 30 min fall-asleep)
+
+**Inputs:**
+- Wake-up time: 5:00 AM (= 300 minutes)
+- Fall-asleep time: 30 minutes
+
+**Calculations:**
+
+1. **4 cycles:** 300 − 360 − 30 = **−90 min → 1350 = 10:30 PM**
+2. **5 cycles:** 300 − 450 − 30 = **−180 min → 1260 = 9:00 PM**
+3. **6 cycles:** 300 − 540 − 30 = **−270 min → 1170 = 7:30 PM**
+
+**Interpretation:** With a 5:00 AM wake-up and 30 minutes to fall asleep, you need to be in bed by 9:00 PM to get the recommended 7.5 hours. The 30-minute fall-asleep time pushes bedtime 15 minutes earlier than someone who falls asleep in 15 minutes. If your fall-asleep time is consistently above 30 minutes, consider cognitive behavioral therapy for insomnia (CBT-I) rather than simply going to bed earlier, which can worsen sleep-onset insomnia.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Sleep Timing
+
+**Sleep cycle duration varies.** The 90-minute cycle is a population average. Individual cycles range from 80 to 120 minutes, and cycle length changes throughout the night — earlier cycles have more deep sleep (N3), later cycles have more REM. This calculator uses 90 minutes as the standard reference because it produces reliable results for the majority of adults.
+
+**Chronotype matters.** "Night owls" (evening chronotypes) have naturally delayed melatonin onset and may struggle to fall asleep at the calculated time even when tired. "Early birds" (morning chronotypes) may find 6-cycle times unrealistically early. Your biological chronotype is approximately 50% genetically determined, so working *with* it rather than against it improves sleep quality more than rigid cycle timing.
+
+**Alcohol and caffeine shift sleep architecture.** Alcohol suppresses REM sleep in the first half of the night and causes rebound wakefulness in the second half, breaking the cycle pattern this calculator assumes. Caffeine has a half-life of 5–6 hours — a coffee at 3:00 PM still has half its caffeine in your system at 8:30 PM, which delays sleep onset and reduces deep sleep even if you feel like you fell asleep normally.
+
+**Light exposure is the strongest timing signal.** Morning bright light (10,000+ lux) advances your circadian clock, making it easier to fall asleep earlier. Evening blue light from screens delays melatonin secretion by 60–90 minutes. If your actual fall-asleep time is consistently longer than your input, reducing screen time in the final hour before bed is the single most impactful intervention.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- The 90-minute sleep cycle is an **average**, not a universal constant. Your personal cycle length may differ by up to 30 minutes in either direction, which means calculated bedtimes could be off by 15–30 minutes.
+- This calculator assumes you **fall asleep once and sleep continuously** until your wake time. It does not account for nighttime awakenings (nocturia, sleep apnea, noise disruptions), which are common in adults over 40.
+- Sleep quality is not solely determined by cycle timing. **Sleep disorders** such as obstructive sleep apnea, restless legs syndrome, and insomnia alter sleep architecture in ways that cycle-based timing cannot address.
+- The fall-asleep time input is a **self-estimate**, and most people are poor judges of their actual sleep onset latency. If you want an accurate measurement, use a sleep tracker or actigraphy device.
+- This calculator does not account for **naps**, which reduce sleep pressure and can delay nighttime sleep onset. A 20-minute afternoon nap effectively adds 20 minutes to your fall-asleep time.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How many sleep cycles do I need per night?
+
+Most adults need 5 to 6 complete sleep cycles per night, equaling 7.5 to 9 hours of actual sleep time. The National Sleep Foundation recommends 7–9 hours for adults aged 18–64 and 7–8 hours for adults 65 and older. Five cycles (7.5 hours) is the practical minimum for sustained cognitive performance, mood regulation, and physical recovery. Consistently sleeping fewer than 5 cycles is associated with increased risk of obesity, cardiovascular disease, and impaired immune function according to research published in *Sleep* (2010).
+
+### Why do I feel tired after 8 hours of sleep?
+
+Feeling tired after a full night often means you woke up mid-cycle rather than at a cycle boundary. Eight hours equals approximately 5.33 cycles, which means your alarm likely interrupted you during the deep-sleep phase of your 6th cycle — producing sleep inertia that can last 15–30 minutes. Adjusting your alarm by 15–30 minutes to align with a cycle endpoint (either 7.5 or 9 hours) often resolves morning grogginess without changing total sleep time. Other causes include undiagnosed sleep apnea, poor sleep quality from alcohol or medications, and chronic sleep debt.
+
+### Is it better to sleep 6 hours or 7.5 hours?
+
+Seven and a half hours (5 cycles) is substantially better than 6 hours (4 cycles) for nearly all adults. A landmark study by Kripke et al. (2002) in *Archives of General Psychiatry* found that adults sleeping 6 hours had significantly higher mortality risk than those sleeping 7–8 hours. At 6 hours, you lose an entire cycle's worth of REM sleep, which is concentrated in the 5th and 6th cycles. REM deprivation impairs emotional regulation, creative problem-solving, and memory consolidation. The 4-cycle option in this calculator is meant for occasional use when schedules are constrained, not as a nightly target.
+
+### Does the 90-minute sleep cycle vary by person?
+
+Yes, the 90-minute figure is a population average. Individual sleep cycles range from approximately 80 to 120 minutes. Early-night cycles tend to be shorter with more deep sleep, while later cycles are longer with more REM sleep. A 2019 study in *Frontiers in Human Neuroscience* found that inter-individual variability in cycle length was approximately 15% — meaning someone with 80-minute cycles would need to adjust their bedtime by about 30 minutes compared to the calculator's estimate. Consumer sleep trackers can help identify your personal cycle duration over several weeks of measurement.
+
+</div>
+
+{/* Section 14: How This Is Calculated */}
+## Sources & Methodology
+
+This calculator applies the widely accepted 90-minute sleep cycle model, backed by polysomnographic research dating to the 1960s. The **National Sleep Foundation** sleep duration recommendations (Hirshkowitz et al., *Sleep Health*, 2015) provide the evidence base for the 7–9 hour adult recommendation (5–6 cycles). Matthew Walker's *Why We Sleep* (Scribner, 2017) synthesizes the neuroscience of sleep stages and the clinical significance of cycle-aligned waking. Sleep onset latency defaults are based on normative data from Ohayon et al. (*Sleep Medicine Reviews*, 2004), which found that healthy adults aged 18–64 have a mean sleep latency of 14 ± 11 minutes. The cycle-aligned bedtime approach is an application of sleep architecture principles described in Carskadon and Dement, *Principles and Practice of Sleep Medicine*, 6th edition (2017).
+
+{/* Section 15: Disclaimer — auto-rendered from spec.disclaimer = "health" */}

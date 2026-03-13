@@ -1,0 +1,124 @@
+{
+  "id": "debt-service-coverage-calculator",
+  "title": "Debt Service Coverage Ratio Calculator",
+  "slug": "debt-service-coverage-calculator",
+  "category": "business",
+  "subcategory": "lending",
+  "primaryKeyword": "debt service coverage ratio calculator",
+  "metaTitle": "DSCR Calculator — Debt Service Coverage Ratio",
+  "metaDescription": "Calculate your debt service coverage ratio (DSCR), excess cash flow, and maximum affordable loan payment. See if you qualify for commercial financing instantly.",
+  "inputs": [
+    {
+      "id": "netOperatingIncome",
+      "label": "Net Operating Income (NOI)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 120000,
+      "min": -100000000,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Annual NOI (revenue minus operating expenses)"
+    },
+    {
+      "id": "annualDebtService",
+      "label": "Annual Debt Service",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 80000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Total annual principal + interest payments"
+    },
+    {
+      "id": "requiredDSCR",
+      "label": "Required DSCR",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1.25,
+      "min": 1.0,
+      "max": 3.0,
+      "step": 0.05,
+      "helpText": "Minimum DSCR required by lender (typical: 1.20-1.50)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "dscr",
+      "label": "Debt Service Coverage Ratio",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "excessCashFlow",
+      "label": "Excess Cash Flow",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "maxLoanPayment",
+      "label": "Max Affordable Debt Service",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "qualificationStatus",
+      "label": "Qualification Status",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "DSCR Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "debt-service-coverage",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "loan-calculator",
+    "rental-property-calculator",
+    "roi-calculator",
+    "cash-flow-calculator",
+    "break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "DSCR = NOI / Total Debt Service; Excess CF = NOI - Debt Service; Max Payment = NOI / Required DSCR",
+  "formulaCitation": "Federal Reserve — \"Commercial Real Estate Lending Standards\" (SR 15-17); FDIC risk management guidance",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "loan-calculator",
+    "rental-property-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "dscr",
+    "noi",
+    "debt-service"
+  ]
+}

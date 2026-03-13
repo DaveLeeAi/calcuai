@@ -1,0 +1,161 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Heating 1 kilogram of water by 10 degrees Celsius requires exactly 41,860 joules of energy — calculated from Q = 1 times 4,186 times 10 using the specific heat equation Q = mcDeltaT. This specific heat calculator solves for any one of the four variables in that equation: heat energy (Q), mass (m), specific heat capacity (c), or temperature change (DeltaT). Select what you want to find, enter the other three values, and get instant results. Common materials like water (4,186 J/kg C), aluminum (897), iron (449), copper (385), and air (1,005) are referenced below for quick lookup.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## What Your Estimate Means
+
+The specific heat equation Q = mcDeltaT is one of the most practical formulas in physics and engineering. It quantifies the energy required to change the temperature of a substance by a given amount. Every heating system, cooling process, cooking recipe, and climate model ultimately depends on this relationship.
+
+**Specific heat capacity** (c) is the amount of energy needed to raise one kilogram of a substance by one degree Celsius. Water has an unusually high specific heat of 4,186 J/(kg times degrees C), which is why lakes moderate nearby climates and why water is used as a coolant in engines and nuclear reactors. Metals have much lower specific heat values — copper is 385, iron is 449, aluminum is 897 — which means they heat up and cool down much faster than water for the same energy input.
+
+When you solve for heat energy (Q), the result tells you the total energy transferred during the temperature change. Positive Q means heat was absorbed (warming); negative Q means heat was released (cooling). When you solve for mass, the result tells you how much of that substance would undergo the specified temperature change for a given energy input. Solving for DeltaT reveals how much the temperature changes when a known amount of energy is added to or removed from a known mass.
+
+For problems involving phase changes (melting, boiling), you need the latent heat equation instead of Q = mcDeltaT, since temperature remains constant during a phase transition. The [Energy Calculator](/calculators/science/energy-calculator) handles broader energy conversions, and the [Heat Transfer Calculator](/calculators/science/heat-transfer-calculator) provides an alternative interface with material presets.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose what to solve for** from the dropdown: Heat Energy, Mass, Specific Heat, or Temperature Change. The calculator will use the other three values as inputs.
+2. **Enter the known values** in their respective fields. Use SI units: kilograms for mass, joules per kilogram per degree Celsius for specific heat, degrees Celsius for temperature change, and joules for heat energy.
+3. **For temperature change, negative values are valid.** A negative DeltaT represents cooling. If you enter -20 degrees C with positive mass and specific heat, the calculator returns a negative Q, meaning heat is released.
+4. **Look up specific heat values** if needed. Common values: water = 4,186, aluminum = 897, iron = 449, copper = 385, air = 1,005, glass = 840, wood (approximate) = 1,700, concrete = 880 — all in J/(kg times degrees C).
+5. **Read the result** displayed as the highlighted output. The summary below shows all four variables with their units so you can verify the complete picture.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Heat Energy from Mass, Specific Heat, and Temperature Change
+
+$$Q = m \times c \times \Delta T$$
+
+Where:
+
+- **Q** = heat energy transferred (joules, J)
+- **m** = mass of the substance (kilograms, kg)
+- **c** = specific heat capacity (J/(kg·°C))
+- **ΔT** = temperature change (°C), equal to $T_{final} - T_{initial}$
+
+### Solve for Mass
+
+$$m = \frac{Q}{c \times \Delta T}$$
+
+### Solve for Specific Heat
+
+$$c = \frac{Q}{m \times \Delta T}$$
+
+### Solve for Temperature Change
+
+$$\Delta T = \frac{Q}{m \times c}$$
+
+Each rearrangement is a simple algebraic manipulation of the same equation. The relationship is linear: doubling the mass doubles the energy required for the same temperature change; doubling DeltaT also doubles the energy. Specific heat is an intrinsic material property that depends on the molecular structure of the substance and varies slightly with temperature (the values above are averages near room temperature).
+
+### Common Specific Heat Values
+
+| Material | c (J/(kg·°C)) |
+|----------|---------------|
+| Water | 4,186 |
+| Ice | 2,090 |
+| Steam | 2,010 |
+| Aluminum | 897 |
+| Concrete | 880 |
+| Glass | 840 |
+| Air | 1,005 |
+| Iron/Steel | 449 |
+| Copper | 385 |
+
+**Source:** Serway & Jewett, *Physics for Scientists and Engineers* (10th ed.), Table 20.1; NIST Standard Reference Data Program, thermophysical properties of materials.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Heating Water for Coffee
+
+How much energy does it take to heat 0.35 kg (about 350 mL) of water from 20 degrees C to 95 degrees C for a pour-over coffee?
+
+**Step-by-step:**
+
+1. Known values: m = **0.35 kg**, c = **4,186 J/(kg times degrees C)** (water), DeltaT = 95 - 20 = **75 degrees C**
+2. Apply the formula: Q = 0.35 times 4,186 times 75 = **109,882.5 J**
+3. Convert to kilojoules: 109,882.5 / 1,000 = **109.88 kJ**
+4. Convert to kilocalories: 109,882.5 / 4,184 = **26.27 kcal**
+
+**Result:** Heating the water requires **109,883 joules** (109.88 kJ or 26.27 food Calories).
+
+**Practical interpretation:** A standard 1,500-watt electric kettle delivers 1,500 joules per second, so it would take 109,883 / 1,500 = 73.3 seconds — about 1 minute 13 seconds — to heat this water, assuming no heat losses. In practice, heat lost to the kettle body and surrounding air adds 10 to 20 seconds.
+
+### Example 2: Identifying a Metal by Its Specific Heat
+
+A 0.2 kg block of unknown metal absorbs 3,590 joules of heat and its temperature rises from 22 degrees C to 112 degrees C. What is the metal?
+
+**Step-by-step:**
+
+1. Known values: Q = **3,590 J**, m = **0.2 kg**, DeltaT = 112 - 22 = **90 degrees C**
+2. Solve for specific heat: c = Q / (m times DeltaT) = 3,590 / (0.2 times 90) = 3,590 / 18 = **199.4 J/(kg times degrees C)**
+3. Compare to reference values: Gold = 129, Lead = 128, Silver = 235, Tin = 227, Brass = 380
+4. The closest standard material is **tin** (227) or a lead alloy, suggesting this block is likely a tin-lead alloy or similar low-c metal
+
+**Result:** The specific heat is approximately **199 J/(kg times degrees C)**, consistent with a tin alloy or similar dense metal.
+
+**Practical interpretation:** This is a classic calorimetry experiment used in introductory physics labs to identify unknown metals. The accuracy depends on minimizing heat loss to the container and surroundings. A styrofoam cup calorimeter typically loses 5 to 15 percent of the heat, so the true specific heat may be slightly higher than calculated.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Temperature dependence of specific heat.** The values in the table above are averages near room temperature (20 to 25 degrees C). For most solids and liquids, specific heat changes by 1 to 5 percent over a 100-degree range, which is negligible for everyday calculations. However, near phase transitions (melting or boiling points), specific heat can spike dramatically. Water's specific heat increases from 4,186 at 15 degrees C to about 4,216 at 100 degrees C — a small change, but it matters in precision engineering.
+
+**Phase changes are not covered by Q = mcDeltaT.** During melting or boiling, temperature remains constant while energy is absorbed or released. For example, converting 1 kg of ice at 0 degrees C to liquid water at 0 degrees C requires 334,000 J (the latent heat of fusion) — and the Q = mcDeltaT formula gives zero because DeltaT is zero. To handle phase changes, add the latent heat equation: Q = mL, where L is the latent heat of the specific transition.
+
+**Heat losses reduce accuracy in real experiments.** No calorimeter is perfectly insulated. Energy escapes to the container walls, the air, and the surroundings through conduction, convection, and radiation. Professional calorimeters use vacuum insulation and stirring to minimize losses. In a simple styrofoam cup calorimeter, expect 5 to 15 percent of the energy to be lost, which means measured specific heat values will be systematically lower than true values.
+
+**Pressure affects gas specific heat significantly.** For gases, specific heat depends on whether pressure or volume is held constant: $c_p$ (constant pressure) is always larger than $c_v$ (constant volume) by an amount equal to the gas constant per mole. For air, $c_p = 1,005$ J/(kg times degrees C) and $c_v = 718$ J/(kg times degrees C). This distinction does not apply to solids and liquids, which are nearly incompressible.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **No phase changes.** The formula assumes the substance stays in a single phase (all solid, all liquid, or all gas) throughout the temperature change. Melting, boiling, and sublimation require separate latent heat calculations.
+- **Constant specific heat.** The calculation uses a single specific heat value across the entire temperature range. For large temperature ranges (more than 200 degrees C) or temperatures near phase transitions, the actual specific heat may vary enough to introduce error.
+- **No heat losses.** The result represents the theoretical minimum energy required. Real systems lose heat to insulation, container walls, and the environment.
+- **Mass must be positive.** Negative or zero mass is physically meaningless and will be clamped to a minimum value.
+- **Linear relationship only.** The formula does not account for chemical reactions, radiation effects, or work done by expanding gases. It applies strictly to sensible heating and cooling of stable substances.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is specific heat capacity?
+
+Specific heat capacity is the amount of energy required to raise the temperature of one kilogram of a substance by one degree Celsius (or equivalently, one kelvin). It is an intrinsic property of the material — water has a specific heat of 4,186 J/(kg times degrees C), which is among the highest of any common substance. This high value is why water is used as a coolant in car engines, industrial processes, and nuclear power plants: it absorbs a large amount of heat with a relatively small temperature rise. Metals like copper (385) and iron (449) have much lower specific heat values, meaning they heat up quickly with less energy input.
+
+### Why does water have such a high specific heat?
+
+Water's specific heat of 4,186 J/(kg times degrees C) is unusually high because of hydrogen bonding between water molecules. Each water molecule forms up to four hydrogen bonds with its neighbors, creating a dense network that requires significant energy to disrupt. When heat is added to water, much of the energy goes into breaking and reforming these hydrogen bonds rather than increasing molecular kinetic energy (which is what temperature measures). This same property makes water an excellent thermal buffer — ocean currents moderate coastal climates, and the human body (which is about 60 percent water by mass) resists rapid temperature changes.
+
+### What is the difference between specific heat and heat capacity?
+
+Specific heat (c) is the heat capacity per unit mass, measured in J/(kg times degrees C). Heat capacity (C) is the total capacity of an object, measured in J/degrees C, and equals mass times specific heat: C = m times c. A 5-kg block of iron has a specific heat of 449 J/(kg times degrees C) but a heat capacity of 2,245 J/degrees C. Specific heat is an intrinsic material property (it does not depend on the amount of substance), while heat capacity is an extrinsic property that scales with mass. In this calculator, you enter specific heat — the per-kilogram value — along with mass to calculate total energy.
+
+### Can temperature change be negative in this formula?
+
+Yes, a negative temperature change represents cooling — the substance loses heat to its surroundings. When you enter a negative DeltaT, the calculated heat energy Q will also be negative, indicating that energy flows out of the substance. For example, cooling 2 kg of water by 15 degrees C releases Q = 2 times 4,186 times (-15) = -125,580 J. The negative sign is a convention indicating the direction of heat flow: positive Q means heat absorbed, negative Q means heat released.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the specific heat equation Q = mcDeltaT in one of four rearranged forms depending on which variable you select to solve for. When solving for heat energy, it multiplies mass by specific heat by temperature change. When solving for mass, it divides heat energy by the product of specific heat and temperature change. When solving for specific heat, it divides heat energy by the product of mass and temperature change. When solving for temperature change, it divides heat energy by the product of mass and specific heat. All calculations use standard SI units and results are rounded to four decimal places. Division by zero is guarded — if the divisor would be zero, the calculator reports an error.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

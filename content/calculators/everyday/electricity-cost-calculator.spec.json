@@ -119,7 +119,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "kWh = (watts × hours) / 1000; cost = kWh × rate. National average residential rate: $0.16/kWh (EIA, 2024).",
   "formulaAuditDate": "2026-03-11",
@@ -128,7 +128,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 72,
+  "qualityScore": 80,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

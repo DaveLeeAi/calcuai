@@ -1,0 +1,173 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Investing \$500 per month in a low-cost S&P 500 index fund (0.03% expense ratio) at a 10% average annual return grows to approximately \$1,062,000 over 30 years, starting with a \$10,000 initial investment. The same portfolio in a fund charging 1.0% in fees reaches only \$870,000 — a difference of \$192,000 lost purely to higher expenses. This calculator shows exactly how expense ratios compound over time and how much choosing a low-cost index fund saves you versus a higher-cost alternative.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Projection Shows */}
+## What Your Estimate Means
+
+This calculator answers two questions: "How much will my index fund investments grow?" and "How much am I losing to fees?" It computes the future value of your portfolio after subtracting your fund's expense ratio from the gross return, then runs the same calculation with a higher-cost comparison fund to show the dollar cost of higher fees over your investment horizon.
+
+**The expense ratio is a silent wealth destroyer.** A 1% expense ratio sounds trivial, but on a portfolio growing for 30 years, it consumes roughly 18–25% of your potential ending balance. The math is relentless: fees are deducted from your balance every year, which means the fees themselves compound against you. A \$500/month investor paying 1% fees over 30 years at 10% gross return loses approximately \$192,000 compared to paying 0.03% — more than their entire contribution total of \$190,000.
+
+**John Bogle's core insight was this:** you can't control the market, but you can control your costs. The Vanguard S&P 500 ETF (VOO) charges 0.03% per year — that's \$3 per \$10,000 invested. An actively managed fund charging 1.0% costs \$100 per \$10,000. Over decades, that 0.97% annual difference compounds into a six-figure gap. This calculator makes that gap visible.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your initial investment** — the lump sum you're investing today. If you're starting from scratch, enter \$0. If you're rolling over an existing 401(k) or IRA into an index fund, enter that balance.
+
+2. **Enter your monthly contribution** — the amount you invest each month. Common amounts: \$200–\$500 for moderate savers, \$500–\$1,500 for aggressive savers, \$1,500+ for high earners targeting early retirement. Consistency matters more than the exact amount.
+
+3. **Set the expected annual return** — the gross (before-fee) return you expect. The S&P 500 has returned approximately 10% annually (nominal) over the past 50 years. Use 10% for a US total stock market index, 7–8% for a balanced stock/bond portfolio, or 4–5% for a bond index fund.
+
+4. **Enter your fund's expense ratio** — this is the annual fee charged by the fund. Low-cost index funds: Vanguard VOO = 0.03%, Fidelity FSKAX = 0.015%, Schwab SWTSX = 0.03%. Check your fund's prospectus or Morningstar for the exact figure.
+
+5. **Set the investment period** — how many years you plan to stay invested. The expense ratio impact grows exponentially with time: at 10 years the difference is modest, at 30+ years it's transformative.
+
+6. **Enter the comparison expense ratio** — set this to the expense ratio of an alternative fund you're considering. For example, compare a 0.03% index fund against a 1.0% actively managed fund, or compare two index funds at 0.03% vs. 0.20%.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The future value uses compound growth with monthly contributions, after subtracting the expense ratio from the gross return:
+
+$$FV = P \times (1 + r_m)^{n} + PMT \times \frac{(1 + r_m)^{n} - 1}{r_m}$$
+
+Where the monthly return accounts for fees:
+
+$$r_m = (1 + R_{gross} - ER)^{1/12} - 1$$
+
+Variables:
+- **FV** = future value of the portfolio (dollars)
+- **P** = initial investment (dollars)
+- **PMT** = monthly contribution (dollars)
+- **R_gross** = gross annual return (decimal, e.g., 10% = 0.10)
+- **ER** = annual expense ratio (decimal, e.g., 0.03% = 0.0003)
+- **r_m** = effective monthly return after fees
+- **n** = total months of investment
+
+The expense ratio cost is the difference between a hypothetical zero-fee portfolio and your actual portfolio:
+
+$$\text{Fee Cost} = FV_{0\% ER} - FV_{actual ER}$$
+
+The fee savings from choosing a low-cost fund is:
+
+$$\text{Fee Savings} = FV_{low ER} - FV_{high ER}$$
+
+**Source:** Bogle, J. "The Little Book of Common Sense Investing" (2007); Vanguard research paper "The Case for Low-Cost Index-Fund Investing" (2023); CFA Institute compound growth mathematics.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: VOO (0.03%) vs. Actively Managed Fund (1.0%) — 30 Years
+
+**Inputs:**
+- Initial Investment: \$10,000
+- Monthly Contribution: \$500
+- Gross Annual Return: 10%
+- Low-Cost ER: 0.03% (Vanguard VOO)
+- High-Cost ER: 1.00% (typical active fund)
+- Period: 30 years
+
+**Step-by-step for low-cost fund:**
+
+1. Effective annual return: 10.00% − 0.03% = 9.97%
+2. Monthly return: (1.0997)^(1/12) − 1 = 0.007940
+3. Months: 360
+4. FV of \$10K: \$10,000 × (1.007940)^360 = \$171,587
+5. FV of \$500/mo: \$500 × ((1.007940)^360 − 1) / 0.007940 = \$890,861
+6. Total: \$1,062,448
+
+**For high-cost fund:** Effective return = 9.00%, monthly rate = 0.007207, FV ≈ \$869,897
+
+**Difference:** \$1,062,448 − \$869,897 = **\$192,551** lost to the higher expense ratio.
+
+**Interpretation:** Over 30 years, the 0.97% fee difference costs more than the investor's entire \$190,000 in contributions. The low-cost fund investor retires with an extra \$192,551 — purely from paying lower fees on the same market returns.
+
+### Example 2: Young Investor — \$200/Month for 40 Years
+
+**Inputs:**
+- Initial Investment: \$0
+- Monthly Contribution: \$200
+- Gross Annual Return: 10%
+- Low-Cost ER: 0.03%
+- High-Cost ER: 0.75%
+- Period: 40 years
+
+**Step-by-step for low-cost fund:**
+
+1. Effective annual return: 9.97%, monthly rate: 0.007940
+2. FV of \$200/mo for 480 months: \$200 × ((1.007940)^480 − 1) / 0.007940 = \$1,100,572
+
+**For 0.75% ER fund:** Effective return = 9.25%, monthly rate = 0.007400, FV ≈ \$872,140
+
+**Difference:** \$1,100,572 − \$872,140 = **\$228,432**
+
+**Interpretation:** A 22-year-old investing just \$200/month in a low-cost index fund accumulates \$228,432 more than a peer paying 0.75% in fees — and the total contributions are only \$96,000. The fee difference is 2.4 times larger than all the money invested. Time amplifies the cost of fees exponentially.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors
+
+**Expense ratio** — The most controllable factor in investing. A 0.03% expense ratio (Vanguard VOO) costs \$3 per year on \$10,000. A 1.0% expense ratio costs \$100. Over 30 years on a \$500/month portfolio, that difference compounds to \$150,000–\$200,000. Always check a fund's expense ratio before investing.
+
+**Time horizon** — Fee impact compounds exponentially. In year 1, a 1% ER costs roughly \$100 on a \$10,000 portfolio. By year 30, that same 1% ER is costing \$8,000+ per year on a much larger balance. The longer you invest, the more critical it is to minimize fees.
+
+**Gross return assumption** — The S&P 500 has returned approximately 10% annually (nominal) since 1974. However, international diversification, bond allocation, and future market conditions may lower this. Every 1% decrease in gross return amplifies the relative impact of fees — a 1% ER on a 7% gross return consumes 14.3% of your return, versus 10% on a 10% gross return.
+
+**Monthly contribution consistency** — Regular contributions benefit from dollar-cost averaging and compound growth. Missing contributions has a disproportionate impact: skipping \$500/month for one year in year 5 of a 30-year plan costs roughly \$30,000 in lost future value at 10% returns.
+
+**Tax-advantaged accounts** — Index funds held in a 401(k), IRA, or Roth IRA compound without annual tax drag. In a taxable account, you also pay capital gains taxes on distributions, which effectively adds 0.5–1.0% per year to your total cost beyond the expense ratio.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Constant return rate** — Actual market returns vary dramatically year to year. The 10% S&P 500 average includes years of −37% (2008) and +32% (2013). This calculator assumes smooth annual growth, not real-world volatility.
+- **Expense ratio as the only fee** — Some funds have trading costs, bid-ask spreads, or 12b-1 fees not captured in the stated expense ratio. Total cost of ownership may be slightly higher.
+- **No taxes modeled** — Capital gains distributions and dividend taxation in taxable accounts are not included. For taxable accounts, index funds are inherently more tax-efficient than actively managed funds due to lower turnover.
+- **Monthly compounding** — The calculator compounds monthly. Actual fund returns are based on daily NAV changes. The difference is negligible for planning purposes.
+- **No inflation adjustment** — All values are nominal (future dollars). In real (inflation-adjusted) terms at 3% inflation, a \$1M future balance has approximately \$412,000 in today's purchasing power after 30 years.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a good expense ratio for an index fund?
+
+An expense ratio below 0.10% is considered excellent for a broad market index fund. The lowest available as of 2024 include Fidelity ZERO Total Market (0.00%), Vanguard S&P 500 ETF (0.03%), and Schwab S&P 500 Index (0.02%). Anything above 0.20% for a passive index fund is overpriced, and expense ratios above 0.50% are typically only justified for actively managed or specialized funds — though evidence shows most active funds underperform their benchmark index after fees.
+
+### How much do index fund fees cost over a lifetime?
+
+On a \$500/month investment over 30 years at 10% gross return, a 0.03% expense ratio costs approximately \$10,000 in total fees, while a 1.0% expense ratio costs roughly \$200,000. The difference — \$190,000 — is more than the investor's total contributions of \$190,000. Over 40 years, the gap exceeds \$300,000. Fees are the single largest controllable drag on long-term investment performance.
+
+### Is the S&P 500 the best index fund to invest in?
+
+The S&P 500 is the most popular but not the only option. A total stock market index (like VTI or VTSAX) adds small-cap and mid-cap exposure to the S&P 500's large-cap companies, providing broader diversification at the same low cost. For additional diversification, many advisors recommend adding international stocks (VXUS, 0.07% ER) and bonds (BND, 0.03% ER). A common allocation is 60% US stocks, 30% international stocks, 10% bonds.
+
+### Do actively managed funds ever beat index funds?
+
+Over any single year, roughly 40–50% of active funds beat their benchmark index. But over 20 years, only about 10% of active funds outperform after fees, according to the S&P SPIVA Scorecard. The problem is that fees compound while outperformance does not persist — last year's winning fund manager is no more likely to win next year. This is why Bogle, Buffett, and most academic research recommend low-cost index funds for the vast majority of investors.
+
+### Should I invest a lump sum or dollar-cost average into an index fund?
+
+Historical data shows that lump-sum investing outperforms dollar-cost averaging about two-thirds of the time, because markets trend upward and money invested earlier has more time to compound. However, dollar-cost averaging (investing a fixed amount monthly) reduces the psychological risk of investing a large sum right before a downturn. For most people, the best approach is to invest whatever you have now as a lump sum and then contribute monthly from income going forward.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator uses the **compound growth formula with periodic contributions** as standardized by the **CFA Institute** curriculum. The expense ratio is subtracted from the gross annual return before computing the effective monthly rate, following the methodology described in John Bogle's **"The Little Book of Common Sense Investing"** (Wiley, 2007, updated 2017). Historical S&P 500 return data (10.0% nominal annual average) cites the **NYU Stern School of Business** historical returns database (Damodaran, updated annually). Expense ratio data for specific funds is sourced from **Morningstar** and fund prospectuses as of 2024. Active fund underperformance statistics cite the **S&P Dow Jones Indices SPIVA U.S. Scorecard** (2023 year-end report).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

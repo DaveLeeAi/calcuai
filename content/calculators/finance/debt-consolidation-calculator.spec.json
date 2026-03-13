@@ -61,12 +61,30 @@
       "required": true,
       "defaultValue": "60",
       "options": [
-        { "value": "24", "label": "2 Years" },
-        { "value": "36", "label": "3 Years" },
-        { "value": "48", "label": "4 Years" },
-        { "value": "60", "label": "5 Years" },
-        { "value": "72", "label": "6 Years" },
-        { "value": "84", "label": "7 Years" }
+        {
+          "value": "24",
+          "label": "2 Years"
+        },
+        {
+          "value": "36",
+          "label": "3 Years"
+        },
+        {
+          "value": "48",
+          "label": "4 Years"
+        },
+        {
+          "value": "60",
+          "label": "5 Years"
+        },
+        {
+          "value": "72",
+          "label": "6 Years"
+        },
+        {
+          "value": "84",
+          "label": "7 Years"
+        }
       ],
       "helpText": "Consolidation loan term"
     }
@@ -105,7 +123,9 @@
     }
   ],
   "formula": "debt-consolidation",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "debt-payoff-calculator",
     "credit-card-payoff-calculator",
@@ -124,7 +144,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Current path: monthly iteration at weighted average APR. Consolidation path: M = P × [r(1+r)^n] / [(1+r)^n - 1] per CFPB Regulation Z",
   "formulaAuditDate": "2026-03-13",
@@ -132,10 +152,17 @@
   "targetIntent": "informational",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["debt-payoff-calculator", "loan-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "debt-payoff-calculator",
+    "loan-calculator"
+  ],
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["principal", "interest-rate", "apr"],
+  "glossaryTerms": [
+    "principal",
+    "interest-rate",
+    "apr"
+  ],
   "methodologyTopics": []
 }

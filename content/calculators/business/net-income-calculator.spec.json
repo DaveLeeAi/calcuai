@@ -27,10 +27,22 @@
       "required": true,
       "defaultValue": "annual",
       "options": [
-        { "value": "annual", "label": "Annual" },
-        { "value": "monthly", "label": "Monthly" },
-        { "value": "biweekly", "label": "Biweekly" },
-        { "value": "weekly", "label": "Weekly" }
+        {
+          "value": "annual",
+          "label": "Annual"
+        },
+        {
+          "value": "monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "biweekly",
+          "label": "Biweekly"
+        },
+        {
+          "value": "weekly",
+          "label": "Weekly"
+        }
       ],
       "helpText": "How often you receive your income"
     },
@@ -171,7 +183,10 @@
     }
   ],
   "formula": "net-income",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "salary-calculator",
     "paycheck-calculator",
@@ -193,8 +208,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["paycheck-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "paycheck-calculator"
+  ],
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "articleWordTarget": 800,

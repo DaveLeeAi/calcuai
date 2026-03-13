@@ -26,8 +26,14 @@
       "required": true,
       "defaultValue": "rate-to-years",
       "options": [
-        { "value": "rate-to-years", "label": "Rate \u2192 Years to Double" },
-        { "value": "years-to-rate", "label": "Years \u2192 Required Rate" }
+        {
+          "value": "rate-to-years",
+          "label": "Rate → Years to Double"
+        },
+        {
+          "value": "years-to-rate",
+          "label": "Years → Required Rate"
+        }
       ]
     },
     {
@@ -40,7 +46,11 @@
       "max": 100,
       "step": 1,
       "helpText": "Target number of years to double",
-      "visibleWhen": { "mode": ["years-to-rate"] }
+      "visibleWhen": {
+        "mode": [
+          "years-to-rate"
+        ]
+      }
     }
   ],
   "outputs": [
@@ -73,7 +83,9 @@
     }
   ],
   "formula": "rule-of-72",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "compound-interest-calculator",
     "investment-calculator",
@@ -87,8 +99,12 @@
   "requiresSources": false,
   "formulaCitation": "Luca Pacioli, Summa de Arithmetica (1494); standard financial mathematics",
   "articleWordTarget": 800,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Rule of 72: Years ≈ 72/rate; Exact: Years = ln(2)/ln(1+r). Luca Pacioli, Summa de Arithmetica (1494); CFA Institute financial math",
   "formulaAuditDate": "2026-03-13",
@@ -96,10 +112,15 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["compound-interest-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "compound-interest-calculator"
+  ],
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["compound-interest", "interest-rate"],
+  "glossaryTerms": [
+    "compound-interest",
+    "interest-rate"
+  ],
   "methodologyTopics": []
 }

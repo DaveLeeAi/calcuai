@@ -39,7 +39,7 @@
       "placeholder": "e.g. 9.80665",
       "min": 0,
       "step": 0.00001,
-      "suffix": "m/s\u00b2",
+      "suffix": "m/s²",
       "defaultValue": 9.80665,
       "helpText": "Acceleration in meters per second squared (default is standard gravity)"
     }
@@ -103,7 +103,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Newton's second law: F = ma, m = F/a, a = F/m",
   "formulaAuditDate": "2026-03-14",
@@ -112,7 +112,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

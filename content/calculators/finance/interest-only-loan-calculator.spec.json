@@ -37,10 +37,22 @@
       "required": true,
       "defaultValue": "30",
       "options": [
-        { "value": "15", "label": "15 years" },
-        { "value": "20", "label": "20 years" },
-        { "value": "25", "label": "25 years" },
-        { "value": "30", "label": "30 years" }
+        {
+          "value": "15",
+          "label": "15 years"
+        },
+        {
+          "value": "20",
+          "label": "20 years"
+        },
+        {
+          "value": "25",
+          "label": "25 years"
+        },
+        {
+          "value": "30",
+          "label": "30 years"
+        }
       ]
     },
     {
@@ -50,10 +62,22 @@
       "required": true,
       "defaultValue": "10",
       "options": [
-        { "value": "3", "label": "3 years" },
-        { "value": "5", "label": "5 years" },
-        { "value": "7", "label": "7 years" },
-        { "value": "10", "label": "10 years" }
+        {
+          "value": "3",
+          "label": "3 years"
+        },
+        {
+          "value": "5",
+          "label": "5 years"
+        },
+        {
+          "value": "7",
+          "label": "7 years"
+        },
+        {
+          "value": "10",
+          "label": "10 years"
+        }
       ],
       "helpText": "Years of interest-only payments before principal + interest begins"
     }
@@ -116,7 +140,10 @@
     }
   ],
   "formula": "interest-only-loan",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "mortgage-calculator",
     "amortization-calculator",
@@ -131,8 +158,12 @@
   "requiresSources": false,
   "formulaCitation": "CFPB — Interest-Only Mortgage Payments and Payment-Option ARMs; Freddie Mac — Loan Product Descriptions",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "IO Payment = P × (r/12). After IO period: M = P × [r(1+r)^n] / [(1+r)^n - 1] where n = remaining months.",
   "formulaAuditDate": "2026-03-14",
@@ -140,10 +171,16 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["mortgage-calculator", "heloc-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "mortgage-calculator",
+    "heloc-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["amortization", "interest-rate"],
+  "glossaryTerms": [
+    "amortization",
+    "interest-rate"
+  ],
   "methodologyTopics": []
 }

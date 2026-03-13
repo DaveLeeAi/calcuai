@@ -15,10 +15,22 @@
       "required": true,
       "defaultValue": "rectangular",
       "options": [
-        { "value": "rectangular", "label": "Rectangular" },
-        { "value": "circular", "label": "Circular" },
-        { "value": "oval", "label": "Oval" },
-        { "value": "kidney", "label": "Kidney" }
+        {
+          "value": "rectangular",
+          "label": "Rectangular"
+        },
+        {
+          "value": "circular",
+          "label": "Circular"
+        },
+        {
+          "value": "oval",
+          "label": "Oval"
+        },
+        {
+          "value": "kidney",
+          "label": "Kidney"
+        }
       ],
       "helpText": "Select the shape closest to your pool"
     },
@@ -31,12 +43,26 @@
       "min": 0,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Pool length (longest dimension)",
-      "visibleWhen": { "poolShape": ["rectangular", "oval", "kidney"] }
+      "visibleWhen": {
+        "poolShape": [
+          "rectangular",
+          "oval",
+          "kidney"
+        ]
+      }
     },
     {
       "id": "width",
@@ -47,12 +73,26 @@
       "min": 0,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Pool width (shortest dimension)",
-      "visibleWhen": { "poolShape": ["rectangular", "oval", "kidney"] }
+      "visibleWhen": {
+        "poolShape": [
+          "rectangular",
+          "oval",
+          "kidney"
+        ]
+      }
     },
     {
       "id": "diameter",
@@ -63,12 +103,24 @@
       "min": 0,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Diameter for circular pools",
-      "visibleWhen": { "poolShape": ["circular"] }
+      "visibleWhen": {
+        "poolShape": [
+          "circular"
+        ]
+      }
     },
     {
       "id": "shallowDepth",
@@ -79,8 +131,16 @@
       "min": 0,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Depth at the shallow end"
@@ -94,8 +154,16 @@
       "min": 0,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Depth at the deep end (same as shallow for uniform depth)"
@@ -173,7 +241,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Standard geometric volume formulas. Gallon conversion factor (7.48052 gal/cu ft) per NIST. Chemical dosage guidelines per PHTA/APSP recommendations.",
   "formulaAuditDate": "2026-03-14",
@@ -184,7 +252,7 @@
   "duplicationRisk": [
     "cubic-yard-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

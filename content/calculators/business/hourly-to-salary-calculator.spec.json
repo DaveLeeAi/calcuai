@@ -62,14 +62,14 @@
       "options": [
         {
           "value": "1.5",
-          "label": "1.5\u00d7 (Standard)"
+          "label": "1.5× (Standard)"
         },
         {
           "value": "2",
-          "label": "2\u00d7 (Double Time)"
+          "label": "2× (Double Time)"
         }
       ],
-      "helpText": "Overtime pay multiplier (1.5\u00d7 is standard under FLSA)"
+      "helpText": "Overtime pay multiplier (1.5× is standard under FLSA)"
     }
   ],
   "outputs": [
@@ -145,7 +145,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "formulaCitation": "Bureau of Labor Statistics — Standard Work Week and Overtime Provisions (Fair Labor Standards Act, 29 U.S.C. \u00a7 207)",
+  "formulaCitation": "Bureau of Labor Statistics — Standard Work Week and Overtime Provisions (Fair Labor Standards Act, 29 U.S.C. § 207)",
   "articleWordTarget": 800,
   "speakableSelectors": [
     ".bluf-intro",
@@ -153,7 +153,7 @@
   ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
-  "formulaSource": "Annual Salary = Hourly Rate \u00d7 Hours/Week \u00d7 Weeks/Year; Overtime = Rate \u00d7 Multiplier \u00d7 OT Hours \u00d7 Weeks/Year; Total = Salary + Overtime",
+  "formulaSource": "Annual Salary = Hourly Rate × Hours/Week × Weeks/Year; Overtime = Rate × Multiplier × OT Hours × Weeks/Year; Total = Salary + Overtime",
   "formulaAuditDate": "2026-03-13",
   "priority": "utility",
   "targetIntent": "transactional",
@@ -162,7 +162,7 @@
   "duplicationRisk": [
     "salary-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

@@ -156,7 +156,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Tile coverage calculations based on Tile Council of North America (TCNA) installation guidelines. Effective coverage accounts for grout joint width added to each tile dimension. Waste factors per TCNA recommendations: 10% for straight layouts, 15% for diagonal or complex patterns.",
   "formulaAuditDate": "2026-03-13",
@@ -168,7 +168,7 @@
     "flooring-calculator",
     "square-footage-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null
 }

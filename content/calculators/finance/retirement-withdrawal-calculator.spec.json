@@ -98,7 +98,10 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "Balance ($)",
-        "colors": ["#2563eb", "#ef4444"]
+        "colors": [
+          "#2563eb",
+          "#ef4444"
+        ]
       }
     },
     {
@@ -106,16 +109,38 @@
       "label": "Year-by-Year Breakdown",
       "type": "table",
       "columns": [
-        { "key": "year", "label": "Year" },
-        { "key": "startBalance", "label": "Start Balance", "format": "currency" },
-        { "key": "withdrawal", "label": "Withdrawal", "format": "currency" },
-        { "key": "growth", "label": "Growth", "format": "currency" },
-        { "key": "endBalance", "label": "End Balance", "format": "currency" }
+        {
+          "key": "year",
+          "label": "Year"
+        },
+        {
+          "key": "startBalance",
+          "label": "Start Balance",
+          "format": "currency"
+        },
+        {
+          "key": "withdrawal",
+          "label": "Withdrawal",
+          "format": "currency"
+        },
+        {
+          "key": "growth",
+          "label": "Growth",
+          "format": "currency"
+        },
+        {
+          "key": "endBalance",
+          "label": "End Balance",
+          "format": "currency"
+        }
       ]
     }
   ],
   "formula": "retirement-withdrawal",
-  "features": ["compare-scenarios", "chart"],
+  "features": [
+    "compare-scenarios",
+    "chart"
+  ],
   "relatedCalculators": [
     "retirement-calculator",
     "401k-calculator",
@@ -134,7 +159,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Year-by-year withdrawal simulation: B(t+1) = (B(t) - W(t)) * (1 + r); W(t) = W0 * (1 + i)^t per Bengen (1994)",
   "formulaAuditDate": "2026-03-13",
@@ -146,7 +171,7 @@
     "retirement-calculator",
     "fire-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 95,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

@@ -17,8 +17,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Driveway/area length"
@@ -32,8 +40,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Driveway/area width"
@@ -48,8 +64,16 @@
       "max": 12,
       "step": 0.5,
       "units": [
-        { "value": "in", "label": "Inches", "conversionFactor": 1 },
-        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
       ],
       "defaultUnit": "in",
       "helpText": "Asphalt thickness — 2–3\" for driveways, 3–4\" for parking lots, 4–6\" for heavy traffic"
@@ -61,9 +85,18 @@
       "required": true,
       "defaultValue": "hot-mix",
       "options": [
-        { "value": "hot-mix", "label": "Hot-Mix Asphalt (HMA)" },
-        { "value": "cold-patch", "label": "Cold Patch" },
-        { "value": "recycled", "label": "Recycled Asphalt (RAP)" }
+        {
+          "value": "hot-mix",
+          "label": "Hot-Mix Asphalt (HMA)"
+        },
+        {
+          "value": "cold-patch",
+          "label": "Cold Patch"
+        },
+        {
+          "value": "recycled",
+          "label": "Recycled Asphalt (RAP)"
+        }
       ],
       "helpText": "Hot-mix is standard for new paving; cold-patch for repairs; recycled for eco-friendly base"
     },
@@ -152,7 +185,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Hot-mix asphalt density of 145 lbs/cu ft per NAPA and Asphalt Institute standards. Cost data from HomeAdvisor/Angi 2025-2026 national averages.",
   "formulaAuditDate": "2026-03-14",
@@ -163,7 +196,7 @@
   "duplicationRisk": [
     "driveway-cost-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

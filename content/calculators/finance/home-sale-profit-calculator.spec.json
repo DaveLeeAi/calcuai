@@ -8,37 +8,184 @@
   "metaTitle": "Home Sale Profit Calculator — Net Proceeds After Fees, Taxes & Closing Costs",
   "metaDescription": "Calculate your net profit from selling a home. Accounts for agent commissions, closing costs, mortgage payoff, capital gains tax, and improvements. Free home sale calculator.",
   "inputs": [
-    {"id": "salePrice", "label": "Expected Sale Price", "type": "currency", "required": true, "defaultValue": 400000, "min": 0, "max": 10000000, "step": 5000, "prefix": "$"},
-    {"id": "purchasePrice", "label": "Original Purchase Price", "type": "currency", "required": true, "defaultValue": 300000, "min": 0, "max": 10000000, "step": 5000, "prefix": "$"},
-    {"id": "mortgageBalance", "label": "Remaining Mortgage Balance", "type": "currency", "required": true, "defaultValue": 220000, "min": 0, "max": 10000000, "step": 1000, "prefix": "$"},
-    {"id": "agentCommissionRate", "label": "Total Agent Commission", "type": "percentage", "required": true, "defaultValue": 5, "min": 0, "max": 10, "step": 0.5, "helpText": "Combined buyer + seller agent commission (typically 5–6%)"},
-    {"id": "closingCostRate", "label": "Seller Closing Costs", "type": "percentage", "required": true, "defaultValue": 2, "min": 0, "max": 5, "step": 0.5, "helpText": "Title insurance, transfer taxes, escrow fees (typically 1–3%)"},
-    {"id": "improvementsCost", "label": "Improvements & Repairs", "type": "currency", "required": false, "defaultValue": 15000, "min": 0, "max": 1000000, "step": 1000, "prefix": "$", "helpText": "Capital improvements added to cost basis"},
-    {"id": "yearsOwned", "label": "Years Owned", "type": "number", "required": true, "defaultValue": 7, "min": 0, "max": 50, "step": 1, "helpText": "Used for capital gains exclusion eligibility"},
-    {"id": "filingStatus", "label": "Filing Status", "type": "select", "required": true, "defaultValue": "single", "options": [{"value": "single", "label": "Single ($250K exclusion)"}, {"value": "married", "label": "Married Filing Jointly ($500K exclusion)"}]}
+    {
+      "id": "salePrice",
+      "label": "Expected Sale Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 400000,
+      "min": 0,
+      "max": 10000000,
+      "step": 5000,
+      "prefix": "$"
+    },
+    {
+      "id": "purchasePrice",
+      "label": "Original Purchase Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300000,
+      "min": 0,
+      "max": 10000000,
+      "step": 5000,
+      "prefix": "$"
+    },
+    {
+      "id": "mortgageBalance",
+      "label": "Remaining Mortgage Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 220000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "agentCommissionRate",
+      "label": "Total Agent Commission",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "helpText": "Combined buyer + seller agent commission (typically 5–6%)"
+    },
+    {
+      "id": "closingCostRate",
+      "label": "Seller Closing Costs",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "helpText": "Title insurance, transfer taxes, escrow fees (typically 1–3%)"
+    },
+    {
+      "id": "improvementsCost",
+      "label": "Improvements & Repairs",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 1000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Capital improvements added to cost basis"
+    },
+    {
+      "id": "yearsOwned",
+      "label": "Years Owned",
+      "type": "number",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "helpText": "Used for capital gains exclusion eligibility"
+    },
+    {
+      "id": "filingStatus",
+      "label": "Filing Status",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single",
+      "options": [
+        {
+          "value": "single",
+          "label": "Single ($250K exclusion)"
+        },
+        {
+          "value": "married",
+          "label": "Married Filing Jointly ($500K exclusion)"
+        }
+      ]
+    }
   ],
   "outputs": [
-    {"id": "netProceeds", "label": "Net Proceeds (Cash in Hand)", "type": "single-value", "format": "currency", "highlight": true},
-    {"id": "grossProfit", "label": "Gross Profit", "type": "single-value", "format": "currency"},
-    {"id": "agentCommission", "label": "Agent Commission", "type": "single-value", "format": "currency"},
-    {"id": "closingCosts", "label": "Closing Costs", "type": "single-value", "format": "currency"},
-    {"id": "capitalGain", "label": "Capital Gain", "type": "single-value", "format": "currency"},
-    {"id": "capitalGainExclusion", "label": "Capital Gain Exclusion", "type": "single-value", "format": "currency"},
-    {"id": "taxableGain", "label": "Taxable Gain", "type": "single-value", "format": "currency"},
-    {"id": "estimatedTax", "label": "Estimated Capital Gains Tax", "type": "single-value", "format": "currency"},
-    {"id": "costBreakdown", "label": "Sale Cost Breakdown", "type": "value-group", "format": "currency"}
+    {
+      "id": "netProceeds",
+      "label": "Net Proceeds (Cash in Hand)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "grossProfit",
+      "label": "Gross Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "agentCommission",
+      "label": "Agent Commission",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "closingCosts",
+      "label": "Closing Costs",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "capitalGain",
+      "label": "Capital Gain",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "capitalGainExclusion",
+      "label": "Capital Gain Exclusion",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "taxableGain",
+      "label": "Taxable Gain",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "estimatedTax",
+      "label": "Estimated Capital Gains Tax",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Sale Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
   ],
   "formula": "home-sale-profit",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["home-equity-calculator", "closing-cost-calculator", "capital-gains-tax-calculator", "mortgage-calculator", "real-estate-commission-calculator", "rent-vs-buy-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "home-equity-calculator",
+    "closing-cost-calculator",
+    "capital-gains-tax-calculator",
+    "mortgage-calculator",
+    "real-estate-commission-calculator",
+    "rent-vs-buy-calculator"
+  ],
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "IRS Publication 523 — Selling Your Home; National Association of Realtors (NAR) commission data; CFPB closing cost guidelines",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Net Proceeds = Sale Price - Agent Commission - Closing Costs - Mortgage Payoff - Capital Gains Tax. Capital gain uses IRS Section 121 exclusion ($250K single/$500K married) for primary residences owned 2+ years.",
   "formulaAuditDate": "2026-03-14",
@@ -46,10 +193,16 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["home-equity-calculator", "capital-gains-tax-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "home-equity-calculator",
+    "capital-gains-tax-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["equity", "capital-gains"],
+  "glossaryTerms": [
+    "equity",
+    "capital-gains"
+  ],
   "methodologyTopics": []
 }

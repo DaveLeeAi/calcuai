@@ -27,10 +27,22 @@
       "required": true,
       "defaultValue": "biweekly",
       "options": [
-        { "value": "weekly", "label": "Weekly" },
-        { "value": "biweekly", "label": "Bi-Weekly (Every 2 Weeks)" },
-        { "value": "semimonthly", "label": "Semi-Monthly (Twice a Month)" },
-        { "value": "monthly", "label": "Monthly" }
+        {
+          "value": "weekly",
+          "label": "Weekly"
+        },
+        {
+          "value": "biweekly",
+          "label": "Bi-Weekly (Every 2 Weeks)"
+        },
+        {
+          "value": "semimonthly",
+          "label": "Semi-Monthly (Twice a Month)"
+        },
+        {
+          "value": "monthly",
+          "label": "Monthly"
+        }
       ]
     },
     {
@@ -40,9 +52,18 @@
       "required": true,
       "defaultValue": "single",
       "options": [
-        { "value": "single", "label": "Single" },
-        { "value": "married", "label": "Married Filing Jointly" },
-        { "value": "head", "label": "Head of Household" }
+        {
+          "value": "single",
+          "label": "Single"
+        },
+        {
+          "value": "married",
+          "label": "Married Filing Jointly"
+        },
+        {
+          "value": "head",
+          "label": "Head of Household"
+        }
       ]
     },
     {
@@ -129,12 +150,21 @@
       "label": "Deductions Breakdown",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#10b981", "#2563eb", "#8b5cf6", "#f59e0b", "#ef4444", "#6366f1"]
+        "colors": [
+          "#10b981",
+          "#2563eb",
+          "#8b5cf6",
+          "#f59e0b",
+          "#ef4444",
+          "#6366f1"
+        ]
       }
     }
   ],
   "formula": "paycheck",
-  "features": ["chart"],
+  "features": [
+    "chart"
+  ],
   "relatedCalculators": [
     "salary-calculator",
     "income-tax-calculator",
@@ -153,7 +183,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Net Pay = Gross Pay - Federal Tax - State Tax - Social Security (6.2%) - Medicare (1.45%) - 401(k) - Health Insurance. Per IRS Pub 15-T and SSA 2025 rates.",
   "formulaAuditDate": "2026-03-13",
@@ -165,7 +195,7 @@
     "salary-calculator",
     "income-tax-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

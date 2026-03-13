@@ -8,40 +8,171 @@
   "metaTitle": "Student Loan Payoff Calculator — Payment Plans, Interest & Payoff Timeline",
   "metaDescription": "Calculate your student loan payoff timeline, total interest, and savings from extra payments. Compare standard, graduated, and extended plans. Free student loan calculator.",
   "inputs": [
-    {"id": "loanBalance", "label": "Total Loan Balance", "type": "currency", "required": true, "defaultValue": 35000, "min": 0, "max": 500000, "step": 1000, "prefix": "$"},
-    {"id": "interestRate", "label": "Interest Rate", "type": "percentage", "required": true, "defaultValue": 5.5, "min": 0, "max": 15, "step": 0.1, "helpText": "Weighted average if multiple loans"},
-    {"id": "repaymentPlan", "label": "Repayment Plan", "type": "select", "required": true, "defaultValue": "standard", "options": [
-      {"value": "standard", "label": "Standard (10-year fixed)"},
-      {"value": "graduated", "label": "Graduated (starts low, increases)"},
-      {"value": "extended", "label": "Extended (25-year fixed)"},
-      {"value": "custom", "label": "Custom Monthly Payment"}
-    ]},
-    {"id": "customPayment", "label": "Custom Monthly Payment", "type": "currency", "required": false, "defaultValue": 500, "min": 0, "max": 50000, "step": 25, "prefix": "$", "helpText": "Only used with Custom plan"},
-    {"id": "extraPayment", "label": "Extra Monthly Payment", "type": "currency", "required": false, "defaultValue": 0, "min": 0, "max": 50000, "step": 25, "prefix": "$"},
-    {"id": "incomeForIBR", "label": "Annual Gross Income", "type": "currency", "required": false, "defaultValue": 50000, "min": 0, "max": 1000000, "step": 1000, "prefix": "$", "helpText": "Used to estimate income-driven payment"}
+    {
+      "id": "loanBalance",
+      "label": "Total Loan Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 35000,
+      "min": 0,
+      "max": 500000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "interestRate",
+      "label": "Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 5.5,
+      "min": 0,
+      "max": 15,
+      "step": 0.1,
+      "helpText": "Weighted average if multiple loans"
+    },
+    {
+      "id": "repaymentPlan",
+      "label": "Repayment Plan",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard (10-year fixed)"
+        },
+        {
+          "value": "graduated",
+          "label": "Graduated (starts low, increases)"
+        },
+        {
+          "value": "extended",
+          "label": "Extended (25-year fixed)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom Monthly Payment"
+        }
+      ]
+    },
+    {
+      "id": "customPayment",
+      "label": "Custom Monthly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 50000,
+      "step": 25,
+      "prefix": "$",
+      "helpText": "Only used with Custom plan"
+    },
+    {
+      "id": "extraPayment",
+      "label": "Extra Monthly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 50000,
+      "step": 25,
+      "prefix": "$"
+    },
+    {
+      "id": "incomeForIBR",
+      "label": "Annual Gross Income",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 1000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Used to estimate income-driven payment"
+    }
   ],
   "outputs": [
-    {"id": "monthlyPayment", "label": "Monthly Payment", "type": "single-value", "format": "currency", "highlight": true},
-    {"id": "payoffMonths", "label": "Payoff Timeline", "type": "single-value", "format": "text"},
-    {"id": "totalInterest", "label": "Total Interest Paid", "type": "single-value", "format": "currency"},
-    {"id": "totalPaid", "label": "Total Amount Paid", "type": "single-value", "format": "currency"},
-    {"id": "payoffDate", "label": "Payoff Date", "type": "single-value", "format": "text"},
-    {"id": "interestSaved", "label": "Interest Saved (Extra Payments)", "type": "single-value", "format": "currency"},
-    {"id": "timeSaved", "label": "Time Saved (Extra Payments)", "type": "single-value", "format": "text"},
-    {"id": "monthlyWithExtra", "label": "Payment With Extra", "type": "single-value", "format": "currency"},
-    {"id": "ibrEstimate", "label": "Estimated IBR Payment", "type": "single-value", "format": "currency"}
+    {
+      "id": "monthlyPayment",
+      "label": "Monthly Payment",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "payoffMonths",
+      "label": "Payoff Timeline",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalPaid",
+      "label": "Total Amount Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "payoffDate",
+      "label": "Payoff Date",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "interestSaved",
+      "label": "Interest Saved (Extra Payments)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "timeSaved",
+      "label": "Time Saved (Extra Payments)",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "monthlyWithExtra",
+      "label": "Payment With Extra",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "ibrEstimate",
+      "label": "Estimated IBR Payment",
+      "type": "single-value",
+      "format": "currency"
+    }
   ],
   "formula": "student-loan-payoff",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["debt-payoff-calculator", "debt-avalanche-calculator", "debt-snowball-calculator", "loan-calculator", "budget-calculator", "savings-goal-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "debt-payoff-calculator",
+    "debt-avalanche-calculator",
+    "debt-snowball-calculator",
+    "loan-calculator",
+    "budget-calculator",
+    "savings-goal-calculator"
+  ],
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Federal Student Aid (studentaid.gov) — Repayment Plan Information; CFPB — Paying for College; Department of Education — Income-Driven Repayment Plans",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Standard plan: M = P x [r(1+r)^n] / [(1+r)^n - 1] where n=120 months. Graduated: starts at 60% of standard, increases 7% every 2 years. Extended: same formula with n=300. IBR: 10% of discretionary income (income above 150% FPL).",
   "formulaAuditDate": "2026-03-14",
@@ -49,10 +180,16 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["debt-payoff-calculator", "loan-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "debt-payoff-calculator",
+    "loan-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["amortization", "interest-rate"],
+  "glossaryTerms": [
+    "amortization",
+    "interest-rate"
+  ],
   "methodologyTopics": []
 }

@@ -39,11 +39,26 @@
       "required": true,
       "defaultValue": "annual",
       "options": [
-        { "value": "annual", "label": "Annual" },
-        { "value": "monthly", "label": "Monthly" },
-        { "value": "biweekly", "label": "Biweekly" },
-        { "value": "weekly", "label": "Weekly" },
-        { "value": "hourly", "label": "Hourly" }
+        {
+          "value": "annual",
+          "label": "Annual"
+        },
+        {
+          "value": "monthly",
+          "label": "Monthly"
+        },
+        {
+          "value": "biweekly",
+          "label": "Biweekly"
+        },
+        {
+          "value": "weekly",
+          "label": "Weekly"
+        },
+        {
+          "value": "hourly",
+          "label": "Hourly"
+        }
       ],
       "helpText": "How the salary amount above is expressed"
     }
@@ -136,7 +151,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "New Salary = Current Salary × (1 + Raise% / 100); Breakdowns: Monthly = Annual / 12, Biweekly = Annual / 26, Weekly = Annual / 52, Hourly = Annual / 2080",
   "formulaAuditDate": "2026-03-13",
@@ -144,9 +159,13 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["salary-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "salary-calculator"
+  ],
+  "qualityScore": 82,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["salary"]
+  "glossaryTerms": [
+    "salary"
+  ]
 }

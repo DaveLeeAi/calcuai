@@ -99,7 +99,9 @@
       "suffix": "%",
       "helpText": "Percentage of PTO paid out — for partial payout policies",
       "visibleWhen": {
-        "ptoPolicy": ["partial-payout"]
+        "ptoPolicy": [
+          "partial-payout"
+        ]
       }
     }
   ],
@@ -186,14 +188,14 @@
   ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
-  "formulaSource": "Gross Payout = Total Hours \u00d7 Hourly Rate \u00d7 (Payout % / 100); Net Payout = Gross Payout \u2212 Tax Withholding",
+  "formulaSource": "Gross Payout = Total Hours × Hourly Rate × (Payout % / 100); Net Payout = Gross Payout − Tax Withholding",
   "formulaAuditDate": "2026-03-14",
   "priority": "utility",
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

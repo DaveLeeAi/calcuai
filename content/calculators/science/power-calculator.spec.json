@@ -15,8 +15,14 @@
       "required": true,
       "defaultValue": "work-time",
       "options": [
-        { "value": "work-time", "label": "Work & Time (P = W/t)" },
-        { "value": "force-velocity", "label": "Force & Velocity (P = Fv)" }
+        {
+          "value": "work-time",
+          "label": "Work & Time (P = W/t)"
+        },
+        {
+          "value": "force-velocity",
+          "label": "Force & Velocity (P = Fv)"
+        }
       ],
       "helpText": "Choose which variables to use"
     },
@@ -118,9 +124,9 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
-  "formulaSource": "Work/time: P = W/t; Force/velocity: P = F \u00d7 v",
+  "formulaSource": "Work/time: P = W/t; Force/velocity: P = F × v",
   "formulaAuditDate": "2026-03-14",
   "priority": "standard",
   "targetIntent": "informational",
@@ -129,7 +135,7 @@
   "duplicationRisk": [
     "ohms-law-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

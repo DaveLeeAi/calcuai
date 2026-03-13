@@ -5,8 +5,8 @@
   "category": "science",
   "subcategory": "physics",
   "primaryKeyword": "wave speed calculator",
-  "metaTitle": "Wave Speed Calculator — v = f\u03bb Solver",
-  "metaDescription": "Calculate wave speed, frequency, or wavelength using v = f\u03bb. Enter any two values to solve for the third. Free physics calculator for sound, light, and radio waves.",
+  "metaTitle": "Wave Speed Calculator — v = fλ Solver",
+  "metaDescription": "Calculate wave speed, frequency, or wavelength using v = fλ. Enter any two values to solve for the third. Free physics calculator for sound, light, and radio waves.",
   "inputs": [
     {
       "id": "waveSpeed",
@@ -103,16 +103,16 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "formulaCitation": "Christiaan Huygens, Trait\u00e9 de la Lumi\u00e8re (1690); d'Alembert wave equation (1747)",
+  "formulaCitation": "Christiaan Huygens, Traité de la Lumière (1690); d'Alembert wave equation (1747)",
   "articleWordTarget": 1500,
   "speakableSelectors": [
     ".bluf-intro",
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
-  "formulaSource": "Wave equation: v = f\u03bb, f = v/\u03bb, \u03bb = v/f",
+  "formulaSource": "Wave equation: v = fλ, f = v/λ, λ = v/f",
   "formulaAuditDate": "2026-03-14",
   "priority": "standard",
   "targetIntent": "informational",
@@ -121,7 +121,7 @@
   "duplicationRisk": [
     "velocity-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

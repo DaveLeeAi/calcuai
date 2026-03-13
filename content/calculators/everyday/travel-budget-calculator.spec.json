@@ -8,37 +8,182 @@
   "metaTitle": "Travel Budget Calculator — Plan Your Trip Costs",
   "metaDescription": "Plan your travel budget with estimates for flights, hotels, food, activities, and transport. Calculate total trip cost per person and per day. Free travel budget planner.",
   "inputs": [
-    {"id": "travelers", "label": "Number of Travelers", "type": "number", "required": true, "defaultValue": 2, "min": 1, "max": 20, "step": 1},
-    {"id": "nights", "label": "Number of Nights", "type": "number", "required": true, "defaultValue": 7, "min": 1, "max": 90, "step": 1},
-    {"id": "flightCost", "label": "Flight/Transport Cost (Total)", "type": "currency", "required": true, "defaultValue": 800, "min": 0, "max": 50000, "step": 50, "prefix": "$", "helpText": "Total round-trip cost for all travelers"},
-    {"id": "accommodationPerNight", "label": "Accommodation per Night", "type": "currency", "required": true, "defaultValue": 150, "min": 0, "max": 5000, "step": 10, "prefix": "$"},
-    {"id": "dailyFoodBudget", "label": "Daily Food Budget (per person)", "type": "currency", "required": true, "defaultValue": 60, "min": 0, "max": 500, "step": 5, "prefix": "$"},
-    {"id": "dailyActivityBudget", "label": "Daily Activities (per person)", "type": "currency", "required": false, "defaultValue": 40, "min": 0, "max": 500, "step": 5, "prefix": "$"},
-    {"id": "dailyTransportBudget", "label": "Daily Local Transport", "type": "currency", "required": false, "defaultValue": 20, "min": 0, "max": 200, "step": 5, "prefix": "$", "helpText": "Taxis, metro, rideshare for the group"},
-    {"id": "shoppingBudget", "label": "Shopping & Souvenirs", "type": "currency", "required": false, "defaultValue": 200, "min": 0, "max": 10000, "step": 50, "prefix": "$"},
-    {"id": "travelInsurance", "label": "Travel Insurance", "type": "currency", "required": false, "defaultValue": 0, "min": 0, "max": 2000, "step": 10, "prefix": "$"}
+    {
+      "id": "travelers",
+      "label": "Number of Travelers",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 1,
+      "max": 20,
+      "step": 1
+    },
+    {
+      "id": "nights",
+      "label": "Number of Nights",
+      "type": "number",
+      "required": true,
+      "defaultValue": 7,
+      "min": 1,
+      "max": 90,
+      "step": 1
+    },
+    {
+      "id": "flightCost",
+      "label": "Flight/Transport Cost (Total)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 800,
+      "min": 0,
+      "max": 50000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Total round-trip cost for all travelers"
+    },
+    {
+      "id": "accommodationPerNight",
+      "label": "Accommodation per Night",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 150,
+      "min": 0,
+      "max": 5000,
+      "step": 10,
+      "prefix": "$"
+    },
+    {
+      "id": "dailyFoodBudget",
+      "label": "Daily Food Budget (per person)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 60,
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "prefix": "$"
+    },
+    {
+      "id": "dailyActivityBudget",
+      "label": "Daily Activities (per person)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 40,
+      "min": 0,
+      "max": 500,
+      "step": 5,
+      "prefix": "$"
+    },
+    {
+      "id": "dailyTransportBudget",
+      "label": "Daily Local Transport",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 20,
+      "min": 0,
+      "max": 200,
+      "step": 5,
+      "prefix": "$",
+      "helpText": "Taxis, metro, rideshare for the group"
+    },
+    {
+      "id": "shoppingBudget",
+      "label": "Shopping & Souvenirs",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 10000,
+      "step": 50,
+      "prefix": "$"
+    },
+    {
+      "id": "travelInsurance",
+      "label": "Travel Insurance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 2000,
+      "step": 10,
+      "prefix": "$"
+    }
   ],
   "outputs": [
-    {"id": "totalTripCost", "label": "Total Trip Cost", "type": "single-value", "format": "currency", "highlight": true},
-    {"id": "costPerPerson", "label": "Cost per Person", "type": "single-value", "format": "currency"},
-    {"id": "costPerDay", "label": "Cost per Day", "type": "single-value", "format": "currency"},
-    {"id": "accommodationTotal", "label": "Accommodation Total", "type": "single-value", "format": "currency"},
-    {"id": "foodTotal", "label": "Food Total", "type": "single-value", "format": "currency"},
-    {"id": "activityTotal", "label": "Activities Total", "type": "single-value", "format": "currency"},
-    {"id": "transportTotal", "label": "Local Transport Total", "type": "single-value", "format": "currency"},
-    {"id": "costBreakdown", "label": "Budget Breakdown", "type": "value-group", "format": "currency"}
+    {
+      "id": "totalTripCost",
+      "label": "Total Trip Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "costPerPerson",
+      "label": "Cost per Person",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costPerDay",
+      "label": "Cost per Day",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "accommodationTotal",
+      "label": "Accommodation Total",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "foodTotal",
+      "label": "Food Total",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "activityTotal",
+      "label": "Activities Total",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "transportTotal",
+      "label": "Local Transport Total",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Budget Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
   ],
   "formula": "travel-budget",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["trip-cost-calculator", "fuel-cost-calculator", "tip-calculator", "discount-calculator", "budget-calculator", "currency-converter"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "trip-cost-calculator",
+    "fuel-cost-calculator",
+    "tip-calculator",
+    "discount-calculator",
+    "budget-calculator",
+    "currency-converter"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Bureau of Labor Statistics — Consumer Expenditure Survey; U.S. Travel Association; Numbeo — Cost of Living Index",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Accommodation = nights x rate. Food = days x dailyBudget x travelers. Activities = days x dailyBudget x travelers. Total = flights + accommodation + food + activities + transport + shopping + insurance.",
   "formulaAuditDate": "2026-03-14",
@@ -46,8 +191,11 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["trip-cost-calculator", "budget-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "trip-cost-calculator",
+    "budget-calculator"
+  ],
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "summer",
   "glossaryTerms": [],

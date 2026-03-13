@@ -17,8 +17,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Length of the slab (longest dimension)"
@@ -32,8 +40,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Width of the slab (shorter dimension)"
@@ -48,8 +64,16 @@
       "max": 24,
       "step": 0.5,
       "units": [
-        { "value": "in", "label": "Inches", "conversionFactor": 1 },
-        { "value": "cm", "label": "Centimeters", "conversionFactor": 0.393701 }
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 1
+        },
+        {
+          "value": "cm",
+          "label": "Centimeters",
+          "conversionFactor": 0.393701
+        }
       ],
       "defaultUnit": "in",
       "helpText": "Slab thickness — 4\" for patios/sidewalks, 5–6\" for driveways"
@@ -154,7 +178,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Standard geometric volume formula for rectangular prisms. Bag yield data per Portland Cement Association (PCA) manufacturer specifications. Cost estimates from HomeAdvisor/Angi 2025-2026 national averages.",
   "formulaAuditDate": "2026-03-14",
@@ -165,7 +189,7 @@
   "duplicationRisk": [
     "concrete-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

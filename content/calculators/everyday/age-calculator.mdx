@@ -243,7 +243,26 @@ In most U.S. states, you reach a new age at the start of your birthday — midni
 
 The total days calculation is accurate to within 1 day for all dates within the supported range (1900-2099). It uses the millisecond difference between two UTC dates divided by 86,400,000 (the number of milliseconds in 24 hours) and rounds to the nearest integer. This method correctly accounts for every leap year in the range. Daylight saving time does not affect the result because the calculation uses UTC dates. For dates before 1900 or after 2099, precision may degrade due to JavaScript Date object limitations.
 
+### How do I calculate my age in months for medical or legal purposes?
+
+Count complete calendar months from your birth date to the target date, then add remaining days. A person born on March 15 is exactly 6 months old on September 15, regardless of how many days each intervening month contains (March has 31, April 30, May 31, June 30, July 31, August 31). Pediatricians track infant age in completed months and days for growth chart accuracy — a baby at "5 months and 20 days" is developmentally different from one at "6 months and 2 days," even though they may be only 12 calendar days apart.
+
+### What is the average human lifespan in days?
+
+The average American lives approximately 28,470 days (77.9 years, per CDC 2023 data). Globally, the average is about 26,645 days (73.0 years, per WHO 2023). Japanese women have the highest life expectancy at approximately 31,755 days (87.0 years). To put daily perspective on it: at age 30 (10,957 days), you have statistically used about 38.5% of your days; at age 50 (18,262 days), about 64.1%. The total-days view makes the finite nature of time more concrete than the years-only figure.
+
 </div>
+
+{/* Section 10b: Real-World Uses */}
+## Real-World Uses
+
+**Insurance premium calculation.** Life insurance premiums increase with each birthday. A 34-year-old applying for a 20-year term policy pays significantly less than a 35-year-old — often \$50-\$150/year less on a \$500,000 policy. Applicants within weeks of their next birthday sometimes rush applications to lock in the lower age bracket. Insurance companies use either "age nearest birthday" or "age last birthday" methods, and this calculator helps applicants verify which age the insurer will use on their policy effective date.
+
+**School enrollment cutoff verification.** Most U.S. states set a birthday cutoff for kindergarten entry, commonly September 1 or October 1. A child born on September 2 in a state with a September 1 cutoff must wait a full year to enroll. Parents of summer-born children use exact age calculations to evaluate "redshirting" — intentionally delaying enrollment so the child is among the oldest in their class. Research shows that the oldest children in a grade (born in September/October in states with September cutoffs) outperform the youngest (born in July/August) in early grades, though the gap narrows by high school.
+
+**Retirement and Social Security planning.** Full Social Security retirement age depends on birth year: 66 for those born 1943-1954, gradually increasing to 67 for those born 1960 or later. Claiming benefits before full retirement age reduces the monthly payment by up to 30%. A person born on January 1 reaches each age on December 31 of the preceding year under the Social Security "day before" rule, potentially enabling earlier benefit collection than expected.
+
+**Legal age thresholds worldwide.** Different countries set legal age milestones at different points: voting (16 in Brazil, 18 in the U.S., 25 for senate candidacy), driving (14 in South Dakota for farm permits, 16 for general permits, 18 in most of Europe), and drinking (18 in the UK, 21 in the U.S.). This calculator verifies exact ages for any threshold in any jurisdiction.
 
 {/* Section 15: Related Calculators — auto-rendered from spec */}
 

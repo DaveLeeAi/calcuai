@@ -98,7 +98,10 @@
     }
   ],
   "formula": "rent-increase",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "rent-vs-buy-calculator",
     "home-affordability-calculator",
@@ -112,8 +115,12 @@
   "requiresSources": false,
   "formulaCitation": "Bureau of Labor Statistics (BLS) — CPI Rent of Primary Residence; Census Bureau — American Community Survey rental data",
   "articleWordTarget": 1200,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Future Rent = Current Rent × (1 + rate)^years. Compound growth model for annual rent increases. Inflation adjustment uses real rate = nominal - inflation.",
   "formulaAuditDate": "2026-03-14",
@@ -121,10 +128,14 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["inflation-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "inflation-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["compound-interest"],
+  "glossaryTerms": [
+    "compound-interest"
+  ],
   "methodologyTopics": []
 }

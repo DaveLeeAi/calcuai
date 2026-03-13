@@ -1,0 +1,174 @@
+{
+  "id": "cash-flow-calculator",
+  "title": "Cash Flow Calculator",
+  "slug": "cash-flow-calculator",
+  "category": "business",
+  "subcategory": "accounting",
+  "primaryKeyword": "cash flow calculator",
+  "metaTitle": "Cash Flow Calculator — Operating, Free & Net Cash",
+  "metaDescription": "Calculate operating cash flow, free cash flow, cash flow margin, and net cash position from your income and balance sheet data. Free, instant results.",
+  "inputs": [
+    {
+      "id": "revenue",
+      "label": "Annual Revenue",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Total annual revenue (for margin calculation)"
+    },
+    {
+      "id": "netIncome",
+      "label": "Net Income",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 75000,
+      "min": -100000000,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Net income (can be negative for a net loss)"
+    },
+    {
+      "id": "depreciation",
+      "label": "Depreciation & Amortization",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 100000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Total depreciation and amortization expense"
+    },
+    {
+      "id": "workingCapitalChange",
+      "label": "Change in Working Capital",
+      "type": "currency",
+      "required": true,
+      "defaultValue": -5000,
+      "min": -100000000,
+      "max": 100000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Positive = increase in working capital (cash outflow)"
+    },
+    {
+      "id": "capitalExpenditures",
+      "label": "Capital Expenditures (CapEx)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Annual spending on property, equipment, or other long-term assets"
+    },
+    {
+      "id": "financingActivities",
+      "label": "Net Financing Activities",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": -100000000,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Debt proceeds, repayments, dividends (net)"
+    },
+    {
+      "id": "beginningCash",
+      "label": "Beginning Cash Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Cash on hand at the start of the period"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "operatingCashFlow",
+      "label": "Operating Cash Flow",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "freeCashFlow",
+      "label": "Free Cash Flow",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "cashFlowMargin",
+      "label": "Cash Flow Margin",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "netCashPosition",
+      "label": "Net Cash Position",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Cash Flow Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "cash-flow",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "profit-calculator",
+    "break-even-calculator",
+    "revenue-calculator",
+    "roi-calculator",
+    "net-income-calculator",
+    "working-capital-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "OCF = Net Income + Depreciation - Change in Working Capital; FCF = OCF - CapEx; CF Margin = OCF / Revenue x 100; Net Cash = Beginning Cash + OCF - CapEx + Financing",
+  "formulaCitation": "CFA Institute — \"Financial Reporting and Analysis\" (CFA Program Curriculum)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "profit-calculator",
+    "net-income-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "operating-cash-flow",
+    "free-cash-flow",
+    "capex"
+  ]
+}

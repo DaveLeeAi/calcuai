@@ -27,9 +27,18 @@
       "required": true,
       "defaultValue": "self-employment",
       "options": [
-        { "value": "self-employment", "label": "Self-Employment" },
-        { "value": "investment", "label": "Investment" },
-        { "value": "mixed", "label": "Mixed (SE + Investment)" }
+        {
+          "value": "self-employment",
+          "label": "Self-Employment"
+        },
+        {
+          "value": "investment",
+          "label": "Investment"
+        },
+        {
+          "value": "mixed",
+          "label": "Mixed (SE + Investment)"
+        }
       ]
     },
     {
@@ -39,10 +48,22 @@
       "required": true,
       "defaultValue": "single",
       "options": [
-        { "value": "single", "label": "Single" },
-        { "value": "married-jointly", "label": "Married Filing Jointly" },
-        { "value": "married-separately", "label": "Married Filing Separately" },
-        { "value": "head-of-household", "label": "Head of Household" }
+        {
+          "value": "single",
+          "label": "Single"
+        },
+        {
+          "value": "married-jointly",
+          "label": "Married Filing Jointly"
+        },
+        {
+          "value": "married-separately",
+          "label": "Married Filing Separately"
+        },
+        {
+          "value": "head-of-household",
+          "label": "Head of Household"
+        }
       ]
     },
     {
@@ -64,8 +85,14 @@
       "required": true,
       "defaultValue": "standard",
       "options": [
-        { "value": "standard", "label": "Standard Deduction" },
-        { "value": "itemized", "label": "Itemized Deductions" }
+        {
+          "value": "standard",
+          "label": "Standard Deduction"
+        },
+        {
+          "value": "itemized",
+          "label": "Itemized Deductions"
+        }
       ]
     },
     {
@@ -79,7 +106,11 @@
       "step": 500,
       "prefix": "$",
       "helpText": "Total itemized deductions if applicable",
-      "visibleWhen": { "deductions": ["itemized"] }
+      "visibleWhen": {
+        "deductions": [
+          "itemized"
+        ]
+      }
     },
     {
       "id": "selfEmploymentIncome",
@@ -92,7 +123,12 @@
       "step": 1000,
       "prefix": "$",
       "helpText": "Self-employment income portion (for SE tax calculation)",
-      "visibleWhen": { "incomeType": ["self-employment", "mixed"] }
+      "visibleWhen": {
+        "incomeType": [
+          "self-employment",
+          "mixed"
+        ]
+      }
     },
     {
       "id": "quartersPaid",
@@ -217,7 +253,7 @@
     "self-employment-tax-calculator",
     "income-tax-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "tax-season",
   "glossaryTerms": [

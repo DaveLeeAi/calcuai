@@ -17,8 +17,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Total length of the wall"
@@ -32,8 +40,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Height of the wall"
@@ -45,10 +61,22 @@
       "required": true,
       "defaultValue": "modular",
       "options": [
-        { "value": "standard", "label": "Standard (8\" × 2¼\" × 3⅝\")" },
-        { "value": "modular", "label": "Modular (7⅝\" × 2¼\" × 3⅝\")" },
-        { "value": "queen", "label": "Queen (7⅝\" × 2¾\" × 3⅛\")" },
-        { "value": "king", "label": "King (9⅝\" × 2¾\" × 3⅝\")" }
+        {
+          "value": "standard",
+          "label": "Standard (8\" × 2¼\" × 3⅝\")"
+        },
+        {
+          "value": "modular",
+          "label": "Modular (7⅝\" × 2¼\" × 3⅝\")"
+        },
+        {
+          "value": "queen",
+          "label": "Queen (7⅝\" × 2¾\" × 3⅛\")"
+        },
+        {
+          "value": "king",
+          "label": "King (9⅝\" × 2¾\" × 3⅝\")"
+        }
       ],
       "helpText": "Brick type determines face dimensions"
     },
@@ -179,7 +207,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Brick count calculations based on Brick Industry Association (BIA) Technical Note 10 — Dimensioning and Estimating Brick Masonry. Effective face area includes mortar joint added to length and height of each brick. Mortar estimate of 7 bags per 100 sq ft based on The Masonry Society (TMS) 402 standard for 3/8\" joints.",
   "formulaAuditDate": "2026-03-14",
@@ -191,7 +219,7 @@
     "paver-calculator",
     "concrete-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

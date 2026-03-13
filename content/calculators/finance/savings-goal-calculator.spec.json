@@ -61,10 +61,22 @@
       "required": true,
       "defaultValue": "12",
       "options": [
-        { "value": "1", "label": "Annually" },
-        { "value": "4", "label": "Quarterly" },
-        { "value": "12", "label": "Monthly" },
-        { "value": "365", "label": "Daily" }
+        {
+          "value": "1",
+          "label": "Annually"
+        },
+        {
+          "value": "4",
+          "label": "Quarterly"
+        },
+        {
+          "value": "12",
+          "label": "Monthly"
+        },
+        {
+          "value": "365",
+          "label": "Daily"
+        }
       ]
     }
   ],
@@ -101,12 +113,17 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "Balance ($)",
-        "colors": ["#2563eb", "#10b981"]
+        "colors": [
+          "#2563eb",
+          "#10b981"
+        ]
       }
     }
   ],
   "formula": "savings-goal",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "savings-calculator",
     "compound-interest-calculator",
@@ -120,8 +137,12 @@
   "requiresSources": false,
   "formulaCitation": "Standard future value annuity formula (FINRA, CFA Institute)",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "PMT = (FV - PV*(1+r/n)^(nt)) * r_eff / ((1+r_eff)^m - 1) where r_eff = (1+r/n)^(n/12)-1; FINRA / CFA Institute standard annuity mathematics",
   "formulaAuditDate": "2026-03-13",
@@ -129,10 +150,19 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["savings-calculator", "compound-interest-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "savings-calculator",
+    "compound-interest-calculator"
+  ],
+  "qualityScore": 95,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["compound-interest", "principal", "interest-rate"],
-  "methodologyTopics": ["compound-interest"]
+  "glossaryTerms": [
+    "compound-interest",
+    "principal",
+    "interest-rate"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
 }

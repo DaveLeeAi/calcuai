@@ -148,9 +148,11 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["interest-rate"],
+  "glossaryTerms": [
+    "interest-rate"
+  ],
   "methodologyTopics": []
 }

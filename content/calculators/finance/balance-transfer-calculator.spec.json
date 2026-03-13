@@ -160,7 +160,10 @@
     }
   ],
   "formula": "balance-transfer",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "credit-card-payoff-calculator",
     "debt-consolidation-calculator",
@@ -191,7 +194,7 @@
     "credit-card-payoff-calculator",
     "debt-consolidation-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

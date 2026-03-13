@@ -5,8 +5,9 @@
   "category": "health",
   "subcategory": "pregnancy",
   "primaryKeyword": "pregnancy calculator",
-  "metaTitle": "Pregnancy Calculator — Week-by-Week Tracker",
-  "metaDescription": "Track your pregnancy week by week with estimated due date, trimester progress, and key developmental milestones. Based on ACOG guidelines and Naegele's Rule.",
+  "secondaryKeywords": ["pregnancy week calculator", "what week am I pregnant", "how many weeks pregnant am I", "pregnancy week by week", "pregnancy week tracker"],
+  "metaTitle": "Pregnancy Calculator — What Week Am I? Week-by-Week Tracker",
+  "metaDescription": "Find out what week of pregnancy you're in. Enter your last period date to see your current week, trimester, baby's size, and developmental milestones. ACOG-based.",
   "inputs": [
     {
       "id": "lastMenstrualPeriod",

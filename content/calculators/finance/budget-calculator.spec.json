@@ -27,10 +27,22 @@
       "required": true,
       "defaultValue": "50-30-20",
       "options": [
-        { "value": "50-30-20", "label": "50/30/20 Rule" },
-        { "value": "60-20-20", "label": "60/20/20 Rule" },
-        { "value": "70-20-10", "label": "70/20/10 Rule" },
-        { "value": "custom", "label": "Custom Percentages" }
+        {
+          "value": "50-30-20",
+          "label": "50/30/20 Rule"
+        },
+        {
+          "value": "60-20-20",
+          "label": "60/20/20 Rule"
+        },
+        {
+          "value": "70-20-10",
+          "label": "70/20/10 Rule"
+        },
+        {
+          "value": "custom",
+          "label": "Custom Percentages"
+        }
       ]
     },
     {
@@ -43,7 +55,11 @@
       "max": 100,
       "step": 1,
       "helpText": "Percentage for needs/essentials",
-      "visibleWhen": { "budgetMethod": ["custom"] }
+      "visibleWhen": {
+        "budgetMethod": [
+          "custom"
+        ]
+      }
     },
     {
       "id": "customWants",
@@ -55,7 +71,11 @@
       "max": 100,
       "step": 1,
       "helpText": "Percentage for wants/discretionary",
-      "visibleWhen": { "budgetMethod": ["custom"] }
+      "visibleWhen": {
+        "budgetMethod": [
+          "custom"
+        ]
+      }
     },
     {
       "id": "customSavings",
@@ -67,7 +87,11 @@
       "max": 100,
       "step": 1,
       "helpText": "Percentage for savings/debt repayment",
-      "visibleWhen": { "budgetMethod": ["custom"] }
+      "visibleWhen": {
+        "budgetMethod": [
+          "custom"
+        ]
+      }
     }
   ],
   "outputs": [
@@ -101,12 +125,18 @@
       "label": "Budget Allocation",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#2563eb", "#f59e0b", "#10b981"]
+        "colors": [
+          "#2563eb",
+          "#f59e0b",
+          "#10b981"
+        ]
       }
     }
   ],
   "formula": "budget",
-  "features": ["chart"],
+  "features": [
+    "chart"
+  ],
   "relatedCalculators": [
     "salary-calculator",
     "savings-calculator",
@@ -125,7 +155,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "50/30/20 budget rule: Needs = Income × 0.50, Wants = Income × 0.30, Savings = Income × 0.20. Per Elizabeth Warren & Amelia Warren Tyagi, All Your Worth (2005)",
   "formulaAuditDate": "2026-03-13",
@@ -136,7 +166,7 @@
   "duplicationRisk": [
     "savings-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 92,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

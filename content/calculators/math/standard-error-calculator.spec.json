@@ -142,7 +142,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "SE = s / √n; Margin of Error = 1.96 × SE (95% CI); Central Limit Theorem",
   "formulaAuditDate": "2026-03-14",
@@ -154,7 +154,7 @@
     "confidence-interval-calculator",
     "sample-size-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

@@ -16,7 +16,7 @@
       "placeholder": "e.g. 50",
       "min": 0,
       "step": 0.01,
-      "suffix": "kg\u00b7m/s",
+      "suffix": "kg·m/s",
       "helpText": "Enter any two values to calculate the third"
     },
     {
@@ -110,16 +110,16 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
-  "formulaSource": "Linear momentum: p = mv, m = p/v, v = p/m; KE = p\u00b2/(2m)",
+  "formulaSource": "Linear momentum: p = mv, m = p/v, v = p/m; KE = p²/(2m)",
   "formulaAuditDate": "2026-03-14",
   "priority": "standard",
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

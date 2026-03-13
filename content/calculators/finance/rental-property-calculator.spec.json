@@ -47,8 +47,14 @@
       "required": true,
       "defaultValue": "30",
       "options": [
-        { "value": "15", "label": "15 years" },
-        { "value": "30", "label": "30 years" }
+        {
+          "value": "15",
+          "label": "15 years"
+        },
+        {
+          "value": "30",
+          "label": "30 years"
+        }
       ]
     },
     {
@@ -232,7 +238,14 @@
       "type": "chart-pie",
       "description": "How annual costs are distributed across property tax, insurance, maintenance, management, other expenses, and mortgage payments.",
       "chartConfig": {
-        "colors": ["#2ECC71", "#3498DB", "#E67E22", "#9B59B6", "#95A5A6", "#E74C3C"]
+        "colors": [
+          "#2ECC71",
+          "#3498DB",
+          "#E67E22",
+          "#9B59B6",
+          "#95A5A6",
+          "#E74C3C"
+        ]
       }
     },
     {
@@ -241,12 +254,35 @@
       "type": "table",
       "description": "Year-by-year projection of property value, rental income, cash flow, equity buildup, and total return on investment.",
       "columns": [
-        { "key": "year", "label": "Year" },
-        { "key": "propertyValue", "label": "Property Value", "format": "currency" },
-        { "key": "annualRent", "label": "Annual Rent", "format": "currency" },
-        { "key": "cashFlow", "label": "Cash Flow", "format": "currency" },
-        { "key": "equity", "label": "Equity", "format": "currency" },
-        { "key": "totalReturn", "label": "Total Return", "format": "currency" }
+        {
+          "key": "year",
+          "label": "Year"
+        },
+        {
+          "key": "propertyValue",
+          "label": "Property Value",
+          "format": "currency"
+        },
+        {
+          "key": "annualRent",
+          "label": "Annual Rent",
+          "format": "currency"
+        },
+        {
+          "key": "cashFlow",
+          "label": "Cash Flow",
+          "format": "currency"
+        },
+        {
+          "key": "equity",
+          "label": "Equity",
+          "format": "currency"
+        },
+        {
+          "key": "totalReturn",
+          "label": "Total Return",
+          "format": "currency"
+        }
       ]
     }
   ],
@@ -276,7 +312,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Standard fixed-rate mortgage amortization formula (M = P[r(1+r)^n]/[(1+r)^n-1]); NOI, Cap Rate, and Cash-on-Cash Return per NAR investment analysis standards",
   "formulaAuditDate": "2026-03-13",
@@ -288,7 +324,7 @@
     "roi-calculator",
     "mortgage-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 97,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "glossaryTerms": [

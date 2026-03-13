@@ -1,0 +1,190 @@
+{
+  "id": "index-fund-calculator",
+  "title": "Index Fund Calculator",
+  "slug": "index-fund-calculator",
+  "category": "finance",
+  "subcategory": "investing",
+  "primaryKeyword": "index fund calculator",
+  "metaTitle": "Index Fund Calculator — Compare Fees & Growth | Free",
+  "metaDescription": "See how index fund fees affect your returns. $500/month at 10% for 30 years grows to $1.06M at 0.03% ER vs $870K at 1% ER — a $190K+ difference. Free tool.",
+  "inputs": [
+    {
+      "id": "initialInvestment",
+      "label": "Initial Investment",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Starting amount to invest"
+    },
+    {
+      "id": "monthlyContribution",
+      "label": "Monthly Contribution",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500,
+      "min": 0,
+      "max": 50000,
+      "step": 50,
+      "prefix": "$",
+      "helpText": "Amount you invest each month"
+    },
+    {
+      "id": "annualReturn",
+      "label": "Expected Annual Return",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 30,
+      "step": 0.1,
+      "suffix": "%",
+      "helpText": "S&P 500 historical average: ~10%"
+    },
+    {
+      "id": "expenseRatio",
+      "label": "Fund Expense Ratio",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 0.03,
+      "min": 0,
+      "max": 3,
+      "step": 0.01,
+      "suffix": "%",
+      "helpText": "Vanguard S&P 500 (VOO): 0.03%"
+    },
+    {
+      "id": "investmentYears",
+      "label": "Investment Period (Years)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 1,
+      "max": 60,
+      "step": 1,
+      "helpText": "How many years you plan to invest"
+    },
+    {
+      "id": "comparisonExpenseRatio",
+      "label": "Comparison Fund Expense Ratio",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 1.0,
+      "min": 0,
+      "max": 3,
+      "step": 0.01,
+      "suffix": "%",
+      "helpText": "Compare against a higher-cost fund"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "futureValue",
+      "label": "Future Value (Low-Cost Fund)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Projected portfolio value after fees with the low-cost index fund"
+    },
+    {
+      "id": "totalContributions",
+      "label": "Total Contributions",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalEarnings",
+      "label": "Total Earnings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "expenseRatioCost",
+      "label": "Total Fees Paid (Low-Cost)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "comparisonFutureValue",
+      "label": "Future Value (High-Cost Fund)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "expenseRatioSavings",
+      "label": "Fee Savings (Low vs High)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "growthChart",
+      "label": "Growth Comparison Over Time",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Balance ($)",
+        "colors": [
+          "#2563eb",
+          "#ef4444",
+          "#10b981"
+        ]
+      }
+    },
+    {
+      "id": "summary",
+      "label": "Index Fund Investment Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "index-fund",
+  "features": [
+    "chart",
+    "compare-scenarios"
+  ],
+  "relatedCalculators": [
+    "compound-interest-calculator",
+    "investment-calculator",
+    "retirement-calculator",
+    "savings-calculator",
+    "roi-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Bogle, J. 'The Little Book of Common Sense Investing' (2007); Vanguard research on expense ratio impact; CFA Institute compound growth formula",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "FV = P(1+r)^n + PMT × ((1+r)^n - 1) / r where r = (1 + grossReturn - expenseRatio)^(1/12) - 1; Bogle (2007), Vanguard research, CFA Institute",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "compound-interest-calculator",
+    "investment-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [
+    "compound-interest",
+    "expense-ratio",
+    "future-value",
+    "interest-rate"
+  ],
+  "methodologyTopics": [
+    "compound-interest"
+  ]
+}

@@ -26,12 +26,30 @@
       "required": true,
       "defaultValue": "degrees",
       "options": [
-        { "value": "degrees", "label": "Degrees (\u00b0)" },
-        { "value": "radians", "label": "Radians (rad)" },
-        { "value": "gradians", "label": "Gradians (gon)" },
-        { "value": "turns", "label": "Turns (rev)" },
-        { "value": "arcminutes", "label": "Arcminutes (\u2032)" },
-        { "value": "arcseconds", "label": "Arcseconds (\u2033)" }
+        {
+          "value": "degrees",
+          "label": "Degrees (°)"
+        },
+        {
+          "value": "radians",
+          "label": "Radians (rad)"
+        },
+        {
+          "value": "gradians",
+          "label": "Gradians (gon)"
+        },
+        {
+          "value": "turns",
+          "label": "Turns (rev)"
+        },
+        {
+          "value": "arcminutes",
+          "label": "Arcminutes (′)"
+        },
+        {
+          "value": "arcseconds",
+          "label": "Arcseconds (″)"
+        }
       ]
     },
     {
@@ -41,32 +59,91 @@
       "required": true,
       "defaultValue": "radians",
       "options": [
-        { "value": "degrees", "label": "Degrees (\u00b0)" },
-        { "value": "radians", "label": "Radians (rad)" },
-        { "value": "gradians", "label": "Gradians (gon)" },
-        { "value": "turns", "label": "Turns (rev)" },
-        { "value": "arcminutes", "label": "Arcminutes (\u2032)" },
-        { "value": "arcseconds", "label": "Arcseconds (\u2033)" }
+        {
+          "value": "degrees",
+          "label": "Degrees (°)"
+        },
+        {
+          "value": "radians",
+          "label": "Radians (rad)"
+        },
+        {
+          "value": "gradians",
+          "label": "Gradians (gon)"
+        },
+        {
+          "value": "turns",
+          "label": "Turns (rev)"
+        },
+        {
+          "value": "arcminutes",
+          "label": "Arcminutes (′)"
+        },
+        {
+          "value": "arcseconds",
+          "label": "Arcseconds (″)"
+        }
       ]
     }
   ],
   "outputs": [
-    { "id": "convertedValue", "label": "Converted Value", "type": "single-value", "format": "number", "highlight": true, "precision": 6 },
-    { "id": "conversionDisplay", "label": "Conversion", "type": "single-value", "format": "text" },
-    { "id": "conversionRate", "label": "Conversion Rate", "type": "single-value", "format": "number", "precision": 6 },
-    { "id": "inverseRate", "label": "Inverse Rate", "type": "single-value", "format": "number", "precision": 6 },
-    { "id": "conversionTable", "label": "All Angle Conversions", "type": "value-group", "format": "text" }
+    {
+      "id": "convertedValue",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true,
+      "precision": 6
+    },
+    {
+      "id": "conversionDisplay",
+      "label": "Conversion",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "conversionRate",
+      "label": "Conversion Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "inverseRate",
+      "label": "Inverse Rate",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Angle Conversions",
+      "type": "value-group",
+      "format": "text"
+    }
   ],
   "formula": "angle-convert",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["triangle-calculator", "circle-calculator", "slope-calculator", "pythagorean-theorem-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "triangle-calculator",
+    "circle-calculator",
+    "slope-calculator",
+    "pythagorean-theorem-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "NIST Special Publication 330, The International System of Units (SI), 2019 Edition",
   "articleWordTarget": 800,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "editorial",
   "formulaSource": "convertedValue = value × (fromFactor / toFactor); base unit = degrees. 1 rad = 180/pi deg, 1 gon = 0.9 deg, 1 turn = 360 deg, 1 arcmin = 1/60 deg, 1 arcsec = 1/3600 deg",
@@ -76,7 +153,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 73,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [],

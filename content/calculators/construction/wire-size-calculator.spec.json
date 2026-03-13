@@ -27,11 +27,26 @@
       "required": true,
       "defaultValue": "120",
       "options": [
-        { "value": "120", "label": "120V (Standard)" },
-        { "value": "208", "label": "208V (Commercial)" },
-        { "value": "240", "label": "240V (Dryer/Range)" },
-        { "value": "277", "label": "277V (Commercial Lighting)" },
-        { "value": "480", "label": "480V (Industrial)" }
+        {
+          "value": "120",
+          "label": "120V (Standard)"
+        },
+        {
+          "value": "208",
+          "label": "208V (Commercial)"
+        },
+        {
+          "value": "240",
+          "label": "240V (Dryer/Range)"
+        },
+        {
+          "value": "277",
+          "label": "277V (Commercial Lighting)"
+        },
+        {
+          "value": "480",
+          "label": "480V (Industrial)"
+        }
       ],
       "helpText": "Circuit voltage"
     },
@@ -44,8 +59,16 @@
       "min": 1,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "One-way wire run distance (panel to device)"
@@ -57,8 +80,14 @@
       "required": true,
       "defaultValue": "copper",
       "options": [
-        { "value": "copper", "label": "Copper" },
-        { "value": "aluminum", "label": "Aluminum" }
+        {
+          "value": "copper",
+          "label": "Copper"
+        },
+        {
+          "value": "aluminum",
+          "label": "Aluminum"
+        }
       ],
       "helpText": "Conductor material"
     },
@@ -69,8 +98,14 @@
       "required": true,
       "defaultValue": "single",
       "options": [
-        { "value": "single", "label": "Single-Phase" },
-        { "value": "three", "label": "Three-Phase" }
+        {
+          "value": "single",
+          "label": "Single-Phase"
+        },
+        {
+          "value": "three",
+          "label": "Three-Phase"
+        }
       ],
       "helpText": "Single-phase (residential) or three-phase (commercial)"
     },
@@ -92,9 +127,18 @@
       "required": true,
       "defaultValue": "pvc",
       "options": [
-        { "value": "pvc", "label": "PVC" },
-        { "value": "emt", "label": "EMT (Metal)" },
-        { "value": "mc", "label": "MC Cable" }
+        {
+          "value": "pvc",
+          "label": "PVC"
+        },
+        {
+          "value": "emt",
+          "label": "EMT (Metal)"
+        },
+        {
+          "value": "mc",
+          "label": "MC Cable"
+        }
       ],
       "helpText": "Conduit type affects ampacity derating"
     }
@@ -183,7 +227,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Ampacity ratings from NEC (NFPA 70) Table 310.16 at 75°C. Wire resistance from NEC Chapter 9, Table 8. Voltage drop formulas per IEEE Std 141 (Red Book). Wire pricing from Cerrowire/electrical distributor retail, 2025–2026.",
   "formulaAuditDate": "2026-03-14",
@@ -194,7 +238,7 @@
   "duplicationRisk": [
     "ohms-law-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

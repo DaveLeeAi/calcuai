@@ -1,0 +1,220 @@
+{
+  "id": "working-capital-calculator",
+  "title": "Working Capital Calculator",
+  "slug": "working-capital-calculator",
+  "category": "business",
+  "subcategory": "accounting",
+  "primaryKeyword": "working capital calculator",
+  "metaTitle": "Working Capital Calculator — Current & Quick Ratios",
+  "metaDescription": "Calculate working capital, current ratio, quick ratio, and days working capital. Assess your business liquidity health in seconds. Free, instant results.",
+  "inputs": [
+    {
+      "id": "cash",
+      "label": "Cash & Cash Equivalents",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Cash on hand plus bank balances"
+    },
+    {
+      "id": "accountsReceivable",
+      "label": "Accounts Receivable",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 75000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Money owed to you by customers"
+    },
+    {
+      "id": "inventory",
+      "label": "Inventory",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 40000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Value of goods available for sale"
+    },
+    {
+      "id": "shortTermInvestments",
+      "label": "Short-Term Investments",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 10000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Marketable securities and other liquid investments"
+    },
+    {
+      "id": "otherCurrentAssets",
+      "label": "Other Current Assets",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 100000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Prepaid expenses and other short-term assets"
+    },
+    {
+      "id": "accountsPayable",
+      "label": "Accounts Payable",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 45000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Money you owe to suppliers"
+    },
+    {
+      "id": "shortTermDebt",
+      "label": "Short-Term Debt",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 20000,
+      "min": 0,
+      "max": 100000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "Loans and credit lines due within 12 months"
+    },
+    {
+      "id": "accruedExpenses",
+      "label": "Accrued Expenses",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 100000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Wages, taxes, and interest owed but not yet paid"
+    },
+    {
+      "id": "otherCurrentLiabilities",
+      "label": "Other Current Liabilities",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5000,
+      "min": 0,
+      "max": 100000000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "Deferred revenue and other short-term obligations"
+    },
+    {
+      "id": "annualRevenue",
+      "label": "Annual Revenue",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 500000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 1000,
+      "prefix": "$",
+      "helpText": "For ratio calculations"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "workingCapital",
+      "label": "Working Capital",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "currentRatio",
+      "label": "Current Ratio",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "quickRatio",
+      "label": "Quick Ratio (Acid Test)",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "workingCapitalRatio",
+      "label": "Working Capital Ratio",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "daysWorkingCapital",
+      "label": "Days Working Capital",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "healthStatus",
+      "label": "Liquidity Health",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Working Capital Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "working-capital",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "cash-flow-calculator",
+    "profit-calculator",
+    "break-even-calculator",
+    "debt-to-income-calculator",
+    "roi-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Working Capital = Current Assets - Current Liabilities; Current Ratio = CA / CL; Quick Ratio = (Cash + AR + STI) / CL; WC Ratio = WC / Revenue x 100; Days WC = (WC / Revenue) x 365",
+  "formulaCitation": "Brealey, Myers & Allen — \"Principles of Corporate Finance\" (13th ed.)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "cash-flow-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "glossaryTerms": [
+    "working-capital",
+    "current-ratio",
+    "quick-ratio"
+  ]
+}

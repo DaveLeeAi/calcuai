@@ -38,12 +38,30 @@
       "required": true,
       "defaultValue": "360",
       "options": [
-        { "value": "60", "label": "5 Years" },
-        { "value": "120", "label": "10 Years" },
-        { "value": "180", "label": "15 Years" },
-        { "value": "240", "label": "20 Years" },
-        { "value": "300", "label": "25 Years" },
-        { "value": "360", "label": "30 Years" }
+        {
+          "value": "60",
+          "label": "5 Years"
+        },
+        {
+          "value": "120",
+          "label": "10 Years"
+        },
+        {
+          "value": "180",
+          "label": "15 Years"
+        },
+        {
+          "value": "240",
+          "label": "20 Years"
+        },
+        {
+          "value": "300",
+          "label": "25 Years"
+        },
+        {
+          "value": "360",
+          "label": "30 Years"
+        }
       ],
       "helpText": "Loan term for Loan A in months"
     },
@@ -65,12 +83,30 @@
       "required": true,
       "defaultValue": "180",
       "options": [
-        { "value": "60", "label": "5 Years" },
-        { "value": "120", "label": "10 Years" },
-        { "value": "180", "label": "15 Years" },
-        { "value": "240", "label": "20 Years" },
-        { "value": "300", "label": "25 Years" },
-        { "value": "360", "label": "30 Years" }
+        {
+          "value": "60",
+          "label": "5 Years"
+        },
+        {
+          "value": "120",
+          "label": "10 Years"
+        },
+        {
+          "value": "180",
+          "label": "15 Years"
+        },
+        {
+          "value": "240",
+          "label": "20 Years"
+        },
+        {
+          "value": "300",
+          "label": "25 Years"
+        },
+        {
+          "value": "360",
+          "label": "30 Years"
+        }
       ],
       "helpText": "Loan term for Loan B in months"
     }
@@ -120,12 +156,17 @@
       "chartConfig": {
         "xLabel": "Year",
         "yLabel": "Remaining Balance ($)",
-        "colors": ["#2563eb", "#10b981"]
+        "colors": [
+          "#2563eb",
+          "#10b981"
+        ]
       }
     }
   ],
   "formula": "loan-comparison",
-  "features": ["compare-scenarios"],
+  "features": [
+    "compare-scenarios"
+  ],
   "relatedCalculators": [
     "loan-calculator",
     "mortgage-calculator",
@@ -144,7 +185,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Standard fixed-rate amortization: M = P × [r(1+r)^n] / [(1+r)^n - 1] per Actuarial Standards Board and CFPB Regulation Z disclosures",
   "formulaAuditDate": "2026-03-13",
@@ -152,10 +193,20 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["loan-calculator", "mortgage-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "loan-calculator",
+    "mortgage-calculator"
+  ],
+  "qualityScore": 97,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
-  "glossaryTerms": ["principal", "interest-rate", "amortization", "apr"],
-  "methodologyTopics": ["mortgage-amortization"]
+  "glossaryTerms": [
+    "principal",
+    "interest-rate",
+    "amortization",
+    "apr"
+  ],
+  "methodologyTopics": [
+    "mortgage-amortization"
+  ]
 }

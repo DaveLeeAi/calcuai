@@ -17,9 +17,21 @@
       "min": 1,
       "step": 1,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Total linear feet of exterior walls"
@@ -34,9 +46,21 @@
       "max": 30,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "in", "label": "Inches", "conversionFactor": 0.0833333 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "in",
+          "label": "Inches",
+          "conversionFactor": 0.0833333
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft"
     },
@@ -100,11 +124,26 @@
       "required": true,
       "defaultValue": "vinyl",
       "options": [
-        { "value": "vinyl", "label": "Vinyl" },
-        { "value": "fiber-cement", "label": "Fiber-Cement (HardiePlank)" },
-        { "value": "wood", "label": "Wood (Clapboard/Shingle)" },
-        { "value": "engineered-wood", "label": "Engineered Wood (LP SmartSide)" },
-        { "value": "metal", "label": "Metal (Aluminum/Steel)" }
+        {
+          "value": "vinyl",
+          "label": "Vinyl"
+        },
+        {
+          "value": "fiber-cement",
+          "label": "Fiber-Cement (HardiePlank)"
+        },
+        {
+          "value": "wood",
+          "label": "Wood (Clapboard/Shingle)"
+        },
+        {
+          "value": "engineered-wood",
+          "label": "Engineered Wood (LP SmartSide)"
+        },
+        {
+          "value": "metal",
+          "label": "Metal (Aluminum/Steel)"
+        }
       ]
     },
     {
@@ -212,7 +251,7 @@
     "paint-calculator",
     "drywall-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

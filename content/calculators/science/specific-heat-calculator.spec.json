@@ -1,0 +1,135 @@
+{
+  "id": "specific-heat-calculator",
+  "title": "Specific Heat Calculator",
+  "slug": "specific-heat-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "specific heat calculator",
+  "metaTitle": "Specific Heat Calculator — Q = mcΔT Heat Equation",
+  "metaDescription": "Calculate heat energy, mass, specific heat capacity, or temperature change using Q = mcΔT. Solve for any variable with common material values included.",
+  "inputs": [
+    {
+      "id": "solveFor",
+      "label": "Solve For",
+      "type": "select",
+      "required": true,
+      "options": [
+        { "label": "Heat Energy (Q)", "value": "heat" },
+        { "label": "Mass (m)", "value": "mass" },
+        { "label": "Specific Heat (c)", "value": "specificHeat" },
+        { "label": "Temperature Change (ΔT)", "value": "temperatureChange" }
+      ],
+      "defaultValue": "heat",
+      "helpText": "Select which variable to calculate"
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 1.0",
+      "defaultValue": 1.0,
+      "min": 0.001,
+      "max": 1000000,
+      "step": 0.01,
+      "suffix": "kg",
+      "helpText": "Mass of the substance in kilograms"
+    },
+    {
+      "id": "specificHeat",
+      "label": "Specific Heat Capacity",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 4186",
+      "defaultValue": 4186,
+      "min": 0.001,
+      "max": 100000,
+      "step": 1,
+      "suffix": "J/(kg·°C)",
+      "helpText": "Specific heat capacity. Water: 4,186 J/(kg·°C)"
+    },
+    {
+      "id": "temperatureChange",
+      "label": "Temperature Change",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "defaultValue": 10,
+      "min": -10000,
+      "max": 10000,
+      "step": 0.1,
+      "suffix": "°C",
+      "helpText": "Temperature change in °C (negative for cooling)"
+    },
+    {
+      "id": "heatEnergy",
+      "label": "Heat Energy",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 41860",
+      "defaultValue": 0,
+      "min": -1000000000000,
+      "max": 1000000000000,
+      "step": 1,
+      "suffix": "J",
+      "helpText": "Heat energy in joules"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Result",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "resultLabel",
+      "label": "Solved Variable",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "allValues",
+      "label": "All Variables",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "specific-heat",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "energy-calculator",
+    "heat-transfer-calculator",
+    "density-calculator",
+    "force-calculator",
+    "work-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Serway & Jewett, Physics for Scientists and Engineers (10th ed.); NIST Standard Reference Data",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Specific heat formula: Q = m × c × ΔT, where Q = heat (J), m = mass (kg), c = specific heat (J/(kg·°C)), ΔT = temperature change (°C)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["heat-transfer-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

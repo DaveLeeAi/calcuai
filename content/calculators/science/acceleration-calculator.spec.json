@@ -6,7 +6,7 @@
   "subcategory": "physics",
   "primaryKeyword": "acceleration calculator",
   "metaTitle": "Acceleration Calculator — Kinematic & Force-Based",
-  "metaDescription": "Calculate acceleration from velocity change over time (a = \u0394v/\u0394t) or from force and mass (a = F/m). Free physics calculator with g-force conversions.",
+  "metaDescription": "Calculate acceleration from velocity change over time (a = Δv/Δt) or from force and mass (a = F/m). Free physics calculator with g-force conversions.",
   "inputs": [
     {
       "id": "mode",
@@ -14,8 +14,14 @@
       "type": "select",
       "required": true,
       "options": [
-        { "value": "kinematic", "label": "Kinematic (velocity & time)" },
-        { "value": "force", "label": "Force-based (F/m)" }
+        {
+          "value": "kinematic",
+          "label": "Kinematic (velocity & time)"
+        },
+        {
+          "value": "force",
+          "label": "Force-based (F/m)"
+        }
       ],
       "defaultValue": "kinematic",
       "helpText": "Choose kinematic mode for velocity/time problems or force mode for F=ma problems"
@@ -130,7 +136,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Kinematic: a = (v_f - v_i) / t; Force: a = F / m",
   "formulaAuditDate": "2026-03-14",
@@ -139,7 +145,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

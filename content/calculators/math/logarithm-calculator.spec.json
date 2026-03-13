@@ -136,7 +136,7 @@
     ".bluf-intro",
     ".formula-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Change of base formula: log_b(x) = ln(x)/ln(b). Standard logarithmic identity from Abramowitz & Stegun, Handbook of Mathematical Functions (1965), Section 4.1",
   "formulaAuditDate": "2026-03-11",
@@ -147,7 +147,7 @@
   "duplicationRisk": [
     "exponent-calculator"
   ],
-  "qualityScore": 73,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-11",
   "seasonality": null
 }

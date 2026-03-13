@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 200 modules, 202 formula IDs
+ * 210 modules, 212 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -11,10 +11,12 @@ import type { FormulaFunction } from '@/lib/types';
 // Business
 import { FORMULA_REGISTRY as business_break_even } from './business/break-even';
 import { FORMULA_REGISTRY as business_business_sales_tax } from './business/business-sales-tax';
+import { FORMULA_REGISTRY as business_cash_flow } from './business/cash-flow';
 import { FORMULA_REGISTRY as business_commission } from './business/commission';
 import { FORMULA_REGISTRY as business_conversion_rate } from './business/conversion-rate';
 import { FORMULA_REGISTRY as business_customer_acquisition_cost } from './business/customer-acquisition-cost';
 import { FORMULA_REGISTRY as business_customer_lifetime_value } from './business/customer-lifetime-value';
+import { FORMULA_REGISTRY as business_debt_service_coverage } from './business/debt-service-coverage';
 import { FORMULA_REGISTRY as business_employee_cost } from './business/employee-cost';
 import { FORMULA_REGISTRY as business_gross_margin } from './business/gross-margin';
 import { FORMULA_REGISTRY as business_hourly_to_salary } from './business/hourly-to-salary';
@@ -30,6 +32,7 @@ import { FORMULA_REGISTRY as business_raise_percentage } from './business/raise-
 import { FORMULA_REGISTRY as business_revenue } from './business/revenue';
 import { FORMULA_REGISTRY as business_roi } from './business/roi';
 import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary-to-hourly';
+import { FORMULA_REGISTRY as business_working_capital } from './business/working-capital';
 
 // Construction
 import { FORMULA_REGISTRY as construction_asphalt } from './construction/asphalt';
@@ -90,6 +93,7 @@ import { FORMULA_REGISTRY as everyday_gas_mileage } from './everyday/gas-mileage
 import { FORMULA_REGISTRY as everyday_gpa } from './everyday/gpa';
 import { FORMULA_REGISTRY as everyday_grade } from './everyday/grade';
 import { FORMULA_REGISTRY as everyday_home_energy_usage } from './everyday/home-energy-usage';
+import { FORMULA_REGISTRY as everyday_moving_cost } from './everyday/moving-cost';
 import { FORMULA_REGISTRY as everyday_solar_panel } from './everyday/solar-panel';
 import { FORMULA_REGISTRY as everyday_test_grade } from './everyday/test-grade';
 import { FORMULA_REGISTRY as everyday_time_math } from './everyday/time-math';
@@ -110,6 +114,7 @@ import { FORMULA_REGISTRY as finance_cap_rate } from './finance/cap-rate';
 import { FORMULA_REGISTRY as finance_capital_gains_tax } from './finance/capital-gains-tax';
 import { FORMULA_REGISTRY as finance_cd_return } from './finance/cd-return';
 import { FORMULA_REGISTRY as finance_closing_costs } from './finance/closing-costs';
+import { FORMULA_REGISTRY as finance_college_savings } from './finance/college-savings';
 import { FORMULA_REGISTRY as finance_compound_interest } from './finance/compound-interest';
 import { FORMULA_REGISTRY as finance_credit_card_payoff } from './finance/credit-card-payoff';
 import { FORMULA_REGISTRY as finance_credit_utilization } from './finance/credit-utilization';
@@ -129,6 +134,7 @@ import { FORMULA_REGISTRY as finance_home_equity } from './finance/home-equity';
 import { FORMULA_REGISTRY as finance_home_insurance } from './finance/home-insurance';
 import { FORMULA_REGISTRY as finance_home_sale_profit } from './finance/home-sale-profit';
 import { FORMULA_REGISTRY as finance_income_tax } from './finance/income-tax';
+import { FORMULA_REGISTRY as finance_index_fund } from './finance/index-fund';
 import { FORMULA_REGISTRY as finance_inflation } from './finance/inflation';
 import { FORMULA_REGISTRY as finance_interest_only_loan } from './finance/interest-only-loan';
 import { FORMULA_REGISTRY as finance_interest_rate_solve } from './finance/interest-rate-solve';
@@ -177,7 +183,9 @@ import { FORMULA_REGISTRY as health_one_rep_max } from './health/one-rep-max';
 import { FORMULA_REGISTRY as health_ovulation } from './health/ovulation';
 import { FORMULA_REGISTRY as health_pace } from './health/pace';
 import { FORMULA_REGISTRY as health_pregnancy } from './health/pregnancy';
+import { FORMULA_REGISTRY as health_sleep } from './health/sleep';
 import { FORMULA_REGISTRY as health_tdee } from './health/tdee';
+import { FORMULA_REGISTRY as health_vo2_max } from './health/vo2-max';
 import { FORMULA_REGISTRY as health_water_intake } from './health/water-intake';
 
 // Math
@@ -220,6 +228,8 @@ import { FORMULA_REGISTRY as science_momentum } from './science/momentum';
 import { FORMULA_REGISTRY as science_ohms_law } from './science/ohms-law';
 import { FORMULA_REGISTRY as science_power } from './science/power';
 import { FORMULA_REGISTRY as science_pressure } from './science/pressure';
+import { FORMULA_REGISTRY as science_projectile_motion } from './science/projectile-motion';
+import { FORMULA_REGISTRY as science_specific_heat } from './science/specific-heat';
 import { FORMULA_REGISTRY as science_velocity } from './science/velocity';
 import { FORMULA_REGISTRY as science_wave_speed } from './science/wave-speed';
 import { FORMULA_REGISTRY as science_work } from './science/work';
@@ -228,10 +238,12 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   // Business
   ...business_break_even,
   ...business_business_sales_tax,
+  ...business_cash_flow,
   ...business_commission,
   ...business_conversion_rate,
   ...business_customer_acquisition_cost,
   ...business_customer_lifetime_value,
+  ...business_debt_service_coverage,
   ...business_employee_cost,
   ...business_gross_margin,
   ...business_hourly_to_salary,
@@ -247,6 +259,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_revenue,
   ...business_roi,
   ...business_salary_to_hourly,
+  ...business_working_capital,
   // Construction
   ...construction_asphalt,
   ...construction_bathroom_remodel,
@@ -304,6 +317,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...everyday_gpa,
   ...everyday_grade,
   ...everyday_home_energy_usage,
+  ...everyday_moving_cost,
   ...everyday_solar_panel,
   ...everyday_test_grade,
   ...everyday_time_math,
@@ -323,6 +337,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_capital_gains_tax,
   ...finance_cd_return,
   ...finance_closing_costs,
+  ...finance_college_savings,
   ...finance_compound_interest,
   ...finance_credit_card_payoff,
   ...finance_credit_utilization,
@@ -342,6 +357,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_home_insurance,
   ...finance_home_sale_profit,
   ...finance_income_tax,
+  ...finance_index_fund,
   ...finance_inflation,
   ...finance_interest_only_loan,
   ...finance_interest_rate_solve,
@@ -389,7 +405,9 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...health_ovulation,
   ...health_pace,
   ...health_pregnancy,
+  ...health_sleep,
   ...health_tdee,
+  ...health_vo2_max,
   ...health_water_intake,
   // Math
   ...math_central_tendency,
@@ -430,6 +448,8 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...science_ohms_law,
   ...science_power,
   ...science_pressure,
+  ...science_projectile_motion,
+  ...science_specific_heat,
   ...science_velocity,
   ...science_wave_speed,
   ...science_work,

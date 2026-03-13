@@ -5,8 +5,8 @@
   "category": "science",
   "subcategory": "physics",
   "primaryKeyword": "work calculator",
-  "metaTitle": "Work Calculator — Mechanical Work (W = Fd cos \u03b8)",
-  "metaDescription": "Calculate mechanical work done by a force over a distance. Supports angled forces with W = Fd cos(\u03b8). Converts between joules, calories, BTU, and more.",
+  "metaTitle": "Work Calculator — Mechanical Work (W = Fd cos θ)",
+  "metaDescription": "Calculate mechanical work done by a force over a distance. Supports angled forces with W = Fd cos(θ). Converts between joules, calories, BTU, and more.",
   "inputs": [
     {
       "id": "force",
@@ -41,9 +41,9 @@
       "min": 0,
       "max": 180,
       "step": 0.1,
-      "suffix": "\u00b0",
+      "suffix": "°",
       "defaultValue": 0,
-      "helpText": "Angle between force and displacement (0\u00b0 = fully aligned, 90\u00b0 = perpendicular)"
+      "helpText": "Angle between force and displacement (0° = fully aligned, 90° = perpendicular)"
     }
   ],
   "outputs": [
@@ -104,9 +104,9 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
-  "formulaSource": "Mechanical work: W = F \u00d7 d \u00d7 cos(\u03b8)",
+  "formulaSource": "Mechanical work: W = F × d × cos(θ)",
   "formulaAuditDate": "2026-03-14",
   "priority": "standard",
   "targetIntent": "informational",
@@ -115,7 +115,7 @@
   "duplicationRisk": [
     "energy-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

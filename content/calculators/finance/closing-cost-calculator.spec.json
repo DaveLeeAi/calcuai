@@ -37,9 +37,18 @@
       "required": true,
       "defaultValue": "conventional",
       "options": [
-        { "value": "conventional", "label": "Conventional" },
-        { "value": "fha", "label": "FHA" },
-        { "value": "va", "label": "VA" }
+        {
+          "value": "conventional",
+          "label": "Conventional"
+        },
+        {
+          "value": "fha",
+          "label": "FHA"
+        },
+        {
+          "value": "va",
+          "label": "VA"
+        }
       ],
       "helpText": "FHA adds 1.75% upfront MIP. VA adds 2.3% funding fee."
     },
@@ -58,8 +67,14 @@
       "required": true,
       "defaultValue": "buyer",
       "options": [
-        { "value": "buyer", "label": "Buyer" },
-        { "value": "seller", "label": "Seller" }
+        {
+          "value": "buyer",
+          "label": "Buyer"
+        },
+        {
+          "value": "seller",
+          "label": "Seller"
+        }
       ]
     }
   ],
@@ -71,7 +86,11 @@
       "format": "currency",
       "highlight": true,
       "description": "Sum of all closing cost line items.",
-      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "buyer"
+        ]
+      }
     },
     {
       "id": "totalSellerCosts",
@@ -79,42 +98,66 @@
       "type": "single-value",
       "format": "currency",
       "highlight": true,
-      "visibleWhen": { "buyerOrSeller": ["seller"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "seller"
+        ]
+      }
     },
     {
       "id": "closingCostPercent",
       "label": "Closing Costs as % of Price",
       "type": "single-value",
       "format": "percentage",
-      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "buyer"
+        ]
+      }
     },
     {
       "id": "sellerCostPercent",
       "label": "Seller Costs as % of Price",
       "type": "single-value",
       "format": "percentage",
-      "visibleWhen": { "buyerOrSeller": ["seller"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "seller"
+        ]
+      }
     },
     {
       "id": "totalCashNeeded",
       "label": "Total Cash Needed at Closing",
       "type": "single-value",
       "format": "currency",
-      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "buyer"
+        ]
+      }
     },
     {
       "id": "netProceeds",
       "label": "Estimated Net Proceeds",
       "type": "single-value",
       "format": "currency",
-      "visibleWhen": { "buyerOrSeller": ["seller"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "seller"
+        ]
+      }
     },
     {
       "id": "loanAmount",
       "label": "Loan Amount",
       "type": "single-value",
       "format": "currency",
-      "visibleWhen": { "buyerOrSeller": ["buyer"] }
+      "visibleWhen": {
+        "buyerOrSeller": [
+          "buyer"
+        ]
+      }
     },
     {
       "id": "costBreakdown",
@@ -145,8 +188,10 @@
   "targetIntent": "transactional",
   "monetizationType": "affiliate+lead-gen",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["mortgage-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "mortgage-calculator"
+  ],
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "articleWordTarget": 1400,

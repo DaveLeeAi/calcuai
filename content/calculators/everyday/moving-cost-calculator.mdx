@@ -1,0 +1,181 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A local move for a 3-bedroom house (5 rooms) costs approximately $1,500 — that's $750 in labor (a 3-person crew at $150/hour for 5 hours), $200 in packing supplies, and $150 for basic valuation coverage. Long-distance moves are priced by weight: the same household shipped 1,000 miles at $0.50/pound runs about $4,100 with an estimated shipment weight of 7,500 lbs. Enter your move details below for an itemized breakdown covering labor or transport, packing materials, and insurance.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Estimate Means
+
+Moving costs catch people off guard because the pricing model changes completely based on distance. Local movers charge by the hour; long-distance carriers charge by the pound. This calculator handles both models and shows you an itemized cost breakdown so you know exactly where your money goes.
+
+**Total moving cost** is the sum of labor (local) or transport (long-distance) plus packing supplies and insurance. For a typical 2-bedroom local move under 30 miles, expect $800–$1,200. A 3-bedroom long-distance move of 1,000 miles typically costs $3,500–$5,500 depending on shipment weight and carrier rates.
+
+**Labor cost** applies to local moves only. It is calculated as the crew's hourly rate multiplied by estimated hours. A 3-person crew at $150/hour moving a 3-bedroom apartment takes roughly 5 hours, totaling $750 in labor. Studios and 1-bedrooms can be done in 2–3 hours. Large 4-bedroom homes often require 10–12 hours and a 4-person crew.
+
+**Transport cost** applies to long-distance moves only. Carriers weigh your shipment and charge per pound, typically $0.40–$0.80/lb. If you do not know your shipment weight, the calculator estimates it at 1,500 lbs per room — an industry-standard rule of thumb from the American Moving & Storage Association.
+
+**Packing supplies** include boxes, tape, bubble wrap, and specialty crating for fragile items. The average household spends $150–$300 on packing materials. Full-service packing by movers adds $300–$600 on top of labor.
+
+**Insurance** covers damage during transit. Federal law requires movers to offer basic liability at $0.60/lb per article (free), but full-value protection typically costs $100–$300 and covers repair or replacement at current market value.
+
+**Cost per room** divides the total by the number of rooms, giving you a quick benchmark. Nationally, the average cost per room for a local move is $200–$350 and for a long-distance move is $500–$900.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your move type** — choose "Local" for moves under 100 miles or "Long Distance" for moves of 100 miles or more. The calculator switches between hourly-rate and weight-based pricing automatically.
+
+2. **Enter the number of rooms** — count every room with furniture: bedrooms, living room, dining room, home office. A studio counts as 1, a 1-bedroom apartment as 2, a 2-bedroom as 3, a 3-bedroom house as 5, and a 4-bedroom as 7. This drives the estimated hours (local) or estimated weight (long-distance).
+
+3. **Set your distance** — for local moves, this is informational. For long-distance moves, carriers factor distance into the per-pound rate. Enter the one-way driving distance between your current and new address.
+
+4. **Adjust labor or transport rates** — for local moves, enter the hourly rate quoted by your moving crew (the full crew rate, not per-mover). For long-distance, enter the carrier's per-pound rate. If you have an actual weight from a survey, enter it in the weight field; otherwise leave it at 0 for auto-estimation.
+
+5. **Add packing and insurance costs** — enter your actual or estimated packing supplies cost and your chosen insurance coverage fee. If you are self-packing, $100–$200 covers most 2–3 bedroom homes.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Local move (under 100 miles):**
+
+$$\text{Estimated Hours} = \max(2, \lceil \text{Rooms} \times 1.5 \rceil)$$
+
+$$\text{Labor Cost} = \text{Hourly Rate} \times \text{Estimated Hours}$$
+
+$$\text{Total Cost} = \text{Labor Cost} + \text{Packing Supplies} + \text{Insurance Fee}$$
+
+**Long-distance move (100+ miles):**
+
+$$\text{Estimated Weight} = \text{Rooms} \times 1{,}500 \text{ lbs} \quad (\text{if not specified})$$
+
+$$\text{Transport Cost} = \text{Weight (lbs)} \times \text{Rate Per Pound}$$
+
+$$\text{Total Cost} = \text{Transport Cost} + \text{Packing Supplies} + \text{Insurance Fee}$$
+
+**Cost per room (both types):**
+
+$$\text{Cost Per Room} = \frac{\text{Total Cost}}{\text{Number of Rooms}}$$
+
+Where:
+
+- **Rooms** = number of furnished rooms (studio=1, 1BR=2, 2BR=3, 3BR=5, 4BR=7)
+- **Hourly Rate** = crew rate per hour for the entire team (not per mover)
+- **Rate Per Pound** = carrier charge per pound of shipment weight ($0.40–$0.80 typical)
+- **1,500 lbs/room** = industry-standard weight estimate (AMSA guideline)
+
+**Source:** American Moving & Storage Association (AMSA) industry averages; MovingLabor.com rate data (2024).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Local Move — 2-Bedroom Apartment, 15 Miles
+
+A renter is moving a 2-bedroom apartment (3 rooms) across town with a 3-person crew charging $130/hour.
+
+**Inputs:**
+- Move type: Local
+- Rooms: 3
+- Hourly rate: $130/hour (full crew)
+- Packing supplies: $150
+- Insurance: $100
+
+**Step 1 — Estimate hours:**
+
+Estimated hours = max(2, ceil(3 × 1.5)) = max(2, 5) = **5 hours**
+
+**Step 2 — Labor cost:**
+
+Labor = $130 × 5 = **$650.00**
+
+**Step 3 — Total cost:**
+
+Total = $650 + $150 + $100 = **$900.00**
+
+Cost per room = $900 / 3 = **$300.00**
+
+This is well within the national average of $800–$1,200 for a local 2-bedroom move. Dropping to a 2-person crew at $100/hour would save $150, but the move would take 6–7 hours instead of 5.
+
+### Example 2: Long-Distance Move — 3-Bedroom House, 800 Miles
+
+A family is relocating a 3-bedroom house (5 rooms) from Dallas to Atlanta. They have not weighed their shipment.
+
+**Inputs:**
+- Move type: Long Distance
+- Rooms: 5
+- Weight: 0 (auto-estimate)
+- Rate per pound: $0.55
+- Packing supplies: $350
+- Insurance: $250
+
+**Step 1 — Estimate weight:**
+
+Estimated weight = 5 × 1,500 = **7,500 lbs**
+
+**Step 2 — Transport cost:**
+
+Transport = 7,500 × $0.55 = **$4,125.00**
+
+**Step 3 — Total cost:**
+
+Total = $4,125 + $350 + $250 = **$4,725.00**
+
+Cost per room = $4,725 / 5 = **$945.00**
+
+At $4,725, this falls in the typical range for a 3-bedroom cross-country move ($3,500–$5,500). Full-value insurance at $250 is worth it — basic liability would only cover $4,500 at $0.60/lb, far below the replacement value of most households.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Moving Cost
+
+**Move type** is the single biggest factor. Local moves are priced by the hour ($100–$200/hour for a crew of 2–4), while long-distance moves are priced by weight ($0.40–$0.80/lb). A local move that costs $1,000 can cost $4,000+ when the same household moves 500 miles.
+
+**Number of rooms** directly drives both time and weight. Each additional room adds approximately 1.5 hours to a local move and 1,500 lbs to a long-distance shipment. Downsizing before a move — selling or donating furniture you will not use — can cut costs 15–25%.
+
+**Time of year** affects pricing significantly. June through August is peak moving season with rates 20–30% higher than winter months. End-of-month dates are also premium because most leases expire on the 1st. Moving mid-month in October–April often yields the lowest rates.
+
+**Access difficulty** can add surcharges. Walk-up apartments without elevator access, narrow staircases, long carry distances from the door to the truck, and parking restrictions can add $100–$400 to a local move. Inform your movers in advance to avoid surprise fees.
+
+**Packing method** changes the cost structure. Self-packing costs $100–$300 in materials. Full-service packing by movers costs $300–$800 for a 2–3 bedroom home but saves significant time and effort, and movers typically cover damage to items they packed.
+
+{/* Section 11: Assumptions & Limitations */}
+## Assumptions and Limitations
+
+This calculator uses industry averages that may not reflect your specific quote. Local move hours are estimated at 1.5 hours per room with a 2-hour minimum — actual time depends on furniture quantity, disassembly needs, stair access, and distance between locations. Long-distance weight is estimated at 1,500 lbs per room based on AMSA guidelines, but actual weight varies widely: a furnished master bedroom may weigh 2,000 lbs while a spare bedroom with a desk weighs 500 lbs. The calculator does not include specialty item surcharges (pianos, pool tables, hot tubs), stair/elevator fees, shuttle service for locations inaccessible by full-size trucks, or storage-in-transit costs. Long-distance rates vary by carrier, season, and route — the per-pound rate entered should reflect your carrier's actual quote. Insurance costs shown are estimates; actual valuation coverage pricing depends on declared value and carrier policy.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to move a 2-bedroom apartment locally?
+
+A local move for a 2-bedroom apartment typically costs $800–$1,200 for a crew of 2–3 movers, including 4–5 hours of labor at $120–$160/hour plus packing supplies. The exact cost depends on the volume of furniture, distance between locations, and whether you need full-service packing. Add $100–$200 for insurance if you want full-value protection beyond the basic $0.60/lb liability.
+
+### How much does a long-distance move cost per pound?
+
+Long-distance movers typically charge $0.40–$0.80 per pound, with the national average around $0.50/lb. The rate varies by distance, season, and carrier. A 3-bedroom household weighing 7,500 lbs at $0.50/lb would cost $3,750 in transport alone. Some carriers offer binding estimates based on a visual or virtual survey rather than strict per-pound pricing.
+
+### Should I hire movers or rent a truck and do it myself?
+
+Renting a truck saves 40–60% on local moves but requires significant physical labor and time. A 26-foot truck rental costs $40–$150/day plus fuel ($0.50–$0.70/mile) and insurance ($15–$30/day). For a local move, compare the truck rental total against 2–3 mover quotes. For long-distance moves, DIY truck rental often costs $1,500–$3,000 versus $3,000–$6,000 for full-service movers — the gap narrows with more belongings and longer distances.
+
+### How far in advance should I book movers?
+
+Book movers 4–6 weeks in advance for local moves and 8–12 weeks ahead for long-distance moves. During peak season (June–August), booking 2–3 months out is advisable. Last-minute bookings within 1–2 weeks often face limited availability and premium surcharges of 10–20%.
+
+</div>
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **American Moving & Storage Association (AMSA)** — Industry cost benchmarks and weight-per-room guidelines
+- **MovingLabor.com** — Hourly rate data by region (2024 averages)
+- **Federal Motor Carrier Safety Administration (FMCSA)** — [Protect Your Move](https://www.fmcsa.dot.gov/protect-your-move) — consumer guide to interstate moving regulations and required insurance minimums
+- **Bureau of Transportation Statistics** — U.S. household moving and migration statistics

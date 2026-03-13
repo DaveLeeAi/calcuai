@@ -1,0 +1,142 @@
+{
+  "id": "projectile-motion-calculator",
+  "title": "Projectile Motion Calculator",
+  "slug": "projectile-motion-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "projectile motion calculator",
+  "metaTitle": "Projectile Motion Calculator — Range, Height & Time",
+  "metaDescription": "Calculate projectile range, max height, time of flight, and impact velocity. Enter launch speed, angle, and height for instant trajectory analysis with chart.",
+  "inputs": [
+    {
+      "id": "initialVelocity",
+      "label": "Initial Velocity",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 20",
+      "defaultValue": 20,
+      "min": 0,
+      "max": 10000,
+      "step": 0.1,
+      "suffix": "m/s",
+      "helpText": "Launch speed in meters per second"
+    },
+    {
+      "id": "launchAngle",
+      "label": "Launch Angle",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 45",
+      "defaultValue": 45,
+      "min": 0,
+      "max": 90,
+      "step": 0.1,
+      "suffix": "°",
+      "helpText": "Angle above horizontal in degrees"
+    },
+    {
+      "id": "initialHeight",
+      "label": "Initial Height",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 0",
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10000,
+      "step": 0.1,
+      "suffix": "m",
+      "helpText": "Height above ground at launch in meters"
+    },
+    {
+      "id": "gravity",
+      "label": "Gravitational Acceleration",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 9.81",
+      "defaultValue": 9.81,
+      "min": 0.1,
+      "max": 100,
+      "step": 0.01,
+      "suffix": "m/s²",
+      "helpText": "Gravitational acceleration (Earth: 9.81 m/s²)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "range",
+      "label": "Horizontal Range",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "maxHeight",
+      "label": "Maximum Height",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "timeOfFlight",
+      "label": "Time of Flight",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "impactVelocity",
+      "label": "Impact Velocity",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "trajectoryData",
+      "label": "Trajectory",
+      "type": "chart",
+      "format": "number"
+    },
+    {
+      "id": "allValues",
+      "label": "Full Results",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "projectile-motion",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "acceleration-calculator",
+    "force-calculator",
+    "energy-calculator",
+    "momentum-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Halliday, Resnick & Walker, Fundamentals of Physics (12th ed.); NASA projectile motion reference",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Projectile motion: R = vx*T, H = h0 + (v0*sinθ)²/(2g), T = (v0*sinθ + √((v0*sinθ)² + 2g*h0))/g",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

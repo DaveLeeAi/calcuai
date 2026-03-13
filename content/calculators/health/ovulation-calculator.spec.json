@@ -35,9 +35,18 @@
       "required": true,
       "defaultValue": "3",
       "options": [
-        { "value": "1", "label": "1 cycle" },
-        { "value": "3", "label": "3 cycles" },
-        { "value": "6", "label": "6 cycles" }
+        {
+          "value": "1",
+          "label": "1 cycle"
+        },
+        {
+          "value": "3",
+          "label": "3 cycles"
+        },
+        {
+          "value": "6",
+          "label": "6 cycles"
+        }
       ]
     }
   ],
@@ -77,12 +86,35 @@
       "label": "Upcoming Cycles",
       "type": "table",
       "columns": [
-        { "key": "cycle", "label": "Cycle" },
-        { "key": "periodStart", "label": "Period Start", "format": "date" },
-        { "key": "fertileStart", "label": "Fertile Window Start", "format": "date" },
-        { "key": "ovulation", "label": "Ovulation", "format": "date" },
-        { "key": "fertileEnd", "label": "Fertile Window End", "format": "date" },
-        { "key": "nextPeriod", "label": "Next Period", "format": "date" }
+        {
+          "key": "cycle",
+          "label": "Cycle"
+        },
+        {
+          "key": "periodStart",
+          "label": "Period Start",
+          "format": "date"
+        },
+        {
+          "key": "fertileStart",
+          "label": "Fertile Window Start",
+          "format": "date"
+        },
+        {
+          "key": "ovulation",
+          "label": "Ovulation",
+          "format": "date"
+        },
+        {
+          "key": "fertileEnd",
+          "label": "Fertile Window End",
+          "format": "date"
+        },
+        {
+          "key": "nextPeriod",
+          "label": "Next Period",
+          "format": "date"
+        }
       ]
     }
   ],
@@ -106,7 +138,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "American College of Obstetricians and Gynecologists (ACOG) — luteal phase and ovulation timing guidelines.",
   "formulaAuditDate": "2026-03-13",
@@ -118,7 +150,7 @@
     "conception-calculator",
     "due-date-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 96,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null
 }

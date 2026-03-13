@@ -241,7 +241,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Mifflin MD, St Jeor ST, et al. American Journal of Clinical Nutrition, 1990;51(2):241-247. Roza AM, Shizgal HM. American Journal of Clinical Nutrition, 1984;40(1):168-182. ACSM Guidelines for Exercise Testing and Prescription, 11th ed., 2021.",
   "formulaAuditDate": "2026-03-14",
@@ -253,7 +253,7 @@
     "calorie-calculator",
     "bmr-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 87,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "new-year",
   "glossaryTerms": [

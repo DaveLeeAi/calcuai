@@ -27,16 +27,46 @@
       "required": true,
       "defaultValue": "other",
       "options": [
-        { "value": "TX", "label": "Texas" },
-        { "value": "FL", "label": "Florida" },
-        { "value": "OK", "label": "Oklahoma" },
-        { "value": "KS", "label": "Kansas" },
-        { "value": "CO", "label": "Colorado" },
-        { "value": "LA", "label": "Louisiana" },
-        { "value": "MN", "label": "Minnesota" },
-        { "value": "CT", "label": "Connecticut" },
-        { "value": "NE", "label": "Nebraska" },
-        { "value": "other", "label": "Other / National Average" }
+        {
+          "value": "TX",
+          "label": "Texas"
+        },
+        {
+          "value": "FL",
+          "label": "Florida"
+        },
+        {
+          "value": "OK",
+          "label": "Oklahoma"
+        },
+        {
+          "value": "KS",
+          "label": "Kansas"
+        },
+        {
+          "value": "CO",
+          "label": "Colorado"
+        },
+        {
+          "value": "LA",
+          "label": "Louisiana"
+        },
+        {
+          "value": "MN",
+          "label": "Minnesota"
+        },
+        {
+          "value": "CT",
+          "label": "Connecticut"
+        },
+        {
+          "value": "NE",
+          "label": "Nebraska"
+        },
+        {
+          "value": "other",
+          "label": "Other / National Average"
+        }
       ],
       "helpText": "State affects base rate"
     },
@@ -47,11 +77,26 @@
       "required": true,
       "defaultValue": "1000",
       "options": [
-        { "value": "500", "label": "$500" },
-        { "value": "1000", "label": "$1,000" },
-        { "value": "2000", "label": "$2,000" },
-        { "value": "2500", "label": "$2,500" },
-        { "value": "5000", "label": "$5,000" }
+        {
+          "value": "500",
+          "label": "$500"
+        },
+        {
+          "value": "1000",
+          "label": "$1,000"
+        },
+        {
+          "value": "2000",
+          "label": "$2,000"
+        },
+        {
+          "value": "2500",
+          "label": "$2,500"
+        },
+        {
+          "value": "5000",
+          "label": "$5,000"
+        }
       ]
     },
     {
@@ -61,9 +106,18 @@
       "required": true,
       "defaultValue": "standard",
       "options": [
-        { "value": "basic", "label": "HO-1 Basic" },
-        { "value": "standard", "label": "HO-3 Standard" },
-        { "value": "premium", "label": "HO-5 Premium" }
+        {
+          "value": "basic",
+          "label": "HO-1 Basic"
+        },
+        {
+          "value": "standard",
+          "label": "HO-3 Standard"
+        },
+        {
+          "value": "premium",
+          "label": "HO-5 Premium"
+        }
       ],
       "helpText": "HO-1 basic, HO-3 standard, HO-5 premium"
     },
@@ -74,9 +128,18 @@
       "required": true,
       "defaultValue": "0",
       "options": [
-        { "value": "0", "label": "0 claims" },
-        { "value": "1", "label": "1 claim" },
-        { "value": "2+", "label": "2+ claims" }
+        {
+          "value": "0",
+          "label": "0 claims"
+        },
+        {
+          "value": "1",
+          "label": "1 claim"
+        },
+        {
+          "value": "2+",
+          "label": "2+ claims"
+        }
       ],
       "helpText": "Number of claims in past 5 years"
     },
@@ -87,10 +150,22 @@
       "required": true,
       "defaultValue": "good",
       "options": [
-        { "value": "excellent", "label": "Excellent (750+)" },
-        { "value": "good", "label": "Good (670–749)" },
-        { "value": "fair", "label": "Fair (580–669)" },
-        { "value": "poor", "label": "Poor (below 580)" }
+        {
+          "value": "excellent",
+          "label": "Excellent (750+)"
+        },
+        {
+          "value": "good",
+          "label": "Good (670–749)"
+        },
+        {
+          "value": "fair",
+          "label": "Fair (580–669)"
+        },
+        {
+          "value": "poor",
+          "label": "Poor (below 580)"
+        }
       ],
       "helpText": "Credit-based insurance score affects premium"
     }
@@ -185,9 +260,11 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["interest-rate"],
+  "glossaryTerms": [
+    "interest-rate"
+  ],
   "methodologyTopics": []
 }

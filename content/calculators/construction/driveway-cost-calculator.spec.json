@@ -17,8 +17,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Total driveway length from street to garage"
@@ -32,8 +40,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Driveway width — 10–12 ft for single car, 20–24 ft for double"
@@ -45,11 +61,26 @@
       "required": true,
       "defaultValue": "concrete",
       "options": [
-        { "value": "concrete", "label": "Concrete" },
-        { "value": "asphalt", "label": "Asphalt" },
-        { "value": "gravel", "label": "Gravel" },
-        { "value": "pavers", "label": "Pavers" },
-        { "value": "stamped-concrete", "label": "Stamped Concrete" }
+        {
+          "value": "concrete",
+          "label": "Concrete"
+        },
+        {
+          "value": "asphalt",
+          "label": "Asphalt"
+        },
+        {
+          "value": "gravel",
+          "label": "Gravel"
+        },
+        {
+          "value": "pavers",
+          "label": "Pavers"
+        },
+        {
+          "value": "stamped-concrete",
+          "label": "Stamped Concrete"
+        }
       ],
       "helpText": "Driveway material — each has different cost, durability, and maintenance"
     },
@@ -60,9 +91,18 @@
       "required": true,
       "defaultValue": "new-install",
       "options": [
-        { "value": "new-install", "label": "New Installation" },
-        { "value": "replacement", "label": "Replacement (remove old)" },
-        { "value": "resurfacing", "label": "Resurfacing / Overlay" }
+        {
+          "value": "new-install",
+          "label": "New Installation"
+        },
+        {
+          "value": "replacement",
+          "label": "Replacement (remove old)"
+        },
+        {
+          "value": "resurfacing",
+          "label": "Resurfacing / Overlay"
+        }
       ],
       "helpText": "New install is baseline; replacement adds demolition cost; resurfacing is cheapest"
     },
@@ -73,9 +113,18 @@
       "required": true,
       "defaultValue": "flat",
       "options": [
-        { "value": "flat", "label": "Flat (no grading needed)" },
-        { "value": "slight-slope", "label": "Slight Slope (+$1/sq ft)" },
-        { "value": "steep", "label": "Steep Grade (+$3/sq ft)" }
+        {
+          "value": "flat",
+          "label": "Flat (no grading needed)"
+        },
+        {
+          "value": "slight-slope",
+          "label": "Slight Slope (+$1/sq ft)"
+        },
+        {
+          "value": "steep",
+          "label": "Steep Grade (+$3/sq ft)"
+        }
       ],
       "helpText": "Sloped driveways cost more due to extra grading, drainage, and material"
     }
@@ -160,7 +209,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Condition multipliers based on Concrete Network demolition/resurfacing cost surveys. Grading adjustments from HomeAdvisor landscaping data.",
   "formulaAuditDate": "2026-03-14",
@@ -172,7 +221,7 @@
     "asphalt-calculator",
     "concrete-slab-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

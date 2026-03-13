@@ -84,6 +84,61 @@ A pair of running shoes originally priced at \$89.95 is marked 20% off with no a
 
 *Interpretation:* A single 20% discount is straightforward — you pay exactly 80% of the original price. For quick mental math, move the decimal one place left to get 10% (\$9.00), then double it to get the 20% savings (\$18.00).
 
+{/* Section 10: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Adding stacked discount percentages together.** The single most common error: assuming 25% off + 10% off equals 35% off. It does not. The second discount applies to the already-reduced price, producing a 32.5% total discount. On a \$500 purchase, the difference between 35% (\$175 savings) and 32.5% (\$162.50 savings) is \$12.50. The gap widens with larger discounts — two 50% discounts yield 75% off, not 100%.
+
+**Applying the discount to the post-tax total.** Discounts apply to the pre-tax price. A \$100 item with 8% tax and a 20% discount should be calculated as: \$100 × 0.80 = \$80, then \$80 × 1.08 = \$86.40. Some shoppers mistakenly compute \$108 × 0.80 = \$86.40 — same result in this case, but the tax base is technically the discounted price, and in jurisdictions with itemized tax receipts, the math must follow the correct order.
+
+**Forgetting that "buy one get one 50% off" is only 25% off.** BOGO deals sound generous but are mathematically modest. Buying two \$40 shirts with "BOGO 50% off" costs \$60 — a 25% average discount per shirt, not 50%. "Buy one get one free" is a true 50% average discount per item.
+
+**Using the discount percentage to calculate what you paid.** If you saved 30%, you paid 70% of the original — not 30%. A \$200 jacket at 30% off costs \$140, not \$60. This sounds obvious, but it is the second most searched discount calculation error online.
+
+**Not checking whether the "original price" is inflated.** Retailers sometimes raise the reference price before a sale to make the discount appear larger. A \$120 item "marked down from \$200" shows a 40% discount, but if the item was never actually sold at \$200, the effective savings are illusory. The FTC requires that reference prices reflect genuine former selling prices.
+
+{/* Section 11: Real-World Uses */}
+## Real-World Uses
+
+**Retail and e-commerce comparison shopping.** When two stores offer different discount structures on the same item — one at 30% off, another at 20% off plus a 15% promo code — the stacked discount calculator reveals which deal saves more. The single 30% discount wins: 30% total vs. 32% total for the stacked version. Wait — that means the stacked discount actually wins in this case. Without computing, most shoppers would guess wrong.
+
+**Credit card cashback optimization.** A 5% cashback credit card effectively functions as an additional stacked discount. A \$300 TV marked 20% off (\$240 sale price) with 5% cashback saves an additional \$12.00, bringing the effective price to \$228 — a total effective discount of 24% off the original price.
+
+**Inventory clearance pricing.** Retailers often apply sequential markdowns: 30% off initial markdown, then an additional 25% off clearance, then a final "extra 20% off" weekend sale. On a \$150 item: \$150 → \$105 → \$78.75 → \$63.00. The total effective discount is 58%, not 75% (30+25+20). Three aggressive-sounding markdowns still leave 42% of the original price.
+
+**Negotiating service contracts.** Freelancers and small business owners use discount stacking logic when offering combined discounts for bundled services. A web designer quoting \$5,000 who offers a 10% "new client discount" and a 5% "prepayment discount" should quote \$4,275, not \$4,250.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes discounts are **percentage-based**, not fixed dollar amounts. A "\$20 off" coupon is not a percentage discount and should be subtracted directly from the price rather than entered into this calculator.
+- Stacked discounts are applied **sequentially** (second discount on the already-reduced price), following standard retail convention per FTC guidelines. Some promotions apply both discounts to the original price simultaneously — verify the store's policy.
+- Sales tax is applied **after all discounts**, which is the legal requirement in all U.S. states that charge sales tax. Tax-inclusive pricing (common in Europe) is not modeled.
+- Does not account for **minimum purchase thresholds** (e.g., "20% off orders over \$50") or **maximum discount caps** (e.g., "25% off, up to \$100 savings").
+- The calculator does not model **buy-one-get-one (BOGO)** or **tiered quantity discounts** (e.g., "10% off 2 items, 15% off 3+"). These require different arithmetic.
+
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Is a 20% discount plus another 20% discount the same as 40% off?
+
+No. Two stacked 20% discounts produce a 36% total discount, not 40%. The first 20% reduces the price to 80% of the original. The second 20% takes 20% off that 80%, removing another 16% of the original price. Total removed: 20% + 16% = 36%. On a \$100 item, you pay \$64 instead of the \$60 you would pay with a true 40% discount.
+
+### Does the order of stacked discounts matter?
+
+No. Multiplication is commutative, so applying 30% first then 10% produces the same result as applying 10% first then 30%. Both yield a 37% total discount. The intermediate "sale price" differs between the two orders, but the final price is identical. This holds for any number of stacked percentage discounts applied in any sequence.
+
+### How do I calculate the original price from a sale price and discount percentage?
+
+Divide the sale price by (1 − discount/100). If you paid \$75 after a 25% discount: \$75 ÷ (1 − 0.25) = \$75 ÷ 0.75 = \$100 original price. For stacked discounts, divide by each discount factor separately: if you paid \$63 after 25% + 10% off, the original was \$63 ÷ 0.75 ÷ 0.90 = \$93.33. This reverse calculation is useful for verifying receipts and computing pre-sale values for returns.
+
+### What is the difference between "percent off" and "percent of"?
+
+"30% off" means you save 30% and pay 70% of the original price. "30% of" means you pay 30% of the original — a 70% discount. These are opposite operations. A \$200 item at "30% off" costs \$140. A \$200 item at "30% of the original price" costs \$60. Retailers use "percent off" exclusively; "percent of" appears in wholesale and manufacturing contexts.
+
+</div>
+
 {/* Section 16: How This Is Calculated */}
 ## How This Is Calculated
 

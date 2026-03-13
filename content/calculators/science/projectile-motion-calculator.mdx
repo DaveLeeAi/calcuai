@@ -1,0 +1,170 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A ball launched at 20 m/s at a 45-degree angle on flat ground travels 40.77 meters horizontally, reaches a maximum height of 10.19 meters, and lands 2.88 seconds later — all calculated from three equations of two-dimensional kinematics. This projectile motion calculator computes horizontal range, maximum height, time of flight, and impact velocity for any launch speed (0 to 10,000 m/s), angle (0 to 90 degrees), and initial height. It also plots the full parabolic trajectory so you can visualize the arc for physics homework, sports science analysis, or engineering ballistics estimates.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## What Your Estimate Means
+
+Projectile motion describes the curved path any object follows when launched into the air and acted on only by gravity — no thrust, no drag, no lift. The trajectory is always a parabola (or a straight line in the degenerate cases of 0-degree and 90-degree launch). The calculator breaks this motion into two independent components: horizontal motion at constant velocity and vertical motion under constant gravitational acceleration.
+
+The **range** is the total horizontal distance from launch point to landing point. On flat ground with no air resistance, a 45-degree launch angle maximizes range for any given speed. At 20 m/s, this optimal range is 40.77 meters. Angles above or below 45 degrees produce shorter ranges, and complementary angles (such as 30 degrees and 60 degrees) yield identical ranges on flat ground.
+
+The **maximum height** represents the apex of the trajectory where vertical velocity momentarily equals zero. A higher launch angle directs more of the initial velocity upward, producing a taller but shorter arc. The **time of flight** is the total airborne duration from launch to impact. The **impact velocity** equals the launch speed on flat ground (energy conservation), but exceeds it when launching from an elevated position because gravity adds energy during the longer fall.
+
+For related physics problems, the [Acceleration Calculator](/calculators/science/acceleration-calculator) helps with constant-acceleration kinematics, and the [Force Calculator](/calculators/science/force-calculator) connects these motions to Newton's second law.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the initial velocity** in meters per second. This is the launch speed — the magnitude of the velocity vector at the moment the projectile leaves the launcher, thrower, or surface. Convert from km/h by dividing by 3.6, or from mph by dividing by 2.237.
+2. **Enter the launch angle** in degrees above the horizontal. A flat throw is 0 degrees, straight up is 90 degrees, and the range-maximizing angle on flat ground is 45 degrees.
+3. **Enter the initial height** in meters (optional, default is 0). Use this for projectiles launched from an elevated position — a cliff edge, a table, or a building roof. The calculator solves the quadratic equation for landing time when height is greater than zero.
+4. **Adjust gravity** if needed (optional, default 9.81 m/s squared for Earth). Use 1.625 for the Moon, 3.72 for Mars, or 24.79 for Jupiter to explore how gravity changes the trajectory.
+5. **Read the results.** The calculator displays horizontal range, maximum height, time of flight, impact velocity, velocity components, and a trajectory chart showing the parabolic arc with 51 data points.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Velocity Components
+
+$$v_x = v_0 \cos(\theta) \qquad v_{y0} = v_0 \sin(\theta)$$
+
+Where:
+
+- **$v_0$** = initial velocity (m/s)
+- **$\theta$** = launch angle above horizontal (radians)
+- **$v_x$** = horizontal velocity component (constant throughout flight)
+- **$v_{y0}$** = initial vertical velocity component
+
+### Time of Flight (with initial height)
+
+$$T = \frac{v_0 \sin(\theta) + \sqrt{(v_0 \sin(\theta))^2 + 2 g h_0}}{g}$$
+
+Where:
+
+- **$T$** = total time of flight (s)
+- **$g$** = gravitational acceleration (m/s², default 9.80665)
+- **$h_0$** = initial height above ground (m)
+
+When $h_0 = 0$, this simplifies to $T = \frac{2 v_0 \sin(\theta)}{g}$.
+
+### Horizontal Range
+
+$$R = v_x \times T = v_0 \cos(\theta) \times T$$
+
+On flat ground, this simplifies to $R = \frac{v_0^2 \sin(2\theta)}{g}$.
+
+### Maximum Height
+
+$$H = h_0 + \frac{(v_0 \sin(\theta))^2}{2g}$$
+
+### Impact Velocity
+
+$$v_{impact} = \sqrt{v_x^2 + v_{y,final}^2}$$
+
+Where $v_{y,final} = v_0 \sin(\theta) - g \times T$ (downward at impact, so negative).
+
+### Position at Time t
+
+$$x(t) = v_0 \cos(\theta) \times t$$
+$$y(t) = h_0 + v_0 \sin(\theta) \times t - \frac{1}{2} g t^2$$
+
+These parametric equations define the parabolic trajectory. Eliminating $t$ yields the path equation $y = h_0 + x \tan(\theta) - \frac{g x^2}{2 v_0^2 \cos^2(\theta)}$.
+
+**Source:** Halliday, Resnick & Walker, *Fundamentals of Physics* (12th ed.), Chapter 4: Motion in Two and Three Dimensions. See also NASA Glenn Research Center, "Projectile Motion" reference materials.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Soccer Free Kick
+
+A soccer ball is kicked at 25 m/s at a 35-degree angle from ground level. How far does it travel, and what is the maximum height?
+
+**Step-by-step:**
+
+1. Convert angle to radians: $\theta = 35° \times \frac{\pi}{180} = 0.6109$ rad
+2. Velocity components: $v_x = 25 \times \cos(35°) = 20.48$ m/s, $v_{y0} = 25 \times \sin(35°) = 14.34$ m/s
+3. Time of flight: $T = \frac{2 \times 14.34}{9.81} = 2.92$ s
+4. Range: $R = 20.48 \times 2.92 = 59.83$ m
+5. Maximum height: $H = \frac{14.34^2}{2 \times 9.81} = 10.48$ m
+
+**Result:** The ball travels **59.83 meters** horizontally and reaches a maximum height of **10.48 meters**.
+
+**Practical interpretation:** This distance is roughly two-thirds the length of a regulation soccer pitch (90-120 m). Air resistance would reduce the actual range by 20-40 percent for a spinning soccer ball, so the true landing point might be 35-48 meters from the kick. Use these vacuum calculations as the theoretical maximum and expect real-world results to fall short.
+
+### Example 2: Ball Thrown from a Rooftop
+
+A ball is thrown horizontally at 15 m/s from the roof of a 30-meter-tall building. How far from the building does it land?
+
+**Step-by-step:**
+
+1. Launch angle: $\theta = 0°$, so $v_x = 15$ m/s, $v_{y0} = 0$ m/s
+2. Time of flight (from quadratic): $T = \frac{0 + \sqrt{0 + 2 \times 9.81 \times 30}}{9.81} = \frac{\sqrt{588.6}}{9.81} = \frac{24.26}{9.81} = 2.47$ s
+3. Range: $R = 15 \times 2.47 = 37.08$ m
+4. Impact velocity: $v_{y,final} = 0 - 9.81 \times 2.47 = -24.26$ m/s, $v_{impact} = \sqrt{15^2 + 24.26^2} = \sqrt{225 + 588.6} = 28.52$ m/s
+
+**Result:** The ball lands **37.08 meters** from the base of the building at an impact speed of **28.52 m/s** (102.7 km/h).
+
+**Practical interpretation:** The ball hits the ground faster than it was thrown because gravity accelerated it vertically during the 2.47-second fall. The impact angle is steep — about 58 degrees below horizontal — meaning the ball arrives mostly downward rather than mostly forward. The [Momentum Calculator](/calculators/science/momentum-calculator) can convert this impact velocity to kinetic energy or impulse force.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Air resistance reduces range dramatically at high speeds.** The calculator assumes a vacuum — no air drag. For a baseball hit at 45 m/s (100 mph), vacuum range is about 206 meters, but actual range with drag is about 120 meters — a 42 percent reduction. The drag effect grows with the square of velocity, making it negligible for slow throws but dominant for bullets, rockets, and high-speed sports. For accurate long-range ballistic calculations, computational fluid dynamics or empirical drag coefficients are required.
+
+**Launch angle for maximum range shifts below 45 degrees with air resistance.** In a vacuum, 45 degrees always maximizes range on flat ground. In the real atmosphere, the optimal angle drops to roughly 38-42 degrees depending on the projectile's mass, size, and speed. Heavier, denser objects (like shot puts) stay closer to 45 degrees; light, high-drag objects (like badminton shuttlecocks) see their optimal angle drop further.
+
+**The Coriolis effect matters for long-range projectiles.** For artillery shells, rockets, or any projectile traveling more than a few kilometers, Earth's rotation deflects the trajectory — rightward in the Northern Hemisphere, leftward in the Southern. At 10 kilometers range, the deflection can exceed 10 meters. This calculator does not account for the Coriolis effect.
+
+**Spin creates lift and curve (the Magnus effect).** A backspin baseball rises higher and travels farther than a no-spin ball. A sidespin soccer ball curves laterally. These forces are not modeled here but can change trajectories by 10-30 percent in sports applications.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **No air resistance (vacuum assumption).** All results assume the projectile travels through a vacuum. Real-world range and height will be reduced by aerodynamic drag, which depends on projectile shape, mass, surface roughness, and air density.
+- **Flat Earth approximation.** The ground is treated as a flat, level surface. For projectiles traveling more than a few kilometers, Earth's curvature becomes relevant and the ground is no longer flat relative to the trajectory.
+- **Constant gravity.** Gravitational acceleration is assumed constant at the user-specified value. In reality, gravity decreases with altitude (about 0.3 percent per kilometer), which matters for very high trajectories.
+- **No spin, lift, or Magnus effect.** The projectile is treated as a point mass with no aerodynamic forces other than gravity.
+- **Two-dimensional motion only.** Wind and lateral forces are not considered. The trajectory lies in a single vertical plane.
+- **Positive time and height.** The calculator only considers the forward trajectory until the projectile returns to ground level (y = 0). Underground trajectories are not modeled.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What angle gives the maximum range in projectile motion?
+
+On flat ground with no air resistance, 45 degrees produces the maximum horizontal range for any given launch speed. This is because the range formula R = v-squared times sin(2 theta) divided by g is maximized when sin(2 theta) = 1, which occurs at theta = 45 degrees. At 20 m/s, a 45-degree launch yields 40.77 meters — any other angle with the same speed produces a shorter range. With air resistance, the optimal angle drops to approximately 38 to 42 degrees depending on the projectile's drag characteristics. For launches from an elevated position, the optimal angle is always less than 45 degrees even in a vacuum.
+
+### Does the mass of the projectile affect its trajectory?
+
+No, mass does not affect projectile trajectory in a vacuum. A 1-gram marble and a 10-kilogram bowling ball launched at the same speed and angle follow identical paths when air resistance is absent — Galileo demonstrated this principle at the Leaning Tower of Pisa. In the real atmosphere, mass matters because heavier objects have more inertia to overcome air drag, so a denser projectile travels farther than a lighter one of the same size. The [Force Calculator](/calculators/science/force-calculator) and [Energy Calculator](/calculators/science/energy-calculator) can help analyze how mass interacts with drag and gravitational forces.
+
+### Why is the impact velocity equal to the launch velocity on flat ground?
+
+Energy conservation requires it. On flat ground (no height change), all kinetic energy at launch converts to potential energy at the apex and then fully reconverts to kinetic energy at impact. The speed (magnitude of velocity) at landing equals the speed at launch: 20 m/s up means 20 m/s down. Only the direction changes — the vertical component reverses while the horizontal component stays constant. When launching from a height above the landing point, the projectile gains additional kinetic energy from the gravitational potential, so impact velocity exceeds launch velocity.
+
+### How does gravity on other planets change the trajectory?
+
+Lower gravity increases both range and flight time proportionally. On the Moon (g = 1.625 m/s squared), a projectile travels about 6 times farther and stays airborne about 6 times longer than on Earth. On Mars (g = 3.72), range roughly triples. On Jupiter (g = 24.79), range drops to about 40 percent of Earth's. Astronaut Alan Shepard's famous golf shot on the Moon — with an estimated launch speed of 30 m/s — would have traveled roughly 550 meters in the lunar vacuum, compared to about 92 meters on Earth.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator decomposes the initial velocity into horizontal and vertical components using trigonometry, then applies constant-acceleration kinematics independently to each axis. The horizontal velocity remains constant throughout flight (no air resistance). The vertical motion follows free-fall equations with the specified gravitational acceleration. When an initial height is provided, the time of flight is found by solving the quadratic equation for when the vertical position returns to zero. The trajectory is sampled at 51 evenly spaced time points to generate the parabolic arc chart. All calculations use standard SI units: meters, seconds, and meters per second.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

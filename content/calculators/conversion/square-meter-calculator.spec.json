@@ -15,8 +15,14 @@
       "required": true,
       "defaultValue": "dimensions",
       "options": [
-        { "value": "dimensions", "label": "Calculate from Dimensions" },
-        { "value": "convert", "label": "Convert Area Units" }
+        {
+          "value": "dimensions",
+          "label": "Calculate from Dimensions"
+        },
+        {
+          "value": "convert",
+          "label": "Convert Area Units"
+        }
       ],
       "helpText": "Calculate area from length x width, or convert an existing area value"
     },
@@ -29,12 +35,24 @@
       "min": 0,
       "step": 0.1,
       "units": [
-        { "value": "m", "label": "Meters", "conversionFactor": 1 },
-        { "value": "ft", "label": "Feet", "conversionFactor": 0.3048 }
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 0.3048
+        }
       ],
       "defaultUnit": "m",
       "helpText": "Length of area",
-      "visibleWhen": { "calculationMode": ["dimensions"] }
+      "visibleWhen": {
+        "calculationMode": [
+          "dimensions"
+        ]
+      }
     },
     {
       "id": "width",
@@ -45,12 +63,24 @@
       "min": 0,
       "step": 0.1,
       "units": [
-        { "value": "m", "label": "Meters", "conversionFactor": 1 },
-        { "value": "ft", "label": "Feet", "conversionFactor": 0.3048 }
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 1
+        },
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 0.3048
+        }
       ],
       "defaultUnit": "m",
       "helpText": "Width of area",
-      "visibleWhen": { "calculationMode": ["dimensions"] }
+      "visibleWhen": {
+        "calculationMode": [
+          "dimensions"
+        ]
+      }
     },
     {
       "id": "areaToConvert",
@@ -61,7 +91,11 @@
       "min": 0,
       "step": 0.01,
       "helpText": "Area value to convert",
-      "visibleWhen": { "calculationMode": ["convert"] }
+      "visibleWhen": {
+        "calculationMode": [
+          "convert"
+        ]
+      }
     },
     {
       "id": "convertFrom",
@@ -70,14 +104,33 @@
       "required": false,
       "defaultValue": "sqft",
       "options": [
-        { "value": "sqft", "label": "Square Feet (ft²)" },
-        { "value": "sqm", "label": "Square Meters (m²)" },
-        { "value": "sqyd", "label": "Square Yards (yd²)" },
-        { "value": "acres", "label": "Acres" },
-        { "value": "hectares", "label": "Hectares" }
+        {
+          "value": "sqft",
+          "label": "Square Feet (ft²)"
+        },
+        {
+          "value": "sqm",
+          "label": "Square Meters (m²)"
+        },
+        {
+          "value": "sqyd",
+          "label": "Square Yards (yd²)"
+        },
+        {
+          "value": "acres",
+          "label": "Acres"
+        },
+        {
+          "value": "hectares",
+          "label": "Hectares"
+        }
       ],
       "helpText": "Unit of the area value to convert",
-      "visibleWhen": { "calculationMode": ["convert"] }
+      "visibleWhen": {
+        "calculationMode": [
+          "convert"
+        ]
+      }
     }
   ],
   "outputs": [
@@ -154,7 +207,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Area = length × width (standard Euclidean geometry). Conversion factors per NIST SP 330: 1 sq m = 10.7639 sq ft, 1 sq yd = 0.836127 sq m, 1 acre = 4046.86 sq m, 1 hectare = 10000 sq m. Linear factor: 1 ft = 0.3048 m exactly (International Yard and Pound Agreement, 1959).",
   "formulaAuditDate": "2026-03-14",
@@ -166,7 +219,7 @@
     "area-converter",
     "square-footage-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

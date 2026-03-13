@@ -27,10 +27,22 @@
       "required": true,
       "defaultValue": "single",
       "options": [
-        { "value": "single", "label": "Single" },
-        { "value": "married-jointly", "label": "Married Filing Jointly" },
-        { "value": "married-separately", "label": "Married Filing Separately" },
-        { "value": "head-of-household", "label": "Head of Household" }
+        {
+          "value": "single",
+          "label": "Single"
+        },
+        {
+          "value": "married-jointly",
+          "label": "Married Filing Jointly"
+        },
+        {
+          "value": "married-separately",
+          "label": "Married Filing Separately"
+        },
+        {
+          "value": "head-of-household",
+          "label": "Head of Household"
+        }
       ]
     },
     {
@@ -137,12 +149,19 @@
       "label": "Tax Composition",
       "type": "chart-pie",
       "chartConfig": {
-        "colors": ["#2563eb", "#10b981", "#f59e0b", "#8b5cf6"]
+        "colors": [
+          "#2563eb",
+          "#10b981",
+          "#f59e0b",
+          "#8b5cf6"
+        ]
       }
     }
   ],
   "formula": "self-employment-tax",
-  "features": ["chart"],
+  "features": [
+    "chart"
+  ],
   "relatedCalculators": [
     "income-tax-calculator",
     "tax-bracket-calculator",
@@ -161,7 +180,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "SE Tax = (Net Earnings × 0.9235) × (12.4% SS + 2.9% Medicare) + Additional Medicare (0.9%). Deductible half = SE Tax × 50%. Per IRS Pub 334, Schedule SE, SSA 2025 wage base $168,600.",
   "formulaAuditDate": "2026-03-14",
@@ -173,7 +192,7 @@
     "paycheck-calculator",
     "income-tax-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "tax-season",
   "glossaryTerms": [

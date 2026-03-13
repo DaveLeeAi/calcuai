@@ -170,7 +170,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "System sizing: kW = daily kWh / sun hours / efficiency. Panel count = system kW × 1000 / panel wattage. Federal ITC: 30% of installed cost (IRC §48, effective through 2032). Cost data: $2.50–$3.50/W national average per EnergySage 2024-2025 marketplace data. Sun hours from NREL solar resource maps.",
   "formulaAuditDate": "2026-03-14",
@@ -179,7 +179,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 80,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

@@ -39,11 +39,26 @@
       "required": true,
       "defaultValue": "mixed",
       "options": [
-        { "value": "hot-humid", "label": "Hot & Humid (FL, TX Gulf, LA)" },
-        { "value": "hot-dry", "label": "Hot & Dry (AZ, NV, NM)" },
-        { "value": "mixed", "label": "Mixed / Moderate (NC, TN, MO)" },
-        { "value": "cold", "label": "Cold (NY, OH, PA)" },
-        { "value": "very-cold", "label": "Very Cold (MN, WI, MT)" }
+        {
+          "value": "hot-humid",
+          "label": "Hot & Humid (FL, TX Gulf, LA)"
+        },
+        {
+          "value": "hot-dry",
+          "label": "Hot & Dry (AZ, NV, NM)"
+        },
+        {
+          "value": "mixed",
+          "label": "Mixed / Moderate (NC, TN, MO)"
+        },
+        {
+          "value": "cold",
+          "label": "Cold (NY, OH, PA)"
+        },
+        {
+          "value": "very-cold",
+          "label": "Very Cold (MN, WI, MT)"
+        }
       ],
       "helpText": "Select the climate closest to your region"
     },
@@ -54,10 +69,22 @@
       "required": true,
       "defaultValue": "average",
       "options": [
-        { "value": "poor", "label": "Poor (old/minimal insulation)" },
-        { "value": "average", "label": "Average (standard builder grade)" },
-        { "value": "good", "label": "Good (upgraded insulation)" },
-        { "value": "excellent", "label": "Excellent (spray foam, high R-value)" }
+        {
+          "value": "poor",
+          "label": "Poor (old/minimal insulation)"
+        },
+        {
+          "value": "average",
+          "label": "Average (standard builder grade)"
+        },
+        {
+          "value": "good",
+          "label": "Good (upgraded insulation)"
+        },
+        {
+          "value": "excellent",
+          "label": "Excellent (spray foam, high R-value)"
+        }
       ],
       "helpText": "Overall insulation quality of the home"
     },
@@ -68,9 +95,18 @@
       "required": true,
       "defaultValue": "1",
       "options": [
-        { "value": "1", "label": "1 Story" },
-        { "value": "2", "label": "2 Stories" },
-        { "value": "3", "label": "3 Stories" }
+        {
+          "value": "1",
+          "label": "1 Story"
+        },
+        {
+          "value": "2",
+          "label": "2 Stories"
+        },
+        {
+          "value": "3",
+          "label": "3 Stories"
+        }
       ],
       "helpText": "Number of above-ground floors"
     },
@@ -81,9 +117,18 @@
       "required": true,
       "defaultValue": "average",
       "options": [
-        { "value": "few", "label": "Few (small or few windows)" },
-        { "value": "average", "label": "Average" },
-        { "value": "many", "label": "Many (large or floor-to-ceiling)" }
+        {
+          "value": "few",
+          "label": "Few (small or few windows)"
+        },
+        {
+          "value": "average",
+          "label": "Average"
+        },
+        {
+          "value": "many",
+          "label": "Many (large or floor-to-ceiling)"
+        }
       ],
       "helpText": "Relative amount of window area"
     },
@@ -94,9 +139,18 @@
       "required": true,
       "defaultValue": "partial",
       "options": [
-        { "value": "shaded", "label": "Mostly Shaded (trees, north-facing)" },
-        { "value": "partial", "label": "Partial Sun" },
-        { "value": "full-sun", "label": "Full Sun (south/west-facing, no shade)" }
+        {
+          "value": "shaded",
+          "label": "Mostly Shaded (trees, north-facing)"
+        },
+        {
+          "value": "partial",
+          "label": "Partial Sun"
+        },
+        {
+          "value": "full-sun",
+          "label": "Full Sun (south/west-facing, no shade)"
+        }
       ],
       "helpText": "How much direct sunlight hits the home"
     }
@@ -181,7 +235,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Base load: 20 BTU/sq ft rule of thumb. Multipliers for climate, insulation, ceiling height, stories, windows, and sun exposure per ACCA Manual J simplified methodology. Equipment sizing rounded to nearest 0.5-ton increment per industry standard. Cost data from HomeAdvisor/Angi 2025 national averages.",
   "formulaAuditDate": "2026-03-14",
@@ -190,7 +244,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 82,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "summer"
 }

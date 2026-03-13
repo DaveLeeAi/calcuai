@@ -166,7 +166,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Federal Reserve — What You Should Know About Home Equity Lines of Credit; standard amortization formula for repayment period",
   "formulaCitation": "Federal Reserve — Home Equity Lines of Credit: Consumer Handbook",
@@ -175,8 +175,10 @@
   "targetIntent": "transactional",
   "monetizationType": "affiliate+lead-gen",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["home-affordability-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "home-affordability-calculator"
+  ],
+  "qualityScore": 80,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "articleWordTarget": 1400,

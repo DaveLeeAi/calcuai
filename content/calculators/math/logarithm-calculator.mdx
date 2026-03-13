@@ -77,6 +77,86 @@ This is the same as asking: what is log₂(1000)?
 
 **Practical interpretation:** This is why computer scientists work with powers of 2. A binary search through 1,000 sorted items takes at most 10 comparisons (⌈log₂(1000)⌉ = 10). Each doubling halves the remaining search space, and 10 halvings narrows 1,000 items down to 1.
 
+{/* Section 9b: Second Worked Example */}
+### Example 2: Earthquake Magnitude — Richter Scale Comparison
+
+The Richter scale uses common logarithms. An earthquake measuring 7.0 releases how many times more energy than one measuring 5.0?
+
+**Step-by-step:**
+
+1. Magnitude difference: 7.0 − 5.0 = **2.0**
+2. Energy ratio per magnitude unit: 10^1.5 ≈ **31.62** (each whole magnitude step represents 31.62× more energy)
+3. For a 2-magnitude difference: 31.62² = **1,000×** more energy
+4. Verify with logs: log₁₀(1000) = **3.0**, confirming that 10^3 = 1,000
+
+**Practical interpretation:** A magnitude 7.0 earthquake releases approximately 1,000 times more energy than a magnitude 5.0 earthquake — not twice as much. This is the power of logarithmic scales: they compress enormous ranges into manageable numbers. The 2011 Tōhoku earthquake (9.1) released about 22,387 times more energy than the 7.0 threshold for "major" earthquakes.
+
+### Example 3: Sound Intensity — Decibel Calculation
+
+A rock concert produces sound at 110 dB. Normal conversation is 60 dB. How many times more intense is the concert?
+
+**Step-by-step:**
+
+1. Decibel difference: 110 − 60 = **50 dB**
+2. Intensity ratio formula: 10^(dB difference / 10)
+3. Compute: 10^(50/10) = 10^5 = **100,000**
+4. Verify: log₁₀(100,000) = **5.0**
+
+**Practical interpretation:** The concert is 100,000 times more intense than conversation, even though the decibel numbers differ by less than 2×. Every 10 dB increase represents a 10× increase in sound intensity. This logarithmic compression is why decibels exist — human hearing spans a range of about 1 trillion to 1 (0 dB to 120 dB), which is impractical to express on a linear scale.
+
+{/* Section 10: Real-World Uses */}
+## Real-World Uses
+
+**Computer science — algorithm complexity.** Binary search through a sorted list of 1 million items requires at most ⌈log₂(1,000,000)⌉ = 20 comparisons. Database indexes, balanced binary trees, and divide-and-conquer algorithms all have O(log n) time complexity, meaning performance degrades slowly as data grows. Doubling the dataset adds only one extra step.
+
+**Finance — compound growth and the Rule of 72.** To find how long it takes an investment to double at a given interest rate, divide 72 by the rate. The exact formula uses logarithms: t = ln(2) / ln(1 + r). At 8% annual return, doubling time = ln(2) / ln(1.08) = 0.6931 / 0.0770 = 9.0 years. The Rule of 72 approximation (72/8 = 9) is remarkably accurate for rates between 4% and 15%.
+
+**Chemistry — pH scale.** pH = −log₁₀[H⁺], where [H⁺] is the hydrogen ion concentration in moles per liter. Pure water has [H⁺] = 10⁻⁷, so pH = 7 (neutral). Stomach acid has [H⁺] ≈ 10⁻¹, so pH = 1. Each pH unit represents a 10× change in acidity — lemon juice (pH 2) is 100,000 times more acidic than pure water (pH 7).
+
+**Information theory — data compression.** The number of bits needed to represent N distinct values is ⌈log₂(N)⌉. An 8-bit byte stores 2⁸ = 256 values. A 16-bit integer stores 2¹⁶ = 65,536 values. Shannon entropy — the theoretical limit of data compression — is calculated using log₂, making logarithms foundational to how digital information is encoded and transmitted.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Entering zero or a negative number.** Logarithms are defined only for positive real numbers. log(0) approaches negative infinity and log(−5) is undefined in the real number system. If your calculation produces a negative input for a log function, check whether you need the absolute value or whether the formula expects a different transformation.
+
+**Confusing log base 10 with natural log (ln).** In mathematics and most programming languages, "log" often means the natural logarithm (base e). In engineering, chemistry, and everyday usage, "log" typically means base 10. A calculator that returns 2.303 for "log(10)" is using the natural logarithm; one that returns 1.0 is using base 10. Always verify which convention your tool or textbook follows.
+
+**Assuming log(a + b) = log(a) + log(b).** This is false. The correct identity is log(a × b) = log(a) + log(b). Logarithms convert multiplication into addition, not addition into addition. For example, log₁₀(3 + 7) = log₁₀(10) = 1, but log₁₀(3) + log₁₀(7) = 0.477 + 0.845 = 1.322.
+
+**Forgetting that log₁(x) is undefined.** A base of 1 produces a division by zero in the change-of-base formula because ln(1) = 0. Intuitively, 1 raised to any power is always 1, so no exponent can make 1 equal any other number.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- This calculator operates on **real numbers only**. Complex logarithms (log of negative numbers) are not supported.
+- Results are computed using **JavaScript's Math.log()** and **Math.log10()** functions, which provide 15–17 significant digits of precision — more than sufficient for scientific and engineering applications.
+- The **custom base** must be a positive number not equal to 1. Bases between 0 and 1 are valid and produce negative logarithms for inputs greater than 1 (e.g., log₀.₅(8) = −3).
+- Very large inputs (above 10³⁰⁸) or very small inputs (below 10⁻³⁰⁸) exceed JavaScript's floating-point range and will return Infinity or −Infinity.
+- The antilog verification may show minor floating-point rounding discrepancies (e.g., 999.9999999 instead of 1000) due to the inherent limitations of IEEE 754 double-precision arithmetic.
+
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between log and ln?
+
+"Log" (common logarithm) uses base 10: log₁₀(100) = 2 because 10² = 100. "Ln" (natural logarithm) uses base e ≈ 2.71828: ln(100) = 4.605 because e⁴·⁶⁰⁵ ≈ 100. Common logs appear in decibels, pH, and Richter scales. Natural logs dominate calculus, statistics, compound interest, and exponential decay. To convert between them: ln(x) = log₁₀(x) × 2.302585, or equivalently log₁₀(x) = ln(x) / 2.302585.
+
+### Why is log₁₀(1) equal to zero?
+
+Because 10⁰ = 1. The logarithm answers "what exponent produces this number?" and the zero exponent of any base (except 0) equals 1. This property holds for every valid base: log₂(1) = 0, ln(1) = 0, log₇(1) = 0. It follows from the fundamental exponent rule that b⁰ = 1 for all b > 0.
+
+### How do logarithms relate to exponential growth?
+
+Logarithms are the inverse of exponential functions. If a quantity grows exponentially — like bacteria doubling every hour — the logarithm tells you how many doubling periods have elapsed. After 8 hours with hourly doubling, you have 2⁸ = 256 bacteria; log₂(256) = 8 recovers the elapsed time. This inverse relationship makes logarithms essential for solving "how long until?" questions in finance (compound interest), biology (population growth), and physics (radioactive decay).
+
+### What is a logarithmic scale and when should I use one?
+
+A logarithmic scale spaces axis values by powers of the base rather than by equal increments. Each tick mark represents a 10× increase (for log₁₀ scales) or a 2× increase (for log₂ scales). Use log scales when your data spans multiple orders of magnitude — earthquake energies (1 to 10 billion joules), sound intensities (1 to 1 trillion), or stock prices over decades. On a linear scale, small values cluster invisibly near zero; on a log scale, all magnitudes are equally visible and comparable.
+
+</div>
+
 {/* Section 15: Related Calculators — auto-rendered from spec */}
 
 {/* Section 16: How This Is Calculated */}

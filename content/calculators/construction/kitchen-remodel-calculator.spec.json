@@ -8,36 +8,236 @@
   "metaTitle": "Kitchen Remodel Calculator — Estimate Costs by Cabinet, Countertop & Layout",
   "metaDescription": "Estimate your kitchen remodel cost based on size, cabinet quality, countertop material, appliances, flooring, and labor. Average kitchen remodel: $15,000–$50,000. Free calculator.",
   "inputs": [
-    {"id": "kitchenSize", "label": "Kitchen Size", "type": "number", "required": true, "defaultValue": 150, "min": 50, "max": 500, "step": 10, "suffix": "sq ft", "helpText": "Total kitchen floor area in square feet"},
-    {"id": "cabinetQuality", "label": "Cabinet Quality", "type": "select", "required": true, "defaultValue": "semi-custom", "options": [{"value": "stock", "label": "Stock ($100–$300/ln ft)"}, {"value": "semi-custom", "label": "Semi-Custom ($150–$650/ln ft)"}, {"value": "custom", "label": "Custom ($500–$1,200/ln ft)"}]},
-    {"id": "countertopMaterial", "label": "Countertop Material", "type": "select", "required": true, "defaultValue": "granite", "options": [{"value": "laminate", "label": "Laminate ($10–$40/sq ft)"}, {"value": "granite", "label": "Granite ($40–$100/sq ft)"}, {"value": "quartz", "label": "Quartz ($50–$150/sq ft)"}, {"value": "marble", "label": "Marble ($75–$200/sq ft)"}]},
-    {"id": "appliancePackage", "label": "Appliance Package", "type": "select", "required": true, "defaultValue": "mid", "options": [{"value": "basic", "label": "Basic ($2,000–$4,000)"}, {"value": "mid", "label": "Mid-Range ($4,000–$8,000)"}, {"value": "premium", "label": "Premium ($8,000–$15,000)"}]},
-    {"id": "flooringType", "label": "Flooring Type", "type": "select", "required": true, "defaultValue": "tile", "options": [{"value": "vinyl", "label": "Vinyl ($2–$7/sq ft)"}, {"value": "tile", "label": "Tile ($5–$15/sq ft)"}, {"value": "hardwood", "label": "Hardwood ($8–$25/sq ft)"}]},
-    {"id": "backsplashIncluded", "label": "Include Backsplash", "type": "select", "required": true, "defaultValue": "yes", "options": [{"value": "no", "label": "No Backsplash"}, {"value": "basic", "label": "Basic Tile ($10–$25/sq ft)"}, {"value": "premium", "label": "Premium Tile/Stone ($25–$50/sq ft)"}]},
-    {"id": "layoutChange", "label": "Layout Changes", "type": "select", "required": true, "defaultValue": "minor", "options": [{"value": "none", "label": "No Layout Change"}, {"value": "minor", "label": "Minor (move 1–2 items)"}, {"value": "major", "label": "Major (full reconfiguration)"}]}
+    {
+      "id": "kitchenSize",
+      "label": "Kitchen Size",
+      "type": "number",
+      "required": true,
+      "defaultValue": 150,
+      "min": 50,
+      "max": 500,
+      "step": 10,
+      "suffix": "sq ft",
+      "helpText": "Total kitchen floor area in square feet"
+    },
+    {
+      "id": "cabinetQuality",
+      "label": "Cabinet Quality",
+      "type": "select",
+      "required": true,
+      "defaultValue": "semi-custom",
+      "options": [
+        {
+          "value": "stock",
+          "label": "Stock ($100–$300/ln ft)"
+        },
+        {
+          "value": "semi-custom",
+          "label": "Semi-Custom ($150–$650/ln ft)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom ($500–$1,200/ln ft)"
+        }
+      ]
+    },
+    {
+      "id": "countertopMaterial",
+      "label": "Countertop Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "granite",
+      "options": [
+        {
+          "value": "laminate",
+          "label": "Laminate ($10–$40/sq ft)"
+        },
+        {
+          "value": "granite",
+          "label": "Granite ($40–$100/sq ft)"
+        },
+        {
+          "value": "quartz",
+          "label": "Quartz ($50–$150/sq ft)"
+        },
+        {
+          "value": "marble",
+          "label": "Marble ($75–$200/sq ft)"
+        }
+      ]
+    },
+    {
+      "id": "appliancePackage",
+      "label": "Appliance Package",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mid",
+      "options": [
+        {
+          "value": "basic",
+          "label": "Basic ($2,000–$4,000)"
+        },
+        {
+          "value": "mid",
+          "label": "Mid-Range ($4,000–$8,000)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium ($8,000–$15,000)"
+        }
+      ]
+    },
+    {
+      "id": "flooringType",
+      "label": "Flooring Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "tile",
+      "options": [
+        {
+          "value": "vinyl",
+          "label": "Vinyl ($2–$7/sq ft)"
+        },
+        {
+          "value": "tile",
+          "label": "Tile ($5–$15/sq ft)"
+        },
+        {
+          "value": "hardwood",
+          "label": "Hardwood ($8–$25/sq ft)"
+        }
+      ]
+    },
+    {
+      "id": "backsplashIncluded",
+      "label": "Include Backsplash",
+      "type": "select",
+      "required": true,
+      "defaultValue": "yes",
+      "options": [
+        {
+          "value": "no",
+          "label": "No Backsplash"
+        },
+        {
+          "value": "basic",
+          "label": "Basic Tile ($10–$25/sq ft)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium Tile/Stone ($25–$50/sq ft)"
+        }
+      ]
+    },
+    {
+      "id": "layoutChange",
+      "label": "Layout Changes",
+      "type": "select",
+      "required": true,
+      "defaultValue": "minor",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Layout Change"
+        },
+        {
+          "value": "minor",
+          "label": "Minor (move 1–2 items)"
+        },
+        {
+          "value": "major",
+          "label": "Major (full reconfiguration)"
+        }
+      ]
+    }
   ],
   "outputs": [
-    {"id": "totalCost", "label": "Estimated Total Cost", "type": "single-value", "format": "currency", "highlight": true},
-    {"id": "costPerSqFt", "label": "Cost Per Square Foot", "type": "single-value", "format": "currency"},
-    {"id": "cabinetCost", "label": "Cabinet Cost", "type": "single-value", "format": "currency"},
-    {"id": "countertopCost", "label": "Countertop Cost", "type": "single-value", "format": "currency"},
-    {"id": "applianceCost", "label": "Appliance Cost", "type": "single-value", "format": "currency"},
-    {"id": "flooringCost", "label": "Flooring Cost", "type": "single-value", "format": "currency"},
-    {"id": "backsplashCost", "label": "Backsplash Cost", "type": "single-value", "format": "currency"},
-    {"id": "laborCost", "label": "Labor & Installation", "type": "single-value", "format": "currency"},
-    {"id": "plumbingElectrical", "label": "Plumbing & Electrical", "type": "single-value", "format": "currency"},
-    {"id": "costBreakdown", "label": "Cost Breakdown", "type": "value-group", "format": "currency"}
+    {
+      "id": "totalCost",
+      "label": "Estimated Total Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost Per Square Foot",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "cabinetCost",
+      "label": "Cabinet Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "countertopCost",
+      "label": "Countertop Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "applianceCost",
+      "label": "Appliance Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "flooringCost",
+      "label": "Flooring Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "backsplashCost",
+      "label": "Backsplash Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor & Installation",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "plumbingElectrical",
+      "label": "Plumbing & Electrical",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
   ],
   "formula": "kitchen-remodel",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["bathroom-remodel-calculator", "tile-calculator", "flooring-calculator", "drywall-calculator", "paint-calculator", "countertop-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "bathroom-remodel-calculator",
+    "tile-calculator",
+    "flooring-calculator",
+    "drywall-calculator",
+    "paint-calculator",
+    "countertop-calculator"
+  ],
   "disclaimer": "construction",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "National Kitchen & Bath Association (NKBA) — Kitchen Planning Guidelines; HomeAdvisor 2024 True Cost Guide; Remodeling Magazine 2024 Cost vs. Value Report",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "editorial",
   "formulaSource": "Cost estimation based on NKBA kitchen planning guidelines. Cabinet costs per linear foot, countertops per square foot of counter area (estimated at 60% of floor area), labor as percentage of materials. Regional cost factors from HomeAdvisor True Cost data.",
@@ -46,10 +246,14 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["bathroom-remodel-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "bathroom-remodel-calculator"
+  ],
+  "qualityScore": 78,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["square-footage"],
+  "glossaryTerms": [
+    "square-footage"
+  ],
   "methodologyTopics": []
 }

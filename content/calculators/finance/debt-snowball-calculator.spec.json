@@ -248,7 +248,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Iterative monthly amortization with payment cascading — smallest balance first per Dave Ramsey's snowball method",
   "formulaAuditDate": "2026-03-13",
@@ -260,7 +260,7 @@
     "debt-payoff-calculator",
     "debt-avalanche-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 90,
   "lastContentUpdate": "2026-03-13",
   "seasonality": "new-year",
   "glossaryTerms": [

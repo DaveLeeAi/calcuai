@@ -39,9 +39,18 @@
       "required": true,
       "defaultValue": "both",
       "options": [
-        { "value": "permutation", "label": "Permutation (order matters)" },
-        { "value": "combination", "label": "Combination (order doesn't matter)" },
-        { "value": "both", "label": "Both" }
+        {
+          "value": "permutation",
+          "label": "Permutation (order matters)"
+        },
+        {
+          "value": "combination",
+          "label": "Combination (order doesn't matter)"
+        },
+        {
+          "value": "both",
+          "label": "Both"
+        }
       ]
     },
     {
@@ -105,7 +114,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "P(n,r) = n!/(n-r)!; C(n,r) = n!/(r!(n-r)!); P_rep(n,r) = n^r; C_rep(n,r) = (n+r-1)!/(r!(n-1)!)",
   "formulaAuditDate": "2026-03-13",
@@ -116,7 +125,7 @@
   "duplicationRisk": [
     "probability-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null
 }

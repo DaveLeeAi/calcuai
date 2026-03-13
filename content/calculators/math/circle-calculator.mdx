@@ -80,6 +80,86 @@ You have a circular garden bed with a radius of 7 feet and need to calculate the
 
 **Practical interpretation:** You need approximately 154 square feet of mulch (at 1 inch depth, that is about 1.3 cubic yards) and approximately 44 feet of edging material. For purchasing, round the edging up to 45 feet to account for waste.
 
+{/* Section 9b: Second Worked Example */}
+### Finding the Radius from a Known Area — Circular Patio
+
+You are buying pavers for a circular patio advertised as 314 square feet. You need the radius to mark the center point and the circumference to order curved edging.
+
+**Step-by-step:**
+
+1. Known area: **A = 314 sq ft**
+2. Solve for radius: r = √(A / π) = √(314 / 3.14159) = √(99.949) = **9.9975 ft** (≈ 10 ft)
+3. Diameter: d = 2 × 9.9975 = **19.9949 ft** (≈ 20 ft)
+4. Circumference: C = 2 × π × 9.9975 = **62.8240 ft**
+
+**Practical interpretation:** The patio has a radius of almost exactly 10 feet and a circumference of about 63 feet. Order 65 feet of curved edging to allow for overlap and waste. To mark the circle on the ground, drive a stake at the center, attach a 10-foot string, and trace the arc — this ancient method is still the most reliable way to lay out a circular shape on a job site.
+
+### Finding Circumference from Diameter — Bicycle Wheel Distance
+
+A road bike wheel has a diameter of 700 mm (standard 700c size). How far does the bike travel in one full wheel revolution?
+
+**Step-by-step:**
+
+1. Known diameter: **d = 700 mm**
+2. Radius: r = 700 / 2 = **350 mm**
+3. Circumference: C = π × 700 = **2,199.11 mm** (≈ 2.199 m)
+4. Area (cross-section): A = π × 350² = **384,845.10 sq mm**
+
+**Practical interpretation:** Each wheel revolution covers approximately 2.2 meters. At a cycling cadence of 90 RPM with a gear ratio that turns the wheel once per pedal stroke, the bike covers 2.2 × 90 = 198 meters per minute, or about 11.9 km/h (7.4 mph). Bike computers use this exact circumference calculation to convert wheel rotation counts into distance traveled.
+
+{/* Section 10: Real-World Uses */}
+## Real-World Uses
+
+**Landscaping and irrigation.** Sprinkler heads spray in circular patterns. A sprinkler with a 15-foot radius covers π × 15² = 706.9 square feet. Knowing this tells you how many sprinkler heads you need to cover a rectangular lawn — a 50 × 30-foot yard (1,500 sq ft) needs at least 3 heads with partial overlap, not the 2 that a naive division would suggest.
+
+**Pizza value comparison.** A 16-inch pizza has an area of π × 8² = 201.1 square inches, while a 12-inch pizza has π × 6² = 113.1 square inches. The 16-inch pizza is 78% larger than the 12-inch, not 33% larger as the diameter ratio implies. If the 16-inch costs \$18 and the 12-inch costs \$12, the larger pizza is \$0.090/sq in versus \$0.106/sq in — 18% cheaper per bite.
+
+**Pipe flow and plumbing.** Water flow capacity through a pipe depends on its cross-sectional area. A 1-inch diameter pipe has an area of π × 0.5² = 0.785 sq in. A 2-inch pipe has π × 1² = 3.14 sq in — four times the area, not double. Doubling the pipe diameter quadruples the flow capacity, which is why plumbers upsize pipes rather than adding parallel runs.
+
+**Wheel and gear sizing.** In mechanical engineering, the circumference of a gear determines its pitch — the distance between teeth. A gear with a 4-inch diameter and 20 teeth has a circular pitch of (π × 4) / 20 = 0.628 inches per tooth. Meshing gears must have identical circular pitch to engage properly.
+
+{/* Section 11: Common Mistakes to Avoid */}
+## Common Mistakes to Avoid
+
+**Confusing radius and diameter.** The most common circle calculation error is entering the diameter where the radius belongs (or vice versa). A circle with radius 10 has area 314.16, but a circle with diameter 10 (radius 5) has area 78.54 — exactly one-quarter as much. Always verify which measurement you have before entering it. If you measured "across the circle," that is the diameter — divide by 2 to get the radius.
+
+**Forgetting to square the units for area.** A circle with radius 5 feet has a circumference of 31.42 feet but an area of 78.54 *square* feet. When ordering materials priced per square foot (tile, turf, mulch), use the area number. When ordering materials priced per linear foot (edging, fencing, trim), use the circumference.
+
+**Using π ≈ 3 instead of 3.14159.** Rounding pi to 3 introduces a 4.5% error. For a circle with radius 20 feet, using π = 3 gives area = 1,200 sq ft instead of the correct 1,256.64 sq ft — a 56.64 sq ft error. For back-of-napkin estimates, π ≈ 3.14 is accurate to within 0.05%.
+
+**Not accounting for the area-to-radius scaling.** Area scales with the *square* of the radius. Doubling the radius quadruples the area. A garden bed with radius 10 feet (314 sq ft) upgraded to radius 15 feet does not increase by 50% — it increases to 707 sq ft, a 125% jump. This nonlinear scaling consistently surprises homeowners estimating material quantities.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes a **perfect geometric circle**. Real-world circles (ponds, patios, rooms) are approximate. For irregular curves, measure the average radius at multiple points and use the mean value.
+- The calculator uses **JavaScript's Math.PI** constant (3.141592653589793), which is accurate to 15 decimal places — far beyond what any physical measurement requires.
+- Results are **unit-agnostic**: enter inches, get square inches for area; enter meters, get square meters. The calculator does not convert between unit systems. Use our [Square Meter Calculator](/calculators/conversion/square-meter-calculator) for unit conversion.
+- Does not compute **arc length, sector area, or segment area** for partial circles. These require an additional angle measurement.
+- **Three-dimensional calculations** (sphere volume, cylinder volume) are not included. A circle's area is two-dimensional only.
+
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the area of a circle with radius 10?
+
+The area of a circle with radius 10 is π × 10² = 314.159 square units. If the radius is in feet, the area is 314.159 square feet — roughly the size of a large living room or a single-car garage. To convert to square meters, multiply by 0.0929: 314.159 × 0.0929 = 29.19 square meters.
+
+### How do I find the radius if I only know the circumference?
+
+Divide the circumference by 2π. If a tree trunk measures 62.83 inches around, the radius is 62.83 ÷ (2 × 3.14159) = 10.0 inches, and the diameter is 20.0 inches. This is how foresters estimate tree diameter — they wrap a tape measure around the trunk (circumference) and divide by pi, using a specialized "diameter tape" that reads the conversion directly.
+
+### Why is pi used in circle formulas?
+
+Pi (π ≈ 3.14159) is the ratio of any circle's circumference to its diameter — a constant that holds for every circle regardless of size. Archimedes proved around 250 BC that this ratio is the same for all circles and approximated it between 3 10/71 and 3 1/7 (3.1408 to 3.1429). The area formula A = πr² follows from dividing a circle into infinitely thin triangular wedges whose combined base equals the circumference (2πr) and whose height equals the radius (r), giving area = ½ × 2πr × r = πr².
+
+### How much bigger is a 14-inch pizza than a 10-inch pizza?
+
+A 14-inch pizza (radius 7) has area π × 7² = 153.94 sq in. A 10-inch pizza (radius 5) has area π × 5² = 78.54 sq in. The 14-inch pizza is 96% larger — nearly double the food, despite being only 40% wider in diameter. This is because area scales with the square of the diameter. If the 14-inch pizza costs 50% more than the 10-inch, it is significantly better value per square inch.
+
+</div>
+
 {/* Section 15: Related Calculators — auto-rendered from spec */}
 
 {/* Section 16: How This Is Calculated */}
