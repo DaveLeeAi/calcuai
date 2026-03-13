@@ -1,6 +1,11 @@
 'use client';
 
 import { useState, useMemo, useCallback } from 'react';
+import Link from 'next/link';
+
+function stateNameToSlug(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '-sales-tax';
+}
 
 interface StateTaxRecord {
   stateCode: string;
@@ -239,9 +244,15 @@ export default function StateTaxTable({ data, onStateClick }: StateTaxTableProps
                       : undefined
                   }
                 >
-                  <td className="sticky left-0 bg-white dark:bg-slate-800 px-3 py-2.5 text-sm font-medium text-gray-900 dark:text-white whitespace-nowrap z-10">
+                  <td className="sticky left-0 bg-white dark:bg-slate-800 px-3 py-2.5 text-sm font-medium whitespace-nowrap z-10">
                     <span className="inline-flex items-center gap-2">
-                      {state.stateName}
+                      <Link
+                        href={`/calculators/finance/${stateNameToSlug(state.stateName)}`}
+                        className="text-brand-600 dark:text-brand-400 hover:underline"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        {state.stateName}
+                      </Link>
                       {isNoTax && (
                         <span className="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/40 px-1.5 py-0.5 text-[10px] font-bold text-green-700 dark:text-green-400">
                           NO TAX
@@ -289,7 +300,7 @@ export default function StateTaxTable({ data, onStateClick }: StateTaxTableProps
       <div className="border-t border-gray-100 dark:border-slate-700 px-4 py-2">
         <p className="text-xs text-gray-400 dark:text-slate-500">
           {sorted.length} of {data.length} states shown. Combined rates = state + average local.
-          Source: Tax Foundation, 2026. Click any state to calculate.
+          Source: Tax Foundation, 2026. Click any state name for detailed rates, exemptions, and examples.
         </p>
       </div>
     </div>

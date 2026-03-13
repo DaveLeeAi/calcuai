@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useMemo, useCallback, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import * as topojson from 'topojson-client';
 import { geoAlbersUsa, geoPath } from 'd3-geo';
 import type { Topology, GeometryCollection } from 'topojson-specification';
@@ -43,6 +44,12 @@ const FIPS_TO_STATE: Record<string, string> = {
   '49': 'Utah', '50': 'Vermont', '51': 'Virginia', '53': 'Washington',
   '54': 'West Virginia', '55': 'Wisconsin', '56': 'Wyoming',
 };
+
+// ─── State slug helper ───────────────────────────────
+
+function stateNameToSlug(name: string): string {
+  return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '') + '-sales-tax';
+}
 
 // ─── Color interpolation ─────────────────────────────
 
@@ -93,6 +100,7 @@ export default function USChoroplethMap({
   colorScale = ['#D5E8F4', '#0D3B5E'],
   noDataColor = '#E5E7EB',
 }: USChoroplethMapProps) {
+  const router = useRouter();
   const [topology, setTopology] = useState<Topology | null>(null);
   const [tooltip, setTooltip] = useState<{
     x: number;
@@ -201,8 +209,12 @@ export default function USChoroplethMap({
       const paddedFips = fips.padStart(2, '0');
       const d = dataByFips.get(paddedFips);
       if (d && onStateClick) onStateClick(d);
+      const stateName = FIPS_TO_STATE[paddedFips];
+      if (stateName) {
+        router.push(`/calculators/finance/${stateNameToSlug(stateName)}`);
+      }
     },
-    [dataByFips, onStateClick]
+    [dataByFips, onStateClick, router]
   );
 
   // Legend steps
@@ -301,6 +313,9 @@ export default function USChoroplethMap({
                   No data available
                 </p>
               )}
+              <p className="mt-1.5 text-xs text-brand-500 dark:text-brand-400">
+                Click to view details →
+              </p>
             </div>
           )}
         </div>
