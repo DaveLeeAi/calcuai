@@ -1,0 +1,148 @@
+{
+  "id": "z-score-calculator",
+  "title": "Z-Score Calculator",
+  "slug": "z-score-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "z-score calculator",
+  "metaTitle": "Z-Score Calculator — Standard Score & Percentile",
+  "metaDescription": "Calculate z-score from a value, mean, and standard deviation. Also compute percentile and cumulative probability. Free statistics calculator with step-by-step breakdown.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "calculate-z",
+      "options": [
+        {
+          "value": "calculate-z",
+          "label": "Calculate Z-Score from Value"
+        },
+        {
+          "value": "calculate-x",
+          "label": "Calculate Value from Z-Score"
+        }
+      ],
+      "helpText": "Choose whether to find the z-score or reverse-calculate the original value"
+    },
+    {
+      "id": "value",
+      "label": "Observed Value (x)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 115,
+      "step": 0.01,
+      "placeholder": "e.g. 115",
+      "helpText": "The observed value (x)"
+    },
+    {
+      "id": "mean",
+      "label": "Population Mean (μ)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 100,
+      "step": 0.01,
+      "placeholder": "e.g. 100",
+      "helpText": "Population mean (μ)"
+    },
+    {
+      "id": "standardDeviation",
+      "label": "Standard Deviation (σ)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0.001,
+      "step": 0.01,
+      "placeholder": "e.g. 15",
+      "helpText": "Standard deviation (σ)"
+    },
+    {
+      "id": "zScore",
+      "label": "Z-Score",
+      "type": "number",
+      "required": false,
+      "step": 0.01,
+      "placeholder": "e.g. 1.96",
+      "helpText": "Z-score for reverse calculation"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Z-Score Results",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "zScore",
+      "label": "Z-Score",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "cumulativeProbability",
+      "label": "Cumulative Probability P(Z ≤ z)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "percentile",
+      "label": "Percentile",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "suffix": "%"
+    },
+    {
+      "id": "probabilityAbove",
+      "label": "Probability Above P(Z > z)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "breakdown",
+      "label": "Step-by-Step Breakdown",
+      "type": "breakdown"
+    }
+  ],
+  "formula": "z-score",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "standard-deviation-calculator",
+    "confidence-interval-calculator",
+    "p-value-calculator",
+    "sample-size-calculator",
+    "probability-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Carl Friedrich Gauss, Theoria motus corporum coelestium (1809)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "z = (x - μ) / σ; CDF via Abramowitz & Stegun erf approximation (7.1.26)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

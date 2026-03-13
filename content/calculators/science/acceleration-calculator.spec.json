@@ -1,0 +1,145 @@
+{
+  "id": "acceleration-calculator",
+  "title": "Acceleration Calculator",
+  "slug": "acceleration-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "acceleration calculator",
+  "metaTitle": "Acceleration Calculator — Kinematic & Force-Based",
+  "metaDescription": "Calculate acceleration from velocity change over time (a = \u0394v/\u0394t) or from force and mass (a = F/m). Free physics calculator with g-force conversions.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "options": [
+        { "value": "kinematic", "label": "Kinematic (velocity & time)" },
+        { "value": "force", "label": "Force-based (F/m)" }
+      ],
+      "defaultValue": "kinematic",
+      "helpText": "Choose kinematic mode for velocity/time problems or force mode for F=ma problems"
+    },
+    {
+      "id": "initialVelocity",
+      "label": "Initial Velocity",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 0",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "defaultValue": 0,
+      "helpText": "Starting velocity (kinematic mode)"
+    },
+    {
+      "id": "finalVelocity",
+      "label": "Final Velocity",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 100",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "defaultValue": 100,
+      "helpText": "Ending velocity (kinematic mode)"
+    },
+    {
+      "id": "time",
+      "label": "Time",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "s",
+      "defaultValue": 10,
+      "helpText": "Time elapsed in seconds (kinematic mode)"
+    },
+    {
+      "id": "force",
+      "label": "Force",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 500",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "N",
+      "helpText": "Applied force in newtons (force mode)"
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 50",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "kg",
+      "helpText": "Object mass in kilograms (force mode)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "acceleration",
+      "label": "Acceleration",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "breakdown",
+      "label": "Calculation Breakdown",
+      "type": "breakdown",
+      "format": "number"
+    }
+  ],
+  "formula": "acceleration",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "force-calculator",
+    "momentum-calculator",
+    "energy-calculator",
+    "pressure-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Galileo Galilei, Discorsi e dimostrazioni matematiche (1638); Newton, Principia (1687)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Kinematic: a = (v_f - v_i) / t; Force: a = F / m",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

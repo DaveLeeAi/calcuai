@@ -1,0 +1,156 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A car going from 0 to 100 km/h (27.78 m/s) in 8 seconds accelerates at 3.47 m/s squared — about 0.35 g, meaning one-third of the force gravity exerts on you. This acceleration calculator supports two modes: kinematic (from velocity change and time) and force-based (from Newton's second law, F/m). Enter your known values and get instant results with conversions between m/s squared, g-force, ft/s squared, and km/h/s for physics homework, automotive performance analysis, and engineering design.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Acceleration measures how quickly velocity changes over time. It is the bridge between kinematics (describing motion) and dynamics (explaining why objects move). This calculator offers two paths to the same quantity: the kinematic approach divides velocity change by elapsed time, and the force approach divides net force by mass. Both yield acceleration in the same units — meters per second squared.
+
+In kinematic mode, the result tells you how much velocity increases (or decreases, for deceleration) every second. An acceleration of 3.47 m/s squared means the object gains 3.47 m/s of speed each second. Starting from rest, after 1 second it moves at 3.47 m/s, after 2 seconds at 6.94 m/s, and so on — provided the acceleration remains constant. In force mode, the result tells you how responsive the object is to an applied force: a 500 N force on a 50 kg object produces 10 m/s squared, but the same force on a 5,000 kg truck produces only 0.1 m/s squared.
+
+G-force conversions are provided for quick reference: 1 g = 9.80665 m/s squared. The [Force Calculator](/calculators/science/force-calculator) computes the force required for a given acceleration, and the [Velocity Calculator](/calculators/science/velocity-calculator) solves speed-distance-time problems.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose your calculation mode.** Select "Kinematic" if you know velocity and time values, or "Force-based" if you know the applied force and mass.
+2. **For kinematic mode:** enter the Initial Velocity (m/s), Final Velocity (m/s), and Time (s). The calculator computes acceleration as the change in velocity divided by time. Set initial velocity to 0 for "from rest" problems.
+3. **For force mode:** enter the Force (N) and Mass (kg). The calculator divides force by mass to find acceleration using Newton's second law.
+4. **Read the results.** The primary output is acceleration in m/s squared, with automatic conversions to g-force, ft/s squared, and km/h/s.
+5. **Verify reasonableness.** Typical accelerations: a braking car = 3-8 m/s squared (0.3-0.8 g), a rollercoaster = 10-40 m/s squared (1-4 g), a fighter jet = 70-90 m/s squared (7-9 g), Earth's gravity = 9.81 m/s squared (1 g). If your result seems unusual, double-check that force is in newtons and mass in kilograms.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Kinematic Acceleration (from velocity and time)
+
+$$a = \frac{v_f - v_i}{t}$$
+
+Where:
+
+- **a** = acceleration, in meters per second squared (m/s²)
+- **v_f** = final velocity, in meters per second (m/s)
+- **v_i** = initial velocity, in meters per second (m/s)
+- **t** = time elapsed, in seconds (s)
+
+This equation gives average acceleration over the time interval. When an object speeds up, acceleration is positive. When it slows down (decelerates), the change in velocity is negative, producing negative acceleration.
+
+### Force-Based Acceleration (Newton's second law)
+
+$$a = \frac{F}{m}$$
+
+Where:
+
+- **F** = net force, in newtons (N)
+- **m** = mass, in kilograms (kg)
+
+This form of Newton's second law reveals that acceleration is directly proportional to force and inversely proportional to mass. Doubling the force doubles the acceleration; doubling the mass halves it.
+
+### Related Kinematic Equations
+
+$$v_f = v_i + a \times t$$
+
+$$d = v_i \times t + \frac{1}{2} a \times t^2$$
+
+$$v_f^2 = v_i^2 + 2 \times a \times d$$
+
+These three kinematic equations (along with a = delta-v / t) form the complete set for uniformly accelerated motion. Together they relate five variables: initial velocity, final velocity, acceleration, time, and distance.
+
+### Unit Conversions
+
+$$1 \text{ m/s}^2 = 3.28084 \text{ ft/s}^2 = 3.6 \text{ km/h/s} = 0.101972 \text{ g}$$
+
+To convert m/s squared to g-force, divide by 9.80665. To convert to ft/s squared, multiply by 3.28084. One g is the acceleration due to Earth's gravity at standard conditions.
+
+**Source:** Galileo Galilei, *Discorsi e dimostrazioni matematiche intorno a due nuove scienze* (1638), Third Day — uniformly accelerated motion. Isaac Newton, *Philosophiae Naturalis Principia Mathematica* (1687), Law II. Unit definitions per NIST Special Publication 330 (2019).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Car 0-to-60 mph Acceleration
+
+A sports car accelerates from 0 to 60 mph (26.82 m/s) in 5.2 seconds. What is its average acceleration?
+
+**Step-by-step:**
+
+1. Known values: v_i = **0 m/s**, v_f = 60 mph = 60 times 0.44704 = **26.8224 m/s**, t = **5.2 s**
+2. Apply the formula: a = (v_f - v_i) / t = (26.8224 - 0) / 5.2 = **5.158 m/s²**
+3. Convert to g-force: 5.158 / 9.80665 = **0.526 g**
+4. Convert to ft/s²: 5.158 times 3.28084 = **16.92 ft/s²**
+
+**Result:** The car's average acceleration is **5.16 m/s²** (0.53 g, 16.92 ft/s²).
+
+**Practical interpretation:** At 0.53 g, occupants feel roughly half their body weight pushing them into the seat. A typical family sedan reaches 60 mph in 7-9 seconds (about 0.3-0.4 g), while a Tesla Model S Plaid does it in 1.99 seconds (about 1.37 g) — approaching the traction limit of road tires. The faster the 0-60 time, the higher the sustained acceleration the drivetrain and tires must deliver. Use the [Force Calculator](/calculators/science/force-calculator) to find how many newtons the drivetrain produces at the wheels.
+
+### Example 2: Gravitational Acceleration from Weight Force
+
+A crate weighs 245 N. If its mass is 25 kg, what is the gravitational acceleration at that location?
+
+**Step-by-step:**
+
+1. Known values: F = **245 N**, m = **25 kg**
+2. Apply the force formula: a = F / m = 245 / 25 = **9.80 m/s²**
+3. Convert to g-force: 9.80 / 9.80665 = **0.9993 g**
+4. Convert to ft/s²: 9.80 times 3.28084 = **32.15 ft/s²**
+
+**Result:** The gravitational acceleration is **9.80 m/s²** (approximately 1 g, 32.15 ft/s²).
+
+**Practical interpretation:** This result is within 0.07% of the standard gravity constant (9.80665 m/s squared), confirming the measurement was taken near sea level at a temperate latitude. Gravitational acceleration varies from 9.764 m/s squared at the equator to 9.832 m/s squared at the poles due to Earth's oblate shape and rotation. At the International Space Station's altitude (408 km), g is still 8.67 m/s squared — astronauts appear weightless not because gravity vanishes, but because they are in continuous free fall around the Earth.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Constant vs. non-constant acceleration.** This calculator assumes uniform (constant) acceleration over the given time interval. Real-world acceleration is rarely constant: a car's acceleration decreases as it approaches top speed because air resistance grows with the square of velocity, and engine output drops at high RPM. The result represents an average — the actual instantaneous acceleration varies throughout the interval. For non-uniform acceleration, you need calculus (a = dv/dt).
+
+**Air resistance opposes acceleration at all speeds.** Aerodynamic drag force is proportional to the square of velocity. A car at 30 m/s faces four times the drag of the same car at 15 m/s. This means maintaining constant acceleration requires progressively more engine force as speed builds. At terminal velocity — roughly 56 m/s (200 km/h) for a skydiver in spread position — drag exactly equals weight and net acceleration drops to zero.
+
+**Reference frames change the measured acceleration.** Acceleration is absolute in Newtonian mechanics — all inertial reference frames measure the same acceleration for a given object. However, in a non-inertial (accelerating) frame, fictitious forces appear. A passenger in a turning car feels pushed outward (centrifugal effect), even though the actual net force is directed inward (centripetal). The [Momentum Calculator](/calculators/science/momentum-calculator) can help analyze frame-dependent collision problems.
+
+**G-force limits on the human body.** Sustained acceleration above 5 g causes blood pooling and vision loss (greyout at 4-5 g, blackout at 5-6 g). Fighter pilots in anti-g suits tolerate up to 9 g for short periods. In a car crash at 50 km/h against a rigid barrier, peak deceleration can exceed 30 g for 50-100 milliseconds — which is why seatbelts and airbags are engineered to extend the deceleration time, reducing peak g-force.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Uniform acceleration assumed.** The kinematic formula a = delta-v / t computes average acceleration. If acceleration varies (e.g., during a car launch where engine torque changes with RPM), the result is an average over the interval, not the peak.
+- **Scalar calculation only.** This calculator treats acceleration as a magnitude. For problems with acceleration at an angle (e.g., projectile motion with both horizontal and vertical components), you must decompose the problem into orthogonal components.
+- **Classical mechanics only.** At speeds approaching the speed of light, relativistic effects make F = ma inadequate. The relativistic form is F = d(gamma times mv)/dt, where gamma is the Lorentz factor. For speeds below 10% of the speed of light, the classical formula is accurate to better than 0.5%.
+- **Net force required for force mode.** The force input should be the net (resultant) force, not the total applied force. If multiple forces act on the object, compute the vector sum first.
+- **Positive time interval required.** The time input must be greater than zero. Division by zero is undefined and would produce an infinite acceleration, which is physically meaningless.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is 1g of acceleration?
+
+One g equals 9.80665 m/s squared (32.174 ft/s squared), which is the standard acceleration due to Earth's gravity at sea level. When you stand on the ground, you experience a constant 1 g. In a car accelerating hard from a stoplight at about 0.5 g, you feel pressed into your seat with a force equal to half your body weight. Astronauts during a Space Shuttle launch experienced about 3 g. The highest sustained g-force survived by a human was 46.2 g for a fraction of a second, recorded by Air Force officer John Stapp in a rocket sled deceleration test in 1954.
+
+### Is deceleration negative acceleration?
+
+Yes, deceleration is simply acceleration in the direction opposite to the velocity — it is represented as a negative value when the velocity direction is defined as positive. A car braking from 30 m/s to 0 m/s in 5 seconds has an acceleration of negative 6 m/s squared. Physically, the brakes apply a force opposite to the direction of motion, producing this negative rate of velocity change. There is no fundamental difference between acceleration and deceleration — both are changes in velocity per unit time, and the sign indicates direction relative to the chosen coordinate system.
+
+### How fast does a free-falling object accelerate?
+
+A free-falling object near Earth's surface accelerates at approximately 9.81 m/s squared (1 g), gaining 9.81 m/s of downward speed every second. After 1 second it falls at 9.81 m/s (35.3 km/h), after 2 seconds at 19.62 m/s (70.6 km/h), and after 3 seconds at 29.43 m/s (106 km/h). In practice, air resistance limits the maximum speed. A skydiver in spread-eagle position reaches terminal velocity of about 55 m/s (200 km/h) after roughly 12 seconds. In a head-down dive, terminal velocity increases to around 90 m/s (320 km/h). In a vacuum, all objects fall at exactly the same rate regardless of mass — a feather and a bowling ball hit the ground at the same time, as demonstrated by Apollo 15 astronaut David Scott on the Moon in 1971.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes acceleration using one of two formulas depending on the selected mode. In kinematic mode, it subtracts initial velocity from final velocity and divides by elapsed time (a = delta-v / t). In force mode, it divides the net force by the object mass (a = F / m). Both methods return the same physical quantity in m/s squared. Unit conversions use fixed factors: divide by 9.80665 for g-force, multiply by 3.28084 for ft/s squared, and multiply by 3.6 for km/h/s.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

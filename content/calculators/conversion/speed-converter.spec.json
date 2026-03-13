@@ -1,0 +1,177 @@
+{
+  "id": "speed-converter",
+  "title": "Speed Converter",
+  "slug": "speed-converter",
+  "category": "conversion",
+  "subcategory": "speed",
+  "primaryKeyword": "speed converter",
+  "metaTitle": "Speed Converter — MPH, KM/H, M/S, Knots & More",
+  "metaDescription": "Convert between speed units including miles per hour, kilometers per hour, meters per second, feet per second, knots, and Mach. Free instant speed unit converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 100,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Speed value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "kilometers-per-hour",
+      "options": [
+        {
+          "value": "meters-per-second",
+          "label": "Meters per Second (m/s)"
+        },
+        {
+          "value": "kilometers-per-hour",
+          "label": "Kilometers per Hour (km/h)"
+        },
+        {
+          "value": "miles-per-hour",
+          "label": "Miles per Hour (mph)"
+        },
+        {
+          "value": "feet-per-second",
+          "label": "Feet per Second (ft/s)"
+        },
+        {
+          "value": "knots",
+          "label": "Knots (kn)"
+        },
+        {
+          "value": "mach",
+          "label": "Mach (M)"
+        },
+        {
+          "value": "centimeters-per-second",
+          "label": "Centimeters per Second (cm/s)"
+        },
+        {
+          "value": "speed-of-light",
+          "label": "Speed of Light (c)"
+        }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "miles-per-hour",
+      "options": [
+        {
+          "value": "meters-per-second",
+          "label": "Meters per Second (m/s)"
+        },
+        {
+          "value": "kilometers-per-hour",
+          "label": "Kilometers per Hour (km/h)"
+        },
+        {
+          "value": "miles-per-hour",
+          "label": "Miles per Hour (mph)"
+        },
+        {
+          "value": "feet-per-second",
+          "label": "Feet per Second (ft/s)"
+        },
+        {
+          "value": "knots",
+          "label": "Knots (kn)"
+        },
+        {
+          "value": "mach",
+          "label": "Mach (M)"
+        },
+        {
+          "value": "centimeters-per-second",
+          "label": "Centimeters per Second (cm/s)"
+        },
+        {
+          "value": "speed-of-light",
+          "label": "Speed of Light (c)"
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "result",
+      "label": "Converted Value",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "highlight": true
+    },
+    {
+      "id": "conversionDetail",
+      "label": "Conversion Details",
+      "type": "value-group",
+      "format": "text"
+    },
+    {
+      "id": "conversionTable",
+      "label": "All Speed Conversions",
+      "type": "table",
+      "columns": [
+        {
+          "key": "unit",
+          "label": "Unit"
+        },
+        {
+          "key": "abbreviation",
+          "label": "Abbr"
+        },
+        {
+          "key": "value",
+          "label": "Value"
+        }
+      ]
+    }
+  ],
+  "formula": "unit-convert",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "length-converter",
+    "temperature-converter",
+    "weight-converter",
+    "volume-converter"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": false,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NIST Special Publication 330, The International System of Units (2019 Edition)",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "result = value × (fromUnit.toBase / toUnit.toBase); base unit = m/s",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "velocity-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

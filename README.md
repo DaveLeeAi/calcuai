@@ -1,8 +1,8 @@
 # CalcuAI
 
-A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **168 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
+A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **178 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
 
-**174 test suites · 3,493 passing tests · 158 formula modules · 34 glossary terms · 9 methodology pages**
+**183 test suites · 4,215 passing tests · 167 formula modules · 34 glossary terms · 9 methodology pages**
 
 ## Tech Stack
 
@@ -13,23 +13,23 @@ A spec-driven calculator authority site built for dual-ranking on Google Search 
 - **Math:** KaTeX for formula rendering
 - **Charts:** Recharts for visualizations
 - **Search:** Fuse.js (client-side)
-- **Testing:** Jest + ts-jest (3,493 tests across 174 suites)
+- **Testing:** Jest + ts-jest (4,215 tests across 183 suites)
 - **Hosting:** Vercel
 
 ## Calculators
 
-168 specs across 8 categories:
+178 specs across 8 categories:
 
 | Category | Count | Examples |
 |----------|-------|---------|
-| **Finance** | 56 | Mortgage, Compound Interest, 401(k), Rental Property, HELOC, Debt Snowball/Avalanche, Self-Employment Tax, Home Insurance, Estimated Tax, Balance Transfer, Mortgage Points, Property Tax |
-| **Construction** | 35 | Concrete (Slab, Footing, Block), Roofing (Shingles, Metal), Asphalt, Driveway Cost, HVAC Size, Wire Size, Pool Volume, Paver, Brick, Siding, Carpet, Deck, Insulation, Retaining Wall |
-| **Math** | 20 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability, Permutation/Combination |
+| **Finance** | 55 | Mortgage, Compound Interest, 401(k), Rental Property, HELOC, Debt Snowball/Avalanche, Self-Employment Tax, Home Insurance, Estimated Tax, Balance Transfer, Mortgage Points, Property Tax |
+| **Construction** | 33 | Concrete (Slab, Footing, Block), Roofing (Shingles, Metal), Asphalt, Driveway Cost, HVAC Size, Wire Size, Pool Volume, Paver, Brick, Siding, Carpet, Deck, Insulation, Retaining Wall |
+| **Math** | 22 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability, Permutation/Combination, Z-Score, Sample Size |
 | **Business** | 16 | ROI, Break-Even, Profit, Payroll, Hourly-to-Salary, Net Income, PTO Payout, Raise, Commission |
 | **Health** | 16 | TDEE, BMI, BMR, Calorie, Body Fat, Macro, Due Date, Ovulation, Water Intake, Heart Rate Zones |
 | **Everyday** | 16 | Tip, Discount, Gas Mileage, Solar Panel, Fuel Cost, Electricity Cost, Age, Date, GPA |
-| **Conversion** | 7 | Length, Weight, Temperature, Volume, Area, Data Storage, Square Meter |
-| **Science** | 5 | Ohm's Law, Density, Velocity, Pressure, Energy |
+| **Conversion** | 8 | Length, Weight, Temperature, Volume, Area, Data Storage, Square Meter, Speed |
+| **Science** | 12 | Ohm's Law, Density, Velocity, Pressure, Energy, Force, Acceleration, Momentum, Work, Power, Frequency, Wave Speed |
 
 ### Calculator Tiers
 
@@ -53,12 +53,12 @@ content/
   calculators/{category}/     .spec.json + .mdx per calculator
   categories/                 8 category definition JSONs
 lib/
-  formulas/{category}/        158 pure TypeScript formula modules
+  formulas/{category}/        167 pure TypeScript formula modules
   types.ts                    All TypeScript interfaces
   content-loader.ts           Build-time spec + MDX loader
   search-index.ts             Fuse.js index builder
 scripts/                      CLI tools (generate, validate, audit, score)
-__tests__/formulas/           174 test files, 3,493 unit tests
+__tests__/formulas/           183 test files, 4,215 unit tests
 ```
 
 ## Getting Started

@@ -1,0 +1,89 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+100 km/h equals 62.14 mph, 27.78 m/s, 91.13 ft/s, or 53.99 knots. This speed converter instantly translates between 8 speed units — meters per second, kilometers per hour, miles per hour, feet per second, knots, Mach, centimeters per second, and the speed of light. Enter any value in one unit and see all conversions at once.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Speed conversions use fixed ratios derived from the definitions of the underlying distance and time units. A mile is exactly 1,609.344 meters, an hour is exactly 3,600 seconds, and a nautical mile is exactly 1,852 meters. These definitions make every speed conversion a simple multiplication or division by a constant factor — no rounding or approximation needed for the conversion itself.
+
+The converter also supports Mach numbers (referenced to the speed of sound in dry air at 20°C: 343 m/s) and fractions of the speed of light (c = 299,792,458 m/s). For physics problems involving speed calculations from distance and time, see the [Velocity Calculator](/calculators/science/velocity-calculator). For converting between distance units, use the [Length Converter](/calculators/conversion/length-converter).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the speed value** you want to convert in the value field.
+2. **Select the source unit** from the "From" dropdown (e.g., kilometers per hour).
+3. **Select the target unit** from the "To" dropdown (e.g., miles per hour).
+4. **Read the result.** The conversion table shows your value in all 8 supported units simultaneously.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+All conversions pass through meters per second (m/s) as the base unit:
+
+$$\text{result} = \text{value} \times \frac{\text{fromFactor}}{\text{toFactor}}$$
+
+### Conversion Factors to m/s
+
+| Unit | Abbreviation | 1 unit = ? m/s |
+|------|-------------|----------------|
+| Meters per second | m/s | 1 |
+| Kilometers per hour | km/h | 0.277778 |
+| Miles per hour | mph | 0.44704 |
+| Feet per second | ft/s | 0.3048 |
+| Knots | kn | 0.514444 |
+| Mach (at 20°C in air) | M | 343 |
+| Centimeters per second | cm/s | 0.01 |
+| Speed of light | c | 299,792,458 |
+
+### Quick Reference: 1 m/s equals
+
+$$1 \text{ m/s} = 3.6 \text{ km/h} = 2.23694 \text{ mph} = 3.28084 \text{ ft/s} = 1.94384 \text{ kn}$$
+
+**Source:** Unit definitions from NIST Special Publication 330, *The International System of Units* (2019 Edition). The mile is defined as exactly 1,609.344 meters. The nautical mile is defined as exactly 1,852 meters. Mach 1 reference: speed of sound in dry air at 20°C, 101.325 kPa.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example: Converting Highway Speed Limits
+
+A European highway has a speed limit of 130 km/h. What is this in mph, m/s, and knots?
+
+**Step-by-step:**
+
+1. Convert to m/s (base unit): 130 × 0.277778 = **36.11 m/s**
+2. Convert m/s to mph: 36.11 / 0.44704 = **80.78 mph**
+3. Convert m/s to ft/s: 36.11 / 0.3048 = **118.47 ft/s**
+4. Convert m/s to knots: 36.11 / 0.514444 = **70.19 knots**
+5. Convert m/s to Mach: 36.11 / 343 = **0.1053 Mach**
+
+**Result:** 130 km/h = **80.78 mph** = **36.11 m/s** = **118.47 ft/s** = **70.19 knots** = **Mach 0.1053**.
+
+**Practical interpretation:** The 130 km/h European highway limit is roughly equivalent to 80 mph — noticeably faster than the typical 65-70 mph US interstate limit. Germany's Autobahn advisory speed is 130 km/h, though many sections have no legal maximum. At Mach 0.105, a car at this speed travels at about 10.5% the speed of sound.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Exact conversion factors.** All conversions use the internationally defined relationships between units. No rounding is applied to the conversion factors themselves — only the displayed result is rounded for readability.
+- **Mach number is temperature-dependent.** This converter uses Mach 1 = 343 m/s, which is the speed of sound in dry air at 20°C and sea-level pressure (101.325 kPa). At higher altitudes or different temperatures, the actual speed of sound changes, and Mach conversions would differ accordingly.
+- **Speed of light is exact.** The value 299,792,458 m/s is a defined constant in the SI system, not a measurement. Conversions to and from the speed of light are exact.
+- **Positive values only.** Speed magnitude is always non-negative. Direction is not modeled.
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This converter translates the input value to meters per second using the source unit's conversion factor, then divides by the target unit's conversion factor to produce the result. All conversion factors are derived from exact unit definitions published by NIST and the International Bureau of Weights and Measures (BIPM). The full conversion table is generated by converting the input to all 8 supported units simultaneously.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

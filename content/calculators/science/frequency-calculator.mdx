@@ -1,0 +1,155 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A guitar string vibrating with a period of 2.2727 milliseconds produces a frequency of 440 Hz — the A4 note used as the universal tuning standard by orchestras worldwide since 1955. This frequency calculator converts between frequency and period using f = 1/T and calculates frequency from wave speed and wavelength using f = v/λ. Enter any known values and get instant results in hertz, kilohertz, megahertz, gigahertz, and RPM for applications in music, radio engineering, acoustics, optics, and physics coursework.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Frequency measures how many complete cycles of a repeating event occur per second. A frequency of 440 Hz means the string (or air column, or electromagnetic field) completes 440 full oscillation cycles every second. The period is simply the reciprocal: each cycle takes 1/440 = 0.0022727 seconds (2.2727 milliseconds) to complete.
+
+The calculator operates in two modes. The period mode (f = 1/T) is the direct relationship — frequency and period are mathematical inverses of each other. The wave mode (f = v/λ) connects frequency to the physical properties of waves: a wave traveling faster or having a shorter wavelength has a higher frequency. Sound waves in air at 20°C travel at 343 m/s, so a 440 Hz tone has a wavelength of 343/440 = 0.780 meters (78.0 cm). Electromagnetic waves in vacuum travel at 299,792,458 m/s, so a 100 MHz FM radio signal has a wavelength of 2.998 meters.
+
+Unit conversions provide context across domains. For related wave calculations, the [Wave Speed Calculator](/calculators/science/wave-speed-calculator) solves for velocity or wavelength, and the [Velocity Calculator](/calculators/science/velocity-calculator) handles speed-distance-time problems. The [Energy Calculator](/calculators/science/energy-calculator) can convert photon energy using E = hf for quantum applications.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your calculation mode.** Choose "From Period (f = 1/T)" if you know the time for one complete cycle. Choose "From Wave Speed & Wavelength (f = v/λ)" if you know the wave's velocity and spatial period.
+2. **Enter your known values.** For period mode: enter the period in seconds (1 ms = 0.001 s, 1 μs = 0.000001 s). For wave mode: enter wave speed in m/s and wavelength in meters. Sound in air at 20°C = 343 m/s; light in vacuum = 299,792,458 m/s.
+3. **Read the results.** The calculator displays frequency in hertz (Hz) along with conversions to kHz, MHz, GHz, and RPM. The corresponding period is also shown.
+4. **Interpret your result within the relevant domain.** Human hearing spans 20 Hz to 20,000 Hz (20 kHz). AM radio uses 540–1,600 kHz. FM radio uses 87.5–108 MHz. Wi-Fi operates at 2.4 GHz or 5 GHz. Visible light spans 430–770 THz. If your result falls outside the expected range, check your units.
+5. **Cross-check using the reciprocal relationship.** Multiply your frequency result by the period — it should equal exactly 1. For wave mode, multiply frequency by wavelength — it should equal the wave speed you entered.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Frequency from Period
+
+$$f = \frac{1}{T}$$
+
+Where:
+
+- **f** = frequency, in hertz (Hz)
+- **T** = period (time for one complete cycle), in seconds (s)
+
+The relationship is perfectly reciprocal: doubling the frequency halves the period, and vice versa. A pendulum with a 2-second period swings at 0.5 Hz; a hummingbird's wings beating 80 times per second have a period of 12.5 milliseconds.
+
+### Period from Frequency
+
+$$T = \frac{1}{f}$$
+
+### Frequency from Wave Speed and Wavelength
+
+$$f = \frac{v}{\lambda}$$
+
+Where:
+
+- **f** = frequency, in hertz (Hz)
+- **v** = wave speed (phase velocity), in meters per second (m/s)
+- **λ** (lambda) = wavelength, in meters (m)
+
+This equation connects the three fundamental properties of any wave. For a fixed wave speed (like sound in air at a given temperature), higher frequency means shorter wavelength. A 20 Hz bass note in air has a wavelength of 343/20 = 17.15 meters; a 20,000 Hz treble tone has a wavelength of 343/20,000 = 0.01715 meters (1.715 cm).
+
+### Unit Conversions
+
+$$1 \text{ Hz} = 0.001 \text{ kHz} = 10^{-6} \text{ MHz} = 10^{-9} \text{ GHz}$$
+
+$$1 \text{ Hz} = 60 \text{ RPM (revolutions per minute)}$$
+
+One hertz equals one cycle per second. The unit is named after Heinrich Hertz, who first conclusively proved the existence of electromagnetic waves in 1887.
+
+**Source:** Heinrich Hertz demonstrated electromagnetic wave generation and detection experimentally in 1887, confirming James Clerk Maxwell's 1865 theoretical predictions. The hertz was adopted as the SI unit of frequency by the 13th General Conference on Weights and Measures (CGPM, 1967), replacing the earlier designation "cycles per second" (cps).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Musical Note A4 from Period
+
+A tuning fork vibrates with a measured period of 2.2727 milliseconds. What frequency does it produce, and what is the corresponding wavelength in air at 20°C?
+
+**Step-by-step:**
+
+1. Convert period to seconds: T = 2.2727 ms = **0.0022727 s**
+2. Apply f = 1/T: f = 1 / 0.0022727 = **440.0 Hz**
+3. Identify the note: 440 Hz is the concert pitch **A4**, the international tuning standard
+4. Calculate wavelength in air: λ = v/f = 343 / 440.0 = **0.7795 m** (77.95 cm)
+5. Convert to kHz: 440.0 / 1,000 = **0.440 kHz**
+6. Convert to RPM: 440.0 × 60 = **26,400 RPM**
+
+**Result:** The tuning fork produces a frequency of **440.0 Hz** (0.440 kHz) with a wavelength of **77.95 cm** in air.
+
+**Practical interpretation:** The 440 Hz standard (also called "A440" or "Stuttgart pitch") was formally adopted by the International Organization for Standardization as ISO 16 in 1975, though orchestras had converged on this frequency by the 1950s. Historically, concert pitch has varied widely — Baroque ensembles often tuned to A = 415 Hz (a semitone lower), and some modern orchestras tune slightly sharp at A = 442–443 Hz for a brighter sound. Each semitone represents a frequency ratio of 2^(1/12) ≈ 1.05946, so A#4 is 440 × 1.05946 = 466.16 Hz, and G#4 is 440 / 1.05946 = 415.30 Hz.
+
+### Example 2: FM Radio Signal Wavelength and Frequency
+
+An FM radio station broadcasts at a wavelength of 3.125 meters. Given that radio waves travel at the speed of light (299,792,458 m/s in vacuum), what is the broadcast frequency?
+
+**Step-by-step:**
+
+1. Known values: v = **299,792,458 m/s**, λ = **3.125 m**
+2. Apply f = v/λ: f = 299,792,458 / 3.125 = **95,933,587 Hz**
+3. Convert to MHz: 95,933,587 / 1,000,000 = **95.93 MHz**
+4. Calculate the period: T = 1 / 95,933,587 = **1.0424 × 10⁻⁸ s** (10.424 nanoseconds)
+5. Verify: f × λ = 95,933,587 × 3.125 = 299,792,459 ≈ 299,792,458 m/s (rounding confirms)
+
+**Result:** The station broadcasts at **95.93 MHz** with a period of **10.42 nanoseconds** per cycle.
+
+**Practical interpretation:** This frequency falls within the FM radio band (87.5–108.0 MHz). In the United States, FM channels are spaced 200 kHz apart, so this station would be tuned as "95.9 FM." The 3.125-meter wavelength explains why FM antennas are typically 75–80 cm long — a quarter-wavelength antenna (λ/4 = 0.781 m) provides the most efficient reception. AM radio, by contrast, uses frequencies around 540–1,600 kHz (wavelengths of 188–556 meters), which is why AM signals diffract around buildings and hills more effectively but carry less audio bandwidth.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Wave speed depends on the medium, not the frequency.** Sound at 440 Hz and sound at 4,400 Hz both travel at 343 m/s in 20°C air — only their wavelengths differ (0.780 m vs. 0.078 m). When a sound wave passes from air into water (where v ≈ 1,480 m/s), its frequency stays the same but its wavelength increases by a factor of 1,480/343 = 4.31. This principle holds for all waves: frequency is set by the source, while wavelength adjusts to match the medium's wave speed.
+
+**The electromagnetic spectrum spans over 20 orders of magnitude in frequency.** Radio waves range from 3 kHz to 300 GHz. Infrared spans 300 GHz to 430 THz. Visible light occupies a narrow band from 430 THz (red, 700 nm) to 770 THz (violet, 390 nm). Ultraviolet, X-rays, and gamma rays extend beyond 770 THz. All electromagnetic waves travel at 299,792,458 m/s in vacuum, so frequency and wavelength are inversely proportional across the entire spectrum. The [Wave Speed Calculator](/calculators/science/wave-speed-calculator) handles these conversions directly.
+
+**Resonance occurs when a driving frequency matches a system's natural frequency.** Every physical object has natural frequencies determined by its mass, stiffness, and geometry. A wine glass shatters when exposed to a sound wave matching its resonant frequency (typically 400–700 Hz for a crystal glass) because the oscillation amplitude builds with each cycle until the glass exceeds its elastic limit. Musical instruments exploit resonance constructively — a guitar body amplifies string vibrations at its resonant frequencies, shaping the instrument's characteristic tone.
+
+**The Doppler effect shifts the observed frequency when source and observer are in relative motion.** An ambulance siren emitting at 700 Hz sounds higher-pitched (approximately 740 Hz) when approaching at 20 m/s and lower-pitched (approximately 664 Hz) when receding at the same speed. The formula is f_observed = f_source × (v_sound ± v_observer) / (v_sound ∓ v_source). This effect applies to all waves, including light — astronomers use redshift (lower observed frequency) to measure the recession velocity of distant galaxies.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Ideal wave behavior assumed.** The formula f = v/λ applies to non-dispersive waves where velocity is independent of frequency. In dispersive media (glass, seawater), different frequencies travel at different speeds, and the formula applies only to individual frequency components.
+- **Phase velocity only.** The wave speed v in f = v/λ is the phase velocity. For wave packets, the group velocity (which carries energy) may differ from the phase velocity.
+- **Vacuum speed for electromagnetic waves.** Radio, light, and other EM waves travel at exactly 299,792,458 m/s in vacuum. In glass (n ≈ 1.5), the speed drops to about 199,861,639 m/s, changing the wavelength but not the frequency.
+- **Temperature affects sound speed.** The default 343 m/s applies to dry air at 20°C. At 0°C, sound speed drops to 331 m/s; at 35°C, it rises to 351 m/s. Humidity has a smaller effect (about +1 m/s per 10% humidity increase).
+- **Positive values only.** Frequency, period, wave speed, and wavelength must all be positive.
+- **Single-frequency (monochromatic) waves.** Real signals are typically composed of many frequencies. This calculator handles one frequency at a time.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the difference between frequency and wavelength?
+
+Frequency is the number of wave cycles passing a fixed point per second, measured in hertz (Hz); wavelength is the spatial distance between two consecutive identical points on a wave (such as crest to crest), measured in meters. They are inversely proportional for a given wave speed: λ = v/f. A 1,000 Hz sound wave in air (343 m/s) has a wavelength of 0.343 m (34.3 cm), while a 1,000 Hz electromagnetic wave in vacuum (299,792,458 m/s) has a wavelength of 299,792 m (299.8 km). The same frequency produces vastly different wavelengths depending on the wave's speed in its medium.
+
+### What frequencies can humans hear?
+
+Healthy young adults can hear frequencies from approximately 20 Hz to 20,000 Hz (20 kHz), spanning about 10 octaves. The lower limit of 20 Hz corresponds to a deep rumble felt as much as heard — pipe organ pedal notes and large subwoofers operate near this threshold. The upper limit of 20 kHz decreases with age: most adults over 40 cannot hear above 14,000–16,000 Hz, and by age 60, the upper limit typically falls to 8,000–12,000 Hz (a condition called presbycusis). Human hearing is most sensitive between 2,000 and 5,000 Hz, the frequency range of speech consonants and baby cries — an evolutionary advantage for communication and infant survival.
+
+### What is the electromagnetic spectrum?
+
+The electromagnetic spectrum is the complete range of electromagnetic radiation frequencies, from extremely low frequency (ELF) radio waves below 3 Hz to gamma rays exceeding 30 exahertz (3 × 10¹⁹ Hz). All electromagnetic waves travel at 299,792,458 m/s in vacuum and differ only in frequency and wavelength. The spectrum is conventionally divided into bands: radio (below 300 GHz, λ > 1 mm), infrared (300 GHz–430 THz, λ = 1 mm to 700 nm), visible light (430–770 THz, λ = 700–390 nm), ultraviolet (770 THz–30 PHz, λ = 390–10 nm), X-rays (30 PHz–30 EHz, λ = 10–0.01 nm), and gamma rays (above 30 EHz, λ < 0.01 nm). Only the visible band — spanning barely one octave of frequency — is detectable by the human eye.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator supports two modes. In period mode, it computes frequency as the reciprocal of period (f = 1/T) and displays both the frequency and the period. In wave mode, it divides wave speed by wavelength (f = v/λ) and derives the corresponding period (T = 1/f). Results are converted to kilohertz (÷ 1,000), megahertz (÷ 1,000,000), gigahertz (÷ 1,000,000,000), and revolutions per minute (× 60) using standard SI prefix factors.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

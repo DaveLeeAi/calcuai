@@ -1,0 +1,125 @@
+{
+  "id": "momentum-calculator",
+  "title": "Momentum Calculator",
+  "slug": "momentum-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "momentum calculator",
+  "metaTitle": "Momentum Calculator — Linear Momentum (p = mv)",
+  "metaDescription": "Calculate momentum, mass, or velocity using p = mv. Also computes kinetic energy from momentum. Free online physics calculator with unit conversions.",
+  "inputs": [
+    {
+      "id": "momentum",
+      "label": "Momentum",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 50",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "kg\u00b7m/s",
+      "helpText": "Enter any two values to calculate the third"
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 10",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "kg",
+      "defaultValue": 10,
+      "helpText": "Mass in kilograms"
+    },
+    {
+      "id": "velocity",
+      "label": "Velocity",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 5",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "defaultValue": 5,
+      "helpText": "Velocity in meters per second"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "momentum",
+      "label": "Momentum",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "mass",
+      "label": "Mass",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "velocity",
+      "label": "Velocity",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "kineticEnergy",
+      "label": "Kinetic Energy",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "momentum",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "velocity-calculator",
+    "force-calculator",
+    "acceleration-calculator",
+    "energy-calculator",
+    "work-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Isaac Newton, Philosophiae Naturalis Principia Mathematica (1687)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Linear momentum: p = mv, m = p/v, v = p/m; KE = p\u00b2/(2m)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -1,0 +1,158 @@
+{
+  "id": "sample-size-calculator",
+  "title": "Sample Size Calculator",
+  "slug": "sample-size-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "sample size calculator",
+  "metaTitle": "Sample Size Calculator — Survey & Research Planning",
+  "metaDescription": "Calculate the required sample size for surveys and research studies. Supports confidence levels from 80% to 99.9% with finite population correction. Free statistics calculator.",
+  "inputs": [
+    {
+      "id": "confidenceLevel",
+      "label": "Confidence Level (%)",
+      "type": "select",
+      "required": true,
+      "defaultValue": "95",
+      "options": [
+        {
+          "value": "80",
+          "label": "80%"
+        },
+        {
+          "value": "85",
+          "label": "85%"
+        },
+        {
+          "value": "90",
+          "label": "90%"
+        },
+        {
+          "value": "95",
+          "label": "95%"
+        },
+        {
+          "value": "99",
+          "label": "99%"
+        },
+        {
+          "value": "99.5",
+          "label": "99.5%"
+        },
+        {
+          "value": "99.9",
+          "label": "99.9%"
+        }
+      ],
+      "helpText": "Higher confidence levels require larger sample sizes"
+    },
+    {
+      "id": "marginOfError",
+      "label": "Margin of Error (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 5,
+      "min": 0.1,
+      "max": 50,
+      "step": 0.1,
+      "suffix": "%",
+      "placeholder": "e.g. 5",
+      "helpText": "Desired margin of error"
+    },
+    {
+      "id": "proportion",
+      "label": "Expected Proportion (%)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 50,
+      "min": 1,
+      "max": 99,
+      "step": 1,
+      "suffix": "%",
+      "placeholder": "e.g. 50",
+      "helpText": "Expected population proportion"
+    },
+    {
+      "id": "populationSize",
+      "label": "Population Size (optional)",
+      "type": "number",
+      "required": false,
+      "min": 1,
+      "step": 1,
+      "placeholder": "e.g. 10000",
+      "helpText": "Total population size (optional)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Sample Size Results",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "sampleSize",
+      "label": "Required Sample Size (infinite population)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "adjustedSampleSize",
+      "label": "Adjusted Sample Size (finite population)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "zScore",
+      "label": "Z-Score (z*)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 5
+    },
+    {
+      "id": "breakdown",
+      "label": "Step-by-Step Breakdown",
+      "type": "breakdown"
+    }
+  ],
+  "formula": "sample-size",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "confidence-interval-calculator",
+    "z-score-calculator",
+    "standard-deviation-calculator",
+    "p-value-calculator",
+    "probability-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Cochran, W.G. (1977). Sampling Techniques, 3rd ed. Wiley.",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "n = (Z² × p × (1-p)) / E²; finite correction: n_adj = n / (1 + (n-1)/N)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "confidence-interval-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -1,0 +1,127 @@
+{
+  "id": "wave-speed-calculator",
+  "title": "Wave Speed Calculator",
+  "slug": "wave-speed-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "wave speed calculator",
+  "metaTitle": "Wave Speed Calculator — v = f\u03bb Solver",
+  "metaDescription": "Calculate wave speed, frequency, or wavelength using v = f\u03bb. Enter any two values to solve for the third. Free physics calculator for sound, light, and radio waves.",
+  "inputs": [
+    {
+      "id": "waveSpeed",
+      "label": "Wave Speed",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 343",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "helpText": "Enter any two values to calculate the third"
+    },
+    {
+      "id": "frequency",
+      "label": "Frequency",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 343",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "Hz",
+      "defaultValue": 343,
+      "helpText": "Frequency in hertz"
+    },
+    {
+      "id": "wavelength",
+      "label": "Wavelength",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 1",
+      "min": 0,
+      "step": 0.000001,
+      "suffix": "m",
+      "defaultValue": 1,
+      "helpText": "Wavelength in meters"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "waveSpeed",
+      "label": "Wave Speed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "frequency",
+      "label": "Frequency",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "wavelength",
+      "label": "Wavelength",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "period",
+      "label": "Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "wave-speed",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "frequency-calculator",
+    "velocity-calculator",
+    "energy-calculator",
+    "density-calculator",
+    "pressure-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Christiaan Huygens, Trait\u00e9 de la Lumi\u00e8re (1690); d'Alembert wave equation (1747)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Wave equation: v = f\u03bb, f = v/\u03bb, \u03bb = v/f",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "velocity-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

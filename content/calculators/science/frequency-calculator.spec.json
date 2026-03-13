@@ -1,0 +1,139 @@
+{
+  "id": "frequency-calculator",
+  "title": "Frequency Calculator",
+  "slug": "frequency-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "frequency calculator",
+  "metaTitle": "Frequency Calculator — Period, Wave Speed & Wavelength",
+  "metaDescription": "Calculate frequency from period (f = 1/T) or from wave speed and wavelength (f = v/\u03bb). Free calculator with kHz, MHz, GHz, and RPM conversions.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Calculation Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "period",
+      "options": [
+        { "value": "period", "label": "From Period (f = 1/T)" },
+        { "value": "wave", "label": "From Wave Speed & Wavelength (f = v/\u03bb)" }
+      ],
+      "helpText": "Choose which variables to use"
+    },
+    {
+      "id": "frequency",
+      "label": "Frequency",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 100",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "Hz",
+      "helpText": "Frequency in hertz"
+    },
+    {
+      "id": "period",
+      "label": "Period",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 0.01",
+      "min": 0,
+      "step": 0.000001,
+      "suffix": "s",
+      "defaultValue": 0.01,
+      "helpText": "Period in seconds"
+    },
+    {
+      "id": "waveSpeed",
+      "label": "Wave Speed",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 343",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m/s",
+      "helpText": "Wave speed in meters per second"
+    },
+    {
+      "id": "wavelength",
+      "label": "Wavelength",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 0.5",
+      "min": 0,
+      "step": 0.000001,
+      "suffix": "m",
+      "helpText": "Wavelength in meters"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "frequency",
+      "label": "Frequency",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "period",
+      "label": "Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "breakdown",
+      "label": "Calculation Breakdown",
+      "type": "breakdown",
+      "format": "text"
+    }
+  ],
+  "formula": "frequency",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "wave-speed-calculator",
+    "velocity-calculator",
+    "energy-calculator",
+    "ohms-law-calculator",
+    "pressure-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Heinrich Hertz (1887), electromagnetic wave confirmation; SI hertz = 1 cycle/s",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Period mode: f = 1/T, T = 1/f; Wave mode: f = v/\u03bb",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

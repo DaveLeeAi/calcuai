@@ -1,0 +1,150 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A test score of 720 on an exam with a mean of 500 and standard deviation of 100 has a z-score of 2.20, placing it at the 98.6th percentile — meaning it exceeds 98.6% of all scores. This z-score calculator computes the standard score from any value, mean, and standard deviation, or reverses the calculation to find the original value from a known z-score. Enter your data to get the z-score, cumulative probability, and percentile ranking instantly.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+A z-score measures how many standard deviations a data point lies above or below the population mean. A z-score of 0 means the value equals the mean exactly. A positive z-score indicates a value above the mean, and a negative z-score indicates a value below it. The further the z-score from zero, the more unusual the observation.
+
+The cumulative probability P(Z ≤ z) tells you the proportion of a normal distribution that falls at or below your value. For a z-score of 1.00, P(Z ≤ z) = 0.8413, meaning 84.13% of the population scores at or below that point. The percentile is simply this probability expressed as a percentage. A value at the 98.6th percentile is higher than 98.6% of all values in the distribution.
+
+In reverse mode, you can find what raw value corresponds to a given z-score or percentile. For example, if you need the score at the 90th percentile of an exam with mean 500 and standard deviation 100, the z-score for the 90th percentile is 1.2816, giving x = 500 + (1.2816 × 100) = 628.16. For related statistical tools, the [Standard Deviation Calculator](/calculators/math/standard-deviation-calculator) computes σ from raw data, and the [P-Value Calculator](/calculators/math/p-value-calculator) uses z-scores for hypothesis testing.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose the calculation mode.** Select "Calculate Z-Score from Value" if you have a raw score and want to know where it falls in the distribution. Select "Calculate Value from Z-Score" if you know the z-score or percentile and want the corresponding raw value.
+2. **Enter the observed value (x)** in the first field. This is the individual data point — a test score, measurement, weight, or any numeric observation you want to evaluate.
+3. **Enter the population mean (μ).** This is the average of the entire population or reference group. For standardized tests, the mean is published (e.g., SAT mean = 1060, IQ mean = 100).
+4. **Enter the standard deviation (σ).** This measures the spread of the distribution. A larger σ produces smaller z-scores for the same distance from the mean. Standard deviation must be greater than zero.
+5. **Read the results.** The calculator displays the z-score, cumulative probability, percentile, and the probability of observing a value above yours.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Z-Score from a Raw Value
+
+$$z = \frac{x - \mu}{\sigma}$$
+
+Where:
+
+- **z** = z-score (standard score), dimensionless
+- **x** = observed value (raw score)
+- **μ** (mu) = population mean
+- **σ** (sigma) = population standard deviation
+
+### Raw Value from a Z-Score
+
+$$x = \mu + z\sigma$$
+
+### Cumulative Distribution Function (CDF)
+
+The cumulative probability P(Z ≤ z) is computed using the standard normal CDF:
+
+$$\Phi(z) = \frac{1}{2}\left[1 + \text{erf}\left(\frac{z}{\sqrt{2}}\right)\right]$$
+
+Where **erf** is the Gauss error function. The percentile equals Φ(z) × 100. This integral has no closed-form solution, so the calculator uses the rational approximation from Abramowitz and Stegun (Handbook of Mathematical Functions, equation 7.1.26), which provides accuracy to better than 1.5 × 10⁻⁷.
+
+### The Empirical Rule (68-95-99.7)
+
+For normally distributed data:
+
+| Z-Score Range | Population Within Range |
+|---------------|----------------------|
+| -1 to +1 | 68.27% |
+| -2 to +2 | 95.45% |
+| -3 to +3 | 99.73% |
+
+**Source:** Carl Friedrich Gauss, *Theoria motus corporum coelestium* (1809). The standard normal distribution and z-score transformation are foundational to frequentist statistics. CDF approximation from Abramowitz & Stegun, *Handbook of Mathematical Functions* (1964), equation 7.1.26.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Exam Score Percentile
+
+A student scores 720 on a standardized exam where the mean is 500 and the standard deviation is 100. What percentile is this score?
+
+**Step-by-step:**
+
+1. Known values: x = **720**, μ = **500**, σ = **100**
+2. Calculate z-score: z = (x − μ) / σ = (720 − 500) / 100 = 220 / 100 = **2.20**
+3. Look up cumulative probability: Φ(2.20) = **0.9861**
+4. Convert to percentile: 0.9861 × 100 = **98.61st percentile**
+5. Probability above: 1 − 0.9861 = **0.0139** (1.39%)
+
+**Result:** A score of 720 has a z-score of **2.20** and falls at the **98.61st percentile**.
+
+**Practical interpretation:** This student scored higher than approximately 98.6% of all test-takers. Only about 1 in 72 students (1.39%) scored 720 or higher. Under the empirical rule, a z-score of 2.20 falls just outside the "95% of data within ±2 standard deviations" zone, confirming this is a notably strong result.
+
+### Example 2: Finding the Value at the 95th Percentile
+
+A company's monthly sales have a mean of $50,000 and a standard deviation of $8,000. What sales figure corresponds to the 95th percentile?
+
+**Step-by-step:**
+
+1. The 95th percentile corresponds to a cumulative probability of 0.95
+2. Find the z-score: z = Φ⁻¹(0.95) = **1.6449**
+3. Known values: μ = **$50,000**, σ = **$8,000**, z = **1.6449**
+4. Calculate raw value: x = μ + zσ = 50,000 + (1.6449 × 8,000) = 50,000 + 13,159.20 = **$63,159.20**
+
+**Result:** The 95th percentile sales figure is **$63,159.20**.
+
+**Practical interpretation:** In 95% of months, the company's sales fall below $63,159. Only 5% of months exceed this threshold. A sales team that hits $63,159 in a given month has performed in the top 5% relative to historical norms. This type of analysis helps set stretch targets: the 90th percentile ($60,250) is a challenging but realistic goal, while the 99th percentile ($68,594) is exceptional.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Z-scores assume a normal (Gaussian) distribution.** The percentile interpretation is only accurate when the underlying data is approximately normally distributed. Many real-world datasets — test scores, heights, measurement errors — closely follow the normal curve. However, income distributions, website traffic, and insurance claims are typically right-skewed, meaning z-scores overestimate the percentile for high values. Before interpreting z-scores as percentiles, verify that your data is reasonably symmetric and bell-shaped.
+
+**Standard deviation sensitivity matters.** A z-score of 2.0 means something very different depending on σ. On an IQ test (μ = 100, σ = 15), a z-score of 2.0 corresponds to an IQ of 130 — the "gifted" threshold. On the SAT (μ = 1060, σ = 217), a z-score of 2.0 corresponds to a score of 1494 — well above the 97th percentile. The same z-score maps to a different raw value depending on the spread of the distribution.
+
+**The empirical rule (68-95-99.7) provides quick benchmarks.** Roughly 68% of data falls within ±1σ of the mean, 95% within ±2σ, and 99.7% within ±3σ. This means a z-score beyond ±3 is extremely rare — only 0.3% of observations in a normal distribution. In quality control, z-scores above 3 or below -3 are typically flagged as outliers. Six Sigma methodology targets processes where defects fall beyond ±6σ (3.4 defects per million opportunities).
+
+**Population parameters vs. sample statistics.** The z-score formula uses population parameters μ and σ. If you are working with a sample rather than a full population, the analogous statistic is the t-score, which uses the sample mean (x̄) and sample standard deviation (s) and follows a t-distribution rather than the standard normal. For sample sizes above 30, the difference between z and t distributions becomes negligible.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Normal distribution assumed.** Percentile calculations are only valid when the data follows a normal (Gaussian) distribution. For non-normal data, the z-score is still computed correctly, but the percentile interpretation may be inaccurate.
+- **Population parameters required.** The formula uses population mean (μ) and population standard deviation (σ). If you only have sample statistics, results are approximate — use a t-distribution for small samples (n < 30).
+- **Standard deviation must be positive.** A standard deviation of zero means all values are identical and the z-score is undefined (division by zero).
+- **Single-variable analysis only.** This calculator evaluates one value against one distribution. For multivariate analysis, use Mahalanobis distance instead.
+- **No continuity correction.** For discrete data (e.g., counts, survey responses), a continuity correction of ±0.5 may improve accuracy when approximating a discrete distribution with the normal curve.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What does a z-score of 2 mean?
+
+A z-score of 2.0 means the observed value is exactly 2 standard deviations above the mean. In a normal distribution, this places the value at the 97.72nd percentile — higher than approximately 97.7% of all observations. Only 2.28% of the population falls at or above this point. For context, on an IQ scale (mean 100, standard deviation 15), a z-score of 2.0 corresponds to an IQ of 130. On a standard exam with mean 500 and standard deviation 100, it corresponds to a score of 700.
+
+### What is the 68-95-99.7 rule?
+
+The 68-95-99.7 rule (also called the empirical rule or three-sigma rule) states that in a normal distribution, 68.27% of data falls within 1 standard deviation of the mean, 95.45% falls within 2 standard deviations, and 99.73% falls within 3 standard deviations. This means only 0.27% of observations have z-scores beyond ±3. The rule provides quick mental benchmarks: if your z-score is between -1 and +1, the value is fairly typical; between ±2, it is uncommon; beyond ±3, it is extremely rare.
+
+### How do you interpret negative z-scores?
+
+A negative z-score means the observed value is below the population mean. The magnitude tells you how far below: z = -1.0 is 1 standard deviation below the mean (15.87th percentile), z = -2.0 is 2 standard deviations below (2.28th percentile), and z = -3.0 is 3 standard deviations below (0.13th percentile). Negative z-scores are not "bad" — they simply indicate below-average values. On a golf scoring distribution, for example, a negative z-score means fewer strokes than average, which is desirable. The interpretation always depends on the context of what is being measured.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes z-scores using z = (x - μ) / σ, where x is the observed value, μ is the population mean, and σ is the standard deviation. The cumulative probability is computed via the standard normal CDF using the Abramowitz and Stegun rational approximation of the error function (equation 7.1.26), providing accuracy to 7 decimal places. In reverse mode, the calculator inverts the CDF numerically to find the z-score corresponding to a target percentile, then computes x = μ + zσ.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

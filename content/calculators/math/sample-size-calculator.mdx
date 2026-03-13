@@ -1,0 +1,154 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A survey targeting 95% confidence with a ±5% margin of error requires 385 respondents when the expected proportion is 50% and the population is large (over 100,000). For smaller populations — say 2,000 employees — the finite population correction reduces this to 323. This sample size calculator determines the minimum number of respondents needed for statistically valid survey results, supporting confidence levels from 80% to 99.9% with automatic finite population adjustment.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The required sample size is the minimum number of responses you need to achieve your desired precision. A larger sample size produces a narrower margin of error (more precise results), but the relationship is not linear — cutting the margin of error in half requires quadrupling the sample size. Moving from ±5% to ±2.5% margin of error increases the requirement from 385 to 1,537 respondents.
+
+Two sample sizes are reported. The **infinite population** sample size assumes the population is so large that sampling a few hundred people has no measurable effect on the population. The **finite population** (adjusted) sample size applies when your population is small enough that each sampled individual represents a meaningful fraction of the whole. For a company with 500 employees, the adjusted sample size is significantly smaller than the infinite-population figure because sampling even 100 people covers 20% of the population.
+
+The z-score shown corresponds to your selected confidence level. For 95% confidence, z* = 1.960; for 99%, z* = 2.576. For related tools, the [Confidence Interval Calculator](/calculators/math/confidence-interval-calculator) computes the interval from collected data, and the [Z-Score Calculator](/calculators/math/z-score-calculator) explains the z-values used in this formula.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select a confidence level.** The most common choice is 95%, meaning that if you repeated the survey 100 times, approximately 95 of the resulting confidence intervals would contain the true population parameter. Higher confidence (99%) requires larger samples; lower confidence (90%) requires fewer.
+2. **Set the margin of error.** This is the "plus or minus" range you are willing to accept. A ±5% margin means that if 60% of respondents say "yes," the true population percentage is between 55% and 65%. Smaller margins of error require dramatically more respondents.
+3. **Enter the expected proportion.** If you expect roughly 50% of respondents to choose a particular answer, use 50% — this produces the largest (most conservative) sample size. If prior research suggests the true proportion is closer to 10% or 90%, entering that value reduces the required sample.
+4. **Enter the population size (optional).** If your total population is known and relatively small (under 50,000), enter it to apply the finite population correction. For large or unknown populations, leave this field blank.
+5. **Read the results.** The calculator displays the minimum required sample size for both infinite and finite populations, plus the z-score used in the calculation.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Sample Size for an Infinite Population
+
+$$n = \frac{z^{2} \times p \times (1 - p)}{E^{2}}$$
+
+Where:
+
+- **n** = required sample size
+- **z** = z-score corresponding to the desired confidence level (e.g., 1.960 for 95%)
+- **p** = expected population proportion (as a decimal, e.g., 0.50 for 50%)
+- **E** = margin of error (as a decimal, e.g., 0.05 for ±5%)
+
+### Finite Population Correction
+
+$$n_{adj} = \frac{n}{1 + \frac{n - 1}{N}}$$
+
+Where:
+
+- **n_adj** = adjusted sample size
+- **n** = sample size from the infinite population formula
+- **N** = total population size
+
+### Common Z-Scores by Confidence Level
+
+| Confidence Level | Z-Score (z*) |
+|-----------------|-------------|
+| 80% | 1.282 |
+| 85% | 1.440 |
+| 90% | 1.645 |
+| 95% | 1.960 |
+| 99% | 2.576 |
+| 99.5% | 2.807 |
+| 99.9% | 3.291 |
+
+The finite population correction becomes meaningful when the sample represents more than about 5% of the total population. For populations above 20,000, the correction reduces the sample size by less than 2%, and can usually be ignored.
+
+**Source:** Cochran, W.G. (1977). *Sampling Techniques*, 3rd ed. Wiley. The Cochran formula is the standard sample size determination method taught in survey methodology and used by Gallup, Pew Research Center, and the U.S. Census Bureau for survey planning.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Standard Market Research Survey
+
+A marketing team wants to survey consumers about brand awareness. They want 95% confidence with a ±5% margin of error and have no prior data on the expected proportion.
+
+**Step-by-step:**
+
+1. Parameters: confidence = **95%** (z = 1.960), E = **0.05**, p = **0.50** (conservative default)
+2. Apply the formula: n = (1.960² × 0.50 × 0.50) / 0.05²
+3. Calculate numerator: 3.8416 × 0.25 = **0.9604**
+4. Calculate denominator: 0.0025
+5. n = 0.9604 / 0.0025 = **384.16**
+6. Round up: **385 respondents**
+
+**Result:** The survey requires a minimum of **385 respondents**.
+
+**Practical interpretation:** This is the most commonly cited sample size in market research because 95%/5% is the industry standard for consumer surveys. Note that 385 is the number of completed responses, not the number of invitations sent. If the expected response rate is 20%, you would need to invite approximately 1,925 people (385 / 0.20) to achieve 385 completed surveys.
+
+### Example 2: Employee Satisfaction Survey with Known Population
+
+A company with 2,000 employees wants to conduct a satisfaction survey at 95% confidence with a ±5% margin of error.
+
+**Step-by-step:**
+
+1. First, calculate the infinite population sample size: n = (1.960² × 0.50 × 0.50) / 0.05² = **385** (from Example 1)
+2. Apply finite population correction: n_adj = 385 / (1 + (385 - 1) / 2,000)
+3. Calculate denominator: 1 + 384/2,000 = 1 + 0.192 = **1.192**
+4. n_adj = 385 / 1.192 = **323.0**
+5. Round up: **323 respondents**
+
+**Result:** With a finite population of 2,000, only **323 respondents** are needed — 62 fewer than the infinite-population calculation.
+
+**Practical interpretation:** The finite population correction saved 16% of the sample size because 323 respondents represent 16.2% of the total population — a substantial sampling fraction. For a company of 200 employees, the correction is even more dramatic: the adjusted sample drops to 132 (66% of the infinite-population requirement). In general, the smaller the population relative to the sample, the greater the correction benefit.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Margin of error has a quadratic impact on sample size.** Cutting the margin of error in half requires four times the sample. A ±5% margin needs 385 respondents; ±2.5% needs 1,537; ±1% needs 9,604. This exponential cost is why most commercial surveys accept ±3% to ±5% — pushing below ±2% becomes prohibitively expensive. Before demanding a narrow margin, consider whether the business decision would actually change between 48% and 52% (±2%) versus 46% and 54% (±4%).
+
+**The proportion assumption matters most near 50%.** The formula uses p × (1 - p), which is maximized at p = 0.50 (yielding 0.25). At p = 0.10 or p = 0.90, p × (1 - p) = 0.09, producing a sample size 64% smaller. Using p = 0.50 when the true proportion is near 10% wastes resources. If previous research or a pilot study suggests the true proportion, use that estimate. When truly uncertain, use 50% for the most conservative (largest) sample.
+
+**Finite populations dramatically reduce requirements for small groups.** For a population of 500, the corrected sample size at 95%/5% is just 217 instead of 385 — a 44% reduction. For a population of 100, it drops to 80. The correction formula becomes negligible above approximately N = 20,000, where the adjusted sample is within 2% of the infinite-population figure. Always apply the correction when surveying a bounded group like employees, students in a school, or members of an organization.
+
+**Non-response bias is often more important than sample size.** A perfectly sized survey with a 15% response rate may be less reliable than a smaller survey with an 80% response rate, because non-respondents may differ systematically from respondents. Survey methodologists recommend multiplying the calculated sample by 1/response_rate to determine the number of invitations needed, and reporting the response rate alongside results.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Simple random sampling assumed.** The Cochran formula assumes every member of the population has an equal probability of selection. Stratified, cluster, or convenience sampling methods require different calculations (often using a design effect multiplier of 1.5–2.0).
+- **Single proportion only.** This calculator sizes for estimating a single population proportion (e.g., "% who prefer Brand A"). Sizing for differences between groups, regression analysis, or multivariate studies requires specialized power analysis tools.
+- **Normal approximation.** The formula relies on the central limit theorem and normal approximation. For very small expected proportions (p < 0.05) or very small sample sizes (n < 30), exact binomial methods are more appropriate.
+- **No adjustment for non-response.** The calculated sample is the number of completed responses needed. Divide by your expected response rate to determine the total number of invitations required.
+- **Conservative at p = 50%.** Using p = 0.50 when the true proportion is far from 50% overestimates the required sample. Use prior data when available.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Why is 385 the most common sample size?
+
+The number 385 (often rounded to 384 or 385) results from the standard parameters used in most consumer research: 95% confidence level (z = 1.960), ±5% margin of error (E = 0.05), and 50% expected proportion (p = 0.50). Plugging these into the Cochran formula gives n = (1.960² × 0.50 × 0.50) / 0.05² = 384.16, rounded up to 385. These parameters represent the industry default because 95%/5% provides a practical balance between statistical rigor and cost. The 50% proportion is used when no prior data exists because it produces the maximum (most conservative) sample size.
+
+### When should I use finite population correction?
+
+Apply the finite population correction when you know the total population size and it is relatively small — typically under 50,000. The correction becomes meaningful when the sample represents more than 5% of the population. For a population of 1,000, the correction reduces the required sample from 385 to 278 (a 28% savings). For a population of 10,000, the correction reduces it from 385 to 370 (only 4% savings). For populations above 100,000, the correction is negligible (less than 0.4% difference) and can be safely omitted.
+
+### What confidence level should I use?
+
+The 95% confidence level is the standard for most academic research and commercial surveys because it balances precision with practicality. Use 99% when the consequences of error are severe — pharmaceutical trials, public health decisions, or financial risk models. Use 90% when resources are limited and the decision is low-stakes — quick internal polls, preliminary market scans, or exploratory research. The key tradeoff: moving from 90% to 99% confidence roughly doubles the required sample size (from 271 to 664 at ±5% margin of error with p = 0.50).
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator applies the Cochran (1977) sample size formula n = (z² × p × (1-p)) / E², where z is the critical value for the selected confidence level, p is the expected proportion, and E is the desired margin of error. The z-score is looked up from a pre-computed table of standard normal critical values. When a finite population size N is provided, the result is adjusted using the finite population correction factor: n_adj = n / (1 + (n-1)/N). All results are rounded up to the next whole number, since partial respondents are not possible.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

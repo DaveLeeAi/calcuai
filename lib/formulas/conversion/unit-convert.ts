@@ -158,6 +158,26 @@ export const DATA_STORAGE_UNITS: UnitDefinition[] = [
 ];
 
 // ═══════════════════════════════════════════════════════
+// Speed units — base unit: meters per second (m/s)
+// ═══════════════════════════════════════════════════════
+
+export const SPEED_UNITS: UnitDefinition[] = [
+  // Metric
+  { id: 'meters-per-second', name: 'Meters per Second', abbreviation: 'm/s', toBase: 1, category: 'metric' },
+  { id: 'kilometers-per-hour', name: 'Kilometers per Hour', abbreviation: 'km/h', toBase: 0.277778, category: 'metric' },
+  { id: 'centimeters-per-second', name: 'Centimeters per Second', abbreviation: 'cm/s', toBase: 0.01, category: 'metric' },
+
+  // Imperial / US
+  { id: 'miles-per-hour', name: 'Miles per Hour', abbreviation: 'mph', toBase: 0.44704, category: 'imperial' },
+  { id: 'feet-per-second', name: 'Feet per Second', abbreviation: 'ft/s', toBase: 0.3048, category: 'imperial' },
+
+  // Nautical / Scientific
+  { id: 'knots', name: 'Knots', abbreviation: 'kn', toBase: 0.514444, category: 'other' },
+  { id: 'mach', name: 'Mach (at sea level)', abbreviation: 'Mach', toBase: 343, category: 'other' },
+  { id: 'speed-of-light', name: 'Speed of Light', abbreviation: 'c', toBase: 299792458, category: 'other' },
+];
+
+// ═══════════════════════════════════════════════════════
 // Temperature units — base unit: Celsius (function-based)
 // ═══════════════════════════════════════════════════════
 
@@ -194,6 +214,7 @@ const UNIT_CATEGORIES: { name: string; units: UnitDefinition[]; isTemperature?: 
   { name: 'area', units: AREA_UNITS },
   { name: 'volume', units: VOLUME_UNITS },
   { name: 'data', units: DATA_STORAGE_UNITS },
+  { name: 'speed', units: SPEED_UNITS },
   { name: 'temperature', units: [], isTemperature: true, tempUnits: TEMPERATURE_UNITS },
 ];
 

@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 158 modules, 160 formula IDs
+ * 167 modules, 169 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -168,19 +168,28 @@ import { FORMULA_REGISTRY as math_probability } from './math/probability';
 import { FORMULA_REGISTRY as math_pythagorean_theorem } from './math/pythagorean-theorem';
 import { FORMULA_REGISTRY as math_quadratic } from './math/quadratic';
 import { FORMULA_REGISTRY as math_ratio } from './math/ratio';
+import { FORMULA_REGISTRY as math_sample_size } from './math/sample-size';
 import { FORMULA_REGISTRY as math_scientific_notation } from './math/scientific-notation';
 import { FORMULA_REGISTRY as math_significant_figures } from './math/significant-figures';
 import { FORMULA_REGISTRY as math_slope } from './math/slope';
 import { FORMULA_REGISTRY as math_square_root } from './math/square-root';
 import { FORMULA_REGISTRY as math_standard_deviation } from './math/standard-deviation';
 import { FORMULA_REGISTRY as math_triangle_solver } from './math/triangle-solver';
+import { FORMULA_REGISTRY as math_z_score } from './math/z-score';
 
 // Science
+import { FORMULA_REGISTRY as science_acceleration } from './science/acceleration';
 import { FORMULA_REGISTRY as science_density } from './science/density';
 import { FORMULA_REGISTRY as science_energy } from './science/energy';
+import { FORMULA_REGISTRY as science_force } from './science/force';
+import { FORMULA_REGISTRY as science_frequency } from './science/frequency';
+import { FORMULA_REGISTRY as science_momentum } from './science/momentum';
 import { FORMULA_REGISTRY as science_ohms_law } from './science/ohms-law';
+import { FORMULA_REGISTRY as science_power } from './science/power';
 import { FORMULA_REGISTRY as science_pressure } from './science/pressure';
 import { FORMULA_REGISTRY as science_velocity } from './science/velocity';
+import { FORMULA_REGISTRY as science_wave_speed } from './science/wave-speed';
+import { FORMULA_REGISTRY as science_work } from './science/work';
 
 const formulaRegistry: Record<string, FormulaFunction> = {
   // Business
@@ -337,18 +346,27 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...math_pythagorean_theorem,
   ...math_quadratic,
   ...math_ratio,
+  ...math_sample_size,
   ...math_scientific_notation,
   ...math_significant_figures,
   ...math_slope,
   ...math_square_root,
   ...math_standard_deviation,
   ...math_triangle_solver,
+  ...math_z_score,
   // Science
+  ...science_acceleration,
   ...science_density,
   ...science_energy,
+  ...science_force,
+  ...science_frequency,
+  ...science_momentum,
   ...science_ohms_law,
+  ...science_power,
   ...science_pressure,
   ...science_velocity,
+  ...science_wave_speed,
+  ...science_work,
 };
 
 export function getFormula(id: string): FormulaFunction {

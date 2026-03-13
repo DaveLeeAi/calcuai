@@ -1,0 +1,157 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Pushing a 50 kg crate 10 meters across a warehouse floor with 200 newtons of force requires 2,000 joules (478.2 calories) of work — enough energy to lift that same crate 4.08 meters straight up against gravity. This work calculator computes the mechanical work done by a force acting over a distance using the formula W = Fd cos(θ), where θ is the angle between the applied force and the direction of motion. Enter force, distance, and angle to get instant results in joules, kilocalories, BTU, foot-pounds, and kilowatt-hours.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Mechanical work quantifies the energy transferred to or from an object by a force acting through a displacement. When you push a crate across a floor, your muscles convert chemical energy into kinetic energy and heat — the work value tells you exactly how much energy was transferred in that process. A result of 2,000 joules means 2,000 newton-meters of energy were delivered to the system.
+
+The angle component is critical. When force is aligned perfectly with the direction of motion (θ = 0°), all of the force contributes to work and cos(0°) = 1. When force is applied at an angle — pulling a sled with a rope at 30° above horizontal, for example — only the horizontal component of force does work on the sled. At θ = 90° (force perpendicular to motion), cos(90°) = 0, and zero work is done regardless of how much force is applied. This explains why carrying a heavy box across a room at constant height does zero mechanical work on the box: gravity acts downward while displacement is horizontal.
+
+The unit conversions provide practical context. One joule equals 0.000239 kilocalories (food calories), so 2,000 joules of mechanical work is about 0.478 dietary calories. For related calculations, the [Energy Calculator](/calculators/science/energy-calculator) covers kinetic and potential energy, while the [Force Calculator](/calculators/science/force-calculator) helps determine the net force on an object.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the applied force in newtons.** This is the magnitude of the force doing work on the object. For gravity on a mass, use F = mg where g = 9.80665 m/s². A 50 kg crate has a gravitational weight of 490.3 N.
+2. **Enter the distance in meters.** This is the displacement of the object in the direction you want to measure work along — not the distance your hand moves, but the distance the object travels.
+3. **Enter the angle between force and displacement (optional).** Use 0° if force is applied in the same direction the object moves (pushing a box horizontally). Use 90° if force is perpendicular to motion (gravity on a horizontally moving object). If you leave this field at 0°, the calculator assumes full alignment.
+4. **Read the results.** The calculator displays work in joules along with unit conversions to kilocalories, BTU, foot-pounds, and kilowatt-hours. It also shows the effective force component (F cos θ) and a step-by-step calculation breakdown.
+5. **Check your result against physical intuition.** Lifting a 1 kg object 1 meter requires about 9.81 joules. If your result is orders of magnitude away from what the scenario suggests, verify your units and angle input.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Work Done by a Force at an Angle
+
+$$W = F \cdot d \cdot \cos(\theta)$$
+
+Where:
+
+- **W** = work done, in joules (J)
+- **F** = magnitude of the applied force, in newtons (N)
+- **d** = displacement (distance traveled), in meters (m)
+- **θ** = angle between the force vector and the displacement vector, in degrees
+
+### Special Cases
+
+When force is parallel to displacement (θ = 0°):
+
+$$W = F \cdot d$$
+
+This is the maximum possible work for a given force and distance, since cos(0°) = 1.
+
+When force is perpendicular to displacement (θ = 90°):
+
+$$W = 0$$
+
+No work is done because cos(90°) = 0. This is why the normal force on a sliding crate and gravity on a horizontally moving object contribute zero work.
+
+When force opposes displacement (θ = 180°):
+
+$$W = -F \cdot d$$
+
+Negative work means energy is removed from the object. Friction always does negative work because it acts opposite to the direction of motion.
+
+### Unit Conversions
+
+$$1 \text{ J} = 0.000239006 \text{ kcal} = 0.000947817 \text{ BTU} = 0.737562 \text{ ft·lbf}$$
+
+$$1 \text{ J} = 2.77778 \times 10^{-7} \text{ kWh}$$
+
+**Source:** The concept of mechanical work was formalized by Gaspard-Gustave de Coriolis in *Du calcul de l'effet des machines* (1829). The joule as the SI unit of energy is defined by the 11th General Conference on Weights and Measures (CGPM, 1960) as 1 J = 1 N·m = 1 kg·m²/s².
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Pushing a Crate Across a Warehouse Floor
+
+A warehouse worker pushes a 50 kg crate 10 meters across a level concrete floor by applying 200 newtons of horizontal force. The force is applied in the same direction as the motion (θ = 0°). How much work is done?
+
+**Step-by-step:**
+
+1. Identify known values: F = **200 N**, d = **10 m**, θ = **0°**
+2. Calculate cos(θ): cos(0°) = **1.0**
+3. Apply the formula: W = F × d × cos(θ) = 200 × 10 × 1.0 = **2,000 J**
+4. Convert to kilocalories: 2,000 × 0.000239006 = **0.478 kcal**
+5. Convert to foot-pounds: 2,000 × 0.737562 = **1,475.12 ft·lbf**
+
+**Result:** The worker does **2,000 joules** (0.478 kcal, 1,475.12 ft·lbf) of work on the crate.
+
+**Practical interpretation:** This 2,000 J represents only the work done pushing the crate forward. The worker's muscles actually consume roughly 8,000–10,000 J of metabolic energy (about 2.0 kcal) for this task because human muscles are approximately 20–25% mechanically efficient. The remaining energy is lost as heat. Meanwhile, friction simultaneously does negative work on the crate, converting kinetic energy into thermal energy in the floor and crate surfaces.
+
+### Example 2: Pulling a Sled at 30 Degrees
+
+A child pulls a sled across snow with a rope that makes a 30° angle with the horizontal ground. The child applies 80 newtons of tension through the rope over a distance of 25 meters. How much work does the tension do on the sled?
+
+**Step-by-step:**
+
+1. Identify known values: F = **80 N**, d = **25 m**, θ = **30°**
+2. Calculate cos(θ): cos(30°) = **0.86603**
+3. Calculate the effective horizontal force: F × cos(θ) = 80 × 0.86603 = **69.28 N**
+4. Apply the formula: W = F × d × cos(θ) = 80 × 25 × 0.86603 = **1,732.05 J**
+5. Convert to kilocalories: 1,732.05 × 0.000239006 = **0.414 kcal**
+6. Convert to BTU: 1,732.05 × 0.000947817 = **1.642 BTU**
+
+**Result:** The rope tension does **1,732.05 joules** of work on the sled.
+
+**Practical interpretation:** Although the child pulls with 80 N total, only 69.28 N (86.6%) acts horizontally to move the sled forward. The remaining 40 N vertical component (F × sin 30°) partially lifts the sled, reducing the normal force and therefore reducing friction — which is why pulling at an angle can sometimes be more efficient than pushing horizontally, especially on soft surfaces like snow where reduced normal force significantly lowers drag.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**The angle between force and displacement determines how much of your effort counts as work.** At 0° (pushing horizontally), 100% of your force contributes. At 45°, only 70.7% contributes (cos 45° = 0.707). At 60°, just 50% contributes. Even a modest 20° angle reduces effective force to 94% — which over long distances adds up. This is why ergonomic guidelines recommend pushing carts at handle heights that minimize the angle between force and motion.
+
+**Friction does negative work, removing energy from the system.** When a 50 kg crate slides 10 meters across concrete with a coefficient of kinetic friction μk = 0.40, friction does W = −μk × m × g × d = −0.40 × 50 × 9.81 × 10 = −1,962 J of work. This means nearly all the 2,000 J of positive work you applied gets converted to heat. On a frictionless surface, that same 2,000 J would accelerate the crate to 8.94 m/s.
+
+**The work-energy theorem connects work directly to changes in kinetic energy.** The net work done on an object equals its change in kinetic energy: W_net = ΔKE = ½mv₂² − ½mv₁². If you push a 10 kg box from rest with a net force of 50 N over 4 meters, the net work is 200 J, giving the box a final speed of √(2 × 200 / 10) = 6.32 m/s. Use the [Velocity Calculator](/calculators/science/velocity-calculator) to verify speed results.
+
+**Zero work does not mean zero effort.** Holding a 20 kg barbell overhead requires enormous muscular effort but does zero mechanical work (displacement = 0). Similarly, carrying a box across a room at constant speed and height does zero work on the box because the applied force (upward) is perpendicular to displacement (horizontal). Your muscles still consume metabolic energy — they just do not transfer it to the box as mechanical work. The [Energy Calculator](/calculators/science/energy-calculator) can help quantify the kinetic and potential energy in related scenarios.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Constant force assumed.** The formula W = Fd cos(θ) applies when force magnitude and direction are constant throughout the displacement. For variable forces (e.g., stretching a spring), work requires integration: W = ∫F·dx.
+- **Rigid body approximation.** The object is treated as a single particle. Deformation, vibration, and internal energy changes are not modeled.
+- **Angle is constant.** The angle θ between force and displacement is assumed to remain fixed. In reality, pulling a sled with a rope changes the angle as the puller moves forward.
+- **No rotational work.** This calculator computes linear (translational) work only. Torque-based rotational work (W = τθ) requires a separate calculation.
+- **Positive values expected.** Entering a negative force is not supported. Negative work (e.g., friction) is modeled by setting θ = 180°.
+- **Significant figures.** Results are displayed to 4 decimal places, but the true precision depends on your input measurements.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Can work be negative?
+
+Yes, work is negative when the force opposes the direction of motion — mathematically, when the angle θ between force and displacement exceeds 90°. Friction always does negative work because it acts opposite to the object's motion (θ = 180°, cos 180° = −1). A braking force of 500 N applied over 20 meters does W = 500 × 20 × (−1) = −10,000 J of work, removing 10,000 joules of kinetic energy from the vehicle and converting it to heat in the brake pads and rotors. Negative work reduces an object's kinetic energy; positive work increases it.
+
+### What is the work-energy theorem?
+
+The work-energy theorem states that the net work done on an object equals the change in its kinetic energy: W_net = ½mv₂² − ½mv₁². If you apply a net force of 100 N to a 25 kg object over 8 meters (800 J of net work), and the object starts from rest, it reaches a final speed of √(2 × 800 / 25) = 8.0 m/s. This theorem is one of the most powerful tools in classical mechanics because it bypasses the need to track acceleration over time — you only need the total work and the mass to find the velocity change.
+
+### Why is no work done when carrying a box horizontally at constant speed?
+
+The supporting force you apply to the box is directed upward (to counteract gravity), while the box's displacement is horizontal — giving θ = 90° and cos(90°) = 0. Work equals force times displacement times cos(θ), so the mechanical work is exactly zero. Your muscles do consume metabolic energy (roughly 300–500 watts during a brisk walk while loaded), but that energy goes into maintaining muscle tension, moving your limbs, and generating heat — not into changing the box's mechanical energy. If you lifted the box 1.5 meters onto a shelf, you would do W = 50 × 9.81 × 1.5 = 735.75 J of positive gravitational work (for a 50 kg box).
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes mechanical work using W = Fd cos(θ), where F is force in newtons, d is distance in meters, and θ is the angle between force and displacement in degrees. The angle is converted to radians internally before computing the cosine. The effective force component (F cos θ) is displayed separately. Results are converted to kilocalories (÷ 4,184), BTU (÷ 1,055.06), foot-pounds (× 0.737562), and kilowatt-hours (÷ 3,600,000) using standard SI conversion factors.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

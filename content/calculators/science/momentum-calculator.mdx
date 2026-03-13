@@ -1,0 +1,159 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 0.145 kg baseball thrown at 40 m/s (90 mph) carries a momentum of 5.8 kg-m/s — enough to sting a catcher's hand through a padded glove. This momentum calculator solves for any one of three variables — momentum, mass, or velocity — when you provide the other two, and also computes kinetic energy from momentum. Enter any pair of values and get instant results with unit conversions between kg-m/s, N-s, lb-ft/s, and g-cm/s for physics coursework, collision analysis, ballistics, and vehicle safety calculations.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+Linear momentum is the product of mass and velocity — it quantifies how much "motion" an object carries and how hard it is to stop. A slowly rolling freight train and a speeding bullet can have similar momenta for very different reasons: the train has enormous mass, the bullet has enormous velocity. Momentum is what determines the outcome of every collision, crash, and impact event.
+
+This calculator rearranges the momentum equation to solve for whichever variable you leave blank. Enter mass and velocity to find momentum. Enter momentum and velocity to find mass. Enter momentum and mass to find velocity. It also computes kinetic energy from momentum using KE = p squared divided by 2m, connecting the two most important mechanical quantities in a single calculation.
+
+The results are expressed in SI units: kg-m/s for momentum and joules for kinetic energy. Momentum in kg-m/s is numerically equal to newton-seconds (N-s), since 1 N = 1 kg-m/s squared and multiplying by seconds cancels one time dimension. For related calculations, the [Force Calculator](/calculators/science/force-calculator) computes F = ma, and the [Energy Calculator](/calculators/science/energy-calculator) handles kinetic and potential energy directly.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Identify the two values you know.** You need exactly two of the three quantities: Momentum (kg-m/s), Mass (kg), or Velocity (m/s). Check your problem statement, lab measurements, or vehicle specifications.
+2. **Enter the first known value** in its corresponding field. Use SI base units — kilograms for mass and meters per second for velocity. Convert before entering: 1 lb = 0.453592 kg, 1 mph = 0.44704 m/s, 1 ft/s = 0.3048 m/s.
+3. **Enter the second known value** in its field. Leave the third field empty or at zero.
+4. **Read the results.** The calculator solves for the missing value and displays all three quantities, kinetic energy in joules, and momentum unit conversions (kg-m/s, N-s, lb-ft/s, g-cm/s).
+5. **Verify reasonableness.** A walking person (70 kg at 1.5 m/s) has a momentum of 105 kg-m/s. A pitched baseball (0.145 kg at 40 m/s) has 5.8 kg-m/s. A car at highway speed (1,500 kg at 30 m/s) has 45,000 kg-m/s. If your result falls far outside these reference points, check your unit conversions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Momentum from Mass and Velocity
+
+$$p = m \times v$$
+
+Where:
+
+- **p** = linear momentum, in kilogram-meters per second (kg-m/s)
+- **m** = mass, in kilograms (kg)
+- **v** = velocity, in meters per second (m/s)
+
+### Mass from Momentum and Velocity
+
+$$m = \frac{p}{v}$$
+
+### Velocity from Momentum and Mass
+
+$$v = \frac{p}{m}$$
+
+These three forms are algebraic rearrangements of the same equation. Momentum is a vector quantity — it has both magnitude and direction. This calculator computes the scalar magnitude, which is always positive.
+
+### Kinetic Energy from Momentum
+
+$$KE = \frac{p^2}{2m}$$
+
+Where:
+
+- **KE** = kinetic energy, in joules (J)
+- **p** = momentum, in kg-m/s
+- **m** = mass, in kg
+
+This relationship is derived by substituting p = mv into the standard kinetic energy formula KE = (1/2)mv squared. It is particularly useful in collision analysis where momentum is known but velocity is not directly measured.
+
+### Unit Conversions
+
+$$1 \text{ kg-m/s} = 1 \text{ N-s} = 7.23301 \text{ lb-ft/s} = 100{,}000 \text{ g-cm/s}$$
+
+One kg-m/s equals one newton-second because force times time (impulse) has the same units as momentum. To convert to pound-feet per second, multiply by 7.23301.
+
+**Source:** Isaac Newton, *Philosophiae Naturalis Principia Mathematica* (1687), Definition II: "The quantity of motion is the measure of the same, arising from the velocity and quantity of matter conjunctly." SI unit definitions per BIPM, *The International System of Units (SI)*, 9th edition (2019).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Momentum of a Baseball Pitch
+
+A regulation baseball has a mass of 0.145 kg. A major-league pitcher throws it at 40 m/s (about 90 mph). What is its momentum and kinetic energy?
+
+**Step-by-step:**
+
+1. Known values: m = **0.145 kg**, v = **40 m/s**
+2. Apply the momentum formula: p = m times v = 0.145 times 40 = **5.80 kg-m/s**
+3. Convert to lb-ft/s: 5.80 times 7.23301 = **41.95 lb-ft/s**
+4. Compute kinetic energy: KE = p squared / (2m) = (5.80)² / (2 times 0.145) = 33.64 / 0.29 = **116.0 J**
+
+**Result:** The baseball carries a momentum of **5.80 kg-m/s** (5.80 N-s) and a kinetic energy of **116.0 J**.
+
+**Practical interpretation:** The 116 joules of kinetic energy is roughly equivalent to a 12 kg (26 lb) weight dropped from 1 meter. A catcher absorbs this energy over about 0.01 seconds when the ball hits the glove, experiencing an average force of p / t = 5.80 / 0.01 = 580 N (130 lbf) — which is why catchers wear heavy padding. By comparison, a cricket ball (0.163 kg at 40 m/s) carries 6.52 kg-m/s of momentum, about 12% more than a baseball at the same speed, due to its slightly larger mass.
+
+### Example 2: Truck vs. Car Momentum Comparison
+
+A 2,000 kg sedan travels at 30 m/s (108 km/h). A 15,000 kg delivery truck travels at 15 m/s (54 km/h). Which has more momentum?
+
+**Step-by-step for the sedan:**
+
+1. Known values: m = **2,000 kg**, v = **30 m/s**
+2. Apply the formula: p = 2,000 times 30 = **60,000 kg-m/s**
+3. Kinetic energy: KE = (60,000)² / (2 times 2,000) = 3,600,000,000 / 4,000 = **900,000 J** (900 kJ)
+
+**Step-by-step for the truck:**
+
+1. Known values: m = **15,000 kg**, v = **15 m/s**
+2. Apply the formula: p = 15,000 times 15 = **225,000 kg-m/s**
+3. Kinetic energy: KE = (225,000)² / (2 times 15,000) = 50,625,000,000 / 30,000 = **1,687,500 J** (1,688 kJ)
+
+**Result:** The truck has **225,000 kg-m/s** of momentum — **3.75 times** more than the sedan's 60,000 kg-m/s — despite traveling at half the speed.
+
+**Practical interpretation:** In a head-on collision between these two vehicles, conservation of momentum dictates the post-collision outcome. The truck's much greater momentum means the wreckage would continue moving in the truck's original direction. However, notice that the truck also has 1.87 times more kinetic energy — that energy must go somewhere during the crash (deforming metal, generating heat, and causing injuries). This is why truck-versus-car collisions are disproportionately deadly for car occupants. The [Acceleration Calculator](/calculators/science/acceleration-calculator) can determine the deceleration forces involved in such impacts.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Conservation of momentum governs every collision.** In any isolated system (no external forces), total momentum before a collision equals total momentum after. A 0.01 kg bullet at 400 m/s (p = 4 kg-m/s) embedding in a 2 kg block produces a combined object moving at 4 / 2.01 = 1.99 m/s. This principle is the foundation of ballistic pendulums, crash reconstruction, rocket propulsion, and particle physics experiments. It holds even when kinetic energy is lost to heat and deformation.
+
+**Elastic vs. inelastic collisions determine energy loss.** In a perfectly elastic collision (two billiard balls), both momentum and kinetic energy are conserved — no energy is lost. In a perfectly inelastic collision (two cars that crumple and stick together), momentum is conserved but kinetic energy is not — much of it converts to heat and deformation. Most real collisions fall between these extremes. A rubber ball bouncing off a floor is about 80% elastic; a car crash is about 5-10% elastic.
+
+**Impulse is the bridge between force and momentum.** Impulse equals force times the time over which it acts, and it equals the change in momentum: J = F times delta-t = delta-p. A baseball pitcher applies roughly 5.8 N-s of impulse to the ball during a throw lasting about 0.05 seconds, meaning the average force on the ball is 5.8 / 0.05 = 116 N. Increasing the contact time (like a crumple zone in a car) reduces the peak force for the same momentum change — this is the entire principle behind airbags and helmet padding.
+
+**Mass and velocity contribute differently to danger.** Momentum scales linearly with both mass and velocity (p = mv), but kinetic energy scales with the square of velocity (KE = 0.5mv squared). This means doubling the speed quadruples the kinetic energy while only doubling the momentum. A car at 120 km/h has four times the kinetic energy of the same car at 60 km/h — and kinetic energy is what causes destruction in a crash. Speed is more dangerous than weight, which is why speed limits save more lives than vehicle weight restrictions.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Linear momentum only.** This calculator computes translational (linear) momentum. It does not compute angular momentum (L = I times omega), which is relevant for spinning objects like flywheels, figure skaters, and planets.
+- **Scalar calculation.** Momentum is a vector quantity (it has direction), but this calculator computes only the magnitude. For collision problems involving angles, you must resolve momentum into x and y components separately.
+- **Non-relativistic speeds.** At speeds approaching the speed of light, relativistic momentum p = gamma times mv (where gamma is the Lorentz factor) replaces the classical formula. For particles at 90% of light speed, the relativistic momentum is 2.29 times the classical prediction. For everyday objects, the classical formula is perfectly accurate.
+- **Point-mass approximation.** The calculator assumes each object is a point mass. For extended bodies where rotation matters (a spinning football, a tumbling satellite), angular momentum must be considered alongside linear momentum.
+- **Positive values only.** All inputs must be positive. The direction of momentum is not modeled — for opposite-direction problems, assign signs manually and compute the vector sum.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is conservation of momentum?
+
+Conservation of momentum states that the total momentum of an isolated system remains constant — it cannot be created or destroyed, only transferred between objects. In a collision between two billiard balls, the combined momentum before impact exactly equals the combined momentum after impact. If ball A (moving at 2 m/s) hits stationary ball B (same mass), ball A stops and ball B moves at 2 m/s — the momentum transfers completely. This law holds for every type of collision: elastic, inelastic, explosions, and even subatomic particle interactions. It is one of the most fundamental conservation laws in physics, rooted in the translational symmetry of space as described by Noether's theorem.
+
+### Why do heavier objects have more momentum at the same speed?
+
+Heavier objects have more momentum because momentum is directly proportional to mass — p = mv. A 15,000 kg truck at 15 m/s carries 225,000 kg-m/s of momentum, while a 70 kg person running at 15 m/s (an unrealistically fast sprint) carries only 1,050 kg-m/s. The truck has over 200 times more momentum. This is why it takes far more force and time to stop a loaded truck than a running person, even at the same speed. It is also why freight trains, despite traveling slowly (often under 25 m/s), are nearly impossible to stop quickly — a 4,000-ton (3,628,739 kg) train at 22 m/s has a momentum of about 80 million kg-m/s.
+
+### What is impulse and how does it relate to momentum?
+
+Impulse is the product of force and the time interval over which it acts, measured in newton-seconds (N-s). Impulse equals the change in momentum: J = F times delta-t = delta-p. A 50 N force applied for 2 seconds produces an impulse of 100 N-s, changing the object's momentum by 100 kg-m/s. The impulse-momentum theorem is why airbags save lives: in a crash, the momentum change (and thus impulse) is fixed by the vehicle's mass and speed, but extending the stopping time from 0.005 seconds (hitting a rigid dashboard) to 0.05 seconds (inflating airbag) reduces the peak force by a factor of 10. The same principle applies to bending your knees when landing a jump — you increase the deceleration time, reducing the peak force on your joints.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes linear momentum using p = mv and solves for any one unknown variable given the other two. When momentum is unknown, it multiplies mass by velocity. When mass is unknown, it divides momentum by velocity. When velocity is unknown, it divides momentum by mass. It also computes kinetic energy from momentum using KE = p squared divided by 2m. Unit conversions use fixed factors: 1 kg-m/s = 1 N-s = 7.23301 lb-ft/s = 100,000 g-cm/s. Kinetic energy is returned in joules.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

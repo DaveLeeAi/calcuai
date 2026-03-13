@@ -1,0 +1,121 @@
+{
+  "id": "work-calculator",
+  "title": "Work Calculator",
+  "slug": "work-calculator",
+  "category": "science",
+  "subcategory": "physics",
+  "primaryKeyword": "work calculator",
+  "metaTitle": "Work Calculator — Mechanical Work (W = Fd cos \u03b8)",
+  "metaDescription": "Calculate mechanical work done by a force over a distance. Supports angled forces with W = Fd cos(\u03b8). Converts between joules, calories, BTU, and more.",
+  "inputs": [
+    {
+      "id": "force",
+      "label": "Force",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 100",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "N",
+      "defaultValue": 100,
+      "helpText": "Applied force in newtons"
+    },
+    {
+      "id": "distance",
+      "label": "Distance",
+      "type": "number",
+      "required": true,
+      "placeholder": "e.g. 5",
+      "min": 0,
+      "step": 0.01,
+      "suffix": "m",
+      "defaultValue": 5,
+      "helpText": "Distance over which the force is applied"
+    },
+    {
+      "id": "angle",
+      "label": "Angle",
+      "type": "number",
+      "required": false,
+      "placeholder": "e.g. 0",
+      "min": 0,
+      "max": 180,
+      "step": 0.1,
+      "suffix": "\u00b0",
+      "defaultValue": 0,
+      "helpText": "Angle between force and displacement (0\u00b0 = fully aligned, 90\u00b0 = perpendicular)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Calculated Values",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "work",
+      "label": "Work Done",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "effectiveForce",
+      "label": "Effective Force Component",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "conversions",
+      "label": "Unit Conversions",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "breakdown",
+      "label": "Calculation Breakdown",
+      "type": "breakdown",
+      "format": "number"
+    }
+  ],
+  "formula": "work",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "force-calculator",
+    "energy-calculator",
+    "velocity-calculator",
+    "momentum-calculator",
+    "pressure-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Gaspard-Gustave de Coriolis, Du calcul de l'effet des machines (1829)",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Mechanical work: W = F \u00d7 d \u00d7 cos(\u03b8)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "energy-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}
