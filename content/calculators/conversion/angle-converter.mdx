@@ -1,0 +1,104 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+180 degrees equals π radians (3.14159), 200 gradians, or 0.5 turns. A right angle of 90 degrees converts to π/2 radians (1.5708), 100 gradians, or 0.25 turns. This calculator converts between degrees, radians, gradians, turns, arcminutes, and arcseconds with a full conversion table showing your angle in every unit simultaneously.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Angle Conversion Shows
+
+Angle conversion works through a base unit — degrees — using fixed multiplication factors. The calculator converts your input to degrees first, then divides by the target unit's factor to produce the result.
+
+**Converted value** is the direct result of the conversion. Enter 180 degrees and convert to radians: 180 / (180/π) = π ≈ 3.14159. The six-decimal-place precision is sufficient for engineering, navigation, surveying, and physics calculations where angular accuracy determines structural integrity or positioning.
+
+**Conversion rate** shows the multiplier between units. The rate from degrees to radians is 0.017453 (π/180), meaning each degree equals 0.017453 radians. The inverse rate (57.295780) tells you each radian equals approximately 57.3 degrees. These rates are mathematical constants that never change.
+
+**Conversion table** displays your angle in all six units at once. Enter 45 degrees and instantly see: 0.785398 radians, 50 gradians, 0.125 turns, 2,700 arcminutes, and 162,000 arcseconds. This side-by-side comparison is valuable for cross-referencing calculations in different unit systems.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the angle value** — type the number you want to convert. Decimals are supported (e.g., 3.14159 radians, 45.5 degrees).
+
+2. **Select the source unit** — choose the unit you're converting from: degrees, radians, gradians, turns, arcminutes, or arcseconds.
+
+3. **Select the target unit** — choose the unit you're converting to. Results appear instantly with six decimal places.
+
+4. **Check the conversion table** — review your angle expressed in all six units to compare across systems used in different fields.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$\text{Converted Value} = \text{Value} \times \frac{\text{From Factor}}{\text{To Factor}}$$
+
+Where each unit's factor converts to degrees:
+
+- **Degrees** = 1
+- **Radians** = 180/π ≈ 57.29578
+- **Gradians** = 0.9
+- **Turns** = 360
+- **Arcminutes** = 1/60 ≈ 0.016667
+- **Arcseconds** = 1/3600 ≈ 0.000278
+
+**Key relationships:** A full circle = 360° = 2π radians = 400 gradians = 1 turn = 21,600 arcminutes = 1,296,000 arcseconds.
+
+**Source:** NIST Special Publication 330, The International System of Units (SI), 2019 Edition.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Converting 45° to All Angle Units
+
+An engineer needs to express a 45-degree angle in radians for a trigonometric calculation and in gradians for a surveying instrument calibrated in the metric angular system.
+
+**Step 1 — Convert to degrees (base unit):**
+
+45 degrees x 1 = **45 degrees** (already in base)
+
+**Step 2 — Convert to each unit:**
+
+- Radians: 45 / (180/π) = 45 x π/180 = **0.785398 radians** (π/4)
+- Gradians: 45 / 0.9 = **50 gradians**
+- Turns: 45 / 360 = **0.125 turns** (1/8 of a circle)
+- Arcminutes: 45 / (1/60) = 45 x 60 = **2,700 arcminutes**
+- Arcseconds: 45 / (1/3600) = 45 x 3,600 = **162,000 arcseconds**
+
+The engineer uses 0.785398 radians for the sine/cosine calculation and confirms that 50 gradians is the correct setting for the surveying instrument (where a right angle = 100 gradians).
+
+{/* Section 10: Key Factors */}
+## Key Factors in Angle Conversion
+
+**Radians are the standard in mathematics and physics.** Most programming languages, scientific calculators, and physics formulas expect angles in radians. The trigonometric functions sin(), cos(), and tan() in JavaScript, Python, C, and nearly every other language use radians — not degrees. Entering degrees into these functions without converting first is one of the most common calculation errors in programming.
+
+**Gradians are used in surveying and some European countries.** The gradian (also called gon or grade) divides a right angle into exactly 100 units, making it convenient for percentage-based slope calculations. A full circle is 400 gradians. French and some European topographic maps use gradians, while most other countries use degrees.
+
+**Arcminutes and arcseconds measure very small angles.** One arcminute (1/60 of a degree) is the resolution limit of the human eye. One arcsecond (1/3600 of a degree) is roughly the apparent width of a dime viewed from 4 kilometers away. These units are essential in astronomy (star positions), geodesy (GPS coordinates), and precision optics.
+
+{/* Section 12: FAQ */}
+## Frequently Asked Questions
+
+### What is the difference between degrees and radians?
+
+Degrees divide a full circle into 360 equal parts (an ancient Babylonian convention), while radians measure angles by the ratio of arc length to radius. A full circle is 2π radians (approximately 6.28318). Radians are dimensionless and mathematically natural — the derivative of sin(x) is cos(x) only when x is in radians, which is why radians are the standard unit in calculus and physics.
+
+### Why are there 360 degrees in a circle?
+
+The 360-degree circle originates from ancient Babylonian astronomy (circa 2000 BCE), where a base-60 number system was used. 360 is highly divisible (by 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 18, 20, 24, 30, 36, 40, 45, 60, 72, 90, 120, 180), making it practical for dividing circles into equal parts without fractions. The Babylonians also observed that a year had approximately 360 days.
+
+### When should I use gradians instead of degrees?
+
+Use gradians for surveying, land measurement, and slope calculations where percentage-based thinking is convenient. A 1% grade (slope) corresponds to approximately 1 gradian. European surveying instruments and topographic maps commonly use gradians. For most other applications — navigation, construction, trigonometry, physics — degrees or radians are more standard and widely understood.
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **NIST Special Publication 330** — [The International System of Units (SI)](https://www.nist.gov/pml/special-publication-330) (2019 Edition)
+- **Bureau International des Poids et Mesures (BIPM)** — SI Brochure, 9th Edition (2019), radian definition
+- **IEEE/ASTM SI 10-2016** — American National Standard for Metric Practice

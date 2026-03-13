@@ -1,0 +1,173 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+With observed values of 50, 30, and 20 against a uniform expected distribution of 33.3 each, the chi-square statistic is 14.00 with 2 degrees of freedom (p = 0.0009) — the result is statistically significant at alpha = 0.05, meaning the observed frequencies deviate from the expected distribution beyond what random chance would explain. This calculator computes the chi-square goodness of fit statistic, p-value, critical value, and per-category contributions for any number of categories, with optional custom expected values.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The chi-square statistic measures the total discrepancy between what you observed and what you expected. Each category contributes (O − E)²/E to the total. A chi-square of 0 means perfect agreement between observed and expected frequencies. The larger the chi-square value, the greater the evidence that the observed distribution differs from the expected one.
+
+The p-value tells you the probability of getting a chi-square statistic at least as extreme as the one calculated, assuming the null hypothesis (that the data follows the expected distribution) is true. A p-value of 0.0009 means there is only a 0.09% chance of observing this much deviation if the data truly followed a uniform distribution. When the p-value is less than the chosen significance level (typically 0.05), you reject the null hypothesis and conclude the difference is statistically significant.
+
+The degrees of freedom (df = k − 1) reflect how many categories are free to vary. With 3 categories that must sum to a fixed total, only 2 are free — the third is determined. The critical value is the chi-square threshold for your chosen significance level and degrees of freedom. If your chi-square exceeds the critical value, the result is significant. For related hypothesis testing tools, the [P-Value Calculator](/calculators/math/p-value-calculator) handles z-tests and t-tests, and the [Probability Calculator](/calculators/math/probability-calculator) computes basic event probabilities.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter observed values.** Type the observed frequencies for each category, separated by commas. For example, if you surveyed 100 people about their favorite color and got 50 red, 30 blue, and 20 green, enter "50, 30, 20".
+2. **Enter expected values (optional).** If you have specific expected frequencies, enter them separated by commas in the same order as the observed values. If left blank, the calculator assumes a uniform distribution — equal expected frequency for each category (total ÷ number of categories).
+3. **Choose the significance level.** The default is 0.05 (5%), which is the most common threshold in social science and business research. Use 0.01 for stricter testing (medical, safety) or 0.10 for exploratory analysis.
+4. **Read the results.** The chi-square statistic, degrees of freedom, p-value, and significance determination appear at the top. The per-category contributions show which categories deviate most from expectation.
+5. **Interpret the decision.** "Reject H₀" means the observed data is unlikely under the assumed distribution. "Fail to reject H₀" means you do not have sufficient evidence to conclude the distributions differ — but this is not proof they are identical.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Chi-Square Goodness of Fit Statistic
+
+$$\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}$$
+
+Where:
+
+- **χ²** = chi-square test statistic
+- **Oᵢ** = observed frequency for category i
+- **Eᵢ** = expected frequency for category i
+- **k** = number of categories
+
+### Degrees of Freedom
+
+$$df = k - 1$$
+
+### Per-Category Contribution
+
+$$c_i = \frac{(O_i - E_i)^2}{E_i}$$
+
+Each category's contribution indicates how much that specific category deviates from expectation. Categories with the largest contributions drive the overall chi-square value.
+
+### Decision Rule
+
+At significance level α:
+- If p-value < α → **reject H₀** (observed ≠ expected)
+- If p-value ≥ α → **fail to reject H₀** (insufficient evidence)
+
+Equivalently, compare χ² to the critical value χ²(α, df). If χ² > critical value, reject H₀.
+
+### Common Critical Values (α = 0.05)
+
+| df | Critical Value |
+|----|---------------|
+| 1 | 3.841 |
+| 2 | 5.991 |
+| 3 | 7.815 |
+| 4 | 9.488 |
+| 5 | 11.070 |
+| 10 | 18.307 |
+| 20 | 31.410 |
+
+**Source:** Karl Pearson, "On the criterion that a given system of deviations from the probable in the case of a correlated system of variables is such that it can be reasonably supposed to have arisen from random sampling," *Philosophical Magazine*, Series 5, 50:302 (1900), pp. 157–175. Critical values from chi-square distribution tables; NIST/SEMATECH e-Handbook of Statistical Methods, Section 1.3.6.7.4.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Fair Dice Test
+
+A statistics student rolls a die 120 times and records: 25 ones, 17 twos, 22 threes, 18 fours, 19 fives, and 19 sixes. Is the die fair at the 5% significance level?
+
+**Step-by-step:**
+
+1. Observed values: O = [25, 17, 22, 18, 19, 19], k = **6 categories**
+2. Expected (uniform): E = 120/6 = **20 per face**
+3. Calculate contributions:
+   - Face 1: (25−20)²/20 = 25/20 = **1.250**
+   - Face 2: (17−20)²/20 = 9/20 = **0.450**
+   - Face 3: (22−20)²/20 = 4/20 = **0.200**
+   - Face 4: (18−20)²/20 = 4/20 = **0.200**
+   - Face 5: (19−20)²/20 = 1/20 = **0.050**
+   - Face 6: (19−20)²/20 = 1/20 = **0.050**
+4. Sum: χ² = 1.25 + 0.45 + 0.20 + 0.20 + 0.05 + 0.05 = **2.200**
+5. Degrees of freedom: df = 6 − 1 = **5**
+6. Critical value at α=0.05, df=5: **11.070**
+7. Decision: 2.200 < 11.070 → **fail to reject H₀**
+
+**Result:** χ² = **2.200**, p ≈ **0.821**. The data is consistent with a fair die.
+
+**Practical interpretation:** The deviations from a perfectly uniform distribution are well within the range expected by chance alone. The largest contributor is face 1 (25 vs. expected 20), but even this alone is not remarkable. A p-value of 0.821 means about 82% of fair dice would produce at least this much variation in 120 rolls.
+
+### Example 2: Customer Preference Survey with Custom Expected Distribution
+
+A company expected their three product lines to capture 50%, 30%, and 20% of market share. After surveying 200 customers, they found 80, 70, and 50 chose each product respectively. Does the actual preference match the expected distribution?
+
+**Step-by-step:**
+
+1. Observed: O = [80, 70, 50], Total = **200**
+2. Expected (from hypothesized proportions): E = [100, 60, 40]
+3. Calculate contributions:
+   - Product A: (80−100)²/100 = 400/100 = **4.000**
+   - Product B: (70−60)²/60 = 100/60 = **1.667**
+   - Product C: (50−40)²/40 = 100/40 = **2.500**
+4. Sum: χ² = 4.000 + 1.667 + 2.500 = **8.167**
+5. Degrees of freedom: df = 3 − 1 = **2**
+6. Critical value at α=0.05, df=2: **5.991**
+7. Decision: 8.167 > 5.991 → **reject H₀**
+
+**Result:** χ² = **8.167**, p ≈ **0.017**. The actual market share significantly differs from the expected distribution.
+
+**Practical interpretation:** Product A underperformed expectations (80 vs. 100), while Products B and C exceeded them. The largest contributor to χ² is Product A (contribution = 4.0), suggesting the primary discrepancy lies in overestimating Product A's appeal. Marketing strategies should be revised to account for this shift. For broader survey design questions, the [Sample Size Calculator](/calculators/math/sample-size-calculator) helps determine how many respondents you need.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Sample size determines statistical power.** With small samples, the chi-square test may fail to detect real differences (low power). With very large samples, even trivially small deviations become statistically significant. A chi-square test on 10,000 observations might reject H₀ for a distribution that is practically identical to the expected one. Always pair the statistical result with an examination of effect size — look at the actual percentage deviations, not just the p-value.
+
+**Expected cell frequencies should be at least 5.** Cochran's rule of thumb states that the chi-square approximation is unreliable when any expected cell frequency falls below 5. If your expected values include cells below 5, consider combining categories or using an exact test (Fisher's exact test for 2×2 tables). The calculator does not enforce this rule but results should be interpreted cautiously when expected values are small.
+
+**The test is non-directional.** Chi-square only tells you that the observed distribution differs from the expected one — not in which direction or which specific category is responsible. The per-category contributions help identify which categories deviate most, but formal post-hoc tests (standardized residuals analysis) are needed to make specific claims about individual categories.
+
+**Choosing between goodness of fit and test of independence.** This calculator performs the goodness of fit test — comparing one distribution against a hypothesized distribution. If you are testing whether two categorical variables are related (e.g., gender vs. product preference), you need the chi-square test of independence, which uses a contingency table with a different degrees of freedom formula: df = (r−1)(c−1).
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Independent observations.** Each observation must be independent. Repeated measures from the same subject or clustered data violate this assumption.
+- **Categorical data only.** Chi-square tests are designed for frequency counts. Do not use them for continuous measurements — use t-tests or ANOVA instead.
+- **Minimum expected frequency.** All expected cell values should be at least 5 for the chi-square approximation to be valid (Cochran, 1954). Results with expected values below 5 may be unreliable.
+- **Non-negative observed values.** Observed frequencies cannot be negative. The calculator rejects negative inputs.
+- **Goodness of fit only.** This calculator tests one variable against a hypothesized distribution. It does not perform the chi-square test of independence (two-way contingency table).
+- **p-value is approximate.** The p-value is computed using a numerical approximation to the regularized incomplete gamma function. Accuracy is typically better than 6 decimal places for most practical chi-square and df values.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What does a chi-square test tell you?
+
+A chi-square goodness of fit test tells you whether the observed frequency distribution of a categorical variable differs significantly from an expected or hypothesized distribution. If the p-value is less than your chosen significance level (typically 0.05), you conclude that the observed data does not follow the expected distribution — the difference is statistically significant. For example, if you expect equal preference for three products (33.3% each) but observe 50%, 30%, and 20%, the chi-square test determines whether those deviations are large enough to be unlikely under random sampling.
+
+### When should you use a chi-square test vs. a t-test?
+
+Use a chi-square test when your data is categorical (counts or frequencies in categories) and you want to compare observed vs. expected distributions. Use a t-test when your data is continuous (measurements on a scale) and you want to compare means between two groups. For instance, testing whether coin flips are fair (counts of heads vs. tails) uses chi-square. Testing whether a new drug changes average blood pressure (measured in mmHg) uses a t-test. The [Z-Score Calculator](/calculators/math/z-score-calculator) handles individual data point comparisons against a known distribution.
+
+### What is a good chi-square value?
+
+There is no universally "good" chi-square value — interpretation depends on the degrees of freedom and significance level. A chi-square of 6.0 is significant at alpha = 0.05 with df = 2 (critical value 5.991) but not with df = 3 (critical value 7.815). The p-value contextualizes the chi-square statistic by accounting for degrees of freedom. Focus on the p-value and practical significance rather than the raw chi-square number. A very large chi-square (relative to df) indicates strong evidence against the null hypothesis, while a chi-square near zero indicates the data closely matches the expected distribution.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes the chi-square goodness of fit statistic using χ² = Σ[(Oᵢ − Eᵢ)² / Eᵢ]. When no expected values are provided, it assumes uniform distribution (total/k for each category). The p-value is computed as 1 minus the chi-square CDF, which uses the regularized lower incomplete gamma function P(df/2, χ²/2) with series expansion for small x and continued-fraction (modified Lentz) method for large x. The critical value is found via bisection inversion of the CDF. Degrees of freedom equal k − 1 where k is the number of categories.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

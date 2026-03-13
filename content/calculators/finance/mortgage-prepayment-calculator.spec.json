@@ -1,0 +1,179 @@
+{
+  "id": "mortgage-prepayment-calculator",
+  "title": "Mortgage Prepayment Calculator",
+  "slug": "mortgage-prepayment-calculator",
+  "category": "finance",
+  "subcategory": "mortgage",
+  "primaryKeyword": "mortgage prepayment calculator",
+  "metaTitle": "Mortgage Prepayment Calculator — Extra Payments, Interest Saved & Payoff Date",
+  "metaDescription": "Calculate how extra mortgage payments reduce your payoff timeline and total interest. See monthly, biweekly, and lump-sum prepayment impact. Free mortgage prepayment calculator.",
+  "inputs": [
+    {
+      "id": "loanBalance",
+      "label": "Current Loan Balance",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300000,
+      "min": 0,
+      "max": 10000000,
+      "step": 1000,
+      "prefix": "$"
+    },
+    {
+      "id": "interestRate",
+      "label": "Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 6.5,
+      "min": 0,
+      "max": 15,
+      "step": 0.125,
+      "helpText": "Annual interest rate"
+    },
+    {
+      "id": "remainingYears",
+      "label": "Remaining Loan Term",
+      "type": "number",
+      "required": true,
+      "defaultValue": 28,
+      "min": 1,
+      "max": 30,
+      "step": 1,
+      "suffix": "years"
+    },
+    {
+      "id": "monthlyPayment",
+      "label": "Current Monthly Payment (P&I)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1896,
+      "min": 0,
+      "max": 100000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Principal & interest only (exclude escrow)"
+    },
+    {
+      "id": "extraMonthly",
+      "label": "Extra Monthly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 200,
+      "min": 0,
+      "max": 50000,
+      "step": 50,
+      "prefix": "$"
+    },
+    {
+      "id": "extraYearly",
+      "label": "Extra Yearly Payment",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 500000,
+      "step": 500,
+      "prefix": "$",
+      "helpText": "One-time extra payment per year"
+    },
+    {
+      "id": "lumpSum",
+      "label": "One-Time Lump Sum",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 5000000,
+      "step": 1000,
+      "prefix": "$"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "interestSaved",
+      "label": "Total Interest Saved",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "newPayoffYears",
+      "label": "New Payoff Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "originalPayoffYears",
+      "label": "Original Payoff Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeSaved",
+      "label": "Time Saved",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "totalInterestOriginal",
+      "label": "Total Interest (Original)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterestNew",
+      "label": "Total Interest (With Extra)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalPaidOriginal",
+      "label": "Total Paid (Original)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalPaidNew",
+      "label": "Total Paid (With Extra)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "payoffDate",
+      "label": "New Payoff Date",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "mortgage-prepayment",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "amortization-calculator",
+    "refinance-calculator",
+    "home-equity-calculator",
+    "loan-calculator",
+    "home-sale-profit-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "CFPB — Mortgage Prepayment Guide; Federal Reserve — Understanding Amortization; Freddie Mac — Monthly Payment Calculator Methodology",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Month-by-month amortization simulation with extra principal payments applied. Interest = Balance × (Rate/12). Principal = Payment - Interest. Extra payments reduce balance directly.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["mortgage-calculator", "amortization-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": ["amortization", "interest-rate"],
+  "methodologyTopics": ["mortgage-amortization"]
+}

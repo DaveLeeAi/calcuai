@@ -1,0 +1,152 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Charging a 75 kWh electric vehicle from 20% to 80% at home costs $7.41 per session at the U.S. average electricity rate of $0.14/kWh — that's $0.04 per mile compared to $0.125 per mile for a 28 MPG gas car at $3.50/gallon. Over a year of driving 250 miles per week, an EV owner saves approximately $1,132 in fuel costs compared to gasoline. Enter your vehicle's battery size, electricity rate, and driving habits below for a personalized charging cost breakdown.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your EV Charging Estimate Shows
+
+Electric vehicle economics depend on three variables: your electricity rate, your vehicle's efficiency, and how much you drive. This calculator converts those inputs into dollar-per-mile costs and compares them directly against gasoline — the number that actually determines whether an EV saves you money.
+
+**Cost per charge session** is what you'll see on your electric bill each time you plug in. A 75 kWh battery charged from 20% to 80% needs 45 kWh of energy delivered to the battery, but Level 2 home charging is only 85% efficient — so you actually draw 52.9 kWh from the wall. At $0.14/kWh, that's $7.41 per session. Compare that to $32.14 for the equivalent range in gasoline (157.5 miles at 28 MPG and $3.50/gallon), and the per-session savings become clear.
+
+**EV cost per mile** is the metric that matters most for comparison shopping. It accounts for charging efficiency losses, so the number you see is the true cost including energy wasted as heat during charging. At $0.14/kWh with a 3.5 mi/kWh vehicle and 85% charging efficiency, the EV cost per mile is $0.047 — roughly one-third of the gasoline equivalent.
+
+**Monthly and yearly charging costs** project your total electricity expense for driving. At 250 miles per week (the U.S. average), monthly EV charging costs approximately $63.59. The equivalent gasoline bill at $3.50/gallon and 28 MPG would be $135.42 — a monthly savings of $71.83.
+
+**Gas comparison** shows the side-by-side cost of fueling a comparable gasoline vehicle for the same mileage. The savings calculator accounts for charging efficiency (energy lost during charging) but not for the higher purchase price of the EV itself, oil changes, or brake wear differences.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your battery capacity** — find this in your vehicle's spec sheet. Common values: Tesla Model 3 LR = 75 kWh, Chevrolet Bolt = 65 kWh, Ford Mustang Mach-E = 68–91 kWh, Hyundai Ioniq 5 = 58–77 kWh. Use the usable capacity, not the gross battery size.
+
+2. **Set your typical charge range** — most EV owners charge from 20% to 80% daily. Charging to 100% accelerates battery degradation, and running below 10% risks being stranded. The 20–80% range maximizes battery longevity while providing practical daily range.
+
+3. **Enter your electricity rate** — check your utility bill for the per-kWh rate. The U.S. average is $0.14/kWh, but rates vary from $0.08/kWh (Louisiana, Idaho) to $0.31/kWh (Hawaii, Connecticut). If you have time-of-use pricing, enter your off-peak rate since most EV charging happens overnight.
+
+4. **Set driving habits and gas comparison** — enter your weekly miles, then the gas price and MPG of the car your EV replaces. This produces an accurate savings estimate for your specific situation.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Energy needed per charge session:**
+
+$$\text{kWh}_{\text{needed}} = \text{Battery Capacity} \times \frac{\text{Target\%} - \text{Start\%}}{100}$$
+
+**Energy drawn from wall (accounting for charging losses):**
+
+$$\text{kWh}_{\text{wall}} = \frac{\text{kWh}_{\text{needed}}}{\text{Charging Efficiency}}$$
+
+**Cost per charge session:**
+
+$$\text{Cost} = \text{kWh}_{\text{wall}} \times \text{Electricity Rate}$$
+
+**EV cost per mile:**
+
+$$\text{Cost/mile}_{\text{EV}} = \frac{\text{Electricity Rate}}{\text{mi/kWh} \times \text{Charging Efficiency}}$$
+
+**Gas cost per mile (comparison):**
+
+$$\text{Cost/mile}_{\text{gas}} = \frac{\text{Gas Price}}{\text{MPG}}$$
+
+Where:
+
+- **Battery Capacity** = total usable battery size in kWh
+- **Charging Efficiency** = ratio of energy stored to energy drawn (typically 0.85 for Level 2)
+- **mi/kWh** = vehicle efficiency in miles per kilowatt-hour
+- **Electricity Rate** = cost per kWh from utility
+
+**Source:** U.S. Department of Energy — Alternative Fuels Data Center; EPA fuel economy ratings; EIA — Average Retail Price of Electricity.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Tesla Model 3 LR — 250 Miles/Week at $0.14/kWh
+
+A Tesla Model 3 Long Range owner drives 250 miles per week and charges at home overnight using a Level 2 (240V) charger. They want to compare costs against their previous 28 MPG sedan.
+
+**Inputs:**
+- Battery: 75 kWh, charging 20% → 80%
+- Electricity rate: $0.14/kWh
+- Charging efficiency: 85%
+- Vehicle efficiency: 3.5 mi/kWh
+- Weekly miles: 250
+- Gas comparison: $3.50/gal, 28 MPG
+
+**Step 1 — Cost per charge session:**
+
+kWh needed = 75 × (80 - 20) / 100 = 45 kWh
+
+kWh from wall = 45 / 0.85 = 52.94 kWh
+
+Cost = 52.94 × $0.14 = **$7.41**
+
+**Step 2 — Monthly EV cost:**
+
+Weekly kWh = 250 / 3.5 / 0.85 = 84.03 kWh from wall
+
+Monthly = 84.03 × $0.14 × 4.333 = **$63.59**
+
+**Step 3 — Monthly gas comparison:**
+
+Monthly gas = 250 × 4.333 / 28 × $3.50 = **$135.42**
+
+**Monthly savings: $71.83 | Yearly savings: $861.96**
+
+At $0.14/kWh, the EV costs $0.047/mile versus $0.125/mile for gas — a 62% reduction in fuel cost per mile.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Charging Cost
+
+**Electricity rate** is the biggest variable. At $0.08/kWh (cheap states), monthly charging drops to $36.34. At $0.25/kWh (expensive states), it rises to $113.55 — potentially making savings vs. gas marginal if gas is cheap. Time-of-use (TOU) plans can reduce rates to $0.05–$0.10/kWh for overnight charging, significantly improving EV economics.
+
+**Charging method** affects efficiency. Level 2 home charging (240V) is 85–90% efficient. Level 1 (standard 120V outlet) drops to 80–85% efficiency. DC fast charging (Supercharger, Electrify America) is 90–95% efficient but costs $0.30–$0.50/kWh — often 2–3× home rates.
+
+**Vehicle efficiency** varies widely. A Tesla Model 3 achieves 3.5–4.0 mi/kWh, while a large SUV like the Rivian R1S manages 2.0–2.5 mi/kWh. Climate control in extreme temperatures can reduce efficiency by 20–40%, especially in winter.
+
+**Driving style** directly impacts efficiency. Highway driving at 75 mph reduces range by 15–25% compared to city driving. Aggressive acceleration burns energy faster than gradual starts.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator uses a constant electricity rate. Time-of-use pricing, tiered rates, and demand charges are not modeled — if you charge off-peak, your actual costs may be lower. Charging efficiency of 85% reflects typical Level 2 home charging; Level 1, DC fast charging, and extreme temperature conditions alter efficiency. Vehicle efficiency (mi/kWh) is assumed constant across all driving conditions; real-world efficiency varies with speed, temperature, terrain, and HVAC use. The gas comparison uses a single MPG value and does not account for maintenance cost differences (EVs eliminate oil changes, have lower brake wear). Battery degradation over time is not included. EV purchase price premium and potential tax credits are not factored into the cost-per-mile comparison.
+
+{/* Section 12: FAQ */}
+## Frequently Asked Questions
+
+### How much does it cost to fully charge an electric car at home?
+
+Charging a 75 kWh EV from 0% to 100% at the U.S. average rate of $0.14/kWh costs approximately $12.35 (accounting for 85% charging efficiency). Most owners charge 20% to 80%, which costs about $7.41. Monthly costs for an average driver (250 miles/week) run $55–$75 depending on local electricity rates.
+
+### Is charging an EV cheaper than gasoline?
+
+In most U.S. locations, yes. At the national average electricity rate of $0.14/kWh, an EV costs about $0.04–$0.05 per mile. A 28 MPG gas car at $3.50/gallon costs $0.125 per mile — roughly 2.5–3× more expensive. The exception is areas with very high electricity rates ($0.30+/kWh) and very cheap gas.
+
+### How long does it take to charge an EV at home?
+
+A Level 2 (240V/32A) home charger adds about 25–30 miles of range per hour. Charging a 75 kWh battery from 20% to 80% takes approximately 6–8 hours — perfect for overnight charging. A Level 1 (120V) outlet adds only 3–5 miles per hour and is impractical for daily use at high mileage.
+
+### Should I charge to 100% every time?
+
+No. Lithium-ion batteries last longer when kept between 20% and 80%. Charging to 100% accelerates degradation and is only recommended before long trips. Most EV manufacturers recommend daily charging to 80% or less. Tesla's onboard software defaults to an 80% charge limit for daily driving.
+
+### How much do public chargers cost compared to home charging?
+
+Public Level 2 chargers typically cost $0.20–$0.35/kWh. DC fast chargers (Tesla Supercharger, Electrify America) range from $0.30–$0.50/kWh — roughly 2–3× home charging costs. Some locations charge per-minute rather than per-kWh, which can be more or less expensive depending on your vehicle's charge rate.
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **U.S. Department of Energy** — [Alternative Fuels Data Center: Electricity Prices](https://afdc.energy.gov/fuels/electricity-prices)
+- **EPA** — [Fuel Economy Guide](https://fueleconomy.gov/) (vehicle mi/kWh ratings)
+- **EIA** — [Average Retail Price of Electricity](https://www.eia.gov/electricity/monthly/) (state-by-state rates)
+- **Idaho National Laboratory** — EV charging efficiency studies (Level 1, Level 2, DC fast)

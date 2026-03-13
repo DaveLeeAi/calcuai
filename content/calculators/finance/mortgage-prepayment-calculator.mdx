@@ -1,0 +1,150 @@
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Adding \$200 per month to a \$300,000 mortgage at 6.5% saves approximately \$103,500 in interest and cuts 7 years off your payoff timeline — reducing total interest from \$382,800 to \$279,300 and shortening the loan from roughly 30 years to 23 years. A one-time \$50,000 lump-sum payment toward principal saves even more by eliminating interest on that amount for the entire remaining term. This calculator runs a month-by-month amortization simulation with your extra monthly, yearly, and lump-sum payments to show exactly how much interest you save, when you pay off the loan, and how your total cost compares to the original schedule.
+
+</section>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+The **Total Interest Saved** is the headline number — the dollar amount you avoid paying the bank by making extra principal payments. On a \$300,000 mortgage at 6.5%, the original loan generates roughly \$382,800 in total interest over its life. Adding \$200/month drops that to approximately \$279,300, saving \$103,500 that stays in your pocket instead of going to your lender.
+
+**New Payoff Time** shows when your mortgage reaches a zero balance with extra payments applied. The **Time Saved** is the difference between the original payoff timeline and the accelerated one. In our default scenario, 7 years of payments disappear entirely — those are years you own your home free and clear while your neighbors are still writing mortgage checks.
+
+**Total Paid (Original)** versus **Total Paid (With Extra)** shows the all-in comparison. Even though you are sending more money each month, your total out-of-pocket cost drops because you are paying interest on a shrinking balance for fewer months. The math is counterintuitive but consistent: paying more per month means paying less overall.
+
+**New Payoff Date** converts the month count into a calendar date so you can plan around a concrete milestone — a date when your largest monthly expense drops to zero.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Current Loan Balance** — the remaining principal on your mortgage. Find this on your most recent statement or lender portal. This is not the original loan amount; it is what you owe today.
+
+2. **Enter your Interest Rate and Remaining Term** — your annual rate (e.g., 6.5%) and approximately how many years remain. If you are 2 years into a 30-year mortgage, enter 28 years remaining.
+
+3. **Enter your Current Monthly Payment** — principal and interest only. Exclude escrow (property tax, insurance, PMI). Your statement breaks this out; look for the "P&I" line.
+
+4. **Enter your extra payment strategy** — choose one or combine all three. Extra Monthly is a recurring additional payment. Extra Yearly is a one-time annual payment (such as a tax refund or bonus). Lump Sum is a one-time immediate payment (such as an inheritance or savings).
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Mortgage prepayment savings are calculated through a month-by-month amortization simulation rather than a single closed-form equation.
+
+**Monthly interest charge:**
+
+$$I_m = B_m \times \frac{r}{12}$$
+
+**Monthly principal reduction:**
+
+$$P_m = \text{Payment} - I_m$$
+
+**New balance after extra payments:**
+
+$$B_{m+1} = B_m - P_m - E_{\text{monthly}} - E_{\text{yearly}} \cdot \mathbb{1}_{m \bmod 12 = 0} - E_{\text{lump}} \cdot \mathbb{1}_{m = 1}$$
+
+Where:
+- $B_m$ = remaining balance at month $m$
+- $r$ = annual interest rate (as decimal)
+- $I_m$ = interest portion of month $m$ payment
+- $P_m$ = principal portion of month $m$ payment
+- $E_{\text{monthly}}$ = extra monthly payment
+- $E_{\text{yearly}}$ = extra yearly payment (applied every 12th month)
+- $E_{\text{lump}}$ = one-time lump sum (applied at month 1)
+
+The simulation runs until the balance reaches zero. Interest saved equals total interest under the original schedule minus total interest under the accelerated schedule.
+
+**Source:** Consumer Financial Protection Bureau (CFPB) — Mortgage Prepayment Guide; Federal Reserve — Understanding Amortization; Freddie Mac — Monthly Payment Calculator Methodology.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### \$300,000 Mortgage at 6.5% with \$200/Month Extra
+
+**Inputs:**
+- Loan Balance: \$300,000
+- Interest Rate: 6.5%
+- Remaining Term: 28 years
+- Monthly Payment (P&I): \$1,896
+- Extra Monthly Payment: \$200
+- Extra Yearly: \$0
+- Lump Sum: \$0
+
+**Step-by-step (month 1):**
+
+1. Monthly interest: \$300,000 × (0.065 / 12) = **\$1,625.00**
+2. Principal from regular payment: \$1,896 − \$1,625.00 = **\$271.00**
+3. Extra principal: **\$200.00**
+4. Total principal reduction: \$271.00 + \$200.00 = **\$471.00**
+5. New balance: \$300,000 − \$471.00 = **\$299,529.00**
+
+This process repeats monthly. Each month, more of the regular payment goes to principal (because the balance is lower), and the \$200 extra accelerates that cycle further.
+
+**Final results:**
+- Original payoff: ~30 years 1 month | Total interest: ~\$382,800
+- With \$200/month extra: ~23 years 1 month | Total interest: ~\$279,300
+- **Interest saved: ~\$103,500**
+- **Time saved: 7 years**
+
+**Interpretation:** An extra \$200/month — roughly the cost of a streaming subscription bundle and a few restaurant meals — eliminates \$103,500 in bank profit and gives you 7 years of mortgage-free ownership. The return on that \$200/month investment far exceeds typical stock market returns because mortgage interest compounds against you.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Savings
+
+**Interest rate matters most.** At 3%, an extra \$200/month on a \$300,000 mortgage saves roughly \$25,000. At 6.5%, the same \$200 saves over \$103,000. At 8%, savings exceed \$140,000. The higher your rate, the more powerful prepayment becomes. Homeowners with rates above 6% benefit dramatically from extra payments.
+
+**Timing amplifies the effect.** Extra payments made in years 1–5 of your mortgage save far more interest than the same payments made in years 20–25. Early in the loan, most of your regular payment goes to interest rather than principal. Extra payments during this period attack the balance when it is largest and has the most remaining months to compound against you.
+
+**Check for prepayment penalties.** Most conventional mortgages originated after 2014 have no prepayment penalties (prohibited under the Ability-to-Repay rule from Dodd-Frank). However, some older loans, jumbo loans, and subprime loans may carry penalties — typically 2%–3% of the outstanding balance during the first 3–5 years. Check your loan documents before committing to a large lump-sum payment.
+
+**Consider the opportunity cost.** If your mortgage rate is 3.5% and you can earn 5% in a high-yield savings account or index fund, mathematically you may earn more by investing the extra \$200 instead of prepaying. At rates above 6%, prepayment almost always wins against conservative investments because the guaranteed return (interest saved) exceeds most risk-free alternatives.
+
+**Specify "apply to principal."** When sending extra payments, explicitly instruct your servicer to apply the funds to principal — not to future payments. Some servicers default to advancing your next due date rather than reducing the balance. Check your online portal for a principal-only payment option.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator assumes a fixed-rate mortgage with constant monthly payments. Adjustable-rate mortgages (ARMs) will produce different results as the rate changes. The simulation does not account for escrow payments (taxes, insurance, PMI), which affect your total monthly obligation but not the principal-and-interest calculation. Prepayment penalty costs are not modeled — verify with your lender. The payoff date assumes you maintain extra payments consistently; skipping months reduces savings proportionally.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### Is it worth making extra mortgage payments?
+
+At interest rates above 5%, extra payments almost always provide a strong guaranteed return. Adding \$200/month to a \$300,000 mortgage at 6.5% saves approximately \$103,500 in interest — equivalent to a guaranteed 6.5% annual return on every extra dollar paid. The decision depends on your rate, alternative investment returns, and whether you have higher-interest debt (credit cards, student loans) that should be paid first.
+
+### Which is better: biweekly payments or extra monthly payments?
+
+Biweekly payments result in 26 half-payments per year (equivalent to 13 monthly payments), adding one extra payment annually. A dedicated extra monthly payment of the same total amount produces similar results but offers more flexibility. For a \$300,000 loan at 6.5% with a \$1,896 payment, biweekly effectively adds about \$158/month extra — saving roughly \$85,000 in interest. A \$200/month extra payment saves more (\$103,500) because it exceeds the biweekly equivalent.
+
+### Do mortgages have prepayment penalties?
+
+Most conventional fixed-rate mortgages originated after January 2014 carry no prepayment penalties, thanks to the CFPB's Qualified Mortgage rules under Dodd-Frank. FHA and VA loans also prohibit prepayment penalties. However, some older mortgages, non-qualified mortgages, and certain jumbo or subprime products may include penalties of 2%–3% of the outstanding balance during the first 3–5 years. Review your promissory note or call your servicer to confirm.
+
+### What is the best prepayment strategy for my situation?
+
+If you have consistent extra cash flow, monthly extra payments provide steady balance reduction. If you receive irregular windfalls (bonuses, tax refunds), annual lump-sum payments work well. The mathematically optimal approach is to combine both: a sustainable monthly extra payment plus occasional larger payments. Always pay off credit card debt (15%–25% APR) before accelerating a 6%–7% mortgage.
+
+### Are there tax implications to paying off my mortgage early?
+
+Paying off your mortgage eliminates the mortgage interest deduction. For homeowners who itemize deductions, this reduces the tax benefit. However, the 2017 Tax Cuts and Jobs Act doubled the standard deduction, meaning fewer than 10% of taxpayers now itemize. If you take the standard deduction, losing the mortgage interest deduction has zero tax impact. Consult a tax advisor for your specific situation.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses a month-by-month amortization simulation following standard fixed-rate mortgage mathematics as defined by the **Consumer Financial Protection Bureau (CFPB)**. The amortization formula follows the methodology published by **Freddie Mac** in their Monthly Payment Calculator and the **Federal Reserve's** consumer education materials on understanding amortization. Prepayment penalty regulations reference the **Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)**, specifically the Qualified Mortgage provisions under **12 CFR § 1026.43**. Biweekly payment comparisons follow standard industry practice as described by the **Mortgage Bankers Association (MBA)**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

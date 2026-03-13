@@ -55,7 +55,35 @@
       "slug": "speed",
       "description": "Convert between units of speed and velocity.",
       "calculators": ["speed-converter"]
+    },
+    {
+      "id": "currency",
+      "name": "Currency",
+      "slug": "currency",
+      "description": "Convert between major world currencies with exchange rate and fee calculations.",
+      "calculators": ["currency-converter"]
+    },
+    {
+      "id": "time",
+      "name": "Time",
+      "slug": "time",
+      "description": "Convert between units of time from seconds to years.",
+      "calculators": ["time-converter"]
+    },
+    {
+      "id": "angle",
+      "name": "Angle",
+      "slug": "angle",
+      "description": "Convert between units of angular measurement.",
+      "calculators": ["angle-converter"]
+    },
+    {
+      "id": "pressure",
+      "name": "Pressure",
+      "slug": "pressure",
+      "description": "Convert between units of pressure and atmospheric measurement.",
+      "calculators": ["pressure-converter"]
     }
   ],
-  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter", "speed-converter"]
+  "featuredCalculators": ["length-converter", "weight-converter", "temperature-converter", "area-converter", "volume-converter", "data-storage-converter", "speed-converter", "currency-converter", "time-converter", "angle-converter", "pressure-converter"]
 }

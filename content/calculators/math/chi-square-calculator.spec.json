@@ -1,0 +1,144 @@
+{
+  "id": "chi-square-calculator",
+  "title": "Chi-Square Calculator",
+  "slug": "chi-square-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "chi square calculator",
+  "metaTitle": "Chi-Square Calculator — Goodness of Fit Test & p-Value",
+  "metaDescription": "Calculate the chi-square statistic, p-value, and critical value for a goodness of fit test. Supports custom or uniform expected distributions. Free statistics calculator with step-by-step solution.",
+  "inputs": [
+    {
+      "id": "observedValues",
+      "label": "Observed Values (comma-separated)",
+      "type": "text",
+      "required": true,
+      "defaultValue": "50,30,20",
+      "placeholder": "e.g. 50, 30, 20",
+      "helpText": "Enter observed frequencies for each category, separated by commas"
+    },
+    {
+      "id": "expectedValues",
+      "label": "Expected Values (comma-separated)",
+      "type": "text",
+      "required": false,
+      "defaultValue": "",
+      "placeholder": "e.g. 33.3, 33.3, 33.3",
+      "helpText": "Leave blank for uniform distribution (equal expected frequencies)"
+    },
+    {
+      "id": "significanceLevel",
+      "label": "Significance Level (α)",
+      "type": "select",
+      "required": true,
+      "defaultValue": "0.05",
+      "options": [
+        {
+          "value": "0.01",
+          "label": "0.01 (99% confidence)"
+        },
+        {
+          "value": "0.05",
+          "label": "0.05 (95% confidence)"
+        },
+        {
+          "value": "0.10",
+          "label": "0.10 (90% confidence)"
+        }
+      ],
+      "helpText": "Probability of rejecting the null hypothesis when it is true"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Chi-Square Test Results",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "chiSquareStatistic",
+      "label": "Chi-Square Statistic (χ²)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "degreesOfFreedom",
+      "label": "Degrees of Freedom (df)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "pValue",
+      "label": "p-Value",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "isSignificant",
+      "label": "Statistically Significant?",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "criticalValue",
+      "label": "Critical Value",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "contributions",
+      "label": "Per-Category Contributions",
+      "type": "value-group",
+      "format": "number"
+    },
+    {
+      "id": "breakdown",
+      "label": "Step-by-Step Breakdown",
+      "type": "breakdown"
+    }
+  ],
+  "formula": "chi-square",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "p-value-calculator",
+    "standard-deviation-calculator",
+    "z-score-calculator",
+    "probability-calculator",
+    "sample-size-calculator",
+    "confidence-interval-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Karl Pearson, On the criterion that a given system of deviations... (1900); NIST/SEMATECH e-Handbook of Statistical Methods",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "χ² = Σ[(Oᵢ − Eᵢ)² / Eᵢ]; df = k − 1; p-value via regularized incomplete gamma function",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "p-value-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

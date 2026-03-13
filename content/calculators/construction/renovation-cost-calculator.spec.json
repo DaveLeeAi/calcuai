@@ -1,0 +1,136 @@
+{
+  "id": "renovation-cost-calculator",
+  "title": "Renovation Cost Calculator",
+  "slug": "renovation-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "renovation cost calculator",
+  "metaTitle": "Renovation Cost Calculator — Estimate Your Home Remodel Budget",
+  "metaDescription": "Estimate whole-home renovation costs by square footage, quality level, kitchen and bathroom upgrades, permits, and contingency. Free renovation cost calculator.",
+  "inputs": [
+    {
+      "id": "squareFootage",
+      "label": "Square Footage",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2000,
+      "min": 100,
+      "max": 10000,
+      "step": 100,
+      "suffix": "sq ft",
+      "helpText": "Total livable area being renovated"
+    },
+    {
+      "id": "qualityLevel",
+      "label": "Quality Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mid-range",
+      "options": [
+        { "value": "basic", "label": "Basic ($50–$75/sq ft)" },
+        { "value": "mid-range", "label": "Mid-Range ($75–$150/sq ft)" },
+        { "value": "high-end", "label": "High-End ($150–$300/sq ft)" },
+        { "value": "luxury", "label": "Luxury ($300–$500/sq ft)" }
+      ]
+    },
+    {
+      "id": "includeKitchen",
+      "label": "Include Kitchen Renovation",
+      "type": "select",
+      "required": true,
+      "defaultValue": "yes",
+      "options": [
+        { "value": "yes", "label": "Yes" },
+        { "value": "no", "label": "No" }
+      ]
+    },
+    {
+      "id": "includeBathrooms",
+      "label": "Number of Bathrooms",
+      "type": "number",
+      "required": true,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 5,
+      "step": 1,
+      "helpText": "Number of bathrooms being renovated (0–5)"
+    },
+    {
+      "id": "structuralChanges",
+      "label": "Structural Changes",
+      "type": "select",
+      "required": true,
+      "defaultValue": "no",
+      "options": [
+        { "value": "yes", "label": "Yes (wall removal, load-bearing changes)" },
+        { "value": "no", "label": "No" }
+      ]
+    },
+    {
+      "id": "contingencyPercent",
+      "label": "Contingency Buffer",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0,
+      "max": 30,
+      "step": 1,
+      "suffix": "%",
+      "helpText": "Recommended 10–20% for unexpected costs"
+    },
+    {
+      "id": "permitPercent",
+      "label": "Permit Cost Estimate",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1.5,
+      "min": 0,
+      "max": 5,
+      "step": 0.5,
+      "suffix": "%",
+      "helpText": "Typically 1–2% of project cost"
+    }
+  ],
+  "outputs": [
+    { "id": "totalCost", "label": "Total Renovation Cost", "type": "single-value", "format": "currency", "highlight": true },
+    { "id": "baseCost", "label": "Base Renovation Cost", "type": "single-value", "format": "currency" },
+    { "id": "kitchenCost", "label": "Kitchen Renovation", "type": "single-value", "format": "currency" },
+    { "id": "bathroomCost", "label": "Bathroom Renovation(s)", "type": "single-value", "format": "currency" },
+    { "id": "structuralCost", "label": "Structural Changes", "type": "single-value", "format": "currency" },
+    { "id": "permitCost", "label": "Estimated Permits", "type": "single-value", "format": "currency" },
+    { "id": "contingency", "label": "Contingency Buffer", "type": "single-value", "format": "currency" },
+    { "id": "effectiveCostPerSqFt", "label": "Effective Cost per Sq Ft", "type": "single-value", "format": "currency" },
+    { "id": "costBreakdown", "label": "Cost Breakdown", "type": "value-group", "format": "currency" }
+  ],
+  "formula": "renovation-cost",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "kitchen-remodel-calculator",
+    "bathroom-remodel-calculator",
+    "flooring-calculator",
+    "paint-calculator",
+    "drywall-calculator",
+    "square-footage-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "HomeAdvisor 2024 True Cost Guide; Remodeling Magazine 2024 Cost vs. Value Report; National Association of Home Builders (NAHB) Remodeling Market Index",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Cost estimation based on national per-square-foot renovation cost ranges by quality tier. Kitchen and bathroom premiums from HomeAdvisor project-level cost guides. Structural surcharge at 20% of base per NAHB contractor surveys. Permit and contingency percentages from industry standard recommendations.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["kitchen-remodel-calculator", "bathroom-remodel-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": ["square-footage"],
+  "methodologyTopics": []
+}

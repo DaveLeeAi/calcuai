@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 167 modules, 169 formula IDs
+ * 182 modules, 184 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -28,6 +28,7 @@ import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary
 
 // Construction
 import { FORMULA_REGISTRY as construction_asphalt } from './construction/asphalt';
+import { FORMULA_REGISTRY as construction_bathroom_remodel } from './construction/bathroom-remodel';
 import { FORMULA_REGISTRY as construction_board_foot } from './construction/board-foot';
 import { FORMULA_REGISTRY as construction_brick } from './construction/brick';
 import { FORMULA_REGISTRY as construction_carpet } from './construction/carpet';
@@ -43,6 +44,8 @@ import { FORMULA_REGISTRY as construction_fence } from './construction/fence';
 import { FORMULA_REGISTRY as construction_flooring } from './construction/flooring';
 import { FORMULA_REGISTRY as construction_hvac_size } from './construction/hvac-size';
 import { FORMULA_REGISTRY as construction_insulation } from './construction/insulation';
+import { FORMULA_REGISTRY as construction_kitchen_remodel } from './construction/kitchen-remodel';
+import { FORMULA_REGISTRY as construction_renovation_cost } from './construction/renovation-cost';
 import { FORMULA_REGISTRY as construction_metal_roofing } from './construction/metal-roofing';
 import { FORMULA_REGISTRY as construction_paint_coverage } from './construction/paint-coverage';
 import { FORMULA_REGISTRY as construction_paver } from './construction/paver';
@@ -61,13 +64,19 @@ import { FORMULA_REGISTRY as construction_wallpaper } from './construction/wallp
 import { FORMULA_REGISTRY as construction_wire_size } from './construction/wire-size';
 
 // Conversion
+import { FORMULA_REGISTRY as conversion_angle_convert } from './conversion/angle-convert';
+import { FORMULA_REGISTRY as conversion_currency_convert } from './conversion/currency-convert';
+import { FORMULA_REGISTRY as conversion_pressure_convert } from './conversion/pressure-convert';
 import { FORMULA_REGISTRY as conversion_square_meter } from './conversion/square-meter';
+import { FORMULA_REGISTRY as conversion_time_convert } from './conversion/time-convert';
 import { FORMULA_REGISTRY as conversion_unit_convert } from './conversion/unit-convert';
 
 // Everyday
 import { FORMULA_REGISTRY as everyday_date_diff } from './everyday/date-diff';
 import { FORMULA_REGISTRY as everyday_discount } from './everyday/discount';
 import { FORMULA_REGISTRY as everyday_electricity_cost } from './everyday/electricity-cost';
+import { FORMULA_REGISTRY as everyday_ev_charging_cost } from './everyday/ev-charging-cost';
+import { FORMULA_REGISTRY as everyday_home_energy_usage } from './everyday/home-energy-usage';
 import { FORMULA_REGISTRY as everyday_final_grade } from './everyday/final-grade';
 import { FORMULA_REGISTRY as everyday_fuel_cost } from './everyday/fuel-cost';
 import { FORMULA_REGISTRY as everyday_gas_mileage } from './everyday/gas-mileage';
@@ -78,6 +87,8 @@ import { FORMULA_REGISTRY as everyday_test_grade } from './everyday/test-grade';
 import { FORMULA_REGISTRY as everyday_time_math } from './everyday/time-math';
 import { FORMULA_REGISTRY as everyday_timezone } from './everyday/timezone';
 import { FORMULA_REGISTRY as everyday_tip_calc } from './everyday/tip-calc';
+import { FORMULA_REGISTRY as everyday_travel_budget } from './everyday/travel-budget';
+import { FORMULA_REGISTRY as everyday_trip_cost } from './everyday/trip-cost';
 
 // Finance
 import { FORMULA_REGISTRY as finance_401k_growth } from './finance/401k-growth';
@@ -108,7 +119,9 @@ import { FORMULA_REGISTRY as finance_heloc } from './finance/heloc';
 import { FORMULA_REGISTRY as finance_home_affordability } from './finance/home-affordability';
 import { FORMULA_REGISTRY as finance_home_equity } from './finance/home-equity';
 import { FORMULA_REGISTRY as finance_home_insurance } from './finance/home-insurance';
+import { FORMULA_REGISTRY as finance_home_sale_profit } from './finance/home-sale-profit';
 import { FORMULA_REGISTRY as finance_income_tax } from './finance/income-tax';
+import { FORMULA_REGISTRY as finance_interest_only_loan } from './finance/interest-only-loan';
 import { FORMULA_REGISTRY as finance_inflation } from './finance/inflation';
 import { FORMULA_REGISTRY as finance_interest_rate_solve } from './finance/interest-rate-solve';
 import { FORMULA_REGISTRY as finance_investment_growth } from './finance/investment-growth';
@@ -116,11 +129,15 @@ import { FORMULA_REGISTRY as finance_loan_comparison } from './finance/loan-comp
 import { FORMULA_REGISTRY as finance_loan_payment } from './finance/loan-payment';
 import { FORMULA_REGISTRY as finance_mortgage_payment } from './finance/mortgage-payment';
 import { FORMULA_REGISTRY as finance_mortgage_points } from './finance/mortgage-points';
+import { FORMULA_REGISTRY as finance_mortgage_prepayment } from './finance/mortgage-prepayment';
 import { FORMULA_REGISTRY as finance_net_worth } from './finance/net-worth';
 import { FORMULA_REGISTRY as finance_paycheck } from './finance/paycheck';
+import { FORMULA_REGISTRY as finance_personal_loan } from './finance/personal-loan';
 import { FORMULA_REGISTRY as finance_present_value } from './finance/present-value';
 import { FORMULA_REGISTRY as finance_property_tax } from './finance/property-tax';
+import { FORMULA_REGISTRY as finance_real_estate_commission } from './finance/real-estate-commission';
 import { FORMULA_REGISTRY as finance_refinance_breakeven } from './finance/refinance-breakeven';
+import { FORMULA_REGISTRY as finance_rent_increase } from './finance/rent-increase';
 import { FORMULA_REGISTRY as finance_rent_vs_buy } from './finance/rent-vs-buy';
 import { FORMULA_REGISTRY as finance_rental_property } from './finance/rental-property';
 import { FORMULA_REGISTRY as finance_retirement_projection } from './finance/retirement-projection';
@@ -133,6 +150,7 @@ import { FORMULA_REGISTRY as finance_savings_goal } from './finance/savings-goal
 import { FORMULA_REGISTRY as finance_savings_growth } from './finance/savings-growth';
 import { FORMULA_REGISTRY as finance_self_employment_tax } from './finance/self-employment-tax';
 import { FORMULA_REGISTRY as finance_simple_interest } from './finance/simple-interest';
+import { FORMULA_REGISTRY as finance_student_loan_payoff } from './finance/student-loan-payoff';
 import { FORMULA_REGISTRY as finance_tax_brackets } from './finance/tax-brackets';
 
 // Health
@@ -154,6 +172,7 @@ import { FORMULA_REGISTRY as health_tdee } from './health/tdee';
 import { FORMULA_REGISTRY as health_water_intake } from './health/water-intake';
 
 // Math
+import { FORMULA_REGISTRY as math_chi_square } from './math/chi-square';
 import { FORMULA_REGISTRY as math_central_tendency } from './math/central-tendency';
 import { FORMULA_REGISTRY as math_circle } from './math/circle';
 import { FORMULA_REGISTRY as math_confidence_interval } from './math/confidence-interval';
@@ -174,6 +193,7 @@ import { FORMULA_REGISTRY as math_significant_figures } from './math/significant
 import { FORMULA_REGISTRY as math_slope } from './math/slope';
 import { FORMULA_REGISTRY as math_square_root } from './math/square-root';
 import { FORMULA_REGISTRY as math_standard_deviation } from './math/standard-deviation';
+import { FORMULA_REGISTRY as math_standard_error } from './math/standard-error';
 import { FORMULA_REGISTRY as math_triangle_solver } from './math/triangle-solver';
 import { FORMULA_REGISTRY as math_z_score } from './math/z-score';
 
@@ -211,6 +231,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_salary_to_hourly,
   // Construction
   ...construction_asphalt,
+  ...construction_bathroom_remodel,
   ...construction_board_foot,
   ...construction_brick,
   ...construction_carpet,
@@ -226,6 +247,8 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...construction_flooring,
   ...construction_hvac_size,
   ...construction_insulation,
+  ...construction_kitchen_remodel,
+  ...construction_renovation_cost,
   ...construction_metal_roofing,
   ...construction_paint_coverage,
   ...construction_paver,
@@ -243,12 +266,18 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...construction_wallpaper,
   ...construction_wire_size,
   // Conversion
+  ...conversion_angle_convert,
+  ...conversion_currency_convert,
+  ...conversion_pressure_convert,
   ...conversion_square_meter,
+  ...conversion_time_convert,
   ...conversion_unit_convert,
   // Everyday
   ...everyday_date_diff,
   ...everyday_discount,
   ...everyday_electricity_cost,
+  ...everyday_ev_charging_cost,
+  ...everyday_home_energy_usage,
   ...everyday_final_grade,
   ...everyday_fuel_cost,
   ...everyday_gas_mileage,
@@ -259,6 +288,8 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...everyday_time_math,
   ...everyday_timezone,
   ...everyday_tip_calc,
+  ...everyday_travel_budget,
+  ...everyday_trip_cost,
   // Finance
   ...finance_401k_growth,
   ...finance_amortization,
@@ -288,7 +319,9 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_home_affordability,
   ...finance_home_equity,
   ...finance_home_insurance,
+  ...finance_home_sale_profit,
   ...finance_income_tax,
+  ...finance_interest_only_loan,
   ...finance_inflation,
   ...finance_interest_rate_solve,
   ...finance_investment_growth,
@@ -296,11 +329,15 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_loan_payment,
   ...finance_mortgage_payment,
   ...finance_mortgage_points,
+  ...finance_mortgage_prepayment,
   ...finance_net_worth,
   ...finance_paycheck,
+  ...finance_personal_loan,
   ...finance_present_value,
   ...finance_property_tax,
+  ...finance_real_estate_commission,
   ...finance_refinance_breakeven,
+  ...finance_rent_increase,
   ...finance_rent_vs_buy,
   ...finance_rental_property,
   ...finance_retirement_projection,
@@ -313,6 +350,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...finance_savings_growth,
   ...finance_self_employment_tax,
   ...finance_simple_interest,
+  ...finance_student_loan_payoff,
   ...finance_tax_brackets,
   // Health
   ...health_bmi,
@@ -332,6 +370,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...health_tdee,
   ...health_water_intake,
   // Math
+  ...math_chi_square,
   ...math_central_tendency,
   ...math_circle,
   ...math_confidence_interval,
@@ -352,6 +391,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...math_slope,
   ...math_square_root,
   ...math_standard_deviation,
+  ...math_standard_error,
   ...math_triangle_solver,
   ...math_z_score,
   // Science

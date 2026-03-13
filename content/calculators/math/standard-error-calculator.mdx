@@ -1,0 +1,160 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+With a sample standard deviation of 15 and sample size of 30, the standard error of the mean is 2.739 — meaning the sample mean of 100 has a 95% confidence interval of [94.63, 105.37]. The standard error quantifies how precisely your sample mean estimates the true population mean: smaller SE means higher precision. This calculator computes SE from either summary statistics or raw data, plus the margin of error, confidence interval, and relative SE — all with a step-by-step breakdown.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: Your Result Explained */}
+## Your Result Explained
+
+The standard error (SE) tells you how much your sample mean is likely to differ from the true population mean due to random sampling variability. An SE of 2.739 means that if you repeatedly drew samples of 30 from the same population, the sample means would typically vary by about 2.739 units from the true mean in either direction.
+
+The 95% confidence interval extends from the sample mean minus 1.96 standard errors to the sample mean plus 1.96 standard errors. For a mean of 100 with SE = 2.739, the interval is [94.63, 105.37]. This means you can be 95% confident the true population mean falls within this range. A narrower interval indicates more precise estimation — achievable by increasing sample size or working with data that has lower variability.
+
+The relative standard error expresses SE as a percentage of the mean. An RSE below 10% generally indicates acceptable precision for survey estimates, while RSE above 25% signals that the estimate may be unreliable. The [Standard Deviation Calculator](/calculators/math/standard-deviation-calculator) computes the spread of raw data, while the [Confidence Interval Calculator](/calculators/math/confidence-interval-calculator) offers additional confidence levels beyond 95%.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Choose your input mode.** Select "Enter Summary Statistics" if you already know the sample standard deviation and sample size. Select "Enter Raw Data" if you have a list of individual measurements and want the calculator to compute everything from scratch.
+2. **For summary mode:** enter the sample standard deviation (s), sample size (n), and optionally the sample mean. The sample mean is used to compute the confidence interval — if omitted, it defaults to 0 and the CI centers on zero.
+3. **For data mode:** enter your data points separated by commas (e.g., "23, 25, 28, 31, 22, 27"). The calculator will compute the mean, standard deviation, and sample size automatically, then derive all SE-related outputs.
+4. **Read the results.** The primary output is the standard error. Below it you will find the 95% margin of error, confidence interval bounds, and relative SE. The step-by-step breakdown shows every intermediate calculation.
+5. **Interpret precision.** Compare SE across different sample sizes to see how precision improves. Quadrupling the sample size halves the SE — this is the key relationship for research planning.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+### Standard Error of the Mean
+
+$$SE = \frac{s}{\sqrt{n}}$$
+
+Where:
+
+- **SE** = standard error of the mean
+- **s** = sample standard deviation
+- **n** = sample size (number of observations)
+
+### Margin of Error (95% Confidence)
+
+$$ME = 1.96 \times SE$$
+
+The z-value 1.96 corresponds to the 97.5th percentile of the standard normal distribution, giving a two-tailed 95% confidence interval.
+
+### Confidence Interval
+
+$$CI = \bar{x} \pm ME = \bar{x} \pm 1.96 \times \frac{s}{\sqrt{n}}$$
+
+Where **x-bar** is the sample mean. The lower bound is x-bar minus ME and the upper bound is x-bar plus ME.
+
+### Relative Standard Error
+
+$$RSE = \frac{SE}{|\bar{x}|} \times 100\%$$
+
+RSE expresses the standard error as a percentage of the absolute value of the mean. It is undefined when the mean is zero.
+
+### Key Relationship: SE and Sample Size
+
+Because SE is inversely proportional to the square root of n, doubling precision (halving SE) requires quadrupling the sample size. Going from n = 100 to n = 400 cuts SE in half. Going from n = 400 to n = 1,600 halves it again.
+
+| Sample Size (n) | SE (when s = 20) |
+|-----------------|-----------------|
+| 25 | 4.000 |
+| 100 | 2.000 |
+| 400 | 1.000 |
+| 1,600 | 0.500 |
+| 10,000 | 0.200 |
+
+**Source:** The standard error formula derives from the Central Limit Theorem, which establishes that the sampling distribution of the mean approaches a normal distribution with standard deviation σ/√n as sample size increases. See Casella & Berger, *Statistical Inference*, 2nd ed. (2002), Theorem 5.5.14. The 1.96 multiplier for 95% confidence comes from standard normal distribution tables (Karl Pearson, 1900).
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Clinical Trial Blood Pressure Readings
+
+A clinical trial measures systolic blood pressure in 64 patients and finds a sample mean of 128 mmHg with a sample standard deviation of 16 mmHg. What is the standard error and 95% confidence interval?
+
+**Step-by-step:**
+
+1. Known values: s = **16**, n = **64**, x-bar = **128**
+2. Calculate SE: SE = s / √n = 16 / √64 = 16 / 8 = **2.000**
+3. Margin of error (95%): ME = 1.96 × 2.000 = **3.920**
+4. Confidence interval: 128 ± 3.920 = **[124.08, 131.92]**
+5. Relative SE: (2.000 / 128) × 100 = **1.56%**
+
+**Result:** The standard error is **2.000 mmHg** and the 95% CI is **[124.08, 131.92] mmHg**.
+
+**Practical interpretation:** The true mean systolic blood pressure for this population likely falls between 124 and 132 mmHg. The relative SE of 1.56% indicates high precision — well below the 10% threshold for reliable estimates. To cut the SE to 1.0 mmHg, the trial would need n = 256 patients (quadrupling the sample size to halve SE).
+
+### Example 2: Survey Response Times from Raw Data
+
+A UX researcher records task completion times in seconds: 12, 15, 18, 14, 22, 11, 16, 19, 13, 20. What is the standard error of the mean completion time?
+
+**Step-by-step:**
+
+1. Count data points: n = **10**
+2. Calculate mean: x-bar = (12+15+18+14+22+11+16+19+13+20) / 10 = 160 / 10 = **16.0**
+3. Calculate sample variance: s² = Σ(xᵢ − 16)² / (10−1) = 118 / 9 = **13.111**
+4. Sample standard deviation: s = √13.111 = **3.621**
+5. Standard error: SE = 3.621 / √10 = 3.621 / 3.162 = **1.145**
+6. Margin of error (95%): ME = 1.96 × 1.145 = **2.245**
+7. Confidence interval: 16.0 ± 2.245 = **[13.76, 18.24]**
+
+**Result:** The standard error is **1.145 seconds** and the 95% CI for mean completion time is **[13.76, 18.24] seconds**.
+
+**Practical interpretation:** With only 10 observations, the SE is relatively large compared to the mean (RSE = 7.2%). If the team needs the CI to be within ±1 second of the mean, they would need approximately 52 participants (SE ≈ 0.502, ME ≈ 0.98). The [Sample Size Calculator](/calculators/math/sample-size-calculator) can help plan study sizes for a desired precision level.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+**Sample size has the largest impact on SE.** The square-root relationship means that early sample-size increases produce dramatic precision gains — going from n = 4 to n = 16 cuts SE in half — but marginal gains diminish at large n. Going from n = 10,000 to n = 40,000 also halves SE, but requires 30,000 additional observations for the same relative improvement. Budget your sample size using the [Sample Size Calculator](/calculators/math/sample-size-calculator) to find the optimal tradeoff between cost and precision.
+
+**Population variability directly scales SE.** If the underlying population has a standard deviation of 50 instead of 10, the SE is 5 times larger for the same sample size. You cannot reduce SE below what the population's natural variability allows — you can only mitigate it by increasing n. Stratified sampling, where the population is divided into more homogeneous subgroups, can reduce effective variability and therefore SE.
+
+**The 95% confidence level is a convention, not a requirement.** For exploratory research, 90% confidence (z = 1.645) may suffice. For medical or safety-critical decisions, 99% confidence (z = 2.576) is typical. The choice of confidence level only affects the margin of error and CI width, not the SE itself. Use the [Z-Score Calculator](/calculators/math/z-score-calculator) to look up z-values for other confidence levels.
+
+**The Central Limit Theorem requires adequate sample size.** For normally distributed populations, SE is exact at any n. For skewed or heavy-tailed distributions, the CLT approximation improves as n increases — typically n ≥ 30 is cited as a rule of thumb, though highly skewed distributions may need n ≥ 100 for the sampling distribution to be approximately normal.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- **Independent observations required.** The SE formula assumes each data point is drawn independently. Clustered data (e.g., multiple measurements from the same person) violates this assumption and requires a cluster-adjusted SE.
+- **95% CI uses the normal approximation.** For small samples (n < 30), the t-distribution is more appropriate. This calculator uses z = 1.96 for the 95% CI, which is accurate for n ≥ 30 but slightly underestimates the true interval for smaller samples.
+- **Sample standard deviation used, not population σ.** The formula uses s (sample standard deviation with n−1 in the denominator) as an estimator of σ. This Bessel's correction makes s an unbiased estimator of σ.
+- **Relative SE undefined at mean = 0.** When the sample mean equals zero, the relative SE is mathematically undefined. The calculator returns null in this case.
+- **Finite population correction not included.** If your sample represents more than 5% of the total population, apply the finite population correction factor: SE_adj = SE × √((N−n)/(N−1)), where N is the population size.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is a good standard error value?
+
+A "good" standard error depends entirely on context and the scale of measurement. There is no universal threshold. Instead, evaluate the relative standard error (RSE = SE/mean × 100%). For survey estimates, the U.S. Census Bureau considers RSE below 10% reliable, 10–25% as use-with-caution, and above 25% as unreliable. In clinical research, the SE should be small enough that the confidence interval is clinically meaningful — a blood pressure CI of ±2 mmHg is precise, while ±15 mmHg is not. Always interpret SE relative to the magnitude of the mean and the practical significance of the measurement.
+
+### What is the difference between standard error and standard deviation?
+
+Standard deviation (s) measures the spread of individual observations around the sample mean — it describes variability in the data. Standard error (SE = s/√n) measures the precision of the sample mean as an estimate of the population mean — it describes variability of the statistic. As sample size grows, SE decreases (the estimate becomes more precise), but standard deviation stays roughly constant (individual data points remain just as variable). A dataset of 100 exam scores might have s = 15 (scores vary by ±15 around the mean) but SE = 1.5 (the sample mean estimates the population mean within ±1.5).
+
+### How does sample size affect the standard error?
+
+Standard error decreases as the square root of the sample size increases: SE = s/√n. This means quadrupling the sample size cuts SE in half. Going from n = 25 (SE = s/5) to n = 100 (SE = s/10) halves the standard error. This square-root relationship is why large gains in precision require disproportionately larger samples — halving SE from 2.0 to 1.0 requires 4 times the observations, and halving again from 1.0 to 0.5 requires another 4 times (16 times the original n).
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator computes the standard error using SE = s / √n, where s is the sample standard deviation and n is the sample size. In data mode, the calculator first computes the sample mean (x-bar = Σxᵢ / n), then the sample variance using Bessel's correction (s² = Σ(xᵢ − x-bar)² / (n−1)), and finally s = √s². The 95% margin of error uses the standard normal z-value of 1.96. The confidence interval is [x-bar − 1.96×SE, x-bar + 1.96×SE]. Relative SE is computed as (SE / |x-bar|) × 100 when x-bar is nonzero.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "general" */}

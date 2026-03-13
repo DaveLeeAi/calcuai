@@ -1,0 +1,169 @@
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A $15,000 personal loan at 10.5% APR over 36 months costs **$487.54 per month**, with $2,551 in total interest — bringing your total repayment to $17,551. Add a 3% origination fee and the lender deducts $450 upfront, giving you only $14,550 in hand while you still repay the full $17,551 — pushing the effective APR above 12.5%. This calculator shows your exact monthly payment, total interest, origination fee impact, and true cost of borrowing so you can compare personal loan offers on equal footing.
+
+</section>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Monthly Payment** is the fixed amount you pay each month for the life of the loan. This number stays the same from month one through the final payment (assuming a fixed-rate loan). For a $15,000 loan at 10.5% over 36 months, that is $487.54. Your first payment splits roughly $131.25 toward interest and $356.43 toward principal. By the final payment, only $4.23 goes to interest and $483.45 retires the remaining balance. Understanding this shift matters because early prepayment saves disproportionately more interest.
+
+**Total Interest Paid** is the cumulative cost of borrowing beyond the principal. On that same $15,000 loan, you pay $2,551 in interest over 3 years. This is the number that most borrowers underestimate. A 5-year term on the same loan drops the monthly payment to $322.52 but increases total interest to $4,351.29 — 70% more interest for the convenience of lower monthly payments.
+
+**Effective APR** is the true annualized cost of borrowing after accounting for the origination fee. If there is no origination fee, the effective APR equals the stated interest rate. With a 3% origination fee on a $15,000 loan, you receive $14,550 but repay $17,551, making the effective APR approximately 12.6% — significantly higher than the advertised 10.5%. The Truth in Lending Act (TILA) requires lenders to disclose APR, but some advertising emphasizes the lower interest rate. Always compare APR, not interest rate.
+
+**Net Loan Proceeds** is the actual cash you receive after the origination fee is deducted. If you need exactly $15,000 for a home improvement project and the lender charges a 3% fee, you must borrow approximately $15,464 to net $15,000. This calculator shows what you actually receive so you can size your loan correctly.
+
+**Loan Cost Breakdown** separates the principal, total interest, and origination fee so you can see the full cost of the loan at a glance. The total cost of the loan is interest plus origination fee — the total price you pay for the privilege of borrowing.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Loan Amount** — the total amount you want to borrow. Personal loans typically range from $1,000 to $50,000, with most lenders offering $5,000–$35,000 for unsecured personal loans.
+
+2. **Enter the Annual Interest Rate** — the fixed APR quoted by the lender. Personal loan rates range from 6% (excellent credit, 750+) to 36% (subprime, below 580). The national average was 12.35% as of Q4 2024 according to the Federal Reserve.
+
+3. **Select the Loan Term** — choose from 12 to 84 months. Shorter terms have higher monthly payments but lower total interest. A 36-month term is the most common personal loan duration. Extending to 60 months reduces the monthly payment by roughly 34% but increases total interest by approximately 70%.
+
+4. **Optionally enter the Origination Fee** — many personal loan lenders charge 1%–8% of the loan amount, deducted from your disbursement. Enter 0 if no fee is charged. Lenders like SoFi and Marcus offer no-fee personal loans; LendingClub and Prosper typically charge 3%–8%.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
+
+Where:
+- $M$ = fixed monthly payment
+- $P$ = loan principal (amount borrowed)
+- $r$ = monthly interest rate (annual rate ÷ 12 ÷ 100)
+- $n$ = total number of monthly payments (loan term in months)
+
+**Total Payment** = $M \times n$
+
+**Total Interest** = Total Payment $-$ $P$
+
+**Origination Fee** = $P \times$ (fee % ÷ 100)
+
+**Net Proceeds** = $P -$ Origination Fee
+
+**Effective APR** is the annual rate $r_{\text{eff}}$ that satisfies:
+
+$$\text{Net Proceeds} = M \times \frac{1 - (1 + r_{\text{eff}}/12)^{-n}}{r_{\text{eff}}/12}$$
+
+This is solved iteratively (Newton's method). When no origination fee exists, the effective APR equals the stated annual interest rate. When a fee is present, the effective APR is always higher than the stated rate because you receive less cash but make the same payments.
+
+**Source:** Consumer Financial Protection Bureau (CFPB) — Loan Estimate explainer; Truth in Lending Act (TILA) Regulation Z, 12 CFR Part 1026.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### $15,000 Loan at 10.5% for 36 Months with 3% Origination Fee
+
+**Inputs:**
+- Loan Amount: $15,000
+- Annual Interest Rate: 10.5%
+- Loan Term: 36 months
+- Origination Fee: 3%
+
+**Step 1 — Monthly rate:**
+$r = 10.5\% \div 12 \div 100 = 0.00875$
+
+**Step 2 — Monthly payment:**
+$M = 15{,}000 \times \frac{0.00875 \times (1.00875)^{36}}{(1.00875)^{36} - 1}$
+$(1.00875)^{36} = 1.36861$
+$M = 15{,}000 \times \frac{0.00875 \times 1.36861}{1.36861 - 1} = 15{,}000 \times \frac{0.011975}{0.36861} = 15{,}000 \times 0.032503 = \$487.54$
+
+**Step 3 — Totals:**
+- Total Payment: $487.54 \times 36 = \$17{,}551.44$
+- Total Interest: $17{,}551.44 - 15{,}000 = \$2{,}551.44$
+
+**Step 4 — Origination fee:**
+- Fee: $15{,}000 \times 3\% = \$450$
+- Net Proceeds: $15{,}000 - 450 = \$14{,}550$
+
+**Step 5 — Effective APR:**
+The lender gives you $14,550 but you repay $17,551.44 over 36 months at $487.54/month. Solving for the rate that equates the present value of 36 payments of $487.54 to $14,550 yields an effective APR of approximately **12.6%** — over 2 percentage points above the stated 10.5%.
+
+**Interpretation:** The origination fee adds $450 in direct cost and pushes the true borrowing cost from 10.5% to about 12.6%. If a competing lender offers 11.5% with no origination fee, their total cost ($2,797 in interest, $0 in fees) is cheaper than this loan ($2,551 in interest + $450 in fees = $3,001 total). Always compare the effective APR, not the headline interest rate.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Personal Loan Cost
+
+**Credit score is the dominant variable.** Borrowers with scores above 750 qualify for rates as low as 6%–8%. Scores between 670–739 see 10%–15%. Below 630, rates jump to 20%–36%. On a $15,000, 36-month loan, the difference between 7% and 20% is approximately $1,630 versus $5,090 in total interest — a $3,462 gap. Checking your score before applying (and improving it if possible) is the single highest-ROI action.
+
+**Loan term creates a monthly-payment vs. total-cost tradeoff.** A 24-month term on a $15,000 loan at 10.5% costs $694.20/month but only $1,660.70 in total interest. A 60-month term drops to $322.52/month but costs $4,351.29 in interest. The 60-month borrower pays 162% more interest for a 54% lower monthly payment. Choose the shortest term your budget allows.
+
+**Origination fees reduce your effective proceeds.** A 5% fee on a $15,000 loan means you receive $14,250 — but repay $15,000 plus interest. If you need a specific amount, you must borrow more to cover the fee. Some lenders add the fee to the loan balance; others deduct it from disbursement. Confirm which method your lender uses.
+
+**Fixed vs. variable rate changes your risk profile.** This calculator assumes a fixed rate — your payment never changes. Variable-rate personal loans start lower but can increase with the prime rate. In a rising-rate environment (like 2022–2023), variable-rate borrowers saw payments increase 2%–4% within 18 months.
+
+**Debt-to-income ratio (DTI) affects approval and rate.** Most lenders want DTI below 40%. Adding a $488/month payment to existing obligations could push you above threshold, resulting in denial or a higher rate. Calculate your DTI before applying by dividing total monthly debt payments (including the new loan) by gross monthly income.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator assumes a fixed interest rate and equal monthly payments over the full loan term (standard amortization). It does not model variable-rate loans, payment holidays, late fees, or prepayment penalties. The origination fee is assumed to be deducted from the loan disbursement (not added to the balance). The effective APR calculation follows TILA Regulation Z methodology but may differ slightly from a lender's disclosed APR due to additional fees (application fees, credit check fees) not captured here. The calculator does not account for autopay discounts (typically 0.25%–0.50% rate reduction) or relationship discounts. Actual payments may vary by a few cents due to rounding. Tax implications of personal loan interest (generally not deductible for personal use) are not modeled.
+
+{/* Section 14: FAQ */}
+<section className="faq-section">
+
+## Frequently Asked Questions
+
+### What credit score do I need for a personal loan?
+
+Most lenders require a minimum credit score of 580–620 for personal loan approval, though the best rates (under 10%) are reserved for borrowers with scores above 720. Some online lenders like Upstart use alternative data and may approve scores as low as 300, but at significantly higher rates (20%–36%). According to TransUnion, the average personal loan borrower has a credit score of 685.
+
+### How does a personal loan differ from a credit card?
+
+A personal loan provides a lump sum at a fixed interest rate with a defined repayment schedule, while a credit card offers revolving credit at a variable rate. Personal loan rates average 12.35% (Federal Reserve, Q4 2024) versus 22.76% for credit cards. The fixed term means forced payoff — you cannot make minimum payments indefinitely. For debt consolidation, a personal loan replaces high-rate revolving balances with a lower-rate installment plan, typically saving 10–15 percentage points in interest.
+
+### What is an origination fee and should I avoid it?
+
+An origination fee is a one-time charge by the lender, typically 1%–8% of the loan amount, deducted from your disbursement. A 5% fee on a $15,000 loan means you receive $14,250 but repay $15,000 plus interest. Whether to avoid it depends on the total cost: a loan with a 3% fee at 8% interest may be cheaper overall than a no-fee loan at 11% interest. Always compare the effective APR, which accounts for the fee.
+
+### Can I pay off a personal loan early?
+
+Most personal loans allow early payoff without penalty, though some lenders charge a prepayment penalty of 1%–5% of the remaining balance. Federal credit unions are prohibited from charging prepayment penalties. Before signing, confirm the prepayment terms in your loan agreement. Early payoff saves interest — paying off the $15,000 example loan 12 months early saves approximately $680 in interest.
+
+### How much can I borrow with a personal loan?
+
+Unsecured personal loan amounts typically range from $1,000 to $50,000, with some lenders offering up to $100,000 for well-qualified borrowers. The amount you qualify for depends on your credit score, income, DTI ratio, and the lender's policies. As a guideline, most lenders cap the monthly payment at 10%–15% of your gross monthly income.
+
+### Is personal loan interest tax-deductible?
+
+Personal loan interest is generally not tax-deductible when the funds are used for personal expenses (vacations, debt consolidation, medical bills). However, if you use the loan proceeds for business expenses or qualified higher education costs, the interest may be deductible. Consult a tax professional for your specific situation. This differs from mortgage interest, which is deductible on loans up to $750,000 for primary residences.
+
+### What is the difference between interest rate and APR?
+
+The interest rate is the annual cost of borrowing the principal, expressed as a percentage. The APR (Annual Percentage Rate) includes the interest rate plus any mandatory fees (such as origination fees), representing the true annual cost. A loan at 10.5% interest with a 3% origination fee has an effective APR of approximately 12.63%. The Truth in Lending Act requires lenders to disclose APR, making it the standard comparison metric.
+
+### How long should my personal loan term be?
+
+Choose the shortest term where the monthly payment fits comfortably in your budget. A 36-month term is the most common and balances payment size against total interest cost. On a $15,000 loan at 10.5%, going from 36 months ($488/mo, $2,551 interest) to 60 months ($323/mo, $4,345 interest) saves $165/month but costs $1,794 more in interest. If cash flow is tight, the longer term provides breathing room — but refinancing to a shorter term later is always an option.
+
+### Should I use a personal loan to consolidate credit card debt?
+
+Debt consolidation is the most common use of personal loans, and it makes mathematical sense when the personal loan rate is significantly lower than your credit card rates. If you carry $15,000 across cards averaging 22% APR, consolidating to a 10.5% personal loan saves approximately $3,600 in interest over 36 months. The key risk: if you run the credit cards back up after consolidating, you end up with more total debt. Close or freeze the cards after transfer.
+
+### What happens if I miss a personal loan payment?
+
+Missing a payment typically triggers a late fee ($25–$50 or 5% of the payment) and a negative mark on your credit report after 30 days past due. Most lenders offer a 10–15 day grace period before charging the late fee. After 90 days delinquent, many lenders charge off the debt and sell it to a collections agency, causing severe credit score damage (100+ point drop). If you anticipate difficulty, contact your lender before the due date — many offer hardship programs or payment deferrals.
+
+</section>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Sources & Methodology
+
+This calculator uses the standard fixed-rate amortization formula as defined by the **Consumer Financial Protection Bureau (CFPB)** in the Loan Estimate disclosure requirements. The effective APR calculation follows the methodology specified in the **Truth in Lending Act (TILA) Regulation Z** (12 CFR Part 1026), which requires lenders to disclose the annualized cost of credit including origination fees. Average personal loan rate data references the **Federal Reserve** G.19 Consumer Credit statistical release. Credit score thresholds reference **TransUnion** and **Experian** personal loan market reports (2024). Origination fee ranges reference data from **LendingTree**, **NerdWallet**, and **Bankrate** personal loan surveys (2024).
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

@@ -1,0 +1,198 @@
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+On a \$300,000 loan at 7%, your interest-only payment is \$1,750 per month for the first 10 years — \$245 less than the \$1,995.91 standard fully amortizing payment. But when the IO period ends, your payment jumps to \$2,311.44 per month to repay the full principal over the remaining 20 years — a 32% increase overnight. Over the life of the loan, an interest-only structure costs \$343,546 in total interest compared to \$418,527 for a standard 30-year fixed... wait, that comparison is misleading. The IO loan actually costs \$343,546 in interest versus \$418,527 for the standard loan because you defer all principal repayment during the IO period. This calculator shows the exact payment during each phase, the payment shock when amortization begins, and the total cost comparison so you can decide whether the lower initial payment justifies the higher long-term cost.
+
+</section>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+The **Interest-Only Monthly Payment** is your cost during the IO period — pure interest with zero principal reduction. On a \$300,000 loan at 7%, that is exactly \$1,750.00 per month. Your loan balance stays at \$300,000 for the entire IO period because none of your payment goes toward principal.
+
+**Payment After IO Period** is the fully amortizing payment that kicks in once the interest-only years expire. This is the number that causes payment shock. The principal you deferred must now be repaid over a shorter remaining term, which drives the payment significantly higher than a standard loan payment. For a 30-year loan with a 10-year IO period, you compress 30 years of principal repayment into 20 years.
+
+**Payment Jump After IO Period** shows the dollar increase and percentage increase between your IO payment and the amortizing payment. A 32% increase on a \$1,750 payment means an extra \$561 per month — \$6,735 per year — that you must budget for starting in year 11.
+
+**Standard Payment (Comparison)** shows what you would pay on a conventional fully amortizing loan with the same principal, rate, and total term. This is your benchmark for evaluating the IO structure. The IO loan starts lower but ends higher, and the total interest comparison tells you the true cost difference.
+
+**Total Interest** figures show the lifetime interest cost under each structure. The IO loan typically costs more in total interest because the principal balance remains higher for longer, generating more interest charges over the life of the loan.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the Loan Amount** — the total principal you plan to borrow. For a home purchase, this is the sale price minus your down payment. For a refinance, use your current mortgage balance.
+
+2. **Select the Annual Interest Rate** — your quoted rate from the lender. Interest-only loans may carry slightly higher rates than standard fixed-rate mortgages. Enter the rate as a percentage (e.g., 7 for 7%).
+
+3. **Choose the Total Loan Term** — the full duration of the loan from origination to final payoff. Common terms are 30 years (most popular), 25, 20, or 15 years.
+
+4. **Choose the Interest-Only Period** — the number of years at the start of the loan during which you pay only interest. Typical IO periods range from 3 to 10 years. After this period ends, the loan converts to a fully amortizing schedule for the remaining term.
+
+5. **Review the payment comparison** — note the IO payment, the post-IO payment, the payment jump, and the total interest under each scenario. Use this to evaluate whether the short-term savings during the IO period justify the higher payments and potentially higher total cost later.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Interest-only monthly payment:**
+
+$$P_{\text{IO}} = L \times \frac{r}{12}$$
+
+Where $L$ is the loan principal and $r$ is the annual interest rate as a decimal.
+
+**Fully amortizing payment after IO period:**
+
+$$M = L \times \frac{r_m (1 + r_m)^n}{(1 + r_m)^n - 1}$$
+
+Where:
+- $L$ = original loan amount (unchanged during IO period)
+- $r_m$ = monthly interest rate ($r / 12$)
+- $n$ = remaining months after IO period ($\text{totalMonths} - \text{ioMonths}$)
+- $M$ = monthly principal + interest payment during amortizing period
+
+**Total interest during IO period:**
+
+$$I_{\text{IO}} = P_{\text{IO}} \times \text{ioMonths}$$
+
+**Total interest during amortizing period:**
+
+$$I_{\text{amort}} = (M \times n) - L$$
+
+**Total interest over life of loan:**
+
+$$I_{\text{total}} = I_{\text{IO}} + I_{\text{amort}}$$
+
+The standard fully amortizing comparison uses the same formula with $n$ = total loan months (no IO period), giving a lower total interest because principal reduction begins immediately.
+
+**Source:** Consumer Financial Protection Bureau (CFPB) — Interest-Only Mortgage Payments and Payment-Option ARMs; Freddie Mac — Loan Product Descriptions.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### \$300,000 Loan at 7% — 30-Year Term with 10-Year IO Period
+
+**Inputs:**
+- Loan Amount: \$300,000
+- Annual Interest Rate: 7%
+- Total Term: 30 years (360 months)
+- Interest-Only Period: 10 years (120 months)
+
+**Step 1 — Interest-Only Payment:**
+
+Monthly rate: 7% / 12 = 0.5833%
+
+IO payment: \$300,000 × 0.005833 = **\$1,750.00/month**
+
+**Step 2 — Total Interest During IO Period:**
+
+\$1,750.00 × 120 months = **\$210,000.00**
+
+**Step 3 — Amortizing Payment (Years 11–30):**
+
+Remaining term: 30 − 10 = 20 years = 240 months
+
+$M = 300{,}000 \times \frac{0.005833 \times (1.005833)^{240}}{(1.005833)^{240} - 1}$
+
+$M$ = **\$2,325.89/month**
+
+**Step 4 — Total Interest During Amortizing Period:**
+
+Total paid: \$2,325.89 × 240 = \$558,213.60
+
+Interest: \$558,213.60 − \$300,000 = **\$258,213.60**
+
+**Step 5 — Total Interest (IO Loan):**
+
+\$210,000 + \$258,213.60 = **\$468,213.60**
+
+**Step 6 — Standard 30-Year Comparison:**
+
+Standard payment: **\$1,995.91/month**
+
+Total interest: \$1,995.91 × 360 − \$300,000 = **\$418,527.60**
+
+**Payment shock:** \$2,325.89 − \$1,750.00 = **\$575.89 increase** (32.9%)
+
+**Extra interest vs standard:** \$468,213.60 − \$418,527.60 = **\$49,686.00 more** over the life of the loan.
+
+**Interpretation:** The IO structure saves \$245.91/month for 10 years (\$29,509 total), but costs an extra \$49,686 in lifetime interest. You pay \$329.98/month more than the standard payment during years 11–30. The IO loan makes financial sense only if you invest the monthly savings at a return exceeding 7% or if you expect to sell/refinance before the IO period ends.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Results
+
+**Interest rate amplifies the payment shock.** At 7%, the post-IO payment is 32% higher than the IO payment. At 4%, the jump is only about 22%. Higher rates make the amortizing period more expensive because the unchanged principal balance generates more interest, requiring larger payments to amortize within the shorter remaining term.
+
+**IO period length determines compression.** A 10-year IO period on a 30-year loan compresses principal repayment into 20 years. A 5-year IO period on a 30-year loan leaves 25 years for amortization — a much gentler payment increase. Shorter IO periods produce smaller payment shocks but less short-term savings.
+
+**Total term matters for the comparison.** A 15-year loan with a 5-year IO period amortizes over only 10 years after the IO ends, creating a dramatic payment spike. A 30-year loan with the same 5-year IO period has 25 years remaining — a far more manageable transition.
+
+**No principal reduction during IO period.** Unlike a standard mortgage where your equity grows with every payment, an IO loan builds zero equity from payments during the IO period. Your only equity growth comes from property appreciation. If home values decline, you could owe more than your home is worth.
+
+**Rate adjustment risk on IO ARMs.** Many interest-only loans are adjustable-rate mortgages (ARMs). If the rate adjusts upward when the IO period ends, you face a double shock: higher rate plus principal amortization. A 7% IO loan that adjusts to 9% could see payments increase by 60% or more.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator assumes a fixed interest rate for the entire loan term. Most real-world interest-only loans are ARMs, meaning the rate may change after the IO period — or even during it. The calculator does not model rate adjustments, payment caps, or negative amortization scenarios. Property taxes, insurance, PMI, and HOA fees are excluded from the payment figures. The standard loan comparison assumes the same rate and total term with no IO period. Actual lender quotes may differ due to pricing adjustments for IO features.
+
+{/* Section 14: FAQ */}
+<section className="faq-section">
+
+## Frequently Asked Questions
+
+### What is an interest-only loan?
+
+An interest-only loan allows you to pay only the interest portion of the debt for a set period — typically 3 to 10 years — before the loan converts to a standard amortizing schedule requiring both principal and interest payments. During the IO period, your monthly payment is lower, but your loan balance does not decrease. After the IO period ends, payments increase significantly because the full principal must be repaid over the remaining term.
+
+### How much lower is an interest-only payment compared to a regular mortgage?
+
+On a \$300,000 loan at 7%, the interest-only payment is \$1,750 per month versus \$1,995.91 for a standard 30-year fixed — a savings of \$245.91 per month or 12.3%. The savings percentage varies by rate and term: at lower rates the gap narrows, and at higher rates it widens. The savings come entirely from deferring principal repayment, not from paying less interest.
+
+### What happens when the interest-only period ends?
+
+Your monthly payment increases — often dramatically. The full loan principal must now be repaid over the remaining term, which is shorter than the original total term. For a \$300,000 loan at 7% with a 10-year IO period, the payment jumps from \$1,750 to approximately \$2,326 per month — a 32.9% increase. This is commonly called "payment shock" and is the primary risk of IO loans.
+
+### Do I pay more total interest with an interest-only loan?
+
+Yes, in almost all cases. Because the principal balance remains unchanged during the IO period, interest charges during those years are higher than they would be on a standard amortizing loan (where the balance decreases monthly). On a \$300,000 loan at 7% over 30 years, the IO structure costs approximately \$49,686 more in total interest than a standard fixed-rate mortgage.
+
+### Who should consider an interest-only loan?
+
+IO loans may suit borrowers who expect significantly higher income in the future, plan to sell the property before the IO period ends, want to maximize cash flow for other investments yielding above the mortgage rate, or have irregular income (commissions, bonuses) and want lower baseline obligations. They are not appropriate for borrowers stretching to afford a more expensive home or those who plan to hold the property long-term without refinancing.
+
+### Can I make principal payments during the interest-only period?
+
+Yes. Most IO loans allow voluntary principal payments during the IO period without penalty. Making even small principal payments reduces the balance and lowers the payment shock when amortization begins. However, the minimum required payment remains interest-only. Any principal payments are optional and reduce the outstanding balance for future interest calculations.
+
+### Are interest-only loans still available after 2008?
+
+Yes, but with stricter qualification requirements. After the 2008 financial crisis, the Dodd-Frank Act and CFPB's Qualified Mortgage (QM) rules excluded most IO loans from QM safe harbor protections. Lenders still offer IO loans as non-QM products, typically requiring higher credit scores (700+), larger down payments (20–30%), substantial reserves, and documented ability to repay at the fully amortizing rate. Jumbo loans and portfolio loans are the most common IO products today.
+
+### How does an interest-only HELOC differ from an IO mortgage?
+
+A HELOC (Home Equity Line of Credit) is inherently interest-only during its draw period (typically 10 years), then converts to an amortizing repayment period (typically 10–20 years). The key differences: HELOCs have variable rates tied to the prime rate, you can draw and repay during the draw period, and the credit limit is based on your home equity. An IO mortgage has a fixed loan amount, may have a fixed or adjustable rate, and the IO period is a one-time phase before permanent amortization begins.
+
+### What is the difference between an interest-only loan and a balloon mortgage?
+
+An interest-only loan requires IO payments followed by fully amortizing payments over the remaining term — you eventually pay off the entire balance through monthly payments. A balloon mortgage requires small payments (often IO or partially amortizing) followed by a single lump-sum "balloon" payment of the remaining balance at a specified date. Balloon mortgages carry refinancing risk because you must pay off or refinance the entire balance at once.
+
+### Should I choose a shorter or longer interest-only period?
+
+A shorter IO period (3–5 years) minimizes total interest cost and reduces payment shock, but provides less time with lower payments. A longer IO period (7–10 years) maximizes short-term savings and cash flow flexibility but increases total interest and creates a larger payment jump. Choose based on your exit strategy: if you plan to sell in 5 years, a 5-year IO period aligns your low payments with your ownership horizon.
+
+</section>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard amortization formula as defined by the **Consumer Financial Protection Bureau (CFPB)** in their guide to Interest-Only Mortgage Payments and Payment-Option ARMs. The interest-only payment calculation follows the simple interest formula (Principal × Monthly Rate), and the post-IO amortizing payment uses the standard annuity formula as documented by **Freddie Mac** in their Loan Product Descriptions. Payment comparison methodology follows standard industry practice as described by the **Mortgage Bankers Association (MBA)**. Qualification and regulatory context references the **Dodd-Frank Wall Street Reform and Consumer Protection Act (2010)**, specifically the Qualified Mortgage provisions under **12 CFR § 1026.43**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

@@ -1,0 +1,105 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+1 hour equals 60 minutes, 3,600 seconds, or 0.04167 days. Converting 90 minutes to hours gives exactly 1.5 hours; converting 7 days to hours yields 168 hours. This calculator converts between seconds, minutes, hours, days, weeks, months (30.44-day average), and years (365.25 days) with a full conversion table showing your value in every unit simultaneously.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Time Conversion Shows
+
+Time conversion involves straightforward multiplication and division through a base unit — in this case, seconds. The calculator converts your input value to seconds first, then divides by the target unit's factor to produce the result.
+
+**Converted value** is the direct result. Enter 2.5 hours and convert to minutes: 2.5 x 60 = 150 minutes. The precision goes to six decimal places, which matters for scientific and engineering applications where fractional seconds count — such as GPS timing, animation frame rates, or chemical reaction kinetics.
+
+**Conversion rate** shows how many target units equal one source unit. The rate from hours to minutes is 60, meaning 1 hour = 60 minutes. The inverse rate (0.016667) tells you 1 minute = 0.016667 hours. These rates remain constant regardless of the input value.
+
+**Conversion table** displays your value in all seven time units at once. Enter 86,400 seconds and instantly see: 1,440 minutes, 24 hours, 1 day, 0.142857 weeks, 0.032873 months, and 0.002738 years. This is especially useful for project planning, scientific calculations, and unit comparison.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the value** — type the number you want to convert. Decimals are supported (e.g., 1.5 hours, 2.75 days).
+
+2. **Select the source unit** — choose the unit you're converting from: seconds, minutes, hours, days, weeks, months, or years.
+
+3. **Select the target unit** — choose the unit you're converting to. The converted value and full conversion table appear instantly.
+
+4. **Read the conversion table** — scan all seven units to compare your value across different time scales in one view.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+$$\text{Converted Value} = \text{Value} \times \frac{\text{From Factor}}{\text{To Factor}}$$
+
+Where each unit's factor represents seconds:
+
+- **Seconds** = 1
+- **Minutes** = 60
+- **Hours** = 3,600
+- **Days** = 86,400
+- **Weeks** = 604,800
+- **Months** = 2,629,746 (30.44 days average)
+- **Years** = 31,557,600 (365.25 days — Julian year)
+
+The month uses 30.44 days (365.25 / 12) and the year uses 365.25 days to account for leap years, following the Julian year convention used in astronomy and the International System of Units (SI).
+
+**Source:** NIST Special Publication 811, Guide for the Use of the International System of Units (SI), 2008 Edition.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Converting 3 Days to All Units
+
+A project manager needs to express a 3-day deadline in multiple time units for international team members who track time differently.
+
+**Step 1 — Convert to base (seconds):**
+
+3 days x 86,400 = **259,200 seconds**
+
+**Step 2 — Convert to each unit:**
+
+- Minutes: 259,200 / 60 = **4,320 minutes**
+- Hours: 259,200 / 3,600 = **72 hours**
+- Weeks: 259,200 / 604,800 = **0.428571 weeks**
+- Months: 259,200 / 2,629,746 = **0.098580 months**
+- Years: 259,200 / 31,557,600 = **0.008213 years**
+
+The 3-day deadline is 72 hours — or about 0.43 weeks, which helps the team understand it falls just under half a work week.
+
+{/* Section 10: Key Factors */}
+## Key Factors in Time Conversion
+
+**Month and year lengths vary.** Calendar months range from 28 to 31 days, and years are 365 or 366 days. This converter uses statistical averages (30.44 days/month, 365.25 days/year) that are standard in scientific and financial contexts. For calendar-specific calculations — such as "how many days until March 15?" — use a date calculator instead.
+
+**Precision matters in technical fields.** In GPS, a microsecond (0.000001 seconds) corresponds to about 300 meters of positioning error. In high-frequency trading, nanosecond differences determine order execution. This converter provides six decimal places, sufficient for most engineering and scientific work.
+
+**Leap seconds and time zones are not included.** This converter uses fixed conversion factors and does not account for UTC leap seconds (27 have been added since 1972) or daylight saving time shifts. For timezone-aware or calendar-aware conversions, use a dedicated date/time calculator.
+
+{/* Section 12: FAQ */}
+## Frequently Asked Questions
+
+### How many seconds are in a year?
+
+A Julian year contains 31,557,600 seconds (365.25 days x 86,400 seconds/day). A common calendar year has 31,536,000 seconds (365 days), while a leap year has 31,622,400 seconds (366 days). The 365.25-day average is the standard used in astronomy and the SI system.
+
+### Why does this converter use 30.44 days for a month?
+
+The 30.44-day month (more precisely, 30.436875 days) comes from dividing the Julian year (365.25 days) by 12 months. This average accounts for the mix of 28, 29, 30, and 31-day months across the calendar year and is the standard conversion factor used in scientific and financial calculations.
+
+### How do I convert weeks to months accurately?
+
+Using the standard factors: 1 week = 604,800 seconds and 1 month = 2,629,746 seconds, so 1 week = 0.2300 months. For 4 weeks: 4 x 0.2300 = 0.9201 months — slightly less than 1 calendar month. For calendar-precise results, count actual days between specific dates instead.
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **NIST Special Publication 811** — [Guide for the Use of the International System of Units (SI)](https://www.nist.gov/pml/special-publication-811) (2008 Edition)
+- **NIST Special Publication 330** — [The International System of Units (SI)](https://www.nist.gov/pml/special-publication-330) (2019 Edition)
+- **International Astronomical Union** — Julian year definition (365.25 days) used in astronomical timekeeping

@@ -1,0 +1,147 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 75-square-foot full bathroom remodel with a mid-range vanity, full tub/shower replacement, porcelain tile, and mid-grade fixtures costs approximately $11,000–$15,000 including labor and plumbing. Master bathrooms with double vanities and walk-in showers run $20,000–$35,000. The shower or tub is typically the single most expensive line item after labor, accounting for 25–35% of the total budget. Enter your bathroom dimensions, fixture selections, and tile coverage below for an itemized estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Bathroom Remodel Estimate Shows
+
+This calculator breaks your bathroom remodel into six cost categories so you can see exactly where the money goes and where you have room to adjust.
+
+**Vanity cost** covers the cabinet, countertop, and sink basin as a single unit. Stock vanities ($200–$800) come pre-assembled in standard widths of 24, 30, 36, and 48 inches. Mid-range vanities ($800–$2,500) offer soft-close drawers, better hardware, and more countertop material options. Custom vanities ($2,500–$6,000) are built to your bathroom's exact dimensions and often include stone countertops. For master bathrooms, the calculator doubles the vanity cost to account for a double-vanity configuration — the standard for primary bathrooms built or remodeled after 2010.
+
+**Shower and tub cost** is the most variable line item. A simple refinish ($300–$600) restores the existing tub surface with a new epoxy or polyurethane coating. A tub liner or insert ($1,000–$3,000) covers the old tub with a fitted acrylic shell. A full replacement ($2,000–$8,000) removes the old unit and installs a new tub or tub/shower combo. A walk-in shower conversion ($4,000–$12,000) removes the tub entirely and builds a curbless or low-threshold shower — the most popular upgrade in current bathroom renovations. For half bathrooms, this cost is automatically set to zero since there is no tub or shower.
+
+**Tile cost** includes both material and installation labor because tile work is highly labor-intensive — installation typically costs as much as the tile itself. Ceramic tile runs $2–$8 per square foot, porcelain $5–$15, and natural stone (marble, slate, travertine) $10–$30 per square foot. The tile area input covers both floor and wall surfaces, so include shower walls, accent walls, and floor tile in your measurement.
+
+**Fixture cost** covers the toilet, faucets, showerhead, towel bars, and bathroom accessories. Basic fixtures ($200–$500) are chrome or brushed nickel builder-grade. Mid-range ($500–$1,500) includes name-brand fixtures with better finishes and features. Premium ($1,500–$3,000) includes designer faucets, rainfall showerheads, and high-efficiency toilets. Master bathrooms add 50% to the fixture budget for the additional sink faucet, extra towel hardware, and often a separate tub filler.
+
+**Labor** is calculated at 30% of non-tile material costs. Tile installation labor is already embedded in the per-square-foot tile pricing. Total labor on a bathroom remodel typically accounts for 40–50% of the final cost, making it the single largest expense category when tile installation is included.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Measure the bathroom floor** — record the length and width in feet, then multiply to get square footage. Standard full bathrooms range from 40 to 100 square feet. Master bathrooms are typically 80–150 square feet. A half bath (powder room) can be as small as 20–30 square feet.
+
+2. **Select your bathroom type** — this controls two important multipliers. A half bath eliminates the shower/tub line item entirely. A master bath doubles the vanity cost (double vanity) and adds 50% to fixtures for the additional faucet set and hardware.
+
+3. **Enter your tile area** — measure all surfaces that will receive tile: floor area, shower walls (length × height for each wall), tub surround, and any accent walls. A full bathroom with a tiled shower surround and floor typically needs 80–150 square feet of tile.
+
+4. **Choose your finish levels and plumbing scope** — select vanity quality, tile quality, fixture grade, and plumbing changes. "No plumbing changes" means all fixtures stay in their current locations. "Minor" covers swapping fixtures. "Major" covers relocating supply and drain lines to new positions.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Bathroom remodel costs sum six components, with type-based multipliers for master and half baths:
+
+**Vanity cost:**
+
+$$\text{Vanity} = \text{Base Vanity Price} \times M_v$$
+
+Where $M_v = 2$ for master bath (double vanity), $M_v = 1$ otherwise.
+
+**Fixture cost:**
+
+$$\text{Fixtures} = \text{Base Fixture Price} \times M_f$$
+
+Where $M_f = 1.5$ for master bath, $M_f = 1$ otherwise.
+
+**Shower/tub cost:**
+
+$$\text{Shower} = \begin{cases} 0 & \text{if half bath} \\ \text{Selected Option Price} & \text{otherwise} \end{cases}$$
+
+**Labor (excluding tile, which includes installation):**
+
+$$\text{Labor} = (\text{Vanity} + \text{Shower} + \text{Fixtures} + \text{Plumbing}) \times 0.30$$
+
+**Total cost:**
+
+$$\text{Total} = \text{Vanity} + \text{Shower} + \text{Tile} + \text{Fixtures} + \text{Plumbing} + \text{Labor}$$
+
+**Source:** National Kitchen & Bath Association (NKBA) — Bathroom Planning Guidelines; HomeAdvisor 2024 True Cost Guide; Remodeling Magazine 2024 Cost vs. Value Report.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### 75 Sq Ft Full Bathroom — Mid-Range Remodel
+
+A homeowner is remodeling a 75-square-foot full bathroom with a mid-range vanity, full tub/shower replacement, 100 sq ft of porcelain tile (floor + shower walls), mid-range fixtures, and minor plumbing changes (swapping out the toilet and faucets).
+
+**Step-by-step:**
+
+1. **Vanity cost:** Mid-range ($1,650) × 1 (full bath, not master) = **$1,650**
+2. **Shower/tub cost:** Full replacement = **$5,000**
+3. **Tile cost:** 100 sq ft × $10/sf (porcelain, installed) = **$1,000**
+4. **Fixture cost:** Mid-range ($1,000) × 1 (full bath, not master) = **$1,000**
+5. **Plumbing cost:** Minor (fixture swap) = **$500**
+6. **Non-tile materials:** $1,650 + $5,000 + $1,000 + $500 = **$8,150**
+7. **Labor (30% of non-tile materials):** $8,150 × 0.30 = **$2,445**
+8. **Total:** $1,650 + $5,000 + $1,000 + $1,000 + $500 + $2,445 = **$11,595**
+9. **Cost per sq ft:** $11,595 / 75 = **$154.60/sq ft**
+
+**Interpretation:** At $155 per square foot, this falls squarely in the mid-range for full bathroom remodels nationally ($100–$250/sq ft according to HomeAdvisor). The tub/shower replacement alone accounts for 43% of the total. Homeowners who opt for a tub refinish instead of full replacement save $4,550 — dropping the total to roughly $7,045 and the cost per square foot to $94.
+
+{/* Section 10: Key Cost Factors */}
+## Key Factors That Affect Bathroom Remodel Cost
+
+**Bathroom type has the largest structural impact.** A half bath (powder room) is the least expensive because it has no shower or tub work — the single most expensive component. A master bath is the most expensive because it doubles the vanity and increases fixture costs by 50%. The cost difference between a half bath and master bath remodel with the same quality selections can exceed 200%.
+
+**Shower and tub scope drives the biggest cost swings.** The gap between a $450 refinish and an $8,000 walk-in shower conversion is significant. Walk-in showers have surged in popularity — they accounted for 67% of bathroom renovations in 2023 according to the NKBA — but they require waterproofing, drain relocation, and often structural modifications that drive costs up.
+
+**Tile coverage is a hidden multiplier.** A bathroom with only floor tile (30–40 sq ft) costs far less than one with floor tile plus full shower walls plus an accent wall (120–200 sq ft). Natural stone tile at $20/sq ft installed on 150 sq ft of surface adds $3,000 — that single upgrade can represent 20–25% of a mid-range total.
+
+**Plumbing relocation is the biggest surprise cost.** Swapping a toilet or faucet costs $500 or less. Moving a toilet, shower, or sink to a new location requires rerouting supply lines, drain lines, and venting — costs that range from $2,000 to $5,000 per fixture moved. Major plumbing changes are the primary reason bathroom remodels go over budget.
+
+**Regional labor variation** affects bathroom remodels even more than kitchens because a higher proportion of the work is skilled labor (plumbing, tile setting, waterproofing). Expect 25–40% premiums in coastal metro areas compared to Midwest and Southern markets.
+
+{/* Section 11: Assumptions */}
+## What This Calculator Assumes
+
+- **Vanity pricing uses single-unit midpoints** for stock, mid-range, and custom tiers. Master bath doubles for a double-vanity configuration.
+- **Tile cost includes installation.** The per-square-foot price covers both material and labor, as tile installation is inseparable from material cost in contractor bids.
+- **Labor at 30%** applies to non-tile materials only, reflecting that tile installation is already priced in. This aligns with national averages from HomeAdvisor.
+- **The estimate does not include** permit fees, design fees, hazardous material abatement (lead paint, asbestos), structural modifications (floor reinforcement for heavy tile), or temporary bathroom arrangements during construction.
+
+{/* Section 12: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does an average bathroom remodel cost?
+
+A mid-range full bathroom remodel costs $10,000–$25,000 nationally, with the average at approximately $12,500 according to the 2024 HomeAdvisor True Cost Guide. A half bath (powder room) remodel averages $5,000–$10,000. A master bathroom remodel ranges from $20,000 to $50,000 depending on size, finishes, and whether plumbing is relocated. Minor cosmetic updates (paint, hardware, mirror, light fixtures) can refresh a bathroom for $2,000–$5,000.
+
+### What is the most expensive part of a bathroom remodel?
+
+Labor and installation is the most expensive category at 40–50% of the total cost when tile work is included. Among material categories, the shower or tub is the single most expensive line item, accounting for 25–35% of a mid-range remodel. A walk-in shower conversion alone can cost $4,000–$12,000. The vanity is the second-largest material cost at 10–20%, followed by tile at 10–15% and fixtures at 5–10%.
+
+### How long does a bathroom remodel take?
+
+A cosmetic refresh (paint, fixtures, hardware) takes 3–5 days. A standard full bathroom remodel with new vanity, tub/shower, tile, and fixtures takes 2–4 weeks of active construction. A master bathroom remodel with layout changes, custom tile work, and plumbing relocation takes 4–8 weeks. Add 1–3 weeks for permit approval if required. Most general contractors schedule bathroom remodels in 3–6 week blocks depending on material lead times, especially for custom vanities and specialty tile.
+
+### Can I remodel a bathroom for $5,000?
+
+Yes, but it limits you to cosmetic changes and a half bath or very small full bath. A $5,000 budget covers painting ($300–$600), a stock vanity with faucet ($400–$800), a new toilet ($200–$500), updated light fixtures and mirror ($300–$600), new hardware and accessories ($100–$300), and basic floor tile on a small footprint ($500–$1,000). It does not cover tub or shower replacement, wall tile, or any plumbing relocation. Refinishing the existing tub ($300–$600) is the best way to refresh a shower area on this budget.
+
+### Does a bathroom remodel increase home value?
+
+A mid-range bathroom remodel recoups approximately 60–70% of its cost at resale, according to the 2024 Remodeling Magazine Cost vs. Value Report. A $15,000 bathroom remodel adds roughly $9,000–$10,500 to the sale price. Universal design features — curbless showers, grab bars, wider doorways — have higher ROI because they appeal to aging-in-place buyers, the fastest-growing segment of the housing market. The highest-ROI bathroom upgrades are replacing a worn tub/shower, updating the vanity, and adding modern tile — these three items create the strongest visual impact per dollar spent.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: How This Is Calculated */}
+## How This Is Calculated
+
+This calculator uses cost estimation methodology from the **National Kitchen & Bath Association (NKBA)** Bathroom Planning Guidelines, with material pricing from the **HomeAdvisor 2024 True Cost Guide** and resale data from the **Remodeling Magazine 2024 Cost vs. Value Report**. Vanity, fixture, and shower/tub costs use national midpoint pricing for each quality tier. Tile costs include installation labor per industry standard (tile bids always bundle material and labor). The 30% labor rate on non-tile materials reflects the national average for bathroom remodeling projects. Bathroom type multipliers (half, full, master) adjust vanity and fixture costs based on NKBA planning standards for each bathroom configuration.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "construction" */}

@@ -1,0 +1,136 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Converting $1,000 USD to euros at a 0.92 exchange rate yields €920.00. Add a 2.5% bank fee and you receive €897.00 — the $23 difference is what banks and exchange services keep as profit. The inverse rate is 1 EUR = 1.0870 USD. Enter your amount, currencies, and exchange rate below for an instant conversion with fee calculations and a quick-reference table.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Currency Conversion Shows
+
+Currency conversion is straightforward multiplication — but the real cost hides in fees, markups, and the spread between buy and sell rates. This calculator shows both the raw conversion and the after-fee amount so you can see exactly how much money reaches the other side.
+
+**Converted amount** is the raw result of multiplying your amount by the exchange rate. At 1 USD = 0.92 EUR, $1,000 converts to €920.00. This is the mid-market rate — the "true" exchange rate you see on Google or Reuters. Banks and services rarely offer this rate to consumers.
+
+**Fee amount** shows how much a bank or exchange service keeps. Credit cards typically charge 1–3% foreign transaction fees. Airport exchange kiosks charge 5–12%. Wire transfers add flat fees ($15–$45) plus margin. On a $1,000 conversion at 2.5%, the fee is $23 — reasonable for a credit card, but expensive compared to services like Wise (0.35–0.7%) or Revolut (free on weekdays up to a limit).
+
+**Inverse rate** flips the conversion: if 1 USD = 0.92 EUR, then 1 EUR = 1.087 USD. This is useful when you're quoted a price in foreign currency and need to convert back to your home currency. The inverse rate helps you quickly sanity-check whether a price abroad is reasonable.
+
+**Quick reference table** shows conversions for common amounts (1, 5, 10, 50, 100, 500, 1,000) at your entered exchange rate. Print or screenshot this for quick reference while traveling.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the amount** — the number of units in your source currency. For example, if you're converting $1,000 to euros, enter 1000.
+
+2. **Select currencies** — choose the "from" and "to" currencies. The calculator supports 20 major world currencies covering 85%+ of global foreign exchange volume.
+
+3. **Enter the exchange rate** — since exchange rates change constantly, enter the current rate from your bank, Google, or a rate comparison site. The rate represents how many units of the target currency equal one unit of the source currency (e.g., 1 USD = 0.92 EUR means the rate is 0.92).
+
+4. **Add bank fees (optional)** — enter the percentage fee your bank or exchange service charges. Credit cards: 1–3%. Wire transfers: check your bank's schedule. Dedicated services (Wise, OFX): 0.3–1.5%. Airport kiosks: 5–12%.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Core conversion:**
+
+$$\text{Converted Amount} = \text{Amount} \times \text{Exchange Rate}$$
+
+**After fees:**
+
+$$\text{After Fees} = \text{Converted Amount} \times \left(1 - \frac{\text{Fee\%}}{100}\right)$$
+
+**Inverse rate:**
+
+$$\text{Inverse Rate} = \frac{1}{\text{Exchange Rate}}$$
+
+Where:
+
+- **Amount** = source currency units
+- **Exchange Rate** = units of target currency per 1 unit of source currency
+- **Fee%** = bank or service charge as a percentage
+
+**Source:** International Monetary Fund (IMF) — SDR Valuation; European Central Bank (ECB) — Reference Exchange Rates; Federal Reserve — Foreign Exchange Rates (H.10 release).
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Converting $5,000 USD to British Pounds
+
+A traveler is converting $5,000 to GBP for a two-week trip to London. Their bank offers an exchange rate of 0.79 GBP per USD with a 2% foreign exchange fee.
+
+**Inputs:**
+- Amount: $5,000
+- Exchange rate: 1 USD = 0.79 GBP
+- Bank fee: 2%
+
+**Step 1 — Raw conversion:**
+
+Converted = 5,000 × 0.79 = **£3,950.00**
+
+**Step 2 — Fee calculation:**
+
+Fee = £3,950 × 0.02 = **£79.00**
+
+**Step 3 — Amount after fees:**
+
+After fees = £3,950 − £79 = **£3,871.00**
+
+**Step 4 — Inverse rate:**
+
+1 GBP = 1 / 0.79 = **$1.2658 USD**
+
+The traveler receives £3,871 — the £79 fee means they're effectively paying a rate of 0.7742 GBP/USD instead of the mid-market 0.79. Using a service like Wise (0.5% fee) would yield £3,930.25 — saving £59.25 compared to the bank.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Currency Conversion Costs
+
+**Exchange rate source** matters more than the fee percentage. Banks typically mark up the mid-market rate by 1–4% before applying their stated fee. A bank quoting "no foreign transaction fee" but offering 0.87 EUR/USD when the mid-market rate is 0.92 EUR/USD is effectively charging a 5.4% fee through the rate markup. Always compare the offered rate against the Google/Reuters mid-market rate.
+
+**Transfer method** determines both cost and speed. Wire transfers: 1–3 business days, $15–$45 flat fee plus margin. Credit cards: instant, 1–3% fee (some cards waive this). Online services (Wise, Revolut, OFX): 1–2 days, 0.3–1.5% fee. Cash exchange: instant, 3–12% fee. For amounts over $1,000, online transfer services almost always offer the best rate.
+
+**Currency volatility** can change your effective cost between when you lock in a rate and when the transfer settles. Major pairs (USD/EUR, USD/GBP) fluctuate 0.3–0.5% daily. Emerging market currencies (BRL, INR, THB) can swing 1–3% daily. For large conversions ($10,000+), consider locking in a forward rate if your service offers it.
+
+**Amount size** affects fee structure. Some services charge minimum flat fees ($3–$15) that make small conversions expensive on a percentage basis. Converting $100 with a $5 flat fee is effectively 5%. The same fee on $5,000 is just 0.1%.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+Exchange rates used in this calculator are user-provided and static — they do not update in real time. Always verify the current rate from your bank, exchange service, or a financial data provider before making a transaction. The fee calculation assumes a simple percentage deducted from the converted amount; some services charge flat fees, tiered fees, or apply the markup to the exchange rate rather than as a separate percentage. This calculator does not account for bid-ask spreads (the difference between buying and selling rates), which add 0.1–0.5% on major pairs. Cross-currency conversions (e.g., THB to BRL) may involve intermediate conversion through USD, adding a second spread. Tax implications of currency gains or losses on large conversions are not included.
+
+{/* Section 12: FAQ */}
+## Frequently Asked Questions
+
+### What is a good exchange rate vs a bad one?
+
+Compare the offered rate to the mid-market rate on Google, XE, or Reuters. If you're within 0.5% of mid-market, it's excellent (typical of Wise, Revolut). Within 1–2% is acceptable (most credit cards). Above 3% is expensive (airport kiosks, hotel exchanges). For example, if Google shows 1 USD = 0.92 EUR and your bank offers 0.89 EUR, they're charging a 3.3% markup.
+
+### Should I convert currency before or during my trip?
+
+For most travelers, using a no-foreign-transaction-fee credit card abroad gives the best rate (Visa/Mastercard use near-mid-market rates). For cash needs, convert before your trip at a competitive online service or your bank — airport exchange kiosks are consistently the most expensive option (5–12% markup). Withdraw local currency from ATMs abroad, but watch for dynamic currency conversion (always choose to be charged in the local currency, not your home currency).
+
+### How do I calculate the real cost of a conversion?
+
+Take the mid-market rate, calculate what you should receive, then compare it to what you actually receive. Example: mid-market is 0.92 EUR/USD, your bank gives you 0.88 EUR/USD on $1,000. You receive €880 instead of €920 — the real cost is €40, or 4.3% of the converted amount, regardless of what "fee" they claim to charge.
+
+### What's the cheapest way to send money internationally?
+
+For transfers under $1,000: Wise (0.35–0.7%), PayPal (2.5–4%), or your bank ($25–$45 flat). For $1,000–$10,000: Wise or OFX (0.3–1%). For $10,000+: negotiate with your bank or use a foreign exchange broker. Wire transfers through major banks typically cost $30–$50 plus a 1–3% rate markup — fine for urgent large transfers, expensive for everything else.
+
+### Why do exchange rates change?
+
+Exchange rates fluctuate based on interest rate differentials between countries, trade balances, inflation rates, political stability, and market sentiment. Central bank decisions (like the Federal Reserve raising rates) strengthen or weaken currencies. Major pairs (USD/EUR) typically move 0.3–0.5% daily; emerging market currencies can move 1–3% in volatile periods.
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **International Monetary Fund** — [Exchange Rate Archives](https://www.imf.org/external/np/fin/ert/GUI/Pages/CountryDataBase.aspx) (SDR valuation methodology)
+- **European Central Bank** — [Reference Exchange Rates](https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/) (daily updates)
+- **Federal Reserve** — [Foreign Exchange Rates (H.10)](https://www.federalreserve.gov/releases/h10/current/) (weekly release)
+- **Bank for International Settlements** — Triennial Central Bank Survey (global FX market volume)

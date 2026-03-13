@@ -1,0 +1,160 @@
+{
+  "id": "standard-error-calculator",
+  "title": "Standard Error Calculator",
+  "slug": "standard-error-calculator",
+  "category": "math",
+  "subcategory": "statistics",
+  "primaryKeyword": "standard error calculator",
+  "metaTitle": "Standard Error Calculator — SE, Margin of Error & Confidence Interval",
+  "metaDescription": "Calculate the standard error of the mean from sample data or summary statistics. Includes 95% confidence interval, margin of error, and step-by-step breakdown. Free statistics tool.",
+  "inputs": [
+    {
+      "id": "mode",
+      "label": "Input Mode",
+      "type": "select",
+      "required": true,
+      "defaultValue": "summary",
+      "options": [
+        {
+          "value": "summary",
+          "label": "Enter Summary Statistics"
+        },
+        {
+          "value": "data",
+          "label": "Enter Raw Data (comma-separated)"
+        }
+      ],
+      "helpText": "Choose whether to enter summary statistics or raw data values"
+    },
+    {
+      "id": "sampleStdDev",
+      "label": "Sample Standard Deviation (s)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0,
+      "step": 0.01,
+      "placeholder": "e.g. 15",
+      "helpText": "The standard deviation of your sample"
+    },
+    {
+      "id": "sampleSize",
+      "label": "Sample Size (n)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 2,
+      "step": 1,
+      "placeholder": "e.g. 30",
+      "helpText": "Number of observations in your sample (must be at least 2)"
+    },
+    {
+      "id": "sampleMean",
+      "label": "Sample Mean (x̄)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 100,
+      "step": 0.01,
+      "placeholder": "e.g. 100",
+      "helpText": "Mean of your sample (used for confidence interval)"
+    },
+    {
+      "id": "dataInput",
+      "label": "Data Values (comma-separated)",
+      "type": "text",
+      "required": false,
+      "defaultValue": "",
+      "placeholder": "e.g. 23, 25, 28, 31, 22, 27, 29, 26, 24, 30",
+      "helpText": "Enter your data points separated by commas"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "allValues",
+      "label": "Standard Error Results",
+      "type": "value-group",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "standardError",
+      "label": "Standard Error (SE)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 6
+    },
+    {
+      "id": "marginOfError95",
+      "label": "Margin of Error (95% CI)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "confidenceIntervalLower",
+      "label": "95% CI Lower Bound",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "confidenceIntervalUpper",
+      "label": "95% CI Upper Bound",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4
+    },
+    {
+      "id": "relativeSE",
+      "label": "Relative Standard Error",
+      "type": "single-value",
+      "format": "number",
+      "precision": 4,
+      "suffix": "%"
+    },
+    {
+      "id": "breakdown",
+      "label": "Step-by-Step Breakdown",
+      "type": "breakdown"
+    }
+  ],
+  "formula": "standard-error",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "standard-deviation-calculator",
+    "confidence-interval-calculator",
+    "sample-size-calculator",
+    "z-score-calculator",
+    "mean-median-mode-calculator",
+    "p-value-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Standard Error of the Mean — derived from the Central Limit Theorem (CLT); see Casella & Berger, Statistical Inference (2002)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "SE = s / √n; Margin of Error = 1.96 × SE (95% CI); Central Limit Theorem",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "confidence-interval-calculator",
+    "sample-size-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

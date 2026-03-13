@@ -1,0 +1,170 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+The average U.S. household uses 886 kWh per month — costing $141.76 at the national average rate of $0.16/kWh — for an annual electricity bill of $1,701.12 and a carbon footprint of 9.79 tons of CO2. That is 101.3% of the EIA national average of 10,500 kWh per year. Enter your monthly kWh from your utility bill and your local electricity rate below to see your exact annual cost, carbon emissions, per-person usage, and how many solar panels it would take to offset your entire electricity consumption.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Home Energy Estimate Shows
+
+Home electricity is the single largest utility expense for most U.S. households, and the gap between efficient and inefficient homes is enormous — a 1,200 sq ft home with modern insulation and LED lighting may use 500 kWh per month, while a 3,000 sq ft home with aging HVAC can exceed 2,000 kWh. This calculator converts your monthly usage into the numbers that matter: annual cost, daily burn rate, carbon footprint, and actionable benchmarks.
+
+**Monthly and annual cost** is the headline number. At the U.S. average of 886 kWh/month and $0.16/kWh, the typical household spends $141.76 per month or $1,701.12 per year on electricity alone. But rates vary dramatically by state — from $0.10/kWh in Idaho and Louisiana to $0.33/kWh in Hawaii and Connecticut — so the same usage can produce wildly different bills. Your local rate is the most important input.
+
+**CO2 emissions** quantify your electricity carbon footprint using the EPA eGRID national average of 0.92 lbs of CO2 per kWh. The average household produces 9,798 lbs (4.9 tons) of CO2 per year from electricity alone. This varies by region — homes powered by coal-heavy grids emit more, while homes in hydro or nuclear regions emit significantly less. The 0.92 lbs/kWh figure is a national weighted average.
+
+**U.S. average comparison** shows your usage as a percentage of the national average of 10,500 kWh per year (EIA Residential Energy Consumption Survey). If your result shows 120%, you are using 20% more electricity than the typical American household — a signal to investigate insulation, HVAC efficiency, or appliance upgrades.
+
+**Solar panel estimate** provides a rough count of how many residential panels (400W, producing ~500 kWh per year per panel in an average U.S. location) would be needed to offset your entire annual electricity consumption. This is a planning-level estimate — actual production depends on roof orientation, shading, latitude, and local solar irradiance.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Find your monthly kWh** — look at your electricity bill for the "kWh used" line. Most bills show the current month and a 12-month average. Use the 12-month average for the most accurate annual projection. If you do not have a bill handy, the U.S. average of 886 kWh/month is pre-loaded.
+
+2. **Enter your electricity rate** — check your bill for the "price per kWh" or "energy charge" line. Ignore fixed service charges and delivery fees — those are separate from usage-based costs. The U.S. average is $0.16/kWh, but your rate may be higher or lower. If you have tiered or time-of-use pricing, use your blended average rate.
+
+3. **Add your home size (optional)** — entering your square footage enables the per-sqft usage metric, which is the best way to compare your home's efficiency against similar-sized homes. The U.S. average is about 5.8 kWh per sq ft per year.
+
+4. **Set occupant count** — this produces a per-person usage figure. The average is about 3,500 kWh per person per year for a 3-person household. Homes with more people typically use more electricity but less per person due to shared heating, cooling, and lighting.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Annual electricity cost:**
+
+$$\text{Annual Cost} = \text{Monthly kWh} \times 12 \times \text{Electricity Rate}$$
+
+**Carbon dioxide emissions:**
+
+$$\text{Annual CO}_2\text{ (lbs)} = \text{Annual kWh} \times 0.92$$
+
+$$\text{Annual CO}_2\text{ (tons)} = \frac{\text{Annual CO}_2\text{ (lbs)}}{2{,}000}$$
+
+**Comparison to U.S. average:**
+
+$$\text{vs. U.S. Average} = \frac{\text{Annual kWh}}{10{,}500} \times 100\%$$
+
+**Solar panel offset estimate:**
+
+$$\text{Panels Needed} = \lceil \frac{\text{Annual kWh}}{500} \rceil$$
+
+Where:
+
+- **Monthly kWh** = electricity consumed per month from utility bill
+- **Electricity Rate** = cost per kilowatt-hour from utility ($/kWh)
+- **0.92 lbs CO2/kWh** = EPA eGRID national average emission factor
+- **10,500 kWh/year** = EIA U.S. average residential household consumption
+- **500 kWh/panel/year** = approximate annual production of a 400W residential solar panel
+
+**Source:** U.S. Energy Information Administration (EIA) — Annual Energy Outlook; EPA eGRID — U.S. electricity emission factors.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### Average U.S. Household — 886 kWh/month at $0.16/kWh
+
+A family of three in a 1,800 sq ft home wants to understand their electricity spending and carbon footprint.
+
+**Inputs:**
+- Monthly usage: 886 kWh
+- Electricity rate: $0.16/kWh
+- Home size: 1,800 sq ft
+- Occupants: 3
+
+**Step 1 — Annual usage and cost:**
+
+Annual kWh = 886 × 12 = 10,632 kWh
+
+Annual cost = 10,632 × $0.16 = **$1,701.12**
+
+Monthly cost = $1,701.12 / 12 = **$141.76**
+
+Daily cost = $1,701.12 / 365 = **$4.66**
+
+**Step 2 — Carbon footprint:**
+
+Annual CO2 = 10,632 × 0.92 = 9,781.44 lbs = **4.89 tons**
+
+**Step 3 — Comparisons:**
+
+vs. U.S. average = (10,632 / 10,500) × 100 = **101.3%** (slightly above average)
+
+Per person = 10,632 / 3 = **3,544 kWh/person/year**
+
+Per sq ft = 10,632 / 1,800 = **5.91 kWh/sq ft/year**
+
+**Step 4 — Solar offset:**
+
+Panels needed = ceil(10,632 / 500) = **22 panels**
+
+At roughly 22 residential solar panels, this household could offset 100% of its electricity consumption — though actual panel count depends on roof orientation, shading, and local solar hours.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Home Energy Usage
+
+**Climate and geography** drive the largest differences. Homes in the South use 30–50% more electricity than the national average due to air conditioning demand — Louisiana averages 1,140 kWh/month compared to Hawaii at 525 kWh/month. Heating-dominated northern climates use less electricity if they heat with gas, but all-electric homes in cold regions can exceed 1,500 kWh/month in winter.
+
+**Home size and insulation** scale usage roughly linearly. A well-insulated 1,500 sq ft home uses 4–6 kWh per sq ft per year, while a poorly insulated 3,000 sq ft home can reach 8–10 kWh per sq ft. Upgrading insulation (attic, walls, and air sealing) is often the highest-ROI efficiency investment.
+
+**HVAC system efficiency** accounts for 40–50% of total residential electricity in most homes. A 15-year-old central AC with a SEER rating of 10 uses twice the electricity of a modern unit rated at SEER 20. Heat pumps are 2–3× more efficient than electric resistance heating.
+
+**Appliances and lighting** contribute 20–30% of usage. Replacing incandescent bulbs with LEDs can save 200–400 kWh/year. An old refrigerator (2005 or older) may consume 600+ kWh/year versus 400 kWh for a modern ENERGY STAR model.
+
+**Occupant behavior** matters more than most homeowners realize. Running the dishwasher daily, keeping the thermostat at 68°F vs 72°F, and using a clothes dryer vs air-drying all create measurable differences. Each degree of cooling below 72°F adds roughly 3% to your AC bill.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator uses a flat electricity rate. Tiered pricing, time-of-use rates, demand charges, and seasonal rate adjustments are not modeled — your actual bill may differ if your utility uses these structures. The CO2 emission factor of 0.92 lbs/kWh is the EPA eGRID national average; your actual emissions depend on your regional electricity mix (coal, gas, nuclear, hydro, wind, solar). Homes on 100% renewable energy plans have near-zero electricity emissions. The solar panel estimate assumes 500 kWh per panel per year, which reflects average U.S. solar irradiance — actual production varies from 350 kWh/year (Pacific Northwest) to 650 kWh/year (Southwest). Panel efficiency, roof orientation, shading, and degradation over time are not factored. The per-sqft metric assumes the entered square footage represents conditioned (heated/cooled) space only.
+
+{/* Section 12: FAQ */}
+## Frequently Asked Questions
+
+### How much electricity does the average U.S. home use per month?
+
+The average U.S. household uses 886 kWh per month, or 10,632 kWh per year, according to the Energy Information Administration (EIA). This varies widely by state — from 525 kWh/month in Hawaii to 1,140 kWh/month in Louisiana. Climate, home size, heating fuel type, and appliance efficiency all drive these differences.
+
+### How much does the average electricity bill cost per month?
+
+At the national average rate of $0.16/kWh, the average monthly electricity bill is approximately $141.76. However, bills range from $90–$100 in low-rate states (Idaho, Utah) to $180–$250 in high-rate states (Connecticut, Massachusetts, Hawaii). Your rate per kWh matters as much as your total usage.
+
+### How many solar panels do I need to power my home?
+
+A typical U.S. household using 10,500 kWh per year needs approximately 21 residential solar panels (400W each, producing ~500 kWh per panel per year). Homes in sunnier states like Arizona or California may need fewer panels (18–19), while homes in the Pacific Northwest may need 25–28. Roof orientation, shading, and panel efficiency all affect the final count.
+
+### What uses the most electricity in a home?
+
+Heating and cooling account for 40–50% of residential electricity in most U.S. homes. Water heating is second at 12–15%, followed by lighting (10%), refrigeration (5–8%), and laundry/dishwashing (5–8%). An inefficient HVAC system is almost always the single largest opportunity for savings.
+
+### How can I reduce my electricity usage?
+
+The highest-impact actions are: upgrading to a high-efficiency HVAC system (can save 20–40% of cooling/heating costs), sealing air leaks and adding insulation (10–20% savings), switching to LED bulbs (saves 200–400 kWh/year), using ENERGY STAR appliances, and adjusting your thermostat by 2–3 degrees (saves 6–9% on heating/cooling). A home energy audit typically identifies $200–$500 per year in savings.
+
+### How much CO2 does my electricity usage produce?
+
+The average U.S. household produces approximately 9,798 lbs (4.9 tons) of CO2 per year from electricity, based on the EPA eGRID national average of 0.92 lbs CO2 per kWh. Homes powered by coal-heavy grids (Midwest, Southeast) produce more, while homes on hydro-dominant grids (Pacific Northwest) produce less. Switching to a green energy plan or installing solar panels can reduce this footprint significantly.
+
+### What is a good kWh per square foot for a home?
+
+An efficient home uses 4–6 kWh per square foot per year. The national average is roughly 5.5–6.0 kWh/sq ft. If your home exceeds 8 kWh/sq ft, it likely has insulation deficiencies, an oversized or aging HVAC system, or air leakage issues worth investigating. New construction with modern insulation and HVAC typically falls in the 3–5 kWh/sq ft range.
+
+### Does the number of people in my home affect electricity usage?
+
+Yes, but not proportionally. Adding an occupant typically increases electricity usage by 10–20% (more hot water, more laundry, more cooking, more device charging), but shared heating, cooling, lighting, and refrigeration mean the per-person usage decreases. A single-person household averages 4,500–5,000 kWh/year, while a four-person household averages 11,000–12,000 kWh/year — roughly 2,750–3,000 kWh per person.
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **U.S. Energy Information Administration (EIA)** — [Residential Energy Consumption Survey (RECS)](https://www.eia.gov/consumption/residential/) — household usage averages (10,500 kWh/year)
+- **EIA** — [Average Retail Price of Electricity](https://www.eia.gov/electricity/monthly/) — state-by-state residential rates
+- **EPA eGRID** — [Emissions & Generation Resource Integrated Database](https://www.epa.gov/egrid) — CO2 emission factors (0.92 lbs CO2/kWh national average)
+- **ENERGY STAR** — [Home Energy Use Benchmarks](https://www.energystar.gov/) — appliance efficiency ratings
+- **National Renewable Energy Laboratory (NREL)** — [PVWatts Calculator](https://pvwatts.nrel.gov/) — solar panel production estimates by region

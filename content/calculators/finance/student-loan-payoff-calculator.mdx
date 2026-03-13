@@ -1,0 +1,140 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A $35,000 student loan at 5.5% interest on the standard 10-year plan costs $379.87 per month and $10,584 in total interest — meaning you pay $45,584 for that $35,000 education. Adding just $100/month in extra payments cuts the payoff timeline to 7 years 2 months and saves $3,321 in interest. This calculator compares standard, graduated, extended, and custom repayment plans so you can find the fastest, cheapest path to $0.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What Your Student Loan Payoff Estimate Shows
+
+Student loan repayment isn't one-size-fits-all. Federal loans offer four main repayment structures, and each one changes your monthly payment, total interest, and payoff timeline dramatically. Choosing the wrong plan can cost you tens of thousands of dollars over the life of the loan.
+
+**Monthly payment** is the amount due each month under your selected plan. The standard 10-year plan produces the highest fixed monthly payment but the lowest total cost. On a $35,000 loan at 5.5%, that's $379.87/month. The extended 25-year plan drops payments to $214.86/month but adds $29,457 in total interest — nearly doubling the original loan balance.
+
+**Payoff timeline** shows when your last payment occurs. The standard plan takes exactly 10 years (120 months). With $100/month extra payments, that same loan pays off in 7 years 2 months — saving 2 years 10 months of payments. The graduated plan starts lower but can extend beyond 10 years depending on how the increasing payments interact with your balance.
+
+**Total interest paid** is the true cost of borrowing. On a $35,000 loan at 5.5%: the standard plan costs $10,584 in interest, the extended plan costs $29,457, and a custom $250/month payment costs $16,886. The difference between the cheapest and most expensive plan is $18,873 — more than half the original loan.
+
+**Income-Based Repayment (IBR) estimate** shows what your payment would be under income-driven plans. The formula takes 10% of your discretionary income (income above 150% of the federal poverty level). At a $50,000 salary, the IBR estimate is approximately $282/month — useful as a safety net during low-income periods but generally more expensive long-term due to extended repayment.
+
+**Extra payment savings** quantify exactly how much faster and cheaper your payoff becomes with additional monthly payments. Even $50/month extra on a $35,000 loan saves $1,844 in interest and 1 year 7 months of payments.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your total loan balance** — if you have multiple federal or private loans, add them together and use a weighted average interest rate. Log in to studentaid.gov for federal loan details or check your servicer statements for private loans.
+
+2. **Enter your interest rate** — federal Direct Loans originated between 2023–2024 carry rates of 5.50% (undergraduate) to 7.05% (graduate). For multiple loans, calculate the weighted average: sum of (each loan balance × its rate) divided by total balance.
+
+3. **Choose a repayment plan** — Standard is the default 10-year fixed-payment plan. Graduated starts low and increases every 2 years. Extended stretches payments over 25 years. Custom lets you enter any monthly payment amount.
+
+4. **Add extra payments** — even small amounts make a significant difference. Try $50, $100, or $200 extra per month and compare the interest saved. Extra payments go entirely toward principal, accelerating payoff exponentially.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+The standard amortization formula determines your fixed monthly payment:
+
+$$M = P \times \frac{r(1+r)^n}{(1+r)^n - 1}$$
+
+Where:
+
+- **M** = monthly payment
+- **P** = principal (loan balance)
+- **r** = monthly interest rate (annual rate ÷ 12)
+- **n** = total number of payments (120 for standard, 300 for extended)
+
+**Graduated plan** starts at 60% of the standard payment and increases 7% every 24 months:
+
+$$M_{\text{graduated}}(t) = 0.6M \times 1.07^{\lfloor (t-1)/24 \rfloor}$$
+
+**Income-Based Repayment (IBR) estimate:**
+
+$$M_{\text{IBR}} = \frac{(\text{Gross Income} - 1.5 \times \text{FPL}) \times 10\%}{12}$$
+
+Where the 2024 Federal Poverty Level (FPL) for a single filer is $15,060.
+
+**Source:** Federal Student Aid (studentaid.gov) — Repayment Plan Information; Consumer Financial Protection Bureau (CFPB) — Paying for College.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### $35,000 Loan at 5.5% — Standard Plan with $100 Extra
+
+A recent graduate has $35,000 in federal student loans at a 5.5% weighted average rate. They're on the standard 10-year plan and want to see how $100/month extra affects their payoff.
+
+**Inputs:**
+- Loan balance: $35,000
+- Interest rate: 5.5%
+- Plan: Standard (10-year)
+- Extra monthly payment: $100
+
+**Step 1 — Standard monthly payment:**
+
+$$M = 35{,}000 \times \frac{0.004583(1.004583)^{120}}{(1.004583)^{120} - 1} = \$379.87$$
+
+**Step 2 — Without extra payments:**
+- Payoff: 10 years (120 months)
+- Total interest: $10,584
+- Total paid: $45,584
+
+**Step 3 — With $100/month extra ($479.87/month):**
+- Payoff: ~7 years 2 months (86 months)
+- Total interest: $7,263
+- Total paid: $42,263
+
+**Savings:** $3,321 less interest and 34 months earlier payoff. That $100/month extra payment effectively earns a guaranteed 5.5% return — better than most savings accounts.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Payoff
+
+**Interest rate** is the single largest cost driver. The difference between 4.5% and 6.5% on a $35,000 loan over 10 years is $3,890 in additional interest. If you have high-rate private loans, refinancing to a lower rate can save thousands — but refinancing federal loans into private loans forfeits access to income-driven plans and Public Service Loan Forgiveness (PSLF).
+
+**Extra payments** provide the most controllable savings lever. Because extra payments reduce principal directly, they reduce future interest charges. The earlier in the loan you make extra payments, the greater the compound savings effect. Even rounding up to the nearest $50 makes a measurable difference.
+
+**Repayment plan selection** involves a clear trade-off: lower monthly payments mean higher total cost. The graduated plan can make sense for borrowers expecting significant income growth, but if your income doesn't rise as expected, you end up paying more interest than the standard plan.
+
+**Loan forgiveness eligibility** changes the calculus entirely. If you qualify for PSLF (10 years of payments while working for a qualifying employer), paying more than the minimum is counterproductive — you want the lowest monthly payment possible so the forgiven amount is maximized.
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator assumes a fixed interest rate throughout the repayment period. Variable-rate private loans will fluctuate. The IBR estimate uses the single-filer federal poverty level and 10% discretionary income (REPAYE/SAVE plan formula); actual IBR plans may use 15% or different FPL thresholds depending on when you borrowed. Graduated plan modeling uses 7% biennial increases, which approximates but does not exactly replicate every servicer's implementation. The calculator does not account for capitalized interest during deferment or forbearance periods, which increase the effective balance. Tax implications of forgiven balances (taxable under some plans) are not included. Always confirm details with your loan servicer or studentaid.gov.
+
+{/* Section 12: FAQ */}
+## Frequently Asked Questions
+
+### How much will I pay in total on a $35,000 student loan?
+
+On the standard 10-year plan at 5.5%, you'll pay $45,584 total — $35,000 in principal plus $10,584 in interest. Switching to the extended 25-year plan increases your total to $64,457. Making $100/month in extra payments on the standard plan reduces total cost to approximately $42,263.
+
+### Should I pay extra on my student loans or invest?
+
+If your student loan interest rate is above 5–6%, paying extra provides a guaranteed return equal to your interest rate. If your rate is below 4%, investing in a diversified index fund (historically 7–10% annual return) may produce higher long-term wealth. At rates between 4–6%, it depends on your risk tolerance. One common approach: pay minimums on low-rate loans while investing the difference.
+
+### What is income-based repayment (IBR)?
+
+IBR caps your monthly payment at 10–15% of your discretionary income (income above 150% of the poverty line). At a $50,000 salary, your estimated IBR payment is approximately $282/month. After 20–25 years of qualifying payments, the remaining balance is forgiven — though forgiven amounts may be taxable depending on the plan.
+
+### Can I switch repayment plans?
+
+Yes. Federal loan borrowers can change repayment plans at any time by contacting their servicer. There's no fee to switch. Changing from standard to income-driven can lower payments during financial hardship. Switching back to standard later accelerates payoff. Private loan borrowers need to refinance to change terms.
+
+### Is student loan refinancing worth it?
+
+Refinancing makes sense if you can lower your interest rate by at least 0.5% and you don't need federal protections (income-driven plans, PSLF, deferment). On a $35,000 loan, refinancing from 6.5% to 4.5% saves $3,890 in interest over 10 years. However, refinancing federal loans into private loans is irreversible — you permanently lose access to federal programs.
+
+{/* Section 13: Sources */}
+## Sources & Methodology
+
+- **Federal Student Aid** — [Repayment Plans](https://studentaid.gov/manage-loans/repayment/plans) (studentaid.gov)
+- **Consumer Financial Protection Bureau** — [Paying for College: Repayment Estimator](https://www.consumerfinance.gov/paying-for-college/)
+- **Department of Education** — Income-Driven Repayment Plan formulas and FPL thresholds
+- **IRS** — Publication 970: Tax Benefits for Education (student loan interest deduction)

@@ -1,0 +1,151 @@
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+At \$1,500/month with 3% annual increases, your rent grows to \$1,739 per month after 5 years — a 15.9% cumulative increase. Over that period, you will pay \$95,564 in total rent, with an inflation-adjusted real cost of approximately \$91,200 at 2.5% inflation. Extend the projection to 10 years and your monthly rent reaches \$2,016, with total payments exceeding \$206,000. This calculator models compound annual rent growth year by year, showing your future monthly rent, cumulative cost, average payment, and inflation-adjusted total so you can compare renting costs against buying, budgeting, or relocating.
+
+</section>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Monthly Rent in Year N** is what your landlord will charge at the end of the projection period, assuming consistent annual increases. This is the number to compare against a potential mortgage payment when evaluating rent versus buy. At 3% annual increases, \$1,500 today becomes \$1,739 in 5 years and \$2,016 in 10 years — compounding turns small annual increases into significant long-term cost growth.
+
+**Total Rent Paid** is the cumulative sum of every monthly payment over the entire projection period. This number is often the most striking: \$1,500/month at 3% increases totals \$95,564 over 5 years and \$206,368 over 10 years. Unlike mortgage payments, none of this amount builds equity — it is a pure cost of housing.
+
+**Total Percent Increase** shows the compound effect. A 3% annual increase does not mean 15% over 5 years (that would be simple interest). It means 15.9% because each year's increase compounds on the previous year's higher rent. Over 10 years, the cumulative increase reaches 34.4%, and over 20 years it exceeds 80%.
+
+**Inflation-Adjusted Total Cost** discounts future rent payments by your expected inflation rate, showing the real (purchasing-power-adjusted) cost. If rent increases match inflation, the real cost stays flat. If rent increases exceed inflation — as they have in most U.S. metros since 2020 — the real cost climbs, meaning rent is consuming a growing share of your income.
+
+**Year-by-Year Breakdown** shows your monthly rent for each year of the projection, making it easy to identify the year when rent crosses a specific threshold — for example, when your rent exceeds what a mortgage payment would be on a comparable home.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Current Monthly Rent** — the amount you pay today, not including utilities or renter's insurance unless those are bundled into your lease.
+
+2. **Enter the Expected Annual Rent Increase** — the national median is approximately 3%–5% per year (Bureau of Labor Statistics, CPI Rent component 2023–2024). In high-demand cities like Austin, Miami, or Denver, increases of 5%–8% have been common. In rent-controlled cities, increases may be capped at 2%–3%.
+
+3. **Enter the Number of Years** — how far ahead you want to project. Use 5 years for near-term budgeting, 10 years for rent-vs-buy comparisons, or 20–30 years for long-term financial planning.
+
+4. **Optionally enter an Inflation Rate** — the default 2.5% represents the Federal Reserve's target. This adjusts the total cost to show what you are really paying in today's dollars. A higher inflation rate reduces the real cost (because future dollars are worth less).
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+**Future monthly rent after N years:**
+
+$$R_N = R_0 \times (1 + g)^N$$
+
+**Total rent paid over N years:**
+
+$$\text{Total} = \sum_{y=0}^{N-1} R_0 \times (1 + g)^y \times 12$$
+
+**Inflation-adjusted total cost:**
+
+$$\text{Real Cost} = \sum_{y=0}^{N-1} \frac{R_0 \times (1 + g)^y \times 12}{(1 + i)^y}$$
+
+Where:
+- $R_0$ = current monthly rent
+- $R_N$ = monthly rent in year $N$
+- $g$ = annual rent increase rate (as decimal, e.g., 0.03 for 3%)
+- $N$ = number of years
+- $i$ = annual inflation rate (as decimal)
+
+The year-by-year calculation assumes rent increases once per year (at lease renewal) and stays constant within each year. This matches the standard U.S. lease structure of 12-month terms.
+
+**Source:** Bureau of Labor Statistics (BLS) — CPI Rent of Primary Residence index; Census Bureau — American Community Survey median gross rent data.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example
+
+### \$1,500/Month Rent with 3% Annual Increases Over 5 Years
+
+**Inputs:**
+- Current Rent: \$1,500/month
+- Annual Increase: 3%
+- Years: 5
+- Inflation Rate: 2.5%
+
+**Step-by-step:**
+
+1. **Year 1:** \$1,500/month × 12 = **\$18,000** annual rent
+2. **Year 2:** \$1,500 × 1.03 = \$1,545/month × 12 = **\$18,540**
+3. **Year 3:** \$1,545 × 1.03 = \$1,591.35/month × 12 = **\$19,096**
+4. **Year 4:** \$1,591.35 × 1.03 = \$1,639.09/month × 12 = **\$19,669**
+5. **Year 5:** \$1,639.09 × 1.03 = \$1,688.26/month × 12 = **\$20,259**
+
+**Totals:**
+- Total rent paid: \$18,000 + \$18,540 + \$19,096 + \$19,669 + \$20,259 = **\$95,564**
+- Future monthly rent (after year 5): \$1,500 × (1.03)^5 = **\$1,738.91**
+- Total monthly increase: \$1,738.91 − \$1,500 = **\$238.91** (15.9%)
+- Average monthly rent: \$95,564 / 60 months = **\$1,592.74**
+
+**Inflation adjustment** (at 2.5%):
+- Year 1 real cost: \$18,000 / 1.000 = \$18,000
+- Year 2 real cost: \$18,540 / 1.025 = \$18,088
+- Year 3 real cost: \$19,096 / 1.0506 = \$18,177
+- Year 4 real cost: \$19,669 / 1.0769 = \$18,264
+- Year 5 real cost: \$20,259 / 1.1038 = \$18,353
+- **Real total: ~\$90,882**
+
+**Interpretation:** Even with modest 3% increases, your monthly rent rises \$239 over 5 years and you spend over \$95,000 total. The inflation-adjusted cost (\$90,882) is slightly lower because some of the nominal increase is offset by general price inflation — but rent is still rising faster than overall inflation (3% vs. 2.5%), meaning your housing costs are growing in real terms.
+
+{/* Section 10: Key Factors */}
+## Key Factors That Affect Your Rent Trajectory
+
+**Local market conditions dominate.** National averages mean little when your specific city or neighborhood has unique supply constraints. San Francisco, New York, and Boston have seen rent increases of 5%–8% annually in recent years, while cities like Cleveland and Detroit have stayed closer to 1%–3%. Research your metro area's historical rent trends through Zillow Observed Rent Index (ZORI) or Apartment List data.
+
+**Rent control and stabilization.** In cities with rent control (New York, San Francisco, Los Angeles, Portland, St. Paul), annual increases may be capped at the lesser of CPI or a fixed percentage (typically 3%–5%). If you live in a rent-controlled unit, use the legal cap as your annual increase rate, not the market average.
+
+**Lease negotiation timing matters.** Landlords are most flexible during low-demand months (November through February in most markets). Signing or renewing during peak season (May through August) gives landlords more leverage to push higher increases. A well-timed renewal conversation can shave 1–2 percentage points off your increase.
+
+**Multi-year leases lock in rates.** Some landlords offer 2- or 3-year leases with predetermined increases (e.g., 2% per year). This trades flexibility for cost certainty. If you expect to stay 2+ years and the predetermined rate is below market, a longer lease saves money.
+
+**Your income growth rate is the real benchmark.** If your income grows at 4% annually and your rent grows at 3%, your rent-to-income ratio improves over time. If rent grows faster than income, you are losing ground financially. The standard guideline is to keep housing costs below 30% of gross income (HUD affordability threshold).
+
+{/* Section 11: Assumptions */}
+## Assumptions and Limitations
+
+This calculator assumes a constant annual rent increase rate applied once per year at lease renewal. In practice, increases vary year to year based on market conditions, landlord discretion, and local regulations. The model does not account for mid-lease rent adjustments, moving costs if you relocate for cheaper rent, renter's insurance, utilities, or security deposit changes. Inflation adjustment uses a constant rate; actual inflation fluctuates. The calculator does not model the tax benefits or equity building of homeownership — for that comparison, use our [Rent vs. Buy Calculator](/finance/rent-vs-buy-calculator).
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### What is the average annual rent increase in the U.S.?
+
+The national average annual rent increase has been approximately 3%–5% per year over the past decade, according to the Bureau of Labor Statistics CPI Rent of Primary Residence index. However, this average masks wide regional variation. In 2022–2023, Sun Belt cities like Miami, Tampa, and Phoenix experienced increases of 10%–20%, while Midwest markets stayed near 2%–4%. The post-pandemic period saw the largest single-year rent increases since tracking began, though growth moderated to 3%–5% nationally by late 2024.
+
+### Can my landlord raise rent by any amount?
+
+In most U.S. states, landlords can raise rent by any amount at lease renewal with proper notice (typically 30–60 days). There is no federal rent control law. However, approximately 180 cities and counties have some form of rent regulation, including New York City, San Francisco, Los Angeles, Portland, and St. Paul. Rent-controlled units typically limit annual increases to CPI or a fixed cap (3%–5%). Check your local tenant protection laws to understand your rights.
+
+### How can I negotiate a lower rent increase?
+
+Start by researching comparable rents in your area using Zillow, Apartments.com, or Rentometer. If your rent is at or above market rate, present this data to your landlord. Offer a longer lease term (18–24 months) in exchange for a lower increase. Highlight your track record: on-time payments, good maintenance of the unit, and long tenure reduce landlord turnover costs (\$1,500–\$5,000 per vacancy). Negotiate 2–3 months before your lease expires — landlords become less flexible as the deadline approaches.
+
+### When does it make more sense to buy than rent?
+
+The breakeven point depends on your local market, but a common rule of thumb is the price-to-rent ratio. Divide the home purchase price by the annual rent for a comparable property. A ratio below 15 favors buying; above 20 favors renting; 15–20 is a gray zone. For a \$1,500/month rental, if comparable homes cost less than \$270,000 (ratio = 15), buying likely saves money over 5+ years. Use our [Rent vs. Buy Calculator](/finance/rent-vs-buy-calculator) for a full comparison including tax benefits, maintenance, and equity building.
+
+### How does inflation affect the real cost of renting?
+
+Inflation reduces the purchasing power of future dollars, which means future rent payments cost less in real terms. If rent increases at 3% and inflation runs at 2.5%, your real rent increase is only about 0.5% per year. However, if rent increases exceed inflation — as has been the case in most U.S. metros since 2020 — renting becomes more expensive in real terms. The inflation-adjusted total in this calculator shows what your cumulative rent payments are worth in today's dollars.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator uses the standard compound growth formula for projecting annual rent increases, consistent with methodologies used by the **Bureau of Labor Statistics (BLS)** in tracking the CPI Rent of Primary Residence component. Historical rent data references the **BLS Consumer Price Index** and the **Census Bureau American Community Survey** median gross rent tables. Inflation adjustment follows standard present-value discounting as defined in introductory economics (Mankiw, *Principles of Economics*). The 30% affordability threshold references **U.S. Department of Housing and Urban Development (HUD)** guidelines. Rent control data references the **National Multifamily Housing Council (NMHC)** rent control database. Comparable rent data sources include **Zillow Observed Rent Index (ZORI)** and **Apartment List National Rent Report**.
+
+{/* Section 17: Disclaimer — auto-rendered from spec.disclaimer = "finance" */}

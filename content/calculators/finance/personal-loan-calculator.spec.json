@@ -1,0 +1,137 @@
+{
+  "id": "personal-loan-calculator",
+  "title": "Personal Loan Calculator",
+  "slug": "personal-loan-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "personal loan calculator",
+  "metaTitle": "Personal Loan Calculator — Monthly Payment, Total Interest & APR",
+  "metaDescription": "Calculate your personal loan monthly payment, total interest, and true APR with origination fees. Compare loan offers side by side. Free personal loan calculator.",
+  "inputs": [
+    {
+      "id": "loanAmount",
+      "label": "Loan Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 15000,
+      "min": 0,
+      "max": 100000,
+      "step": 500,
+      "prefix": "$"
+    },
+    {
+      "id": "annualInterestRate",
+      "label": "Annual Interest Rate (APR)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 10.5,
+      "min": 0,
+      "max": 36,
+      "step": 0.1,
+      "helpText": "Fixed annual interest rate. Average personal loan rate is 8%–15% depending on credit score."
+    },
+    {
+      "id": "loanTermMonths",
+      "label": "Loan Term",
+      "type": "select",
+      "required": true,
+      "defaultValue": "36",
+      "options": [
+        {"value": "12", "label": "12 months (1 year)"},
+        {"value": "24", "label": "24 months (2 years)"},
+        {"value": "36", "label": "36 months (3 years)"},
+        {"value": "48", "label": "48 months (4 years)"},
+        {"value": "60", "label": "60 months (5 years)"},
+        {"value": "72", "label": "72 months (6 years)"},
+        {"value": "84", "label": "84 months (7 years)"}
+      ]
+    },
+    {
+      "id": "originationFeePercent",
+      "label": "Origination Fee",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 10,
+      "step": 0.5,
+      "helpText": "One-time fee charged by lender, typically 1%–8% of loan amount. Deducted from disbursement."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyPayment",
+      "label": "Monthly Payment",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalPayment",
+      "label": "Total Amount Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "effectiveAPR",
+      "label": "Effective APR",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "originationFee",
+      "label": "Origination Fee",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "netLoanProceeds",
+      "label": "Net Loan Proceeds",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Loan Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "personal-loan",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "loan-calculator",
+    "debt-consolidation-calculator",
+    "auto-loan-calculator",
+    "credit-card-payoff-calculator",
+    "debt-payoff-calculator",
+    "interest-rate-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Consumer Financial Protection Bureau (CFPB) — Loan Estimate explainer; Truth in Lending Act (TILA) Regulation Z",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "M = P × [r(1+r)^n] / [(1+r)^n - 1] where P = principal, r = monthly rate, n = term in months. APR accounts for origination fees per TILA Regulation Z.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["loan-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": ["apr", "amortization"],
+  "methodologyTopics": []
+}

@@ -12,14 +12,14 @@
       "name": "Mortgage & Home",
       "slug": "mortgage",
       "description": "Calculate monthly mortgage payments, compare renting vs. buying, find your home budget, estimate refinance savings, and plan your down payment timeline.",
-      "calculators": ["mortgage-calculator", "amortization-calculator", "refinance-calculator", "home-affordability-calculator", "mortgage-points-calculator", "closing-cost-calculator", "heloc-calculator", "home-equity-calculator", "down-payment-calculator", "rent-vs-buy-calculator", "rental-property-calculator", "debt-to-income-calculator", "cap-rate-calculator", "property-tax-calculator", "home-insurance-calculator"]
+      "calculators": ["mortgage-calculator", "amortization-calculator", "refinance-calculator", "home-affordability-calculator", "mortgage-points-calculator", "closing-cost-calculator", "heloc-calculator", "home-equity-calculator", "down-payment-calculator", "rent-vs-buy-calculator", "rental-property-calculator", "debt-to-income-calculator", "cap-rate-calculator", "property-tax-calculator", "home-insurance-calculator", "home-sale-profit-calculator", "real-estate-commission-calculator", "mortgage-prepayment-calculator", "rent-increase-calculator"]
     },
     {
       "id": "loans",
       "name": "Loans & Debt",
       "slug": "loans",
       "description": "Calculate monthly loan payments, compare loan offers side by side, find your implied interest rate, explore debt payoff and consolidation strategies, and check your credit utilization.",
-      "calculators": ["loan-calculator", "payment-calculator", "interest-rate-calculator", "debt-payoff-calculator", "debt-snowball-calculator", "debt-avalanche-calculator", "credit-card-payoff-calculator", "balance-transfer-calculator", "auto-loan-calculator", "loan-comparison-calculator", "debt-consolidation-calculator", "credit-utilization-calculator"]
+      "calculators": ["loan-calculator", "payment-calculator", "interest-rate-calculator", "personal-loan-calculator", "interest-only-loan-calculator", "debt-payoff-calculator", "debt-snowball-calculator", "debt-avalanche-calculator", "credit-card-payoff-calculator", "balance-transfer-calculator", "auto-loan-calculator", "loan-comparison-calculator", "debt-consolidation-calculator", "credit-utilization-calculator", "student-loan-payoff-calculator"]
     },
     {
       "id": "investment",

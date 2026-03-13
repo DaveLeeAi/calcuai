@@ -1,0 +1,149 @@
+{
+  "id": "interest-only-loan-calculator",
+  "title": "Interest-Only Loan Calculator",
+  "slug": "interest-only-loan-calculator",
+  "category": "finance",
+  "subcategory": "loans",
+  "primaryKeyword": "interest only loan calculator",
+  "metaTitle": "Interest-Only Loan Calculator — Compare IO vs Fully Amortizing Payments",
+  "metaDescription": "Calculate interest-only loan payments and see how they compare to standard amortizing loans. Project total cost, payment jump after IO period, and total interest. Free calculator.",
+  "inputs": [
+    {
+      "id": "loanAmount",
+      "label": "Loan Amount",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 300000,
+      "min": 0,
+      "max": 5000000,
+      "step": 5000,
+      "prefix": "$"
+    },
+    {
+      "id": "annualInterestRate",
+      "label": "Annual Interest Rate",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0.1,
+      "max": 30,
+      "step": 0.125,
+      "helpText": "Current mortgage rate or loan rate"
+    },
+    {
+      "id": "totalTermYears",
+      "label": "Total Loan Term",
+      "type": "select",
+      "required": true,
+      "defaultValue": "30",
+      "options": [
+        { "value": "15", "label": "15 years" },
+        { "value": "20", "label": "20 years" },
+        { "value": "25", "label": "25 years" },
+        { "value": "30", "label": "30 years" }
+      ]
+    },
+    {
+      "id": "interestOnlyYears",
+      "label": "Interest-Only Period",
+      "type": "select",
+      "required": true,
+      "defaultValue": "10",
+      "options": [
+        { "value": "3", "label": "3 years" },
+        { "value": "5", "label": "5 years" },
+        { "value": "7", "label": "7 years" },
+        { "value": "10", "label": "10 years" }
+      ],
+      "helpText": "Years of interest-only payments before principal + interest begins"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "interestOnlyPayment",
+      "label": "Interest-Only Monthly Payment",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "fullyAmortizingPayment",
+      "label": "Payment After IO Period",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "standardPayment",
+      "label": "Standard 30-Year Payment (Comparison)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "paymentIncrease",
+      "label": "Payment Jump After IO Period",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "paymentIncreasePercent",
+      "label": "Payment Increase %",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "totalInterest",
+      "label": "Total Interest (IO Loan)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalInterestStandard",
+      "label": "Total Interest (Standard Loan)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "interestDifference",
+      "label": "Extra Interest vs Standard Loan",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "interest-only-loan",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "mortgage-calculator",
+    "amortization-calculator",
+    "heloc-calculator",
+    "refinance-calculator",
+    "home-affordability-calculator",
+    "loan-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "CFPB — Interest-Only Mortgage Payments and Payment-Option ARMs; Freddie Mac — Loan Product Descriptions",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "IO Payment = P × (r/12). After IO period: M = P × [r(1+r)^n] / [(1+r)^n - 1] where n = remaining months.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["mortgage-calculator", "heloc-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": ["amortization", "interest-rate"],
+  "methodologyTopics": []
+}

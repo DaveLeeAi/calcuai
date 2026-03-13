@@ -1,0 +1,86 @@
+{
+  "id": "time-converter",
+  "title": "Time Converter",
+  "slug": "time-converter",
+  "category": "conversion",
+  "subcategory": "time",
+  "primaryKeyword": "time converter",
+  "metaTitle": "Time Converter — Seconds, Minutes, Hours, Days, Weeks, Months & Years",
+  "metaDescription": "Convert between time units: seconds, minutes, hours, days, weeks, months, and years. Instant conversion table with all units displayed. Free time unit converter.",
+  "inputs": [
+    {
+      "id": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 0,
+      "max": 999999999999,
+      "step": 0.01,
+      "helpText": "Time value to convert"
+    },
+    {
+      "id": "fromUnit",
+      "label": "From",
+      "type": "select",
+      "required": true,
+      "defaultValue": "hours",
+      "options": [
+        { "value": "seconds", "label": "Seconds (s)" },
+        { "value": "minutes", "label": "Minutes (min)" },
+        { "value": "hours", "label": "Hours (hr)" },
+        { "value": "days", "label": "Days (d)" },
+        { "value": "weeks", "label": "Weeks (wk)" },
+        { "value": "months", "label": "Months (mo)" },
+        { "value": "years", "label": "Years (yr)" }
+      ]
+    },
+    {
+      "id": "toUnit",
+      "label": "To",
+      "type": "select",
+      "required": true,
+      "defaultValue": "minutes",
+      "options": [
+        { "value": "seconds", "label": "Seconds (s)" },
+        { "value": "minutes", "label": "Minutes (min)" },
+        { "value": "hours", "label": "Hours (hr)" },
+        { "value": "days", "label": "Days (d)" },
+        { "value": "weeks", "label": "Weeks (wk)" },
+        { "value": "months", "label": "Months (mo)" },
+        { "value": "years", "label": "Years (yr)" }
+      ]
+    }
+  ],
+  "outputs": [
+    { "id": "convertedValue", "label": "Converted Value", "type": "single-value", "format": "number", "highlight": true, "precision": 6 },
+    { "id": "conversionDisplay", "label": "Conversion", "type": "single-value", "format": "text" },
+    { "id": "conversionRate", "label": "Conversion Rate", "type": "single-value", "format": "number", "precision": 6 },
+    { "id": "inverseRate", "label": "Inverse Rate", "type": "single-value", "format": "number", "precision": 6 },
+    { "id": "conversionTable", "label": "All Time Conversions", "type": "value-group", "format": "text" }
+  ],
+  "formula": "time-convert",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["date-calculator", "hours-calculator", "countdown-calculator", "time-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NIST Special Publication 811, Guide for the Use of the International System of Units (SI), 2008 Edition",
+  "articleWordTarget": 800,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "convertedValue = value × (fromFactor / toFactor); base unit = seconds. 1 min = 60 s, 1 hr = 3600 s, 1 day = 86400 s, 1 wk = 604800 s, 1 mo = 2629746 s (30.44 d), 1 yr = 31557600 s (365.25 d)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["time-calculator", "hours-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": [],
+  "methodologyTopics": []
+}
