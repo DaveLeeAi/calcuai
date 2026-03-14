@@ -5,7 +5,12 @@
   "category": "energy",
   "subcategory": "electricity",
   "primaryKeyword": "kwh cost calculator",
-  "secondaryKeywords": ["electricity cost per kwh", "appliance running cost", "kilowatt hour cost", "electric bill estimator"],
+  "secondaryKeywords": [
+    "electricity cost per kwh",
+    "appliance running cost",
+    "kilowatt hour cost",
+    "electric bill estimator"
+  ],
   "metaTitle": "kWh Cost Calculator — Electricity Cost Per Appliance | CalcAI",
   "metaDescription": "Calculate the exact cost to run any appliance. Enter watts, hours per day, and your electricity rate to get daily, monthly, and annual electricity costs.",
   "inputs": [
@@ -99,15 +104,27 @@
     }
   ],
   "formula": "kwh-cost",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["electricity-cost-calculator", "home-energy-usage-calculator", "generator-size-calculator", "solar-panel-payback-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "electricity-cost-calculator",
+    "home-energy-usage-calculator",
+    "generator-size-calculator",
+    "solar-panel-payback-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "U.S. Energy Information Administration — Residential Electricity Use (2025); ENERGY STAR — Appliance Energy Use Guidelines (2025)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "kWh = (Watts × Hours) / 1000; Cost = kWh × Rate",
@@ -117,7 +134,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

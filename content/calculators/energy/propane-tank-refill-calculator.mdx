@@ -1,0 +1,87 @@
+---
+title: "Propane Tank Refill Cost Calculator"
+description: "Calculate the cost to refill your propane tank based on size, current level, and local price per gallon."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Refilling a **500-gallon propane tank from 20% to full** at the national average price of **$2.80/gallon** (EIA, 2025) costs approximately **$896** for 320 gallons. A standard **20-lb BBQ tank** costs **$11-$18 to refill** (about 4.7 gallons at $2.50-$3.80/gallon, depending on location and season). Propane tanks are filled to 80% of total capacity for safety — a "full" 500-gallon tank holds 400 usable gallons. Bulk orders of 200+ gallons often qualify for per-gallon discounts of $0.10-$0.30, and filling in summer typically saves $0.20-$0.50/gallon compared to peak winter prices.
+
+</section>
+
+## What Your Results Mean
+
+**Gallons needed** is the amount of propane required to bring your tank from its current level to 80% capacity (the standard fill limit). Propane tanks are never filled to 100% — the 80% rule allows space for the liquid propane to expand safely with temperature changes. **Total cost** is the gallons needed multiplied by your local price per gallon. **Cost per fill** shows what a complete refill from empty would cost at your current price, which is useful for budgeting seasonal refills.
+
+## How to Use This Calculator
+
+1. Select your tank size — common residential sizes are 120-gallon, 250-gallon, 500-gallon, and 1,000-gallon. For portable tanks, select "20-lb BBQ tank" (4.7 gallons usable).
+2. Enter your current tank level as a percentage. Most tanks have a gauge on top — read it before ordering to avoid overpaying for a partial fill.
+3. Enter your local propane price per gallon. Check with your supplier or the EIA weekly propane price report for regional averages.
+4. The calculator shows gallons needed, total cost, and cost per full fill.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Usable Capacity} = \text{Tank Size (gallons)} \times 0.80
+$$
+$$
+\text{Gallons Needed} = \text{Usable Capacity} \times (1 - \text{Current Level \%})
+$$
+$$
+\text{Total Cost} = \text{Gallons Needed} \times \text{Price per Gallon}
+$$
+
+Where:
+- **0.80** = industry-standard maximum fill level (80% rule) per NFPA 58, allowing expansion space for liquid propane
+- **Current Level %** = your tank gauge reading as a decimal (e.g., 20% = 0.20)
+- **Price per Gallon** = your local propane price (national average: $2.80/gallon, EIA 2025)
+
+*Source: U.S. Energy Information Administration — Weekly Heating Oil and Propane Prices (2025); National Fire Protection Association — NFPA 58: Liquefied Petroleum Gas Code (2024)*
+
+</div>
+
+## Worked Example 1
+
+**500-gallon residential tank at 20%, $2.80/gallon:**
+
+- Usable capacity: 500 x 0.80 = **400 gallons**
+- Current propane: 400 x 0.20 = **80 gallons remaining**
+- Gallons needed: 400 - 80 = **320 gallons**
+- Total cost: 320 x $2.80 = **$896.00**
+
+Most propane suppliers recommend ordering when your tank reaches 20-25% to avoid running out during cold snaps. A 500-gallon tank providing home heating in a cold climate (2,000+ heating degree days) may use 80-120 gallons per month in winter, so a tank at 20% has roughly 2-3 weeks of supply remaining.
+
+## Worked Example 2
+
+**20-lb BBQ tank, empty, $4.50/gallon at retail exchange:**
+
+- Usable capacity: 20 lbs / 4.24 lbs per gallon = **4.7 gallons**
+- Current propane: 0 gallons (empty)
+- Gallons needed: **4.7 gallons**
+- Total cost: 4.7 x $4.50 = **$21.15**
+
+Retail tank exchanges (at gas stations and hardware stores) typically charge $4.00-$5.50 per gallon equivalent, and many exchange tanks are only filled to 15 lbs (3.5 gallons) rather than the full 20 lbs. Refilling at a propane dealer is usually cheaper — $2.50-$3.50/gallon for the full 4.7 gallons — but requires bringing your tank to the fill station.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: Why is my propane tank only filled to 80%?**
+A: The 80% fill rule is a safety requirement under NFPA 58 (Liquefied Petroleum Gas Code). Liquid propane expands approximately 1.5% for every 10 degrees F increase in temperature. A tank filled to 100% on a cool morning could exceed safe pressure levels by afternoon if temperatures rise significantly. The 20% ullage (empty space) provides room for this thermal expansion without triggering the pressure relief valve. This means a "full" 500-gallon tank holds 400 usable gallons, a 250-gallon tank holds 200 gallons, and so on.
+
+**Q: When is the cheapest time to buy propane?**
+A: Propane prices are typically lowest from late spring through early fall (May-September) when heating demand drops. The EIA reports seasonal price spreads of $0.20-$0.50/gallon between summer lows and winter peaks, depending on region. Many propane suppliers offer "summer fill" or "pre-buy" programs that lock in lower per-gallon rates for the upcoming heating season. Ordering a full fill in August or September, rather than waiting until your tank runs low in January, can save $60-$160 on a 500-gallon tank refill.
+
+**Q: How many gallons of propane does a typical home use per year?**
+A: Annual propane consumption varies widely by climate and usage. A home using propane only for heating in a cold climate (northern U.S.) may use 800-1,200 gallons per year. A home using propane for heating, hot water, cooking, and clothes drying typically uses 1,000-1,500 gallons. In moderate climates or homes using propane only for water heating and cooking, annual consumption may be 200-400 gallons. The EIA reports average household propane consumption of approximately 750 gallons/year nationally, but this average blends very different usage patterns across climate zones.
+
+</div>
+
+## Sources & Methodology
+
+Propane price data is from the U.S. Energy Information Administration (EIA) Weekly Heating Oil and Propane Prices report (2025). The national average residential propane price of $2.80/gallon reflects the EIA's most recent heating season data — prices vary significantly by region, with the Midwest typically $0.20-$0.40/gallon lower and the Northeast $0.20-$0.40 higher than the national average. The 80% fill rule and tank specifications reference NFPA 58: Liquefied Petroleum Gas Code (2024 edition). BBQ tank capacity is based on the standard DOT 20-lb (nominal) cylinder holding 4.7 gallons (20 lbs / 4.24 lbs per gallon at 60 degrees F). Seasonal pricing patterns reflect 5-year EIA historical data (2020-2025). All costs are estimates; actual prices depend on your supplier, delivery minimums, contract terms, and market conditions at time of purchase.

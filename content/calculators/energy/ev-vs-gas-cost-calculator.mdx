@@ -1,0 +1,169 @@
+---
+title: "EV vs Gas Cost Calculator"
+description: "Compare the total 5-year and 10-year cost of owning an electric vehicle vs a gas car, including fuel, maintenance, and purchase price."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A driver covering 12,000 miles per year spends **$590/year** fueling an EV at the national average electricity rate of 17.24¢/kWh (3.5 mi/kWh efficiency) versus **$1,556/year** fueling a gas car getting 27 MPG at $3.50/gallon — a difference of **$966/year** or **$9,660 over 10 years** in fuel alone. Add in the EV's lower maintenance costs ($600/year vs. $1,200/year for gas), and the total 10-year ownership savings reach **$15,660** before accounting for purchase price differences or tax incentives. This calculator runs the full comparison for your specific driving pattern, vehicle choices, and local energy prices.
+
+</section>
+
+## What Your Results Mean
+
+**Annual fuel cost** shows what you spend per year on electricity (EV) or gasoline (gas car) at your entered rates and driving distance. **Annual maintenance cost** reflects the structural maintenance advantage of EVs: no oil changes, no transmission servicing, no exhaust system, and regenerative braking that extends brake pad life to 100,000+ miles. **5-year and 10-year total cost of ownership** combines purchase price, fuel, maintenance, and insurance into a single number for direct comparison — revealing the true break-even point where the EV's higher sticker price is offset by lower running costs.
+
+The year-by-year savings table shows exactly when the cumulative fuel and maintenance savings cross the purchase price gap, giving you a concrete payback timeline.
+
+## How to Use This Calculator
+
+1. Enter your annual driving distance in miles. The US average is 13,500 miles/year (FHWA 2024), but your actual mileage may differ.
+2. Enter the EV purchase price (before incentives) and the comparable gas vehicle price.
+3. Set the EV efficiency in miles per kWh. Most modern EVs range from 3.0 to 4.5 mi/kWh — check EPA ratings at fueleconomy.gov.
+4. Enter the gas car's MPG (combined city/highway EPA rating).
+5. Enter your local electricity rate per kWh and gas price per gallon.
+6. Add any applicable federal or state EV tax credit (up to $7,500 federal through 2032).
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{EV Annual Fuel Cost} = \frac{\text{Miles/Year}}{\text{Miles per kWh}} \times \text{Electricity Rate (\$/kWh)}
+$$
+$$
+\text{Gas Annual Fuel Cost} = \frac{\text{Miles/Year}}{\text{MPG}} \times \text{Gas Price (\$/gal)}
+$$
+$$
+\text{Total Cost}_N = \text{Purchase Price} - \text{Incentives} + \sum_{y=1}^{N} (\text{Fuel}_y + \text{Maintenance}_y)
+$$
+
+Where:
+- **Miles per kWh** = EV efficiency (EPA rated, typically 3.0–4.5 mi/kWh)
+- **MPG** = gas vehicle combined fuel economy (EPA rated)
+- **N** = ownership period in years (5 or 10)
+- **Maintenance** = annual maintenance and repair costs (EV avg $600/yr, gas avg $1,200/yr)
+
+*Source: U.S. Department of Energy — Alternative Fuels Data Center, Vehicle Cost Calculator Methodology (2026); AAA — Your Driving Costs Study (2025); Consumer Reports — EV Ownership Cost Analysis (2025)*
+
+</div>
+
+## Worked Example 1
+
+**Mainstream comparison: Tesla Model 3 vs. Toyota Camry at national average rates, 12,000 miles/year:**
+
+**EV: Tesla Model 3 Standard Range ($35,000 MSRP)**
+- Efficiency: 3.8 mi/kWh (EPA rated)
+- Electricity rate: $0.1724/kWh (national average)
+- Annual fuel: 12,000 ÷ 3.8 × $0.1724 = **$544/year**
+- Annual maintenance: **$600/year** (tires, wipers, cabin filter, coolant)
+- Federal tax credit: **$7,500** (if eligible)
+- Net purchase price: $35,000 − $7,500 = **$27,500**
+
+**Gas: Toyota Camry LE ($30,000 MSRP)**
+- Fuel economy: 32 MPG (EPA combined)
+- Gas price: $3.50/gallon
+- Annual fuel: 12,000 ÷ 32 × $3.50 = **$1,313/year**
+- Annual maintenance: **$1,200/year** (oil changes, brakes, transmission, exhaust)
+
+**5-Year Comparison:**
+- Model 3 total: $27,500 + (5 × $544) + (5 × $600) = **$33,220**
+- Camry total: $30,000 + (5 × $1,313) + (5 × $1,200) = **$42,565**
+- **5-year savings with EV: $9,345**
+
+**10-Year Comparison:**
+- Model 3 total: $27,500 + (10 × $544) + (10 × $600) = **$38,940**
+- Camry total: $30,000 + (10 × $1,313) + (10 × $1,200) = **$55,130**
+- **10-year savings with EV: $16,190**
+
+Even without the federal tax credit, the Model 3 breaks even at year 3 and saves $8,690 over 10 years. The combination of 70% lower fuel costs and 50% lower maintenance costs makes the EV cheaper from year one in running costs.
+
+## Worked Example 2
+
+**High-mileage, high-gas-price scenario in California: 15,000 miles/year at $5.00/gallon:**
+
+**EV: Chevrolet Equinox EV ($33,000 MSRP)**
+- Efficiency: 3.4 mi/kWh (EPA rated)
+- Electricity rate: $0.3471/kWh (California average)
+- Annual fuel: 15,000 ÷ 3.4 × $0.3471 = **$1,531/year**
+- Annual maintenance: **$600/year**
+- Federal tax credit: **$7,500**
+- Net purchase price: $33,000 − $7,500 = **$25,500**
+
+**Gas: Honda CR-V ($34,000 MSRP)**
+- Fuel economy: 30 MPG (EPA combined)
+- Gas price: $5.00/gallon
+- Annual fuel: 15,000 ÷ 30 × $5.00 = **$2,500/year**
+- Annual maintenance: **$1,200/year**
+
+**5-Year Comparison:**
+- Equinox EV total: $25,500 + (5 × $1,531) + (5 × $600) = **$36,155**
+- CR-V total: $34,000 + (5 × $2,500) + (5 × $1,200) = **$52,500**
+- **5-year savings with EV: $16,345**
+
+Even with California's high electricity rates (the highest in the continental US), the EV still costs $969 less per year in fuel alone because electricity is still cheaper per mile than gasoline at $5.00/gallon. In California, the EV advantage is amplified further by the $2,000 California Clean Vehicle Rebate (for income-qualifying buyers) and free or discounted workplace charging offered by many employers. Drivers who charge primarily at home on a TOU plan during off-peak hours ($0.12–$0.18/kWh) reduce their annual fuel cost to $660–$990 — widening the gap to over $1,500/year versus gas.
+
+## Key Factors That Affect the EV vs Gas Equation
+
+**Electricity rate is the single biggest EV variable.** At $0.10/kWh (Washington state), fueling an EV costs $0.029/mile. At $0.35/kWh (California peak), it costs $0.10/mile. That 3.4× range can make or break the EV's fuel advantage. Charging at home on an off-peak TOU plan is almost always cheaper than public fast charging, which runs $0.30–$0.60/kWh at most networks.
+
+**Gas prices are the single biggest gas variable.** At $3.00/gallon, a 30 MPG car costs $0.10/mile. At $5.00/gallon, the same car costs $0.167/mile. Gas price volatility means the EV's economic advantage widens during price spikes and narrows during dips — but electricity rates are far more stable, rising a predictable 3–4% per year versus gas swings of 30–50% in a single year.
+
+**Annual mileage amplifies every per-mile difference.** A driver covering 8,000 miles/year saves relatively little switching to an EV. At 20,000 miles/year, the fuel savings alone can reach $1,500–$2,500/year, making the EV break-even point arrive in 2–3 years.
+
+**Purchase price gap is shrinking.** In 2020, the average EV cost $10,000–$15,000 more than a comparable gas car. By 2026, models like the Chevrolet Equinox EV ($33,000), Hyundai Ioniq 5 ($34,000 after credit), and Tesla Model 3 ($27,500 after credit) are at or below the average new car transaction price of $48,000. As battery costs continue falling — Bloomberg NEF projects $80/kWh by 2027, down from $139/kWh in 2023 — the sticker price gap will narrow further.
+
+## The Maintenance Advantage
+
+EVs have fewer moving parts than gas cars — roughly 20 major components in the drivetrain versus 2,000+ in an internal combustion engine and transmission. This structural simplicity translates directly into lower maintenance costs.
+
+**What EVs eliminate entirely:** oil changes ($50–$100 every 5,000 miles), transmission fluid ($150–$300 every 30,000 miles), spark plugs ($100–$300 every 30,000–100,000 miles), timing belt ($500–$1,000 at 60,000–100,000 miles), exhaust system repairs ($200–$1,500 over vehicle life), emission system repairs ($200–$2,000). Over 10 years and 120,000 miles, these add up to $4,000–$8,000 in avoided costs.
+
+**What EVs reduce:** Brake pads last 2–3× longer (100,000+ miles vs. 30,000–50,000 miles for gas cars) because regenerative braking handles 70–90% of deceleration. Consumer Reports data shows EV brake replacements cost $300–$500 once over 150,000 miles versus $900–$1,500 in cumulative brake costs for gas cars over the same distance.
+
+**What EVs add:** Tire replacement may come slightly sooner due to the heavier weight and instant torque of EVs. EV tires cost $150–$250 each and should be rotated every 7,500 miles. Battery degradation is the long-term concern, but modern EV batteries retain 90% capacity after 200,000 miles, and all major manufacturers warrant the battery for 8 years or 100,000 miles.
+
+According to AAA's 2025 Your Driving Costs study, the average EV costs $0.066/mile to maintain versus $0.101/mile for a gas car — a 35% savings that compounds over the life of the vehicle.
+
+## Federal and State EV Incentives
+
+**Federal Clean Vehicle Credit (through 2032):** Up to $7,500 for new EVs meeting battery sourcing requirements. Must be purchased from a dealer (not private sale). Income limits: $150,000 AGI (single), $300,000 (joint). Vehicle MSRP cap: $55,000 (sedans), $80,000 (SUVs/trucks). The credit is now available as a point-of-sale discount — you do not need to wait until tax filing. Used EVs qualify for a separate $4,000 credit (vehicles at least 2 model years old, priced under $25,000).
+
+**State incentives stack on top of the federal credit.** Colorado offers $5,000 off any new EV. New Jersey and Washington exempt EVs from state sales tax (saving $2,000–$4,000). California's Clean Vehicle Rebate provides up to $2,000 for income-qualifying buyers. Oregon offers $2,500 for new EVs. Massachusetts offers $3,500. The full list is maintained at the DOE Alternative Fuels Data Center (afdc.energy.gov/laws).
+
+**Utility incentives** are often overlooked. Many utilities offer $500–$1,500 rebates for purchasing a Level 2 home charger, plus discounted EV-specific electricity rates. Pacific Gas & Electric (PG&E) offers an EV TOU rate as low as $0.12/kWh during off-peak hours — 65% below the standard residential rate.
+
+Combined, a buyer in Colorado purchasing a qualifying EV can receive $7,500 (federal) + $5,000 (state) + $800 (utility charger rebate) = **$13,300 in total incentives** — enough to make a $35,000 EV cost less upfront than most gas cars.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: Is an EV really cheaper than a gas car over 10 years?**
+A: Yes, in most scenarios. The DOE's Alternative Fuels Data Center estimates that EVs cost $6,000–$12,000 less to operate over 10 years than comparable gas cars, depending on local electricity and gas prices. At national average rates ($0.1724/kWh electricity, $3.50/gal gas), a 12,000-mile/year driver saves roughly $770/year in fuel and $600/year in maintenance — totaling $13,700 over 10 years. Even if the EV costs $5,000 more upfront, the net 10-year savings are $8,700. The break-even point for most EV-to-gas comparisons is 2–5 years.
+
+**Q: How much does it cost to charge an EV at home vs. at a public charger?**
+A: Home charging at the national average residential rate of $0.1724/kWh costs about $0.049/mile for a typical EV (3.5 mi/kWh), or roughly $49 to charge a 60 kWh battery from empty to full. Public Level 2 chargers cost $0.25–$0.40/kWh, and DC fast chargers cost $0.30–$0.60/kWh — making public fast charging 2–4× more expensive per mile than home charging. Most EV owners do 80–90% of their charging at home overnight, keeping their effective charging cost close to the home rate. Installing a Level 2 home charger costs $500–$1,500 including the unit and electrician labor.
+
+**Q: What EV efficiency (miles per kWh) should I enter?**
+A: Use the EPA-rated efficiency for the specific EV you are comparing. Common values: Tesla Model 3 = 3.8 mi/kWh, Chevrolet Bolt = 3.6 mi/kWh, Hyundai Ioniq 6 = 4.3 mi/kWh, Ford Mustang Mach-E = 3.0 mi/kWh, Rivian R1S = 2.5 mi/kWh. Larger EVs and trucks have lower mi/kWh due to weight and aerodynamics. Real-world efficiency is typically 10–15% below EPA ratings, especially in cold weather (below 40°F) or at highway speeds above 70 mph. For a conservative estimate, reduce the EPA number by 10%.
+
+**Q: Do EVs save money in states with high electricity rates like California and Massachusetts?**
+A: Yes, because gas prices in those states are also high. In California ($0.35/kWh electricity, $5.00/gal gas), an EV costs $0.10/mile in fuel versus $0.167/mile for a 30 MPG gas car — still a 40% savings. In Massachusetts ($0.31/kWh, $3.80/gal), an EV costs $0.089/mile versus $0.127/mile — a 30% savings. The EV advantage narrows in high-electricity states but almost never disappears because the electricity-to-gas cost ratio favors EVs at virtually any US rate combination. The only scenario where gas wins on fuel cost is an extremely efficient hybrid (50+ MPG) against high-rate electricity ($0.35+/kWh).
+
+**Q: How does EV battery degradation affect long-term costs?**
+A: Modern EV batteries (2020 and later) degrade slowly — losing approximately 1–2% of capacity per year under normal use. After 10 years, a battery that started at 300 miles of range retains 260–280 miles. This gradual range reduction slightly increases your per-mile energy cost (because the battery is less efficient at lower state-of-health), but the impact is small: roughly $20–$40/year in additional electricity cost by year 10. Battery replacement is the doomsday scenario, costing $8,000–$15,000 — but it is rare during the first 10 years. All major manufacturers warrant the battery for 8 years or 100,000 miles (whichever comes first), and data from Recurrent Auto shows that less than 2% of EVs need battery replacement within 10 years.
+
+</div>
+
+## Charging Infrastructure and Home Setup Costs
+
+The cost to "fuel" an EV includes not just the electricity but also the one-time investment in charging equipment. Level 1 charging (standard 120V outlet) is free to set up but adds only 3–5 miles of range per hour — adequate if you drive under 40 miles daily and can charge overnight for 10+ hours. Level 2 charging (240V, 40–50 amp circuit) adds 25–35 miles of range per hour and is the standard home setup. A Level 2 EVSE (charger unit) costs $300–$700, and electrician installation runs $200–$800 depending on panel capacity and distance from the panel to the garage.
+
+For renters or apartment dwellers without home charging access, public charging becomes the primary option. Workplace charging is often free or discounted — a growing benefit offered by employers to attract talent. Public Level 2 networks like ChargePoint and Blink charge $0.25–$0.40/kWh. Tesla Superchargers and other DC fast charging networks charge $0.30–$0.55/kWh and can add 150–200 miles of range in 20–30 minutes. While more expensive than home charging, public fast charging still costs less per mile than gasoline in most markets.
+
+## Sources & Methodology
+
+Fuel cost calculations use the DOE Alternative Fuels Data Center's Vehicle Cost Calculator methodology: EV fuel cost = miles ÷ mi/kWh × electricity rate; gas fuel cost = miles ÷ MPG × gas price. Average EV efficiency of 3.5 mi/kWh and gas car MPG of 27 are from the EPA Fuel Economy Guide (2025). National average electricity rate ($0.1724/kWh) is from the EIA Electric Power Monthly (2026). National average gas price ($3.50/gallon) is from the EIA Weekly Retail Gasoline and Diesel Prices. Maintenance cost estimates ($600/year EV, $1,200/year gas) are from AAA's Your Driving Costs (2025) and Consumer Reports' EV Total Cost of Ownership study (2025). Federal tax credit details are from the IRS Clean Vehicle Credit guidance (IRC Section 30D) as amended by the Inflation Reduction Act.

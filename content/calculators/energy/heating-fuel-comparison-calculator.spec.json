@@ -1,0 +1,151 @@
+{
+  "id": "heating-fuel-comparison-calculator",
+  "title": "Heating Fuel Comparison Calculator",
+  "slug": "heating-fuel-comparison-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "heating fuel comparison calculator",
+  "secondaryKeywords": [
+    "heating cost comparison",
+    "cheapest way to heat a home",
+    "gas vs propane vs oil heating cost",
+    "fuel cost per BTU"
+  ],
+  "metaTitle": "Heating Fuel Comparison Calculator — Gas vs Propane vs Oil vs Electric | CalcAI",
+  "metaDescription": "Compare annual heating costs across natural gas, propane, heating oil, and electric. A 2,000 sq ft home costs $800–$2,400/year depending on fuel type and region.",
+  "inputs": [
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "number",
+      "default": 2000,
+      "min": 200,
+      "max": 20000,
+      "suffix": "sq ft"
+    },
+    {
+      "id": "heatingDegreeDays",
+      "label": "Heating Degree Days (HDD)",
+      "type": "number",
+      "default": 5000,
+      "min": 500,
+      "max": 12000,
+      "helpText": "US average ~5,000; Minneapolis ~7,500; Atlanta ~3,000"
+    },
+    {
+      "id": "gasPrice",
+      "label": "Natural Gas Price",
+      "type": "currency",
+      "default": 1.50,
+      "min": 0.10,
+      "max": 10,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/therm"
+    },
+    {
+      "id": "propanePrice",
+      "label": "Propane Price",
+      "type": "currency",
+      "default": 2.80,
+      "min": 0.50,
+      "max": 10,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/gallon"
+    },
+    {
+      "id": "oilPrice",
+      "label": "Heating Oil Price",
+      "type": "currency",
+      "default": 3.50,
+      "min": 0.50,
+      "max": 10,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/gallon"
+    },
+    {
+      "id": "electricRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "comparison",
+      "label": "Fuel Cost Comparison",
+      "type": "table",
+      "columns": [
+        "fuelType",
+        "annualCost",
+        "costPerMillionBtu",
+        "efficiency",
+        "annualUsage"
+      ]
+    },
+    {
+      "id": "cheapestFuel",
+      "label": "Cheapest Fuel",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "cheapestAnnualCost",
+      "label": "Lowest Annual Heating Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "savingsVsMostExpensive",
+      "label": "Savings vs Most Expensive",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "heating-fuel-comparison",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "home-heating-cost-calculator",
+    "gas-vs-electric-cost-calculator",
+    "heat-pump-vs-gas-furnace-calculator",
+    "propane-tank-refill-calculator",
+    "home-insulation-savings-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. EIA — Heating Fuel Comparison (2025); Penn State Extension — Home Heating Cost Calculator",
+  "articleWordTarget": 1800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual BTU = Home Size × HDD × Design Factor; Fuel Cost = Annual BTU / (Fuel BTU Content × Equipment Efficiency) × Fuel Price",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "gas-vs-electric-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

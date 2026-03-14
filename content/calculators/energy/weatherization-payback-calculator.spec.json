@@ -1,0 +1,122 @@
+{
+  "id": "weatherization-payback-calculator",
+  "title": "Weatherization Payback Calculator",
+  "slug": "weatherization-payback-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "weatherization payback calculator",
+  "secondaryKeywords": [
+    "weatherization savings",
+    "home weatherization cost",
+    "air sealing payback",
+    "weatherization ROI"
+  ],
+  "metaTitle": "Weatherization Payback Calculator — Savings by Upgrade Type | CalcAI",
+  "metaDescription": "Calculate the payback period for weatherization projects. Air sealing and insulation typically save 15–25% on heating/cooling bills, paying back in 2–5 years.",
+  "inputs": [
+    {
+      "id": "annualHeatingCoolingCost",
+      "label": "Annual Heating & Cooling Cost",
+      "type": "currency",
+      "default": 1800,
+      "min": 100,
+      "max": 15000,
+      "prefix": "$",
+      "helpText": "Heating + cooling portion of your energy bill"
+    },
+    {
+      "id": "items",
+      "label": "Weatherization Project",
+      "type": "select",
+      "default": "air-sealing",
+      "options": [
+        { "value": "air-sealing", "label": "Air Sealing (caulk, foam, weather strip) — ~$500–$1,500" },
+        { "value": "attic-insulation", "label": "Attic Insulation — ~$1,500–$3,500" },
+        { "value": "wall-insulation", "label": "Wall Insulation (blown-in) — ~$2,000–$5,000" },
+        { "value": "crawl-space-insulation", "label": "Crawl Space / Floor Insulation — ~$1,000–$3,000" },
+        { "value": "duct-sealing", "label": "Duct Sealing & Insulation — ~$500–$2,000" },
+        { "value": "storm-windows", "label": "Storm Windows / Window Film — ~$100–$400/window" },
+        { "value": "door-weatherstrip", "label": "Door Weatherstripping & Sweeps — ~$50–$200" },
+        { "value": "full-weatherization", "label": "Full Weatherization Package — ~$4,000–$10,000" }
+      ],
+      "helpText": "Select the project type for savings estimate"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSavings",
+      "label": "Estimated Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "projectCostMid",
+      "label": "Estimated Project Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "paybackYears",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "suffix": " years",
+      "highlight": true
+    },
+    {
+      "id": "fiveYearNet",
+      "label": "5-Year Net Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "tenYearNet",
+      "label": "10-Year Net Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Savings Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "weatherization-payback",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "home-insulation-savings-calculator",
+    "energy-audit-roi-calculator",
+    "home-heating-cost-calculator",
+    "smart-thermostat-savings-calculator",
+    "seer-savings-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE — Weatherization Assistance Program (2024); ENERGY STAR — Seal and Insulate Guide (2025)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual Savings = Heating/Cooling Cost × Savings Percentage (by project type); Payback = Project Cost / Annual Savings; Net Savings = (Savings × Years) − Project Cost",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "home-insulation-savings-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

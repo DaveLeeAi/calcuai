@@ -1,0 +1,159 @@
+{
+  "id": "seer-savings-calculator",
+  "title": "SEER2 HVAC Savings Calculator",
+  "slug": "seer-savings-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "SEER savings calculator",
+  "secondaryKeywords": [
+    "SEER2 savings",
+    "HVAC efficiency calculator",
+    "AC upgrade savings calculator"
+  ],
+  "metaTitle": "SEER2 HVAC Savings Calculator — Cooling Cost Comparison | CalcAI",
+  "metaDescription": "Calculate annual cooling savings from upgrading to a higher SEER2-rated AC or heat pump. Compare current vs new system costs and see payback period.",
+  "inputs": [
+    {
+      "id": "currentSeer",
+      "label": "Current System SEER2 Rating",
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 30,
+      "step": 0.5
+    },
+    {
+      "id": "newSeer",
+      "label": "New System SEER2 Rating",
+      "type": "number",
+      "default": 16,
+      "min": 1,
+      "max": 30,
+      "step": 0.5
+    },
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "number",
+      "default": 2000,
+      "min": 100,
+      "max": 20000,
+      "suffix": "sq ft"
+    },
+    {
+      "id": "usageProfile",
+      "label": "Cooling Usage Profile",
+      "type": "select",
+      "default": "moderate",
+      "options": [
+        {
+          "value": "light",
+          "label": "Light (mild climate, good insulation)"
+        },
+        {
+          "value": "moderate",
+          "label": "Moderate (mixed climate, avg home)"
+        },
+        {
+          "value": "heavy",
+          "label": "Heavy (hot climate, poor insulation)"
+        }
+      ]
+    },
+    {
+      "id": "annualCoolingHours",
+      "label": "Annual Cooling Hours",
+      "type": "number",
+      "default": 1200,
+      "min": 200,
+      "max": 4000,
+      "suffix": "hrs",
+      "helpText": "South: 1500-2500h, North: 600-1200h"
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "systemCost",
+      "label": "New System Installed Cost",
+      "type": "currency",
+      "default": 8000,
+      "prefix": "$"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "currentAnnualCost",
+      "label": "Current Annual Cooling Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "newAnnualCost",
+      "label": "New Annual Cooling Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualSavings",
+      "label": "Estimated Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "paybackPeriod",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "fifteenYearSavings",
+      "label": "15-Year Net Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "seer-savings",
+  "features": [
+    "compare-scenarios",
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "heat-pump-vs-gas-furnace-calculator",
+    "electric-bill-estimator",
+    "smart-thermostat-savings-calculator",
+    "kwh-cost-calculator",
+    "home-insulation-savings-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "DOE SEER2 / HSPF2 framework (effective 2023); AHRI Air Conditioning Rating Standards (2024)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual kWh = (BTU_load × hours) / (SEER2 × 1000); Cost = kWh × rate",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 79,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

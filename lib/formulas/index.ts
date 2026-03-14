@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 279 modules, 281 formula IDs
+ * 302 modules, 304 formula IDs
  * Generated: 2026-03-14
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -138,11 +138,34 @@ import { FORMULA_REGISTRY as ecommerce_shopify_fee } from './ecommerce/shopify-f
 import { FORMULA_REGISTRY as ecommerce_tiktok_shop_profit } from './ecommerce/tiktok-shop-profit';
 
 // Energy
+import { FORMULA_REGISTRY as energy_appliance_energy_cost } from './energy/appliance-energy-cost';
+import { FORMULA_REGISTRY as energy_carbon_footprint } from './energy/carbon-footprint';
+import { FORMULA_REGISTRY as energy_electric_bill_estimator } from './energy/electric-bill-estimator';
+import { FORMULA_REGISTRY as energy_electricity_rate_comparison } from './energy/electricity-rate-comparison';
+import { FORMULA_REGISTRY as energy_energy_audit_roi } from './energy/energy-audit-roi';
+import { FORMULA_REGISTRY as energy_energy_rebate } from './energy/energy-rebate';
+import { FORMULA_REGISTRY as energy_ev_vs_gas_cost } from './energy/ev-vs-gas-cost';
 import { FORMULA_REGISTRY as energy_gas_vs_electric_cost } from './energy/gas-vs-electric-cost';
 import { FORMULA_REGISTRY as energy_generator_size } from './energy/generator-size';
+import { FORMULA_REGISTRY as energy_heat_pump_vs_gas_furnace } from './energy/heat-pump-vs-gas-furnace';
+import { FORMULA_REGISTRY as energy_heat_pump_water_heater_payback } from './energy/heat-pump-water-heater-payback';
+import { FORMULA_REGISTRY as energy_heating_fuel_comparison } from './energy/heating-fuel-comparison';
+import { FORMULA_REGISTRY as energy_home_battery_backup } from './energy/home-battery-backup';
+import { FORMULA_REGISTRY as energy_home_ev_charger_cost } from './energy/home-ev-charger-cost';
 import { FORMULA_REGISTRY as energy_home_heating_cost } from './energy/home-heating-cost';
+import { FORMULA_REGISTRY as energy_home_insulation_savings } from './energy/home-insulation-savings';
 import { FORMULA_REGISTRY as energy_kwh_cost } from './energy/kwh-cost';
+import { FORMULA_REGISTRY as energy_net_metering } from './energy/net-metering';
+import { FORMULA_REGISTRY as energy_phantom_load } from './energy/phantom-load';
+import { FORMULA_REGISTRY as energy_pool_heating_cost } from './energy/pool-heating-cost';
+import { FORMULA_REGISTRY as energy_propane_tank_refill } from './energy/propane-tank-refill';
+import { FORMULA_REGISTRY as energy_seer_savings } from './energy/seer-savings';
+import { FORMULA_REGISTRY as energy_smart_thermostat_savings } from './energy/smart-thermostat-savings';
+import { FORMULA_REGISTRY as energy_solar_battery_storage } from './energy/solar-battery-storage';
 import { FORMULA_REGISTRY as energy_solar_panel_payback } from './energy/solar-panel-payback';
+import { FORMULA_REGISTRY as energy_time_of_use } from './energy/time-of-use';
+import { FORMULA_REGISTRY as energy_water_heater_energy_cost } from './energy/water-heater-energy-cost';
+import { FORMULA_REGISTRY as energy_weatherization_payback } from './energy/weatherization-payback';
 
 // Everyday
 import { FORMULA_REGISTRY as everyday_date_diff } from './everyday/date-diff';
@@ -438,11 +461,34 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...ecommerce_shopify_fee,
   ...ecommerce_tiktok_shop_profit,
   // Energy
+  ...energy_appliance_energy_cost,
+  ...energy_carbon_footprint,
+  ...energy_electric_bill_estimator,
+  ...energy_electricity_rate_comparison,
+  ...energy_energy_audit_roi,
+  ...energy_energy_rebate,
+  ...energy_ev_vs_gas_cost,
   ...energy_gas_vs_electric_cost,
   ...energy_generator_size,
+  ...energy_heat_pump_vs_gas_furnace,
+  ...energy_heat_pump_water_heater_payback,
+  ...energy_heating_fuel_comparison,
+  ...energy_home_battery_backup,
+  ...energy_home_ev_charger_cost,
   ...energy_home_heating_cost,
+  ...energy_home_insulation_savings,
   ...energy_kwh_cost,
+  ...energy_net_metering,
+  ...energy_phantom_load,
+  ...energy_pool_heating_cost,
+  ...energy_propane_tank_refill,
+  ...energy_seer_savings,
+  ...energy_smart_thermostat_savings,
+  ...energy_solar_battery_storage,
   ...energy_solar_panel_payback,
+  ...energy_time_of_use,
+  ...energy_water_heater_energy_cost,
+  ...energy_weatherization_payback,
   // Everyday
   ...everyday_date_diff,
   ...everyday_discount,

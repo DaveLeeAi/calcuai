@@ -1,0 +1,160 @@
+{
+  "id": "smart-thermostat-savings-calculator",
+  "title": "Smart Thermostat Savings Calculator",
+  "slug": "smart-thermostat-savings-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "smart thermostat savings calculator",
+  "secondaryKeywords": [
+    "thermostat savings",
+    "smart thermostat payback",
+    "programmable thermostat savings"
+  ],
+  "metaTitle": "Smart Thermostat Savings Calculator — Estimate Your HVAC Savings | CalcAI",
+  "metaDescription": "Estimate annual savings from upgrading to a smart thermostat. See payback period, 10-year savings, and how climate and thermostat type affect results.",
+  "inputs": [
+    {
+      "id": "monthlyBill",
+      "label": "Average Monthly HVAC Bill",
+      "type": "currency",
+      "default": 150,
+      "min": 0,
+      "max": 2000,
+      "prefix": "$"
+    },
+    {
+      "id": "climateZone",
+      "label": "Climate Zone",
+      "type": "select",
+      "default": "mixed",
+      "options": [
+        {
+          "value": "cold",
+          "label": "Cold (Chicago, Minneapolis)"
+        },
+        {
+          "value": "mixed",
+          "label": "Mixed (Nashville, Atlanta)"
+        },
+        {
+          "value": "hot",
+          "label": "Hot (Phoenix, Houston)"
+        }
+      ]
+    },
+    {
+      "id": "upgradeType",
+      "label": "Upgrade Type",
+      "type": "select",
+      "default": "manual-to-smart",
+      "options": [
+        {
+          "value": "manual-to-programmable",
+          "label": "Manual → Programmable"
+        },
+        {
+          "value": "manual-to-smart",
+          "label": "Manual → Smart"
+        },
+        {
+          "value": "programmable-to-smart",
+          "label": "Programmable → Smart"
+        }
+      ]
+    },
+    {
+      "id": "deviceCost",
+      "label": "Thermostat Cost",
+      "type": "currency",
+      "default": 250,
+      "min": 0,
+      "max": 500,
+      "prefix": "$"
+    },
+    {
+      "id": "utilityRebate",
+      "label": "Utility Rebate",
+      "type": "currency",
+      "default": 0,
+      "min": 0,
+      "max": 200,
+      "prefix": "$",
+      "helpText": "Many utilities offer $25-$100 rebates"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSavingsBase",
+      "label": "Estimated Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualSavingsLow",
+      "label": "Conservative Estimate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualSavingsHigh",
+      "label": "Optimistic Estimate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "paybackPeriod",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "netCost",
+      "label": "Net Cost After Rebate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "tenYearNet",
+      "label": "10-Year Net Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "smart-thermostat-savings",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "home-heating-cost-calculator",
+    "gas-vs-electric-cost-calculator",
+    "electric-bill-estimator",
+    "seer-savings-calculator",
+    "home-insulation-savings-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "ENERGY STAR — Smart Thermostat Savings Estimates (2024); U.S. DOE — Programmable Thermostat Energy Savings (2023)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Savings = monthly_bill × 12 × savings_pct (base ~10%, adjusted by climate and upgrade type)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

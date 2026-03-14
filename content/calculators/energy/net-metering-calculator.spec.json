@@ -1,0 +1,114 @@
+{
+  "id": "net-metering-calculator",
+  "title": "Net Metering Calculator",
+  "slug": "net-metering-calculator",
+  "category": "energy",
+  "subcategory": "solar-battery",
+  "primaryKeyword": "net metering calculator",
+  "secondaryKeywords": [
+    "solar net metering savings",
+    "net metering credit calculator",
+    "solar export value calculator"
+  ],
+  "metaTitle": "Net Metering Calculator — Solar Export Credits & Savings | CalcAI",
+  "metaDescription": "Calculate your net metering savings. Enter solar production, home usage, and credit rate to see monthly bill, grid credits, and annual savings.",
+  "inputs": [
+    {
+      "id": "monthlyProduction",
+      "label": "Monthly Solar Production",
+      "type": "number",
+      "default": 900,
+      "min": 0,
+      "max": 10000,
+      "suffix": "kWh"
+    },
+    {
+      "id": "monthlyUsage",
+      "label": "Monthly Home Usage",
+      "type": "number",
+      "default": 863,
+      "min": 0,
+      "max": 10000,
+      "suffix": "kWh"
+    },
+    {
+      "id": "buyRate",
+      "label": "Electricity Buy Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "creditRate",
+      "label": "Net Metering Credit Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "Full retail = buy rate; NEM 3.0 states may be lower"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "excessSolar",
+      "label": "Excess Solar Exported",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " kWh"
+    },
+    {
+      "id": "gridCredit",
+      "label": "Grid Credit Earned",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "netMonthlyBill",
+      "label": "Net Monthly Bill",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualSavings",
+      "label": "Annual Savings vs No Solar",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "net-metering",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "solar-panel-payback-calculator",
+    "solar-battery-storage-calculator",
+    "electric-bill-estimator",
+    "electricity-rate-comparison-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. DOE — Net Metering Policy Overview (2026); DSIRE Database",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Excess = max(0, production - usage); Credit = excess × credit_rate",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

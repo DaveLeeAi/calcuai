@@ -1,0 +1,181 @@
+{
+  "id": "home-insulation-savings-calculator",
+  "title": "Home Insulation Savings Calculator",
+  "slug": "home-insulation-savings-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "home insulation savings calculator",
+  "secondaryKeywords": [
+    "insulation savings",
+    "attic insulation savings",
+    "insulation payback calculator",
+    "R-value savings"
+  ],
+  "metaTitle": "Home Insulation Savings Calculator — Estimate Energy Savings | CalcAI",
+  "metaDescription": "Estimate annual energy savings from upgrading your home insulation. Enter current and target R-values to see payback period and 20-year savings.",
+  "inputs": [
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "number",
+      "default": 2000,
+      "min": 100,
+      "max": 20000,
+      "suffix": "sq ft"
+    },
+    {
+      "id": "currentR",
+      "label": "Current R-Value",
+      "type": "number",
+      "default": 13,
+      "min": 1,
+      "max": 60,
+      "helpText": "Pre-1990 homes: R-11 to R-19; newer: R-30+"
+    },
+    {
+      "id": "targetR",
+      "label": "Target R-Value",
+      "type": "number",
+      "default": 49,
+      "min": 1,
+      "max": 70,
+      "helpText": "DOE recommends R-38 to R-60 for attics"
+    },
+    {
+      "id": "climateZone",
+      "label": "Climate Zone",
+      "type": "select",
+      "default": "cold",
+      "options": [
+        {
+          "value": "very-cold",
+          "label": "Very Cold (Minneapolis, Anchorage)"
+        },
+        {
+          "value": "cold",
+          "label": "Cold (Chicago, Denver)"
+        },
+        {
+          "value": "mixed",
+          "label": "Mixed (Atlanta, Dallas)"
+        },
+        {
+          "value": "hot",
+          "label": "Hot (Miami, Houston)"
+        }
+      ]
+    },
+    {
+      "id": "fuelType",
+      "label": "Heating Fuel Type",
+      "type": "select",
+      "default": "gas",
+      "options": [
+        {
+          "value": "gas",
+          "label": "Natural Gas"
+        },
+        {
+          "value": "electric",
+          "label": "Electric"
+        },
+        {
+          "value": "oil",
+          "label": "Heating Oil"
+        },
+        {
+          "value": "propane",
+          "label": "Propane"
+        }
+      ]
+    },
+    {
+      "id": "projectCost",
+      "label": "Insulation Project Cost",
+      "type": "currency",
+      "default": 2500,
+      "min": 0,
+      "max": 50000,
+      "prefix": "$"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSavings",
+      "label": "Estimated Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "paybackPeriod",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "twentyYearSavings",
+      "label": "20-Year Net Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "heatingSavings",
+      "label": "Heating Savings Portion",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "coolingSavings",
+      "label": "Cooling Savings Portion",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "reductionPercent",
+      "label": "Heat Loss Reduction",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1
+    }
+  ],
+  "formula": "home-insulation-savings",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "home-heating-cost-calculator",
+    "smart-thermostat-savings-calculator",
+    "energy-rebate-calculator",
+    "seer-savings-calculator",
+    "electric-bill-estimator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE Building Technologies Office — Insulation Fact Sheet (2024); Oak Ridge National Laboratory — Building Envelope Research (2023); IRS — Energy Efficient Home Improvement Credit (25C)",
+  "articleWordTarget": 1800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Savings = annual_energy_cost × heating_fraction × (1 - current_R/target_R) × climate_weight",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "insulation-calculator",
+    "insulation-cost-calculator"
+  ],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

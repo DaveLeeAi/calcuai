@@ -1,0 +1,116 @@
+{
+  "id": "electric-bill-estimator",
+  "title": "Electric Bill Estimator",
+  "slug": "electric-bill-estimator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "electric bill estimator",
+  "secondaryKeywords": [
+    "estimate electric bill",
+    "electricity bill calculator",
+    "monthly electric bill calculator",
+    "how much is my electric bill"
+  ],
+  "metaTitle": "Electric Bill Estimator — Calculate Your Monthly Electricity Cost | CalcAI",
+  "metaDescription": "Estimate your monthly electric bill by entering kWh usage and your rate. Compare your state's average rate to the national average of 17.24¢/kWh.",
+  "inputs": [
+    {
+      "id": "monthlyKwh",
+      "label": "Monthly Usage (kWh)",
+      "type": "number",
+      "default": 863,
+      "min": 0,
+      "max": 50000,
+      "suffix": "kWh",
+      "helpText": "US average is 863 kWh/month"
+    },
+    {
+      "id": "ratePerKwh",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.0001,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "US average is $0.1724/kWh (2026)"
+    },
+    {
+      "id": "fixedCharge",
+      "label": "Fixed Monthly Charge",
+      "type": "currency",
+      "default": 12,
+      "min": 0,
+      "max": 100,
+      "prefix": "$",
+      "helpText": "Service/delivery charge from your utility"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyBill",
+      "label": "Monthly Bill",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualBill",
+      "label": "Annual Bill",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "dailyCost",
+      "label": "Cost Per Day",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "breakdown",
+      "label": "Bill Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "electric-bill-estimator",
+  "features": [
+    "state-data-integration",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "kwh-cost-calculator",
+    "solar-panel-payback-calculator",
+    "home-heating-cost-calculator",
+    "gas-vs-electric-cost-calculator",
+    "electricity-rate-comparison-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Energy Information Administration (EIA), Electric Power Monthly, December 2025",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Monthly Bill = (kWh × Rate) + Fixed Charge",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "kwh-cost-calculator"
+  ],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

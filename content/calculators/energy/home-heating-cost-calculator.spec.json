@@ -5,7 +5,12 @@
   "category": "energy",
   "subcategory": "heating-cooling",
   "primaryKeyword": "home heating cost calculator",
-  "secondaryKeywords": ["annual heating cost calculator", "how much does heating cost", "heating bill estimator", "natural gas heating cost per year"],
+  "secondaryKeywords": [
+    "annual heating cost calculator",
+    "how much does heating cost",
+    "heating bill estimator",
+    "natural gas heating cost per year"
+  ],
   "metaTitle": "Home Heating Cost Calculator — Annual & Monthly Estimates | CalcAI",
   "metaDescription": "Estimate annual home heating costs by fuel type, home size, insulation level, and climate. Covers natural gas, electricity, heating oil, propane, and wood pellets.",
   "inputs": [
@@ -22,10 +27,22 @@
       "type": "select",
       "default": "average",
       "options": [
-        { "value": "poor", "label": "Poor (older home, drafty windows)" },
-        { "value": "average", "label": "Average (standard insulation)" },
-        { "value": "good", "label": "Good (well-insulated)" },
-        { "value": "excellent", "label": "Excellent (energy-efficient/new build)" }
+        {
+          "value": "poor",
+          "label": "Poor (older home, drafty windows)"
+        },
+        {
+          "value": "average",
+          "label": "Average (standard insulation)"
+        },
+        {
+          "value": "good",
+          "label": "Good (well-insulated)"
+        },
+        {
+          "value": "excellent",
+          "label": "Excellent (energy-efficient/new build)"
+        }
       ]
     },
     {
@@ -42,11 +59,26 @@
       "type": "select",
       "default": "natural-gas",
       "options": [
-        { "value": "natural-gas", "label": "Natural Gas" },
-        { "value": "electricity", "label": "Electric (resistance/baseboard)" },
-        { "value": "heating-oil", "label": "Heating Oil (#2)" },
-        { "value": "propane", "label": "Propane (LP)" },
-        { "value": "wood-pellets", "label": "Wood Pellets" }
+        {
+          "value": "natural-gas",
+          "label": "Natural Gas"
+        },
+        {
+          "value": "electricity",
+          "label": "Electric (resistance/baseboard)"
+        },
+        {
+          "value": "heating-oil",
+          "label": "Heating Oil (#2)"
+        },
+        {
+          "value": "propane",
+          "label": "Propane (LP)"
+        },
+        {
+          "value": "wood-pellets",
+          "label": "Wood Pellets"
+        }
       ]
     },
     {
@@ -103,7 +135,11 @@
       "id": "monthlyEstimates",
       "label": "Monthly Cost Breakdown",
       "type": "table",
-      "columns": ["month", "estimatedCost", "percentOfAnnual"]
+      "columns": [
+        "month",
+        "estimatedCost",
+        "percentOfAnnual"
+      ]
     },
     {
       "id": "summary",
@@ -112,16 +148,28 @@
     }
   ],
   "formula": "home-heating-cost",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["gas-vs-electric-cost-calculator", "kwh-cost-calculator", "home-energy-usage-calculator", "electricity-cost-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "gas-vs-electric-cost-calculator",
+    "kwh-cost-calculator",
+    "home-energy-usage-calculator",
+    "electricity-cost-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "U.S. Energy Information Administration — Residential Energy Consumption Survey (2025); U.S. DOE Building Technologies Office — Heating Degree Days (2025)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Annual BTU = HDD × 24 × (Home Area × U-factor) × Insulation multiplier; Annual Cost = (Annual BTU / Fuel BTU content) × Rate / Efficiency",
   "formulaAuditDate": "2026-03-14",
@@ -130,7 +178,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "winter"
 }

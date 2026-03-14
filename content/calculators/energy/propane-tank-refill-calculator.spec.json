@@ -1,0 +1,136 @@
+{
+  "id": "propane-tank-refill-calculator",
+  "title": "Propane Tank Refill Calculator",
+  "slug": "propane-tank-refill-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "propane tank refill cost calculator",
+  "secondaryKeywords": [
+    "propane refill cost",
+    "how much to fill a propane tank",
+    "propane tank fill cost",
+    "propane delivery cost"
+  ],
+  "metaTitle": "Propane Tank Refill Calculator — Cost by Tank Size | CalcAI",
+  "metaDescription": "Calculate your propane tank refill cost by tank size and current level. A 500-gallon tank refill at $2.80/gallon costs $1,120 from empty, or $560 from half full.",
+  "inputs": [
+    {
+      "id": "tankSize",
+      "label": "Tank Size",
+      "type": "select",
+      "default": "500",
+      "options": [
+        { "value": "20", "label": "20 lb (BBQ grill — 4.7 gal)" },
+        { "value": "100", "label": "100 gallons" },
+        { "value": "120", "label": "120 gallons" },
+        { "value": "250", "label": "250 gallons" },
+        { "value": "500", "label": "500 gallons" },
+        { "value": "1000", "label": "1,000 gallons" }
+      ]
+    },
+    {
+      "id": "pricePerGallon",
+      "label": "Propane Price Per Gallon",
+      "type": "currency",
+      "default": 2.80,
+      "min": 0.50,
+      "max": 10,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/gal",
+      "helpText": "US average ~$2.50–$3.50/gal (2025)"
+    },
+    {
+      "id": "refillsPerYear",
+      "label": "Refills Per Year",
+      "type": "number",
+      "default": 3,
+      "min": 1,
+      "max": 12
+    },
+    {
+      "id": "currentLevel",
+      "label": "Current Tank Level",
+      "type": "select",
+      "default": "20",
+      "options": [
+        { "value": "0", "label": "Empty (0%)" },
+        { "value": "10", "label": "Nearly Empty (10%)" },
+        { "value": "20", "label": "Low (20%)" },
+        { "value": "30", "label": "30%" },
+        { "value": "50", "label": "Half Full (50%)" },
+        { "value": "75", "label": "75%" }
+      ],
+      "helpText": "Tanks are filled to 80% capacity for safety"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "refillCost",
+      "label": "This Refill Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "gallonsNeeded",
+      "label": "Gallons Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "suffix": " gal"
+    },
+    {
+      "id": "fullRefillCost",
+      "label": "Full Refill (from empty)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualCost",
+      "label": "Estimated Annual Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "bulkSavings",
+      "label": "Potential Bulk / Pre-Buy Savings",
+      "type": "single-value",
+      "format": "currency"
+    }
+  ],
+  "formula": "propane-tank-refill",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "heating-fuel-comparison-calculator",
+    "home-heating-cost-calculator",
+    "gas-vs-electric-cost-calculator",
+    "heat-pump-vs-gas-furnace-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. EIA — Propane Prices (2025); Propane Education & Research Council",
+  "articleWordTarget": 800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gallons Needed = (Tank Capacity × 0.80) − (Tank Capacity × Current Level%); Refill Cost = Gallons × Price/Gallon; Annual Cost = Refill Cost × Refills/Year",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "utility",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

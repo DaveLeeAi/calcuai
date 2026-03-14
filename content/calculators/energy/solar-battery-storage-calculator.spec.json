@@ -1,0 +1,146 @@
+{
+  "id": "solar-battery-storage-calculator",
+  "title": "Solar Battery Storage Calculator",
+  "slug": "solar-battery-storage-calculator",
+  "category": "energy",
+  "subcategory": "solar-battery",
+  "primaryKeyword": "solar battery storage calculator",
+  "secondaryKeywords": [
+    "solar battery size calculator",
+    "battery storage sizing",
+    "solar self-sufficiency calculator"
+  ],
+  "metaTitle": "Solar Battery Storage Calculator — Size Your Solar Battery | CalcAI",
+  "metaDescription": "Calculate how much battery storage you need for your solar system. Enter daily usage, system size, and sun hours to get recommended kWh and self-sufficiency %.",
+  "inputs": [
+    {
+      "id": "dailyEnergyUse",
+      "label": "Daily Energy Use",
+      "type": "number",
+      "default": 30,
+      "min": 1,
+      "max": 200,
+      "suffix": "kWh"
+    },
+    {
+      "id": "solarSystemSize",
+      "label": "Solar System Size",
+      "type": "number",
+      "default": 8,
+      "min": 0,
+      "max": 50,
+      "step": 0.5,
+      "suffix": "kW"
+    },
+    {
+      "id": "peakSunHours",
+      "label": "Peak Sun Hours",
+      "type": "number",
+      "default": 5,
+      "min": 1,
+      "max": 8,
+      "step": 0.5,
+      "suffix": "hrs/day"
+    },
+    {
+      "id": "batteryDoD",
+      "label": "Battery Depth of Discharge",
+      "type": "percentage",
+      "default": 90,
+      "min": 10,
+      "max": 100,
+      "suffix": "%"
+    },
+    {
+      "id": "daysOfAutonomy",
+      "label": "Days of Autonomy",
+      "type": "number",
+      "default": 1,
+      "min": 0.5,
+      "max": 7,
+      "step": 0.5
+    }
+  ],
+  "outputs": [
+    {
+      "id": "dailySolarProduction",
+      "label": "Daily Solar Production",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "suffix": " kWh"
+    },
+    {
+      "id": "storageNeeded",
+      "label": "Storage Needed",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "suffix": " kWh",
+      "highlight": true
+    },
+    {
+      "id": "recommendedBatteryKwh",
+      "label": "Recommended Battery",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " kWh",
+      "highlight": true
+    },
+    {
+      "id": "selfSufficiency",
+      "label": "Self-Sufficiency",
+      "type": "single-value",
+      "format": "percentage",
+      "precision": 1,
+      "highlight": true
+    },
+    {
+      "id": "pieData",
+      "label": "Energy Source Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#F59E0B",
+          "#6B7280"
+        ]
+      }
+    }
+  ],
+  "formula": "solar-battery-storage",
+  "features": [
+    "chart",
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "home-battery-backup-calculator",
+    "solar-panel-payback-calculator",
+    "net-metering-calculator",
+    "electric-bill-estimator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NREL — PVWatts Methodology (2025); EnergySage Battery Storage Guide (2026)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Storage = (daily_use - solar_production) × autonomy_days / DoD",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "home-battery-backup-calculator"
+  ],
+  "qualityScore": 87,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

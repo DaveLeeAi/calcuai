@@ -1,0 +1,127 @@
+---
+title: "Home Energy Carbon Footprint Calculator"
+description: "Calculate your home's carbon footprint from electricity, gas, and heating oil. See annual CO2 emissions in tons and trees needed to offset."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+The average US home produces **7.5 metric tons of CO2 per year** from energy use alone — equivalent to driving 18,750 miles in a gas car. Electricity accounts for roughly **4.6 tons** (at the national grid average of 0.855 lbs CO2/kWh), natural gas adds **2.5 tons** (from ~40 therms/month), and heating oil contributes **0.4 tons** where used. Offsetting 7.5 tons of CO2 would require planting **156 trees** and waiting 10 years. Use this calculator to measure your home's specific carbon footprint and identify which energy source contributes the most.
+
+</section>
+
+## What Your Results Mean
+
+**Total annual CO2 emissions** is your home's carbon footprint from energy consumption, measured in metric tons of CO2 equivalent. **Emissions by source** breaks this total into electricity, natural gas, and heating oil so you can see which fuel contributes the most — this tells you where to focus reduction efforts. **Trees to offset** converts your emissions into the number of mature trees needed to absorb an equivalent amount of CO2 over one year, providing an intuitive sense of scale.
+
+The comparison panel shows how your home stacks up against the US average (7.5 tons/year) and the target for a net-zero home (under 1 ton/year from grid electricity only, with remaining energy from on-site renewables).
+
+## How to Use This Calculator
+
+1. Enter your monthly electricity consumption in kWh (from your utility bill — look for "kWh used").
+2. Enter your monthly natural gas consumption in therms (from your gas bill — look for "therms" or "CCF," where 1 CCF ≈ 1.036 therms).
+3. Enter monthly heating oil consumption in gallons, if applicable (common in the Northeast).
+4. Optionally select your state to use the regional grid emission factor instead of the national average — grid intensity varies from 0.06 lbs CO2/kWh in Vermont to 1.74 lbs CO2/kWh in West Virginia.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{CO}_2\text{ (lbs/year)} = (\text{kWh/month} \times EF_{\text{grid}}) + (\text{therms/month} \times 11.7) + (\text{gal/month} \times 22.4)) \times 12
+$$
+
+$$
+\text{CO}_2\text{ (metric tons)} = \frac{\text{CO}_2\text{ (lbs/year)}}{2{,}204.6}
+$$
+
+$$
+\text{Trees to offset} = \frac{\text{CO}_2\text{ (lbs/year)}}{48}
+$$
+
+Where:
+- **EF_grid** = grid emission factor (lbs CO2/kWh) — US average is 0.855; varies by state and grid region
+- **11.7** = lbs CO2 per therm of natural gas (EPA emission factor)
+- **22.4** = lbs CO2 per gallon of heating oil (EPA emission factor)
+- **48** = lbs CO2 absorbed per tree per year (EPA estimate for a medium-growth tree over 10 years)
+- **2,204.6** = lbs per metric ton conversion factor
+
+*Source: U.S. EPA — Greenhouse Gas Equivalencies Calculator (2024); EPA eGRID — Emission Factors for Regional Power Grids (2024); U.S. EIA — Carbon Dioxide Emissions Coefficients by Fuel Type (2024)*
+
+</div>
+
+## Worked Example 1
+
+**Average US home: 886 kWh/month electricity, 40 therms/month gas, 0 gallons oil, national grid average:**
+
+- Monthly electricity CO2: 886 × 0.855 = **757.5 lbs**
+- Monthly gas CO2: 40 × 11.7 = **468.0 lbs**
+- Monthly oil CO2: 0 × 22.4 = **0 lbs**
+- Monthly total: 757.5 + 468.0 + 0 = **1,225.5 lbs CO2**
+- Annual total: 1,225.5 × 12 = **14,706 lbs** = **6.67 metric tons CO2**
+- Trees to offset: 14,706 ÷ 48 = **306 trees**
+
+This home's carbon footprint is 11% below the US average of 7.5 metric tons, primarily because it uses no heating oil. Electricity accounts for 62% of emissions and gas accounts for 38%. The single most impactful change would be switching to a clean electricity plan or installing rooftop solar — eliminating the 4.1 tons from grid electricity would cut the footprint by nearly two-thirds.
+
+## Worked Example 2
+
+**Solar home: 886 kWh/month total usage, 500 kWh covered by rooftop solar (net 386 kWh from grid), 40 therms gas, Vermont grid (0.06 lbs CO2/kWh):**
+
+- Monthly grid electricity CO2: 386 × 0.06 = **23.2 lbs**
+- Monthly gas CO2: 40 × 11.7 = **468.0 lbs**
+- Monthly total: 23.2 + 468.0 = **491.2 lbs CO2**
+- Annual total: 491.2 × 12 = **5,894 lbs** = **2.67 metric tons CO2**
+- Trees to offset: 5,894 ÷ 48 = **123 trees**
+
+This solar home in Vermont produces only 2.67 metric tons — 64% less than the US average. The clean Vermont grid (primarily hydro and nuclear) means even the remaining grid electricity contributes negligibly. Nearly all emissions (95%) come from natural gas. Replacing the gas furnace with a heat pump would drop total emissions below 1 ton/year, approaching net-zero status. Adding a heat pump water heater would eliminate the remaining gas usage entirely.
+
+## How Grid Intensity Varies by State
+
+Your electricity's carbon footprint depends heavily on how your region generates power. The same 886 kWh/month produces vastly different emissions depending on your state's fuel mix:
+
+| State | Grid Factor (lbs CO2/kWh) | Annual CO2 from 886 kWh/mo | Primary Sources |
+|---|---|---|---|
+| Vermont | 0.06 | 0.29 tons | Hydro, nuclear |
+| Washington | 0.18 | 0.86 tons | Hydro, wind |
+| California | 0.42 | 2.01 tons | Solar, gas, wind |
+| New York | 0.46 | 2.20 tons | Nuclear, gas, hydro |
+| US Average | 0.855 | 4.10 tons | Gas, coal, nuclear, renewables |
+| Texas | 0.90 | 4.31 tons | Gas, wind, coal |
+| Ohio | 1.15 | 5.51 tons | Gas, coal, nuclear |
+| West Virginia | 1.74 | 8.34 tons | Coal, gas |
+
+A household in West Virginia produces **29× more CO2 from electricity** than the same household in Vermont. This means the value of rooftop solar — measured in avoided emissions — is dramatically higher in coal-heavy states. Installing solar in West Virginia offsets 1.74 lbs of CO2 per kWh generated, versus only 0.06 lbs in Vermont. If you live in a coal-heavy state, switching to solar or a clean electricity plan is the single highest-impact climate action you can take at home.
+
+## How to Reduce Your Carbon Footprint
+
+The most effective strategies target the largest emission sources first. For most homes, the priority order is clear:
+
+**1. Switch to clean electricity (saves 2–5 tons/year).** Options range from free (enrolling in your utility's green power program) to investment-grade (rooftop solar at $15,000–$25,000 after credits). Community solar subscriptions cost nothing upfront and typically save 5–15% on your electric bill while eliminating grid emissions.
+
+**2. Electrify heating with a heat pump (saves 1–3 tons/year).** A modern cold-climate heat pump replaces both your gas furnace and central AC. At a COP of 3.0, it delivers 3 BTUs of heat for every BTU of electricity consumed — making it 2–3× more efficient than even a 96% AFUE gas furnace when accounting for source energy. In states with clean grids, this switch alone can cut total home emissions by 40%.
+
+**3. Electrify water heating (saves 0.5–1.5 tons/year).** A heat pump water heater uses 65–70% less energy than a gas unit and produces zero on-site emissions. The $1,750 HEAR rebate makes the switch cost-neutral for income-qualified households.
+
+**4. Improve insulation and air sealing (saves 0.5–2 tons/year).** Reducing the energy you need in the first place multiplies the benefit of every other action. Attic insulation and air sealing typically cost $1,500–$3,000 and reduce heating/cooling energy by 15–25%.
+
+**5. Switch to an EV (saves 3–5 tons/year from transportation).** While not part of home energy emissions, transportation is the average American's largest single carbon source at 4.6 tons/year. Charging an EV at home on clean electricity can reduce your total personal carbon footprint by 30% or more.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the average home's carbon footprint in the US?**
+A: The average US home produces approximately 7.5 metric tons of CO2 per year from energy use, according to EPA data. This includes electricity (about 4.6 tons at the national grid average), natural gas (about 2.5 tons from heating and cooking), and heating oil or propane where applicable. This figure covers only direct home energy use — it does not include transportation, food, goods consumption, or other lifestyle emissions. The total carbon footprint of an average American, including all sources, is approximately 16 metric tons per year, making home energy roughly 47% of the total.
+
+**Q: How accurate are carbon footprint calculators?**
+A: Home energy carbon calculators are accurate to within 10–15% for most households when using actual utility bill data and state-specific grid emission factors. The primary sources of uncertainty are: (1) grid emission factors change year-to-year as utilities add renewables and retire coal plants — this calculator uses EPA eGRID 2022 data published in 2024; (2) gas furnace efficiency varies with age and maintenance — a nominally 80% AFUE furnace operating poorly may run at 70% actual efficiency; (3) heating oil and propane consumption may vary seasonally in ways that monthly averages do not capture. For the most precise calculation, use 12 months of actual utility bills rather than monthly averages.
+
+**Q: How many trees would I need to plant to offset my home's carbon footprint?**
+A: A typical US home producing 7.5 metric tons (16,535 lbs) of CO2 per year would require approximately 345 trees to absorb that amount annually. The EPA estimates that a medium-growth tree absorbs about 48 lbs of CO2 per year averaged over a 10-year growth period. Mature trees absorb more (up to 100 lbs/year for large hardwoods), while newly planted saplings absorb less (10–20 lbs/year for the first few years). Tree planting is a valuable but slow offset strategy — it takes 5–10 years before newly planted trees reach meaningful absorption rates, making direct emission reductions (solar, heat pumps, insulation) far more immediately effective.
+
+</div>
+
+## Sources & Methodology
+
+Carbon emission calculations use EPA-published emission factors: 0.855 lbs CO2/kWh national grid average (EPA eGRID 2022, published January 2024), 11.7 lbs CO2/therm for natural gas, and 22.4 lbs CO2/gallon for heating oil (EPA GHG Emission Factors Hub, 2024). State-level grid emission factors are from EPA eGRID subregion data. Tree absorption rates use the EPA's Greenhouse Gas Equivalencies Calculator methodology (48 lbs CO2/tree/year for a medium-growth coniferous or deciduous tree planted in a suburban setting and grown for 10 years). Average US home energy consumption data is from the U.S. Energy Information Administration's Residential Energy Consumption Survey (RECS 2020, released 2023). The 7.5 metric tons average home figure is derived from EIA RECS consumption data applied to EPA emission factors.

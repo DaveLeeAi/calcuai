@@ -1,0 +1,112 @@
+---
+title: "SEER2 HVAC Savings Calculator"
+description: "Calculate annual cooling cost savings from upgrading to a higher SEER2-rated air conditioner or heat pump. Compare current vs new system efficiency and see payback."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Upgrading a central air conditioner from SEER2 10 to SEER2 16 reduces annual cooling energy consumption by approximately **37%**. For a 2,000 sq ft home running 1,200 cooling hours per year at $0.1724/kWh (the 2024 US average residential rate per EIA), that translates to roughly **$350 in annual savings**. A new 3-ton SEER2 16 system typically costs $4,500–$7,500 installed, yielding an estimated payback of 13–21 years on efficiency savings alone — though the primary driver for replacement is usually equipment failure, not efficiency payback. Higher SEER2 ratings (20–25+) save more per year but carry higher upfront costs, so the optimal rating depends on your climate, runtime hours, and electricity rate.
+
+</section>
+
+## What Your Results Mean
+
+**Annual cooling cost (current)** is your estimated electricity expense for cooling based on your current system's SEER2 rating, cooling load, runtime, and local electricity rate. **Annual cooling cost (new)** is the projected cost with the upgraded system. **Annual savings** is the difference — the amount you can expect to save each year, assuming similar usage patterns. **Simple payback** divides the system cost by annual savings to show how many years until the efficiency gains cover the price difference. These are estimates based on typical operating conditions — actual savings depend on installation quality, duct condition, thermostat settings, and real-world runtime.
+
+## How to Use This Calculator
+
+1. Enter your home's approximate cooling load in BTU/h. A rough estimate: 20 BTU per square foot for a well-insulated home, 25–30 BTU for average insulation. A 2,000 sq ft home typically needs a 36,000–48,000 BTU (3–4 ton) system.
+2. Enter your current system's SEER or SEER2 rating — check the yellow EnergyGuide label, the outdoor unit nameplate, or your installation paperwork. Systems installed before 2006 are often SEER 8–10; systems from 2006–2022 are typically SEER 13–16.
+3. Enter the SEER2 rating of the new system you are considering. Current federal minimums are SEER2 13.4 (northern states) or SEER2 14.3 (southern states).
+4. Enter your annual cooling hours. Reference: Phoenix ~2,500 hrs, Houston ~2,000 hrs, Chicago ~800 hrs, Minneapolis ~600 hrs.
+5. Enter your electricity rate per kWh from your utility bill.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Annual kWh} = \frac{\text{BTU Load} \times \text{Cooling Hours}}{\text{SEER2} \times 1{,}000}
+$$
+$$
+\text{Annual Cost} = \text{Annual kWh} \times \text{Electricity Rate}
+$$
+$$
+\text{Annual Savings} = \text{Cost}_{\text{current}} - \text{Cost}_{\text{new}}
+$$
+
+Where:
+- **BTU Load** = cooling capacity in BTU/h (system size)
+- **Cooling Hours** = estimated annual hours the compressor runs
+- **SEER2** = Seasonal Energy Efficiency Ratio (BTU removed per watt-hour consumed, measured under the M1 test procedure)
+- **Electricity Rate** = local cost per kWh
+
+*Source: U.S. Department of Energy — SEER2 Efficiency Standards (effective January 1, 2023); AHRI — Air-Conditioning, Heating, and Refrigeration Institute rating methodology (2023)*
+
+</div>
+
+## Worked Example
+
+**Midwest homeowner upgrading an aging AC:** 36,000 BTU (3-ton) system, current SEER2 10, new SEER2 16, 1,200 cooling hours/year, $0.1724/kWh.
+
+- Current annual kWh: (36,000 × 1,200) ÷ (10 × 1,000) = **4,320 kWh**
+- Current annual cost: 4,320 × $0.1724 = **$744.77**
+- New annual kWh: (36,000 × 1,200) ÷ (16 × 1,000) = **2,700 kWh**
+- New annual cost: 2,700 × $0.1724 = **$465.48**
+- Annual savings: $744.77 − $465.48 = **$279.29**
+- Savings percentage: **37.5%**
+
+At $6,000 installed cost for the new system, the simple payback on efficiency alone is approximately 21.5 years. However, this calculation only captures cooling savings — a heat pump at the same SEER2 rating would also reduce heating costs, and the avoided repair bills on a failing unit add practical value beyond the efficiency payback.
+
+## Worked Example 2
+
+**Phoenix homeowner with heavy cooling demand:** 48,000 BTU (4-ton) system, current SEER2 12, new SEER2 20, 2,500 cooling hours/year, $0.15/kWh.
+
+- Current annual kWh: (48,000 × 2,500) ÷ (12 × 1,000) = **10,000 kWh**
+- Current annual cost: 10,000 × $0.15 = **$1,500.00**
+- New annual kWh: (48,000 × 2,500) ÷ (20 × 1,000) = **6,000 kWh**
+- New annual cost: 6,000 × $0.15 = **$900.00**
+- Annual savings: $1,500.00 − $900.00 = **$600.00**
+- Savings percentage: **40%**
+
+In a hot climate with 2,500+ cooling hours, the higher SEER2 system saves $600/year. At an installed cost of $8,500 for a SEER2 20 unit, the simple payback is approximately 14.2 years. If electricity rates increase 3% annually (the approximate US historical average), the effective payback shortens because future savings are worth more in nominal dollars. Phoenix homeowners also benefit from the 2023 federal 25C tax credit, which may cover up to $600 for qualifying high-efficiency central AC systems — consult IRS guidelines for current eligibility requirements.
+
+## Understanding SEER2 vs SEER
+
+The U.S. Department of Energy transitioned from SEER to SEER2 as the official efficiency rating effective **January 1, 2023**. This change updated the testing procedure from the legacy method to the M1 test standard, which measures performance under conditions that more closely reflect real-world installed conditions — including higher external static pressure on the blower to simulate typical ductwork resistance.
+
+**What changed in practice:** SEER2 ratings are roughly 4.7% lower than equivalent SEER ratings for the same unit, because the M1 test is slightly more demanding. A system rated SEER 16 under the old test would be approximately SEER2 15.2 under the new standard. The equipment itself did not change — only the measurement scale shifted.
+
+**Federal minimum efficiency requirements (as of January 1, 2023):**
+
+| Region | Split System AC | Split System Heat Pump |
+|---|---|---|
+| Northern states (DOE North region) | SEER2 13.4 | SEER2 14.3 (HSPF2 7.5) |
+| Southern states (DOE South/Southwest) | SEER2 14.3 | SEER2 14.3 (HSPF2 7.5) |
+
+**How to compare old and new ratings:** If your current system has a SEER label (pre-2023 installation), you can approximate the SEER2 equivalent by multiplying by 0.953. For example, a SEER 14 system is roughly equivalent to SEER2 13.3. This calculator accepts either rating — just be consistent and note which standard you are using.
+
+**Installation quality matters more than the rating.** An AHRI study found that improperly installed high-efficiency systems can lose 20–30% of their rated efficiency. Common installation issues include incorrect refrigerant charge (over- or under-charged), undersized or leaky ductwork, and poor airflow across the evaporator coil. A SEER2 20 system installed with 15% duct leakage may perform like a SEER2 15 system in practice. Always verify that your installer performs a Manual J load calculation and tests duct leakage after installation.
+
+**Duct condition and maintenance.** Even with a perfectly installed high-SEER2 system, duct losses directly reduce real-world efficiency. The DOE estimates that the average home loses 20–30% of conditioned air through duct leaks, holes, and poorly connected joints. Sealing and insulating accessible ductwork costs $300–$1,000 and can improve delivered efficiency by 10–20%, making it one of the highest-ROI companion upgrades when replacing HVAC equipment.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much money does a higher SEER2 rating actually save per year?**
+A: Each SEER2 point of improvement reduces cooling energy consumption, but the savings per point are not linear — the gains diminish at higher ratings. Going from SEER2 10 to 14 saves approximately 29% on cooling costs; going from SEER2 14 to 18 saves an additional 22%; going from SEER2 18 to 22 saves another 18%. For a 3-ton system running 1,200 hours/year at $0.17/kWh, the approximate annual savings are: SEER2 10→14 = $215; SEER2 14→18 = $125; SEER2 18→22 = $80. The biggest savings come from replacing the oldest, least efficient systems. Actual savings depend on your cooling hours, electricity rate, and real-world system performance.
+
+**Q: Is it worth paying extra for SEER2 20+ over SEER2 16?**
+A: It depends on your climate and electricity rate. In hot climates with 1,800+ cooling hours/year and electricity rates above $0.15/kWh, the incremental savings from SEER2 16 to 20 can be $150–$300/year — potentially justifying the $1,500–$3,000 price premium within 8–15 years. In mild climates with 600–800 cooling hours and lower rates, the incremental savings may be only $50–$80/year, making the premium harder to recoup within the equipment's 15–20 year lifespan. Also consider that higher-SEER2 systems use variable-speed compressors that provide better humidity control and quieter operation — benefits that do not show up in the energy savings calculation but affect comfort.
+
+**Q: Does SEER2 matter for heating, or only cooling?**
+A: SEER2 measures cooling efficiency only. For heat pumps, heating efficiency is measured separately by HSPF2 (Heating Seasonal Performance Factor 2). A heat pump with a high SEER2 rating typically also has a high HSPF2, but they are independent ratings. If you are replacing an AC-only system with a heat pump, the heating savings from displacing gas or electric resistance heat can be significantly larger than the cooling savings from a higher SEER2 rating. This calculator estimates cooling savings only — for a complete comparison including heating, pair this with a heat pump vs. furnace cost analysis.
+
+</div>
+
+## Sources & Methodology
+
+SEER2 efficiency calculations use the standard formula: Annual kWh = (BTU capacity x cooling hours) / (SEER2 x 1,000). The SEER2 rating standard and M1 test procedure are defined by the U.S. Department of Energy in 10 CFR Part 430, effective January 1, 2023. Federal minimum efficiency requirements by region are from AHRI (Air-Conditioning, Heating, and Refrigeration Institute) regulatory guidance (2023). The SEER-to-SEER2 conversion factor of 0.953 is the approximate average across equipment types per AHRI technical guidance. Typical system pricing reflects 2024–2025 installed costs from HomeAdvisor and HVAC industry surveys. The 2024 US average residential electricity rate of $0.1724/kWh is from the U.S. Energy Information Administration (EIA). Cooling hour estimates by city are based on NOAA cooling degree day data and ASHRAE climate zone classifications. All results are estimates — actual cooling costs depend on installation quality, duct condition, thermostat settings, and real-world runtime hours.

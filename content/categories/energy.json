@@ -2,46 +2,94 @@
   "id": "energy",
   "name": "Energy & Utilities Calculators",
   "slug": "energy",
-  "description": "Free energy calculators — generator size, kWh cost, solar payback, gas vs. electric comparison, and home heating costs.",
+  "description": "Free energy calculators — electric bill estimator, appliance costs, EV vs gas, solar payback, heat pump savings, pool heating, fuel comparison, battery backup, and more.",
   "icon": "/icons/energy.svg",
   "metaTitle": "Energy & Utilities Calculators — Free Tools for Homeowners",
-  "metaDescription": "Calculate generator wattage needs, kWh appliance running costs, solar panel payback period, gas vs. electric savings, and annual home heating costs. Free tools updated for 2026.",
+  "metaDescription": "28 free energy calculators: compare electricity rates, estimate appliance costs, calculate EV savings, size batteries, find rebates, and compare heating fuels. Updated for 2026.",
   "subcategories": [
     {
       "id": "electricity",
       "name": "Electricity Costs",
       "slug": "electricity",
-      "description": "Calculate the cost of running any appliance and understand your electricity bill.",
+      "description": "Estimate your electric bill, calculate appliance running costs, find phantom loads, compare rates, and understand time-of-use pricing.",
       "calculators": [
+        "electric-bill-estimator",
+        "appliance-energy-cost-calculator",
+        "phantom-load-calculator",
         "kwh-cost-calculator",
+        "electricity-rate-comparison-calculator",
+        "time-of-use-calculator",
         "generator-size-calculator"
       ]
     },
     {
-      "id": "solar",
-      "name": "Solar & Renewables",
-      "slug": "solar",
-      "description": "Estimate solar panel payback period and long-term energy savings.",
+      "id": "solar-battery",
+      "name": "Solar & Battery Storage",
+      "slug": "solar-battery",
+      "description": "Calculate solar payback, battery backup sizing, storage needs, and net metering credits.",
       "calculators": [
-        "solar-panel-payback-calculator"
+        "solar-panel-payback-calculator",
+        "solar-battery-storage-calculator",
+        "home-battery-backup-calculator",
+        "net-metering-calculator"
       ]
     },
     {
-      "id": "heating-cooling",
+      "id": "heating",
       "name": "Heating & Cooling",
-      "slug": "heating-cooling",
-      "description": "Compare fuel costs and estimate annual home heating expenses.",
+      "slug": "heating",
+      "description": "Compare heating fuels, estimate pool heating costs, calculate thermostat and insulation savings, and find water heater payback.",
       "calculators": [
+        "heating-fuel-comparison-calculator",
         "gas-vs-electric-cost-calculator",
-        "home-heating-cost-calculator"
+        "home-heating-cost-calculator",
+        "heat-pump-vs-gas-furnace-calculator",
+        "pool-heating-cost-calculator",
+        "water-heater-energy-cost-calculator",
+        "heat-pump-water-heater-payback-calculator",
+        "seer-savings-calculator",
+        "smart-thermostat-savings-calculator",
+        "home-insulation-savings-calculator",
+        "weatherization-payback-calculator",
+        "propane-tank-refill-calculator"
+      ]
+    },
+    {
+      "id": "transportation",
+      "name": "EV & Transportation",
+      "slug": "transportation",
+      "description": "Compare EV vs gas car total costs and estimate home charger installation expenses.",
+      "calculators": [
+        "ev-vs-gas-cost-calculator",
+        "home-ev-charger-cost-calculator"
+      ]
+    },
+    {
+      "id": "incentives",
+      "name": "Rebates & Incentives",
+      "slug": "incentives",
+      "description": "Estimate energy rebates and calculate audit ROI under the IRA including HOMES, HEAR, and federal tax credits.",
+      "calculators": [
+        "energy-rebate-calculator",
+        "energy-audit-roi-calculator"
+      ]
+    },
+    {
+      "id": "environment",
+      "name": "Carbon & Environment",
+      "slug": "environment",
+      "description": "Calculate your home energy carbon footprint and see how to reduce emissions.",
+      "calculators": [
+        "carbon-footprint-calculator"
       ]
     }
   ],
   "featuredCalculators": [
-    "kwh-cost-calculator",
-    "generator-size-calculator",
+    "appliance-energy-cost-calculator",
+    "electric-bill-estimator",
+    "ev-vs-gas-cost-calculator",
+    "heating-fuel-comparison-calculator",
     "solar-panel-payback-calculator",
-    "gas-vs-electric-cost-calculator",
-    "home-heating-cost-calculator"
+    "energy-rebate-calculator"
   ]
 }

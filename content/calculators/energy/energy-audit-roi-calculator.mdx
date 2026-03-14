@@ -1,0 +1,128 @@
+---
+title: "Home Energy Audit ROI Calculator"
+description: "Estimate the return on investment from a professional energy audit. See combined savings from air sealing, insulation, HVAC tune-up, and more."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A homeowner with a **$2,400/year energy bill** who invests $400 in a professional energy audit and implements the top recommended improvements can typically reduce energy costs by **20-30%**, saving **$480-$720/year**. With improvement costs of $2,000-$5,000 for common upgrades like air sealing, attic insulation, and duct sealing, the combined payback period is typically **3-5 years**. The U.S. Department of Energy estimates the average American household spends approximately $2,400/year on energy, and that audits identify savings opportunities averaging 5-30% depending on the home's age, condition, and existing efficiency measures. Older homes (pre-1980) with minimal insulation and unsealed air leaks tend to see the largest returns.
+
+</section>
+
+## What Your Results Mean
+
+**Combined savings percentage** is the total estimated reduction in your annual energy bill from all improvements you select. Individual improvement savings do not simply add up — there is interaction between measures (for example, air sealing reduces the load on your HVAC, which slightly reduces the marginal benefit of an HVAC tune-up). This calculator applies a diminishing returns cap of 50% to prevent unrealistic total savings estimates. **Payback period** is the number of years until cumulative savings offset the total cost of the audit plus all improvements. **10-year net savings** shows the long-term value after accounting for all upfront costs.
+
+Results assume improvements are properly installed and maintained. Poor installation quality — such as insulation with gaps or improperly sealed ductwork — can significantly reduce actual savings.
+
+## How to Use This Calculator
+
+1. Enter your annual energy bill. Check your utility statements for the past 12 months and add heating fuel costs (gas, oil, propane) if applicable.
+2. Enter the cost of the energy audit. Professional audits with blower door testing and infrared imaging typically cost $200-$600. Some utilities offer free or subsidized audits.
+3. Select which improvements you plan to implement. Each has a typical cost range and an estimated savings percentage based on DOE data.
+4. Enter the estimated cost for each improvement. Use quotes from contractors or the default cost ranges provided.
+5. Review your combined savings, payback period, and 10-year net savings.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Combined Savings \%} = \min\left(\sum_{i=1}^{n} S_i, \ 0.50\right)
+$$
+$$
+\text{Annual Savings (\$)} = \text{Annual Energy Bill} \times \text{Combined Savings \%}
+$$
+$$
+\text{Total Cost} = \text{Audit Cost} + \sum_{i=1}^{n} \text{Improvement Cost}_i
+$$
+$$
+\text{Payback (years)} = \frac{\text{Total Cost}}{\text{Annual Savings}}
+$$
+$$
+\text{10-Year Net Savings} = (\text{Annual Savings} \times 10) - \text{Total Cost}
+$$
+
+Where:
+- **S_i** = estimated savings percentage for each improvement (based on DOE and BPI data)
+- **0.50** = maximum combined savings cap (50%) to account for diminishing returns between measures
+- **n** = number of improvements selected
+
+Typical individual savings percentages (DOE/BPI estimates):
+- Air sealing: 10-15%
+- Attic insulation: 10-15%
+- Duct sealing: 5-10%
+- HVAC tune-up: 3-5%
+- Smart thermostat: 5-10%
+- Window upgrades: 5-8%
+- Water heater insulation: 1-3%
+- LED lighting: 3-5%
+
+*Source: U.S. Department of Energy — Home Energy Audits (2024); Building Performance Institute (BPI) — Standard Practice for Building Analyst Professional (2023); ENERGY STAR — Home Energy Improvements (2024)*
+
+</div>
+
+## Worked Example 1
+
+**Homeowner with $2,400/year bill, 6 improvements:** $400 professional audit, air sealing ($800), attic insulation ($1,800), duct sealing ($600), HVAC tune-up ($150), smart thermostat ($200), LED lighting ($100).
+
+- Annual energy bill: **$2,400/year**
+- Individual savings: air sealing 15% + attic insulation 15% + duct sealing 8% + HVAC tune-up 4% + smart thermostat 8% + LEDs 4% = 54%
+- Combined savings (capped at 50%): **45%** (applying diminishing returns)
+- Annual savings: $2,400 x 0.45 = **$1,080/year**
+- Total cost: $400 + $800 + $1,800 + $600 + $150 + $200 + $100 = **$4,050**
+- Payback period: $4,050 / $1,080 = **3.8 years**
+- 10-year net savings: ($1,080 x 10) - $4,050 = **$6,750**
+
+This homeowner sees strong returns because the home had significant air leakage and minimal insulation — common in homes built before 1980. The audit cost ($400) is a small fraction of the total investment and identifies which improvements deliver the most savings per dollar spent.
+
+## Worked Example 2
+
+**Homeowner with $1,800/year bill, 3 targeted improvements:** $300 audit, air sealing ($600), attic insulation ($1,500), smart thermostat ($200).
+
+- Annual energy bill: **$1,800/year**
+- Individual savings: air sealing 15% + attic insulation 15% + smart thermostat 10% = 40%
+- Combined savings: **40%** (under cap, no adjustment needed)
+- Annual savings: $1,800 x 0.40 = **$720/year**
+- Total cost: $300 + $600 + $1,500 + $200 = **$2,600**
+- Payback period: $2,600 / $720 = **3.6 years**
+- 10-year net savings: ($720 x 10) - $2,600 = **$4,600**
+
+Focusing on the three highest-impact improvements keeps costs lower while still capturing the majority of available savings. Air sealing and attic insulation together typically account for 50-70% of total savings identified in an audit, making them the highest-priority measures for most homes.
+
+## What Does an Energy Audit Include?
+
+A professional energy audit (also called a home energy assessment) is a systematic evaluation of where your home gains and loses energy. Understanding what the audit covers helps you evaluate whether the cost is justified and what to expect from the results.
+
+**Blower door test.** The auditor installs a calibrated fan in an exterior door frame and depressurizes the house to measure total air leakage in cubic feet per minute (CFM50). The Building Performance Institute (BPI) standard considers a home "tight" at under 0.35 natural air changes per hour (ACHnat). Most pre-1980 homes test at 0.5-1.0 ACHnat, indicating significant air leakage. The blower door test identifies leakage rates and helps the auditor locate specific leak points.
+
+**Infrared thermography.** Using a thermal camera (often during the blower door test), the auditor scans walls, ceilings, and floors to identify insulation gaps, thermal bridges, and hidden air leaks that are invisible to the naked eye. Missing insulation in wall cavities, poorly sealed recessed lights, and gaps around plumbing penetrations are common findings.
+
+**HVAC system inspection.** The auditor evaluates your heating and cooling equipment — checking age, efficiency rating (AFUE for furnaces, SEER for AC), filter condition, and ductwork integrity. Duct leakage testing may be performed separately using a duct blaster. The DOE estimates that typical duct systems lose 20-30% of conditioned air through leaks and poor connections.
+
+**Combustion safety testing.** For homes with gas appliances, the auditor checks for proper venting, carbon monoxide levels, and backdrafting risks. This is a critical safety check, not just an efficiency measure.
+
+**Prioritized recommendation report.** The final deliverable is a ranked list of improvements ordered by cost-effectiveness. A good audit report shows estimated savings, estimated cost, and simple payback for each measure — allowing you to make informed decisions about where to invest.
+
+**Cost and availability.** Professional audits with blower door testing and thermal imaging typically cost $200-$600. Many utilities offer subsidized audits for $50-$100, and some offer them free to customers. The DOE's Weatherization Assistance Program provides free audits and improvements to income-qualifying households.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: Is a professional energy audit worth the $200-$600 cost?**
+A: For most homeowners, yes — a professional audit with blower door testing and thermal imaging typically identifies $400-$1,200/year in potential savings, making the audit itself pay back within the first year through the savings it directs. The key value is prioritization: an audit tells you which improvements deliver the most savings per dollar, preventing you from spending money on low-impact measures. Homes built before 1990, homes with uneven room temperatures, or homes with energy bills significantly above neighbors in similar-sized homes are the strongest candidates. Newer homes (post-2010) built to modern energy codes may have fewer cost-effective improvements available, potentially making a DIY assessment sufficient.
+
+**Q: Can I do my own energy audit instead of hiring a professional?**
+A: A DIY walkthrough can identify obvious issues — visible gaps around windows, uninsulated attic hatches, old weatherstripping — but cannot replicate the quantitative data from a blower door test or thermal camera. The blower door test measures total air leakage (which is impossible to assess visually) and the thermal camera reveals hidden insulation gaps inside walls. These two tools account for the majority of an audit's diagnostic value. If your home was built after 2000 and you are primarily looking for low-cost fixes, a DIY assessment combined with your utility's online energy analysis tool may be sufficient. For older homes or before investing $2,000+ in improvements, the professional audit's precision typically justifies the cost.
+
+**Q: How long do the savings from energy audit improvements last?**
+A: Most improvements identified by an energy audit are durable, long-lasting measures. Air sealing with caulk and foam lasts 10-20 years. Attic insulation (fiberglass batts or blown cellulose) retains its R-value for 20-40 years if undisturbed and kept dry. Duct sealing with mastic lasts the life of the duct system (20-30 years). Smart thermostats last 5-10 years before replacement. HVAC tune-ups provide benefits for 1-2 seasons and should be repeated annually. Overall, the payback calculation based on a 10-year window is conservative — most of these improvements continue saving energy well beyond that period.
+
+</div>
+
+## Sources & Methodology
+
+Savings percentages for individual improvements are based on the U.S. Department of Energy's Home Energy Saver tool, ENERGY STAR's home improvement guidelines, and Building Performance Institute (BPI) field data from the Standard Practice for Building Analyst Professional (2023). The average U.S. household energy expenditure of approximately $2,400/year is from the EIA Residential Energy Consumption Survey (RECS, 2020, adjusted for 2024 prices). Air leakage and insulation savings estimates reflect BPI and DOE modeling for typical pre-1990 housing stock. The 50% combined savings cap accounts for interaction effects between measures — as each improvement reduces the total load, subsequent improvements have a smaller absolute base to reduce. Audit cost ranges reflect 2024 pricing from BPI-certified auditors and utility-sponsored programs. Improvement cost ranges are based on national averages from the DOE Weatherization Assistance Program and HomeAdvisor/Angi contractor pricing data (2024). All results are estimates; actual savings depend on home age, construction type, climate zone, occupancy patterns, existing efficiency measures, and installation quality.

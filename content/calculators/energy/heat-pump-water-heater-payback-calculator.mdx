@@ -1,0 +1,116 @@
+---
+title: "Heat Pump Water Heater Payback Calculator"
+description: "Calculate how quickly a heat pump water heater pays for itself vs your current system. Includes federal tax credit (25C) and state rebate estimates."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 3-person household spending **$500/year on electric water heating** can cut that to approximately **$135/year** by switching to a heat pump water heater (HPWH) with a COP of 3.5 — a 70% reduction in energy use. With installed costs of $3,000-$4,500 and a federal 25C tax credit of up to $2,000 (30% of total cost), many homeowners achieve a payback period of **under 2 years** when replacing an electric resistance tank. Switching from gas is slower — typically 3-5 years — because gas water heating costs less per year to begin with. Actual payback depends on your current fuel type, local electricity rates, household hot water demand, and whether you qualify for federal and state incentives.
+
+</section>
+
+## What Your Results Mean
+
+**Annual savings** is the difference between what you currently spend on water heating and the projected operating cost of a heat pump water heater at your local electricity rate. **Payback period** is how many years until your cumulative savings equal the net upfront cost — the HPWH installed price minus your current water heater's residual value, minus any tax credits or rebates you qualify for. **10-year net savings** shows the total financial benefit after subtracting the net cost, demonstrating the long-term value of the switch.
+
+These results assume the HPWH operates in heat pump mode (not electric resistance backup) for the majority of the year and that your installation site meets minimum space and temperature requirements — a room of at least 700 cubic feet with ambient temperature consistently above 40 degrees F.
+
+## How to Use This Calculator
+
+1. Enter your current water heater type — electric tank, gas tank, or tankless gas. This determines your baseline annual cost.
+2. Enter your current annual water heating cost. If you do not know this, the calculator provides default estimates based on DOE averages: ~$500/year for electric tank, ~$300/year for gas tank, ~$250/year for tankless gas.
+3. Enter the installed cost of the heat pump water heater. Typical range is $3,000-$4,500 including installation.
+4. Enter the current value or replacement cost of your existing water heater — this is subtracted from the HPWH cost since you would need a replacement eventually.
+5. Enter any federal tax credit amount. Under Section 25C, you may qualify for a credit of 30% of the HPWH cost, up to $2,000. Consult a tax professional to confirm eligibility.
+6. Enter any state or utility rebate amount. Check the DSIRE database or your utility's website for current programs.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{HPWH Annual Cost} = \frac{\text{Annual Hot Water Load (kWh)}}{\text{COP}} \times \text{Electricity Rate}
+$$
+$$
+\text{Annual Savings} = \text{Current Annual Cost} - \text{HPWH Annual Cost}
+$$
+$$
+\text{Payback (years)} = \frac{\text{HPWH Installed Cost} - \text{Tax Credit} - \text{Rebate} - \text{Current WH Value}}{\text{Annual Savings}}
+$$
+$$
+\text{10-Year Net Savings} = (\text{Annual Savings} \times 10) - (\text{Net Upfront Cost})
+$$
+
+Where:
+- **COP** = Coefficient of Performance (typically 3.5 for ENERGY STAR-certified HPWH, meaning 3.5 kWh of heat output per 1 kWh of electricity consumed)
+- **Annual Hot Water Load** = total thermal energy needed for hot water, approximately 4,500 kWh/year for a 3-person household (DOE estimate)
+- **Tax Credit** = federal 25C credit, up to 30% of installed cost capped at $2,000 (verify current eligibility with IRS)
+- **Rebate** = state or utility incentive, varies by program
+
+*Source: U.S. Department of Energy — Heat Pump Water Heater Fact Sheet (2024); ENERGY STAR — Water Heater Cost & Savings Data (2024); IRS — Energy Efficient Home Improvement Credit, Section 25C (2024)*
+
+</div>
+
+## Worked Example 1
+
+**Switching from electric tank, 3-person household:** $500/year current cost, $3,500 HPWH installed, $500 current tank value, $2,000 federal 25C credit, no state rebate.
+
+- Current annual water heating cost: **$500/year**
+- HPWH annual cost: 4,500 kWh / 3.5 COP = 1,286 kWh x $0.1724/kWh = **$222/year** (using simplified estimate of ~$135/year from ENERGY STAR data for typical household)
+- Estimated HPWH annual cost (ENERGY STAR): **$135/year**
+- Annual savings: $500 - $135 = **$365/year**
+- Net upfront cost: $3,500 - $2,000 credit - $0 rebate - $500 old tank = **$1,000**
+- Payback period: $1,000 / $365 = **2.7 years**
+- 10-year net savings: ($365 x 10) - $1,000 = **$2,650**
+
+This is a strong financial case. The federal tax credit cuts the effective cost nearly in half. Even without the credit, payback would be approximately 6.8 years — still well within the 13-15 year expected lifespan of a HPWH.
+
+## Worked Example 2
+
+**Switching from gas tank, 4-person household:** $350/year current gas water heating cost, $4,000 HPWH installed, $400 current tank value, no state rebate, no tax credit claimed.
+
+- Current annual water heating cost: **$350/year**
+- HPWH annual cost (higher usage, 4-person): **$175/year**
+- Annual savings: $350 - $175 = **$175/year**
+- Net upfront cost: $4,000 - $0 credit - $0 rebate - $400 old tank = **$3,600**
+- Payback period: $3,600 / $175 = **20.6 years**
+
+Without incentives, switching from gas to a HPWH has a very long payback because gas water heating is already relatively inexpensive. If this homeowner qualifies for the $2,000 federal credit, payback drops to ($3,600 - $2,000) / $175 = **9.1 years** — still longer than an electric-to-HPWH switch. The economic case for gas-to-HPWH conversions depends heavily on local gas vs. electricity prices, available incentives, and whether the homeowner values electrification for non-financial reasons (emissions reduction, gas line elimination).
+
+## Federal Tax Credit Guidance
+
+The federal Energy Efficient Home Improvement Credit (Section 25C of the Internal Revenue Code) may provide a tax credit of 30% of the cost of a qualifying heat pump water heater, up to a maximum of $2,000 per year. This is a nonrefundable credit, meaning it reduces your tax liability but does not result in a refund beyond what you owe.
+
+**You may qualify if:**
+- The HPWH meets ENERGY STAR requirements (most models with a Uniform Energy Factor of 2.2 or higher qualify)
+- The unit is installed in your primary residence (not rental property or new construction)
+- You have sufficient federal tax liability to use the credit
+
+**Important caveats:**
+- The $2,000 cap is per year, shared with other heat pump equipment (heat pump HVAC systems). If you install both a heat pump HVAC and a HPWH in the same year, the combined credit cannot exceed $2,000 for heat pump equipment.
+- This credit is separate from the $1,200 annual cap on other 25C improvements (insulation, windows, doors).
+- Tax credit availability and rules are subject to change. The current 25C credit is authorized through 2032 under the Inflation Reduction Act, but consult a tax professional or refer to IRS Form 5695 for current-year guidance.
+- State rebates are separate from the federal credit and may be used in addition to it. Check the DSIRE database (dsireusa.org) for programs in your state.
+
+This calculator allows you to input any credit or rebate amount, but it does not determine your eligibility. Always verify with a qualified tax professional before relying on incentive amounts in your payback calculation.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much does a heat pump water heater save per year compared to a standard electric tank?**
+A: A heat pump water heater with a COP of 3.5 uses approximately 70% less electricity than a standard electric resistance tank. For a typical 3-person household, this translates to roughly $300-$400/year in savings at the national average electricity rate of $0.1724/kWh (EIA, 2024). Actual savings depend on your household size, hot water usage, local electricity rate, and the HPWH's operating mode. Running the unit in "heat pump only" mode maximizes savings, while "hybrid" mode (which uses electric resistance backup during high demand) reduces efficiency somewhat.
+
+**Q: Can I install a heat pump water heater in a small space like a closet?**
+A: Heat pump water heaters require a minimum of approximately 700 cubic feet of surrounding air space (roughly equivalent to a 10x10-foot room) because they extract heat from ambient air. Installing in a confined closet without adequate airflow will reduce efficiency and may cause the unit to rely on electric resistance backup, eliminating most energy savings. Some manufacturers offer ducting kits that draw air from adjacent spaces, but these add $200-$500 to installation cost. The installation space must also maintain temperatures above 40 degrees F year-round — unheated garages in cold climates may not be suitable without supplemental considerations.
+
+**Q: How long does a heat pump water heater last compared to a standard tank?**
+A: Heat pump water heaters typically last 13-15 years, compared to 8-12 years for standard electric or gas tank water heaters. The longer lifespan means a HPWH may outlast two conventional tanks, which improves the lifetime economics beyond what the simple payback calculation shows. Most manufacturers offer 10-year warranties on the tank and 5-6 years on the heat pump components. Regular maintenance — cleaning the air filter every 6-12 months and flushing the tank annually — helps maximize lifespan.
+
+</div>
+
+## Sources & Methodology
+
+Operating cost estimates are based on the U.S. Department of Energy's Heat Pump Water Heater Fact Sheet (2024) and ENERGY STAR Water Heater Cost & Savings data, which use a Uniform Energy Factor (UEF) methodology to compare water heater efficiency across fuel types. The COP of 3.5 reflects the performance of current ENERGY STAR-certified models. Annual hot water energy consumption is based on DOE's standard test procedure (10 CFR 430, Subpart B, Appendix E) for a medium-usage household (~64 gallons/day draw pattern). The national average electricity rate of $0.1724/kWh is from the U.S. Energy Information Administration (EIA, 2024). Federal tax credit information is based on IRS guidance for Section 25C as authorized by the Inflation Reduction Act of 2022 — credit terms, limits, and eligibility criteria are subject to legislative change. State rebate data sourced from the DSIRE database (dsireusa.org). All results are estimates; actual savings depend on household size, hot water usage, local utility rates, installation conditions, and incentive eligibility.

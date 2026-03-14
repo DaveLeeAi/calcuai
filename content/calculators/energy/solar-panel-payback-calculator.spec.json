@@ -5,7 +5,12 @@
   "category": "energy",
   "subcategory": "solar",
   "primaryKeyword": "solar panel payback calculator",
-  "secondaryKeywords": ["solar payback period", "solar ROI calculator", "how long to pay off solar", "solar panel break even"],
+  "secondaryKeywords": [
+    "solar payback period",
+    "solar ROI calculator",
+    "how long to pay off solar",
+    "solar panel break even"
+  ],
   "metaTitle": "Solar Panel Payback Calculator — Break-Even & ROI | CalcAI",
   "metaDescription": "Calculate your solar panel payback period and lifetime ROI. Includes the 30% federal tax credit (ITC), state incentives, and electricity rate escalation.",
   "inputs": [
@@ -103,7 +108,11 @@
       "id": "paybackTable",
       "label": "Year-by-Year Payback",
       "type": "table",
-      "columns": ["year", "cumulativeSavings", "netPosition"]
+      "columns": [
+        "year",
+        "cumulativeSavings",
+        "netPosition"
+      ]
     },
     {
       "id": "summary",
@@ -112,16 +121,28 @@
     }
   ],
   "formula": "solar-panel-payback",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["kwh-cost-calculator", "electricity-cost-calculator", "home-energy-usage-calculator", "gas-vs-electric-cost-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "kwh-cost-calculator",
+    "electricity-cost-calculator",
+    "home-energy-usage-calculator",
+    "gas-vs-electric-cost-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "U.S. Department of Energy — Solar Investment Tax Credit (ITC) Guide (2025); National Renewable Energy Laboratory (NREL) — PVWatts Methodology (2025)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Net Cost = System Cost × (1 - 0.30) - State Incentives; Simple Payback = Net Cost / Year1 Savings; Lifetime Savings = Sum of annual savings with rate escalation",
   "formulaAuditDate": "2026-03-14",
@@ -130,7 +151,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 84,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

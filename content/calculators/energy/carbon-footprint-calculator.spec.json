@@ -1,0 +1,148 @@
+{
+  "id": "carbon-footprint-calculator",
+  "title": "Home Energy Carbon Footprint Calculator",
+  "slug": "carbon-footprint-calculator",
+  "category": "energy",
+  "subcategory": "environment",
+  "primaryKeyword": "home energy carbon footprint calculator",
+  "secondaryKeywords": [
+    "carbon footprint calculator",
+    "home CO2 emissions calculator",
+    "household carbon calculator"
+  ],
+  "metaTitle": "Home Energy Carbon Footprint Calculator — CO2 Emissions | CalcAI",
+  "metaDescription": "Calculate your home's carbon footprint from electricity, gas, and heating oil. See annual CO2 in tons and tree-equivalent offset needed.",
+  "inputs": [
+    {
+      "id": "monthlyElectricity",
+      "label": "Monthly Electricity",
+      "type": "number",
+      "default": 863,
+      "min": 0,
+      "max": 10000,
+      "suffix": "kWh"
+    },
+    {
+      "id": "electricitySource",
+      "label": "Electricity Source",
+      "type": "select",
+      "default": "grid",
+      "options": [
+        {
+          "value": "grid",
+          "label": "Grid (US Average)"
+        },
+        {
+          "value": "partial-solar",
+          "label": "Partial Solar (~50%)"
+        },
+        {
+          "value": "full-solar",
+          "label": "Full Solar"
+        }
+      ]
+    },
+    {
+      "id": "monthlyGas",
+      "label": "Monthly Natural Gas",
+      "type": "number",
+      "default": 40,
+      "min": 0,
+      "max": 1000,
+      "suffix": "therms"
+    },
+    {
+      "id": "monthlyOil",
+      "label": "Monthly Heating Oil",
+      "type": "number",
+      "default": 0,
+      "min": 0,
+      "max": 500,
+      "suffix": "gal"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "electricityCO2",
+      "label": "Electricity CO₂ (lbs/mo)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "gasCO2",
+      "label": "Natural Gas CO₂ (lbs/mo)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "totalMonthlyCO2",
+      "label": "Total Monthly CO₂ (lbs)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "annualCO2Tons",
+      "label": "Annual CO₂ (tons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "treesEquivalent",
+      "label": "Trees Needed to Offset",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "pieData",
+      "label": "CO₂ Source Breakdown",
+      "type": "chart-pie",
+      "chartConfig": {
+        "colors": [
+          "#3B82F6",
+          "#EF4444",
+          "#8B5CF6"
+        ]
+      }
+    }
+  ],
+  "formula": "carbon-footprint",
+  "features": [
+    "chart",
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "electric-bill-estimator",
+    "solar-panel-payback-calculator",
+    "ev-vs-gas-cost-calculator",
+    "home-heating-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "EPA eGRID 2024, EIA Carbon Dioxide Emission Factors 2025",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "CO2 = kWh × grid_intensity; Gas CO2 = therms × 11.7 lbs; Oil CO2 = gal × 22.4 lbs",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 85,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

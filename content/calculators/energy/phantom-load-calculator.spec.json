@@ -1,0 +1,121 @@
+{
+  "id": "phantom-load-calculator",
+  "title": "Phantom Load Calculator",
+  "slug": "phantom-load-calculator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "phantom load calculator",
+  "secondaryKeywords": [
+    "standby power calculator",
+    "vampire power cost",
+    "phantom energy cost",
+    "idle power consumption"
+  ],
+  "metaTitle": "Phantom Load Calculator — Standby Power Cost Estimator | CalcAI",
+  "metaDescription": "Calculate how much phantom loads cost you per year. The average U.S. home wastes $100–$200 annually on standby power from idle electronics and chargers.",
+  "inputs": [
+    {
+      "id": "devices",
+      "label": "Device Category",
+      "type": "select",
+      "default": "entertainment-center",
+      "options": [
+        { "value": "entertainment-center", "label": "Entertainment Center (TV, streaming box, sound bar)" },
+        { "value": "home-office", "label": "Home Office (monitor, router, printer, chargers)" },
+        { "value": "kitchen", "label": "Kitchen (microwave, coffee maker, toaster oven)" },
+        { "value": "bedroom", "label": "Bedroom (alarm clock, phone charger, smart speaker)" },
+        { "value": "gaming-setup", "label": "Gaming Setup (console, monitor, headset charger)" },
+        { "value": "laundry", "label": "Laundry (washer, dryer, iron)" },
+        { "value": "smart-home", "label": "Smart Home (hub, cameras, smart plugs, displays)" },
+        { "value": "garage-workshop", "label": "Garage/Workshop (power tools, chargers, opener)" },
+        { "value": "whole-home", "label": "Whole Home (all categories combined)" },
+        { "value": "custom", "label": "Custom (enter standby watts below)" }
+      ],
+      "helpText": "Select a device group or choose Custom"
+    },
+    {
+      "id": "customStandbyWatts",
+      "label": "Custom Standby Watts",
+      "type": "number",
+      "default": 5,
+      "min": 0,
+      "max": 500,
+      "suffix": "W",
+      "helpText": "Used only when 'Custom' is selected above"
+    },
+    {
+      "id": "ratePerKwh",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "US average is $0.16/kWh (2025)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalAnnualCost",
+      "label": "Total Annual Phantom Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalMonthlyCost",
+      "label": "Monthly Phantom Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalStandbyWatts",
+      "label": "Total Standby Draw",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "suffix": " W"
+    },
+    {
+      "id": "deviceBreakdown",
+      "label": "Device Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "phantom-load",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "kwh-cost-calculator",
+    "appliance-energy-cost-calculator",
+    "electric-bill-estimator",
+    "home-energy-usage-calculator",
+    "smart-thermostat-savings-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Lawrence Berkeley National Laboratory — Standby Power Summary (2024); NRDC — Home Idle Load Study (2023)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual Cost = (Standby Watts × 8,760 hours) / 1000 × Rate; typical home 40–100 W continuous standby",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

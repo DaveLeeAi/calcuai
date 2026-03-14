@@ -1,0 +1,120 @@
+---
+title: "Energy Rebate & Incentive Calculator"
+description: "Estimate your energy rebates under the Inflation Reduction Act. Calculate HOMES, HEAR, and federal 25C tax credit eligibility based on income and project type."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A household earning $50,000 in a region with an $80,000 area median income qualifies for up to **$14,000 in HEAR rebates**, **$8,000 in HOMES rebates**, and a **30% federal tax credit (25C)** on qualifying equipment — potentially covering the entire cost of a $15,000 heat pump installation. The Inflation Reduction Act allocated **$370 billion** for clean energy incentives through 2032, making this the largest consumer energy incentive program in US history. Use this calculator to find your household's specific rebate eligibility by income level, project type, and state.
+
+</section>
+
+## What Your Results Mean
+
+**Total estimated rebates** combines all programs you qualify for — HEAR point-of-sale rebates, HOMES whole-home rebates, and the 25C federal tax credit — into a single number. **Net project cost** subtracts your total rebates from the gross project cost, showing what you actually pay out of pocket. **Rebate coverage percentage** tells you how much of your project is subsidized. Low-income households (below 80% AMI) routinely see 80–100% coverage on heat pumps and weatherization, while moderate-income households (80–150% AMI) typically see 40–60% coverage.
+
+The breakdown panel separates each program so you can see which incentives stack and which have overlapping caps. Some programs cannot be combined on the same equipment — for example, you cannot claim both a HEAR rebate and a 25C tax credit on the same heat pump, but you can use HEAR for the heat pump and 25C for a heat pump water heater in the same home.
+
+## How to Use This Calculator
+
+1. Enter your household income and the area median income (AMI) for your county — find your AMI at the HUD Income Limits portal (huduser.gov).
+2. Select your project type: heat pump, heat pump water heater, weatherization, electrical panel, solar, or combination.
+3. Enter the total estimated project cost including installation labor.
+4. The calculator determines your income tier (low, moderate, or above-moderate) and applies the correct rebate caps for each program.
+
+## The Formula
+
+<div className="formula-section">
+
+**HEAR Rebate (point-of-sale):**
+$$
+\text{HEAR} = \begin{cases} \min(\text{project cost}, \text{cap}) & \text{if income} \leq 80\% \text{ AMI} \\ \min(50\% \times \text{project cost}, \text{cap}) & \text{if } 80\% < \text{income} \leq 150\% \text{ AMI} \\ 0 & \text{if income} > 150\% \text{ AMI} \end{cases}
+$$
+
+**HOMES Rebate (whole-home efficiency):**
+$$
+\text{HOMES} = \begin{cases} \min(\text{project cost}, \$8{,}000) & \text{if income} \leq 80\% \text{ AMI (35%+ savings)} \\ \min(50\% \times \text{project cost}, \$4{,}000) & \text{if } 80\% < \text{income} \leq 150\% \text{ AMI} \end{cases}
+$$
+
+**25C Tax Credit:**
+$$
+\text{25C} = \min(30\% \times \text{cost}, \text{annual cap})
+$$
+
+Where:
+- **AMI** = Area Median Income for your county, set annually by HUD
+- **HEAR caps:** $8,000 for heat pumps, $1,750 for heat pump water heaters, $2,500 for electrical panels, $1,600 for insulation, $14,000 total per household
+- **25C annual caps:** $2,000 for heat pumps/water heaters, $1,200 for insulation/windows/doors, $3,200 combined annual cap
+- **Solar ITC:** 30% of total installed cost with no cap through 2032
+
+*Source: U.S. Department of Energy — Inflation Reduction Act Home Energy Rebates (2024); IRS Publication 5797 — Clean Energy Tax Credits (2024); DSIRE — Database of State Incentives for Renewables & Efficiency (2025)*
+
+</div>
+
+## Worked Example 1
+
+**Low-income household: $50,000 income, $80,000 AMI, heat pump installation costing $15,000:**
+
+- Income ratio: $50,000 ÷ $80,000 = 62.5% AMI → qualifies as **low-income** (≤80% AMI)
+- HEAR rebate: 100% of cost up to $8,000 cap → **$8,000**
+- HOMES rebate: eligible for up to $8,000 if whole-home savings ≥35% → **$8,000**
+- 25C tax credit: cannot stack with HEAR on same equipment → **$0** on heat pump (already covered)
+- Total rebates: $8,000 + $8,000 = **$16,000** (capped at project cost)
+- Net project cost: $15,000 − $15,000 = **$0 out of pocket**
+
+This household pays nothing for a $15,000 heat pump installation. The rebates exceed the project cost, though the total payout is capped at the actual cost. If this household also installs a heat pump water heater ($3,500), they could claim an additional $1,750 HEAR rebate on that equipment separately.
+
+## Worked Example 2
+
+**Above-moderate-income household: $100,000 income, $80,000 AMI, rooftop solar costing $30,000:**
+
+- Income ratio: $100,000 ÷ $80,000 = 125% AMI → **above-moderate** for HEAR/HOMES, but solar ITC has no income limit
+- HEAR rebate: income >150% AMI for most HEAR categories → likely **$0** (varies by state)
+- HOMES rebate: above 150% AMI → **$0**
+- Solar ITC (Section 48): 30% × $30,000 = **$9,000** federal tax credit (no income limit, no cap)
+- Total incentives: **$9,000**
+- Net project cost: $30,000 − $9,000 = **$21,000 out of pocket**
+
+The solar ITC alone saves $9,000. If this household also adds a battery storage system ($12,000), the 30% credit applies to that too — adding another $3,600 in tax credits. Note: the solar ITC is a nonrefundable tax credit, meaning you need at least $9,000 in federal tax liability to capture the full benefit in one year. Any unused credit carries forward to future tax years.
+
+## Understanding IRA Rebate Programs
+
+The Inflation Reduction Act created three distinct residential energy programs that serve different purposes and follow different rules. Understanding which applies to your situation is critical to maximizing your total benefit.
+
+**HEAR (Home Electrification and Appliance Rebates)** provides point-of-sale discounts — the rebate is applied at checkout, reducing what you pay the contractor directly. HEAR covers specific electrification equipment: heat pumps ($8,000 cap), heat pump water heaters ($1,750), heat pump clothes dryers ($840), electric stoves ($840), electrical panels ($4,000), and insulation/ventilation ($1,600). The $14,000 lifetime household cap means you can combine multiple items up to that total. HEAR is income-restricted: full rebate at ≤80% AMI, 50% rebate at 80–150% AMI, no rebate above 150% AMI.
+
+**HOMES (Home Owner Managing Energy Savings)** rewards whole-home energy efficiency improvements based on modeled or measured energy savings. If your retrofit achieves 20–34% energy savings, you qualify for up to $2,000 (moderate income) or $4,000 (low income). At 35%+ savings, caps double to $4,000 and $8,000 respectively. HOMES requires an energy audit and either modeled or measured verification of savings — making it more complex to claim but potentially more valuable for comprehensive retrofits.
+
+**25C Tax Credits (Energy Efficient Home Improvement Credit)** are available to all taxpayers regardless of income. The 30% credit applies to heat pumps ($2,000 annual cap), insulation and air sealing ($1,200 annual cap), windows ($600 per item), doors ($500 total), and home energy audits ($150). The combined annual cap is $3,200. Unlike HEAR, 25C resets annually — you can claim $3,200 every year through 2032, enabling phased retrofits across multiple tax years.
+
+## How Income Affects Your Rebate
+
+Your household income relative to your area median income (AMI) is the single most important factor determining your rebate eligibility. The IRA uses HUD's income limits, which vary significantly by county — a household earning $80,000 might be low-income in San Francisco (AMI $149,600) but above-moderate in rural Mississippi (AMI $51,000).
+
+**Low-income (≤80% AMI):** Maximum benefits across all programs. HEAR covers 100% of costs up to per-item caps. HOMES offers up to $8,000. These households can realistically achieve zero out-of-pocket costs on most electrification projects.
+
+**Moderate-income (80–150% AMI):** HEAR covers 50% of costs up to per-item caps. HOMES offers up to $4,000. Combined with 25C credits on non-overlapping equipment, total coverage typically reaches 40–60% of project costs.
+
+**Above-moderate (>150% AMI):** Not eligible for HEAR or HOMES rebates, but fully eligible for 25C tax credits ($3,200/year) and the solar/battery ITC (30%, no cap). A high-income household installing solar, a battery, and a heat pump can still capture $15,000–$25,000 in federal incentives over 2–3 tax years.
+
+Many states layer additional rebates on top of federal programs. California's TECH Clean California adds $3,000–$4,000 for heat pumps. New York's EmPower+ covers 100% of costs for income-eligible households. Massachusetts offers $10,000 heat pump rebates through Mass Save. Check the DSIRE database for your state's current offerings.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: Can I combine HEAR rebates with the 25C tax credit on the same project?**
+A: You can combine them on the same project but not on the same piece of equipment. For example, if you install a heat pump and a heat pump water heater in the same renovation, you can use HEAR for the heat pump ($8,000 rebate) and the 25C credit for the water heater (30% up to $2,000). You cannot claim both HEAR and 25C on the same heat pump. The strategy is to apply the larger rebate (usually HEAR) to the most expensive item and use 25C for additional equipment. A knowledgeable contractor or energy advisor can help you optimize the stacking order.
+
+**Q: When will HEAR rebates be available in my state?**
+A: HEAR rebate availability varies by state because each state must apply to the DOE and set up its own distribution program. As of early 2025, New York, Arizona, Wisconsin, and several other states have launched their programs, with most remaining states expected to launch by mid-to-late 2025. Check the DOE's IRA Rebate Program Status page (energy.gov/save) for your state's timeline. Once launched, HEAR rebates are applied as point-of-sale discounts through participating contractors — you do not need to file paperwork or wait for reimbursement.
+
+**Q: What happens if my rebates exceed my project cost?**
+A: Rebates are capped at 100% of the actual project cost — you cannot profit from the incentives. If your HEAR plus HOMES rebates total $16,000 on a $15,000 project, you receive $15,000 in rebates and pay $0 out of pocket. The excess $1,000 is not paid out. However, you retain remaining HEAR lifetime cap space ($14,000 minus what you used) for future projects, and the 25C credit resets annually, so you can claim additional credits in subsequent years for other qualifying improvements.
+
+</div>
+
+## Sources & Methodology
+
+Rebate calculations follow the eligibility rules established by the Inflation Reduction Act of 2022 (Public Law 117-169, Sections 50121 and 50122) as implemented by the U.S. Department of Energy's Home Energy Rebate Programs guidance. Income thresholds use HUD's FY2024 Area Median Income limits. The 25C tax credit rules follow IRS Notice 2024-13 and IRS Publication 5797. Solar ITC calculations follow Section 48 of the Internal Revenue Code as amended by the IRA. State rebate data is sourced from the DSIRE database maintained by the N.C. Clean Energy Technology Center. Equipment cost ranges reflect 2024–2025 national averages from HomeAdvisor and EnergySage.

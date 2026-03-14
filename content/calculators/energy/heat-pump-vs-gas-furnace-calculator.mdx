@@ -1,0 +1,130 @@
+---
+title: "Heat Pump vs Gas Furnace Calculator"
+description: "Compare annual heating costs between a heat pump and gas furnace. Enter your home size, climate zone, and local rates to find the cheaper option."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+In a mixed climate zone (4,000 HDD), a heat pump with a COP of 3.2 heats a 2,000 sq ft home for **$948/year** at the national average electricity rate of $0.1724/kWh. A gas furnace at 80% AFUE heats the same home for **$1,125/year** at $1.50/therm — making the heat pump **$177/year cheaper**, or **$1,770 over 10 years**. However, in cold climates below 10°F, heat pump COP drops to 2.0–2.5, and the equation can flip in favor of gas if electricity rates are high. The $2,000 federal IRA tax credit for qualifying heat pumps further tilts the math toward electric. Enter your climate zone, home size, and local rates to find which system wins for your situation.
+
+</section>
+
+## What Your Results Mean
+
+**Annual heating cost** for each system reflects the true fuel expense after accounting for equipment efficiency. A gas furnace at 80% AFUE wastes 20 cents of every fuel dollar up the flue — you pay for 100 therms but only get 80 therms of heat. A heat pump with COP 3.2 delivers 3.2 units of heat for every unit of electricity consumed, making it 320% effective — but that efficiency drops in colder outdoor temperatures. **Break-even electricity rate** tells you the maximum cents/kWh at which the heat pump still beats gas. **10-year savings** shows the compounding financial impact including projected fuel price increases.
+
+## How to Use This Calculator
+
+1. Select your climate zone or enter your annual heating degree days (HDD). Mild = 2,000–3,000 HDD, Mixed = 3,000–5,000 HDD, Cold = 5,000–7,000 HDD, Very Cold = 7,000+.
+2. Enter your home's conditioned square footage.
+3. Enter your local electricity rate per kWh and natural gas rate per therm (both found on your utility bills).
+4. Set the heat pump COP for your climate. Use 3.8 for mild climates (average winter above 40°F), 3.2 for mixed (30–40°F winters), and 2.5 for cold (below 30°F). Cold-climate heat pumps maintain COP 2.5–3.0 even at 5°F.
+5. Enter your gas furnace AFUE (80% is standard, 90–96% is high-efficiency condensing).
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{HP Annual Cost} = \frac{\text{BTU}_{\text{heating}}}{\text{COP} \times 3{,}412} \times \text{Rate}_{\text{electric}}
+$$
+$$
+\text{Gas Annual Cost} = \frac{\text{BTU}_{\text{heating}}}{\text{AFUE} \times 100{,}000} \times \text{Rate}_{\text{gas}}
+$$
+
+Where:
+- **BTU_heating** = annual heating load in BTU (derived from HDD, home size, and insulation factor)
+- **COP** = Coefficient of Performance (heat output divided by electricity input; varies 2.0–4.5 by climate)
+- **3,412** = BTU per kWh (thermodynamic constant)
+- **AFUE** = Annual Fuel Utilization Efficiency (0.80 = 80% efficient)
+- **100,000** = BTU per therm of natural gas
+
+*Source: U.S. DOE — Building Technologies Office, Heating System Efficiency Standards (2025); ASHRAE — Residential Heating Load Calculations (2024); AHRI — Heat Pump Performance Ratings (2025)*
+
+</div>
+
+## Worked Example 1
+
+**2,000 sq ft home in mixed climate (4,000 HDD), average insulation, $0.1724/kWh, $1.50/therm:**
+
+A typical 2,000 sq ft home in a 4,000 HDD climate (Nashville, Kansas City, Raleigh) has an annual heating load of approximately 60,000,000 BTU.
+
+**Heat pump (COP 3.2) at $0.1724/kWh:**
+- Each kWh produces: 3.2 × 3,412 = **10,918 BTU**
+- kWh consumed: 60,000,000 ÷ 10,918 = **5,496 kWh**
+- Annual cost: 5,496 × $0.1724 = **$948/year**
+
+**Gas furnace (80% AFUE) at $1.50/therm:**
+- Effective therms consumed: 60,000,000 ÷ (0.80 × 100,000) = **750 therms**
+- Annual cost: 750 × $1.50 = **$1,125/year**
+
+**Heat pump saves: $177/year**, or **$1,770 over 10 years**. With the $2,000 IRA heat pump tax credit, the heat pump pays for its installation cost premium in the first year.
+
+## Worked Example 2
+
+**2,500 sq ft home in cold climate (7,000 HDD), $0.14/kWh, $2.00/therm:**
+
+Annual heating load: approximately 100,000,000 BTU/season (larger home, colder climate, higher heat loss).
+
+**Cold-climate heat pump (COP 2.5) at $0.14/kWh:**
+- kWh consumed: 100,000,000 ÷ (2.5 × 3,412) = **11,722 kWh**
+- Annual cost: 11,722 × $0.14 = **$1,641/year**
+
+**High-efficiency gas furnace (96% AFUE) at $2.00/therm:**
+- Therms consumed: 100,000,000 ÷ (0.96 × 100,000) = **1,042 therms**
+- Annual cost: 1,042 × $2.00 = **$2,084/year**
+
+**Heat pump saves: $443/year**, or **$4,430 over 10 years**.
+
+Even in a cold climate with the heat pump operating at reduced COP 2.5, the combination of relatively low electricity rates ($0.14/kWh) and high gas prices ($2.00/therm) still favors the heat pump. At this gas rate, the heat pump wins unless electricity exceeds $0.24/kWh — and only 5 states average above that threshold. The key factor is the cold-climate heat pump's ability to maintain COP 2.0–2.5 down to 5°F, compared to standard heat pumps that lose efficiency rapidly below 30°F. Modern cold-climate models from Mitsubishi (Hyper-HEAT), Bosch (Climate 5000), and Daikin (Aurora) can operate down to -13°F.
+
+## When Each System Wins
+
+| Scenario | Winner | Why |
+|---|---|---|
+| Electricity < $0.15/kWh, gas > $1.50/therm | Heat pump | Low electricity + high gas = clear electric win |
+| Electricity > $0.25/kWh, gas < $1.00/therm | Gas furnace | Cheap gas overwhelms even efficient heat pump |
+| Mild climate (HDD < 3,000) | Heat pump | COP 3.5–4.0 in mild weather is hard to beat |
+| Very cold climate (HDD > 7,000) | Depends on rates | Cold-climate HP at COP 2.5 can still win if gas is expensive |
+| Replacing an old 60–70% AFUE furnace | Either new system | Anything modern beats a sub-70% furnace |
+| Dual-fuel available | Dual-fuel hybrid | Best of both worlds — HP above 30°F, gas below |
+
+## Installation Costs and Total Cost of Ownership
+
+Operating cost is only half the equation. Equipment and installation costs determine how long it takes for the cheaper-to-run system to pay off its higher upfront price.
+
+**Gas furnace installation costs $3,000–$6,500** for a standard 80% AFUE unit and $5,000–$10,000 for a high-efficiency 96% condensing model (including venting and gas line work). Gas furnaces have a lifespan of 15–20 years with annual maintenance costs of $100–$200 (filter changes, burner cleaning, heat exchanger inspection).
+
+**Air-source heat pump installation costs $5,000–$12,000** for a standard efficiency unit and $8,000–$15,000 for a cold-climate model. Mini-split (ductless) heat pumps run $3,000–$8,000 per zone. Heat pumps last 12–20 years with annual maintenance of $100–$150 — slightly less than gas because there is no combustion system to service.
+
+**The installation cost gap is $2,000–$5,000** in favor of gas furnaces. However, the Inflation Reduction Act's $2,000 heat pump tax credit closes most of that gap immediately. State and utility rebates can close it entirely. Massachusetts offers up to $10,000 in heat pump rebates for income-qualified households. New York's EmPower program covers full installation costs for eligible residents. Maine's Efficiency Maine program offers $2,000–$4,000 per unit.
+
+**10-year total cost of ownership** combines installation, annual fuel, and maintenance. For a 2,000 sq ft home in a mixed climate at national average rates:
+- Gas furnace (80% AFUE): $5,000 install + ($1,125 × 10) fuel + ($150 × 10) maintenance = **$17,750**
+- Heat pump (COP 3.2): $10,000 install − $2,000 ITC + ($948 × 10) fuel + ($125 × 10) maintenance = **$18,730**
+- Heat pump (COP 3.2) with $3,000 state rebate: **$15,730**
+
+With both federal and state incentives, the heat pump wins on total cost of ownership by year 6 and saves $2,020 over 10 years. Without state rebates, the systems are nearly tied — making operating cost the tiebreaker, which favors the heat pump in most rate environments.
+
+**Dual-fuel systems** pair a heat pump with a gas furnace for the best of both worlds. The heat pump handles heating when outdoor temperatures are above 30–35°F (operating at peak efficiency), and the gas furnace activates below that threshold when heat pump COP drops. Installation costs $10,000–$16,000 for the combined system, but annual fuel costs are typically 20–30% lower than either system alone in cold climates. This approach is particularly attractive in Climate Zones 5–7 (Chicago, Denver, Boston) where winter temperatures regularly dip below the heat pump's optimal range but spend most of the season above 30°F.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: Is a heat pump cheaper to run than a gas furnace?**
+A: In most US climates with electricity below $0.20/kWh, yes. A heat pump with COP 3.0 produces 3 units of heat per unit of electricity — making it 300% effective versus a gas furnace's 80–96% efficiency. At national average rates ($0.1724/kWh, $1.50/therm), the heat pump costs $150–$400/year less to operate depending on climate zone. The exceptions: very cheap natural gas markets (under $0.80/therm) with high electricity rates (above $0.25/kWh), and extreme cold climates where the heat pump COP drops below 2.0 for extended periods.
+
+**Q: Do heat pumps work in cold climates?**
+A: Modern cold-climate heat pumps maintain effective heating performance down to -13°F (-25°C). Models such as the Mitsubishi Hyper-HEAT, Daikin Aurora, and Bosch Climate 5000 are rated for cold climates and maintain COP 2.0–2.5 at 5°F — still more efficient than electric resistance heating. In the coldest US climates (Minnesota, Wisconsin, Maine), many homeowners pair a cold-climate heat pump with a gas furnace backup (dual-fuel system) that activates only during the coldest 5–10% of winter hours, capturing 90%+ of the heat pump's efficiency advantage while protecting against extreme cold performance loss.
+
+**Q: What tax credits are available for heat pumps in 2026?**
+A: The Inflation Reduction Act provides a $2,000 federal tax credit for qualifying heat pump installations through 2032 — including air-source heat pumps, geothermal heat pumps, and heat pump water heaters. The credit is non-refundable (you must owe at least $2,000 in federal income tax to claim it fully), and unused amounts can be carried forward. This is separate from and stackable with state and utility rebates. Many states offer additional rebates of $500–$3,000. The DOE's Home Efficiency Rebate program (part of IRA) provides income-qualified households up to $8,000 in point-of-sale rebates for heat pump installations — check your state energy office for availability.
+
+</div>
+
+## Sources & Methodology
+
+Heat pump cost calculations use COP (Coefficient of Performance) to convert heating BTU requirements into kWh consumed: kWh = BTU ÷ (COP × 3,412 BTU/kWh). Gas furnace calculations divide the heating BTU load by the AFUE efficiency and the energy content of natural gas (100,000 BTU/therm). COP values by climate zone — 3.8 (mild), 3.2 (mixed), 2.5 (cold) — are derived from AHRI performance ratings at ASHRAE design temperatures and represent seasonal averages across the full heating season. National average energy rates ($0.1724/kWh electricity, $1.50/therm gas) are from the U.S. EIA Electric Power Monthly and Natural Gas Monthly (2025–2026). The $2,000 heat pump tax credit is from the IRS guidance on the Energy Efficient Home Improvement Credit (IRC Section 25C) as amended by the Inflation Reduction Act of 2022.

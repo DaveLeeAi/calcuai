@@ -1,0 +1,180 @@
+{
+  "id": "appliance-energy-cost-calculator",
+  "title": "Appliance Energy Cost Calculator",
+  "slug": "appliance-energy-cost-calculator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "appliance energy cost calculator",
+  "secondaryKeywords": [
+    "appliance electricity cost",
+    "how much does it cost to run an appliance",
+    "appliance running cost per year",
+    "home appliance energy use"
+  ],
+  "metaTitle": "Appliance Energy Cost Calculator — Annual Running Cost by Device | CalcAI",
+  "metaDescription": "Calculate the annual cost to run any appliance. Select from 20+ common devices or enter custom wattage. The average U.S. refrigerator costs $67/year at $0.16/kWh.",
+  "inputs": [
+    {
+      "id": "appliance",
+      "label": "Appliance",
+      "type": "select",
+      "default": "refrigerator",
+      "options": [
+        { "value": "refrigerator", "label": "Refrigerator (150 W)" },
+        { "value": "chest-freezer", "label": "Chest Freezer (100 W)" },
+        { "value": "dishwasher", "label": "Dishwasher (1,800 W)" },
+        { "value": "washing-machine", "label": "Washing Machine (500 W)" },
+        { "value": "clothes-dryer", "label": "Clothes Dryer (3,000 W)" },
+        { "value": "microwave", "label": "Microwave (1,200 W)" },
+        { "value": "oven", "label": "Electric Oven (2,500 W)" },
+        { "value": "toaster-oven", "label": "Toaster Oven (1,200 W)" },
+        { "value": "coffee-maker", "label": "Coffee Maker (900 W)" },
+        { "value": "air-conditioner-window", "label": "Window AC Unit (1,200 W)" },
+        { "value": "central-ac", "label": "Central Air Conditioner (3,500 W)" },
+        { "value": "space-heater", "label": "Space Heater (1,500 W)" },
+        { "value": "ceiling-fan", "label": "Ceiling Fan (75 W)" },
+        { "value": "dehumidifier", "label": "Dehumidifier (350 W)" },
+        { "value": "water-heater", "label": "Electric Water Heater (4,500 W)" },
+        { "value": "tv-led", "label": "LED TV 55\" (80 W)" },
+        { "value": "gaming-console", "label": "Gaming Console (150 W)" },
+        { "value": "desktop-computer", "label": "Desktop Computer (200 W)" },
+        { "value": "laptop", "label": "Laptop (50 W)" },
+        { "value": "hair-dryer", "label": "Hair Dryer (1,800 W)" },
+        { "value": "vacuum-cleaner", "label": "Vacuum Cleaner (1,000 W)" },
+        { "value": "pool-pump", "label": "Pool Pump (1,500 W)" },
+        { "value": "ev-charger-l2", "label": "EV Charger Level 2 (7,200 W)" },
+        { "value": "custom", "label": "Custom (enter watts below)" }
+      ],
+      "helpText": "Select an appliance or choose Custom to enter your own wattage"
+    },
+    {
+      "id": "watts",
+      "label": "Power Rating (Watts)",
+      "type": "number",
+      "default": 150,
+      "min": 1,
+      "max": 50000,
+      "suffix": "W",
+      "helpText": "Auto-filled from appliance selection or enter manually"
+    },
+    {
+      "id": "hoursPerDay",
+      "label": "Hours Used Per Day",
+      "type": "number",
+      "default": 24,
+      "min": 0.1,
+      "max": 24,
+      "step": 0.5,
+      "suffix": "hrs"
+    },
+    {
+      "id": "daysPerYear",
+      "label": "Days Used Per Year",
+      "type": "number",
+      "default": 365,
+      "min": 1,
+      "max": 365,
+      "suffix": "days"
+    },
+    {
+      "id": "ratePerKwh",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "US average is $0.16/kWh (2025)"
+    },
+    {
+      "id": "quantity",
+      "label": "Number of Appliances",
+      "type": "number",
+      "default": 1,
+      "min": 1,
+      "max": 50
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualCost",
+      "label": "Annual Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "monthlyCost",
+      "label": "Monthly Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "dailyCost",
+      "label": "Daily Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 4
+    },
+    {
+      "id": "annualKwh",
+      "label": "Annual Energy Use",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "suffix": " kWh"
+    },
+    {
+      "id": "applianceList",
+      "label": "Appliance Cost Comparison",
+      "type": "table",
+      "columns": [
+        "appliance",
+        "watts",
+        "dailyCost",
+        "monthlyCost",
+        "annualCost"
+      ]
+    }
+  ],
+  "formula": "appliance-energy-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "kwh-cost-calculator",
+    "electric-bill-estimator",
+    "phantom-load-calculator",
+    "time-of-use-calculator",
+    "home-heating-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE — Estimating Appliance Energy Use (2025); ENERGY STAR Appliance Database (2025)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual kWh = (Watts × Hours/Day × Days/Year) / 1000; Annual Cost = kWh × Rate × Quantity",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "kwh-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

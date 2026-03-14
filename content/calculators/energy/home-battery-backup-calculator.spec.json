@@ -1,0 +1,121 @@
+{
+  "id": "home-battery-backup-calculator",
+  "title": "Home Battery Backup Calculator",
+  "slug": "home-battery-backup-calculator",
+  "category": "energy",
+  "subcategory": "solar-battery",
+  "primaryKeyword": "home battery backup calculator",
+  "secondaryKeywords": [
+    "battery backup size calculator",
+    "home battery sizing",
+    "backup power calculator"
+  ],
+  "metaTitle": "Home Battery Backup Calculator — Size Your Battery System | CalcAI",
+  "metaDescription": "Calculate the right battery backup size for your home. Enter your essential appliances and backup hours to get recommended kWh capacity and cost estimate.",
+  "inputs": [
+    {
+      "id": "totalWatts",
+      "label": "Total Essential Load",
+      "type": "number",
+      "default": 3000,
+      "min": 0,
+      "max": 50000,
+      "suffix": "W"
+    },
+    {
+      "id": "backupHours",
+      "label": "Backup Hours Needed",
+      "type": "number",
+      "default": 12,
+      "min": 1,
+      "max": 72,
+      "suffix": "hrs"
+    },
+    {
+      "id": "depthOfDischarge",
+      "label": "Battery Depth of Discharge",
+      "type": "percentage",
+      "default": 90,
+      "min": 10,
+      "max": 100,
+      "suffix": "%"
+    },
+    {
+      "id": "inverterEfficiency",
+      "label": "Inverter Efficiency",
+      "type": "percentage",
+      "default": 95,
+      "min": 50,
+      "max": 100,
+      "suffix": "%"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalCapacityKwh",
+      "label": "Required Capacity (kWh)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2,
+      "highlight": true
+    },
+    {
+      "id": "recommendedKwh",
+      "label": "Recommended Battery Size",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "estimatedCostLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "estimatedCostHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Sizing Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "home-battery-backup",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "solar-battery-storage-calculator",
+    "solar-panel-payback-calculator",
+    "generator-size-calculator",
+    "electric-bill-estimator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "NREL — Residential Battery Storage Technology Overview (2025)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Capacity = (Watts × Hours) / (DoD × Inverter Efficiency)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 74,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

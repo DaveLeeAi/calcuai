@@ -1,0 +1,126 @@
+{
+  "id": "electricity-rate-comparison-calculator",
+  "title": "Electricity Rate Comparison Calculator",
+  "slug": "electricity-rate-comparison-calculator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "electricity rate comparison calculator",
+  "secondaryKeywords": [
+    "compare electricity rates",
+    "electricity provider comparison",
+    "switch electricity provider savings"
+  ],
+  "metaTitle": "Electricity Rate Comparison Calculator — Compare Providers | CalcAI",
+  "metaDescription": "Compare your current electricity rate to a competitor. Calculate annual savings, total contract savings, and breakeven month including fixed fees.",
+  "inputs": [
+    {
+      "id": "currentRate",
+      "label": "Current Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "monthlyUsage",
+      "label": "Monthly Usage",
+      "type": "number",
+      "default": 863,
+      "min": 0,
+      "max": 10000,
+      "suffix": "kWh"
+    },
+    {
+      "id": "competitorRate",
+      "label": "Competitor Rate",
+      "type": "currency",
+      "default": 0.14,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "fixedFee",
+      "label": "Competitor Fixed Monthly Fee",
+      "type": "currency",
+      "default": 10,
+      "prefix": "$"
+    },
+    {
+      "id": "contractLength",
+      "label": "Contract Length",
+      "type": "number",
+      "default": 12,
+      "min": 1,
+      "max": 60,
+      "suffix": "months"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "currentAnnualCost",
+      "label": "Current Annual Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "competitorAnnualCost",
+      "label": "Competitor Annual Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualSavings",
+      "label": "Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalContractSavings",
+      "label": "Total Contract Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "breakevenMonth",
+      "label": "Breakeven Month",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    }
+  ],
+  "formula": "electricity-rate-comparison",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "electric-bill-estimator",
+    "time-of-use-calculator",
+    "kwh-cost-calculator",
+    "solar-panel-payback-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. EIA — Retail Electricity Rate Comparison Methodology (2025)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Savings = (current_rate - competitor_rate) × monthly_kWh × 12",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 77,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -1,0 +1,110 @@
+---
+title: "Smart Thermostat Savings Calculator"
+description: "Estimate your annual HVAC savings from upgrading to a smart or programmable thermostat. See payback period, 10-year net savings, and how results vary by climate and upgrade type."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A homeowner spending **$200/month on HVAC** who upgrades from a manual thermostat to a smart thermostat can expect to save approximately **$240/year** — an estimated 10% reduction based on ENERGY STAR modeling. With a typical smart thermostat costing $150–$300 and many utilities offering $25–$100 in rebates, the payback period is often **under 2 years**. However, actual savings depend heavily on your current setpoint behavior, occupancy patterns, climate zone, and HVAC runtime. Homeowners who already use disciplined setback schedules may see savings closer to 3–5%, while those with irregular schedules or frequent manual overrides often see 12–15%.
+
+</section>
+
+## What Your Results Mean
+
+**Estimated annual savings** is the projected reduction in your HVAC costs based on your current monthly bill, climate zone, and the type of thermostat upgrade. This is an estimate, not a guarantee — real-world savings vary based on occupancy, setpoint behavior, and system condition. **Payback period** is how many months until your cumulative savings equal the net cost of the thermostat (purchase price minus any rebate). **10-year net savings** shows the long-term value after accounting for the upfront cost — this is where even modest monthly savings become meaningful.
+
+These results assume consistent use of the thermostat's scheduling and optimization features. Disabling or frequently overriding the automated schedule reduces savings significantly.
+
+## How to Use This Calculator
+
+1. Enter your average monthly HVAC cost — check your utility bill for the heating/cooling portion, or use your total bill if HVAC is the dominant load.
+2. Select your climate zone: hot, cold, or mixed. Hotter and colder climates have more HVAC runtime, which means more opportunity for savings.
+3. Select your current thermostat type: manual, basic programmable, or smart (upgrading within the smart category yields minimal savings).
+4. Enter the cost of your new thermostat. Popular models range from $130 (Nest Thermostat) to $250 (Ecobee Premium).
+5. Enter any utility rebate you qualify for — check your utility's website or the ENERGY STAR rebate finder.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Annual Savings} = \text{Monthly HVAC Bill} \times 12 \times S_{\text{base}} \times C_{\text{climate}} \times U_{\text{upgrade}}
+$$
+$$
+\text{Payback (months)} = \frac{\text{Device Cost} - \text{Rebate}}{\text{Annual Savings} \div 12}
+$$
+$$
+\text{10-Year Net Savings} = (\text{Annual Savings} \times 10) - (\text{Device Cost} - \text{Rebate})
+$$
+
+Where:
+- **S_base** = base savings rate (~0.10 or 10%, per DOE setback schedule estimates)
+- **C_climate** = climate adjustment factor (hot = 1.1, mixed = 1.0, cold = 0.9 — reflecting HVAC runtime differences)
+- **U_upgrade** = upgrade type factor (manual → smart = 1.0, programmable → smart = 0.5, smart → smart = 0.15)
+
+*Source: ENERGY STAR — Smart Thermostat Savings Estimates (2024); U.S. Department of Energy — Programmable Thermostat Fact Sheet (2024)*
+
+</div>
+
+## Worked Example
+
+**Homeowner upgrading from manual to smart thermostat:** $200/month HVAC bill, mixed climate, $250 smart thermostat, no rebate.
+
+- Base annual HVAC spend: $200 × 12 = **$2,400/year**
+- Savings rate: 10% base × 1.0 (mixed climate) × 1.0 (manual → smart) = **10%**
+- Estimated annual savings: $2,400 × 0.10 = **$240/year**
+- Net thermostat cost: $250 − $0 = **$250**
+- Payback period: $250 ÷ ($240 ÷ 12) = **12.5 months**
+- 10-year net savings: ($240 × 10) − $250 = **$2,150**
+
+This homeowner recoups the thermostat cost in just over a year and saves an estimated $2,150 over a decade. These savings assume consistent use of the thermostat's scheduling features and no major changes to occupancy or setpoint behavior.
+
+## Worked Example 2
+
+**Homeowner upgrading from programmable to smart thermostat:** $120/month HVAC bill, cold climate, $200 smart thermostat, $75 utility rebate.
+
+- Base annual HVAC spend: $120 × 12 = **$1,440/year**
+- Savings rate: 10% base × 0.9 (cold climate) × 0.5 (programmable → smart) = **4.5%**
+- Estimated annual savings: $1,440 × 0.045 = **$64.80/year** (approximately $5.40/month)
+- Net thermostat cost: $200 − $75 = **$125**
+- Payback period: $125 ÷ ($64.80 ÷ 12) = **23.1 months** (~1.9 years)
+- 10-year net savings: ($64.80 × 10) − $125 = **$523**
+
+Upgrading from a programmable thermostat to a smart model yields smaller savings because the programmable unit already captures a portion of the setback benefit. The smart thermostat adds value through occupancy sensing, learning algorithms, and remote control — but the incremental energy savings are more modest. In cold climates, shorter cooling seasons also limit the total HVAC runtime available for optimization.
+
+## What Affects Your Actual Savings
+
+Smart thermostat savings estimates are averages — your results may differ significantly based on several real-world factors.
+
+**Occupancy patterns.** Smart thermostats save the most for households with irregular schedules — shift workers, families where everyone is out during the day, or frequent travelers. If someone is home most of the time (remote workers, retirees), the thermostat has fewer unoccupied hours to optimize, and savings may be 3–5% rather than 10%.
+
+**Existing setpoint behavior.** If you already manually set back your thermostat 7–10°F when you leave or sleep, you are already capturing much of the savings a smart thermostat automates. The DOE's 10% savings estimate specifically comes from setback schedules — turning down heat 7–10°F for 8 hours daily. Homeowners who leave their thermostat at a constant temperature 24/7 see the largest benefit from upgrading.
+
+**HVAC system condition.** A thermostat optimizes when your system runs, but it cannot fix an inefficient system. Leaky ductwork (which the DOE estimates wastes 20–30% of conditioned air in a typical home), a dirty filter reducing airflow by 5–15%, or a unit operating at degraded capacity all limit the real savings a thermostat delivers.
+
+**Insulation and air sealing.** A well-insulated, tightly sealed home holds temperature longer, meaning shorter HVAC cycles and less total runtime for the thermostat to optimize. Conversely, a drafty home with poor insulation may see higher absolute savings in dollars but also higher bills overall — insulation and air sealing upgrades typically deliver 2–4 times more savings than a thermostat alone.
+
+**Climate extremes.** In very hot climates (Phoenix, Houston), cooling accounts for 40–50% of total energy costs with long runtime seasons — giving the thermostat more hours to optimize. In moderate climates (San Francisco, Portland), HVAC may run only a few months per year, limiting total savings opportunity regardless of thermostat intelligence.
+
+**Override frequency.** Every manual override — bumping the temperature up because you feel cold, canceling a setback because guests are visiting — reduces the thermostat's ability to execute its optimized schedule. Studies by Nest Labs found that households averaging more than 3 manual overrides per week saved roughly 40% less than households that let the schedule run uninterrupted.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much can a smart thermostat actually save on heating and cooling bills?**
+A: ENERGY STAR estimates approximately 8% savings on heating and cooling bills, which translates to roughly $50/year for the average US household. The DOE estimates up to 10% from consistent setback schedules (lowering heat 7–10°F for 8 hours daily). Real-world savings range from 3–5% for homeowners who already use setback schedules or are home most of the day, up to 12–15% for households with irregular occupancy that previously ran their thermostat at a constant temperature. Actual results depend on your occupancy patterns, HVAC runtime, existing setpoint behavior, climate zone, and home insulation quality.
+
+**Q: Are smart thermostats worth it if I already have a programmable thermostat?**
+A: The incremental savings from upgrading a programmable thermostat to a smart model are typically 3–5% rather than the full 8–10% claimed for manual-to-smart upgrades. The programmable thermostat already captures the basic scheduling benefit. Smart thermostats add occupancy sensing, learning algorithms, and remote access — which provide value mainly if you frequently deviate from your programmed schedule. If you set your programmable thermostat once and rarely adjust it, the energy savings from upgrading are modest. The convenience and remote control features may still justify the $125–$250 net cost, but do not expect the same payback as someone upgrading from a manual dial.
+
+**Q: Do utility rebates or tax credits apply to smart thermostats?**
+A: Many utilities offer rebates of $25–$100 for ENERGY STAR-certified smart thermostats — check your utility's website or the ENERGY STAR rebate finder tool. As of 2024, smart thermostats do not qualify for the federal 25C energy efficiency tax credit (that credit covers insulation, windows, doors, and HVAC equipment, but not thermostats). Some states offer additional incentives through energy efficiency programs. Rebate availability and amounts change frequently, so verify current offers with your specific utility before purchasing. The ENERGY STAR certification requirement means not all smart thermostats qualify — look for the ENERGY STAR label on the product or packaging.
+
+</div>
+
+## Sources & Methodology
+
+Savings estimates are based on the ENERGY STAR Certified Smart Thermostat Program Requirements (2024) and the U.S. Department of Energy's Programmable Thermostat Fact Sheet, which estimates 10% heating and cooling savings from consistent setback schedules of 7–10°F for 8 hours daily. Climate adjustment factors reflect relative HVAC runtime differences across DOE climate zones. Upgrade type factors account for the diminishing marginal savings when upgrading from an already-programmable thermostat. Smart thermostat pricing reflects 2024–2025 retail data from major manufacturers (Google Nest, Ecobee, Honeywell). Utility rebate ranges are sourced from the DSIRE database and ENERGY STAR rebate finder. All results are estimates based on modeling assumptions — actual savings depend on individual occupancy patterns, setpoint behavior, HVAC system condition, home insulation, and climate.

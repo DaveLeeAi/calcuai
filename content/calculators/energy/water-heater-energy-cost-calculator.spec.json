@@ -1,0 +1,150 @@
+{
+  "id": "water-heater-energy-cost-calculator",
+  "title": "Water Heater Cost Calculator",
+  "slug": "water-heater-energy-cost-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "water heater energy cost calculator",
+  "secondaryKeywords": [
+    "water heater operating cost",
+    "water heater running cost",
+    "heat pump water heater savings"
+  ],
+  "metaTitle": "Water Heater Cost Calculator — Annual Operating Cost by Type | CalcAI",
+  "metaDescription": "Compare annual operating costs for electric, gas, heat pump, and solar water heaters. See 10-year total cost and savings vs electric resistance.",
+  "inputs": [
+    {
+      "id": "heaterType",
+      "label": "Water Heater Type",
+      "type": "select",
+      "default": "electric-resistance",
+      "options": [
+        {
+          "value": "electric-resistance",
+          "label": "Electric Resistance"
+        },
+        {
+          "value": "gas",
+          "label": "Gas"
+        },
+        {
+          "value": "heat-pump",
+          "label": "Heat Pump"
+        },
+        {
+          "value": "solar",
+          "label": "Solar"
+        }
+      ]
+    },
+    {
+      "id": "hotWaterUsage",
+      "label": "Hot Water Usage",
+      "type": "number",
+      "default": 64,
+      "min": 10,
+      "max": 200,
+      "suffix": "gal/day"
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "gasRate",
+      "label": "Gas Rate",
+      "type": "currency",
+      "default": 1.5,
+      "prefix": "$",
+      "suffix": "/therm"
+    },
+    {
+      "id": "unitCost",
+      "label": "Unit Cost",
+      "type": "currency",
+      "default": 1200,
+      "prefix": "$"
+    },
+    {
+      "id": "installationCost",
+      "label": "Installation Cost",
+      "type": "currency",
+      "default": 800,
+      "prefix": "$"
+    },
+    {
+      "id": "lifespan",
+      "label": "Expected Lifespan",
+      "type": "number",
+      "default": 12,
+      "min": 5,
+      "max": 25,
+      "suffix": "years"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualEnergyCost",
+      "label": "Annual Energy Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "tenYearTotal",
+      "label": "10-Year Total Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualSavingsVsResistance",
+      "label": "Annual Savings vs Electric",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "water-heater-energy-cost",
+  "features": [
+    "compare-scenarios",
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "home-heating-cost-calculator",
+    "electric-bill-estimator",
+    "energy-rebate-calculator",
+    "gas-vs-electric-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. DOE — Energy Saver Water Heater Guide (2025); ENERGY STAR Water Heater Calculator",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual kWh = (gallons × 8.34 × temp_rise × 365) / (3412 × efficiency)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 77,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

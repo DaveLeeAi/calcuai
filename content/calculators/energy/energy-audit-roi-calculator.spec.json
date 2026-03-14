@@ -1,0 +1,130 @@
+{
+  "id": "energy-audit-roi-calculator",
+  "title": "Energy Audit ROI Calculator",
+  "slug": "energy-audit-roi-calculator",
+  "category": "energy",
+  "subcategory": "incentives",
+  "primaryKeyword": "energy audit ROI calculator",
+  "secondaryKeywords": [
+    "home energy audit savings",
+    "energy audit payback",
+    "energy audit worth it",
+    "home energy assessment ROI"
+  ],
+  "metaTitle": "Energy Audit ROI Calculator — Payback Period & Savings | CalcAI",
+  "metaDescription": "Calculate your energy audit ROI. A $300–$500 audit typically identifies $200–$600/year in savings, paying for itself in under 2 years with recommended upgrades.",
+  "inputs": [
+    {
+      "id": "annualEnergyBill",
+      "label": "Annual Energy Bill",
+      "type": "currency",
+      "default": 2400,
+      "min": 100,
+      "max": 20000,
+      "prefix": "$",
+      "helpText": "Total gas + electric for the year"
+    },
+    {
+      "id": "auditCost",
+      "label": "Energy Audit Cost",
+      "type": "currency",
+      "default": 400,
+      "min": 0,
+      "max": 2000,
+      "prefix": "$",
+      "helpText": "Professional audit typically $300–$500"
+    },
+    {
+      "id": "improvements",
+      "label": "Planned Improvements",
+      "type": "select",
+      "default": "air-sealing-insulation",
+      "options": [
+        { "value": "air-sealing-only", "label": "Air Sealing Only (~10–20% savings)" },
+        { "value": "air-sealing-insulation", "label": "Air Sealing + Insulation (~20–30% savings)" },
+        { "value": "hvac-upgrade", "label": "HVAC Upgrade (~15–25% savings)" },
+        { "value": "air-sealing-insulation-hvac", "label": "Air Sealing + Insulation + HVAC (~30–45% savings)" },
+        { "value": "comprehensive", "label": "Comprehensive (all systems, ~35–50% savings)" },
+        { "value": "windows-doors", "label": "Windows & Doors Only (~10–15% savings)" },
+        { "value": "water-heating", "label": "Water Heating Upgrade (~8–15% savings)" },
+        { "value": "lighting-appliances", "label": "Lighting & Appliances (~5–10% savings)" }
+      ],
+      "helpText": "Select the scope of improvements you plan"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSavings",
+      "label": "Estimated Annual Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalCost",
+      "label": "Total Project Cost (audit + improvements)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "paybackYears",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "suffix": " years",
+      "highlight": true
+    },
+    {
+      "id": "tenYearNet",
+      "label": "10-Year Net Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "twentyYearNet",
+      "label": "20-Year Net Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Savings Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "energy-audit-roi",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "home-insulation-savings-calculator",
+    "weatherization-payback-calculator",
+    "smart-thermostat-savings-calculator",
+    "energy-rebate-calculator",
+    "home-heating-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE — Home Energy Audits (2025); ENERGY STAR — Home Performance Contractors (2024)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Annual Savings = Annual Bill × Savings Percentage (by improvement scope); Payback = (Audit Cost + Improvement Cost) / Annual Savings; Net = (Savings × Years) − Total Cost",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

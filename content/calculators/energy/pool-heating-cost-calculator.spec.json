@@ -1,0 +1,173 @@
+{
+  "id": "pool-heating-cost-calculator",
+  "title": "Pool Heating Cost Calculator",
+  "slug": "pool-heating-cost-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "pool heating cost calculator",
+  "secondaryKeywords": [
+    "pool heater cost per month",
+    "cost to heat a pool",
+    "pool heat pump vs gas heater cost",
+    "swimming pool heating calculator"
+  ],
+  "metaTitle": "Pool Heating Cost Calculator — Gas vs Heat Pump vs Solar | CalcAI",
+  "metaDescription": "Calculate your seasonal pool heating cost by heater type. A gas heater for a 20,000-gallon pool costs $200–$500/month, while a heat pump runs $50–$150/month.",
+  "inputs": [
+    {
+      "id": "poolVolume",
+      "label": "Pool Volume",
+      "type": "number",
+      "default": 20000,
+      "min": 1000,
+      "max": 100000,
+      "suffix": "gallons",
+      "helpText": "Average residential pool is 15,000–30,000 gallons"
+    },
+    {
+      "id": "currentTemp",
+      "label": "Average Unheated Water Temp",
+      "type": "number",
+      "default": 65,
+      "min": 40,
+      "max": 90,
+      "suffix": "°F",
+      "helpText": "Typical ambient pool temp without heating"
+    },
+    {
+      "id": "targetTemp",
+      "label": "Desired Water Temperature",
+      "type": "number",
+      "default": 82,
+      "min": 70,
+      "max": 104,
+      "suffix": "°F"
+    },
+    {
+      "id": "heaterType",
+      "label": "Primary Heater Type",
+      "type": "select",
+      "default": "gas",
+      "options": [
+        { "value": "gas", "label": "Gas Heater (natural gas)" },
+        { "value": "propane", "label": "Gas Heater (propane)" },
+        { "value": "heat-pump", "label": "Electric Heat Pump" },
+        { "value": "solar", "label": "Solar Pool Heater" }
+      ]
+    },
+    {
+      "id": "gasPrice",
+      "label": "Natural Gas Price",
+      "type": "currency",
+      "default": 1.50,
+      "min": 0.10,
+      "max": 10,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/therm",
+      "helpText": "US average ~$1.50/therm (2025)"
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "seasonMonths",
+      "label": "Swimming Season Length",
+      "type": "number",
+      "default": 6,
+      "min": 1,
+      "max": 12,
+      "suffix": "months"
+    },
+    {
+      "id": "coverUsed",
+      "label": "Pool Cover Used?",
+      "type": "toggle",
+      "default": false,
+      "helpText": "A cover reduces heat loss by 50–70%"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "seasonalCost",
+      "label": "Seasonal Heating Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "monthlyCost",
+      "label": "Monthly Heating Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "initialCost",
+      "label": "Initial Heat-Up Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "gasSeasonalCost",
+      "label": "Gas Heater Season Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "heatPumpSeasonalCost",
+      "label": "Heat Pump Season Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualSavingsHeatPump",
+      "label": "Annual Savings (Heat Pump vs Gas)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "pool-heating-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "gas-vs-electric-cost-calculator",
+    "home-heating-cost-calculator",
+    "kwh-cost-calculator",
+    "heat-pump-vs-gas-furnace-calculator",
+    "water-heater-energy-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE — Swimming Pool Heating (2025); ENERGY STAR Pool Equipment Guide (2024)",
+  "articleWordTarget": 1800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "BTU needed = Pool Volume × 8.34 × ΔT; Gas cost = BTU / (heater efficiency × 100,000) × gas price; Heat pump cost = BTU / (COP × 3,412) × electric rate",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

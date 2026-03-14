@@ -1,0 +1,149 @@
+---
+title: "Pool Heating Cost Calculator"
+description: "Calculate the seasonal cost to heat your pool by gas, heat pump, or solar. Compare heater types side by side and see how a pool cover cuts costs 50-80%."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Heating a standard 15,000-gallon pool from 65°F to 82°F with a gas heater costs **$200–$500/month** during swimming season, while a heat pump achieves the same temperature for **$50–$150/month** — and a solar heater runs at **$0/month** after installation. The difference comes down to physics: a gas heater burns fuel at roughly **85% thermal efficiency**, while a heat pump moves heat from the air with a **COP of 5.0–6.0**, delivering 5–6 units of heat for every unit of electricity consumed. Adding a solar pool cover reduces heat loss by **50–70%**, cutting any heater type's operating cost by roughly half. A 15,000-gallon pool needs approximately **2.1 million BTU** to raise the water 17°F — that initial heat-up alone costs $25–$35 with gas or $5–$8 with a heat pump.
+
+</section>
+
+## What Your Results Mean
+
+**Monthly heating cost** is the ongoing expense to maintain your target water temperature throughout the swimming season, factoring in daily heat loss and your heater's efficiency. This is the number that determines whether a pool heater is affordable to run regularly or only for occasional weekend use. **Season total** multiplies monthly cost by your swimming season length — typically 4–7 months depending on climate. **Initial heat-up cost** is the one-time expense to bring the pool from ambient water temperature to your target — relevant at season opening and after extended cold snaps. **Cost with cover** shows how much a solar pool cover saves by reducing overnight evaporative heat loss, which accounts for 70% of all pool heat loss.
+
+The heater comparison table shows side-by-side operating costs for gas, heat pump, and solar heating methods using your actual pool dimensions and local energy rates.
+
+## How to Use This Calculator
+
+1. Enter your pool volume in gallons. A typical residential pool is 10,000–20,000 gallons. If you do not know your volume, use the formula: length × width × average depth × 7.5 for rectangular pools, or length × width × average depth × 5.9 for oval/round pools.
+2. Enter the current water temperature and your desired temperature. Most pool owners target 78–84°F for comfortable swimming.
+3. Select your heater type: gas (natural gas or propane), heat pump, or solar.
+4. For gas heaters, enter your fuel cost per therm ($1.00–$2.50 is typical for natural gas) and heater efficiency (80–95% for modern units). For heat pumps, enter your electricity rate and COP rating (typically 5.0–6.0 for modern units).
+5. Indicate whether you use a pool cover. Covers reduce daily heat loss by 50–70%, dramatically lowering monthly operating costs.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{BTU Required} = \text{Gallons} \times 8.34 \times \Delta T
+$$
+$$
+\text{Gas Cost} = \frac{\text{BTU}}{(\text{Efficiency} \times 100{,}000)} \times \text{Price per Therm}
+$$
+$$
+\text{Heat Pump Cost} = \frac{\text{BTU}}{(\text{COP} \times 3{,}412)} \times \text{Rate per kWh}
+$$
+
+Where:
+- **8.34** = weight of one gallon of water in pounds
+- **ΔT** = temperature rise in °F (target temp − current temp)
+- **100,000** = BTU per therm of natural gas
+- **COP** = Coefficient of Performance (heat pump efficiency, typically 5.0–6.0)
+- **3,412** = BTU per kWh (conversion constant)
+- **Efficiency** = gas heater thermal efficiency as a decimal (0.80–0.95)
+
+*Source: U.S. Department of Energy — Swimming Pool Heating Costs (2025); ENERGY STAR — Heat Pump Pool Heater Standards (2024)*
+
+</div>
+
+## Worked Example 1
+
+**Gas heater, no pool cover — 15,000-gallon pool, 6-month season in Atlanta:**
+
+- Pool volume: 15,000 gallons
+- Temperature rise: 65°F → 82°F = 17°F
+- Gas heater efficiency: 85% (standard atmospheric gas heater)
+- Natural gas cost: $1.50/therm
+- Daily heat loss (no cover): 5°F per day (typical uncovered pool in moderate climate)
+
+**Initial heat-up:**
+- BTU required: 15,000 × 8.34 × 17 = **2,126,700 BTU**
+- Therms: 2,126,700 ÷ (0.85 × 100,000) = **25.0 therms**
+- Initial heat-up cost: 25.0 × $1.50 = **$37.50**
+
+**Monthly maintenance (keeping pool at 82°F):**
+- Daily heat loss: 15,000 × 8.34 × 5 = 625,500 BTU/day
+- Monthly BTU: 625,500 × 30 = 18,765,000 BTU
+- Monthly therms: 18,765,000 ÷ (0.85 × 100,000) = 220.8 therms
+- Monthly cost: 220.8 × $1.50 = **$331.18/month**
+
+**6-month season total: $37.50 + ($331.18 × 6) = $2,024.58/year**
+
+At $331/month, gas pool heating is a significant ongoing expense. The high cost stems from the uncovered pool losing 5°F of heat daily through evaporation — the heater must replace all of that lost energy every single day. This is exactly why pool covers are not optional accessories but essential cost-control tools.
+
+## Worked Example 2
+
+**Heat pump with pool cover — same 15,000-gallon pool in Atlanta:**
+
+- Pool volume: 15,000 gallons
+- Temperature rise: 65°F → 82°F = 17°F
+- Heat pump COP: 5.5 (modern variable-speed unit)
+- Electricity rate: $0.1724/kWh
+- Daily heat loss (with cover): 1.5°F per day (cover reduces loss by 70%)
+
+**Initial heat-up:**
+- BTU required: 15,000 × 8.34 × 17 = **2,126,700 BTU**
+- kWh required: 2,126,700 ÷ (5.5 × 3,412) = **113.3 kWh**
+- Initial heat-up cost: 113.3 × $0.1724 = **$19.53**
+
+**Monthly maintenance:**
+- Daily heat loss: 15,000 × 8.34 × 1.5 = 187,650 BTU/day
+- Monthly BTU: 187,650 × 30 = 5,629,500 BTU
+- Monthly kWh: 5,629,500 ÷ (5.5 × 3,412) = 299.9 kWh
+- Monthly cost: 299.9 × $0.1724 = **$51.70/month**
+
+**6-month season total: $19.53 + ($51.70 × 6) = $329.73/year**
+
+**Annual savings vs. gas without cover: $2,024.58 − $329.73 = $1,694.85/year.** The heat pump with a cover costs 84% less to operate. The cover alone accounts for roughly half the savings by reducing daily heat loss from 5°F to 1.5°F — meaning the heater works less than one-third as hard. A modern heat pump for a 15,000-gallon pool costs $3,000–$5,000 installed, and a solar cover costs $50–$150. At $1,695/year in savings versus gas, the combined investment pays back in under 3 years.
+
+## Gas vs Heat Pump vs Solar Pool Heater
+
+| Factor | Gas Heater | Heat Pump | Solar |
+|---|---|---|---|
+| Equipment cost | $1,500–$3,000 | $3,000–$5,500 | $3,000–$7,000 |
+| Monthly operating cost | $200–$500 | $50–$150 | $0 |
+| Heating speed | Fast (1–2°F/hour) | Moderate (0.5–1°F/hour) | Slow (weather dependent) |
+| Best climate | Any (especially cold) | Mild to warm (above 50°F air) | Warm + sunny |
+| Lifespan | 5–10 years | 10–15 years | 15–20 years |
+| Works in cloudy/cold? | Yes | Down to ~45°F air temp | Poorly |
+| Maintenance cost | $150–$300/year | $50–$150/year | $25–$75/year |
+| Environmental impact | CO₂ emissions | Low (electricity) | Zero |
+| Season extension | Unlimited | 2–4 months beyond solar | Limited by weather |
+
+**The bottom line:** Gas heaters win on heating speed and cold-weather performance — they can heat a pool from 60°F to 82°F in 12–24 hours regardless of outdoor temperature. Heat pumps win on operating cost by a wide margin and are the best choice for maintaining temperature in climates where air stays above 50°F during swimming season. Solar heaters win on lifetime cost (zero fuel cost) but only work well in sunny climates and cannot maintain temperature through extended cloudy periods or cool nights without a backup heater.
+
+## How Pool Covers Cut Heating Costs
+
+Evaporation is responsible for **70% of all pool heat loss** — far more than conduction through pool walls (20%) or radiation to the night sky (10%). A solar pool cover (also called a blanket or liquid solar cover) dramatically reduces evaporation and can be the single most cost-effective pool energy investment.
+
+**Solar blanket covers** ($50–$200) are floating plastic covers with air bubbles that insulate the surface and trap solar heat. They reduce evaporative heat loss by 50–70% and can raise water temperature 5–10°F through passive solar gain alone. The DOE reports that a solar cover on an outdoor pool reduces heating costs by 50–70%, regardless of the heater type.
+
+**Automatic pool covers** ($5,000–$15,000 installed) provide the same thermal benefit as a blanket cover with the convenience of motorized retraction. They also serve as a safety barrier, potentially reducing insurance costs. The thermal performance is comparable to a blanket cover — 50–70% heat loss reduction.
+
+**Liquid solar covers** ($15–$30/month) are alcohol-based products that form a microscopic film on the water surface, reducing evaporation by 15–30%. They are less effective than physical covers but require no manual handling. They work best as a supplement to a physical cover during the hours the cover is removed for swimming.
+
+**Without a cover**, a pool in a warm climate loses 3–5°F per night through evaporation. In dry, windy climates like Arizona or Colorado, losses can reach 7–10°F per night. The heater must replace all of this lost energy the next day — effectively heating the pool from scratch every 2–3 days.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much does it cost to heat a pool for a month?**
+A: Monthly pool heating costs range from $50 to $500+ depending on heater type, pool size, climate, and whether you use a pool cover. For a typical 15,000-gallon pool maintained at 82°F: a gas heater costs $200–$500/month without a cover (or $100–$200 with one); a heat pump costs $50–$150/month without a cover ($30–$75 with one); and solar heating costs $0/month in operating expenses. The single biggest variable is the pool cover — it cuts costs by 50–70% regardless of heater type by reducing evaporative heat loss, which accounts for 70% of all pool heat loss.
+
+**Q: Is a heat pump pool heater worth the higher upfront cost?**
+A: Yes, in most climates. A heat pump costs $3,000–$5,500 installed versus $1,500–$3,000 for a gas heater, but saves $1,000–$3,000/year in operating costs. The payback period on the price premium is typically 1–3 years. Heat pumps also last 10–15 years versus 5–10 for gas heaters, so the lifetime cost advantage is substantial. The main exception is very cold climates (northern states where pool season is short and air temps drop below 50°F frequently) — in those conditions, a gas heater is more effective because heat pumps lose efficiency as air temperature drops. For pools in the Southeast, Southwest, and mid-Atlantic, a heat pump is the clear financial winner.
+
+**Q: Does a pool cover really make that big a difference?**
+A: A pool cover is the single most cost-effective pool energy investment. The DOE states that pool covers reduce heating costs by 50–70% by virtually eliminating evaporative heat loss, which is responsible for 70% of all pool heat loss. A $100 solar blanket cover on a gas-heated pool can save $1,000–$2,000/year — a payback period measured in weeks, not months. In addition to reducing heating costs, covers reduce water loss (saving 30–50% on refill water), reduce chemical consumption (less evaporation means less chlorine loss), and keep debris out of the pool.
+
+</div>
+
+## Sources & Methodology
+
+Pool heating calculations use the standard thermal energy formula: BTU = gallons × 8.34 lb/gal × temperature rise (°F). Gas heater costs factor in thermal efficiency (80–95% for modern units) and fuel cost per therm (1 therm = 100,000 BTU). Heat pump costs use the Coefficient of Performance (COP) to determine electrical input required: kWh = BTU ÷ (COP × 3,412 BTU/kWh). Daily heat loss estimates are based on DOE pool heat loss models accounting for evaporation (70% of total loss), conduction (20%), and radiation (10%). Pool cover heat loss reduction of 50–70% is from the U.S. Department of Energy's Energy Saver guide on swimming pool heating. Equipment costs and lifespans reflect 2025–2026 national averages from HomeAdvisor and the Association of Pool & Spa Professionals (APSP). The national average electricity rate of $0.1724/kWh and natural gas rate of $1.50/therm are from the U.S. Energy Information Administration (2025–2026).

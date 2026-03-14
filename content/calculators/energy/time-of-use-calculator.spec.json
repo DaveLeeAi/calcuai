@@ -1,0 +1,128 @@
+{
+  "id": "time-of-use-calculator",
+  "title": "Time-of-Use Rate Calculator",
+  "slug": "time-of-use-calculator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "time of use rate calculator",
+  "secondaryKeywords": [
+    "TOU rate calculator",
+    "peak vs off-peak electricity cost",
+    "time of use savings"
+  ],
+  "metaTitle": "Time-of-Use Rate Calculator — Peak vs Off-Peak Savings | CalcAI",
+  "metaDescription": "Calculate your monthly electricity bill under time-of-use rates. Compare peak vs off-peak costs and see how much you save by shifting usage.",
+  "inputs": [
+    {
+      "id": "peakKwh",
+      "label": "Daily Peak Usage",
+      "type": "number",
+      "default": 10,
+      "min": 0,
+      "max": 200,
+      "suffix": "kWh"
+    },
+    {
+      "id": "offPeakKwh",
+      "label": "Daily Off-Peak Usage",
+      "type": "number",
+      "default": 20,
+      "min": 0,
+      "max": 200,
+      "suffix": "kWh"
+    },
+    {
+      "id": "peakRate",
+      "label": "Peak Rate",
+      "type": "currency",
+      "default": 0.3,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "offPeakRate",
+      "label": "Off-Peak Rate",
+      "type": "currency",
+      "default": 0.1,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "daysPerMonth",
+      "label": "Days Per Month",
+      "type": "number",
+      "default": 30,
+      "min": 1,
+      "max": 31
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyPeakCost",
+      "label": "Monthly Peak Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyOffPeakCost",
+      "label": "Monthly Off-Peak Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalMonthlyBill",
+      "label": "Total Monthly Bill",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "flatRateBill",
+      "label": "Flat Rate Comparison",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "savingsPotential",
+      "label": "TOU Savings vs Flat",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "time-of-use",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "electric-bill-estimator",
+    "kwh-cost-calculator",
+    "electricity-rate-comparison-calculator",
+    "solar-panel-payback-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. EIA — Time-of-Use Rate Structures (2025); OpenEI Utility Rate Database",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Bill = (peak kWh × peak rate + off-peak kWh × off-peak rate) × days",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "kwh-cost-calculator"
+  ],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

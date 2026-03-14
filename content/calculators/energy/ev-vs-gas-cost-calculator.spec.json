@@ -1,0 +1,176 @@
+{
+  "id": "ev-vs-gas-cost-calculator",
+  "title": "EV vs Gas Cost Calculator",
+  "slug": "ev-vs-gas-cost-calculator",
+  "category": "energy",
+  "subcategory": "transportation",
+  "primaryKeyword": "ev vs gas cost calculator",
+  "secondaryKeywords": [
+    "electric car vs gas car cost",
+    "EV savings calculator",
+    "electric vehicle cost comparison"
+  ],
+  "metaTitle": "EV vs Gas Cost Calculator — Compare 5-Year & 10-Year Costs | CalcAI",
+  "metaDescription": "Compare the total cost of owning an EV vs gas car over 5 and 10 years. Includes fuel, maintenance, and purchase price. See your breakeven year.",
+  "inputs": [
+    {
+      "id": "annualMiles",
+      "label": "Annual Miles Driven",
+      "type": "number",
+      "default": 12000,
+      "min": 0,
+      "max": 100000,
+      "suffix": "mi"
+    },
+    {
+      "id": "evEfficiency",
+      "label": "EV Efficiency",
+      "type": "number",
+      "default": 3.5,
+      "min": 1,
+      "max": 10,
+      "step": 0.1,
+      "suffix": "mi/kWh"
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "gasPrice",
+      "label": "Gas Price",
+      "type": "currency",
+      "default": 3.5,
+      "prefix": "$",
+      "suffix": "/gal"
+    },
+    {
+      "id": "gasMpg",
+      "label": "Gas Car MPG",
+      "type": "number",
+      "default": 27,
+      "min": 5,
+      "max": 100,
+      "suffix": "MPG"
+    },
+    {
+      "id": "evPrice",
+      "label": "EV Purchase Price",
+      "type": "currency",
+      "default": 35000,
+      "prefix": "$"
+    },
+    {
+      "id": "gasCarPrice",
+      "label": "Gas Car Purchase Price",
+      "type": "currency",
+      "default": 30000,
+      "prefix": "$"
+    },
+    {
+      "id": "evMaintenance",
+      "label": "EV Annual Maintenance",
+      "type": "currency",
+      "default": 600,
+      "prefix": "$",
+      "suffix": "/yr"
+    },
+    {
+      "id": "gasMaintenance",
+      "label": "Gas Car Annual Maintenance",
+      "type": "currency",
+      "default": 1200,
+      "prefix": "$",
+      "suffix": "/yr"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "fiveYrEvTotal",
+      "label": "5-Year EV Total Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "fiveYrGasTotal",
+      "label": "5-Year Gas Total Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "fiveYrSavings",
+      "label": "5-Year Savings (EV)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualFuelSavings",
+      "label": "Annual Fuel Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakevenYears",
+      "label": "Breakeven Year",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "cumulativeCost",
+      "label": "Cumulative Cost Over 10 Years",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Total Cost ($)",
+        "colors": [
+          "#2563EB",
+          "#DC2626"
+        ]
+      }
+    }
+  ],
+  "formula": "ev-vs-gas-cost",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "electric-bill-estimator",
+    "home-ev-charger-cost-calculator",
+    "carbon-footprint-calculator",
+    "kwh-cost-calculator",
+    "gas-vs-electric-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Department of Energy Alternative Fuels Data Center, 2026",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "EV fuel = (miles / efficiency) × rate; Gas fuel = (miles / MPG) × price",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 88,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

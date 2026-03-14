@@ -1,0 +1,131 @@
+---
+title: "Heating Fuel Comparison Calculator"
+description: "Compare heating costs across natural gas, propane, heating oil, electric resistance, and heat pump. See cost per million BTU and annual estimates side by side."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+At 2025 national average fuel prices, the cost to deliver one million BTU of useful heat varies dramatically by fuel type: **natural gas costs $17.65/MMBTU**, **propane costs $30.60/MMBTU**, **heating oil costs $24.55/MMBTU**, **electric resistance costs $50.53/MMBTU**, and an **air-source heat pump costs just $18.05/MMBTU**. For a typical 2,000 sq ft home in a cold climate (80 million BTU/year heating load), that translates to annual costs ranging from **$1,412 (natural gas)** to **$4,042 (electric resistance)** — a $2,630 difference for the same amount of heat. Approximately 58 million US homes heat with natural gas, 5.5 million use propane, and 5 million use heating oil. Enter your local fuel prices and home size to see which fuel is cheapest where you live.
+
+</section>
+
+## What Your Results Mean
+
+**Cost per MMBTU** (million BTU) is the standard unit for comparing fuels — it levels the playing field between gallons, therms, and kilowatt-hours by expressing each fuel's cost to deliver the same amount of useful heat after accounting for equipment efficiency. A lower cost per MMBTU means cheaper heating, period. **Annual heating cost** estimates your full-season expense based on your home's heating load and local fuel prices. **Savings vs. most expensive option** shows how much you would save by switching from the costliest fuel to each alternative.
+
+The comparison table ranks all five fuel types from cheapest to most expensive for your specific inputs — because regional fuel prices can completely reverse the national rankings. In the Pacific Northwest, where electricity averages $0.10/kWh, a heat pump is the cheapest option by far. In New England, where electricity hits $0.30/kWh, natural gas or even heating oil may win.
+
+## How to Use This Calculator
+
+1. Enter your home's annual heating load in BTU. If you do not know this, use your annual fuel consumption: multiply therms by 100,000 (gas), gallons by 91,500 (oil), or gallons by 91,500 (propane) to get approximate BTU. Alternatively, a rule of thumb: 25–50 BTU per sq ft per heating degree day (HDD). A 2,000 sq ft home in a 5,000 HDD climate needs roughly 50–100 million BTU/year.
+2. For each fuel you want to compare, enter your local price: natural gas ($/therm), propane ($/gallon), heating oil ($/gallon), electricity ($/kWh).
+3. Enter the efficiency of your equipment: gas furnace AFUE (80–98%), oil boiler AFUE (80–90%), propane furnace AFUE (80–95%), heat pump HSPF (8–13), electric resistance (100%).
+4. Review the side-by-side comparison to identify which fuel delivers the lowest cost per MMBTU at your prices.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Cost per MMBTU} = \frac{\text{Fuel Price per Unit}}{\text{BTU per Unit} \times \text{Efficiency}} \times 1{,}000{,}000
+$$
+$$
+\text{Annual Cost} = \frac{\text{Annual Heating Load (BTU)}}{\text{BTU per Unit} \times \text{Efficiency}} \times \text{Fuel Price per Unit}
+$$
+
+Where:
+- **BTU per Unit:** Natural gas = 100,000 BTU/therm; Propane = 91,500 BTU/gallon; Heating oil = 138,500 BTU/gallon; Electricity = 3,412 BTU/kWh
+- **Efficiency:** Gas furnace AFUE 80–98%; Oil boiler AFUE 80–90%; Propane furnace AFUE 80–95%; Heat pump COP = HSPF ÷ 3.412; Electric resistance = 100% (COP 1.0)
+- **1,000,000** = scaling factor to express cost per million BTU
+
+*Source: U.S. Energy Information Administration — State Energy Data System, Short-Term Energy Outlook (2025); ASHRAE Fundamentals — Fuel Heating Values (2024)*
+
+</div>
+
+## Worked Example 1
+
+**2,000 sq ft home, 5,000 HDD climate, 80 million BTU annual heating load — all 5 fuels at national average prices:**
+
+| Fuel | Price | BTU/Unit | Efficiency | Cost/MMBTU | Annual Cost |
+|---|---|---|---|---|---|
+| Natural gas | $1.50/therm | 100,000 | 90% AFUE | $16.67 | $1,333 |
+| Propane | $2.80/gal | 91,500 | 90% AFUE | $34.00 | $2,720 |
+| Heating oil | $3.50/gal | 138,500 | 85% AFUE | $29.73 | $2,379 |
+| Electric resistance | $0.1724/kWh | 3,412 | 100% | $50.53 | $4,042 |
+| Heat pump (HSPF 10) | $0.1724/kWh | 3,412 | COP 2.93 | $17.24 | $1,379 |
+
+**Rankings at national average prices:**
+1. Natural gas — **$1,333/year** (cheapest)
+2. Heat pump — **$1,379/year** ($46 more than gas)
+3. Heating oil — **$2,379/year** ($1,046 more)
+4. Propane — **$2,720/year** ($1,387 more)
+5. Electric resistance — **$4,042/year** ($2,709 more)
+
+At national average prices, natural gas and heat pumps are nearly tied. Gas wins by $46/year — but the heat pump also provides air conditioning in summer (eliminating the need for a separate AC system), which tips the total HVAC cost in the heat pump's favor for most climates. Electric resistance heating is by far the most expensive option, costing 3× more than gas for the same heat. If you currently heat with electric baseboard or wall heaters, switching to a heat pump cuts your heating bill by 65–70%.
+
+## Worked Example 2
+
+**Rural home choosing between propane ($3.00/gallon) and heat pump ($0.14/kWh), 100 million BTU load:**
+
+**Propane (90% AFUE furnace):**
+- Gallons needed: 100,000,000 ÷ (91,500 × 0.90) = **1,214 gallons**
+- Annual cost: 1,214 × $3.00 = **$3,643/year**
+- Cost per MMBTU: ($3.00 ÷ 82,350) × 1,000,000 = **$36.43**
+
+**Heat pump (HSPF 10, COP 2.93):**
+- kWh needed: 100,000,000 ÷ (3,412 × 2.93) = **10,002 kWh**
+- Annual cost: 10,002 × $0.14 = **$1,400/year**
+- Cost per MMBTU: ($0.14 ÷ 10,000) × 1,000,000 = **$14.00**
+
+**Savings: $3,643 − $1,400 = $2,243/year in favor of the heat pump.**
+
+At $0.14/kWh electricity (common in the Southeast, Midwest, and mountain states), the heat pump costs 62% less than propane. Even after the higher installation cost of a heat pump ($5,000–$8,000 vs. $3,000–$5,000 for a propane furnace), the payback on the price premium is under 2 years. For the 5.5 million US homes that heat with propane — predominantly rural areas without natural gas service — a heat pump is the strongest cost-reduction opportunity available. Cold-climate heat pumps (rated to −13°F) now perform effectively in northern climates where propane has traditionally been the default choice.
+
+## Regional Fuel Price Trends
+
+Fuel prices are not uniform across the US, and regional pricing can completely reverse the national-average rankings. Understanding your region's fuel cost structure is critical before choosing a heating system.
+
+**Northeast (New England + Mid-Atlantic):** Natural gas prices are 20–40% above the national average ($1.80–$2.20/therm) due to pipeline constraints. Heating oil is dominant in older homes — about 4 million of the nation's 5 million oil-heated homes are in the Northeast. Electricity rates are the highest in the continental US ($0.24–$0.35/kWh in Massachusetts, Connecticut, and New York). At these electricity rates, gas and oil often beat heat pumps on operating cost alone — but cold-climate heat pumps at HSPF 12–13 are closing the gap, and the Inflation Reduction Act's $2,000 heat pump tax credit changes the total cost equation.
+
+**Southeast:** Natural gas prices are near or slightly below the national average ($1.30–$1.60/therm). Electricity rates are moderate ($0.12–$0.16/kWh). Heat pumps are already the dominant heating system in new construction because mild winters mean excellent COP performance, and the same unit provides summer cooling. At $0.13/kWh, a heat pump at HSPF 10 costs just $12.88/MMBTU — beating gas in most scenarios.
+
+**Midwest:** Natural gas is cheapest here ($1.00–$1.40/therm) due to proximity to major production areas. Electricity rates are moderate ($0.13–$0.17/kWh). Gas furnaces remain the clear economic winner for heating — a 96% AFUE gas furnace at $1.20/therm costs just $12.50/MMBTU, which even the most efficient heat pump cannot beat at Midwest electricity rates. However, propane-dependent rural Midwest homes (where gas service is unavailable) pay $2.50–$3.50/gallon, making heat pumps the cheaper option.
+
+**West Coast:** Natural gas is moderate ($1.40–$1.80/therm). Electricity is expensive in California ($0.30–$0.42/kWh) but cheap in Washington and Oregon ($0.10–$0.13/kWh due to hydropower). In California, gas beats heat pumps on operating cost — but state incentive programs aggressively subsidize heat pump adoption, and new construction gas bans in several cities make heat pumps the only legal option. In the Pacific Northwest, a heat pump at $0.11/kWh costs just $9.44/MMBTU — the lowest heating cost in the country.
+
+**Mountain West:** Propane and heating oil are common in rural areas. Electricity rates are low to moderate ($0.10–$0.14/kWh). Heat pumps perform well in most mountain communities (winters are cold but dry, which is favorable for heat pump efficiency), and low electricity rates make them very competitive with propane.
+
+## Fuel Energy Content Reference Table
+
+| Fuel | Unit | BTU per Unit | Common Efficiency | Effective BTU/Unit |
+|---|---|---|---|---|
+| Natural gas | 1 therm | 100,000 | 90% AFUE | 90,000 |
+| Propane | 1 gallon | 91,500 | 90% AFUE | 82,350 |
+| Heating oil (#2) | 1 gallon | 138,500 | 85% AFUE | 117,725 |
+| Electricity (resistance) | 1 kWh | 3,412 | 100% | 3,412 |
+| Electricity (heat pump) | 1 kWh | 3,412 | COP 2.93 (HSPF 10) | 10,000 |
+| Cord wood | 1 cord | 20,000,000 | 60–80% | 12–16M |
+| Wood pellets | 1 ton | 16,500,000 | 80–85% | 13.2–14M |
+
+Note that heating oil has the highest energy density per gallon of any common heating fuel — 138,500 BTU/gallon versus 91,500 for propane. This is why oil furnaces fill their tanks less frequently, even though they consume a similar amount of total energy. The heat pump's advantage comes from the COP multiplier: at COP 2.93, one kWh of electricity produces 10,000 BTU of heat — nearly 3× its electrical energy content — by extracting ambient heat from outdoor air.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the cheapest way to heat a house right now?**
+A: At 2025 national average prices, natural gas and air-source heat pumps are virtually tied for cheapest at $16–$18 per million BTU. Gas wins by a small margin in areas with low gas prices (Midwest: $1.00–$1.40/therm), while heat pumps win where electricity is cheap (Southeast: $0.12–$0.14/kWh, Pacific Northwest: $0.10–$0.12/kWh). Electric resistance heating is the most expensive option at $50/MMBTU — approximately 3× the cost of gas or a heat pump. If you heat with electric baseboard, resistance wall units, or an electric furnace, switching to a heat pump is the single largest energy savings opportunity available, cutting heating costs by 60–70%.
+
+**Q: How do I convert between different fuel units to compare prices?**
+A: The key is converting everything to cost per million BTU (MMBTU). Divide your fuel price by the BTU content per unit, then multiply by 1,000,000, and divide by efficiency. For example: gas at $1.50/therm ÷ 100,000 BTU × 1,000,000 ÷ 0.90 efficiency = $16.67/MMBTU. Propane at $2.80/gallon ÷ 91,500 BTU × 1,000,000 ÷ 0.90 = $34.00/MMBTU. This apples-to-apples comparison eliminates the confusion of comparing therms to gallons to kWh. The fuel with the lowest cost per MMBTU is your cheapest heating option.
+
+**Q: Is it worth switching from oil heat to a heat pump?**
+A: For most oil-heated homes, yes. Heating oil at $3.50/gallon with an 85% AFUE boiler costs $29.73/MMBTU. A heat pump at $0.17/kWh with HSPF 10 costs $17.24/MMBTU — a 42% reduction. For a 2,000 sq ft home using 80 million BTU/year, that is a savings of approximately $1,000/year. A cold-climate heat pump system costs $8,000–$15,000 installed, minus the $2,000 federal tax credit (IRA, through 2032), giving a payback period of 6–13 years on the price premium. In high-electricity-rate states like Connecticut ($0.30/kWh), the math is tighter — cost per MMBTU rises to $30.05, essentially equal to oil. Run the numbers with your actual local rates before committing.
+
+</div>
+
+## Sources & Methodology
+
+Fuel cost comparisons use the standard cost-per-MMBTU formula: (price per unit ÷ BTU per unit × 1,000,000) ÷ equipment efficiency. BTU content per fuel unit follows ASHRAE Fundamentals handbook values: natural gas 100,000 BTU/therm, propane 91,500 BTU/gallon, heating oil (#2) 138,500 BTU/gallon, electricity 3,412 BTU/kWh. National average fuel prices are from the U.S. Energy Information Administration: natural gas from the Natural Gas Monthly ($1.50/therm residential average, 2025), propane from the Weekly Heating Oil and Propane Prices Report ($2.80/gallon, winter 2025), heating oil from the same report ($3.50/gallon), and electricity from the Electric Power Monthly ($0.1724/kWh residential average). Equipment efficiency assumptions represent typical modern installations: gas furnace 90% AFUE, oil boiler 85% AFUE, propane furnace 90% AFUE, heat pump HSPF 10 (COP 2.93). The EIA reports approximately 58 million homes heat with natural gas, 5.5 million with propane, and 5 million with heating oil as of the 2022 RECS.

@@ -1,0 +1,119 @@
+---
+title: "Home Battery Backup Calculator"
+description: "Calculate the right battery backup size for your home. Enter your essential load in watts and backup hours to get recommended kWh capacity and cost."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A home running essentials only — refrigerator, LED lights, Wi-Fi router, and phone chargers at 500 watts — needs just **7.0 kWh** of usable battery capacity for 12 hours of backup, which fits inside a single Tesla Powerwall 3 (13.5 kWh usable, **$8,500–$11,500 installed**). Add central AC and a well pump (5,000 watts total) and your 8-hour backup requirement jumps to **46.8 kWh** — requiring 3–4 Powerwalls or a comparable multi-battery stack costing **$25,000–$40,000**. The gap between "keep the lights on" and "run everything" is where most homeowners overspend or undersize. This calculator finds the right capacity for your actual needs.
+
+</section>
+
+## What Your Results Mean
+
+**Total load (watts)** is the combined continuous power draw of every appliance you want to keep running during an outage. **Required capacity (kWh)** is how much stored energy you need to power that load for your desired backup duration, adjusted for real-world losses. **Usable capacity** accounts for depth of discharge (DoD) — most lithium batteries should only be drained to 80–90% to maximize lifespan — and inverter efficiency losses of 3–5%. **Estimated cost** gives a price range based on current market pricing for residential battery systems including installation.
+
+## How to Use This Calculator
+
+1. List every appliance you want powered during an outage. Start with essentials: refrigerator, lights, modem/router, phone chargers.
+2. Enter the wattage for each appliance (check the label or use the reference table below).
+3. Set your desired backup duration in hours. For grid outages, 8–12 hours covers most events; 24–48 hours covers extended storms.
+4. Set depth of discharge (DoD) — use 90% for LFP (lithium iron phosphate) batteries like the Tesla Powerwall and Enphase IQ, or 80% for NMC (nickel manganese cobalt) chemistries.
+5. Set inverter efficiency at 95% (industry standard for modern hybrid inverters).
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Required Capacity (kWh)} = \frac{\text{Total Watts} \times \text{Backup Hours}}{\text{DoD} \times \text{Inverter Efficiency} \times 1{,}000}
+$$
+
+Where:
+- **Total Watts** = sum of all appliance wattages you want to power simultaneously
+- **Backup Hours** = desired runtime in hours
+- **DoD** = Depth of Discharge (0.90 for LFP, 0.80 for NMC — the usable fraction of rated capacity)
+- **Inverter Efficiency** = typically 0.95 (95% of stored energy reaches appliances; 5% lost as heat)
+- **1,000** = converts watt-hours to kilowatt-hours
+
+*Source: NREL — Residential Battery Storage Technical Report (2024); Tesla — Powerwall Technical Specifications (2025); EnergySage — Home Battery Buyer's Guide (2025)*
+
+</div>
+
+## Worked Example 1
+
+**Essentials-only backup: refrigerator, lights, Wi-Fi, phone chargers for 12 hours:**
+
+| Appliance | Watts |
+|---|---|
+| Refrigerator | 150 W |
+| LED lights (8 bulbs) | 80 W |
+| Modem + router | 25 W |
+| Phone chargers (3) | 15 W |
+| Laptop | 60 W |
+| Ceiling fan | 70 W |
+| Gas furnace blower (if winter) | 100 W (intermittent) |
+| **Total** | **500 W** |
+
+- Raw energy needed: 500 W × 12 hours = **6,000 Wh = 6.0 kWh**
+- Adjusted for 90% DoD: 6.0 ÷ 0.90 = **6.67 kWh**
+- Adjusted for 95% inverter efficiency: 6.67 ÷ 0.95 = **7.0 kWh**
+- **Recommended battery: 7.0 kWh minimum rated capacity**
+
+A single Tesla Powerwall 3 (13.5 kWh) handles this with 6.5 kWh to spare, giving you nearly 24 hours of essentials-only backup instead of 12. An Enphase IQ Battery 5P (5.0 kWh) would provide about 8.5 hours of essentials — adequate for most grid outages but tight for extended events. At $8,500–$11,500 for a Powerwall or $5,000–$7,000 for an Enphase 5P, the essentials-only approach keeps costs manageable.
+
+## Worked Example 2
+
+**Full comfort backup: essentials plus central AC and well pump for 8 hours:**
+
+| Appliance | Watts |
+|---|---|
+| Central AC (3-ton) | 3,500 W |
+| Well pump (1/2 HP) | 750 W |
+| Refrigerator | 150 W |
+| LED lights (12 bulbs) | 120 W |
+| Modem + router | 25 W |
+| TV | 100 W |
+| Microwave (intermittent) | 200 W (averaged) |
+| Misc electronics | 155 W |
+| **Total** | **5,000 W** |
+
+- Raw energy needed: 5,000 W × 8 hours = **40,000 Wh = 40.0 kWh**
+- Adjusted for 90% DoD: 40.0 ÷ 0.90 = **44.4 kWh**
+- Adjusted for 95% inverter efficiency: 44.4 ÷ 0.95 = **46.8 kWh**
+- **Recommended battery: 46.8 kWh minimum rated capacity**
+
+This requires 3–4 Tesla Powerwalls (3 × 13.5 = 40.5 kWh, tight; 4 × 13.5 = 54 kWh, comfortable) at a cost of **$25,500–$46,000 installed**. Alternatively, the Franklin WholePower system offers scalable 13.6 kWh modules. The high cost of full-comfort backup is why most homeowners choose a middle path: back up essentials plus one or two high-priority loads (like the well pump), and forgo AC during outages or run a portable generator for the AC compressor alone. Dropping the AC from this scenario reduces the requirement to 12.0 kWh — well within a single Powerwall.
+
+## Battery Comparison: Popular Home Battery Systems
+
+| Battery | Usable Capacity | Continuous Output | Chemistry | Installed Cost | Warranty |
+|---|---|---|---|---|---|
+| Tesla Powerwall 3 | 13.5 kWh | 11.5 kW | LFP | $8,500–$11,500 | 10 yr |
+| Enphase IQ Battery 5P | 5.0 kWh | 3.84 kW | LFP | $5,000–$7,000 | 15 yr |
+| Franklin WholePower | 13.6 kWh | 10.0 kW | LFP | $10,000–$14,000 | 12 yr |
+| SonnenCore+ | 10.0 kWh | 4.8 kW | LFP | $10,000–$15,000 | 10 yr |
+| Generac PWRcell | 9.0–18.0 kWh | 4.5–9.0 kW | NMC | $12,000–$20,000 | 10 yr |
+
+LFP (lithium iron phosphate) batteries offer 5,000+ charge cycles and superior thermal safety. NMC (nickel manganese cobalt) batteries offer higher energy density in a smaller footprint but typically last 3,000 cycles. For home backup applications where longevity matters more than weight, LFP is the preferred chemistry as of 2025–2026.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How many kWh of battery backup does the average home need?**
+A: For essentials only (refrigerator, lights, router, phone chargers), 5–10 kWh covers 8–16 hours. For essentials plus a well pump or medical equipment, plan for 10–15 kWh. For full-comfort backup including central AC, 40–55 kWh is typical for an 8-hour outage. Most homeowners land in the 10–15 kWh range (one Powerwall or equivalent), which handles everything except central AC and electric heating at a cost of $8,000–$15,000 installed. The right size depends on your specific loads and how long outages typically last in your area — check your utility's outage history.
+
+**Q: How much does a home battery backup system cost?**
+A: A single-battery system (10–14 kWh) costs $8,000–$15,000 installed, including the battery unit, hybrid inverter, electrical panel work, and permitting. Multi-battery systems for whole-home backup run $20,000–$45,000. The 30% federal solar ITC applies to batteries installed alongside solar panels, reducing a $12,000 battery to $8,400 out of pocket. Some utilities offer additional rebates of $1,000–$5,000 for battery installations, particularly in California (SGIP program), Massachusetts (ConnectedSolutions), and Vermont (Bring Your Own Device programs). Without solar pairing, the standalone battery federal tax credit is 30% through 2032 under the Inflation Reduction Act.
+
+**Q: Can a home battery replace a generator?**
+A: For outages lasting 4–24 hours, a battery is a superior alternative to a portable generator — it starts instantly (no setup), runs silently, produces no carbon monoxide, requires no fuel, and operates indoors. For extended outages beyond 24–48 hours, a battery alone will eventually deplete unless paired with solar panels that recharge it daily. A solar-plus-battery system provides indefinite backup during daylight hours, which a generator cannot match without ongoing fuel delivery. The exception is extreme loads like central AC in summer: a battery handling 3,500 W AC drains quickly, while a gas generator can run continuously with fuel. Many homeowners install a battery for essentials and keep a small portable generator as a backup for extended events.
+
+</div>
+
+## Sources & Methodology
+
+Battery sizing calculations use the standard formula: required capacity = (watts × hours) ÷ (DoD × inverter efficiency). Depth of discharge values (90% for LFP, 80% for NMC) reflect manufacturer recommendations for cycle longevity and are consistent with NREL's Residential Battery Storage Technical Report (2024). Inverter efficiency of 95% is the industry standard for modern hybrid inverters including Enphase, SolarEdge, and Tesla integrated systems. Battery pricing data is from EnergySage's Home Battery Buyer's Guide (2025), reflecting installed costs including labor, permitting, and electrical panel integration. Appliance wattage values are from the U.S. Department of Energy's Energy Saver appliance database and ENERGY STAR product specifications.

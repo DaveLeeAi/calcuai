@@ -1,0 +1,184 @@
+{
+  "id": "heat-pump-water-heater-payback-calculator",
+  "title": "Heat Pump Water Heater Payback Calculator",
+  "slug": "heat-pump-water-heater-payback-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "heat pump water heater payback calculator",
+  "secondaryKeywords": [
+    "HPWH savings calculator",
+    "heat pump water heater ROI",
+    "hybrid water heater payback",
+    "heat pump water heater vs gas"
+  ],
+  "metaTitle": "Heat Pump Water Heater Payback Calculator — Savings & ROI | CalcAI",
+  "metaDescription": "Calculate your heat pump water heater payback period and annual savings. A typical HPWH saves $300–$550/year vs a standard electric tank, paying for itself in 3–5 years.",
+  "inputs": [
+    {
+      "id": "currentType",
+      "label": "Current Water Heater Type",
+      "type": "select",
+      "default": "electric-tank",
+      "options": [
+        { "value": "electric-tank", "label": "Standard Electric Tank" },
+        { "value": "gas-tank", "label": "Gas Tank (natural gas)" },
+        { "value": "propane-tank", "label": "Propane Tank" },
+        { "value": "electric-tankless", "label": "Electric Tankless" },
+        { "value": "gas-tankless", "label": "Gas Tankless" }
+      ]
+    },
+    {
+      "id": "householdSize",
+      "label": "Household Size",
+      "type": "select",
+      "default": "3",
+      "options": [
+        { "value": "1", "label": "1 Person (~20 gal/day)" },
+        { "value": "2", "label": "2 People (~40 gal/day)" },
+        { "value": "3", "label": "3 People (~55 gal/day)" },
+        { "value": "4", "label": "4 People (~65 gal/day)" },
+        { "value": "5", "label": "5+ People (~80 gal/day)" }
+      ]
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "gasRate",
+      "label": "Natural Gas Rate",
+      "type": "currency",
+      "default": 1.50,
+      "min": 0.10,
+      "max": 10,
+      "step": 0.01,
+      "prefix": "$",
+      "suffix": "/therm",
+      "helpText": "Used only for gas/propane current heater"
+    },
+    {
+      "id": "hpwhCost",
+      "label": "Heat Pump Water Heater Cost (installed)",
+      "type": "currency",
+      "default": 3500,
+      "min": 1000,
+      "max": 8000,
+      "prefix": "$",
+      "helpText": "Typical installed cost: $2,500–$4,500"
+    },
+    {
+      "id": "currentWhCost",
+      "label": "Current Water Heater Replacement Cost",
+      "type": "currency",
+      "default": 1200,
+      "min": 0,
+      "max": 5000,
+      "prefix": "$",
+      "helpText": "Cost to replace with another unit of same type"
+    },
+    {
+      "id": "federalCredit",
+      "label": "Federal Tax Credit (25C)",
+      "type": "currency",
+      "default": 2000,
+      "min": 0,
+      "max": 2000,
+      "prefix": "$",
+      "helpText": "Up to $2,000 for qualifying HPWH (2025)"
+    },
+    {
+      "id": "stateRebate",
+      "label": "State/Utility Rebate",
+      "type": "currency",
+      "default": 0,
+      "min": 0,
+      "max": 5000,
+      "prefix": "$"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualSavings",
+      "label": "Annual Energy Savings",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "paybackYears",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1,
+      "suffix": " years",
+      "highlight": true
+    },
+    {
+      "id": "hpwhAnnualCost",
+      "label": "HPWH Annual Operating Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "currentAnnualCost",
+      "label": "Current Heater Annual Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "incrementalCost",
+      "label": "Net Incremental Cost (after credits)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "fifteenYearSavings",
+      "label": "15-Year Lifetime Savings",
+      "type": "single-value",
+      "format": "currency"
+    }
+  ],
+  "formula": "heat-pump-water-heater-payback",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "water-heater-energy-cost-calculator",
+    "energy-rebate-calculator",
+    "heat-pump-vs-gas-furnace-calculator",
+    "gas-vs-electric-cost-calculator",
+    "home-heating-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE — Heat Pump Water Heater Savings (2025); IRS — Energy Efficient Home Improvement Credit (25C)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "HPWH annual cost = (hot water BTU / HPWH COP) / 3412 × electric rate; Savings = current annual cost − HPWH annual cost; Payback = (HPWH cost − current replacement − credits) / annual savings",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "water-heater-energy-cost-calculator"
+  ],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

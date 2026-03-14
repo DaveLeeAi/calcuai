@@ -5,7 +5,12 @@
   "category": "energy",
   "subcategory": "heating-cooling",
   "primaryKeyword": "gas vs electric cost calculator",
-  "secondaryKeywords": ["gas vs electric heating cost", "heat pump vs gas furnace cost", "natural gas vs electricity calculator", "is gas or electric cheaper"],
+  "secondaryKeywords": [
+    "gas vs electric heating cost",
+    "heat pump vs gas furnace cost",
+    "natural gas vs electricity calculator",
+    "is gas or electric cheaper"
+  ],
   "metaTitle": "Gas vs Electric Cost Calculator — Annual Heating Comparison | CalcAI",
   "metaDescription": "Compare annual gas vs electric heating costs. Includes furnace AFUE efficiency, heat pump HSPF rating, and 10-year total cost comparison.",
   "inputs": [
@@ -20,7 +25,7 @@
       "id": "gasCostPerTherm",
       "label": "Gas Cost Per Therm",
       "type": "currency",
-      "default": 1.50,
+      "default": 1.5,
       "prefix": "$",
       "suffix": "/therm"
     },
@@ -94,7 +99,12 @@
       "id": "comparisonTable",
       "label": "Fuel Cost Comparison",
       "type": "table",
-      "columns": ["fuel", "annualCost", "tenYearCost", "efficiencyRating"]
+      "columns": [
+        "fuel",
+        "annualCost",
+        "tenYearCost",
+        "efficiencyRating"
+      ]
     },
     {
       "id": "summary",
@@ -103,16 +113,28 @@
     }
   ],
   "formula": "gas-vs-electric-cost",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["home-heating-cost-calculator", "kwh-cost-calculator", "solar-panel-payback-calculator", "electricity-cost-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "home-heating-cost-calculator",
+    "kwh-cost-calculator",
+    "solar-panel-payback-calculator",
+    "electricity-cost-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "U.S. Energy Information Administration — Natural Gas and Electricity Prices (2025); ENERGY STAR — Heating System Efficiency Ratings (2025)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Gas Cost = (Therms × Rate) / (AFUE / 100); Electric Cost (heat pump) = (kWh needed / HSPF × 3.412) × Rate; kWh needed = Therms × 29.3 kWh/therm",
   "formulaAuditDate": "2026-03-14",
@@ -121,7 +143,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

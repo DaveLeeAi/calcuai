@@ -15,6 +15,7 @@ import {
   getSpec,
 } from '@/lib/content-loader';
 import salesTaxData from '@/content/data/us-sales-tax-2026.json';
+import electricityData from '@/content/data/us-electricity-rates-2026.json';
 import { Breadcrumbs } from '@/components/layout/Breadcrumbs';
 import CalculatorRenderer from '@/components/calculator/CalculatorRenderer';
 import ShareButton from '@/components/ui/ShareButton';
@@ -80,7 +81,13 @@ export async function generateStaticParams() {
     slug: stateNameToSlug(s.stateName),
   }));
 
-  return [...calcParams, ...subParams, ...stateTaxParams];
+  // State electricity rate pages live at /energy/{state}-electricity-rates
+  const elecStateParams = (electricityData.states as StateElectricityEntry[]).map((s) => ({
+    category: 'energy',
+    slug: stateNameToElecSlug(s.stateName),
+  }));
+
+  return [...calcParams, ...subParams, ...stateTaxParams, ...elecStateParams];
 }
 
 // ═══════════════════════════════════════════════════════
@@ -118,6 +125,35 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       const canonicalUrl = `${siteConfig.url}/finance/${params.slug}`;
       const title = `${stateName} Sales Tax Calculator (2026) — Free Online Calculator`;
       const description = `Calculate ${stateName} sales tax instantly. State rate: ${fmt(stateTaxRate)}%, average local: ${fmt(avgLocalTaxRate)}%, combined: ${fmt(combinedRate)}%. Rates updated January 2026.`;
+      return {
+        title,
+        description,
+        alternates: { canonical: canonicalUrl },
+        openGraph: {
+          title,
+          description,
+          url: canonicalUrl,
+          type: 'website',
+          locale: 'en_US',
+          siteName: siteConfig.name,
+        },
+        twitter: {
+          card: 'summary_large_image',
+          title,
+          description,
+        },
+      };
+    }
+  }
+
+  // State electricity rate page
+  if (params.category === 'energy' && params.slug.endsWith('-electricity-rates')) {
+    const entry = getElecStateBySlug(params.slug);
+    if (entry) {
+      const { stateName, avgRateCentsPerKwh } = entry;
+      const canonicalUrl = `${siteConfig.url}/energy/${params.slug}`;
+      const title = `${stateName} Electricity Rates (2026) — Average Cost Per kWh`;
+      const description = `Average electricity rate in ${stateName} is ${avgRateCentsPerKwh.toFixed(2)}¢/kWh as of 2026. Compare to the national average of ${(electricityData.nationalAvgResidentialCentsPerKwh as number).toFixed(2)}¢/kWh and estimate your monthly bill.`;
       return {
         title,
         description,
@@ -538,6 +574,186 @@ function buildStateSpec(
 }
 
 // ═══════════════════════════════════════════════════════
+// State Electricity Rates — types, helpers, schema builders
+// ═══════════════════════════════════════════════════════
+
+interface StateElectricityEntry {
+  stateCode: string;
+  stateName: string;
+  avgRateCentsPerKwh: number;
+  prevYearRate: number;
+  yoyChangePercent: number;
+  nationalRank: number;
+  deregulated: boolean;
+  region: string;
+}
+
+const NATIONAL_AVG_ELEC = electricityData.nationalAvgResidentialCentsPerKwh as number;
+const NATIONAL_AVG_USAGE = electricityData.nationalAvgMonthlyUsageKwh as number;
+
+function stateNameToElecSlug(stateName: string): string {
+  return (
+    stateName
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/[^a-z0-9-]/g, '') + '-electricity-rates'
+  );
+}
+
+function getElecStateBySlug(slug: string): StateElectricityEntry | undefined {
+  return (electricityData.states as StateElectricityEntry[]).find(
+    (s) => stateNameToElecSlug(s.stateName) === slug
+  );
+}
+
+interface ElecNeighborLink {
+  stateName: string;
+  slug: string;
+  avgRateCentsPerKwh: number;
+}
+
+function getElecNeighborLinks(stateCode: string): ElecNeighborLink[] {
+  const neighborCodes = (STATE_NEIGHBORS[stateCode] ?? []).slice(0, 4);
+  return neighborCodes
+    .map((code) => {
+      const entry = (electricityData.states as StateElectricityEntry[]).find(
+        (s) => s.stateCode === code
+      );
+      if (!entry) return null;
+      return {
+        stateName: entry.stateName,
+        slug: stateNameToElecSlug(entry.stateName),
+        avgRateCentsPerKwh: entry.avgRateCentsPerKwh,
+      };
+    })
+    .filter((n): n is ElecNeighborLink => n !== null);
+}
+
+function buildElecStateSpec(
+  baseSpec: CalculatorSpec,
+  rate: number
+): CalculatorSpec {
+  return {
+    ...baseSpec,
+    inputs: baseSpec.inputs.map((input) => {
+      if (input.id === 'ratePerKwh') {
+        return { ...input, defaultValue: rate / 100 };
+      }
+      return input;
+    }),
+  };
+}
+
+function buildElecWebPageSchema(
+  entry: StateElectricityEntry,
+  slug: string,
+  title: string,
+  description: string
+): Record<string, unknown> {
+  const url = `${siteConfig.url}/energy/${slug}`;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${url}/#webpage`,
+    name: title,
+    description,
+    url,
+    isPartOf: { '@id': `${siteConfig.url}/#website` },
+    about: {
+      '@type': 'Thing',
+      name: `${entry.stateName} Electricity Rates`,
+    },
+    author: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+    },
+    publisher: {
+      '@type': 'Organization',
+      '@id': `${siteConfig.url}/#organization`,
+      name: siteConfig.name,
+    },
+    dateModified: electricityData.effectiveDate,
+    datePublished: electricityData.effectiveDate,
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['.bluf-intro', 'h1'],
+    },
+  };
+}
+
+function buildElecBreadcrumbSchema(stateName: string, slug: string): Record<string, unknown> {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: siteConfig.url,
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Energy',
+        item: `${siteConfig.url}/energy`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Electric Bill Estimator',
+        item: `${siteConfig.url}/energy/electric-bill-estimator`,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: `${stateName} Electricity Rates`,
+        item: `${siteConfig.url}/energy/${slug}`,
+      },
+    ],
+  };
+}
+
+function buildElecFAQSchema(entry: StateElectricityEntry): Record<string, unknown> {
+  const { stateName, avgRateCentsPerKwh, deregulated } = entry;
+  const monthlyBill = ((NATIONAL_AVG_USAGE * avgRateCentsPerKwh) / 100).toFixed(2);
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: `What is the average electricity rate in ${stateName}?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `The average residential electricity rate in ${stateName} is ${avgRateCentsPerKwh.toFixed(2)}¢ per kWh as of 2026, compared to the national average of ${NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `Is ${stateName} a deregulated electricity market?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: deregulated
+            ? `Yes, ${stateName} has a deregulated electricity market, which means residential customers can choose their electricity supplier. This competition can lead to lower rates and more plan options, but it also requires consumers to compare offers carefully.`
+            : `No, ${stateName} has a regulated electricity market. Your utility company is the sole provider of electricity in your area, and rates are set by the state public utility commission.`,
+        },
+      },
+      {
+        '@type': 'Question',
+        name: `How much does the average ${stateName} household pay for electricity?`,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: `Based on the average rate of ${avgRateCentsPerKwh.toFixed(2)}¢/kWh and national average usage of ${NATIONAL_AVG_USAGE} kWh/month, the estimated monthly electric bill in ${stateName} is approximately $${monthlyBill}. Actual bills vary based on household size, climate, and energy efficiency.`,
+        },
+      },
+    ],
+  };
+}
+
+// ═══════════════════════════════════════════════════════
 // Page Component
 // ═══════════════════════════════════════════════════════
 
@@ -546,7 +762,8 @@ export default function SlugPage({ params }: Props) {
 
   if (
     resolution.type === 'not-found' &&
-    !(params.category === 'finance' && params.slug.endsWith('-sales-tax'))
+    !(params.category === 'finance' && params.slug.endsWith('-sales-tax')) &&
+    !(params.category === 'energy' && params.slug.endsWith('-electricity-rates'))
   ) {
     notFound();
   }
@@ -729,7 +946,7 @@ export default function SlugPage({ params }: Props) {
   // ═══════════════════════════════════════════════════════
   // STATE SALES TAX PAGE
   // ═══════════════════════════════════════════════════════
-  if (resolution.type === 'not-found') {
+  if (resolution.type === 'not-found' && params.category === 'finance' && params.slug.endsWith('-sales-tax')) {
     const entry = getStateBySlug(params.slug);
     if (!entry) notFound();
 
@@ -1211,6 +1428,378 @@ export default function SlugPage({ params }: Props) {
               </Link>
             </div>
           </section>
+
+        </div>
+      </article>
+    );
+  }
+
+  // ═══════════════════════════════════════════════════════
+  // STATE ELECTRICITY RATE PAGE
+  // ═══════════════════════════════════════════════════════
+  if (
+    resolution.type === 'not-found' &&
+    params.category === 'energy' &&
+    params.slug.endsWith('-electricity-rates')
+  ) {
+    const elecEntry = getElecStateBySlug(params.slug);
+    if (!elecEntry) notFound();
+
+    const elecBaseSpec = getSpec('energy', 'electric-bill-estimator');
+    if (!elecBaseSpec) notFound();
+
+    const {
+      stateName: elecStateName,
+      stateCode: elecStateCode,
+      avgRateCentsPerKwh,
+      prevYearRate,
+      yoyChangePercent,
+      nationalRank,
+      deregulated,
+      region,
+    } = elecEntry;
+
+    const elecStateSpec = buildElecStateSpec(elecBaseSpec, avgRateCentsPerKwh);
+    const elecNeighborLinks = getElecNeighborLinks(elecStateCode);
+
+    const estMonthlyBill = ((NATIONAL_AVG_USAGE * avgRateCentsPerKwh) / 100);
+    const rateDiffFromNational = avgRateCentsPerKwh - NATIONAL_AVG_ELEC;
+    const isAboveNational = rateDiffFromNational > 0.5;
+    const isBelowNational = rateDiffFromNational < -0.5;
+    const comparisonWord = isAboveNational ? 'above' : isBelowNational ? 'below' : 'close to';
+    const yoyDirection = yoyChangePercent > 0 ? 'up' : yoyChangePercent < 0 ? 'down' : 'unchanged';
+    const yoyAbs = Math.abs(yoyChangePercent);
+
+    const elecTitle = `${elecStateName} Electricity Rates (2026) — Average Cost Per kWh`;
+    const elecDescription = `Average electricity rate in ${elecStateName} is ${avgRateCentsPerKwh.toFixed(2)}¢/kWh as of 2026. Compare to the national average of ${NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh and estimate your monthly bill.`;
+    const elecCanonicalSlug = params.slug;
+
+    const elecWebPageSchema = buildElecWebPageSchema(elecEntry, elecCanonicalSlug, elecTitle, elecDescription);
+    const elecBreadcrumbSchema = buildElecBreadcrumbSchema(elecStateName, elecCanonicalSlug);
+    const elecFaqSchema = buildElecFAQSchema(elecEntry);
+
+    const regionLabels: Record<string, string> = {
+      'northeast': 'Northeast',
+      'southeast': 'Southeast',
+      'midwest': 'Midwest',
+      'south-central': 'South Central',
+      'west': 'West',
+    };
+    const regionLabel = regionLabels[region] || region;
+
+    return (
+      <article>
+        <JsonLd data={elecWebPageSchema} id="schema-webpage" />
+        <JsonLd data={elecBreadcrumbSchema} id="schema-breadcrumb" />
+        <JsonLd data={elecFaqSchema} id="schema-faq" />
+
+        <Breadcrumbs
+          items={[
+            { label: 'Home', href: '/' },
+            { label: 'Energy', href: '/energy' },
+            { label: 'Electric Bill Estimator', href: '/energy/electric-bill-estimator' },
+            { label: `${elecStateName} Electricity Rates` },
+          ]}
+        />
+
+        <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mt-4 mb-4">
+          {elecTitle}
+        </h1>
+
+        <div className="bluf-intro text-base text-gray-700 dark:text-slate-300 leading-relaxed mb-8" data-speakable="true">
+          <p>
+            The{' '}
+            <strong>
+              average residential electricity rate in {elecStateName} is {avgRateCentsPerKwh.toFixed(2)}¢ per kWh
+            </strong>{' '}
+            as of 2026, which is {comparisonWord} the national average of{' '}
+            <strong>{NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh</strong>.
+            {yoyDirection === 'unchanged'
+              ? ` Rates have remained stable compared to the previous year.`
+              : ` Rates are ${yoyDirection} ${yoyAbs.toFixed(1)}% year-over-year from ${prevYearRate.toFixed(2)}¢/kWh.`}
+            {' '}Based on average US household usage of {NATIONAL_AVG_USAGE} kWh/month, the estimated
+            monthly electric bill in {elecStateName} is approximately{' '}
+            <strong>{fmtUSD(estMonthlyBill)}</strong>.
+            {deregulated && (
+              <>{' '}{elecStateName} has a deregulated electricity market, which means you can shop for competitive rates from multiple providers.</>
+            )}
+          </p>
+        </div>
+
+        <div className="my-8">
+          <CalculatorRenderer spec={elecStateSpec} />
+        </div>
+
+        <div className="mx-auto max-w-calculator mt-3 mb-8 flex items-center justify-between">
+          <ShareButton title={elecTitle} />
+          <FeedbackWidget calculatorSlug={`${elecStateCode.toLowerCase()}-electricity-rates`} calculatorTitle={elecTitle} inline />
+        </div>
+
+        <InlineTableOfContents containerSelector="article" />
+
+        <div className="space-y-8">
+
+          <section id="rates">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Electricity Rates in {elecStateName}
+            </h2>
+
+            <div className="space-y-4 text-gray-700 dark:text-slate-300">
+              <p>
+                {elecStateName} ranks <strong>#{nationalRank} out of 50 states</strong> (plus DC)
+                for residential electricity costs, where #1 is cheapest and #50 is most expensive.
+                The current average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh
+                {isAboveNational
+                  ? ` is ${Math.abs(rateDiffFromNational).toFixed(2)}¢ above`
+                  : isBelowNational
+                    ? ` is ${Math.abs(rateDiffFromNational).toFixed(2)}¢ below`
+                    : ' is close to'}{' '}
+                the national average.
+              </p>
+
+              <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                <p className="text-sm font-medium text-blue-800 dark:text-blue-300">
+                  {elecStateName} Electricity at a Glance (2026)
+                </p>
+                <ul className="mt-2 space-y-1 text-sm text-blue-700 dark:text-blue-400">
+                  <li>Average rate: {avgRateCentsPerKwh.toFixed(2)}¢/kWh</li>
+                  <li>Previous year: {prevYearRate.toFixed(2)}¢/kWh</li>
+                  <li>Year-over-year change: {yoyChangePercent > 0 ? '+' : ''}{yoyChangePercent.toFixed(1)}%</li>
+                  <li>National rank: #{nationalRank} (1 = cheapest)</li>
+                  <li>Deregulated: {deregulated ? 'Yes' : 'No'}</li>
+                  <li>Source: EIA / Choose Energy, 2026</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section id="comparison">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              How {elecStateName} Compares to the National Average
+            </h2>
+
+            <div className="space-y-4 text-gray-700 dark:text-slate-300">
+              {isAboveNational ? (
+                <p>
+                  {elecStateName}&apos;s average electricity rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh
+                  is <strong>{Math.abs(rateDiffFromNational).toFixed(2)}¢ above</strong> the national average
+                  of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh. At the national average usage of{' '}
+                  {NATIONAL_AVG_USAGE} kWh/month, {elecStateName} residents pay roughly{' '}
+                  <strong>{fmtUSD(Math.abs(rateDiffFromNational) * NATIONAL_AVG_USAGE / 100)} more per month</strong>{' '}
+                  than the national average household. Over a full year, that adds up to approximately{' '}
+                  {fmtUSD(Math.abs(rateDiffFromNational) * NATIONAL_AVG_USAGE * 12 / 100)} in additional
+                  electricity costs.
+                </p>
+              ) : isBelowNational ? (
+                <p>
+                  {elecStateName}&apos;s average electricity rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh
+                  is <strong>{Math.abs(rateDiffFromNational).toFixed(2)}¢ below</strong> the national average
+                  of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh. At the national average usage of{' '}
+                  {NATIONAL_AVG_USAGE} kWh/month, {elecStateName} residents save roughly{' '}
+                  <strong>{fmtUSD(Math.abs(rateDiffFromNational) * NATIONAL_AVG_USAGE / 100)} per month</strong>{' '}
+                  compared to the national average household. Over a full year, that amounts to
+                  approximately {fmtUSD(Math.abs(rateDiffFromNational) * NATIONAL_AVG_USAGE * 12 / 100)} in savings.
+                </p>
+              ) : (
+                <p>
+                  {elecStateName}&apos;s average electricity rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh
+                  is <strong>close to the national average</strong> of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh.
+                  Monthly bills in {elecStateName} are roughly in line with what the average US household pays.
+                </p>
+              )}
+            </div>
+          </section>
+
+          <section id="why-rates-differ">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              Why Electricity Rates Differ in {elecStateName}
+            </h2>
+
+            <div className="space-y-4 text-gray-700 dark:text-slate-300">
+              <p>
+                Electricity rates in {elecStateName} are influenced by several factors specific to the{' '}
+                {regionLabel} region. Key drivers include the fuel mix used for power generation,
+                transmission and distribution infrastructure costs, state energy policy, and seasonal demand patterns.
+              </p>
+
+              {deregulated ? (
+                <div className="bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg p-4">
+                  <p className="text-sm font-semibold text-amber-800 dark:text-amber-300">
+                    Deregulated Market
+                  </p>
+                  <p className="mt-1 text-sm text-amber-700 dark:text-amber-400">
+                    {elecStateName} has a deregulated electricity market, meaning customers can choose
+                    from multiple retail electricity providers. While competition can drive rates lower,
+                    it also means rates can vary significantly between providers and plan types. Fixed-rate,
+                    variable-rate, and time-of-use plans are typically available. Shopping and comparing
+                    providers regularly can help you secure a better rate.
+                  </p>
+                </div>
+              ) : (
+                <p>
+                  {elecStateName} has a regulated electricity market, where your local utility is the sole
+                  electricity provider. Rates are reviewed and approved by the state public utility commission,
+                  providing more rate stability but fewer options for consumers to shop for lower prices.
+                </p>
+              )}
+
+              <p>
+                Other factors that affect {elecStateName}&apos;s electricity rates include the state&apos;s
+                reliance on specific fuel sources (natural gas, coal, nuclear, hydroelectric, wind, or solar),
+                the age and efficiency of the power grid, weather-driven demand peaks, and renewable energy
+                mandates or incentive programs.
+              </p>
+            </div>
+          </section>
+
+          <section id="lower-bill">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              How to Lower Your Electric Bill in {elecStateName}
+            </h2>
+
+            <div className="space-y-4 text-gray-700 dark:text-slate-300">
+              <p>
+                Regardless of {elecStateName}&apos;s average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh,
+                there are practical steps you can take to reduce your monthly electricity bill:
+              </p>
+
+              <ul className="list-disc list-inside space-y-2">
+                <li>
+                  <strong>Upgrade to LED lighting</strong> — replacing incandescent bulbs with LEDs can
+                  reduce lighting energy use by up to 75%.
+                </li>
+                <li>
+                  <strong>Use a programmable thermostat</strong> — adjusting heating and cooling schedules
+                  when you&apos;re away or asleep can save 10-15% on HVAC costs.
+                </li>
+                <li>
+                  <strong>Seal air leaks and add insulation</strong> — reducing drafts around windows, doors,
+                  and attics keeps conditioned air inside, lowering energy waste.
+                </li>
+                <li>
+                  <strong>Upgrade to ENERGY STAR appliances</strong> — efficient refrigerators, washers, and
+                  dryers use significantly less electricity than older models.
+                </li>
+                <li>
+                  <strong>Consider solar panels</strong> — {elecStateName} residents may benefit from net
+                  metering or solar incentive programs that offset electricity costs.
+                </li>
+                {deregulated && (
+                  <li>
+                    <strong>Shop electricity providers</strong> — in {elecStateName}&apos;s deregulated
+                    market, comparing offers from multiple providers can help you lock in a lower rate.
+                  </li>
+                )}
+                <li>
+                  <strong>Take advantage of time-of-use rates</strong> — if your utility offers TOU pricing,
+                  shifting high-energy activities to off-peak hours can reduce costs.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section id="neighbors">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+              Neighbor State Comparison
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {elecNeighborLinks.map((neighbor) => (
+                <Link
+                  key={neighbor.slug}
+                  href={`/energy/${neighbor.slug}`}
+                  className="flex items-center justify-between rounded-lg border border-gray-200 dark:border-slate-700 px-4 py-3 hover:border-brand-400 hover:bg-brand-50 dark:hover:bg-brand-900/10 transition-colors"
+                >
+                  <span className="font-medium text-gray-900 dark:text-white text-sm">
+                    {neighbor.stateName} Electricity Rates
+                  </span>
+                  <span className="text-brand-600 dark:text-brand-400 text-sm font-semibold">
+                    {neighbor.avgRateCentsPerKwh.toFixed(2)}¢/kWh
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+
+          <section id="faq">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-5">
+              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
+                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+                  What is the average electricity rate in {elecStateName}?
+                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
+                  <p>
+                    The average residential electricity rate in {elecStateName} is{' '}
+                    <strong>{avgRateCentsPerKwh.toFixed(2)}¢ per kWh</strong> as of 2026, according to EIA data.
+                    This is {comparisonWord} the national average of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh.
+                    {elecStateName} ranks #{nationalRank} among all states and DC (1 = cheapest).
+                  </p>
+                </div>
+              </details>
+
+              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
+                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+                  Is {elecStateName} a deregulated electricity market?
+                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
+                  {deregulated ? (
+                    <p>
+                      Yes, {elecStateName} has a deregulated electricity market. Residential customers can
+                      choose from multiple electricity providers, which means you can shop for competitive
+                      rates and plan types. Compare offers regularly to ensure you are getting the best deal.
+                    </p>
+                  ) : (
+                    <p>
+                      No, {elecStateName} has a regulated electricity market. Your local utility is the sole
+                      provider of electricity, and rates are set and approved by the state public utility
+                      commission. While you cannot choose your provider, rates tend to be more stable
+                      and predictable.
+                    </p>
+                  )}
+                </div>
+              </details>
+
+              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
+                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+                  How much does the average {elecStateName} household pay for electricity?
+                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
+                  <p>
+                    Based on {elecStateName}&apos;s average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh and
+                    the national average usage of {NATIONAL_AVG_USAGE} kWh/month, the estimated monthly
+                    electric bill is approximately <strong>{fmtUSD(estMonthlyBill)}</strong>, or about{' '}
+                    <strong>{fmtUSD(estMonthlyBill * 12)}</strong> per year. Actual bills vary based on
+                    household size, climate, heating/cooling systems, and energy efficiency measures.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </section>
+
+          <section id="disclaimer">
+            <DisclaimerBlock type="general" />
+          </section>
+
+          <div className="mt-4 flex flex-wrap gap-3">
+            <Link
+              href="/energy/electric-bill-estimator"
+              className="text-sm text-brand-600 dark:text-brand-400 hover:underline"
+            >
+              &larr; Back to Electric Bill Estimator
+            </Link>
+            <Link
+              href="/energy/kwh-cost-calculator"
+              className="text-sm text-brand-600 dark:text-brand-400 hover:underline"
+            >
+              kWh Cost Calculator &rarr;
+            </Link>
+          </div>
 
         </div>
       </article>

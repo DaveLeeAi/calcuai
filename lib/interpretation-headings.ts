@@ -66,6 +66,10 @@ const HEADING_BY_CATEGORY: Record<Category, string> = {
   everyday: 'Your Result Explained',
   business: 'What Your Results Mean',
   conversion: 'How This Conversion Works',
+  ecommerce: 'What Your Results Mean',
+  'real-estate': 'What Your Results Mean',
+  energy: 'What Your Results Mean',
+  productivity: 'Your Result Explained',
 };
 
 const GENERIC_FALLBACK = 'What Your Results Mean';

@@ -1,0 +1,170 @@
+{
+  "id": "heat-pump-vs-gas-furnace-calculator",
+  "title": "Heat Pump vs Gas Furnace Calculator",
+  "slug": "heat-pump-vs-gas-furnace-calculator",
+  "category": "energy",
+  "subcategory": "heating",
+  "primaryKeyword": "heat pump vs gas furnace calculator",
+  "secondaryKeywords": [
+    "heat pump vs furnace cost",
+    "heat pump savings calculator",
+    "gas furnace vs heat pump comparison"
+  ],
+  "metaTitle": "Heat Pump vs Gas Furnace Calculator — Annual Cost Comparison | CalcAI",
+  "metaDescription": "Compare annual heating costs between a heat pump and gas furnace by climate zone. See breakeven year and 20-year savings with your actual rates.",
+  "inputs": [
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "number",
+      "default": 2000,
+      "min": 100,
+      "max": 20000,
+      "suffix": "sq ft"
+    },
+    {
+      "id": "climateZone",
+      "label": "Climate Zone",
+      "type": "select",
+      "default": "mixed",
+      "options": [
+        {
+          "value": "cold",
+          "label": "Cold (Chicago, Minneapolis)"
+        },
+        {
+          "value": "mixed",
+          "label": "Mixed (Nashville, DC)"
+        },
+        {
+          "value": "hot",
+          "label": "Hot (Phoenix, Houston)"
+        }
+      ]
+    },
+    {
+      "id": "electricityRate",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.1724,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "gasPrice",
+      "label": "Gas Price",
+      "type": "currency",
+      "default": 1.5,
+      "prefix": "$",
+      "suffix": "/therm"
+    },
+    {
+      "id": "heatPumpCost",
+      "label": "Heat Pump Installed Cost",
+      "type": "currency",
+      "default": 12000,
+      "prefix": "$"
+    },
+    {
+      "id": "gasFurnaceCost",
+      "label": "Gas Furnace Installed Cost",
+      "type": "currency",
+      "default": 5000,
+      "prefix": "$"
+    },
+    {
+      "id": "systemLifespan",
+      "label": "System Lifespan",
+      "type": "number",
+      "default": 20,
+      "min": 5,
+      "max": 30,
+      "suffix": "years"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualHeatPumpCost",
+      "label": "Annual Heat Pump Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualGasCost",
+      "label": "Annual Gas Furnace Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualSavings",
+      "label": "Annual Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakevenYears",
+      "label": "Breakeven Year",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "lifetimeSavings",
+      "label": "Lifetime Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "yearlyComparison",
+      "label": "20-Year Cost Comparison",
+      "type": "chart-line",
+      "chartConfig": {
+        "xLabel": "Year",
+        "yLabel": "Total Cost ($)",
+        "colors": [
+          "#16A34A",
+          "#DC2626"
+        ]
+      }
+    }
+  ],
+  "formula": "heat-pump-vs-gas-furnace",
+  "features": [
+    "chart",
+    "compare-scenarios",
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "gas-vs-electric-cost-calculator",
+    "home-heating-cost-calculator",
+    "energy-rebate-calculator",
+    "electric-bill-estimator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. DOE Office of Energy Efficiency, ENERGY STAR 2026",
+  "articleWordTarget": 1800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Heat pump kWh = BTU / (COP × 3412); Gas therms = BTU / (AFUE × 100000)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "gas-vs-electric-cost-calculator"
+  ],
+  "qualityScore": 87,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

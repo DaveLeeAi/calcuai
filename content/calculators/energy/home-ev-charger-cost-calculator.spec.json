@@ -1,0 +1,123 @@
+{
+  "id": "home-ev-charger-cost-calculator",
+  "title": "Home EV Charger Installation Cost Calculator",
+  "slug": "home-ev-charger-cost-calculator",
+  "category": "energy",
+  "subcategory": "transportation",
+  "primaryKeyword": "home EV charger installation cost calculator",
+  "secondaryKeywords": [
+    "EV charger cost",
+    "Level 2 charger installation cost",
+    "home charging station cost"
+  ],
+  "metaTitle": "Home EV Charger Installation Cost Calculator | CalcAI",
+  "metaDescription": "Estimate the total cost to install a home EV charger. Includes equipment, labor, panel upgrade, and annual charging cost by charger level.",
+  "inputs": [
+    {
+      "id": "chargerLevel",
+      "label": "Charger Level",
+      "type": "select",
+      "default": "level-2",
+      "options": [
+        {
+          "value": "level-1",
+          "label": "Level 1 (120V Outlet)"
+        },
+        {
+          "value": "level-2",
+          "label": "Level 2 (240V Outlet)"
+        },
+        {
+          "value": "level-2-hardwired",
+          "label": "Level 2 (Hardwired)"
+        }
+      ]
+    },
+    {
+      "id": "panelUpgradeNeeded",
+      "label": "Panel Upgrade Needed?",
+      "type": "toggle",
+      "default": false
+    },
+    {
+      "id": "outletDistance",
+      "label": "Distance from Panel",
+      "type": "number",
+      "default": 20,
+      "min": 0,
+      "max": 200,
+      "suffix": "ft"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "equipmentCost",
+      "label": "Equipment Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "installationLabor",
+      "label": "Installation Labor",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "panelUpgradeCost",
+      "label": "Panel Upgrade Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalCost",
+      "label": "Total Installation Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualChargingCost",
+      "label": "Est. Annual Charging Cost",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "breakdown",
+      "label": "Cost Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "home-ev-charger-cost",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "ev-vs-gas-cost-calculator",
+    "electric-bill-estimator",
+    "energy-rebate-calculator",
+    "kwh-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. DOE Alternative Fuels Data Center — EVSE Installation Guide (2026)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total = equipment + labor × distance_factor + panel_cost",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 73,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

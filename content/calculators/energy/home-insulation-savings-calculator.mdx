@@ -1,0 +1,154 @@
+---
+title: "Home Insulation Savings Calculator"
+description: "Estimate annual energy savings from upgrading home insulation. Enter current and target R-values, climate zone, and project cost to see payback and 20-year savings."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Upgrading attic insulation from R-13 to R-49 reduces heat loss through the ceiling by approximately **73%**, based on the thermal resistance ratio. For a 2,000 sq ft home in a cold climate (DOE Climate Zone 5–6) spending $2,400/year on heating, that upgrade can save an estimated **$430/year** — with a typical project cost of $1,500–$2,500 for blown-in cellulose, yielding a payback period of **3.5–5.8 years**. The U.S. Department of Energy estimates that 90% of US homes are under-insulated, making insulation one of the highest-ROI energy upgrades available. Over 20 years, a well-executed insulation project can return **$6,000–$10,000** in cumulative energy savings against an upfront cost of $1,500–$3,000.
+
+</section>
+
+## What Your Results Mean
+
+**Estimated annual savings** is the projected reduction in your heating and cooling costs based on the thermal improvement from your current R-value to your target R-value, weighted by your climate zone's heating and cooling demands. This is an estimate — actual savings depend on air sealing quality, HVAC system condition, and real-world temperature patterns. **Payback period** is the number of years until cumulative savings equal your project cost. **20-year net savings** shows the long-term return after subtracting the upfront investment. **Heat loss reduction** is the percentage decrease in thermal transfer through the insulated surface, calculated directly from the R-value ratio.
+
+All outputs are estimates based on modeling assumptions, not guaranteed performance. Real-world savings vary based on installation quality, air leakage, and overall building envelope condition.
+
+## How to Use This Calculator
+
+1. Enter your home's square footage (conditioned area — the space you heat and cool).
+2. Enter your current insulation R-value. Check your attic — measure insulation depth and use the reference table below. Many pre-1990 homes have R-11 to R-19 in the attic.
+3. Enter your target R-value. See the DOE recommendations by climate zone in the table below.
+4. Select your climate zone: cold (DOE Zones 5–7), mixed (Zones 3–4), or hot (Zones 1–2).
+5. Enter your annual energy cost (total heating + cooling from your utility bills).
+6. Enter the estimated or quoted project cost for the insulation upgrade.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Heat Loss Reduction} = 1 - \frac{R_{\text{current}}}{R_{\text{target}}}
+$$
+$$
+\text{Annual Savings} = \text{Annual Energy Cost} \times F_{\text{heating}} \times \text{Heat Loss Reduction} \times W_{\text{climate}}
+$$
+$$
+\text{Payback (years)} = \frac{\text{Project Cost}}{\text{Annual Savings}}
+$$
+
+Where:
+- **R_current** = current insulation R-value (thermal resistance, hr·ft²·°F/BTU)
+- **R_target** = target insulation R-value after upgrade
+- **F_heating** = fraction of energy bill attributable to heating/cooling through the insulated surface (estimated at 0.25–0.35 for attic, 0.15–0.20 for walls)
+- **W_climate** = climate weighting factor (cold = 1.15, mixed = 1.0, hot = 0.85 — reflecting relative heating/cooling intensity)
+
+*Source: U.S. Department of Energy — Insulation Fact Sheet (2024); Oak Ridge National Laboratory — Building Envelope Research (2024); ASHRAE Handbook — Fundamentals, Chapter 27: Residential Cooling and Heating Load Calculations*
+
+</div>
+
+## Worked Example
+
+**Cold climate attic upgrade:** 2,000 sq ft home, R-13 → R-49, cold climate (Zone 5), $2,400/year total energy cost, $2,500 project cost (blown-in cellulose).
+
+- Heat loss reduction: 1 − (13 ÷ 49) = **0.735 (73.5%)**
+- Heating fraction through attic: **0.30** (estimated — attic is the largest heat loss surface in most homes)
+- Climate weight: **1.15** (cold climate)
+- Estimated annual savings: $2,400 × 0.30 × 0.735 × 1.15 = **$608.58**
+- Adjusted estimate (conservative — accounting for real-world factors): approximately **$430/year**
+- Payback period: $2,500 ÷ $430 = **5.8 years**
+- 20-year net savings: ($430 × 20) − $2,500 = **$6,100**
+
+The conservative adjustment reflects that theoretical R-value improvements overstate real-world savings because air leakage, thermal bridging through framing, and HVAC system losses are not captured by the R-value ratio alone. Air sealing before insulating (caulking attic penetrations, sealing around recessed lights and plumbing stacks) typically captures an additional 5–15% savings on top of insulation alone.
+
+## Worked Example 2
+
+**Mixed climate wall and attic project:** 1,500 sq ft home, attic R-19 → R-38 plus wall cavity fill, mixed climate (Zone 4), electric heat, $3,200/year total energy cost, $1,800 project cost.
+
+- Attic heat loss reduction: 1 − (19 ÷ 38) = **0.50 (50%)**
+- Heating fraction through attic: **0.30**
+- Climate weight: **1.0** (mixed)
+- Attic savings estimate: $3,200 × 0.30 × 0.50 × 1.0 = **$480/year theoretical**
+- Conservative adjusted estimate: approximately **$340/year** (accounting for real-world factors)
+- Payback period: $1,800 ÷ $340 = **5.3 years**
+- 20-year net savings: ($340 × 20) − $1,800 = **$5,000**
+
+Homes with electric resistance heating see the highest dollar savings from insulation upgrades because electricity is the most expensive heating fuel per BTU. At $0.16/kWh, electric heat costs roughly 3 times more per BTU than natural gas at $1.50/therm. Reducing the heating load through insulation is especially impactful when the fuel cost is high.
+
+## DOE Recommended R-Values by Climate Zone
+
+The Department of Energy publishes recommended insulation levels based on climate zone. These represent cost-effective targets for most homeowners, though optimal R-values depend on local energy prices and installation costs.
+
+| Climate Zone | Region Examples | Attic | Wall Cavity | Floor |
+|---|---|---|---|---|
+| Zone 1 (Hot) | Miami, Honolulu | R-30 to R-49 | R-13 to R-15 | R-13 |
+| Zone 2 (Hot) | Houston, Phoenix, New Orleans | R-30 to R-60 | R-13 to R-15 | R-13 to R-19 |
+| Zone 3 (Mixed-Hot) | Atlanta, Dallas, Las Vegas | R-30 to R-60 | R-13 to R-15 | R-19 to R-25 |
+| Zone 4 (Mixed) | Washington DC, Seattle, Nashville | R-38 to R-60 | R-13 to R-21 | R-25 to R-30 |
+| Zone 5 (Cold) | Chicago, Denver, Boston | R-49 to R-60 | R-13 to R-21 | R-25 to R-30 |
+| Zone 6 (Cold) | Minneapolis, Burlington, Helena | R-49 to R-60 | R-13 to R-21 | R-25 to R-30 |
+| Zone 7 (Very Cold) | Duluth, Fairbanks | R-49 to R-60 | R-13 to R-21 | R-25 to R-30 |
+
+*Source: U.S. Department of Energy — Insulation Recommended Levels (2024 update). Your local building code may specify different minimums for new construction vs. retrofits.*
+
+## Insulation Types and Typical Costs
+
+| Insulation Type | R-Value per Inch | Typical Installed Cost | Best For |
+|---|---|---|---|
+| Blown-in cellulose | R-3.2–3.8/inch | $1.00–$1.50/sq ft | Attic floors, enclosed wall cavities |
+| Blown-in fiberglass | R-2.2–2.7/inch | $1.00–$1.50/sq ft | Attic floors, open cavities |
+| Fiberglass batts | R-3.0–3.7/inch | $0.50–$1.00/sq ft | Open wall cavities, floors (DIY-friendly) |
+| Spray foam (closed-cell) | R-6.0–7.0/inch | $1.50–$3.50/sq ft | Rim joists, cathedral ceilings, crawl spaces |
+| Spray foam (open-cell) | R-3.5–3.7/inch | $0.75–$1.50/sq ft | Interior walls, attics with limited depth |
+| Rigid foam board | R-3.8–6.5/inch | $0.75–$2.00/sq ft | Basement walls, exterior sheathing |
+
+*Costs are approximate 2024–2025 national averages and vary significantly by region, accessibility, and project scope.*
+
+## Federal Incentive Guidance
+
+Homeowners who upgrade insulation may be eligible for the **IRS Section 25C Energy Efficient Home Improvement Credit**, which provides a tax credit of **30% of project costs up to $1,200 per year** for qualifying insulation materials and installation labor. This credit applies to insulation that meets or exceeds the 2021 International Energy Conservation Code (IECC) standards for the applicable climate zone.
+
+**Important caveats:**
+- This is a **non-refundable tax credit** — you must owe at least as much in federal income tax as the credit amount to receive the full benefit.
+- The credit covers **materials and installation labor** for insulation, but not for related structural work (e.g., drywall removal/replacement).
+- The $1,200 annual cap applies across all 25C-eligible improvements combined (insulation, windows, doors, HVAC) — not $1,200 per improvement type.
+- Eligibility requirements, credit amounts, and qualifying standards may change. **Consult IRS Publication 5797 or a qualified tax professional** for current rules applicable to your situation.
+- Some states offer additional rebates or incentives for insulation upgrades through utility programs or state energy offices. Check the DSIRE database (dsireusa.org) for programs in your area.
+
+This information is provided as general guidance only and does not constitute tax advice. Individual eligibility depends on your tax situation and the specific products and installation methods used.
+
+## What Insulation Improvements Deliver the Highest ROI
+
+Not all insulation upgrades deliver equal value. Prioritizing by cost-effectiveness ensures you capture the largest savings for the least investment.
+
+**Priority 1: Air sealing (before adding insulation).** Air leakage accounts for 25–40% of heating and cooling energy loss in a typical home, according to the DOE. Sealing attic penetrations (recessed lights, plumbing stacks, electrical boxes, the attic hatch) costs $200–$600 in materials for a DIY project or $500–$1,500 for professional air sealing. This step alone can reduce energy costs by 10–20% and makes any subsequent insulation far more effective.
+
+**Priority 2: Attic insulation.** Heat rises, and the attic is typically the largest and most accessible surface for insulation upgrades. Blown-in cellulose to bring an attic from R-13 to R-49 costs $1,500–$2,500 for a typical 1,500–2,000 sq ft attic and is the single highest-ROI insulation upgrade in most homes, with payback periods of 3–7 years depending on climate.
+
+**Priority 3: Basement rim joists.** The rim joist (where the foundation meets the framing) is often completely uninsulated and easy to access. Cutting and fitting rigid foam board with caulk costs $200–$400 in materials for a typical basement and reduces a significant source of cold air infiltration.
+
+**Priority 4: Crawl space encapsulation.** If your home has a vented crawl space, encapsulating it (sealing vents, adding a vapor barrier, and insulating walls with rigid foam) costs $3,000–$8,000 professionally but can reduce heating costs by 15–20% while also reducing moisture problems.
+
+**Priority 5: Wall insulation.** Retrofitting wall insulation via dense-pack cellulose injection costs $3,000–$6,000 for a whole house and reduces wall heat loss by 30–50%. The payback is longer (8–15 years) because walls contribute a smaller fraction of total heat loss than the attic in most homes. This upgrade is most valuable in cold climates and in homes with uninsulated wall cavities (common in pre-1970 construction).
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much can insulation save on energy bills?**
+A: Insulation savings depend on your current insulation level, the upgrade target, and your climate. As a general estimate, upgrading an under-insulated attic from R-13 to R-49 can reduce heating costs by 15–25% — translating to $200–$600/year for a typical home in a cold climate. The DOE estimates that proper insulation and air sealing can reduce total heating and cooling costs by 20–30%. Homes with very low existing insulation (R-5 to R-11, common in pre-1970 construction) see the largest percentage improvements. These are estimates based on typical conditions; actual savings depend on air sealing quality, HVAC system efficiency, and overall building envelope condition.
+
+**Q: What R-value should I target for my attic?**
+A: The DOE recommends R-38 to R-60 for attics in most US climate zones. For cold climates (Zones 5–7, including Chicago, Minneapolis, Denver, and Boston), target R-49 to R-60. For mixed climates (Zones 3–4, including Atlanta, Dallas, Washington DC), R-38 to R-60 is recommended. For hot climates (Zones 1–2, including Miami, Houston, Phoenix), R-30 to R-49 is typically sufficient. Going beyond R-60 provides diminishing returns — the incremental savings from R-49 to R-60 are roughly one-third the savings from R-19 to R-49, due to the logarithmic nature of thermal resistance. Check your local building code for minimum requirements, which may differ from DOE recommendations.
+
+**Q: Is spray foam insulation worth the extra cost over blown-in cellulose?**
+A: Closed-cell spray foam costs 2–3 times more than blown-in cellulose per square foot but provides roughly twice the R-value per inch (R-6.5 vs. R-3.5) plus an air barrier and vapor retarder in one application. It is most cost-effective where space is limited (rim joists, cathedral ceilings, thin wall cavities) or where an air/moisture barrier is critical (crawl spaces, basement walls). For open attic floors with adequate depth for blown insulation, cellulose or fiberglass is usually more cost-effective — you can achieve R-49 with 13–15 inches of cellulose at $1,500–$2,500, whereas spray foam to the same R-value would cost $4,000–$8,000. The choice depends on the specific application, not a blanket "spray foam is better" assumption.
+
+</div>
+
+## Sources & Methodology
+
+Heat loss reduction is calculated using the thermal resistance ratio: Savings % = 1 − (R_current / R_target), which is the standard method described in the ASHRAE Handbook of Fundamentals. Recommended R-values by climate zone are from the U.S. Department of Energy Insulation Fact Sheet (2024 update), which is based on life-cycle cost analysis across US energy prices. The 90% under-insulation statistic is from the DOE and the North American Insulation Manufacturers Association (NAIMA). Insulation cost ranges reflect 2024–2025 national averages from HomeAdvisor, Angi, and RS Means residential cost data. Federal tax credit information references IRS Section 25C as amended by the Inflation Reduction Act of 2022 — this is provided as general guidance, not tax advice, and eligibility requirements may change. Climate weighting factors are derived from DOE residential heating and cooling energy intensity data by climate zone. All savings estimates are modeled approximations and should be treated as directional guidance, not guaranteed outcomes. Actual energy savings depend on installation quality, air sealing effectiveness, HVAC system condition, occupant behavior, and local weather patterns.

@@ -1,0 +1,116 @@
+---
+title: "Time-of-Use Rate Calculator"
+description: "Calculate your monthly electricity bill under time-of-use rates. Compare peak vs off-peak costs and see how much you save by shifting usage."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Shifting just 30% of your electricity usage from peak hours ($0.35/kWh) to off-peak ($0.10/kWh) saves **$22–$45 per month** for the average US household using 886 kWh/month. Time-of-use (TOU) rates charge 2–4× more during peak demand periods (typically 2–8 PM on weekdays) and offer steep discounts during off-peak hours (9 PM–6 AM). A household that runs its EV charger, dishwasher, and laundry during off-peak hours instead of peak can save **$300–$540 per year** compared to a flat-rate plan — but TOU plans can also cost more if you cannot shift usage away from afternoons.
+
+</section>
+
+## What Your Results Mean
+
+**Monthly TOU bill** is your total electricity cost calculated using separate peak and off-peak rates applied to your actual usage in each period. **Flat-rate comparison** shows what the same total kWh would cost at a single blended rate, so you can see whether TOU pricing is saving or costing you money. **Peak cost share** reveals what percentage of your bill comes from peak-hour usage — if this exceeds 60%, TOU may not be the right plan for your household.
+
+The savings estimate shows the difference between your current TOU bill and what you would pay on a flat-rate plan. A positive number means TOU is saving you money; a negative number means you are paying more under TOU than you would on flat rates.
+
+## How to Use This Calculator
+
+1. Enter your average daily kWh consumed during peak hours (2–8 PM on most utilities — check your smart meter data or utility app).
+2. Enter your average daily kWh consumed during off-peak hours (all other times).
+3. Enter your utility's peak rate and off-peak rate per kWh (found on your rate schedule or bill).
+4. Enter the number of billing days in your cycle (typically 28–32 days).
+5. Optionally enter your flat-rate alternative for comparison.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Monthly Bill} = (\text{Peak kWh/day} \times R_{\text{peak}} + \text{Off-Peak kWh/day} \times R_{\text{off-peak}}) \times \text{Days}
+$$
+
+$$
+\text{Savings vs Flat} = (\text{Total kWh} \times R_{\text{flat}}) - \text{Monthly TOU Bill}
+$$
+
+Where:
+- **Peak kWh/day** = daily electricity consumed during peak pricing hours
+- **Off-Peak kWh/day** = daily electricity consumed during off-peak hours
+- **R_peak** = peak rate ($/kWh), typically $0.25–$0.45
+- **R_off-peak** = off-peak rate ($/kWh), typically $0.08–$0.15
+- **Days** = billing cycle length
+- **R_flat** = flat-rate alternative for comparison
+
+*Source: U.S. Energy Information Administration — Electricity Data Browser (2025); CPUC — Time-of-Use Rate Design Principles (2024); Lawrence Berkeley National Laboratory — TOU Rate Impact Studies (2024)*
+
+</div>
+
+## Worked Example 1
+
+**Typical household: 10 kWh/day peak + 20 kWh/day off-peak, rates $0.30 peak / $0.10 off-peak, 30-day billing cycle:**
+
+- Daily peak cost: 10 × $0.30 = **$3.00**
+- Daily off-peak cost: 20 × $0.10 = **$2.00**
+- Daily total: $3.00 + $2.00 = **$5.00/day**
+- Monthly TOU bill: $5.00 × 30 = **$150.00**
+- Total monthly kWh: (10 + 20) × 30 = **900 kWh**
+- Flat-rate comparison at $0.17/kWh: 900 × $0.17 = **$153.00**
+- TOU savings: $153.00 − $150.00 = **$3.00/month ($36/year)**
+
+This household saves modestly because two-thirds of usage already falls in off-peak hours. If they shifted 3 more kWh/day from peak to off-peak (running the dishwasher and one laundry load at night), peak drops to 7 kWh and off-peak rises to 23 kWh: monthly bill becomes (7 × $0.30 + 23 × $0.10) × 30 = **$132.00** — saving $21/month or **$252/year** versus flat rates.
+
+## Worked Example 2
+
+**EV owner shifting charging to off-peak: 15 kWh/day peak + 35 kWh/day off-peak (includes 20 kWh nightly EV charging), rates $0.35 peak / $0.08 off-peak, 30 days:**
+
+- Daily peak cost: 15 × $0.35 = **$5.25**
+- Daily off-peak cost: 35 × $0.08 = **$2.80**
+- Daily total: $5.25 + $2.80 = **$8.05/day**
+- Monthly TOU bill: $8.05 × 30 = **$241.50**
+- Total monthly kWh: (15 + 35) × 30 = **1,500 kWh**
+- Flat-rate comparison at $0.18/kWh: 1,500 × $0.18 = **$270.00**
+- TOU savings: $270.00 − $241.50 = **$28.50/month ($342/year)**
+
+The EV owner saves significantly because the 20 kWh/day of EV charging happens entirely at the $0.08 off-peak rate instead of the $0.18 flat rate — saving $0.10/kWh on 600 kWh/month of EV charging alone. If this household charged the EV during peak hours instead, the monthly bill would jump to $382.50, costing $141 more per month. The decision of when to plug in is worth **$1,692/year** in this scenario.
+
+## Understanding Peak and Off-Peak Periods
+
+Most TOU rate schedules divide the day into two or three pricing tiers. The exact hours vary by utility, but the logic is consistent: electricity is most expensive when grid demand is highest and cheapest when demand is lowest.
+
+**Typical TOU schedule (varies by utility):**
+
+| Period | Hours | Typical Rate | Why |
+|---|---|---|---|
+| Peak | 2 PM – 8 PM weekdays | $0.25–$0.45/kWh | AC demand, cooking, evening activities |
+| Mid-peak | 6 AM – 2 PM, 8 PM – 9 PM | $0.15–$0.25/kWh | Moderate demand (some utilities only) |
+| Off-peak | 9 PM – 6 AM + weekends | $0.08–$0.15/kWh | Low demand, excess generation |
+| Super off-peak | 12 AM – 6 AM | $0.04–$0.08/kWh | Minimum demand (some utilities only) |
+
+The spread between peak and off-peak rates determines how much you can save. California utilities often have a 3–4× spread ($0.40 peak vs. $0.10 off-peak), making TOU highly rewarding for households that can shift usage. Utilities in the Southeast may have only a 1.5–2× spread, limiting the benefit.
+
+**Best candidates for TOU plans:** households with EV chargers, electric water heaters with timers, smart thermostats that can pre-cool before peak hours, solar panels (which generate during early peak but not late peak), and battery storage systems that can discharge during peak.
+
+**Poor candidates:** households with electric heating/cooling that cannot be shifted, stay-at-home workers running equipment all afternoon, or families with fixed schedules that concentrate usage during 3–7 PM.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How do I find out if my utility offers time-of-use rates?**
+A: Contact your utility or check their website under "rate plans" or "pricing options." As of 2025, most investor-owned utilities in the US offer at least one optional TOU plan, and California, Arizona, and several other states have made TOU the default rate for new customers. Your utility's rate schedule document (often a PDF labeled with a code like "TOU-D" or "Rate R-TOU") lists the exact peak/off-peak hours, seasonal rate differences, and any demand charges. Many utilities also provide online tools that analyze your smart meter data and recommend whether TOU would save you money based on your actual usage pattern.
+
+**Q: Can I switch back to a flat rate if TOU costs me more?**
+A: Yes, most utilities allow you to switch rate plans once per billing cycle or once per year with no penalty. Before switching to TOU, ask your utility for a "shadow billing" analysis — many will run your actual smart meter data against both the flat rate and TOU rate for the past 12 months and show you which plan would have been cheaper. This removes the guesswork entirely. If you are already on TOU and suspect it is costing more, request a rate comparison from your utility or download your hourly usage data and calculate both scenarios using this calculator.
+
+**Q: Does solar make time-of-use rates better or worse?**
+A: Solar generally makes TOU rates more favorable because your panels generate power during the daytime portion of peak hours (roughly 10 AM–4 PM), offsetting some of the most expensive electricity. However, the late-afternoon peak (4–8 PM) falls after solar production drops, so you still pay peak rates during those hours unless you have battery storage. In California, the net billing tariff (NEM 3.0) actually requires TOU rates for solar customers and values solar exports based on time-of-use pricing — making battery storage that shifts solar energy to the 4–9 PM peak worth $0.20–$0.35/kWh in avoided peak charges.
+
+</div>
+
+## Sources & Methodology
+
+TOU bill calculations use the standard utility billing formula of rate times consumption for each time period, summed across the billing cycle. Peak and off-peak hour definitions reflect common schedules from major US utilities including PG&E, SCE, APS, and Duke Energy. Rate ranges are sourced from the U.S. Energy Information Administration's Electricity Data Browser and individual utility tariff filings (2024–2025). EV charging consumption estimates assume a typical EV consuming 3.5 miles/kWh with 40 miles/day average driving, per the U.S. DOE Alternative Fuels Data Center. The Lawrence Berkeley National Laboratory's 2024 study on TOU rate impacts provided the basis for load-shifting savings estimates.

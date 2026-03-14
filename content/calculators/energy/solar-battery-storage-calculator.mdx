@@ -1,0 +1,110 @@
+---
+title: "Solar Battery Storage Calculator"
+description: "Calculate how much battery storage you need for your solar panel system. See your daily production, storage gap, and self-sufficiency percentage."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+The average US home uses **30 kWh/day**, while a typical 6 kW solar system produces **24 kWh/day** at 4 peak sun hours — leaving a **6 kWh daily shortfall** that the grid fills. Adding a 13.5 kWh battery (one Tesla Powerwall) captures daytime excess and covers the gap, raising self-sufficiency from roughly 60% to **85–90%** and eliminating most grid purchases during evening peak-rate hours. Without storage, a grid-tied solar system exports midday surplus at reduced credit rates (as low as $0.05/kWh under California NEM 3.0) and buys back that same energy at $0.30+/kWh after sunset — a 6:1 penalty that storage eliminates.
+
+</section>
+
+## What Your Results Mean
+
+**Daily solar production** is the kWh your system generates on an average day, based on system size and peak sun hours for your location. **Daily consumption** is your household's total electricity use averaged across the year. **Daily surplus or deficit** shows whether your solar system produces more or less than you use — the deficit is what storage must cover. **Self-sufficiency percentage** tells you what fraction of your electricity comes from your own solar-plus-battery system versus the grid. **Recommended storage** factors in your desired autonomy days and battery depth of discharge to give a practical kWh target.
+
+## How to Use This Calculator
+
+1. Enter your daily electricity consumption in kWh. Find this by dividing your monthly kWh (from your electric bill) by 30.
+2. Enter your solar system size in kW. The most common residential sizes are 5–10 kW.
+3. Enter your location's peak sun hours. National average is 4.5; ranges from 3.0 (Pacific Northwest) to 6.0 (Arizona, Nevada).
+4. Set your desired autonomy — how many days of stored energy you want available. 1 day is standard for daily cycling; 2–3 days provides storm/outage resilience.
+5. Set depth of discharge (DoD) — 90% for LFP batteries (Powerwall, Enphase), 80% for NMC chemistry.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Daily Production} = \text{System Size (kW)} \times \text{Peak Sun Hours} \times 0.80
+$$
+$$
+\text{Daily Deficit} = \max(0,\; \text{Daily Use} - \text{Daily Production})
+$$
+$$
+\text{Storage Needed (kWh)} = \frac{\text{Daily Deficit} \times \text{Autonomy Days}}{\text{DoD}}
+$$
+
+Where:
+- **0.80** = system performance ratio accounting for panel degradation, wiring losses, inverter efficiency, soiling, and temperature derating
+- **DoD** = Depth of Discharge (0.90 for LFP, 0.80 for NMC)
+- **Autonomy Days** = number of days of backup storage desired (1 = daily cycling, 2–3 = outage resilience)
+
+*Source: NREL — PVWatts Calculator Methodology (2025); Lawrence Berkeley National Laboratory — Tracking the Sun (2024); EnergySage — Solar Battery Sizing Guide (2025)*
+
+</div>
+
+## Worked Example 1
+
+**High-production system: 8 kW solar, 5 peak sun hours, 30 kWh/day consumption, 1 day autonomy:**
+
+- Daily production: 8 × 5.0 × 0.80 = **32.0 kWh/day**
+- Daily surplus: 32.0 − 30.0 = **+2.0 kWh surplus**
+- Storage needed for daily cycling: **0 kWh** (system produces more than needed)
+
+This system is already solar-positive on an average day. However, storage is still valuable for two reasons. First, production and consumption do not align in time: solar generates 80% of its output between 9 AM and 3 PM, but consumption peaks between 5 PM and 10 PM. Without a battery, you export midday surplus at reduced credit and buy evening power at full retail. A 10 kWh battery shifts that midday surplus to evening use, saving $0.10–$0.25 per kWh on every shifted kilowatt-hour. Second, cloudy days cut production by 50–80%, and a battery provides a buffer for 1–2 days of below-average sun. Even a modest 10 kWh battery raises this system's self-sufficiency from 75% to approximately 92%.
+
+## Worked Example 2
+
+**Undersized system: 6 kW solar, 4 peak sun hours, 40 kWh/day consumption (large home with EV), 1.5 days autonomy:**
+
+- Daily production: 6 × 4.0 × 0.80 = **19.2 kWh/day**
+- Daily deficit: 40.0 − 19.2 = **20.8 kWh/day**
+- Storage needed: (20.8 × 1.5) ÷ 0.90 = **34.7 kWh**
+
+This home needs approximately 35 kWh of battery storage to cover 1.5 days of the solar production gap — roughly 2.5 Tesla Powerwalls (34 kWh combined) at a cost of **$21,000–$29,000 installed**. The more cost-effective path may be to increase the solar system size instead: upgrading from 6 kW to 10 kW adds $8,000–$12,000 (before the 30% ITC) and produces 32 kWh/day, reducing the deficit to 8 kWh/day and the storage requirement to 13.3 kWh — a single Powerwall. In general, if your deficit exceeds 15 kWh/day, adding more solar panels is cheaper per kWh than adding more batteries.
+
+## Self-Sufficiency by Storage Size
+
+This table shows the approximate self-sufficiency percentage for a typical 8 kW system producing 28 kWh/day in a home using 30 kWh/day:
+
+| Storage (kWh) | Self-Sufficiency | Grid Purchases | Annual Grid Savings |
+|---|---|---|---|
+| 0 (grid-tied only) | 55–65% | 10–14 kWh/day | — |
+| 5 kWh | 70–75% | 7–9 kWh/day | $200–$350/yr |
+| 10 kWh | 80–85% | 4–6 kWh/day | $350–$550/yr |
+| 13.5 kWh (1 Powerwall) | 85–90% | 3–5 kWh/day | $450–$650/yr |
+| 27 kWh (2 Powerwalls) | 92–95% | 1–2 kWh/day | $600–$800/yr |
+
+Diminishing returns set in above 90% self-sufficiency. Going from 90% to 95% requires doubling your battery capacity but only saves an additional $150–$200/year. Most homeowners find the sweet spot at 80–90% self-sufficiency with one battery unit.
+
+## Battery Chemistry: LFP vs NMC for Solar Storage
+
+Two lithium-ion chemistries dominate the residential solar storage market, and the differences matter for sizing and longevity.
+
+**LFP (Lithium Iron Phosphate)** — used in Tesla Powerwall 3, Enphase IQ Battery 5P, and Franklin WholePower — offers 5,000–6,000 charge cycles at 90% DoD before reaching 80% of original capacity. At one cycle per day, that is 13–16 years of daily cycling. LFP is inherently more thermally stable (lower fire risk) and tolerates deeper discharge without accelerated degradation. The tradeoff: LFP has lower energy density (larger physical size per kWh).
+
+**NMC (Nickel Manganese Cobalt)** — used in LG RESU, Generac PWRcell, and older Powerwall models — offers higher energy density in a smaller package but typically lasts 3,000–4,000 cycles at 80% DoD. Deeper discharge accelerates NMC degradation. NMC batteries should be sized 10–15% larger than LFP to account for the lower recommended DoD.
+
+For daily solar cycling applications, LFP's longer cycle life and deeper safe discharge make it the better long-term value despite the slightly higher upfront cost per kWh. For backup-only applications (infrequent cycling), NMC's compact size may be preferred.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much battery storage do I need for my solar panels?**
+A: Calculate your daily deficit (daily consumption minus daily solar production) and divide by your battery's depth of discharge. A typical US home using 30 kWh/day with a 6 kW system producing 24 kWh/day has a 6 kWh deficit — meaning a single 10–13.5 kWh battery covers the gap with margin for cloudy days. If your solar system already produces more than you consume, you may still benefit from 5–10 kWh of storage to time-shift midday surplus to evening peak hours, saving $200–$500/year on grid purchases.
+
+**Q: Is solar battery storage worth the cost?**
+A: It depends on your net metering policy. In states with full retail net metering (credit for exports equals your buy rate), storage provides modest financial benefit — perhaps $200–$400/year in time-shifting savings. In states with reduced net metering (California NEM 3.0 credits exports at $0.05–$0.08/kWh vs. buy rates of $0.30–$0.45/kWh), storage captures $600–$1,200/year by self-consuming power you would otherwise export at a steep discount. At $10,000–$12,000 net cost (after the 30% ITC), storage pays back in 8–15 years in full-retail states and 5–8 years in reduced-credit states. Backup power during outages provides additional value that is hard to quantify financially.
+
+**Q: How long do solar batteries last?**
+A: Modern LFP batteries are warranted for 10–15 years and designed for 5,000+ cycles, which translates to 13–16 years of daily solar cycling. After reaching end-of-warranty, the battery retains approximately 70–80% of its original capacity — still functional but with reduced storage. NMC batteries last 3,000–4,000 cycles (8–11 years of daily use). Actual lifespan depends on cycling depth, temperature (batteries degrade faster in extreme heat), and charge rate. Installing the battery in a temperature-controlled space (garage, basement) rather than an exterior wall in direct sun can extend life by 15–20%.
+
+</div>
+
+## Sources & Methodology
+
+Daily solar production estimates use the system performance ratio of 0.80, consistent with NREL's PVWatts Calculator methodology, which accounts for module degradation, soiling, wiring losses, inverter efficiency, and temperature derating. Peak sun hour values by region are from NREL's Solar Resource Data (TMY3 dataset). Battery sizing calculations follow the standard formula: capacity = (daily deficit × autonomy days) ÷ DoD. Cycle life data for LFP (5,000+ cycles) and NMC (3,000+ cycles) is from manufacturer datasheets and the Lawrence Berkeley National Laboratory's Tracking the Sun report (2024). Battery pricing reflects installed costs from EnergySage's Home Battery Buyer's Guide and includes the battery unit, inverter integration, electrical work, and permitting.

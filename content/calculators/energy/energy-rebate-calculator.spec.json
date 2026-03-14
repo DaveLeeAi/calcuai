@@ -1,0 +1,146 @@
+{
+  "id": "energy-rebate-calculator",
+  "title": "Energy Rebate & Incentive Calculator",
+  "slug": "energy-rebate-calculator",
+  "category": "energy",
+  "subcategory": "incentives",
+  "primaryKeyword": "energy rebate calculator",
+  "secondaryKeywords": [
+    "IRA rebate calculator",
+    "HOMES rebate calculator",
+    "energy incentive calculator",
+    "heat pump tax credit calculator"
+  ],
+  "metaTitle": "Energy Rebate Calculator — HOMES, HEAR & Tax Credit Estimator | CalcAI",
+  "metaDescription": "Estimate your energy rebates under the Inflation Reduction Act. Calculate HOMES, HEAR, and 25C tax credit eligibility based on income and project type.",
+  "inputs": [
+    {
+      "id": "projectType",
+      "label": "Project Type",
+      "type": "select",
+      "default": "heat-pump",
+      "options": [
+        {
+          "value": "heat-pump",
+          "label": "Heat Pump"
+        },
+        {
+          "value": "water-heater",
+          "label": "Water Heater"
+        },
+        {
+          "value": "insulation",
+          "label": "Insulation"
+        },
+        {
+          "value": "windows",
+          "label": "Windows/Doors"
+        },
+        {
+          "value": "ev-charger",
+          "label": "EV Charger"
+        },
+        {
+          "value": "solar",
+          "label": "Solar Panels"
+        }
+      ]
+    },
+    {
+      "id": "householdIncome",
+      "label": "Household Income",
+      "type": "currency",
+      "default": 60000,
+      "prefix": "$"
+    },
+    {
+      "id": "areaMedianIncome",
+      "label": "Area Median Income (AMI)",
+      "type": "currency",
+      "default": 80000,
+      "prefix": "$",
+      "helpText": "Find yours at huduser.gov"
+    },
+    {
+      "id": "projectCost",
+      "label": "Estimated Project Cost",
+      "type": "currency",
+      "default": 15000,
+      "prefix": "$"
+    },
+    {
+      "id": "stateRebate",
+      "label": "State/Utility Rebate",
+      "type": "currency",
+      "default": 0,
+      "prefix": "$"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "hearRebate",
+      "label": "HEAR Rebate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "homesRebate",
+      "label": "HOMES Rebate",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "federal25C",
+      "label": "Federal 25C Tax Credit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalRebate",
+      "label": "Total Rebates & Credits",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "netCost",
+      "label": "Net Cost After Rebates",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    }
+  ],
+  "formula": "energy-rebate",
+  "features": [
+    "shareable-url"
+  ],
+  "relatedCalculators": [
+    "solar-panel-payback-calculator",
+    "heat-pump-vs-gas-furnace-calculator",
+    "home-ev-charger-cost-calculator",
+    "water-heater-energy-cost-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "IRA HOMES and HEAR Programs, DOE 2026; One Big Beautiful Bill Act (Public Law 119-21)",
+  "articleWordTarget": 1800,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "HEAR/HOMES eligibility based on household income vs AMI ratio thresholds",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 75,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

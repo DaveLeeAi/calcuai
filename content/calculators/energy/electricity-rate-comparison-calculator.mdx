@@ -1,0 +1,120 @@
+---
+title: "Electricity Rate Comparison Calculator"
+description: "Compare your current electricity rate to a competitor. Calculate annual savings, total contract savings, and breakeven month including fixed fees."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A rate difference of just **$0.03/kWh** saves the average US household (886 kWh/month) **$319 per year** — and in deregulated markets like Texas, Pennsylvania, and Ohio, competitive rate spreads of **$0.04–$0.06/kWh** are common, translating to **$425–$638 in annual savings**. However, low advertised rates often come with fixed monthly fees ($5–$20/month), early termination fees ($50–$200), or variable rate clauses that erase the savings. This calculator factors in all costs to show your true net savings and breakeven timeline before switching providers.
+
+</section>
+
+## What Your Results Mean
+
+**Annual savings** is the total dollar amount you save (or lose) by switching from your current rate to the competitor, including any fixed monthly fees charged by the new provider. **Breakeven month** tells you when cumulative savings exceed any switching costs or early termination fees from your current provider — if the breakeven is beyond the new contract term, switching loses money. **Total contract savings** projects your net savings across the full contract length (typically 6, 12, or 24 months).
+
+A negative annual savings means the competitor's plan actually costs more when fixed fees are included, even if the per-kWh rate looks lower. Always compare the total cost, not just the rate.
+
+## How to Use This Calculator
+
+1. Enter your current electricity rate per kWh (found on your bill under "energy charge" or "supply charge").
+2. Enter the competitor's rate per kWh from their offer.
+3. Enter your average monthly electricity usage in kWh (check your bill or use 886 kWh as the US average).
+4. Enter any fixed monthly fees charged by the competitor (service charges, minimum bills, etc.).
+5. Enter any early termination fee from your current provider and the competitor's contract length in months.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Monthly Savings} = (\text{Current Rate} - \text{Competitor Rate}) \times \text{Monthly kWh} - F_{\text{monthly}}
+$$
+
+$$
+\text{Annual Savings} = \text{Monthly Savings} \times 12
+$$
+
+$$
+\text{Breakeven Month} = \lceil \frac{F_{\text{ETF}}}{\text{Monthly Savings}} \rceil
+$$
+
+$$
+\text{Contract Savings} = (\text{Monthly Savings} \times \text{Contract Months}) - F_{\text{ETF}}
+$$
+
+Where:
+- **Current Rate** = your existing per-kWh rate ($/kWh)
+- **Competitor Rate** = the new provider's per-kWh rate ($/kWh)
+- **Monthly kWh** = your average monthly electricity consumption
+- **F_monthly** = competitor's fixed monthly fee (if any)
+- **F_ETF** = early termination fee from your current provider (one-time cost to switch)
+- **Contract Months** = length of the competitor's plan
+
+*Source: U.S. EIA — Electric Power Monthly (2025); Public Utility Commission of Texas — Power to Choose Program (2025); Pennsylvania PUC — PA Power Switch Rate Comparison (2025)*
+
+</div>
+
+## Worked Example 1
+
+**Standard comparison: $0.1724/kWh current vs $0.14/kWh competitor, 886 kWh/month, $10/month fixed fee, no ETF, 12-month contract:**
+
+- Monthly rate savings: ($0.1724 − $0.14) × 886 = $0.0324 × 886 = **$28.71**
+- Monthly net savings (after fixed fee): $28.71 − $10.00 = **$18.71/month**
+- Annual savings: $18.71 × 12 = **$224.50/year**
+- No ETF → breakeven = **Month 1**
+- 12-month contract savings: $18.71 × 12 = **$224.50**
+
+The $0.032/kWh rate advantage initially looks like it saves $344/year, but the $10/month fixed fee reduces actual savings to $225/year. Without accounting for the fixed fee, you would overestimate savings by 53%. Always include fixed fees in the comparison — a plan with a slightly higher rate but no fixed fee may be the better deal for low-usage households.
+
+## Worked Example 2
+
+**Texas deregulated market: $0.16/kWh current vs $0.12/kWh competitor, 1,100 kWh/month (Texas average), $0 fixed fee, $150 ETF from current provider, 24-month contract:**
+
+- Monthly rate savings: ($0.16 − $0.12) × 1,100 = $0.04 × 1,100 = **$44.00/month**
+- Monthly net savings: $44.00 − $0 = **$44.00/month**
+- Breakeven month: $150 ÷ $44.00 = 3.4 → **Month 4**
+- Annual savings: $44.00 × 12 = **$528/year**
+- 24-month contract savings: ($44.00 × 24) − $150 = **$906**
+
+Despite the $150 early termination fee, this switch pays for itself by month 4 and saves $906 over the full contract. Texas households use more electricity than the national average (1,100 vs 886 kWh/month) due to summer cooling loads, which amplifies per-kWh rate differences. The $0.04/kWh spread is typical in the ERCOT market, where 60+ retail providers compete for customers through PowerToChoose.org.
+
+## Deregulated vs Regulated Markets
+
+Whether you can shop for electricity rates depends entirely on your state's regulatory structure. In regulated markets, your utility is a monopoly — you have one provider and one rate schedule. In deregulated markets, you choose your electricity supplier (who provides the energy) while the utility still delivers it through the same poles and wires.
+
+**Deregulated states (retail choice available):**
+Texas, Pennsylvania, Ohio, Illinois, New York, Connecticut, Delaware, Maine, Maryland, Massachusetts, New Hampshire, New Jersey, Rhode Island, and Washington DC offer full or partial retail electricity choice. In these markets, consumers can choose from dozens of competing suppliers offering fixed-rate, variable-rate, and green energy plans.
+
+**What to watch for when comparing rates in deregulated markets:**
+
+**Variable rate traps.** Introductory rates of $0.08–$0.10/kWh may jump to $0.18–$0.25/kWh after 3 months. Always confirm whether the rate is fixed for the full contract term and read the Electricity Facts Label (required in Texas) or equivalent disclosure document.
+
+**Fixed monthly fees.** Some plans advertise very low per-kWh rates but add $5–$20/month in fixed service charges, base charges, or minimum usage fees. On 500 kWh/month usage, a $10 fixed fee effectively adds $0.02/kWh to your real cost.
+
+**Early termination fees.** Locking into a 24-month contract at a good rate protects you from price spikes, but leaving early typically costs $50–$200. Calculate your breakeven month before committing to any long-term contract.
+
+**Minimum usage penalties.** Some Texas plans charge a penalty (or lose a discount) if monthly usage falls below 1,000 kWh. These plans look cheap at 1,200 kWh but become expensive in mild spring/fall months when usage drops.
+
+**Renewable energy premiums.** 100% renewable plans typically cost $0.01–$0.03/kWh more than conventional plans in deregulated markets. Whether this premium is worth paying depends on your priorities — the electrons you receive are identical regardless of plan type, but your payment supports renewable energy generation through Renewable Energy Certificates (RECs).
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How much can I actually save by switching electricity providers?**
+A: Typical savings in deregulated markets range from $200–$600 per year, depending on your usage and the rate spread available. A household using 1,000 kWh/month that finds a rate $0.03/kWh lower saves $360/year. In competitive markets like Texas during low-demand seasons, rate spreads of $0.05–$0.08/kWh are possible, yielding $600–$960/year in savings. However, savings vary by season and market conditions — the best time to lock in a fixed rate is typically during low-demand months (spring and fall) when wholesale prices are lowest and suppliers compete most aggressively.
+
+**Q: What is the difference between my electricity supply rate and delivery rate?**
+A: In deregulated markets, your electric bill has two main components: the supply charge (the cost of generating the electricity, which you can shop for) and the delivery charge (the cost of transmitting it to your home through the utility's poles and wires, which is fixed by the utility and not shoppable). When comparing providers, you are only comparing the supply rate — delivery charges remain the same regardless of which supplier you choose. Some comparison sites show "all-in" rates that include delivery; others show only the supply rate. Make sure you are comparing the same type of rate to avoid misleading conclusions.
+
+**Q: Should I choose a fixed-rate or variable-rate electricity plan?**
+A: Fixed-rate plans lock your per-kWh rate for the contract term (typically 6–24 months), protecting you from price spikes but potentially costing more if wholesale prices drop. Variable-rate plans adjust monthly based on market conditions — they offer flexibility (no contract, no ETF) but expose you to price volatility. In 2021–2022, Texas variable-rate customers saw rates spike to $0.20–$0.30+/kWh during summer heat waves while fixed-rate customers paid their locked-in rate. For budget predictability, a 12-month fixed-rate plan is the safest choice for most households. Only consider variable rates if you actively monitor market prices and are willing to switch quickly when rates rise.
+
+</div>
+
+## Sources & Methodology
+
+Rate comparison calculations use the straightforward cost-difference formula applied to actual monthly kWh consumption. National average electricity rates are from the U.S. Energy Information Administration's Electric Power Monthly (2025). State-level deregulation information is from the EIA's Status of Electricity Restructuring by State database. Texas retail market data references the Public Utility Commission of Texas PowerToChoose.org platform. Pennsylvania data references the PA Power Switch program operated by the Pennsylvania PUC. Fixed fee and early termination fee ranges reflect common terms found in Electricity Facts Labels filed with state regulators in 2024–2025. The 886 kWh/month US average household consumption is from the EIA Residential Energy Consumption Survey (RECS 2020).

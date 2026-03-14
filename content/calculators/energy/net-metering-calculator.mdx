@@ -1,0 +1,111 @@
+---
+title: "Net Metering Calculator"
+description: "Calculate your net metering savings. See how much credit you earn for excess solar exported to the grid and your net monthly electric bill."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A solar home producing 900 kWh/month and consuming 863 kWh/month exports 37 kWh of surplus to the grid. Under full retail net metering at $0.17/kWh, those exports earn **$6.29 in credits**, reducing the net bill to approximately **$0 after offsets**. But under California's NEM 3.0 policy, the same 37 kWh earns only **$2.22** at the reduced export rate of roughly $0.06/kWh — and the homeowner still owes the utility for grid power consumed in the evening. As of 2026, **38 states plus DC** have some form of net metering, but the trend is unmistakably toward lower export credits. This calculator shows your actual savings based on your state's current policy.
+
+</section>
+
+## What Your Results Mean
+
+**Monthly solar production** is the total kWh your system generates. **Self-consumed solar** is the portion used directly by your home during production hours — this offsets grid purchases at the full retail rate regardless of net metering policy. **Exported surplus** is the excess sent to the grid. **Export credit** is what your utility pays you for that surplus — this is where net metering policy makes all the difference. **Net monthly bill** is your remaining cost after solar offsets and export credits are applied. If your credits exceed your grid purchases, many utilities bank the surplus as a kWh credit (not a cash payment) for future months.
+
+## How to Use This Calculator
+
+1. Enter your monthly solar production in kWh. Get this from your solar monitoring app (Enphase, SolarEdge, Tesla) or estimate it: system size (kW) × peak sun hours × 30 days × 0.80 performance ratio.
+2. Enter your monthly electricity consumption in kWh from your utility bill.
+3. Enter your buy rate (the rate you pay for grid electricity, in $/kWh).
+4. Enter your export credit rate. For full retail net metering states, this equals your buy rate. For reduced net metering (California NEM 3.0, etc.), this is typically $0.04–$0.08/kWh.
+5. Enter any fixed monthly charges your utility applies regardless of consumption ($5–$25 typical).
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Self-Consumed} = \min(\text{Production}, \text{Consumption} \times f_{\text{self}})
+$$
+$$
+\text{Exported} = \max(0, \text{Production} - \text{Self-Consumed})
+$$
+$$
+\text{Grid Draw} = \max(0, \text{Consumption} - \text{Self-Consumed})
+$$
+$$
+\text{Export Credit} = \text{Exported} \times \text{Credit Rate}
+$$
+$$
+\text{Net Bill} = (\text{Grid Draw} \times \text{Buy Rate}) - \text{Export Credit} + \text{Fixed Charges}
+$$
+
+Where:
+- **f_self** = self-consumption fraction (typically 0.30–0.50 without battery, 0.70–0.90 with battery)
+- **Credit Rate** = what the utility pays per kWh of exported solar (retail rate or reduced rate)
+- **Buy Rate** = what you pay per kWh of grid electricity
+- **Fixed Charges** = monthly service/delivery fees that apply regardless of usage
+
+*Source: DSIRE (Database of State Incentives for Renewables & Efficiency) — Net Metering Policy Database (2026); U.S. EIA — Electric Power Monthly (2026); California PUC — NEM 3.0 Successor Tariff Decision (2023)*
+
+</div>
+
+## Worked Example 1
+
+**Full retail net metering state (New York): 900 kWh production, 863 kWh consumption, $0.17/kWh rate:**
+
+- Self-consumed solar (40% of production during daytime): 900 × 0.40 = **360 kWh**
+- Exported to grid: 900 − 360 = **540 kWh**
+- Grid electricity drawn (evening/night): 863 − 360 = **503 kWh**
+- Grid cost: 503 × $0.17 = **$85.51**
+- Export credit (full retail): 540 × $0.17 = **$91.80**
+- Fixed charge: **$12.00**
+- Net bill: $85.51 − $91.80 + $12.00 = **$5.71**
+
+Under full retail net metering, this homeowner's 900 kWh system nearly zeroes out the bill despite consuming 863 kWh. The $91.80 in export credits offsets all but $5.71 of the grid costs. The excess 37 kWh of production (900 − 863) banks as a credit for future months when production may fall short. Over a full year, this system saves approximately **$1,750** compared to no solar — and the net metering credit is responsible for about 60% of that savings.
+
+## Worked Example 2
+
+**Reduced net metering (California NEM 3.0): 1,200 kWh production, 800 kWh consumption, $0.35/kWh buy rate, $0.06/kWh export credit:**
+
+- Self-consumed solar (35% of production): 1,200 × 0.35 = **420 kWh**
+- Exported to grid: 1,200 − 420 = **780 kWh**
+- Grid electricity drawn: 800 − 420 = **380 kWh**
+- Grid cost: 380 × $0.35 = **$133.00**
+- Export credit (NEM 3.0 reduced rate): 780 × $0.06 = **$46.80**
+- Fixed charge: **$15.00**
+- Net bill: $133.00 − $46.80 + $15.00 = **$101.20**
+
+Under NEM 3.0, this homeowner still pays **$101.20/month** despite producing 50% more electricity than consumed. The reduced export credit of $0.06/kWh means 780 kWh of exported power earns only $46.80 — the same power would be worth $273 at the retail buy rate. The **$226 gap** between export value and retail value is the cost of reduced net metering. The solution: add a 10–13.5 kWh battery to shift self-consumption from 35% to 75–85%. With a battery, self-consumed solar rises to 900 kWh, exports drop to 300 kWh, grid draw falls to 0 kWh, and the net bill drops to $15 (fixed charge only) — saving $86/month or **$1,032/year** versus NEM 3.0 without storage.
+
+## The Net Metering Landscape in 2026
+
+Net metering policy is the single biggest variable in residential solar economics after the electricity rate itself. The trend across the US is moving from full retail credit toward reduced export compensation, but the pace varies dramatically by state.
+
+**Full retail net metering** (export credit = buy rate) is still available in 25+ states including New York, New Jersey, Massachusetts, Maryland, Colorado, Oregon, and Illinois. In these states, a solar system that produces exactly what you consume effectively eliminates your energy charge entirely — you only pay fixed fees.
+
+**Reduced or successor tariffs** have been adopted in California (NEM 3.0, effective April 2023), Nevada, Arizona, Hawaii, and several other states. Under these policies, export credits range from $0.03/kWh to $0.10/kWh — a fraction of the retail buy rate. The rationale: utilities argue that solar homeowners shift grid maintenance costs to non-solar ratepayers. The effect: solar payback periods extend by 2–5 years unless paired with battery storage.
+
+**No statewide net metering** exists in a handful of states including Alabama, Tennessee, South Dakota, and Idaho, where utilities set their own compensation rates (often at avoided cost, $0.02–$0.05/kWh). Solar adoption in these states is significantly lower.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is net metering and how does it work?**
+A: Net metering is a billing arrangement where your utility credits you for excess solar electricity you export to the grid. Your electric meter effectively runs backward when you produce more than you consume, and forward when you draw from the grid. At the end of the billing period, you pay only for your net consumption (grid draw minus exports). Under full retail net metering, each exported kWh earns a credit equal to your buy rate. Under reduced net metering (like California NEM 3.0), exports earn a lower rate — often 70–85% less than the retail price. As of 2026, 38 states plus DC have mandatory net metering or comparable programs, though policies are evolving rapidly.
+
+**Q: How much can I save with net metering?**
+A: Net metering savings depend on three factors: how much you export, your export credit rate, and your buy rate. A solar home exporting 500 kWh/month under full retail net metering at $0.17/kWh saves $85/month ($1,020/year) in export credits alone. Under reduced NEM 3.0 at $0.06/kWh, the same 500 kWh earns only $30/month ($360/year) — a $660/year difference. The highest-value strategy in any net metering environment is to self-consume as much solar as possible (using batteries, load shifting, and EV charging during solar hours) rather than relying on export credits.
+
+**Q: What happens to net metering credits I do not use?**
+A: Most utilities roll over unused credits to the next billing period. If you overproduce in sunny April but underproduce in cloudy December, April's credits offset December's grid costs. At year-end (the true-up date), policies vary: some utilities pay out remaining credits at the avoided cost rate ($0.03–$0.05/kWh), some expire them, and some roll them over indefinitely. California NEM 3.0 credits expire after 12 months with no cash payout. New York's VDER program pays out credits monthly. Check your utility's specific true-up policy — it affects how aggressively you should size your system relative to consumption.
+
+</div>
+
+## Sources & Methodology
+
+Net metering calculations use the standard utility billing offset model: net bill = (grid consumption × buy rate) − (exports × credit rate) + fixed charges. Self-consumption fractions (30–50% without battery, 70–90% with battery) are based on NREL modeling of residential solar load profiles. State net metering policy data is from the Database of State Incentives for Renewables and Efficiency (DSIRE), maintained by the N.C. Clean Energy Technology Center at NC State University. California NEM 3.0 export rates are from the California Public Utilities Commission Decision 22-12-056. National average electricity rate ($0.1724/kWh) is from the U.S. EIA Electric Power Monthly (2026). The 38-state count reflects mandatory net metering or equivalent successor tariff programs as cataloged by DSIRE as of January 2026.
