@@ -7,6 +7,7 @@ import {
   STATE_RATES,
   zipToStateCode,
   getStateRate,
+  NATIONAL_AVG,
 } from '@/lib/formulas/energy/electric-bill-calculator';
 import type {
   ApplianceBreakdown,
@@ -146,6 +147,11 @@ function StateComparison({
     rateVsState: number;
   };
 
+  const nationalAvgRate = NATIONAL_AVG.ratePerKwh;
+  const rateVsNational = nationalAvgRate > 0
+    ? ((userRate - nationalAvgRate) / nationalAvgRate) * 100
+    : 0;
+
   return (
     <div className="rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 p-4">
       <h4 className="text-sm font-semibold text-gray-800 dark:text-slate-200 mb-3 flex items-center gap-2">
@@ -155,7 +161,7 @@ function StateComparison({
         </svg>
         {s.stateName} Comparison
       </h4>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-3 gap-3">
         <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-3 text-center">
           <p className="text-xs text-gray-500 dark:text-slate-400 mb-1">Your Rate</p>
           <p className="text-lg font-bold text-gray-800 dark:text-slate-200">{(userRate * 100).toFixed(2)}¢</p>
@@ -166,14 +172,34 @@ function StateComparison({
           <p className="text-lg font-bold text-gray-800 dark:text-slate-200">{(s.stateAvgRate * 100).toFixed(2)}¢</p>
           <p className="text-[10px] text-gray-400 dark:text-slate-500">per kWh</p>
         </div>
+        <div className="rounded-lg bg-gray-50 dark:bg-slate-700/50 p-3 text-center">
+          <p className="text-xs text-gray-500 dark:text-slate-400 mb-1">National Avg</p>
+          <p className="text-lg font-bold text-gray-800 dark:text-slate-200">{(nationalAvgRate * 100).toFixed(2)}¢</p>
+          <p className="text-[10px] text-gray-400 dark:text-slate-500">per kWh</p>
+        </div>
       </div>
-      <p className="text-xs text-center text-gray-500 dark:text-slate-400 mt-3">
-        {s.rateVsState >= 0 ? (
-          <>Your rate is <span className="font-semibold text-red-600 dark:text-red-400">{s.rateVsState.toFixed(1)}% higher</span> than the {s.stateName} average</>
-        ) : (
-          <>Your rate is <span className="font-semibold text-emerald-600 dark:text-emerald-400">{Math.abs(s.rateVsState).toFixed(1)}% lower</span> than the {s.stateName} average</>
-        )}
-      </p>
+      <div className="text-xs text-center text-gray-500 dark:text-slate-400 mt-3 space-y-1">
+        <p>
+          {Math.abs(s.rateVsState) < 0.01 ? (
+            <>Your rate <span className="font-semibold text-gray-700 dark:text-slate-200">matches</span> the {s.stateName} average</>
+          ) : s.rateVsState > 0 ? (
+            <>Your rate is <span className="font-semibold text-red-600 dark:text-red-400">{s.rateVsState.toFixed(1)}% higher</span> than the {s.stateName} average</>
+          ) : (
+            <>Your rate is <span className="font-semibold text-emerald-600 dark:text-emerald-400">{Math.abs(s.rateVsState).toFixed(1)}% lower</span> than the {s.stateName} average</>
+          )}
+        </p>
+        <p>
+          {Math.abs(rateVsNational) < 2 ? (
+            <>vs. national average: <span className="font-semibold text-gray-700 dark:text-slate-200">at the national average</span></>
+          ) : rateVsNational > 50 ? (
+            <>vs. national average: <span className="font-semibold text-red-600 dark:text-red-400">{(userRate / nationalAvgRate).toFixed(1)}× the national average</span></>
+          ) : rateVsNational > 0 ? (
+            <>vs. national average: <span className="font-semibold text-red-600 dark:text-red-400">{rateVsNational.toFixed(1)}% above</span></>
+          ) : (
+            <>vs. national average: <span className="font-semibold text-emerald-600 dark:text-emerald-400">{Math.abs(rateVsNational).toFixed(1)}% below</span></>
+          )}
+        </p>
+      </div>
     </div>
   );
 }
@@ -210,7 +236,7 @@ export default function ElectricBillCalculator({ defaultStateCode = '' }: Electr
     if (stateCode && !rateManuallySet) {
       const state = getStateRate(stateCode);
       if (state) {
-        setRatePerKwh(state.avgRateCentsPerKwh / 100);
+        setRatePerKwh(parseFloat((state.avgRateCentsPerKwh / 100).toFixed(4)));
         setMonthlyBaseFee(state.avgMonthlyBaseFee);
       }
     }
@@ -443,7 +469,7 @@ export default function ElectricBillCalculator({ defaultStateCode = '' }: Electr
                 id="ebc-rate"
                 type="text"
                 inputMode="decimal"
-                value={ratePerKwh === 0 ? '' : ratePerKwh}
+                value={ratePerKwh === 0 ? '' : Number(ratePerKwh.toFixed(4))}
                 onChange={(e) => handleRateChange(e.target.value)}
                 placeholder="0.1724"
                 className="h-10 w-full rounded-lg border border-gray-300 dark:border-slate-600 bg-white dark:bg-slate-800 pl-7 pr-14 text-sm text-gray-800 dark:text-slate-200 outline-none transition-colors focus:border-blue-500 focus:ring-2 focus:ring-blue-500/30"
@@ -510,7 +536,7 @@ export default function ElectricBillCalculator({ defaultStateCode = '' }: Electr
                 {/* Secondary stats */}
                 <div className="grid grid-cols-3 gap-3 mt-5">
                   <div className="rounded-xl bg-white/70 dark:bg-slate-700/50 py-3 px-2">
-                    <p className="text-xs text-gray-500 dark:text-slate-400">Annual</p>
+                    <p className="text-xs text-gray-500 dark:text-slate-400">Your Est. Annual</p>
                     <p className="text-lg sm:text-xl font-bold text-gray-800 dark:text-slate-200">{formatCurrency(annualBill)}</p>
                   </div>
                   <div className="rounded-xl bg-white/70 dark:bg-slate-700/50 py-3 px-2">

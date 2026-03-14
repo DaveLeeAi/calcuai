@@ -1584,8 +1584,12 @@ export default function SlugPage({ params }: Props) {
 
             <div className="space-y-4 text-gray-700 dark:text-slate-300">
               <p>
-                {elecStateName} ranks <strong>#{nationalRank} out of 50 states</strong> (plus DC)
-                for residential electricity costs, where #1 is cheapest and #50 is most expensive.
+                {nationalRank === 1
+                  ? <>{elecStateName} <strong>has the lowest residential electricity rates in the US</strong> — the least expensive of all 50 states and DC.</>
+                  : nationalRank >= 50
+                    ? <>{elecStateName} <strong>has the highest residential electricity rates in the US</strong> — the most expensive of all 50 states and DC.</>
+                    : <>{elecStateName} <strong>ranks #{nationalRank} out of 51</strong> for residential electricity costs (where 1 = least expensive and 51 = most expensive).</>
+                }
                 The current average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh
                 {isAboveNational
                   ? ` is ${Math.abs(rateDiffFromNational).toFixed(2)}¢ above`
@@ -1603,7 +1607,7 @@ export default function SlugPage({ params }: Props) {
                   <li>Average rate: {avgRateCentsPerKwh.toFixed(2)}¢/kWh</li>
                   <li>Previous year: {prevYearRate.toFixed(2)}¢/kWh</li>
                   <li>Year-over-year change: {yoyChangePercent > 0 ? '+' : ''}{yoyChangePercent.toFixed(1)}%</li>
-                  <li>National rank: #{nationalRank} (1 = cheapest)</li>
+                  <li>National rank: #{nationalRank} of 51 (1 = least expensive)</li>
                   <li>Deregulated: {deregulated ? 'Yes' : 'No'}</li>
                   <li>Source: EIA / Choose Energy, 2026</li>
                 </ul>
@@ -1667,9 +1671,15 @@ export default function SlugPage({ params }: Props) {
               <li>
                 <strong>The weather where you live.</strong> Hot summers and cold winters both push usage up. If you rely on electric heating or cooling, your bill can double during extreme months.
               </li>
-              <li>
-                <strong>Your electricity plan.</strong> Some plans charge a flat rate per kWh. Others charge more during busy hours and less at night. The type of plan you have affects your total cost even if your usage stays the same.
-              </li>
+              {deregulated ? (
+                <li>
+                  <strong>Your electricity plan.</strong> Some plans charge a flat rate per kWh. Others charge more during busy hours and less at night. The type of plan you have affects your total cost even if your usage stays the same.
+                </li>
+              ) : (
+                <li>
+                  <strong>Your utility&apos;s rate structure.</strong> Your utility sets a single rate per kWh approved by the state. While you can&apos;t choose a different provider, you may be able to request budget billing or apply for low-income assistance programs to reduce your bill.
+                </li>
+              )}
               <li>
                 <strong>Fixed fees from your utility.</strong> Most utilities charge a monthly service fee (typically $5–$25) regardless of how much electricity you use. This shows up as a base or delivery charge on your bill.
               </li>
@@ -1803,20 +1813,40 @@ export default function SlugPage({ params }: Props) {
                   <strong>Upgrade to ENERGY STAR appliances</strong> — efficient refrigerators, washers, and
                   dryers use significantly less electricity than older models.
                 </li>
-                <li>
-                  <strong>Consider solar panels</strong> — {elecStateName} residents may benefit from net
-                  metering or solar incentive programs that offset electricity costs.
-                </li>
+                {(['CA','HI','AZ','NM','TX','FL','NV','CO'].includes(elecStateCode) || deregulated || nationalRank >= 35) ? (
+                  <li>
+                    <strong>Consider solar panels</strong> — {elecStateName} residents may benefit from net
+                    metering or solar incentive programs that offset electricity costs.
+                  </li>
+                ) : nationalRank <= 15 ? (
+                  <li>
+                    <strong>Enroll in budget billing</strong> — your utility spreads your annual cost into
+                    equal monthly payments, which helps with planning even if it doesn&apos;t lower your total bill.
+                  </li>
+                ) : (
+                  <li>
+                    <strong>Consider solar panels</strong> — {elecStateName} residents may benefit from net
+                    metering or solar incentive programs that offset electricity costs.
+                  </li>
+                )}
                 {deregulated && (
                   <li>
                     <strong>Shop electricity providers</strong> — in {elecStateName}&apos;s deregulated
                     market, comparing offers from multiple providers can help you lock in a lower rate.
                   </li>
                 )}
-                <li>
-                  <strong>Take advantage of time-of-use rates</strong> — if your utility offers TOU pricing,
-                  shifting high-energy activities to off-peak hours can reduce costs.
-                </li>
+                {deregulated ? (
+                  <li>
+                    <strong>Take advantage of time-of-use rates</strong> — if your utility offers TOU pricing,
+                    shifting high-energy activities to off-peak hours can reduce costs.
+                  </li>
+                ) : (
+                  <li>
+                    <strong>Request a home energy audit</strong> — many regulated utilities offer free or
+                    low-cost audits that identify where your home is losing energy. It&apos;s one of the few
+                    direct ways to lower your bill when you can&apos;t switch providers.
+                  </li>
+                )}
               </ul>
             </div>
           </section>
@@ -1849,27 +1879,30 @@ export default function SlugPage({ params }: Props) {
             </h2>
 
             <div className="space-y-5">
-              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
-                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+              <div className="space-y-2">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                   What is the average electricity rate in {elecStateName}?
-                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
+                </h3>
+                <div className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
                   <p>
                     The average residential electricity rate in {elecStateName} is{' '}
                     <strong>{avgRateCentsPerKwh.toFixed(2)}¢ per kWh</strong> as of 2026, according to EIA data.
-                    This is {comparisonWord} the national average of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh.
-                    {elecStateName} ranks #{nationalRank} among all states and DC (1 = cheapest).
+                    This is {comparisonWord} the national average of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh.{' '}
+                    {nationalRank === 1
+                      ? `${elecStateName} has the lowest residential electricity rates in the US — the least expensive of all 50 states and DC.`
+                      : nationalRank >= 50
+                        ? `${elecStateName} has the highest residential electricity rates in the US — the most expensive of all 50 states and DC.`
+                        : `${elecStateName} ranks #${nationalRank} out of 51 for residential electricity costs (where 1 = least expensive and 51 = most expensive).`
+                    }
                   </p>
                 </div>
-              </details>
+              </div>
 
-              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
-                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+              <div className="space-y-2">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                   Is {elecStateName} a deregulated electricity market?
-                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
+                </h3>
+                <div className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
                   {deregulated ? (
                     <p>
                       Yes, {elecStateName} has a deregulated electricity market. Residential customers can
@@ -1885,32 +1918,31 @@ export default function SlugPage({ params }: Props) {
                     </p>
                   )}
                 </div>
-              </details>
+              </div>
 
-              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
-                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+              <div className="space-y-2">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                   How much does the average {elecStateName} household pay for electricity?
-                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed">
+                </h3>
+                <div className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed">
                   <p>
-                    Based on {elecStateName}&apos;s average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh and
-                    the national average usage of {NATIONAL_AVG_USAGE} kWh/month, the estimated monthly
-                    electric bill is approximately <strong>{fmtUSD(estMonthlyBill)}</strong>, or about{' '}
-                    <strong>{fmtUSD(estMonthlyBill * 12)}</strong> per year. Actual bills vary based on
-                    household size, climate, heating/cooling systems, and energy efficiency measures.
+                    A typical {elecStateName} household pays approximately{' '}
+                    <strong>{fmtUSD(estMonthlyBill)}</strong> per month, or about{' '}
+                    <strong>{fmtUSD(Math.round(estMonthlyBill * 12))}</strong> per year, based on
+                    the state average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh and national average
+                    usage of {NATIONAL_AVG_USAGE} kWh/month. Actual bills vary based on household size,
+                    climate, heating/cooling systems, and energy efficiency measures.
                   </p>
                 </div>
-              </details>
+              </div>
 
-              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
-                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+              <div className="space-y-2">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                   How close is this calculator to my real electricity bill?
-                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed space-y-2">
+                </h3>
+                <div className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed space-y-2">
                   <p>
-                    Pretty close — as long as you use your actual numbers. The calculator uses the
+                    Very accurate when you enter your actual numbers — the calculator uses the
                     real formula your utility uses: <strong>kWh used × rate per kWh + monthly base fee</strong>.
                     If you pull your kWh usage and rate directly off your bill, the result should
                     land within a few dollars of what you actually owe.
@@ -1923,14 +1955,13 @@ export default function SlugPage({ params }: Props) {
                     For a quick estimate, though, it gives you a solid ballpark.
                   </p>
                 </div>
-              </details>
+              </div>
 
-              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
-                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+              <div className="space-y-2">
+                <h3 className="text-base font-semibold text-gray-900 dark:text-white">
                   What are simple ways to use less electricity at home?
-                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
-                </summary>
-                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed space-y-2">
+                </h3>
+                <div className="text-sm text-gray-700 dark:text-slate-300 leading-relaxed space-y-2">
                   <p>
                     The biggest wins come from the things that run the longest or use the most power:
                   </p>
@@ -1942,10 +1973,10 @@ export default function SlugPage({ params }: Props) {
                     <li><strong>Check your water heater setting.</strong> Most are set to 140°F from the factory. Turning it down to 120°F is usually enough for everyday use and cuts the energy it takes to keep water hot.</li>
                   </ul>
                   <p className="mt-1">
-                    None of these require big purchases or lifestyle changes. Start with the thermostat and lighting — those two alone can trim 15–20% off a typical bill.
+                    None of these require big purchases or lifestyle changes. Start with the thermostat and lighting — those two alone can trim 10–20% off a typical bill, per DOE estimates.
                   </p>
                 </div>
-              </details>
+              </div>
             </div>
           </section>
 
@@ -1958,7 +1989,7 @@ export default function SlugPage({ params }: Props) {
               href="/energy/electric-bill-calculator"
               className="text-sm text-brand-600 dark:text-brand-400 hover:underline"
             >
-              &larr; Back to Electric Bill Estimator
+              &larr; Back to Electric Bill Calculator
             </Link>
             <Link
               href="/energy/kwh-cost-calculator"
