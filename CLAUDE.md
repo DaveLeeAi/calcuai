@@ -176,6 +176,13 @@ All 94 standalone calculators + 6 tab/mode features live. Full `npm run qa` pass
 - [ ] Prepare for 1,000+ scale (split sitemap, CI/CD pipeline)
 
 ### Milestone 5: Pre-Launch (CURRENT)
+- [x] US market content localization pass (146 MDX files updated):
+  - [x] Fix **bold** rendering as literal asterisks in BLUF sections (46 files → <strong> tags)
+  - [x] Replace template "This calculator" CTAs in BLUFs with varied language (79 files)
+  - [x] Replace formal language site-wide: individuals→people, expenditure→cost/spending (39 files, 117 replacements)
+  - [x] Rewrite 5 productivity BLUF intros + H2s for conversational American tone
+  - [x] Rewrite 5 health BLUF intros for warmer second-person tone
+  - [x] Vary generic H2 headers on 5 ecommerce/real-estate calculators
 - [ ] Filter draft specs from sitemap and routes (age-calc, exponent-calc)
 - [ ] Migrate state tax URLs from /calculators/finance/ to /finance/
 - [ ] Add Sales Tax by State section to finance category hub

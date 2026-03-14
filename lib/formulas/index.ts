@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 302 modules, 304 formula IDs
+ * 303 modules, 305 formula IDs
  * Generated: 2026-03-14
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -168,6 +168,7 @@ import { FORMULA_REGISTRY as energy_water_heater_energy_cost } from './energy/wa
 import { FORMULA_REGISTRY as energy_weatherization_payback } from './energy/weatherization-payback';
 
 // Everyday
+import { FORMULA_REGISTRY as everyday_age_calc } from './everyday/age-calc';
 import { FORMULA_REGISTRY as everyday_date_diff } from './everyday/date-diff';
 import { FORMULA_REGISTRY as everyday_discount } from './everyday/discount';
 import { FORMULA_REGISTRY as everyday_electricity_cost } from './everyday/electricity-cost';
@@ -490,6 +491,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...energy_water_heater_energy_cost,
   ...energy_weatherization_payback,
   // Everyday
+  ...everyday_age_calc,
   ...everyday_date_diff,
   ...everyday_discount,
   ...everyday_electricity_cost,

@@ -2,6 +2,7 @@ import type { MetadataRoute } from 'next';
 import { getAllCategories, getAllSpecs, getAllGlossaryTerms, getAllMethodologyTopics } from '@/lib/content-loader';
 import { siteConfig } from '@/lib/site-config';
 import salesTaxData from '@/content/data/us-sales-tax-2026.json';
+import electricityData from '@/content/data/us-electricity-rates-2026.json';
 
 function stateNameToSlug(stateName: string): string {
   return (
@@ -97,6 +98,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
+  // Programmatic state electricity rate pages (51 entries)
+  const stateElectricityPages: MetadataRoute.Sitemap = (
+    electricityData.states as { stateName: string }[]
+  ).map((state) => ({
+    url: `${baseUrl}/energy/${state.stateName.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')}-electricity-rates`,
+    lastModified: new Date(electricityData.effectiveDate),
+    changeFrequency: 'monthly' as const,
+    priority: 0.7,
+  }));
+
   return [
     ...staticPages,
     ...categoryPages,
@@ -105,5 +116,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...glossaryPages,
     ...methodologyPages,
     ...stateSalesTaxPages,
+    ...stateElectricityPages,
   ];
 }
