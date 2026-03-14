@@ -105,7 +105,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "FICO Score model; Experian, TransUnion, Equifax credit reporting standards",
   "articleWordTarget": 800,
   "speakableSelectors": [

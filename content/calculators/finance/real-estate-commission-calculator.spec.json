@@ -119,7 +119,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "National Association of Realtors (NAR) — Member Profile & Commission Data; Bureau of Labor Statistics (BLS) real estate agent compensation data",
   "articleWordTarget": 1200,
   "speakableSelectors": [

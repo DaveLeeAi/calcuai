@@ -93,7 +93,7 @@
   ],
   "relatedCalculators": [
     "ev-vs-gas-cost-calculator",
-    "electric-bill-estimator",
+    "electric-bill-calculator",
     "energy-rebate-calculator",
     "kwh-cost-calculator"
   ],
@@ -117,7 +117,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 73,
+  "qualityScore": 74,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

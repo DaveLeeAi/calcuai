@@ -101,7 +101,7 @@
   "disclaimer": "health",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "National Sleep Foundation sleep cycle research; Walker, M. Why We Sleep (2017)",
   "articleWordTarget": 1400,
   "speakableSelectors": [

@@ -155,7 +155,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Bogle, J. 'The Little Book of Common Sense Investing' (2007); Vanguard research on expense ratio impact; CFA Institute compound growth formula",
   "articleWordTarget": 1400,
   "speakableSelectors": [

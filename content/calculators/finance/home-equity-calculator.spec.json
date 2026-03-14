@@ -166,7 +166,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Equity = Home Value - Total Liens; LTV = Total Debt / Home Value; Borrowable Equity = Home Value × LTV Limit - Total Debt",

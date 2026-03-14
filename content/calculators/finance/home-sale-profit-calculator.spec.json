@@ -177,7 +177,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "IRS Publication 523 — Selling Your Home; National Association of Realtors (NAR) commission data; CFPB closing cost guidelines",
   "articleWordTarget": 1400,
   "speakableSelectors": [

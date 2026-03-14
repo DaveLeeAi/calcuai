@@ -157,6 +157,18 @@
       "label": "Cost Comparison",
       "type": "value-group",
       "format": "currency"
+    },
+    {
+      "id": "costComparisonChart",
+      "label": "Total Cost Comparison",
+      "type": "chart-pie",
+      "description": "Visual comparison of total payoff cost between your current card and the balance transfer option.",
+      "chartConfig": {
+        "colors": [
+          "#E74C3C",
+          "#27AE60"
+        ]
+      }
     }
   ],
   "formula": "balance-transfer",
@@ -174,7 +186,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Consumer Financial Protection Bureau (CFPB)",
   "articleWordTarget": 1400,
   "speakableSelectors": [
@@ -182,7 +194,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Iterative amortization with two-phase payoff (promo + post-promo) per CFPB balance transfer disclosure requirements under TILA",
   "formulaAuditDate": "2026-03-14",
@@ -194,7 +206,7 @@
     "credit-card-payoff-calculator",
     "debt-consolidation-calculator"
   ],
-  "qualityScore": 73,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

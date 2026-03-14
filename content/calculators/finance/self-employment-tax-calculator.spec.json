@@ -172,7 +172,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "IRS Publication 334 — Tax Guide for Small Business; IRS Schedule SE (Form 1040); SSA 2025 wage base",
   "articleWordTarget": 1400,
   "speakableSelectors": [

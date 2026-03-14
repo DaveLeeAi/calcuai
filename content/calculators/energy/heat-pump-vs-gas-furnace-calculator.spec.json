@@ -140,7 +140,7 @@
     "gas-vs-electric-cost-calculator",
     "home-heating-cost-calculator",
     "energy-rebate-calculator",
-    "electric-bill-estimator"
+    "electric-bill-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": true,

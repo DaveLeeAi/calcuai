@@ -142,7 +142,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "IRS Topic No. 409 — Capital Gains and Losses; IRS Revenue Procedure 2024-40",
   "articleWordTarget": 1400,
   "speakableSelectors": [

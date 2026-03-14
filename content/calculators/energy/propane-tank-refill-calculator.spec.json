@@ -20,20 +20,38 @@
       "type": "select",
       "default": "500",
       "options": [
-        { "value": "20", "label": "20 lb (BBQ grill — 4.7 gal)" },
-        { "value": "100", "label": "100 gallons" },
-        { "value": "120", "label": "120 gallons" },
-        { "value": "250", "label": "250 gallons" },
-        { "value": "500", "label": "500 gallons" },
-        { "value": "1000", "label": "1,000 gallons" }
+        {
+          "value": "20",
+          "label": "20 lb (BBQ grill — 4.7 gal)"
+        },
+        {
+          "value": "100",
+          "label": "100 gallons"
+        },
+        {
+          "value": "120",
+          "label": "120 gallons"
+        },
+        {
+          "value": "250",
+          "label": "250 gallons"
+        },
+        {
+          "value": "500",
+          "label": "500 gallons"
+        },
+        {
+          "value": "1000",
+          "label": "1,000 gallons"
+        }
       ]
     },
     {
       "id": "pricePerGallon",
       "label": "Propane Price Per Gallon",
       "type": "currency",
-      "default": 2.80,
-      "min": 0.50,
+      "default": 2.8,
+      "min": 0.5,
       "max": 10,
       "step": 0.01,
       "prefix": "$",
@@ -54,12 +72,30 @@
       "type": "select",
       "default": "20",
       "options": [
-        { "value": "0", "label": "Empty (0%)" },
-        { "value": "10", "label": "Nearly Empty (10%)" },
-        { "value": "20", "label": "Low (20%)" },
-        { "value": "30", "label": "30%" },
-        { "value": "50", "label": "Half Full (50%)" },
-        { "value": "75", "label": "75%" }
+        {
+          "value": "0",
+          "label": "Empty (0%)"
+        },
+        {
+          "value": "10",
+          "label": "Nearly Empty (10%)"
+        },
+        {
+          "value": "20",
+          "label": "Low (20%)"
+        },
+        {
+          "value": "30",
+          "label": "30%"
+        },
+        {
+          "value": "50",
+          "label": "Half Full (50%)"
+        },
+        {
+          "value": "75",
+          "label": "75%"
+        }
       ],
       "helpText": "Tanks are filled to 80% capacity for safety"
     }
@@ -130,7 +166,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

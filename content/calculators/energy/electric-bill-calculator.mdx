@@ -1,0 +1,193 @@
+---
+title: "Electric Bill Calculator"
+description: "Calculate your monthly electric bill by state or ZIP code. Compare your rate to the US average of 17.24¢/kWh across all 50 states. See appliance-level breakdown and efficiency rating."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+The average US household uses 863 kWh per month and pays **$148.78/month** at the national average rate of **17.24¢/kWh** — but your actual bill depends almost entirely on where you live. North Dakota residents pay as little as 11.02¢/kWh ($95.09/month at average usage), while Hawaii tops the chart at 41.62¢/kWh ($359.18/month for the same consumption). Electricity rates rose roughly 6% year-over-year nationally through early 2026, driven by infrastructure upgrades, fuel costs, and growing demand from data centers and EV charging. Select your state or enter your ZIP code above to see what your bill should be — and whether you're paying more than you need to.
+
+</section>
+
+## What Your Results Mean
+
+**Monthly bill** is the total you owe your utility, combining your energy charge (kWh × rate) with any fixed monthly base fees your utility tacks on regardless of usage. **Annual cost** extrapolates your monthly bill across 12 months — useful for budgeting, but keep in mind that seasonal swings can push summer bills 40–80% above winter bills in warm climates and vice versa in cold ones. **Cost per day** breaks down your consumption into a daily expense, making it easier to spot waste: if your daily cost jumps from $4.50 to $7.00, something changed in your home.
+
+The **efficiency meter** shows how your bill stacks up against the national average. If you are paying more than $148.78/month at average consumption, your rate is above the US median — and switching plans, negotiating with your utility, or adding solar may produce meaningful savings. The **appliance breakdown** estimates where your electricity dollars go based on EIA household energy end-use data.
+
+## How to Use This Calculator
+
+1. **Select your state** or **enter your ZIP code** — the calculator automatically fills in your state's average electricity rate and base fee.
+2. Choose a **household size preset** (Apartment, Small Home, or Large Home) or drag the slider to set your exact monthly kWh usage. Find your actual usage on your electric bill under "kWh used" or "total consumption."
+3. Adjust the **Price per kWh** if your rate differs from the state average. Look for "energy charge" or "supply rate" on your bill.
+4. Adjust the **Monthly Base Fee** if needed. This is your utility's fixed service/delivery charge ($5–$25 typical).
+5. Results update instantly as you change any input — no button click required.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Monthly Bill} = (\text{kWh} \times \text{Price per kWh}) + \text{Monthly Base Fee}
+$$
+$$
+\text{Annual Cost} = \text{Monthly Bill} \times 12
+$$
+$$
+\text{Daily Cost} = \frac{\text{Monthly Bill}}{30}
+$$
+
+Where:
+- **kWh** = kilowatt-hours consumed during the billing period (from your meter)
+- **Price per kWh** = your utility's energy charge per kWh ($/kWh)
+- **Monthly Base Fee** = the flat monthly service fee your utility charges regardless of usage ($5–$25 typical)
+
+*Source: U.S. Energy Information Administration — Electric Power Monthly, Table 5.6.a (March 2026); Choose Energy — Average Electricity Rates by State (March 2026)*
+
+</div>
+
+## Worked Example 1
+
+**Texas homeowner with above-average summer usage:**
+
+- Monthly usage: 1,100 kWh (Texas average is 1,132 kWh — the highest in the US due to AC load)
+- Rate: $0.1587/kWh (Texas residential average, EIA 2025)
+- Monthly base fee: $10.00/month
+
+Calculation:
+- Energy charge: 1,100 × $0.1587 = **$174.57**
+- Monthly base fee: **$10.00**
+- Monthly bill: $174.57 + $10.00 = **$184.57**
+- Annual cost: $184.57 × 12 = **$2,214.84**
+- Daily cost: $184.57 ÷ 30 = **$6.15/day**
+
+At $184.57/month, this Texas homeowner pays about 24% more than the national average — but that is driven by usage, not rate. Texas electricity rates are actually 8% below the national average. The culprit is cooling: air conditioning accounts for 50–70% of summer electricity consumption in Texas, pushing July and August bills to $250–$350 while winter months may drop to $80–$100.
+
+## Worked Example 2
+
+**California homeowner on tiered rates with moderate usage:**
+
+- Monthly usage: 700 kWh (below California average of 532 kWh due to a medium-sized home with central AC)
+- Blended rate: $0.3471/kWh (California residential average, EIA 2025)
+- Monthly base fee: $15.00/month
+
+Calculation:
+- Energy charge: 700 × $0.3471 = **$242.97**
+- Monthly base fee: **$15.00**
+- Monthly bill: $242.97 + $15.00 = **$257.97**
+- Annual cost: $257.97 × 12 = **$3,095.64**
+- Daily cost: $257.97 ÷ 30 = **$8.60/day**
+
+Despite using 37% fewer kWh than the national average, this California homeowner pays 73% more than the national average bill. California's rate — more than double the national average — is driven by wildfire mitigation costs, grid upgrades, and aggressive renewable mandates. This is the state where solar panels produce the fastest payback: at $0.35/kWh, a 6 kW system generating 9,000 kWh/year saves $3,150 annually.
+
+## Why Is My Electric Bill So High?
+
+Your electric bill is determined by two factors: how much electricity you use (kWh) and how much you pay per unit (rate). Here is where the average American household's electricity goes, according to the EIA Residential Energy Consumption Survey (RECS 2022):
+
+**HVAC (Heating & Cooling) — 46% of your bill.** Central AC, heat pumps, and space heaters dominate household electricity consumption. In hot climates, cooling alone can account for 60–70% of summer bills. A typical central AC unit draws 3,000–5,000 watts and runs 8–16 hours daily during peak summer.
+
+**Water Heating — 18% of your bill.** A standard electric water heater uses 4,500 watts and accounts for roughly $25–$35/month at the national average rate. Heat pump water heaters cut this by 65%.
+
+**Appliances — 15% of your bill.** Refrigerators (400–600 watts, running 24/7), clothes dryers (5,000 watts per cycle), dishwashers, and ovens account for a combined 15% of household electricity.
+
+**Lighting — 12% of your bill.** The average home has 30–40 light fixtures. LED bulbs use 7–10 watts each versus 60 watts for incandescent, saving $100+/year for a typical household.
+
+**Electronics & Other — 9% of your bill.** TVs, computers, gaming consoles, phone chargers, and standby power ("phantom loads") account for 9% of the average bill. A desktop computer running 8 hours/day costs roughly $30/year at the national average rate.
+
+## Why Electricity Rates Vary by State
+
+Electricity rates are not random. Five structural factors explain why North Dakota pays 11.02¢/kWh while Hawaii pays 41.62¢/kWh — a 278% difference for the same commodity.
+
+**Generation fuel mix.** States that rely heavily on low-cost fuels have lower rates. West Virginia (93% coal and gas) and Idaho (60% hydropower) have historically low generation costs. Hawaii imports petroleum for most of its generation at global oil prices, inflating costs far above the mainland.
+
+**Transmission and distribution infrastructure.** Rural states with long distances between power plants and customers face higher per-mile transmission costs. Conversely, states with dense population centers amortize grid costs across more ratepayers. California's wildfire liability has added $5–$8 billion in grid hardening costs, passed directly to ratepayers as surcharges.
+
+**Regulatory structure.** Deregulated states like Texas and Pennsylvania allow consumers to choose competitive retail electricity providers, which can drive rates lower through competition — but also exposes consumers to price volatility, as Texas saw during the February 2021 winter storm when some variable-rate plans spiked to $9/kWh. Regulated states like Florida and Georgia have a single utility with fixed rates set by the Public Utilities Commission.
+
+**Renewable mandates.** States with aggressive renewable portfolio standards (RPS) add the cost of subsidies, grid integration, and backup capacity to consumer rates. California's 60% RPS target and New York's 70% target by 2030 both add 1–3¢/kWh to retail prices. However, falling solar and wind costs mean this premium is shrinking annually.
+
+**Weather and peak demand.** States with extreme summer heat (Texas, Arizona, Florida) build extra generation capacity to handle July–August peak demand — capacity that sits idle 9 months a year. That idle capacity is paid for through base rates year-round.
+
+## State-by-State Rate Comparison
+
+Rates below reflect residential averages from the EIA Electric Power Monthly (2025–2026 data). Your actual rate may differ based on your utility, plan type, and usage tier.
+
+| State | Avg Rate (¢/kWh) | Avg Monthly Bill | Rate vs. National |
+|---|---|---|---|
+| Hawaii | 41.62¢ | $359 | +141% |
+| California | 34.71¢ | $300 | +101% |
+| Rhode Island | 31.15¢ | $269 | +81% |
+| Massachusetts | 30.88¢ | $267 | +79% |
+| Maine | 30.39¢ | $262 | +76% |
+| New York | 27.39¢ | $236 | +59% |
+| New Hampshire | 26.28¢ | $227 | +52% |
+| National Average | 17.24¢ | $149 | — |
+| Texas | 15.87¢ | $137 | −8% |
+| Florida | 15.02¢ | $130 | −13% |
+| Arkansas | 12.33¢ | $106 | −28% |
+| Missouri | 11.91¢ | $103 | −31% |
+| Nebraska | 11.57¢ | $100 | −33% |
+| North Dakota | 11.02¢ | $95 | −36% |
+
+## How to Read Your Electricity Bill
+
+Your electric bill contains several distinct charges that together make up your total. Understanding each one is essential to finding savings.
+
+**Energy charge** is the cost of the electricity itself — your kWh consumed multiplied by the per-kWh rate. This is the "Price per kWh" you enter into this calculator. In deregulated states, this may appear as the "supply charge" from your chosen provider.
+
+**Delivery charge** covers transmission lines, substations, and local distribution wires. It is often a fixed fee ($8–$20/month) plus a small per-kWh component ($0.02–$0.06/kWh). You cannot avoid this charge regardless of your electricity supplier. This is the "Monthly Base Fee" in the calculator.
+
+**Demand charge** (primarily commercial accounts, but some residential TOU plans include it) is based on your peak 15-minute draw during the billing period. If you ran your AC, dryer, oven, and EV charger simultaneously and peaked at 12 kW, you might face a $5–$15/kW demand charge on that 12 kW peak — even if you only hit it once all month.
+
+**Regulatory surcharges** include renewable energy fund contributions, energy efficiency program costs, nuclear decommissioning fees, and wildfire mitigation surcharges. These vary by state and utility but typically add $3–$15/month.
+
+**Taxes and fees** include state and local sales tax (if applicable), franchise fees, and miscellaneous regulatory assessments. These typically add 5–12% to the pre-tax bill.
+
+## How to Lower Your Electric Bill
+
+Reducing your electric bill comes down to three levers: use less electricity, shift usage to cheaper hours, or pay a lower rate. The strategies below are ordered by typical ROI, highest first.
+
+**Switch to time-of-use (TOU) rates if offered.** Many utilities offer optional TOU plans where off-peak electricity (typically 9 PM to 7 AM) costs $0.08–$0.14/kWh versus $0.25–$0.40/kWh during peak hours. If you can shift your EV charging, dishwasher, laundry, and water heater to overnight, you can cut the energy cost of those appliances by 40–60%.
+
+**Replace your top three energy hogs.** Central AC (1,500–5,000 W), electric water heaters (4,500 W), and old refrigerators (400–600 W, 24/7) dominate most electric bills. Upgrading to an ENERGY STAR air conditioner with a higher SEER2 rating (16+) reduces cooling energy by 20–40%. A heat pump water heater uses 65% less electricity than a standard electric tank.
+
+**Seal your building envelope.** Air leaks around windows, doors, outlets, and attic penetrations force your HVAC to work harder. The DOE estimates that air sealing and insulation improvements reduce heating and cooling costs by 15–30%.
+
+**Install solar panels.** At 17.24¢/kWh, a 6 kW system producing 9,000 kWh/year offsets $1,552 in annual electricity costs. After the 30% federal tax credit, a $20,000 system nets $14,000 — paying itself back in 9 years.
+
+**Shop competitive providers in deregulated states.** In Texas, Pennsylvania, Ohio, and 12 other deregulated states, you can choose your electricity supplier. Switching from the default utility rate to a competitive fixed-rate plan can save 10–25% with no service changes.
+
+## Seasonal Usage Patterns and Peak Demand
+
+Electricity consumption is not uniform across the year. The national average of 863 kWh/month masks dramatic seasonal swings that can double or triple your bill depending on climate and heating/cooling fuel type.
+
+In the South and Southwest, summer is the expensive season. A Texas household that uses 800 kWh/month in March may consume 1,400–1,800 kWh/month in July and August when central AC runs 12–16 hours daily. At $0.16/kWh, that is a swing from $128/month to $224–$288/month — purely from cooling load.
+
+In the Northeast and Midwest, homes with electric heat see winter spikes instead. A Massachusetts home on a heat pump might use 600 kWh/month in June but 1,200+ kWh/month in January when the heat pump works overtime against 20°F outdoor temperatures. At $0.31/kWh, that January bill exceeds $370.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the average electric bill in the US?**
+A: The average US residential electric bill is approximately $148.78 per month, based on average consumption of 863 kWh at 17.24¢/kWh as of 2025–2026 EIA data. However, actual bills range from under $100/month in low-rate states like North Dakota and Washington to over $250/month in high-rate states like California, Massachusetts, and Hawaii.
+
+**Q: How many kWh does the average home use per month?**
+A: The US average is 863 kWh per month, but this varies significantly by state and climate. Louisiana averages 1,149 kWh/month (heavy AC use), Texas averages 1,132 kWh/month, while Hawaii averages only 505 kWh/month (mild climate, smaller homes). Home size, number of occupants, and appliance efficiency also matter.
+
+**Q: Why did my electric bill go up even though I did not change anything?**
+A: Three common causes: (1) Rate increase — utilities raise rates 3–6% annually, and a 5% rate hike on a $150 bill adds $7.50/month silently; (2) Seasonal demand — AC in summer and electric heating in winter can double your kWh usage; (3) Tiered pricing — many utilities charge a higher rate per kWh once you exceed a baseline.
+
+**Q: How do I find my electricity rate per kWh?**
+A: Look on your electric bill for "energy charge," "supply charge," or "rate per kWh." It is typically listed in cents per kWh (e.g., 15.87¢/kWh or $0.1587/kWh). If your bill shows tiered rates, calculate your blended rate by dividing your total energy charge by total kWh.
+
+**Q: Is it cheaper to use electricity at night?**
+A: Only if you are on a time-of-use (TOU) rate plan. Standard flat-rate plans charge the same price per kWh regardless of when you use it. TOU plans offer off-peak rates (typically 9 PM to 7 AM) that are 40–65% cheaper than peak rates.
+
+</div>
+
+## Sources & Methodology
+
+Electric bill calculations use the standard utility billing formula: total bill = (kWh consumed × price per kWh) + monthly base fee. National and state average electricity rates are sourced from the U.S. Energy Information Administration's Electric Power Monthly, Table 5.6.a (Residential Average Retail Price of Electricity by State). Average household consumption of 863 kWh/month is from the EIA's 2022 Residential Energy Consumption Survey (RECS), the most recent available. Appliance energy end-use breakdown percentages are from the same EIA RECS 2022 data. Year-over-year rate increase data is from the EIA Short-Term Energy Outlook and Choose Energy's monthly state rate tracker (March 2026).

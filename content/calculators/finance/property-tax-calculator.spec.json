@@ -114,6 +114,18 @@
       "label": "Tax Breakdown",
       "type": "value-group",
       "format": "currency"
+    },
+    {
+      "id": "taxBreakdownChart",
+      "label": "Tax Breakdown",
+      "type": "chart-pie",
+      "description": "Visual split between base property tax and special assessments.",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C"
+        ]
+      }
     }
   ],
   "formula": "property-tax",
@@ -131,7 +143,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Tax Foundation — Property Tax Collections and Rates by State",
   "articleWordTarget": 1400,
   "speakableSelectors": [
@@ -139,7 +151,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Annual Tax = (Taxable Value × Tax Rate / 100) + Special Assessments; Taxable Value = max(0, Assessed Value − Exemptions); Assessed Value = Home Value × Assessment Rate / 100; Effective Rate = (Annual Tax / Home Value) × 100; Mill Rate = Tax Rate × 10",
   "formulaAuditDate": "2026-03-14",
@@ -148,7 +160,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 78,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

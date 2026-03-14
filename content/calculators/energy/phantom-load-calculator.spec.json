@@ -20,16 +20,46 @@
       "type": "select",
       "default": "entertainment-center",
       "options": [
-        { "value": "entertainment-center", "label": "Entertainment Center (TV, streaming box, sound bar)" },
-        { "value": "home-office", "label": "Home Office (monitor, router, printer, chargers)" },
-        { "value": "kitchen", "label": "Kitchen (microwave, coffee maker, toaster oven)" },
-        { "value": "bedroom", "label": "Bedroom (alarm clock, phone charger, smart speaker)" },
-        { "value": "gaming-setup", "label": "Gaming Setup (console, monitor, headset charger)" },
-        { "value": "laundry", "label": "Laundry (washer, dryer, iron)" },
-        { "value": "smart-home", "label": "Smart Home (hub, cameras, smart plugs, displays)" },
-        { "value": "garage-workshop", "label": "Garage/Workshop (power tools, chargers, opener)" },
-        { "value": "whole-home", "label": "Whole Home (all categories combined)" },
-        { "value": "custom", "label": "Custom (enter standby watts below)" }
+        {
+          "value": "entertainment-center",
+          "label": "Entertainment Center (TV, streaming box, sound bar)"
+        },
+        {
+          "value": "home-office",
+          "label": "Home Office (monitor, router, printer, chargers)"
+        },
+        {
+          "value": "kitchen",
+          "label": "Kitchen (microwave, coffee maker, toaster oven)"
+        },
+        {
+          "value": "bedroom",
+          "label": "Bedroom (alarm clock, phone charger, smart speaker)"
+        },
+        {
+          "value": "gaming-setup",
+          "label": "Gaming Setup (console, monitor, headset charger)"
+        },
+        {
+          "value": "laundry",
+          "label": "Laundry (washer, dryer, iron)"
+        },
+        {
+          "value": "smart-home",
+          "label": "Smart Home (hub, cameras, smart plugs, displays)"
+        },
+        {
+          "value": "garage-workshop",
+          "label": "Garage/Workshop (power tools, chargers, opener)"
+        },
+        {
+          "value": "whole-home",
+          "label": "Whole Home (all categories combined)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (enter standby watts below)"
+        }
       ],
       "helpText": "Select a device group or choose Custom"
     },
@@ -91,7 +121,7 @@
   "relatedCalculators": [
     "kwh-cost-calculator",
     "appliance-energy-cost-calculator",
-    "electric-bill-estimator",
+    "electric-bill-calculator",
     "home-energy-usage-calculator",
     "smart-thermostat-savings-calculator"
   ],
@@ -115,7 +145,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

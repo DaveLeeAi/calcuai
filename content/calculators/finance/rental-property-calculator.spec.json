@@ -304,7 +304,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "National Association of Realtors — Real Estate Investment Analysis; Freddie Mac — Rental Income Guidelines",
   "articleWordTarget": 2000,
   "speakableSelectors": [

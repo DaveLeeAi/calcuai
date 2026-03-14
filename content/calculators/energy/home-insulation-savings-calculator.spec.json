@@ -150,7 +150,7 @@
     "smart-thermostat-savings-calculator",
     "energy-rebate-calculator",
     "seer-savings-calculator",
-    "electric-bill-estimator"
+    "electric-bill-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": true,

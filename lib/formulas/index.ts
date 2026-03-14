@@ -140,7 +140,7 @@ import { FORMULA_REGISTRY as ecommerce_tiktok_shop_profit } from './ecommerce/ti
 // Energy
 import { FORMULA_REGISTRY as energy_appliance_energy_cost } from './energy/appliance-energy-cost';
 import { FORMULA_REGISTRY as energy_carbon_footprint } from './energy/carbon-footprint';
-import { FORMULA_REGISTRY as energy_electric_bill_estimator } from './energy/electric-bill-estimator';
+import { FORMULA_REGISTRY as energy_electric_bill_calculator } from './energy/electric-bill-calculator';
 import { FORMULA_REGISTRY as energy_electricity_rate_comparison } from './energy/electricity-rate-comparison';
 import { FORMULA_REGISTRY as energy_energy_audit_roi } from './energy/energy-audit-roi';
 import { FORMULA_REGISTRY as energy_energy_rebate } from './energy/energy-rebate';
@@ -463,7 +463,7 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   // Energy
   ...energy_appliance_energy_cost,
   ...energy_carbon_footprint,
-  ...energy_electric_bill_estimator,
+  ...energy_electric_bill_calculator,
   ...energy_electricity_rate_comparison,
   ...energy_energy_audit_roi,
   ...energy_energy_rebate,

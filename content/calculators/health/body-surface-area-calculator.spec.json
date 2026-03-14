@@ -134,7 +134,7 @@
   "disclaimer": "health",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "DuBois D, DuBois EF. A formula to estimate approximate surface area. Archives of Internal Medicine. 1916;17:863-871",
   "articleWordTarget": 1400,
   "speakableSelectors": [

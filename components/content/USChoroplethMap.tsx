@@ -22,6 +22,11 @@ interface USChoroplethMapProps {
   legend: string;
   source: string;
   valueFormat?: 'percentage' | 'currency' | 'number';
+  /** Override the default value formatter for tooltip and legend */
+  valueFormatFn?: (val: number) => string;
+  /** Override the URL to navigate to when a state is clicked.
+   *  Return null to disable navigation for that state. */
+  buildStateUrl?: (stateName: string, fips: string) => string | null;
   onStateClick?: (state: StateData) => void;
   colorScale?: [string, string];
   noDataColor?: string;
@@ -96,6 +101,8 @@ export default function USChoroplethMap({
   legend,
   source,
   valueFormat = 'percentage',
+  valueFormatFn,
+  buildStateUrl,
   onStateClick,
   colorScale = ['#D5E8F4', '#0D3B5E'],
   noDataColor = '#E5E7EB',
@@ -211,10 +218,15 @@ export default function USChoroplethMap({
       if (d && onStateClick) onStateClick(d);
       const stateName = FIPS_TO_STATE[paddedFips];
       if (stateName) {
-        router.push(`/finance/${stateNameToSlug(stateName)}`);
+        if (buildStateUrl) {
+          const url = buildStateUrl(stateName, paddedFips);
+          if (url) router.push(url);
+        } else {
+          router.push(`/finance/${stateNameToSlug(stateName)}`);
+        }
       }
     },
-    [dataByFips, onStateClick, router]
+    [dataByFips, onStateClick, router, buildStateUrl]
   );
 
   // Legend steps
@@ -293,13 +305,13 @@ export default function USChoroplethMap({
               </p>
               {tooltip.state ? (
                 <div className="mt-1 space-y-0.5 text-gray-600 dark:text-slate-300">
-                  <p>State Rate: {formatValue(tooltip.state.rate, valueFormat)}</p>
+                  <p>Rate: {valueFormatFn ? valueFormatFn(tooltip.state.rate) : formatValue(tooltip.state.rate, valueFormat)}</p>
                   {tooltip.state.localRate !== undefined && (
-                    <p>Avg. Local: {formatValue(tooltip.state.localRate, valueFormat)}</p>
+                    <p>Avg. Local: {valueFormatFn ? valueFormatFn(tooltip.state.localRate) : formatValue(tooltip.state.localRate, valueFormat)}</p>
                   )}
                   {tooltip.state.combinedRate !== undefined && (
                     <p className="font-medium text-gray-900 dark:text-white">
-                      Combined: {formatValue(tooltip.state.combinedRate, valueFormat)}
+                      Combined: {valueFormatFn ? valueFormatFn(tooltip.state.combinedRate) : formatValue(tooltip.state.combinedRate, valueFormat)}
                     </p>
                   )}
                   {tooltip.state.label && (
@@ -323,7 +335,7 @@ export default function USChoroplethMap({
         {/* Legend */}
         <div className="mt-4 flex items-center gap-2">
           <span className="text-xs text-gray-500 dark:text-slate-400">
-            {formatValue(0, valueFormat)}
+            {valueFormatFn ? valueFormatFn(0) : formatValue(0, valueFormat)}
           </span>
           <div className="flex-1 flex h-3 rounded-full overflow-hidden">
             {legendSteps.slice(0, -1).map((step, i) => (
@@ -335,7 +347,7 @@ export default function USChoroplethMap({
             ))}
           </div>
           <span className="text-xs text-gray-500 dark:text-slate-400">
-            {formatValue(maxRate, valueFormat)}
+            {valueFormatFn ? valueFormatFn(maxRate) : formatValue(maxRate, valueFormat)}
           </span>
           <div className="ml-3 flex items-center gap-1.5">
             <div

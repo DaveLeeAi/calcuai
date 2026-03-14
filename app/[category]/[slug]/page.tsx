@@ -42,6 +42,8 @@ import {
 } from '@/lib/content-linker';
 import { autoLinkGlossaryTerms } from '@/lib/glossary-auto-linker';
 import SalesTaxVisualizations from '@/components/content/SalesTaxVisualizations';
+import ElectricityRateMap from '@/components/content/ElectricityRateMap';
+import ElectricBillCalculator from '@/components/calculator/ElectricBillCalculator';
 import FeedbackWidget from '@/components/ui/FeedbackWidget';
 import InlineTableOfContents from '@/components/content/InlineTableOfContents';
 import { siteConfig } from '@/lib/site-config';
@@ -703,7 +705,7 @@ function buildElecBreadcrumbSchema(stateName: string, slug: string): Record<stri
         '@type': 'ListItem',
         position: 3,
         name: 'Electric Bill Estimator',
-        item: `${siteConfig.url}/energy/electric-bill-estimator`,
+        item: `${siteConfig.url}/energy/electric-bill-calculator`,
       },
       {
         '@type': 'ListItem',
@@ -831,7 +833,11 @@ export default function SlugPage({ params }: Props) {
 
         {/* Calculator Widget — centered, hero position */}
         <div className="my-8">
-          <CalculatorRenderer spec={spec} />
+          {spec.id === 'electric-bill-calculator' ? (
+            <ElectricBillCalculator />
+          ) : (
+            <CalculatorRenderer spec={spec} />
+          )}
         </div>
 
         {/* Share + Feedback — compact utility row */}
@@ -864,6 +870,13 @@ export default function SlugPage({ params }: Props) {
         {spec.id === 'sales-tax-calculator' && (
           <div className="mt-8">
             <SalesTaxVisualizations />
+          </div>
+        )}
+
+        {/* Electricity rate choropleth map — renders above the sortable table */}
+        {spec.id === 'electric-bill-calculator' && (
+          <div className="mt-8 not-prose">
+            <ElectricityRateMap />
           </div>
         )}
 
@@ -1445,7 +1458,7 @@ export default function SlugPage({ params }: Props) {
     const elecEntry = getElecStateBySlug(params.slug);
     if (!elecEntry) notFound();
 
-    const elecBaseSpec = getSpec('energy', 'electric-bill-estimator');
+    const elecBaseSpec = getSpec('energy', 'electric-bill-calculator');
     if (!elecBaseSpec) notFound();
 
     const {
@@ -1497,7 +1510,7 @@ export default function SlugPage({ params }: Props) {
           items={[
             { label: 'Home', href: '/' },
             { label: 'Energy', href: '/energy' },
-            { label: 'Electric Bill Estimator', href: '/energy/electric-bill-estimator' },
+            { label: 'Electric Bill Calculator', href: '/energy/electric-bill-calculator' },
             { label: `${elecStateName} Electricity Rates` },
           ]}
         />
@@ -1527,12 +1540,37 @@ export default function SlugPage({ params }: Props) {
         </div>
 
         <div className="my-8">
-          <CalculatorRenderer spec={elecStateSpec} />
+          <ElectricBillCalculator defaultStateCode={elecStateCode} />
         </div>
 
         <div className="mx-auto max-w-calculator mt-3 mb-8 flex items-center justify-between">
           <ShareButton title={elecTitle} />
           <FeedbackWidget calculatorSlug={`${elecStateCode.toLowerCase()}-electricity-rates`} calculatorTitle={elecTitle} inline />
+        </div>
+
+        {/* Key Takeaways */}
+        <div className="rounded-xl border border-amber-200 dark:border-amber-800 bg-amber-50 dark:bg-amber-900/20 p-5 mb-8">
+          <h2 className="text-base font-bold text-amber-900 dark:text-amber-200 mb-3">
+            Key Takeaways — {elecStateName} Electricity Costs
+          </h2>
+          <ul className="space-y-2 text-sm text-amber-800 dark:text-amber-300">
+            <li className="flex gap-2">
+              <span className="mt-0.5 shrink-0">•</span>
+              <span>The average residential electricity rate in {elecStateName} is <strong>{avgRateCentsPerKwh.toFixed(2)}¢/kWh</strong> as of 2026 — {isAboveNational ? `${Math.abs(rateDiffFromNational).toFixed(2)}¢ above` : isBelowNational ? `${Math.abs(rateDiffFromNational).toFixed(2)}¢ below` : 'close to'} the national average of {NATIONAL_AVG_ELEC.toFixed(2)}¢/kWh.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-0.5 shrink-0">•</span>
+              <span>Based on average US household usage of {NATIONAL_AVG_USAGE} kWh/month, the estimated monthly bill in {elecStateName} is approximately <strong>{fmtUSD(estMonthlyBill)}</strong>.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-0.5 shrink-0">•</span>
+              <span>Your actual bill depends on your home size, the appliances you use, your lifestyle and habits, and any fixed fees your utility charges each month.</span>
+            </li>
+            <li className="flex gap-2">
+              <span className="mt-0.5 shrink-0">•</span>
+              <span>Monthly cost is calculated as: <strong>Usage (kWh) × Rate (¢/kWh) + Monthly Base Fee</strong>. Enter your square footage or kWh usage above to estimate your bill.</span>
+            </li>
+          </ul>
         </div>
 
         <InlineTableOfContents containerSelector="article" />
@@ -1608,6 +1646,91 @@ export default function SlugPage({ params }: Props) {
                 </p>
               )}
             </div>
+          </section>
+
+          <section id="what-affects">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
+              What Affects Your Electricity Bill?
+            </h2>
+
+            <p className="text-gray-700 dark:text-slate-300 mb-4">
+              Your monthly bill is shaped by a mix of things specific to your home and how you live:
+            </p>
+
+            <ul className="space-y-3 text-gray-700 dark:text-slate-300 mb-5">
+              <li>
+                <strong>Home size and appliances.</strong> Bigger homes take more energy to heat, cool, and light. Appliances like central air conditioners, electric water heaters, and clothes dryers are the biggest drivers of a high bill.
+              </li>
+              <li>
+                <strong>Your daily habits.</strong> Working from home, charging an electric vehicle, or doing laundry during peak hours can all add noticeably to your monthly total.
+              </li>
+              <li>
+                <strong>The weather where you live.</strong> Hot summers and cold winters both push usage up. If you rely on electric heating or cooling, your bill can double during extreme months.
+              </li>
+              <li>
+                <strong>Your electricity plan.</strong> Some plans charge a flat rate per kWh. Others charge more during busy hours and less at night. The type of plan you have affects your total cost even if your usage stays the same.
+              </li>
+              <li>
+                <strong>Fixed fees from your utility.</strong> Most utilities charge a monthly service fee (typically $5–$25) regardless of how much electricity you use. This shows up as a base or delivery charge on your bill.
+              </li>
+            </ul>
+
+            <p className="text-gray-700 dark:text-slate-300 mb-4">
+              To get a sense of how much common appliances contribute to your bill, here is an estimate of the yearly electricity each one typically uses:
+            </p>
+
+            <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-slate-700">
+              <table className="min-w-full text-sm text-left">
+                <thead>
+                  <tr className="bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-slate-300">
+                    <th className="px-4 py-3 font-semibold">Appliance or Device</th>
+                    <th className="px-4 py-3 font-semibold">Yearly kWh</th>
+                    <th className="px-4 py-3 font-semibold">Typical Use</th>
+                    <th className="px-4 py-3 font-semibold">Est. Cost/Year in {elecStateName}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-100 dark:divide-slate-700 text-gray-700 dark:text-slate-300">
+                  {[
+                    { name: 'Central AC or Heat Pump', kwhLow: 1200, kwhHigh: 6500, use: 'Runs several hours a day during heating and cooling season' },
+                    { name: 'EV Home Charger (Level 2)', kwhLow: 2000, kwhHigh: 4500, use: 'Charges overnight; based on avg US driving of 37 miles/day' },
+                    { name: 'Electric Water Heater (standard)', kwhLow: 2500, kwhHigh: 4500, use: 'Heats a full tank once or twice a day' },
+                    { name: 'Heat Pump Water Heater', kwhLow: 800, kwhHigh: 1500, use: 'Same usage — but 60–70% more efficient than standard electric' },
+                    { name: 'Clothes Dryer (electric)', kwhLow: 450, kwhHigh: 900, use: '5 to 6 loads per week' },
+                    { name: 'Refrigerator', kwhLow: 300, kwhHigh: 600, use: 'Runs all day, every day' },
+                    { name: 'Washing Machine', kwhLow: 100, kwhHigh: 300, use: '7 to 8 loads per week (cold-water wash saves the most)' },
+                    { name: 'Dishwasher', kwhLow: 200, kwhHigh: 300, use: 'One full cycle per day with heated dry' },
+                    { name: 'Desktop Home Office (PC + monitor)', kwhLow: 300, kwhHigh: 900, use: '8 hours a day, 5 days a week' },
+                    { name: 'Laptop Home Office', kwhLow: 75, kwhHigh: 200, use: '8 hours a day, 5 days a week' },
+                    { name: 'Smart TV (55–75 inches)', kwhLow: 100, kwhHigh: 350, use: '4 to 5 hours per day (OLED 75" at top of range)' },
+                    { name: 'Gaming Console (PS5 / Xbox Series X)', kwhLow: 75, kwhHigh: 220, use: '2 to 3 hours per day' },
+                    { name: 'Coffee Maker or Espresso Machine', kwhLow: 150, kwhHigh: 350, use: '1 to 2 uses per day, keep-warm on' },
+                    { name: 'Microwave', kwhLow: 40, kwhHigh: 100, use: '10 to 15 minutes per day' },
+                    { name: 'Streaming Device or Smart Speaker', kwhLow: 10, kwhHigh: 30, use: 'On most of the day in standby' },
+                  ].map((row, i) => {
+                    const rate = avgRateCentsPerKwh / 100;
+                    const costLow = Math.round(row.kwhLow * rate);
+                    const costHigh = Math.round(row.kwhHigh * rate);
+                    const kwhDisplay = row.kwhLow === row.kwhHigh
+                      ? row.kwhLow.toLocaleString()
+                      : `${row.kwhLow.toLocaleString()}–${row.kwhHigh.toLocaleString()}`;
+                    const costDisplay = costLow === costHigh
+                      ? `$${costLow.toLocaleString()}`
+                      : `$${costLow.toLocaleString()}–$${costHigh.toLocaleString()}`;
+                    return (
+                      <tr key={row.name} className={i % 2 === 0 ? 'bg-white dark:bg-slate-800' : 'bg-gray-50 dark:bg-slate-800/60'}>
+                        <td className="px-4 py-3">{row.name}</td>
+                        <td className="px-4 py-3 font-medium">{kwhDisplay}</td>
+                        <td className="px-4 py-3 text-gray-500 dark:text-slate-400">{row.use}</td>
+                        <td className="px-4 py-3 font-semibold text-blue-700 dark:text-blue-400">{costDisplay}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-gray-400 dark:text-slate-500 mt-2 italic">
+              Cost estimates use {elecStateName}&apos;s average rate of {avgRateCentsPerKwh.toFixed(2)}¢/kWh. kWh figures are based on EIA RECS 2022 data and 2026 average appliance wattage. EV figures assume a 240V Level 2 home charger and average US daily driving of 37 miles. Your actual costs will vary by model, usage, and local conditions.
+            </p>
           </section>
 
           <section id="why-rates-differ">
@@ -1779,6 +1902,50 @@ export default function SlugPage({ params }: Props) {
                   </p>
                 </div>
               </details>
+
+              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
+                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+                  How close is this calculator to my real electricity bill?
+                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed space-y-2">
+                  <p>
+                    Pretty close — as long as you use your actual numbers. The calculator uses the
+                    real formula your utility uses: <strong>kWh used × rate per kWh + monthly base fee</strong>.
+                    If you pull your kWh usage and rate directly off your bill, the result should
+                    land within a few dollars of what you actually owe.
+                  </p>
+                  <p>
+                    Where it gets less exact: some utilities use tiered pricing (where the rate goes
+                    up after you hit a certain usage level), time-of-use rates, or seasonal
+                    adjustments. This calculator uses a single flat rate, so if your plan has
+                    multiple rate tiers, your real bill might be a bit higher or lower than shown.
+                    For a quick estimate, though, it gives you a solid ballpark.
+                  </p>
+                </div>
+              </details>
+
+              <details className="group border border-gray-200 dark:border-slate-700 rounded-lg">
+                <summary className="flex cursor-pointer items-center justify-between p-4 font-semibold text-gray-900 dark:text-white">
+                  What are simple ways to use less electricity at home?
+                  <span className="ml-4 shrink-0 text-brand-500 group-open:rotate-180 transition-transform">&#9660;</span>
+                </summary>
+                <div className="px-4 pb-4 text-gray-700 dark:text-slate-300 text-sm leading-relaxed space-y-2">
+                  <p>
+                    The biggest wins come from the things that run the longest or use the most power:
+                  </p>
+                  <ul className="list-disc list-inside space-y-1.5 mt-1">
+                    <li><strong>Turn your thermostat up a few degrees in summer and down in winter.</strong> Heating and cooling account for nearly half the average electricity bill, so even a 2–3 degree shift makes a real difference.</li>
+                    <li><strong>Switch to LED bulbs.</strong> They use about 75% less electricity than older bulbs and last much longer. It&apos;s one of the cheapest and fastest changes you can make.</li>
+                    <li><strong>Run large appliances at night.</strong> Dishwashers, washing machines, and dryers draw a lot of power. Running them after 9 PM can save money if your utility charges less during off-peak hours.</li>
+                    <li><strong>Unplug things you&apos;re not using.</strong> TVs, game consoles, chargers, and coffee makers all draw a small amount of power even when switched off. Plugging them into a power strip you can flip off costs nothing extra.</li>
+                    <li><strong>Check your water heater setting.</strong> Most are set to 140°F from the factory. Turning it down to 120°F is usually enough for everyday use and cuts the energy it takes to keep water hot.</li>
+                  </ul>
+                  <p className="mt-1">
+                    None of these require big purchases or lifestyle changes. Start with the thermostat and lighting — those two alone can trim 15–20% off a typical bill.
+                  </p>
+                </div>
+              </details>
             </div>
           </section>
 
@@ -1788,7 +1955,7 @@ export default function SlugPage({ params }: Props) {
 
           <div className="mt-4 flex flex-wrap gap-3">
             <Link
-              href="/energy/electric-bill-estimator"
+              href="/energy/electric-bill-calculator"
               className="text-sm text-brand-600 dark:text-brand-400 hover:underline"
             >
               &larr; Back to Electric Bill Estimator
@@ -1824,14 +1991,17 @@ function BlufContent({ source }: BlufContentProps) {
   if (!blufMatch) return null;
   const blufContent = blufMatch[1].trim();
 
+  // BLUF paragraphs are narrative text — dollar signs are currency, not LaTeX.
+  // Using remarkMath here causes "$148.78" to be parsed as a math delimiter,
+  // which breaks bold markers (**text**) and renders them as raw **text**.
+  // Omit remarkMath/rehypeKatex; use remarkGfm only for tables/strikethrough.
   return (
-    <div className="bluf-intro text-base text-gray-700 dark:text-slate-300 leading-relaxed">
+    <div className="bluf-intro prose prose-gray dark:prose-invert prose-sm max-w-none text-base text-gray-700 dark:text-slate-300 leading-relaxed">
       <MDXRemote
         source={blufContent}
         options={{
           mdxOptions: {
-            remarkPlugins: [remarkGfm, remarkMath],
-            rehypePlugins: [rehypeKatex],
+            remarkPlugins: [remarkGfm],
           },
         }}
       />

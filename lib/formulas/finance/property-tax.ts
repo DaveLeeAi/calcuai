@@ -90,6 +90,12 @@ export function calculatePropertyTax(inputs: Record<string, unknown>): Record<st
     { label: 'Total Annual', value: annualTax },
   ];
 
+  // 10. Tax component chart — {name, value}[] for pie chart rendering
+  const taxBreakdownChart = [
+    { name: 'Base Property Tax', value: baseTax },
+    { name: 'Special Assessments', value: specialAssessments },
+  ].filter(item => item.value > 0);
+
   return {
     assessedValue,
     taxableValue,
@@ -99,6 +105,7 @@ export function calculatePropertyTax(inputs: Record<string, unknown>): Record<st
     effectiveRate,
     millRate,
     taxBreakdown,
+    taxBreakdownChart,
   };
 }
 

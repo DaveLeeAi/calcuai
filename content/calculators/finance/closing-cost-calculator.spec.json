@@ -164,6 +164,21 @@
       "label": "Cost Breakdown",
       "type": "value-group",
       "format": "currency"
+    },
+    {
+      "id": "costBreakdownChart",
+      "label": "Cost Breakdown",
+      "type": "chart-pie",
+      "description": "Visual breakdown of closing cost categories.",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#27AE60",
+          "#E74C3C",
+          "#F39C12",
+          "#8E44AD"
+        ]
+      }
     }
   ],
   "formula": "closing-costs",
@@ -178,8 +193,8 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
-  "editorialStatus": "review",
+  "requiresSources": true,
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Consumer Financial Protection Bureau — Your Loan Estimate explained (closing cost categories and typical fee ranges for residential real estate transactions)",
   "formulaCitation": "Consumer Financial Protection Bureau — Closing Costs Explained",
@@ -191,7 +206,7 @@
   "duplicationRisk": [
     "mortgage-calculator"
   ],
-  "qualityScore": 75,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-13",
   "seasonality": null,
   "articleWordTarget": 1400,

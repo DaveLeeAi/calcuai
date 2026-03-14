@@ -95,7 +95,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "FDIC Truth in Savings Act (Regulation DD)",
   "articleWordTarget": 800,
   "speakableSelectors": [

@@ -130,7 +130,7 @@
   "disclaimer": "health",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "American College of Obstetricians and Gynecologists (ACOG)",
   "articleWordTarget": 1400,
   "speakableSelectors": [

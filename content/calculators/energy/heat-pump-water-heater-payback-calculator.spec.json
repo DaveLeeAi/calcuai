@@ -20,11 +20,26 @@
       "type": "select",
       "default": "electric-tank",
       "options": [
-        { "value": "electric-tank", "label": "Standard Electric Tank" },
-        { "value": "gas-tank", "label": "Gas Tank (natural gas)" },
-        { "value": "propane-tank", "label": "Propane Tank" },
-        { "value": "electric-tankless", "label": "Electric Tankless" },
-        { "value": "gas-tankless", "label": "Gas Tankless" }
+        {
+          "value": "electric-tank",
+          "label": "Standard Electric Tank"
+        },
+        {
+          "value": "gas-tank",
+          "label": "Gas Tank (natural gas)"
+        },
+        {
+          "value": "propane-tank",
+          "label": "Propane Tank"
+        },
+        {
+          "value": "electric-tankless",
+          "label": "Electric Tankless"
+        },
+        {
+          "value": "gas-tankless",
+          "label": "Gas Tankless"
+        }
       ]
     },
     {
@@ -33,11 +48,26 @@
       "type": "select",
       "default": "3",
       "options": [
-        { "value": "1", "label": "1 Person (~20 gal/day)" },
-        { "value": "2", "label": "2 People (~40 gal/day)" },
-        { "value": "3", "label": "3 People (~55 gal/day)" },
-        { "value": "4", "label": "4 People (~65 gal/day)" },
-        { "value": "5", "label": "5+ People (~80 gal/day)" }
+        {
+          "value": "1",
+          "label": "1 Person (~20 gal/day)"
+        },
+        {
+          "value": "2",
+          "label": "2 People (~40 gal/day)"
+        },
+        {
+          "value": "3",
+          "label": "3 People (~55 gal/day)"
+        },
+        {
+          "value": "4",
+          "label": "4 People (~65 gal/day)"
+        },
+        {
+          "value": "5",
+          "label": "5+ People (~80 gal/day)"
+        }
       ]
     },
     {
@@ -55,8 +85,8 @@
       "id": "gasRate",
       "label": "Natural Gas Rate",
       "type": "currency",
-      "default": 1.50,
-      "min": 0.10,
+      "default": 1.5,
+      "min": 0.1,
       "max": 10,
       "step": 0.01,
       "prefix": "$",
@@ -178,7 +208,7 @@
   "duplicationRisk": [
     "water-heater-energy-cost-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

@@ -13,7 +13,7 @@
       "slug": "electricity",
       "description": "Estimate your electric bill, calculate appliance running costs, find phantom loads, compare rates, and understand time-of-use pricing.",
       "calculators": [
-        "electric-bill-estimator",
+        "electric-bill-calculator",
         "appliance-energy-cost-calculator",
         "phantom-load-calculator",
         "kwh-cost-calculator",
@@ -86,7 +86,7 @@
   ],
   "featuredCalculators": [
     "appliance-energy-cost-calculator",
-    "electric-bill-estimator",
+    "electric-bill-calculator",
     "ev-vs-gas-cost-calculator",
     "heating-fuel-comparison-calculator",
     "solar-panel-payback-calculator",

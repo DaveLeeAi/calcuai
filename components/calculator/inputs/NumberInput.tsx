@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useId } from 'react';
+import { useCallback, useId, useState } from 'react';
 import { InputComponentProps } from './types';
 
 function formatDisplay(val: number): string {
@@ -9,15 +9,29 @@ function formatDisplay(val: number): string {
 
 export default function NumberInput({ field, value, error, onChange }: InputComponentProps) {
   const id = useId();
-  const numValue = typeof value === 'number' ? value : (typeof value === 'string' ? parseFloat(value) : undefined);
+  const [rawString, setRawString] = useState<string>('');
+  const [isFocused, setIsFocused] = useState(false);
+
+  const numValue =
+    typeof value === 'number' && !isNaN(value)
+      ? value
+      : typeof value === 'string'
+        ? parseFloat(value)
+        : NaN;
+
+  const handleFocus = useCallback(() => {
+    setIsFocused(true);
+    // Seed rawString with the current numeric value (no formatting)
+    setRawString(!isNaN(numValue) ? String(numValue) : '');
+  }, [numValue]);
 
   const handleChange = useCallback(
     (e: React.ChangeEvent<HTMLInputElement>) => {
       const raw = e.target.value.replace(/,/g, '');
-      if (raw === '' || raw === '-') {
-        onChange(raw as unknown as number);
-        return;
-      }
+      setRawString(raw);
+      // Only call onChange when we have a fully parseable number
+      // (not mid-decimal like "0." or lone "-")
+      if (raw === '' || raw === '-') return;
       const parsed = parseFloat(raw);
       if (!isNaN(parsed)) {
         onChange(parsed);
@@ -26,20 +40,38 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
     [onChange]
   );
 
+  const handleBlur = useCallback(() => {
+    setIsFocused(false);
+    const trimmed = rawString.trim();
+    if (trimmed === '' || trimmed === '-') {
+      onChange(0);
+    } else {
+      const parsed = parseFloat(trimmed);
+      onChange(!isNaN(parsed) ? parsed : 0);
+    }
+  }, [rawString, onChange]);
+
   const handleStep = useCallback(
     (direction: 1 | -1) => {
-      const current = typeof numValue === 'number' && !isNaN(numValue) ? numValue : 0;
+      const current = !isNaN(numValue) ? numValue : 0;
       const step = field.step ?? 1;
       let next = current + step * direction;
       if (field.min !== undefined) next = Math.max(field.min, next);
       if (field.max !== undefined) next = Math.min(field.max, next);
       onChange(next);
+      // Keep rawString in sync so blur doesn't overwrite the stepped value
+      setRawString(String(next));
     },
     [numValue, field.step, field.min, field.max, onChange]
   );
 
-  const displayValue =
-    typeof numValue === 'number' && !isNaN(numValue) ? formatDisplay(numValue) : (value as string) ?? '';
+  // While focused: show rawString so the user sees exactly what they type.
+  // While blurred: show formatted value from parent state.
+  const displayValue = isFocused
+    ? rawString
+    : !isNaN(numValue)
+      ? formatDisplay(numValue)
+      : '';
 
   return (
     <div className="flex flex-col gap-1">
@@ -63,6 +95,8 @@ export default function NumberInput({ field, value, error, onChange }: InputComp
           inputMode="decimal"
           value={displayValue}
           onChange={handleChange}
+          onFocus={handleFocus}
+          onBlur={handleBlur}
           placeholder={field.placeholder ?? ''}
           aria-invalid={!!error}
           aria-describedby={error ? `${id}-error` : field.helpText ? `${id}-help` : undefined}

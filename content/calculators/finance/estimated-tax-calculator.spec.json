@@ -216,6 +216,18 @@
       "label": "Quarterly Due Dates",
       "type": "value-group",
       "format": "text"
+    },
+    {
+      "id": "taxBreakdownChart",
+      "label": "Tax Breakdown",
+      "type": "chart-pie",
+      "description": "Visual split between federal income tax and self-employment tax.",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C"
+        ]
+      }
     }
   ],
   "formula": "estimated-tax",
@@ -233,7 +245,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "IRS Form 1040-ES — Estimated Tax for Individuals (2025); IRS Publication 505 — Tax Withholding and Estimated Tax",
   "articleWordTarget": 1400,
   "speakableSelectors": [
@@ -241,7 +253,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Quarterly Payment = max(0, (Total Tax − Withheld − Paid) / (4 − Quarters Paid)). SE Tax = SE Income × 0.9235 × 15.3%. Federal tax via 2025 progressive brackets. Safe harbor = 90% of current year / 4. Per IRS Form 1040-ES, Pub 505.",
   "formulaAuditDate": "2026-03-14",
@@ -253,7 +265,7 @@
     "self-employment-tax-calculator",
     "income-tax-calculator"
   ],
-  "qualityScore": 73,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "tax-season",
   "glossaryTerms": [

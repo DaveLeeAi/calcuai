@@ -40,14 +40,38 @@
       "type": "select",
       "default": "air-sealing-insulation",
       "options": [
-        { "value": "air-sealing-only", "label": "Air Sealing Only (~10–20% savings)" },
-        { "value": "air-sealing-insulation", "label": "Air Sealing + Insulation (~20–30% savings)" },
-        { "value": "hvac-upgrade", "label": "HVAC Upgrade (~15–25% savings)" },
-        { "value": "air-sealing-insulation-hvac", "label": "Air Sealing + Insulation + HVAC (~30–45% savings)" },
-        { "value": "comprehensive", "label": "Comprehensive (all systems, ~35–50% savings)" },
-        { "value": "windows-doors", "label": "Windows & Doors Only (~10–15% savings)" },
-        { "value": "water-heating", "label": "Water Heating Upgrade (~8–15% savings)" },
-        { "value": "lighting-appliances", "label": "Lighting & Appliances (~5–10% savings)" }
+        {
+          "value": "air-sealing-only",
+          "label": "Air Sealing Only (~10–20% savings)"
+        },
+        {
+          "value": "air-sealing-insulation",
+          "label": "Air Sealing + Insulation (~20–30% savings)"
+        },
+        {
+          "value": "hvac-upgrade",
+          "label": "HVAC Upgrade (~15–25% savings)"
+        },
+        {
+          "value": "air-sealing-insulation-hvac",
+          "label": "Air Sealing + Insulation + HVAC (~30–45% savings)"
+        },
+        {
+          "value": "comprehensive",
+          "label": "Comprehensive (all systems, ~35–50% savings)"
+        },
+        {
+          "value": "windows-doors",
+          "label": "Windows & Doors Only (~10–15% savings)"
+        },
+        {
+          "value": "water-heating",
+          "label": "Water Heating Upgrade (~8–15% savings)"
+        },
+        {
+          "value": "lighting-appliances",
+          "label": "Lighting & Appliances (~5–10% savings)"
+        }
       ],
       "helpText": "Select the scope of improvements you plan"
     }
@@ -124,7 +148,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

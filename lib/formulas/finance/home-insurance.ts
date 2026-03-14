@@ -140,6 +140,14 @@ export function calculateHomeInsurance(inputs: Record<string, unknown>): Record<
     { label: 'Medical Payments', value: medicalPayments },
   ];
 
+  // Coverage breakdown chart — {name, value}[] for pie chart rendering
+  const coverageBreakdownChart = [
+    { name: 'Dwelling Coverage', value: dwellingCoverage },
+    { name: 'Personal Property', value: personalProperty },
+    { name: 'Liability Coverage', value: liabilityCoverage },
+    { name: 'Medical Payments', value: medicalPayments },
+  ].filter(item => item.value > 0);
+
   return {
     annualPremium,
     monthlyPremium,
@@ -151,6 +159,7 @@ export function calculateHomeInsurance(inputs: Record<string, unknown>): Record<
     baseRate,
     costBreakdown,
     coverageSummary,
+    coverageBreakdownChart,
   };
 }
 

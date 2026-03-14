@@ -189,6 +189,12 @@ export function calculateEstimatedTax(inputs: Record<string, unknown>): Record<s
     { label: 'Remaining Owed', value: Math.max(0, totalOwed) },
   ];
 
+  // Tax breakdown chart — {name, value}[] for pie chart rendering
+  const taxBreakdownChart = [
+    { name: 'Federal Income Tax', value: federalIncomeTax },
+    { name: 'Self-Employment Tax', value: selfEmploymentTax },
+  ].filter(item => item.value > 0);
+
   return {
     totalTaxLiability,
     quarterlyPayment,
@@ -202,6 +208,7 @@ export function calculateEstimatedTax(inputs: Record<string, unknown>): Record<s
     taxBreakdown,
     taxableIncome,
     seTaxDeduction,
+    taxBreakdownChart,
   };
 }
 

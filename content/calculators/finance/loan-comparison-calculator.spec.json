@@ -177,7 +177,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Standard amortization formula (Actuarial Standards Board)",
   "articleWordTarget": 1400,
   "speakableSelectors": [

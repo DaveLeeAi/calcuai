@@ -93,7 +93,7 @@
     "solar-battery-storage-calculator",
     "solar-panel-payback-calculator",
     "generator-size-calculator",
-    "electric-bill-estimator"
+    "electric-bill-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": true,

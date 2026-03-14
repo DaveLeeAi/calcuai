@@ -151,7 +151,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "William Bengen, Journal of Financial Planning (1994); Trinity Study",
   "articleWordTarget": 1400,
   "speakableSelectors": [

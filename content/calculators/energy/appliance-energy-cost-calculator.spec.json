@@ -20,30 +20,102 @@
       "type": "select",
       "default": "refrigerator",
       "options": [
-        { "value": "refrigerator", "label": "Refrigerator (150 W)" },
-        { "value": "chest-freezer", "label": "Chest Freezer (100 W)" },
-        { "value": "dishwasher", "label": "Dishwasher (1,800 W)" },
-        { "value": "washing-machine", "label": "Washing Machine (500 W)" },
-        { "value": "clothes-dryer", "label": "Clothes Dryer (3,000 W)" },
-        { "value": "microwave", "label": "Microwave (1,200 W)" },
-        { "value": "oven", "label": "Electric Oven (2,500 W)" },
-        { "value": "toaster-oven", "label": "Toaster Oven (1,200 W)" },
-        { "value": "coffee-maker", "label": "Coffee Maker (900 W)" },
-        { "value": "air-conditioner-window", "label": "Window AC Unit (1,200 W)" },
-        { "value": "central-ac", "label": "Central Air Conditioner (3,500 W)" },
-        { "value": "space-heater", "label": "Space Heater (1,500 W)" },
-        { "value": "ceiling-fan", "label": "Ceiling Fan (75 W)" },
-        { "value": "dehumidifier", "label": "Dehumidifier (350 W)" },
-        { "value": "water-heater", "label": "Electric Water Heater (4,500 W)" },
-        { "value": "tv-led", "label": "LED TV 55\" (80 W)" },
-        { "value": "gaming-console", "label": "Gaming Console (150 W)" },
-        { "value": "desktop-computer", "label": "Desktop Computer (200 W)" },
-        { "value": "laptop", "label": "Laptop (50 W)" },
-        { "value": "hair-dryer", "label": "Hair Dryer (1,800 W)" },
-        { "value": "vacuum-cleaner", "label": "Vacuum Cleaner (1,000 W)" },
-        { "value": "pool-pump", "label": "Pool Pump (1,500 W)" },
-        { "value": "ev-charger-l2", "label": "EV Charger Level 2 (7,200 W)" },
-        { "value": "custom", "label": "Custom (enter watts below)" }
+        {
+          "value": "refrigerator",
+          "label": "Refrigerator (150 W)"
+        },
+        {
+          "value": "chest-freezer",
+          "label": "Chest Freezer (100 W)"
+        },
+        {
+          "value": "dishwasher",
+          "label": "Dishwasher (1,800 W)"
+        },
+        {
+          "value": "washing-machine",
+          "label": "Washing Machine (500 W)"
+        },
+        {
+          "value": "clothes-dryer",
+          "label": "Clothes Dryer (3,000 W)"
+        },
+        {
+          "value": "microwave",
+          "label": "Microwave (1,200 W)"
+        },
+        {
+          "value": "oven",
+          "label": "Electric Oven (2,500 W)"
+        },
+        {
+          "value": "toaster-oven",
+          "label": "Toaster Oven (1,200 W)"
+        },
+        {
+          "value": "coffee-maker",
+          "label": "Coffee Maker (900 W)"
+        },
+        {
+          "value": "air-conditioner-window",
+          "label": "Window AC Unit (1,200 W)"
+        },
+        {
+          "value": "central-ac",
+          "label": "Central Air Conditioner (3,500 W)"
+        },
+        {
+          "value": "space-heater",
+          "label": "Space Heater (1,500 W)"
+        },
+        {
+          "value": "ceiling-fan",
+          "label": "Ceiling Fan (75 W)"
+        },
+        {
+          "value": "dehumidifier",
+          "label": "Dehumidifier (350 W)"
+        },
+        {
+          "value": "water-heater",
+          "label": "Electric Water Heater (4,500 W)"
+        },
+        {
+          "value": "tv-led",
+          "label": "LED TV 55\" (80 W)"
+        },
+        {
+          "value": "gaming-console",
+          "label": "Gaming Console (150 W)"
+        },
+        {
+          "value": "desktop-computer",
+          "label": "Desktop Computer (200 W)"
+        },
+        {
+          "value": "laptop",
+          "label": "Laptop (50 W)"
+        },
+        {
+          "value": "hair-dryer",
+          "label": "Hair Dryer (1,800 W)"
+        },
+        {
+          "value": "vacuum-cleaner",
+          "label": "Vacuum Cleaner (1,000 W)"
+        },
+        {
+          "value": "pool-pump",
+          "label": "Pool Pump (1,500 W)"
+        },
+        {
+          "value": "ev-charger-l2",
+          "label": "EV Charger Level 2 (7,200 W)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom (enter watts below)"
+        }
       ],
       "helpText": "Select an appliance or choose Custom to enter your own wattage"
     },
@@ -147,7 +219,7 @@
   ],
   "relatedCalculators": [
     "kwh-cost-calculator",
-    "electric-bill-estimator",
+    "electric-bill-calculator",
     "phantom-load-calculator",
     "time-of-use-calculator",
     "home-heating-cost-calculator"
@@ -163,7 +235,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Annual kWh = (Watts × Hours/Day × Days/Year) / 1000; Annual Cost = kWh × Rate × Quantity",
   "formulaAuditDate": "2026-03-14",
@@ -174,7 +246,7 @@
   "duplicationRisk": [
     "kwh-cost-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

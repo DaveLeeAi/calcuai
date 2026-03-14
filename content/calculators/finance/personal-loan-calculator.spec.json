@@ -122,6 +122,19 @@
       "label": "Loan Cost Breakdown",
       "type": "value-group",
       "format": "currency"
+    },
+    {
+      "id": "costBreakdownChart",
+      "label": "Loan Cost Breakdown",
+      "type": "chart-pie",
+      "description": "Visual split of principal, total interest, and origination fee.",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#E74C3C",
+          "#F39C12"
+        ]
+      }
     }
   ],
   "formula": "personal-loan",
@@ -140,7 +153,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Consumer Financial Protection Bureau (CFPB) — Loan Estimate explainer; Truth in Lending Act (TILA) Regulation Z",
   "articleWordTarget": 1400,
   "speakableSelectors": [
@@ -148,7 +161,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "M = P × [r(1+r)^n] / [(1+r)^n - 1] where P = principal, r = monthly rate, n = term in months. APR accounts for origination fees per TILA Regulation Z.",
   "formulaAuditDate": "2026-03-14",
@@ -159,7 +172,7 @@
   "duplicationRisk": [
     "loan-calculator"
   ],
-  "qualityScore": 76,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

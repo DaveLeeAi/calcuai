@@ -133,7 +133,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "IRS Publication 590-A (Contributions to IRAs); Roth IRA conversion rules",
   "articleWordTarget": 1400,
   "speakableSelectors": [

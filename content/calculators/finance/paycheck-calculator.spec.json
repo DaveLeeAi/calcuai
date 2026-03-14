@@ -175,7 +175,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "IRS Publication 15-T (2025 Federal Income Tax Withholding Methods); SSA FICA rates",
   "articleWordTarget": 1400,
   "speakableSelectors": [

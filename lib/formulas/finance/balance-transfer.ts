@@ -289,6 +289,12 @@ export function calculateBalanceTransfer(inputs: Record<string, unknown>): Recor
     { label: 'Transfer Fee', value: transferFeeCost },
   ];
 
+  // Cost comparison chart — {name, value}[] for pie chart rendering
+  const costComparisonChart = [
+    { name: 'Current Card Total', value: totalCost_current },
+    { name: 'Balance Transfer Total', value: totalCost_transfer },
+  ].filter(item => item.value > 0);
+
   return {
     transferFeeCost,
     totalTransferred,
@@ -304,6 +310,7 @@ export function calculateBalanceTransfer(inputs: Record<string, unknown>): Recor
     paidDuringPromo: transferResult.paidDuringPromo,
     remainingAfterPromo: transferResult.remainingAfterPromo,
     comparisonSummary,
+    costComparisonChart,
   };
 }
 

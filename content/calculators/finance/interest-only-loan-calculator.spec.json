@@ -155,7 +155,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "CFPB — Interest-Only Mortgage Payments and Payment-Option ARMs; Freddie Mac — Loan Product Descriptions",
   "articleWordTarget": 1400,
   "speakableSelectors": [

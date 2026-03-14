@@ -1,0 +1,181 @@
+{
+  "id": "electric-bill-calculator",
+  "title": "Electric Bill Calculator",
+  "slug": "electric-bill-calculator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "electric bill calculator",
+  "secondaryKeywords": [
+    "electricity bill calculator",
+    "monthly electric bill calculator",
+    "how much is my electric bill",
+    "electricity cost calculator by state",
+    "electric bill estimator by zip code"
+  ],
+  "metaTitle": "Electric Bill Calculator — Estimate Your Monthly Electricity Cost by State | CalcAI",
+  "metaDescription": "Calculate your monthly electric bill by state or ZIP code. Compare your rate to the US average of 17.24¢/kWh. See appliance-level breakdown and efficiency rating.",
+  "inputs": [
+    {
+      "id": "stateCode",
+      "label": "State",
+      "type": "select",
+      "default": "",
+      "options": [
+        { "value": "", "label": "Select your state" },
+        { "value": "AL", "label": "Alabama (16.01¢/kWh)" },
+        { "value": "AK", "label": "Alaska (25.54¢/kWh)" },
+        { "value": "AZ", "label": "Arizona (15.46¢/kWh)" },
+        { "value": "AR", "label": "Arkansas (12.33¢/kWh)" },
+        { "value": "CA", "label": "California (34.71¢/kWh)" },
+        { "value": "CO", "label": "Colorado (16.12¢/kWh)" },
+        { "value": "CT", "label": "Connecticut (25.30¢/kWh)" },
+        { "value": "DE", "label": "Delaware (17.12¢/kWh)" },
+        { "value": "DC", "label": "District of Columbia (19.80¢/kWh)" },
+        { "value": "FL", "label": "Florida (15.02¢/kWh)" },
+        { "value": "GA", "label": "Georgia (13.67¢/kWh)" },
+        { "value": "HI", "label": "Hawaii (41.62¢/kWh)" },
+        { "value": "ID", "label": "Idaho (11.87¢/kWh)" },
+        { "value": "IL", "label": "Illinois (17.07¢/kWh)" },
+        { "value": "IN", "label": "Indiana (15.91¢/kWh)" },
+        { "value": "IA", "label": "Iowa (12.60¢/kWh)" },
+        { "value": "KS", "label": "Kansas (14.43¢/kWh)" },
+        { "value": "KY", "label": "Kentucky (13.22¢/kWh)" },
+        { "value": "LA", "label": "Louisiana (12.56¢/kWh)" },
+        { "value": "ME", "label": "Maine (30.39¢/kWh)" },
+        { "value": "MD", "label": "Maryland (19.57¢/kWh)" },
+        { "value": "MA", "label": "Massachusetts (30.88¢/kWh)" },
+        { "value": "MI", "label": "Michigan (19.53¢/kWh)" },
+        { "value": "MN", "label": "Minnesota (14.96¢/kWh)" },
+        { "value": "MS", "label": "Mississippi (14.16¢/kWh)" },
+        { "value": "MO", "label": "Missouri (11.91¢/kWh)" },
+        { "value": "MT", "label": "Montana (12.77¢/kWh)" },
+        { "value": "NE", "label": "Nebraska (11.57¢/kWh)" },
+        { "value": "NV", "label": "Nevada (12.83¢/kWh)" },
+        { "value": "NH", "label": "New Hampshire (26.28¢/kWh)" },
+        { "value": "NJ", "label": "New Jersey (22.98¢/kWh)" },
+        { "value": "NM", "label": "New Mexico (14.66¢/kWh)" },
+        { "value": "NY", "label": "New York (27.39¢/kWh)" },
+        { "value": "NC", "label": "North Carolina (13.47¢/kWh)" },
+        { "value": "ND", "label": "North Dakota (11.02¢/kWh)" },
+        { "value": "OH", "label": "Ohio (17.31¢/kWh)" },
+        { "value": "OK", "label": "Oklahoma (12.25¢/kWh)" },
+        { "value": "OR", "label": "Oregon (14.94¢/kWh)" },
+        { "value": "PA", "label": "Pennsylvania (20.08¢/kWh)" },
+        { "value": "RI", "label": "Rhode Island (31.15¢/kWh)" },
+        { "value": "SC", "label": "South Carolina (14.82¢/kWh)" },
+        { "value": "SD", "label": "South Dakota (12.51¢/kWh)" },
+        { "value": "TN", "label": "Tennessee (12.87¢/kWh)" },
+        { "value": "TX", "label": "Texas (15.87¢/kWh)" },
+        { "value": "UT", "label": "Utah (12.99¢/kWh)" },
+        { "value": "VT", "label": "Vermont (23.22¢/kWh)" },
+        { "value": "VA", "label": "Virginia (15.27¢/kWh)" },
+        { "value": "WA", "label": "Washington (13.33¢/kWh)" },
+        { "value": "WV", "label": "West Virginia (14.61¢/kWh)" },
+        { "value": "WI", "label": "Wisconsin (17.84¢/kWh)" },
+        { "value": "WY", "label": "Wyoming (12.83¢/kWh)" }
+      ],
+      "helpText": "Selecting a state auto-fills the average electricity rate"
+    },
+    {
+      "id": "monthlyKwh",
+      "label": "Monthly Usage (kWh)",
+      "type": "range",
+      "default": 863,
+      "min": 0,
+      "max": 5000,
+      "step": 10,
+      "suffix": "kWh",
+      "helpText": "US average is 863 kWh/month. Drag the slider or type a value."
+    },
+    {
+      "id": "ratePerKwh",
+      "label": "Price per kWh",
+      "type": "currency",
+      "default": 0.1724,
+      "min": 0.01,
+      "max": 1,
+      "step": 0.0001,
+      "prefix": "$",
+      "suffix": "/kWh",
+      "helpText": "US average is $0.1724/kWh (2026)"
+    },
+    {
+      "id": "monthlyBaseFee",
+      "label": "Monthly Base Fee",
+      "type": "currency",
+      "default": 12,
+      "min": 0,
+      "max": 200,
+      "prefix": "$",
+      "helpText": "Service/delivery charge from your utility ($5–$25 typical)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyBill",
+      "label": "Monthly Bill",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualBill",
+      "label": "Annual Bill",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "dailyCost",
+      "label": "Cost Per Day",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "breakdown",
+      "label": "Bill Breakdown",
+      "type": "value-group"
+    }
+  ],
+  "formula": "electric-bill-calculator",
+  "customRenderer": "ElectricBillCalculator",
+  "features": [
+    "state-data-integration",
+    "presets",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "kwh-cost-calculator",
+    "solar-panel-payback-calculator",
+    "home-heating-cost-calculator",
+    "gas-vs-electric-cost-calculator",
+    "electricity-rate-comparison-calculator"
+  ],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "U.S. Energy Information Administration (EIA), Electric Power Monthly, Table 5.6.a (March 2026)",
+  "articleWordTarget": 2500,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Monthly Bill = (kWh × Rate per kWh) + Monthly Base Fee",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "kwh-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

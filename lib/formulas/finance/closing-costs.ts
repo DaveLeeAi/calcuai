@@ -85,6 +85,15 @@ export function calculateClosingCosts(inputs: Record<string, unknown>): Record<s
       { label: 'Pro-Rated Property Tax', value: proRatedTax },
     ];
 
+    // Seller cost breakdown chart — {name, value}[] for pie chart rendering
+    const costBreakdownChart = [
+      { name: 'Agent Commission', value: agentCommission },
+      { name: 'Title Insurance', value: titleInsurance },
+      { name: 'Pro-Rated Tax', value: proRatedTax },
+      { name: 'Transfer Tax', value: transferTax },
+      { name: 'Attorney & Recording', value: parseFloat((attorneyFee + recordingFee).toFixed(2)) },
+    ].filter(item => item.value > 0);
+
     return {
       agentCommission,
       transferTax,
@@ -96,6 +105,7 @@ export function calculateClosingCosts(inputs: Record<string, unknown>): Record<s
       sellerCostPercent,
       netProceeds,
       costBreakdown,
+      costBreakdownChart,
     };
   }
 
@@ -173,6 +183,21 @@ export function calculateClosingCosts(inputs: Record<string, unknown>): Record<s
     ...(vaFundingFee > 0 ? [{ label: 'VA Funding Fee (2.3%)', value: vaFundingFee }] : []),
   ];
 
+  // Buyer cost breakdown chart — grouped categories for pie chart
+  const lenderFees = parseFloat((originationFee + appraisalFee + creditReportFee).toFixed(2));
+  const titleLegalFees = parseFloat((titleInsurance + titleSearchFee + attorneyFee + recordingFee + (surveyFee ?? 0)).toFixed(2));
+  const inspectionFees = parseFloat((homeInspection + floodCertification).toFixed(2));
+  const prepaidItems = parseFloat((prepaidInterest + homeownersInsurance + propertyTaxEscrow).toFixed(2));
+  const mortgageInsurance = parseFloat((pmiFirstYear + fhaUpfrontMIP + vaFundingFee).toFixed(2));
+
+  const costBreakdownChart = [
+    { name: 'Lender Fees', value: lenderFees },
+    { name: 'Title & Legal', value: titleLegalFees },
+    { name: 'Inspection Fees', value: inspectionFees },
+    { name: 'Prepaid Items', value: prepaidItems },
+    { name: 'Mortgage Insurance', value: mortgageInsurance },
+  ].filter(item => item.value > 0);
+
   return {
     loanAmount,
     originationFee,
@@ -195,6 +220,7 @@ export function calculateClosingCosts(inputs: Record<string, unknown>): Record<s
     closingCostPercent,
     totalCashNeeded,
     costBreakdown,
+    costBreakdownChart,
   };
 }
 

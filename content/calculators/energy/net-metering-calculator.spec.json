@@ -85,7 +85,7 @@
   "relatedCalculators": [
     "solar-panel-payback-calculator",
     "solar-battery-storage-calculator",
-    "electric-bill-estimator",
+    "electric-bill-calculator",
     "electricity-rate-comparison-calculator"
   ],
   "disclaimer": "general",

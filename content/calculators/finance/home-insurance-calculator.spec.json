@@ -226,6 +226,20 @@
       "label": "Coverage Summary",
       "type": "value-group",
       "format": "currency"
+    },
+    {
+      "id": "coverageBreakdownChart",
+      "label": "Coverage Breakdown",
+      "type": "chart-pie",
+      "description": "Visual split of your total homeowners insurance coverage by category.",
+      "chartConfig": {
+        "colors": [
+          "#1A6FA0",
+          "#27AE60",
+          "#E74C3C",
+          "#F39C12"
+        ]
+      }
     }
   ],
   "formula": "home-insurance",
@@ -243,7 +257,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "NAIC — Homeowners Insurance Report; Insurance Information Institute (III); Bankrate — Average Homeowners Insurance Rates by State (2025)",
   "articleWordTarget": 1400,
   "speakableSelectors": [
@@ -251,7 +265,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Annual Premium = (Home Value / 1,000 × State Rate) × Deductible Adj × Coverage Adj × Claims Adj × Credit Adj. Rates per $1,000: TX $5.50, FL $8.00, OK $6.00, KS $5.80, CO $4.50, LA $7.50, MN $3.50, CT $3.80, NE $5.00, National Avg $3.50. Source: NAIC, III, Bankrate 2025.",
   "formulaAuditDate": "2026-03-14",
@@ -260,7 +274,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 75,
+  "qualityScore": 85,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

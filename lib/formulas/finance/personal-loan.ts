@@ -150,6 +150,13 @@ export function calculatePersonalLoan(inputs: Record<string, unknown>): Record<s
     { label: 'Total Cost of Loan', value: round2(totalInterest + originationFee) },
   ];
 
+  // Cost breakdown chart — {name, value}[] for pie chart rendering
+  const costBreakdownChart = [
+    { name: 'Principal', value: loanAmount },
+    { name: 'Total Interest', value: totalInterest },
+    { name: 'Origination Fee', value: originationFee },
+  ].filter(item => item.value > 0);
+
   return {
     monthlyPayment,
     totalPayment,
@@ -162,6 +169,7 @@ export function calculatePersonalLoan(inputs: Record<string, unknown>): Record<s
     lastPaymentInterest,
     lastPaymentPrincipal,
     costBreakdown,
+    costBreakdownChart,
   };
 }
 

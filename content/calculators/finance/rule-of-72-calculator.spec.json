@@ -96,7 +96,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Luca Pacioli, Summa de Arithmetica (1494); standard financial mathematics",
   "articleWordTarget": 800,
   "speakableSelectors": [

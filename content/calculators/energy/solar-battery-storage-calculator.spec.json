@@ -116,7 +116,7 @@
     "home-battery-backup-calculator",
     "solar-panel-payback-calculator",
     "net-metering-calculator",
-    "electric-bill-estimator"
+    "electric-bill-calculator"
   ],
   "disclaimer": "general",
   "hasFAQ": true,

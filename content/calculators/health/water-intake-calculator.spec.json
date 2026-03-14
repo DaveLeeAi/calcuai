@@ -135,7 +135,7 @@
   "disclaimer": "health",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "National Academies of Sciences — Dietary Reference Intakes for Water",
   "articleWordTarget": 800,
   "speakableSelectors": [

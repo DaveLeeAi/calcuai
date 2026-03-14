@@ -49,18 +49,30 @@
       "type": "select",
       "default": "gas",
       "options": [
-        { "value": "gas", "label": "Gas Heater (natural gas)" },
-        { "value": "propane", "label": "Gas Heater (propane)" },
-        { "value": "heat-pump", "label": "Electric Heat Pump" },
-        { "value": "solar", "label": "Solar Pool Heater" }
+        {
+          "value": "gas",
+          "label": "Gas Heater (natural gas)"
+        },
+        {
+          "value": "propane",
+          "label": "Gas Heater (propane)"
+        },
+        {
+          "value": "heat-pump",
+          "label": "Electric Heat Pump"
+        },
+        {
+          "value": "solar",
+          "label": "Solar Pool Heater"
+        }
       ]
     },
     {
       "id": "gasPrice",
       "label": "Natural Gas Price",
       "type": "currency",
-      "default": 1.50,
-      "min": 0.10,
+      "default": 1.5,
+      "min": 0.1,
       "max": 10,
       "step": 0.01,
       "prefix": "$",
@@ -167,7 +179,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 77,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

@@ -147,7 +147,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "formulaCitation": "Elizabeth Warren & Amelia Warren Tyagi, All Your Worth (2005) — 50/30/20 budgeting rule",
   "articleWordTarget": 1400,
   "speakableSelectors": [

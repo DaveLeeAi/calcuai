@@ -172,7 +172,7 @@
   "disclaimer": "finance",
   "hasFAQ": true,
   "hasMethodologyPage": false,
-  "requiresSources": false,
+  "requiresSources": true,
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Consumer Financial Protection Bureau — Discount Points and Lender Credits (explains how each point costs 1% of the loan and typically reduces the rate by 0.25%)",
