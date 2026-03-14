@@ -1,0 +1,167 @@
+---
+title: "Shopify Fee Calculator"
+description: "Calculate your true monthly Shopify cost across all plans. Compares Basic, Shopify, Advanced, and Plus on subscription, processing fees, transaction fees, and currency conversion at your revenue level."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your total monthly Shopify cost — subscription plus payment processing fees, transaction fees (third-party only), and currency conversion — then compare all four plans at your revenue level to find the breakeven point where upgrading saves money. A seller doing \$50,000/month on Basic (Shopify Payments) pays \$39 subscription + \$1,481 in processing fees = \$1,520 total, an effective rate of 3.04%. Upgrading to the \$105/month Shopify plan saves \$270/month in processing, paying back the \$66/month subscription increase 4× over. Plan optimization is one of the highest-ROI decisions a Shopify store makes — and most sellers are on the wrong plan for their revenue level.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Total Monthly Cost** is the sum of every fee Shopify charges: subscription, payment processing, transaction fees (if using third-party payment processors), and currency conversion on international orders. This is your true Shopify platform cost — not the \$39/month advertised subscription fee.
+
+**Effective Fee Rate** expresses total monthly Shopify cost as a percentage of your revenue. At low revenue, the fixed subscription fee dominates and effective rate is high. At high revenue, percentage-based processing fees dominate and effective rate stabilizes. This rate is the right number to compare across plans and to benchmark against alternative platforms.
+
+**Plan Comparison Table** shows what you would pay on all four Shopify plans at your current revenue level — Basic, Shopify, Advanced, and Plus — with the breakdown of subscription, processing, and transaction fees for each. The right plan is not the cheapest subscription; it is the plan with the lowest total monthly cost at your specific revenue level.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select Your Shopify Plan** — your current plan (Basic, Shopify, Advanced, or Plus). The calculator will show your current cost and compare it to all other plans.
+2. **Enter Monthly Revenue** — your total Shopify store gross revenue for a typical month. Use your last 3-month average for stable stores, or your projected revenue if evaluating a plan for launch.
+3. **Enter Average Order Value** — your typical order size. This is used to calculate the per-transaction fixed fee (\$0.30 per order) which adds up at high order volumes with low AOV.
+4. **Select Payment Method** — Shopify Payments or third-party processor.
+   - **Shopify Payments:** Shopify charges its processing rate (2.9%–2.15% depending on plan) but no transaction fee. This is the standard for most US sellers.
+   - **Third-party processor:** Shopify charges no processing fee (your processor charges separately) but adds a transaction fee of 2.0%–0.15% depending on plan. Always use Shopify Payments if available — the transaction fee on third-party nearly always costs more.
+5. **Enter International Revenue %** — percentage of your revenue from international customers. Shopify charges 1.5% currency conversion on all international orders regardless of plan. Enter 0 if you sell exclusively to US customers.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Processing Fees (Shopify Payments):**
+
+$$
+\text{Processing Fees} = \text{Revenue} \times \text{Plan Rate\%} + \left(\frac{\text{Revenue}}{\text{AOV}}\right) \times \$0.30
+$$
+
+**Transaction Fees (Third-Party Only):**
+
+$$
+\text{Transaction Fees} = \text{Revenue} \times \text{Plan Transaction Rate\%}
+$$
+
+**Currency Conversion Fees:**
+
+$$
+\text{Currency Fees} = \text{Revenue} \times \text{International\%} \times 1.5\%
+$$
+
+**Total Monthly Cost:**
+
+$$
+\text{Total Cost} = \text{Subscription} + \text{Processing} + \text{Transaction} + \text{Currency Conversion}
+$$
+
+**Effective Fee Rate:**
+
+$$
+\text{Effective Rate\%} = \frac{\text{Total Monthly Cost}}{\text{Monthly Revenue}} \times 100
+$$
+
+Where (2026 annual billing rates):
+| Plan | Subscription | Processing Rate | Transaction Fee |
+|---|---|---|---|
+| Basic | \$39/mo | 2.9% + \$0.30 | 2.0% (third-party) |
+| Shopify | \$105/mo | 2.6% + \$0.30 | 1.0% (third-party) |
+| Advanced | \$399/mo | 2.4% + \$0.30 | 0.5% (third-party) |
+| Plus | \$2,300/mo | 2.15% + \$0.30 | 0.15% (third-party) |
+
+*Source: Shopify — Pricing Plans and Transaction Fees (2026). Shopify — Payments Processing Rates by Plan (2026).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Finding the Plan Crossover Point (\$75K/Month Store)
+
+A DTC brand does \$75,000/month on Shopify Basic with Shopify Payments and a \$55 average order value.
+
+| Plan | Subscription | Processing | Total | Effective Rate |
+|---|---|---|---|---|
+| Basic | \$39 | \$2,218 | \$2,257 | 3.01% |
+| Shopify | \$105 | \$1,986 | \$2,091 | 2.79% |
+| Advanced | \$399 | \$1,845 | \$2,244 | 2.99% |
+| Plus | \$2,300 | \$1,646 | \$3,946 | 5.26% |
+
+*Processing includes: processing rate × \$75,000 + (75,000/55) × \$0.30 per order*
+
+*Interpretation:* The Shopify plan at \$105/month is the winner — \$166/month cheaper than Basic despite the \$66 higher subscription, because the 0.3% lower processing rate saves \$225/month on \$75,000 in revenue. Advanced at \$399 is barely cheaper than Basic because the processing savings (\$373) don't fully offset the \$360 subscription premium at this revenue level. Advanced becomes the right plan around \$130,000–\$150,000/month. Plus only makes sense above \$800,000+/month.
+
+### Example 2: Third-Party Processor Cost (Why It Almost Never Wins)
+
+The same \$75,000/month seller considers using Stripe (third-party) instead of Shopify Payments on their current Basic plan. Stripe charges 2.9% + \$0.30 per transaction.
+
+**With Shopify Payments (Basic):**
+- Shopify total: \$2,257/month (as above)
+- External processor cost: \$0
+
+**With Stripe third-party (Basic):**
+- Shopify subscription: \$39
+- Shopify transaction fee (2%): \$1,500
+- Stripe processing (2.9% + \$0.30): \$2,218 (paid to Stripe, not included in Shopify fees)
+- **Shopify total: \$1,539** — appears cheaper
+- **But Stripe charges separately: \$2,218**
+- **Combined real total: \$3,757/month** — \$1,500 more than Shopify Payments
+
+*Interpretation:* This is the math most sellers miss. The Shopify fee calculator shows lower cost with third-party because it correctly excludes the processor's own fee — which you still pay. Shopify Payments is almost always the correct choice for US sellers because it eliminates the transaction fee while the processing rate is competitive with Stripe's standard rates.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Plan Crossover Points at 2026 Rates** — The revenue thresholds at which upgrading plans pays for itself:
+   - **Basic → Shopify crossover:** approximately \$24,000/month. Below this, Basic's lower subscription costs less despite higher processing rate.
+   - **Shopify → Advanced crossover:** approximately \$130,000/month.
+   - **Advanced → Plus crossover:** approximately \$800,000/month (this is also near Shopify's stated Plus requirement of \$1M+ annual revenue).
+   These are approximate and depend on AOV (the per-transaction \$0.30 fee matters more at low AOV).
+
+2. **The \$0.30 Per-Transaction Fee at Low AOV** — The fixed \$0.30 per-order fee is often overlooked. At a \$15 AOV, \$0.30 represents 2% of the order on top of the percentage rate — effectively doubling the processing rate. At \$100 AOV, it represents 0.3% — negligible. Stores with low average order values (accessories, consumables) should calculate per-transaction fees explicitly rather than using percentage-based estimates.
+
+3. **Annual vs. Monthly Billing** — The plan prices in this calculator use annual billing rates. Monthly billing costs approximately 25% more: Basic is \$39/mo (annual) vs. \$49/mo (monthly), Shopify is \$105 vs. \$132, Advanced is \$399 vs. \$517. If you are growing rapidly and unsure about a plan, monthly billing gives flexibility at a premium. Once stable at a revenue level, switching to annual billing pays back in 2–3 months.
+
+4. **International Revenue and Currency Conversion** — The 1.5% currency conversion fee applies to all Shopify plans. For a store with 30% international revenue at \$100,000/month, that is \$450/month in conversion fees — more than the subscription upgrade from Basic to Shopify. International-heavy stores should factor conversion fees heavily into plan cost calculations and evaluate whether currency hedging or multi-currency pricing can reduce this exposure.
+
+5. **Shopify Plus Is Not Just a Price Plan** — Plus at \$2,300/month is primarily purchased for features (custom checkout, B2B, dedicated account management, API rate limits, checkout extensibility) rather than processing rate savings alone. The processing rate savings versus Advanced is 0.25% — on \$800,000/month, that saves \$2,000/month, roughly covering the subscription premium over Advanced. Stores considering Plus should evaluate it primarily on the feature requirements, using fee savings as a secondary consideration.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses 2026 Shopify annual billing rates; monthly billing rates are approximately 25% higher — verify current rates in Shopify Admin → Settings → Plan
+- Processing fees assume Shopify Payments in the US; rates differ by country (UK, EU, Australia have different rate structures)
+- Third-party processor calculation shows only the Shopify-charged fees (transaction fee) — the external processor's own processing fees are not modeled here (they would be an additional cost on top)
+- Does not include Shopify app subscription costs, which can add \$200–\$1,000+/month for stores using multiple paid apps
+- Plus pricing shown is the standard Plus rate; some high-volume Plus customers negotiate custom rates
+
+## Frequently Asked Questions
+
+### When should I upgrade from Basic to Shopify plan?
+
+Upgrade from Basic to Shopify when your monthly Shopify Payments revenue exceeds approximately \$24,000/month. At that revenue level, the 0.3% lower processing rate (2.9% → 2.6%) saves more than the \$66/month subscription increase. At \$25,000/month, the processing saving is \$75/month — \$9 more than the subscription premium. The breakeven point is precise and worth calculating at your specific AOV since the per-transaction \$0.30 fee affects the exact threshold.
+
+### Is Shopify Payments always better than third-party processors?
+
+For most US sellers, yes. With a third-party processor, Shopify charges a transaction fee (2.0% on Basic, down to 0.15% on Plus) on top of whatever your external processor charges. On Basic at \$50,000/month, that is \$1,000/month in Shopify transaction fees before paying your processor. Shopify Payments eliminates the transaction fee entirely and charges a comparable processing rate. The exception is if you have a specialized processor (high-risk merchant, specific international requirements) that isn't supported by Shopify Payments.
+
+### Does Shopify Plus include unlimited processing?
+
+Shopify Plus charges 2.15% + \$0.30 per transaction through Shopify Payments (2026 rates) — not unlimited or zero processing. The advantage of Plus is a lower rate (2.15% vs. 2.9% on Basic) and a lower transaction fee for third-party processors (0.15% vs. 2.0%). At very high revenue levels, these savings offset the \$2,300/month subscription premium, but Plus is not a flat-fee or processing-free plan.
+
+### How much does Shopify charge for international sales?
+
+Shopify charges 1.5% currency conversion on all international orders regardless of plan. This applies on top of the regular processing fee when a customer pays in a currency different from your store's default currency. A store doing \$20,000/month in international revenue pays \$300/month in currency conversion fees — the same on Basic as on Plus. If international revenue is significant, factor this into your total cost calculation. Some brands price international SKUs slightly higher to absorb the conversion fee.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Shopify** — Pricing Plans and Transaction Fees (2026)
+- **Shopify** — Payments Processing Rates by Plan (2026)
+- **Shopify Help Center** — Understanding Shopify Payments fees and Shopify transaction fees (2026)
+
+Related tools: [Product Pricing Calculator](/ecommerce/product-pricing-calculator) · [Amazon FBA Profit Calculator](/ecommerce/amazon-fba-profit-calculator) · [Advertising Break-Even Calculator](/ecommerce/advertising-break-even-calculator)

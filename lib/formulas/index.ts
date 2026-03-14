@@ -4,7 +4,7 @@
  * Source: scripts/generate-formula-registry.ts
  *
  * 247 modules, 249 formula IDs
- * Generated: 2026-03-13
+ * Generated: 2026-03-14
  */
 import type { FormulaFunction } from '@/lib/types';
 
@@ -33,6 +33,24 @@ import { FORMULA_REGISTRY as business_revenue } from './business/revenue';
 import { FORMULA_REGISTRY as business_roi } from './business/roi';
 import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary-to-hourly';
 import { FORMULA_REGISTRY as business_working_capital } from './business/working-capital';
+
+// Ecommerce
+import { FORMULA_REGISTRY as ecommerce_product_pricing } from './ecommerce/product-pricing';
+import { FORMULA_REGISTRY as ecommerce_average_order_value } from './ecommerce/average-order-value';
+import { FORMULA_REGISTRY as ecommerce_return_on_ad_spend } from './ecommerce/return-on-ad-spend';
+import { FORMULA_REGISTRY as ecommerce_advertising_break_even } from './ecommerce/advertising-break-even';
+import { FORMULA_REGISTRY as ecommerce_amazon_fba_profit } from './ecommerce/amazon-fba-profit';
+import { FORMULA_REGISTRY as ecommerce_landed_cost } from './ecommerce/landed-cost';
+import { FORMULA_REGISTRY as ecommerce_tiktok_shop_profit } from './ecommerce/tiktok-shop-profit';
+import { FORMULA_REGISTRY as ecommerce_amazon_acos } from './ecommerce/amazon-acos';
+import { FORMULA_REGISTRY as ecommerce_shopify_fee } from './ecommerce/shopify-fee';
+import { FORMULA_REGISTRY as ecommerce_ebay_fee } from './ecommerce/ebay-fee';
+import { FORMULA_REGISTRY as ecommerce_etsy_fee } from './ecommerce/etsy-fee';
+import { FORMULA_REGISTRY as ecommerce_dropshipping_profit } from './ecommerce/dropshipping-profit';
+import { FORMULA_REGISTRY as ecommerce_print_on_demand_profit } from './ecommerce/print-on-demand-profit';
+import { FORMULA_REGISTRY as ecommerce_fba_vs_fbm } from './ecommerce/fba-vs-fbm';
+import { FORMULA_REGISTRY as ecommerce_amazon_fba_storage_fee } from './ecommerce/amazon-fba-storage-fee';
+import { FORMULA_REGISTRY as ecommerce_reorder_point } from './ecommerce/reorder-point';
 
 // Construction
 import { FORMULA_REGISTRY as construction_accessibility_remodel_cost } from './construction/accessibility-remodel-cost';
@@ -297,6 +315,23 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_roi,
   ...business_salary_to_hourly,
   ...business_working_capital,
+  // Ecommerce
+  ...ecommerce_product_pricing,
+  ...ecommerce_average_order_value,
+  ...ecommerce_return_on_ad_spend,
+  ...ecommerce_advertising_break_even,
+  ...ecommerce_amazon_fba_profit,
+  ...ecommerce_landed_cost,
+  ...ecommerce_tiktok_shop_profit,
+  ...ecommerce_amazon_acos,
+  ...ecommerce_shopify_fee,
+  ...ecommerce_ebay_fee,
+  ...ecommerce_etsy_fee,
+  ...ecommerce_dropshipping_profit,
+  ...ecommerce_print_on_demand_profit,
+  ...ecommerce_fba_vs_fbm,
+  ...ecommerce_amazon_fba_storage_fee,
+  ...ecommerce_reorder_point,
   // Construction
   ...construction_accessibility_remodel_cost,
   ...construction_artificial_turf_cost,

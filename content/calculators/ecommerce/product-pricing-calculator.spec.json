@@ -1,0 +1,159 @@
+{
+  "id": "product-pricing-calculator",
+  "title": "Product Pricing Calculator",
+  "slug": "product-pricing-calculator",
+  "category": "ecommerce",
+  "subcategory": "pricing",
+  "primaryKeyword": "product pricing calculator",
+  "metaTitle": "Product Pricing Calculator — Set Profitable Ecommerce Prices",
+  "metaDescription": "Calculate the right selling price for your product based on cost, target margin, and volume tiers. Free ecommerce pricing tool with tiered discount planning.",
+  "inputs": [
+    {
+      "id": "productCost",
+      "label": "Product Cost (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 20,
+      "min": 0.01,
+      "max": 1000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Total landed cost per unit — include manufacturing, shipping, and duties"
+    },
+    {
+      "id": "targetMargin",
+      "label": "Target Gross Margin (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 50,
+      "min": 1,
+      "max": 99,
+      "step": 0.5,
+      "helpText": "Your desired gross margin as a percentage of selling price (not cost)"
+    },
+    {
+      "id": "overheadPerUnit",
+      "label": "Overhead Per Unit (Optional)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Allocated overhead per unit: platform fees, payment processing, packaging"
+    },
+    {
+      "id": "discountTier1Qty",
+      "label": "Volume Tier 1 — Min Qty",
+      "type": "number",
+      "required": false,
+      "defaultValue": 10,
+      "min": 2,
+      "max": 100000,
+      "step": 1,
+      "helpText": "Minimum quantity to qualify for Tier 1 volume discount"
+    },
+    {
+      "id": "discountTier1Pct",
+      "label": "Volume Tier 1 — Discount (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 0.5,
+      "helpText": "Discount percentage applied at Tier 1 quantity"
+    },
+    {
+      "id": "discountTier2Qty",
+      "label": "Volume Tier 2 — Min Qty",
+      "type": "number",
+      "required": false,
+      "defaultValue": 50,
+      "min": 2,
+      "max": 100000,
+      "step": 1,
+      "helpText": "Minimum quantity to qualify for Tier 2 volume discount"
+    },
+    {
+      "id": "discountTier2Pct",
+      "label": "Volume Tier 2 — Discount (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 50,
+      "step": 0.5,
+      "helpText": "Discount percentage applied at Tier 2 quantity"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "basePrice",
+      "label": "Base Selling Price",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "grossProfit",
+      "label": "Gross Profit per Unit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "pricingTiers",
+      "label": "Volume Pricing Tiers",
+      "type": "table",
+      "columns": [
+        { "key": "tier", "label": "Tier" },
+        { "key": "minQty", "label": "Min Qty" },
+        { "key": "price", "label": "Price", "format": "currency" },
+        { "key": "margin", "label": "Margin %", "format": "percentage" },
+        { "key": "profitPerUnit", "label": "Profit/Unit", "format": "currency" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Pricing Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "product-pricing",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "markup-calculator",
+    "margin-calculator",
+    "break-even-calculator",
+    "average-order-value-calculator",
+    "return-on-ad-spend-calculator",
+    "profit-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Corporate Finance Institute — Gross Margin and Cost-Plus Pricing (2024); Shopify — Ecommerce Pricing Strategies Guide (2025)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Base Price = Product Cost / (1 − Target Margin%/100); Tier Price = Base Price × (1 − Discount%/100); Margin% = (Price − COGS − Overhead) / Price × 100",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["markup-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null,
+  "glossaryTerms": ["profit-margin"]
+}

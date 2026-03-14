@@ -1,0 +1,164 @@
+{
+  "id": "print-on-demand-profit-calculator",
+  "title": "Print on Demand Profit Calculator",
+  "slug": "print-on-demand-profit-calculator",
+  "category": "ecommerce",
+  "subcategory": "sourcing",
+  "primaryKeyword": "print on demand profit calculator",
+  "metaTitle": "Print on Demand Profit Calculator — Printful, Printify, Etsy & Shopify",
+  "metaDescription": "Calculate print on demand net profit per order after POD base cost, platform fees, and ad spend. Works for Printful + Etsy, Printify + Shopify, and custom POD setups.",
+  "inputs": [
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 34.99,
+      "min": 0.01,
+      "max": 10000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "What your customer pays for the product"
+    },
+    {
+      "id": "podCost",
+      "label": "POD Cost per Item",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 14,
+      "min": 0,
+      "max": 10000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "What your POD provider charges — includes base product cost + printing. Examples: Printful t-shirt ~$13–$15, mug ~$8–$10."
+    },
+    {
+      "id": "shippingCost",
+      "label": "Shipping Cost",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 4.5,
+      "min": 0,
+      "max": 200,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Shipping to customer (enter 0 if charged separately to buyer and passed through)"
+    },
+    {
+      "id": "platform",
+      "label": "Selling Platform",
+      "type": "select",
+      "required": true,
+      "defaultValue": "etsy",
+      "options": [
+        { "value": "etsy", "label": "Etsy (~9.5% + $0.45 per order)" },
+        { "value": "shopify-payments", "label": "Shopify Payments Basic (2.9% + $0.30)" },
+        { "value": "amazon-merch", "label": "Merch by Amazon (enter royalty% below)" },
+        { "value": "redbubble", "label": "Redbubble / Zazzle (enter margin% below)" },
+        { "value": "custom", "label": "Custom — enter rate below" }
+      ],
+      "helpText": "Your selling platform — pre-fills fee rate for common platforms"
+    },
+    {
+      "id": "customPlatformRate",
+      "label": "Platform Fee Rate (%) — for Custom/Amazon/Redbubble",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 9.5,
+      "min": 0,
+      "max": 100,
+      "step": 0.1,
+      "helpText": "For Amazon Merch: your royalty% (what you keep as % of price). For Redbubble: your margin%. For custom: your platform's fee%."
+    },
+    {
+      "id": "adSpendPerOrder",
+      "label": "Ad Spend per Order (Optional)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 1000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Paid advertising cost per sale — monthly ad spend ÷ monthly orders"
+    },
+    {
+      "id": "monthlyOrders",
+      "label": "Monthly Orders",
+      "type": "number",
+      "required": false,
+      "defaultValue": 60,
+      "min": 1,
+      "max": 100000,
+      "step": 1,
+      "helpText": "Monthly order volume for monthly profit projection"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netProfitPerOrder",
+      "label": "Net Profit per Order",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "profitMargin",
+      "label": "Profit Margin",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "monthlyProfit",
+      "label": "Monthly Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdownTable",
+      "label": "Cost Breakdown",
+      "type": "table",
+      "columns": [
+        { "key": "item", "label": "Cost Item" },
+        { "key": "amount", "label": "Amount", "format": "currency" },
+        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Profit Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "print-on-demand-profit",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "etsy-fee-calculator",
+    "shopify-fee-calculator",
+    "dropshipping-profit-calculator",
+    "product-pricing-calculator",
+    "return-on-ad-spend-calculator",
+    "advertising-break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Printful — Pricing and Profit Calculator (2025); Etsy — Fees & Payments Policy (2025); Shopify — Payments Processing Rates (2026)",
+  "articleWordTarget": 1300,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Profit = Selling Price − Platform Fee − POD Cost − Shipping − Ad Spend; Profit Margin = Net Profit / Selling Price × 100; Monthly Profit = Net Profit × Monthly Orders",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -1,0 +1,130 @@
+{
+  "id": "average-order-value-calculator",
+  "title": "Average Order Value Calculator",
+  "slug": "average-order-value-calculator",
+  "category": "ecommerce",
+  "subcategory": "metrics",
+  "primaryKeyword": "average order value calculator",
+  "metaTitle": "Average Order Value Calculator — AOV for Ecommerce",
+  "metaDescription": "Calculate your average order value (AOV) from revenue and order count. Model revenue impact of AOV improvements. Free ecommerce AOV tool.",
+  "inputs": [
+    {
+      "id": "totalRevenue",
+      "label": "Total Revenue",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 50000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total revenue from all orders in the period"
+    },
+    {
+      "id": "numberOfOrders",
+      "label": "Number of Orders",
+      "type": "number",
+      "required": true,
+      "defaultValue": 500,
+      "min": 1,
+      "max": 10000000,
+      "step": 1,
+      "helpText": "Total number of orders placed in the same period"
+    },
+    {
+      "id": "targetAOV",
+      "label": "Target AOV (Optional)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 120,
+      "min": 0,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Your goal AOV — see projected revenue lift if you hit this target"
+    },
+    {
+      "id": "monthlyOrders",
+      "label": "Monthly Order Volume (Optional)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 500,
+      "min": 1,
+      "max": 10000000,
+      "step": 1,
+      "helpText": "Monthly orders — used to calculate annual revenue impact of AOV improvement"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "aov",
+      "label": "Average Order Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "projectedRevenueAtTargetAOV",
+      "label": "Projected Revenue at Target AOV",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualAOVLift",
+      "label": "Annual Revenue Lift",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "aovBenchmarkTable",
+      "label": "AOV Improvement Scenarios",
+      "type": "table",
+      "columns": [
+        { "key": "scenario", "label": "Scenario" },
+        { "key": "aov", "label": "AOV", "format": "currency" },
+        { "key": "monthlyRevenue", "label": "Monthly Revenue", "format": "currency" },
+        { "key": "annualRevenue", "label": "Annual Revenue", "format": "currency" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "AOV Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "average-order-value",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "return-on-ad-spend-calculator",
+    "advertising-break-even-calculator",
+    "product-pricing-calculator",
+    "revenue-calculator",
+    "conversion-rate-calculator",
+    "customer-lifetime-value-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Shopify — Average Order Value: Definition and How to Increase It (2025); BigCommerce — Ecommerce Metrics Guide (2024)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "AOV = Total Revenue / Number of Orders; Revenue Lift = (Target AOV − Current AOV) × Monthly Orders × 12",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["revenue-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

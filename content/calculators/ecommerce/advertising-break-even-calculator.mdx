@@ -1,0 +1,157 @@
+---
+title: "Advertising Break-Even Calculator"
+description: "Calculate how many orders you need to break even on your ad budget. Find your maximum cost per acquisition, break-even ROAS, and traffic needed. Free ecommerce advertising tool."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate how many orders you need to cover your ad budget before you start generating profit. On a \$3,000 ad budget with an \$85 AOV, 40% COGS, and 5% fees, you need 65 orders — each generating \$46.75 in contribution margin — to break even. Your maximum allowable cost per acquisition (CPA) is \$46.75; any ad CPA above that loses money.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Break-Even Orders** is the exact number of orders your ad campaign must generate to recover the ad budget through contribution margin. Below this number, the campaign loses money. Above it, every additional order generates pure profit. This is your minimum viable conversion target for the campaign.
+
+**Max Cost Per Acquisition (CPA)** is the highest amount you can pay per order while still covering your ad budget through gross profit. Set this as your target CPA ceiling in Google Ads Smart Bidding or Meta's Cost Cap. Any CPA bid above this number means you are spending more to acquire the order than you earn from it.
+
+**Break-Even ROAS** is the revenue-to-spend ratio you must hit to recover ad cost through gross profit. Below break-even ROAS, campaigns are burning contribution margin. Set this as your minimum ROAS target in your ad platform's portfolio bid strategy.
+
+**Traffic Needed** shows the website visitors required to generate break-even orders at your current conversion rate. Use this to sanity-check whether your ad budget can realistically buy enough traffic at your current CPC to hit break-even.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Ad Budget** — the total budget you are evaluating. This can be a monthly campaign budget, a specific campaign's spend, or a budget you are considering.
+2. **Enter Average Order Value (AOV)** — your store's average revenue per order. Use the actual average from your analytics, not a hoped-for value. You can calculate AOV with our [AOV Calculator](/ecommerce/average-order-value-calculator).
+3. **Enter Cost of Goods Sold %** — your COGS as a percentage of AOV. If products cost \$34 and you sell them for \$85, COGS% is 40%.
+4. **Enter Fulfilment & Fees %** (optional) — shipping, platform transaction fees, and payment processing as a percentage of revenue. Shopify payments: 2.9% + \$0.30 per order. Amazon: 8–45% referral fee. DTC fulfilment: 5–15% of AOV.
+5. **Enter Current Conversion Rate %** (optional) — your store's conversion rate used to calculate how much traffic you need. If unsure, use 2%–3% as a starting benchmark for paid traffic.
+6. **Review the profit/loss table** — each row shows net profit after ad spend at different order volumes (50%, 75%, 100%, 125%, 150% of break-even). Use this to set campaign performance expectations.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Contribution Margin per Order:**
+
+$$
+\text{Contribution Margin} = \text{AOV} \times \left(1 - \frac{\text{COGS\%} + \text{Fees\%}}{100}\right)
+$$
+
+**Break-Even Orders:**
+
+$$
+\text{Break-Even Orders} = \left\lceil \frac{\text{Ad Budget}}{\text{Contribution Margin}} \right\rceil
+$$
+
+**Max Cost Per Acquisition (Break-Even CPA):**
+
+$$
+\text{Max CPA} = \text{Contribution Margin per Order}
+$$
+
+**Break-Even ROAS:**
+
+$$
+\text{Break-Even ROAS} = \frac{1}{\text{Net Margin (decimal)}}
+$$
+
+**Traffic Needed:**
+
+$$
+\text{Traffic Needed} = \left\lceil \frac{\text{Break-Even Orders}}{\text{Conversion Rate / 100}} \right\rceil
+$$
+
+Where:
+- **AOV** = average order value
+- **COGS%** = cost of goods as % of AOV
+- **Fees%** = platform, payment, and fulfilment fees as % of revenue
+- **Net Margin** = (1 − COGS% − Fees%) expressed as a decimal
+- **⌈ ⌉** = ceiling function (round up to the nearest whole order)
+
+*Source: Shopify — How to Calculate Your Ecommerce Break-Even Point (2025).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Shopify DTC Apparel Brand
+
+A clothing brand plans to spend \$5,000/month on Google Shopping. Their metrics:
+- AOV: \$95
+- COGS: 35% (\$33.25/order)
+- Fees: 7% (Shopify 2.9% + shipping 4.1%) = \$6.65/order
+- Contribution Margin: \$95 × (1 − 0.35 − 0.07) = \$95 × 0.58 = **\$55.10**
+- Break-Even Orders: ⌈\$5,000 / \$55.10⌉ = ⌈90.7⌉ = **91 orders**
+- Max CPA: **\$55.10**
+- Break-Even ROAS: 1 / 0.58 = **1.72**
+- Current CVR: 2.5% → Traffic Needed: ⌈91 / 0.025⌉ = **3,640 visitors**
+
+*Interpretation:* The brand needs 91 orders and 3,640 clicks to break even. At an average CPC of \$0.80 on Google Shopping, 3,640 clicks costs \$2,912 — well within the \$5,000 budget. They have room to scale or to tolerate CPC increases up to \$1.37 before the campaign becomes mathematically unable to reach break-even.
+
+### Example 2: Amazon Sponsored Products
+
+A supplement brand runs \$2,000/month in Amazon Sponsored Products. Their metrics:
+- AOV: \$49.99
+- COGS: 30% (\$15/order)
+- Fees: 15% Amazon referral + 10% FBA = 25% = \$12.50/order
+- Contribution Margin: \$49.99 × (1 − 0.30 − 0.25) = \$49.99 × 0.45 = **\$22.50**
+- Break-Even Orders: ⌈\$2,000 / \$22.50⌉ = ⌈88.9⌉ = **89 orders**
+- Max CPA: **\$22.50**
+- Break-Even ROAS: 1 / 0.45 = **2.22**
+
+*Interpretation:* The brand needs 89 orders at a max CPA of \$22.50. If their average Amazon ad CPA (cost per sale) is currently \$18, they are generating profit from ads. If CPA rises above \$22.50 through bid competition, the campaign becomes loss-generating. Set a cost-per-sale target of \$18–\$20 in Amazon's portfolio bidding with \$22.50 as the hard ceiling.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **AOV Improvement Directly Reduces Break-Even** — Increasing AOV from \$85 to \$100 raises contribution margin by \$15 per order (at 55% net margin), which reduces the number of orders needed to break even. For a \$3,000 budget, that drops break-even from 65 to 55 orders. AOV improvement is the fastest way to improve advertising break-even without changing your bids. Use our [AOV Calculator](/ecommerce/average-order-value-calculator) to model this.
+
+2. **Fee Structure by Channel** — Amazon ads carry much higher break-even ROAS requirements than Shopify/DTC because Amazon's referral fee (8–45%) consumes a large portion of contribution margin. A product with 60% gross margin on Shopify has a 1.67 break-even ROAS; the same product on Amazon (with 30% total fees) has a break-even ROAS of 3.33 — double the hurdle.
+
+3. **Conversion Rate Sensitivity** — Break-even traffic needed scales directly with conversion rate. A 1% CVR requires twice the traffic of a 2% CVR to break even. For high-budget campaigns, a 0.5% CVR improvement is often worth more than a 20% ad spend reduction because it halves traffic needs while maintaining or growing conversion volume.
+
+4. **Return Rate Impact** — This calculator does not model return rates. If your product has a 10% return rate, your effective AOV is 90% of reported revenue. At \$85 AOV with 10% returns, effective AOV is \$76.50. Recalculate contribution margin using effective AOV for high-return-rate products (apparel, electronics).
+
+5. **New vs. Repeat Purchase Dynamics** — Break-even on first purchase alone ignores lifetime value. If your repeat purchase rate is 40% and second-order contribution margin is \$50, a campaign that barely breaks even on first order may have an NPV-positive ROI over 12 months. Use customer LTV to adjust your target CPA ceiling beyond just the first-order contribution margin.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes all ad-generated orders are at the average AOV — does not model SKU-level or session-level order value variance
+- Break-even orders are rounded up (ceiling function) — actual break-even may fall between two whole orders
+- Traffic needed assumes uniform conversion rate across all traffic from the campaign — conversion rate varies by ad creative, audience, and landing page
+- Does not account for return rates or order cancellations
+- Assumes linear contribution margin — does not model COGS reductions from volume purchasing at higher order counts
+
+## Frequently Asked Questions
+
+### What is a break-even CPA for ecommerce advertising?
+
+Your break-even CPA equals your contribution margin per order: AOV × (1 − COGS% − Fees%). It is the maximum you can pay to acquire a customer while covering COGS and ad spend with zero net profit. Set your ad platform's target CPA or cost cap below this number for profitable campaigns. For profitable growth, target a CPA at 70–80% of your break-even CPA, leaving margin to cover returns, overhead, and desired net profit.
+
+### How do I find my actual contribution margin?
+
+Contribution margin per order = AOV − COGS − per-order fulfilment costs − platform fees. Example: \$100 AOV − \$40 COGS − \$6 Shopify fee − \$4 packaging/shipping = \$50 contribution margin (50%). This differs from gross margin because it includes fulfilment and channel fees that are only incurred when an order ships, making it the most accurate profitability benchmark for paid acquisition decisions.
+
+### Why does my break-even ROAS seem so high?
+
+High break-even ROAS signals thin contribution margins — most common in high-fee channels (Amazon, marketplaces) or low-margin product categories (electronics, commodities). If break-even ROAS is above 5, either your fees are too high, your COGS is too high, or your AOV is too low. Before cutting ad spend, model whether fee negotiation, supplier renegotiation, or AOV improvement (upsells, bundles) can lower your break-even ROAS to a practically achievable level.
+
+### What conversion rate should I use if I don't know mine?
+
+Industry benchmarks for paid traffic conversion rates: Google Shopping 1.5–2.5%; Google Search 2–4%; Meta (Facebook/Instagram) 1–2%; Amazon Sponsored Products 5–15% (because the customer is closer to purchase intent). Use these as starting estimates, but track actual conversion rate from your ad platform's landing page report or Google Analytics within 2–4 weeks of campaign launch to replace the estimate with real data.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Shopify** — How to Calculate Your Ecommerce Break-Even Point (2025)
+- **Google Ads Help** — Smart Bidding: Target CPA and Target ROAS strategies (2025)
+- **Meta Business** — Advantage+ Shopping Campaign Performance Benchmarks (2024)
+
+Related tools: [ROAS Calculator](/ecommerce/return-on-ad-spend-calculator) · [AOV Calculator](/ecommerce/average-order-value-calculator) · [Break-Even Calculator](/business/break-even-calculator) · [CAC Calculator](/business/customer-acquisition-cost-calculator)

@@ -1,0 +1,177 @@
+{
+  "id": "dropshipping-profit-calculator",
+  "title": "Dropshipping Profit Calculator",
+  "slug": "dropshipping-profit-calculator",
+  "category": "ecommerce",
+  "subcategory": "sourcing",
+  "primaryKeyword": "dropshipping profit calculator",
+  "metaTitle": "Dropshipping Profit Calculator — Net Profit, Margin & ROI per Order",
+  "metaDescription": "Calculate dropshipping net profit, margin, and ROI per order after supplier cost, shipping, platform fees, and ad spend. Works for Shopify, WooCommerce, eBay, and Amazon.",
+  "inputs": [
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 39.99,
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "The price your customer pays"
+    },
+    {
+      "id": "supplierCost",
+      "label": "Supplier Cost",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 12,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "What you pay your supplier per order (AliExpress, CJ Dropshipping, etc.) — including product cost"
+    },
+    {
+      "id": "shippingCost",
+      "label": "Shipping Cost",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 3.5,
+      "min": 0,
+      "max": 500,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Cost to ship from supplier to customer (enter 0 if included in supplier cost)"
+    },
+    {
+      "id": "platformType",
+      "label": "Selling Platform",
+      "type": "select",
+      "required": true,
+      "defaultValue": "shopify-payments",
+      "options": [
+        { "value": "shopify-payments", "label": "Shopify + Shopify Payments (2.9% + $0.30)" },
+        { "value": "shopify-stripe", "label": "Shopify + Stripe (2.9% + $0.30 + 1% txn fee)" },
+        { "value": "woocommerce", "label": "WooCommerce + Stripe (2.9% + $0.30)" },
+        { "value": "amazon", "label": "Amazon (avg 15% referral)" },
+        { "value": "ebay", "label": "eBay (avg 13.25% + 2.9% + $0.30)" },
+        { "value": "custom", "label": "Custom — enter rate below" }
+      ],
+      "helpText": "Your selling platform — pre-fills the platform fee rate"
+    },
+    {
+      "id": "customPlatformRate",
+      "label": "Custom Platform Fee Rate (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 0.1,
+      "helpText": "Only used when 'Custom' platform is selected above"
+    },
+    {
+      "id": "adSpendPerOrder",
+      "label": "Ad Spend per Order",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 10000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your paid ad cost per order — total monthly ad spend ÷ monthly orders"
+    },
+    {
+      "id": "monthlyOrders",
+      "label": "Monthly Orders",
+      "type": "number",
+      "required": false,
+      "defaultValue": 100,
+      "min": 1,
+      "max": 1000000,
+      "step": 1,
+      "helpText": "Monthly order volume for monthly profit projection"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netProfitPerOrder",
+      "label": "Net Profit per Order",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "profitMargin",
+      "label": "Profit Margin",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "roi",
+      "label": "ROI",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "breakEvenPrice",
+      "label": "Break-Even Selling Price",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "monthlyProfit",
+      "label": "Monthly Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdownTable",
+      "label": "Cost Breakdown",
+      "type": "table",
+      "columns": [
+        { "key": "item", "label": "Cost Item" },
+        { "key": "amount", "label": "Amount", "format": "currency" },
+        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Profit Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "dropshipping-profit",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "print-on-demand-profit-calculator",
+    "shopify-fee-calculator",
+    "product-pricing-calculator",
+    "return-on-ad-spend-calculator",
+    "advertising-break-even-calculator",
+    "amazon-fba-profit-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Shopify — Payments Processing Rates (2026); eBay — Seller Fees (2025); Amazon Seller Central — Referral Fee Schedule (2026)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Profit = Selling Price − Platform Fee − Supplier Cost − Shipping − Ad Spend per Order; ROI = Net Profit / (Supplier Cost + Shipping + Ad Spend) × 100; Break-Even Price = (Supplier + Shipping + Ad Spend + Fixed Fee) / (1 − Rate%)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

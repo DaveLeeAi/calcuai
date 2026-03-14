@@ -1,0 +1,133 @@
+{
+  "id": "amazon-acos-calculator",
+  "title": "Amazon ACoS & TACoS Calculator",
+  "slug": "amazon-acos-calculator",
+  "category": "ecommerce",
+  "subcategory": "advertising",
+  "primaryKeyword": "amazon acos calculator",
+  "metaTitle": "Amazon ACoS Calculator — ACoS, TACoS & Break-Even ACoS",
+  "metaDescription": "Calculate your Amazon ACoS, TACoS, and break-even ACoS in seconds. See if your Sponsored Products campaigns are profitable. Free Amazon advertising calculator.",
+  "inputs": [
+    {
+      "id": "adSpend",
+      "label": "Ad Spend",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1200,
+      "min": 0.01,
+      "max": 1000000000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Total Amazon PPC ad spend in the period (from Advertising Console)"
+    },
+    {
+      "id": "adAttributedSales",
+      "label": "Ad-Attributed Sales",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 8000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Revenue directly attributed to ads (from Campaign Manager — not total store sales)"
+    },
+    {
+      "id": "totalStoreSales",
+      "label": "Total Store Sales",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 20000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Total store revenue including organic sales (for TACoS calculation)"
+    },
+    {
+      "id": "grossMargin",
+      "label": "Gross Margin (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 35,
+      "min": 1,
+      "max": 99,
+      "step": 0.5,
+      "helpText": "Your gross margin after COGS and Amazon fees (but before ad spend)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "acos",
+      "label": "ACoS",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "tacos",
+      "label": "TACoS",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "breakEvenAcos",
+      "label": "Break-Even ACoS",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "roas",
+      "label": "ROAS",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "acosStatusTable",
+      "label": "ACoS Health Check",
+      "type": "table",
+      "columns": [
+        { "key": "metric", "label": "Metric" },
+        { "key": "value", "label": "Your Value" },
+        { "key": "benchmark", "label": "Benchmark" },
+        { "key": "status", "label": "Status" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "PPC Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "amazon-acos",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "amazon-fba-profit-calculator",
+    "return-on-ad-spend-calculator",
+    "advertising-break-even-calculator",
+    "conversion-rate-calculator",
+    "customer-acquisition-cost-calculator",
+    "average-order-value-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Amazon Advertising — Campaign performance metrics guide (2025); Canopy Management — Amazon ACoS Benchmarks by Category (2025)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "ACoS = Ad Spend / Ad-Attributed Sales × 100; TACoS = Ad Spend / Total Store Sales × 100; Break-Even ACoS = Gross Margin%; ROAS = Ad-Attributed Sales / Ad Spend",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["return-on-ad-spend-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

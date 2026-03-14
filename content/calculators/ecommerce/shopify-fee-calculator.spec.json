@@ -1,0 +1,137 @@
+{
+  "id": "shopify-fee-calculator",
+  "title": "Shopify Fee Calculator",
+  "slug": "shopify-fee-calculator",
+  "category": "ecommerce",
+  "subcategory": "platforms",
+  "primaryKeyword": "shopify fee calculator",
+  "metaTitle": "Shopify Fee Calculator — True Monthly Cost by Plan (2026)",
+  "metaDescription": "Calculate your true Shopify monthly cost including subscription, payment processing, transaction fees, and currency conversion. Compare all 4 Shopify plans by revenue tier.",
+  "inputs": [
+    {
+      "id": "shopifyPlan",
+      "label": "Shopify Plan",
+      "type": "select",
+      "required": true,
+      "defaultValue": "basic",
+      "options": [
+        { "value": "basic", "label": "Basic — $39/mo" },
+        { "value": "shopify", "label": "Shopify — $105/mo" },
+        { "value": "advanced", "label": "Advanced — $399/mo" },
+        { "value": "plus", "label": "Shopify Plus — $2,300/mo" }
+      ],
+      "helpText": "Your current or target Shopify plan (annual billing prices)"
+    },
+    {
+      "id": "monthlyRevenue",
+      "label": "Monthly Revenue",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 25000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Your average monthly gross revenue on Shopify"
+    },
+    {
+      "id": "averageOrderValue",
+      "label": "Average Order Value",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 65,
+      "min": 0.01,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Average revenue per order — used to calculate per-transaction fees"
+    },
+    {
+      "id": "paymentMethod",
+      "label": "Payment Processor",
+      "type": "select",
+      "required": true,
+      "defaultValue": "shopify-payments",
+      "options": [
+        { "value": "shopify-payments", "label": "Shopify Payments (no transaction fee)" },
+        { "value": "third-party", "label": "Third-Party (PayPal, Stripe, etc.)" }
+      ],
+      "helpText": "Shopify Payments waives the transaction fee; third-party processors incur an additional 0.5–2% fee"
+    },
+    {
+      "id": "internationalRevenuePct",
+      "label": "International Revenue (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 10,
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "helpText": "Percentage of revenue from international orders (currency conversion fee applies)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalMonthlyCost",
+      "label": "Total Monthly Fees",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "effectiveFeeRate",
+      "label": "Effective Fee Rate",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "planComparisonTable",
+      "label": "Plan Cost Comparison",
+      "type": "table",
+      "columns": [
+        { "key": "plan", "label": "Plan" },
+        { "key": "subscription", "label": "Subscription", "format": "currency" },
+        { "key": "processingFees", "label": "Processing Fees", "format": "currency" },
+        { "key": "transactionFees", "label": "Transaction Fees", "format": "currency" },
+        { "key": "totalCost", "label": "Total Monthly", "format": "currency" },
+        { "key": "effectiveRate", "label": "Effective Rate", "format": "percentage" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Fee Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "shopify-fee",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "tiktok-shop-profit-calculator",
+    "amazon-fba-profit-calculator",
+    "product-pricing-calculator",
+    "average-order-value-calculator",
+    "return-on-ad-spend-calculator",
+    "break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Shopify — Pricing Plans and Transaction Fees (2026); Shopify — Payments Processing Rates by Plan (2026)",
+  "articleWordTarget": 1300,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total Cost = Subscription Fee + (Revenue × Processing Rate) + (Orders × Per-Transaction Fee) + (Transaction Fee% × Revenue if third-party) + (International Revenue × 1.5% currency conversion); Effective Rate = Total Cost / Revenue × 100",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

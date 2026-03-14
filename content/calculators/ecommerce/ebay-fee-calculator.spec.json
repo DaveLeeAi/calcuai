@@ -1,0 +1,168 @@
+{
+  "id": "ebay-fee-calculator",
+  "title": "eBay Fee Calculator",
+  "slug": "ebay-fee-calculator",
+  "category": "ecommerce",
+  "subcategory": "marketplace",
+  "primaryKeyword": "ebay fee calculator",
+  "metaTitle": "eBay Fee Calculator — Final Value Fee + Managed Payments (2025)",
+  "metaDescription": "Calculate eBay net profit after final value fees, Managed Payments processing, promoted listings, and shipping. Updated for 2025 eBay fee structure by category.",
+  "inputs": [
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 29.99,
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your eBay listing price — the amount the buyer pays for the item"
+    },
+    {
+      "id": "productCost",
+      "label": "Product Cost (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your cost to acquire or produce the item"
+    },
+    {
+      "id": "productCategory",
+      "label": "Product Category",
+      "type": "select",
+      "required": true,
+      "defaultValue": "most-categories",
+      "options": [
+        { "value": "most-categories", "label": "Most Categories (13.25%)" },
+        { "value": "electronics", "label": "Consumer Electronics / Cameras (8.7%)" },
+        { "value": "fashion-under-100", "label": "Clothing & Shoes under $100 (15%)" },
+        { "value": "fashion-over-100", "label": "Clothing & Shoes $100+ (9%)" },
+        { "value": "media", "label": "Books / DVDs / Music / Games (14.35%)" },
+        { "value": "coins-stamps", "label": "Coins & Paper Money / Stamps (12.35%)" },
+        { "value": "motors-parts", "label": "Motors Parts & Accessories (11.5%)" },
+        { "value": "jewelry-under-5k", "label": "Jewelry & Watches under $5,000 (15%)" },
+        { "value": "jewelry-over-5k", "label": "Jewelry & Watches $5,000+ (9%)" }
+      ],
+      "helpText": "Your eBay listing category — determines the final value fee percentage"
+    },
+    {
+      "id": "buyerShipping",
+      "label": "Shipping Charged to Buyer",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 1000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Shipping amount the buyer pays. eBay charges final value fee on item price + buyer shipping."
+    },
+    {
+      "id": "actualShippingCost",
+      "label": "Your Actual Shipping Cost",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 1000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "What you actually pay to ship the item (postage, label, packaging)"
+    },
+    {
+      "id": "promotedListingsRate",
+      "label": "Promoted Listings Rate (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 0,
+      "min": 0,
+      "max": 20,
+      "step": 0.5,
+      "helpText": "Promoted Listings Standard ad rate (0 if not using promoted listings). Typical range: 2–10%."
+    },
+    {
+      "id": "monthlyOrders",
+      "label": "Monthly Orders",
+      "type": "number",
+      "required": false,
+      "defaultValue": 50,
+      "min": 1,
+      "max": 100000,
+      "step": 1,
+      "helpText": "Your monthly sales volume — used to calculate monthly profit"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netProfitPerOrder",
+      "label": "Net Profit per Order",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "profitMargin",
+      "label": "Profit Margin",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "monthlyProfit",
+      "label": "Monthly Profit",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "feeBreakdownTable",
+      "label": "Fee Breakdown",
+      "type": "table",
+      "columns": [
+        { "key": "item", "label": "Item" },
+        { "key": "amount", "label": "Amount", "format": "currency" },
+        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Profit Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "ebay-fee",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "etsy-fee-calculator",
+    "shopify-fee-calculator",
+    "amazon-fba-profit-calculator",
+    "product-pricing-calculator",
+    "return-on-ad-spend-calculator",
+    "advertising-break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "eBay — Selling fees for private sellers (2025); eBay — Managed Payments processing rates (2025)",
+  "articleWordTarget": 1300,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Profit = Selling Price − Final Value Fee − Payment Processing Fee − Promoted Listings Fee − Actual Shipping Cost − COGS; Final Value Fee = Buyer Total × Category Rate (tiered on threshold)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

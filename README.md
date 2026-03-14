@@ -1,8 +1,8 @@
 # CalcuAI
 
-A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **258 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
+A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **274 calculators** across 9 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
 
-**263 test suites · 5,780 passing tests · 247 formula modules · 34 glossary terms · 9 methodology pages**
+**279 test suites · 6,149 passing tests · 263 formula modules · 34 glossary terms · 9 methodology pages**
 
 ## Tech Stack
 
@@ -18,12 +18,13 @@ A spec-driven calculator authority site built for dual-ranking on Google Search 
 
 ## Calculators
 
-258 specs across 8 categories:
+274 specs across 9 categories:
 
 | Category | Count | Examples |
 |----------|-------|---------|
 | **Finance** | 64 | Mortgage, Compound Interest, 401(k), Rental Property, HELOC, Debt Snowball/Avalanche, Self-Employment Tax, Home Insurance, Personal Loan, Interest-Only Loan, Home Sale Profit, Student Loan Payoff, Mortgage Prepayment, Rent Increase, College Savings, Index Fund |
 | **Construction** | 73 | Concrete (Slab, Footing, Block), Roofing, Kitchen & Bathroom Remodel, HVAC Replacement, Heat Pump, Mini-Split, Ductwork, Water Heater, Whole-House Repipe, Electrical Panel & Service Upgrade, Backup Generator, Solar Battery, EV Charger, Painting, Insulation, Garage Door, Door & Window Replacement, Foundation Repair, Basement Waterproofing, Crawl Space Encapsulation, Sump Pump, Radon Mitigation, Pergola, Tree Removal, Artificial Turf, Sprinkler System, Crown Molding, Home Energy Audit, Accessibility Remodel |
+| **E-Commerce** | 16 | Amazon FBA Profit, Landed Cost, TikTok Shop Profit, Amazon ACoS/TACoS, Shopify Fee, eBay Fee, Etsy Fee, Dropshipping Profit, Print-on-Demand Profit, FBA vs FBM, FBA Storage Fee, Reorder Point, ROAS, Advertising Break-Even, Product Pricing, Average Order Value |
 | **Math** | 24 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability, Z-Score, Sample Size, Standard Error, Chi-Square, Confidence Interval, P-Value |
 | **Business** | 24 | ROI, Break-Even, Profit, Payroll, Customer Lifetime Value, Conversion Rate, Customer Acquisition Cost, Payback Period, Inventory Turnover, Hourly-to-Salary, Net Income, Commission, Cash Flow, Working Capital, Debt Service Coverage |
 | **Everyday** | 21 | Tip, Discount, Gas Mileage, Solar Panel, Fuel Cost, Electricity Cost, Travel Budget, Home Energy Usage, EV Charging Cost, Trip Cost, Age, Date, GPA, Moving Cost |

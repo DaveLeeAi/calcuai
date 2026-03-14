@@ -1,0 +1,130 @@
+{
+  "id": "return-on-ad-spend-calculator",
+  "title": "Return on Ad Spend Calculator",
+  "slug": "return-on-ad-spend-calculator",
+  "category": "ecommerce",
+  "subcategory": "advertising",
+  "primaryKeyword": "return on ad spend calculator",
+  "metaTitle": "Return on Ad Spend Calculator (ROAS) — Free Tool",
+  "metaDescription": "Calculate ROAS from ad spend and revenue. Find your break-even ROAS, profit ROAS, and whether your campaigns are actually profitable. Free advertising tool.",
+  "inputs": [
+    {
+      "id": "adSpend",
+      "label": "Ad Spend",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 5000,
+      "min": 0.01,
+      "max": 1000000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total amount spent on advertising in the period"
+    },
+    {
+      "id": "adRevenue",
+      "label": "Revenue from Ads",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 20000,
+      "min": 0,
+      "max": 1000000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total revenue attributed to those ads (from your ad platform)"
+    },
+    {
+      "id": "grossMarginPercent",
+      "label": "Gross Margin % (Optional)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 50,
+      "min": 1,
+      "max": 99,
+      "step": 0.5,
+      "helpText": "Your gross margin — used to calculate true profit after cost of goods"
+    },
+    {
+      "id": "additionalCostsPercent",
+      "label": "Platform / Transaction Fees % (Optional)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 3,
+      "min": 0,
+      "max": 30,
+      "step": 0.1,
+      "helpText": "Marketplace, payment processing, and fulfilment fees as % of revenue"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "roas",
+      "label": "ROAS",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "breakEvenROAS",
+      "label": "Break-Even ROAS",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "netProfitFromAds",
+      "label": "Net Profit from Ads",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "roasScenarioTable",
+      "label": "ROAS Scenario Analysis",
+      "type": "table",
+      "columns": [
+        { "key": "scenario", "label": "Scenario" },
+        { "key": "roas", "label": "ROAS" },
+        { "key": "revenue", "label": "Revenue", "format": "currency" },
+        { "key": "netProfit", "label": "Net Profit", "format": "currency" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "ROAS Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "return-on-ad-spend",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "advertising-break-even-calculator",
+    "average-order-value-calculator",
+    "product-pricing-calculator",
+    "roi-calculator",
+    "conversion-rate-calculator",
+    "customer-acquisition-cost-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Google Ads Help — Understanding ROAS (2025); Meta Business — Ad Performance Metrics (2025)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "ROAS = Revenue from Ads / Ad Spend; Break-Even ROAS = 1 / Gross Margin; Net Profit = Ad Revenue × Gross Margin% − Ad Spend − (Ad Revenue × Fees%)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["roi-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

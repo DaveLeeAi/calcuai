@@ -1,0 +1,143 @@
+---
+title: "Product Pricing Calculator"
+description: "Calculate the optimal selling price for your product based on landed cost, target gross margin, and volume discount tiers. Includes tiered pricing with real ecommerce examples."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your product's selling price from cost and target gross margin, then model volume discount tiers to stay profitable at every quantity. A product costing \$20 with a 50% gross margin must sell for \$40 — dropping to \$36 at a 10% volume discount still yields a 44.4% margin. Margin-based pricing anchors your price to profitability, not just what you paid.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Base Selling Price** is the minimum price you should charge a single customer to hit your target gross margin. It accounts for your landed product cost plus any per-unit overhead (platform fees, payment processing, packaging). If the base price seems high compared to competitors, your costs are high — not your margin target.
+
+**Gross Profit per Unit** is what you keep after covering COGS and overhead. It is not net profit — you still need to cover marketing spend, returns, and any fixed operating costs. For ecommerce, a healthy gross profit per unit gives you the room to run paid ads, offer free shipping, and absorb occasional returns without going negative.
+
+**Volume Pricing Tiers** show the selling price and effective margin at each discount threshold. The margin column is critical: a tier that drops your margin below 35% may not generate enough contribution to cover ad spend and operating costs. Review the effective margin for each tier, not just the discount percentage.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Product Cost (COGS)** — your total landed cost per unit, including manufacturing or wholesale price, inbound freight, customs duties, and any inspection fees. Do not use your list price or invoice price without adding freight.
+2. **Set your Target Gross Margin** — the percentage of the selling price you want to keep after COGS and overhead. A 50% margin means half of every sale covers your costs; the other half is available for operating expenses and profit.
+3. **Add Overhead per Unit** (optional) — allocate per-unit costs for Shopify/Amazon fees (typically 2–15%), Stripe/PayPal processing (2.9% + \$0.30), and packaging materials. Including these gives you a true landed margin.
+4. **Set Volume Tier Thresholds** — enter the minimum quantity and discount percentage for each tier. These tiers are useful for wholesale customers, bundle offers, or quantity-break promotions.
+5. **Review the Tier Table** — check the effective margin at each tier, not just the discounted price. A tier is only viable if its margin covers your advertising cost per order.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Base Selling Price (margin-based):**
+
+$$
+\text{Base Price} = \frac{\text{Product Cost} + \text{Overhead per Unit}}{1 - \frac{\text{Target Margin\%}}{100}}
+$$
+
+**Volume Tier Price:**
+
+$$
+\text{Tier Price} = \text{Base Price} \times \left(1 - \frac{\text{Discount\%}}{100}\right)
+$$
+
+**Effective Margin at Any Price:**
+
+$$
+\text{Effective Margin\%} = \frac{\text{Price} - \text{COGS} - \text{Overhead}}{\text{Price}} \times 100
+$$
+
+Where:
+- **Product Cost** = total landed cost per unit (COGS)
+- **Overhead per Unit** = allocated platform fees, payment processing, packaging
+- **Target Margin%** = your desired gross margin as % of selling price
+- **Discount%** = volume discount applied at each tier threshold
+- **Effective Margin%** = actual gross margin after all per-unit costs
+
+*Source: Corporate Finance Institute — Gross Margin and Cost-Plus Pricing (2024). Shopify — Ecommerce Pricing Strategies Guide (2025).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Shopify Skincare Brand
+
+A skincare brand sources face serums at \$14 per unit, including freight from their contract manufacturer. They pay \$2 per unit in Shopify fees and payment processing.
+
+- **Total Cost per Unit:** \$14 + \$2 = \$16
+- **Target Margin:** 60%
+- **Base Price:** \$16 / (1 − 0.60) = \$16 / 0.40 = **\$40.00**
+- **Gross Profit:** \$40 − \$16 = **\$24.00**
+
+At a Tier 1 discount of 10% for orders of 6+ units:
+- **Tier 1 Price:** \$40 × 0.90 = **\$36.00**
+- **Tier 1 Margin:** (\$36 − \$16) / \$36 = 55.6%
+
+*Interpretation:* The base \$40 price supports a solid 60% margin. Even at the volume discount, the brand holds 55.6% — enough to run paid social ads at a \$12–\$15 CPA and remain profitable.
+
+### Example 2: Amazon FBA Supplement Seller
+
+A supplement brand buys protein powder in bulk at \$8 per unit. Amazon FBA fees total \$4.50 per unit (fulfillment + referral fee).
+
+- **Total Cost per Unit:** \$8 + \$4.50 = \$12.50
+- **Target Margin:** 45%
+- **Base Price:** \$12.50 / (1 − 0.45) = \$12.50 / 0.55 = **\$22.73**
+
+Rounded to \$22.99 for Amazon pricing optics. Effective margin at \$22.99:
+- **Effective Margin:** (\$22.99 − \$12.50) / \$22.99 = **45.6%**
+
+*Interpretation:* At 45.6% margin, the brand can allocate roughly \$4.50 per unit to Amazon Sponsored Products ads before dropping below the 25% net margin threshold typical for healthy Amazon businesses.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Landed Cost Accuracy** — The most common pricing mistake in ecommerce is using supplier invoice price without adding freight, duties, and inspection costs. A product invoiced at \$10 with \$2 in freight and \$0.80 in duties has a true landed cost of \$12.80. Using \$10 as your COGS will inflate your apparent margin by 22%.
+
+2. **Platform Fee Variance** — Amazon referral fees range from 6% to 45% depending on category. Shopify's transaction fees vary by plan. If you sell across multiple channels, use a weighted average overhead percentage or calculate a separate price per channel.
+
+3. **Volume Tier Viability** — A volume discount is only profitable if the incremental order size offsets the lower per-unit margin. If your contribution margin at Tier 2 (\$85 AOV, 38% margin, \$32 contribution) cannot cover a \$30 customer acquisition cost, the tier is a subsidy — not a growth strategy.
+
+4. **Competitor Pricing** — Margin-based pricing tells you your floor. Market research tells you your ceiling. If your base price is \$40 and competitors charge \$25, you have a cost problem, not a pricing problem. The calculator gives you data to negotiate better supplier terms or cut overhead before slashing your margin.
+
+5. **Return Rate Absorptionability** — At 50% margin on a \$40 product, a 5% return rate costs \$2 per unit sold (\$40 × 5% × 50% margin). At 30% margin, the same return rate costs \$1.20 but hits a smaller margin base — rising from 4.2% to 6% of your margin as a cost.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Calculates price for a single product/SKU — does not model product bundles or kits with varying COGS across components
+- Overhead per unit must be manually allocated; the calculator does not automatically calculate platform fees as a percentage of price (use a fixed dollar amount or pre-calculate as a % of your expected price)
+- Volume tiers apply a flat discount to base price — does not model cost-reduction pricing (where higher volume lowers your COGS through supplier tiering)
+- Does not account for VAT/GST on B2B sales in VAT-registered countries
+- Gross profit is not net profit — operating expenses (salaries, software, advertising) are not included
+
+## Frequently Asked Questions
+
+### What is the difference between markup and gross margin?
+
+Markup is profit expressed as a percentage of cost. Gross margin is profit expressed as a percentage of selling price. A product costing \$20 and selling for \$40 has a 100% markup but a 50% gross margin. For ecommerce pricing, margin is the more useful metric because it directly tells you what percentage of each sale is available to cover operating costs and profit. Use our [Markup Calculator](/business/markup-calculator) for cost-plus pricing, and this calculator for margin-targeted pricing.
+
+### What gross margin should ecommerce sellers target?
+
+Healthy ecommerce gross margins vary by category: direct-to-consumer brands typically target 60–75% gross margin to fund advertising and operations; Amazon FBA sellers often target 40–55% after Amazon fees; wholesale/B2B sellers work with 30–50%. Below 30% gross margin, it becomes difficult to run paid acquisition profitably. Above 70%, you have strong pricing power and room for aggressive growth.
+
+### How do I calculate my landed cost?
+
+Landed cost = supplier invoice price + inbound freight + customs duties + port/customs broker fees + inland freight to warehouse. For products manufactured overseas, landed cost is typically 15–35% higher than the FOB (Free on Board) invoice price. Request your freight forwarder for a landed cost estimate before placing your first purchase order.
+
+### Should I use cost-plus or margin-based pricing?
+
+Cost-plus pricing (markup) is simpler but can result in wildly different margins depending on cost variations. Margin-based pricing (this calculator) ensures every product delivers a consistent percentage of revenue as gross profit, making financial forecasting more predictable. Most experienced ecommerce operators use margin-based pricing with a hard floor: they will not sell at below a minimum margin percentage regardless of competitive pressure.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Corporate Finance Institute (CFI)** — Gross Margin definition and cost-plus pricing formulas (2024)
+- **Shopify** — Ecommerce Pricing Strategies: How to Price a Product (2025)
+- **Investopedia** — Gross Profit Margin definition and calculation (2024)
+
+Related tools: [Markup Calculator](/business/markup-calculator) · [Margin Calculator](/business/margin-calculator) · [Break-Even Calculator](/business/break-even-calculator) · [ROAS Calculator](/ecommerce/return-on-ad-spend-calculator)

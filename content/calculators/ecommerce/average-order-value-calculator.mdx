@@ -1,0 +1,144 @@
+---
+title: "Average Order Value Calculator"
+description: "Calculate your ecommerce average order value (AOV) from revenue and order count, and model the revenue impact of hitting a higher AOV target."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your average order value (AOV) by dividing total revenue by number of orders — a store generating \$50,000 from 500 orders has a \$100 AOV. Increasing AOV by just 20% to \$120 generates \$120,000 in additional annual revenue without acquiring a single new customer. AOV is the highest-leverage metric in ecommerce because it improves both revenue and ad efficiency simultaneously.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Average Order Value (AOV)** tells you how much each customer spends per transaction. It is calculated from your actual revenue and order count — not estimated or projected. This is your baseline to improve.
+
+**Projected Revenue at Target AOV** shows your revenue from the same order volume if you hit your AOV goal. It answers the question: "What is raising AOV actually worth?" If you process 500 orders per month and raise AOV from \$100 to \$120, you generate \$12,000 more per month from the same traffic and conversion rate.
+
+**Annual Revenue Lift** compounds the monthly improvement over 12 months, showing the full annual impact of hitting your target AOV. This figure is what makes AOV improvement so compelling: it requires no new traffic, no higher conversion rate, and no additional customer acquisition cost.
+
+**Scenario Table** models revenue at +10%, +20%, +30%, and your custom target AOV. Use this to set a realistic quarterly goal and understand what each improvement level is worth.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Total Revenue** — the total revenue generated from all orders in the period you are analyzing. Use the same time period (e.g., last 30 days or last quarter) for total revenue and order count.
+2. **Enter Number of Orders** — total orders placed in the same period. Do not include cancelled, unfulfilled, or returned orders if your revenue figure excludes them.
+3. **Enter Target AOV** (optional) — your goal AOV based on upsell/cross-sell tactics you plan to implement. Leave as \$0 to skip the target projection.
+4. **Enter Monthly Orders** (optional) — your typical monthly order volume, used to calculate annual revenue lift. If blank, defaults to the order count you entered.
+5. **Review your current AOV and the scenario table** — compare your AOV against industry benchmarks and identify how much revenue improvement each AOV increment is worth.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Average Order Value:**
+
+$$
+\text{AOV} = \frac{\text{Total Revenue}}{\text{Number of Orders}}
+$$
+
+**Projected Revenue at Target AOV:**
+
+$$
+\text{Projected Revenue} = \text{Target AOV} \times \text{Number of Orders}
+$$
+
+**Annual Revenue Lift:**
+
+$$
+\text{Annual Lift} = (\text{Target AOV} - \text{Current AOV}) \times \text{Monthly Orders} \times 12
+$$
+
+Where:
+- **Total Revenue** = gross revenue from all orders in the period
+- **Number of Orders** = total completed orders in the same period
+- **Target AOV** = your goal average order value after improvement tactics
+- **Monthly Orders** = your typical monthly order volume for annualized projection
+
+*Source: Shopify — Average Order Value: Definition and How to Increase It (2025). BigCommerce — Ecommerce Metrics Guide (2024).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: DTC Apparel Store
+
+An online clothing store generated \$180,000 in revenue from 1,800 orders last quarter.
+
+- **AOV:** \$180,000 / 1,800 = **\$100**
+
+After implementing product bundling (shirt + matching belt) and a "free shipping over \$120" threshold:
+
+- **Target AOV:** \$120
+- **Projected Quarterly Revenue:** \$120 × 1,800 = **\$216,000** (+\$36,000)
+- **Monthly Orders:** 600
+- **Annual Revenue Lift:** (\$120 − \$100) × 600 × 12 = **\$144,000**
+
+*Interpretation:* A \$20 AOV increase on the same order volume adds \$144,000 in annual revenue — without spending an extra dollar on customer acquisition. If paid ads cost \$15,000/month to drive those 600 orders, the AOV improvement alone effectively adds a 16th month of revenue.
+
+### Example 2: Supplement Subscription Brand
+
+A supplement brand runs a \$2.4M annual run rate with 24,000 orders per year.
+
+- **AOV:** \$2,400,000 / 24,000 = **\$100**
+
+After adding an upsell to a 3-month supply (vs. 1-month default):
+
+- **Target AOV:** \$130
+- **Monthly Orders:** 2,000
+- **Annual Revenue Lift:** (\$130 − \$100) × 2,000 × 12 = **\$720,000**
+
+*Interpretation:* The subscription upsell adds over \$700,000 in revenue on the same customer base. AOV improvement at scale compounds dramatically — a 30% increase in AOV is effectively a 30% increase in revenue from existing demand.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Product Category Ceiling** — AOV improvement strategies have a natural ceiling set by product category and customer segment. A grocery delivery service has natural AOV limits around weekly basket size. A luxury furniture store has higher natural AOVs. Before targeting a specific AOV lift, confirm the category ceiling — a \$150 supplement AOV is achievable; a \$500 AOV in a commodity category is not.
+
+2. **Free Shipping Thresholds** — The most proven AOV lever in ecommerce. Set your free shipping threshold at 20–30% above your current AOV. A store with a \$75 AOV should offer free shipping over \$95–\$100. Shopify data shows that correctly placed free shipping thresholds raise AOV by 15–25% without reducing conversion rate.
+
+3. **Bundle vs. Individual Pricing** — Product bundles raise AOV but must preserve margin. A 3-for-2 bundle offer raises AOV by ~50% but reduces gross margin by ~33%. Use this calculator's margin tool to verify bundle pricing before launching. The AOV gain only matters if the contribution margin per order also increases.
+
+4. **Cross-Sell Relevance** — Post-cart cross-sells (e.g., "customers also bought") raise AOV when recommendations are genuinely relevant. Irrelevant upsells increase cart abandonment — lowering order volume and partially offsetting the AOV gain. Segment cross-sell recommendations by product category for best results.
+
+5. **ROAS Impact** — AOV directly improves your return on ad spend. If your ROAS is currently 3.0 (\$90 revenue per \$30 ad spend) and AOV rises from \$90 to \$120, your effective ROAS rises to 4.0 with no change in ad spend. Higher AOV is the simplest way to improve ad efficiency without optimizing campaigns. Use our [ROAS Calculator](/ecommerce/return-on-ad-spend-calculator) to model this.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses total completed orders — excludes returns and cancelled orders only if your revenue figure also excludes them. Use consistent data from the same source (Shopify Analytics, Google Analytics, etc.)
+- Annual revenue lift assumes order volume stays constant — actual volume may increase or decrease independently of AOV changes
+- Projection assumes all orders in the period are at the new AOV — in practice, AOV changes gradually as tactics roll out
+- Does not model the impact of AOV changes on gross margin — confirm your bundle and upsell pricing preserves contribution margin
+
+## Frequently Asked Questions
+
+### What is a good average order value for ecommerce?
+
+AOV benchmarks vary by category. According to Shopify merchant data (2024), global ecommerce AOV averages \$121. By category: fashion and apparel (\$107), health and beauty (\$97), electronics (\$154), home and garden (\$168), food and beverage (\$85). Compare your AOV to your specific category, not the overall average. If your AOV is significantly below category average, there is likely an upsell or bundling opportunity.
+
+### How do I increase average order value?
+
+The five highest-ROI AOV tactics in ecommerce are: (1) Free shipping threshold set 20–30% above current AOV — the most reliable single tactic; (2) Product bundles priced at a small discount vs. buying items separately; (3) Post-add-to-cart upsells showing complementary products; (4) Volume discounts (e.g., "buy 2 save 10%"); (5) Subscription upgrades that convert single purchases to recurring orders at a lower per-unit cost. Implement one at a time to isolate impact on your AOV metric.
+
+### Should I track AOV for all channels separately?
+
+Yes. AOV varies significantly by channel: paid search typically has higher AOV than paid social because search intent is stronger. Email marketing often has the highest AOV because existing customers spend more per order. Tracking blended AOV hides which channels are diluting your overall average. Use channel-segmented AOV to allocate marketing budget toward your highest-AOV acquisition channels.
+
+### How does AOV relate to customer lifetime value?
+
+AOV is one of three inputs to simple customer lifetime value: CLV = AOV × Purchase Frequency × Customer Lifespan. Increasing AOV raises CLV proportionally, which in turn raises your maximum allowable customer acquisition cost (CAC). If your CLV rises from \$200 to \$260 due to a 30% AOV improvement, you can afford to spend 30% more on acquisition — a compounding advantage. See our [Customer Lifetime Value Calculator](/business/customer-lifetime-value-calculator).
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Shopify** — Average Order Value: Definition and How to Increase It (2025)
+- **BigCommerce** — Ecommerce Metrics and KPIs Guide (2024)
+- **Klaviyo** — Ecommerce Benchmarks: AOV by Industry (2024)
+
+Related tools: [ROAS Calculator](/ecommerce/return-on-ad-spend-calculator) · [Product Pricing Calculator](/ecommerce/product-pricing-calculator) · [Conversion Rate Calculator](/business/conversion-rate-calculator) · [CLV Calculator](/business/customer-lifetime-value-calculator)

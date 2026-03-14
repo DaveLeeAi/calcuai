@@ -1,0 +1,121 @@
+{/* reorder-point-calculator.mdx */}
+
+<div className="bluf-intro">
+A stockout on Amazon costs more than lost sales — it causes ranking drops that can take weeks to recover. The reorder point formula tells you exactly when to place your next order: **(Average Daily Sales × Lead Time) + Safety Stock**. Selling 15 units/day with a 30-day supplier lead time and 14 days of safety stock means your reorder point is **660 units** — the moment your inventory hits 660, place the order or you risk going out of stock before the new shipment arrives.
+</div>
+
+## What Your Results Mean
+
+**Reorder Point** is the inventory level at which you must immediately place a purchase order to avoid stockout before the new shipment arrives.
+
+**Safety Stock** is the buffer inventory that protects against demand spikes or supplier delays. It's included in the reorder point calculation.
+
+**Days of Supply** shows how many days your current inventory will last at your average daily sales rate — your countdown clock.
+
+**Stockout Risk** tells you whether you need to order now, soon, or whether you're in a healthy position.
+
+## How to Use This Calculator
+
+1. Enter **Average Daily Sales** — use your 30-day sales average from Seller Central or your analytics dashboard
+2. Enter **Lead Time** — total days from purchase order to inventory available for sale (factory production + transit + FBA receiving time)
+3. Set **Safety Stock Days** — buffer days of coverage (14 days is a common starting point; increase for unreliable suppliers or highly seasonal products)
+4. Enter **Current Inventory** — all units across your storage locations
+5. Enter **Unit Cost** and **Target Stock Days** to get your reorder quantity and order value
+
+## Reorder Point Formula
+
+<div className="formula-section">
+
+$$
+\text{Safety Stock} = \text{Average Daily Sales} \times \text{Safety Stock Days}
+$$
+
+$$
+\text{Reorder Point} = (\text{Average Daily Sales} \times \text{Lead Time}) + \text{Safety Stock}
+$$
+
+$$
+\text{Days of Supply} = \frac{\text{Current Inventory}}{\text{Average Daily Sales}}
+$$
+
+$$
+\text{Reorder Quantity} = \text{Average Daily Sales} \times \text{Target Stock Days}
+$$
+
+$$
+\text{Reorder Value} = \text{Reorder Quantity} \times \text{Unit Cost}
+$$
+
+Source: CSCMP — Supply Chain Management Terms and Glossary (2023); Investopedia — Reorder Point Formula (2024).
+
+</div>
+
+## Worked Example 1 — Standard FBA Product
+
+An Amazon seller moves **20 units/day** of a kitchen gadget. Supplier lead time is 35 days (25 days production + 10 days sea freight + FBA receiving). They use 14 days of safety stock.
+
+| Metric | Calculation | Result |
+|--------|-------------|--------|
+| Safety Stock | 20 × 14 | **280 units** |
+| Reorder Point | (20 × 35) + 280 | **980 units** |
+| Reorder Quantity (60-day target) | 20 × 60 | **1,200 units** |
+| Reorder Value (@$9/unit) | 1,200 × $9 | **$10,800** |
+
+When inventory hits **980 units**, the purchase order must be placed. With 980 units and 20 sales/day, that's exactly 49 days of supply — covering the 35-day lead time plus 14 days of buffer.
+
+## Worked Example 2 — Fast Seller with Air Freight Option
+
+A seasonal product sells **45 units/day** in peak season. The seller uses air freight (12-day lead time) and keeps 7 days of safety stock.
+
+| Metric | Calculation | Result |
+|--------|-------------|--------|
+| Safety Stock | 45 × 7 | **315 units** |
+| Reorder Point | (45 × 12) + 315 | **855 units** |
+| Days of Supply at 855 units | 855 / 45 | **19 days** |
+| Reorder Quantity (45-day target) | 45 × 45 | **2,025 units** |
+
+At 45 units/day, 855 units last only 19 days — the reorder trigger comes fast. The seller monitors inventory daily and may reorder weekly.
+
+## Key Factors That Affect Your Reorder Point
+
+**Lead time is the most impactful variable — and the most underestimated.** Sellers often forget to include FBA receiving time (typically 3–7 days after arrival at the warehouse). A shipment that arrives at an Amazon facility on Day 30 may not be available for sale until Day 37. Factor in receiving when you calculate lead time.
+
+**Safety stock is not a fixed number — it's a decision about risk tolerance.** 14 days of safety stock protects against a 2-week supplier delay or a 2-week demand spike. If your supplier has ever been late by 3 weeks, you need 21+ days. If you're in a product category with predictable, stable demand and a reliable supplier, 7 days may be sufficient and reduces carrying cost.
+
+**Seasonality requires dynamic reorder points.** A product selling 15 units/day in October may sell 50 units/day in December. Your reorder point for a November purchase should be based on your projected December daily sales, not your October average. Review and adjust your safety stock heading into peak season.
+
+**FBA restock limits change the math.** Amazon caps inbound inventory based on your Inventory Performance Index (IPI). If your restock limit is 2,000 units and your ideal reorder quantity is 3,000, you may need to split shipments or improve IPI by clearing slower-moving ASINs.
+
+**Air freight vs. sea freight changes everything.** Switching from 35-day sea freight to 12-day air freight reduces your reorder point dramatically — at 20 units/day, the reorder point drops from 980 to 520 units, freeing up significant working capital. The higher freight cost may be worth it for fast-moving products where stockout risk is high.
+
+## Assumptions & Limitations
+
+- Average daily sales should be your 30-day trailing average, not your all-time average. Seasonal products need period-adjusted averages.
+- Lead time should include: supplier production time + transit time + customs clearance (for international shipments) + FBA receiving time. Each segment adds variability.
+- Safety stock calculated as a fixed number of days. More sophisticated models use demand variability and service level targets (e.g., z-score × standard deviation × √lead time) — this calculator uses the practical simplified version.
+- Reorder quantity is a simple days-of-stock target. Economic Order Quantity (EOQ) models also factor in ordering cost and carrying cost per unit.
+
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+**What is the reorder point formula?**
+The reorder point is: (Average Daily Sales × Lead Time in Days) + Safety Stock. Safety stock is typically Average Daily Sales × Safety Stock Days. The result is the inventory level at which you must immediately place a new purchase order to avoid running out of stock before the next shipment arrives.
+
+**How many days of safety stock should I keep?**
+A common starting point is 14 days for products with reliable suppliers and stable demand. Increase to 21–30 days for international suppliers with variable lead times, seasonal products, or categories prone to demand spikes. Reduce to 7 days if you use air freight with short, predictable lead times and have strong supplier reliability data.
+
+**How do I calculate average daily sales for the calculator?**
+In Amazon Seller Central, go to Reports → Business Reports → Detail Page Sales and Traffic and pull the last 30 days of unit sessions. Divide total units ordered by 30. For new products, use your best demand estimate. For seasonal products, use a rolling 30-day average during the equivalent season from the prior year.
+
+**What happens if I run out of FBA inventory (stockout)?**
+A stockout removes your product from Prime eligibility and often results in a ranking drop in search results. Amazon's A9 algorithm uses recent sales velocity as a ranking signal — going to zero sales for even 3–5 days can cause a ranking decline that takes weeks of advertising to recover. The cost of a stockout typically far exceeds the cost of carrying extra safety stock.
+
+</div>
+
+## Sources & Methodology
+
+- CSCMP. *Supply Chain Management Terms and Glossary* (2023). Council of Supply Chain Management Professionals.
+- Investopedia. *Reorder Point — Definition and Calculation* (2024).
+- Amazon Seller Central. *Inventory Performance Index and restock limits* (2025).
+- Jungle Scout. *Amazon Seller State of the Market Report — Inventory management insights* (2024).

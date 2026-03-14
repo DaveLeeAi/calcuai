@@ -1,0 +1,154 @@
+{
+  "id": "reorder-point-calculator",
+  "title": "Reorder Point Calculator",
+  "slug": "reorder-point-calculator",
+  "category": "ecommerce",
+  "subcategory": "metrics",
+  "primaryKeyword": "reorder point calculator",
+  "metaTitle": "Reorder Point Calculator — When to Reorder Inventory (Formula + Examples)",
+  "metaDescription": "Calculate your inventory reorder point, safety stock, and days of supply. Prevent Amazon stockouts and overstocking with the reorder point formula for ecommerce sellers.",
+  "inputs": [
+    {
+      "id": "averageDailySales",
+      "label": "Average Daily Sales (units)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.1,
+      "helpText": "Average units sold per day. Use 30-day average from Seller Central or your store analytics."
+    },
+    {
+      "id": "leadTimeDays",
+      "label": "Lead Time (days)",
+      "type": "number",
+      "required": true,
+      "defaultValue": 30,
+      "min": 1,
+      "max": 365,
+      "step": 1,
+      "helpText": "Days from placing a purchase order to inventory arriving at your warehouse or FBA. Include production + transit + receiving time."
+    },
+    {
+      "id": "safetyStockDays",
+      "label": "Safety Stock (days of cover)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 14,
+      "min": 0,
+      "max": 180,
+      "step": 1,
+      "helpText": "Extra buffer inventory measured in days of supply. 14 days is typical for stable products; 30+ days for high-demand or long lead-time items."
+    },
+    {
+      "id": "currentInventory",
+      "label": "Current Inventory (units)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 750,
+      "min": 0,
+      "max": 10000000,
+      "step": 1,
+      "helpText": "Your current on-hand inventory (total across all locations)"
+    },
+    {
+      "id": "unitCost",
+      "label": "Unit Cost (COGS)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 8,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Cost per unit — used to calculate the dollar value of your reorder quantity"
+    },
+    {
+      "id": "targetStockDays",
+      "label": "Target Reorder Quantity (days of stock)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 60,
+      "min": 7,
+      "max": 365,
+      "step": 1,
+      "helpText": "How many days of stock to order each time. 60 days is typical for FBA sellers balancing storage fees and stockout risk."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "reorderPoint",
+      "label": "Reorder Point (units)",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "safetyStock",
+      "label": "Safety Stock (units)",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "daysOfSupply",
+      "label": "Days of Supply (current)",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "reorderQuantity",
+      "label": "Recommended Reorder Quantity",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "reorderValue",
+      "label": "Reorder Order Value",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "stockoutRisk",
+      "label": "Stockout Risk",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Inventory Summary",
+      "type": "value-group",
+      "format": "number"
+    }
+  ],
+  "formula": "reorder-point",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "amazon-fba-storage-fee-calculator",
+    "amazon-fba-profit-calculator",
+    "fba-vs-fbm-calculator",
+    "landed-cost-calculator",
+    "average-order-value-calculator",
+    "return-on-ad-spend-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "CSCMP — Supply Chain Management Terms and Glossary (2023); Investopedia — Reorder Point Formula (2024)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Reorder Point = (Average Daily Sales × Lead Time) + Safety Stock; Safety Stock = Average Daily Sales × Safety Stock Days; Days of Supply = Current Inventory / Average Daily Sales; Reorder Qty = Average Daily Sales × Target Stock Days",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

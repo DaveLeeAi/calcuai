@@ -1,0 +1,186 @@
+{
+  "id": "amazon-fba-profit-calculator",
+  "title": "Amazon FBA Profit Calculator",
+  "slug": "amazon-fba-profit-calculator",
+  "category": "ecommerce",
+  "subcategory": "marketplace",
+  "primaryKeyword": "amazon fba profit calculator",
+  "metaTitle": "Amazon FBA Profit Calculator — 2026 Fee Tables (Updated Jan 15)",
+  "metaDescription": "Calculate Amazon FBA profit with updated 2026 fee tables. Enter product cost, selling price, size, and category to get net profit, margin, ROI, and break-even price.",
+  "inputs": [
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 29.99,
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your product's Amazon listing price"
+    },
+    {
+      "id": "productCost",
+      "label": "Product Cost (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your landed cost per unit — including manufacturing, freight, and duties"
+    },
+    {
+      "id": "productCategory",
+      "label": "Product Category",
+      "type": "select",
+      "required": true,
+      "defaultValue": "home-garden",
+      "options": [
+        { "value": "automotive", "label": "Automotive (12%)" },
+        { "value": "baby", "label": "Baby Products (8%)" },
+        { "value": "beauty", "label": "Beauty & Personal Care (8%)" },
+        { "value": "books", "label": "Books (15%)" },
+        { "value": "camera", "label": "Camera & Photo (8%)" },
+        { "value": "cell-phones", "label": "Cell Phones (8%)" },
+        { "value": "clothing", "label": "Clothing & Accessories (17%)" },
+        { "value": "electronics", "label": "Consumer Electronics (8%)" },
+        { "value": "grocery", "label": "Grocery & Food (8%)" },
+        { "value": "health", "label": "Health & Household (8%)" },
+        { "value": "home-garden", "label": "Home & Garden (15%)" },
+        { "value": "kitchen", "label": "Kitchen (15%)" },
+        { "value": "office", "label": "Office Products (15%)" },
+        { "value": "pet", "label": "Pet Supplies (15%)" },
+        { "value": "shoes", "label": "Shoes & Handbags (17%)" },
+        { "value": "sports", "label": "Sports & Outdoors (15%)" },
+        { "value": "tools", "label": "Tools & Home Improvement (15%)" },
+        { "value": "toys", "label": "Toys & Games (15%)" },
+        { "value": "video-games", "label": "Video Games (15%)" }
+      ],
+      "helpText": "Your product's Amazon category — determines the referral fee percentage"
+    },
+    {
+      "id": "sizeTier",
+      "label": "FBA Size Tier",
+      "type": "select",
+      "required": true,
+      "defaultValue": "large-standard-8oz",
+      "options": [
+        { "value": "small-standard-4oz", "label": "Small Standard ≤4 oz" },
+        { "value": "small-standard-8oz", "label": "Small Standard >4–8 oz" },
+        { "value": "small-standard-12oz", "label": "Small Standard >8–12 oz" },
+        { "value": "small-standard-16oz", "label": "Small Standard >12–16 oz" },
+        { "value": "large-standard-4oz", "label": "Large Standard ≤4 oz" },
+        { "value": "large-standard-8oz", "label": "Large Standard >4–8 oz" },
+        { "value": "large-standard-12oz", "label": "Large Standard >8–12 oz" },
+        { "value": "large-standard-16oz", "label": "Large Standard >12–16 oz" },
+        { "value": "large-standard-1.5lb", "label": "Large Standard >1–1.5 lb" },
+        { "value": "large-standard-2lb", "label": "Large Standard >1.5–2 lb" },
+        { "value": "large-standard-2.5lb", "label": "Large Standard >2–2.5 lb" },
+        { "value": "large-standard-3lb", "label": "Large Standard >2.5–3 lb" },
+        { "value": "small-oversize", "label": "Small Oversize" },
+        { "value": "medium-oversize", "label": "Medium Oversize" }
+      ],
+      "helpText": "Your product's FBA size tier — determines the fulfillment fee"
+    },
+    {
+      "id": "inboundShippingPerUnit",
+      "label": "Inbound Shipping per Unit",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 1.5,
+      "min": 0,
+      "max": 1000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your cost to ship inventory from supplier to Amazon FBA warehouse"
+    },
+    {
+      "id": "ppcCostPerUnit",
+      "label": "PPC Ad Cost per Unit (Optional)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 2,
+      "min": 0,
+      "max": 10000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your Amazon Sponsored Products ad spend divided by units sold"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netProfit",
+      "label": "Net Profit per Unit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "profitMargin",
+      "label": "Profit Margin",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "roi",
+      "label": "ROI",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "breakEvenPrice",
+      "label": "Break-Even Price",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "feeBreakdownTable",
+      "label": "Fee Breakdown",
+      "type": "table",
+      "columns": [
+        { "key": "item", "label": "Item" },
+        { "key": "amount", "label": "Amount", "format": "currency" },
+        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Profit Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "amazon-fba-profit",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "amazon-acos-calculator",
+    "landed-cost-calculator",
+    "product-pricing-calculator",
+    "advertising-break-even-calculator",
+    "return-on-ad-spend-calculator",
+    "average-order-value-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Amazon Seller Central — 2026 FBA fulfillment fee schedule (effective January 15, 2026); Amazon — Referral fee schedule by category (2026)",
+  "articleWordTarget": 1600,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Profit = Selling Price − Referral Fee − FBA Fee − Product Cost − Inbound Shipping − PPC Cost; ROI = Net Profit / Total Costs × 100; Break-Even Price = (Total Costs) / (1 − Referral Fee%)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "Q4"
+}

@@ -1,0 +1,178 @@
+{
+  "id": "fba-vs-fbm-calculator",
+  "title": "FBA vs FBM Calculator",
+  "slug": "fba-vs-fbm-calculator",
+  "category": "ecommerce",
+  "subcategory": "marketplace",
+  "primaryKeyword": "fba vs fbm calculator",
+  "metaTitle": "FBA vs FBM Calculator — Should You Use Amazon FBA or Fulfill Yourself?",
+  "metaDescription": "Compare Amazon FBA vs Fulfilled by Merchant (FBM) cost, profit, and margin side by side. Updated for 2026 FBA fee schedule.",
+  "inputs": [
+    {
+      "id": "sellingPrice",
+      "label": "Selling Price",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 29.99,
+      "min": 0.01,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your Amazon listing price"
+    },
+    {
+      "id": "productCost",
+      "label": "Product Cost (COGS)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 7,
+      "min": 0,
+      "max": 100000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your landed cost per unit (manufacturing + freight + duties)"
+    },
+    {
+      "id": "productCategory",
+      "label": "Amazon Category",
+      "type": "select",
+      "required": true,
+      "defaultValue": "home-garden",
+      "options": [
+        { "value": "beauty", "label": "Beauty & Personal Care (8%)" },
+        { "value": "clothing", "label": "Clothing & Accessories (17%)" },
+        { "value": "electronics", "label": "Consumer Electronics (8%)" },
+        { "value": "health", "label": "Health & Household (8%)" },
+        { "value": "home-garden", "label": "Home & Garden (15%)" },
+        { "value": "kitchen", "label": "Kitchen (15%)" },
+        { "value": "pet", "label": "Pet Supplies (15%)" },
+        { "value": "sports", "label": "Sports & Outdoors (15%)" },
+        { "value": "tools", "label": "Tools & Home Improvement (15%)" },
+        { "value": "toys", "label": "Toys & Games (15%)" }
+      ],
+      "helpText": "Amazon referral fee category — applies to both FBA and FBM"
+    },
+    {
+      "id": "sizeTier",
+      "label": "FBA Size Tier",
+      "type": "select",
+      "required": true,
+      "defaultValue": "large-standard-8oz",
+      "options": [
+        { "value": "small-standard-4oz", "label": "Small Standard ≤4 oz" },
+        { "value": "small-standard-8oz", "label": "Small Standard >4–8 oz" },
+        { "value": "large-standard-4oz", "label": "Large Standard ≤4 oz" },
+        { "value": "large-standard-8oz", "label": "Large Standard >4–8 oz" },
+        { "value": "large-standard-12oz", "label": "Large Standard >8–12 oz" },
+        { "value": "large-standard-16oz", "label": "Large Standard >12–16 oz" },
+        { "value": "large-standard-1.5lb", "label": "Large Standard >1–1.5 lb" },
+        { "value": "large-standard-2lb", "label": "Large Standard >1.5–2 lb" },
+        { "value": "small-oversize", "label": "Small Oversize" }
+      ],
+      "helpText": "Used to look up the FBA fulfillment fee (2026 schedule)"
+    },
+    {
+      "id": "inboundShipping",
+      "label": "FBA Inbound Shipping per Unit",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 1.5,
+      "min": 0,
+      "max": 500,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Cost to ship inventory from your supplier to Amazon warehouse"
+    },
+    {
+      "id": "fbmShippingCost",
+      "label": "FBM Shipping to Customer",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 6.5,
+      "min": 0,
+      "max": 500,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Your cost to ship the order directly to the customer (postage + packaging)"
+    },
+    {
+      "id": "fbmPackagingCost",
+      "label": "FBM Packaging & Labor",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 1.5,
+      "min": 0,
+      "max": 100,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Box, tape, dunnage, and packing labor cost per order"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "comparisonTable",
+      "label": "FBA vs FBM Comparison",
+      "type": "table",
+      "columns": [
+        { "key": "item", "label": "Cost / Metric" },
+        { "key": "fba", "label": "FBA", "format": "currency" },
+        { "key": "fbm", "label": "FBM", "format": "currency" }
+      ]
+    },
+    {
+      "id": "fbaProfitPerUnit",
+      "label": "FBA Net Profit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "fbmProfitPerUnit",
+      "label": "FBM Net Profit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "recommendation",
+      "label": "Recommended Method",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "fba-vs-fbm",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "amazon-fba-profit-calculator",
+    "amazon-fba-storage-fee-calculator",
+    "landed-cost-calculator",
+    "amazon-acos-calculator",
+    "product-pricing-calculator",
+    "reorder-point-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Amazon Seller Central — 2026 FBA fulfillment fee schedule (effective January 15, 2026); Amazon — Referral fee schedule by category (2026)",
+  "articleWordTarget": 1300,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "FBA Profit = Price − Referral Fee − FBA Fee − Inbound Shipping − COGS; FBM Profit = Price − Referral Fee − FBM Shipping − Packaging − COGS; Recommendation = method with higher net profit",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

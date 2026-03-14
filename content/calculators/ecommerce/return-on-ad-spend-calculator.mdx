@@ -1,0 +1,143 @@
+---
+title: "Return on Ad Spend Calculator"
+description: "Calculate your ROAS, break-even ROAS, and true profit from advertising. Enter ad spend, revenue, and gross margin to see whether your campaigns are actually profitable."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your return on ad spend (ROAS) by dividing revenue attributed to ads by ad spend — \$5,000 in spend generating \$20,000 in revenue equals a 4.0 ROAS. But a 4× ROAS is only profitable if your gross margin exceeds 25%. On a 50% margin product, break-even ROAS is 2.0; anything above that is profit. ROAS without margin is a vanity metric.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**ROAS** (Return on Ad Spend) measures how much revenue you generate for every dollar spent on advertising. A ROAS of 4.0 means \$4 in revenue per \$1 in ad spend. ROAS is a revenue metric, not a profit metric — a high ROAS on a low-margin product can still lose money.
+
+**Break-Even ROAS** is the minimum ROAS at which your ad spend is exactly covered by gross profit. Below this threshold, your ads are consuming more gross profit than they generate. Above it, you are earning a return on ad spend after product costs. Break-even ROAS = 1 / gross margin (as a decimal), so a 50% margin product breaks even at 2.0 ROAS, and a 40% margin product needs at least 2.5 ROAS.
+
+**Net Profit from Ads** is the actual dollar profit after deducting both product cost (COGS) and ad spend from attributed revenue. This is the number that matters for business viability — ROAS tells you efficiency, but net profit tells you whether the campaign is worth running.
+
+**Scenario Table** shows your ROAS and net profit at current performance and projected improvement scenarios, so you can set realistic ROAS targets grounded in your actual margin structure.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter Ad Spend** — the total amount spent on advertising in the period. Use the same time window for spend and revenue (e.g., last 30 days).
+2. **Enter Revenue from Ads** — the total revenue your ad platform attributes to those ads. Use the same attribution window your platform reports (e.g., 7-day click, 1-day view for Meta; 30-day for Google). Be consistent — mixing attribution windows inflates apparent ROAS.
+3. **Enter Gross Margin %** (optional) — your product's gross margin as a percentage of selling price. The calculator uses this to determine your break-even ROAS and compute true net profit. If you are unsure, use our [Product Pricing Calculator](/ecommerce/product-pricing-calculator) to derive your margin.
+4. **Enter Platform/Transaction Fees %** (optional) — Shopify fees, Amazon referral fees, payment processing (typically 2.9–15% depending on channel). These reduce your effective margin and raise your break-even ROAS.
+5. **Review break-even ROAS vs. your current ROAS** — if you are below break-even, your campaigns are losing money after product costs even if ROAS looks reasonable. If you are above break-even, you are generating real profit.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**ROAS:**
+
+$$
+\text{ROAS} = \frac{\text{Revenue from Ads}}{\text{Ad Spend}}
+$$
+
+**Break-Even ROAS:**
+
+$$
+\text{Break-Even ROAS} = \frac{1}{\text{Net Margin (decimal)}}
+$$
+
+Where:
+$$
+\text{Net Margin} = \frac{\text{Gross Margin\%} - \text{Fees\%}}{100}
+$$
+
+**Net Profit from Ads:**
+
+$$
+\text{Net Profit} = \text{Ad Revenue} \times \text{Net Margin} - \text{Ad Spend}
+$$
+
+Where:
+- **Ad Spend** = total amount paid to the advertising platform
+- **Ad Revenue** = revenue attributed to ads by the platform
+- **Gross Margin%** = (Selling Price − COGS) / Selling Price × 100
+- **Fees%** = platform, fulfilment, and payment processing fees as % of revenue
+- **Net Margin** = Gross Margin% − Fees% (expressed as a decimal for calculation)
+
+*Source: Google Ads Help — Understanding ROAS (2025). Meta Business — Ad Performance Metrics (2025).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Facebook Ads for a Skincare Brand
+
+A skincare brand spent \$8,000 on Meta Ads last month, generating \$32,000 in attributed revenue (7-day click attribution). Their gross margin is 65%, and Shopify + Stripe fees total 4%.
+
+- **ROAS:** \$32,000 / \$8,000 = **4.0**
+- **Net Margin:** 65% − 4% = 61%
+- **Break-Even ROAS:** 1 / 0.61 = **1.64**
+- **Net Profit:** \$32,000 × 0.61 − \$8,000 = \$19,520 − \$8,000 = **\$11,520**
+
+*Interpretation:* At ROAS 4.0 versus a break-even of 1.64, the campaign is generating strong returns. The brand has room to scale spend — if ROAS drops to 2.0 as they scale, they remain profitable (\$32k × 0.61 × (2/4) − \$8k = net positive).
+
+### Example 2: Google Shopping for an Electronics Retailer
+
+An electronics seller spent \$15,000 on Google Shopping, attributing \$42,000 in revenue (30-day conversion window). Their gross margin is 22%, and Amazon Marketplace fees total 15%.
+
+- **ROAS:** \$42,000 / \$15,000 = **2.8**
+- **Net Margin:** 22% − 15% = 7%
+- **Break-Even ROAS:** 1 / 0.07 = **14.3**
+- **Net Profit:** \$42,000 × 0.07 − \$15,000 = \$2,940 − \$15,000 = **−\$12,060**
+
+*Interpretation:* A 2.8 ROAS sounds reasonable, but on 7% net margin, the retailer needs a 14.3 ROAS just to break even. The campaign is losing over \$12,000 per month. The solution is either margin improvement (better supplier terms, reduced fees) or cutting campaigns with ROAS below 14.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **Attribution Window Mismatch** — Meta's default attribution is 7-day click + 1-day view. Google's is typically 30-day. Comparing these directly inflates one and deflates the other. Use consistent, platform-specific attribution windows and avoid blending click and view-through conversions when calculating ROAS for budget decisions.
+
+2. **Margin Varies by Product Mix** — If your ad campaigns drive a mix of high-margin and low-margin products, a single gross margin input gives you an average ROAS picture. For brands with wide margin variance, calculate ROAS and break-even separately by product category or campaign.
+
+3. **Blended vs. True ROAS** — "Blended ROAS" includes all revenue (including organic and direct) divided by ad spend. True ROAS uses only ad-attributed revenue. Blended ROAS looks better but can mask underperforming campaigns. This calculator uses true ROAS — enter only ad-attributed revenue.
+
+4. **New Customer vs. Repeat ROAS** — Acquiring a new customer at a 2.5 ROAS may be profitable once you factor in lifetime value (CLV). Retargeting an existing customer at the same ROAS may be redundant spend. Segment ROAS targets by customer type: set a lower minimum ROAS target for new customer acquisition campaigns if your CLV supports it.
+
+5. **Scaling Diminishing Returns** — ROAS typically declines as you scale spend because you exhaust your highest-intent audience first. Budget for this: plan for a ROAS decline of 15–30% per ad spend doubling, and verify your margin still supports the campaign at the lower ROAS before committing to scale.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Assumes revenue attribution is accurate per your ad platform's window — this calculator cannot adjust for attribution model differences between platforms
+- Uses a single gross margin percentage applied to all ad-attributed revenue — does not model SKU-level margin variation
+- Net Profit calculation assumes all attributed revenue reflects actual collected revenue (no refunds/returns adjustment)
+- Does not account for brand lift or long-term revenue impact of awareness campaigns — ROAS is a direct-response metric
+
+## Frequently Asked Questions
+
+### What is a good ROAS for ecommerce?
+
+"Good ROAS" depends entirely on your gross margin. The minimum viable ROAS is your break-even ROAS (1 / gross margin). A brand with 60% gross margin breaks even at 1.67 ROAS and targets 3.0–4.0 ROAS for comfortable profitability. A brand with 25% gross margin breaks even at 4.0 ROAS and needs 6.0+ to be meaningfully profitable. Industry benchmarks (Google Ads average ROAS of 2.0, Meta average of 3.0) are meaningless without knowing the margin structure behind them.
+
+### How is ROAS different from ROI?
+
+ROAS measures revenue returned per ad dollar spent (a gross metric). ROI measures net profit returned per dollar invested (a net metric). ROAS of 4.0 at 50% margin generates an ROI of 100% (\$1 invested in ads returns \$1 in net profit). ROAS of 4.0 at 25% margin generates an ROI of 0% — you break even. Always convert ROAS to ROI using your margin before evaluating campaign performance.
+
+### Why is my break-even ROAS so high?
+
+High break-even ROAS is driven by low net margin. If your gross margin is 30% and platform fees take 10%, your net margin is 20% and your break-even ROAS is 5.0. This means ads must generate \$5 in revenue for every \$1 spent just to cover COGS and ad costs. Improve break-even ROAS by: (1) raising gross margin through better sourcing; (2) reducing platform/fulfillment fees; (3) increasing AOV so each ad-generated order is worth more.
+
+### Should I optimize for ROAS or CPA?
+
+Both metrics are valid but serve different objectives. Optimize for ROAS when your average order value varies significantly (different products at different prices) — ROAS normalizes performance across order sizes. Optimize for CPA (cost per acquisition) when your AOV is consistent and you want to directly control acquisition cost. For businesses with variable AOV, ROAS is typically the better optimization target for Google and Meta campaign bidding.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Google Ads Help** — Return on Ad Spend (ROAS) definition and optimization (2025)
+- **Meta Business** — Understanding Ad Performance Metrics (2025)
+- **Shopify** — What Is ROAS? How to Calculate Return on Ad Spend (2025)
+
+Related tools: [Advertising Break-Even Calculator](/ecommerce/advertising-break-even-calculator) · [Product Pricing Calculator](/ecommerce/product-pricing-calculator) · [AOV Calculator](/ecommerce/average-order-value-calculator) · [ROI Calculator](/business/roi-calculator)

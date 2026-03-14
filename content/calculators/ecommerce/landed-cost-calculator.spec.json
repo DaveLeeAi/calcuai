@@ -1,0 +1,174 @@
+{
+  "id": "landed-cost-calculator",
+  "title": "Landed Cost Calculator",
+  "slug": "landed-cost-calculator",
+  "category": "ecommerce",
+  "subcategory": "sourcing",
+  "primaryKeyword": "landed cost calculator",
+  "metaTitle": "Landed Cost Calculator — True Cost Per Unit After Freight, Duties & Fees",
+  "metaDescription": "Calculate your true landed cost per unit including FOB price, freight, insurance, import duties, and broker fees. Essential for ecommerce sellers importing from China and overseas.",
+  "inputs": [
+    {
+      "id": "fobCostPerUnit",
+      "label": "FOB Cost per Unit",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 8,
+      "min": 0.01,
+      "max": 1000000,
+      "step": 0.01,
+      "prefix": "$",
+      "helpText": "Supplier invoice price per unit (Free On Board — excludes freight)"
+    },
+    {
+      "id": "unitsPerShipment",
+      "label": "Units per Shipment",
+      "type": "number",
+      "required": true,
+      "defaultValue": 500,
+      "min": 1,
+      "max": 10000000,
+      "step": 1,
+      "helpText": "Total units in the shipment"
+    },
+    {
+      "id": "totalFreightCost",
+      "label": "Total Freight Cost",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 1800,
+      "min": 0,
+      "max": 10000000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Ocean or air freight from origin port to destination port"
+    },
+    {
+      "id": "freightInsurance",
+      "label": "Freight Insurance",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 120,
+      "min": 0,
+      "max": 1000000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Cargo insurance for the shipment (typically 0.5–1% of cargo value)"
+    },
+    {
+      "id": "importDutyRate",
+      "label": "Import Duty Rate (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 15,
+      "min": 0,
+      "max": 200,
+      "step": 0.5,
+      "helpText": "Customs duty rate as a % of FOB value. China goods: 30–125%; most other countries: 0–20%"
+    },
+    {
+      "id": "customsBrokerFee",
+      "label": "Customs Broker Fee",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 250,
+      "min": 0,
+      "max": 100000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Fee paid to customs broker/freight forwarder for clearance (typically $150–$500)"
+    },
+    {
+      "id": "inlandFreight",
+      "label": "Inland Freight (Drayage + Delivery)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 400,
+      "min": 0,
+      "max": 1000000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Cost to move goods from port to your warehouse or Amazon FBA"
+    },
+    {
+      "id": "otherFees",
+      "label": "Other Fees (Port, Handling, etc.)",
+      "type": "currency",
+      "required": false,
+      "defaultValue": 150,
+      "min": 0,
+      "max": 100000,
+      "step": 10,
+      "prefix": "$",
+      "helpText": "Port fees, demurrage, container handling, label application"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "landedCostPerUnit",
+      "label": "Landed Cost per Unit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "landedCostMarkupPct",
+      "label": "Landed Cost vs. FOB",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "totalDutyPaid",
+      "label": "Total Duty Paid",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "costBreakdownTable",
+      "label": "Cost Breakdown per Unit",
+      "type": "table",
+      "columns": [
+        { "key": "item", "label": "Cost Component" },
+        { "key": "total", "label": "Total", "format": "currency" },
+        { "key": "perUnit", "label": "Per Unit", "format": "currency" },
+        { "key": "pctOfLanded", "label": "% of Landed", "format": "percentage" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Landed Cost Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "landed-cost",
+  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "relatedCalculators": [
+    "amazon-fba-profit-calculator",
+    "import-duty-calculator",
+    "product-pricing-calculator",
+    "tiktok-shop-profit-calculator",
+    "margin-calculator",
+    "break-even-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "US Customs and Border Protection — Harmonized Tariff Schedule (2026); Flexport — Landed Cost Guide (2025); Incoterms 2020 — ICC Publication",
+  "articleWordTarget": 1500,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Landed Cost = FOB Cost + Freight + Insurance + Import Duty + Broker Fee + Inland Freight + Other Fees; Duty = FOB Value × Duty Rate%; Landed Cost per Unit = Total Landed Cost / Units",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "flagship",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

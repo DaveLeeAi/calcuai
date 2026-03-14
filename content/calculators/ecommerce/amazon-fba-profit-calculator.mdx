@@ -1,0 +1,158 @@
+---
+title: "Amazon FBA Profit Calculator"
+description: "Calculate Amazon FBA net profit, margin, and ROI with updated 2026 fee tables. Includes referral fee by category, FBA fulfillment fee by size tier, inbound shipping, and PPC cost."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate your Amazon FBA net profit after referral fees, fulfillment fees, inbound shipping, and PPC ad cost using the January 15, 2026 fee schedule. A product selling for \$29.99 in the Home & Garden category (large standard, >4–8 oz) incurs \$4.50 in referral fee and \$4.08 in FBA fees — leaving roughly \$9–\$11 in net profit depending on your costs. Every Amazon fee increase makes previously viable products unprofitable: run these numbers before restocking.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Net Profit per Unit** is what you keep after Amazon takes its cut, your product lands in the warehouse, and ads bring in the buyer. It accounts for all five variable costs: referral fee, FBA fulfillment fee, product cost (COGS), inbound shipping, and PPC. If this number is negative, no amount of sales volume will fix the unit economics — the product needs repricing or a cost reduction before scaling.
+
+**Profit Margin** expresses net profit as a percentage of the selling price. For Amazon sellers, a healthy margin is typically 20–35% after all fees and ad spend. Below 15%, you have limited buffer for returns, storage fees, or a CPC increase. Above 40%, you likely have pricing power — test higher prices.
+
+**ROI** measures your return on the capital you deploy per unit (product cost + inbound shipping + PPC). A 100% ROI means you double the money invested in each unit. Amazon sellers typically target 50–150% ROI depending on inventory turn speed.
+
+**Break-Even Price** is the minimum viable selling price — the floor below which every sale loses money. Use this to set automated repricing rules with a hard floor so competitive repricing tools never push you below profitability.
+
+**Fee Breakdown Table** shows every deduction as both a dollar amount and a percentage of your sale price, so you can see at a glance where the margin goes.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your Selling Price** — your current or target Amazon list price.
+2. **Enter your Product Cost (COGS)** — your fully landed cost per unit, including manufacturing, ocean/air freight, import duties, and customs fees. If you are still estimating landed cost, use our [Landed Cost Calculator](/ecommerce/landed-cost-calculator) first.
+3. **Select your Product Category** — this determines the referral fee percentage. Categories range from 8% (electronics, beauty, health) to 17% (clothing, shoes). Select the most specific category that matches your product.
+4. **Select your FBA Size Tier** — based on the packaged dimensions and weight. Amazon charges fees based on the greater of actual weight and dimensional weight. When in doubt, measure the packaged item, not just the product itself.
+5. **Enter Inbound Shipping per Unit** — your cost to get inventory from your supplier to an Amazon FBA warehouse. For domestic suppliers, this is typically \$0.50–\$2.00/unit. For ocean freight from Asia, divide total freight cost by total units in the shipment.
+6. **Enter PPC Ad Cost per Unit** (optional) — divide your monthly Sponsored Products ad spend by units sold in the same period. This converts campaign-level ROAS data into a per-unit cost that can be weighed against margin.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Referral Fee:**
+
+$$
+\text{Referral Fee} = \text{Selling Price} \times \text{Category Rate\%}
+$$
+
+**Net Profit:**
+
+$$
+\text{Net Profit} = \text{Price} - \text{Referral Fee} - \text{FBA Fee} - \text{COGS} - \text{Inbound Shipping} - \text{PPC Cost}
+$$
+
+**ROI:**
+
+$$
+\text{ROI} = \frac{\text{Net Profit}}{\text{COGS} + \text{Inbound Shipping} + \text{PPC Cost}} \times 100
+$$
+
+**Break-Even Price:**
+
+$$
+\text{Break-Even Price} = \frac{\text{COGS} + \text{Inbound Shipping} + \text{PPC} + \text{FBA Fee}}{1 - \text{Referral Rate}}
+$$
+
+Where:
+- **Category Rate%** = Amazon referral fee for the product category (8–17%)
+- **FBA Fee** = fixed fulfillment fee from the 2026 size tier table (effective January 15, 2026)
+- **COGS** = total landed cost per unit
+- **Referral Rate** = referral fee % expressed as a decimal for break-even calculation
+
+*Source: Amazon Seller Central — 2026 FBA fulfillment fee schedule (effective January 15, 2026). Amazon — Referral fee schedule by category (2026).*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Home Kitchen Gadget (Typical FBA Launch)
+
+A seller sources a silicone baking mat at \$6.50 landed cost. They price it at \$24.99 on Amazon.
+
+| Cost Component | Amount |
+|---|---|
+| Selling Price | \$24.99 |
+| Referral Fee (15% — Kitchen) | −\$3.75 |
+| FBA Fee (large standard, 8–12 oz) | −\$4.24 |
+| Product Cost (COGS) | −\$6.50 |
+| Inbound Shipping | −\$1.20 |
+| PPC Cost per Unit | −\$2.50 |
+| **Net Profit** | **\$6.80** |
+
+**Profit Margin:** \$6.80 / \$24.99 = **27.2%**
+**ROI:** \$6.80 / (\$6.50 + \$1.20 + \$2.50) = **67%**
+**Break-Even Price:** (\$6.50 + \$1.20 + \$2.50 + \$4.24) / (1 − 0.15) = **\$16.99**
+
+*Interpretation:* Selling at \$24.99 generates a 27.2% margin and 67% ROI with a \$16.99 break-even floor. If a competitor drops price to \$17, you break even. If they go below \$17, it is more profitable to pause the listing than compete.
+
+### Example 2: Clothing Item After Jan 2026 Fee Changes
+
+A private label activewear seller had a product at \$39.99 before the January 2026 fee increase.
+
+**Pre-2026 calculation (hypothetical FBA fee: \$4.65):**
+- Net Profit: \$39.99 − \$6.80 (17%) − \$4.65 − \$12 − \$2.50 = **\$14.04** (35.1% margin)
+
+**Post-2026 (FBA fee for large standard 1–1.5 lb: \$5.09):**
+- Net Profit: \$39.99 − \$6.80 − \$5.09 − \$12 − \$2.50 = **\$13.60** (34% margin)
+
+*Interpretation:* The January 2026 fee increase cost this seller \$0.44/unit. At 5,000 units/month, that is \$2,200/month in lost profit — absorbed silently unless the seller recalculated. This is why recalculating after every Amazon fee change is non-negotiable.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **January 2026 FBA Fee Schedule** — Amazon raised fulfillment fees an average of \$0.08/unit for standard items and up to \$0.51/unit on high-value small-standard products, effective January 15, 2026. Any calculation run before that date is now incorrect. The inbound placement fee (introduced in March 2024) is not modeled here — sellers using Amazon's Inbound Placement service pay an additional \$0.21–\$1.27/unit depending on shipment size and proximity to Amazon's fulfilment network.
+
+2. **Referral Fee Category Accuracy** — Amazon assigns referral fees by category, not by what you call the product. A fitness tracker sold in "Health & Household" pays 8% referral. The same product listed in "Electronics Accessories" could pay 15%. Verify your product's category in Seller Central — miscategorization is one of the most common FBA profit calculation errors.
+
+3. **PPC Cost Is Variable** — PPC cost per unit varies with campaign performance, competitor bidding, and seasonality. Q4 CPC increases of 40–80% are common on Amazon. Model your PPC cost at both your current blended CPA and a Q4 stress-test CPA to see how margin compresses under bid pressure.
+
+4. **Dimensional Weight vs. Actual Weight** — Amazon charges the greater of actual weight and dimensional weight. Dimensional weight (DW) = Length × Width × Height / 139 (inches). A lightweight but bulky product can fall into a larger and more expensive size tier than its actual weight suggests. Always verify the size tier Amazon assigns in your Seller Central Inventory before calculating.
+
+5. **Storage Fees Are Excluded** — This calculator does not include monthly storage fees (\$0.78/cubic foot Jan–Sep; \$2.40/cubic foot Oct–Dec) or aged inventory surcharges (\$0.50–\$6.90/cubic foot for items aged 271–365 days). Slow-moving products' true cost includes storage — add this to COGS for any product with inventory turn below 8× annually.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Uses the 2026 FBA fulfillment fee schedule effective January 15, 2026 — fees change periodically; verify against Amazon Seller Central for the most current schedule
+- Does not include the Amazon Inbound Placement Fee (charged separately for managed placement shipments)
+- Does not include monthly storage fees, long-term storage fees, or returns processing fees
+- Referral fees are calculated at a flat rate — some categories (Electronics Accessories, Grocery) use tiered rates based on selling price; verify for high-value or low-price products
+- Assumes Shopify/third-party channel fees are zero — add channel fees manually if also selling through non-Amazon channels
+
+## Frequently Asked Questions
+
+### What is a good profit margin for Amazon FBA?
+
+A healthy Amazon FBA profit margin falls between 20% and 35% after all costs including PPC. Below 15%, the margin is too thin to absorb fee changes, storage costs, or return rate increases. Above 40%, you have strong pricing power — test price increases to see if demand holds, as capturing that margin improves ROI on the same inventory investment. Clothing, shoes, and jewelry see natural margin compression from the 17% referral rate; electronics sellers work with 8% referral but face tighter competitive pricing.
+
+### How do I find my FBA size tier?
+
+In Amazon Seller Central, go to Manage Inventory → select a listing → click "FBA" in the fulfillment column. The "Size Tier" column shows your tier. Alternatively, use Amazon's fee preview tool in Revenue Calculator (search your ASIN). Size tier is determined by the packaged item dimensions (not the product dimensions) and the greater of actual weight versus dimensional weight (L × W × H / 139 for standard size).
+
+### Did Amazon raise FBA fees in 2026?
+
+Yes. Amazon increased FBA fulfillment fees effective January 15, 2026. Average increases were \$0.08/unit for standard items, up to \$0.51/unit for high-value small-standard products, and an average of \$0.30/unit for Multi-Channel Fulfillment (MCF) orders. Amazon also ended its FBA prep and labeling service as of January 1, 2026. This calculator uses the updated January 2026 fee table.
+
+### How do I calculate my inbound shipping cost per unit?
+
+Request a shipping quote from your freight forwarder or use historical invoices. For ocean freight from China: total freight invoice / total units shipped = inbound shipping per unit. Example: \$1,800 freight for 500 units = \$3.60/unit. Add customs broker fees (\$200–\$400 per shipment) and drayage/inland freight to get the full cost. For accuracy, use our [Landed Cost Calculator](/ecommerce/landed-cost-calculator) to derive your total landed cost first.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **Amazon Seller Central** — 2026 FBA fulfillment fee schedule, effective January 15, 2026
+- **Amazon** — Referral fee schedule by category (2026)
+- **eFulfillment Service** — Amazon FBA Fee Increases 2026: Complete Guide for Sellers (2025)
+- **Jungle Scout** — Amazon FBA Fees: The Complete Guide (2025 Edition)
+
+Related tools: [Landed Cost Calculator](/ecommerce/landed-cost-calculator) · [Amazon ACoS Calculator](/ecommerce/amazon-acos-calculator) · [Advertising Break-Even Calculator](/ecommerce/advertising-break-even-calculator) · [Product Pricing Calculator](/ecommerce/product-pricing-calculator)

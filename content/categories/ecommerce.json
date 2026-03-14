@@ -1,0 +1,93 @@
+{
+  "id": "ecommerce",
+  "name": "E-Commerce Calculators",
+  "slug": "ecommerce",
+  "description": "Free calculators for ecommerce sellers — FBA profit, landed cost, TikTok Shop, Shopify fees, ROAS, and more.",
+  "icon": "/icons/ecommerce.svg",
+  "metaTitle": "E-Commerce Calculators — Free Tools for Online Sellers",
+  "metaDescription": "Calculate Amazon FBA profit, landed cost with tariffs, TikTok Shop margins, Shopify fees, eBay fees, Etsy fees, dropshipping profit, and more. Free ecommerce tools updated for 2026.",
+  "subcategories": [
+    {
+      "id": "marketplace",
+      "name": "Marketplace Profit",
+      "slug": "marketplace",
+      "description": "Calculate net profit on Amazon FBA, TikTok Shop, eBay, and Etsy after all fees.",
+      "calculators": [
+        "amazon-fba-profit-calculator",
+        "tiktok-shop-profit-calculator",
+        "ebay-fee-calculator",
+        "etsy-fee-calculator",
+        "fba-vs-fbm-calculator",
+        "amazon-fba-storage-fee-calculator"
+      ]
+    },
+    {
+      "id": "sourcing",
+      "name": "Sourcing & Landed Cost",
+      "slug": "sourcing",
+      "description": "Calculate your true landed cost, dropshipping margin, and print-on-demand profit per unit.",
+      "calculators": [
+        "landed-cost-calculator",
+        "dropshipping-profit-calculator",
+        "print-on-demand-profit-calculator"
+      ]
+    },
+    {
+      "id": "advertising",
+      "name": "Advertising",
+      "slug": "advertising",
+      "description": "Measure ad performance and plan profitable ad spend across channels.",
+      "calculators": [
+        "amazon-acos-calculator",
+        "return-on-ad-spend-calculator",
+        "advertising-break-even-calculator"
+      ]
+    },
+    {
+      "id": "platforms",
+      "name": "Platform Fees",
+      "slug": "platforms",
+      "description": "Calculate the true cost of selling on Shopify and compare plans.",
+      "calculators": [
+        "shopify-fee-calculator"
+      ]
+    },
+    {
+      "id": "pricing",
+      "name": "Pricing & Profit",
+      "slug": "pricing",
+      "description": "Set profitable prices and understand your margins at every volume tier.",
+      "calculators": [
+        "product-pricing-calculator"
+      ]
+    },
+    {
+      "id": "metrics",
+      "name": "Sales & Inventory Metrics",
+      "slug": "metrics",
+      "description": "Track key ecommerce performance indicators and manage inventory efficiently.",
+      "calculators": [
+        "average-order-value-calculator",
+        "reorder-point-calculator"
+      ]
+    }
+  ],
+  "featuredCalculators": [
+    "amazon-fba-profit-calculator",
+    "landed-cost-calculator",
+    "tiktok-shop-profit-calculator",
+    "dropshipping-profit-calculator",
+    "ebay-fee-calculator",
+    "etsy-fee-calculator",
+    "amazon-acos-calculator",
+    "shopify-fee-calculator",
+    "fba-vs-fbm-calculator",
+    "amazon-fba-storage-fee-calculator",
+    "print-on-demand-profit-calculator",
+    "reorder-point-calculator",
+    "return-on-ad-spend-calculator",
+    "advertising-break-even-calculator",
+    "product-pricing-calculator",
+    "average-order-value-calculator"
+  ]
+}

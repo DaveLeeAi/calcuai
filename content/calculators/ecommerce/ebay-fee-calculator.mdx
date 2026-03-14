@@ -1,0 +1,135 @@
+{/* ebay-fee-calculator.mdx */}
+
+<div className="bluf-intro">
+eBay sellers keep an average of **$0.67 for every $1.00** in sales after fees — but the exact number depends heavily on category and whether you use Promoted Listings. On a $29.99 item in most categories, eBay takes roughly $5.17 in combined fees (13.25% final value fee + 2.9% Managed Payments + $0.30), leaving about $11.83 in net profit after a $7 product cost and $5 shipping. Use this calculator to find your exact number before you list.
+</div>
+
+## What Your Results Mean
+
+**Net Profit per Order** is what you actually pocket after eBay's final value fee, Managed Payments processing, promoted listings, your shipping cost, and your product cost.
+
+**Profit Margin** is net profit as a percentage of your selling price — most healthy eBay businesses target 20–35%.
+
+**Monthly Profit** projects your income at your entered order volume, useful for deciding whether a product is worth scaling.
+
+## How to Use This Calculator
+
+1. Enter your **Selling Price** — what the buyer pays for the item
+2. Enter your **Product Cost** — what you paid to source or make it
+3. Select your **Product Category** — this sets the final value fee rate
+4. Enter **Shipping Charged to Buyer** (0 for free shipping) — eBay's FVF applies to item + shipping collected
+5. Enter **Your Actual Shipping Cost** — your real postage + packaging expense
+6. Optionally enter your **Promoted Listings Rate** (0 if not running ads)
+7. Enter **Monthly Orders** to see your income projection
+
+## eBay Fee Formula
+
+<div className="formula-section">
+
+eBay charges its final value fee on the **total amount the buyer pays** — including any shipping they pay. This is a commonly missed detail.
+
+$$
+\text{Final Value Fee} = \text{Buyer Total} \times \text{Category Rate}
+$$
+
+$$
+\text{Buyer Total} = \text{Selling Price} + \text{Buyer Shipping}
+$$
+
+$$
+\text{Payment Processing} = \text{Buyer Total} \times 2.9\% + \$0.30
+$$
+
+$$
+\text{Net Profit} = \text{Selling Price} - \text{FVF} - \text{Processing} - \text{Promoted Fee} - \text{Actual Shipping} - \text{COGS}
+$$
+
+**2025 Final Value Fee Rates by Category:**
+
+| Category | Rate | Threshold | Rate Above |
+|----------|------|-----------|------------|
+| Most Categories | 13.25% | $7,500 | 2.35% |
+| Consumer Electronics / Cameras | 8.7% | $7,500 | 2.35% |
+| Books / DVDs / Music / Games | 14.35% | $7,500 | 2.35% |
+| Clothing & Shoes under $100 | 15% | $100 | 9% |
+| Coins & Stamps | 12.35% | $7,500 | 2.35% |
+| Motors Parts & Accessories | 11.5% | $7,500 | 2.35% |
+| Jewelry under $5,000 | 15% | $5,000 | 9% |
+
+Source: eBay — Selling fees for private sellers (2025).
+
+</div>
+
+## Worked Example 1 — Home Goods (Free Shipping)
+
+A seller lists a decorative ceramic vase for **$34.99** with free shipping. Product cost is $9.00.
+
+| Fee | Calculation | Amount |
+|-----|-------------|--------|
+| Final Value Fee (13.25%) | $34.99 × 13.25% | $4.64 |
+| Managed Payments | $34.99 × 2.9% + $0.30 | $1.31 |
+| Actual Shipping Cost | (USPS Priority) | $8.50 |
+| Product Cost | — | $9.00 |
+| **Net Profit** | $34.99 − $4.64 − $1.31 − $8.50 − $9.00 | **$11.54** |
+| **Profit Margin** | $11.54 / $34.99 | **33%** |
+
+## Worked Example 2 — Electronics with Promoted Listings
+
+A seller lists refurbished earbuds for **$49.99** with $5 buyer shipping, $4 actual shipping, and a 5% Promoted Listings rate. Product cost is $18.
+
+| Fee | Calculation | Amount |
+|-----|-------------|--------|
+| Buyer Total | $49.99 + $5.00 | $54.99 |
+| Final Value Fee (8.7%) | $54.99 × 8.7% | $4.78 |
+| Managed Payments | $54.99 × 2.9% + $0.30 | $1.90 |
+| Promoted Listings (5%) | $49.99 × 5% | $2.50 |
+| Actual Shipping | — | $4.00 |
+| Product Cost | — | $18.00 |
+| **Net Profit** | $49.99 − $4.78 − $1.90 − $2.50 − $4.00 − $18.00 | **$18.81** |
+| **Profit Margin** | $18.81 / $49.99 | **37.6%** |
+
+Note: At 8.7%, electronics is one of eBay's lowest-rate categories — significantly better than the 13.25% default.
+
+## Key Factors That Affect eBay Profit
+
+**Category selection matters most.** The difference between 8.7% (electronics) and 15% (fashion under $100) is 6.3 percentage points — on a $50 sale, that's $3.15 of additional fee you can't recover.
+
+**Free shipping isn't truly free.** Many sellers offer free shipping to win the algorithm, but eBay still charges its final value fee on the item price, not the buyer's total — so you absorb the shipping cost rather than losing FVF on it. Run the numbers both ways; sometimes charging shipping is more profitable.
+
+**Promoted Listings Standard compounds costs.** At 5% on a $30 item, that's $1.50 per sale. If your promoted listings campaigns run at 5% and your natural profit margin is already thin at 20%, you're giving away 25% of your margin to ads.
+
+**Insertion fees after 250 listings.** eBay allows 250 free listings per month. The 251st costs $0.35 each, and this adds up fast for high-SKU sellers — not captured in per-order calculators but relevant to monthly overhead.
+
+**Return shipping policies.** eBay's "money-back guarantee" means buyers can return items for any reason. Sellers absorbing return shipping on $8–$12 postage costs can easily wipe out 2–3 weeks of profit on a slow SKU.
+
+## Assumptions & Limitations
+
+- Rates are for **eBay US private sellers** (2025). Business accounts and store subscribers may have different rates.
+- Final value fee applies to total buyer-paid amount including buyer shipping — this calculator models that correctly.
+- eBay may charge a final value fee on successfully resolved disputes or returns at their discretion.
+- Promoted Listings Standard fee applies only when a sale results from the promoted placement.
+- Store subscribers (Basic, Premium, Anchor) receive reduced fees on certain categories — this calculator does not model store subscription discounts.
+
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+**What is eBay's final value fee?**
+eBay's final value fee is a percentage of the total buyer-paid amount (item price + shipping charged) collected when a sale completes. The rate ranges from 8.7% for electronics to 15% for fashion items under $100, with most categories at 13.25%. eBay charges the fee on both the item price and any shipping amount the buyer pays.
+
+**Does eBay charge fees on shipping?**
+Yes. eBay's final value fee applies to the total buyer-paid amount, which includes any shipping fee collected from the buyer. If you charge $5 for shipping and your item sells for $30, eBay charges 13.25% of $35 = $4.64, not $3.98. Offering free shipping shifts the shipping cost to you but avoids eBay taking a cut of it.
+
+**What is Managed Payments and how much does it cost?**
+eBay Managed Payments replaced PayPal as eBay's payment processor. The standard rate is 2.9% of the total buyer amount + $0.30 per order. For most sellers, Managed Payments costs slightly less than the old PayPal arrangement (which was 2.9% + $0.30 on top of eBay fees separately).
+
+**How do Promoted Listings Standard fees work?**
+Promoted Listings Standard is a pay-per-sale ad model — you set an ad rate (typically 2–10%) and only pay when your item sells through the promoted placement. The fee is calculated as your chosen rate × the item's selling price. You are not charged if the item sells organically without the buyer clicking the promoted listing.
+
+</div>
+
+## Sources & Methodology
+
+- eBay. *Seller fees — Final value fee rates by category* (2025). Retrieved from eBay Seller Center.
+- eBay. *Managed Payments — Payment processing rates* (2025). Retrieved from eBay Seller Center.
+- eBay. *Promoted Listings Standard — How fees work* (2025). Retrieved from eBay Seller Center.

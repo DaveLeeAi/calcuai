@@ -1,0 +1,163 @@
+---
+title: "Landed Cost Calculator"
+description: "Calculate your true landed cost per unit including FOB price, ocean freight, insurance, import duties, customs broker fees, and inland freight. Essential for ecommerce sellers importing from overseas."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Calculate the true cost of an imported product per unit by adding FOB price, freight, insurance, import duty, and broker fees. A product invoiced at \$8 FOB from China, shipped in a 500-unit order with \$1,800 freight and a 15% duty rate, has a landed cost of \$14.64 — 83% above the invoice price. After the US eliminated de minimis exemptions in August 2025 and stacked 30–125% tariffs on Chinese goods, accurate landed cost calculation is the single most important number in ecommerce sourcing.
+
+</section>
+
+{/* Section 6: What Your Results Mean */}
+## What Your Results Mean
+
+**Landed Cost per Unit** is the true cost of one unit sitting in your warehouse or Amazon FBA, ready to sell. This is the number you must use as your COGS in every profit, pricing, and margin calculation. Using FOB cost as COGS is the most common and most expensive mistake in ecommerce — it can overstate gross margin by 20–50% for Chinese-origin goods.
+
+**Landed Cost vs. FOB Markup** shows how much higher your true cost is compared to what your supplier invoiced. For ocean freight from China pre-tariff, typical landed markups were 20–40% above FOB. Post-August 2025 with 30%+ tariffs, landed cost is often 60–100%+ above FOB for many product categories.
+
+**Total Duty Paid** is the cash outlay for customs duties on the entire shipment — a direct cash cost that must be paid before goods can be released. At 30% duty on \$4,000 in FOB goods, that is \$1,200 paid before a single unit sells.
+
+**Cost Breakdown Table** allocates every dollar of landed cost across cost components and shows what percentage each represents, so you can target the highest-impact cost reductions (usually freight and duty).
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter FOB Cost per Unit** — the unit price from your supplier's invoice (Free On Board — excludes all freight). This is the price at the origin port before shipping begins.
+2. **Enter Units per Shipment** — total units in the shipment. This determines how fixed costs (freight, broker, inland) allocate across each unit.
+3. **Enter Total Freight Cost** — the amount paid to your freight forwarder for ocean or air freight from origin port to destination port. Get this from your freight invoice or request a quote from Flexport, Freightos, or your forwarder.
+4. **Enter Freight Insurance** — cargo insurance for the shipment, typically 0.5–1% of cargo value. On \$4,000 in goods, expect \$20–\$40.
+5. **Enter Import Duty Rate** — your product's HTS (Harmonized Tariff Schedule) rate. For most countries: 0–20%. For Chinese-origin goods as of 2025-2026: baseline 10% + Section 301 tariff of 7.5–25% + additional executive order tariffs; total effective rates of 30–125% are common. Check the USITC Harmonized Tariff Schedule at usitc.gov or use a licensed customs broker.
+6. **Enter Customs Broker Fee** — fee paid to your customs broker or freight forwarder for clearance. Typically \$150–\$500 per shipment for standard commercial imports.
+7. **Enter Inland Freight** — cost to move goods from the destination port to your warehouse or Amazon FBA. This includes drayage (container trucking) and final-mile delivery.
+8. **Enter Other Fees** — port terminal handling, examination fees, ISF (Importer Security Filing), container cleaning, or Amazon FBA receiving fees.
+
+{/* Section 8: The Formula */}
+## The Formula
+
+<div className="formula-section">
+
+**Import Duty:**
+
+$$
+\text{Import Duty} = \text{FOB Value} \times \frac{\text{Duty Rate\%}}{100}
+$$
+
+**Total Landed Cost:**
+
+$$
+\text{Total Landed} = \text{FOB Value} + \text{Freight} + \text{Insurance} + \text{Duty} + \text{Broker Fee} + \text{Inland Freight} + \text{Other}
+$$
+
+**Landed Cost per Unit:**
+
+$$
+\text{Landed Cost per Unit} = \frac{\text{Total Landed Cost}}{\text{Units in Shipment}}
+$$
+
+**Landed Cost Markup vs. FOB:**
+
+$$
+\text{Landed Markup\%} = \left(\frac{\text{Landed Cost per Unit}}{\text{FOB Cost per Unit}} - 1\right) \times 100
+$$
+
+Where:
+- **FOB Value** = FOB price per unit × units in shipment
+- **Duty Rate%** = the applicable HTS rate for your product and country of origin
+- **FOB Cost per Unit** = your supplier's invoice price excluding all freight
+
+*Source: US Customs and Border Protection — Harmonized Tariff Schedule (2026). Flexport — Landed Cost Guide (2025). Incoterms 2020 — ICC Publication No. 723.*
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Examples
+
+### Example 1: Consumer Goods from China (Post-2025 Tariff Environment)
+
+An Amazon seller sources silicone kitchen tools from a Guangdong supplier at \$7 FOB. Shipment: 1,000 units.
+
+| Cost Component | Total | Per Unit |
+|---|---|---|
+| FOB Product Cost | \$7,000 | \$7.00 |
+| Ocean Freight | \$2,200 | \$2.20 |
+| Freight Insurance | \$85 | \$0.09 |
+| Import Duty (30% of FOB) | \$2,100 | \$2.10 |
+| Customs Broker Fee | \$350 | \$0.35 |
+| Inland Freight / Drayage | \$600 | \$0.60 |
+| Amazon FBA Receiving | \$200 | \$0.20 |
+| **Total Landed Cost** | **\$12,535** | **\$12.54** |
+
+**Landed Markup vs. FOB:** (\$12.54 / \$7.00 − 1) × 100 = **79% above invoice price**
+
+*Interpretation:* The seller who prices based on a \$7 COGS and targets 50% gross margin prices at \$14. The seller who knows their true \$12.54 COGS prices at \$25.08 to hit the same margin. The first seller runs at 6.3% gross margin and loses money once platform fees, returns, and ad spend are applied. The second seller is profitable.
+
+### Example 2: Vietnam-Origin Product (Lower Tariff)
+
+A Shopify seller sources bamboo cutting boards from Vietnam at \$4 FOB, 2,000 units.
+
+| Cost Component | Total | Per Unit |
+|---|---|---|
+| FOB Product Cost | \$8,000 | \$4.00 |
+| Ocean Freight | \$1,600 | \$0.80 |
+| Insurance | \$60 | \$0.03 |
+| Import Duty (10%) | \$800 | \$0.40 |
+| Customs Broker | \$275 | \$0.14 |
+| Inland Freight | \$450 | \$0.23 |
+| **Landed Cost** | **\$11,185** | **\$5.59** |
+
+**Landed Markup:** (\$5.59 / \$4.00 − 1) × 100 = **40% above FOB**
+
+*Interpretation:* Vietnam-origin goods carry significantly lower effective duty rates than Chinese goods — 40% vs. 79% landed markup in these examples. This is why many ecommerce sellers accelerated supply chain diversification to Vietnam, India, and Mexico from 2023–2025 as China tariffs escalated.
+
+{/* Section 10: Key Factors That Affect Your Results */}
+## Key Factors That Affect Your Results
+
+1. **De Minimis Elimination (August 29, 2025)** — The US \$800 duty-free de minimis threshold was eliminated for all shipments effective August 29, 2025, following the earlier China/Hong Kong de minimis suspension on May 2, 2025. Previously, 4+ million packages per day entered the US duty-free under de minimis. Every single one of those packages — Temu, Shein, Amazon Haul, and direct DTC shipments — now faces customs duty calculation. If your import model previously relied on sub-\$800 shipments avoiding duty, your entire cost structure has changed.
+
+2. **China Section 301 Tariffs** — On top of the baseline Most Favored Nation (MFN) tariff rate, Chinese-origin goods carry additional Section 301 tariffs ranging from 7.5% to 25% depending on HTS code, plus executive-order tariffs of 10%+ imposed in 2025. Total effective rates on many product categories run 30–125%. The tariff rate for your specific product must be verified against the current USITC Harmonized Tariff Schedule — rates change with executive orders.
+
+3. **First Sale vs. Transaction Value** — US Customs normally values imports on the "transaction value" — the price paid to your foreign supplier. If you source through a trading company or middleman, and can document the price the factory charges the trading company (the "first sale" price), you may be able to calculate duty on the lower first-sale price, reducing duty liability. This requires proper documentation and is most valuable on high-volume, high-duty-rate products.
+
+4. **Freight Rate Volatility** — Ocean freight rates are highly volatile. Trans-Pacific spot rates fluctuated between \$1,200 and \$8,900 per 40-foot container equivalent (FEU) in the 2022–2025 period. Build a landed cost model with both current freight rates and a stress-test scenario at 2× current rates to see how margin holds under freight rate spikes.
+
+5. **Per-Unit Sensitivity to Order Size** — Fixed costs (freight, broker fee, inland freight) spread across more units at higher order quantities, reducing per-unit landed cost. Doubling a 500-unit order to 1,000 units typically does not double freight cost — reducing per-unit freight by 30–40%. Use the calculator to model the landed cost at different order sizes before deciding your minimum order quantity.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- Import duty is calculated on FOB value only — some duty calculations use CIF (Cost + Insurance + Freight) value; verify with your customs broker for your specific HTS classification
+- Does not model Section 232 steel/aluminum tariffs, anti-dumping or countervailing duties (ADD/CVD), or Chapter 99 secondary tariffs — add these to the duty rate input manually
+- Does not account for duty drawback (refund on duties for re-exported goods)
+- Freight insurance is entered as a flat dollar amount; actual insurance is typically 0.5–1% of CIF value plus a markup
+- Assumes a single HTS rate for the entire shipment; mixed shipments with different HTS rates should be calculated per-product
+
+## Frequently Asked Questions
+
+### What is the difference between FOB price and landed cost?
+
+FOB (Free On Board) price is your supplier's invoice price — what you pay them to put goods on a ship at the origin port. Landed cost is the total cost of getting that product to your warehouse, including ocean or air freight, cargo insurance, import duties, customs broker fees, and inland transportation. For Chinese-origin goods in 2025-2026, landed cost typically runs 60–100%+ above FOB due to stacked tariffs. Using FOB as your COGS will systematically overstate your profit margin.
+
+### How do I find my import duty rate?
+
+Your product's duty rate depends on its HTS (Harmonized Tariff Schedule) code and country of origin. Look up the HTS code at the USITC Harmonized Tariff Schedule website (usitc.gov). For Chinese-origin goods, add any applicable Section 301 tariff (check ustr.gov) and any additional executive-order tariffs. Most reliable approach: ask your customs broker — this is their core expertise, and misclassification is a customs violation.
+
+### Do I still need to pay duty if I ship directly to Amazon FBA?
+
+Yes. Amazon does not handle customs — you or your freight forwarder must clear goods through US Customs before delivery to Amazon. Amazon FBA only accepts goods already cleared through US Customs. Your freight forwarder typically handles the customs entry and will charge a separate fee for this service.
+
+### How do China tariffs affect my landed cost in 2025–2026?
+
+Chinese-origin goods currently face: (1) MFN baseline rate (0–20% by product), (2) Section 301 tariff (7.5–25% by HTS list), and (3) additional executive-order tariffs (10%+ as of 2025). Total effective rates commonly run 30–45% for consumer goods, 50–125% for specific categories. A product with \$10 FOB from China and a 35% combined tariff rate incurs \$3.50 in duty per unit — a cost that did not exist before 2018 and has grown significantly through 2025.
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+- **US Customs and Border Protection (CBP)** — Harmonized Tariff Schedule and de minimis policy (2026)
+- **USITC** — Harmonized Tariff Schedule of the United States (2026 edition)
+- **Flexport** — Landed Cost Guide and Tariff Simulator (2025)
+- **ECDB** — Effect of De Minimis Elimination and Tariff Increases on US eCommerce (2025)
+- **Incoterms 2020** — ICC Publication No. 723
+
+Related tools: [Amazon FBA Profit Calculator](/ecommerce/amazon-fba-profit-calculator) · [Product Pricing Calculator](/ecommerce/product-pricing-calculator) · [Margin Calculator](/business/margin-calculator)

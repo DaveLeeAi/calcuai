@@ -1,0 +1,147 @@
+{
+  "id": "advertising-break-even-calculator",
+  "title": "Advertising Break-Even Calculator",
+  "slug": "advertising-break-even-calculator",
+  "category": "ecommerce",
+  "subcategory": "advertising",
+  "primaryKeyword": "advertising break-even calculator",
+  "metaTitle": "Advertising Break-Even Calculator — How Many Sales to Cover Ad Spend",
+  "metaDescription": "Calculate how many sales you need to break even on your ad budget. Find your break-even CPA, ROAS, and required conversion rate. Free ecommerce advertising tool.",
+  "inputs": [
+    {
+      "id": "adBudget",
+      "label": "Ad Budget",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 3000,
+      "min": 1,
+      "max": 1000000000,
+      "step": 100,
+      "prefix": "$",
+      "helpText": "Total advertising budget you want to evaluate"
+    },
+    {
+      "id": "averageOrderValue",
+      "label": "Average Order Value (AOV)",
+      "type": "currency",
+      "required": true,
+      "defaultValue": 85,
+      "min": 0.01,
+      "max": 1000000,
+      "step": 1,
+      "prefix": "$",
+      "helpText": "Average revenue per order"
+    },
+    {
+      "id": "cogsPercent",
+      "label": "Cost of Goods Sold (%)",
+      "type": "percentage",
+      "required": true,
+      "defaultValue": 40,
+      "min": 1,
+      "max": 99,
+      "step": 0.5,
+      "helpText": "COGS as a percentage of AOV (product cost / selling price × 100)"
+    },
+    {
+      "id": "additionalCostsPercent",
+      "label": "Fulfilment & Fees (%)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 5,
+      "min": 0,
+      "max": 50,
+      "step": 0.5,
+      "helpText": "Shipping, platform fees, and payment processing as % of AOV"
+    },
+    {
+      "id": "currentConversionRate",
+      "label": "Current Conversion Rate % (Optional)",
+      "type": "percentage",
+      "required": false,
+      "defaultValue": 2.5,
+      "min": 0.01,
+      "max": 100,
+      "step": 0.1,
+      "helpText": "Your store's conversion rate — used to estimate traffic needed"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "breakEvenOrders",
+      "label": "Break-Even Orders",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "breakEvenCPA",
+      "label": "Max Cost Per Acquisition",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "breakEvenROAS",
+      "label": "Break-Even ROAS",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "trafficNeeded",
+      "label": "Traffic Needed to Break Even",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "profitScenarioTable",
+      "label": "Profit/Loss at Different Order Volumes",
+      "type": "table",
+      "columns": [
+        { "key": "orders", "label": "Orders" },
+        { "key": "revenue", "label": "Revenue", "format": "currency" },
+        { "key": "grossProfit", "label": "Gross Profit", "format": "currency" },
+        { "key": "netAfterAds", "label": "Net After Ads", "format": "currency" }
+      ]
+    },
+    {
+      "id": "summary",
+      "label": "Break-Even Summary",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "advertising-break-even",
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "return-on-ad-spend-calculator",
+    "average-order-value-calculator",
+    "break-even-calculator",
+    "product-pricing-calculator",
+    "customer-acquisition-cost-calculator",
+    "conversion-rate-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "Shopify — How to Calculate Your Ecommerce Break-Even Point (2025); Andrew Chen — Growth Metrics for Ecommerce (2024)",
+  "articleWordTarget": 1300,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "stuart",
+  "formulaSource": "Contribution Margin = AOV × (1 − COGS% − Fees%); Break-Even Orders = Ad Budget / Contribution Margin; Break-Even CPA = Contribution Margin; Break-Even ROAS = 1 / Gross Margin",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": ["break-even-calculator"],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}
