@@ -39,16 +39,46 @@
       "required": true,
       "defaultValue": "home-garden",
       "options": [
-        { "value": "beauty", "label": "Beauty & Personal Care (8%)" },
-        { "value": "clothing", "label": "Clothing & Accessories (17%)" },
-        { "value": "electronics", "label": "Consumer Electronics (8%)" },
-        { "value": "health", "label": "Health & Household (8%)" },
-        { "value": "home-garden", "label": "Home & Garden (15%)" },
-        { "value": "kitchen", "label": "Kitchen (15%)" },
-        { "value": "pet", "label": "Pet Supplies (15%)" },
-        { "value": "sports", "label": "Sports & Outdoors (15%)" },
-        { "value": "tools", "label": "Tools & Home Improvement (15%)" },
-        { "value": "toys", "label": "Toys & Games (15%)" }
+        {
+          "value": "beauty",
+          "label": "Beauty & Personal Care (8%)"
+        },
+        {
+          "value": "clothing",
+          "label": "Clothing & Accessories (17%)"
+        },
+        {
+          "value": "electronics",
+          "label": "Consumer Electronics (8%)"
+        },
+        {
+          "value": "health",
+          "label": "Health & Household (8%)"
+        },
+        {
+          "value": "home-garden",
+          "label": "Home & Garden (15%)"
+        },
+        {
+          "value": "kitchen",
+          "label": "Kitchen (15%)"
+        },
+        {
+          "value": "pet",
+          "label": "Pet Supplies (15%)"
+        },
+        {
+          "value": "sports",
+          "label": "Sports & Outdoors (15%)"
+        },
+        {
+          "value": "tools",
+          "label": "Tools & Home Improvement (15%)"
+        },
+        {
+          "value": "toys",
+          "label": "Toys & Games (15%)"
+        }
       ],
       "helpText": "Amazon referral fee category — applies to both FBA and FBM"
     },
@@ -59,15 +89,42 @@
       "required": true,
       "defaultValue": "large-standard-8oz",
       "options": [
-        { "value": "small-standard-4oz", "label": "Small Standard ≤4 oz" },
-        { "value": "small-standard-8oz", "label": "Small Standard >4–8 oz" },
-        { "value": "large-standard-4oz", "label": "Large Standard ≤4 oz" },
-        { "value": "large-standard-8oz", "label": "Large Standard >4–8 oz" },
-        { "value": "large-standard-12oz", "label": "Large Standard >8–12 oz" },
-        { "value": "large-standard-16oz", "label": "Large Standard >12–16 oz" },
-        { "value": "large-standard-1.5lb", "label": "Large Standard >1–1.5 lb" },
-        { "value": "large-standard-2lb", "label": "Large Standard >1.5–2 lb" },
-        { "value": "small-oversize", "label": "Small Oversize" }
+        {
+          "value": "small-standard-4oz",
+          "label": "Small Standard ≤4 oz"
+        },
+        {
+          "value": "small-standard-8oz",
+          "label": "Small Standard >4–8 oz"
+        },
+        {
+          "value": "large-standard-4oz",
+          "label": "Large Standard ≤4 oz"
+        },
+        {
+          "value": "large-standard-8oz",
+          "label": "Large Standard >4–8 oz"
+        },
+        {
+          "value": "large-standard-12oz",
+          "label": "Large Standard >8–12 oz"
+        },
+        {
+          "value": "large-standard-16oz",
+          "label": "Large Standard >12–16 oz"
+        },
+        {
+          "value": "large-standard-1.5lb",
+          "label": "Large Standard >1–1.5 lb"
+        },
+        {
+          "value": "large-standard-2lb",
+          "label": "Large Standard >1.5–2 lb"
+        },
+        {
+          "value": "small-oversize",
+          "label": "Small Oversize"
+        }
       ],
       "helpText": "Used to look up the FBA fulfillment fee (2026 schedule)"
     },
@@ -114,9 +171,20 @@
       "label": "FBA vs FBM Comparison",
       "type": "table",
       "columns": [
-        { "key": "item", "label": "Cost / Metric" },
-        { "key": "fba", "label": "FBA", "format": "currency" },
-        { "key": "fbm", "label": "FBM", "format": "currency" }
+        {
+          "key": "item",
+          "label": "Cost / Metric"
+        },
+        {
+          "key": "fba",
+          "label": "FBA",
+          "format": "currency"
+        },
+        {
+          "key": "fbm",
+          "label": "FBM",
+          "format": "currency"
+        }
       ]
     },
     {
@@ -147,7 +215,11 @@
     }
   ],
   "formula": "fba-vs-fbm",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-fba-profit-calculator",
     "amazon-fba-storage-fee-calculator",
@@ -162,7 +234,11 @@
   "requiresSources": true,
   "formulaCitation": "Amazon Seller Central — 2026 FBA fulfillment fee schedule (effective January 15, 2026); Amazon — Referral fee schedule by category (2026)",
   "articleWordTarget": 1300,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "FBA Profit = Price − Referral Fee − FBA Fee − Inbound Shipping − COGS; FBM Profit = Price − Referral Fee − FBM Shipping − Packaging − COGS; Recommendation = method with higher net profit",
@@ -172,7 +248,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

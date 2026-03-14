@@ -14,10 +14,22 @@
       "type": "select",
       "required": true,
       "options": [
-        { "label": "Heat Energy (Q)", "value": "heat" },
-        { "label": "Mass (m)", "value": "mass" },
-        { "label": "Specific Heat (c)", "value": "specificHeat" },
-        { "label": "Temperature Change (ΔT)", "value": "temperatureChange" }
+        {
+          "label": "Heat Energy (Q)",
+          "value": "heat"
+        },
+        {
+          "label": "Mass (m)",
+          "value": "mass"
+        },
+        {
+          "label": "Specific Heat (c)",
+          "value": "specificHeat"
+        },
+        {
+          "label": "Temperature Change (ΔT)",
+          "value": "temperatureChange"
+        }
       ],
       "defaultValue": "heat",
       "helpText": "Select which variable to calculate"
@@ -28,7 +40,7 @@
       "type": "number",
       "required": false,
       "placeholder": "e.g. 1.0",
-      "defaultValue": 1.0,
+      "defaultValue": 1,
       "min": 0.001,
       "max": 1000000,
       "step": 0.01,
@@ -120,7 +132,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Specific heat formula: Q = m × c × ΔT, where Q = heat (J), m = mass (kg), c = specific heat (J/(kg·°C)), ΔT = temperature change (°C)",
   "formulaAuditDate": "2026-03-14",
@@ -128,8 +140,10 @@
   "targetIntent": "informational",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["heat-transfer-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "heat-transfer-calculator"
+  ],
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

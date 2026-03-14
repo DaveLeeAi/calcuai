@@ -5,7 +5,12 @@
   "category": "productivity",
   "subcategory": "time-management",
   "primaryKeyword": "work break ratio calculator",
-  "secondaryKeywords": ["best work to break ratio", "52 17 rule calculator", "how often to take breaks", "work break schedule calculator"],
+  "secondaryKeywords": [
+    "best work to break ratio",
+    "52 17 rule calculator",
+    "how often to take breaks",
+    "work break schedule calculator"
+  ],
   "metaTitle": "Work Break Ratio Calculator — Optimal Work & Break Schedule | CalcAI",
   "metaDescription": "Calculate your work break schedule using any work-to-break ratio. Compare Pomodoro 25/5, DeskTime 52/17, 90-minute ultradian, and custom ratios.",
   "inputs": [
@@ -83,7 +88,13 @@
       "id": "presetComparisons",
       "label": "Popular Method Comparison",
       "type": "table",
-      "columns": ["name", "workMinutes", "breakMinutes", "ratio", "bestFor"]
+      "columns": [
+        "name",
+        "workMinutes",
+        "breakMinutes",
+        "ratio",
+        "bestFor"
+      ]
     },
     {
       "id": "summary",
@@ -92,15 +103,26 @@
     }
   ],
   "formula": "work-break-ratio",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["pomodoro-calculator", "study-time-calculator", "sleep-cycle-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "pomodoro-calculator",
+    "study-time-calculator",
+    "sleep-cycle-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Ariga & Lleras — Cognition (2011); DeskTime Productivity Study (2014); Cirillo — The Pomodoro Technique (2006)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Sessions = floor(availableMinutes / (workBlock + breakLength)); Total work = Sessions × workBlock; Efficiency = Total work / availableMinutes × 100",
@@ -110,7 +132,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 72,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

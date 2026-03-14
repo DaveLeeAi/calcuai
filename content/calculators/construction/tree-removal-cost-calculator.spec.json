@@ -278,7 +278,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Tree removal base pricing from HomeAdvisor and Angi 2025-2026 national average surveys. Trunk diameter and condition multipliers derived from International Society of Arboriculture (ISA) risk assessment and pricing guidelines. Proximity surcharges from HomeAdvisor hazardous-access cost data. Stump removal and cleanup pricing from HomeAdvisor and Angi 2025-2026 add-on service surveys. Regional labor multipliers derived from BLS OES regional wage data for tree trimmers and pruners (SOC 37-3013).",
   "formulaAuditDate": "2026-03-14",
@@ -290,7 +290,7 @@
     "pergola-cost-calculator",
     "fence-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

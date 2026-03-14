@@ -81,10 +81,24 @@
       "label": "ROAS Scenario Analysis",
       "type": "table",
       "columns": [
-        { "key": "scenario", "label": "Scenario" },
-        { "key": "roas", "label": "ROAS" },
-        { "key": "revenue", "label": "Revenue", "format": "currency" },
-        { "key": "netProfit", "label": "Net Profit", "format": "currency" }
+        {
+          "key": "scenario",
+          "label": "Scenario"
+        },
+        {
+          "key": "roas",
+          "label": "ROAS"
+        },
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "format": "currency"
+        },
+        {
+          "key": "netProfit",
+          "label": "Net Profit",
+          "format": "currency"
+        }
       ]
     },
     {
@@ -114,7 +128,11 @@
   "requiresSources": true,
   "formulaCitation": "Google Ads Help — Understanding ROAS (2025); Meta Business — Ad Performance Metrics (2025)",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "ROAS = Revenue from Ads / Ad Spend; Break-Even ROAS = 1 / Gross Margin; Net Profit = Ad Revenue × Gross Margin% − Ad Spend − (Ad Revenue × Fees%)",
@@ -123,8 +141,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["roi-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "roi-calculator"
+  ],
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

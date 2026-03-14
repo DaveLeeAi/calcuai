@@ -285,7 +285,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. R-value multipliers based on U.S. Department of Energy insulation thickness recommendations by climate zone. Application area labor multipliers derived from contractor installation surveys accounting for access difficulty. Regional labor multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for insulation workers (SOC 47-2131).",
   "formulaAuditDate": "2026-03-14",
@@ -296,7 +296,7 @@
   "duplicationRisk": [
     "insulation-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

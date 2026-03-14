@@ -191,7 +191,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Working Capital = Current Assets - Current Liabilities; Current Ratio = CA / CL; Quick Ratio = (Cash + AR + STI) / CL; WC Ratio = WC / Revenue x 100; Days WC = (WC / Revenue) x 365",
   "formulaCitation": "Brealey, Myers & Allen — \"Principles of Corporate Finance\" (13th ed.)",
@@ -203,7 +203,7 @@
   "duplicationRisk": [
     "cash-flow-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "articleWordTarget": 1400,

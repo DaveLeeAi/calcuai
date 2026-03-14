@@ -260,7 +260,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Per-linear-foot pricing from HomeAdvisor and Angi 2025-2026 national average surveys for residential basement waterproofing. Method cost ranges validated against Basement Health Association (BHA) member contractor pricing data. Crack repair costs from HomeAdvisor foundation repair surveys. Sump pump pricing from HomeAdvisor and major manufacturer MSRP data. Regional labor multipliers derived from BLS Occupational Employment and Wage Statistics (SOC 47-2061). Material/labor split of 30/70 reflects the heavy labor intensity of waterproofing work per BHA contractor surveys.",
   "formulaAuditDate": "2026-03-14",
@@ -271,7 +271,7 @@
   "duplicationRisk": [
     "foundation-repair-cost-calculator"
   ],
-  "qualityScore": 80,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring"
 }

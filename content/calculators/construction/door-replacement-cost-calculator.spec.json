@@ -265,7 +265,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "draft",
   "reviewOwner": "editorial",
   "formulaSource": "Door base pricing from HomeAdvisor and Angi 2025-2026 national average surveys covering interior hollow-core, solid-core, and exterior steel, fiberglass, wood, french, and sliding glass doors. Hardware and trim add-on costs from HomeAdvisor contractor survey data. Frame replacement multiplier derived from American Architectural Manufacturers Association (AAMA) installation cost studies. Labor rates from Bureau of Labor Statistics OES data for door installers (SOC 47-2031). Regional labor multipliers derived from BLS OES regional wage data.",
   "formulaAuditDate": "2026-03-14",
@@ -277,7 +277,7 @@
     "garage-door-cost-calculator",
     "window-replacement-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 35,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

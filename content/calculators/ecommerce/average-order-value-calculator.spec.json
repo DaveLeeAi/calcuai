@@ -81,10 +81,25 @@
       "label": "AOV Improvement Scenarios",
       "type": "table",
       "columns": [
-        { "key": "scenario", "label": "Scenario" },
-        { "key": "aov", "label": "AOV", "format": "currency" },
-        { "key": "monthlyRevenue", "label": "Monthly Revenue", "format": "currency" },
-        { "key": "annualRevenue", "label": "Annual Revenue", "format": "currency" }
+        {
+          "key": "scenario",
+          "label": "Scenario"
+        },
+        {
+          "key": "aov",
+          "label": "AOV",
+          "format": "currency"
+        },
+        {
+          "key": "monthlyRevenue",
+          "label": "Monthly Revenue",
+          "format": "currency"
+        },
+        {
+          "key": "annualRevenue",
+          "label": "Annual Revenue",
+          "format": "currency"
+        }
       ]
     },
     {
@@ -114,7 +129,11 @@
   "requiresSources": true,
   "formulaCitation": "Shopify — Average Order Value: Definition and How to Increase It (2025); BigCommerce — Ecommerce Metrics Guide (2024)",
   "articleWordTarget": 1200,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "AOV = Total Revenue / Number of Orders; Revenue Lift = (Target AOV − Current AOV) × Monthly Orders × 12",
@@ -123,8 +142,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["revenue-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "revenue-calculator"
+  ],
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

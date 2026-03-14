@@ -129,10 +129,25 @@
       "label": "Cost Breakdown per Unit",
       "type": "table",
       "columns": [
-        { "key": "item", "label": "Cost Component" },
-        { "key": "total", "label": "Total", "format": "currency" },
-        { "key": "perUnit", "label": "Per Unit", "format": "currency" },
-        { "key": "pctOfLanded", "label": "% of Landed", "format": "percentage" }
+        {
+          "key": "item",
+          "label": "Cost Component"
+        },
+        {
+          "key": "total",
+          "label": "Total",
+          "format": "currency"
+        },
+        {
+          "key": "perUnit",
+          "label": "Per Unit",
+          "format": "currency"
+        },
+        {
+          "key": "pctOfLanded",
+          "label": "% of Landed",
+          "format": "percentage"
+        }
       ]
     },
     {
@@ -143,7 +158,11 @@
     }
   ],
   "formula": "landed-cost",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-fba-profit-calculator",
     "import-duty-calculator",
@@ -158,7 +177,11 @@
   "requiresSources": true,
   "formulaCitation": "US Customs and Border Protection — Harmonized Tariff Schedule (2026); Flexport — Landed Cost Guide (2025); Incoterms 2020 — ICC Publication",
   "articleWordTarget": 1500,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Landed Cost = FOB Cost + Freight + Insurance + Import Duty + Broker Fee + Inland Freight + Other Fees; Duty = FOB Value × Duty Rate%; Landed Cost per Unit = Total Landed Cost / Units",
@@ -168,7 +191,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 92,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

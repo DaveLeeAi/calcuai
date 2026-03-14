@@ -143,7 +143,10 @@
     }
   ],
   "formula": "real-estate-cash-flow",
-  "features": ["compare-scenarios", "shareable-url"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url"
+  ],
   "relatedCalculators": [
     "rental-yield-calculator",
     "landlord-roi-calculator",
@@ -156,7 +159,11 @@
   "requiresSources": false,
   "formulaCitation": "Investopedia — Net Operating Income (NOI) Definition (2025); BiggerPockets — Cash Flow Analysis for Rental Properties (2025)",
   "articleWordTarget": 1200,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Effective Rent = Monthly Rent × (1 − Vacancy Rate); NOI = (Effective Rent − Operating Expenses) × 12; Cash Flow = NOI / 12 − Monthly Mortgage; Cash-on-Cash = Annual Cash Flow / Total Cash Invested × 100",
@@ -166,7 +173,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 77,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

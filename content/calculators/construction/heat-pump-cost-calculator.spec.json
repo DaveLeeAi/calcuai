@@ -319,7 +319,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Equipment and labor cost ranges from HomeAdvisor and Angi 2025-2026 national averages. Efficiency multipliers from ENERGY STAR Heat Pump Guide. IRA tax credit calculation per IRC §25D (30% of qualified costs, max $2,000). Regional multipliers from HomeAdvisor regional cost index.",
   "formulaAuditDate": "2026-03-14",
@@ -330,7 +330,7 @@
   "duplicationRisk": [
     "hvac-replacement-cost-calculator"
   ],
-  "qualityScore": 85,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-fall"
 }

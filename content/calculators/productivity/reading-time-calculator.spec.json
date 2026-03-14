@@ -5,7 +5,12 @@
   "category": "productivity",
   "subcategory": "study",
   "primaryKeyword": "reading time calculator",
-  "secondaryKeywords": ["how long to read a book", "book reading time estimator", "pages per hour reading", "how many books can I read per year"],
+  "secondaryKeywords": [
+    "how long to read a book",
+    "book reading time estimator",
+    "pages per hour reading",
+    "how many books can I read per year"
+  ],
   "metaTitle": "Reading Time Calculator — How Long to Finish Any Book | CalcAI",
   "metaDescription": "Calculate how long it takes to read any book or document. Enter pages, reading speed, and reading type to get total hours and a days-to-finish schedule.",
   "inputs": [
@@ -51,11 +56,26 @@
       "type": "select",
       "default": "fiction",
       "options": [
-        { "value": "fiction", "label": "Fiction / Biography (1.0× speed)" },
-        { "value": "non-fiction", "label": "Non-Fiction / Self-Help (0.85× speed)" },
-        { "value": "textbook", "label": "Textbook (0.60× speed)" },
-        { "value": "technical", "label": "Technical / Academic (0.50× speed)" },
-        { "value": "casual-blog", "label": "Casual Blog / News (1.2× speed)" }
+        {
+          "value": "fiction",
+          "label": "Fiction / Biography (1.0× speed)"
+        },
+        {
+          "value": "non-fiction",
+          "label": "Non-Fiction / Self-Help (0.85× speed)"
+        },
+        {
+          "value": "textbook",
+          "label": "Textbook (0.60× speed)"
+        },
+        {
+          "value": "technical",
+          "label": "Technical / Academic (0.50× speed)"
+        },
+        {
+          "value": "casual-blog",
+          "label": "Casual Blog / News (1.2× speed)"
+        }
       ]
     }
   ],
@@ -110,15 +130,26 @@
     }
   ],
   "formula": "reading-time",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["study-time-calculator", "pomodoro-calculator", "work-break-ratio-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "study-time-calculator",
+    "pomodoro-calculator",
+    "work-break-ratio-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Brysbaert, Marc — Journal of Memory and Language (2019); Rayner et al. — Psychological Bulletin (2016)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Total Words = Pages × Words/Page; Adjusted WPM = WPM × reading type multiplier; Total Minutes = Total Words / Adjusted WPM; Days = Total Minutes / Daily Reading Minutes",
@@ -128,7 +159,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 62,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

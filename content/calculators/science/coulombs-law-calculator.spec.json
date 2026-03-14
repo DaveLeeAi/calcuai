@@ -16,7 +16,7 @@
       "placeholder": "e.g. 1e-6",
       "step": "any",
       "suffix": "C",
-      "defaultValue": 1e-6,
+      "defaultValue": 0.000001,
       "helpText": "First charge in coulombs (negative values allowed)"
     },
     {
@@ -27,7 +27,7 @@
       "placeholder": "e.g. 1e-6",
       "step": "any",
       "suffix": "C",
-      "defaultValue": 1e-6,
+      "defaultValue": 0.000001,
       "helpText": "Second charge in coulombs (negative values allowed)"
     },
     {
@@ -103,7 +103,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Coulomb's law: F = k * |q1| * |q2| / r^2, where k = 8.9875517873681764e9 N*m^2/C^2",
   "formulaAuditDate": "2026-03-14",
@@ -112,7 +112,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 82,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

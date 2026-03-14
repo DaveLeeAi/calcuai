@@ -22,11 +22,26 @@
       "required": true,
       "defaultValue": "standard-1000sqft",
       "options": [
-        { "value": "small-200sqft", "label": "Small - 200 sq ft ($5–$8/sq ft base)" },
-        { "value": "medium-500sqft", "label": "Medium - 500 sq ft ($5–$8/sq ft base)" },
-        { "value": "standard-1000sqft", "label": "Standard - 1,000 sq ft ($5–$8/sq ft base)" },
-        { "value": "large-2000sqft", "label": "Large - 2,000 sq ft ($4–$7/sq ft base)" },
-        { "value": "xlarge-5000sqft", "label": "Extra Large - 5,000 sq ft ($4–$7/sq ft base)" }
+        {
+          "value": "small-200sqft",
+          "label": "Small - 200 sq ft ($5–$8/sq ft base)"
+        },
+        {
+          "value": "medium-500sqft",
+          "label": "Medium - 500 sq ft ($5–$8/sq ft base)"
+        },
+        {
+          "value": "standard-1000sqft",
+          "label": "Standard - 1,000 sq ft ($5–$8/sq ft base)"
+        },
+        {
+          "value": "large-2000sqft",
+          "label": "Large - 2,000 sq ft ($4–$7/sq ft base)"
+        },
+        {
+          "value": "xlarge-5000sqft",
+          "label": "Extra Large - 5,000 sq ft ($4–$7/sq ft base)"
+        }
       ],
       "helpText": "Larger projects get volume discounts. Measure length × width for rectangular areas, or use a lawn measurement app for irregular shapes."
     },
@@ -37,10 +52,22 @@
       "required": true,
       "defaultValue": "mid-range",
       "options": [
-        { "value": "economy", "label": "Economy (1.0x — short pile, basic durability)" },
-        { "value": "mid-range", "label": "Mid-Range (1.25x — most popular residential grade)" },
-        { "value": "premium", "label": "Premium (1.60x — realistic look, long warranty)" },
-        { "value": "sport-grade", "label": "Sport Grade (2.0x — field-rated, heavy traffic)" }
+        {
+          "value": "economy",
+          "label": "Economy (1.0x — short pile, basic durability)"
+        },
+        {
+          "value": "mid-range",
+          "label": "Mid-Range (1.25x — most popular residential grade)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium (1.60x — realistic look, long warranty)"
+        },
+        {
+          "value": "sport-grade",
+          "label": "Sport Grade (2.0x — field-rated, heavy traffic)"
+        }
       ],
       "helpText": "Mid-range turf suits most residential yards. Premium turf has longer blades, better UV stability, and longer warranties. Sport grade is designed for athletic fields and high-traffic commercial areas."
     },
@@ -51,10 +78,22 @@
       "required": true,
       "defaultValue": "crumb-rubber",
       "options": [
-        { "value": "crumb-rubber", "label": "Crumb Rubber ($0.50–$1.00/sq ft)" },
-        { "value": "silica-sand", "label": "Silica Sand ($0.75–$1.25/sq ft)" },
-        { "value": "organic-coconut", "label": "Organic Coconut ($1.00–$2.00/sq ft)" },
-        { "value": "zeolite", "label": "Zeolite ($1.25–$2.50/sq ft — odor control)" }
+        {
+          "value": "crumb-rubber",
+          "label": "Crumb Rubber ($0.50–$1.00/sq ft)"
+        },
+        {
+          "value": "silica-sand",
+          "label": "Silica Sand ($0.75–$1.25/sq ft)"
+        },
+        {
+          "value": "organic-coconut",
+          "label": "Organic Coconut ($1.00–$2.00/sq ft)"
+        },
+        {
+          "value": "zeolite",
+          "label": "Zeolite ($1.25–$2.50/sq ft — odor control)"
+        }
       ],
       "helpText": "Infill stabilizes the turf blades and provides cushioning. Crumb rubber is the most common. Zeolite is recommended for pet areas due to its odor-neutralizing properties."
     },
@@ -65,9 +104,18 @@
       "required": true,
       "defaultValue": "standard",
       "options": [
-        { "value": "minimal", "label": "Minimal — existing hard base, no excavation needed" },
-        { "value": "standard", "label": "Standard — grading, compaction, decomposed granite (+15%)" },
-        { "value": "extensive", "label": "Extensive — excavation + gravel base + compaction (+35%)" }
+        {
+          "value": "minimal",
+          "label": "Minimal — existing hard base, no excavation needed"
+        },
+        {
+          "value": "standard",
+          "label": "Standard — grading, compaction, decomposed granite (+15%)"
+        },
+        {
+          "value": "extensive",
+          "label": "Extensive — excavation + gravel base + compaction (+35%)"
+        }
       ],
       "helpText": "Most lawn-to-turf installations require standard base prep. Extensive prep is needed for areas with poor drainage, tree roots, or significant grading issues."
     },
@@ -78,9 +126,18 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (+$0 — rely on turf backing perforations)" },
-        { "value": "basic-perforated", "label": "Basic Perforated Pipe (+$0.50–$1.00/sq ft)" },
-        { "value": "full-drain-board", "label": "Full Drain Board (+$1.50–$3.00/sq ft)" }
+        {
+          "value": "none",
+          "label": "None (+$0 — rely on turf backing perforations)"
+        },
+        {
+          "value": "basic-perforated",
+          "label": "Basic Perforated Pipe (+$0.50–$1.00/sq ft)"
+        },
+        {
+          "value": "full-drain-board",
+          "label": "Full Drain Board (+$1.50–$3.00/sq ft)"
+        }
       ],
       "helpText": "Most artificial turf has built-in drainage perforations. Additional drainage is recommended in low-lying areas, heavy rainfall regions, or pet areas."
     },
@@ -91,13 +148,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences. Labor accounts for 35% of the material cost."
     }
@@ -197,7 +275,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Base material costs per square foot from HomeAdvisor and Angi 2025-2026 national average surveys for residential artificial turf installation. Turf quality multipliers from Synthetic Turf Council member contractor pricing data (2025). Infill cost per square foot from HomeAdvisor landscape materials cost data. Base preparation cost adders derived from contractor survey data. Drainage system costs from HomeAdvisor landscape drainage cost data. Labor fraction of 35% of material cost per Synthetic Turf Council installation surveys. Regional labor multipliers from BLS Occupational Employment and Wage Statistics (SOC 37-3011).",
   "formulaAuditDate": "2026-03-14",
@@ -206,7 +284,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring"
 }

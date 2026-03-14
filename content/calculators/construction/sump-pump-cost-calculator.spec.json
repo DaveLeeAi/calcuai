@@ -22,11 +22,26 @@
       "required": true,
       "defaultValue": "submersible-primary",
       "options": [
-        { "value": "submersible-primary", "label": "Submersible Primary ($150–$400 — most common)" },
-        { "value": "pedestal-primary", "label": "Pedestal Primary ($100–$300 — easy maintenance)" },
-        { "value": "battery-backup", "label": "Battery Backup Only ($300–$800 — power outage protection)" },
-        { "value": "water-powered-backup", "label": "Water-Powered Backup ($200–$500 — no battery needed)" },
-        { "value": "combination-primary-backup", "label": "Combination Primary + Backup ($500–$1,200)" }
+        {
+          "value": "submersible-primary",
+          "label": "Submersible Primary ($150–$400 — most common)"
+        },
+        {
+          "value": "pedestal-primary",
+          "label": "Pedestal Primary ($100–$300 — easy maintenance)"
+        },
+        {
+          "value": "battery-backup",
+          "label": "Battery Backup Only ($300–$800 — power outage protection)"
+        },
+        {
+          "value": "water-powered-backup",
+          "label": "Water-Powered Backup ($200–$500 — no battery needed)"
+        },
+        {
+          "value": "combination-primary-backup",
+          "label": "Combination Primary + Backup ($500–$1,200)"
+        }
       ],
       "helpText": "Submersible pumps sit inside the pit and are quieter. Pedestal pumps sit above the pit and are easier to service. Battery backup systems run when the primary pump fails or power goes out."
     },
@@ -37,10 +52,22 @@
       "required": true,
       "defaultValue": "1/3-hp",
       "options": [
-        { "value": "1/3-hp", "label": "1/3 HP (standard residential — most homes)" },
-        { "value": "1/2-hp", "label": "1/2 HP (+15% — high water table or large basement)" },
-        { "value": "3/4-hp", "label": "3/4 HP (+35% — heavy duty, frequent cycling)" },
-        { "value": "1-hp", "label": "1 HP (+55% — commercial or extreme conditions)" }
+        {
+          "value": "1/3-hp",
+          "label": "1/3 HP (standard residential — most homes)"
+        },
+        {
+          "value": "1/2-hp",
+          "label": "1/2 HP (+15% — high water table or large basement)"
+        },
+        {
+          "value": "3/4-hp",
+          "label": "3/4 HP (+35% — heavy duty, frequent cycling)"
+        },
+        {
+          "value": "1-hp",
+          "label": "1 HP (+55% — commercial or extreme conditions)"
+        }
       ],
       "helpText": "1/3 HP handles most residential basements. Upgrade to 1/2 HP or higher for homes with a high water table, frequent flooding, or basements larger than 1,500 sq ft."
     },
@@ -51,9 +78,18 @@
       "required": true,
       "defaultValue": "existing-basin",
       "options": [
-        { "value": "existing-basin", "label": "Existing Basin — no new pit needed (+$0)" },
-        { "value": "new-plastic", "label": "New Plastic Basin (+$75–$200)" },
-        { "value": "new-fiberglass", "label": "New Fiberglass Basin (+$150–$350 — more durable)" }
+        {
+          "value": "existing-basin",
+          "label": "Existing Basin — no new pit needed (+$0)"
+        },
+        {
+          "value": "new-plastic",
+          "label": "New Plastic Basin (+$75–$200)"
+        },
+        {
+          "value": "new-fiberglass",
+          "label": "New Fiberglass Basin (+$150–$350 — more durable)"
+        }
       ],
       "helpText": "If replacing an existing sump pump, you likely already have a basin. New construction or first-time installations require excavating and installing a new basin."
     },
@@ -64,9 +100,18 @@
       "required": true,
       "defaultValue": "existing",
       "options": [
-        { "value": "existing", "label": "Use Existing Discharge Line (+$0)" },
-        { "value": "new-interior", "label": "New Interior Discharge (+$100–$300)" },
-        { "value": "new-exterior-with-burial", "label": "New Exterior with Burial (+$300–$800)" }
+        {
+          "value": "existing",
+          "label": "Use Existing Discharge Line (+$0)"
+        },
+        {
+          "value": "new-interior",
+          "label": "New Interior Discharge (+$100–$300)"
+        },
+        {
+          "value": "new-exterior-with-burial",
+          "label": "New Exterior with Burial (+$300–$800)"
+        }
       ],
       "helpText": "The discharge line routes water away from the foundation. Exterior lines with burial prevent ice blockage and discharge water further from the house."
     },
@@ -77,9 +122,18 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (+$0 — use if existing valve is functional)" },
-        { "value": "standard", "label": "Standard Check Valve (+$30–$60)" },
-        { "value": "quiet-check", "label": "Quiet Check Valve (+$60–$120 — reduced water hammer)" }
+        {
+          "value": "none",
+          "label": "None (+$0 — use if existing valve is functional)"
+        },
+        {
+          "value": "standard",
+          "label": "Standard Check Valve (+$30–$60)"
+        },
+        {
+          "value": "quiet-check",
+          "label": "Quiet Check Valve (+$60–$120 — reduced water hammer)"
+        }
       ],
       "helpText": "A check valve prevents water from flowing back into the pit when the pump shuts off. Required for all new installations. Quiet check valves reduce the 'clunking' sound when the pump cycles off."
     },
@@ -90,13 +144,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts base installation labor ($300–$600) for regional plumber and handyman labor rate differences."
     }
@@ -196,7 +271,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Sump pump unit costs from HomeAdvisor and Angi 2025-2026 national average surveys and major manufacturer MSRP data (Zoeller, Wayne, Liberty Pumps). Horsepower multipliers derived from pump manufacturer pricing data. Basin installation costs from HomeAdvisor foundation and drainage cost data. Discharge line costs from plumbing contractor survey data. Check valve costs from major plumbing supply retailers. Base labor range of $300–$600 from HomeAdvisor sump pump installation surveys. Regional labor multipliers from BLS Occupational Employment and Wage Statistics (SOC 47-2152 plumbers and pipefitters).",
   "formulaAuditDate": "2026-03-14",
@@ -207,7 +282,7 @@
   "duplicationRisk": [
     "basement-waterproofing-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring"
 }

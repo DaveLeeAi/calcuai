@@ -5,7 +5,12 @@
   "category": "productivity",
   "subcategory": "health-performance",
   "primaryKeyword": "sleep cycle calculator",
-  "secondaryKeywords": ["what time should I go to sleep", "bedtime calculator", "sleep cycles calculator", "best time to wake up"],
+  "secondaryKeywords": [
+    "what time should I go to sleep",
+    "bedtime calculator",
+    "sleep cycles calculator",
+    "best time to wake up"
+  ],
   "metaTitle": "Sleep Cycle Calculator — Best Bedtime to Wake Up Refreshed | CalcAI",
   "metaDescription": "Find the optimal bedtime based on your wake-up time and 90-minute sleep cycles. Wake up between cycles feeling refreshed, not groggy.",
   "inputs": [
@@ -32,7 +37,12 @@
       "id": "recommendedBedtimes",
       "label": "Recommended Bedtimes",
       "type": "table",
-      "columns": ["bedtime", "cycles", "totalSleepHours", "quality"]
+      "columns": [
+        "bedtime",
+        "cycles",
+        "totalSleepHours",
+        "quality"
+      ]
     },
     {
       "id": "optimalBedtime",
@@ -62,15 +72,26 @@
     }
   ],
   "formula": "sleep-cycle",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["study-time-calculator", "pomodoro-calculator", "work-break-ratio-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "study-time-calculator",
+    "pomodoro-calculator",
+    "work-break-ratio-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Walker, Matthew — Why We Sleep (2017); National Sleep Foundation — Sleep Duration Recommendations (2015)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Bedtime = Wake Time - (N × 90 min) - Sleep Onset Minutes; N = number of cycles (4, 5, or 6 recommended); Cycle duration = 90 minutes (standard NREM+REM cycle)",
@@ -80,7 +101,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 72,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

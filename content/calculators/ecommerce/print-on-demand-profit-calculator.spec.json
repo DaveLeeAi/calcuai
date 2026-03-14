@@ -51,11 +51,26 @@
       "required": true,
       "defaultValue": "etsy",
       "options": [
-        { "value": "etsy", "label": "Etsy (~9.5% + $0.45 per order)" },
-        { "value": "shopify-payments", "label": "Shopify Payments Basic (2.9% + $0.30)" },
-        { "value": "amazon-merch", "label": "Merch by Amazon (enter royalty% below)" },
-        { "value": "redbubble", "label": "Redbubble / Zazzle (enter margin% below)" },
-        { "value": "custom", "label": "Custom — enter rate below" }
+        {
+          "value": "etsy",
+          "label": "Etsy (~9.5% + $0.45 per order)"
+        },
+        {
+          "value": "shopify-payments",
+          "label": "Shopify Payments Basic (2.9% + $0.30)"
+        },
+        {
+          "value": "amazon-merch",
+          "label": "Merch by Amazon (enter royalty% below)"
+        },
+        {
+          "value": "redbubble",
+          "label": "Redbubble / Zazzle (enter margin% below)"
+        },
+        {
+          "value": "custom",
+          "label": "Custom — enter rate below"
+        }
       ],
       "helpText": "Your selling platform — pre-fills fee rate for common platforms"
     },
@@ -120,9 +135,20 @@
       "label": "Cost Breakdown",
       "type": "table",
       "columns": [
-        { "key": "item", "label": "Cost Item" },
-        { "key": "amount", "label": "Amount", "format": "currency" },
-        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+        {
+          "key": "item",
+          "label": "Cost Item"
+        },
+        {
+          "key": "amount",
+          "label": "Amount",
+          "format": "currency"
+        },
+        {
+          "key": "pctOfSale",
+          "label": "% of Sale",
+          "format": "percentage"
+        }
       ]
     },
     {
@@ -133,7 +159,11 @@
     }
   ],
   "formula": "print-on-demand-profit",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "etsy-fee-calculator",
     "shopify-fee-calculator",
@@ -148,7 +178,11 @@
   "requiresSources": true,
   "formulaCitation": "Printful — Pricing and Profit Calculator (2025); Etsy — Fees & Payments Policy (2025); Shopify — Payments Processing Rates (2026)",
   "articleWordTarget": 1300,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Net Profit = Selling Price − Platform Fee − POD Cost − Shipping − Ad Spend; Profit Margin = Net Profit / Selling Price × 100; Monthly Profit = Net Profit × Monthly Orders",
@@ -158,7 +192,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

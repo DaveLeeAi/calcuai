@@ -279,7 +279,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for roofers (SOC 47-2181). Story and complexity multipliers based on NRCA industry guidelines for roofing labor adjustments.",
   "formulaAuditDate": "2026-03-14",
@@ -290,7 +290,7 @@
   "duplicationRisk": [
     "roofing-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-summer"
 }

@@ -240,7 +240,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Equipment base pricing from HomeAdvisor and Angi 2025-2026 national average surveys for ductless mini-split systems. SEER2 efficiency tier multipliers derived from AHRI (Air-Conditioning, Heating, and Refrigeration Institute) certified performance data. Labor rates calculated at 40% of equipment cost, adjusted for line set complexity and regional wage differences from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC installers (SOC 49-9021). Electrical work pricing from HomeAdvisor and licensed electrician rate surveys. Regional labor multipliers derived from BLS OES regional wage data.",
   "formulaAuditDate": "2026-03-14",
@@ -252,7 +252,7 @@
     "hvac-replacement-cost-calculator",
     "heat-pump-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

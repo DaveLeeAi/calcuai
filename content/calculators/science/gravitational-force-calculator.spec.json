@@ -17,7 +17,7 @@
       "min": 0,
       "step": "any",
       "suffix": "kg",
-      "defaultValue": 5.972e24,
+      "defaultValue": 5.972e+24,
       "helpText": "First mass in kilograms (default is Earth's mass)"
     },
     {
@@ -101,7 +101,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Newton's law of universal gravitation: F = G * m1 * m2 / r^2",
   "formulaAuditDate": "2026-03-14",
@@ -110,7 +110,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 82,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

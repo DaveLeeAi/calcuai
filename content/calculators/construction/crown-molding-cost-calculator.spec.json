@@ -22,11 +22,26 @@
       "required": true,
       "defaultValue": "standard-80ft",
       "options": [
-        { "value": "small-40ft", "label": "Small Room — 40 linear feet (~10×10 ft)" },
-        { "value": "medium-60ft", "label": "Medium Room — 60 linear feet (~12×12 ft)" },
-        { "value": "standard-80ft", "label": "Standard Room — 80 linear feet (~14×14 ft)" },
-        { "value": "large-120ft", "label": "Large Room — 120 linear feet (~16×22 ft)" },
-        { "value": "xlarge-200ft", "label": "Open Floor Plan — 200 linear feet (multiple rooms)" }
+        {
+          "value": "small-40ft",
+          "label": "Small Room — 40 linear feet (~10×10 ft)"
+        },
+        {
+          "value": "medium-60ft",
+          "label": "Medium Room — 60 linear feet (~12×12 ft)"
+        },
+        {
+          "value": "standard-80ft",
+          "label": "Standard Room — 80 linear feet (~14×14 ft)"
+        },
+        {
+          "value": "large-120ft",
+          "label": "Large Room — 120 linear feet (~16×22 ft)"
+        },
+        {
+          "value": "xlarge-200ft",
+          "label": "Open Floor Plan — 200 linear feet (multiple rooms)"
+        }
       ],
       "helpText": "Measure the total perimeter of all walls where crown molding will be installed. Subtract door widths if molding will not cross doorways."
     },
@@ -37,11 +52,26 @@
       "required": true,
       "defaultValue": "mdf-paint-grade",
       "options": [
-        { "value": "mdf-paint-grade", "label": "MDF Paint Grade ($1–$3/ft) — Most popular, smooth finish" },
-        { "value": "pine-finger-joint", "label": "Pine Finger Joint ($2–$5/ft) — Paint-grade natural wood" },
-        { "value": "solid-poplar", "label": "Solid Poplar ($3–$7/ft) — Paint or stain grade" },
-        { "value": "solid-oak", "label": "Solid Oak ($5–$12/ft) — Premium stain-grade hardwood" },
-        { "value": "polyurethane-foam", "label": "Polyurethane Foam ($2–$6/ft) — Lightweight, moisture-resistant" }
+        {
+          "value": "mdf-paint-grade",
+          "label": "MDF Paint Grade ($1–$3/ft) — Most popular, smooth finish"
+        },
+        {
+          "value": "pine-finger-joint",
+          "label": "Pine Finger Joint ($2–$5/ft) — Paint-grade natural wood"
+        },
+        {
+          "value": "solid-poplar",
+          "label": "Solid Poplar ($3–$7/ft) — Paint or stain grade"
+        },
+        {
+          "value": "solid-oak",
+          "label": "Solid Oak ($5–$12/ft) — Premium stain-grade hardwood"
+        },
+        {
+          "value": "polyurethane-foam",
+          "label": "Polyurethane Foam ($2–$6/ft) — Lightweight, moisture-resistant"
+        }
       ],
       "helpText": "MDF is the most popular choice for painted trim due to its smooth surface and lower cost. Solid wood is preferred when staining. Polyurethane foam works well in high-humidity areas."
     },
@@ -52,10 +82,22 @@
       "required": true,
       "defaultValue": "simple-cove",
       "options": [
-        { "value": "simple-cove", "label": "Simple Cove (1.0x) — Single-piece, basic profile" },
-        { "value": "standard-3-piece", "label": "Standard 3-Piece (1.4x) — Crown + bed + cap" },
-        { "value": "elaborate-5-piece", "label": "Elaborate 5-Piece (2.0x) — Built-up multi-piece assembly" },
-        { "value": "custom-built-up", "label": "Custom Built-Up (2.75x) — Architectural crown, high-end homes" }
+        {
+          "value": "simple-cove",
+          "label": "Simple Cove (1.0x) — Single-piece, basic profile"
+        },
+        {
+          "value": "standard-3-piece",
+          "label": "Standard 3-Piece (1.4x) — Crown + bed + cap"
+        },
+        {
+          "value": "elaborate-5-piece",
+          "label": "Elaborate 5-Piece (2.0x) — Built-up multi-piece assembly"
+        },
+        {
+          "value": "custom-built-up",
+          "label": "Custom Built-Up (2.75x) — Architectural crown, high-end homes"
+        }
       ],
       "helpText": "Profile complexity multiplies both material and labor costs. Custom built-up crown molding requires skilled carpentry and significantly more installation time."
     },
@@ -66,10 +108,22 @@
       "required": true,
       "defaultValue": "standard-8ft",
       "options": [
-        { "value": "standard-8ft", "label": "Standard — 8 ft (1.0x labor)" },
-        { "value": "raised-9ft", "label": "Raised — 9 ft (1.1x labor)" },
-        { "value": "tall-10ft", "label": "Tall — 10 ft (1.25x labor)" },
-        { "value": "vaulted-over-10ft", "label": "Vaulted — Over 10 ft (1.5x labor)" }
+        {
+          "value": "standard-8ft",
+          "label": "Standard — 8 ft (1.0x labor)"
+        },
+        {
+          "value": "raised-9ft",
+          "label": "Raised — 9 ft (1.1x labor)"
+        },
+        {
+          "value": "tall-10ft",
+          "label": "Tall — 10 ft (1.25x labor)"
+        },
+        {
+          "value": "vaulted-over-10ft",
+          "label": "Vaulted — Over 10 ft (1.5x labor)"
+        }
       ],
       "helpText": "Higher ceilings require taller scaffolding or ladders, increasing labor time and safety requirements. Vaulted ceilings require custom angle cuts that add significant time."
     },
@@ -80,10 +134,22 @@
       "required": true,
       "defaultValue": "unfinished",
       "options": [
-        { "value": "unfinished", "label": "Unfinished (you will paint or stain)" },
-        { "value": "primer-only", "label": "Primer Only (+$0.50–$1.00/ft)" },
-        { "value": "one-coat", "label": "One Coat Paint (+$1.00–$2.00/ft)" },
-        { "value": "two-coat-premium", "label": "Two-Coat Premium Paint (+$1.50–$3.00/ft)" }
+        {
+          "value": "unfinished",
+          "label": "Unfinished (you will paint or stain)"
+        },
+        {
+          "value": "primer-only",
+          "label": "Primer Only (+$0.50–$1.00/ft)"
+        },
+        {
+          "value": "one-coat",
+          "label": "One Coat Paint (+$1.00–$2.00/ft)"
+        },
+        {
+          "value": "two-coat-premium",
+          "label": "Two-Coat Premium Paint (+$1.50–$3.00/ft)"
+        }
       ],
       "helpText": "If purchasing pre-primed or factory-finished molding, select unfinished. Painter-applied finish costs are per linear foot of installed molding."
     },
@@ -94,13 +160,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs (carpenter wages) for regional pricing differences. Material costs are not adjusted."
     }
@@ -186,7 +273,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material cost per linear foot from HomeAdvisor and Angi 2025-2026 national average surveys for crown molding materials (MDF, pine, poplar, oak, polyurethane). Profile complexity multipliers from NAHB trim installation labor data. Ceiling height multipliers from HomeAdvisor contractor survey data. Base labor rate ($3–$8/ft) from BLS Occupational Employment and Wage Statistics for carpenters (SOC 47-2031). Paint/finish add-on costs from HomeAdvisor painting cost data. Regional multipliers applied to labor portion only.",
   "formulaAuditDate": "2026-03-14",
@@ -197,7 +284,7 @@
   "duplicationRisk": [
     "painting-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "year-round"
 }

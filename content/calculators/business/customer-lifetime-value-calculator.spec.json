@@ -15,8 +15,14 @@
       "required": true,
       "defaultValue": "simple",
       "options": [
-        { "value": "simple", "label": "Simple CLV" },
-        { "value": "subscription", "label": "Subscription CLV" }
+        {
+          "value": "simple",
+          "label": "Simple CLV"
+        },
+        {
+          "value": "subscription",
+          "label": "Subscription CLV"
+        }
       ],
       "helpText": "Choose simple for transaction-based or subscription for recurring revenue"
     },
@@ -31,7 +37,10 @@
       "step": 1,
       "prefix": "$",
       "helpText": "Average revenue per transaction",
-      "visibleWhen": { "field": "calculationMode", "value": "simple" }
+      "visibleWhen": {
+        "field": "calculationMode",
+        "value": "simple"
+      }
     },
     {
       "id": "purchaseFrequency",
@@ -43,7 +52,10 @@
       "max": 10000,
       "step": 1,
       "helpText": "Number of purchases per year",
-      "visibleWhen": { "field": "calculationMode", "value": "simple" }
+      "visibleWhen": {
+        "field": "calculationMode",
+        "value": "simple"
+      }
     },
     {
       "id": "customerLifespan",
@@ -56,7 +68,10 @@
       "step": 0.5,
       "suffix": "years",
       "helpText": "Average customer relationship in years",
-      "visibleWhen": { "field": "calculationMode", "value": "simple" }
+      "visibleWhen": {
+        "field": "calculationMode",
+        "value": "simple"
+      }
     },
     {
       "id": "monthlyRevenue",
@@ -69,7 +84,10 @@
       "step": 1,
       "prefix": "$",
       "helpText": "Monthly revenue per customer (ARPU)",
-      "visibleWhen": { "field": "calculationMode", "value": "subscription" }
+      "visibleWhen": {
+        "field": "calculationMode",
+        "value": "subscription"
+      }
     },
     {
       "id": "grossMarginPercent",
@@ -82,7 +100,10 @@
       "step": 1,
       "suffix": "%",
       "helpText": "Gross margin percentage",
-      "visibleWhen": { "field": "calculationMode", "value": "subscription" }
+      "visibleWhen": {
+        "field": "calculationMode",
+        "value": "subscription"
+      }
     },
     {
       "id": "monthlyChurnRate",
@@ -95,7 +116,10 @@
       "step": 0.1,
       "suffix": "%",
       "helpText": "Monthly customer churn rate",
-      "visibleWhen": { "field": "calculationMode", "value": "subscription" }
+      "visibleWhen": {
+        "field": "calculationMode",
+        "value": "subscription"
+      }
     },
     {
       "id": "acquisitionCost",
@@ -160,7 +184,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Simple CLV = Avg Purchase Value x Purchase Frequency x Customer Lifespan; Subscription CLV = (ARPU x Gross Margin%) / Churn Rate",
   "formulaCitation": "Harvard Business Review — \"The Value of Keeping the Right Customers\" (2014)",
@@ -172,7 +196,7 @@
   "duplicationRisk": [
     "customer-acquisition-cost-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 87,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "articleWordTarget": 1400,

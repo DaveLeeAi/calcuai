@@ -109,7 +109,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "National Sleep Foundation. Sleep Cycle Stages and Duration. Walker, M. Why We Sleep: Unlocking the Power of Sleep and Dreams. Scribner, 2017. Carskadon MA, Dement WC. Normal Human Sleep: An Overview. Principles and Practice of Sleep Medicine, 6th ed., 2017.",
   "formulaAuditDate": "2026-03-14",
@@ -118,7 +118,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 96,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "evergreen",
   "glossaryTerms": [],

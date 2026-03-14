@@ -270,7 +270,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Per-unit repair cost ranges from HomeAdvisor and Angi 2025-2026 national averages for eight common foundation repair methods. Foundation type, severity, and access multipliers based on contractor industry surveys and Foundation Repair Association (FRA) guidelines. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for cement masons and concrete finishers (SOC 47-2051) and construction laborers (SOC 47-2061). Material/labor split of 40/60 based on industry standard for foundation repair projects.",
   "formulaAuditDate": "2026-03-14",
@@ -279,7 +279,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

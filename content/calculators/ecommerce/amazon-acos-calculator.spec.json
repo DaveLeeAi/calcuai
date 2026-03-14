@@ -88,10 +88,22 @@
       "label": "ACoS Health Check",
       "type": "table",
       "columns": [
-        { "key": "metric", "label": "Metric" },
-        { "key": "value", "label": "Your Value" },
-        { "key": "benchmark", "label": "Benchmark" },
-        { "key": "status", "label": "Status" }
+        {
+          "key": "metric",
+          "label": "Metric"
+        },
+        {
+          "key": "value",
+          "label": "Your Value"
+        },
+        {
+          "key": "benchmark",
+          "label": "Benchmark"
+        },
+        {
+          "key": "status",
+          "label": "Status"
+        }
       ]
     },
     {
@@ -102,7 +114,11 @@
     }
   ],
   "formula": "amazon-acos",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-fba-profit-calculator",
     "return-on-ad-spend-calculator",
@@ -117,7 +133,11 @@
   "requiresSources": true,
   "formulaCitation": "Amazon Advertising — Campaign performance metrics guide (2025); Canopy Management — Amazon ACoS Benchmarks by Category (2025)",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "ACoS = Ad Spend / Ad-Attributed Sales × 100; TACoS = Ad Spend / Total Store Sales × 100; Break-Even ACoS = Gross Margin%; ROAS = Ad-Attributed Sales / Ad Spend",
@@ -126,8 +146,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["return-on-ad-spend-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "return-on-ad-spend-calculator"
+  ],
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

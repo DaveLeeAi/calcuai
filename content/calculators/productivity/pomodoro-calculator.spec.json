@@ -5,7 +5,12 @@
   "category": "productivity",
   "subcategory": "time-management",
   "primaryKeyword": "pomodoro calculator",
-  "secondaryKeywords": ["pomodoro timer calculator", "pomodoro technique schedule", "how many pomodoros per day", "pomodoro sessions planner"],
+  "secondaryKeywords": [
+    "pomodoro timer calculator",
+    "pomodoro technique schedule",
+    "how many pomodoros per day",
+    "pomodoro sessions planner"
+  ],
   "metaTitle": "Pomodoro Calculator — Plan Your Pomodoro Sessions & Schedule | CalcAI",
   "metaDescription": "Calculate total Pomodoros, breaks, and end time for any work session. Generate a minute-by-minute Pomodoro schedule with custom work block and break lengths.",
   "inputs": [
@@ -99,7 +104,13 @@
       "id": "sessionSchedule",
       "label": "Session Schedule",
       "type": "table",
-      "columns": ["block", "type", "duration", "startTime", "endTime"]
+      "columns": [
+        "block",
+        "type",
+        "duration",
+        "startTime",
+        "endTime"
+      ]
     },
     {
       "id": "summary",
@@ -108,15 +119,26 @@
     }
   ],
   "formula": "pomodoro",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["work-break-ratio-calculator", "study-time-calculator", "reading-time-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "work-break-ratio-calculator",
+    "study-time-calculator",
+    "reading-time-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Cirillo, Francesco — The Pomodoro Technique (2006); DeskTime Productivity Study (2014)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Pomodoros = floor(totalWorkMinutes / pomodoroMinutes); Long breaks = floor(Pomodoros / sessionsBeforeLongBreak); Short breaks = Pomodoros - Long breaks - 1; Total time = Work blocks + short breaks + long breaks",
@@ -126,7 +148,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 71,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

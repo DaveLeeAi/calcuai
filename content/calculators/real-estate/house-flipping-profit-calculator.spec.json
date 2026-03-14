@@ -123,7 +123,10 @@
     }
   ],
   "formula": "house-flipping-profit",
-  "features": ["compare-scenarios", "shareable-url"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url"
+  ],
   "relatedCalculators": [
     "property-appreciation-calculator",
     "rental-yield-calculator",
@@ -136,7 +139,11 @@
   "requiresSources": false,
   "formulaCitation": "BiggerPockets — House Flipping Guide & 70% Rule (2025); National Association of Realtors — Investment Property Returns (2025)",
   "articleWordTarget": 1200,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Net Profit = ARV − Purchase Price − Rehab − Holding Costs − Buying Closing Costs − Selling Closing Costs; ROI = Net Profit / Total Investment × 100; Max Allowable Offer = ARV × 0.70 − Rehab",
@@ -146,7 +153,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 75,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

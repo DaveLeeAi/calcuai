@@ -39,25 +39,82 @@
       "required": true,
       "defaultValue": "home-garden",
       "options": [
-        { "value": "automotive", "label": "Automotive (12%)" },
-        { "value": "baby", "label": "Baby Products (8%)" },
-        { "value": "beauty", "label": "Beauty & Personal Care (8%)" },
-        { "value": "books", "label": "Books (15%)" },
-        { "value": "camera", "label": "Camera & Photo (8%)" },
-        { "value": "cell-phones", "label": "Cell Phones (8%)" },
-        { "value": "clothing", "label": "Clothing & Accessories (17%)" },
-        { "value": "electronics", "label": "Consumer Electronics (8%)" },
-        { "value": "grocery", "label": "Grocery & Food (8%)" },
-        { "value": "health", "label": "Health & Household (8%)" },
-        { "value": "home-garden", "label": "Home & Garden (15%)" },
-        { "value": "kitchen", "label": "Kitchen (15%)" },
-        { "value": "office", "label": "Office Products (15%)" },
-        { "value": "pet", "label": "Pet Supplies (15%)" },
-        { "value": "shoes", "label": "Shoes & Handbags (17%)" },
-        { "value": "sports", "label": "Sports & Outdoors (15%)" },
-        { "value": "tools", "label": "Tools & Home Improvement (15%)" },
-        { "value": "toys", "label": "Toys & Games (15%)" },
-        { "value": "video-games", "label": "Video Games (15%)" }
+        {
+          "value": "automotive",
+          "label": "Automotive (12%)"
+        },
+        {
+          "value": "baby",
+          "label": "Baby Products (8%)"
+        },
+        {
+          "value": "beauty",
+          "label": "Beauty & Personal Care (8%)"
+        },
+        {
+          "value": "books",
+          "label": "Books (15%)"
+        },
+        {
+          "value": "camera",
+          "label": "Camera & Photo (8%)"
+        },
+        {
+          "value": "cell-phones",
+          "label": "Cell Phones (8%)"
+        },
+        {
+          "value": "clothing",
+          "label": "Clothing & Accessories (17%)"
+        },
+        {
+          "value": "electronics",
+          "label": "Consumer Electronics (8%)"
+        },
+        {
+          "value": "grocery",
+          "label": "Grocery & Food (8%)"
+        },
+        {
+          "value": "health",
+          "label": "Health & Household (8%)"
+        },
+        {
+          "value": "home-garden",
+          "label": "Home & Garden (15%)"
+        },
+        {
+          "value": "kitchen",
+          "label": "Kitchen (15%)"
+        },
+        {
+          "value": "office",
+          "label": "Office Products (15%)"
+        },
+        {
+          "value": "pet",
+          "label": "Pet Supplies (15%)"
+        },
+        {
+          "value": "shoes",
+          "label": "Shoes & Handbags (17%)"
+        },
+        {
+          "value": "sports",
+          "label": "Sports & Outdoors (15%)"
+        },
+        {
+          "value": "tools",
+          "label": "Tools & Home Improvement (15%)"
+        },
+        {
+          "value": "toys",
+          "label": "Toys & Games (15%)"
+        },
+        {
+          "value": "video-games",
+          "label": "Video Games (15%)"
+        }
       ],
       "helpText": "Your product's Amazon category — determines the referral fee percentage"
     },
@@ -68,20 +125,62 @@
       "required": true,
       "defaultValue": "large-standard-8oz",
       "options": [
-        { "value": "small-standard-4oz", "label": "Small Standard ≤4 oz" },
-        { "value": "small-standard-8oz", "label": "Small Standard >4–8 oz" },
-        { "value": "small-standard-12oz", "label": "Small Standard >8–12 oz" },
-        { "value": "small-standard-16oz", "label": "Small Standard >12–16 oz" },
-        { "value": "large-standard-4oz", "label": "Large Standard ≤4 oz" },
-        { "value": "large-standard-8oz", "label": "Large Standard >4–8 oz" },
-        { "value": "large-standard-12oz", "label": "Large Standard >8–12 oz" },
-        { "value": "large-standard-16oz", "label": "Large Standard >12–16 oz" },
-        { "value": "large-standard-1.5lb", "label": "Large Standard >1–1.5 lb" },
-        { "value": "large-standard-2lb", "label": "Large Standard >1.5–2 lb" },
-        { "value": "large-standard-2.5lb", "label": "Large Standard >2–2.5 lb" },
-        { "value": "large-standard-3lb", "label": "Large Standard >2.5–3 lb" },
-        { "value": "small-oversize", "label": "Small Oversize" },
-        { "value": "medium-oversize", "label": "Medium Oversize" }
+        {
+          "value": "small-standard-4oz",
+          "label": "Small Standard ≤4 oz"
+        },
+        {
+          "value": "small-standard-8oz",
+          "label": "Small Standard >4–8 oz"
+        },
+        {
+          "value": "small-standard-12oz",
+          "label": "Small Standard >8–12 oz"
+        },
+        {
+          "value": "small-standard-16oz",
+          "label": "Small Standard >12–16 oz"
+        },
+        {
+          "value": "large-standard-4oz",
+          "label": "Large Standard ≤4 oz"
+        },
+        {
+          "value": "large-standard-8oz",
+          "label": "Large Standard >4–8 oz"
+        },
+        {
+          "value": "large-standard-12oz",
+          "label": "Large Standard >8–12 oz"
+        },
+        {
+          "value": "large-standard-16oz",
+          "label": "Large Standard >12–16 oz"
+        },
+        {
+          "value": "large-standard-1.5lb",
+          "label": "Large Standard >1–1.5 lb"
+        },
+        {
+          "value": "large-standard-2lb",
+          "label": "Large Standard >1.5–2 lb"
+        },
+        {
+          "value": "large-standard-2.5lb",
+          "label": "Large Standard >2–2.5 lb"
+        },
+        {
+          "value": "large-standard-3lb",
+          "label": "Large Standard >2.5–3 lb"
+        },
+        {
+          "value": "small-oversize",
+          "label": "Small Oversize"
+        },
+        {
+          "value": "medium-oversize",
+          "label": "Medium Oversize"
+        }
       ],
       "helpText": "Your product's FBA size tier — determines the fulfillment fee"
     },
@@ -142,9 +241,20 @@
       "label": "Fee Breakdown",
       "type": "table",
       "columns": [
-        { "key": "item", "label": "Item" },
-        { "key": "amount", "label": "Amount", "format": "currency" },
-        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+        {
+          "key": "item",
+          "label": "Item"
+        },
+        {
+          "key": "amount",
+          "label": "Amount",
+          "format": "currency"
+        },
+        {
+          "key": "pctOfSale",
+          "label": "% of Sale",
+          "format": "percentage"
+        }
       ]
     },
     {
@@ -155,7 +265,11 @@
     }
   ],
   "formula": "amazon-fba-profit",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-acos-calculator",
     "landed-cost-calculator",
@@ -170,7 +284,11 @@
   "requiresSources": true,
   "formulaCitation": "Amazon Seller Central — 2026 FBA fulfillment fee schedule (effective January 15, 2026); Amazon — Referral fee schedule by category (2026)",
   "articleWordTarget": 1600,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Net Profit = Selling Price − Referral Fee − FBA Fee − Product Cost − Inbound Shipping − PPC Cost; ROI = Net Profit / Total Costs × 100; Break-Even Price = (Total Costs) / (1 − Referral Fee%)",
@@ -180,7 +298,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 91,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "Q4"
 }

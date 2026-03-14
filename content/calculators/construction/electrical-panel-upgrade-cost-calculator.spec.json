@@ -264,7 +264,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Panel and labor cost data from HomeAdvisor and Angi 2025-2026 national averages for electrical panel upgrades. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians (SOC 47-2111). Brand tier multipliers based on manufacturer MSRP comparisons. Circuit, permit, and surge protector costs based on NECA unit pricing guidelines.",
   "formulaAuditDate": "2026-03-14",
@@ -276,7 +276,7 @@
     "wire-size-calculator",
     "renovation-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

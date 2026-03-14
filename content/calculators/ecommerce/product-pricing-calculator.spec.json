@@ -108,11 +108,29 @@
       "label": "Volume Pricing Tiers",
       "type": "table",
       "columns": [
-        { "key": "tier", "label": "Tier" },
-        { "key": "minQty", "label": "Min Qty" },
-        { "key": "price", "label": "Price", "format": "currency" },
-        { "key": "margin", "label": "Margin %", "format": "percentage" },
-        { "key": "profitPerUnit", "label": "Profit/Unit", "format": "currency" }
+        {
+          "key": "tier",
+          "label": "Tier"
+        },
+        {
+          "key": "minQty",
+          "label": "Min Qty"
+        },
+        {
+          "key": "price",
+          "label": "Price",
+          "format": "currency"
+        },
+        {
+          "key": "margin",
+          "label": "Margin %",
+          "format": "percentage"
+        },
+        {
+          "key": "profitPerUnit",
+          "label": "Profit/Unit",
+          "format": "currency"
+        }
       ]
     },
     {
@@ -142,7 +160,11 @@
   "requiresSources": true,
   "formulaCitation": "Corporate Finance Institute — Gross Margin and Cost-Plus Pricing (2024); Shopify — Ecommerce Pricing Strategies Guide (2025)",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Base Price = Product Cost / (1 − Target Margin%/100); Tier Price = Base Price × (1 − Discount%/100); Margin% = (Price − COGS − Overhead) / Price × 100",
@@ -151,9 +173,13 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["markup-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "markup-calculator"
+  ],
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
-  "glossaryTerms": ["profit-margin"]
+  "glossaryTerms": [
+    "profit-margin"
+  ]
 }

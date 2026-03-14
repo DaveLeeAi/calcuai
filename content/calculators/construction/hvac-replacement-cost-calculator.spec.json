@@ -280,7 +280,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Equipment base costs from HomeAdvisor and Angi 2025-2026 national HVAC replacement surveys. Efficiency multipliers derived from ENERGY STAR SEER rating cost differentials. Home size multipliers based on ACCA Manual J load calculations and industry-standard tonnage-to-square-footage ratios. Ductwork costs from HomeAdvisor ductwork installation and repair data. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC mechanics and installers (SOC 49-9021). Thermostat costs based on manufacturer MSRP plus professional installation labor.",
   "formulaAuditDate": "2026-03-14",
@@ -291,7 +291,7 @@
   "duplicationRisk": [
     "hvac-size-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-fall"
 }

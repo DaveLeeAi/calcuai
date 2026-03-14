@@ -149,7 +149,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Cooper KH. A Means of Assessing Maximal Oxygen Intake. JAMA. 1968;203(3):201-204. Uth N, Sorensen H, Overgaard K, Pedersen PK. Estimation of VO2max from the ratio between HRmax and HRrest. Eur J Appl Physiol. 2004;91(1):111-115.",
   "formulaAuditDate": "2026-03-14",
@@ -161,7 +161,7 @@
     "heart-rate-zone-calculator",
     "pace-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "evergreen",
   "glossaryTerms": [],

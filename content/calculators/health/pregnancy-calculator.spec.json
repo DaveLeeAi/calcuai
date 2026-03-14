@@ -5,7 +5,13 @@
   "category": "health",
   "subcategory": "pregnancy",
   "primaryKeyword": "pregnancy calculator",
-  "secondaryKeywords": ["pregnancy week calculator", "what week am I pregnant", "how many weeks pregnant am I", "pregnancy week by week", "pregnancy week tracker"],
+  "secondaryKeywords": [
+    "pregnancy week calculator",
+    "what week am I pregnant",
+    "how many weeks pregnant am I",
+    "pregnancy week by week",
+    "pregnancy week tracker"
+  ],
   "metaTitle": "Pregnancy Calculator — What Week Am I? Week-by-Week Tracker",
   "metaDescription": "Find out what week of pregnancy you're in. Enter your last period date to see your current week, trimester, baby's size, and developmental milestones. ACOG-based.",
   "inputs": [

@@ -70,10 +70,25 @@
       "label": "Year-by-Year Cash Flow",
       "type": "table",
       "columns": [
-        { "key": "year", "label": "Year" },
-        { "key": "cashFlow", "label": "Cash Flow", "format": "currency" },
-        { "key": "discountedCashFlow", "label": "Discounted Cash Flow", "format": "currency" },
-        { "key": "cumulative", "label": "Cumulative", "format": "currency" }
+        {
+          "key": "year",
+          "label": "Year"
+        },
+        {
+          "key": "cashFlow",
+          "label": "Cash Flow",
+          "format": "currency"
+        },
+        {
+          "key": "discountedCashFlow",
+          "label": "Discounted Cash Flow",
+          "format": "currency"
+        },
+        {
+          "key": "cumulative",
+          "label": "Cumulative",
+          "format": "currency"
+        }
       ]
     },
     {
@@ -99,7 +114,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Simple Payback = Initial Investment / Annual Cash Flow; Discounted Payback uses present value of cash flows at the given discount rate",
   "formulaCitation": "Brealey, Myers & Allen, Principles of Corporate Finance (13th ed., 2020)",
@@ -112,7 +127,7 @@
     "roi-calculator",
     "break-even-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 95,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "articleWordTarget": 1400,

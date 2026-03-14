@@ -171,7 +171,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "FV_cost = Σ annualCost × (1+i)^(yearsUntil+k); PMT = remaining × r_m / ((1+r_m)^n - 1); College Board Trends in College Pricing (2023), FINRA 529 Plan guidance",
   "formulaAuditDate": "2026-03-14",
@@ -182,7 +182,7 @@
   "duplicationRisk": [
     "savings-goal-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "glossaryTerms": [

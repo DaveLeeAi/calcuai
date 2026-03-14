@@ -292,7 +292,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Labor and material cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for painters, construction, and maintenance (SOC 47-2141). Prep cost ranges based on Painting Contractors Association (PCA) surface preparation guidelines. Paint coverage at 350 sq ft per gallon per ASTM D2369.",
   "formulaAuditDate": "2026-03-14",
@@ -304,7 +304,7 @@
     "paint-calculator",
     "renovation-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-fall"
 }

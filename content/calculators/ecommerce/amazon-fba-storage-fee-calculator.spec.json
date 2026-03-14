@@ -37,8 +37,14 @@
       "required": true,
       "defaultValue": "standard",
       "options": [
-        { "value": "standard", "label": "Standard Size" },
-        { "value": "oversize", "label": "Oversize" }
+        {
+          "value": "standard",
+          "label": "Standard Size"
+        },
+        {
+          "value": "oversize",
+          "label": "Oversize"
+        }
       ],
       "helpText": "Standard size: fits within 18×14×8 inches and ≤20 lbs. Oversize: exceeds any of those dimensions."
     },
@@ -49,8 +55,14 @@
       "required": true,
       "defaultValue": "regular",
       "options": [
-        { "value": "regular", "label": "Jan–Sep (Regular: $0.78/cuft standard)" },
-        { "value": "peak", "label": "Oct–Dec (Peak Q4: $2.40/cuft standard)" }
+        {
+          "value": "regular",
+          "label": "Jan–Sep (Regular: $0.78/cuft standard)"
+        },
+        {
+          "value": "peak",
+          "label": "Oct–Dec (Peak Q4: $2.40/cuft standard)"
+        }
       ],
       "helpText": "Amazon charges higher rates in Q4 (October–December)"
     },
@@ -119,7 +131,11 @@
     }
   ],
   "formula": "amazon-fba-storage-fee",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-fba-profit-calculator",
     "fba-vs-fbm-calculator",
@@ -134,8 +150,12 @@
   "requiresSources": true,
   "formulaCitation": "Amazon Seller Central — FBA storage fees (2026); Amazon — Aged inventory surcharge rates (2026)",
   "articleWordTarget": 1200,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "published",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Monthly Storage = Cubic Feet × Units × Monthly Rate; Aged Surcharge = Cubic Feet × Units × Surcharge Rate (if days > 271); Annual = Monthly × 9 regular + Monthly Peak Rate × 3 peak months",
   "formulaAuditDate": "2026-03-14",
@@ -144,7 +164,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 71,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "Q4"
 }

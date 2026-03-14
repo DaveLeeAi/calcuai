@@ -123,7 +123,11 @@
     }
   ],
   "formula": "reorder-point",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-fba-storage-fee-calculator",
     "amazon-fba-profit-calculator",
@@ -138,8 +142,12 @@
   "requiresSources": true,
   "formulaCitation": "CSCMP — Supply Chain Management Terms and Glossary (2023); Investopedia — Reorder Point Formula (2024)",
   "articleWordTarget": 1200,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "published",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Reorder Point = (Average Daily Sales × Lead Time) + Safety Stock; Safety Stock = Average Daily Sales × Safety Stock Days; Days of Supply = Current Inventory / Average Daily Sales; Reorder Qty = Average Daily Sales × Target Stock Days",
   "formulaAuditDate": "2026-03-14",
@@ -148,7 +156,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 72,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

@@ -144,7 +144,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "OCF = Net Income + Depreciation - Change in Working Capital; FCF = OCF - CapEx; CF Margin = OCF / Revenue x 100; Net Cash = Beginning Cash + OCF - CapEx + Financing",
   "formulaCitation": "CFA Institute — \"Financial Reporting and Analysis\" (CFA Program Curriculum)",
@@ -157,7 +157,7 @@
     "profit-calculator",
     "net-income-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "articleWordTarget": 1400,

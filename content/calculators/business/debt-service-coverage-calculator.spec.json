@@ -38,8 +38,8 @@
       "type": "number",
       "required": true,
       "defaultValue": 1.25,
-      "min": 1.0,
-      "max": 3.0,
+      "min": 1,
+      "max": 3,
       "step": 0.05,
       "helpText": "Minimum DSCR required by lender (typical: 1.20-1.50)"
     }
@@ -94,7 +94,7 @@
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "DSCR = NOI / Total Debt Service; Excess CF = NOI - Debt Service; Max Payment = NOI / Required DSCR",
   "formulaCitation": "Federal Reserve — \"Commercial Real Estate Lending Standards\" (SR 15-17); FDIC risk management guidance",
@@ -107,7 +107,7 @@
     "loan-calculator",
     "rental-property-calculator"
   ],
-  "qualityScore": 0,
+  "qualityScore": 88,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null,
   "articleWordTarget": 1400,

@@ -142,7 +142,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "DuBois: BSA = 0.007184 × W^0.425 × H^0.725; Mosteller: BSA = √(W×H/3600); Haycock: BSA = 0.024265 × W^0.5378 × H^0.3964; Boyd: BSA = 0.0003207 × W^(0.7285 − 0.0188×log10(W)) × H^0.3",
   "formulaAuditDate": "2026-03-14",
@@ -153,7 +153,7 @@
   "duplicationRisk": [
     "bmi-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "evergreen",
   "glossaryTerms": [

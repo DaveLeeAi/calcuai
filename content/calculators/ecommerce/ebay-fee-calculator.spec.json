@@ -39,15 +39,42 @@
       "required": true,
       "defaultValue": "most-categories",
       "options": [
-        { "value": "most-categories", "label": "Most Categories (13.25%)" },
-        { "value": "electronics", "label": "Consumer Electronics / Cameras (8.7%)" },
-        { "value": "fashion-under-100", "label": "Clothing & Shoes under $100 (15%)" },
-        { "value": "fashion-over-100", "label": "Clothing & Shoes $100+ (9%)" },
-        { "value": "media", "label": "Books / DVDs / Music / Games (14.35%)" },
-        { "value": "coins-stamps", "label": "Coins & Paper Money / Stamps (12.35%)" },
-        { "value": "motors-parts", "label": "Motors Parts & Accessories (11.5%)" },
-        { "value": "jewelry-under-5k", "label": "Jewelry & Watches under $5,000 (15%)" },
-        { "value": "jewelry-over-5k", "label": "Jewelry & Watches $5,000+ (9%)" }
+        {
+          "value": "most-categories",
+          "label": "Most Categories (13.25%)"
+        },
+        {
+          "value": "electronics",
+          "label": "Consumer Electronics / Cameras (8.7%)"
+        },
+        {
+          "value": "fashion-under-100",
+          "label": "Clothing & Shoes under $100 (15%)"
+        },
+        {
+          "value": "fashion-over-100",
+          "label": "Clothing & Shoes $100+ (9%)"
+        },
+        {
+          "value": "media",
+          "label": "Books / DVDs / Music / Games (14.35%)"
+        },
+        {
+          "value": "coins-stamps",
+          "label": "Coins & Paper Money / Stamps (12.35%)"
+        },
+        {
+          "value": "motors-parts",
+          "label": "Motors Parts & Accessories (11.5%)"
+        },
+        {
+          "value": "jewelry-under-5k",
+          "label": "Jewelry & Watches under $5,000 (15%)"
+        },
+        {
+          "value": "jewelry-over-5k",
+          "label": "Jewelry & Watches $5,000+ (9%)"
+        }
       ],
       "helpText": "Your eBay listing category — determines the final value fee percentage"
     },
@@ -124,9 +151,20 @@
       "label": "Fee Breakdown",
       "type": "table",
       "columns": [
-        { "key": "item", "label": "Item" },
-        { "key": "amount", "label": "Amount", "format": "currency" },
-        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+        {
+          "key": "item",
+          "label": "Item"
+        },
+        {
+          "key": "amount",
+          "label": "Amount",
+          "format": "currency"
+        },
+        {
+          "key": "pctOfSale",
+          "label": "% of Sale",
+          "format": "percentage"
+        }
       ]
     },
     {
@@ -137,7 +175,11 @@
     }
   ],
   "formula": "ebay-fee",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "etsy-fee-calculator",
     "shopify-fee-calculator",
@@ -152,7 +194,11 @@
   "requiresSources": true,
   "formulaCitation": "eBay — Selling fees for private sellers (2025); eBay — Managed Payments processing rates (2025)",
   "articleWordTarget": 1300,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Net Profit = Selling Price − Final Value Fee − Payment Processing Fee − Promoted Listings Fee − Actual Shipping Cost − COGS; Final Value Fee = Buyer Total × Category Rate (tiered on threshold)",
@@ -162,7 +208,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

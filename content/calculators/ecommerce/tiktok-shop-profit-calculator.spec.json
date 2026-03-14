@@ -39,16 +39,46 @@
       "required": true,
       "defaultValue": "beauty",
       "options": [
-        { "value": "beauty", "label": "Beauty & Personal Care (8%)" },
-        { "value": "electronics", "label": "Electronics (5%)" },
-        { "value": "fashion", "label": "Fashion & Apparel (8%)" },
-        { "value": "health", "label": "Health & Wellness (8%)" },
-        { "value": "home", "label": "Home & Garden (8%)" },
-        { "value": "food", "label": "Food & Beverage (8%)" },
-        { "value": "sports", "label": "Sports & Outdoors (8%)" },
-        { "value": "toys", "label": "Toys & Hobbies (8%)" },
-        { "value": "pets", "label": "Pet Supplies (8%)" },
-        { "value": "other", "label": "Other (8%)" }
+        {
+          "value": "beauty",
+          "label": "Beauty & Personal Care (8%)"
+        },
+        {
+          "value": "electronics",
+          "label": "Electronics (5%)"
+        },
+        {
+          "value": "fashion",
+          "label": "Fashion & Apparel (8%)"
+        },
+        {
+          "value": "health",
+          "label": "Health & Wellness (8%)"
+        },
+        {
+          "value": "home",
+          "label": "Home & Garden (8%)"
+        },
+        {
+          "value": "food",
+          "label": "Food & Beverage (8%)"
+        },
+        {
+          "value": "sports",
+          "label": "Sports & Outdoors (8%)"
+        },
+        {
+          "value": "toys",
+          "label": "Toys & Hobbies (8%)"
+        },
+        {
+          "value": "pets",
+          "label": "Pet Supplies (8%)"
+        },
+        {
+          "value": "other",
+          "label": "Other (8%)"
+        }
       ],
       "helpText": "TikTok Shop commission rate varies by product category"
     },
@@ -113,9 +143,20 @@
       "label": "Fee Breakdown",
       "type": "table",
       "columns": [
-        { "key": "item", "label": "Fee" },
-        { "key": "amount", "label": "Amount", "format": "currency" },
-        { "key": "pctOfSale", "label": "% of Sale", "format": "percentage" }
+        {
+          "key": "item",
+          "label": "Fee"
+        },
+        {
+          "key": "amount",
+          "label": "Amount",
+          "format": "currency"
+        },
+        {
+          "key": "pctOfSale",
+          "label": "% of Sale",
+          "format": "percentage"
+        }
       ]
     },
     {
@@ -126,7 +167,11 @@
     }
   ],
   "formula": "tiktok-shop-profit",
-  "features": ["compare-scenarios", "shareable-url", "print-results"],
+  "features": [
+    "compare-scenarios",
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "amazon-fba-profit-calculator",
     "shopify-fee-calculator",
@@ -141,7 +186,11 @@
   "requiresSources": true,
   "formulaCitation": "TikTok Shop — US Seller Fee Policy (2025); TikTok Shop — Commission Rate Schedule by Category (2025)",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Net Profit = Selling Price − Platform Commission − Affiliate Commission − Small Order Fee − Transaction Fee − Shipping Cost − Product Cost; Small Order Fee = $2 if Selling Price < $10",
@@ -151,7 +200,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "Q4"
 }

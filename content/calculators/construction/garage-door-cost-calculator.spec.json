@@ -266,7 +266,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Door base pricing from HomeAdvisor and Angi 2025-2026 national average surveys. Material multipliers derived from International Door Association (IDA) wholesale-to-retail pricing data. Insulation cost premiums from IDA R-value performance guides. Labor rates from Bureau of Labor Statistics Occupational Employment and Wage Statistics for door installers (SOC 47-2031). Regional labor multipliers derived from BLS OES regional wage data. Opener pricing from HomeAdvisor and major manufacturer MSRP data.",
   "formulaAuditDate": "2026-03-14",
@@ -278,7 +278,7 @@
     "door-replacement-cost-calculator",
     "renovation-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

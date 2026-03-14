@@ -304,7 +304,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Per-window cost data from HomeAdvisor and Angi 2025-2026 national averages, split into material and labor components. Frame material and glass type multipliers derived from manufacturer pricing surveys (Andersen, Pella, Marvin, Milgard). Regional labor multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for glaziers (SOC 47-2121). Energy savings estimates from ENERGY STAR Residential Windows Selection Guide and DOE energy performance ratings.",
   "formulaAuditDate": "2026-03-14",
@@ -313,7 +313,7 @@
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring-fall"
 }

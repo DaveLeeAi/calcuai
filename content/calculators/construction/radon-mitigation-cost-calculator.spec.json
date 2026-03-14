@@ -22,11 +22,26 @@
       "required": true,
       "defaultValue": "slab-on-grade",
       "options": [
-        { "value": "slab-on-grade", "label": "Slab-on-Grade ($800–$1,500)" },
-        { "value": "basement-unfinished", "label": "Unfinished Basement ($900–$1,800)" },
-        { "value": "basement-finished", "label": "Finished Basement ($1,200–$2,500)" },
-        { "value": "crawl-space", "label": "Crawl Space ($1,000–$2,000)" },
-        { "value": "mixed-foundation", "label": "Mixed Foundation ($1,500–$3,000)" }
+        {
+          "value": "slab-on-grade",
+          "label": "Slab-on-Grade ($800–$1,500)"
+        },
+        {
+          "value": "basement-unfinished",
+          "label": "Unfinished Basement ($900–$1,800)"
+        },
+        {
+          "value": "basement-finished",
+          "label": "Finished Basement ($1,200–$2,500)"
+        },
+        {
+          "value": "crawl-space",
+          "label": "Crawl Space ($1,000–$2,000)"
+        },
+        {
+          "value": "mixed-foundation",
+          "label": "Mixed Foundation ($1,500–$3,000)"
+        }
       ],
       "helpText": "Foundation type is the primary cost driver. Finished basements cost more due to routing pipes through finished walls and ceilings."
     },
@@ -37,11 +52,26 @@
       "required": true,
       "defaultValue": "sub-slab-depressurization",
       "options": [
-        { "value": "sub-slab-depressurization", "label": "Sub-Slab Depressurization (SSD) — Most common (1.0x)" },
-        { "value": "sub-membrane-depressurization", "label": "Sub-Membrane Depressurization (SMD) — Crawl spaces (1.1x)" },
-        { "value": "drain-tile-suction", "label": "Drain Tile Suction — Existing drain tile (1.25x)" },
-        { "value": "block-wall-suction", "label": "Block Wall Suction — CMU foundations (1.15x)" },
-        { "value": "heat-recovery-ventilator", "label": "Heat Recovery Ventilator (HRV) — Tight houses (1.75x)" }
+        {
+          "value": "sub-slab-depressurization",
+          "label": "Sub-Slab Depressurization (SSD) — Most common (1.0x)"
+        },
+        {
+          "value": "sub-membrane-depressurization",
+          "label": "Sub-Membrane Depressurization (SMD) — Crawl spaces (1.1x)"
+        },
+        {
+          "value": "drain-tile-suction",
+          "label": "Drain Tile Suction — Existing drain tile (1.25x)"
+        },
+        {
+          "value": "block-wall-suction",
+          "label": "Block Wall Suction — CMU foundations (1.15x)"
+        },
+        {
+          "value": "heat-recovery-ventilator",
+          "label": "Heat Recovery Ventilator (HRV) — Tight houses (1.75x)"
+        }
       ],
       "helpText": "Sub-slab depressurization is the EPA-recommended method for most slab and basement homes. HRV systems are used when depressurization methods are impractical."
     },
@@ -52,10 +82,22 @@
       "required": true,
       "defaultValue": "medium-1500-2500",
       "options": [
-        { "value": "small-under-1500", "label": "Small — Under 1,500 sq ft (1.0x)" },
-        { "value": "medium-1500-2500", "label": "Medium — 1,500–2,500 sq ft (1.1x)" },
-        { "value": "standard-2500-3500", "label": "Standard — 2,500–3,500 sq ft (1.2x)" },
-        { "value": "large-over-3500", "label": "Large — Over 3,500 sq ft (1.35x)" }
+        {
+          "value": "small-under-1500",
+          "label": "Small — Under 1,500 sq ft (1.0x)"
+        },
+        {
+          "value": "medium-1500-2500",
+          "label": "Medium — 1,500–2,500 sq ft (1.1x)"
+        },
+        {
+          "value": "standard-2500-3500",
+          "label": "Standard — 2,500–3,500 sq ft (1.2x)"
+        },
+        {
+          "value": "large-over-3500",
+          "label": "Large — Over 3,500 sq ft (1.35x)"
+        }
       ],
       "helpText": "Larger homes may require additional suction points or longer pipe runs, increasing installation cost."
     },
@@ -66,9 +108,18 @@
       "required": true,
       "defaultValue": "interior-closet",
       "options": [
-        { "value": "interior-closet", "label": "Interior Closet / Chase (1.0x) — Most common" },
-        { "value": "exterior-wall", "label": "Exterior Wall (1.1x) — Visible outside the home" },
-        { "value": "garage-route", "label": "Garage Route (0.95x) — Simplified routing through garage" }
+        {
+          "value": "interior-closet",
+          "label": "Interior Closet / Chase (1.0x) — Most common"
+        },
+        {
+          "value": "exterior-wall",
+          "label": "Exterior Wall (1.1x) — Visible outside the home"
+        },
+        {
+          "value": "garage-route",
+          "label": "Garage Route (0.95x) — Simplified routing through garage"
+        }
       ],
       "helpText": "Interior routing through a closet or utility chase is standard. Exterior wall routing is visible but easier to install in finished basements."
     },
@@ -79,9 +130,18 @@
       "required": true,
       "defaultValue": "standard",
       "options": [
-        { "value": "standard", "label": "Standard Fan (1.0x) — $50–$150/year operating cost" },
-        { "value": "high-suction", "label": "High-Suction Fan (1.15x) — For high radon levels" },
-        { "value": "ultra-quiet", "label": "Ultra-Quiet Fan (1.25x) — Minimal noise, interior installations" }
+        {
+          "value": "standard",
+          "label": "Standard Fan (1.0x) — $50–$150/year operating cost"
+        },
+        {
+          "value": "high-suction",
+          "label": "High-Suction Fan (1.15x) — For high radon levels"
+        },
+        {
+          "value": "ultra-quiet",
+          "label": "Ultra-Quiet Fan (1.25x) — Minimal noise, interior installations"
+        }
       ],
       "helpText": "High-suction fans are needed when radon levels are very high (above 20 pCi/L) or when sub-slab conditions impede suction. Ultra-quiet fans are preferred for interior installations near living areas."
     },
@@ -92,13 +152,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts the labor portion (55% of project cost) for regional pricing differences. High-radon states like Colorado and Pennsylvania often have more competitive pricing due to greater contractor availability."
     }
@@ -182,7 +263,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Foundation type base cost ranges from HomeAdvisor and Angi 2025-2026 national average surveys for installed radon mitigation systems. Method multipliers from EPA Radon Mitigation Standards (EPA 402-R-93-078) and AARST/NRPP certified mitigator cost surveys. Home size, piping route, and fan type multipliers derived from AARST contractor pricing data. Labor set at 55% of total cost per NRPP contractor survey data. Regional labor multipliers from BLS Occupational Employment and Wage Statistics for construction trades (SOC 47-2061).",
   "formulaAuditDate": "2026-03-14",
@@ -193,7 +274,7 @@
   "duplicationRisk": [
     "basement-waterproofing-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "year-round"
 }

@@ -5,7 +5,12 @@
   "category": "productivity",
   "subcategory": "study",
   "primaryKeyword": "study time calculator",
-  "secondaryKeywords": ["how long to study for exam", "study hours calculator", "exam prep time calculator", "how many hours do I need to study"],
+  "secondaryKeywords": [
+    "how long to study for exam",
+    "study hours calculator",
+    "exam prep time calculator",
+    "how many hours do I need to study"
+  ],
   "metaTitle": "Study Time Calculator — How Long to Study for Exams | CalcAI",
   "metaDescription": "Calculate total study hours and a day-by-day schedule based on pages, reading speed, difficulty, and review repetitions. Plan your exam prep with precision.",
   "inputs": [
@@ -41,10 +46,22 @@
       "type": "select",
       "default": "medium",
       "options": [
-        { "value": "easy", "label": "Easy (fiction, light reading)" },
-        { "value": "medium", "label": "Medium (textbook, moderate concepts)" },
-        { "value": "hard", "label": "Hard (technical, dense concepts)" },
-        { "value": "very-hard", "label": "Very Hard (law, medicine, advanced math)" }
+        {
+          "value": "easy",
+          "label": "Easy (fiction, light reading)"
+        },
+        {
+          "value": "medium",
+          "label": "Medium (textbook, moderate concepts)"
+        },
+        {
+          "value": "hard",
+          "label": "Hard (technical, dense concepts)"
+        },
+        {
+          "value": "very-hard",
+          "label": "Very Hard (law, medicine, advanced math)"
+        }
       ]
     },
     {
@@ -115,7 +132,12 @@
       "id": "studySchedule",
       "label": "Study Schedule Outline",
       "type": "table",
-      "columns": ["day", "sessionType", "pagesTarget", "hoursRequired"]
+      "columns": [
+        "day",
+        "sessionType",
+        "pagesTarget",
+        "hoursRequired"
+      ]
     },
     {
       "id": "summary",
@@ -124,15 +146,26 @@
     }
   ],
   "formula": "study-time",
-  "features": ["shareable-url", "print-results"],
-  "relatedCalculators": ["reading-time-calculator", "pomodoro-calculator", "work-break-ratio-calculator"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "reading-time-calculator",
+    "pomodoro-calculator",
+    "work-break-ratio-calculator"
+  ],
   "disclaimer": "general",
   "hasFAQ": true,
   "hasMethodologyPage": false,
   "requiresSources": false,
   "formulaCitation": "Dunlosky et al., Psychological Science in the Public Interest (2013); Cepeda et al., Psychological Science (2006)",
   "articleWordTarget": 1000,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "review",
   "reviewOwner": "stuart",
   "formulaSource": "Base hours = (Pages × Words/Page) / (WPM × 60) × Difficulty multiplier × Review repetitions; Difficulty multipliers: easy=1.0, medium=1.5, hard=2.0, very-hard=2.8",
@@ -142,7 +175,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 72,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

@@ -22,11 +22,26 @@
       "required": true,
       "defaultValue": "standard-1500sqft",
       "options": [
-        { "value": "small-500sqft", "label": "Small - 500 sq ft ($2,000–$4,000 base)" },
-        { "value": "medium-1000sqft", "label": "Medium - 1,000 sq ft ($3,500–$7,000 base)" },
-        { "value": "standard-1500sqft", "label": "Standard - 1,500 sq ft ($5,000–$10,000 base)" },
-        { "value": "large-2000sqft", "label": "Large - 2,000 sq ft ($7,000–$14,000 base)" },
-        { "value": "xlarge-2500sqft", "label": "Extra Large - 2,500 sq ft ($9,000–$18,000 base)" }
+        {
+          "value": "small-500sqft",
+          "label": "Small - 500 sq ft ($2,000–$4,000 base)"
+        },
+        {
+          "value": "medium-1000sqft",
+          "label": "Medium - 1,000 sq ft ($3,500–$7,000 base)"
+        },
+        {
+          "value": "standard-1500sqft",
+          "label": "Standard - 1,500 sq ft ($5,000–$10,000 base)"
+        },
+        {
+          "value": "large-2000sqft",
+          "label": "Large - 2,000 sq ft ($7,000–$14,000 base)"
+        },
+        {
+          "value": "xlarge-2500sqft",
+          "label": "Extra Large - 2,500 sq ft ($9,000–$18,000 base)"
+        }
       ],
       "helpText": "Select the square footage of your crawl space. The footprint is typically similar to your home's ground floor."
     },
@@ -37,9 +52,18 @@
       "required": true,
       "defaultValue": "6-mil-standard",
       "options": [
-        { "value": "6-mil-standard", "label": "6-Mil Standard (1.0x — basic moisture protection)" },
-        { "value": "12-mil-reinforced", "label": "12-Mil Reinforced (1.15x — puncture resistant)" },
-        { "value": "20-mil-premium", "label": "20-Mil Premium (1.30x — commercial grade)" }
+        {
+          "value": "6-mil-standard",
+          "label": "6-Mil Standard (1.0x — basic moisture protection)"
+        },
+        {
+          "value": "12-mil-reinforced",
+          "label": "12-Mil Reinforced (1.15x — puncture resistant)"
+        },
+        {
+          "value": "20-mil-premium",
+          "label": "20-Mil Premium (1.30x — commercial grade)"
+        }
       ],
       "helpText": "Thicker mil ratings resist punctures and last longer. 6-mil is standard for most residential crawl spaces; 20-mil is recommended for high-moisture or commercial properties."
     },
@@ -50,9 +74,18 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (+$0)" },
-        { "value": "interior-drain", "label": "Interior Drain (+$800–$1,500)" },
-        { "value": "sump-pump", "label": "Sump Pump (+$1,200–$2,500)" }
+        {
+          "value": "none",
+          "label": "None (+$0)"
+        },
+        {
+          "value": "interior-drain",
+          "label": "Interior Drain (+$800–$1,500)"
+        },
+        {
+          "value": "sump-pump",
+          "label": "Sump Pump (+$1,200–$2,500)"
+        }
       ],
       "helpText": "Active water intrusion requires a drainage system. Interior drains channel water to a low point. A sump pump actively discharges water away from the foundation."
     },
@@ -63,9 +96,18 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (+$0)" },
-        { "value": "portable", "label": "Portable Unit (+$300–$600)" },
-        { "value": "commercial-grade", "label": "Commercial Grade (+$1,500–$3,000)" }
+        {
+          "value": "none",
+          "label": "None (+$0)"
+        },
+        {
+          "value": "portable",
+          "label": "Portable Unit (+$300–$600)"
+        },
+        {
+          "value": "commercial-grade",
+          "label": "Commercial Grade (+$1,500–$3,000)"
+        }
       ],
       "helpText": "A dehumidifier maintains low humidity inside the encapsulated crawl space, preventing mold and condensation. Commercial-grade units run continuously and drain automatically."
     },
@@ -76,10 +118,22 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (+$0)" },
-        { "value": "fiberglass-batt", "label": "Fiberglass Batt (+$500–$1,000)" },
-        { "value": "rigid-foam", "label": "Rigid Foam Board (+$800–$1,500)" },
-        { "value": "spray-foam", "label": "Spray Foam (+$1,500–$3,000)" }
+        {
+          "value": "none",
+          "label": "None (+$0)"
+        },
+        {
+          "value": "fiberglass-batt",
+          "label": "Fiberglass Batt (+$500–$1,000)"
+        },
+        {
+          "value": "rigid-foam",
+          "label": "Rigid Foam Board (+$800–$1,500)"
+        },
+        {
+          "value": "spray-foam",
+          "label": "Spray Foam (+$1,500–$3,000)"
+        }
       ],
       "helpText": "Insulation improves energy efficiency. Spray foam provides the best air seal and highest R-value but costs more. Rigid foam is a popular middle ground."
     },
@@ -90,13 +144,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences. Labor accounts for 40% of the base encapsulation cost."
     }
@@ -203,7 +278,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Base encapsulation costs from HomeAdvisor and Angi 2025-2026 national average surveys for residential crawl space encapsulation by square footage. Vapor barrier grade multipliers derived from contractor pricing data in the Basement Health Association member cost database. Drainage and dehumidifier add-on costs from HomeAdvisor specialty project cost data. Insulation add-on costs from national contractor surveys for crawl space insulation (2025-2026). Labor fraction of 40% of base cost per Basement Health Association contractor surveys. Regional labor multipliers from BLS Occupational Employment and Wage Statistics (SOC 47-2061).",
   "formulaAuditDate": "2026-03-14",
@@ -214,7 +289,7 @@
   "duplicationRisk": [
     "basement-waterproofing-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": "spring"
 }

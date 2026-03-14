@@ -21,9 +21,18 @@
       "required": true,
       "defaultValue": "100-to-200",
       "options": [
-        { "value": "100-to-200", "label": "100A to 200A ($3,000–$5,000)" },
-        { "value": "200-to-400", "label": "200A to 400A ($5,000–$10,000)" },
-        { "value": "100-to-400", "label": "100A to 400A ($7,000–$14,000)" }
+        {
+          "value": "100-to-200",
+          "label": "100A to 200A ($3,000–$5,000)"
+        },
+        {
+          "value": "200-to-400",
+          "label": "200A to 400A ($5,000–$10,000)"
+        },
+        {
+          "value": "100-to-400",
+          "label": "100A to 400A ($7,000–$14,000)"
+        }
       ],
       "helpText": "A service upgrade replaces the utility meter base, weatherhead/mast, main service cable, AND main breaker panel. This is more extensive than a panel-only swap."
     },
@@ -34,8 +43,14 @@
       "required": true,
       "defaultValue": "same-location",
       "options": [
-        { "value": "same-location", "label": "Same Location (1.0x)" },
-        { "value": "relocate", "label": "Relocate Meter (+20% labor)" }
+        {
+          "value": "same-location",
+          "label": "Same Location (1.0x)"
+        },
+        {
+          "value": "relocate",
+          "label": "Relocate Meter (+20% labor)"
+        }
       ],
       "helpText": "Relocating the meter requires new conduit runs, trenching, and additional utility coordination."
     },
@@ -46,8 +61,14 @@
       "required": true,
       "defaultValue": "standard",
       "options": [
-        { "value": "standard", "label": "Standard Overhead Weatherhead (1.0x)" },
-        { "value": "underground-conversion", "label": "Underground Conversion (+30% labor)" }
+        {
+          "value": "standard",
+          "label": "Standard Overhead Weatherhead (1.0x)"
+        },
+        {
+          "value": "underground-conversion",
+          "label": "Underground Conversion (+30% labor)"
+        }
       ],
       "helpText": "Converting from overhead to underground service adds trenching and conduit work but eliminates the exposed weatherhead and mast."
     },
@@ -58,9 +79,18 @@
       "required": true,
       "defaultValue": "modern-post-2000",
       "options": [
-        { "value": "modern-post-2000", "label": "Modern — Built After 2000 (1.0x)" },
-        { "value": "mid-1960-2000", "label": "Mid-Century — 1960–2000 (+10% labor)" },
-        { "value": "old-pre-1960", "label": "Older Home — Pre-1960 (+25% labor)" }
+        {
+          "value": "modern-post-2000",
+          "label": "Modern — Built After 2000 (1.0x)"
+        },
+        {
+          "value": "mid-1960-2000",
+          "label": "Mid-Century — 1960–2000 (+10% labor)"
+        },
+        {
+          "value": "old-pre-1960",
+          "label": "Older Home — Pre-1960 (+25% labor)"
+        }
       ],
       "helpText": "Older homes often have outdated wiring, non-standard configurations, or asbestos-containing materials that increase labor time and complexity."
     },
@@ -71,8 +101,14 @@
       "required": true,
       "defaultValue": "yes",
       "options": [
-        { "value": "yes", "label": "Yes — Electrical Permit ($200–$600)" },
-        { "value": "no", "label": "No Permit Needed" }
+        {
+          "value": "yes",
+          "label": "Yes — Electrical Permit ($200–$600)"
+        },
+        {
+          "value": "no",
+          "label": "No Permit Needed"
+        }
       ],
       "helpText": "Electrical service upgrades require a permit and inspection in virtually all U.S. jurisdictions. The utility company also requires a permit before reconnecting service."
     },
@@ -83,32 +119,121 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
   ],
   "outputs": [
-    { "id": "upgradeCost", "label": "Base Upgrade Cost (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "materialCost", "label": "Materials (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "laborCost", "label": "Labor (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "permitCost", "label": "Permit & Inspection", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "totalLow", "label": "Estimated Cost (Low)", "type": "single-value", "format": "currency", "precision": 0, "highlight": true },
-    { "id": "totalHigh", "label": "Estimated Cost (High)", "type": "single-value", "format": "currency", "precision": 0, "highlight": true },
-    { "id": "totalMid", "label": "Estimated Cost (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "costPerAmp", "label": "Cost Per Amp", "type": "single-value", "format": "currency", "precision": 2 },
-    { "id": "upgradeComparison", "label": "Upgrade Type Cost Comparison", "type": "value-group", "format": "currency" },
-    { "id": "timeline", "label": "Estimated Timeline", "type": "single-value", "format": "string" },
-    { "id": "utilityNote", "label": "Utility Coordination Note", "type": "single-value", "format": "string" }
+    {
+      "id": "upgradeCost",
+      "label": "Base Upgrade Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "materialCost",
+      "label": "Materials (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "permitCost",
+      "label": "Permit & Inspection",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerAmp",
+      "label": "Cost Per Amp",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "upgradeComparison",
+      "label": "Upgrade Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "utilityNote",
+      "label": "Utility Coordination Note",
+      "type": "single-value",
+      "format": "string"
+    }
   ],
   "formula": "electrical-service-upgrade-cost",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "electrical-panel-upgrade-cost-calculator",
     "solar-battery-cost-calculator",
@@ -121,8 +246,12 @@
   "requiresSources": true,
   "formulaCitation": "HomeAdvisor / Angi 2025-2026; National Electrical Contractors Association (NECA); BLS SOC 47-2111",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Service upgrade base pricing from HomeAdvisor and Angi 2025-2026 national average surveys for electrical service entrance upgrades. Material/labor split (35%/65%) based on NECA unit pricing guidelines. Meter relocation, underground conversion, and home age labor multipliers derived from NECA project complexity adjustments. Regional labor multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians (SOC 47-2111). Permit costs from municipal electrical permit fee schedule surveys across 50 U.S. metro areas.",
   "formulaAuditDate": "2026-03-14",
@@ -130,8 +259,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["electrical-panel-upgrade-cost-calculator"],
-  "qualityScore": 82,
+  "duplicationRisk": [
+    "electrical-panel-upgrade-cost-calculator"
+  ],
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

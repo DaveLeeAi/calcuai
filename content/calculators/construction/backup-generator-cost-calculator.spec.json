@@ -21,10 +21,22 @@
       "required": true,
       "defaultValue": "large-20-24kw",
       "options": [
-        { "value": "small-7-10kw", "label": "Small 7–10 kW ($2,500–$4,000)" },
-        { "value": "medium-12-16kw", "label": "Medium 12–16 kW ($3,500–$6,000)" },
-        { "value": "large-20-24kw", "label": "Large 20–24 kW ($5,000–$10,000)" },
-        { "value": "xlarge-30-48kw", "label": "Extra-Large 30–48 kW ($10,000–$18,000)" }
+        {
+          "value": "small-7-10kw",
+          "label": "Small 7–10 kW ($2,500–$4,000)"
+        },
+        {
+          "value": "medium-12-16kw",
+          "label": "Medium 12–16 kW ($3,500–$6,000)"
+        },
+        {
+          "value": "large-20-24kw",
+          "label": "Large 20–24 kW ($5,000–$10,000)"
+        },
+        {
+          "value": "xlarge-30-48kw",
+          "label": "Extra-Large 30–48 kW ($10,000–$18,000)"
+        }
       ],
       "helpText": "Small covers essential circuits (fridge, lights, sump). Medium covers most circuits. Large powers a whole home. Extra-large handles large or luxury homes with multiple HVAC systems."
     },
@@ -35,9 +47,18 @@
       "required": true,
       "defaultValue": "natural-gas",
       "options": [
-        { "value": "natural-gas", "label": "Natural Gas (1.0x — most common)" },
-        { "value": "propane", "label": "Propane (1.05x — tank required)" },
-        { "value": "diesel", "label": "Diesel (1.15x — longest runtime)" }
+        {
+          "value": "natural-gas",
+          "label": "Natural Gas (1.0x — most common)"
+        },
+        {
+          "value": "propane",
+          "label": "Propane (1.05x — tank required)"
+        },
+        {
+          "value": "diesel",
+          "label": "Diesel (1.15x — longest runtime)"
+        }
       ],
       "helpText": "Natural gas connects to your existing gas line. Propane requires a separate storage tank. Diesel generators cost more upfront but offer the longest runtime per gallon."
     },
@@ -48,9 +69,18 @@
       "required": true,
       "defaultValue": "automatic-whole-home",
       "options": [
-        { "value": "manual", "label": "Manual ($300–$600)" },
-        { "value": "automatic-load-shedding", "label": "Automatic Load-Shedding ($800–$1,500)" },
-        { "value": "automatic-whole-home", "label": "Automatic Whole-Home ($1,500–$3,000)" }
+        {
+          "value": "manual",
+          "label": "Manual ($300–$600)"
+        },
+        {
+          "value": "automatic-load-shedding",
+          "label": "Automatic Load-Shedding ($800–$1,500)"
+        },
+        {
+          "value": "automatic-whole-home",
+          "label": "Automatic Whole-Home ($1,500–$3,000)"
+        }
       ],
       "helpText": "Manual requires you to physically switch over during an outage. Automatic load-shedding manages selected circuits. Automatic whole-home transfers all circuits instantly."
     },
@@ -61,8 +91,14 @@
       "required": true,
       "defaultValue": "new-concrete-pad",
       "options": [
-        { "value": "existing", "label": "Existing Pad (No Cost)" },
-        { "value": "new-concrete-pad", "label": "New Concrete Pad ($300–$800)" }
+        {
+          "value": "existing",
+          "label": "Existing Pad (No Cost)"
+        },
+        {
+          "value": "new-concrete-pad",
+          "label": "New Concrete Pad ($300–$800)"
+        }
       ],
       "helpText": "A level concrete pad is required for proper installation. If you already have a suitable pad, select existing."
     },
@@ -73,8 +109,14 @@
       "required": true,
       "defaultValue": "yes",
       "options": [
-        { "value": "yes", "label": "Yes — Electrical/Building Permit ($100–$400)" },
-        { "value": "no", "label": "No Permit Needed" }
+        {
+          "value": "yes",
+          "label": "Yes — Electrical/Building Permit ($100–$400)"
+        },
+        {
+          "value": "no",
+          "label": "No Permit Needed"
+        }
       ],
       "helpText": "Most jurisdictions require an electrical permit and inspection for standby generator installation."
     },
@@ -85,32 +127,121 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
   ],
   "outputs": [
-    { "id": "generatorCost", "label": "Generator Equipment (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "laborCost", "label": "Installation Labor (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "transferSwitchCost", "label": "Transfer Switch (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "padCost", "label": "Concrete Pad", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "permitCost", "label": "Permit & Inspection", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "totalLow", "label": "Estimated Cost (Low)", "type": "single-value", "format": "currency", "precision": 0, "highlight": true },
-    { "id": "totalHigh", "label": "Estimated Cost (High)", "type": "single-value", "format": "currency", "precision": 0, "highlight": true },
-    { "id": "totalMid", "label": "Estimated Cost (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
-    { "id": "sizeComparison", "label": "Generator Size Cost Comparison", "type": "value-group", "format": "currency" },
-    { "id": "weeklyFuelCost", "label": "Estimated Weekly Fuel Cost", "type": "single-value", "format": "string" },
-    { "id": "timeline", "label": "Estimated Installation Time", "type": "single-value", "format": "string" }
+    {
+      "id": "generatorCost",
+      "label": "Generator Equipment (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "transferSwitchCost",
+      "label": "Transfer Switch (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "padCost",
+      "label": "Concrete Pad",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "permitCost",
+      "label": "Permit & Inspection",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "sizeComparison",
+      "label": "Generator Size Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "weeklyFuelCost",
+      "label": "Estimated Weekly Fuel Cost",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
   ],
   "formula": "backup-generator-cost",
-  "features": ["shareable-url", "print-results"],
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
   "relatedCalculators": [
     "solar-battery-cost-calculator",
     "electrical-panel-upgrade-cost-calculator",
@@ -123,8 +254,12 @@
   "requiresSources": true,
   "formulaCitation": "HomeAdvisor / Angi 2025-2026; Generac / Kohler / Cummins MSRP data; BLS SOC 49-9051",
   "articleWordTarget": 1400,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
-  "editorialStatus": "review",
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Generator equipment pricing from HomeAdvisor and Angi 2025-2026 national average surveys for whole-house standby generator installation. Fuel type pricing premiums derived from Generac, Kohler, and Cummins manufacturer MSRP data. Transfer switch pricing from HomeAdvisor and National Electrical Contractors Association (NECA). Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians and electrical power-line installers (SOC 49-9051). Concrete pad costs from HomeAdvisor flatwork estimates. Permit costs from municipal fee schedule surveys.",
   "formulaAuditDate": "2026-03-14",
@@ -132,8 +267,11 @@
   "targetIntent": "transactional",
   "monetizationType": "ads+affiliate",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["solar-battery-cost-calculator", "electrical-panel-upgrade-cost-calculator"],
-  "qualityScore": 82,
+  "duplicationRisk": [
+    "solar-battery-cost-calculator",
+    "electrical-panel-upgrade-cost-calculator"
+  ],
+  "qualityScore": 83,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

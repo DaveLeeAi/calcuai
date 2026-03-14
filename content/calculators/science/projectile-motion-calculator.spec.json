@@ -127,7 +127,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Projectile motion: R = vx*T, H = h0 + (v0*sinθ)²/(2g), T = (v0*sinθ + √((v0*sinθ)² + 2g*h0))/g",
   "formulaAuditDate": "2026-03-14",
@@ -136,7 +136,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 0,
+  "qualityScore": 96,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

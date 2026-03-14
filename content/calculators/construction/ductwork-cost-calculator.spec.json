@@ -254,7 +254,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Base ductwork costs from HomeAdvisor and Angi 2025-2026 national average surveys for residential HVAC ductwork installation. Material multipliers derived from ACCA Manual D duct design standards and SMACNA (Sheet Metal and Air Conditioning Contractors' National Association) pricing guides. Project type multipliers based on HomeAdvisor demolition and new-construction survey data. Insulation adders from DOE R-value recommendations and HomeAdvisor insulation upgrade pricing. Access difficulty multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC installers (SOC 49-9021). Regional labor multipliers derived from BLS OES regional wage data.",
   "formulaAuditDate": "2026-03-14",
@@ -266,7 +266,7 @@
     "hvac-replacement-cost-calculator",
     "insulation-cost-calculator"
   ],
-  "qualityScore": 82,
+  "qualityScore": 81,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

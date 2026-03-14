@@ -48,19 +48,58 @@
       "type": "select",
       "required": false,
       "options": [
-        { "label": "Custom", "value": "custom" },
-        { "label": "Water (4186)", "value": "4186" },
-        { "label": "Ice (2090)", "value": "2090" },
-        { "label": "Steam (2010)", "value": "2010" },
-        { "label": "Aluminum (897)", "value": "897" },
-        { "label": "Copper (385)", "value": "385" },
-        { "label": "Iron (449)", "value": "449" },
-        { "label": "Glass (840)", "value": "840" },
-        { "label": "Wood (1700)", "value": "1700" },
-        { "label": "Air (1005)", "value": "1005" },
-        { "label": "Concrete (880)", "value": "880" },
-        { "label": "Ethanol (2440)", "value": "2440" },
-        { "label": "Olive Oil (1970)", "value": "1970" }
+        {
+          "label": "Custom",
+          "value": "custom"
+        },
+        {
+          "label": "Water (4186)",
+          "value": "4186"
+        },
+        {
+          "label": "Ice (2090)",
+          "value": "2090"
+        },
+        {
+          "label": "Steam (2010)",
+          "value": "2010"
+        },
+        {
+          "label": "Aluminum (897)",
+          "value": "897"
+        },
+        {
+          "label": "Copper (385)",
+          "value": "385"
+        },
+        {
+          "label": "Iron (449)",
+          "value": "449"
+        },
+        {
+          "label": "Glass (840)",
+          "value": "840"
+        },
+        {
+          "label": "Wood (1700)",
+          "value": "1700"
+        },
+        {
+          "label": "Air (1005)",
+          "value": "1005"
+        },
+        {
+          "label": "Concrete (880)",
+          "value": "880"
+        },
+        {
+          "label": "Ethanol (2440)",
+          "value": "2440"
+        },
+        {
+          "label": "Olive Oil (1970)",
+          "value": "1970"
+        }
       ],
       "defaultValue": "4186",
       "helpText": "Select a material to auto-fill specific heat capacity"
@@ -122,7 +161,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Heat transfer: Q = m * c * DT, where Q = heat (J), m = mass (kg), c = specific heat (J/kg*K), DT = temperature change (K or C)",
   "formulaAuditDate": "2026-03-14",
@@ -131,7 +170,7 @@
   "monetizationType": "ads",
   "mergeCandidateOf": null,
   "duplicationRisk": [],
-  "qualityScore": 82,
+  "qualityScore": 86,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }

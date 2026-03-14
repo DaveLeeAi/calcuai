@@ -98,10 +98,25 @@
       "label": "Profit/Loss at Different Order Volumes",
       "type": "table",
       "columns": [
-        { "key": "orders", "label": "Orders" },
-        { "key": "revenue", "label": "Revenue", "format": "currency" },
-        { "key": "grossProfit", "label": "Gross Profit", "format": "currency" },
-        { "key": "netAfterAds", "label": "Net After Ads", "format": "currency" }
+        {
+          "key": "orders",
+          "label": "Orders"
+        },
+        {
+          "key": "revenue",
+          "label": "Revenue",
+          "format": "currency"
+        },
+        {
+          "key": "grossProfit",
+          "label": "Gross Profit",
+          "format": "currency"
+        },
+        {
+          "key": "netAfterAds",
+          "label": "Net After Ads",
+          "format": "currency"
+        }
       ]
     },
     {
@@ -131,7 +146,11 @@
   "requiresSources": true,
   "formulaCitation": "Shopify — How to Calculate Your Ecommerce Break-Even Point (2025); Andrew Chen — Growth Metrics for Ecommerce (2024)",
   "articleWordTarget": 1300,
-  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
   "editorialStatus": "published",
   "reviewOwner": "stuart",
   "formulaSource": "Contribution Margin = AOV × (1 − COGS% − Fees%); Break-Even Orders = Ad Budget / Contribution Margin; Break-Even CPA = Contribution Margin; Break-Even ROAS = 1 / Gross Margin",
@@ -140,8 +159,10 @@
   "targetIntent": "transactional",
   "monetizationType": "ads",
   "mergeCandidateOf": null,
-  "duplicationRisk": ["break-even-calculator"],
-  "qualityScore": 0,
+  "duplicationRisk": [
+    "break-even-calculator"
+  ],
+  "qualityScore": 98,
   "lastContentUpdate": "2026-03-14",
   "seasonality": null
 }
