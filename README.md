@@ -110,13 +110,15 @@ The shared `CalculatorRenderer` component reads the spec, wires up the formula, 
 
 Articles are optimized for both traditional SEO and AI model citation through 7 structural rules:
 
-- **BLUF intro** -- First paragraph gives the direct answer with a specific number
+- **BLUF intro** -- First paragraph gives the direct answer with a specific number, written in conversational American English (not formal/clinical AI-sounding prose)
 - **Formula section** -- KaTeX rendering + every variable defined + source citation
 - **Worked examples** -- Step-by-step with real numbers, ending with practical interpretation
 - **FAQ answers** -- First sentence is the direct answer, self-contained and citable
 - **Sources section** -- Every calculator cites at least one authoritative source
 - **Schema markup** -- JSON-LD (Organization, WebPage, FAQPage, Speakable, BreadcrumbList)
 - **Citable statements** -- Precise facts with specific numbers throughout
+
+Content has been through a US market localization pass: formal language replaced with conversational equivalents ("individuals" -> "people", "expenditure" -> "cost"), BLUF intros rewritten for warm second-person tone, and H2 section headers varied per topic instead of generic templates.
 
 ### Quality Gates
 
