@@ -1,0 +1,153 @@
+{
+  "id": "generator-size-calculator",
+  "title": "Generator Size Calculator",
+  "slug": "generator-size-calculator",
+  "category": "energy",
+  "subcategory": "electricity",
+  "primaryKeyword": "generator size calculator",
+  "secondaryKeywords": ["what size generator do I need", "generator wattage calculator", "home generator sizing", "whole house generator size"],
+  "metaTitle": "Generator Size Calculator — What Size Generator Do You Need? | CalcAI",
+  "metaDescription": "Calculate the right generator size for your home. Enter your appliances to find total running watts, starting surge watts, and recommended generator kW.",
+  "inputs": [
+    {
+      "id": "refrigerator",
+      "label": "Refrigerator",
+      "type": "number",
+      "default": 150,
+      "suffix": "W"
+    },
+    {
+      "id": "airConditioner",
+      "label": "Air Conditioner",
+      "type": "number",
+      "default": 1500,
+      "suffix": "W"
+    },
+    {
+      "id": "furnaceBlower",
+      "label": "Furnace Blower Motor",
+      "type": "number",
+      "default": 500,
+      "suffix": "W"
+    },
+    {
+      "id": "wellPump",
+      "label": "Well Pump",
+      "type": "number",
+      "default": 0,
+      "suffix": "W"
+    },
+    {
+      "id": "sumpPump",
+      "label": "Sump Pump",
+      "type": "number",
+      "default": 0,
+      "suffix": "W"
+    },
+    {
+      "id": "lights",
+      "label": "Lights (total)",
+      "type": "number",
+      "default": 300,
+      "suffix": "W"
+    },
+    {
+      "id": "television",
+      "label": "Television",
+      "type": "number",
+      "default": 100,
+      "suffix": "W"
+    },
+    {
+      "id": "computer",
+      "label": "Computer / Laptop",
+      "type": "number",
+      "default": 200,
+      "suffix": "W"
+    },
+    {
+      "id": "microwave",
+      "label": "Microwave",
+      "type": "number",
+      "default": 700,
+      "suffix": "W"
+    },
+    {
+      "id": "otherWatts",
+      "label": "Other Appliances",
+      "type": "number",
+      "default": 200,
+      "suffix": "W"
+    },
+    {
+      "id": "includeStartingSurge",
+      "label": "Include Motor Starting Surge",
+      "type": "toggle",
+      "default": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalRunningWatts",
+      "label": "Total Running Watts",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " W"
+    },
+    {
+      "id": "totalStartingWatts",
+      "label": "Total Starting Watts (with surge)",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " W",
+      "highlight": true
+    },
+    {
+      "id": "recommendedKw",
+      "label": "Recommended Generator Size",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " kW",
+      "highlight": true
+    },
+    {
+      "id": "recommendedSizeLabel",
+      "label": "Generator Category",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "applianceBreakdown",
+      "label": "Appliance Load Breakdown",
+      "type": "table",
+      "columns": ["appliance", "runningWatts", "startingWatts"]
+    },
+    {
+      "id": "summary",
+      "label": "Sizing Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "generator-size",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["kwh-cost-calculator", "home-energy-usage-calculator", "solar-panel-payback-calculator", "electricity-cost-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Generac — Generator Sizing Guide (2025); U.S. Department of Energy — Standby Generator Selection Guidelines (2025)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Starting Watts = Running Watts × surge multiplier (2x–3x for motors); Recommended kW = Starting Watts × 1.25 headroom factor",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

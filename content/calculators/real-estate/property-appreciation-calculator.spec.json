@@ -1,0 +1,123 @@
+{
+  "id": "property-appreciation-calculator",
+  "title": "Property Appreciation Calculator",
+  "slug": "property-appreciation-calculator",
+  "category": "real-estate",
+  "subcategory": "flipping",
+  "primaryKeyword": "property appreciation calculator",
+  "secondaryKeywords": [
+    "home appreciation calculator",
+    "real estate appreciation rate",
+    "future home value calculator",
+    "house value growth calculator",
+    "home equity growth calculator"
+  ],
+  "metaTitle": "Property Appreciation Calculator — Future Home Value | CalcAI",
+  "metaDescription": "Project future home value and equity growth using historical appreciation rates. See year-by-year gains for any holding period up to 30 years.",
+  "inputs": [
+    {
+      "id": "currentValue",
+      "label": "Current Property Value",
+      "type": "currency",
+      "default": 350000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true
+    },
+    {
+      "id": "annualAppreciationRate",
+      "label": "Annual Appreciation Rate (%)",
+      "type": "percentage",
+      "default": 3.5,
+      "min": -10,
+      "max": 30,
+      "required": true,
+      "helpText": "US national average is 3–4% annually since 1991"
+    },
+    {
+      "id": "years",
+      "label": "Holding Period (Years)",
+      "type": "number",
+      "default": 10,
+      "min": 1,
+      "max": 30,
+      "required": true
+    },
+    {
+      "id": "remainingMortgage",
+      "label": "Current Mortgage Balance",
+      "type": "currency",
+      "default": 200000,
+      "min": 0,
+      "max": 10000000,
+      "required": false,
+      "helpText": "Used to calculate projected equity (assumes no additional paydown)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "futureValue",
+      "label": "Projected Future Value",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalAppreciation",
+      "label": "Total Appreciation Gain",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "totalAppreciationPercent",
+      "label": "Total Appreciation (%)",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "projectedEquity",
+      "label": "Projected Equity",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "yearByYearTable",
+      "label": "Year-by-Year Projection",
+      "type": "table",
+      "columns": ["Year", "Property Value", "Appreciation", "Equity"]
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "property-appreciation",
+  "features": ["compare-scenarios", "shareable-url"],
+  "relatedCalculators": [
+    "house-flipping-profit-calculator",
+    "landlord-roi-calculator",
+    "rental-yield-calculator",
+    "home-equity-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Federal Housing Finance Agency (FHFA) — House Price Index (2025); S&P CoreLogic Case-Shiller Home Price Index (2025)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Future Value = Current Value × (1 + Rate)^Years; Equity = Future Value − Remaining Mortgage",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

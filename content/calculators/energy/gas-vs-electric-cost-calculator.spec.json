@@ -1,0 +1,127 @@
+{
+  "id": "gas-vs-electric-cost-calculator",
+  "title": "Gas vs Electric Cost Calculator",
+  "slug": "gas-vs-electric-cost-calculator",
+  "category": "energy",
+  "subcategory": "heating-cooling",
+  "primaryKeyword": "gas vs electric cost calculator",
+  "secondaryKeywords": ["gas vs electric heating cost", "heat pump vs gas furnace cost", "natural gas vs electricity calculator", "is gas or electric cheaper"],
+  "metaTitle": "Gas vs Electric Cost Calculator — Annual Heating Comparison | CalcAI",
+  "metaDescription": "Compare annual gas vs electric heating costs. Includes furnace AFUE efficiency, heat pump HSPF rating, and 10-year total cost comparison.",
+  "inputs": [
+    {
+      "id": "annualThermsGas",
+      "label": "Annual Gas Consumption",
+      "type": "number",
+      "default": 700,
+      "suffix": "therms/yr"
+    },
+    {
+      "id": "gasCostPerTherm",
+      "label": "Gas Cost Per Therm",
+      "type": "currency",
+      "default": 1.50,
+      "prefix": "$",
+      "suffix": "/therm"
+    },
+    {
+      "id": "furnaceEfficiencyPercent",
+      "label": "Furnace Efficiency (AFUE %)",
+      "type": "percentage",
+      "default": 80,
+      "min": 55,
+      "max": 99
+    },
+    {
+      "id": "annualKwhElectric",
+      "label": "Annual Electric Heating Consumption",
+      "type": "number",
+      "default": 8000,
+      "suffix": "kWh/yr"
+    },
+    {
+      "id": "electricCostPerKwh",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "heatPumpHspf",
+      "label": "Heat Pump HSPF Rating",
+      "type": "number",
+      "default": 9,
+      "min": 0,
+      "max": 15,
+      "helpText": "Enter 0 for resistance heat (baseboard/electric furnace)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "annualGasCost",
+      "label": "Annual Gas Heating Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualElectricCost",
+      "label": "Annual Electric Heating Cost",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualSavings",
+      "label": "Annual Savings with Cheaper Option",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "cheaperFuel",
+      "label": "Cheaper Heating Fuel",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "tenYearSavings",
+      "label": "10-Year Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "comparisonTable",
+      "label": "Fuel Cost Comparison",
+      "type": "table",
+      "columns": ["fuel", "annualCost", "tenYearCost", "efficiencyRating"]
+    },
+    {
+      "id": "summary",
+      "label": "Comparison Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "gas-vs-electric-cost",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["home-heating-cost-calculator", "kwh-cost-calculator", "solar-panel-payback-calculator", "electricity-cost-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. Energy Information Administration — Natural Gas and Electricity Prices (2025); ENERGY STAR — Heating System Efficiency Ratings (2025)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gas Cost = (Therms × Rate) / (AFUE / 100); Electric Cost (heat pump) = (kWh needed / HSPF × 3.412) × Rate; kWh needed = Therms × 29.3 kWh/therm",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

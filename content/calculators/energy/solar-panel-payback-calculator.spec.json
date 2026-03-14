@@ -1,0 +1,136 @@
+{
+  "id": "solar-panel-payback-calculator",
+  "title": "Solar Panel Payback Calculator",
+  "slug": "solar-panel-payback-calculator",
+  "category": "energy",
+  "subcategory": "solar",
+  "primaryKeyword": "solar panel payback calculator",
+  "secondaryKeywords": ["solar payback period", "solar ROI calculator", "how long to pay off solar", "solar panel break even"],
+  "metaTitle": "Solar Panel Payback Calculator — Break-Even & ROI | CalcAI",
+  "metaDescription": "Calculate your solar panel payback period and lifetime ROI. Includes the 30% federal tax credit (ITC), state incentives, and electricity rate escalation.",
+  "inputs": [
+    {
+      "id": "systemCostDollars",
+      "label": "System Cost (Before Incentives)",
+      "type": "currency",
+      "default": 25000
+    },
+    {
+      "id": "annualKwhProduction",
+      "label": "Annual kWh Production",
+      "type": "number",
+      "default": 9000,
+      "suffix": "kWh/yr"
+    },
+    {
+      "id": "electricityRatePerKwh",
+      "label": "Electricity Rate",
+      "type": "currency",
+      "default": 0.16,
+      "prefix": "$",
+      "suffix": "/kWh"
+    },
+    {
+      "id": "annualRateIncrease",
+      "label": "Annual Rate Increase",
+      "type": "percentage",
+      "default": 3
+    },
+    {
+      "id": "stateIncentives",
+      "label": "State/Local Incentives ($)",
+      "type": "currency",
+      "default": 0
+    },
+    {
+      "id": "systemLifetimeYears",
+      "label": "System Lifetime",
+      "type": "number",
+      "default": 25,
+      "min": 5,
+      "max": 30,
+      "suffix": "yrs"
+    },
+    {
+      "id": "applyFederalCredit",
+      "label": "Apply 30% Federal Tax Credit (ITC)",
+      "type": "toggle",
+      "default": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netSystemCost",
+      "label": "Net System Cost (After Incentives)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "federalTaxCredit",
+      "label": "Federal Tax Credit (30%)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualSavingsYear1",
+      "label": "Year 1 Savings",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "simplePaybackYears",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " years",
+      "highlight": true
+    },
+    {
+      "id": "lifetimeSavings",
+      "label": "Lifetime Savings (25 yrs)",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "roi",
+      "label": "Return on Investment",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "paybackTable",
+      "label": "Year-by-Year Payback",
+      "type": "table",
+      "columns": ["year", "cumulativeSavings", "netPosition"]
+    },
+    {
+      "id": "summary",
+      "label": "Investment Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "solar-panel-payback",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["kwh-cost-calculator", "electricity-cost-calculator", "home-energy-usage-calculator", "gas-vs-electric-cost-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "U.S. Department of Energy — Solar Investment Tax Credit (ITC) Guide (2025); National Renewable Energy Laboratory (NREL) — PVWatts Methodology (2025)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Cost = System Cost × (1 - 0.30) - State Incentives; Simple Payback = Net Cost / Year1 Savings; Lifetime Savings = Sum of annual savings with rate escalation",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

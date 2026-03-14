@@ -2,7 +2,7 @@
 // Calculator Spec Schema — v2 with operational fields
 // ═══════════════════════════════════════════════════════
 
-export type Category = 'finance' | 'health' | 'math' | 'construction' | 'science' | 'everyday' | 'business' | 'conversion';
+export type Category = 'finance' | 'health' | 'math' | 'construction' | 'science' | 'everyday' | 'business' | 'conversion' | 'ecommerce' | 'real-estate' | 'energy' | 'productivity';
 export type InputType = 'number' | 'currency' | 'percentage' | 'date' | 'select' | 'toggle' | 'range' | 'radio' | 'unit-pair';
 export type OutputType = 'single-value' | 'value-group' | 'table' | 'chart-pie' | 'chart-line' | 'chart-bar' | 'gauge' | 'comparison';
 export type Feature = 'chart' | 'amortization-table' | 'compare-scenarios' | 'shareable-url' | 'print-results' | 'presets';

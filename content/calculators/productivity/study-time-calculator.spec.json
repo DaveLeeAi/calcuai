@@ -1,0 +1,148 @@
+{
+  "id": "study-time-calculator",
+  "title": "Study Time Calculator",
+  "slug": "study-time-calculator",
+  "category": "productivity",
+  "subcategory": "study",
+  "primaryKeyword": "study time calculator",
+  "secondaryKeywords": ["how long to study for exam", "study hours calculator", "exam prep time calculator", "how many hours do I need to study"],
+  "metaTitle": "Study Time Calculator — How Long to Study for Exams | CalcAI",
+  "metaDescription": "Calculate total study hours and a day-by-day schedule based on pages, reading speed, difficulty, and review repetitions. Plan your exam prep with precision.",
+  "inputs": [
+    {
+      "id": "totalPages",
+      "label": "Total Pages to Study",
+      "type": "number",
+      "default": 200,
+      "min": 1,
+      "max": 2000
+    },
+    {
+      "id": "readingSpeedWpm",
+      "label": "Reading Speed",
+      "type": "number",
+      "default": 250,
+      "suffix": "WPM",
+      "min": 50,
+      "max": 1200
+    },
+    {
+      "id": "wordsPerPage",
+      "label": "Words Per Page",
+      "type": "number",
+      "default": 300,
+      "suffix": "words/page",
+      "min": 100,
+      "max": 600
+    },
+    {
+      "id": "difficultyLevel",
+      "label": "Material Difficulty",
+      "type": "select",
+      "default": "medium",
+      "options": [
+        { "value": "easy", "label": "Easy (fiction, light reading)" },
+        { "value": "medium", "label": "Medium (textbook, moderate concepts)" },
+        { "value": "hard", "label": "Hard (technical, dense concepts)" },
+        { "value": "very-hard", "label": "Very Hard (law, medicine, advanced math)" }
+      ]
+    },
+    {
+      "id": "reviewRepetitions",
+      "label": "Review Repetitions",
+      "type": "number",
+      "default": 2,
+      "min": 1,
+      "max": 5,
+      "helpText": "How many times you plan to review the material (spaced repetition improves retention)"
+    },
+    {
+      "id": "hoursPerDay",
+      "label": "Study Hours Per Day",
+      "type": "number",
+      "default": 3,
+      "suffix": "hrs/day",
+      "min": 0.5,
+      "max": 16
+    },
+    {
+      "id": "sessionLengthMinutes",
+      "label": "Study Session Length",
+      "type": "number",
+      "default": 50,
+      "suffix": "min",
+      "min": 15,
+      "max": 180
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalStudyHours",
+      "label": "Total Study Hours",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " hrs",
+      "highlight": true
+    },
+    {
+      "id": "daysNeeded",
+      "label": "Days to Complete",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " days",
+      "highlight": true
+    },
+    {
+      "id": "totalSessions",
+      "label": "Total Study Sessions",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "minutesPerPage",
+      "label": "Minutes Per Page",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " min/page"
+    },
+    {
+      "id": "pagesPerHour",
+      "label": "Pages Per Hour",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "studySchedule",
+      "label": "Study Schedule Outline",
+      "type": "table",
+      "columns": ["day", "sessionType", "pagesTarget", "hoursRequired"]
+    },
+    {
+      "id": "summary",
+      "label": "Study Plan Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "study-time",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["reading-time-calculator", "pomodoro-calculator", "work-break-ratio-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Dunlosky et al., Psychological Science in the Public Interest (2013); Cepeda et al., Psychological Science (2006)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Base hours = (Pages × Words/Page) / (WPM × 60) × Difficulty multiplier × Review repetitions; Difficulty multipliers: easy=1.0, medium=1.5, hard=2.0, very-hard=2.8",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

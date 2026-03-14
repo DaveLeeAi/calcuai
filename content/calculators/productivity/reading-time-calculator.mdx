@@ -1,0 +1,90 @@
+---
+title: "Reading Time Calculator"
+description: "Find out how long it takes to read any book or document based on page count, words per page, reading speed, and reading type. Get a days-to-finish estimate."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 300-page fiction novel (90,000 words) takes **6 hours to read** at 250 WPM — or **12 days at 30 minutes of daily reading**. Switch to a textbook and the same page count takes **10 hours** at an adjusted 150 WPM because your brain slows to absorb dense concepts. The 30-minutes-a-day reader who sticks to the schedule finishes **18–24 books per year** — proving consistency matters far more than speed.
+
+</section>
+
+## What Your Results Mean
+
+**Total reading hours** is how long it will take in active reading time, adjusted for your material type. **Days to finish** divides that by your daily reading commitment — this is what actually gets books finished, because 6 hours sounds achievable but "21 days at 20 minutes" is a real schedule. **Minutes per page** is a practical pacing metric you can use with a timer to track progress during each reading session.
+
+## How to Use This Calculator
+
+1. Enter the page count of your book or document. For Kindle books, multiply your location count by 0.04 to get approximate pages.
+2. Standard paperbacks have 250–300 words/page. Coffee table books or textbooks may have 100–200 words/page. Academic papers: 400–500 words/page.
+3. Enter your actual reading speed — use the test below if you're unsure. Default of 250 WPM is the adult average for comfortable fiction reading.
+4. Select reading type — this is the most underappreciated factor. A technical manual at 250 WPM is unrealistic; 125 WPM with active note-taking is more accurate.
+5. Enter how many minutes you actually read daily — be honest.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Total Words} = \text{Pages} \times \text{Words/Page}
+$$
+$$
+\text{Adjusted WPM} = \text{Your WPM} \times R_{\text{type}}
+$$
+$$
+\text{Reading Hours} = \frac{\text{Total Words}}{\text{Adjusted WPM} \times 60}
+$$
+
+Where:
+- **R_type** = reading type multiplier: fiction 1.0, non-fiction 0.85, textbook 0.60, technical 0.50, casual 1.20
+- **Days** = Reading Hours ÷ (Daily Reading Minutes ÷ 60)
+
+*Source: Brysbaert (2019), Journal of Memory and Language — Silent reading rate norms; Rayner et al. (2016), Psychological Bulletin*
+
+</div>
+
+## Worked Example
+
+**Reading Atomic Habits (320 pages, ~68,000 words) as non-fiction at 250 WPM, 20 minutes/day:**
+
+- Adjusted WPM (non-fiction): 250 × 0.85 = **212 WPM**
+- Total minutes: 68,000 ÷ 212 = **321 minutes**
+- Total hours: **5.35 hours**
+- Days at 20 min/day: 321 ÷ 20 = **16 days**
+
+With 30 min/day: 11 days. With a single dedicated Saturday: done in one focused session.
+
+## Reading Speed by Material Type
+
+| Reading Type | Typical Effective WPM | Examples |
+|---|---|---|
+| Casual web / news | 280–350 WPM | Blogs, articles, email |
+| Fiction | 200–280 WPM | Novels, memoir |
+| Non-fiction | 170–240 WPM | Self-help, history, business |
+| Textbook | 120–180 WPM | College courses |
+| Technical / academic | 80–150 WPM | Research papers, manuals |
+
+## Quick Reading Speed Test
+
+Count the words in one paragraph of your book. Read it and time yourself. Divide words by seconds, multiply by 60. That's your WPM for that material type.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How fast do people read on average?**
+A: The average adult reads silently at **238 WPM** for non-fiction material, according to Brysbaert's 2019 meta-analysis of 190 studies covering 18,573 participants — making "250 WPM" a reasonable default. College students average slightly higher (260–300 WPM). The variation is large: slow readers read 100–150 WPM, fast readers 400–500 WPM, and speed readers claim 1,000+ WPM (though comprehension typically drops sharply above 400–500 WPM, according to Rayner et al.'s 2016 Psychological Bulletin review).
+
+**Q: How can I read faster without losing comprehension?**
+A: The most evidence-backed speed improvements come from: (1) **Reducing subvocalization** (mentally "saying" words as you read) — train yourself to read in phrases rather than word-by-word; (2) **Expanding your eye span** — practice taking in 3–4 words per fixation instead of 1–2; (3) **Previewing structure** — skim chapter headings, bold text, and summary sections before reading to prime comprehension; (4) **Eliminating regressions** — the habit of re-reading previous lines costs 15–20% of reading speed in poor readers. Speed reading courses that promise 1,000+ WPM rely on skimming and sacrifice comprehension — they're not useful for learning, only for screening.
+
+**Q: How many books can I read per year?**
+A: At 30 minutes of daily reading, you'll read approximately **18–24 books/year** (assuming 250–350 pages per book at fiction pace) or **12–15 books/year** for non-fiction. The most consistent book readers in the world — Bill Gates (50 books/year), Warren Buffett (~80 books/year) — read 60–90+ minutes daily with high non-fiction focus. The actual number matters less than the habit: a 15-minute daily reading habit produces **5–8 books/year** and compounds dramatically over a decade.
+
+</div>
+
+## Sources & Methodology
+
+Reading speed norms use Brysbaert's (2019) meta-analysis of silent reading rates published in the Journal of Memory and Language, which provides the most comprehensive cross-study norms available (238 WPM average from 190 studies). Reading type multipliers are calibrated against Rayner et al.'s (2016) Psychological Bulletin review of reading rate studies across text difficulty levels. Words-per-page estimates of 250–300 are consistent with standard trade paperback typography (11–12 pt font, 25–32 lines per page).

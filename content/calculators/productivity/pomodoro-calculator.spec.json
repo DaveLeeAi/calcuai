@@ -1,0 +1,132 @@
+{
+  "id": "pomodoro-calculator",
+  "title": "Pomodoro Calculator",
+  "slug": "pomodoro-calculator",
+  "category": "productivity",
+  "subcategory": "time-management",
+  "primaryKeyword": "pomodoro calculator",
+  "secondaryKeywords": ["pomodoro timer calculator", "pomodoro technique schedule", "how many pomodoros per day", "pomodoro sessions planner"],
+  "metaTitle": "Pomodoro Calculator — Plan Your Pomodoro Sessions & Schedule | CalcAI",
+  "metaDescription": "Calculate total Pomodoros, breaks, and end time for any work session. Generate a minute-by-minute Pomodoro schedule with custom work block and break lengths.",
+  "inputs": [
+    {
+      "id": "totalWorkHours",
+      "label": "Total Work Time",
+      "type": "number",
+      "default": 4,
+      "suffix": " hrs",
+      "min": 0.5,
+      "max": 16
+    },
+    {
+      "id": "pomodoroMinutes",
+      "label": "Pomodoro (Work Block) Length",
+      "type": "number",
+      "default": 25,
+      "suffix": " min",
+      "min": 5,
+      "max": 120
+    },
+    {
+      "id": "shortBreakMinutes",
+      "label": "Short Break Length",
+      "type": "number",
+      "default": 5,
+      "suffix": " min",
+      "min": 1,
+      "max": 30
+    },
+    {
+      "id": "longBreakMinutes",
+      "label": "Long Break Length",
+      "type": "number",
+      "default": 15,
+      "suffix": " min",
+      "min": 5,
+      "max": 60
+    },
+    {
+      "id": "sessionsBeforeLongBreak",
+      "label": "Pomodoros Before Long Break",
+      "type": "number",
+      "default": 4,
+      "min": 2,
+      "max": 8
+    },
+    {
+      "id": "startTime",
+      "label": "Start Time",
+      "type": "text",
+      "default": "09:00",
+      "helpText": "Enter start time in 24-hour format (e.g., 09:00)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalPomodoros",
+      "label": "Total Pomodoros",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "totalShortBreaks",
+      "label": "Short Breaks",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalLongBreaks",
+      "label": "Long Breaks",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalTimeHours",
+      "label": "Total Clock Time",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " hrs",
+      "highlight": true
+    },
+    {
+      "id": "estimatedEndTime",
+      "label": "Estimated End Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "sessionSchedule",
+      "label": "Session Schedule",
+      "type": "table",
+      "columns": ["block", "type", "duration", "startTime", "endTime"]
+    },
+    {
+      "id": "summary",
+      "label": "Session Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "pomodoro",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["work-break-ratio-calculator", "study-time-calculator", "reading-time-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Cirillo, Francesco — The Pomodoro Technique (2006); DeskTime Productivity Study (2014)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Pomodoros = floor(totalWorkMinutes / pomodoroMinutes); Long breaks = floor(Pomodoros / sessionsBeforeLongBreak); Short breaks = Pomodoros - Long breaks - 1; Total time = Work blocks + short breaks + long breaks",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

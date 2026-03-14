@@ -1,0 +1,172 @@
+{
+  "id": "real-estate-cash-flow-calculator",
+  "title": "Real Estate Cash Flow Calculator",
+  "slug": "real-estate-cash-flow-calculator",
+  "category": "real-estate",
+  "subcategory": "rental",
+  "primaryKeyword": "real estate cash flow calculator",
+  "secondaryKeywords": [
+    "rental property cash flow",
+    "monthly cash flow calculator",
+    "cash on cash return calculator",
+    "NOI calculator real estate",
+    "rental income calculator"
+  ],
+  "metaTitle": "Real Estate Cash Flow Calculator — Monthly & Annual NOI | CalcAI",
+  "metaDescription": "Calculate monthly cash flow, NOI, and cash-on-cash return for any rental property. Enter rent, vacancy, expenses, and mortgage to see your true return.",
+  "inputs": [
+    {
+      "id": "monthlyRent",
+      "label": "Monthly Gross Rent",
+      "type": "currency",
+      "default": 2200,
+      "min": 1,
+      "max": 100000,
+      "required": true
+    },
+    {
+      "id": "vacancyRatePercent",
+      "label": "Vacancy Rate (%)",
+      "type": "percentage",
+      "default": 5,
+      "min": 0,
+      "max": 50,
+      "required": false,
+      "helpText": "US average is 5–8%; enter 0 if fully occupied"
+    },
+    {
+      "id": "propertyTaxMonthly",
+      "label": "Monthly Property Tax",
+      "type": "currency",
+      "default": 300,
+      "min": 0,
+      "max": 10000,
+      "required": false
+    },
+    {
+      "id": "insuranceMonthly",
+      "label": "Monthly Insurance",
+      "type": "currency",
+      "default": 120,
+      "min": 0,
+      "max": 5000,
+      "required": false
+    },
+    {
+      "id": "maintenanceMonthly",
+      "label": "Monthly Maintenance",
+      "type": "currency",
+      "default": 165,
+      "min": 0,
+      "max": 5000,
+      "required": false,
+      "helpText": "Rule of thumb: 1% of property value per year ÷ 12"
+    },
+    {
+      "id": "propertyManagementPercent",
+      "label": "Property Management Fee (%)",
+      "type": "percentage",
+      "default": 8,
+      "min": 0,
+      "max": 20,
+      "required": false
+    },
+    {
+      "id": "otherExpensesMonthly",
+      "label": "Other Monthly Expenses",
+      "type": "currency",
+      "default": 50,
+      "min": 0,
+      "max": 5000,
+      "required": false,
+      "helpText": "HOA, lawn care, snow removal, etc."
+    },
+    {
+      "id": "monthlyMortgagePayment",
+      "label": "Monthly Mortgage Payment",
+      "type": "currency",
+      "default": 1400,
+      "min": 0,
+      "max": 50000,
+      "required": false,
+      "helpText": "Principal + interest only; enter 0 if owned free and clear"
+    },
+    {
+      "id": "totalCashInvested",
+      "label": "Total Cash Invested",
+      "type": "currency",
+      "default": 70000,
+      "min": 1,
+      "max": 5000000,
+      "required": true,
+      "helpText": "Down payment + closing costs + initial repairs"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "monthlyCashFlow",
+      "label": "Monthly Cash Flow",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "annualCashFlow",
+      "label": "Annual Cash Flow",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "cashOnCashReturn",
+      "label": "Cash-on-Cash Return",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "noi",
+      "label": "Net Operating Income (NOI)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "expenseRatio",
+      "label": "Expense Ratio",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "real-estate-cash-flow",
+  "features": ["compare-scenarios", "shareable-url"],
+  "relatedCalculators": [
+    "rental-yield-calculator",
+    "landlord-roi-calculator",
+    "rental-property-calculator",
+    "cap-rate-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Investopedia — Net Operating Income (NOI) Definition (2025); BiggerPockets — Cash Flow Analysis for Rental Properties (2025)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Effective Rent = Monthly Rent × (1 − Vacancy Rate); NOI = (Effective Rent − Operating Expenses) × 12; Cash Flow = NOI / 12 − Monthly Mortgage; Cash-on-Cash = Annual Cash Flow / Total Cash Invested × 100",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

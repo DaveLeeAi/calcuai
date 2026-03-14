@@ -1,0 +1,86 @@
+{
+  "id": "sleep-cycle-calculator",
+  "title": "Sleep Cycle Calculator",
+  "slug": "sleep-cycle-calculator",
+  "category": "productivity",
+  "subcategory": "health-performance",
+  "primaryKeyword": "sleep cycle calculator",
+  "secondaryKeywords": ["what time should I go to sleep", "bedtime calculator", "sleep cycles calculator", "best time to wake up"],
+  "metaTitle": "Sleep Cycle Calculator — Best Bedtime to Wake Up Refreshed | CalcAI",
+  "metaDescription": "Find the optimal bedtime based on your wake-up time and 90-minute sleep cycles. Wake up between cycles feeling refreshed, not groggy.",
+  "inputs": [
+    {
+      "id": "targetWakeTime",
+      "label": "Wake Up Time",
+      "type": "text",
+      "default": "07:00",
+      "helpText": "Enter your target wake-up time in 24-hour format (e.g., 07:00 or 22:30)"
+    },
+    {
+      "id": "sleepOnsetMinutes",
+      "label": "Time to Fall Asleep",
+      "type": "number",
+      "default": 14,
+      "suffix": "min",
+      "min": 0,
+      "max": 60,
+      "helpText": "Average time to fall asleep after getting into bed. US average: 14 minutes."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "recommendedBedtimes",
+      "label": "Recommended Bedtimes",
+      "type": "table",
+      "columns": ["bedtime", "cycles", "totalSleepHours", "quality"]
+    },
+    {
+      "id": "optimalBedtime",
+      "label": "Optimal Bedtime",
+      "type": "single-value",
+      "format": "text",
+      "highlight": true
+    },
+    {
+      "id": "optimalCycles",
+      "label": "Sleep Cycles",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "optimalSleepHours",
+      "label": "Total Sleep Time",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " hrs",
+      "highlight": true
+    },
+    {
+      "id": "summary",
+      "label": "Sleep Recommendation",
+      "type": "value-group"
+    }
+  ],
+  "formula": "sleep-cycle",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["study-time-calculator", "pomodoro-calculator", "work-break-ratio-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Walker, Matthew — Why We Sleep (2017); National Sleep Foundation — Sleep Duration Recommendations (2015)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Bedtime = Wake Time - (N × 90 min) - Sleep Onset Minutes; N = number of cycles (4, 5, or 6 recommended); Cycle duration = 90 minutes (standard NREM+REM cycle)",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

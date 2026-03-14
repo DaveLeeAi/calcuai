@@ -1,0 +1,152 @@
+{
+  "id": "house-flipping-profit-calculator",
+  "title": "House Flipping Profit Calculator",
+  "slug": "house-flipping-profit-calculator",
+  "category": "real-estate",
+  "subcategory": "flipping",
+  "primaryKeyword": "house flipping profit calculator",
+  "secondaryKeywords": [
+    "fix and flip calculator",
+    "70% rule calculator",
+    "house flip roi calculator",
+    "real estate flip profit",
+    "max allowable offer calculator"
+  ],
+  "metaTitle": "House Flipping Profit Calculator — ROI & 70% Rule | CalcAI",
+  "metaDescription": "Calculate net profit, ROI, and maximum allowable offer for any house flip. Uses the 70% rule and includes holding costs, rehab, and closing fees.",
+  "inputs": [
+    {
+      "id": "arv",
+      "label": "After-Repair Value (ARV)",
+      "type": "currency",
+      "default": 350000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true,
+      "helpText": "Estimated sale price after all repairs and improvements"
+    },
+    {
+      "id": "purchasePrice",
+      "label": "Purchase Price",
+      "type": "currency",
+      "default": 180000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true
+    },
+    {
+      "id": "rehabCost",
+      "label": "Total Rehab Cost",
+      "type": "currency",
+      "default": 55000,
+      "min": 0,
+      "max": 1000000,
+      "required": true
+    },
+    {
+      "id": "holdingMonths",
+      "label": "Holding Period (Months)",
+      "type": "number",
+      "default": 6,
+      "min": 1,
+      "max": 36,
+      "required": true
+    },
+    {
+      "id": "monthlyHoldingCost",
+      "label": "Monthly Holding Cost",
+      "type": "currency",
+      "default": 1800,
+      "min": 0,
+      "max": 50000,
+      "required": false,
+      "helpText": "Mortgage/rent, utilities, insurance, HOA"
+    },
+    {
+      "id": "buyingClosingCostPercent",
+      "label": "Buying Closing Costs (%)",
+      "type": "percentage",
+      "default": 2,
+      "min": 0,
+      "max": 10,
+      "required": false
+    },
+    {
+      "id": "sellingClosingCostPercent",
+      "label": "Selling Closing Costs (%)",
+      "type": "percentage",
+      "default": 8,
+      "min": 0,
+      "max": 15,
+      "required": false,
+      "helpText": "Typical 6–9% including agent commissions"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "netProfit",
+      "label": "Net Profit",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "roi",
+      "label": "Return on Investment",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "annualizedRoi",
+      "label": "Annualized ROI",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "totalInvestment",
+      "label": "Total Cash Invested",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "maxAllowableOffer",
+      "label": "Max Allowable Offer (70% Rule)",
+      "type": "single-value",
+      "format": "currency",
+      "description": "70% Rule: ARV × 0.70 − Rehab"
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "house-flipping-profit",
+  "features": ["compare-scenarios", "shareable-url"],
+  "relatedCalculators": [
+    "property-appreciation-calculator",
+    "rental-yield-calculator",
+    "cap-rate-calculator",
+    "home-sale-profit-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "BiggerPockets — House Flipping Guide & 70% Rule (2025); National Association of Realtors — Investment Property Returns (2025)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Net Profit = ARV − Purchase Price − Rehab − Holding Costs − Buying Closing Costs − Selling Closing Costs; ROI = Net Profit / Total Investment × 100; Max Allowable Offer = ARV × 0.70 − Rehab",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

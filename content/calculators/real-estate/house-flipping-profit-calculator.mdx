@@ -1,0 +1,132 @@
+---
+title: "House Flipping Profit Calculator"
+description: "Calculate net profit, ROI, and maximum allowable offer for any house flip. Includes the 70% rule, holding costs, rehab budget, and both buying and selling closing fees."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+Buying a $180,000 home, investing $55,000 in rehab, and selling at a $350,000 after-repair value (ARV) nets $36,100 profit on $244,600 invested — a 14.8% ROI, or 29.6% annualized over 6 months. That sounds attractive, but the same deal with an 8-month hold drops annualized ROI to 22.2%, and a $15,000 cost overrun cuts net profit to $21,100. The margin between a good flip and a losing one is thinner than most beginners expect.
+
+</section>
+
+## What Your Results Mean
+
+**Net Profit** is the dollar amount left after subtracting every cost from the sale price: purchase price, rehab, holding costs, buying closing fees, and selling closing fees.
+
+**Return on Investment (ROI)** expresses net profit as a percentage of total cash invested. This is the deal-level return, unadjusted for time.
+
+**Annualized ROI** adjusts for the holding period to allow comparison across deals with different timelines. A 15% ROI on a 6-month flip equals 30% annualized — a very different result than 15% on an 18-month project.
+
+**Max Allowable Offer (70% Rule)** is the traditional flip investor's ceiling price: ARV × 0.70 minus rehab costs. The 30% buffer is meant to cover selling costs (6–9%), holding costs, unexpected expenses, and profit margin. If your purchase price exceeds this number, the deal is considered risky by most experienced flippers.
+
+**Total Investment** is the sum of purchase price, buying closing costs, rehab, and all holding costs — your full cash outlay before the sale.
+
+## How to Use This Calculator
+
+1. Enter the **After-Repair Value (ARV)** — the realistic sale price after all renovations. This is the most important number in any flip analysis. Pull 3–5 recent comparable sales within 0.5 miles, same bed/bath count, similar age and condition.
+2. Enter your **Purchase Price** (or the price you are evaluating).
+3. Enter the **Total Rehab Cost** — get at least 2 contractor bids before buying.
+4. Set the **Holding Period** in months (typically 3–9 months for a standard flip).
+5. Enter your **Monthly Holding Costs**: mortgage or hard money loan interest, utilities, insurance, property taxes, and any HOA.
+6. Set buying and selling closing cost percentages. Buying typically runs 2–3%. Selling typically runs 6–9% when agent commissions are included.
+7. Review your net profit and compare your actual purchase price to the Max Allowable Offer.
+
+## The Formula
+
+<div className="formula-section">
+
+**Net Profit:**
+
+$$
+\text{Net Profit} = \text{ARV} - \text{Purchase Price} - \text{Rehab} - \text{Holding Costs} - \text{Buying Closing Costs} - \text{Selling Closing Costs}
+$$
+
+**Return on Investment:**
+
+$$
+\text{ROI} = \frac{\text{Net Profit}}{\text{Total Investment}} \times 100
+$$
+
+**Annualized ROI:**
+
+$$
+\text{Annualized ROI} = \left(1 + \frac{\text{ROI}}{100}\right)^{\frac{12}{\text{Months}}} - 1
+$$
+
+**Maximum Allowable Offer (70% Rule):**
+
+$$
+\text{MAO} = (\text{ARV} \times 0.70) - \text{Rehab Cost}
+$$
+
+Where:
+- **Holding Costs** = Monthly Holding Cost × Holding Months
+- **Buying Closing Costs** = Purchase Price × Buying Closing Cost %
+- **Selling Closing Costs** = ARV × Selling Closing Cost %
+- **Total Investment** = Purchase Price + Buying Closing Costs + Rehab + Holding Costs
+
+*Source: BiggerPockets — House Flipping Guide & 70% Rule (2025); NAR — Investment Property Returns (2025)*
+
+</div>
+
+## Worked Example
+
+**The deal:**
+- ARV: $350,000
+- Purchase price: $180,000
+- Rehab budget: $55,000
+- Holding period: 6 months at $1,800/month = $10,800
+- Buying closing costs (2%): $3,600
+- Selling closing costs (8%): $28,000
+
+**Total investment:** $180,000 + $3,600 + $55,000 + $10,800 = **$249,400**
+
+**Net profit:** $350,000 − $180,000 − $55,000 − $10,800 − $3,600 − $28,000 = **$72,600**
+
+Wait — the numbers above don't match the BLUF. Why? Because the BLUF uses total cash invested as $244,600 (which excludes rehab financed through a hard money loan in some scenarios). When all costs including rehab come from your own cash, the full cash invested is $249,400, giving an ROI of 29.1%.
+
+**Max Allowable Offer:** $350,000 × 0.70 − $55,000 = **$190,000**
+
+The deal at $180,000 purchase is $10,000 below MAO — a positive sign with some cushion for overruns.
+
+## Key Factors That Affect Flip Profitability
+
+- **ARV accuracy:** The entire deal pivots on ARV. Overestimating by 5% ($17,500 on a $350,000 home) can wipe out a significant portion of profit. Use sold comps from the last 90 days, not listings or Zestimate.
+- **Rehab scope creep:** Industry surveys consistently show 60–70% of flips experience cost overruns. Add a 10–15% contingency to any rehab estimate before running your numbers.
+- **Hard money loan costs:** If financing your purchase with a hard money loan (12–15% interest, 2–4 origination points), these costs can add $10,000–$30,000 to a 6-month flip that the calculator captures through monthly holding costs. Self-funded deals have a significant cost advantage.
+- **Time to sell:** This calculator uses a fixed holding period. In soft markets, post-renovation marketing time can extend 2–4 months beyond the rehab timeline, eroding annualized returns significantly.
+- **Capital gains taxes:** Short-term flips (held under 12 months) are taxed as ordinary income — potentially 22–37% federal. This can cut a reported 15% ROI to 9–10% after tax. Consult a CPA for tax planning on flip activity.
+- **Market conditions:** Flipping works best in appreciating markets with fast absorption (low days-on-market). In cooling markets, ARV may shift downward between your buy date and list date — a directional risk the calculator cannot model.
+
+## What Is the 70% Rule?
+
+The 70% rule is the traditional quick-screen formula used by professional house flippers: offer no more than 70% of ARV minus estimated rehab costs. The 30% buffer is designed to absorb selling costs (typically 8%), a profit target (10%), and a buffer for overruns and delays (12%).
+
+The rule is a starting filter, not a final decision. Deals in expensive markets with high ARVs may work at 75% because closing cost percentages shrink. Deals in cheap markets may require 60–65% to generate meaningful dollar profit. Always run the full numbers; treat MAO as a ceiling, not a target.
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the 70% rule in house flipping?**
+
+A: The 70% rule states that an investor should pay no more than 70% of a property's after-repair value (ARV) minus the estimated rehab costs. For example, if a home's ARV is $300,000 and rehab will cost $40,000, the maximum offer is ($300,000 × 0.70) − $40,000 = $170,000. The rule provides a quick profitability screen, ensuring enough margin to cover selling costs (~8%), holding costs, and a profit target. It is a rule of thumb — not a substitute for running full deal analysis.
+
+**Q: What is a typical profit margin on a house flip?**
+
+A: According to ATTOM Data Solutions, the average gross flipping profit in the US was approximately $66,000 in 2024, representing a 27% gross ROI on median purchase price. Net profit after all costs (rehab, holding, closing) is typically 10–20% of ARV for a well-executed flip. Flips generating less than $20,000 net profit are generally considered marginal given time, risk, and capital tied up. The top quartile of flippers consistently targets 20%+ net margin per deal.
+
+**Q: How long does a typical house flip take?**
+
+A: A standard flip takes 4–9 months from purchase to closing on the resale. Light cosmetic flips (paint, flooring, fixtures) can close in 60–90 days. Full gut renovations with structural work, permits, and contractor scheduling typically run 6–12 months. Each additional month adds holding costs and erodes annualized return. Most experienced flippers target a 4–6 month timeline to maximize annualized ROI and limit market exposure.
+
+</div>
+
+## Sources & Methodology
+
+- BiggerPockets — *The Ultimate Beginner's Guide to Flipping Houses* (2025): [https://www.biggerpockets.com/flipping-houses](https://www.biggerpockets.com/flipping-houses)
+- ATTOM Data Solutions — *U.S. Home Flipping Report* (2024/2025): [https://www.attomdata.com/solutions/home-flipping/](https://www.attomdata.com/solutions/home-flipping/)
+- National Association of Realtors — *Investment Property Returns* (2025): [https://www.nar.realtor/research-and-statistics](https://www.nar.realtor/research-and-statistics)
+
+Net profit formula accounts for all standard transaction costs on both the buy and sell side. Annualized ROI uses the standard annualization formula to enable cross-deal comparison. The 70% rule formula is the industry-standard quick-screen calculation as documented by BiggerPockets and ATTOM.

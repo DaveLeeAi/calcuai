@@ -1,0 +1,47 @@
+{
+  "id": "energy",
+  "name": "Energy & Utilities Calculators",
+  "slug": "energy",
+  "description": "Free energy calculators — generator size, kWh cost, solar payback, gas vs. electric comparison, and home heating costs.",
+  "icon": "/icons/energy.svg",
+  "metaTitle": "Energy & Utilities Calculators — Free Tools for Homeowners",
+  "metaDescription": "Calculate generator wattage needs, kWh appliance running costs, solar panel payback period, gas vs. electric savings, and annual home heating costs. Free tools updated for 2026.",
+  "subcategories": [
+    {
+      "id": "electricity",
+      "name": "Electricity Costs",
+      "slug": "electricity",
+      "description": "Calculate the cost of running any appliance and understand your electricity bill.",
+      "calculators": [
+        "kwh-cost-calculator",
+        "generator-size-calculator"
+      ]
+    },
+    {
+      "id": "solar",
+      "name": "Solar & Renewables",
+      "slug": "solar",
+      "description": "Estimate solar panel payback period and long-term energy savings.",
+      "calculators": [
+        "solar-panel-payback-calculator"
+      ]
+    },
+    {
+      "id": "heating-cooling",
+      "name": "Heating & Cooling",
+      "slug": "heating-cooling",
+      "description": "Compare fuel costs and estimate annual home heating expenses.",
+      "calculators": [
+        "gas-vs-electric-cost-calculator",
+        "home-heating-cost-calculator"
+      ]
+    }
+  ],
+  "featuredCalculators": [
+    "kwh-cost-calculator",
+    "generator-size-calculator",
+    "solar-panel-payback-calculator",
+    "gas-vs-electric-cost-calculator",
+    "home-heating-cost-calculator"
+  ]
+}

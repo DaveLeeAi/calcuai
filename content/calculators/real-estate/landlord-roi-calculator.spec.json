@@ -1,0 +1,158 @@
+{
+  "id": "landlord-roi-calculator",
+  "title": "Landlord ROI Calculator",
+  "slug": "landlord-roi-calculator",
+  "category": "real-estate",
+  "subcategory": "rental",
+  "primaryKeyword": "landlord roi calculator",
+  "secondaryKeywords": [
+    "rental property return on investment",
+    "total real estate ROI",
+    "rental property ROI calculator",
+    "investment property total return",
+    "real estate holding period return"
+  ],
+  "metaTitle": "Landlord ROI Calculator — Total Return on Rental Property | CalcAI",
+  "metaDescription": "Calculate your total landlord ROI including cash flow, equity paydown, appreciation, and tax benefits. See annualized and cumulative returns over any holding period.",
+  "inputs": [
+    {
+      "id": "totalCashInvested",
+      "label": "Total Cash Invested",
+      "type": "currency",
+      "default": 70000,
+      "min": 1,
+      "max": 5000000,
+      "required": true,
+      "helpText": "Down payment + closing costs + initial repairs"
+    },
+    {
+      "id": "annualCashFlow",
+      "label": "Annual Cash Flow",
+      "type": "currency",
+      "default": 2400,
+      "min": -100000,
+      "max": 500000,
+      "required": true,
+      "helpText": "Use the Cash Flow Calculator to find this number"
+    },
+    {
+      "id": "annualPrincipalPaydown",
+      "label": "Annual Principal Paydown",
+      "type": "currency",
+      "default": 3000,
+      "min": 0,
+      "max": 100000,
+      "required": false,
+      "helpText": "From your mortgage amortization schedule (Year 1)"
+    },
+    {
+      "id": "currentPropertyValue",
+      "label": "Current Property Value",
+      "type": "currency",
+      "default": 370000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true
+    },
+    {
+      "id": "purchasePrice",
+      "label": "Original Purchase Price",
+      "type": "currency",
+      "default": 320000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true
+    },
+    {
+      "id": "annualTaxBenefits",
+      "label": "Annual Tax Benefits",
+      "type": "currency",
+      "default": 2500,
+      "min": 0,
+      "max": 100000,
+      "required": false,
+      "helpText": "Depreciation + deductions (consult a tax professional)"
+    },
+    {
+      "id": "holdingYears",
+      "label": "Holding Period (Years)",
+      "type": "number",
+      "default": 5,
+      "min": 1,
+      "max": 30,
+      "required": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalROI",
+      "label": "Total ROI",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "cashOnCashROI",
+      "label": "Cash-on-Cash ROI",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "annualizedROI",
+      "label": "Annualized ROI",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "appreciationGain",
+      "label": "Appreciation Gain",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "totalCumulativeReturn",
+      "label": "Total Cumulative Return ($)",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "roiBreakdown",
+      "label": "ROI Breakdown",
+      "type": "table",
+      "columns": ["Return Source", "Total ($)", "% of Investment"]
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "landlord-roi",
+  "features": ["compare-scenarios", "shareable-url"],
+  "relatedCalculators": [
+    "real-estate-cash-flow-calculator",
+    "rental-yield-calculator",
+    "rental-property-calculator",
+    "property-appreciation-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Investopedia — Return on Investment (ROI) for Real Estate (2025); National Association of Realtors — Real Estate Investment Returns (2025)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total Return = (Cash Flow × Years) + (Principal Paydown × Years) + Appreciation Gain + (Tax Benefits × Years); Total ROI = Total Return / Cash Invested × 100; Annualized ROI = (1 + Total ROI)^(1/Years) − 1",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

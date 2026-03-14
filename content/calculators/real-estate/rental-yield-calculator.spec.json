@@ -1,0 +1,140 @@
+{
+  "id": "rental-yield-calculator",
+  "title": "Rental Yield Calculator",
+  "slug": "rental-yield-calculator",
+  "category": "real-estate",
+  "subcategory": "rental",
+  "primaryKeyword": "rental yield calculator",
+  "secondaryKeywords": [
+    "gross rental yield",
+    "net rental yield",
+    "rental return on investment",
+    "buy to let yield",
+    "investment property yield"
+  ],
+  "metaTitle": "Rental Yield Calculator — Gross & Net Yield | CalcAI",
+  "metaDescription": "Calculate gross and net rental yield on any investment property. Enter rent, property value, and expenses to find your real return in seconds.",
+  "inputs": [
+    {
+      "id": "propertyValue",
+      "label": "Property Value",
+      "type": "currency",
+      "default": 300000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true
+    },
+    {
+      "id": "monthlyRent",
+      "label": "Monthly Rent",
+      "type": "currency",
+      "default": 2000,
+      "min": 1,
+      "max": 100000,
+      "required": true
+    },
+    {
+      "id": "annualPropertyTax",
+      "label": "Annual Property Tax",
+      "type": "currency",
+      "default": 3600,
+      "min": 0,
+      "max": 500000,
+      "required": false
+    },
+    {
+      "id": "annualInsurance",
+      "label": "Annual Insurance",
+      "type": "currency",
+      "default": 1200,
+      "min": 0,
+      "max": 100000,
+      "required": false
+    },
+    {
+      "id": "annualMaintenance",
+      "label": "Annual Maintenance",
+      "type": "currency",
+      "default": 1800,
+      "min": 0,
+      "max": 100000,
+      "required": false
+    },
+    {
+      "id": "managementFeePercent",
+      "label": "Property Management Fee (%)",
+      "type": "percentage",
+      "default": 8,
+      "min": 0,
+      "max": 30,
+      "required": false,
+      "helpText": "Typically 8–12% of gross rent"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "grossYield",
+      "label": "Gross Rental Yield",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "netYield",
+      "label": "Net Rental Yield",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "annualRent",
+      "label": "Annual Rent Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualExpenses",
+      "label": "Total Annual Expenses",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "annualNetIncome",
+      "label": "Annual Net Income",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "rental-yield",
+  "features": ["compare-scenarios", "shareable-url"],
+  "relatedCalculators": [
+    "real-estate-cash-flow-calculator",
+    "landlord-roi-calculator",
+    "cap-rate-calculator",
+    "rental-property-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Investopedia — Rental Yield Definition (2025); National Association of Realtors — Rental Property Analysis Guide (2025)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Gross Yield = (Annual Rent / Property Value) × 100; Net Yield = ((Annual Rent − Expenses) / Property Value) × 100",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

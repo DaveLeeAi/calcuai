@@ -1,0 +1,49 @@
+{
+  "id": "real-estate",
+  "name": "Real Estate Calculators",
+  "slug": "real-estate",
+  "description": "Free real estate calculators for investors and landlords — rental yield, house flipping profit, property appreciation, cash flow, and more.",
+  "icon": "/icons/real-estate.svg",
+  "metaTitle": "Real Estate Calculators — Free Tools for Property Investors",
+  "metaDescription": "Calculate rental yield, house flipping profit, property appreciation, landlord ROI, and real estate cash flow. Free tools for property investors updated for 2026.",
+  "subcategories": [
+    {
+      "id": "rental",
+      "name": "Rental Property",
+      "slug": "rental",
+      "description": "Calculate rental yield, cash flow, and landlord ROI for income-producing properties.",
+      "calculators": [
+        "rental-yield-calculator",
+        "real-estate-cash-flow-calculator",
+        "landlord-roi-calculator"
+      ]
+    },
+    {
+      "id": "flipping",
+      "name": "House Flipping & Appreciation",
+      "slug": "flipping",
+      "description": "Estimate profits from house flipping projects and model long-term property appreciation.",
+      "calculators": [
+        "house-flipping-profit-calculator",
+        "property-appreciation-calculator"
+      ]
+    },
+    {
+      "id": "valuation",
+      "name": "Property Valuation",
+      "slug": "valuation",
+      "description": "Analyze property value using price per square foot and comparable sales data.",
+      "calculators": [
+        "price-per-square-foot-calculator"
+      ]
+    }
+  ],
+  "featuredCalculators": [
+    "rental-yield-calculator",
+    "house-flipping-profit-calculator",
+    "real-estate-cash-flow-calculator",
+    "property-appreciation-calculator",
+    "landlord-roi-calculator",
+    "price-per-square-foot-calculator"
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "id": "price-per-square-foot-calculator",
+  "title": "Price Per Square Foot Calculator",
+  "slug": "price-per-square-foot-calculator",
+  "category": "real-estate",
+  "subcategory": "valuation",
+  "primaryKeyword": "price per square foot calculator",
+  "secondaryKeywords": [
+    "price per sqft calculator",
+    "cost per square foot home",
+    "real estate price per square foot",
+    "home value per square foot",
+    "comparable sales analysis"
+  ],
+  "metaTitle": "Price Per Square Foot Calculator — Compare to Comps | CalcAI",
+  "metaDescription": "Calculate price per square foot for any property and compare to 3 nearby sales. Instantly see if a home is priced fairly, at a premium, or at a discount.",
+  "inputs": [
+    {
+      "id": "propertyPrice",
+      "label": "Subject Property Price",
+      "type": "currency",
+      "default": 425000,
+      "min": 1000,
+      "max": 10000000,
+      "required": true
+    },
+    {
+      "id": "squareFootage",
+      "label": "Subject Property Square Footage",
+      "type": "number",
+      "default": 2100,
+      "min": 100,
+      "max": 50000,
+      "required": true
+    },
+    {
+      "id": "comp1Price",
+      "label": "Comparable #1 Sale Price",
+      "type": "currency",
+      "default": 400000,
+      "min": 1000,
+      "max": 10000000,
+      "required": false
+    },
+    {
+      "id": "comp1SqFt",
+      "label": "Comparable #1 Square Footage",
+      "type": "number",
+      "default": 2000,
+      "min": 100,
+      "max": 50000,
+      "required": false
+    },
+    {
+      "id": "comp2Price",
+      "label": "Comparable #2 Sale Price",
+      "type": "currency",
+      "default": 450000,
+      "min": 1000,
+      "max": 10000000,
+      "required": false
+    },
+    {
+      "id": "comp2SqFt",
+      "label": "Comparable #2 Square Footage",
+      "type": "number",
+      "default": 2200,
+      "min": 100,
+      "max": 50000,
+      "required": false
+    },
+    {
+      "id": "comp3Price",
+      "label": "Comparable #3 Sale Price",
+      "type": "currency",
+      "default": 410000,
+      "min": 1000,
+      "max": 10000000,
+      "required": false
+    },
+    {
+      "id": "comp3SqFt",
+      "label": "Comparable #3 Square Footage",
+      "type": "number",
+      "default": 1950,
+      "min": 100,
+      "max": 50000,
+      "required": false
+    }
+  ],
+  "outputs": [
+    {
+      "id": "subjectPSF",
+      "label": "Subject Property $/Sq Ft",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true,
+      "description": "Your property's price per square foot"
+    },
+    {
+      "id": "avgCompPSF",
+      "label": "Average Comparable $/Sq Ft",
+      "type": "single-value",
+      "format": "currency",
+      "highlight": true
+    },
+    {
+      "id": "estimatedValue",
+      "label": "Estimated Value at Avg Comp PSF",
+      "type": "single-value",
+      "format": "currency"
+    },
+    {
+      "id": "premiumDiscountPercent",
+      "label": "Premium / Discount to Comps",
+      "type": "single-value",
+      "format": "percentage"
+    },
+    {
+      "id": "comparablesTable",
+      "label": "Comparables Table",
+      "type": "table",
+      "columns": ["Property", "Sale Price", "Sq Ft", "$/Sq Ft"]
+    },
+    {
+      "id": "summary",
+      "label": "Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "price-per-square-foot",
+  "features": ["compare-scenarios", "shareable-url"],
+  "relatedCalculators": [
+    "property-appreciation-calculator",
+    "house-flipping-profit-calculator",
+    "home-sale-profit-calculator",
+    "home-affordability-calculator"
+  ],
+  "disclaimer": "finance",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Zillow Research — Price Per Square Foot Methodology (2025); National Association of Realtors — Comparable Sales Analysis (2025)",
+  "articleWordTarget": 1200,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "PSF = Sale Price / Square Footage; Average Comp PSF = Mean of all comparable PSF values; Estimated Value = Subject Sq Ft × Avg Comp PSF; Premium/Discount = (Subject PSF − Avg Comp PSF) / Avg Comp PSF × 100",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

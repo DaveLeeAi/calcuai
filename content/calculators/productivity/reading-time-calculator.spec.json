@@ -1,0 +1,134 @@
+{
+  "id": "reading-time-calculator",
+  "title": "Reading Time Calculator",
+  "slug": "reading-time-calculator",
+  "category": "productivity",
+  "subcategory": "study",
+  "primaryKeyword": "reading time calculator",
+  "secondaryKeywords": ["how long to read a book", "book reading time estimator", "pages per hour reading", "how many books can I read per year"],
+  "metaTitle": "Reading Time Calculator — How Long to Finish Any Book | CalcAI",
+  "metaDescription": "Calculate how long it takes to read any book or document. Enter pages, reading speed, and reading type to get total hours and a days-to-finish schedule.",
+  "inputs": [
+    {
+      "id": "totalPages",
+      "label": "Total Pages",
+      "type": "number",
+      "default": 300,
+      "min": 1,
+      "max": 5000
+    },
+    {
+      "id": "wordsPerPage",
+      "label": "Words Per Page",
+      "type": "number",
+      "default": 300,
+      "suffix": "words/page",
+      "min": 50,
+      "max": 600
+    },
+    {
+      "id": "readingSpeedWpm",
+      "label": "Reading Speed",
+      "type": "number",
+      "default": 250,
+      "suffix": "WPM",
+      "min": 50,
+      "max": 1200,
+      "helpText": "Average adult: 200–300 WPM. Find yours with a 1-minute reading test."
+    },
+    {
+      "id": "dailyReadingMinutes",
+      "label": "Daily Reading Time",
+      "type": "number",
+      "default": 30,
+      "suffix": "min/day",
+      "min": 1,
+      "max": 600
+    },
+    {
+      "id": "readingType",
+      "label": "Reading Type",
+      "type": "select",
+      "default": "fiction",
+      "options": [
+        { "value": "fiction", "label": "Fiction / Biography (1.0× speed)" },
+        { "value": "non-fiction", "label": "Non-Fiction / Self-Help (0.85× speed)" },
+        { "value": "textbook", "label": "Textbook (0.60× speed)" },
+        { "value": "technical", "label": "Technical / Academic (0.50× speed)" },
+        { "value": "casual-blog", "label": "Casual Blog / News (1.2× speed)" }
+      ]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalWords",
+      "label": "Total Words",
+      "type": "single-value",
+      "format": "number"
+    },
+    {
+      "id": "totalReadingMinutes",
+      "label": "Total Reading Time",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " min"
+    },
+    {
+      "id": "totalReadingHours",
+      "label": "Total Reading Hours",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " hrs",
+      "highlight": true
+    },
+    {
+      "id": "daysToFinish",
+      "label": "Days to Finish",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " days",
+      "highlight": true
+    },
+    {
+      "id": "minutesPerPage",
+      "label": "Minutes Per Page",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " min/page"
+    },
+    {
+      "id": "adjustedWpm",
+      "label": "Adjusted Reading Speed",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " WPM"
+    },
+    {
+      "id": "summary",
+      "label": "Reading Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "reading-time",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["study-time-calculator", "pomodoro-calculator", "work-break-ratio-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Brysbaert, Marc — Journal of Memory and Language (2019); Rayner et al. — Psychological Bulletin (2016)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Total Words = Pages × Words/Page; Adjusted WPM = WPM × reading type multiplier; Total Minutes = Total Words / Adjusted WPM; Days = Total Minutes / Daily Reading Minutes",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

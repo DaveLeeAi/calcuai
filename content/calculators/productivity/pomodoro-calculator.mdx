@@ -1,0 +1,85 @@
+---
+title: "Pomodoro Calculator"
+description: "Calculate your Pomodoro schedule: total sessions, breaks, and estimated end time for any work block. Customize session length, break intervals, and start time."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+4 hours of work using standard 25-minute Pomodoros with 5-minute short breaks and 15-minute long breaks every 4 sessions takes **5 hours 5 minutes total clock time** — producing **10 Pomodoros**, **6 short breaks**, and **2 long breaks**, finishing at **2:05 PM** from a 9:00 AM start. The gap between 4 hours of intended work and 5+ hours of actual time is why planning with Pomodoros prevents the surprise of "where did the day go?" when you skip breaks.
+
+</section>
+
+## What Your Results Mean
+
+**Total Pomodoros** is the number of focused work blocks you'll complete. **Total clock time** is the real-world time from start to finish including all breaks — always longer than raw work time. **Estimated end time** lets you plan your day around concrete commitments. The **session schedule table** gives you a minute-by-minute roadmap: when to start each block, when to take each break, and when your session ends.
+
+## How to Use This Calculator
+
+1. Enter your total intended work time (not counting breaks — just the focused work hours).
+2. Customize the Pomodoro length if you prefer longer blocks: 25 min is classic, 50 min works better for deep work like writing or coding.
+3. Set your short break (5 min standard) and long break (15–30 min standard) lengths.
+4. Choose how many Pomodoros before a long break — 4 is the original Cirillo prescription.
+5. Enter your start time to get a concrete end time.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Pomodoros} = \left\lfloor \frac{\text{Total Work Minutes}}{\text{Pomodoro Length}} \right\rfloor
+$$
+$$
+\text{Long Breaks} = \left\lfloor \frac{\text{Pomodoros}}{\text{Sessions Before Long Break}} \right\rfloor
+$$
+$$
+\text{Total Time} = (\text{Pomodoros} \times P) + (\text{Short Breaks} \times S) + (\text{Long Breaks} \times L)
+$$
+
+Where:
+- **P** = Pomodoro length (minutes)
+- **S** = short break length (minutes)
+- **L** = long break length (minutes)
+
+*Source: Cirillo, Francesco — The Pomodoro Technique (2006)*
+
+</div>
+
+## Worked Example
+
+**Writing session:** 3 hours work, 50-minute Pomodoros, 10-minute short breaks, 30-minute long break after every 3, starting at 10:00 AM.
+
+- Pomodoros: 180 ÷ 50 = **3 Pomodoros**
+- Long breaks: 3 ÷ 3 = **1 long break** (at end)
+- Short breaks: 3 − 1 − 1 = **1 short break** (after Pomodoro 1)
+- Total time: (3 × 50) + (1 × 10) + (1 × 30) = **190 min = 3 hrs 10 min**
+- End time: 10:00 AM + 3:10 = **1:10 PM**
+
+| Block | Type | Duration | Start | End |
+|---|---|---|---|---|
+| 1 | Pomodoro | 50 min | 10:00 | 10:50 |
+| — | Short break | 10 min | 10:50 | 11:00 |
+| 2 | Pomodoro | 50 min | 11:00 | 11:50 |
+| — | Short break | 10 min | 11:50 | 12:00 |
+| 3 | Pomodoro | 50 min | 12:00 | 12:50 |
+| — | Long break | 30 min | 12:50 | 1:20 |
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the Pomodoro Technique?**
+A: The Pomodoro Technique is a time management system developed by Francesco Cirillo in the late 1980s (named after a tomato-shaped kitchen timer he used as a student). The method alternates focused work intervals — traditionally 25 minutes — with short breaks (5 minutes), with a longer break (15–30 minutes) every 4 intervals. The principle is that time pressure from a defined work block improves focus and urgency, while mandatory breaks prevent mental fatigue and maintain sustainable productivity throughout the day.
+
+**Q: How long should a Pomodoro work block be?**
+A: The original 25-minute Pomodoro works best for tasks requiring frequent context-switching: email processing, answering questions, admin tasks. For deep work — coding, writing, research — many practitioners extend blocks to 45–90 minutes. A 2014 DeskTime analysis of the most productive workers found they worked for **52 minutes** then broke for **17 minutes** on average. The principle matters more than the exact number: pick a block length you can sustain without distraction, and honor the break completely.
+
+**Q: Does the Pomodoro Technique work for ADHD?**
+A: Many people with ADHD report the Pomodoro Technique is particularly effective because the defined endpoint reduces task-aversion anxiety ("I only have to do this for 25 minutes, not forever") and the timer provides external structure that ADHD brains often struggle to generate internally. Shorter blocks (15–20 minutes) may work better than the standard 25 minutes for those with significant attention challenges. Combining Pomodoro with task lists that break work into Pomodoro-sized chunks — so you know exactly what to do during each block — amplifies the benefit.
+
+</div>
+
+## Sources & Methodology
+
+The Pomodoro Technique framework is from Francesco Cirillo's original 2006 methodology book. The 52/17 productivity data point is from DeskTime's 2014 analysis of their time-tracking software users, identifying the work/break patterns of their top 10% most productive users. Break timing recommendations align with Ariga and Lleras (2011) in Cognition, which found that brief diversions from a task dramatically improve focus on that task over extended time periods — providing scientific support for why regular breaks increase rather than decrease total output.

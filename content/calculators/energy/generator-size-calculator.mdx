@@ -1,0 +1,90 @@
+---
+title: "Generator Size Calculator"
+description: "Find the right generator size for your home by entering your appliances. Get total running watts, starting surge watts, and the recommended generator kW."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A home with a refrigerator, central AC (1,500 W), furnace blower, lights, TV, and computer needs roughly **3,650 running watts** but **8,250+ starting watts** to handle motor surge — meaning a 5 kW generator won't cut it. Plan for a **10 kW generator** with 25% headroom to prevent overload during simultaneous starts. Undersizing by even 20% is the most common and costly generator mistake.
+
+</section>
+
+## What Your Results Mean
+
+**Running watts** is what your appliances consume continuously. **Starting watts** accounts for the surge that electric motors (AC compressors, pumps, furnace blowers) draw for 1–3 seconds on startup — typically 2–3× their running draw. The **recommended generator size** adds a 25% safety margin on top of your peak starting load to prevent the generator from straining or shutting down.
+
+The appliance breakdown table shows exactly where your load is coming from so you can prioritize which circuits to power during an outage.
+
+## How to Use This Calculator
+
+1. Enter the running wattage for each appliance you want to power during an outage — leave at zero for appliances you'll skip.
+2. Keep "Include Motor Starting Surge" enabled unless you have soft-start equipment.
+3. Find appliance wattages on the label, in the manual, or use the reference table below.
+4. The recommended generator size includes a 25% safety buffer — size up, never down.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Starting Watts} = \text{Running Watts}_{\text{largest motor}} \times 3 + \text{All other running watts}
+$$
+$$
+\text{Recommended kW} = \frac{\text{Starting Watts} \times 1.25}{1000}
+$$
+
+Where:
+- **3×** = motor starting surge multiplier (conservative estimate for AC compressors and pumps)
+- **1.25** = 25% headroom factor for safe continuous operation
+
+*Source: Generac — Generator Sizing Guide (2025); U.S. Department of Energy — Standby Generator Selection Guidelines (2025)*
+
+</div>
+
+## Worked Example
+
+**Scenario:** Power outage during a heat wave. You want to run:
+- Central AC: 1,500 W running / 4,500 W starting
+- Refrigerator: 150 W running / 450 W starting
+- Furnace blower: 500 W running / 1,500 W starting
+- Lights: 300 W (LED, no surge)
+- TV + computer: 300 W (no surge)
+
+Total running watts: 2,750 W
+Starting watts (AC surge dominates): 4,500 + 1,300 remaining = **5,800 W**
+Recommended generator: 5,800 × 1.25 ÷ 1,000 = **7.25 kW → buy a 8–10 kW unit**
+
+## Appliance Wattage Reference
+
+| Appliance | Running Watts | Starting Watts |
+|---|---|---|
+| Central AC (2.5-ton) | 1,500 W | 4,500 W |
+| Central AC (5-ton) | 3,500 W | 10,500 W |
+| Well pump (1/2 HP) | 750 W | 2,250 W |
+| Sump pump (1/3 HP) | 500 W | 1,500 W |
+| Furnace blower | 500 W | 1,500 W |
+| Refrigerator | 150 W | 450 W |
+| Microwave | 700 W | 700 W |
+| LED lights (10 bulbs) | 100 W | 100 W |
+| Electric range (one burner) | 1,500 W | 1,500 W |
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the difference between running watts and starting watts?**
+A: Running watts (also called rated watts) is the continuous power an appliance draws during normal operation. Starting watts (also called surge watts) is the brief spike of 2–3 times more power that electric motors need for 1–3 seconds when they first turn on. Air conditioners, refrigerators, well pumps, and sump pumps all have high starting surges. If your generator can't supply the starting watts, it will either trip its breaker or be damaged. Always size for starting watts, not running watts.
+
+**Q: What size generator do I need for a whole house?**
+A: A whole-house standby generator typically requires 20–22 kW for a 2,000–2,500 sq ft home with central AC, electric appliances, and a well pump. If you're willing to shed loads (run only essential circuits), a 10–12 kW portable generator can cover refrigerator, furnace, well pump, lights, and phone charging. The exact size depends on your specific appliance mix — use this calculator with your actual load list for a personalized recommendation.
+
+**Q: Portable generator vs. standby generator — which should I buy?**
+A: Portable generators (2–12 kW, $400–$4,000) run on gasoline or propane, require manual setup and refueling, and are suitable for occasional outages or job sites. Standby generators (10–22+ kW, $5,000–$15,000 installed) connect permanently to your natural gas line, start automatically within seconds of an outage, and can run indefinitely. If your area experiences outages more than once a year or you have medical equipment, a standby unit pays for itself in convenience and safety.
+
+</div>
+
+## Sources & Methodology
+
+Starting surge multipliers are based on Generac's published sizing methodology and the U.S. Department of Energy's consumer guidance on standby generators. The 25% headroom factor is the industry standard recommended by generator manufacturers including Generac, Kohler, and Briggs & Stratton to ensure safe continuous operation below 80% of rated capacity. Motor starting surge estimates use a 3× multiplier for single-phase induction motors, which is the conservative case for residential AC compressors and pumps.

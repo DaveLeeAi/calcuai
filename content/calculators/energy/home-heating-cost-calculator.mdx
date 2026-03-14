@@ -1,0 +1,94 @@
+---
+title: "Home Heating Cost Calculator"
+description: "Estimate your annual and monthly home heating cost by fuel type, home size, insulation level, and climate zone using heating degree days."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A 1,800 sq ft home with average insulation in a 4,500 HDD climate (Chicago) costs about **$1,260/year** to heat with natural gas at $1.50/therm in an 80% AFUE furnace — averaging **$105/month**, with January alone running $250 and July costing $0. The same home in Miami (500 HDD) costs $140/year; in Minneapolis (8,000 HDD) it costs $2,240/year. Fuel type and insulation quality are the two biggest factors you can actually control.
+
+</section>
+
+## What Your Results Mean
+
+**Annual heating cost** is the estimated total fuel cost for your heating season based on your climate's heating degree days, home size, insulation, and fuel type. **Monthly breakdown** distributes that annual cost across 12 months weighted by typical degree-day patterns — heaviest in January–February, near zero June–August in most climates. **Annual fuel consumption** tells you how many therms, gallons, or kWh to budget for.
+
+## How to Use This Calculator
+
+1. Enter your home's conditioned square footage (the area you actually heat).
+2. Select your insulation level honestly — most pre-1980 homes are "poor" to "average."
+3. Find your city's heating degree days on NOAA's Climate Data Portal or use the reference below.
+4. Select your fuel type and enter your actual rate (check your utility bill).
+5. Enter your system's efficiency — the yellow EnergyGuide label shows this for newer equipment.
+
+## Typical Heating Degree Days by City
+
+| City | Annual HDD | Climate |
+|---|---|---|
+| Miami, FL | 200 | Very warm |
+| Atlanta, GA | 2,900 | Mild |
+| Washington, DC | 4,200 | Moderate |
+| Chicago, IL | 6,500 | Cold |
+| Denver, CO | 5,500 | Cold |
+| Minneapolis, MN | 8,000 | Very cold |
+| Anchorage, AK | 10,800 | Extreme |
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Annual BTU} = \text{HDD} \times 24 \times \frac{\text{Area (sq ft)} \times U_{\text{avg}}}{\text{Insulation factor}}
+$$
+$$
+\text{Annual Cost} = \frac{\text{Annual BTU}}{\text{Fuel BTU content}} \times \frac{\text{Fuel Rate}}{\text{Efficiency}}
+$$
+
+Where:
+- **HDD** = Heating Degree Days (base 65°F)
+- **U-factor** = average heat loss rate (BTU/hr·°F·sq ft), varies by insulation level
+- **Fuel BTU content:** natural gas = 100,000 BTU/therm; heating oil = 138,500 BTU/gal; propane = 91,500 BTU/gal; electricity = 3,412 BTU/kWh
+
+*Source: U.S. EIA — Residential Energy Consumption Survey (2025); U.S. DOE Building Technologies Office — Heating Degree Days (2025)*
+
+</div>
+
+## Worked Example
+
+**Chicago suburb (6,500 HDD), 2,000 sq ft, average insulation, natural gas at $1.50/therm, 80% AFUE:**
+
+- Annual BTU needed: 6,500 × 24 × (2,000 × 0.031) ≈ **96,720,000 BTU**
+- Therms needed: 96,720,000 ÷ 100,000 = **967 therms**
+- Effective therms (accounting for 80% efficiency): 967 ÷ 0.80 = **1,209 therms**
+- Annual cost: 1,209 × $1.50 = **$1,814/year** ($151/month average)
+
+## Fuel Cost Comparison at National Average Rates (2025)
+
+| Fuel | National Avg Rate | Annual Cost (Chicago, 2,000 sq ft) |
+|---|---|---|
+| Natural gas | $1.50/therm | $1,814 |
+| Propane | $2.80/gallon | $2,730 |
+| Heating oil | $3.40/gallon | $2,200 |
+| Electric resistance | $0.16/kWh | $4,540 |
+| Heat pump (HSPF 9) | $0.16/kWh | $1,600 |
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What are heating degree days and how do I find mine?**
+A: Heating degree days (HDD) measure how cold your climate is for heating purposes. Each degree that a day's average temperature falls below 65°F counts as one HDD — so a day averaging 45°F adds 20 HDD. A full year's HDDs measure your total heating load: Miami accumulates ~200 HDD/year, while Minneapolis accumulates ~8,000. Find your city's actual historical HDD data at the NOAA Climate Data Online portal (climate.weather.gov) or your state's energy office website.
+
+**Q: How much does heating add to my monthly utility bill?**
+A: Heating adds $60–$300/month to utility bills in cold climates during winter, depending on fuel type and home size. Natural gas heating for a 2,000 sq ft home in a cold climate (Chicago, Minneapolis) typically costs $150–$300/month in winter and near zero in summer. Propane and heating oil can cost $200–$500/month in deep winter. Electric resistance heating is typically $200–$500+/month in cold climates — the most expensive option. Budgeting 10–15% of your annual heating cost per peak winter month is a useful rule of thumb.
+
+**Q: What are the best ways to reduce heating costs?**
+A: The highest-ROI improvements in order: (1) Air sealing ($100–$500, reduces heating 10–20%) — caulk windows, weatherstrip doors, seal attic penetrations; (2) Attic insulation ($1,000–$3,000, saves $200–$600/year) — most heat escapes through the ceiling; (3) Programmable thermostat ($25–$250) — drop 7–10°F for 8 hours while sleeping or away to save 10% annually; (4) Furnace tune-up ($80–$150/year) — a dirty filter alone can cut efficiency 10–15%; (5) Window upgrades ($400–$800/window) — longest payback but meaningful in very cold climates.
+
+</div>
+
+## Sources & Methodology
+
+The heating load model uses the degree-day method (base 65°F), which is the standard approach used by the U.S. Department of Energy and ASHRAE for residential heating estimates. U-factor values by insulation level are derived from DOE Building Technologies Office envelope performance data. Fuel energy content values (BTU per unit) and national average fuel prices are from the U.S. Energy Information Administration's Residential Energy Consumption Survey and Short-Term Energy Outlook (2025). Monthly distribution of heating degree days uses 30-year NOAA climate normals.

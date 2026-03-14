@@ -1,0 +1,116 @@
+{
+  "id": "work-break-ratio-calculator",
+  "title": "Work Break Ratio Calculator",
+  "slug": "work-break-ratio-calculator",
+  "category": "productivity",
+  "subcategory": "time-management",
+  "primaryKeyword": "work break ratio calculator",
+  "secondaryKeywords": ["best work to break ratio", "52 17 rule calculator", "how often to take breaks", "work break schedule calculator"],
+  "metaTitle": "Work Break Ratio Calculator — Optimal Work & Break Schedule | CalcAI",
+  "metaDescription": "Calculate your work break schedule using any work-to-break ratio. Compare Pomodoro 25/5, DeskTime 52/17, 90-minute ultradian, and custom ratios.",
+  "inputs": [
+    {
+      "id": "availableHours",
+      "label": "Available Work Hours",
+      "type": "number",
+      "default": 8,
+      "suffix": " hrs",
+      "min": 0.5,
+      "max": 16
+    },
+    {
+      "id": "workBlockMinutes",
+      "label": "Work Block Length",
+      "type": "number",
+      "default": 52,
+      "suffix": "min",
+      "min": 5,
+      "max": 180
+    },
+    {
+      "id": "breakLengthMinutes",
+      "label": "Break Length",
+      "type": "number",
+      "default": 17,
+      "suffix": "min",
+      "min": 1,
+      "max": 60
+    },
+    {
+      "id": "startTime",
+      "label": "Start Time",
+      "type": "text",
+      "default": "09:00",
+      "helpText": "Enter start time in 24-hour format (e.g., 09:00)"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "totalWorkSessions",
+      "label": "Total Work Sessions",
+      "type": "single-value",
+      "format": "number",
+      "highlight": true
+    },
+    {
+      "id": "totalWorkMinutes",
+      "label": "Total Focused Work Time",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " min"
+    },
+    {
+      "id": "totalBreakMinutes",
+      "label": "Total Break Time",
+      "type": "single-value",
+      "format": "number",
+      "suffix": " min"
+    },
+    {
+      "id": "workEfficiencyPercent",
+      "label": "Work Efficiency",
+      "type": "single-value",
+      "format": "percentage",
+      "highlight": true
+    },
+    {
+      "id": "estimatedEndTime",
+      "label": "Estimated End Time",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "presetComparisons",
+      "label": "Popular Method Comparison",
+      "type": "table",
+      "columns": ["name", "workMinutes", "breakMinutes", "ratio", "bestFor"]
+    },
+    {
+      "id": "summary",
+      "label": "Schedule Summary",
+      "type": "value-group"
+    }
+  ],
+  "formula": "work-break-ratio",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": ["pomodoro-calculator", "study-time-calculator", "sleep-cycle-calculator"],
+  "disclaimer": "general",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": false,
+  "formulaCitation": "Ariga & Lleras — Cognition (2011); DeskTime Productivity Study (2014); Cirillo — The Pomodoro Technique (2006)",
+  "articleWordTarget": 1000,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "review",
+  "reviewOwner": "stuart",
+  "formulaSource": "Sessions = floor(availableMinutes / (workBlock + breakLength)); Total work = Sessions × workBlock; Efficiency = Total work / availableMinutes × 100",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "informational",
+  "monetizationType": "ads",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 0,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

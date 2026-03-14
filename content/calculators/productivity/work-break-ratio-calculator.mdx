@@ -1,0 +1,83 @@
+---
+title: "Work Break Ratio Calculator"
+description: "Find the optimal work-to-break ratio for your schedule. Compare Pomodoro 25/5, DeskTime 52/17, ultradian 90/20, and any custom ratio across an 8-hour day."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+The DeskTime 52-minute work / 17-minute break ratio produces **6 focused sessions** in an 8-hour day — **312 minutes (5.2 hours) of actual work** at 65% efficiency. By comparison, Pomodoro 25/5 yields 9 sessions but only **225 minutes of work** at 47% efficiency. The 90-minute ultradian rhythm approach gives the highest focused output: **4 sessions × 90 minutes = 360 minutes (6 hours)** at 75% efficiency. The best ratio is the one you'll actually sustain — but the data strongly favors longer work blocks with proportionally longer breaks.
+
+</section>
+
+## What Your Results Mean
+
+**Total work sessions** is how many complete work blocks you'll fit in your day. **Work efficiency** is the percentage of your available hours actually spent in focused work — lower is not necessarily worse if those focused minutes are higher quality. **Popular method comparison** shows all major systems side by side using the same 8-hour day, letting you see exactly what you give up or gain by switching methods.
+
+## How to Use This Calculator
+
+1. Enter your actual available work hours (subtract commute, meals, meetings).
+2. Enter your preferred work block length — start with 52 minutes if you've never measured this before.
+3. Enter your break length — the research suggests breaks should be roughly 25–30% of your work block.
+4. Enter your start time for a concrete end-time estimate.
+5. Compare your custom settings against the preset methods in the results table.
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Sessions} = \left\lfloor \frac{\text{Available Minutes}}{\text{Work Block} + \text{Break Length}} \right\rfloor
+$$
+$$
+\text{Work Efficiency} = \frac{\text{Sessions} \times \text{Work Block}}{\text{Available Minutes}} \times 100\%
+$$
+
+Where:
+- **Available Minutes** = available work hours × 60
+- The last partial cycle is excluded (it may not complete)
+
+*Source: Ariga & Lleras — Cognition (2011); DeskTime Productivity Study (2014)*
+
+</div>
+
+## Worked Example
+
+**8-hour day (480 min), 52-minute blocks, 17-minute breaks:**
+
+- Cycle length: 52 + 17 = 69 minutes
+- Sessions: 480 ÷ 69 = **6.95 → 6 complete sessions**
+- Total work: 6 × 52 = **312 minutes (5.2 hours)**
+- Total breaks: 6 × 17 = **102 minutes (1.7 hours)**
+- Remaining: 480 − (6 × 69) = **66 minutes** (available for meetings, partial work, admin)
+- Work efficiency: 312 ÷ 480 = **65%**
+
+## Popular Method Comparison (8-hour day)
+
+| Method | Work Block | Break | Sessions | Work Minutes | Efficiency | Best For |
+|---|---|---|---|---|---|---|
+| Pomodoro (classic) | 25 min | 5 min | 9 | 225 min | 47% | Task lists, admin |
+| DeskTime 52/17 | 52 min | 17 min | 6 | 312 min | 65% | Knowledge work |
+| Ultradian 90/20 | 90 min | 20 min | 4 | 360 min | 75% | Deep work, writing |
+| Flow state (custom) | 120 min | 30 min | 3 | 360 min | 75% | Complex projects |
+| 80/20 rule | 80 min | 20 min | 4 | 320 min | 67% | Balanced |
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: What is the best work-to-break ratio for productivity?**
+A: There is no single universal answer — the optimal ratio depends on the type of work, your personal attention span, and what you mean by "best." For raw focused-work time, the **90-minute ultradian block** produces the most work output (360 minutes in an 8-hour day). For task variety and maintaining energy across a full day, the **52/17 ratio** balances output and sustainability. For ADHD, short-deadline-driven, or administrative work, **Pomodoro 25/5** is most effective. The research consensus is clear that all intentional work-break systems outperform "work until you can't focus anymore" approaches by 30–50%.
+
+**Q: Where does the 52/17 rule come from?**
+A: DeskTime, a productivity tracking software company, analyzed time-use data from their most productive 10% of users in 2014 and found they naturally fell into a work pattern of approximately 52 minutes of focused activity followed by 17-minute breaks — not because they were following a prescribed method, but as an emergent pattern from their actual behavior. The DeskTime study has not been replicated in peer-reviewed research, but it aligns with Ariga and Lleras's 2011 study in Cognition showing that brief diversions from sustained tasks restore attentional focus and prevent performance decline.
+
+**Q: How often should you take breaks during an 8-hour workday?**
+A: Cognitive performance research (Ariga & Lleras, 2011; Kahneman, 2011) suggests taking a break every **60–90 minutes** of focused work is the neurological sweet spot. Less than 60 minutes of work means constant context-switching and reduced flow state entry. More than 90 minutes without a break triggers the ultradian performance trough — a natural dip in alertness and attention that occurs every 90–120 minutes. The break itself must be genuinely restorative: stepping away from the desk, moving, looking out a window, or a brief nap — not checking email or social media, which maintains cognitive load and prevents recovery.
+
+</div>
+
+## Sources & Methodology
+
+The DeskTime 52/17 data is from DeskTime's 2014 internal productivity analysis, cited widely in productivity literature but not peer-reviewed. Scientific support for intentional break-taking comes from Ariga and Lleras (2011) in Cognition ("Brief and rare mental 'breaks' keep you focused"), which found that brief deactivations from a task dramatically improved sustained attention performance over extended periods. Ultradian rhythm research (90–120 minute cycles in alertness) is based on Kleitman's (1963) original Basic Rest-Activity Cycle research and subsequent confirmations in sleep and chronobiology literature.

@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 247 modules, 249 formula IDs
+ * 279 modules, 281 formula IDs
  * Generated: 2026-03-14
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -33,24 +33,6 @@ import { FORMULA_REGISTRY as business_revenue } from './business/revenue';
 import { FORMULA_REGISTRY as business_roi } from './business/roi';
 import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary-to-hourly';
 import { FORMULA_REGISTRY as business_working_capital } from './business/working-capital';
-
-// Ecommerce
-import { FORMULA_REGISTRY as ecommerce_product_pricing } from './ecommerce/product-pricing';
-import { FORMULA_REGISTRY as ecommerce_average_order_value } from './ecommerce/average-order-value';
-import { FORMULA_REGISTRY as ecommerce_return_on_ad_spend } from './ecommerce/return-on-ad-spend';
-import { FORMULA_REGISTRY as ecommerce_advertising_break_even } from './ecommerce/advertising-break-even';
-import { FORMULA_REGISTRY as ecommerce_amazon_fba_profit } from './ecommerce/amazon-fba-profit';
-import { FORMULA_REGISTRY as ecommerce_landed_cost } from './ecommerce/landed-cost';
-import { FORMULA_REGISTRY as ecommerce_tiktok_shop_profit } from './ecommerce/tiktok-shop-profit';
-import { FORMULA_REGISTRY as ecommerce_amazon_acos } from './ecommerce/amazon-acos';
-import { FORMULA_REGISTRY as ecommerce_shopify_fee } from './ecommerce/shopify-fee';
-import { FORMULA_REGISTRY as ecommerce_ebay_fee } from './ecommerce/ebay-fee';
-import { FORMULA_REGISTRY as ecommerce_etsy_fee } from './ecommerce/etsy-fee';
-import { FORMULA_REGISTRY as ecommerce_dropshipping_profit } from './ecommerce/dropshipping-profit';
-import { FORMULA_REGISTRY as ecommerce_print_on_demand_profit } from './ecommerce/print-on-demand-profit';
-import { FORMULA_REGISTRY as ecommerce_fba_vs_fbm } from './ecommerce/fba-vs-fbm';
-import { FORMULA_REGISTRY as ecommerce_amazon_fba_storage_fee } from './ecommerce/amazon-fba-storage-fee';
-import { FORMULA_REGISTRY as ecommerce_reorder_point } from './ecommerce/reorder-point';
 
 // Construction
 import { FORMULA_REGISTRY as construction_accessibility_remodel_cost } from './construction/accessibility-remodel-cost';
@@ -136,6 +118,31 @@ import { FORMULA_REGISTRY as conversion_pressure_convert } from './conversion/pr
 import { FORMULA_REGISTRY as conversion_square_meter } from './conversion/square-meter';
 import { FORMULA_REGISTRY as conversion_time_convert } from './conversion/time-convert';
 import { FORMULA_REGISTRY as conversion_unit_convert } from './conversion/unit-convert';
+
+// Ecommerce
+import { FORMULA_REGISTRY as ecommerce_advertising_break_even } from './ecommerce/advertising-break-even';
+import { FORMULA_REGISTRY as ecommerce_amazon_acos } from './ecommerce/amazon-acos';
+import { FORMULA_REGISTRY as ecommerce_amazon_fba_profit } from './ecommerce/amazon-fba-profit';
+import { FORMULA_REGISTRY as ecommerce_amazon_fba_storage_fee } from './ecommerce/amazon-fba-storage-fee';
+import { FORMULA_REGISTRY as ecommerce_average_order_value } from './ecommerce/average-order-value';
+import { FORMULA_REGISTRY as ecommerce_dropshipping_profit } from './ecommerce/dropshipping-profit';
+import { FORMULA_REGISTRY as ecommerce_ebay_fee } from './ecommerce/ebay-fee';
+import { FORMULA_REGISTRY as ecommerce_etsy_fee } from './ecommerce/etsy-fee';
+import { FORMULA_REGISTRY as ecommerce_fba_vs_fbm } from './ecommerce/fba-vs-fbm';
+import { FORMULA_REGISTRY as ecommerce_landed_cost } from './ecommerce/landed-cost';
+import { FORMULA_REGISTRY as ecommerce_print_on_demand_profit } from './ecommerce/print-on-demand-profit';
+import { FORMULA_REGISTRY as ecommerce_product_pricing } from './ecommerce/product-pricing';
+import { FORMULA_REGISTRY as ecommerce_reorder_point } from './ecommerce/reorder-point';
+import { FORMULA_REGISTRY as ecommerce_return_on_ad_spend } from './ecommerce/return-on-ad-spend';
+import { FORMULA_REGISTRY as ecommerce_shopify_fee } from './ecommerce/shopify-fee';
+import { FORMULA_REGISTRY as ecommerce_tiktok_shop_profit } from './ecommerce/tiktok-shop-profit';
+
+// Energy
+import { FORMULA_REGISTRY as energy_gas_vs_electric_cost } from './energy/gas-vs-electric-cost';
+import { FORMULA_REGISTRY as energy_generator_size } from './energy/generator-size';
+import { FORMULA_REGISTRY as energy_home_heating_cost } from './energy/home-heating-cost';
+import { FORMULA_REGISTRY as energy_kwh_cost } from './energy/kwh-cost';
+import { FORMULA_REGISTRY as energy_solar_panel_payback } from './energy/solar-panel-payback';
 
 // Everyday
 import { FORMULA_REGISTRY as everyday_date_diff } from './everyday/date-diff';
@@ -269,6 +276,21 @@ import { FORMULA_REGISTRY as math_standard_error } from './math/standard-error';
 import { FORMULA_REGISTRY as math_triangle_solver } from './math/triangle-solver';
 import { FORMULA_REGISTRY as math_z_score } from './math/z-score';
 
+// Productivity
+import { FORMULA_REGISTRY as productivity_pomodoro } from './productivity/pomodoro';
+import { FORMULA_REGISTRY as productivity_reading_time } from './productivity/reading-time';
+import { FORMULA_REGISTRY as productivity_sleep_cycle } from './productivity/sleep-cycle';
+import { FORMULA_REGISTRY as productivity_study_time } from './productivity/study-time';
+import { FORMULA_REGISTRY as productivity_work_break_ratio } from './productivity/work-break-ratio';
+
+// Real-estate
+import { FORMULA_REGISTRY as real_estate_house_flipping_profit } from './real-estate/house-flipping-profit';
+import { FORMULA_REGISTRY as real_estate_landlord_roi } from './real-estate/landlord-roi';
+import { FORMULA_REGISTRY as real_estate_price_per_square_foot } from './real-estate/price-per-square-foot';
+import { FORMULA_REGISTRY as real_estate_property_appreciation } from './real-estate/property-appreciation';
+import { FORMULA_REGISTRY as real_estate_real_estate_cash_flow } from './real-estate/real-estate-cash-flow';
+import { FORMULA_REGISTRY as real_estate_rental_yield } from './real-estate/rental-yield';
+
 // Science
 import { FORMULA_REGISTRY as science_acceleration } from './science/acceleration';
 import { FORMULA_REGISTRY as science_coulombs_law } from './science/coulombs-law';
@@ -315,23 +337,6 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_roi,
   ...business_salary_to_hourly,
   ...business_working_capital,
-  // Ecommerce
-  ...ecommerce_product_pricing,
-  ...ecommerce_average_order_value,
-  ...ecommerce_return_on_ad_spend,
-  ...ecommerce_advertising_break_even,
-  ...ecommerce_amazon_fba_profit,
-  ...ecommerce_landed_cost,
-  ...ecommerce_tiktok_shop_profit,
-  ...ecommerce_amazon_acos,
-  ...ecommerce_shopify_fee,
-  ...ecommerce_ebay_fee,
-  ...ecommerce_etsy_fee,
-  ...ecommerce_dropshipping_profit,
-  ...ecommerce_print_on_demand_profit,
-  ...ecommerce_fba_vs_fbm,
-  ...ecommerce_amazon_fba_storage_fee,
-  ...ecommerce_reorder_point,
   // Construction
   ...construction_accessibility_remodel_cost,
   ...construction_artificial_turf_cost,
@@ -415,6 +420,29 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...conversion_square_meter,
   ...conversion_time_convert,
   ...conversion_unit_convert,
+  // Ecommerce
+  ...ecommerce_advertising_break_even,
+  ...ecommerce_amazon_acos,
+  ...ecommerce_amazon_fba_profit,
+  ...ecommerce_amazon_fba_storage_fee,
+  ...ecommerce_average_order_value,
+  ...ecommerce_dropshipping_profit,
+  ...ecommerce_ebay_fee,
+  ...ecommerce_etsy_fee,
+  ...ecommerce_fba_vs_fbm,
+  ...ecommerce_landed_cost,
+  ...ecommerce_print_on_demand_profit,
+  ...ecommerce_product_pricing,
+  ...ecommerce_reorder_point,
+  ...ecommerce_return_on_ad_spend,
+  ...ecommerce_shopify_fee,
+  ...ecommerce_tiktok_shop_profit,
+  // Energy
+  ...energy_gas_vs_electric_cost,
+  ...energy_generator_size,
+  ...energy_home_heating_cost,
+  ...energy_kwh_cost,
+  ...energy_solar_panel_payback,
   // Everyday
   ...everyday_date_diff,
   ...everyday_discount,
@@ -543,6 +571,19 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...math_standard_error,
   ...math_triangle_solver,
   ...math_z_score,
+  // Productivity
+  ...productivity_pomodoro,
+  ...productivity_reading_time,
+  ...productivity_sleep_cycle,
+  ...productivity_study_time,
+  ...productivity_work_break_ratio,
+  // Real-estate
+  ...real_estate_house_flipping_profit,
+  ...real_estate_landlord_roi,
+  ...real_estate_price_per_square_foot,
+  ...real_estate_property_appreciation,
+  ...real_estate_real_estate_cash_flow,
+  ...real_estate_rental_yield,
   // Science
   ...science_acceleration,
   ...science_coulombs_law,

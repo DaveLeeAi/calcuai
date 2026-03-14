@@ -1,0 +1,91 @@
+---
+title: "Solar Panel Payback Calculator"
+description: "Calculate your solar panel payback period and 25-year ROI, including the 30% federal tax credit, state incentives, and electricity rate escalation."
+---
+
+{/* Section 3: BLUF Intro */}
+<section className="bluf-intro">
+
+A $25,000 solar system with the 30% federal Investment Tax Credit (ITC) costs **$17,500 net**. At $0.16/kWh generating 9,000 kWh/year, you save **$1,440 in year one** and break even in **12.2 years** — with $19,000+ in total lifetime savings over 25 years. Factor in the 3% annual electricity rate increase and your year-25 savings alone top $3,200. The ITC is currently 30% through 2032, making now an optimal time for most homeowners.
+
+</section>
+
+## What Your Results Mean
+
+**Net system cost** is your out-of-pocket cost after the federal tax credit and any state incentives — this is your actual break-even target. **Year 1 savings** is your electricity bill reduction based on your current rate and production estimate. **Payback period** is how many years until cumulative savings equal your net cost. **Lifetime savings** accounts for annual electricity rate increases, giving a more realistic picture than a static calculation.
+
+The year-by-year table shows exactly when you cross into profit and how your returns accelerate as electricity rates rise.
+
+## How to Use This Calculator
+
+1. Enter your system quote (before incentives). Average US residential system: $18,000–$30,000.
+2. Get your annual kWh production estimate from your solar installer's proposal or NREL's PVWatts tool.
+3. Check your utility bill for your current rate per kWh.
+4. Use 3% as the default annual rate increase (US historical average since 2000).
+5. Add any state or local rebates (many states offer $1,000–$5,000 additional incentives).
+
+## The Formula
+
+<div className="formula-section">
+
+**Formula:**
+$$
+\text{Net Cost} = \text{System Cost} \times (1 - 0.30) - \text{State Incentives}
+$$
+$$
+\text{Simple Payback} = \frac{\text{Net Cost}}{\text{Year 1 Savings}}
+$$
+$$
+\text{Lifetime Savings} = \sum_{y=1}^{N} \text{Annual kWh} \times \text{Rate} \times (1 + r)^{y-1}
+$$
+
+Where:
+- **0.30** = federal ITC rate (30% through 2032)
+- **r** = annual electricity rate increase (default 3%)
+- **N** = system lifetime in years
+
+*Source: U.S. Department of Energy — Solar Investment Tax Credit Guide (2025); NREL — PVWatts Methodology (2025)*
+
+</div>
+
+## Worked Example
+
+**California homeowner:** $28,000 system, 11,000 kWh/year production, $0.26/kWh rate, 3% escalation, $1,000 state rebate.
+
+- Federal tax credit: $28,000 × 30% = **$8,400**
+- Net cost: $28,000 − $8,400 − $1,000 = **$18,600**
+- Year 1 savings: 11,000 × $0.26 = **$2,860**
+- Simple payback: $18,600 ÷ $2,860 = **6.5 years**
+- 25-year savings (with 3% escalation): **$109,000+**
+
+High electricity rates in California make solar exceptionally attractive — payback periods of 5–7 years are common.
+
+## Key Factors That Affect Payback
+
+| Factor | Impact on Payback |
+|---|---|
+| Higher electricity rate | Shorter payback |
+| More sun hours (Southwest vs. Northeast) | Shorter payback |
+| Larger system (better $/watt) | Slightly shorter |
+| Net metering policy | Shorter (credit for excess) |
+| Panel degradation (0.5%/yr) | Slightly longer |
+| State income taxes (credit may be taxable) | Varies |
+
+## FAQ
+
+<div className="faq-section">
+
+**Q: How long does it actually take to pay off solar panels?**
+A: The average US solar payback period is 8–12 years, though it ranges from 5–7 years in high-rate states like California, Massachusetts, and Connecticut to 14–18 years in low-rate states like Louisiana and Washington. The 30% federal tax credit, local incentives, and your electricity rate are the three biggest variables. A system that lasts 25–30 years (as modern panels do) still generates 12–22 years of free electricity after payback.
+
+**Q: Does the 30% federal solar tax credit expire?**
+A: The 30% Residential Clean Energy Credit (ITC) is locked in through 2032 under the Inflation Reduction Act. It drops to 26% in 2033, then 22% in 2034, then expires for residential installations in 2035 unless Congress acts. To claim it, you must owe at least as much in federal income tax as the credit amount — it's a non-refundable credit. Unused credit can be carried forward to the next tax year.
+
+**Q: What factors most affect solar payback period?**
+A: In order of impact: (1) Your electricity rate — high-rate states give much faster payback; (2) Net metering policy — full retail credit for exported power versus partial credit makes a major difference; (3) System cost per watt — national average is $3.00–$4.00/watt installed, with variation based on roof type, system size, and installer competition; (4) Sun hours — Arizona gets 5.5–6 peak sun hours daily vs. 3.5–4 for the Northeast; (5) Panel degradation — modern panels degrade about 0.5%/year, meaning a 25-year-old system still produces ~88% of original output.
+
+</div>
+
+## Sources & Methodology
+
+Federal tax credit rates sourced from the IRS Residential Clean Energy Credit guidelines and the U.S. Department of Energy Solar Office. Annual production estimates use the NREL PVWatts methodology. Historical electricity rate escalation of 3% is based on EIA retail electricity price data from 2000–2024. Panel degradation of 0.5%/year is the industry consensus figure from the Lawrence Berkeley National Laboratory's Tracking the Sun report (2024).

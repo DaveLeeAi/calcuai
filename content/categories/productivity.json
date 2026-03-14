@@ -1,0 +1,47 @@
+{
+  "id": "productivity",
+  "name": "Productivity Calculators",
+  "slug": "productivity",
+  "description": "Free productivity calculators — study time, sleep cycles, pomodoro sessions, reading time, and work-break ratios.",
+  "icon": "/icons/productivity.svg",
+  "metaTitle": "Productivity Calculators — Free Time & Study Planning Tools",
+  "metaDescription": "Calculate study time needed for exams, optimal sleep cycle wake times, pomodoro work sessions, book reading time, and ideal work-break ratios. Free productivity tools.",
+  "subcategories": [
+    {
+      "id": "study",
+      "name": "Study & Learning",
+      "slug": "study",
+      "description": "Plan study sessions and estimate reading time for books and materials.",
+      "calculators": [
+        "study-time-calculator",
+        "reading-time-calculator"
+      ]
+    },
+    {
+      "id": "time-management",
+      "name": "Time Management",
+      "slug": "time-management",
+      "description": "Structure your work day with proven time management frameworks.",
+      "calculators": [
+        "pomodoro-calculator",
+        "work-break-ratio-calculator"
+      ]
+    },
+    {
+      "id": "health-performance",
+      "name": "Sleep & Recovery",
+      "slug": "health-performance",
+      "description": "Calculate optimal sleep and wake times based on natural sleep cycles.",
+      "calculators": [
+        "sleep-cycle-calculator"
+      ]
+    }
+  ],
+  "featuredCalculators": [
+    "study-time-calculator",
+    "sleep-cycle-calculator",
+    "pomodoro-calculator",
+    "reading-time-calculator",
+    "work-break-ratio-calculator"
+  ]
+}
