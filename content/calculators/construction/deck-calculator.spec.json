@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "deck calculator",
+  "secondaryKeywords": [
+    "deck board calculator",
+    "how much decking do I need",
+    "deck material list calculator",
+    "composite deck board calculator"
+  ],
   "metaTitle": "Deck Calculator | Estimate Decking Materials & Cost",
   "metaDescription": "Calculate decking boards, joists, posts, and footings for your deck project. Compare material costs for pressure-treated, cedar, and composite. Free calculator.",
   "inputs": [

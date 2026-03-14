@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "stair calculator",
+  "secondaryKeywords": [
+    "stair stringer calculator",
+    "stair rise and run calculator",
+    "deck stair calculator",
+    "staircase dimensions calculator"
+  ],
   "metaTitle": "Stair Calculator — Risers, Treads & Stringer Length",
   "metaDescription": "Calculate stair dimensions: number of risers, tread depth, riser height, total run, and stringer length. Checks IRC building code compliance automatically.",
   "inputs": [

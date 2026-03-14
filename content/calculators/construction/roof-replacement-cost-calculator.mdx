@@ -1,0 +1,190 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Replacing a 2,000-square-foot asphalt shingle roof costs $10,000–$18,000 at national average rates, with a midpoint of $14,000 including materials and labor. Architectural shingles run $13,000–$23,000 for the same area, metal standing seam costs $24,000–$42,000, and slate is the premium option at $44,000–$84,000. Removing an existing single layer of roofing adds $2,000–$4,000, and regional labor rates can shift the total by 15–25% above or below the national average. A 2-story home adds 10% to labor, and complex roof designs with hips, dormers, and valleys add up to 25%. Enter your roof area, material, and options below for a personalized estimate with a side-by-side comparison of all eight common roofing materials.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides installed cost ranges for eight common roofing materials — asphalt 3-tab, architectural shingle, metal standing seam, metal corrugated, clay tile, concrete tile, slate, and wood shake — based on your roof area, building height, roof complexity, tear-off needs, and region. It produces a low/mid/high estimate for your selected material, a cost-per-roofing-square figure (per 100 sq ft), and a comparison table showing what the same roof would cost in every material.
+
+The **material cost** covers the roofing product itself — shingles, panels, tiles, or slates — plus underlayment and fasteners. Material rates reflect 2025–2026 wholesale-to-retail pricing from HomeAdvisor and Angi national surveys.
+
+The **labor cost** covers professional installation — tear-off preparation, underlayment, flashing, ridge caps, and cleanup. Labor is adjusted by three multipliers: story height (2-story adds 10%, 3-story adds 20%), roof complexity (hip roofs add 10%, complex multi-level adds 25%), and regional labor rates (South is 15% below national average, West Coast is 25% above).
+
+The **tear-off cost** applies only when removing existing roofing layers before installation. A single-layer tear-off runs $1–$2 per square foot, and a double-layer tear-off runs $2–$3.50 per square foot. Most building codes limit asphalt shingle roofs to two layers before requiring a full tear-off.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter your roof area** — the total surface area of your roof in square feet. The average U.S. single-family home has 1,700–2,100 square feet of roof area. If you do not know your exact roof area, multiply your home's footprint square footage by 1.15 for a simple gable roof or 1.25 for a hip roof to account for pitch.
+
+2. **Choose your roofing material** — asphalt 3-tab is the most affordable option but has a 15–20 year lifespan. Architectural shingles are the most popular choice with a 25–30 year lifespan. Metal roofing lasts 40–70 years. Clay and concrete tile last 50–100 years. Slate is the longest-lasting material at 75–150 years.
+
+3. **Select number of stories** — taller buildings require scaffolding, safety harnesses, and more time to haul materials up. Each additional story adds 10% to labor costs.
+
+4. **Select roof complexity** — a simple gable roof with two slopes is the baseline. Hip roofs with four slopes add 10% to labor. Complex multi-level roofs with dormers, valleys, skylights, and multiple intersections add 25% to labor.
+
+5. **Choose tear-off option** — select "None" for new construction or if you are overlaying on one existing layer. Select "Single Layer" for removing one layer of existing shingles. Select "Double Layer" for two existing layers that must be removed.
+
+6. **Select your region** — this adjusts labor costs for regional pricing differences. The South and Midwest have below-average labor rates. The Northeast and West Coast have above-average rates.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Roof replacement cost is estimated using area times material and labor rates, with multipliers for story height, roof complexity, and regional labor.
+
+**Cost range:**
+
+$$C_{low} = A \times R_{mat,low} + A \times R_{lab,low} \times M_s \times M_c \times M_r + T_{low}$$
+
+$$C_{high} = A \times R_{mat,high} + A \times R_{lab,high} \times M_s \times M_c \times M_r + T_{high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+**Cost per roofing square:**
+
+$$C_{sq} = \frac{C_{mid}}{A} \times 100$$
+
+Where:
+
+- **A** = roof area in square feet
+- **R_mat** = material cost per square foot (low/high range by material)
+- **R_lab** = labor cost per square foot (low/high range by material)
+- **M_s** = story multiplier (1.0 for 1-story, 1.10 for 2-story, 1.20 for 3-story)
+- **M_c** = complexity multiplier (1.0 for simple gable, 1.10 for hip, 1.25 for complex)
+- **M_r** = regional labor multiplier (0.85–1.25)
+- **T** = tear-off cost (area times $1–$3.50 per sq ft if applicable)
+
+**Material and labor rates per sq ft (2025-2026):**
+
+| Roofing Material | Material | Labor | Total Installed |
+|---|---|---|---|
+| Asphalt 3-Tab | $3–$5 | $2–$4 | $5–$9 |
+| Architectural Shingle | $4–$7 | $2.50–$4.50 | $6.50–$11.50 |
+| Metal Standing Seam | $8–$14 | $4–$7 | $12–$21 |
+| Metal Corrugated | $5–$9 | $3–$5 | $8–$14 |
+| Clay Tile | $10–$18 | $5–$9 | $15–$27 |
+| Concrete Tile | $8–$14 | $4–$7 | $12–$21 |
+| Slate | $15–$30 | $7–$12 | $22–$42 |
+| Wood Shake | $6–$10 | $3.50–$6 | $9.50–$16 |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and **National Roofing Contractors Association (NRCA)**.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 2,000 sq ft Architectural Shingle Roof (2-Story, Simple Gable, Single-Layer Tear-Off, National Average)
+
+A homeowner is replacing the roof on a 2-story home with a simple gable roof — 2,000 square feet, architectural shingles, single-layer tear-off of existing asphalt, national average labor rates.
+
+**Step-by-step:**
+
+1. Roof area: **2,000 sq ft**
+2. Look up architectural shingle material rate: $4–$7/sq ft
+3. Look up architectural shingle labor rate: $2.50–$4.50/sq ft
+4. Material cost low: 2,000 x $4 = **$8,000** | high: 2,000 x $7 = **$14,000**
+5. Labor cost low: 2,000 x $2.50 x 1.10 (2-story) x 1.0 (simple) x 1.0 (national) = **$5,500** | high: 2,000 x $4.50 x 1.10 = **$9,900**
+6. Tear-off cost low: 2,000 x $1 = **$2,000** | high: 2,000 x $2 = **$4,000**
+7. Total low: $8,000 + $5,500 + $2,000 = **$15,500**
+8. Total high: $14,000 + $9,900 + $4,000 = **$27,900**
+9. Total mid: ($15,500 + $27,900) / 2 = **$21,700**
+10. Cost per roofing square: ($21,700 / 2,000) x 100 = **$1,085 per square**
+
+**Interpretation:** At $21,700 midpoint, this architectural shingle replacement with tear-off on a 2-story home falls in the mid-range for residential roofing projects. The same roof in asphalt 3-tab would save roughly $4,000–$6,000 but sacrifice 10 years of lifespan. Metal standing seam would cost $33,000–$46,000 but last 40–70 years compared to 25–30 years for architectural shingles.
+
+{/* Section 10: Roofing Material Comparison */}
+## Roofing Material Comparison
+
+| Material | Cost/sq ft | 2,000 sq ft | Lifespan | Best For | Weight |
+|---|---|---|---|---|---|
+| Asphalt 3-Tab | $5–$9 | $10,000–$18,000 | 15–20 years | Budget replacement, rental properties | 2.0–2.5 lbs/sq ft |
+| Architectural Shingle | $6.50–$11.50 | $13,000–$23,000 | 25–30 years | Most homes, best value | 2.5–3.5 lbs/sq ft |
+| Metal Corrugated | $8–$14 | $16,000–$28,000 | 40–60 years | Barns, modern aesthetic, rural areas | 1.0–1.5 lbs/sq ft |
+| Wood Shake | $9.50–$16 | $19,000–$32,000 | 20–30 years | Rustic aesthetic, mild climates | 3.0–3.5 lbs/sq ft |
+| Metal Standing Seam | $12–$21 | $24,000–$42,000 | 40–70 years | Long-term homes, snow country, energy savings | 1.0–1.5 lbs/sq ft |
+| Concrete Tile | $12–$21 | $24,000–$42,000 | 50–100 years | Southwest style, hurricane zones | 9.0–12.0 lbs/sq ft |
+| Clay Tile | $15–$27 | $30,000–$54,000 | 50–100 years | Mediterranean style, premium homes | 8.0–12.0 lbs/sq ft |
+| Slate | $22–$42 | $44,000–$84,000 | 75–150 years | Historic homes, luxury properties | 10.0–15.0 lbs/sq ft |
+
+All costs include materials and labor at national average rates for a 1-story, simple gable roof with no tear-off. Actual costs vary 15–25% by region.
+
+{/* Section 11: Key Cost Factors */}
+## Key Cost Factors
+
+**Roofing material** creates the largest cost swing. The same 2,000-square-foot roof ranges from $10,000 in asphalt 3-tab to $84,000 in slate — an 8x difference. Architectural shingles at $6.50–$11.50 per square foot installed offer the best balance of cost, appearance, and lifespan for most homeowners and account for roughly 75% of U.S. residential roofing installations.
+
+**Roof area** directly determines total cost. Roofing contractors typically quote in "roofing squares" (100 sq ft each). A 2,000 sq ft roof is 20 squares. The average U.S. home roof is 17–21 squares. Larger roofs cost more total but may achieve slightly lower per-square-foot pricing due to contractor volume efficiency.
+
+**Story height** increases labor cost by 10% for 2-story and 20% for 3-story homes. Higher roofs require scaffolding rental ($500–$2,000), additional safety equipment, and more time to transport materials. On a $14,000 asphalt roof, the 2-story surcharge adds roughly $600 to labor.
+
+**Roof complexity** is one of the most significant cost variables. A simple gable roof has two slopes and minimal cutting. Hip roofs with four slopes add 10% for the additional ridge and hip cap work. Complex multi-level roofs with dormers, valleys, skylights, and chimney flashing can add 25% or more to labor.
+
+**Tear-off** of existing roofing typically costs $1–$2 per square foot for a single layer and $2–$3.50 per square foot for a double layer. A 2,000 sq ft single-layer tear-off averages $3,000. Most building codes prohibit more than two layers of asphalt shingles, requiring tear-off before a third installation.
+
+**Regional labor rates** vary 15–25% from the national average. A $14,000 roof in the South (0.85x labor) would cost approximately $13,100, while the same job on the West Coast (1.25x labor) would cost approximately $15,500. Material costs remain constant across regions — only labor shifts.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including standard labor, materials, underlayment, flashing, and ridge caps. Specialty items like ice-and-water shield, drip edge upgrades, and custom flashing are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and NRCA. Your local market may be 15–25% higher or lower.
+- The calculator assumes a **standard roof pitch** (4:12 to 8:12). Steep roofs (above 8:12) require additional safety equipment and may add 15–25% to labor costs.
+- **Structural repairs** are not included. If the roof deck (plywood sheathing) needs replacement, add $2–$5 per square foot for new plywood and labor.
+- **Permit costs** vary by municipality and are not included. Roofing permits typically cost $100–$500.
+- This calculator does not account for **gutter replacement**, **soffit and fascia repair**, or **chimney reflashing** — common add-ons during roof replacement.
+- **Tile and slate roofs** may require structural reinforcement due to their weight (8–15 lbs/sq ft vs. 2–3 lbs/sq ft for asphalt). Structural upgrades are not included in these estimates.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to replace a roof on a 2,000 sq ft house?
+
+A 2,000-square-foot roof replacement costs $10,000–$18,000 for asphalt 3-tab shingles, $13,000–$23,000 for architectural shingles, and $24,000–$42,000 for metal standing seam at national average rates. These estimates include materials and labor for a 1-story home with a simple gable roof and no tear-off. Add $2,000–$4,000 for single-layer tear-off of existing shingles. Two-story homes add approximately 10% to labor costs. Regional variation of 15–25% is expected.
+
+### What is the cheapest roofing material?
+
+Asphalt 3-tab shingles are the cheapest roofing material at $5–$9 per square foot installed, or $500–$900 per roofing square (100 sq ft). A 2,000-square-foot roof in asphalt 3-tab costs $10,000–$18,000. However, 3-tab shingles have the shortest lifespan at 15–20 years. Architectural shingles at $6.50–$11.50 per square foot offer significantly better durability (25–30 years) for only 30% more cost, making them the better long-term value for most homeowners.
+
+### How long does a roof replacement take?
+
+A standard asphalt shingle roof replacement on a 2,000-square-foot home takes 2–5 days, including tear-off and cleanup. Metal corrugated roofs take 4–7 days due to panel alignment and seaming. Metal standing seam takes 5–10 days. Clay and concrete tile roofs take 1–2 weeks due to the weight and precision required for each tile. Slate roofs take 2–3 weeks because each slate must be individually cut and hand-nailed. Weather delays, complex roof designs, and structural repairs can extend any of these timelines.
+
+### Should I repair or replace my roof?
+
+Replace your roof if it is more than 80% through its expected lifespan, has widespread damage affecting more than 30% of the surface, or shows signs of structural sagging. Repair is more cost-effective if the damage is localized — a few missing shingles, a small leak around a vent boot, or isolated storm damage. As a general rule, if repair costs exceed 50% of full replacement cost, replacement is the better investment because it resets the roof's warranty clock and addresses underlying wear.
+
+### Do I need a permit to replace my roof?
+
+Most U.S. municipalities require a building permit for a full roof replacement. Permits typically cost $100–$500 depending on your location and project value. Your roofing contractor usually pulls the permit as part of the project. Permits ensure the work meets local building codes, which is important for insurance claims and home resale. Some jurisdictions exempt minor repairs (under a certain square footage or dollar threshold) but require permits for full replacements. Check with your local building department before work begins.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates roof replacement costs using separate material and labor rates per square foot for eight roofing materials, adjusted for story height, roof complexity, and regional labor differences. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by **National Roofing Contractors Association (NRCA)** industry cost guidelines. Material costs cover the roofing product, underlayment, and standard flashing at wholesale-to-retail rates. Labor costs cover professional installation including tear-off preparation, layout, installation, ridge caps, and cleanup. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for roofers (SOC 47-2181). Story height multipliers (10% per additional story) and roof complexity multipliers (10% for hip, 25% for complex multi-level) reflect NRCA industry labor adjustment guidelines. Tear-off rates of $1–$3.50 per square foot are based on HomeAdvisor tear-off cost data for single and double layer removal. All prices are fully installed costs at national average rates. Regional variation of 15–25% on labor is expected.
+
+{/* Section 16: Disclaimer — auto-rendered */}

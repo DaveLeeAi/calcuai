@@ -1,0 +1,310 @@
+{
+  "id": "painting-cost-calculator",
+  "title": "Painting Cost Calculator",
+  "slug": "painting-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "painting cost calculator",
+  "secondaryKeywords": [
+    "interior painting cost estimator",
+    "house painting cost per square foot",
+    "exterior painting cost calculator",
+    "cost to paint a room"
+  ],
+  "metaTitle": "Painting Cost Calculator | Interior & Exterior Estimates with Labor",
+  "metaDescription": "Estimate interior and exterior painting costs with labor, prep, and paint quality. Per-square-foot pricing with regional adjustments for 2025-2026.",
+  "inputs": [
+    {
+      "id": "paintArea",
+      "label": "Total Paintable Area",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 1500,
+      "min": 50,
+      "step": 50,
+      "units": [
+        {
+          "value": "sqft",
+          "label": "Square Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "sqm",
+          "label": "Square Meters",
+          "conversionFactor": 10.7639
+        }
+      ],
+      "defaultUnit": "sqft",
+      "helpText": "Total wall or surface area to paint — a typical room is 400-600 sq ft of wall area"
+    },
+    {
+      "id": "projectType",
+      "label": "Project Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "interior-walls",
+      "options": [
+        {
+          "value": "interior-walls",
+          "label": "Interior Walls ($2–$4/sq ft installed)"
+        },
+        {
+          "value": "interior-ceiling",
+          "label": "Interior Ceiling (+$1–$2/sq ft add-on)"
+        },
+        {
+          "value": "exterior-siding",
+          "label": "Exterior Siding ($3–$6/sq ft installed)"
+        },
+        {
+          "value": "exterior-trim-only",
+          "label": "Exterior Trim Only ($4–$8/sq ft installed)"
+        }
+      ],
+      "helpText": "Interior vs exterior and surface type — affects labor rates"
+    },
+    {
+      "id": "paintQuality",
+      "label": "Paint Quality",
+      "type": "select",
+      "required": true,
+      "defaultValue": "mid-range",
+      "options": [
+        {
+          "value": "builder-grade",
+          "label": "Builder Grade (1.0x — basic coverage)"
+        },
+        {
+          "value": "mid-range",
+          "label": "Mid-Range (1.15x — Behr, Valspar)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium (1.35x — Benjamin Moore, Sherwin-Williams)"
+        }
+      ],
+      "helpText": "Paint quality affects material cost — premium paints offer better coverage and durability"
+    },
+    {
+      "id": "coats",
+      "label": "Number of Coats",
+      "type": "select",
+      "required": true,
+      "defaultValue": "2-coats",
+      "options": [
+        {
+          "value": "1-coat",
+          "label": "1 Coat (0.75x — touch-up only)"
+        },
+        {
+          "value": "2-coats",
+          "label": "2 Coats (standard)"
+        },
+        {
+          "value": "3-coats",
+          "label": "3 Coats (1.20x — dark-to-light color change)"
+        }
+      ],
+      "helpText": "2 coats is standard for most jobs; 3 coats for dramatic color changes"
+    },
+    {
+      "id": "preparation",
+      "label": "Surface Preparation",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-sand-prime",
+      "options": [
+        {
+          "value": "minimal-clean",
+          "label": "Minimal — Clean Only ($0.25–$0.50/sq ft)"
+        },
+        {
+          "value": "standard-sand-prime",
+          "label": "Standard — Sand & Prime ($0.50–$1.00/sq ft)"
+        },
+        {
+          "value": "extensive-scrape-repair",
+          "label": "Extensive — Scrape & Repair ($1.50–$3.00/sq ft)"
+        }
+      ],
+      "helpText": "Surface prep is often 20–30% of the total cost — old paint, peeling, or damaged surfaces need more work"
+    },
+    {
+      "id": "ceilingHeight",
+      "label": "Ceiling Height",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-8ft",
+      "options": [
+        {
+          "value": "standard-8ft",
+          "label": "Standard 8 ft (1.0x)"
+        },
+        {
+          "value": "tall-9-10ft",
+          "label": "Tall 9–10 ft (1.15x labor)"
+        },
+        {
+          "value": "extra-tall-12ft",
+          "label": "Extra Tall 12+ ft (1.35x labor)"
+        }
+      ],
+      "helpText": "Taller ceilings require scaffolding and extra labor time — increases labor cost"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "paintArea",
+      "label": "Paintable Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialCost",
+      "label": "Paint & Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "prepCost",
+      "label": "Surface Prep Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "paintGallonsEstimate",
+      "label": "Paint Needed (Gallons)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 1
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "projectTypeComparison",
+      "label": "Project Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    }
+  ],
+  "formula": "painting-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "paint-calculator",
+    "drywall-calculator",
+    "siding-replacement-cost-calculator",
+    "renovation-cost-calculator",
+    "wallpaper-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 Painting Cost Data; Painting Contractors Association (PCA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Labor and material cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for painters, construction, and maintenance (SOC 47-2141). Prep cost ranges based on Painting Contractors Association (PCA) surface preparation guidelines. Paint coverage at 350 sq ft per gallon per ASTM D2369.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "paint-calculator",
+    "renovation-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-fall"
+}

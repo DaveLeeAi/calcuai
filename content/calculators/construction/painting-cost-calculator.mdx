@@ -1,0 +1,241 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Painting the interior of a 1,500-square-foot home costs $3,000–$6,000 with professional labor and mid-range paint, averaging $2–$4 per square foot of wall area. Exterior painting runs $3–$6 per square foot due to ladder work and more intensive surface prep. A gallon of quality interior paint costs $32–$60 and covers approximately 350 square feet per coat. Surface preparation — the most commonly underquoted part of any painting project — adds $0.50–$3.00 per square foot depending on wall condition. Regional labor rates shift the total by 15–25% above or below the national average. This calculator estimates your full painting project cost including labor, prep, materials, and regional adjustments — distinct from our [paint calculator](/calculators/construction/paint-calculator) which only estimates how many gallons of paint you need.
+
+</div>
+
+<div className="at-a-glance">
+
+| Metric | Value |
+|---|---|
+| Interior Walls | $2–$4/sq ft installed |
+| Exterior Siding | $3–$6/sq ft installed |
+| Paint Per Gallon | $32–$60 (mid-range to premium) |
+| Coverage Per Gallon | ~350 sq ft per coat |
+| Prep Work | Adds $0.50–$3.00/sq ft |
+| Professional Crew | 2–3 painters, 2–5 days |
+| Regional Labor Variation | +/- 15–25% |
+
+</div>
+
+> **Note:** This calculator estimates full painting project costs with labor and prep. For calculating paint quantity only (gallons needed), see our [Paint Calculator](/calculators/construction/paint-calculator).
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides installed cost ranges for four painting project types — interior walls, interior ceilings, exterior siding, and exterior trim — based on your paintable area, paint quality, number of coats, surface preparation needs, ceiling height, and region. It produces a low/mid/high estimate, a cost-per-square-foot figure, a paint gallon estimate, a project timeline, and a comparison table showing costs across all four project types.
+
+The **material cost** covers paint only, calculated at per-square-foot rates that reflect the quality tier you select. Builder-grade paint runs $0.50–$1.00 per square foot per coat. Mid-range brands (Behr, Valspar) cost $0.65–$1.25. Premium brands (Benjamin Moore, Sherwin-Williams) cost $0.85–$1.75. The coats multiplier adjusts material cost: one coat uses 0.75x the two-coat baseline, and three coats uses 1.20x.
+
+The **labor cost** is the largest component — typically 50–60% of the total for interior work and 55–65% for exterior. Interior wall painting labor runs $1.50–$3.00 per square foot. Interior ceiling work adds a $1.00–$2.00 surcharge on top of the base rate due to overhead positioning and drop-cloth requirements. Exterior siding labor is $2.00–$4.00 per square foot due to ladder and scaffolding time. Exterior trim is the highest at $3.00–$6.00 per square foot because of detailed brush work around windows, doors, and fascia.
+
+The **surface preparation cost** is often underestimated by homeowners. Minimal cleaning runs $0.25–$0.50 per square foot and is suitable for walls in good condition with no peeling. Standard sand-and-prime at $0.50–$1.00 per square foot is the most common prep for repaints. Extensive scrape-and-repair at $1.50–$3.00 per square foot applies to peeling exterior surfaces, water damage, or lead paint remediation.
+
+The **paint gallons estimate** uses the industry standard coverage rate of 350 square feet per gallon per coat. This is separate from our paint calculator, which provides a more detailed gallon estimate with room dimensions, window/door deductions, and finish adjustments.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the total paintable area** — for interior rooms, calculate wall area as perimeter (feet) times wall height, then subtract windows and doors. A standard 12×14 ft room with 8 ft ceilings has about 416 sq ft of wall area before deductions. For exterior siding, measure the total exterior surface area of the home. A typical 1,500 sq ft ranch-style home has 1,800–2,200 sq ft of exterior siding.
+
+2. **Select the project type** — interior walls is the most common project. Interior ceiling painting adds a surcharge for overhead work. Exterior siding covers the main house surfaces. Exterior trim covers windows, doors, fascia, soffits, and decorative elements only.
+
+3. **Choose paint quality** — builder-grade is the cheapest option, suitable for rental properties and utility spaces. Mid-range paints (Behr, Valspar) are the standard for most homeowners. Premium paints (Benjamin Moore Regal, Sherwin-Williams Duration) offer better coverage, durability, and color retention — often requiring fewer coats to achieve full coverage.
+
+4. **Select the number of coats** — two coats is standard for most repaints. Use one coat for minor touch-ups or color refreshes with the same shade. Three coats is necessary when changing from a dark color to a light color or painting over stains and patches.
+
+5. **Choose surface preparation level** — this is the most commonly underquoted part of a painting project. Minimal prep works only for clean walls in good condition. Standard sand-and-prime is needed for most repaints. Extensive scrape-and-repair is required for peeling exterior paint, water-damaged surfaces, or older homes with multiple paint layers.
+
+6. **Select ceiling height** — standard 8 ft ceilings use the baseline labor rate. Taller ceilings (9–10 ft) add 15% to labor for extension poles and ladders. Extra tall ceilings (12+ ft) add 35% for scaffolding setup and safety equipment.
+
+7. **Select your region** — this adjusts labor costs for regional pricing differences. The South and Midwest have below-average labor rates. The Northeast and West Coast are above average. Material costs are the same nationwide.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Painting cost is estimated using area times separate material, labor, and prep rates with multipliers for coats, ceiling height, and region.
+
+**Material cost:**
+
+$$C_{mat} = A \times R_{paint} \times M_{coats}$$
+
+**Labor cost:**
+
+$$C_{lab} = A \times R_{labor} \times M_{coats} \times M_{height} \times M_{region}$$
+
+**Prep cost:**
+
+$$C_{prep} = A \times R_{prep}$$
+
+**Total cost range:**
+
+$$C_{low} = C_{mat,low} + C_{lab,low} + C_{prep,low}$$
+
+$$C_{high} = C_{mat,high} + C_{lab,high} + C_{prep,high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+**Paint gallons needed:**
+
+$$G = \frac{A \times N_{coats}}{350}$$
+
+Where:
+
+- **A** = paintable area in square feet
+- **R_paint** = paint material rate per sq ft (varies by quality tier)
+- **R_labor** = labor rate per sq ft (varies by project type)
+- **R_prep** = surface preparation rate per sq ft
+- **M_coats** = coats multiplier (0.75 / 1.0 / 1.20)
+- **M_height** = ceiling height multiplier (1.0 / 1.15 / 1.35)
+- **M_region** = regional labor multiplier (0.85–1.25)
+- **N_coats** = actual number of coats (1, 2, or 3)
+- **350** = square feet of coverage per gallon (industry standard)
+
+**Paint material rates per sq ft (2025-2026):**
+
+| Paint Quality | Material Rate | Common Brands |
+|---|---|---|
+| Builder Grade | $0.50–$1.00 | Store brands, contractor white |
+| Mid-Range | $0.65–$1.25 | Behr, Valspar, Glidden |
+| Premium | $0.85–$1.75 | Benjamin Moore, Sherwin-Williams, Farrow & Ball |
+
+**Labor rates per sq ft by project type:**
+
+| Project Type | Labor Rate | Notes |
+|---|---|---|
+| Interior Walls | $1.50–$3.00 | Standard brush/roller work |
+| Interior Ceiling | $2.50–$5.00 | Includes $1–$2 overhead surcharge |
+| Exterior Siding | $2.00–$4.00 | Includes ladder/scaffold time |
+| Exterior Trim | $3.00–$6.00 | Detail brush work, windows, fascia |
+
+**Surface prep rates per sq ft:**
+
+| Prep Level | Rate | When Needed |
+|---|---|---|
+| Minimal — Clean Only | $0.25–$0.50 | Walls in good condition |
+| Standard — Sand & Prime | $0.50–$1.00 | Most repaints |
+| Extensive — Scrape & Repair | $1.50–$3.00 | Peeling, damaged, or lead paint |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and the **Painting Contractors Association (PCA)**.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 1,500 sq ft Interior Walls — Mid-Range Paint, Standard Prep, National Average
+
+A homeowner is repainting the interior walls of a 3-bedroom home — 1,500 square feet of wall area, mid-range paint quality, 2 coats, standard sand-and-prime prep, standard 8 ft ceilings, national average labor rates.
+
+**Step-by-step:**
+
+1. Paintable area: **1,500 sq ft**
+2. Look up mid-range paint rate: $0.65–$1.25/sq ft
+3. Look up interior walls labor rate: $1.50–$3.00/sq ft
+4. Look up standard prep rate: $0.50–$1.00/sq ft
+5. Material cost low: 1,500 × $0.65 × 1.0 = **$975** | high: 1,500 × $1.25 × 1.0 = **$1,875**
+6. Labor cost low: 1,500 × $1.50 × 1.0 × 1.0 × 1.0 = **$2,250** | high: 1,500 × $3.00 × 1.0 × 1.0 × 1.0 = **$4,500**
+7. Prep cost low: 1,500 × $0.50 = **$750** | high: 1,500 × $1.00 = **$1,500**
+8. Total low: $975 + $2,250 + $750 = **$3,975**
+9. Total high: $1,875 + $4,500 + $1,500 = **$7,875**
+10. Total mid: ($3,975 + $7,875) / 2 = **$5,925**
+11. Cost per sq ft: $5,925 / 1,500 = **$3.95/sq ft**
+12. Paint gallons: (1,500 × 2) / 350 = **8.6 gallons**
+
+**Interpretation:** At $5,925 midpoint, painting the interior walls of a 3-bedroom home is one of the highest-ROI home improvements — Zillow reports fresh interior paint adds 1–3% to home sale price. The same area with builder-grade paint and minimal prep would cost roughly $4,125 (30% less), while premium paint with extensive prep would run $9,450 (60% more). For an exact gallon count with room-by-room dimensions and window deductions, use our [paint calculator](/calculators/construction/paint-calculator).
+
+{/* Section 10: Painting Cost vs Paint Calculator */}
+## Painting Cost Calculator vs Paint Calculator: What's the Difference?
+
+| Feature | Painting Cost Calculator (This Page) | Paint Calculator |
+|---|---|---|
+| **Primary Purpose** | Estimate total project cost with labor | Calculate gallons of paint needed |
+| **Includes Labor** | Yes — $1.50–$6.00/sq ft by project type | No |
+| **Includes Prep** | Yes — $0.25–$3.00/sq ft by condition | No |
+| **Regional Pricing** | Yes — 7 U.S. regions | No |
+| **Paint Quality Tiers** | Yes — builder/mid-range/premium | Yes — by finish type |
+| **Coat Adjustments** | Yes — affects cost and gallons | Yes — affects gallons |
+| **Window/Door Deductions** | No — enter net paintable area | Yes — deducts from room dimensions |
+| **Best For** | Budgeting a professional painting project | Buying the right amount of paint |
+
+Use this calculator to budget a painting project with a contractor. Use the [paint calculator](/calculators/construction/paint-calculator) to figure out how many gallons to buy for a DIY project.
+
+{/* Section 11: Factors That Affect Painting Cost */}
+## Factors That Affect Painting Cost
+
+**Surface preparation** is the single biggest variable after project size. A home in good condition with clean, well-adhered paint needs only minimal prep at $0.25–$0.50 per square foot. A home with peeling exterior paint, water stains, or decades of built-up layers may need extensive scraping, sanding, patching, and priming at $1.50–$3.00 per square foot — adding $1,500–$3,750 to a 1,500 sq ft project. Professional painters report that prep work accounts for 20–40% of total project time.
+
+**Interior vs exterior** creates a fundamental cost difference. Interior wall painting at $2.65–$4.25 per square foot (all-in) is more affordable because painters work in controlled conditions with easy wall access. Exterior siding at $3.15–$5.25 per square foot requires ladder or scaffold setup, weather scheduling, and more extensive surface prep. Exterior trim at $4.35–$7.75 per square foot is the highest-cost option because every window frame, door casing, and fascia board requires precise brush work.
+
+**Paint quality** affects both material cost and long-term value. Builder-grade paint at $0.50–$1.00 per square foot provides basic coverage but typically needs repainting in 3–5 years. Mid-range paints at $0.65–$1.25 per square foot from Behr, Valspar, and Glidden offer 7–10 year durability. Premium paints from Benjamin Moore and Sherwin-Williams at $0.85–$1.75 per square foot offer 10–15 year durability, better coverage (often requiring fewer coats), and superior color accuracy.
+
+**Ceiling height** directly impacts labor cost for interior projects. Standard 8 ft ceilings use the baseline rate. Tall 9–10 ft ceilings add 15% to labor for extension poles. Extra tall ceilings at 12+ ft add 35% for scaffolding setup, which can cost $200–$500 per room in rental fees alone.
+
+**Number of coats** affects both paint consumption and labor time. Two coats is standard for most repaints. Three coats is necessary when changing from dark to light colors — a dark navy-to-white conversion may need a tinted primer plus two topcoats. One coat is only appropriate for minor touch-ups or same-color refreshes.
+
+**Regional labor rates** shift the total by 15–25%. A $5,925 interior painting job in the national average becomes $5,250 in the South (0.85x labor) or $6,863 on the West Coast (1.25x labor). Material costs are the same nationwide — only labor varies by region.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **fully installed prices** including labor, materials, prep, and cleanup. Costs do not include furniture moving, floor protection beyond standard drop cloths, or color consultation services.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and the Painting Contractors Association. Your actual quote may be 15–25% higher or lower depending on local labor market conditions and painter experience.
+- The calculator assumes **standard residential surfaces** in accessible locations. Cathedral ceilings, stairwells, multi-story exteriors, or surfaces requiring lead paint abatement will cost significantly more than these estimates.
+- **Interior ceiling surcharge** ($1–$2/sq ft) is applied only to the interior-ceiling project type. The surcharge covers overhead positioning, additional drop-cloth setup, and slower application speed.
+- **Paint gallon estimate** uses 350 sq ft per gallon per coat, which is the industry average for flat and eggshell finishes on smooth surfaces. Textured walls, bare drywall, or high-gloss finishes may reduce coverage to 250–300 sq ft per gallon. For a precise gallon count, use our [paint calculator](/calculators/construction/paint-calculator).
+- This calculator does not account for **wallpaper removal**, **mold remediation**, **structural repair**, or **specialty finishes** (faux, metallic, Venetian plaster).
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to paint a room?
+
+Painting a standard 12×14 ft room (about 400–500 sq ft of wall area) costs $1,060–$2,100 with mid-range paint, standard prep, and 2 coats at national average rates. That breaks down to roughly $2.65–$4.25 per square foot installed. A smaller bedroom (10×12 ft, 350 sq ft of walls) runs $925–$1,840. A larger living room (16×20 ft, 575 sq ft of walls) costs $1,525–$3,020. These prices include labor, paint, prep, and cleanup but not ceiling painting or trim work.
+
+### How much does it cost to paint the exterior of a house?
+
+Painting the exterior of a typical 1,500 sq ft home (approximately 2,000 sq ft of siding) costs $6,300–$10,500 at national average rates with mid-range paint and standard prep. A 2,500 sq ft two-story home with 3,000 sq ft of siding runs $9,450–$15,750. Exterior painting costs $3.15–$5.25 per square foot all-in, which is 20–50% more than interior painting due to ladder work, weather constraints, and more intensive surface preparation.
+
+### Is it cheaper to paint yourself or hire a painter?
+
+DIY painting costs $0.50–$1.75 per square foot for materials only — roughly 60–75% less than hiring a professional at $2.65–$5.25 per square foot installed. For a 1,500 sq ft interior project, DIY costs $750–$2,625 in materials versus $3,975–$7,875 with a professional. However, DIY takes 3–5x longer (a professional crew of 2–3 painters completes a whole-house interior in 2–3 days, while a DIY homeowner may need 2–3 weekends), and professional results are more consistent, especially on ceilings and trim.
+
+### How long does a professional painting project take?
+
+A professional crew of 2–3 painters can complete a single room in 4–8 hours, a whole-house interior (1,500 sq ft) in 2–3 days, and a whole-house exterior in 3–7 days depending on size, prep needs, and weather. Extensive surface preparation (scraping, sanding, patching) can add 1–2 extra days. Exterior projects require dry weather with temperatures above 50 degrees F and below 90 degrees F.
+
+### How much does surface prep cost?
+
+Surface preparation costs $0.25–$3.00 per square foot depending on wall condition. Minimal cleaning (dusting, light wipe-down) runs $0.25–$0.50 per square foot and is appropriate for walls in good condition with no peeling. Standard sand-and-prime at $0.50–$1.00 per square foot is the most common prep level for repaints — it smooths minor imperfections and ensures paint adhesion. Extensive scrape-and-repair at $1.50–$3.00 per square foot covers peeling paint, water stains, drywall patching, and caulking around windows and doors. For a 1,500 sq ft interior project, prep adds $375–$4,500 to the total. Professional painters report that prep work accounts for 20–40% of total project time but is the single most important factor in how long a paint job lasts.
+
+### How many coats of paint do I need?
+
+Two coats is standard for most interior repaints and provides full, even coverage with proper color depth. One coat is sufficient only for minor touch-ups or same-color refreshes using high-quality paint with built-in primer. Three coats are necessary when painting light over dark (such as white over navy) or covering stains, patches, and heavily repaired surfaces. Each additional coat adds roughly 20% to material cost and 15–20% to labor time. Using a tinted primer as a first coat when making dramatic color changes can reduce the total coats needed from three to two.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates painting project costs using separate material, labor, and surface preparation rates per square foot, adjusted for paint quality, number of coats, ceiling height, and regional labor differences. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by the **Painting Contractors Association (PCA)** industry cost benchmarks. Material costs cover paint only at retail pricing for three quality tiers — builder grade, mid-range (Behr/Valspar), and premium (Benjamin Moore/Sherwin-Williams). Labor rates are based on Bureau of Labor Statistics Occupational Employment and Wage Statistics for painters, construction, and maintenance (SOC 47-2141). Regional multipliers reflect BLS geographic wage differentials across seven U.S. regions. Surface preparation rates are based on PCA surface condition assessment guidelines. Paint coverage of 350 square feet per gallon per coat follows ASTM D2369 standard spread rate for architectural latex paint on smooth surfaces. All prices are fully installed costs including labor, materials, prep, and standard cleanup.
+
+{/* Section 16: Disclaimer — auto-rendered */}

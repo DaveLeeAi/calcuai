@@ -15,9 +15,10 @@ interface SearchBarProps {
 const FUSE_OPTIONS: IFuseOptions<SearchItem> = {
   keys: [
     { name: 'title', weight: 0.4 },
-    { name: 'primaryKeyword', weight: 0.3 },
-    { name: 'category', weight: 0.1 },
-    { name: 'subcategory', weight: 0.1 },
+    { name: 'primaryKeyword', weight: 0.25 },
+    { name: 'secondaryKeywords', weight: 0.15 },
+    { name: 'category', weight: 0.05 },
+    { name: 'subcategory', weight: 0.05 },
     { name: 'metaDescription', weight: 0.1 },
   ],
   threshold: 0.4,

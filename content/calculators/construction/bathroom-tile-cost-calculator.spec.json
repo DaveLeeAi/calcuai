@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "remodeling",
   "primaryKeyword": "bathroom tile cost calculator",
+  "secondaryKeywords": [
+    "bathroom tile installation cost",
+    "shower tile cost per square foot",
+    "bathroom floor tile cost",
+    "tile labor cost bathroom"
+  ],
   "metaTitle": "Bathroom Tile Cost Calculator | Shower, Floor & Full Bath Estimates",
   "metaDescription": "Estimate bathroom tiling costs for shower walls, floors, tub surrounds, and full bathrooms. Compare ceramic, porcelain, stone, and glass tile by region.",
   "inputs": [
@@ -137,13 +143,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -264,7 +291,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for tile and stone setters. Waterproofing costs based on NTCA membrane installation guidelines. Supplies costs based on Tile Council of North America material quantity standards.",
   "formulaAuditDate": "2026-03-14",

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "square footage calculator",
+  "secondaryKeywords": [
+    "square feet calculator",
+    "room size calculator",
+    "how to calculate square footage",
+    "area calculator for rooms"
+  ],
   "metaTitle": "Square Footage Calculator — Area for Any Shape | CalcHub",
   "metaDescription": "Calculate square footage for rooms, yards, and projects. Supports rectangle, triangle, circle, and trapezoid shapes with unit conversions and cost estimates.",
   "tabs": [

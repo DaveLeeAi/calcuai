@@ -72,6 +72,7 @@ export interface CalculatorSpec {
 
   // SEO
   primaryKeyword: string;
+  secondaryKeywords?: string[];
   metaTitle: string;
   metaDescription: string;
 

@@ -1,0 +1,268 @@
+{
+  "id": "sprinkler-system-cost-calculator",
+  "title": "Sprinkler System Cost Calculator",
+  "slug": "sprinkler-system-cost-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "sprinkler system cost calculator",
+  "secondaryKeywords": [
+    "sprinkler system installation cost",
+    "irrigation system cost",
+    "lawn sprinkler cost",
+    "sprinkler system cost per zone"
+  ],
+  "metaTitle": "Sprinkler System Cost Calculator | In-Ground, Drip & Above-Ground Estimates",
+  "metaDescription": "Estimate sprinkler system installation costs for above-ground, in-ground manual, in-ground automatic, and drip irrigation. Compare costs by lawn size, zone count, soil type, and region.",
+  "inputs": [
+    {
+      "id": "lawnSize",
+      "label": "Lawn Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-2500-5000",
+      "options": [
+        {
+          "value": "small-under-2500",
+          "label": "Small — Under 2,500 sq ft ($1,500–$2,500)"
+        },
+        {
+          "value": "medium-2500-5000",
+          "label": "Medium — 2,500–5,000 sq ft ($2,500–$4,500)"
+        },
+        {
+          "value": "large-5000-10000",
+          "label": "Large — 5,000–10,000 sq ft ($4,500–$7,500)"
+        },
+        {
+          "value": "xlarge-over-10000",
+          "label": "Extra Large — Over 10,000 sq ft ($7,500–$12,000)"
+        }
+      ],
+      "helpText": "Total irrigated lawn area in square feet. Larger lawns require more zones and piping."
+    },
+    {
+      "id": "systemType",
+      "label": "System Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "in-ground-automatic",
+      "options": [
+        {
+          "value": "above-ground",
+          "label": "Above-Ground (0.40x — portable hoses)"
+        },
+        {
+          "value": "in-ground-manual",
+          "label": "In-Ground Manual (0.85x — manual valves)"
+        },
+        {
+          "value": "in-ground-automatic",
+          "label": "In-Ground Automatic (1.0x — timer + valves)"
+        },
+        {
+          "value": "drip-irrigation",
+          "label": "Drip Irrigation (0.70x — garden beds)"
+        }
+      ],
+      "helpText": "In-ground automatic is the most common residential system. Drip irrigation is best for garden beds and shrubs."
+    },
+    {
+      "id": "zones",
+      "label": "Number of Zones",
+      "type": "number",
+      "required": true,
+      "defaultValue": 4,
+      "min": 1,
+      "max": 12,
+      "helpText": "Each zone covers 800–1,200 sq ft. Small lawns need 3, medium 4, large 6, extra large 8+. Extra zones beyond included add $200–$400 each."
+    },
+    {
+      "id": "soilType",
+      "label": "Soil Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "normal",
+      "options": [
+        {
+          "value": "normal",
+          "label": "Normal Soil (1.0x)"
+        },
+        {
+          "value": "clay",
+          "label": "Clay Soil (+15% labor)"
+        },
+        {
+          "value": "rocky",
+          "label": "Rocky Soil (+30% labor)"
+        }
+      ],
+      "helpText": "Clay and rocky soil increase trenching labor. Rocky soil may require equipment upgrades."
+    },
+    {
+      "id": "backflowPreventer",
+      "label": "Backflow Preventer",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Backflow Preventer"
+        },
+        {
+          "value": "standard",
+          "label": "Standard (+$100–$300)"
+        },
+        {
+          "value": "rpz-valve",
+          "label": "RPZ Valve (+$300–$600 — code required)"
+        }
+      ],
+      "helpText": "Many municipalities require a backflow preventer on irrigation systems to protect the water supply. RPZ valves are the highest-rated option."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "backflowCost",
+      "label": "Backflow Preventer",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "zoneAdjustment",
+      "label": "Extra Zone Adjustment",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerZone",
+      "label": "Cost Per Zone",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "systemComparison",
+      "label": "System Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "sprinkler-system-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "pergola-cost-calculator",
+    "concrete-patio-cost-calculator",
+    "tree-removal-cost-calculator",
+    "driveway-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; Irrigation Association installation cost data",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base pricing from HomeAdvisor and Angi 2025-2026 national average surveys for residential irrigation installation. System type multipliers derived from Irrigation Association member pricing data. Zone add-on costs from HomeAdvisor per-zone installation averages. Soil difficulty multipliers from contractor labor surveys. Backflow preventer pricing from HomeAdvisor and local plumbing supply wholesale data. Regional labor multipliers derived from BLS Occupational Employment and Wage Statistics (SOC 47-2181).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 80,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

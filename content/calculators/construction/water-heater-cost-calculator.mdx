@@ -1,0 +1,212 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 50-gallon tank gas water heater costs $1,200–$2,100 installed nationally, including the unit, labor, and basic fittings. A tankless gas unit runs $1,500–$3,000, while a heat pump water heater costs $1,500–$3,500 installed. Installation labor alone ranges from $250–$1,200 depending on unit type, venting requirements, and whether the existing hookups need modification. Tank units last 8–12 years on average; tankless and heat pump models last 20+ years. Removing and disposing of an old unit adds $100–$300. Enter your water heater type, fuel source, capacity, and region below for a personalized installed-cost estimate with a side-by-side comparison of all six water heater types.
+
+</div>
+
+<div className="at-a-glance">
+
+| Metric | Value |
+|---|---|
+| Tank Gas (50-gal) | $800–$1,500 unit + $250–$600 install |
+| Tankless Gas | $1,000–$2,000 unit + $500–$1,000 install |
+| Heat Pump | $1,200–$2,500 unit + $300–$1,000 install |
+| Tank Electric (50-gal) | $600–$1,200 unit + $250–$500 install |
+| Installation Labor Range | $250–$1,200 |
+| Typical Lifespan (Tank) | 8–12 years |
+| Typical Lifespan (Tankless) | 20+ years |
+| Regional Labor Variation | +/- 15–25% |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator estimates the total installed cost of a new residential water heater, including the unit price, installation labor, removal of the old unit, and any necessary permit fees. It produces a low/mid/high cost range for your selected water heater type and a comparison table showing all six common water heater configurations at national rates.
+
+The **unit cost** covers the water heater itself — tank, burner or heating element, controls, and standard warranty. Unit prices vary primarily by type (tank vs. tankless vs. heat pump), fuel source (gas vs. electric), capacity (40–80 gallons for tank units, GPM rating for tankless), and energy efficiency rating (UEF — Uniform Energy Factor).
+
+The **installation labor** covers removal of the old unit, positioning the new unit, connecting water supply lines, connecting the fuel source (gas line or electrical circuit), installing or modifying venting (gas units), installing the condensate drain (condensing tankless and heat pump units), and testing. Tankless installations cost more in labor because they often require upgraded gas lines (3/4-inch to 1-inch), new venting runs, and electrical outlets for electronic ignition.
+
+The **removal cost** covers disconnecting and disposing of the old water heater. A standard tank water heater weighs 100–150 pounds when empty. Most installers include basic removal in their labor quote, but some charge separately — especially for units in attics, crawl spaces, or locations requiring difficult access.
+
+The **permit fee** varies by municipality from $0 to $400. Most jurisdictions require a plumbing permit for water heater replacement. Some also require an electrical permit (for heat pump units) or a mechanical permit (for gas venting changes). The calculator uses a national average of $150–$400 when permits are selected.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the water heater type** — tank gas is the most common residential unit. Tankless gas provides on-demand hot water and saves space. Tank electric is common where natural gas is unavailable. Tankless electric suits small homes and point-of-use applications. Heat pump is the most energy-efficient option for warm and moderate climates. Solar with backup tank is the highest upfront cost but lowest operating cost in sunny regions.
+
+2. **Select the capacity** — for tank units, a 40-gallon tank serves 1–2 people, 50 gallons serves 2–4 people, and 75–80 gallons serves 4+ people. For tankless units, capacity is measured in gallons per minute (GPM): 5–7 GPM serves a typical household, 8–10 GPM serves large households with simultaneous demand.
+
+3. **Select the installation complexity** — "standard" means replacing a like-for-like unit with existing hookups in good condition. "Moderate" means minor modifications such as extending a gas line or upgrading a vent pipe. "Complex" means significant changes such as converting from tank to tankless, relocating the unit, or running new gas or electrical service.
+
+4. **Include old unit removal** — select "Yes" if the installer needs to disconnect, drain, and haul away the old unit. Most full-service quotes include this, but confirm with your contractor.
+
+5. **Include permit fees** — most jurisdictions require a plumbing permit for water heater installation. Select "Yes" to include an estimated $150–$400 permit fee.
+
+6. **Select your region** — adjusts labor costs for local market conditions. The South and Midwest are 10–15% below national average; the Northeast and West Coast are 15–25% above.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Water heater installed cost combines the unit price, installation labor adjusted by complexity and region, old unit removal, and permit fees.
+
+**Unit cost:**
+
+$$C_{unit} = R_{unit,type}$$
+
+**Installation labor:**
+
+$$C_{labor} = R_{labor,base} \times M_{complexity} \times M_{region}$$
+
+**Additional costs:**
+
+$$C_{removal} = R_{removal}$$
+
+$$C_{permit} = R_{permit}$$
+
+**Totals:**
+
+$$C_{low} = C_{unit,low} + C_{labor,low} + C_{removal,low} + C_{permit,low}$$
+
+$$C_{high} = C_{unit,high} + C_{labor,high} + C_{removal,high} + C_{permit,high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **R_unit** = water heater unit price (varies by type and capacity)
+- **R_labor,base** = base labor cost (varies by water heater type)
+- **M_complexity** = complexity multiplier (standard: 1.0, moderate: 1.35, complex: 1.75)
+- **M_region** = regional labor multiplier (0.85–1.25)
+- **R_removal** = old unit removal ($100–$300 if selected)
+- **R_permit** = permit fee ($150–$400 if selected)
+
+**Water heater unit + labor rates (2025-2026):**
+
+| Type | Unit Cost | Base Labor | Total Installed |
+|---|---|---|---|
+| Tank Gas (50-gal) | $800–$1,500 | $250–$600 | $1,200–$2,100 |
+| Tank Electric (50-gal) | $600–$1,200 | $250–$500 | $900–$1,700 |
+| Tankless Gas | $1,000–$2,000 | $500–$1,000 | $1,500–$3,000 |
+| Tankless Electric | $500–$1,200 | $300–$700 | $800–$1,900 |
+| Heat Pump | $1,200–$2,500 | $300–$1,000 | $1,500–$3,500 |
+| Solar (w/ backup) | $2,000–$5,000 | $1,000–$2,500 | $3,000–$7,500 |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages, **Department of Energy** water heater efficiency standards, and **AHRI** (Air-Conditioning, Heating, and Refrigeration Institute).
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 50-Gallon Tank Gas, Standard Install, National Average
+
+A homeowner is replacing an existing 50-gallon tank gas water heater with a new like-for-like unit. Existing gas line and venting are in good condition. Old unit removal included. Permit required. Location: national average.
+
+**Step-by-step:**
+
+1. Unit cost low: **$800** | high: **$1,500**
+2. Base labor low: **$250** | high: **$600**
+3. Complexity multiplier (standard): **1.0**
+4. Regional multiplier (national average): **1.0**
+5. Labor low: $250 x 1.0 x 1.0 = **$250** | high: $600 x 1.0 x 1.0 = **$600**
+6. Old unit removal low: **$100** | high: **$300**
+7. Permit fee low: **$150** | high: **$400**
+8. Total low: $800 + $250 + $100 + $150 = **$1,300**
+9. Total high: $1,500 + $600 + $300 + $400 = **$2,800**
+10. Total mid: ($1,300 + $2,800) / 2 = **$2,050**
+
+**Interpretation:** At $2,050 midpoint, a standard tank gas water heater replacement is one of the most straightforward and affordable plumbing projects. The unit itself is the largest cost component at 55–65% of the total. Upgrading to a tankless gas unit for the same home would cost $2,250–$4,700 with moderate complexity — 60% more upfront — but saves $100–$200 per year in energy costs and lasts twice as long. Over a 20-year period, tankless often costs less in total when energy savings and replacement cycles are factored in.
+
+{/* Section 10: Water Heater Type Comparison */}
+## Water Heater Type Comparison
+
+| Type | Installed Cost | Annual Energy Cost | Lifespan | Space Required | Best For |
+|---|---|---|---|---|---|
+| Tank Gas (50-gal) | $1,200–$2,100 | $250–$400 | 8–12 years | 5 sq ft floor | Most homes, reliable, proven |
+| Tank Electric (50-gal) | $900–$1,700 | $350–$550 | 10–15 years | 5 sq ft floor | No gas line, lower upfront |
+| Tankless Gas | $1,500–$3,000 | $150–$250 | 20+ years | Wall-mounted | Endless hot water, space savings |
+| Tankless Electric | $800–$1,900 | $200–$350 | 20+ years | Wall-mounted | Point-of-use, small homes |
+| Heat Pump | $1,500–$3,500 | $100–$200 | 13–15 years | 8 sq ft + clearance | Warm climates, highest efficiency |
+| Solar (w/ backup) | $3,000–$7,500 | $50–$100 | 20–25 years | Roof panels + tank | Sunny climates, lowest operating |
+
+Annual energy costs based on DOE average household usage of 64 gallons per day. Tank gas assumes natural gas at $1.50/therm. Electric assumes $0.16/kWh national average. Actual costs vary by usage, rates, and climate.
+
+{/* Section 11: Factors That Affect Water Heater Cost */}
+## Key Cost Factors
+
+**Water heater type** is the largest cost variable. A basic 50-gallon tank electric unit starts at $900 installed, while a solar system with backup tank can reach $7,500. Tank units account for 85% of residential installations due to their lower upfront cost and simpler installation, but tankless and heat pump models are gaining market share rapidly as energy costs rise.
+
+**Fuel source** affects both installation cost and long-term operating cost. Gas units require proper venting (atmospheric or power vent) and a gas supply line. Electric units need a dedicated 240V circuit (30-amp for standard tank, 60-amp for some heat pumps). Converting from gas to electric or vice versa adds $500–$2,000 in electrical or plumbing modifications.
+
+**Installation complexity** creates the widest labor cost swing. A standard like-for-like swap takes 2–4 hours. Converting from tank to tankless may require gas line upsizing, new venting, electrical work, and wall reinforcement — turning a half-day job into a 1–2 day project. Attic, crawl space, or tight closet installations add 30–50% to labor time.
+
+**Capacity** scales the unit cost. For tank water heaters, each 10-gallon step up adds $100–$200 to the unit price. A 40-gallon tank costs $100–$200 less than a 50-gallon, while a 75-gallon high-demand tank costs $200–$400 more. Oversizing wastes energy heating unused water; undersizing means running out of hot water during peak demand.
+
+**Energy efficiency (UEF rating)** affects both purchase price and lifetime cost. A standard gas tank with 0.60 UEF costs less upfront than a high-efficiency model with 0.70 UEF, but the high-efficiency unit saves $50–$75 per year in gas costs. Heat pump water heaters achieve 3.0+ UEF — three times more efficient than a standard electric tank — saving $200–$350 per year.
+
+**Regional labor and energy rates** compound over the water heater's lifetime. A West Coast installation costs 25% more in labor, and electricity rates in California ($0.25/kWh) are 56% higher than the national average ($0.16/kWh), making heat pump models especially attractive in high-rate areas.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including the water heater unit, standard installation labor, and basic fittings (supply lines, shut-off valves, discharge pipe). Expansion tanks, water treatment systems, and recirculation pumps are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor and Angi. Your local market may be 15–25% higher or lower depending on labor rates and permit requirements.
+- The calculator assumes **standard residential installation** in a garage, basement, or utility closet with existing utility connections. Attic installations, outdoor installations, or units requiring structural reinforcement will cost more.
+- **Permit fees** vary widely by municipality from $0 to $500+. The calculator uses a national average range of $150–$400. Check with your local building department for exact costs.
+- **Energy cost estimates** use national average utility rates ($1.50/therm for natural gas, $0.16/kWh for electricity). Your actual savings depend on local rates, usage patterns, and climate.
+- This calculator does not account for **federal or state tax credits** for heat pump or solar water heaters. The federal tax credit (as of 2025) covers 30% of heat pump water heater cost up to $2,000 — which can significantly offset the higher upfront price.
+- **Tankless sizing** depends on incoming water temperature and simultaneous demand. The calculator uses typical whole-home ratings; point-of-use applications cost less.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How long does a water heater last?
+
+A standard tank water heater lasts 8–12 years with proper maintenance, including annual flushing to remove sediment buildup. Electric tanks tend to last 1–2 years longer than gas tanks because they have fewer moving parts and no combustion-related wear. Tankless water heaters last 20+ years — often 25 years — because they heat water on demand without storing it, eliminating the tank corrosion that degrades tank units. Heat pump water heaters last 13–15 years. Solar systems last 20–25 years for the collectors, though the backup tank element may need replacement at 10–12 years.
+
+### When should I replace my water heater?
+
+Replace your water heater when it shows any of these signs: visible rust or corrosion on the tank, water pooling around the base (indicating internal tank failure), rusty hot water from the faucet, rumbling or banging noises (sediment buildup), inconsistent water temperature, or the unit is over 10 years old. Emergency replacement after a tank failure costs 20–50% more than planned replacement due to rush scheduling and water damage cleanup. Proactive replacement at 10–12 years avoids the risk of a catastrophic leak that can cause $3,000–$10,000 in water damage to floors, walls, and belongings.
+
+### Tank vs. tankless: which should I choose?
+
+A tankless gas water heater costs $1,500–$3,000 installed versus $1,200–$2,100 for a standard tank — 40–60% more upfront. However, tankless units save $100–$200 per year in energy costs and last 20+ years versus 8–12 years for tank units. Over a 20-year period, the total cost of ownership (purchase + energy + one tank replacement) favors tankless by $1,000–$3,000. Tankless also provides unlimited hot water and frees up 5+ square feet of floor space. The main drawback is the higher upfront cost and potentially complex installation if converting from a tank system. Tankless is most worth it for households with high hot water demand, those staying in the home long-term, and homes where space is limited.
+
+### Is a heat pump water heater worth it?
+
+A heat pump water heater costs $1,500–$3,500 installed — comparable to tankless gas — but uses 60–70% less electricity than a standard electric tank. At national average electricity rates, a heat pump saves $200–$350 per year in energy costs compared to a standard electric tank. The federal tax credit (30% up to $2,000 as of 2025) can reduce the effective cost to $1,050–$2,450. The payback period is 2–4 years in most cases. Heat pumps work best in warm and moderate climates (50 degrees F+ ambient air) and require 700+ cubic feet of surrounding air space. They also dehumidify the room they are in — a benefit in humid climates, but a drawback in cold basements.
+
+### How much does water heater installation labor cost?
+
+Water heater installation labor costs $250–$1,200 depending on the unit type and installation complexity. A standard tank-for-tank swap costs $250–$600 in labor and takes 2–4 hours. Tankless installation costs $500–$1,000 because it often requires gas line upgrades, new venting, and electrical connections. Heat pump installation runs $300–$1,000 due to condensate drain requirements and electrical circuit needs. Complex installations — converting fuel types, relocating the unit, or installing in tight spaces — add 35–75% to base labor costs. Always get 2–3 quotes and verify the installer is licensed and insured.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates residential water heater installed costs by combining unit price, installation labor (adjusted for complexity and region), old unit removal, and permit fees. Unit pricing comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by manufacturer MSRP data from **Rheem**, **A.O. Smith**, and **Bradford White**. Labor rates reflect plumber billing surveys from HomeAdvisor and the **Plumbing-Heating-Cooling Contractors Association (PHCC)**. Energy cost and efficiency data come from the **U.S. Department of Energy** residential water heating fact sheets and **Energy Star** certified product lists. Regional labor multipliers are based on **Bureau of Labor Statistics** Occupational Employment and Wage Statistics for plumbers, pipefitters, and steamfitters (SOC 47-2152). Lifespan estimates are based on industry consensus from PHCC and manufacturer warranty data. All prices are installed costs and vary 15–25% by region.
+
+{/* Section 16: Disclaimer — auto-rendered */}

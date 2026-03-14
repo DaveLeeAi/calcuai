@@ -1,8 +1,8 @@
 # CalcuAI
 
-A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **229 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
+A spec-driven calculator authority site built for dual-ranking on Google Search **and** AI model citation (ChatGPT, Perplexity, Gemini, Google AI Overview). **258 calculators** across 8 categories, each defined by a JSON spec + MDX content file + pure TypeScript formula module, rendered by a shared component system.
 
-**234 test suites · 5,639 passing tests · 220 formula IDs · 34 glossary terms · 9 methodology pages**
+**263 test suites · 5,780 passing tests · 247 formula modules · 34 glossary terms · 9 methodology pages**
 
 ## Tech Stack
 
@@ -13,17 +13,17 @@ A spec-driven calculator authority site built for dual-ranking on Google Search 
 - **Math:** KaTeX for formula rendering
 - **Charts:** Recharts for visualizations
 - **Search:** Fuse.js (client-side)
-- **Testing:** Jest + ts-jest (5,639 tests across 234 suites)
+- **Testing:** Jest + ts-jest (5,780 tests across 263 suites)
 - **Hosting:** Vercel
 
 ## Calculators
 
-229 specs across 8 categories:
+258 specs across 8 categories:
 
 | Category | Count | Examples |
 |----------|-------|---------|
 | **Finance** | 64 | Mortgage, Compound Interest, 401(k), Rental Property, HELOC, Debt Snowball/Avalanche, Self-Employment Tax, Home Insurance, Personal Loan, Interest-Only Loan, Home Sale Profit, Student Loan Payoff, Mortgage Prepayment, Rent Increase, College Savings, Index Fund |
-| **Construction** | 44 | Concrete (Slab, Footing, Block), Roofing (Shingles, Metal), Kitchen Remodel, Bathroom Remodel, Renovation Cost, Asphalt, Driveway Cost, HVAC Size, Wire Size, Pool Volume, Paver, Brick, Siding, Carpet, Backsplash Tile, Bathroom Tile, Deck Replacement, Flooring Installation, Gutter Replacement, Regrouting, Concrete Patio |
+| **Construction** | 73 | Concrete (Slab, Footing, Block), Roofing, Kitchen & Bathroom Remodel, HVAC Replacement, Heat Pump, Mini-Split, Ductwork, Water Heater, Whole-House Repipe, Electrical Panel & Service Upgrade, Backup Generator, Solar Battery, EV Charger, Painting, Insulation, Garage Door, Door & Window Replacement, Foundation Repair, Basement Waterproofing, Crawl Space Encapsulation, Sump Pump, Radon Mitigation, Pergola, Tree Removal, Artificial Turf, Sprinkler System, Crown Molding, Home Energy Audit, Accessibility Remodel |
 | **Math** | 24 | Percentage, Fraction, Quadratic Formula, Standard Deviation, Probability, Z-Score, Sample Size, Standard Error, Chi-Square, Confidence Interval, P-Value |
 | **Business** | 24 | ROI, Break-Even, Profit, Payroll, Customer Lifetime Value, Conversion Rate, Customer Acquisition Cost, Payback Period, Inventory Turnover, Hourly-to-Salary, Net Income, Commission, Cash Flow, Working Capital, Debt Service Coverage |
 | **Everyday** | 21 | Tip, Discount, Gas Mileage, Solar Panel, Fuel Cost, Electricity Cost, Travel Budget, Home Energy Usage, EV Charging Cost, Trip Cost, Age, Date, GPA, Moving Cost |
@@ -53,12 +53,12 @@ content/
   calculators/{category}/     .spec.json + .mdx per calculator
   categories/                 8 category definition JSONs
 lib/
-  formulas/{category}/        218 pure TypeScript formula modules (220 formula IDs)
+  formulas/{category}/        247 pure TypeScript formula modules
   types.ts                    All TypeScript interfaces
   content-loader.ts           Build-time spec + MDX loader
   search-index.ts             Fuse.js index builder
 scripts/                      CLI tools (generate, validate, audit, score)
-__tests__/formulas/           234 test files, 5,639 unit tests
+__tests__/formulas/           263 test files, 5,780 unit tests
 ```
 
 ## Getting Started

@@ -1,0 +1,296 @@
+{
+  "id": "tree-removal-cost-calculator",
+  "title": "Tree Removal Cost Calculator",
+  "slug": "tree-removal-cost-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "tree removal cost calculator",
+  "secondaryKeywords": [
+    "tree removal cost",
+    "tree cutting cost",
+    "tree removal service cost",
+    "how much to remove a tree"
+  ],
+  "metaTitle": "Tree Removal Cost Calculator | By Height, Trunk Size & Stump Options",
+  "metaDescription": "Estimate tree removal costs by height, trunk diameter, condition, and proximity to structures. Compare stump grinding vs. full removal with regional labor rates for 2025-2026.",
+  "inputs": [
+    {
+      "id": "treeHeight",
+      "label": "Tree Height",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-25-50ft",
+      "options": [
+        {
+          "value": "small-under-25ft",
+          "label": "Small — Under 25 ft ($200–$500)"
+        },
+        {
+          "value": "medium-25-50ft",
+          "label": "Medium — 25-50 ft ($500–$1,200)"
+        },
+        {
+          "value": "large-50-75ft",
+          "label": "Large — 50-75 ft ($1,200–$2,500)"
+        },
+        {
+          "value": "xlarge-over-75ft",
+          "label": "Extra Large — Over 75 ft ($2,500–$5,000)"
+        }
+      ],
+      "helpText": "Measured from ground to crown. Taller trees require more equipment and crew time."
+    },
+    {
+      "id": "trunkDiameter",
+      "label": "Trunk Diameter",
+      "type": "select",
+      "required": true,
+      "defaultValue": "thin-under-12in",
+      "options": [
+        {
+          "value": "thin-under-12in",
+          "label": "Thin — Under 12 in (1.0x baseline)"
+        },
+        {
+          "value": "medium-12-24in",
+          "label": "Medium — 12-24 in (1.20x)"
+        },
+        {
+          "value": "thick-over-24in",
+          "label": "Thick — Over 24 in (1.50x)"
+        }
+      ],
+      "helpText": "Measured at chest height (DBH). Thicker trunks require heavier equipment and more labor."
+    },
+    {
+      "id": "condition",
+      "label": "Tree Condition",
+      "type": "select",
+      "required": true,
+      "defaultValue": "healthy",
+      "options": [
+        {
+          "value": "healthy",
+          "label": "Healthy (1.0x baseline)"
+        },
+        {
+          "value": "dead-diseased",
+          "label": "Dead / Diseased (1.15x — unpredictable)"
+        },
+        {
+          "value": "storm-damaged",
+          "label": "Storm Damaged (1.30x — hazardous)"
+        }
+      ],
+      "helpText": "Dead, diseased, or storm-damaged trees are less predictable and require extra safety measures."
+    },
+    {
+      "id": "proximity",
+      "label": "Proximity to Structures",
+      "type": "select",
+      "required": true,
+      "defaultValue": "open-yard",
+      "options": [
+        {
+          "value": "open-yard",
+          "label": "Open Yard (1.0x baseline)"
+        },
+        {
+          "value": "near-structure",
+          "label": "Near Structure (1.25x — careful rigging)"
+        },
+        {
+          "value": "near-power-lines",
+          "label": "Near Power Lines (1.50x — utility coordination)"
+        }
+      ],
+      "helpText": "Trees near buildings or power lines require crane work and careful sectional dismantling."
+    },
+    {
+      "id": "stumpRemoval",
+      "label": "Stump Removal",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Stump Removal"
+        },
+        {
+          "value": "grinding",
+          "label": "Stump Grinding (+$150–$400)"
+        },
+        {
+          "value": "full-removal",
+          "label": "Full Stump Removal (+$300–$700)"
+        }
+      ],
+      "helpText": "Grinding shreds the stump 6-12 in below grade. Full removal extracts the root ball entirely."
+    },
+    {
+      "id": "cleanup",
+      "label": "Cleanup Option",
+      "type": "select",
+      "required": true,
+      "defaultValue": "leave-debris",
+      "options": [
+        {
+          "value": "leave-debris",
+          "label": "Leave Debris (no added cost)"
+        },
+        {
+          "value": "chip-and-haul",
+          "label": "Chip & Haul Away (+$75–$200)"
+        }
+      ],
+      "helpText": "Chip & haul includes chipping branches and hauling all debris off-site."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "treeCost",
+      "label": "Tree Removal Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "stumpCost",
+      "label": "Stump Removal Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "cleanupCost",
+      "label": "Cleanup Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerTree",
+      "label": "Cost Per Tree",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "sizeComparison",
+      "label": "Tree Size Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Removal Time",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "permitNote",
+      "label": "Permit Note",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "tree-removal-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "pergola-cost-calculator",
+    "concrete-patio-cost-calculator",
+    "fence-calculator",
+    "mulch-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; International Society of Arboriculture (ISA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Tree removal base pricing from HomeAdvisor and Angi 2025-2026 national average surveys. Trunk diameter and condition multipliers derived from International Society of Arboriculture (ISA) risk assessment and pricing guidelines. Proximity surcharges from HomeAdvisor hazardous-access cost data. Stump removal and cleanup pricing from HomeAdvisor and Angi 2025-2026 add-on service surveys. Regional labor multipliers derived from BLS OES regional wage data for tree trimmers and pruners (SOC 37-3013).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "pergola-cost-calculator",
+    "fence-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

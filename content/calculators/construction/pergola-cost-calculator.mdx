@@ -1,0 +1,219 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 10x12-foot pressure-treated wood pergola costs $5,250–$10,500 installed at national average rates, including structure materials and labor. Cedar upgrades to $6,825–$13,650 for the same footprint, while aluminum runs $7,088–$14,175. Adding a polycarbonate roof panel adds $1,000–$2,500, concrete footings increase the total by 15%, and wiring for a ceiling fan with lights adds $500–$1,200. Regional labor rates shift the labor portion 15–25% above or below the national baseline. Enter your pergola size, material, roof type, foundation, electrical options, and region below for a personalized estimate with a side-by-side comparison of all six common pergola materials.
+
+</div>
+
+{/* At a Glance — Pergola Costs */}
+<div className="at-a-glance">
+
+| Metric | Value |
+|--------|-------|
+| **Small 8x8 (pressure-treated, installed)** | $3,000–$6,000 |
+| **Medium 10x12 (pressure-treated, installed)** | $5,250–$10,500 |
+| **Large 12x16 (pressure-treated, installed)** | $8,250–$16,500 |
+| **Cedar upgrade multiplier** | 1.30x structure cost |
+| **Labor factor** | 50% of structure cost |
+| **Source** | HomeAdvisor / Angi, 2025–2026; NADRA |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator provides installed cost ranges for six common pergola materials — pressure-treated wood, cedar, redwood, vinyl, aluminum, and fiberglass — based on your selected size, roof type, foundation, electrical add-ons, and region. It produces a low/mid/high estimate for your configuration, a cost-per-square-foot figure, and a comparison table showing what the same pergola would cost in every material.
+
+The **structure / materials cost** covers lumber or manufactured components for posts, beams, rafters, and hardware. Material pricing starts with a size-specific base range (e.g., $3,500–$7,000 for a 10x12) multiplied by the material factor. Pressure-treated wood is the 1.0x baseline; cedar is 1.30x; redwood is the premium at 1.50x.
+
+The **labor cost** is calculated as 50% of the structure cost, adjusted by a regional multiplier. Labor covers site preparation, post installation, beam and rafter assembly, and finish work. The South is 15% below the national average, while the West Coast is 25% above.
+
+The **roof / cover add-on** is a flat cost range for shade slats ($500–$1,500), polycarbonate panels ($1,000–$2,500), or retractable canopies ($1,500–$3,500). Open-rafter pergolas have no roof add-on.
+
+The **foundation adjustment** applies a multiplier to the entire subtotal (structure + labor + roof + electrical). Surface-mounted pergolas are the 1.0x baseline. Concrete footings add 15% for excavation, forms, and concrete. Deck-mounted pergolas add 5% for structural reinforcement.
+
+The **electrical add-on** covers wiring for a basic outdoor outlet ($200–$400) or a ceiling fan with lights ($500–$1,200), run by a licensed electrician.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the pergola size** — an 8x8 (64 sq ft) suits a small seating area or hot tub cover. A 10x12 (120 sq ft) is the most popular residential size, covering a standard patio dining set. A 12x16 (192 sq ft) or 14x20 (280 sq ft) accommodates outdoor kitchens, lounge areas, or large gatherings.
+
+2. **Choose your material** — pressure-treated wood is the most affordable and widely available. Cedar offers natural rot resistance and a warm color at 1.30x. Redwood is the premium wood at 1.50x. Vinyl (1.20x) is low-maintenance but limited in design. Aluminum (1.35x) is lightweight and durable. Fiberglass (1.40x) is the strongest manufactured option.
+
+3. **Select the roof type** — open-rafter pergolas provide partial shade with an airy look. Shade slats add angled boards for 70–80% sun coverage. Polycarbonate panels provide full rain and UV protection while allowing light through. Retractable canopies offer adjustable shade.
+
+4. **Choose the foundation** — surface mount bolts directly to an existing patio or deck surface (1.0x baseline). Concrete footings (1.15x) are the most structurally sound option for freestanding pergolas. Deck mount (1.05x) attaches to an existing deck structure with blocking.
+
+5. **Add electrical options** — a basic outlet is useful for string lights or speakers. A ceiling fan with lights provides comfort for evening use and requires a licensed electrician.
+
+6. **Select your region** — this adjusts the labor portion only. Material, roof, and electrical costs remain the same nationwide.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Pergola cost is estimated using a size-based structure cost multiplied by a material factor, with labor at 50% of structure cost and a regional multiplier. Roof, electrical, and foundation costs are additive or multiplicative adjustments.
+
+**Structure cost:**
+
+$$C_{struct} = B_{size} \times M_{material}$$
+
+**Labor cost:**
+
+$$C_{labor} = C_{struct} \times 0.50 \times M_{region}$$
+
+**Total cost range:**
+
+$$C_{low} = (C_{struct,low} + C_{labor,low} + R_{low} + E_{low}) \times F$$
+
+$$C_{high} = (C_{struct,high} + C_{labor,high} + R_{high} + E_{high}) \times F$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+$$C_{sqft} = \frac{C_{mid}}{A}$$
+
+Where:
+
+- **B_size** = size base cost range (low/high by pergola footprint)
+- **M_material** = material multiplier (pressure-treated: 1.0, vinyl: 1.20, cedar: 1.30, aluminum: 1.35, fiberglass: 1.40, redwood: 1.50)
+- **M_region** = regional labor multiplier (0.85–1.25)
+- **R** = roof type add-on cost (open-rafter: $0, shade slats: $500–$1,500, polycarbonate: $1,000–$2,500, retractable: $1,500–$3,500)
+- **E** = electrical add-on cost (none: $0, basic outlet: $200–$400, fan and lights: $500–$1,200)
+- **F** = foundation multiplier (surface-mount: 1.0, concrete-footings: 1.15, deck-mount: 1.05)
+- **A** = pergola area in square feet
+
+**Size base costs (pressure-treated wood, 2025–2026):**
+
+| Size | Sq Ft | Base Range |
+|---|---|---|
+| Small 8x8 | 64 | $2,000–$4,000 |
+| Medium 10x12 | 120 | $3,500–$7,000 |
+| Large 12x16 | 192 | $5,500–$11,000 |
+| Extra Large 14x20 | 280 | $8,000–$16,000 |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025–2026 national averages and **NADRA** (North American Deck and Railing Association) outdoor living cost data.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: Medium 10x12, Pressure-Treated Wood, Open Rafter, Surface Mount (National Average)
+
+A homeowner is building a 10x12-foot pressure-treated wood pergola with open rafters, surface-mounted on an existing patio, no electrical, national average labor rates.
+
+**Step-by-step:**
+
+1. Look up size base: 10x12 = **$3,500–$7,000**
+2. Apply pressure-treated material multiplier (1.0x): $3,500 x 1.0 = **$3,500** low | $7,000 x 1.0 = **$7,000** high
+3. Calculate labor (50% of structure x 1.0 regional):
+   - Low: $3,500 x 0.50 x 1.0 = **$1,750**
+   - High: $7,000 x 0.50 x 1.0 = **$3,500**
+4. Roof add-on (open rafter): **$0**
+5. Electrical add-on (none): **$0**
+6. Subtotal low: $3,500 + $1,750 + $0 + $0 = **$5,250**
+7. Subtotal high: $7,000 + $3,500 + $0 + $0 = **$10,500**
+8. Apply foundation multiplier (surface mount, 1.0x): low = **$5,250** | high = **$10,500**
+9. Total mid: ($5,250 + $10,500) / 2 = **$7,875**
+10. Cost per sq ft: $7,875 / 120 = **$65.63/sq ft**
+
+**Material comparison (10x12, open rafter, surface mount, no electrical, national):**
+- Pressure-Treated Wood (1.0x): $5,250–$10,500 (mid: $7,875)
+- Vinyl (1.20x): $6,300–$12,600 (mid: $9,450)
+- Cedar (1.30x): $6,825–$13,650 (mid: $10,238)
+- Aluminum (1.35x): $7,088–$14,175 (mid: $10,631)
+- Fiberglass (1.40x): $7,350–$14,700 (mid: $11,025)
+- Redwood (1.50x): $7,875–$15,750 (mid: $11,813)
+
+**Interpretation:** At $7,875 midpoint, a 10x12 pressure-treated wood pergola is the most budget-friendly option. Upgrading to cedar adds $2,363 (mid) for natural rot resistance and a warmer aesthetic. Adding shade slats would add $500–$1,500 to any material choice. Switching to concrete footings would increase the total by 15% ($1,181 at midpoint) but provides the most structurally permanent installation. For the same footprint, a large 12x16 in pressure-treated wood would run $8,250–$16,500 (mid: $12,375) — about 57% more for 60% more coverage area.
+
+{/* Section 10: Pergola Cost by Material */}
+## Pergola Cost by Material
+
+| Material | 8x8 Installed | 10x12 Installed | 12x16 Installed | Maintenance | Lifespan |
+|---|---|---|---|---|---|
+| Pressure-Treated | $3,000–$6,000 | $5,250–$10,500 | $8,250–$16,500 | Stain every 2–3 years | 15–20 years |
+| Vinyl | $3,600–$7,200 | $6,300–$12,600 | $9,900–$19,800 | Wash only | 20–30 years |
+| Cedar | $3,900–$7,800 | $6,825–$13,650 | $10,725–$21,450 | Seal every 2–3 years | 20–25 years |
+| Aluminum | $4,050–$8,100 | $7,088–$14,175 | $11,138–$22,275 | Minimal | 25–40 years |
+| Fiberglass | $4,200–$8,400 | $7,350–$14,700 | $11,550–$23,100 | Minimal | 30–50 years |
+| Redwood | $4,500–$9,000 | $7,875–$15,750 | $12,375–$24,750 | Seal every 2–3 years | 25–30 years |
+
+All costs include structure materials and labor at national average rates with open-rafter design and surface mount (1.0x foundation). Roof add-ons, electrical, foundation upgrades, and regional variation are additional.
+
+{/* Section 11: Roof Type Comparison */}
+## Pergola Roof Types Compared
+
+**Open rafter** is the classic pergola design — parallel beams with no covering. It provides 40–50% shade depending on beam spacing and orientation, allows full airflow, and adds no cost. Open rafters are ideal for decorative garden structures, vine-growing supports, and climates where rain protection is not needed.
+
+**Shade slats** add angled boards between the rafters, increasing sun coverage to 70–80% while maintaining an open-air feel. At $500–$1,500, they are the most affordable shade upgrade. The angle of the slats can be oriented to block afternoon sun while allowing morning light.
+
+**Polycarbonate roof panels** provide full rain and UV protection while allowing 80–90% of natural light through. At $1,000–$2,500, they are the most practical all-weather option. Polycarbonate panels are lightweight, impact-resistant, and available in clear or tinted styles. They can increase heat underneath, so ventilation is important.
+
+**Retractable canopies** offer maximum flexibility — full shade when closed, open air when retracted. At $1,500–$3,500, they are the most expensive roof option. Retractable canopies have moving parts (tracks, motors for motorized versions) that may require maintenance every 3–5 years. They are available in manual or motorized versions.
+
+{/* Section 12: Factors That Affect Pergola Cost */}
+## Factors That Affect Pergola Cost
+
+**Pergola size** is the primary cost driver. An 8x8 (64 sq ft) in pressure-treated wood starts at $3,000 installed, while a 14x20 (280 sq ft) starts at $12,000 — a 4x price increase for a 4.4x size increase. Larger pergolas require heavier structural members (6x6 or 8x8 posts versus 4x4 or 6x6), which increases per-square-foot material costs.
+
+**Material selection** creates a 50% cost swing for any given size. The same 10x12 pergola ranges from $7,875 (mid) in pressure-treated wood to $11,813 (mid) in redwood. Vinyl and aluminum sit in the middle at 1.20x–1.35x but offer significantly lower lifetime maintenance costs.
+
+**Foundation type** affects structural permanence and total cost. Surface-mount is the fastest and cheapest installation. Concrete footings (1.15x) provide the most stable foundation and are required by code for freestanding pergolas in most jurisdictions. Code typically requires footings below the frost line — 36–48 inches in northern states, which adds significant excavation depth.
+
+**Regional labor rates** shift the labor portion by 15–25%. Since labor is 50% of structure cost, a $7,875 pergola in the South (0.85x labor) drops to about $7,284, while the same project on the West Coast (1.25x labor) rises to approximately $8,859.
+
+**Permits and HOA approvals** add $50–$500 depending on jurisdiction. Most municipalities require a building permit for permanent outdoor structures, especially freestanding pergolas over 120 square feet or those exceeding 10 feet in height.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including structure materials, hardware, and professional labor. Decorative elements (lattice panels, curtains, privacy screens, planters) are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and NADRA. Your local market may be 15–25% higher or lower depending on labor rates and lumber pricing.
+- The calculator assumes a **level site** with good access. Sloped sites, difficult access (narrow side yards, rear lots without gate access), or sites requiring grading may add $500–$2,000.
+- **Building permits** ($50–$500) are not included. Most jurisdictions require permits for permanent outdoor structures.
+- The **foundation multiplier** applies to the entire subtotal (structure + labor + roof + electrical) because foundation work affects all phases of construction.
+- **Electrical add-ons** assume an existing exterior panel within 50 feet. Longer runs or panel upgrades increase electrical costs beyond the ranges shown.
+- This calculator estimates **standard rectangular pergolas**. Custom shapes, curved designs, multi-level structures, or pergolas integrated with outdoor kitchens require custom estimating.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does a pergola cost?
+
+A pergola costs $3,000–$24,750 installed, depending on size, material, and features. A 10x12-foot pressure-treated wood pergola with open rafters costs $5,250–$10,500 at national average rates. Cedar raises that to $6,825–$13,650. Aluminum runs $7,088–$14,175, and redwood is the most expensive at $7,875–$15,750 for the same size. Adding a polycarbonate roof panel adds $1,000–$2,500. Concrete footings add 15% to the total project cost.
+
+### What is the best pergola material?
+
+Pressure-treated wood is best for budget projects at 1.0x baseline cost, but it requires staining every 2–3 years and lasts 15–20 years. Cedar (1.30x) is the most popular wood choice for its natural rot resistance and warm color — it lasts 20–25 years with periodic sealing. Aluminum (1.35x) is the best low-maintenance option, lasting 25–40 years with almost no upkeep. Fiberglass (1.40x) is the strongest and most weather-resistant, lasting 30–50 years. Choose based on your budget, aesthetic preference, and willingness to maintain the structure.
+
+### Do I need a permit for a pergola?
+
+Most municipalities require a building permit for pergolas, especially freestanding structures or those exceeding 120 square feet or 10 feet in height. Permit costs range from $50 to $500 depending on jurisdiction. Attached pergolas may trigger additional requirements for structural connection to the house. Some HOAs have restrictions on material type, height, placement, and design. Always check with your local building department before starting construction.
+
+### How long does pergola installation take?
+
+Pergola installation takes 2–8 days depending on size and complexity. A small 8x8 surface-mounted pergola can be completed in 2–3 days. A medium 10x12 takes 3–5 days. Large 12x16 and extra-large 14x20 pergolas take 4–8 days. Concrete footings add 1–2 days for excavation and curing. Polycarbonate roof panels or retractable canopies add 1 day. Electrical work adds half a day to the timeline.
+
+### Cedar vs. aluminum pergola — which is better?
+
+Cedar pergolas cost less upfront (1.30x vs. 1.35x material multiplier for the same size) and offer a warm, natural wood aesthetic. However, cedar requires sealing every 2–3 years and lasts 20–25 years. Aluminum pergolas cost slightly more initially but require almost no maintenance and last 25–40 years. Over a 30-year period, aluminum typically costs less due to zero maintenance expense. Cedar is the better choice for traditional or rustic aesthetics. Aluminum is better for modern designs and owners who want zero upkeep.
+
+### Is a pergola worth the investment?
+
+A pergola adds 50–80% of its cost to home resale value according to NADRA and National Association of Realtors data. A $10,000 pergola typically adds $5,000–$8,000 in perceived value. Beyond resale, pergolas extend usable outdoor living space by providing shade that can reduce deck surface temperatures by 20–30 degrees Fahrenheit. Homes with well-designed outdoor living spaces sell 4–6 weeks faster on average than comparable homes without them.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates pergola installation costs using size-based structure cost ranges multiplied by material factors, with labor calculated as 50% of structure cost and adjusted for regional differences. Roof type, electrical, and foundation costs are additive or multiplicative adjustments applied to the subtotal. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by **NADRA** (North American Deck and Railing Association) outdoor living cost data. Material multipliers reflect the relative cost of lumber species and manufactured materials compared to a pressure-treated wood baseline. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for carpenters (SOC 47-2031). Foundation multipliers, roof type add-ons, and electrical costs are based on HomeAdvisor project cost data for outdoor structures. All prices are fully installed costs including standard hardware and professional labor.
+
+{/* Section 17: Disclaimer — auto-rendered */}

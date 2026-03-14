@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "concrete block calculator",
+  "secondaryKeywords": [
+    "CMU block calculator",
+    "cinder block wall calculator",
+    "how many blocks for a wall",
+    "concrete masonry unit calculator"
+  ],
   "metaTitle": "Concrete Block Calculator — How Many CMU Blocks Do You Need?",
   "metaDescription": "Calculate how many concrete blocks (CMU) you need for any wall. Enter wall dimensions, block size, mortar joint width, and openings to get an accurate block count with mortar, fill concrete, and cost estimates.",
   "inputs": [

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "tile calculator",
+  "secondaryKeywords": [
+    "tile square footage calculator",
+    "how many tiles do I need",
+    "floor tile calculator",
+    "tile coverage calculator"
+  ],
   "metaTitle": "Tile Calculator — How Many Tiles Do You Need?",
   "metaDescription": "Calculate exactly how many tiles you need for any room. Enter room dimensions, tile size, grout gap, and waste factor to get an accurate tile count with cost estimate.",
   "inputs": [

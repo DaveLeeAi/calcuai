@@ -1,0 +1,272 @@
+{
+  "id": "ductwork-cost-calculator",
+  "title": "Ductwork Cost Calculator",
+  "slug": "ductwork-cost-calculator",
+  "category": "construction",
+  "subcategory": "hvac",
+  "primaryKeyword": "ductwork installation cost calculator",
+  "secondaryKeywords": [
+    "ductwork cost",
+    "HVAC duct installation cost",
+    "ductwork replacement cost",
+    "new ductwork cost"
+  ],
+  "metaTitle": "Ductwork Cost Calculator | New, Replacement & Modification Estimates",
+  "metaDescription": "Estimate ductwork installation costs for new builds, replacements, and modifications. Compare sheet metal, flexible, and fiberglass board ducts with insulation and access adjustments by region.",
+  "inputs": [
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-1000-1500",
+      "options": [
+        {
+          "value": "small-under-1000",
+          "label": "Small — Under 1,000 sq ft ($2,000–$3,500)"
+        },
+        {
+          "value": "medium-1000-1500",
+          "label": "Medium — 1,000–1,500 sq ft ($3,500–$6,000)"
+        },
+        {
+          "value": "large-1500-2500",
+          "label": "Large — 1,500–2,500 sq ft ($5,500–$9,000)"
+        },
+        {
+          "value": "xlarge-over-2500",
+          "label": "Extra Large — Over 2,500 sq ft ($8,000–$14,000)"
+        }
+      ],
+      "helpText": "Total conditioned square footage. Larger homes require more duct runs, registers, and returns."
+    },
+    {
+      "id": "ductMaterial",
+      "label": "Duct Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "sheet-metal",
+      "options": [
+        {
+          "value": "sheet-metal",
+          "label": "Sheet Metal (1.0x — most durable)"
+        },
+        {
+          "value": "flexible",
+          "label": "Flexible Duct (0.70x — lowest cost)"
+        },
+        {
+          "value": "fiberglass-board",
+          "label": "Fiberglass Board (1.15x — quietest)"
+        }
+      ],
+      "helpText": "Sheet metal is the baseline and most durable. Flexible duct is cheapest but less efficient. Fiberglass board is quietest and has built-in insulation."
+    },
+    {
+      "id": "projectType",
+      "label": "Project Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "new-installation",
+      "options": [
+        {
+          "value": "new-installation",
+          "label": "New Installation (1.0x)"
+        },
+        {
+          "value": "replacement",
+          "label": "Replacement (1.20x — includes demo)"
+        },
+        {
+          "value": "modification",
+          "label": "Modification / Partial (0.50x)"
+        }
+      ],
+      "helpText": "New installation is a full duct system in new construction or an unducted home. Replacement includes demo of old ductwork. Modification adds or reroutes a section of existing ducts."
+    },
+    {
+      "id": "insulation",
+      "label": "Duct Insulation",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-r6",
+      "options": [
+        {
+          "value": "standard-r6",
+          "label": "Standard R-6 (included in base)"
+        },
+        {
+          "value": "upgraded-r8",
+          "label": "Upgraded R-8 (+$500–$1,500)"
+        },
+        {
+          "value": "none",
+          "label": "No Insulation (−$300–$500 credit)"
+        }
+      ],
+      "helpText": "Standard R-6 insulation is included in base pricing. R-8 reduces energy loss in unconditioned spaces. No insulation is only appropriate for ducts entirely within conditioned spaces."
+    },
+    {
+      "id": "accessType",
+      "label": "Duct Access Location",
+      "type": "select",
+      "required": true,
+      "defaultValue": "accessible-attic",
+      "options": [
+        {
+          "value": "accessible-attic",
+          "label": "Accessible Attic / Basement (1.0x)"
+        },
+        {
+          "value": "crawlspace",
+          "label": "Crawl Space (1.15x labor)"
+        },
+        {
+          "value": "in-wall-ceiling",
+          "label": "In-Wall / Ceiling (1.35x labor)"
+        }
+      ],
+      "helpText": "Access difficulty affects labor cost. Open attics and basements are cheapest. Crawl spaces add 15% to labor. In-wall/ceiling runs require drywall cuts and add 35% to labor."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences. Material costs remain the same nationwide."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "insulationCost",
+      "label": "Insulation Adder (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "materialComparison",
+      "label": "Duct Material Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "ductwork-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "hvac-replacement-cost-calculator",
+    "mini-split-cost-calculator",
+    "insulation-cost-calculator",
+    "heat-pump-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; ACCA Manual D",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base ductwork costs from HomeAdvisor and Angi 2025-2026 national average surveys for residential HVAC ductwork installation. Material multipliers derived from ACCA Manual D duct design standards and SMACNA (Sheet Metal and Air Conditioning Contractors' National Association) pricing guides. Project type multipliers based on HomeAdvisor demolition and new-construction survey data. Insulation adders from DOE R-value recommendations and HomeAdvisor insulation upgrade pricing. Access difficulty multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC installers (SOC 49-9021). Regional labor multipliers derived from BLS OES regional wage data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "hvac-replacement-cost-calculator",
+    "insulation-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

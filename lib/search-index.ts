@@ -19,6 +19,7 @@ export function buildSearchItems(): SearchItem[] {
       category: s.category,
       subcategory: s.subcategory,
       primaryKeyword: s.primaryKeyword,
+      secondaryKeywords: s.secondaryKeywords,
       metaDescription: s.metaDescription,
       href: `/${s.category}/${s.slug}`,
       itemType: 'calculator' as const,

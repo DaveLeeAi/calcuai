@@ -1,0 +1,346 @@
+{
+  "id": "solar-battery-cost-calculator",
+  "title": "Solar Battery Cost Calculator",
+  "slug": "solar-battery-cost-calculator",
+  "category": "construction",
+  "subcategory": "energy",
+  "primaryKeyword": "solar battery cost calculator",
+  "secondaryKeywords": [
+    "home battery storage cost",
+    "Tesla Powerwall cost",
+    "solar battery cost with installation",
+    "battery backup cost for home"
+  ],
+  "metaTitle": "Solar Battery Cost Calculator | Home Storage & IRA Tax Credit",
+  "metaDescription": "Estimate home solar battery storage costs by capacity, chemistry, inverter, and transfer switch options. Calculate your IRA 30% tax credit savings with regional labor rates for 2025-2026.",
+  "inputs": [
+    {
+      "id": "batteryCapacity",
+      "label": "Battery Capacity",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-13kwh",
+      "options": [
+        {
+          "value": "small-5kwh",
+          "label": "5 kWh — Partial Backup ($4,000–$6,000)"
+        },
+        {
+          "value": "medium-10kwh",
+          "label": "10 kWh — Essential Circuits ($7,000–$11,000)"
+        },
+        {
+          "value": "standard-13kwh",
+          "label": "13.5 kWh — Standard Home ($9,000–$14,000)"
+        },
+        {
+          "value": "large-20kwh",
+          "label": "20 kWh — Large Home ($13,000–$20,000)"
+        },
+        {
+          "value": "whole-home-30kwh",
+          "label": "30 kWh — Whole-Home Backup ($18,000–$28,000)"
+        }
+      ],
+      "helpText": "Average US home uses ~30 kWh/day. 13.5 kWh covers most circuits for 10-14 hours."
+    },
+    {
+      "id": "batteryChemistry",
+      "label": "Battery Chemistry",
+      "type": "select",
+      "required": true,
+      "defaultValue": "lithium-ion-nmc",
+      "options": [
+        {
+          "value": "lithium-ion-nmc",
+          "label": "Lithium-Ion NMC (1.0x — Tesla Powerwall type)"
+        },
+        {
+          "value": "lithium-iron-phosphate",
+          "label": "Lithium Iron Phosphate / LFP (1.10x — longest lifespan)"
+        },
+        {
+          "value": "lead-acid",
+          "label": "Lead-Acid (0.65x — budget, shorter lifespan)"
+        }
+      ],
+      "helpText": "NMC is most common (Tesla, Enphase). LFP lasts longer with more cycles. Lead-acid is cheapest but has a shorter usable life."
+    },
+    {
+      "id": "inverterType",
+      "label": "Inverter Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "hybrid-included",
+      "options": [
+        {
+          "value": "hybrid-included",
+          "label": "Hybrid Inverter Included (no extra cost)"
+        },
+        {
+          "value": "separate-inverter",
+          "label": "Separate Inverter (+$1,500–$3,000)"
+        },
+        {
+          "value": "existing-compatible",
+          "label": "Existing Compatible Inverter (no extra cost)"
+        }
+      ],
+      "helpText": "Most modern battery systems include a hybrid inverter. A separate inverter is needed if your existing solar setup is not battery-compatible."
+    },
+    {
+      "id": "transferSwitch",
+      "label": "Transfer Switch",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Transfer Switch"
+        },
+        {
+          "value": "manual",
+          "label": "Manual Transfer Switch (+$300–$600)"
+        },
+        {
+          "value": "automatic",
+          "label": "Automatic Transfer Switch (+$1,000–$2,500)"
+        }
+      ],
+      "helpText": "Automatic switches seamlessly cut over to battery during an outage. Manual switches require homeowner action."
+    },
+    {
+      "id": "claimIRATaxCredit",
+      "label": "Claim IRA 30% Tax Credit?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "yes",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes — Claim 30% Federal Tax Credit"
+        },
+        {
+          "value": "no",
+          "label": "No — Show Full Price"
+        }
+      ],
+      "helpText": "The Inflation Reduction Act (IRC §25D) provides a 30% federal tax credit for residential battery storage installed through 2032."
+    },
+    {
+      "id": "electricalUpgrade",
+      "label": "Electrical Upgrade Needed",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Electrical Upgrade"
+        },
+        {
+          "value": "panel-upgrade",
+          "label": "Panel Upgrade (+$1,500–$3,000)"
+        },
+        {
+          "value": "service-upgrade",
+          "label": "Service Upgrade (+$3,000–$6,000)"
+        }
+      ],
+      "helpText": "Older homes may need a panel upgrade (100A to 200A) or full service upgrade to support battery integration."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "batteryCost",
+      "label": "Battery Equipment Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "inverterCost",
+      "label": "Inverter Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "transferSwitchCost",
+      "label": "Transfer Switch Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "electricalCost",
+      "label": "Electrical Upgrade Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "subtotalLow",
+      "label": "Subtotal Before Credit (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "subtotalHigh",
+      "label": "Subtotal Before Credit (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "subtotal",
+      "label": "Subtotal Before Credit (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "iraTaxCredit",
+      "label": "IRA 30% Tax Credit Savings",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalAfterCredit",
+      "label": "Total After Tax Credit",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "capacityComparison",
+      "label": "Capacity Tier Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "estimatedBackupHours",
+      "label": "Estimated Backup Duration",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "paybackPeriod",
+      "label": "Estimated Payback Period",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "solar-battery-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "electrical-panel-upgrade-cost-calculator",
+    "heat-pump-cost-calculator",
+    "hvac-replacement-cost-calculator",
+    "ev-charger-installation-cost-calculator",
+    "water-heater-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; ENERGY STAR; IRS IRC §25D Clean Energy Tax Credit",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "editorial",
+  "formulaSource": "Battery capacity pricing from HomeAdvisor, Angi, and EnergySage marketplace data 2025-2026. Chemistry multipliers from manufacturer MSRP comparisons (Tesla, Enphase, Generac, LG). Inverter and transfer switch pricing from HomeAdvisor 2025-2026 national surveys. Electrical upgrade costs from HomeAdvisor panel upgrade cost data. IRA 30% tax credit per IRC §25D as extended by the Inflation Reduction Act through 2032. Backup hour estimates based on average US residential consumption of ~30 kWh/day (EIA). Regional labor multipliers derived from BLS OES regional wage data for electricians (SOC 47-2111).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 85,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

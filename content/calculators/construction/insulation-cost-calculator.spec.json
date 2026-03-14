@@ -1,0 +1,302 @@
+{
+  "id": "insulation-cost-calculator",
+  "title": "Insulation Cost Calculator",
+  "slug": "insulation-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "insulation cost calculator",
+  "secondaryKeywords": [
+    "insulation installation cost per square foot",
+    "blown in insulation cost",
+    "spray foam insulation cost",
+    "attic insulation cost"
+  ],
+  "metaTitle": "Insulation Cost Calculator | Spray Foam, Blown-In & Batt Estimates",
+  "metaDescription": "Estimate insulation installation costs for fiberglass batt, blown-in cellulose, spray foam, rigid board, and mineral wool. Compare types by R-value and region.",
+  "inputs": [
+    {
+      "id": "area",
+      "label": "Area to Insulate",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 1000,
+      "min": 50,
+      "step": 50,
+      "units": [
+        {
+          "value": "sqft",
+          "label": "Square Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "sqm",
+          "label": "Square Meters",
+          "conversionFactor": 10.7639
+        }
+      ],
+      "defaultUnit": "sqft",
+      "helpText": "Total area to insulate in square feet — measure floor area for attic, wall area for walls"
+    },
+    {
+      "id": "insulationType",
+      "label": "Insulation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "fiberglass-batt",
+      "options": [
+        {
+          "value": "fiberglass-batt",
+          "label": "Fiberglass Batt ($1.50–$3.50/sq ft material)"
+        },
+        {
+          "value": "blown-cellulose",
+          "label": "Blown-In Cellulose ($1.50–$3.00/sq ft material)"
+        },
+        {
+          "value": "spray-foam-open",
+          "label": "Open-Cell Spray Foam ($2.50–$5.50/sq ft material)"
+        },
+        {
+          "value": "spray-foam-closed",
+          "label": "Closed-Cell Spray Foam ($4.00–$8.00/sq ft material)"
+        },
+        {
+          "value": "rigid-board",
+          "label": "Rigid Board ($2.00–$4.50/sq ft material)"
+        },
+        {
+          "value": "mineral-wool",
+          "label": "Mineral Wool ($3.00–$5.50/sq ft material)"
+        }
+      ],
+      "helpText": "Insulation material — each type has different R-value per inch, cost, and application method"
+    },
+    {
+      "id": "applicationArea",
+      "label": "Application Area",
+      "type": "select",
+      "required": true,
+      "defaultValue": "attic",
+      "options": [
+        {
+          "value": "attic",
+          "label": "Attic (baseline labor)"
+        },
+        {
+          "value": "walls",
+          "label": "Walls (+15% labor)"
+        },
+        {
+          "value": "crawlspace",
+          "label": "Crawl Space (+10% labor)"
+        },
+        {
+          "value": "basement",
+          "label": "Basement (+20% labor)"
+        }
+      ],
+      "helpText": "Where the insulation will be installed — affects labor cost due to access difficulty"
+    },
+    {
+      "id": "rValueTarget",
+      "label": "R-Value Target",
+      "type": "select",
+      "required": true,
+      "defaultValue": "R-30",
+      "options": [
+        {
+          "value": "R-13",
+          "label": "R-13 (walls, mild climate)"
+        },
+        {
+          "value": "R-19",
+          "label": "R-19 (walls, moderate climate)"
+        },
+        {
+          "value": "R-30",
+          "label": "R-30 (attic, standard)"
+        },
+        {
+          "value": "R-38",
+          "label": "R-38 (attic, cold climate)"
+        },
+        {
+          "value": "R-49",
+          "label": "R-49 (attic, very cold / DOE Zone 5+)"
+        }
+      ],
+      "helpText": "Higher R-values require more material thickness — DOE recommends R-30 to R-60 for attics depending on climate zone"
+    },
+    {
+      "id": "removalOfOld",
+      "label": "Remove Old Insulation?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Removal Needed"
+        },
+        {
+          "value": "yes",
+          "label": "Yes — Remove Existing ($1.00–$2.50/sq ft)"
+        }
+      ],
+      "helpText": "Removing old, damaged, or contaminated insulation adds $1–$2.50 per square foot"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Area to Insulate (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 2
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "removalCost",
+      "label": "Old Insulation Removal Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "insulationComparison",
+      "label": "Insulation Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "rValueAchieved",
+      "label": "R-Value Achieved",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "insulation-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "insulation-calculator",
+    "hvac-size-calculator",
+    "hvac-replacement-cost-calculator",
+    "renovation-cost-calculator",
+    "drywall-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; U.S. DOE Insulation Recommendations",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. R-value multipliers based on U.S. Department of Energy insulation thickness recommendations by climate zone. Application area labor multipliers derived from contractor installation surveys accounting for access difficulty. Regional labor multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for insulation workers (SOC 47-2131).",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "insulation-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

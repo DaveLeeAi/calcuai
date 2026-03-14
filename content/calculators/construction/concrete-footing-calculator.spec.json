@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "concrete footing calculator",
+  "secondaryKeywords": [
+    "footing concrete calculator",
+    "deck footing calculator",
+    "pier footing concrete volume",
+    "foundation footing calculator"
+  ],
   "metaTitle": "Concrete Footing Calculator | Pads, Piers & Strip Footings",
   "metaDescription": "Calculate concrete for footings — continuous strip, rectangular pad, or round pier. Get cubic yards, bag counts, and cost estimates. Free calculator.",
   "inputs": [

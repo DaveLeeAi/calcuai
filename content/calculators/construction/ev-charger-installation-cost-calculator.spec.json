@@ -1,0 +1,278 @@
+{
+  "id": "ev-charger-installation-cost-calculator",
+  "title": "EV Charger Installation Cost Calculator",
+  "slug": "ev-charger-installation-cost-calculator",
+  "category": "construction",
+  "subcategory": "electrical",
+  "primaryKeyword": "EV charger installation cost calculator",
+  "secondaryKeywords": [
+    "EV charger installation cost",
+    "home EV charger cost",
+    "Level 2 charger installation cost",
+    "electric vehicle charger cost"
+  ],
+  "metaTitle": "EV Charger Installation Cost Calculator | Level 1 & 2",
+  "metaDescription": "Estimate home EV charger installation costs for Level 1 and Level 2 (32A, 48A, 80A) chargers. Compare brand tiers, circuit distance, panel upgrades, and permits by region.",
+  "inputs": [
+    {
+      "id": "chargerLevel",
+      "label": "Charger Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "level-2-32amp",
+      "options": [
+        {
+          "value": "level-1",
+          "label": "Level 1 — 120V (included EVSE, $0 charger)"
+        },
+        {
+          "value": "level-2-32amp",
+          "label": "Level 2 — 32A 240V ($300–$600)"
+        },
+        {
+          "value": "level-2-48amp",
+          "label": "Level 2 — 48A 240V ($500–$900)"
+        },
+        {
+          "value": "level-2-80amp",
+          "label": "Level 2 — 80A 240V ($700–$1,200)"
+        }
+      ],
+      "helpText": "Level 1 uses a standard 120V outlet (3–5 mi/hr). Level 2 requires a dedicated 240V circuit and charges 6–12x faster."
+    },
+    {
+      "id": "chargerBrand",
+      "label": "Charger Brand Tier",
+      "type": "select",
+      "required": true,
+      "defaultValue": "basic",
+      "options": [
+        {
+          "value": "basic",
+          "label": "Basic (1.0x — budget brands)"
+        },
+        {
+          "value": "mid-range",
+          "label": "Mid-Range (1.15x — ChargePoint, Grizzl-E)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium (1.40x — JuiceBox, Wallbox)"
+        },
+        {
+          "value": "tesla-wall-connector",
+          "label": "Tesla Wall Connector (1.25x)"
+        }
+      ],
+      "helpText": "Brand multiplier applied to charger hardware cost. Basic is the baseline."
+    },
+    {
+      "id": "circuitDistance",
+      "label": "Circuit Run Distance",
+      "type": "select",
+      "required": true,
+      "defaultValue": "under-25ft",
+      "options": [
+        {
+          "value": "under-25ft",
+          "label": "Under 25 ft (1.0x labor)"
+        },
+        {
+          "value": "25-50ft",
+          "label": "25–50 ft (1.2x labor)"
+        },
+        {
+          "value": "over-50ft",
+          "label": "Over 50 ft (1.5x labor)"
+        }
+      ],
+      "helpText": "Distance from electrical panel to charger location. Longer runs require more wire, conduit, and labor."
+    },
+    {
+      "id": "panelUpgrade",
+      "label": "Panel Upgrade",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Panel Upgrade Needed"
+        },
+        {
+          "value": "subpanel",
+          "label": "Add Subpanel (+$500–$1,500)"
+        },
+        {
+          "value": "main-panel-upgrade",
+          "label": "Main Panel Upgrade (+$1,500–$3,000)"
+        }
+      ],
+      "helpText": "Older homes with 100A or 150A panels may need an upgrade to support a Level 2 charger. A subpanel is cheaper if the main panel has spare capacity."
+    },
+    {
+      "id": "permitRequired",
+      "label": "Permit Required?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "yes",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes — Permit Needed (+$75–$250)"
+        },
+        {
+          "value": "no",
+          "label": "No Permit Needed"
+        }
+      ],
+      "helpText": "Most jurisdictions require an electrical permit for 240V circuit installation. Check with your local building department."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "chargerCost",
+      "label": "Charger Hardware (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "panelCost",
+      "label": "Panel Upgrade (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "permitCost",
+      "label": "Permit Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "chargerComparison",
+      "label": "Charger Level Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "chargingSpeed",
+      "label": "Charging Speed",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "ev-charger-installation-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "electrical-panel-upgrade-cost-calculator",
+    "solar-battery-cost-calculator",
+    "electrical-service-upgrade-cost-calculator",
+    "heat-pump-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; U.S. Department of Energy Alternative Fuels Data Center (AFDC)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Charger hardware pricing from HomeAdvisor and Angi 2025-2026 national average surveys and manufacturer MSRP data for ChargePoint, JuiceBox, Wallbox, Tesla, and Grizzl-E units. Charging speed specifications from U.S. Department of Energy Alternative Fuels Data Center (AFDC). Labor rates from Bureau of Labor Statistics OES data for electricians (SOC 47-2111). Circuit distance multipliers from HomeAdvisor contractor survey data. Panel upgrade and permit costs from HomeAdvisor 2025-2026. Regional labor multipliers derived from BLS OES regional wage data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "electrical-panel-upgrade-cost-calculator",
+    "solar-battery-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

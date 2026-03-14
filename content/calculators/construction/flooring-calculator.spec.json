@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "flooring calculator",
+  "secondaryKeywords": [
+    "how much flooring do I need",
+    "hardwood flooring calculator",
+    "laminate floor calculator",
+    "flooring square footage calculator"
+  ],
   "metaTitle": "Flooring Calculator — Square Feet, Boxes & Cost by Material",
   "metaDescription": "Calculate how much flooring you need in square feet and boxes. Supports hardwood, laminate, vinyl plank, tile, and carpet with waste factor and cost estimates.",
   "inputs": [

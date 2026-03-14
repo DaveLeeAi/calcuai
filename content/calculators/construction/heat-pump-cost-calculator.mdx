@@ -1,0 +1,202 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard air-source heat pump installed in a medium-sized home (1,500-2,500 sq ft) costs $6,800-$12,400 before the IRA tax credit and $7,600 at the midpoint after applying the $2,000 federal credit. Geothermal systems run $26,000-$51,000 but save $700-$1,500 per year on energy. Ductless mini-splits are the most affordable option at $5,100-$9,000 installed. The Inflation Reduction Act provides a 30% tax credit (capped at $2,000 per year) on qualifying heat pump installations through 2032, making 2026 one of the best years to switch from gas. Enter your pump type, home size, efficiency level, and region below for a personalized estimate with IRA credit calculation.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides installed cost ranges for five heat pump types — air-source standard, air-source cold-climate, ductless mini-split, dual-fuel hybrid, and geothermal — adjusted for home size, efficiency rating, backup heat source, refrigerant line set, region, and the IRA 30% federal tax credit. It produces a low/mid/high estimate, an IRA credit calculation, a comparison table for all five pump types, and estimated annual savings versus a gas furnace.
+
+The **equipment cost** covers the heat pump unit itself, sized for your home. A small home under 1,500 sq ft uses a base-capacity unit (1.0x multiplier). A medium home at 1,500-2,500 sq ft requires a 1.20x larger system. Large homes (2,500-3,500 sq ft) use 1.45x, and homes over 3,500 sq ft use 1.75x. Higher SEER2 efficiency ratings increase equipment cost: standard 15 SEER2 is the baseline, 17 SEER2 adds 20%, and premium 20+ SEER2 adds 40%. The efficiency premium pays back through lower energy bills over 5-15 years depending on your climate and electricity rates.
+
+The **labor cost** covers professional HVAC installation — removing the old system, running refrigerant lines, connecting electrical, charging refrigerant, and commissioning the system. Labor varies significantly by pump type: a standard air-source replacement takes 1-2 days, while geothermal requires 1-2 weeks including ground loop installation. The calculator applies a regional multiplier to labor only — the South is 15% below the national average, while the West Coast is 25% above.
+
+The **IRA tax credit** is calculated as 30% of the total installed cost, capped at $2,000 per year. This applies to ENERGY STAR-certified heat pumps installed through December 31, 2032, under IRC Section 25D of the Inflation Reduction Act. The credit is nonrefundable — it reduces your federal tax bill but cannot exceed what you owe. Many states offer additional rebates through the High-Efficiency Electric Home Rebate Act (HEEHRA), which can stack with the IRA credit.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your heat pump type** — air-source standard is the most common replacement for central AC and gas furnace systems. Cold-climate models are designed for regions with winter temperatures below 5 degrees F. Ductless mini-splits are ideal for room additions, older homes without ductwork, or supplemental heating/cooling. Dual-fuel hybrid pairs a heat pump with a gas furnace for extreme cold backup. Geothermal uses underground loops for the highest efficiency but at the highest install cost.
+
+2. **Select your home size** — this determines the capacity (tonnage) needed. A 1,500 sq ft home typically needs a 2-2.5 ton unit, while a 3,500+ sq ft home may need 4-5 tons. The calculator adjusts equipment cost based on size.
+
+3. **Choose your efficiency level** — SEER2 (Seasonal Energy Efficiency Ratio 2) replaced SEER in January 2023. Standard 15 SEER2 meets minimum federal requirements. High 17 SEER2 qualifies for most utility rebates. Premium 20+ SEER2 units offer the lowest operating costs and the quietest operation. All efficiency levels qualify for the IRA tax credit when ENERGY STAR certified.
+
+4. **Select backup heat** — in cold climates, a backup heat source activates when outdoor temperatures drop below the heat pump's efficient operating range (typically 25-35 degrees F for standard units, 5 degrees F for cold-climate units). Electric resistance strips are cheap to install but expensive to run. Keeping an existing furnace is free. A new gas furnace adds $2,000-$3,500.
+
+5. **Select refrigerant line set** — if replacing an existing central AC system with a heat pump of similar capacity, the existing copper lines can often be reused ($0). New construction or significant relocations need new lines. A short run (under 25 feet) costs $300-$600. A long run (25-75 feet) costs $600-$1,200.
+
+6. **Toggle the IRA tax credit** — set to "Yes" to see your cost after the 30% federal credit (max $2,000). The credit applies to the total installed cost including equipment, labor, and line set. Set to "No" if you are not eligible (e.g., you already claimed the maximum for the tax year).
+
+7. **Select your region** — adjusts labor costs only. Equipment prices are consistent nationally.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Heat pump installation cost is estimated using equipment base cost scaled by home size and efficiency, plus labor adjusted by region, plus optional backup heat and line set add-ons.
+
+**Equipment cost:**
+
+$$C_{equip} = B_{pump} \times M_{size} \times M_{eff}$$
+
+**Labor cost:**
+
+$$C_{labor} = L_{pump} \times M_{region}$$
+
+**Subtotal:**
+
+$$S = C_{equip} + C_{labor} + C_{backup} + C_{lineset}$$
+
+**IRA tax credit:**
+
+$$IRA = \min(S \times 0.30,\ \$2{,}000)$$
+
+**Total after credit:**
+
+$$T = S - IRA$$
+
+Where:
+
+- **B_pump** = equipment base cost (low/high range by pump type)
+- **M_size** = home size multiplier (1.0 for under 1,500 sq ft to 1.75 for over 3,500 sq ft)
+- **M_eff** = efficiency multiplier (1.0 for 15 SEER2, 1.20 for 17 SEER2, 1.40 for 20+ SEER2)
+- **L_pump** = labor base cost (low/high range by pump type)
+- **M_region** = regional labor multiplier (0.85-1.25)
+- **C_backup** = backup heat add-on cost ($0-$3,500)
+- **C_lineset** = refrigerant line set cost ($0-$1,200)
+
+**Equipment base costs (2025-2026):**
+
+| Pump Type | Equipment | Labor | Total Range |
+|---|---|---|---|
+| Air Source Standard | $4,000-$7,000 | $2,000-$4,000 | $6,000-$11,000 |
+| Air Source Cold Climate | $5,500-$9,000 | $2,500-$4,500 | $8,000-$13,500 |
+| Ductless Mini-Split | $3,000-$5,000 | $1,500-$3,000 | $4,500-$8,000 |
+| Dual-Fuel Hybrid | $5,000-$9,000 | $2,500-$5,000 | $7,500-$14,000 |
+| Geothermal | $15,000-$30,000 | $8,000-$15,000 | $23,000-$45,000 |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages, **ENERGY STAR** Heat Pump Guide, and **IRS IRC Section 25D** (Inflation Reduction Act).
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: Air Source Standard, Medium Home, 15 SEER2, National Average
+
+A homeowner is replacing a 15-year-old gas furnace and central AC with a standard air-source heat pump in a 2,000 sq ft home. They want standard efficiency, no backup heat, reusing existing refrigerant lines, and claiming the IRA credit.
+
+**Step-by-step:**
+
+1. Look up air-source-standard equipment base: $4,000-$7,000
+2. Apply medium home multiplier (1.20x): $4,800 low, $8,400 high
+3. Apply standard efficiency multiplier (1.0x): no change
+4. Look up labor: $2,000-$4,000 (national, 1.0x)
+5. Backup heat: $0 (none)
+6. Line set: $0 (reusing existing)
+7. Total low: $4,800 + $2,000 + $0 + $0 = **$6,800**
+8. Total high: $8,400 + $4,000 + $0 + $0 = **$12,400**
+9. Total mid: ($6,800 + $12,400) / 2 = **$9,600**
+10. IRA credit: min($9,600 x 0.30, $2,000) = min($2,880, $2,000) = **$2,000**
+11. Total after credit: $9,600 - $2,000 = **$7,600**
+
+**Interpretation:** At $7,600 after the IRA credit, a standard air-source heat pump for a medium home is competitive with replacing a gas furnace ($3,000-$6,000) and central AC ($3,500-$7,000) separately. The heat pump provides both heating and cooling in one unit, eliminates gas bills, and typically saves $300-$600 per year on energy. At the midpoint, the payback period versus a traditional gas+AC replacement is 6-10 years before the credit and 4-7 years after.
+
+{/* Section 10: IRA Tax Credit Deep Dive */}
+## IRA Tax Credit for Heat Pumps (2024-2032)
+
+The Inflation Reduction Act of 2022 created a 30% tax credit for qualifying heat pump installations under IRC Section 25D. Key details every homeowner should know:
+
+| Detail | Value |
+|---|---|
+| Credit rate | 30% of installed cost |
+| Annual cap | $2,000 per year |
+| Eligible through | December 31, 2032 |
+| Credit type | Nonrefundable (reduces tax owed, no refund for excess) |
+| Who qualifies | Homeowner, primary or secondary residence, new installation |
+| What qualifies | ENERGY STAR certified heat pumps (air source, mini-split, geothermal) |
+
+The $2,000 cap is per year, not per system. If your total installed cost exceeds $6,667 (the point where 30% equals $2,000), you receive the full $2,000 credit. Below that threshold, you receive 30% of the installed cost. Geothermal systems have a separate, uncapped 30% credit under IRC Section 25D(a)(5) — the calculator uses the $2,000 cap as a conservative estimate, but geothermal owners should consult a tax professional for the higher credit.
+
+Many states and utilities offer additional rebates. The HEEHRA (High-Efficiency Electric Home Rebate Act) provides up to $8,000 in point-of-sale rebates for qualifying heat pumps for low-to-moderate income households. These stack with the IRA tax credit. Check the DSIRE database (dsireusa.org) for your state's current rebates.
+
+{/* Section 11: Key Cost Factors */}
+## Key Cost Factors
+
+**Heat pump type** creates the largest cost difference. A ductless mini-split at $4,500-$8,000 installed is a fraction of a geothermal system at $23,000-$45,000. Standard air-source heat pumps ($6,000-$11,000) are the most common whole-home replacement, while cold-climate models ($8,000-$13,500) are essential in USDA climate zones 5-7 where winter temps regularly drop below 15 degrees F.
+
+**Home size** directly scales equipment cost. A 3,500+ sq ft home needs roughly 1.75x the equipment capacity of a 1,500 sq ft home, pushing a standard air-source from $6,000-$11,000 to $9,000-$16,250. Labor does not scale proportionally — a larger unit takes roughly the same time to install as a smaller one.
+
+**Efficiency rating** increases upfront cost but reduces operating costs. A 20+ SEER2 premium unit costs 40% more than a 15 SEER2 standard unit but uses 25-30% less electricity. In a climate with $200/month average heating and cooling costs, a premium unit saves $50-$60/month, paying back the efficiency premium in 4-6 years.
+
+**Geothermal ground loops** are the single largest cost driver for geothermal systems. Horizontal loops (trenching) cost $8,000-$15,000 for installation. Vertical loops (drilling) cost $15,000-$30,000. The ground loop lasts 50+ years, so the investment is amortized over multiple heat pump replacements.
+
+**Regional labor** shifts the total 15-25% above or below the national average. A $9,600 standard air-source install in the South (0.85x labor) costs approximately $9,150, while the same job on the West Coast (1.25x labor) costs approximately $10,350.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **fully installed prices** including equipment, labor, refrigerant charge, electrical connection, and system commissioning. Permit fees ($100-$500 depending on jurisdiction) are not included.
+- Cost ranges reflect **2025-2026 U.S. national averages** from HomeAdvisor and Angi. Actual costs vary by brand (Carrier, Trane, Lennox, Daikin, Mitsubishi), installer, and local market conditions.
+- The calculator assumes **replacement of an existing HVAC system** with accessible ductwork (for ducted types) or wall space (for mini-splits). New construction or major duct modifications will add $2,000-$5,000.
+- **Home size multipliers** approximate capacity needs. A proper Manual J load calculation by an HVAC contractor is required for accurate sizing. Oversizing or undersizing a heat pump reduces efficiency and comfort.
+- The **IRA tax credit** is modeled as 30% of total cost, capped at $2,000. Geothermal systems may qualify for an uncapped 30% credit — consult a tax professional. The credit is nonrefundable and requires sufficient federal tax liability.
+- **Annual savings and payback estimates** assume average U.S. electricity rates ($0.16/kWh) and gas rates ($1.50/therm). Actual savings depend on your local utility rates, climate, home insulation, and thermostat settings.
+- This calculator does not account for **electrical panel upgrades** ($1,500-$4,000) that may be required for homes with less than 200-amp service.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does a heat pump cost to install?
+
+A heat pump costs $6,000-$11,000 to install for a standard air-source unit in a small home, or $6,800-$12,400 for a medium home (1,500-2,500 sq ft), before the IRA tax credit. After the $2,000 federal credit, the midpoint drops to $7,600 for a medium home. Ductless mini-splits cost $4,500-$8,000 installed. Cold-climate models run $8,000-$13,500. Dual-fuel hybrids cost $7,500-$14,000. Geothermal systems are the most expensive at $23,000-$45,000 but offer the highest energy savings. All prices include equipment and professional labor at national average rates.
+
+### What is the IRA tax credit for heat pumps?
+
+The IRA (Inflation Reduction Act) provides a 30% federal tax credit on qualifying heat pump installations, capped at $2,000 per year, through December 31, 2032. The credit applies to ENERGY STAR certified heat pumps — air source, mini-split, and geothermal. It is a nonrefundable credit, meaning it reduces your tax bill but does not generate a refund beyond what you owe. A $10,000 installation yields a $2,000 credit (30% = $3,000, but capped at $2,000). Geothermal systems may qualify for an uncapped 30% credit under a separate provision.
+
+### Are heat pumps worth it in cold climates?
+
+Heat pumps are worth it in cold climates when you install a cold-climate rated model (rated to 5 degrees F or lower). Modern cold-climate heat pumps from Mitsubishi, Daikin, and Bosch maintain 80-100% heating capacity down to 5 degrees F and continue operating at reduced capacity to -13 degrees F. In USDA climate zones 5-7, a cold-climate heat pump with electric resistance backup typically costs $400-$800 less per year to operate than a gas furnace, with a 7-12 year payback. The IRA credit shortens payback to 5-9 years.
+
+### How long does a heat pump last?
+
+An air-source heat pump lasts 12-15 years on average, comparable to a central AC unit. Geothermal heat pump indoor units last 20-25 years, and the underground ground loop lasts 50+ years. Ductless mini-splits last 15-20 years with proper maintenance. Regular maintenance includes annual filter changes, biannual coil cleaning, and refrigerant level checks. Dual-fuel hybrids may last slightly longer (15-18 years) because the gas furnace handles the coldest days, reducing compressor wear.
+
+### How much can I save with a heat pump vs. gas furnace?
+
+A standard air-source heat pump saves $300-$600 per year compared to a gas furnace plus central AC. Cold-climate models save $400-$800 per year. Geothermal systems save $700-$1,500 per year. Savings depend on local electricity and gas rates — heat pumps are most cost-effective where electricity is cheap (under $0.15/kWh) and gas is expensive (over $1.50/therm). In the Southeast and Pacific Northwest, where electricity rates are low and winters are mild, heat pumps can cut heating costs by 40-60%.
+
+### Do I need an electrical panel upgrade for a heat pump?
+
+You may need an electrical panel upgrade if your home has less than 200-amp service. A standard air-source heat pump requires a 30-50 amp dedicated circuit. If your panel is already near capacity (common in homes built before 1990 with 100-150 amp panels), an upgrade to 200 amps costs $1,500-$4,000. This cost is not included in the heat pump estimate. Some newer heat pumps (like the Rheem ProTerra) are designed for low-amperage circuits to avoid panel upgrades.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates heat pump installation costs using equipment base costs per pump type, scaled by home size and efficiency multipliers, plus flat labor rates adjusted by region. Equipment and labor cost data comes from **HomeAdvisor** and **Angi** 2025-2026 national average surveys for HVAC installations. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC mechanics and installers (SOC 49-9021). The IRA tax credit is modeled per **IRS IRC Section 25D** as enacted by the **Inflation Reduction Act of 2022** — 30% of installed cost, capped at $2,000 per year for air-source and mini-split systems, effective through December 31, 2032. Annual savings estimates are from the **ENERGY STAR** Heating and Cooling Equipment guide, based on national average electricity ($0.16/kWh) and natural gas ($1.50/therm) rates from the EIA. Home size multipliers approximate Manual J load scaling factors published by **ACCA** (Air Conditioning Contractors of America). All prices are fully installed costs including equipment, labor, refrigerant charge, and commissioning. Permit fees, electrical panel upgrades, and ductwork modifications are excluded.
+
+{/* Section 16: Disclaimer — auto-rendered */}

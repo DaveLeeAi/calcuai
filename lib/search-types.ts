@@ -8,6 +8,7 @@ export interface SearchItem {
   category: Category | 'glossary' | 'methodology';
   subcategory: string;
   primaryKeyword: string;
+  secondaryKeywords?: string[];
   metaDescription: string;
   href: string;
   itemType: SearchItemType;

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "cubic yard calculator",
+  "secondaryKeywords": [
+    "cubic yard calculator for concrete",
+    "volume to cubic yards",
+    "how to calculate cubic yards",
+    "yards of material calculator"
+  ],
   "metaTitle": "Cubic Yard Calculator — Volume, Weight & Truckloads",
   "metaDescription": "Convert dimensions to cubic yards for any construction project. Supports rectangular, circular, and triangular shapes with weight estimates and truckload counts.",
   "inputs": [

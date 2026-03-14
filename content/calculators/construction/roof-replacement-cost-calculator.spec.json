@@ -1,0 +1,296 @@
+{
+  "id": "roof-replacement-cost-calculator",
+  "title": "Roof Replacement Cost Calculator",
+  "slug": "roof-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "roof replacement cost calculator",
+  "secondaryKeywords": [
+    "roof replacement cost per square",
+    "new roof cost estimator",
+    "shingle roof replacement cost",
+    "roof replacement cost by material"
+  ],
+  "metaTitle": "Roof Replacement Cost Calculator | Compare Materials & Get Estimates",
+  "metaDescription": "Estimate roof replacement costs for asphalt shingles, metal, tile, slate, and wood shake. Includes tear-off, labor, and regional pricing for 2025-2026.",
+  "inputs": [
+    {
+      "id": "roofArea",
+      "label": "Roof Area",
+      "type": "unit-pair",
+      "required": true,
+      "defaultValue": 2000,
+      "min": 100,
+      "step": 100,
+      "units": [
+        {
+          "value": "sqft",
+          "label": "sq ft",
+          "conversionFactor": 1
+        },
+        {
+          "value": "sqm",
+          "label": "sq m",
+          "conversionFactor": 10.7639
+        }
+      ],
+      "defaultUnit": "sqft",
+      "helpText": "Total roof area in square feet — average U.S. home is 1,700–2,100 sq ft"
+    },
+    {
+      "id": "roofingMaterial",
+      "label": "Roofing Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "asphalt-3tab",
+      "options": [
+        {
+          "value": "asphalt-3tab",
+          "label": "Asphalt 3-Tab ($5–$9/sq ft installed)"
+        },
+        {
+          "value": "architectural-shingle",
+          "label": "Architectural Shingle ($6.50–$11.50/sq ft installed)"
+        },
+        {
+          "value": "metal-standing-seam",
+          "label": "Metal Standing Seam ($12–$21/sq ft installed)"
+        },
+        {
+          "value": "metal-corrugated",
+          "label": "Metal Corrugated ($8–$14/sq ft installed)"
+        },
+        {
+          "value": "tile-clay",
+          "label": "Clay Tile ($15–$27/sq ft installed)"
+        },
+        {
+          "value": "tile-concrete",
+          "label": "Concrete Tile ($12–$21/sq ft installed)"
+        },
+        {
+          "value": "slate",
+          "label": "Slate ($22–$42/sq ft installed)"
+        },
+        {
+          "value": "wood-shake",
+          "label": "Wood Shake ($9.50–$16/sq ft installed)"
+        }
+      ],
+      "helpText": "Roofing material — each has different cost, lifespan, and aesthetics"
+    },
+    {
+      "id": "stories",
+      "label": "Number of Stories",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1-story",
+      "options": [
+        {
+          "value": "1-story",
+          "label": "1 Story"
+        },
+        {
+          "value": "2-story",
+          "label": "2 Stories (+10% labor)"
+        },
+        {
+          "value": "3-story",
+          "label": "3 Stories (+20% labor)"
+        }
+      ],
+      "helpText": "Higher roofs increase labor costs due to scaffolding and safety equipment"
+    },
+    {
+      "id": "roofComplexity",
+      "label": "Roof Complexity",
+      "type": "select",
+      "required": true,
+      "defaultValue": "simple-gable",
+      "options": [
+        {
+          "value": "simple-gable",
+          "label": "Simple Gable"
+        },
+        {
+          "value": "moderate-hip",
+          "label": "Moderate Hip (+10% labor)"
+        },
+        {
+          "value": "complex-multi-level",
+          "label": "Complex Multi-Level (+25% labor)"
+        }
+      ],
+      "helpText": "Complex roof shapes with dormers, valleys, and multiple levels increase labor"
+    },
+    {
+      "id": "tearOff",
+      "label": "Old Roof Tear-Off",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Tear-Off (new construction or overlay)"
+        },
+        {
+          "value": "single-layer",
+          "label": "Single Layer ($1–$2/sq ft)"
+        },
+        {
+          "value": "double-layer",
+          "label": "Double Layer ($2–$3.50/sq ft)"
+        }
+      ],
+      "helpText": "Removing existing roofing layers before installation — most codes limit to 2 layers"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "area",
+      "label": "Roof Area (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "tearOffCost",
+      "label": "Tear-Off Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSquare",
+      "label": "Cost per Roofing Square (100 sq ft)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "materialComparison",
+      "label": "Roofing Material Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "roof-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "roofing-calculator",
+    "metal-roofing-calculator",
+    "siding-replacement-cost-calculator",
+    "gutter-replacement-cost-calculator",
+    "insulation-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Roofing Cost Data; National Roofing Contractors Association (NRCA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for roofers (SOC 47-2181). Story and complexity multipliers based on NRCA industry guidelines for roofing labor adjustments.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "roofing-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "landscaping",
   "primaryKeyword": "concrete patio cost calculator",
+  "secondaryKeywords": [
+    "patio installation cost estimator",
+    "stamped concrete patio cost",
+    "concrete patio cost per square foot",
+    "backyard patio cost"
+  ],
   "metaTitle": "Concrete Patio Cost Calculator | Compare Finishes & Get Estimates",
   "metaDescription": "Estimate concrete patio costs for broom finish, stamped, exposed aggregate, colored, and polished concrete. Includes demolition, extras, and regional labor.",
   "inputs": [
@@ -153,13 +159,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -266,7 +293,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material and labor cost splits from HomeAdvisor and Angi 2025-2026 national averages. Finish type pricing from Concrete Network 2025 contractor surveys. Thickness adjustments from American Concrete Institute residential slab guidelines. Regional multipliers from HomeAdvisor regional cost index.",
   "formulaAuditDate": "2026-03-14",

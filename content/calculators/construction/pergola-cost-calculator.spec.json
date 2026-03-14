@@ -1,0 +1,310 @@
+{
+  "id": "pergola-cost-calculator",
+  "title": "Pergola Cost Calculator",
+  "slug": "pergola-cost-calculator",
+  "category": "construction",
+  "subcategory": "landscaping",
+  "primaryKeyword": "pergola cost calculator",
+  "secondaryKeywords": [
+    "pergola installation cost",
+    "wood pergola cost",
+    "vinyl pergola cost",
+    "pergola cost per square foot"
+  ],
+  "metaTitle": "Pergola Cost Calculator | Wood, Vinyl & Aluminum Estimates",
+  "metaDescription": "Estimate pergola installation costs for pressure-treated wood, cedar, redwood, vinyl, aluminum, and fiberglass. Compare materials, roof types, and regional labor rates.",
+  "inputs": [
+    {
+      "id": "size",
+      "label": "Pergola Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-10x12",
+      "options": [
+        {
+          "value": "small-8x8",
+          "label": "Small 8x8 ft (64 sq ft) — $2,000-$4,000"
+        },
+        {
+          "value": "medium-10x12",
+          "label": "Medium 10x12 ft (120 sq ft) — $3,500-$7,000"
+        },
+        {
+          "value": "large-12x16",
+          "label": "Large 12x16 ft (192 sq ft) — $5,500-$11,000"
+        },
+        {
+          "value": "xlarge-14x20",
+          "label": "Extra Large 14x20 ft (280 sq ft) — $8,000-$16,000"
+        }
+      ],
+      "helpText": "Select the footprint size of the pergola — measured as length x width"
+    },
+    {
+      "id": "material",
+      "label": "Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "pressure-treated-wood",
+      "options": [
+        {
+          "value": "pressure-treated-wood",
+          "label": "Pressure-Treated Wood (1.0x — baseline)"
+        },
+        {
+          "value": "cedar",
+          "label": "Cedar (1.30x)"
+        },
+        {
+          "value": "redwood",
+          "label": "Redwood (1.50x)"
+        },
+        {
+          "value": "vinyl",
+          "label": "Vinyl (1.20x)"
+        },
+        {
+          "value": "aluminum",
+          "label": "Aluminum (1.35x)"
+        },
+        {
+          "value": "fiberglass",
+          "label": "Fiberglass (1.40x)"
+        }
+      ],
+      "helpText": "Material type — each has different cost, look, and maintenance level"
+    },
+    {
+      "id": "roofType",
+      "label": "Roof / Cover Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "open-rafter",
+      "options": [
+        {
+          "value": "open-rafter",
+          "label": "Open Rafter (no added cost)"
+        },
+        {
+          "value": "shade-slats",
+          "label": "Shade Slats (+$500-$1,500)"
+        },
+        {
+          "value": "polycarbonate-roof",
+          "label": "Polycarbonate Roof (+$1,000-$2,500)"
+        },
+        {
+          "value": "retractable-canopy",
+          "label": "Retractable Canopy (+$1,500-$3,500)"
+        }
+      ],
+      "helpText": "Roof type affects shade coverage and overall cost"
+    },
+    {
+      "id": "foundation",
+      "label": "Foundation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "surface-mount",
+      "options": [
+        {
+          "value": "surface-mount",
+          "label": "Surface Mount (1.0x — baseline)"
+        },
+        {
+          "value": "concrete-footings",
+          "label": "Concrete Footings (1.15x)"
+        },
+        {
+          "value": "deck-mount",
+          "label": "Deck Mount (1.05x)"
+        }
+      ],
+      "helpText": "Foundation type affects structural stability and cost"
+    },
+    {
+      "id": "electricalOutlet",
+      "label": "Electrical Add-Ons",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "basic-outlet",
+          "label": "Basic Outlet (+$200-$400)"
+        },
+        {
+          "value": "fan-and-lights",
+          "label": "Ceiling Fan & Lights (+$500-$1,200)"
+        }
+      ],
+      "helpText": "Electrical wiring for outlets, fans, or lighting"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "sqft",
+      "label": "Pergola Footprint (sq ft)",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "structureCost",
+      "label": "Structure / Materials Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "roofCost",
+      "label": "Roof / Cover Add-On",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "foundationAdj",
+      "label": "Foundation Adjustment",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "electricalCost",
+      "label": "Electrical Add-On",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerSqFt",
+      "label": "Cost per Square Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 2
+    },
+    {
+      "id": "materialComparison",
+      "label": "Material Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "pergola-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "deck-calculator",
+    "deck-replacement-cost-calculator",
+    "paver-calculator",
+    "concrete-patio-cost-calculator",
+    "fence-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 National Cost Data; NADRA Outdoor Living Cost Data",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "published",
+  "reviewOwner": "editorial",
+  "formulaSource": "Structure and labor cost data from HomeAdvisor and Angi 2025-2026 national average surveys. Material multipliers derived from NADRA (North American Deck and Railing Association) outdoor living cost data. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for carpenters (SOC 47-2031). Roof, foundation, and electrical add-on costs from HomeAdvisor project cost data 2025-2026.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "deck-calculator",
+    "concrete-patio-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-summer"
+}

@@ -1,0 +1,203 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Upgrading from a 100-amp to 200-amp electrical panel costs $1,800–$4,500 installed nationally, including the panel, breakers, service entrance cable, labor, and standard permit. A straightforward panel swap at the same amperage runs $1,500–$2,800, while a 200-to-400-amp service upgrade for large homes costs $3,000–$5,000 in parts alone plus $1,500–$2,500 in labor. Permits run $150–$400 in most jurisdictions. The typical 100-to-200A upgrade takes 4–8 hours of electrician time over 1–2 days including utility coordination. Regional labor rates shift the total by 15–25% — the South averages 15% below national, and the West Coast averages 25% above. Enter your upgrade type, brand preference, and add-ons below for a personalized estimate with a side-by-side comparison of all four upgrade options.
+
+</div>
+
+<div className="at-a-glance">
+
+| Metric | Value |
+|---|---|
+| Panel Swap (Same Amp) | $1,000–$1,800 parts |
+| 100A to 200A Upgrade | $1,500–$3,000 parts |
+| 200A to 400A Upgrade | $3,000–$5,000 parts |
+| Permit and Inspection | $150–$400 |
+| Typical Timeline | 4–8 hours (1–2 days) |
+| Electrician Labor | $800–$1,500 (100-to-200A) |
+| Regional Labor Variation | +/- 15–25% |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides installed cost ranges for four types of electrical panel upgrades — panel swap (same amperage), 100A-to-200A upgrade, 400A upgrade, and sub-panel addition — based on your panel brand tier, additional circuits, permit needs, surge protection, and region. It produces a low/mid/high estimate for your selected upgrade type and a comparison table showing what each upgrade option would cost at standard brand pricing.
+
+The **panel and parts cost** covers the breaker panel itself, the main breaker, branch circuit breakers, bus bars, grounding components, and wiring from the meter to the panel. This is the largest cost component and varies by upgrade complexity. Brand tier multipliers adjust this cost: standard panels (Siemens, Eaton) are baseline, mid-grade (Square D QO) adds 15%, and premium panels (Leviton Smart, Square D Homeline) add 30%.
+
+The **labor cost** covers a licensed electrician's time for disconnecting power, removing the old panel, mounting and wiring the new panel, connecting circuits, grounding, and testing. Labor is adjusted by region: the South is 15% below the national average, while the West Coast is 25% above. For a 100A-to-200A upgrade, the utility company must also upgrade the service entrance cable and meter base, which is included in the labor estimate.
+
+The **additional circuits cost** covers new breakers and wiring runs for circuits added during the upgrade — common for EV chargers, HVAC systems, kitchen appliances, or home offices. The **permit and inspection cost** covers the electrical permit required by most jurisdictions for panel work, plus the mandatory inspection afterward. The **surge protector cost** covers a whole-house surge protection device installed at the main panel to protect all circuits.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your upgrade type** — a panel swap replaces an outdated or damaged panel at the same amperage. A 100A-to-200A upgrade is the most common residential project, typically needed when adding central air, an EV charger, or a hot tub. A 400A upgrade is for very large homes (4,000+ sq ft) or homes with workshops, pools, and multiple HVAC systems. A sub-panel addition feeds a separate area (garage, workshop, addition) from the existing main panel.
+
+2. **Choose your panel brand tier** — standard brands (Siemens, Eaton) are reliable and widely available. Mid-grade panels (Square D QO series) offer better bus bar construction and easier circuit management. Premium panels include smart monitoring features and arc fault protection on every circuit.
+
+3. **Select additional circuits** — if you are adding new circuits during the upgrade (EV charger, dedicated HVAC circuit, kitchen appliance circuits), select the appropriate range. Each new circuit includes the breaker, wire run, and termination.
+
+4. **Choose permit and inspection** — nearly all jurisdictions require an electrical permit for panel upgrades. Select "Not Needed" only if you have already obtained the permit separately or your jurisdiction does not require one for the specific scope of work.
+
+5. **Add surge protection** — a whole-house surge protector installed at the panel costs $200–$500 and protects all electronics and appliances from voltage spikes. This is strongly recommended during any panel upgrade since the panel is already open.
+
+6. **Select your region** — this adjusts labor costs for regional pricing differences. The South and Midwest have below-average labor rates, while the Northeast and West Coast have above-average rates.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Electrical panel upgrade cost is estimated by combining panel/parts cost (adjusted for brand tier), labor cost (adjusted for region), and additive costs for circuits, permits, and surge protection.
+
+**Panel cost:**
+
+$$C_{panel} = P_{base} \times B_m$$
+
+**Labor cost:**
+
+$$C_{labor} = L_{base} \times R_m$$
+
+**Total cost range:**
+
+$$C_{low} = C_{panel,low} + C_{labor,low} + C_{circuits,low} + C_{permit,low} + C_{surge,low}$$
+
+$$C_{high} = C_{panel,high} + C_{labor,high} + C_{circuits,high} + C_{permit,high} + C_{surge,high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **P_base** = base panel/parts cost range by upgrade type
+- **B_m** = brand tier multiplier (1.0 standard, 1.15 mid-grade, 1.30 premium)
+- **L_base** = base labor cost range by upgrade type
+- **R_m** = regional labor multiplier (0.85–1.25)
+- **C_circuits** = additional circuit cost ($0–$1,500 based on count)
+- **C_permit** = permit and inspection cost ($0 or $150–$400)
+- **C_surge** = whole-house surge protector ($0 or $200–$500)
+
+**Base costs by upgrade type (2025-2026):**
+
+| Upgrade Type | Panel/Parts | Labor | Total (No Extras) |
+|---|---|---|---|
+| Panel Swap (Same Amp) | $1,000–$1,800 | $500–$1,000 | $1,500–$2,800 |
+| 100A to 200A Upgrade | $1,500–$3,000 | $800–$1,500 | $2,300–$4,500 |
+| Upgrade to 400A | $3,000–$5,000 | $1,500–$2,500 | $4,500–$7,500 |
+| Sub-Panel Addition | $800–$1,500 | $400–$800 | $1,200–$2,300 |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and **National Electrical Contractors Association (NECA)**.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 100A to 200A Upgrade, Standard Brand, National Average, With Permit
+
+A homeowner is upgrading from a 100-amp panel to a 200-amp panel — standard brand (Siemens), no additional circuits, permit included, no surge protector, national average labor rates.
+
+**Step-by-step:**
+
+1. Look up 100A-to-200A panel/parts cost: $1,500–$3,000
+2. Apply standard brand multiplier (1.0x): $1,500–$3,000 (unchanged)
+3. Look up 100A-to-200A labor cost: $800–$1,500
+4. Apply national region multiplier (1.0x): $800–$1,500 (unchanged)
+5. Additional circuits: $0 (none selected)
+6. Permit and inspection: $150–$400
+7. Surge protector: $0 (not selected)
+8. Total low: $1,500 + $800 + $0 + $150 + $0 = **$2,450**
+9. Total high: $3,000 + $1,500 + $0 + $400 + $0 = **$4,900**
+10. Total mid: ($2,450 + $4,900) / 2 = **$3,675**
+
+**Interpretation:** At a $3,675 midpoint, a 100A-to-200A panel upgrade is one of the most impactful electrical investments a homeowner can make. It provides capacity for modern electrical loads including central air conditioning (30–60 amps), an EV charger (40–50 amps), an electric range (40–50 amps), and a heat pump (30–60 amps). The same job with a premium panel would cost roughly $4,200 at midpoint, and adding 5–8 new circuits would push the total to approximately $4,275.
+
+{/* Section 10: Panel Upgrade Cost by Type */}
+## Panel Upgrade Cost by Type
+
+| Upgrade Type | Cost Range | Midpoint | Timeline | Common Reason |
+|---|---|---|---|---|
+| Sub-Panel Addition | $1,200–$2,300 | $1,750 | 4–6 hours | Garage, workshop, or home addition |
+| Panel Swap (Same Amp) | $1,500–$2,800 | $2,150 | 4–8 hours | Outdated/damaged panel, Federal Pacific or Zinsco replacement |
+| 100A to 200A Upgrade | $2,300–$4,500 | $3,400 | 1–2 days | Adding central air, EV charger, or modern appliance loads |
+| Upgrade to 400A | $4,500–$7,500 | $6,000 | 2–3 days | Large home (4,000+ sq ft), workshop, pool, multiple HVAC |
+
+All costs include standard-brand panel, labor, and permit at national average rates. Brand tier and regional labor adjustments shift totals by 15–30%.
+
+{/* Section 11: Factors That Affect Panel Upgrade Cost */}
+## Factors That Affect Panel Upgrade Cost
+
+**Upgrade scope** is the primary cost driver. A simple panel swap at the same amperage keeps the existing service entrance cable and meter base, cutting labor nearly in half compared to a full amperage upgrade. A 100A-to-200A upgrade requires new service entrance cable (typically 2/0 or 4/0 copper), a new meter base, and coordination with the utility company for the service drop — all of which add labor hours and material cost.
+
+**Panel brand and features** create a 30% cost swing on parts alone. Standard panels from Siemens or Eaton run $1,500–$3,000 for a 200A upgrade. Premium panels with whole-home monitoring, WiFi connectivity, and integrated arc fault/ground fault protection on every circuit run $1,950–$3,900 for the same upgrade. Smart panels that allow circuit-level energy monitoring (like Leviton Smart Panel or Span Panel) can exceed $4,000 for the panel alone.
+
+**Additional circuits** are the most common add-on during a panel upgrade. Running new circuits while the panel is open is significantly cheaper than a separate service call later. Each circuit costs $50–$150 for the breaker plus $100–$250 for the wire run depending on distance and complexity. Common additions include 240V circuits for EV chargers, electric dryers, ranges, and HVAC equipment.
+
+**Regional labor rates** shift the labor portion by 15–25%. An electrician in Texas or Florida charges 15% less than the national average, while electricians in California or New York charge 20–25% more. The panel and parts cost is the same nationwide; only labor varies by region.
+
+**Permit and inspection** are required in virtually all U.S. jurisdictions for panel upgrades. Permit fees range from $150 to $400 depending on the municipality and scope of work. Skipping the permit is a code violation that can create liability issues, void homeowner's insurance, and complicate future home sales.
+
+**Existing wiring condition** can increase cost if the electrician discovers aluminum wiring, outdated cloth-insulated wiring, or improperly grounded circuits during the upgrade. Remediation work is typically quoted separately and can add $500–$2,000 to the project.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including panel, breakers, labor, and standard wiring between the meter and panel. Service entrance cable upgrades (required for amperage increases) are included in the labor estimate.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and NECA. Your local market may be 15–25% higher or lower.
+- The calculator assumes **standard residential installation** on an exterior or basement wall within 5 feet of the meter. Longer runs between meter and panel add $10–$20 per linear foot.
+- **Utility coordination** costs (temporary disconnect/reconnect of service drop) are typically handled by the electrician and included in labor. Some utilities charge a separate fee ($50–$200) not reflected in this estimate.
+- This calculator does **not** account for remediation of existing wiring issues (aluminum wiring, ungrounded circuits, code violations discovered during the upgrade).
+- **Sub-panel estimates** assume the sub-panel is within 25 feet of the main panel. Longer feeder wire runs add $8–$15 per linear foot.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to upgrade from 100 amp to 200 amp?
+
+A 100A-to-200A electrical panel upgrade costs $2,300–$4,500 at national average rates, including the panel, service entrance cable, labor, and permit. The panel and parts account for $1,500–$3,000, and electrician labor runs $800–$1,500. Premium brand panels add 15–30% to the parts cost. Regional labor variation of 15–25% further adjusts the total. This is the most common residential panel upgrade, typically required when adding central air conditioning, an EV charger, or modern kitchen appliances that exceed a 100-amp panel's capacity.
+
+### Do I need a permit for an electrical panel upgrade?
+
+Yes, virtually all U.S. jurisdictions require an electrical permit for panel upgrades, replacements, or sub-panel additions. Permit fees range from $150 to $400 and include a mandatory inspection after the work is completed. The inspection verifies proper grounding, breaker sizing, wire gauge, clearances, and NEC code compliance. Working without a permit is a code violation that can void your homeowner's insurance, create liability during a fire or electrical event, and require costly remediation if discovered during a home sale inspection.
+
+### How long does an electrical panel upgrade take?
+
+A panel swap at the same amperage takes 4–8 hours and is typically completed in a single day. A 100A-to-200A upgrade takes 1–2 days — day one for the panel installation and day two for utility coordination, inspection, and final energization. A 400A upgrade takes 2–3 days due to the larger service entrance and potentially a second meter. A sub-panel addition takes 4–6 hours. Your home will be without power for 4–8 hours during the actual panel swap portion of any upgrade.
+
+### Should I upgrade my electrical panel?
+
+You should upgrade your electrical panel if your home has a 100-amp (or lower) panel and you are adding major electrical loads like central air conditioning (30–60 amps), an EV charger (40–50 amps), an electric range (40–50 amps), or a heat pump (30–60 amps). You should also upgrade if your panel is a Federal Pacific, Zinsco, or Pushmatic brand — all three have documented safety issues and may not trip properly during an overload. Signs you need an upgrade include frequently tripping breakers, flickering lights under load, visible corrosion on the panel, and the inability to add new circuits.
+
+### Is a whole-house surge protector worth it during a panel upgrade?
+
+A whole-house surge protector is strongly recommended during any panel upgrade — it costs $200–$500 installed and protects every circuit in your home from voltage spikes caused by lightning, utility switching, and grid fluctuations. Installing it during a panel upgrade saves $100–$200 in separate installation labor since the panel is already open and de-energized. A single surge event can damage $5,000–$20,000 worth of electronics, HVAC control boards, and smart home devices. The surge protector pays for itself after preventing one event.
+
+### Can I upgrade my electrical panel myself?
+
+No. Electrical panel work requires a licensed electrician in all U.S. jurisdictions. Panel upgrades involve working with live 200–400 amp service entrance conductors that carry lethal voltage directly from the utility transformer. The risk of electrocution, arc flash (which can reach 35,000 degrees Fahrenheit), and fire is severe. Additionally, permits and inspections require work to be performed by a licensed professional, and your homeowner's insurance will not cover damage from unpermitted DIY electrical work.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates electrical panel upgrade costs using separate panel/parts and labor base rates for four upgrade types, adjusted by brand tier multiplier and regional labor multiplier respectively. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys for electrical panel replacements and upgrades, supplemented by **National Electrical Contractors Association (NECA)** unit pricing data for circuit additions, permits, and surge protection. Panel/parts costs (55–65% of installed price) cover the panel, main breaker, branch breakers, bus bars, grounding, and service entrance cable where applicable. Labor costs (35–45% of installed price) cover electrician time for disconnection, removal, installation, circuit termination, grounding, testing, and utility coordination. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians (SOC 47-2111). Brand tier multipliers reflect manufacturer MSRP comparisons across Siemens, Eaton, Square D, and Leviton product lines as of 2025. All prices are fully installed costs including standard permit and inspection fees where selected.
+
+{/* Section 16: Disclaimer — auto-rendered */}

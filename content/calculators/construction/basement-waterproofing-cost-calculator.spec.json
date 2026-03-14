@@ -1,0 +1,277 @@
+{
+  "id": "basement-waterproofing-cost-calculator",
+  "title": "Basement Waterproofing Cost Calculator",
+  "slug": "basement-waterproofing-cost-calculator",
+  "category": "construction",
+  "subcategory": "foundation",
+  "primaryKeyword": "basement waterproofing cost calculator",
+  "secondaryKeywords": [
+    "basement waterproofing cost",
+    "basement sealing cost",
+    "interior basement waterproofing cost",
+    "exterior basement waterproofing cost"
+  ],
+  "metaTitle": "Basement Waterproofing Cost Calculator | Interior, Exterior & Combination Estimates",
+  "metaDescription": "Estimate basement waterproofing costs for interior sealant, interior drainage, exterior excavation, and combination methods. Compare costs by wall length, crack repair, sump pump, and region.",
+  "inputs": [
+    {
+      "id": "basementSize",
+      "label": "Basement Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-500-1000",
+      "options": [
+        {
+          "value": "small-under-500",
+          "label": "Small - Under 500 sq ft"
+        },
+        {
+          "value": "medium-500-1000",
+          "label": "Medium - 500-1,000 sq ft"
+        },
+        {
+          "value": "large-1000-1500",
+          "label": "Large - 1,000-1,500 sq ft"
+        },
+        {
+          "value": "xlarge-over-1500",
+          "label": "Extra Large - Over 1,500 sq ft"
+        }
+      ],
+      "helpText": "Used to suggest default wall perimeter length if you do not enter a custom value below."
+    },
+    {
+      "id": "method",
+      "label": "Waterproofing Method",
+      "type": "select",
+      "required": true,
+      "defaultValue": "interior-drainage",
+      "options": [
+        {
+          "value": "interior-sealant",
+          "label": "Interior Sealant (-/lf - surface coating)"
+        },
+        {
+          "value": "interior-drainage",
+          "label": "Interior Drainage (\u0000-\u0000/lf - French drain)"
+        },
+        {
+          "value": "exterior-excavation",
+          "label": "Exterior Excavation (\u0000-\u0000/lf - full dig)"
+        },
+        {
+          "value": "combination",
+          "label": "Combination (\u0000-(/lf - interior + exterior)"
+        }
+      ],
+      "helpText": "Interior sealant is cheapest but only stops minor moisture. Exterior excavation is the gold standard for serious water intrusion. Combination addresses both sides of the wall."
+    },
+    {
+      "id": "wallLength",
+      "label": "Wall Length (Linear Feet)",
+      "type": "number",
+      "required": false,
+      "defaultValue": 100,
+      "min": 20,
+      "max": 500,
+      "helpText": "Total linear feet of basement wall to waterproof. Typical: 80 lf (small), 120 lf (medium), 150 lf (large), 180 lf (extra large). Measure perimeter of affected walls."
+    },
+    {
+      "id": "crackRepair",
+      "label": "Crack Repair",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Crack Repair Needed"
+        },
+        {
+          "value": "minor",
+          "label": "Minor Cracks (+(-\u0000)"
+        },
+        {
+          "value": "major",
+          "label": "Major Cracks (+,000-,000)"
+        }
+      ],
+      "helpText": "Minor cracks are hairline or less than 1/4 inch. Major cracks are structural, wider than 1/4 inch, or actively leaking."
+    },
+    {
+      "id": "sumpPump",
+      "label": "Sump Pump",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Sump Pump"
+        },
+        {
+          "value": "standard",
+          "label": "Standard Sump Pump (+\u0000-,500)"
+        },
+        {
+          "value": "battery-backup",
+          "label": "Battery Backup Sump (+,000-,000)"
+        }
+      ],
+      "helpText": "A sump pump collects water from the drainage system and pumps it away from the foundation. Battery backup ensures operation during power outages."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "waterproofingCost",
+      "label": "Waterproofing Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "materialCost",
+      "label": "Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "crackRepairCost",
+      "label": "Crack Repair",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "sumpPumpCost",
+      "label": "Sump Pump",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerLinearFoot",
+      "label": "Cost Per Linear Foot",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "methodComparison",
+      "label": "Method Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Project Duration",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "basement-waterproofing-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "foundation-repair-cost-calculator",
+    "whole-house-repipe-cost-calculator",
+    "renovation-cost-calculator",
+    "insulation-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; Basement Health Association waterproofing cost data",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Per-linear-foot pricing from HomeAdvisor and Angi 2025-2026 national average surveys for residential basement waterproofing. Method cost ranges validated against Basement Health Association (BHA) member contractor pricing data. Crack repair costs from HomeAdvisor foundation repair surveys. Sump pump pricing from HomeAdvisor and major manufacturer MSRP data. Regional labor multipliers derived from BLS Occupational Employment and Wage Statistics (SOC 47-2061). Material/labor split of 30/70 reflects the heavy labor intensity of waterproofing work per BHA contractor surveys.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "foundation-repair-cost-calculator"
+  ],
+  "qualityScore": 80,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring"
+}

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "insulation calculator",
+  "secondaryKeywords": [
+    "how much insulation do I need",
+    "insulation R-value calculator",
+    "attic insulation calculator",
+    "batt insulation calculator"
+  ],
   "metaTitle": "Insulation Calculator | Estimate Materials & Cost by R-Value",
   "metaDescription": "Calculate how much insulation you need for your attic, walls, or floor. See batts, bags, or board feet needed by R-value with cost estimates.",
   "inputs": [

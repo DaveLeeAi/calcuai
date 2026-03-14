@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "roof pitch calculator",
+  "secondaryKeywords": [
+    "roof slope calculator",
+    "roof angle calculator",
+    "roof pitch to degrees",
+    "how to measure roof pitch"
+  ],
   "metaTitle": "Roof Pitch Calculator | Find Roof Slope & Angle",
   "metaDescription": "Calculate roof pitch from rise and run measurements. Convert between pitch ratio, degrees, and percent grade. See if your roof is walkable.",
   "inputs": [

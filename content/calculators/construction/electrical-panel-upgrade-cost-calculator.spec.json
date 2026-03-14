@@ -1,0 +1,282 @@
+{
+  "id": "electrical-panel-upgrade-cost-calculator",
+  "title": "Electrical Panel Upgrade Cost Calculator",
+  "slug": "electrical-panel-upgrade-cost-calculator",
+  "category": "construction",
+  "subcategory": "electrical",
+  "primaryKeyword": "electrical panel upgrade cost",
+  "secondaryKeywords": [
+    "breaker box replacement cost",
+    "200 amp panel upgrade cost",
+    "electrical panel replacement cost",
+    "circuit breaker panel cost"
+  ],
+  "metaTitle": "Electrical Panel Upgrade Cost Calculator | 100A to 200A & More",
+  "metaDescription": "Estimate electrical panel upgrade costs for 100 to 200 amp, panel swaps, and sub-panels. Includes permits, circuits, and regional labor pricing.",
+  "inputs": [
+    {
+      "id": "upgradeType",
+      "label": "Upgrade Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "upgrade-100-to-200",
+      "options": [
+        {
+          "value": "panel-swap-same-amp",
+          "label": "Panel Swap — Same Amperage ($1,000–$1,800 parts)"
+        },
+        {
+          "value": "upgrade-100-to-200",
+          "label": "100A to 200A Upgrade ($1,500–$3,000 parts)"
+        },
+        {
+          "value": "upgrade-to-400",
+          "label": "Upgrade to 400A ($3,000–$5,000 parts)"
+        },
+        {
+          "value": "sub-panel-add",
+          "label": "Sub-Panel Addition ($800–$1,500 parts)"
+        }
+      ],
+      "helpText": "Type of electrical panel upgrade — determines base parts and labor cost"
+    },
+    {
+      "id": "panelBrand",
+      "label": "Panel Brand Tier",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard (Siemens, Eaton — 1.0x)"
+        },
+        {
+          "value": "mid-grade",
+          "label": "Mid-Grade (Square D QO — 1.15x)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium (Leviton Smart, Square D HOM — 1.30x)"
+        }
+      ],
+      "helpText": "Panel manufacturer tier — multiplied against parts cost"
+    },
+    {
+      "id": "additionalCircuits",
+      "label": "Additional Circuits",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Additional Circuits"
+        },
+        {
+          "value": "2-4-circuits",
+          "label": "2–4 Circuits (+$200–$400)"
+        },
+        {
+          "value": "5-8-circuits",
+          "label": "5–8 Circuits (+$400–$800)"
+        },
+        {
+          "value": "10-plus-circuits",
+          "label": "10+ Circuits (+$800–$1,500)"
+        }
+      ],
+      "helpText": "New circuits added during the panel upgrade — for EV chargers, HVAC, appliances, etc."
+    },
+    {
+      "id": "permitInspection",
+      "label": "Permit & Inspection",
+      "type": "select",
+      "required": true,
+      "defaultValue": "included",
+      "options": [
+        {
+          "value": "included",
+          "label": "Included ($150–$400)"
+        },
+        {
+          "value": "not-needed",
+          "label": "Not Needed / Already Obtained"
+        }
+      ],
+      "helpText": "Electrical permits are required in most jurisdictions for panel upgrades"
+    },
+    {
+      "id": "wholeHouseSurgeProtector",
+      "label": "Whole-House Surge Protector",
+      "type": "select",
+      "required": true,
+      "defaultValue": "no",
+      "options": [
+        {
+          "value": "yes",
+          "label": "Yes — Add Surge Protection (+$200–$500)"
+        },
+        {
+          "value": "no",
+          "label": "No Surge Protector"
+        }
+      ],
+      "helpText": "Installed at the main panel to protect all circuits from power surges"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "panelCost",
+      "label": "Panel & Parts Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "circuitCost",
+      "label": "Additional Circuits Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "permitCost",
+      "label": "Permit & Inspection Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "surgeCost",
+      "label": "Surge Protector Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "upgradeComparison",
+      "label": "Upgrade Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "safetyNote",
+      "label": "Safety Warning",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "electrical-panel-upgrade-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "wire-size-calculator",
+    "ev-charger-installation-cost-calculator",
+    "electrical-service-upgrade-cost-calculator",
+    "renovation-cost-calculator",
+    "hvac-replacement-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 Electrical Panel Cost Data; National Electrical Contractors Association (NECA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Panel and labor cost data from HomeAdvisor and Angi 2025-2026 national averages for electrical panel upgrades. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians (SOC 47-2111). Brand tier multipliers based on manufacturer MSRP comparisons. Circuit, permit, and surge protector costs based on NECA unit pricing guidelines.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "wire-size-calculator",
+    "renovation-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -3,7 +3,7 @@
  * Run: npm run generate:registry
  * Source: scripts/generate-formula-registry.ts
  *
- * 218 modules, 220 formula IDs
+ * 247 modules, 249 formula IDs
  * Generated: 2026-03-13
  */
 import type { FormulaFunction } from '@/lib/types';
@@ -35,8 +35,12 @@ import { FORMULA_REGISTRY as business_salary_to_hourly } from './business/salary
 import { FORMULA_REGISTRY as business_working_capital } from './business/working-capital';
 
 // Construction
+import { FORMULA_REGISTRY as construction_accessibility_remodel_cost } from './construction/accessibility-remodel-cost';
+import { FORMULA_REGISTRY as construction_artificial_turf_cost } from './construction/artificial-turf-cost';
 import { FORMULA_REGISTRY as construction_asphalt } from './construction/asphalt';
 import { FORMULA_REGISTRY as construction_backsplash_tile_cost } from './construction/backsplash-tile-cost';
+import { FORMULA_REGISTRY as construction_backup_generator_cost } from './construction/backup-generator-cost';
+import { FORMULA_REGISTRY as construction_basement_waterproofing_cost } from './construction/basement-waterproofing-cost';
 import { FORMULA_REGISTRY as construction_bathroom_remodel } from './construction/bathroom-remodel';
 import { FORMULA_REGISTRY as construction_bathroom_tile_cost } from './construction/bathroom-tile-cost';
 import { FORMULA_REGISTRY as construction_board_foot } from './construction/board-foot';
@@ -47,36 +51,61 @@ import { FORMULA_REGISTRY as construction_concrete_footing } from './constructio
 import { FORMULA_REGISTRY as construction_concrete_patio_cost } from './construction/concrete-patio-cost';
 import { FORMULA_REGISTRY as construction_concrete_slab } from './construction/concrete-slab';
 import { FORMULA_REGISTRY as construction_concrete_volume } from './construction/concrete-volume';
+import { FORMULA_REGISTRY as construction_crawl_space_encapsulation_cost } from './construction/crawl-space-encapsulation-cost';
+import { FORMULA_REGISTRY as construction_crown_molding_cost } from './construction/crown-molding-cost';
 import { FORMULA_REGISTRY as construction_cubic_yard } from './construction/cubic-yard';
 import { FORMULA_REGISTRY as construction_deck_replacement_cost } from './construction/deck-replacement-cost';
 import { FORMULA_REGISTRY as construction_deck } from './construction/deck';
+import { FORMULA_REGISTRY as construction_door_replacement_cost } from './construction/door-replacement-cost';
 import { FORMULA_REGISTRY as construction_driveway_cost } from './construction/driveway-cost';
 import { FORMULA_REGISTRY as construction_drywall } from './construction/drywall';
+import { FORMULA_REGISTRY as construction_ductwork_cost } from './construction/ductwork-cost';
+import { FORMULA_REGISTRY as construction_electrical_panel_upgrade_cost } from './construction/electrical-panel-upgrade-cost';
+import { FORMULA_REGISTRY as construction_electrical_service_upgrade_cost } from './construction/electrical-service-upgrade-cost';
+import { FORMULA_REGISTRY as construction_ev_charger_installation_cost } from './construction/ev-charger-installation-cost';
 import { FORMULA_REGISTRY as construction_fence } from './construction/fence';
 import { FORMULA_REGISTRY as construction_flooring_installation_cost } from './construction/flooring-installation-cost';
 import { FORMULA_REGISTRY as construction_flooring } from './construction/flooring';
+import { FORMULA_REGISTRY as construction_foundation_repair_cost } from './construction/foundation-repair-cost';
+import { FORMULA_REGISTRY as construction_garage_door_cost } from './construction/garage-door-cost';
 import { FORMULA_REGISTRY as construction_gutter_replacement_cost } from './construction/gutter-replacement-cost';
+import { FORMULA_REGISTRY as construction_heat_pump_cost } from './construction/heat-pump-cost';
+import { FORMULA_REGISTRY as construction_home_energy_audit_cost } from './construction/home-energy-audit-cost';
+import { FORMULA_REGISTRY as construction_hvac_replacement_cost } from './construction/hvac-replacement-cost';
 import { FORMULA_REGISTRY as construction_hvac_size } from './construction/hvac-size';
+import { FORMULA_REGISTRY as construction_insulation_cost } from './construction/insulation-cost';
 import { FORMULA_REGISTRY as construction_insulation } from './construction/insulation';
 import { FORMULA_REGISTRY as construction_kitchen_remodel } from './construction/kitchen-remodel';
 import { FORMULA_REGISTRY as construction_metal_roofing } from './construction/metal-roofing';
+import { FORMULA_REGISTRY as construction_mini_split_cost } from './construction/mini-split-cost';
 import { FORMULA_REGISTRY as construction_paint_coverage } from './construction/paint-coverage';
+import { FORMULA_REGISTRY as construction_painting_cost } from './construction/painting-cost';
 import { FORMULA_REGISTRY as construction_paver } from './construction/paver';
+import { FORMULA_REGISTRY as construction_pergola_cost } from './construction/pergola-cost';
 import { FORMULA_REGISTRY as construction_pool_volume } from './construction/pool-volume';
+import { FORMULA_REGISTRY as construction_radon_mitigation_cost } from './construction/radon-mitigation-cost';
 import { FORMULA_REGISTRY as construction_rafter_length } from './construction/rafter-length';
 import { FORMULA_REGISTRY as construction_regrouting_cost } from './construction/regrouting-cost';
 import { FORMULA_REGISTRY as construction_renovation_cost } from './construction/renovation-cost';
 import { FORMULA_REGISTRY as construction_retaining_wall } from './construction/retaining-wall';
 import { FORMULA_REGISTRY as construction_roof_pitch } from './construction/roof-pitch';
+import { FORMULA_REGISTRY as construction_roof_replacement_cost } from './construction/roof-replacement-cost';
 import { FORMULA_REGISTRY as construction_roofing } from './construction/roofing';
 import { FORMULA_REGISTRY as construction_siding_replacement_cost } from './construction/siding-replacement-cost';
 import { FORMULA_REGISTRY as construction_siding } from './construction/siding';
+import { FORMULA_REGISTRY as construction_solar_battery_cost } from './construction/solar-battery-cost';
+import { FORMULA_REGISTRY as construction_sprinkler_system_cost } from './construction/sprinkler-system-cost';
 import { FORMULA_REGISTRY as construction_square_footage } from './construction/square-footage';
 import { FORMULA_REGISTRY as construction_stair } from './construction/stair';
+import { FORMULA_REGISTRY as construction_sump_pump_cost } from './construction/sump-pump-cost';
 import { FORMULA_REGISTRY as construction_tile } from './construction/tile';
 import { FORMULA_REGISTRY as construction_topsoil } from './construction/topsoil';
+import { FORMULA_REGISTRY as construction_tree_removal_cost } from './construction/tree-removal-cost';
 import { FORMULA_REGISTRY as construction_volume_material } from './construction/volume-material';
 import { FORMULA_REGISTRY as construction_wallpaper } from './construction/wallpaper';
+import { FORMULA_REGISTRY as construction_water_heater_cost } from './construction/water-heater-cost';
+import { FORMULA_REGISTRY as construction_whole_house_repipe_cost } from './construction/whole-house-repipe-cost';
+import { FORMULA_REGISTRY as construction_window_replacement_cost } from './construction/window-replacement-cost';
 import { FORMULA_REGISTRY as construction_wire_size } from './construction/wire-size';
 
 // Conversion
@@ -269,8 +298,12 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...business_salary_to_hourly,
   ...business_working_capital,
   // Construction
+  ...construction_accessibility_remodel_cost,
+  ...construction_artificial_turf_cost,
   ...construction_asphalt,
   ...construction_backsplash_tile_cost,
+  ...construction_backup_generator_cost,
+  ...construction_basement_waterproofing_cost,
   ...construction_bathroom_remodel,
   ...construction_bathroom_tile_cost,
   ...construction_board_foot,
@@ -281,36 +314,61 @@ const formulaRegistry: Record<string, FormulaFunction> = {
   ...construction_concrete_patio_cost,
   ...construction_concrete_slab,
   ...construction_concrete_volume,
+  ...construction_crawl_space_encapsulation_cost,
+  ...construction_crown_molding_cost,
   ...construction_cubic_yard,
   ...construction_deck_replacement_cost,
   ...construction_deck,
+  ...construction_door_replacement_cost,
   ...construction_driveway_cost,
   ...construction_drywall,
+  ...construction_ductwork_cost,
+  ...construction_electrical_panel_upgrade_cost,
+  ...construction_electrical_service_upgrade_cost,
+  ...construction_ev_charger_installation_cost,
   ...construction_fence,
   ...construction_flooring_installation_cost,
   ...construction_flooring,
+  ...construction_foundation_repair_cost,
+  ...construction_garage_door_cost,
   ...construction_gutter_replacement_cost,
+  ...construction_heat_pump_cost,
+  ...construction_home_energy_audit_cost,
+  ...construction_hvac_replacement_cost,
   ...construction_hvac_size,
+  ...construction_insulation_cost,
   ...construction_insulation,
   ...construction_kitchen_remodel,
   ...construction_metal_roofing,
+  ...construction_mini_split_cost,
   ...construction_paint_coverage,
+  ...construction_painting_cost,
   ...construction_paver,
+  ...construction_pergola_cost,
   ...construction_pool_volume,
+  ...construction_radon_mitigation_cost,
   ...construction_rafter_length,
   ...construction_regrouting_cost,
   ...construction_renovation_cost,
   ...construction_retaining_wall,
   ...construction_roof_pitch,
+  ...construction_roof_replacement_cost,
   ...construction_roofing,
   ...construction_siding_replacement_cost,
   ...construction_siding,
+  ...construction_solar_battery_cost,
+  ...construction_sprinkler_system_cost,
   ...construction_square_footage,
   ...construction_stair,
+  ...construction_sump_pump_cost,
   ...construction_tile,
   ...construction_topsoil,
+  ...construction_tree_removal_cost,
   ...construction_volume_material,
   ...construction_wallpaper,
+  ...construction_water_heater_cost,
+  ...construction_whole_house_repipe_cost,
+  ...construction_window_replacement_cost,
   ...construction_wire_size,
   // Conversion
   ...conversion_angle_convert,

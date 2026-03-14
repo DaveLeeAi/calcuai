@@ -1,0 +1,219 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Replacing a central AC and furnace system for a 2,000-square-foot home costs $7,500–$15,000 installed nationally, including equipment, labor, and standard permits. A heat pump system for the same home runs $5,600–$11,200, while a ductless mini-split costs $4,200–$7,000. Upgrading to a 20+ SEER high-efficiency unit adds 35% to equipment cost but saves $300–$500 per year on energy bills. New ductwork adds $5,000–$12,000, and regional labor rates swing the total 15–25% above or below the national average. Enter your system type, home size, efficiency level, and region below for a personalized HVAC replacement estimate with a side-by-side system comparison.
+
+</div>
+
+<div className="at-a-glance">
+
+| Metric | Value |
+|---|---|
+| Central AC + Furnace | $5,000–$10,000 equipment |
+| Heat Pump System | $4,000–$8,000 equipment |
+| New Ductwork | $5,000–$12,000 |
+| Standard Efficiency | 14 SEER (federal minimum) |
+| Typical Lifespan | 15–20 years |
+| Installation Labor | 40% of equipment cost |
+| Regional Labor Variation | +/- 15–25% |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator produces a low/mid/high cost range for replacing your HVAC system based on five key variables: system type, home size, efficiency rating, ductwork condition, and geographic region. It breaks total cost into equipment, labor, ductwork, and thermostat components, and includes a comparison table showing what every system type would cost for your specific home.
+
+The **equipment cost** is the largest line item, covering the air conditioner, furnace, heat pump, or mini-split unit itself. Base costs range from $2,500 for a standalone furnace to $10,000 for a full AC-plus-furnace bundle, then scale with your home size (larger homes need higher-capacity units) and efficiency rating (higher SEER units cost more). Equipment typically represents 60% of the total project cost.
+
+The **labor cost** covers professional installation — removing the old system, setting the new equipment, connecting refrigerant lines, electrical work, commissioning, and testing. Labor runs approximately 40% of the equipment cost and is the component most affected by regional pricing. The South is 15% below the national average, while the West Coast is 25% above.
+
+The **ductwork cost** is an additive component. If your existing ductwork is in good condition, this is $0. Minor sealing and repairs run $500–$1,500. Major repair or partial replacement costs $2,000–$5,000. A complete new duct system for a home without ductwork — or with severely damaged ducts — costs $5,000–$12,000.
+
+The **thermostat cost** covers an optional upgrade. A basic programmable thermostat adds $150–$300, while a smart WiFi thermostat (Nest, Ecobee) adds $200–$400 installed. Smart thermostats can reduce heating and cooling costs by 8–15% annually according to ENERGY STAR.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your system type** — choose the HVAC system you are replacing. "Central AC Only" is a standalone air conditioner paired with an existing furnace. "Furnace Only" replaces the heating unit. "AC + Furnace Bundle" replaces both simultaneously (typically 10–15% cheaper than replacing them separately). "Heat Pump" provides both heating and cooling in one unit. "Ductless Mini-Split" works without ductwork and is ideal for room additions or homes without existing ducts.
+
+2. **Select your home size** — this determines the system capacity (tonnage) required. A 1,500 sq ft home typically needs a 2-ton system, while a 3,500+ sq ft home needs 5 tons. Larger systems cost proportionally more. If you have already had a Manual J load calculation performed, use the recommended tonnage as your guide.
+
+3. **Select your efficiency level** — SEER (Seasonal Energy Efficiency Ratio) measures cooling efficiency. The federal minimum is 14 SEER in northern states and 15 SEER in southern states as of 2023. A 16 SEER unit costs about 15% more than standard but saves $100–$250 per year. A 20+ SEER premium unit costs 35% more but saves $300–$500 per year — the payback period is typically 5–8 years.
+
+4. **Select your ductwork condition** — if your ducts are less than 15 years old, well-sealed, and properly insulated, choose "Existing — Good." If you notice uneven temperatures, high energy bills, or visible duct damage, choose "Minor Repair." If ducts are severely damaged, disconnected, or you are converting from a ductless system, choose "New Ductwork."
+
+5. **Select a thermostat upgrade** — adding a smart thermostat during HVAC installation is cheaper than a standalone install because the HVAC technician is already on-site.
+
+6. **Select your region** — this adjusts labor costs for regional pricing differences. The South and Midwest have below-average HVAC labor rates. The Northeast and West Coast have above-average rates.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+HVAC replacement cost is estimated using system base cost scaled by home size and efficiency, plus labor as a percentage of equipment cost with a regional multiplier, plus additive ductwork and thermostat costs.
+
+**Equipment cost:**
+
+$$E_{low} = B_{low} \times M_h \times M_e$$
+
+$$E_{high} = B_{high} \times M_h \times M_e$$
+
+**Labor cost:**
+
+$$L_{low} = E_{low} \times 0.40 \times M_r$$
+
+$$L_{high} = E_{high} \times 0.40 \times M_r$$
+
+**Total cost:**
+
+$$C_{low} = E_{low} + L_{low} + D_{low} + T_{low}$$
+
+$$C_{high} = E_{high} + L_{high} + D_{high} + T_{high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **B** = system base cost (low/high range by system type)
+- **M_h** = home size multiplier (1.0–1.80)
+- **M_e** = efficiency multiplier (1.0–1.35)
+- **M_r** = regional labor multiplier (0.85–1.25)
+- **D** = ductwork cost ($0–$12,000 range)
+- **T** = thermostat cost ($0–$400 range)
+
+**System base costs (2025-2026):**
+
+| System Type | Base Cost (Low) | Base Cost (High) |
+|---|---|---|
+| Central AC Only | $3,000 | $6,000 |
+| Furnace Only | $2,500 | $5,000 |
+| AC + Furnace Bundle | $5,000 | $10,000 |
+| Heat Pump | $4,000 | $8,000 |
+| Ductless Mini-Split | $3,000 | $5,000 |
+
+**Home size multipliers:**
+
+| Home Size | Multiplier | Typical Tonnage |
+|---|---|---|
+| Under 1,500 sq ft | 1.00x | 2.0 tons |
+| 1,500–2,500 sq ft | 1.25x | 3.0 tons |
+| 2,500–3,500 sq ft | 1.50x | 4.0 tons |
+| Over 3,500 sq ft | 1.80x | 5.0 tons |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages, **ENERGY STAR** HVAC efficiency guidelines, and **ACCA Manual J** load calculation standards.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: Central AC + Furnace Bundle, Medium Home, 16 SEER, Minor Duct Repair, South Region
+
+A homeowner in Atlanta is replacing a 15-year-old central AC and furnace in a 2,100-square-foot home. They want high-efficiency 16 SEER equipment, need minor ductwork repairs, and are adding a smart thermostat.
+
+**Step-by-step:**
+
+1. Look up AC + Furnace base cost: $5,000–$10,000
+2. Apply medium home multiplier (1.25x): $6,250 low, $12,500 high
+3. Apply 16 SEER efficiency multiplier (1.15x): $7,187.50 low, $14,375 high
+4. Calculate labor (40% of equipment × 0.85 South multiplier): $2,443.75 low, $4,887.50 high
+5. Add minor ductwork repair: $500 low, $1,500 high
+6. Add smart WiFi thermostat: $200 low, $400 high
+7. Total low: $7,187.50 + $2,443.75 + $500 + $200 = **$10,331.25**
+8. Total high: $14,375 + $4,887.50 + $1,500 + $400 = **$21,162.50**
+9. Total mid: ($10,331.25 + $21,162.50) / 2 = **$15,746.88**
+10. Cost per ton: $15,746.88 / 3.0 = **$5,248.96/ton**
+
+**Interpretation:** At roughly $15,750, this is a mid-range HVAC replacement. The 16 SEER upgrade adds about $1,700 over a 14 SEER system but will save $100–$250 per year on cooling costs — a 7–10 year payback. The Atlanta location saves roughly $1,100 compared to the same project in New York (northeast region). If the homeowner chose standard 14 SEER and skipped the thermostat, the midpoint would drop to about $12,500.
+
+{/* Section 10: HVAC System Comparison */}
+## HVAC System Comparison
+
+| System Type | Small Home | Medium Home | Large Home | Best For | Lifespan |
+|---|---|---|---|---|---|
+| Central AC Only | $4,200–$8,400 | $5,250–$10,500 | $6,300–$12,600 | Homes with existing furnace | 15–20 years |
+| Furnace Only | $3,500–$7,000 | $4,375–$8,750 | $5,250–$10,500 | Heating-only replacement | 15–25 years |
+| AC + Furnace Bundle | $7,000–$14,000 | $8,750–$17,500 | $10,500–$21,000 | Full system replacement (best value) | 15–20 years |
+| Heat Pump | $5,600–$11,200 | $7,000–$14,000 | $8,400–$16,800 | Moderate climates, dual heating/cooling | 15–20 years |
+| Ductless Mini-Split | $4,200–$7,000 | $5,250–$8,750 | $6,300–$10,500 | No existing ductwork, additions | 20–30 years |
+
+All costs include equipment and labor at national average rates with standard 14 SEER efficiency. Ductwork and thermostat upgrades are additional. Regional variation of 15–25% on labor is expected.
+
+{/* Section 11: Factors That Affect HVAC Replacement Cost */}
+## Factors That Affect HVAC Replacement Cost
+
+**System type** creates the biggest cost difference. Replacing both AC and furnace together costs $8,750–$17,500 for a medium home, but bundling saves 10–15% compared to replacing each unit separately in different years. A heat pump that provides both heating and cooling in one unit costs $7,000–$14,000 and is increasingly popular in moderate climates where winter temperatures rarely drop below 25 degrees Fahrenheit.
+
+**Home size** directly determines the system capacity required. ACCA Manual J calculations match tonnage to square footage, insulation quality, window area, and climate zone. Under-sizing causes the system to run continuously without reaching the set temperature. Over-sizing causes short-cycling, which wastes energy and reduces equipment lifespan. A professional load calculation costs $150–$300 and is the most important step in HVAC sizing.
+
+**Efficiency rating (SEER)** creates a classic upfront-vs-operating-cost trade-off. A 14 SEER system for a medium home costs roughly $7,875. A 20 SEER system for the same home costs $10,631 — a $2,756 premium. At $300–$500 per year in energy savings, the premium model pays for itself in 6–9 years while lasting the same 15–20 years as the standard unit.
+
+**Ductwork condition** is the hidden cost multiplier. The Department of Energy estimates that leaky ducts waste 20–30% of conditioned air. Sealing and insulating existing ductwork ($500–$1,500) is one of the highest-ROI improvements in HVAC. If ductwork is severely damaged or nonexistent, the $5,000–$12,000 cost of new ducts can nearly double the project total.
+
+**Regional labor rates** shift labor costs 15–25% from the national average. A project with $3,000 in labor at national rates would cost $2,550 in the South (0.85x) or $3,750 on the West Coast (1.25x). Equipment costs are the same everywhere — only labor varies by region.
+
+**Time of year** affects pricing. HVAC contractors are busiest in extreme heat (June–August) and extreme cold (December–February). Scheduling replacement in spring (March–May) or fall (September–November) often yields 5–10% lower labor rates and better equipment availability.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **fully installed prices** including equipment, labor, permits, and standard materials. Specialty items (zoning systems, UV air purifiers, humidifiers) are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor and Angi. Your local market may be 15–25% higher or lower depending on regional labor rates and contractor availability.
+- The calculator assumes a **standard replacement** where the new system is the same type as the old system (e.g., replacing a central AC with a central AC). Converting from one system type to another (e.g., forced air to radiant heat) involves additional costs not captured here.
+- **Home size multipliers** are approximations based on ACCA Manual J guidelines. Actual tonnage requirements depend on insulation quality, window area, ceiling height, climate zone, and sun exposure. A professional Manual J load calculation is recommended.
+- **Labor at 40% of equipment cost** is a national average ratio. Actual labor percentages range from 30% for simple replacements to 60% for complex installations with difficult access.
+- This calculator does not account for **utility rebates** (often $200–$1,500 for high-efficiency systems), **federal tax credits** (up to $2,000 for heat pumps under the Inflation Reduction Act), or **manufacturer rebates**.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to replace an HVAC system?
+
+A full HVAC system replacement (AC and furnace) costs $5,000–$17,500 for most U.S. homes, with a national average of $8,750–$12,500 for a medium-sized home (1,500–2,500 sq ft) with standard 14 SEER efficiency. Central AC alone costs $3,000–$10,500, a furnace alone costs $2,500–$8,750, and a heat pump costs $4,000–$14,000. The final price depends on system type, home size, efficiency rating, ductwork condition, and regional labor rates. Adding new ductwork can increase the total by $5,000–$12,000.
+
+### How long does an HVAC system last?
+
+A well-maintained HVAC system lasts 15–20 years on average. Furnaces typically last 15–25 years, central AC units last 15–20 years, heat pumps last 15–20 years, and ductless mini-splits last 20–30 years. Annual maintenance ($150–$300 per year) extends system life by 3–5 years. Signs your system needs replacement include frequent repairs costing more than 50% of a new system, energy bills increasing by 20% or more, uneven temperatures throughout the house, and the system using R-22 refrigerant (phased out in 2020).
+
+### Is a heat pump cheaper than AC and furnace?
+
+A heat pump is cheaper upfront than an AC-plus-furnace bundle — $4,000–$14,000 for a heat pump versus $5,000–$17,500 for a bundled AC and furnace. Heat pumps also qualify for up to $2,000 in federal tax credits under the Inflation Reduction Act. However, heat pumps are most cost-effective in moderate climates (USDA zones 7–10). In regions with harsh winters below 25 degrees Fahrenheit, heat pumps may need a backup heating source, which reduces their cost advantage. In the Southeast, Southwest, and Pacific Northwest, heat pumps are typically the best value.
+
+### What SEER rating should I buy?
+
+For most homeowners, a 16 SEER system offers the best balance of upfront cost and energy savings. The federal minimum is 14 SEER in northern states and 15 SEER in southern states (as of 2023). A 16 SEER unit costs about 15% more than standard but saves $100–$250 per year on energy bills, with a 5–8 year payback. Premium 20+ SEER units cost 35% more and save $300–$500 per year — worthwhile in hot climates (Texas, Arizona, Florida) where cooling costs dominate, but overkill in mild climates. The ENERGY STAR "Most Efficient" designation starts at 16 SEER.
+
+### Should I replace AC and furnace at the same time?
+
+Replacing both the AC and furnace simultaneously is recommended if both units are over 10 years old. Bundling saves 10–15% compared to two separate replacements because the contractor mobilizes once, and matched systems run more efficiently together. A mismatched pair (new AC with old furnace) can reduce efficiency by 10–15% and may void the new equipment warranty. The main reason to replace only one is if the other unit is less than 5 years old and working well.
+
+### How much can I save with utility rebates and tax credits?
+
+Federal tax credits under the Inflation Reduction Act provide up to $2,000 for heat pump installations and up to $600 for high-efficiency central AC or furnaces (meeting CEE Tier requirements). Many state and local utilities offer additional rebates of $200–$1,500 for ENERGY STAR-rated equipment. Combined, rebates and credits can offset $500–$3,500 of the upfront cost. Check DSIRE (dsireusa.org) and your local utility website for current programs. These incentives are not included in the calculator estimates above.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates HVAC replacement costs using system-specific base equipment pricing scaled by home size and efficiency rating, with labor calculated as 40% of equipment cost adjusted by a regional multiplier. Equipment base costs come from **HomeAdvisor** and **Angi** 2025–2026 national HVAC replacement cost surveys covering over 150,000 homeowner-reported projects. Home size multipliers are derived from **ACCA Manual J** residential load calculation guidelines, which correlate square footage to required system tonnage. Efficiency cost premiums reflect real market pricing differentials between 14, 16, and 20+ SEER equipment from major manufacturers (Carrier, Trane, Lennox, Rheem, Goodman). Regional labor multipliers are derived from **Bureau of Labor Statistics** Occupational Employment and Wage Statistics for HVAC mechanics and installers (SOC 49-9021). Ductwork costs are based on HomeAdvisor duct installation and repair cost data. Energy savings estimates reference **ENERGY STAR** HVAC efficiency guidelines and Department of Energy heating and cooling cost data. All prices are fully installed costs including standard permits and materials. Regional variation of 15–25% on labor is expected.
+
+{/* Section 16: Disclaimer — auto-rendered */}

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "remodeling",
   "primaryKeyword": "backsplash tile cost calculator",
+  "secondaryKeywords": [
+    "kitchen backsplash cost estimator",
+    "tile backsplash installation cost",
+    "backsplash cost per square foot",
+    "subway tile backsplash cost"
+  ],
   "metaTitle": "Backsplash Tile Cost Calculator | Compare Materials & Get Estimates",
   "metaDescription": "Estimate kitchen backsplash tile costs for ceramic, glass mosaic, natural stone, porcelain, and peel-and-stick. Compare materials and labor by region.",
   "inputs": [
@@ -120,13 +126,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -227,7 +254,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material and labor cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for tile and stone setters. Supplies costs based on Tile Council of North America material quantity guidelines.",
   "formulaAuditDate": "2026-03-14",

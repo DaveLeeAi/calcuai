@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "rafter length calculator",
+  "secondaryKeywords": [
+    "rafter span calculator",
+    "roof rafter size calculator",
+    "rafter cut calculator",
+    "common rafter length calculator"
+  ],
   "metaTitle": "Rafter Length Calculator | Common Rafter Size & Cut Angles",
   "metaDescription": "Calculate rafter length from building span and roof pitch. Get plumb cut angle, seat cut angle, and recommended lumber size. Free calculator.",
   "inputs": [

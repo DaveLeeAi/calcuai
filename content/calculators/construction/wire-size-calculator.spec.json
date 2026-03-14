@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "wire size calculator",
+  "secondaryKeywords": [
+    "electrical wire gauge calculator",
+    "AWG wire size calculator",
+    "wire ampacity calculator",
+    "voltage drop calculator"
+  ],
   "metaTitle": "Wire Size Calculator | AWG Wire Gauge for Any Circuit",
   "metaDescription": "Calculate the correct wire gauge (AWG) for your electrical circuit. Enter amps, voltage, and distance. Accounts for voltage drop, copper and aluminum. Free calculator.",
   "inputs": [

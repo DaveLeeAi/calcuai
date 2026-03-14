@@ -5,6 +5,13 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "concrete calculator",
+  "secondaryKeywords": [
+    "how much concrete do I need",
+    "concrete yard calculator",
+    "concrete volume calculator",
+    "concrete bag calculator",
+    "concrete mix calculator"
+  ],
   "metaTitle": "Concrete Calculator — Yards, Bags & Cost Estimate",
   "metaDescription": "Calculate how much concrete you need in cubic yards and bags for slabs, footings, columns, and steps. Accurate volume, bag counts, and cost estimates.",
   "inputs": [

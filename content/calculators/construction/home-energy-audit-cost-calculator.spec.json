@@ -1,0 +1,210 @@
+{
+  "id": "home-energy-audit-cost-calculator",
+  "title": "Home Energy Audit Cost Calculator",
+  "slug": "home-energy-audit-cost-calculator",
+  "category": "construction",
+  "subcategory": "electrical",
+  "primaryKeyword": "home energy audit cost calculator",
+  "secondaryKeywords": [
+    "home energy audit cost",
+    "energy audit price",
+    "blower door test cost",
+    "residential energy audit cost",
+    "home energy assessment cost"
+  ],
+  "metaTitle": "Home Energy Audit Cost Calculator | Blower Door, Thermal & Full Audit Estimates",
+  "metaDescription": "Estimate home energy audit costs by house size, audit level, and add-ons like thermal imaging and duct testing. See how much a blower door test costs in your region.",
+  "inputs": [
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-2500-3500",
+      "options": [
+        { "value": "small-under-1500", "label": "Small — Under 1,500 sq ft ($150–$300 base)" },
+        { "value": "medium-1500-2500", "label": "Medium — 1,500–2,500 sq ft ($200–$400 base)" },
+        { "value": "standard-2500-3500", "label": "Standard — 2,500–3,500 sq ft ($300–$500 base)" },
+        { "value": "large-3500-5000", "label": "Large — 3,500–5,000 sq ft ($400–$700 base)" },
+        { "value": "xlarge-over-5000", "label": "Extra Large — Over 5,000 sq ft ($500–$1,000 base)" }
+      ],
+      "helpText": "Larger homes take more time to audit, increasing base cost. Base reflects a visual walkthrough audit."
+    },
+    {
+      "id": "auditLevel",
+      "label": "Audit Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-diagnostic",
+      "options": [
+        { "value": "visual-walkthrough", "label": "Visual Walkthrough (1.0x) — Basic inspection only" },
+        { "value": "standard-diagnostic", "label": "Standard Diagnostic (1.5x) — Blower door + inspection report" },
+        { "value": "comprehensive-with-blower", "label": "Comprehensive with Blower Door (2.0x) — Full diagnostic suite" },
+        { "value": "full-performance-testing", "label": "Full Performance Testing (2.75x) — BPI/RESNET certified audit" }
+      ],
+      "helpText": "A standard diagnostic audit with blower door test is the most common professional audit. Full performance testing meets BPI and RESNET certification standards required for energy efficiency rebates."
+    },
+    {
+      "id": "thermalImaging",
+      "label": "Thermal Imaging",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "No Thermal Imaging" },
+        { "value": "basic-scan", "label": "Basic Thermal Scan (+$100–$200)" },
+        { "value": "detailed-report", "label": "Detailed Thermal Report (+$200–$400)" }
+      ],
+      "helpText": "Infrared cameras identify insulation gaps, air leaks, and moisture intrusion invisible to the naked eye. A detailed report includes annotated images and recommendations."
+    },
+    {
+      "id": "ductTesting",
+      "label": "Duct Leakage Testing",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "No Duct Testing" },
+        { "value": "pressure-test", "label": "Duct Pressure Test (+$100–$250)" },
+        { "value": "full-duct-leakage", "label": "Full Duct Leakage Test (+$200–$450)" }
+      ],
+      "helpText": "Duct leakage testing measures how much conditioned air escapes through HVAC ducts before reaching living spaces. Leaky ducts can waste 20–30% of heating and cooling energy."
+    },
+    {
+      "id": "combustionSafety",
+      "label": "Combustion Safety Testing",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "No Combustion Safety Testing" },
+        { "value": "basic", "label": "Basic Combustion Test (+$50–$100)" },
+        { "value": "comprehensive", "label": "Comprehensive Combustion Test (+$100–$250)" }
+      ],
+      "helpText": "Required for homes with gas appliances, oil furnaces, or wood-burning fireplaces. Tests for carbon monoxide spillage, backdrafting, and appliance efficiency."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Energy audits are 100% labor/service — regional multipliers apply to the full cost."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "baseCost",
+      "label": "Base Audit Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "thermalCost",
+      "label": "Thermal Imaging (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "ductTestCost",
+      "label": "Duct Testing (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "combustionCost",
+      "label": "Combustion Testing (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "potentialSavings",
+      "label": "Potential Energy Savings",
+      "type": "single-value",
+      "format": "string"
+    },
+    {
+      "id": "auditLevelComparison",
+      "label": "Cost by Audit Level",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Audit Duration",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "home-energy-audit-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "insulation-cost-calculator",
+    "hvac-replacement-cost-calculator",
+    "heat-pump-cost-calculator",
+    "electrical-panel-upgrade-cost-calculator",
+    "solar-battery-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; DOE Building Technologies Office; RESNET; BPI certified auditor rates",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base audit cost ranges from HomeAdvisor and Angi 2025-2026 national average surveys for professional home energy audits. Audit level multipliers derived from RESNET HERS rater fee data and BPI certified energy auditor rates. Add-on costs for thermal imaging, duct testing, and combustion safety testing from DOE Building Technologies Office contractor survey data. Regional multipliers applied to full cost (energy audits are 100% labor/service) from BLS Occupational Employment and Wage Statistics.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "year-round"
+}

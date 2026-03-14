@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "paint calculator",
+  "secondaryKeywords": [
+    "how much paint do I need",
+    "paint coverage calculator",
+    "room paint calculator",
+    "gallons of paint needed"
+  ],
   "metaTitle": "Paint Calculator — Gallons Needed by Room Size & Finish",
   "metaDescription": "Calculate how many gallons of paint you need for walls and ceilings. Deducts doors and windows, adjusts for paint finish, coats, and provides cost estimates.",
   "inputs": [

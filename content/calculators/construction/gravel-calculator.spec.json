@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "landscaping",
   "primaryKeyword": "gravel calculator",
+  "secondaryKeywords": [
+    "how much gravel do I need",
+    "gravel tonnage calculator",
+    "crushed stone calculator",
+    "gravel driveway calculator"
+  ],
   "metaTitle": "Gravel Calculator — Cubic Yards, Tons & Cost Estimate",
   "metaDescription": "Calculate how much gravel you need in cubic yards and tons. Supports pea gravel, crushed stone, river rock, and decomposed granite with cost estimates.",
   "inputs": [

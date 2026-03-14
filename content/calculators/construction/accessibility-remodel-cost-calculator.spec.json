@@ -1,0 +1,215 @@
+{
+  "id": "accessibility-remodel-cost-calculator",
+  "title": "Accessibility Remodel Cost Calculator",
+  "slug": "accessibility-remodel-cost-calculator",
+  "category": "construction",
+  "subcategory": "remodeling",
+  "primaryKeyword": "accessibility remodel cost calculator",
+  "secondaryKeywords": [
+    "ADA remodel cost",
+    "aging in place remodel cost",
+    "wheelchair accessible home cost",
+    "handicap bathroom remodel cost",
+    "accessibility modification cost"
+  ],
+  "metaTitle": "Accessibility Remodel Cost Calculator | ADA & Aging-in-Place Estimates",
+  "metaDescription": "Estimate accessibility remodel costs for grab bars, ADA bathrooms, kitchen modifications, entrance ramps, and whole-home conversions. Compare costs by mobility level, add-ons, and region.",
+  "inputs": [
+    {
+      "id": "projectScope",
+      "label": "Project Scope",
+      "type": "select",
+      "required": true,
+      "defaultValue": "bathroom-ada",
+      "options": [
+        { "value": "basic-grab-bars", "label": "Basic Grab Bars ($500–$1,500)" },
+        { "value": "bathroom-ada", "label": "Bathroom ADA Remodel ($5,000–$15,000)" },
+        { "value": "kitchen-ada", "label": "Kitchen ADA Remodel ($8,000–$20,000)" },
+        { "value": "entrance-ramp", "label": "Entrance Ramp ($2,000–$8,000)" },
+        { "value": "whole-home", "label": "Whole-Home Accessibility ($20,000–$100,000)" }
+      ],
+      "helpText": "Select the primary scope of your accessibility modification project."
+    },
+    {
+      "id": "mobilityLevel",
+      "label": "Mobility Level / Need",
+      "type": "select",
+      "required": true,
+      "defaultValue": "ambulatory-assist",
+      "options": [
+        { "value": "ambulatory-assist", "label": "Ambulatory with Assistance (1.0x)" },
+        { "value": "wheelchair-partial", "label": "Partial Wheelchair Use (1.25x)" },
+        { "value": "wheelchair-full", "label": "Full Wheelchair / ADA Compliant (1.50x)" }
+      ],
+      "helpText": "Full wheelchair use requires wider doorways, turning radius, and ADA-compliant fixtures — adding 25–50% to base project cost."
+    },
+    {
+      "id": "bathroomMods",
+      "label": "Bathroom Modifications",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "No Bathroom Modifications" },
+        { "value": "grab-bars-only", "label": "Grab Bars Only (+$200–$600)" },
+        { "value": "roll-in-shower", "label": "Roll-In Shower (+$3,000–$8,000)" },
+        { "value": "full-ada-bathroom", "label": "Full ADA Bathroom (+$8,000–$20,000)" }
+      ],
+      "helpText": "Add-on bathroom modifications beyond the primary project scope selected above."
+    },
+    {
+      "id": "doorwayWidening",
+      "label": "Doorway Widening",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "No Doorway Widening" },
+        { "value": "1-2-doorways", "label": "1–2 Doorways (+$500–$1,500)" },
+        { "value": "3-5-doorways", "label": "3–5 Doorways (+$1,500–$4,000)" },
+        { "value": "6-plus-doorways", "label": "6+ Doorways (+$3,000–$8,000)" }
+      ],
+      "helpText": "ADA-compliant doorways require a minimum 32–36 inch clear width. Widening requires structural modifications to door frames."
+    },
+    {
+      "id": "flooringChanges",
+      "label": "Flooring Changes",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "No Flooring Changes" },
+        { "value": "threshold-removal", "label": "Threshold Removal (+$300–$800)" },
+        { "value": "full-non-slip", "label": "Full Non-Slip Flooring (+$2,000–$6,000)" }
+      ],
+      "helpText": "Threshold removal eliminates trip hazards between rooms. Full non-slip flooring replaces existing flooring throughout the modified area."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs (45% of project cost) for regional pricing differences."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "baseCost",
+      "label": "Base Project Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "bathroomCost",
+      "label": "Bathroom Add-On (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "doorwayCost",
+      "label": "Doorway Widening (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "flooringCost",
+      "label": "Flooring Changes (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "scopeComparison",
+      "label": "Cost by Project Scope",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Project Duration",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "accessibility-remodel-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "bathroom-remodel-calculator",
+    "renovation-cost-calculator",
+    "door-replacement-cost-calculator",
+    "insulation-cost-calculator",
+    "flooring-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; NAHB Aging-in-Place Specialist data 2025",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base project cost ranges from HomeAdvisor and Angi 2025-2026 national average surveys for ADA and aging-in-place remodeling. Mobility level multipliers from NAHB Aging-in-Place Specialist (CAPS) program cost data 2025. Add-on costs for bathroom modifications, doorway widening, and flooring changes from HomeAdvisor cost surveys. Labor portion set at 45% of base project cost per NAHB renovation labor data. Regional labor multipliers derived from BLS Occupational Employment and Wage Statistics for construction and remodeling trades.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "bathroom-remodel-calculator",
+    "renovation-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "year-round"
+}

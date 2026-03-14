@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "deck replacement cost calculator",
+  "secondaryKeywords": [
+    "deck replacement cost per square foot",
+    "new deck cost estimator",
+    "composite deck cost calculator",
+    "deck rebuild cost"
+  ],
   "metaTitle": "Deck Replacement Cost Calculator | Compare Materials & Estimates",
   "metaDescription": "Estimate deck replacement costs for pressure-treated, cedar, composite, PVC, and hardwood decking. Includes demolition, substructure, railing, and regional labor.",
   "inputs": [
@@ -161,13 +167,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -288,7 +315,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Cost-per-square-foot data split into material (~45%) and labor (~55%) from HomeAdvisor and Angi 2025-2026 national averages. Demolition flat rate of $5/sq ft from NADRA industry surveys. Railing, stair, and substructure rates from HomeAdvisor contractor cost guides. Regional labor multipliers from BLS Occupational Employment and Wage Statistics.",
   "formulaAuditDate": "2026-03-14",

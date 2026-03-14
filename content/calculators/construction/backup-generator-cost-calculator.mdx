@@ -1,0 +1,179 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A 20–24 kW whole-home standby generator costs $8,400–$17,200 fully installed with an automatic transfer switch, concrete pad, and permit at national average rates, with a midpoint of $12,800. A smaller 7–10 kW unit covering essential circuits runs $4,700–$8,800, while a large 30–48 kW system for luxury homes ranges from $14,500–$25,200. Natural gas is the baseline fuel type, propane adds 5% to equipment cost, and diesel adds 15%. Regional labor rates shift the installation portion by 15–25%. Enter your generator size, fuel type, and add-ons below for a personalized estimate with a side-by-side comparison of all four size tiers.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides fully installed cost ranges for four standby generator size tiers — 7–10 kW, 12–16 kW, 20–24 kW, and 30–48 kW — based on your fuel type, transfer switch selection, pad requirements, permit needs, and region. It produces a low/mid/high total estimate, a breakdown by cost component, and a comparison table showing what each generator size would cost with standard options.
+
+The **generator cost** covers the standby generator unit itself, adjusted by fuel type. Natural gas units are the baseline. Propane-ready generators cost 5% more due to fuel system components. Diesel generators cost 15% more for heavy-duty engine components and fuel storage. Equipment prices reflect 2025–2026 manufacturer suggested retail pricing from Generac, Kohler, and Cummins.
+
+The **labor cost** covers professional installation at 30% of the generator equipment cost, adjusted by regional multiplier. Installation includes electrical connections, fuel line hookup, mounting, and system testing. A licensed electrician is required for all generator installations. Labor varies by region — the South is 15% below the national average, while the West Coast is 25% above.
+
+The **transfer switch cost** is a separate adder covering the device that switches your home between utility and generator power. Manual switches ($300–$600) require you to flip a switch during an outage. Automatic load-shedding switches ($800–$1,500) prioritize circuits. Automatic whole-home switches ($1,500–$3,000) transfer all circuits seamlessly within seconds.
+
+The **pad and permit costs** cover the concrete mounting pad ($300–$800 for a new pad) and local building permit ($100–$400). Generators must sit on a level, stable surface per manufacturer requirements and local codes.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the generator size** — a 7–10 kW unit powers essential circuits (refrigerator, sump pump, a few lights). A 12–16 kW unit covers most circuits except large HVAC. A 20–24 kW unit is true whole-home backup for average-sized homes. A 30–48 kW unit handles large or luxury homes with multiple HVAC systems, pools, or EV chargers.
+
+2. **Choose the fuel type** — natural gas is the most common and connects to your existing gas line with no fuel storage needed. Propane requires a dedicated storage tank (200–1,000 gallons) but works in areas without natural gas service. Diesel offers the highest energy density and longest runtime but requires fuel storage and periodic fuel replacement.
+
+3. **Select the transfer switch type** — manual switches are cheapest but require you to be home during an outage. Automatic load-shedding switches prioritize critical circuits and are the standard recommendation. Automatic whole-home switches transfer all circuits and are recommended for 20 kW+ generators.
+
+4. **Choose concrete pad option** — select "Existing" if you already have a suitable concrete pad or flat mounting surface. Select "New Concrete Pad" if one needs to be poured. Most new installations require a new pad.
+
+5. **Select permit requirement** — most municipalities require a building permit for standby generator installation. Check with your local building department. Permit fees typically run $100–$400.
+
+6. **Select your region** — this adjusts labor costs only. Equipment costs are consistent nationally.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Backup generator cost is estimated by applying a fuel-type multiplier to the base generator equipment cost, adding installation labor at 30% of equipment cost with a regional adjustment, then adding transfer switch, pad, and permit costs.
+
+**Generator equipment cost:**
+
+$$C_{gen} = C_{base} \times M_{fuel}$$
+
+**Installation labor:**
+
+$$C_{labor} = C_{gen} \times 0.30 \times M_r$$
+
+**Total installed cost:**
+
+$$C_{total} = C_{gen} + C_{labor} + C_{switch} + C_{pad} + C_{permit}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **C_base** = generator base equipment cost (low/high range by size tier)
+- **M_fuel** = fuel type multiplier (1.0 natural gas, 1.05 propane, 1.15 diesel)
+- **M_r** = regional labor multiplier (0.85–1.25)
+- **C_switch** = transfer switch cost ($300–$3,000 by type)
+- **C_pad** = concrete pad cost ($0–$800)
+- **C_permit** = permit fee ($0–$400)
+
+**Generator equipment cost by size (2025-2026):**
+
+| Generator Size | Equipment Low | Equipment High | Typical Use |
+|---|---|---|---|
+| 7–10 kW | $2,500 | $4,000 | Essential circuits only |
+| 12–16 kW | $3,500 | $6,000 | Most circuits (no large HVAC) |
+| 20–24 kW | $5,000 | $10,000 | Whole home, standard |
+| 30–48 kW | $10,000 | $18,000 | Large/luxury home |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages, **Generac / Kohler / Cummins** MSRP data, and **Bureau of Labor Statistics** (SOC 49-9051) for electrician wages.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 20–24 kW Natural Gas Generator, Whole-Home Transfer Switch, National Average
+
+A homeowner wants a whole-home standby generator — 20–24 kW, natural gas, automatic whole-home transfer switch, new concrete pad, with permit, at national average labor rates.
+
+**Step-by-step:**
+
+1. Look up 20–24 kW base equipment cost: $5,000–$10,000
+2. Apply natural gas fuel multiplier (1.0x): $5,000–$10,000 (unchanged)
+3. Calculate labor (30% of equipment × 1.0 regional): low = $5,000 × 0.30 = **$1,500** | high = $10,000 × 0.30 = **$3,000**
+4. Transfer switch (automatic whole-home): **$1,500–$3,000**
+5. New concrete pad: **$300–$800**
+6. Permit fee: **$100–$400**
+7. Total low: $5,000 + $1,500 + $1,500 + $300 + $100 = **$8,400**
+8. Total high: $10,000 + $3,000 + $3,000 + $800 + $400 = **$17,200**
+9. Total mid: ($8,400 + $17,200) / 2 = **$12,800**
+
+**Interpretation:** At $12,800 midpoint, a 20–24 kW whole-home standby generator is the most popular residential option, covering all circuits including central HVAC, kitchen appliances, and lighting. A smaller 12–16 kW unit would save roughly $3,000–$4,000 but cannot power a large central air system simultaneously with other loads. The same 20–24 kW setup on propane (1.05x) would raise equipment cost to $5,250–$10,500, increasing the total midpoint to roughly $13,175. On diesel (1.15x), the midpoint rises to approximately $14,100.
+
+{/* Section 10: Cost Comparison by Generator Size */}
+## Cost Comparison by Generator Size
+
+| Generator Size | Coverage | Equipment | Total Installed | Weekly Fuel (NG) | Install Time |
+|---|---|---|---|---|---|
+| 7–10 kW | Essential circuits | $2,500–$4,000 | $4,700–$8,800 | $15–$25/week | 1–2 days |
+| 12–16 kW | Most circuits | $3,500–$6,000 | $6,200–$11,200 | $25–$40/week | 1–2 days |
+| 20–24 kW | Whole home | $5,000–$10,000 | $8,400–$17,200 | $35–$55/week | 1–2 days |
+| 30–48 kW | Large/luxury home | $10,000–$18,000 | $14,500–$25,200 | $55–$90/week | 2–3 days |
+
+All totals include automatic whole-home transfer switch, new concrete pad, and permit at national average labor rates. Weekly fuel costs estimated at 50% load for 8 hours of operation.
+
+{/* Section 11: Factors That Affect Generator Cost */}
+## Factors That Affect Generator Cost
+
+**Generator size** is the largest cost driver. Equipment costs range from $2,500 for a basic 7 kW essential-circuits unit to $18,000 for a 48 kW luxury-home system — a 7x difference. Size your generator based on your home's peak electrical load. A licensed electrician can perform a load calculation, but a general rule is 20–24 kW for homes under 2,500 sq ft with central AC, and 30+ kW for homes over 3,000 sq ft with multiple HVAC zones.
+
+**Transfer switch type** significantly affects both cost and convenience. A manual transfer switch saves $1,200–$2,400 compared to automatic whole-home, but it requires someone to physically flip the switch during every outage. For standby generators designed to start automatically, an automatic transfer switch is the standard recommendation — the generator detects the outage and transfers power within 10–30 seconds without any human intervention.
+
+**Fuel type** affects both upfront equipment cost and ongoing operating cost. Natural gas is cheapest to operate ($35–$55 per week for 20–24 kW at 50% load) and requires no fuel storage. Propane costs 5% more upfront and $50–$75 per week to operate, but is available in areas without natural gas service. Diesel adds 15% to equipment cost and $55–$85 per week in fuel, but provides the highest power density and longest runtime per gallon.
+
+**Regional labor rates** shift installation costs by 15–25%. Since labor represents 30% of generator equipment cost, a $12,800 national-average installation would cost approximately $11,840 in the South and $13,600 on the West Coast. Equipment prices are consistent nationally.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **fully installed prices** including generator, transfer switch, concrete pad, fuel line connection, electrical hookup, and permit. Propane tank installation ($500–$3,000) is not included for propane units.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and manufacturer MSRP. Your actual cost depends on the specific brand and model selected.
+- The calculator assumes **standard installation conditions**: accessible outdoor location within 25 feet of the main electrical panel and existing fuel supply (natural gas line or propane tank). Extended fuel line runs add $500–$2,000.
+- **Labor at 30%** of equipment cost reflects the industry average installation labor ratio. Complex installations (panel relocation, extended wiring, gas line extension) will increase labor.
+- **Weekly fuel costs** are estimates based on 50% load for 8 hours of operation per week. Actual fuel consumption depends on load, runtime, and fuel prices.
+- This calculator does not account for **annual maintenance contracts** ($200–$500/year), **extended warranties**, or **whole-home surge protection**.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does a whole-home generator cost?
+
+A whole-home standby generator costs $8,400–$17,200 fully installed for a 20–24 kW natural gas unit with an automatic transfer switch, concrete pad, and permit at national average rates. The midpoint is $12,800. Smaller essential-circuits generators (7–10 kW) cost $4,700–$8,800, while large luxury-home units (30–48 kW) run $14,500–$25,200. Equipment accounts for roughly 60% of the total cost, with installation labor, transfer switch, pad, and permit making up the remaining 40%.
+
+### What size generator do I need for my house?
+
+A 20–24 kW generator powers a typical 2,000–2,500 sq ft home including central HVAC, kitchen appliances, lighting, and electronics. A 12–16 kW unit covers most circuits but cannot run a large central air system simultaneously with other heavy loads. For homes over 3,000 sq ft or those with multiple HVAC zones, a pool pump, or EV charger, a 30–48 kW generator is recommended. A licensed electrician can perform a precise load calculation for your home.
+
+### How long does generator installation take?
+
+Professional standby generator installation takes 1–2 days for units up to 24 kW and 2–3 days for 30–48 kW systems. However, the total timeline from purchase to operation is typically 2–6 weeks, including delivery lead time, concrete pad curing (3–7 days), utility coordination for gas line connection, and local permit inspection scheduling. Plan ahead, especially before storm season.
+
+### Natural gas vs. propane generator — which is better?
+
+Natural gas generators are better for most homeowners because they connect to your existing gas line, require no fuel storage, and have lower operating costs ($35–$55 per week at 50% load for a 20–24 kW unit vs. $50–$75 for propane). Natural gas units also cost 5% less upfront. Propane generators are the better choice in rural areas without natural gas service or in regions with unreliable gas supply. Propane has a longer shelf life than diesel and provides reliable starting in cold temperatures.
+
+### Do standby generators increase home value?
+
+Standby generators typically increase home value by 3–5% of the generator's installed cost, according to Remodeling Magazine's Cost vs. Value Report. A $12,800 generator installation may add $5,000–$8,000 in resale value. The return is highest in areas prone to power outages from storms, ice, or grid instability. More importantly, generators prevent costly damage from sump pump failure, frozen pipes, and food spoilage during extended outages — protection valued at $5,000–$50,000 per event.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates standby generator installation costs using equipment base pricing by size tier, adjusted for fuel type, with installation labor calculated at 30% of equipment cost and adjusted by regional multiplier. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by **Generac**, **Kohler**, and **Cummins** manufacturer suggested retail pricing. Transfer switch, concrete pad, and permit costs are flat adders based on HomeAdvisor component pricing data. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians (SOC 49-9051). Weekly fuel cost estimates are based on manufacturer specifications at 50% rated load for 8 hours of operation. All prices are fully installed costs. Regional variation of 15–25% on labor is expected.
+
+{/* Section 16: Disclaimer — auto-rendered */}

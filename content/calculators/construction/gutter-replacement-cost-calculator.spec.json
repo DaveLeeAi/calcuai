@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "gutter replacement cost calculator",
+  "secondaryKeywords": [
+    "gutter installation cost estimator",
+    "seamless gutter cost per foot",
+    "new gutters cost",
+    "gutter replacement cost per linear foot"
+  ],
   "metaTitle": "Gutter Replacement Cost Calculator | Compare Materials & Estimates",
   "metaDescription": "Estimate gutter replacement costs for aluminum, vinyl, steel, copper, and zinc gutters. Includes gutter guards, downspouts, and regional labor rates.",
   "inputs": [
@@ -26,11 +32,26 @@
       "required": true,
       "defaultValue": "aluminum",
       "options": [
-        { "value": "aluminum", "label": "Aluminum ($6–$12/lin ft installed)" },
-        { "value": "vinyl", "label": "Vinyl ($3–$7/lin ft installed)" },
-        { "value": "steel", "label": "Steel ($8–$15/lin ft installed)" },
-        { "value": "copper", "label": "Copper ($18–$35/lin ft installed)" },
-        { "value": "zinc", "label": "Zinc ($15–$25/lin ft installed)" }
+        {
+          "value": "aluminum",
+          "label": "Aluminum ($6–$12/lin ft installed)"
+        },
+        {
+          "value": "vinyl",
+          "label": "Vinyl ($3–$7/lin ft installed)"
+        },
+        {
+          "value": "steel",
+          "label": "Steel ($8–$15/lin ft installed)"
+        },
+        {
+          "value": "copper",
+          "label": "Copper ($18–$35/lin ft installed)"
+        },
+        {
+          "value": "zinc",
+          "label": "Zinc ($15–$25/lin ft installed)"
+        }
       ],
       "helpText": "Material affects cost, durability, and appearance"
     },
@@ -41,8 +62,14 @@
       "required": true,
       "defaultValue": "k-style",
       "options": [
-        { "value": "k-style", "label": "K-Style (standard residential)" },
-        { "value": "half-round", "label": "Half-Round (+25% — traditional/upscale)" }
+        {
+          "value": "k-style",
+          "label": "K-Style (standard residential)"
+        },
+        {
+          "value": "half-round",
+          "label": "Half-Round (+25% — traditional/upscale)"
+        }
       ],
       "helpText": "K-style is the most common residential gutter profile"
     },
@@ -64,10 +91,22 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None" },
-        { "value": "basic-screen", "label": "Basic Screen ($4–$6/lin ft)" },
-        { "value": "micro-mesh", "label": "Micro-Mesh ($6–$10/lin ft)" },
-        { "value": "reverse-curve", "label": "Reverse Curve ($7–$12/lin ft)" }
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "basic-screen",
+          "label": "Basic Screen ($4–$6/lin ft)"
+        },
+        {
+          "value": "micro-mesh",
+          "label": "Micro-Mesh ($6–$10/lin ft)"
+        },
+        {
+          "value": "reverse-curve",
+          "label": "Reverse Curve ($7–$12/lin ft)"
+        }
       ],
       "helpText": "Guards reduce leaf and debris clogs — micro-mesh is the most effective"
     },
@@ -78,8 +117,14 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (new install)" },
-        { "value": "yes", "label": "Remove Old Gutters ($1.50–$3/lin ft)" }
+        {
+          "value": "none",
+          "label": "None (new install)"
+        },
+        {
+          "value": "yes",
+          "label": "Remove Old Gutters ($1.50–$3/lin ft)"
+        }
       ],
       "helpText": "Includes removal, disposal, and fascia inspection"
     },
@@ -90,9 +135,18 @@
       "required": true,
       "defaultValue": "1-story",
       "options": [
-        { "value": "1-story", "label": "1-Story" },
-        { "value": "2-story", "label": "2-Story (+$1.50/lin ft)" },
-        { "value": "3-story", "label": "3-Story (+$4/lin ft)" }
+        {
+          "value": "1-story",
+          "label": "1-Story"
+        },
+        {
+          "value": "2-story",
+          "label": "2-Story (+$1.50/lin ft)"
+        },
+        {
+          "value": "3-story",
+          "label": "3-Story (+$4/lin ft)"
+        }
       ],
       "helpText": "Taller homes require more ladder work and safety equipment"
     },
@@ -103,13 +157,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -216,7 +291,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Cost-per-linear-foot data from HomeAdvisor and Angi 2025-2026 national averages. Material/labor split based on industry standard 40/60 ratio. Style multipliers from Gutter Helmet pricing guides. Guard costs from LeafFilter and HomeAdvisor surveys.",
   "formulaAuditDate": "2026-03-14",

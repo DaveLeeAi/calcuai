@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "siding replacement cost calculator",
+  "secondaryKeywords": [
+    "siding replacement cost per square foot",
+    "vinyl siding replacement cost",
+    "house siding cost estimator",
+    "fiber cement siding cost"
+  ],
   "metaTitle": "Siding Replacement Cost Calculator | Compare Materials & Estimates",
   "metaDescription": "Estimate siding replacement costs for vinyl, fiber cement, wood, engineered wood, aluminum, and stone veneer. Includes removal, housewrap, and regional labor.",
   "inputs": [
@@ -122,13 +128,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -242,7 +269,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Cost-per-square-foot data split into material (~40%) and labor (~60%) from HomeAdvisor and Angi 2025-2026 national averages. Story multipliers from scaffolding rental and labor premium surveys. Removal rates from HomeAdvisor demolition cost guides. Housewrap rates from Tyvek and building envelope industry data. Regional labor multipliers from BLS Occupational Employment and Wage Statistics.",
   "formulaAuditDate": "2026-03-14",

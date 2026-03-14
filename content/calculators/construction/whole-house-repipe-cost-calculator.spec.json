@@ -1,0 +1,155 @@
+{
+  "id": "whole-house-repipe-cost-calculator",
+  "title": "Whole House Repipe Cost Calculator",
+  "slug": "whole-house-repipe-cost-calculator",
+  "category": "construction",
+  "subcategory": "plumbing",
+  "primaryKeyword": "whole house repipe cost",
+  "secondaryKeywords": [
+    "repiping cost estimate",
+    "copper repipe cost",
+    "PEX repipe cost",
+    "house repiping cost by size"
+  ],
+  "metaTitle": "Whole House Repipe Cost Calculator | Copper, PEX & CPVC Estimates",
+  "metaDescription": "Estimate whole-house repiping costs for copper, PEX, and CPVC. Compare pipe materials by home size, stories, bathrooms, and region. Includes wall repair and permits.",
+  "inputs": [
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-1000-1500",
+      "options": [
+        { "value": "small-under-1000", "label": "Small — Under 1,000 sq ft ($3,000–$5,000)" },
+        { "value": "medium-1000-1500", "label": "Medium — 1,000–1,500 sq ft ($4,500–$8,000)" },
+        { "value": "large-1500-2500", "label": "Large — 1,500–2,500 sq ft ($7,000–$13,000)" },
+        { "value": "xlarge-over-2500", "label": "Extra Large — Over 2,500 sq ft ($10,000–$18,000)" }
+      ],
+      "helpText": "Total finished square footage — determines base piping cost"
+    },
+    {
+      "id": "pipeMaterial",
+      "label": "Pipe Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "copper",
+      "options": [
+        { "value": "copper", "label": "Copper (1.0x — premium, 50+ year lifespan)" },
+        { "value": "pex", "label": "PEX (0.60x — flexible, 40+ year lifespan)" },
+        { "value": "cpvc", "label": "CPVC (0.55x — budget, 25–40 year lifespan)" }
+      ],
+      "helpText": "Pipe material — copper is premium, PEX is most popular, CPVC is budget"
+    },
+    {
+      "id": "stories",
+      "label": "Home Stories",
+      "type": "select",
+      "required": true,
+      "defaultValue": "1-story",
+      "options": [
+        { "value": "1-story", "label": "1-Story (standard labor)" },
+        { "value": "2-story", "label": "2-Story (+15% labor)" },
+        { "value": "3-story", "label": "3-Story (+30% labor)" }
+      ],
+      "helpText": "Multi-story homes require more vertical pipe runs and access work"
+    },
+    {
+      "id": "bathrooms",
+      "label": "Number of Bathrooms",
+      "type": "select",
+      "required": true,
+      "defaultValue": "2-bath",
+      "options": [
+        { "value": "1-bath", "label": "1 Bathroom (−15%)" },
+        { "value": "2-bath", "label": "2 Bathrooms (standard)" },
+        { "value": "3-bath", "label": "3 Bathrooms (+15%)" },
+        { "value": "4-plus-bath", "label": "4+ Bathrooms (+30%)" }
+      ],
+      "helpText": "More bathrooms = more fixtures and pipe runs"
+    },
+    {
+      "id": "wallRepair",
+      "label": "Wall Repair After Repiping",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        { "value": "none", "label": "None (PEX through existing access or open walls)" },
+        { "value": "drywall-patches", "label": "Drywall Patches (+$500–$1,500)" },
+        { "value": "full-drywall-repair", "label": "Full Drywall Repair (+$1,500–$4,000)" }
+      ],
+      "helpText": "Wall repair needed after accessing pipes — PEX often needs fewer wall cuts than copper"
+    },
+    {
+      "id": "permitRequired",
+      "label": "Plumbing Permit Required?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "no",
+      "options": [
+        { "value": "no", "label": "No Permit" },
+        { "value": "yes", "label": "Yes — Plumbing Permit (+$200–$500)" }
+      ],
+      "helpText": "Most cities require a plumbing permit for whole-house repiping — check your local building department"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        { "value": "national", "label": "National Average" },
+        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
+        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
+        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
+        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
+        { "value": "south", "label": "South (TX, FL, GA, NC)" },
+        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    { "id": "pipingCost", "label": "Piping Cost (Material + Labor)", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "materialCost", "label": "Material Cost (35%)", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "laborCost", "label": "Labor Cost (65%)", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "wallRepairCost", "label": "Wall Repair Cost", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "permitCost", "label": "Permit Cost", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "totalLow", "label": "Estimated Cost (Low)", "type": "single-value", "format": "currency", "precision": 0, "highlight": true },
+    { "id": "totalHigh", "label": "Estimated Cost (High)", "type": "single-value", "format": "currency", "precision": 0, "highlight": true },
+    { "id": "totalMid", "label": "Estimated Cost (Mid)", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "costPerBathroom", "label": "Cost per Bathroom", "type": "single-value", "format": "currency", "precision": 0 },
+    { "id": "materialComparison", "label": "Pipe Material Cost Comparison", "type": "value-group", "format": "currency" },
+    { "id": "timeline", "label": "Estimated Timeline", "type": "single-value", "format": "text" }
+  ],
+  "formula": "whole-house-repipe-cost",
+  "features": ["shareable-url", "print-results"],
+  "relatedCalculators": [
+    "water-heater-cost-calculator",
+    "bathroom-remodel-calculator",
+    "renovation-cost-calculator",
+    "kitchen-remodel-calculator",
+    "foundation-repair-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; Plumbing-Heating-Cooling Contractors Association (PHCC)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [".bluf-intro", ".formula-section", ".faq-section"],
+  "editorialStatus": "published",
+  "reviewOwner": "editorial",
+  "formulaSource": "Base cost ranges from HomeAdvisor and Angi 2025-2026 national averages for whole-house repiping, organized by home size. Pipe material multipliers from Plumbing-Heating-Cooling Contractors Association (PHCC) material cost surveys. Regional labor multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for plumbers, pipefitters, and steamfitters (SOC 47-2152). Wall repair and permit cost ranges from HomeAdvisor drywall repair and plumbing permit cost guides.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

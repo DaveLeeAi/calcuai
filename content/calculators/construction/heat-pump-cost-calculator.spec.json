@@ -1,0 +1,336 @@
+{
+  "id": "heat-pump-cost-calculator",
+  "title": "Heat Pump Cost Calculator",
+  "slug": "heat-pump-cost-calculator",
+  "category": "construction",
+  "subcategory": "hvac",
+  "primaryKeyword": "heat pump installation cost calculator",
+  "secondaryKeywords": [
+    "heat pump cost with installation",
+    "mini split heat pump cost",
+    "air source heat pump cost",
+    "heat pump cost with IRA tax credit"
+  ],
+  "metaTitle": "Heat Pump Cost Calculator | Air Source, Geothermal & IRA Tax Credit",
+  "metaDescription": "Estimate heat pump installation costs for air source, cold climate, mini-split, dual-fuel, and geothermal. Includes IRA 30% tax credit and regional labor.",
+  "inputs": [
+    {
+      "id": "pumpType",
+      "label": "Heat Pump Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "air-source-standard",
+      "options": [
+        {
+          "value": "air-source-standard",
+          "label": "Air Source Standard ($4,000–$7,000)"
+        },
+        {
+          "value": "air-source-cold-climate",
+          "label": "Air Source Cold Climate ($5,500–$9,000)"
+        },
+        {
+          "value": "ductless-mini-split",
+          "label": "Ductless Mini-Split ($3,000–$5,000)"
+        },
+        {
+          "value": "dual-fuel-hybrid",
+          "label": "Dual-Fuel Hybrid ($5,000–$9,000)"
+        },
+        {
+          "value": "geothermal",
+          "label": "Geothermal ($15,000–$30,000)"
+        }
+      ],
+      "helpText": "Equipment base cost before home-size and efficiency adjustments"
+    },
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-1500-2500",
+      "options": [
+        {
+          "value": "small-under-1500",
+          "label": "Small — Under 1,500 sq ft (1.0x)"
+        },
+        {
+          "value": "medium-1500-2500",
+          "label": "Medium — 1,500–2,500 sq ft (1.20x)"
+        },
+        {
+          "value": "large-2500-3500",
+          "label": "Large — 2,500–3,500 sq ft (1.45x)"
+        },
+        {
+          "value": "xlarge-over-3500",
+          "label": "Extra Large — Over 3,500 sq ft (1.75x)"
+        }
+      ],
+      "helpText": "Larger homes need higher-capacity systems — multiplied against equipment cost"
+    },
+    {
+      "id": "efficiency",
+      "label": "Efficiency (SEER2 / HSPF2)",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-15-seer2",
+      "options": [
+        {
+          "value": "standard-15-seer2",
+          "label": "Standard — 15 SEER2 (1.0x)"
+        },
+        {
+          "value": "high-17-seer2",
+          "label": "High — 17 SEER2 (1.20x)"
+        },
+        {
+          "value": "premium-20-seer2",
+          "label": "Premium — 20+ SEER2 (1.40x)"
+        }
+      ],
+      "helpText": "Higher efficiency costs more upfront but lowers energy bills — SEER2 is the 2023+ rating standard"
+    },
+    {
+      "id": "backupHeat",
+      "label": "Backup Heat Source",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "electric-resistance-strips",
+          "label": "Electric Resistance Strips (+$300–$800)"
+        },
+        {
+          "value": "existing-furnace-kept",
+          "label": "Existing Furnace Kept ($0)"
+        },
+        {
+          "value": "new-gas-furnace",
+          "label": "New Gas Furnace (+$2,000–$3,500)"
+        }
+      ],
+      "helpText": "Backup heat for when outdoor temps drop below the heat pump's efficient range"
+    },
+    {
+      "id": "lineSet",
+      "label": "Refrigerant Line Set",
+      "type": "select",
+      "required": true,
+      "defaultValue": "existing-reuse",
+      "options": [
+        {
+          "value": "existing-reuse",
+          "label": "Reuse Existing ($0)"
+        },
+        {
+          "value": "new-short-run",
+          "label": "New Short Run (+$300–$600)"
+        },
+        {
+          "value": "new-long-run",
+          "label": "New Long Run (+$600–$1,200)"
+        }
+      ],
+      "helpText": "Copper refrigerant lines connecting outdoor and indoor units — reuse if compatible"
+    },
+    {
+      "id": "claimIRATaxCredit",
+      "label": "Claim IRA Tax Credit (30%, up to $2,000)",
+      "type": "select",
+      "required": true,
+      "defaultValue": "true",
+      "options": [
+        {
+          "value": "true",
+          "label": "Yes — Apply 30% IRA Credit (max $2,000)"
+        },
+        {
+          "value": "false",
+          "label": "No — Skip Tax Credit"
+        }
+      ],
+      "helpText": "Inflation Reduction Act 25D credit: 30% of installed cost, max $2,000/year, through 2032"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "equipmentCost",
+      "label": "Equipment Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "backupHeatCost",
+      "label": "Backup Heat Add-On",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "lineSetCost",
+      "label": "Refrigerant Line Set",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "subtotal",
+      "label": "Subtotal Before Credit",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "iraTaxCredit",
+      "label": "IRA Tax Credit (30%)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalAfterCredit",
+      "label": "Total After IRA Credit",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "pumpTypeComparison",
+      "label": "Heat Pump Type Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "annualSavingsVsGas",
+      "label": "Est. Annual Savings vs. Gas",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "paybackPeriod",
+      "label": "Payback Period",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "heat-pump-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "hvac-size-calculator",
+    "hvac-replacement-cost-calculator",
+    "insulation-calculator",
+    "electrical-panel-upgrade-cost-calculator",
+    "mini-split-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 Heat Pump Cost Data; ENERGY STAR Heat Pump Guide; IRS Inflation Reduction Act (IRC §25D) Heat Pump Tax Credit",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Equipment and labor cost ranges from HomeAdvisor and Angi 2025-2026 national averages. Efficiency multipliers from ENERGY STAR Heat Pump Guide. IRA tax credit calculation per IRC §25D (30% of qualified costs, max $2,000). Regional multipliers from HomeAdvisor regional cost index.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "hvac-replacement-cost-calculator"
+  ],
+  "qualityScore": 85,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-fall"
+}

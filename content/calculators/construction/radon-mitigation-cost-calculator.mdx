@@ -1,0 +1,198 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A radon mitigation system costs $880–$1,650 for a typical slab-on-grade home with sub-slab depressurization at national average rates, with a midpoint of $1,265. Finished basements cost $1,200–$2,500 due to routing pipes through finished walls. More complex methods like heat recovery ventilators (HRV) cost 75% more than standard sub-slab depressurization — typically $1,400–$2,625 for a slab home. Regional labor rates (55% of project cost) shift total cost by 15–25%. The EPA recommends fixing homes with radon above 4 pCi/L — roughly 1 in 15 U.S. homes exceeds this level. Enter your foundation type, method, and home details below for a personalized estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator estimates installed radon mitigation system costs by foundation type, mitigation method, home size, piping route, fan type, and region. It produces a low/mid/high estimate, an equipment/labor cost breakdown, and a comparison table showing the cost of each mitigation method for your foundation type.
+
+The **equipment cost** (45% of project cost) covers the radon fan, PVC piping, electrical wiring for the fan circuit, and all fittings, couplings, and penetration sealing hardware. Standard residential fans cost $150–$350; high-suction fans for elevated radon levels cost $350–$600.
+
+The **labor cost** (55% of project cost) covers the certified radon mitigator's time to core-drill through the foundation, install and route the piping, mount and wire the fan, seal all penetrations, test the system, and provide post-mitigation radon measurement. Labor is the majority of project cost and varies significantly by region and foundation complexity.
+
+The **annual fan operating cost** is $50–$150/year for electricity to run the continuously operating fan. Radon fans run 24/7/365 at low wattage (typically 20–90 watts) — comparable to a few LED light bulbs. This ongoing cost should be factored into the lifetime cost comparison of mitigation versus not acting.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select foundation type** — this is the primary cost driver. Slab-on-grade and unfinished basements allow direct sub-slab access. Finished basements require routing pipes through walls and ceilings, adding complexity. Crawl spaces use a membrane system. Mixed foundations (part slab, part basement, part crawl space) require the most planning.
+
+2. **Choose mitigation method** — sub-slab depressurization (SSD) is the EPA-recommended method for most homes and the least expensive. Sub-membrane depressurization is used for crawl spaces. Drain tile suction leverages existing perimeter drain tile. Block wall suction is for concrete masonry unit (CMU) block foundations. Heat recovery ventilators are used when depressurization is not feasible due to extremely tight construction.
+
+3. **Select home size** — larger homes may require additional suction points or longer pipe runs. Very large homes with multiple foundation areas may need more than one fan system.
+
+4. **Choose piping route** — interior routing through a closet or utility chase is the most common and keeps the pipe concealed. Exterior wall routing is visible on the outside but is often easier in finished basements. Garage routing is the simplest installation when the garage is attached and the route is practical.
+
+5. **Select fan type** — standard fans are appropriate for most homes where initial radon testing shows levels between 4 and 20 pCi/L. High-suction fans are recommended when levels exceed 20 pCi/L or when sub-slab suction field extension tests indicate difficult sub-slab conditions. Ultra-quiet fans minimize noise for interior installations near bedrooms or living areas.
+
+6. **Select your region** — regional multipliers apply to the labor portion (55% of project cost). States with high radon prevalence like Colorado, Pennsylvania, and Minnesota have more certified contractors, which can moderate prices despite higher labor costs.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Radon mitigation cost is calculated by applying method, home size, piping route, and fan type multipliers to the foundation base cost, then splitting into equipment (45%) and labor (55%) components, with regional adjustment applied to labor only.
+
+**Adjusted base cost:**
+
+$$C_{adj} = B_{foundation} \times M_{method} \times M_{size} \times M_{piping} \times M_{fan}$$
+
+**Equipment and labor split:**
+
+$$C_{equip} = C_{adj} \times 0.45$$
+
+$$C_{labor} = C_{adj} \times 0.55 \times M_r$$
+
+**Total cost:**
+
+$$C_{total} = C_{equip} + C_{labor}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **B_foundation** = foundation type base cost range (low/high)
+- **M_method** = mitigation method multiplier (1.0–1.75)
+- **M_size** = home size multiplier (1.0–1.35)
+- **M_piping** = piping route multiplier (0.95–1.10)
+- **M_fan** = fan type multiplier (1.0–1.25)
+- **M_r** = regional labor multiplier (0.85–1.25)
+
+**Foundation type base cost ranges (2025–2026):**
+
+| Foundation Type | Low | High |
+|---|---|---|
+| Slab-on-Grade | $800 | $1,500 |
+| Unfinished Basement | $900 | $1,800 |
+| Finished Basement | $1,200 | $2,500 |
+| Crawl Space | $1,000 | $2,000 |
+| Mixed Foundation | $1,500 | $3,000 |
+
+**Mitigation method multipliers:**
+
+| Method | Multiplier | Best For |
+|---|---|---|
+| Sub-Slab Depressurization (SSD) | 1.0x | Slab and basement homes |
+| Sub-Membrane Depressurization (SMD) | 1.10x | Crawl spaces |
+| Drain Tile Suction | 1.25x | Homes with existing drain tile |
+| Block Wall Suction | 1.15x | CMU block foundations |
+| Heat Recovery Ventilator (HRV) | 1.75x | Tight construction, impractical SSD |
+
+**Regional labor multipliers:**
+
+| Region | Multiplier |
+|---|---|
+| South (TX, FL, GA, NC) | 0.85x |
+| Midwest (OH, IN, MI, WI) | 0.90x |
+| Mountain West (CO, AZ, UT) | 0.95x |
+| National Average | 1.00x |
+| Mid-Atlantic (PA, MD, VA, DC) | 1.15x |
+| Northeast (NY, NJ, CT, MA) | 1.20x |
+| West Coast (CA, WA, OR) | 1.25x |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025–2026, **EPA Radon Mitigation Standards (EPA 402-R-93-078)**, and **AARST/NRPP** certified mitigator rate surveys.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: Slab-on-Grade, Sub-Slab Depressurization, Medium Home, National Average
+
+A homeowner tests their slab-on-grade home (1,800 sq ft) and finds radon at 6.2 pCi/L — above the EPA action level of 4.0 pCi/L. They choose sub-slab depressurization with interior closet routing, a standard fan, at national average rates.
+
+**Step-by-step:**
+
+1. Foundation base cost: $800–$1,500 (slab-on-grade)
+2. Mitigation method multiplier (SSD, 1.0x): $800–$1,500
+3. Home size multiplier (medium 1,500–2,500 sq ft, 1.1x): $880–$1,650
+4. Piping route multiplier (interior closet, 1.0x): $880–$1,650
+5. Fan type multiplier (standard, 1.0x): $880–$1,650
+6. Equipment cost (45%): $396–$742.50
+7. Labor cost (55% × 1.0 regional): $484–$907.50
+8. Total low: $396 + $484 = **$880**
+9. Total high: $742.50 + $907.50 = **$1,650**
+10. Total mid: ($880 + $1,650) / 2 = **$1,265**
+
+**Interpretation:** At $1,265 midpoint, this is a straightforward installation with interior routing. Post-mitigation testing 24 hours after installation typically shows radon reduced to below 2.0 pCi/L for most SSD systems. The fan runs continuously at approximately 30–50 watts, costing $26–$44/year in electricity at national average rates. EPA recommends retesting every 2 years after mitigation to confirm system performance.
+
+{/* Section 10: Cost Comparison by Mitigation Method */}
+## Cost Comparison by Mitigation Method (Slab-on-Grade, Medium Home)
+
+| Method | Low | High | Mid | Annual Fan Cost |
+|---|---|---|---|---|
+| Sub-Slab Depressurization (SSD) | $880 | $1,650 | $1,265 | $50–$150/year |
+| Sub-Membrane Depressurization (SMD) | $968 | $1,815 | $1,392 | $50–$150/year |
+| Block Wall Suction | $1,012 | $1,898 | $1,455 | $50–$150/year |
+| Drain Tile Suction | $1,100 | $2,063 | $1,581 | $50–$150/year |
+| Heat Recovery Ventilator (HRV) | $1,540 | $2,888 | $2,214 | $75–$200/year |
+
+All costs at national average rates for medium (1,500–2,500 sq ft) home, interior closet routing, standard fan.
+
+{/* Section 11: Key Cost Factors */}
+## Key Cost Factors
+
+**Foundation type** is the primary cost driver because it determines how difficult sub-slab access is. Finished basements require opening finished walls or ceilings to route piping, adding $300–$700 in carpentry restoration costs. Crawl spaces require a membrane system covering the entire crawl space floor, which is labor-intensive. Mixed foundations (homes with both slab areas and basement areas) may require multiple suction points and longer pipe runs.
+
+**Radon levels** affect the equipment selection but not the basic installation cost. Homes with very high radon (above 20 pCi/L) may require high-suction fans and potentially multiple suction points, adding 15–35% to equipment costs. Your certified mitigator should perform a sub-slab suction field extension test before installation to determine the optimal suction point location and confirm that a single suction point will be sufficient.
+
+**Piping route complexity** in finished basements is frequently underestimated. Routing through a closet is straightforward. Routing through a finished basement's walls and ceiling to reach the attic or exterior can require 4–8 hours of additional labor for drywall patching, painting, and trim work — adding $400–$900 to the base estimate.
+
+**Regional labor rates** apply to 55% of project cost. In the South (0.85x labor multiplier), a $1,265 mid-price job would cost approximately $1,185. In the Northeast (1.20x), the same job costs approximately $1,382. The Mountain West often has competitive pricing despite reasonable labor rates because Colorado, Utah, and Arizona have high radon prevalence, creating a well-developed contractor base.
+
+**Testing costs** are separate from mitigation and typically run $15–$30 for a short-term do-it-yourself test kit or $100–$200 for professional radon testing. Post-mitigation retesting is recommended 24–48 hours after system activation and again 30 days after installation to confirm performance.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **fully installed prices** including certified mitigator labor, all equipment, PVC piping, fan, electrical connection, and sealing materials. Post-mitigation radon testing is not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and AARST/NRPP certified mitigator surveys. Your local market may vary 15–25% on the labor component.
+- The calculator assumes **single suction point installation**. Homes with very high radon levels (above 20 pCi/L) or complex sub-slab conditions may require 2–4 suction points, adding $300–$600 per additional point.
+- **Electrical connection** for the fan is included in the estimate for homes with accessible wiring. If a new dedicated circuit is required from the main panel, add $200–$400 for an electrician.
+- This calculator does not include the cost of **radon testing** before or after mitigation, or **HVAC combustion safety testing** that should be performed in some homes before aggressive air sealing.
+- **Annual fan operating cost** of $50–$150/year is estimated at national average electricity rates. Actual cost depends on fan wattage (20–90 watts) and local electricity rates.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does radon mitigation cost?
+
+Radon mitigation costs $880–$1,650 for a typical medium-sized home with a slab-on-grade foundation and sub-slab depressurization at national average rates, with a midpoint of $1,265. Finished basements cost $1,200–$2,500 due to wall and ceiling routing requirements. Heat recovery ventilator systems for homes where SSD is impractical cost $1,400–$2,625. Post-mitigation radon testing ($15–$200) and annual fan electricity ($50–$150/year) are additional ongoing costs.
+
+### What radon level requires mitigation?
+
+The EPA recommends taking action when radon levels reach 4 pCi/L or higher. The EPA also recommends considering mitigation for levels between 2–4 pCi/L. Radon is the second leading cause of lung cancer in the United States, responsible for approximately 21,000 lung cancer deaths per year according to the EPA. The average indoor radon level in U.S. homes is 1.3 pCi/L; any level above 4 pCi/L warrants professional mitigation.
+
+### How long does radon mitigation take?
+
+A standard sub-slab depressurization installation takes 4–8 hours for a single suction point in a slab or unfinished basement. Finished basements with complex routing may take 6–12 hours including drywall restoration. Post-mitigation, the system requires 24–48 hours of operation before the follow-up radon test is conducted. Most homeowners see radon reduced below 2.0 pCi/L within 24 hours of system activation.
+
+### Does radon mitigation really work?
+
+Yes — EPA-approved sub-slab depressurization systems reduce indoor radon levels by 50–99% when properly installed by NRPP- or AARST-certified mitigators. The EPA reports that mitigation reduces radon to below 2 pCi/L in most homes. The system works by creating negative pressure beneath the foundation slab, redirecting radon gas that would otherwise enter the home through the soil and routing it outside above the roofline where it dilutes harmlessly in the air. Post-mitigation monitoring every 2 years confirms continued system performance.
+
+### Is radon mitigation required for home sales?
+
+Radon disclosure requirements vary by state. About 12 states require radon testing or disclosure at point of sale. Many other states require real estate agents to disclose known radon levels. Even in states without a legal requirement, elevated radon is a material defect that sellers are typically obligated to disclose under general real estate disclosure laws. Buyers increasingly request radon inspections — especially in high-radon states like Colorado, Pennsylvania, Iowa, Minnesota, and Ohio — and may negotiate a price reduction or require mitigation before closing.
+
+### Who should install radon mitigation?
+
+Radon mitigation should be installed only by certified professionals. NRPP (National Radon Proficiency Program) and AARST (American Association of Radon Scientists and Technologists) certify radon mitigators who have demonstrated knowledge of EPA standards and system design. State licensing requirements vary. Hiring a non-certified contractor risks improper installation that fails to adequately reduce radon levels, creates new pathways for radon entry, or causes HVAC combustion safety problems in homes with gas appliances. Verify certification at the NRPP registry at nrpp.info.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates radon mitigation costs using foundation type base cost ranges multiplied by method, home size, piping route, and fan type factors, with equipment (45%) and labor (55%) split and regional multiplier applied to labor only. Base cost ranges come from **HomeAdvisor** and **Angi** 2025–2026 national average surveys for installed radon mitigation systems. Method multipliers are derived from **EPA Radon Mitigation Standards (EPA 402-R-93-078)** and **AARST/NRPP** certified mitigator contractor pricing surveys. Home size, piping, and fan multipliers from AARST contractor cost data. Regional labor multipliers from **Bureau of Labor Statistics** Occupational Employment and Wage Statistics for construction trades (SOC 47-2061). Annual fan operating cost based on typical fan wattage range (20–90 watts) at U.S. average electricity rate of $0.16/kWh.
+
+{/* Section 16: Disclaimer — auto-rendered */}

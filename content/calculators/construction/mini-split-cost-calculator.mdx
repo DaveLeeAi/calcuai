@@ -1,0 +1,198 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A single-zone 12,000 BTU ductless mini-split costs $2,800–$4,900 installed at national average rates, covering equipment and labor with a standard 15-foot line set and existing electrical circuit. Multi-zone systems for whole-home cooling run $4,900–$14,000 depending on zone count. Upgrading to a premium 25 SEER2 unit adds 30% to equipment cost but cuts annual cooling bills by 20–25%. A new dedicated circuit adds $300–$600, while sub-panel upgrades for older homes add $800–$1,500. Regional labor rates swing the total by 15–25% — the South runs 15% below average, the West Coast 25% above. Enter your system type, efficiency, line set length, electrical needs, and region below for a personalized installed cost estimate with a comparison of all six system configurations.
+
+</div>
+
+{/* At a Glance — Mini-Split Costs */}
+<div className="at-a-glance">
+
+| Metric | Value |
+|--------|-------|
+| **Single-zone 9K BTU (installed)** | $2,100–$3,500 |
+| **Single-zone 12K BTU (installed)** | $2,800–$4,900 |
+| **Multi-zone 2-zone (installed)** | $4,900–$8,400 |
+| **Multi-zone 4-zone (installed)** | $9,100–$14,000 |
+| **Labor factor** | 40% of equipment cost |
+| **Source** | HomeAdvisor / Angi, 2025–2026; AHRI |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator provides installed cost ranges for six ductless mini-split configurations — from a single-zone 9,000 BTU unit to a four-zone multi-split system — based on your efficiency tier, refrigerant line set length, electrical requirements, and region. It produces a low/mid/high cost estimate, a cost-per-zone figure, an installation timeline, and a comparison table showing all six system types at national average rates.
+
+The **equipment cost** covers the outdoor condenser unit and indoor air handler(s). Single-zone systems include one condenser and one wall-mounted head. Multi-zone systems include one outdoor condenser connected to 2, 3, or 4 indoor units. Equipment cost increases with higher BTU capacity and efficiency rating. A standard 20 SEER2 unit is the baseline (1.0x); high-efficiency 22 SEER2 adds 15%; premium 25 SEER2 adds 30% to equipment cost.
+
+The **labor cost** is calculated as 40% of equipment cost, adjusted for line set length and regional labor rates. Labor covers mounting the indoor unit(s), placing the outdoor condenser, running copper refrigerant lines, charging the system, and testing. Longer refrigerant line runs require more materials and labor: a 25-foot extended run adds 10%, and a 50-foot long run adds 25%.
+
+The **electrical cost** covers any required wiring. Mini-splits need a dedicated 20–30 amp circuit. If your home already has one at the installation location, electrical cost is $0. A new circuit costs $300–$600. Homes with older or fully loaded panels may need a sub-panel upgrade at $800–$1,500.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your system type** — choose based on how many rooms you need to condition. Single-zone units serve one room: 9K BTU for rooms up to 350 sq ft, 12K BTU for 350–550 sq ft, and 18K BTU for 550–800 sq ft. Multi-zone systems connect 2–4 indoor units to one outdoor condenser for multiple rooms.
+
+2. **Choose your efficiency rating** — SEER2 measures cooling efficiency. Standard 20 SEER2 is the baseline. High-efficiency 22 SEER2 units use about 10% less electricity annually. Premium 25 SEER2 units use 20–25% less electricity but cost 30% more upfront. In hot climates with heavy AC usage, the premium unit typically pays for itself in 5–8 years.
+
+3. **Select the line set length** — measure the distance from where the outdoor condenser will sit to the indoor unit location. Standard installations with the condenser directly outside the room require about 15 feet. Second-floor installations or units placed far from the condenser need 25–50 feet.
+
+4. **Choose your electrical needs** — if you have a dedicated 20–30 amp circuit near the installation location, select "Existing Circuit." If no dedicated circuit exists, select "New Circuit." If your panel is at capacity (common in pre-1990 homes), select "Sub-Panel Required."
+
+5. **Select your region** — this adjusts labor costs for local market conditions. The South and Midwest have below-average HVAC labor rates. The Northeast and West Coast have above-average rates.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Mini-split installation cost is estimated using equipment base cost, a labor factor tied to equipment cost, and add-ons for electrical work and line set complexity.
+
+**Equipment cost:**
+
+$$E = B_{system} \times M_{efficiency}$$
+
+**Labor cost:**
+
+$$L = E \times 0.40 \times M_{lineset} \times M_{region}$$
+
+**Total cost range:**
+
+$$C_{low} = E_{low} + L_{low} + Elec_{low}$$
+
+$$C_{high} = E_{high} + L_{high} + Elec_{high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+**Cost per zone:**
+
+$$C_{zone} = \frac{C_{mid}}{N_{zones}}$$
+
+Where:
+
+- **B_system** = system type base equipment cost (low/high range)
+- **M_efficiency** = efficiency multiplier (standard 20 SEER2: 1.0, high 22 SEER2: 1.15, premium 25 SEER2: 1.30)
+- **M_lineset** = line set length multiplier (standard 15 ft: 1.0, extended 25 ft: 1.10, long-run 50 ft: 1.25)
+- **M_region** = regional labor multiplier (0.85–1.25)
+- **Elec** = electrical work cost ($0 existing, $300–$600 new circuit, $800–$1,500 sub-panel)
+- **N_zones** = number of indoor zones (1–4)
+
+**Equipment base costs (2025–2026):**
+
+| System Type | Equipment | Zones | Best For |
+|---|---|---|---|
+| Single-Zone 9K BTU | $1,500–$2,500 | 1 | Bedrooms, offices (up to 350 sq ft) |
+| Single-Zone 12K BTU | $2,000–$3,500 | 1 | Living rooms, master suites (350–550 sq ft) |
+| Single-Zone 18K BTU | $2,500–$4,000 | 1 | Large rooms, open plans (550–800 sq ft) |
+| Multi-Zone 2-Zone | $3,500–$6,000 | 2 | Small homes, additions |
+| Multi-Zone 3-Zone | $5,000–$8,000 | 3 | Mid-size homes |
+| Multi-Zone 4-Zone | $6,500–$10,000 | 4 | Whole-home ductless |
+
+**Source:** Equipment and labor data from **HomeAdvisor / Angi** 2025–2026 national averages and **AHRI** (Air-Conditioning, Heating, and Refrigeration Institute) performance standards.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: Single-Zone 12K BTU, Standard Efficiency, National Average
+
+A homeowner is installing a ductless mini-split in a 450-square-foot living room. They choose a 12,000 BTU single-zone system with standard 20 SEER2 efficiency, standard 15-foot line set, existing electrical circuit, at national average rates.
+
+**Step-by-step:**
+
+1. Look up system base cost: Single-Zone 12K BTU = **$2,000–$3,500**
+2. Apply efficiency multiplier (standard 20 SEER2, 1.0x): $2,000 x 1.0 = **$2,000** low | $3,500 x 1.0 = **$3,500** high
+3. Calculate labor (40% of equipment x line set x region):
+   - Low: $2,000 x 0.40 x 1.0 x 1.0 = **$800**
+   - High: $3,500 x 0.40 x 1.0 x 1.0 = **$1,400**
+4. Electrical cost (existing circuit): **$0**
+5. Total low: $2,000 + $800 + $0 = **$2,800**
+6. Total high: $3,500 + $1,400 + $0 = **$4,900**
+7. Total mid: ($2,800 + $4,900) / 2 = **$3,850**
+8. Cost per zone: $3,850 / 1 = **$3,850**
+
+**System type comparison (all standard efficiency, standard line set, no electrical, national):**
+- Single-Zone 9K BTU: $2,100–$3,500 (mid: $2,800)
+- Single-Zone 12K BTU: $2,800–$4,900 (mid: $3,850)
+- Single-Zone 18K BTU: $3,500–$5,600 (mid: $4,550)
+- Multi-Zone 2-Zone: $4,900–$8,400 (mid: $6,650)
+- Multi-Zone 3-Zone: $7,000–$11,200 (mid: $9,100)
+- Multi-Zone 4-Zone: $9,100–$14,000 (mid: $11,550)
+
+**Interpretation:** At $3,850 midpoint, a standard-efficiency single-zone 12K BTU mini-split is the most popular residential installation for conditioning one room. Upgrading to 22 SEER2 efficiency raises the total to $3,220–$5,635 (mid: $4,428) — an extra $578 upfront that saves roughly $100–$150 per year in electricity. Adding a new dedicated circuit would add $300–$600 to the total. The same project on the West Coast would cost approximately $4,200 due to 25% higher labor rates.
+
+{/* Section 10: Mini-Split vs Central AC */}
+## Mini-Split vs. Central Air Conditioning
+
+A single-zone mini-split is significantly cheaper than central AC for conditioning one room — $2,800–$4,900 versus $4,000–$8,000 for a central system. However, a whole-home 4-zone mini-split at $9,100–$14,000 costs roughly the same as central AC. Mini-splits are most cost-effective for room additions, converted garages, bonus rooms, or homes without existing ductwork, where installing new ducts for central AC would add $3,000–$7,000.
+
+**Where mini-splits win:** zone-by-zone temperature control (set each room independently), no ductwork required, higher efficiency ratings, quieter indoor operation, and simpler installation for 1–2 rooms.
+
+**Where central AC wins:** whole-home cooling from a single system, hidden equipment (no wall-mounted units visible), simpler system when ductwork already exists, lower per-room cost at 5+ rooms, and higher resale appeal in most markets.
+
+{/* Section 11: Factors That Affect Mini-Split Cost */}
+## Factors That Affect Mini-Split Cost
+
+**System size and zone count** is the largest cost driver. A single-zone 9K BTU unit at $2,100–$3,500 serves one small room. A 4-zone system at $9,100–$14,000 conditions an entire home. However, cost per zone decreases with more zones: $2,800/zone for a single-zone 9K versus approximately $2,888/zone for a 4-zone system, making multi-zone systems a better per-room value.
+
+**Efficiency rating** creates a 30% cost swing on equipment. Standard 20 SEER2 units meet current DOE efficiency requirements. Premium 25 SEER2 units add 30% to equipment cost but reduce annual cooling energy use by 20–25%. In cooling-dominated climates (IECC zones 1–3), premium units typically pay back the efficiency investment in 5–8 years through lower electricity bills.
+
+**Refrigerant line set length** affects labor cost. A standard 15-foot run works when the outdoor unit sits directly below the indoor unit. Second-floor installations or opposite-side placements may require 25–50 feet, adding 10–25% to the labor portion.
+
+**Electrical requirements** can add $0–$1,500. Every mini-split needs a dedicated 20–30 amp, 208/230V circuit. Newer homes often have spare panel capacity. Pre-1990 homes with 100-amp or 150-amp panels may need a sub-panel upgrade at $800–$1,500.
+
+**Regional labor rates** vary 15–25% from the national average. HVAC labor in the South averages $45–$65/hour versus $75–$100/hour on the West Coast and Northeast. This difference compounds on multi-zone installations requiring 2–3 days of labor.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including equipment, labor, and standard mounting hardware. Decorative line set covers, condensate pump upgrades, and Wi-Fi thermostat add-ons are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor and Angi. Your local market may be 15–25% higher or lower depending on contractor availability, brand selection, and permit fees.
+- Equipment costs assume **wall-mounted indoor units**, the most common and least expensive style. Ceiling cassettes add $200–$500 per unit; floor-mounted consoles add $100–$300 per unit.
+- The **labor factor of 40% of equipment cost** is a national average for standard installation complexity. Attic runs, concrete-mounted condensers, or multi-story buildings may exceed this estimate.
+- This calculator does not account for **building permits** ($75–$250 in most jurisdictions), **removal of existing equipment**, or **ductwork modifications**.
+- **Efficiency multipliers** reflect upfront equipment cost premiums only. Actual energy savings depend on local electricity rates, climate zone, and usage patterns.
+- **Brand pricing** varies significantly. Budget brands (Pioneer, MRCOOL) run 20–30% below these averages. Premium brands (Mitsubishi, Daikin, Fujitsu) run 10–25% above.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does a mini-split cost to install?
+
+A single-zone ductless mini-split costs $2,100–$4,900 installed, depending on BTU capacity and efficiency rating. The most popular residential size — a 12,000 BTU single-zone system — costs $2,800–$4,900 at national average rates. Multi-zone systems cost $4,900–$14,000 for 2–4 zones. Equipment accounts for roughly 70% of the total with labor at 30%. Adding a new electrical circuit adds $300–$600, and regional labor rates shift the total by 15–25%.
+
+### Is a mini-split cheaper than central AC?
+
+A single-zone mini-split is significantly cheaper than central AC for conditioning one room — $2,800–$4,900 versus $4,000–$8,000 for a central system. For whole-home cooling, a 4-zone mini-split at $9,100–$14,000 costs roughly the same as central AC. Mini-splits are most cost-effective for additions, converted garages, or homes without existing ductwork, where installing new ducts would add $3,000–$7,000 to a central AC project.
+
+### How many zones do I need?
+
+Size your system by counting the rooms you need to condition independently. One zone per room is standard. A bedroom needs 9,000 BTU (up to 350 sq ft), a living room needs 12,000 BTU (350–550 sq ft), and a large open space needs 18,000 BTU (550–800 sq ft). Multi-zone systems with 2–4 indoor units share one outdoor condenser, which is more efficient and less expensive than installing multiple single-zone systems.
+
+### Do mini-splits heat and cool?
+
+Yes, all modern mini-splits are heat pumps that both cool and heat. Standard models maintain rated heating capacity down to 25–30 degrees Fahrenheit and lose efficiency below that. Cold-climate models (Mitsubishi Hyper-Heat, Fujitsu XLTH, Daikin Aurora) maintain rated heating capacity down to -13 degrees Fahrenheit and cost 15–30% more than standard models. In IECC climate zones 5–7 (northern U.S.), a cold-climate mini-split paired with backup heat provides year-round comfort.
+
+### How long does mini-split installation take?
+
+Single-zone mini-split installation takes 4–8 hours (one day) for a standard setup with a short line set and existing electrical circuit. Multi-zone systems with 2–4 indoor units take 1–3 days. The timeline increases with longer refrigerant line runs, new electrical work, or difficult-to-access installation locations. Most contractors can complete a single-zone installation in one visit.
+
+### What SEER2 rating should I choose?
+
+Standard 20 SEER2 is sufficient for moderate climates or limited AC usage. High-efficiency 22 SEER2 is the best value for most homeowners — it adds 15% to equipment cost but saves about $100–$150 per year in electricity. Premium 25 SEER2 adds 30% upfront and is best justified in hot climates (IECC zones 1–3) where the unit runs 6+ months per year, with payback in 5–8 years. Higher SEER2 ratings may also qualify for utility rebates and federal tax credits.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates ductless mini-split installation costs using equipment base pricing by system type, a labor factor of 40% of equipment cost, and adjustments for efficiency tier, refrigerant line set length, electrical requirements, and regional labor rates. Equipment costs come from **HomeAdvisor** and **Angi** 2025–2026 national average surveys for ductless mini-split systems. Efficiency ratings follow **AHRI** (Air-Conditioning, Heating, and Refrigeration Institute) SEER2 testing standards established under 2023 DOE regulations. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC mechanics and installers (SOC 49-9021). Electrical work costs are based on HomeAdvisor 2025–2026 electrical service pricing. The 40% labor-to-equipment ratio is a national average for residential mini-split installations; actual labor percentages vary by installation complexity and local rates. All prices are fully installed costs including standard mounting hardware.
+
+{/* Section 17: Disclaimer — auto-rendered */}

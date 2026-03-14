@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "siding calculator",
+  "secondaryKeywords": [
+    "how much siding do I need",
+    "vinyl siding calculator",
+    "siding square footage calculator",
+    "house siding estimator"
+  ],
   "metaTitle": "Siding Calculator — Squares, Panels & Cost by Material Type",
   "metaDescription": "Calculate how much siding you need in squares and panels. Supports vinyl, fiber-cement, wood, engineered wood, and metal. Deducts windows and doors with cost estimates.",
   "inputs": [

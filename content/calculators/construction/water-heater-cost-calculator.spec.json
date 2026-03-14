@@ -1,0 +1,325 @@
+{
+  "id": "water-heater-cost-calculator",
+  "title": "Water Heater Cost Calculator",
+  "slug": "water-heater-cost-calculator",
+  "category": "construction",
+  "subcategory": "plumbing",
+  "primaryKeyword": "water heater cost calculator",
+  "secondaryKeywords": [
+    "water heater installation cost",
+    "tankless water heater cost",
+    "hot water heater replacement cost",
+    "water heater cost by type"
+  ],
+  "metaTitle": "Water Heater Cost Calculator | Tank, Tankless & Heat Pump Estimates",
+  "metaDescription": "Compare water heater costs for tank, tankless, heat pump, and solar. Includes installation labor, fuel conversion, venting, and regional pricing for 2025-2026.",
+  "inputs": [
+    {
+      "id": "heaterType",
+      "label": "Water Heater Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "tank-gas",
+      "options": [
+        {
+          "value": "tank-gas",
+          "label": "Tank Gas ($800–$1,500 unit)"
+        },
+        {
+          "value": "tank-electric",
+          "label": "Tank Electric ($600–$1,200 unit)"
+        },
+        {
+          "value": "tankless-gas",
+          "label": "Tankless Gas ($1,500–$3,000 unit)"
+        },
+        {
+          "value": "tankless-electric",
+          "label": "Tankless Electric ($800–$1,500 unit)"
+        },
+        {
+          "value": "heat-pump",
+          "label": "Heat Pump ($1,500–$3,500 unit)"
+        },
+        {
+          "value": "solar",
+          "label": "Solar ($3,000–$6,000 unit)"
+        }
+      ],
+      "helpText": "Select your water heater type — each has different purchase, installation, and operating costs"
+    },
+    {
+      "id": "tankSize",
+      "label": "Tank Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "40-gallon",
+      "options": [
+        {
+          "value": "40-gallon",
+          "label": "40 Gallon (1–2 people)"
+        },
+        {
+          "value": "50-gallon",
+          "label": "50 Gallon (2–3 people) +$100–$200"
+        },
+        {
+          "value": "75-gallon",
+          "label": "75 Gallon (4+ people) +$200–$400"
+        }
+      ],
+      "visibleWhen": {
+        "heaterType": ["tank-gas", "tank-electric", "heat-pump", "solar"]
+      },
+      "helpText": "Larger tanks cost more but serve more simultaneous hot water demand"
+    },
+    {
+      "id": "tankSize",
+      "label": "Flow Rate",
+      "type": "select",
+      "required": true,
+      "defaultValue": "tankless-standard",
+      "options": [
+        {
+          "value": "tankless-standard",
+          "label": "Standard Flow (2–5 GPM)"
+        },
+        {
+          "value": "tankless-high-flow",
+          "label": "High Flow (5–8 GPM) +$300–$500"
+        }
+      ],
+      "visibleWhen": {
+        "heaterType": ["tankless-gas", "tankless-electric"]
+      },
+      "helpText": "Higher flow rate units support more simultaneous fixtures"
+    },
+    {
+      "id": "fuelConversion",
+      "label": "Fuel Line Conversion",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Conversion Needed"
+        },
+        {
+          "value": "gas-to-electric",
+          "label": "Gas to Electric (+$500–$1,200)"
+        },
+        {
+          "value": "electric-to-gas",
+          "label": "Electric to Gas (+$800–$1,500)"
+        }
+      ],
+      "helpText": "Switching fuel types requires electrical panel upgrades or gas line installation"
+    },
+    {
+      "id": "ventingUpgrade",
+      "label": "Venting Upgrade",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Venting Upgrade"
+        },
+        {
+          "value": "standard-vent",
+          "label": "Standard Vent ($200–$500)"
+        },
+        {
+          "value": "power-vent",
+          "label": "Power Vent ($400–$800)"
+        },
+        {
+          "value": "direct-vent",
+          "label": "Direct Vent ($300–$600)"
+        }
+      ],
+      "helpText": "Gas water heaters may require new or upgraded venting — tankless units often need stainless steel venting"
+    },
+    {
+      "id": "permitRequired",
+      "label": "Permit Required",
+      "type": "toggle",
+      "required": true,
+      "defaultValue": "no",
+      "options": [
+        {
+          "value": "no",
+          "label": "No Permit"
+        },
+        {
+          "value": "yes",
+          "label": "Yes — Permit Required ($100–$300)"
+        }
+      ],
+      "helpText": "Most jurisdictions require a plumbing permit for water heater replacement — check your local codes"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "unitCost",
+      "label": "Equipment Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "fuelConversionCost",
+      "label": "Fuel Conversion Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "ventingCost",
+      "label": "Venting Upgrade Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "permitCost",
+      "label": "Permit Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "annualOperatingCost",
+      "label": "Est. Annual Operating Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "heaterComparison",
+      "label": "Water Heater Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "paybackPeriod",
+      "label": "Payback Period vs. Tank Gas",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeline",
+      "label": "Typical Installation Time",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "water-heater-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "hvac-size-calculator",
+    "renovation-cost-calculator",
+    "electricity-cost-calculator",
+    "home-energy-usage-calculator",
+    "bathroom-remodel-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 Water Heater Cost Data; ENERGY STAR Water Heater Selection Guide; U.S. Department of Energy",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Equipment and installation labor cost data from HomeAdvisor and Angi 2025-2026 national averages. Annual operating cost estimates from U.S. Department of Energy and ENERGY STAR Water Heater Selection Guide. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for plumbers, pipefitters, and steamfitters (SOC 47-2152). Fuel conversion and venting costs based on HomeAdvisor 2025 specialty plumbing data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "renovation-cost-calculator",
+    "bathroom-remodel-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

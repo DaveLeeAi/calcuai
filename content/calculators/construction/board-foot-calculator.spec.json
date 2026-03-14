@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "board foot calculator",
+  "secondaryKeywords": [
+    "lumber board foot calculator",
+    "board feet calculator",
+    "how to calculate board feet",
+    "hardwood board footage"
+  ],
   "metaTitle": "Board Foot Calculator — Lumber Volume & Pricing",
   "metaDescription": "Calculate board feet for lumber projects. Enter thickness, width, and length to get board foot volume, total cost, and nominal-to-actual dimension conversion.",
   "inputs": [

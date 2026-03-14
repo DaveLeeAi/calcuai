@@ -1,0 +1,284 @@
+{
+  "id": "garage-door-cost-calculator",
+  "title": "Garage Door Cost Calculator",
+  "slug": "garage-door-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "garage door cost calculator",
+  "secondaryKeywords": [
+    "garage door replacement cost",
+    "new garage door cost",
+    "garage door installation cost",
+    "garage door cost by type"
+  ],
+  "metaTitle": "Garage Door Cost Calculator | Single, Double & Custom Estimates",
+  "metaDescription": "Estimate garage door costs for single, double, insulated, and custom carriage doors. Compare steel, wood, aluminum, fiberglass, and composite materials with opener and removal add-ons by region.",
+  "inputs": [
+    {
+      "id": "doorType",
+      "label": "Door Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single-standard",
+      "options": [
+        {
+          "value": "single-standard",
+          "label": "Single Standard ($600–$1,200)"
+        },
+        {
+          "value": "single-insulated",
+          "label": "Single Insulated ($800–$1,600)"
+        },
+        {
+          "value": "double-standard",
+          "label": "Double Standard ($800–$1,800)"
+        },
+        {
+          "value": "double-insulated",
+          "label": "Double Insulated ($1,200–$2,500)"
+        },
+        {
+          "value": "custom-carriage",
+          "label": "Custom Carriage ($2,000–$5,000)"
+        }
+      ],
+      "helpText": "Single = 8–9 ft wide (1-car). Double = 16 ft wide (2-car). Custom carriage = swing-out or overlay style."
+    },
+    {
+      "id": "material",
+      "label": "Door Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "steel",
+      "options": [
+        {
+          "value": "steel",
+          "label": "Steel (1.0x — most popular)"
+        },
+        {
+          "value": "wood",
+          "label": "Wood (1.40x premium)"
+        },
+        {
+          "value": "aluminum",
+          "label": "Aluminum (0.85x — lightweight)"
+        },
+        {
+          "value": "fiberglass",
+          "label": "Fiberglass (1.15x — rust-proof)"
+        },
+        {
+          "value": "composite",
+          "label": "Composite (1.25x — low maintenance)"
+        }
+      ],
+      "helpText": "Material multiplier applied to door base price. Steel is the baseline."
+    },
+    {
+      "id": "insulation",
+      "label": "Insulation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Insulation (1.0x)"
+        },
+        {
+          "value": "polystyrene",
+          "label": "Polystyrene (+10%)"
+        },
+        {
+          "value": "polyurethane",
+          "label": "Polyurethane (+20% — best R-value)"
+        }
+      ],
+      "helpText": "Insulation improves energy efficiency and noise reduction. Polyurethane has the highest R-value."
+    },
+    {
+      "id": "opener",
+      "label": "Garage Door Opener",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Opener"
+        },
+        {
+          "value": "chain-drive",
+          "label": "Chain Drive (+$200–$350)"
+        },
+        {
+          "value": "belt-drive",
+          "label": "Belt Drive (+$300–$500 — quieter)"
+        },
+        {
+          "value": "smart-wifi",
+          "label": "Smart WiFi (+$400–$700 — app control)"
+        }
+      ],
+      "helpText": "Chain drive is loudest but cheapest. Belt drive is quieter. Smart WiFi adds remote app control and monitoring."
+    },
+    {
+      "id": "oldDoorRemoval",
+      "label": "Remove Old Door?",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Removal Needed"
+        },
+        {
+          "value": "yes",
+          "label": "Yes — Remove & Dispose (+$100–$200)"
+        }
+      ],
+      "helpText": "Includes disconnecting old springs, tracks, and panels plus haul-away disposal."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "doorCost",
+      "label": "Door Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "openerCost",
+      "label": "Opener Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "removalCost",
+      "label": "Old Door Removal",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "doorTypeComparison",
+      "label": "Door Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "garage-door-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "door-replacement-cost-calculator",
+    "renovation-cost-calculator",
+    "driveway-cost-calculator",
+    "electrical-panel-upgrade-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; International Door Association (IDA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Door base pricing from HomeAdvisor and Angi 2025-2026 national average surveys. Material multipliers derived from International Door Association (IDA) wholesale-to-retail pricing data. Insulation cost premiums from IDA R-value performance guides. Labor rates from Bureau of Labor Statistics Occupational Employment and Wage Statistics for door installers (SOC 47-2031). Regional labor multipliers derived from BLS OES regional wage data. Opener pricing from HomeAdvisor and major manufacturer MSRP data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "door-replacement-cost-calculator",
+    "renovation-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "roofing calculator",
+  "secondaryKeywords": [
+    "how many shingles do I need",
+    "roofing material calculator",
+    "roof square calculator",
+    "shingle bundle calculator"
+  ],
   "metaTitle": "Roofing Calculator — Squares, Bundles & Material Cost",
   "metaDescription": "Calculate roofing squares, bundles, and underlayment rolls for your project. Supports shingles, metal, tile, and wood shake with pitch factor and cost.",
   "inputs": [

@@ -1,0 +1,240 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Repiping a 1,000-1,500 sq ft home with copper costs $4,500-$8,000 for piping alone. PEX repiping cuts that to $2,700-$4,800 -- roughly 40% less than copper -- while CPVC comes in at $2,475-$4,400 (45% less). Add $500-$1,500 for drywall patch repairs and $200-$500 for permits. A full copper repipe of a medium home with drywall patches and permits runs $5,200-$10,000, with a midpoint of $7,600. Multi-story homes add 15-30% and homes with 3+ bathrooms add 15-30% more. Enter your home details below for a personalized estimate with a material comparison and regional labor adjustment.
+
+</div>
+
+{/* At a Glance -- Whole House Repipe Costs */}
+<div className="at-a-glance">
+
+| Metric | Value |
+|--------|-------|
+| **Copper repipe (1.0x baseline)** | $4,500-$8,000 (medium home) |
+| **PEX repipe (0.60x copper)** | $2,700-$4,800 (medium home) |
+| **CPVC repipe (0.55x copper)** | $2,475-$4,400 (medium home) |
+| **Small home (under 1,000 sq ft)** | $3,000-$5,000 base |
+| **Large home (1,500-2,500 sq ft)** | $7,000-$13,000 base |
+| **Source** | HomeAdvisor / Angi, 2025-2026; PHCC |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator provides installed cost ranges for whole-house repiping across three common pipe materials -- copper, PEX (cross-linked polyethylene), and CPVC (chlorinated polyvinyl chloride). It factors in home size, number of stories, bathroom count, wall repair, permits, and regional labor rates. The result includes a low/mid/high estimate for your selected material plus a side-by-side comparison of all three pipe types.
+
+The **base cost** is determined by home size, with four tiers from small (under 1,000 sq ft) to extra-large (over 2,500 sq ft). These ranges reflect 2025-2026 national averages from HomeAdvisor, Angi, and the Plumbing-Heating-Cooling Contractors Association (PHCC), covering pipe materials, fittings, labor, and standard fixture connections.
+
+The **pipe material multiplier** creates the largest cost difference. Copper is the baseline at 1.0x -- it is the most expensive but offers the longest lifespan (50-70 years) and highest resale value. PEX at 0.60x is 40% cheaper because it installs faster (flexible tubing routes through walls without soldering) and the material itself costs less. CPVC at 0.55x is the cheapest option but has a shorter lifespan (25-40 years) and cannot be used outdoors or in UV-exposed areas.
+
+The **story multiplier** adds 15% per additional story (2-story: 1.15x, 3-story: 1.30x) because multi-story homes require more vertical pipe runs, ceiling/floor penetrations, and scaffold or attic work.
+
+The **bathroom multiplier** adjusts for fixture density. A 1-bath home uses a 0.85x multiplier because it has fewer pipe runs. A 2-bath home is the baseline at 1.0x. Three bathrooms add 15% (1.15x) and four or more add 30% (1.30x) because each additional bathroom means more supply lines, drain connections, and fixture hookups.
+
+The cost splits into materials (35%) and labor (65%), with regional multipliers applied to the labor portion only. This reflects the labor-intensive nature of repiping, where cutting into walls, routing new pipe, and patching drywall consume the majority of project time.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select your home size** -- measure the total conditioned square footage. Small is under 1,000 sq ft (apartments, small ranch homes). Medium is 1,000-1,500 sq ft (standard ranch or colonial). Large is 1,500-2,500 sq ft (larger colonial, split-level). Extra-large is over 2,500 sq ft (large colonial, luxury homes).
+
+2. **Select the pipe material** -- copper is the premium choice with the longest lifespan but highest cost. PEX is the most popular choice for residential repipes due to lower cost and faster installation. CPVC is the budget option but has more code restrictions and a shorter lifespan. Your plumber may recommend a specific material based on local building code and water chemistry.
+
+3. **Select the number of stories** -- count all full stories. A 1-story ranch is baseline pricing. A 2-story home adds 15% for vertical pipe runs and ceiling work. A 3-story home adds 30%. Finished basements with plumbing count as a story for estimating purposes.
+
+4. **Select the number of bathrooms** -- count all full and half bathrooms. A half bath (toilet and sink) counts the same as a full bath because it still requires full supply and drain connections.
+
+5. **Select wall repair level** -- "none" means the plumber can access pipes through existing access panels, crawl spaces, or basements. "Drywall patches" ($500-$1,500) covers targeted cuts and patches where the plumber opens walls to reach pipe runs. "Full drywall repair" ($1,500-$4,000) covers extensive wall opening and finishing for homes where most pipe runs are behind finished walls.
+
+6. **Select permit** -- most jurisdictions require a plumbing permit for whole-house repiping. Select "yes" to add $200-$500 for the permit. The permit ensures the work is inspected and meets local plumbing code.
+
+7. **Select your region** -- regional labor multipliers adjust for local plumber wages. Northeast (1.20x) and West Coast (1.25x) are the most expensive markets. South (0.85x) and Midwest (0.90x) are the most affordable.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Whole-house repiping cost is estimated using a home-size base rate adjusted by pipe material, stories, and bathrooms, then split into material and labor components with regional adjustment on labor only.
+
+**Adjusted base cost:**
+
+$$C_{\text{adjusted}} = C_{\text{base}} \times M_{\text{pipe}} \times M_{\text{story}} \times M_{\text{bath}}$$
+
+**Piping cost (material + labor split):**
+
+$$C_{\text{piping}} = C_{\text{adjusted}} \times 0.35 + C_{\text{adjusted}} \times 0.65 \times R$$
+
+**Total cost:**
+
+$$C_{\text{total}} = C_{\text{piping}} + C_{\text{wall}} + C_{\text{permit}}$$
+
+$$C_{\text{mid}} = \frac{C_{\text{total,low}} + C_{\text{total,high}}}{2}$$
+
+Where:
+
+- **C_base** = home size base cost range (low/high -- see table below)
+- **M_pipe** = pipe material multiplier (copper: 1.0, PEX: 0.60, CPVC: 0.55)
+- **M_story** = story multiplier (1-story: 1.0, 2-story: 1.15, 3-story: 1.30)
+- **M_bath** = bathroom multiplier (1-bath: 0.85, 2-bath: 1.0, 3-bath: 1.15, 4+: 1.30)
+- **R** = regional labor multiplier (national: 1.0, northeast: 1.20, west-coast: 1.25, midwest: 0.90, south: 0.85)
+- **0.35** = material cost share
+- **0.65** = labor cost share
+- **C_wall** = wall repair add-on (none: $0, patches: $500-$1,500, full repair: $1,500-$4,000)
+- **C_permit** = permit cost (yes: $200-$500, no: $0)
+
+**Home size base costs (2025-2026):**
+
+| Home Size | Low | High |
+|---|---|---|
+| Small (under 1,000 sq ft) | $3,000 | $5,000 |
+| Medium (1,000-1,500 sq ft) | $4,500 | $8,000 |
+| Large (1,500-2,500 sq ft) | $7,000 | $13,000 |
+| Extra Large (over 2,500 sq ft) | $10,000 | $18,000 |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and **Plumbing-Heating-Cooling Contractors Association (PHCC)**.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: Medium Home, Copper, 1-Story, 2-Bath, Drywall Patches, Permit
+
+A homeowner is repiping a 1,200-square-foot single-story ranch home with copper. Two bathrooms, drywall patches needed, permit required. National average pricing.
+
+**Step-by-step:**
+
+1. Look up base cost for medium home (1,000-1,500 sq ft): **$4,500-$8,000**
+2. Pipe material multiplier (copper): **1.0x**
+3. Story multiplier (1-story): **1.0x**
+4. Bathroom multiplier (2-bath): **1.0x**
+5. Adjusted cost low: $4,500 x 1.0 x 1.0 x 1.0 = **$4,500**
+6. Adjusted cost high: $8,000 x 1.0 x 1.0 x 1.0 = **$8,000**
+7. Material portion low: $4,500 x 0.35 = **$1,575**
+8. Labor portion low: $4,500 x 0.65 x 1.0 = **$2,925**
+9. Material portion high: $8,000 x 0.35 = **$2,800**
+10. Labor portion high: $8,000 x 0.65 x 1.0 = **$5,200**
+11. Piping cost low: $1,575 + $2,925 = **$4,500**
+12. Piping cost high: $2,800 + $5,200 = **$8,000**
+13. Add drywall patches: **$500-$1,500**
+14. Add permit: **$200-$500**
+15. Total low: $4,500 + $500 + $200 = **$5,200**
+16. Total high: $8,000 + $1,500 + $500 = **$10,000**
+17. Total mid: ($5,200 + $10,000) / 2 = **$7,600**
+
+**Material comparison for this home (1-story, 2-bath, no wall repair or permit):**
+- CPVC (0.55x): $2,475-$4,400 (mid: $3,437.50)
+- PEX (0.60x): $2,700-$4,800 (mid: $3,750)
+- Copper (1.0x): $4,500-$8,000 (mid: $6,250)
+
+**Interpretation:** At $7,600 midpoint, a copper repipe of this medium ranch home runs about $6,250 for piping alone plus $1,350 in wall repairs and permits. Switching to PEX would drop the piping cost to $3,750 midpoint -- saving roughly $2,500 -- while still delivering a 40-50 year lifespan. The drywall patch cost ($1,000 midpoint) is typical for a single-story home where many pipe runs are accessible through the crawl space or basement, limiting the number of wall openings.
+
+## Worked Example: Large 2-Story Home, PEX, 3-Bath, West Coast Pricing
+
+A homeowner in Seattle is repiping a 2,000-square-foot two-story colonial with PEX. Three bathrooms, full drywall repair, permit required. West Coast labor rates.
+
+**Step-by-step:**
+
+1. Base cost for large home (1,500-2,500 sq ft): **$7,000-$13,000**
+2. Pipe material multiplier (PEX): **0.60x**
+3. Story multiplier (2-story): **1.15x**
+4. Bathroom multiplier (3-bath): **1.15x**
+5. Adjusted cost low: $7,000 x 0.60 x 1.15 x 1.15 = **$5,558.70**
+6. Adjusted cost high: $13,000 x 0.60 x 1.15 x 1.15 = **$10,323.30**
+7. Material portion low: $5,558.70 x 0.35 = **$1,945.55**
+8. Labor portion low: $5,558.70 x 0.65 x 1.25 = **$4,516.44**
+9. Material portion high: $10,323.30 x 0.35 = **$3,613.16**
+10. Labor portion high: $10,323.30 x 0.65 x 1.25 = **$8,387.68**
+11. Piping cost low: $1,945.55 + $4,516.44 = **$6,461.99**
+12. Piping cost high: $3,613.16 + $8,387.68 = **$12,000.84**
+13. Add full drywall repair: **$1,500-$4,000**
+14. Add permit: **$200-$500**
+15. Total low: $6,461.99 + $1,500 + $200 = **$8,161.99**
+16. Total high: $12,000.84 + $4,000 + $500 = **$16,500.84**
+17. Total mid: ($8,161.99 + $16,500.84) / 2 = **$12,331.42**
+
+**Interpretation:** At $12,331 midpoint, this PEX repipe is substantially higher than a basic medium-home project due to the larger home size, two stories (1.15x), three bathrooms (1.15x), and Seattle-area labor premium (1.25x on labor). Even with PEX's 40% material savings, the total is significant. If this homeowner chose copper instead, the piping cost alone would jump from roughly $9,231 midpoint to $15,385 -- an additional $6,154. This cost difference explains why PEX has become the dominant choice for whole-house repiping in the 2020s.
+
+{/* Section 10: Pipe Material Comparison */}
+## Pipe Material Comparison
+
+| Feature | Copper | PEX | CPVC |
+|---|---|---|---|
+| Cost multiplier | 1.0x (baseline) | 0.60x (40% less) | 0.55x (45% less) |
+| Medium home cost | $4,500-$8,000 | $2,700-$4,800 | $2,475-$4,400 |
+| Lifespan | 50-70 years | 40-50 years | 25-40 years |
+| Installation method | Soldered joints | Crimp/push-fit (faster) | Solvent cement |
+| Installation speed | Slowest (5-7 days) | Fastest (3-5 days) | Medium (4-6 days) |
+| Freeze resistance | Poor (rigid, splits) | Good (flexible, expands) | Poor (rigid, brittle) |
+| UV resistance | Yes | No (must be protected) | No (degrades in sunlight) |
+| Resale value impact | Highest | Moderate | Lowest |
+| Best for | Premium installs, hot climates | Most residential repipes | Budget projects, mild climates |
+
+Copper remains the gold standard for longevity and resale value, but PEX dominates the repiping market because it costs 40% less and installs 2-3x faster. CPVC is the cheapest option but carries restrictions -- it cannot be used outdoors, becomes brittle with age, and some insurance companies charge higher premiums for CPVC supply lines.
+
+{/* Section 11: Signs You Need Repiping */}
+## Signs You Need Whole-House Repiping
+
+**Frequent leaks** are the clearest signal. If you are patching pinhole leaks every 6-12 months, the pipes have reached the end of their useful life. Spot repairs on failing pipes are like patching a tire with multiple punctures -- each fix shifts stress to the next weak point. When you have spent $1,000+ on individual plumbing repairs in a single year, repiping is almost always more cost-effective.
+
+**Discolored water** (brown, yellow, or rusty) after sitting overnight indicates internal pipe corrosion. This is common in galvanized steel pipes (pre-1960s homes) and aging copper with aggressive water chemistry. A water quality test ($50-$150) can confirm whether discoloration comes from your pipes or the municipal supply.
+
+**Low water pressure** throughout the house (not just one fixture) often signals mineral buildup or corrosion narrowing the pipe interior. Galvanized steel pipes lose up to half their internal diameter over 40 years from scale accumulation. If pressure is low at multiple fixtures simultaneously, the problem is systemic.
+
+**Pipe material and age** are predictive. Galvanized steel (common in pre-1960 homes) lasts 40-60 years and should be proactively replaced. Polybutylene pipes (1978-1995, gray or blue flexible tubing) are failure-prone and many insurance companies refuse to cover homes with PB plumbing. Lead pipes (pre-1930) should be replaced for health safety regardless of condition.
+
+**Slab leaks** -- leaks in pipes embedded in the concrete foundation -- cost $2,000-$4,000 per individual repair and often indicate system-wide deterioration. If you have had two or more slab leak repairs, full repiping is usually more cost-effective than continued spot fixes. A licensed plumber can assess overall pipe condition with a camera inspection for $200-$500.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including pipe materials, fittings, labor, and standard fixture connections. Fixture replacement (faucets, valves, water heater connections) is not included.
+- Cost ranges reflect **2025-2026 U.S. national averages** from HomeAdvisor, Angi, and PHCC. Your local market may be 20-40% higher or lower depending on plumber availability and local code requirements.
+- The calculator assumes **standard residential construction** with accessible walls, crawl spaces, or basements. Homes built on slab foundations may cost more because pipes in the slab must be abandoned and new lines rerouted through the attic or walls.
+- **Wall repair costs** are flat add-ons. Homes with plaster walls (vs drywall), tile walls, or extensive built-in cabinetry may cost significantly more to open and restore.
+- **Permit fees** vary by jurisdiction from $100 to $800. The $200-$500 range covers most standard residential plumbing permits.
+- The **35% material / 65% labor** cost split reflects PHCC industry data for residential repiping. Material-heavy projects (copper in large homes) may shift closer to 40/60.
+- This calculator does not include costs for **drain/waste/vent (DWV) repiping**, **water heater replacement**, **main shutoff valve replacement**, **sewer line work**, or **outdoor irrigation piping** -- these are separate projects.
+- The calculator does not account for **slab reroute costs** for homes on concrete slab foundations where pipes cannot be accessed through the slab and must be rerouted through attic or walls.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to repipe a house?
+
+A whole-house repipe costs $3,000-$18,000+ depending on home size, pipe material, and complexity. A medium home (1,000-1,500 sq ft) with copper costs $4,500-$8,000 for piping alone, or $5,200-$10,000 with drywall patches and permits. PEX cuts the piping cost to $2,700-$4,800 for the same home -- 40% less than copper. Large homes (1,500-2,500 sq ft) range from $7,000-$13,000 with copper. Add $500-$4,000 for wall repairs and $200-$500 for permits on top of the piping cost.
+
+### Is PEX or copper better for repiping?
+
+PEX is the better choice for most residential repipes because it costs 40% less than copper and installs 2-3x faster. PEX is flexible (bends around corners without fittings), freeze-resistant (expands without splitting), and lasts 40-50 years. Copper lasts longer (50-70 years), has higher resale value, and is universally code-compliant. Choose copper if your local code requires it, you plan to stay in the home 30+ years, or you have aggressive water chemistry that may degrade PEX. Choose PEX for cost savings, faster installation (3-5 days vs 5-7 days for copper), and freeze-prone climates.
+
+### How long does whole-house repiping take?
+
+Repiping takes 2-10 days depending on home size. A small single-story home takes 2-4 days. A medium home takes 3-5 days. A large 2-story home takes 4-7 days. Extra-large homes can take 5-10 days. PEX installation is typically 1-2 days faster than copper because it requires no soldering and routes more easily through existing wall cavities. Your water will be shut off during active pipe work (usually 6-8 hours per day) but restored each evening.
+
+### What are the signs you need to repipe your house?
+
+The five key warning signs are: frequent pinhole leaks (more than one per year in different locations), discolored or rusty water after sitting overnight, consistently low water pressure throughout the house, visible pipe corrosion or green patina on copper fittings, and age-based risk factors (galvanized steel over 40 years old, polybutylene pipes of any age, or lead pipes of any age). A licensed plumber can perform a pipe inspection with a camera for $200-$500 to assess overall condition before committing to a full repipe.
+
+### Does repiping increase home value?
+
+Repiping typically recoups 50-70% of its cost in added home value and makes a home significantly easier to sell. Buyers and home inspectors flag old galvanized or polybutylene pipes as major deficiencies that can kill deals or trigger price reductions of $10,000-$20,000. Copper repiping offers the highest resale premium. PEX is increasingly accepted by buyers and appraisers, especially in newer construction markets. Any repipe -- regardless of material -- eliminates a major inspection red flag and removes a common buyer objection.
+
+### Do I need a permit for repiping?
+
+Yes, nearly all jurisdictions require a plumbing permit for whole-house repiping. Permits cost $200-$500 and ensure the work is inspected for code compliance. The process typically involves a pre-inspection, an in-wall inspection of new pipe routing before walls are closed, and a final inspection after completion. Working without a permit can void your homeowner's insurance, create disclosure issues when selling, and result in fines. Always hire a licensed plumber who pulls the permit as part of the job.
+
+</div>
+
+{/* Section 15: Related Calculators -- auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates whole-house repiping costs using home-size base rates adjusted by pipe material, stories, and bathroom count. The adjusted cost is split into materials (35%) and labor (65%), with regional labor multipliers applied to the labor portion only. Cost data comes from **HomeAdvisor** and **Angi** 2025-2026 national average surveys, supplemented by **Plumbing-Heating-Cooling Contractors Association (PHCC)** industry data and contractor pricing surveys. Pipe material multipliers reflect the relative installed cost of copper (1.0x baseline), PEX (0.60x), and CPVC (0.55x) from PHCC contractor surveys and material supplier pricing. Story and bathroom multipliers are derived from HomeAdvisor project data showing incremental costs for additional vertical pipe runs and fixture connections. Wall repair costs are flat add-ons based on HomeAdvisor drywall repair cost data. Regional labor multipliers follow the HomeAdvisor regional cost index (Northeast 1.20x, West Coast 1.25x, Mid-Atlantic 1.15x, Midwest 0.90x, South 0.85x, Mountain West 0.95x). All prices are installed costs including materials, fittings, labor, and standard fixture connections.
+
+{/* Section 17: Disclaimer -- auto-rendered */}

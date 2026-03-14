@@ -1,0 +1,258 @@
+{
+  "id": "mini-split-cost-calculator",
+  "title": "Mini-Split Cost Calculator",
+  "slug": "mini-split-cost-calculator",
+  "category": "construction",
+  "subcategory": "hvac",
+  "primaryKeyword": "mini split installation cost calculator",
+  "secondaryKeywords": [
+    "mini split cost",
+    "ductless mini split cost",
+    "mini split AC installation cost",
+    "mini split heat pump cost"
+  ],
+  "metaTitle": "Mini-Split Cost Calculator | Ductless Single & Multi-Zone Estimates",
+  "metaDescription": "Estimate ductless mini-split installation costs for single-zone and multi-zone systems. Compare 9K, 12K, and 18K BTU units with SEER2 efficiency tiers, line set lengths, and electrical work by region.",
+  "inputs": [
+    {
+      "id": "systemType",
+      "label": "System Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "single-zone-12k",
+      "options": [
+        {
+          "value": "single-zone-9k",
+          "label": "Single-Zone 9K BTU ($1,500–$2,500)"
+        },
+        {
+          "value": "single-zone-12k",
+          "label": "Single-Zone 12K BTU ($2,000–$3,500)"
+        },
+        {
+          "value": "single-zone-18k",
+          "label": "Single-Zone 18K BTU ($2,500–$4,000)"
+        },
+        {
+          "value": "multi-zone-2",
+          "label": "Multi-Zone 2-Zone ($3,500–$6,000)"
+        },
+        {
+          "value": "multi-zone-3",
+          "label": "Multi-Zone 3-Zone ($5,000–$8,000)"
+        },
+        {
+          "value": "multi-zone-4",
+          "label": "Multi-Zone 4-Zone ($6,500–$10,000)"
+        }
+      ],
+      "helpText": "Single-zone cools/heats one room. Multi-zone uses one outdoor condenser with multiple indoor units for 2–4 rooms."
+    },
+    {
+      "id": "efficiency",
+      "label": "Efficiency Rating",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-20-seer2",
+      "options": [
+        {
+          "value": "standard-20-seer2",
+          "label": "Standard 20 SEER2 (1.0×)"
+        },
+        {
+          "value": "high-22-seer2",
+          "label": "High 22 SEER2 (+15%)"
+        },
+        {
+          "value": "premium-25-seer2",
+          "label": "Premium 25 SEER2 (+30%)"
+        }
+      ],
+      "helpText": "Higher SEER2 ratings mean lower operating costs but higher upfront equipment price. Federal minimum is 15 SEER2 for mini-splits."
+    },
+    {
+      "id": "lineSetLength",
+      "label": "Line Set Length",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-15ft",
+      "options": [
+        {
+          "value": "standard-15ft",
+          "label": "Standard 15 ft (1.0×)"
+        },
+        {
+          "value": "extended-25ft",
+          "label": "Extended 25 ft (+10%)"
+        },
+        {
+          "value": "long-run-50ft",
+          "label": "Long Run 50 ft (+25%)"
+        }
+      ],
+      "helpText": "Distance between the outdoor condenser and indoor air handler. Longer runs increase labor and refrigerant line costs."
+    },
+    {
+      "id": "electricalWork",
+      "label": "Electrical Work Required",
+      "type": "select",
+      "required": true,
+      "defaultValue": "existing-circuit",
+      "options": [
+        {
+          "value": "existing-circuit",
+          "label": "Existing Circuit (No Extra Cost)"
+        },
+        {
+          "value": "new-circuit",
+          "label": "New Dedicated Circuit (+$300–$600)"
+        },
+        {
+          "value": "sub-panel-required",
+          "label": "Sub-Panel Required (+$800–$1,500)"
+        }
+      ],
+      "helpText": "Most mini-splits need a dedicated 20–30 amp circuit. Older homes may require a new circuit or sub-panel upgrade."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "equipmentCost",
+      "label": "Equipment Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "electricalCost",
+      "label": "Electrical Work (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerZone",
+      "label": "Cost Per Zone",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "systemComparison",
+      "label": "System Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "mini-split-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "hvac-replacement-cost-calculator",
+    "heat-pump-cost-calculator",
+    "electrical-panel-upgrade-cost-calculator",
+    "insulation-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; AHRI performance data",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Equipment base pricing from HomeAdvisor and Angi 2025-2026 national average surveys for ductless mini-split systems. SEER2 efficiency tier multipliers derived from AHRI (Air-Conditioning, Heating, and Refrigeration Institute) certified performance data. Labor rates calculated at 40% of equipment cost, adjusted for line set complexity and regional wage differences from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC installers (SOC 49-9021). Electrical work pricing from HomeAdvisor and licensed electrician rate surveys. Regional labor multipliers derived from BLS OES regional wage data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "hvac-replacement-cost-calculator",
+    "heat-pump-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

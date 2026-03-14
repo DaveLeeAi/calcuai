@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "fence calculator",
+  "secondaryKeywords": [
+    "fence material calculator",
+    "how many fence boards do I need",
+    "fence post calculator",
+    "privacy fence material list"
+  ],
   "metaTitle": "Fence Calculator — Posts, Rails, Boards & Material Cost",
   "metaDescription": "Calculate fence materials: posts, rails, boards, and concrete. Supports privacy, picket, board-on-board, split-rail, and chain-link with cost estimates.",
   "inputs": [

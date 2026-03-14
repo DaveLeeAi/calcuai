@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "measurement",
   "primaryKeyword": "HVAC size calculator",
+  "secondaryKeywords": [
+    "HVAC tonnage calculator",
+    "what size AC unit do I need",
+    "BTU calculator for house",
+    "air conditioner sizing calculator"
+  ],
   "metaTitle": "HVAC Size Calculator | BTU & Tonnage for Your Home",
   "metaDescription": "Calculate the right HVAC size for your home. Enter square footage, climate zone, and insulation to find BTU, tonnage, and cost estimates for AC and heat pumps.",
   "inputs": [

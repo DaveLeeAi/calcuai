@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "remodeling",
   "primaryKeyword": "flooring installation cost calculator",
+  "secondaryKeywords": [
+    "floor installation cost per square foot",
+    "hardwood floor installation cost",
+    "laminate flooring installed cost",
+    "flooring labor cost calculator"
+  ],
   "metaTitle": "Flooring Installation Cost Calculator | Compare Materials & Estimates",
   "metaDescription": "Estimate flooring installation costs for hardwood, laminate, vinyl plank, tile, carpet, and engineered hardwood. Includes removal, subfloor prep, and regional labor.",
   "inputs": [
@@ -17,8 +23,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Room length in feet"
@@ -32,8 +46,16 @@
       "min": 0.1,
       "step": 0.5,
       "units": [
-        { "value": "ft", "label": "Feet", "conversionFactor": 1 },
-        { "value": "m", "label": "Meters", "conversionFactor": 3.28084 }
+        {
+          "value": "ft",
+          "label": "Feet",
+          "conversionFactor": 1
+        },
+        {
+          "value": "m",
+          "label": "Meters",
+          "conversionFactor": 3.28084
+        }
       ],
       "defaultUnit": "ft",
       "helpText": "Room width in feet"
@@ -45,12 +67,30 @@
       "required": true,
       "defaultValue": "hardwood",
       "options": [
-        { "value": "hardwood", "label": "Hardwood ($6–$18/sq ft installed)" },
-        { "value": "laminate", "label": "Laminate ($3–$8/sq ft installed)" },
-        { "value": "vinyl-plank", "label": "Vinyl Plank ($4–$10/sq ft installed)" },
-        { "value": "tile", "label": "Tile ($7–$16/sq ft installed)" },
-        { "value": "carpet", "label": "Carpet ($3–$8/sq ft installed)" },
-        { "value": "engineered-hardwood", "label": "Engineered Hardwood ($5–$14/sq ft installed)" }
+        {
+          "value": "hardwood",
+          "label": "Hardwood ($6–$18/sq ft installed)"
+        },
+        {
+          "value": "laminate",
+          "label": "Laminate ($3–$8/sq ft installed)"
+        },
+        {
+          "value": "vinyl-plank",
+          "label": "Vinyl Plank ($4–$10/sq ft installed)"
+        },
+        {
+          "value": "tile",
+          "label": "Tile ($7–$16/sq ft installed)"
+        },
+        {
+          "value": "carpet",
+          "label": "Carpet ($3–$8/sq ft installed)"
+        },
+        {
+          "value": "engineered-hardwood",
+          "label": "Engineered Hardwood ($5–$14/sq ft installed)"
+        }
       ],
       "helpText": "Material type — each has different cost, durability, and maintenance requirements"
     },
@@ -61,10 +101,22 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (bare subfloor)" },
-        { "value": "carpet-removal", "label": "Carpet Removal ($1–$2/sq ft)" },
-        { "value": "hardwood-removal", "label": "Hardwood Removal ($2–$4/sq ft)" },
-        { "value": "tile-removal", "label": "Tile Removal ($3–$5/sq ft)" }
+        {
+          "value": "none",
+          "label": "None (bare subfloor)"
+        },
+        {
+          "value": "carpet-removal",
+          "label": "Carpet Removal ($1–$2/sq ft)"
+        },
+        {
+          "value": "hardwood-removal",
+          "label": "Hardwood Removal ($2–$4/sq ft)"
+        },
+        {
+          "value": "tile-removal",
+          "label": "Tile Removal ($3–$5/sq ft)"
+        }
       ],
       "helpText": "Removing existing flooring adds to the project cost"
     },
@@ -75,9 +127,18 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None (subfloor is level and sound)" },
-        { "value": "minor-repair", "label": "Minor Repair ($1.50–$3/sq ft)" },
-        { "value": "full-leveling", "label": "Full Leveling ($3–$6/sq ft)" }
+        {
+          "value": "none",
+          "label": "None (subfloor is level and sound)"
+        },
+        {
+          "value": "minor-repair",
+          "label": "Minor Repair ($1.50–$3/sq ft)"
+        },
+        {
+          "value": "full-leveling",
+          "label": "Full Leveling ($3–$6/sq ft)"
+        }
       ],
       "helpText": "Uneven or damaged subfloors need repair before new flooring"
     },
@@ -88,9 +149,18 @@
       "required": true,
       "defaultValue": "none",
       "options": [
-        { "value": "none", "label": "None" },
-        { "value": "standard", "label": "Standard ($0.50–$1.50/sq ft)" },
-        { "value": "premium", "label": "Premium ($1.50–$3/sq ft — moisture barrier + sound dampening)" }
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "standard",
+          "label": "Standard ($0.50–$1.50/sq ft)"
+        },
+        {
+          "value": "premium",
+          "label": "Premium ($1.50–$3/sq ft — moisture barrier + sound dampening)"
+        }
       ],
       "helpText": "Underlayment protects flooring and reduces noise — required for laminate and engineered hardwood"
     },
@@ -112,13 +182,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -246,7 +337,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Installed cost-per-square-foot data from HomeAdvisor and Angi 2025-2026 national averages. Material/labor split based on NWFA industry standard 45/55 ratio. Removal, subfloor, and underlayment costs from HomeAdvisor contractor surveys. Trim costs based on industry-standard baseboard and transition strip pricing.",
   "formulaAuditDate": "2026-03-14",

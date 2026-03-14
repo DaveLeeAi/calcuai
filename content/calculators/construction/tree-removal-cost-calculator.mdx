@@ -1,0 +1,212 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A medium tree (25-50 ft) costs $500-$1,200 to remove. Large trees (50-75 ft) run $1,200-$2,500, and extra-large trees over 75 feet reach $2,500-$5,000. Add $150-$400 for stump grinding or $300-$700 for full stump extraction. Dead or diseased trees cost 15% more, storm-damaged trees 30% more, and trees near power lines can cost 50% more than open-yard removals. The cost splits 30% equipment and 70% labor, so regional labor rates shift your total by 15-25% above or below the national average. Enter your tree details below for a personalized estimate with a size comparison chart.
+
+</div>
+
+{/* At a Glance — Tree Removal Costs by Size */}
+<div className="at-a-glance">
+
+| Metric | Value |
+|--------|-------|
+| **Small tree (under 25 ft)** | $200-$500 |
+| **Medium tree (25-50 ft)** | $500-$1,200 |
+| **Large tree (50-75 ft)** | $1,200-$2,500 |
+| **Extra large tree (75+ ft)** | $2,500-$5,000 |
+| **Stump grinding add-on** | $150-$400 |
+| **Source** | HomeAdvisor / Angi, 2025-2026; ISA |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator provides cost ranges for tree removal based on four key variables -- tree height, trunk diameter, condition, and proximity to obstacles -- plus optional stump removal and debris cleanup. It produces a low/mid/high estimate for your specific tree and a comparison chart showing costs across all four height categories.
+
+The **base cost** is determined by tree height, the primary cost driver for removal work. These ranges reflect 2025-2026 national averages from HomeAdvisor, Angi, and the International Society of Arboriculture (ISA), covering equipment, rigging, labor, and standard safety protocols.
+
+The **trunk diameter multiplier** adjusts for the tree's girth. Thin trunks (under 12 inches) are the baseline at 1.0x. Medium trunks (12-24 inches) add 20% because they require heavier saws and more labor time. Thick trunks (over 24 inches) add 50% and often need crane assistance or specialized rigging to lower heavy sections safely.
+
+The **condition multiplier** accounts for structural unpredictability. Healthy trees are the baseline at 1.0x. Dead or diseased trees cost 15% more because compromised wood can break without warning during cutting. Storm-damaged trees add 30% due to unstable positions, tangled debris, and emergency safety protocols.
+
+The **proximity multiplier** reflects the precision work required near obstacles. Open yard is the baseline at 1.0x. Trees within 20 feet of a structure add 25% for careful sectional removal and property protection. Trees near power lines add 50% because they require utility coordination and often a certified line-clearance arborist.
+
+The total cost splits into material/equipment (30%) and labor (70%), with regional labor multipliers applied to the labor portion only. This split reflects the labor-intensive nature of arborist work.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the tree height** -- estimate from ground to crown. A single-story house is roughly 15-20 feet for reference. Small ornamental trees (dogwood, crape myrtle) are typically under 25 feet. Most shade trees (oak, maple, pine) are 25-75 feet. Mature hardwoods and old-growth trees exceed 75 feet.
+
+2. **Select the trunk diameter** -- measure at chest height (4.5 feet above ground), called DBH (diameter at breast height). Wrap a tape measure around the trunk and divide the circumference by 3.14. Under 12 inches is thin, 12-24 inches is medium, over 24 inches is thick.
+
+3. **Select the tree condition** -- healthy trees are structurally sound with full canopies. Dead or diseased trees show significant decay, hollow sections, or fungal growth. Storm-damaged trees have broken limbs, split trunks, or are partially uprooted.
+
+4. **Select proximity** -- open yard means the tree has clear space on all sides for safe felling. Near structure means within 20 feet of a house, garage, fence, or shed. Near power lines means within falling distance of overhead utility wires.
+
+5. **Choose stump removal** -- "none" leaves the stump in place (it will decay naturally over 5-10 years). Stump grinding ($150-$400) shaves the stump 6-12 inches below grade. Full removal ($300-$700) extracts the entire root ball and is necessary when replanting or building on the site.
+
+6. **Choose cleanup** -- "leave debris" means the crew drops the tree but you handle branches and wood. "Chip and haul" ($75-$200) includes running all brush through a chipper and hauling away all material.
+
+7. **Select your region** -- regional labor multipliers adjust for local wage differences. Northeast (1.20x) and West Coast (1.25x) are the most expensive. South (0.85x) and Midwest (0.90x) are the most affordable.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Tree removal cost is estimated using a height-based rate multiplied by trunk, condition, and proximity factors. The result is split into material/equipment (30%) and labor (70%) components with regional adjustment on labor only.
+
+**Base cost:**
+
+$$\text{baseCost} = H_{\text{rate}} \times M_t \times M_c \times M_p$$
+
+**Tree removal cost (material + labor split):**
+
+$$C_{\text{tree}} = \text{baseCost} \times 0.30 + \text{baseCost} \times 0.70 \times R$$
+
+**Total cost:**
+
+$$C_{\text{total}} = C_{\text{tree}} + C_{\text{stump}} + C_{\text{cleanup}}$$
+
+$$C_{\text{mid}} = \frac{C_{\text{total,low}} + C_{\text{total,high}}}{2}$$
+
+Where:
+
+- **H_rate** = tree height base cost range (low/high -- see table below)
+- **M_t** = trunk diameter multiplier (thin: 1.0, medium: 1.20, thick: 1.50)
+- **M_c** = condition multiplier (healthy: 1.0, dead/diseased: 1.15, storm-damaged: 1.30)
+- **M_p** = proximity multiplier (open yard: 1.0, near structure: 1.25, near power lines: 1.50)
+- **R** = regional labor multiplier (national: 1.0, northeast: 1.20, west-coast: 1.25, midwest: 0.90, south: 0.85)
+- **C_stump** = stump removal add-on (none: $0, grinding: $150-$400, full removal: $300-$700)
+- **C_cleanup** = debris cleanup add-on (leave debris: $0, chip and haul: $75-$200)
+
+**Height base costs (2025-2026):**
+
+| Tree Height | Low | High |
+|---|---|---|
+| Small (under 25 ft) | $200 | $500 |
+| Medium (25-50 ft) | $500 | $1,200 |
+| Large (50-75 ft) | $1,200 | $2,500 |
+| Extra Large (75+ ft) | $2,500 | $5,000 |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages and **International Society of Arboriculture (ISA)** pricing guidelines.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: Medium Tree, Thin Trunk, Stump Grinding, Chip & Haul
+
+A homeowner needs to remove a healthy 35-foot maple in an open backyard. They want stump grinding and full debris cleanup. National average pricing.
+
+**Step-by-step:**
+
+1. Look up height rate for medium (25-50 ft): **$500-$1,200**
+2. Trunk diameter multiplier (thin, under 12"): **1.0x**
+3. Condition multiplier (healthy): **1.0x**
+4. Proximity multiplier (open yard): **1.0x**
+5. Base cost low: $500 x 1.0 x 1.0 x 1.0 = **$500**
+6. Base cost high: $1,200 x 1.0 x 1.0 x 1.0 = **$1,200**
+7. Tree cost low: $500 x 0.30 + $500 x 0.70 x 1.0 = $150 + $350 = **$500**
+8. Tree cost high: $1,200 x 0.30 + $1,200 x 0.70 x 1.0 = $360 + $840 = **$1,200**
+9. Add stump grinding: **$150-$400**
+10. Add chip-and-haul cleanup: **$75-$200**
+11. Total low: $500 + $150 + $75 = **$725**
+12. Total high: $1,200 + $400 + $200 = **$1,800**
+13. Total mid: ($725 + $1,800) / 2 = **$1,262.50**
+
+**Interpretation:** At roughly $1,263 midpoint, this is a straightforward residential removal. The stump grinding and cleanup add about $500 combined to an otherwise $500-$1,200 tree-only removal. Skipping the chip-and-haul saves $75-$200, and leaving the stump saves $150-$400 -- but most arborists recommend grinding to prevent regrowth and termite habitat.
+
+## Worked Example: Large Storm-Damaged Oak Near a House (Northeast)
+
+A homeowner in Connecticut needs to remove a storm-damaged 60-foot oak with a thick trunk (28 inches) that is within 15 feet of the house. Stump grinding and full cleanup. Northeast labor rates.
+
+**Step-by-step:**
+
+1. Height rate for large (50-75 ft): **$1,200-$2,500**
+2. Trunk diameter multiplier (thick, over 24"): **1.50x**
+3. Condition multiplier (storm-damaged): **1.30x**
+4. Proximity multiplier (near structure): **1.25x**
+5. Base cost low: $1,200 x 1.50 x 1.30 x 1.25 = **$2,925**
+6. Base cost high: $2,500 x 1.50 x 1.30 x 1.25 = **$6,093.75**
+7. Tree cost low: $2,925 x 0.30 + $2,925 x 0.70 x 1.20 = $877.50 + $2,457 = **$3,334.50**
+8. Tree cost high: $6,093.75 x 0.30 + $6,093.75 x 0.70 x 1.20 = $1,828.13 + $5,118.75 = **$6,946.88**
+9. Add stump grinding: **$150-$400**
+10. Add chip-and-haul cleanup: **$75-$200**
+11. Total low: $3,334.50 + $150 + $75 = **$3,559.50**
+12. Total high: $6,946.88 + $400 + $200 = **$7,546.88**
+13. Total mid: ($3,559.50 + $7,546.88) / 2 = **$5,553.19**
+
+**Interpretation:** At roughly $5,553, this is a high-complexity removal. The thick trunk (1.50x), storm damage (1.30x), proximity to the house (1.25x), and Northeast labor premium (1.20x on labor) nearly quintuples the base rate. This type of job typically requires a crane, a crew of 3-5 workers, and takes 1-2 full days. Check your homeowner's insurance -- most policies cover tree removal if a storm-damaged tree fell on or threatens a structure, typically up to $500-$1,000 per tree.
+
+{/* Section 10: Cost Factors */}
+## Factors That Affect Tree Removal Cost
+
+**Tree height** is the primary cost driver. Every additional 25 feet of height roughly doubles the base cost because taller trees require more rigging, heavier equipment, and more labor hours. Trees over 75 feet often require a crane ($500-$1,500/day rental) in addition to standard equipment.
+
+**Trunk diameter** determines equipment needs and labor time. A 24-inch oak trunk takes 3-4x longer to section than a 10-inch trunk. Thick trunks also mean heavier wood rounds that require careful rigging to lower, especially near structures.
+
+**Tree condition** adds risk and unpredictability. Dead trees look simpler to remove but are more dangerous -- branches snap without warning and trunks may collapse during cutting. Storm-damaged trees in unstable positions (leaning, hung up in other trees) require the most cautious approach.
+
+**Proximity to structures** forces crews to use sectional removal instead of directional felling. Sectional removal takes 2-3x longer because each piece must be rigged, cut, and lowered individually. Trees near power lines require utility coordination and specialized insulated equipment.
+
+**Regional labor rates** create a 20-40% cost swing nationwide. Labor accounts for 70% of tree removal cost, so regional variation has an outsized impact. West Coast and Northeast rates are 20-25% above national average, while South and Midwest are 10-15% below.
+
+**Season and timing** influence pricing. Winter (dormant season) is typically 10-20% cheaper because demand is lower and leafless trees are lighter. Emergency removal after storms commands premium rates of 50-100% above scheduled pricing.
+
+**Number of trees** can reduce per-tree cost. Most arborists offer 10-15% discounts for 2-3 trees and 15-25% for 4+ trees because mobilization and setup are amortized across the job.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs assume a **single tree** removal with standard site access. Multi-tree discounts (10-25%) are not factored in.
+- Cost ranges reflect **2025-2026 U.S. national averages** from HomeAdvisor, Angi, and ISA. Your local market may be 20-40% higher or lower.
+- The calculator assumes **standard site access** -- the tree is reachable by truck and chipper from a driveway or street. Difficult access (narrow gates, steep terrain, no vehicle access) may add $200-$1,000.
+- **Emergency removal** (storm damage, same-day response) typically costs 50-100% more than scheduled removal. This calculator estimates scheduled pricing only.
+- **Permit costs** ($0-$500) are not included. Many municipalities require permits for trees above a certain trunk diameter or for protected species.
+- The **30%/70% material-labor split** reflects ISA industry data. Equipment costs (chainsaws, rigging, chipper, crane rental) are in the material portion.
+- **Stump and cleanup** costs are flat add-ons. In practice, very large stumps (over 36 inches) may exceed the $400 grinding estimate.
+- This calculator does not cover **land clearing** (multiple trees per acre), **tree trimming/pruning**, or **hazardous material abatement**.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does tree removal cost?
+
+Tree removal costs $200-$5,000+ depending primarily on height. Small trees under 25 feet cost $200-$500. Medium trees (25-50 ft) cost $500-$1,200. Large trees (50-75 ft) cost $1,200-$2,500. Extra-large trees over 75 feet cost $2,500-$5,000 or more. These are base prices for healthy trees with thin trunks in open yards at national average labor rates. Thick trunks add 20-50%, poor condition adds 15-30%, and proximity to structures or power lines adds 25-50%. Stump grinding adds $150-$400 and debris hauling adds $75-$200.
+
+### Do I need a permit to remove a tree?
+
+Most municipalities require a permit to remove trees above a certain size, typically those with trunks over 6-12 inches in diameter. Many cities also protect specific species or heritage trees regardless of size. Permit fees range from $25 to $500. Some jurisdictions require a replacement tree to be planted for each tree removed. Removing a protected tree without a permit can result in fines of $500-$10,000 or more. Always check with your local planning or zoning department before scheduling removal.
+
+### When is the best time to remove a tree?
+
+Late fall through early spring (November-March) is the best time for non-emergency removal. During the dormant season, trees have no leaves (reducing weight and debris), the ground may be frozen (protecting your lawn from heavy equipment), and arborist schedules are less busy -- which often means 10-20% lower prices. The exception is emergency removal after storm damage, which should happen immediately for safety. Dead or hazardous trees should be removed as soon as possible regardless of season.
+
+### Is stump grinding necessary after tree removal?
+
+Stump grinding is recommended but not required. At $150-$400, it removes the visible stump 6-12 inches below grade so you can cover the area with topsoil and grass. Without grinding, stumps take 3-10 years to decompose and can attract termites, carpenter ants, and fungi. Full stump removal ($300-$700) extracts the entire root ball and is necessary when replanting or building on the site. If the stump is in a remote area and appearance is not a concern, leaving it saves $150-$700.
+
+### How much does emergency tree removal cost?
+
+Emergency tree removal -- typically needed within 24-48 hours after storm damage -- costs 50-100% more than scheduled removal. A medium tree that would normally cost $500-$1,200 can reach $750-$2,400 as an emergency call. The premium covers overtime labor, priority scheduling, and hazardous conditions. Check your homeowner's insurance: most policies cover removal if the tree fell on a structure due to a covered peril (storm, lightning), usually $500-$1,000 per tree with a $5,000 per-event cap.
+
+### Should I hire an ISA-certified arborist?
+
+An ISA-certified arborist is recommended for large trees (over 50 feet), trees near structures, or any complex removal. ISA certification means the arborist passed a comprehensive exam on tree biology, safety, and removal techniques. Always verify that any tree service carries general liability insurance ($1 million minimum) and workers' compensation coverage. Get at least three written quotes that specify scope of work, debris disposal, stump treatment, and cleanup level. The cheapest quote is not always the safest -- underinsured or unqualified crews can cause property damage that far exceeds any savings.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates tree removal costs using height-based price ranges multiplied by trunk diameter, condition, and proximity factors. The base cost is split 30% materials/equipment and 70% labor, with regional adjustment applied to the labor portion only. Cost data comes from **HomeAdvisor** and **Angi** 2025-2026 national average surveys, supplemented by **International Society of Arboriculture (ISA)** pricing guidelines and arborist industry data. Regional labor multipliers are derived from the HomeAdvisor regional cost index (Northeast 1.20x, West Coast 1.25x, Mid-Atlantic 1.15x, Midwest 0.90x, South 0.85x, Mountain West 0.95x). Stump grinding and full removal costs are based on HomeAdvisor project cost data. The 30%/70% material-labor split reflects the labor-intensive nature of tree removal per ISA industry standards, where equipment costs (chainsaws, rigging hardware, chippers, crane rental) represent the material portion and crew time represents the labor portion. All prices are for scheduled (non-emergency) single-tree removal.
+
+{/* Section 17: Disclaimer — auto-rendered */}

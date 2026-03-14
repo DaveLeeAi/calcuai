@@ -1,0 +1,297 @@
+{
+  "id": "hvac-replacement-cost-calculator",
+  "title": "HVAC Replacement Cost Calculator",
+  "slug": "hvac-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "hvac",
+  "primaryKeyword": "HVAC replacement cost calculator",
+  "secondaryKeywords": [
+    "HVAC system cost",
+    "new AC and furnace cost",
+    "central air replacement cost",
+    "HVAC installation cost estimate"
+  ],
+  "metaTitle": "HVAC Replacement Cost Calculator | AC, Furnace & Heat Pump Estimates",
+  "metaDescription": "Estimate HVAC replacement costs for central AC, furnaces, heat pumps, and mini-splits. Compare efficiency levels with ductwork and regional pricing.",
+  "inputs": [
+    {
+      "id": "systemType",
+      "label": "System Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "central-ac-only",
+      "options": [
+        {
+          "value": "central-ac-only",
+          "label": "Central AC Only ($3,000–$6,000 base)"
+        },
+        {
+          "value": "furnace-only",
+          "label": "Furnace Only ($2,500–$5,000 base)"
+        },
+        {
+          "value": "ac-and-furnace",
+          "label": "AC + Furnace Bundle ($5,000–$10,000 base)"
+        },
+        {
+          "value": "heat-pump",
+          "label": "Heat Pump ($4,000–$8,000 base)"
+        },
+        {
+          "value": "ductless-mini-split",
+          "label": "Ductless Mini-Split ($3,000–$5,000 base)"
+        }
+      ],
+      "helpText": "The type of HVAC system you are replacing or installing"
+    },
+    {
+      "id": "homeSize",
+      "label": "Home Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "medium-1500-2500",
+      "options": [
+        {
+          "value": "small-under-1500",
+          "label": "Small — Under 1,500 sq ft (1.0x)"
+        },
+        {
+          "value": "medium-1500-2500",
+          "label": "Medium — 1,500–2,500 sq ft (1.25x)"
+        },
+        {
+          "value": "large-2500-3500",
+          "label": "Large — 2,500–3,500 sq ft (1.50x)"
+        },
+        {
+          "value": "xlarge-over-3500",
+          "label": "Extra Large — Over 3,500 sq ft (1.80x)"
+        }
+      ],
+      "helpText": "Larger homes require higher-capacity systems and more complex installation"
+    },
+    {
+      "id": "efficiency",
+      "label": "Efficiency Level",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-14-seer",
+      "options": [
+        {
+          "value": "standard-14-seer",
+          "label": "Standard — 14 SEER (1.0x)"
+        },
+        {
+          "value": "high-16-seer",
+          "label": "High Efficiency — 16 SEER (1.15x)"
+        },
+        {
+          "value": "premium-20-seer",
+          "label": "Premium — 20+ SEER (1.35x)"
+        }
+      ],
+      "helpText": "Higher SEER ratings cost more upfront but save $100–$500/year on energy bills"
+    },
+    {
+      "id": "ductwork",
+      "label": "Ductwork Condition",
+      "type": "select",
+      "required": true,
+      "defaultValue": "existing-good",
+      "options": [
+        {
+          "value": "existing-good",
+          "label": "Existing — Good Condition ($0)"
+        },
+        {
+          "value": "minor-repair",
+          "label": "Minor Repair Needed ($500–$1,500)"
+        },
+        {
+          "value": "major-repair",
+          "label": "Major Repair Needed ($2,000–$5,000)"
+        },
+        {
+          "value": "new-ductwork",
+          "label": "New Ductwork Required ($5,000–$12,000)"
+        }
+      ],
+      "helpText": "Leaky, damaged, or missing ductwork adds significant cost to HVAC replacement"
+    },
+    {
+      "id": "thermostat",
+      "label": "Thermostat Upgrade",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Upgrade ($0)"
+        },
+        {
+          "value": "basic-programmable",
+          "label": "Basic Programmable ($150–$300)"
+        },
+        {
+          "value": "smart-wifi",
+          "label": "Smart WiFi Thermostat ($200–$400)"
+        }
+      ],
+      "helpText": "Smart thermostats can save 8–15% on heating and cooling costs annually"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "equipmentCost",
+      "label": "Equipment Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "ductworkCost",
+      "label": "Ductwork Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "thermostatCost",
+      "label": "Thermostat Cost",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerTon",
+      "label": "Cost per Ton",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "systemComparison",
+      "label": "System Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "estimatedAnnualSavings",
+      "label": "Est. Annual Energy Savings",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "timeline",
+      "label": "Installation Timeline",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "hvac-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "hvac-size-calculator",
+    "insulation-calculator",
+    "home-energy-usage-calculator",
+    "electricity-cost-calculator",
+    "solar-panel-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 HVAC Cost Data; ENERGY STAR HVAC Efficiency Guidelines; ACCA Manual J",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Equipment base costs from HomeAdvisor and Angi 2025-2026 national HVAC replacement surveys. Efficiency multipliers derived from ENERGY STAR SEER rating cost differentials. Home size multipliers based on ACCA Manual J load calculations and industry-standard tonnage-to-square-footage ratios. Ductwork costs from HomeAdvisor ductwork installation and repair data. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for HVAC mechanics and installers (SOC 49-9021). Thermostat costs based on manufacturer MSRP plus professional installation labor.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "hvac-size-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-fall"
+}

@@ -1,0 +1,179 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Upgrading from 100-amp to 200-amp electrical service costs $3,200–$5,600 at national average rates for a modern home, with a midpoint of $4,400 including new meter base, weatherhead, service entrance cable, main panel, and permit. A 200-to-400-amp upgrade runs $5,400–$10,600, and a full 100-to-400-amp jump costs $7,400–$14,600. Relocating the meter adds 20% to labor, underground service conversion adds 30%, and homes built before 1960 add 25% for code remediation. Regional labor rates shift costs by 15–25%, and your utility company must coordinate the disconnect and reconnection. Enter your upgrade type and home details below for a personalized estimate.
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimate Shows
+
+This calculator provides installed cost ranges for three electrical service upgrade paths — 100A to 200A, 200A to 400A, and 100A to 400A — based on your meter location, service entrance type, home age, permit needs, and region. It produces a low/mid/high total estimate, a material/labor/permit breakdown, a cost-per-amp figure, and a comparison table showing all three upgrade paths.
+
+This calculator covers a **full service upgrade**, which is distinct from a panel-only upgrade. A service upgrade involves replacing the utility meter base, weatherhead or underground lateral, main service entrance cable, AND the main breaker panel. A panel-only upgrade (sometimes called a panel swap or panel replacement) replaces just the breaker box at the same service amperage.
+
+The **material cost** covers hardware at 35% of the base project cost — meter base, weatherhead/mast, service entrance cable, main panel, breakers, grounding, and conduit. Material costs are consistent nationally.
+
+The **labor cost** covers licensed electrician work at 65% of the base cost, adjusted by four multipliers: meter relocation (1.0x or 1.2x), weatherhead type (1.0x standard or 1.3x for underground conversion), home age (1.0x–1.25x for code remediation in older homes), and regional labor rates (0.85x–1.25x). Labor is the dominant cost component because service upgrades require utility coordination, heavy gauge wiring, and code inspection.
+
+The **permit cost** is a flat adder of $200–$600. Electrical service upgrades require a permit in virtually all U.S. jurisdictions. The utility company will not reconnect power without a passed inspection.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select the upgrade type** — 100A to 200A is the most common residential upgrade and is sufficient for most homes adding central AC, EV chargers, or modern kitchen appliances. 200A to 400A is for large homes adding major loads like pools, workshops, or multiple EV chargers. 100A to 400A is a full jump for older homes undergoing major renovation with significant new electrical demands.
+
+2. **Choose meter location** — select "Same Location" if the existing meter position works for the new service. Select "Relocate" if the meter needs to move to a different wall or location, which adds 20% to labor for additional conduit, trenching, and utility coordination.
+
+3. **Select weatherhead type** — "Standard" covers a typical overhead service entrance (weatherhead, mast, and service drop from the utility pole). "Underground Conversion" converts from overhead to underground service, which adds 30% to labor for trenching, conduit burial, and a new underground lateral from the utility transformer.
+
+4. **Choose home age** — modern homes (post-2000) have the lowest labor cost. Mid-age homes (1960–2000) add 10% for potential wiring updates. Homes built before 1960 add 25% for code remediation, knob-and-tube removal, asbestos concerns, and non-standard configurations.
+
+5. **Select permit requirement** — nearly all electrical service upgrades require a permit. The permit ensures the work is inspected for code compliance and is required by the utility company before reconnection.
+
+6. **Select your region** — this adjusts labor costs for regional electrician wage differences.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Electrical service upgrade cost is estimated by splitting the base project cost into material (35%) and labor (65%) components, then applying four labor multipliers for meter relocation, weatherhead type, home age, and regional rates.
+
+**Material cost:**
+
+$$C_{mat} = C_{base} \times 0.35$$
+
+**Adjusted labor cost:**
+
+$$C_{labor} = C_{base} \times 0.65 \times M_{meter} \times M_{weather} \times M_{age} \times M_r$$
+
+**Total cost:**
+
+$$C_{total} = C_{mat} + C_{labor} + C_{permit}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **C_base** = base upgrade cost (low/high range by upgrade type)
+- **M_meter** = meter location multiplier (1.0 same, 1.2 relocate)
+- **M_weather** = weatherhead multiplier (1.0 standard, 1.3 underground conversion)
+- **M_age** = home age multiplier (1.0 post-2000, 1.1 1960–2000, 1.25 pre-1960)
+- **M_r** = regional labor multiplier (0.85–1.25)
+- **C_permit** = permit fee ($200–$600)
+
+**Base costs by upgrade type (2025-2026):**
+
+| Upgrade Path | Base Low | Base High | Target Amps |
+|---|---|---|---|
+| 100A to 200A | $3,000 | $5,000 | 200A |
+| 200A to 400A | $5,000 | $10,000 | 400A |
+| 100A to 400A | $7,000 | $14,000 | 400A |
+
+**Labor multiplier stacking:**
+
+| Factor | Multiplier | Applies When |
+|---|---|---|
+| Meter relocation | 1.20x | Meter needs to move to new location |
+| Underground conversion | 1.30x | Converting overhead to underground service |
+| Mid-age home (1960–2000) | 1.10x | Potential wiring updates needed |
+| Old home (pre-1960) | 1.25x | Code remediation, knob-and-tube, asbestos |
+| Regional (South) | 0.85x | TX, FL, GA, NC |
+| Regional (West Coast) | 1.25x | CA, WA, OR |
+
+Multipliers stack multiplicatively on the labor portion only. A pre-1960 home with meter relocation in the Northeast would have a combined labor multiplier of 1.20 x 1.0 x 1.25 x 1.20 = **1.80x** on the 65% labor component.
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025-2026 national averages, **National Electrical Contractors Association (NECA)**, and **Bureau of Labor Statistics** (SOC 47-2111) for electrician wages.
+
+</div>
+
+{/* Section 9: Worked Example */}
+## Worked Example: 100A to 200A Upgrade, Modern Home, Standard Weatherhead, National Average
+
+A homeowner with a modern post-2000 home is upgrading from 100-amp to 200-amp service to support a new central AC system and EV charger. The meter stays in the same location, standard overhead weatherhead, permit required, national average labor rates.
+
+**Step-by-step:**
+
+1. Look up 100-to-200 base cost: $3,000–$5,000
+2. Material cost (35%): low = $3,000 × 0.35 = **$1,050** | high = $5,000 × 0.35 = **$1,750**
+3. Labor base (65%): low = $3,000 × 0.65 = **$1,950** | high = $5,000 × 0.65 = **$3,250**
+4. Combined labor multiplier: 1.0 (same location) × 1.0 (standard) × 1.0 (modern) × 1.0 (national) = **1.0x**
+5. Adjusted labor: low = $1,950 × 1.0 = **$1,950** | high = $3,250 × 1.0 = **$3,250**
+6. Permit fee: **$200–$600**
+7. Total low: $1,050 + $1,950 + $200 = **$3,200**
+8. Total high: $1,750 + $3,250 + $600 = **$5,600**
+9. Total mid: ($3,200 + $5,600) / 2 = **$4,400**
+10. Cost per amp: $4,400 / 200 = **$22.00/amp**
+
+**Interpretation:** At $4,400 midpoint, a 100-to-200-amp service upgrade is one of the most common residential electrical projects. The same upgrade in a pre-1960 home on the West Coast with meter relocation would cost significantly more — the combined labor multiplier of 1.20 × 1.0 × 1.25 × 1.25 = 1.875x would raise total labor from $2,600 (midpoint) to $4,875, pushing the total midpoint to approximately $6,675. Always get multiple quotes, as electrician pricing varies widely even within the same region.
+
+{/* Section 10: Cost Comparison by Upgrade Type */}
+## Cost Comparison by Upgrade Type
+
+| Upgrade Path | Material | Labor | Permit | Total Range | Timeline |
+|---|---|---|---|---|---|
+| 100A to 200A | $1,050–$1,750 | $1,950–$3,250 | $200–$600 | $3,200–$5,600 | 1–2 days + utility |
+| 200A to 400A | $1,750–$3,500 | $3,250–$6,500 | $200–$600 | $5,200–$10,600 | 2–3 days + utility |
+| 100A to 400A | $2,450–$4,900 | $4,550–$9,100 | $200–$600 | $7,200–$14,600 | 2–4 days + utility |
+
+All costs assume same meter location, standard weatherhead, modern home, national average labor, with permit. Utility scheduling adds 2–4 weeks to the overall project timeline.
+
+{/* Section 11: Factors That Affect Service Upgrade Cost */}
+## Factors That Affect Service Upgrade Cost
+
+**Upgrade type** determines the base cost range. A 100-to-200-amp upgrade at $3,000–$5,000 base is the most common and most affordable path. Jumping straight from 100A to 400A costs $7,000–$14,000 but can save money compared to doing two separate upgrades if you know you will need 400A service within the next decade.
+
+**Home age** is the second-largest cost factor. Homes built before 1960 incur a 25% labor premium for code remediation work — removing knob-and-tube wiring, addressing asbestos-wrapped conductors, upgrading grounding systems, and bringing non-standard configurations up to current NEC code. Homes from 1960–2000 add a smaller 10% premium for potential updates.
+
+**Service entrance type** significantly affects installation complexity. Converting from overhead to underground service adds 30% to labor costs for trenching (typically 30–100 feet), conduit burial, utility transformer connection, and landscape restoration. Underground service is more reliable and aesthetically cleaner but adds $2,000–$5,000 to the project cost.
+
+**Meter relocation** adds 20% to labor when the existing meter location does not work for the new service — common when adding an exterior subpanel, changing the service entrance route, or when the utility requires a different meter position for the new service rating. Additional conduit and wiring runs increase both material and labor costs.
+
+{/* Section 12: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including materials, licensed electrician labor, and standard permit fees. Utility company charges for the service drop reconnection ($0–$500) are not included.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor, Angi, and NECA. Your actual cost depends on your specific home configuration and local electrician rates.
+- **Labor multipliers stack multiplicatively** on the 65% labor portion. A pre-1960 home needing meter relocation and underground conversion on the West Coast could see the labor portion nearly double compared to a modern home with standard setup at national average.
+- The calculator assumes **no additional subpanel work**, **no whole-house rewiring**, and **no EV charger circuit installation** beyond the service upgrade itself. These are separate projects that require their own cost estimates.
+- **Utility coordination** adds 2–4 weeks to the project timeline. Your utility must disconnect power, verify the new service, and reconnect. Some utilities perform this at no charge; others charge $0–$500.
+- This estimate is for **residential service upgrades only**. Commercial service upgrades involve different equipment, higher amperage, and significantly different pricing.
+
+{/* Section 13: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does it cost to upgrade from 100 to 200 amp service?
+
+Upgrading from 100-amp to 200-amp electrical service costs $3,200–$5,600 at national average rates for a modern home with standard installation and permit, with a midpoint of $4,400. This includes a new meter base, weatherhead, service entrance cable, 200-amp main breaker panel, and building permit. Older homes (pre-1960) can cost 25% more due to code remediation. The total cost also depends on meter relocation needs, service entrance type, and regional labor rates.
+
+### How long does an electrical service upgrade take?
+
+The on-site electrical work takes 1–2 days for a 100-to-200-amp upgrade and 2–4 days for a 100-to-400-amp upgrade. However, the overall project timeline is typically 3–6 weeks when including permit application (1–2 weeks), utility company scheduling for disconnect and reconnection (2–4 weeks), and final inspection scheduling. Your home will be without power for 4–8 hours during the actual switchover, which the utility coordinates with your electrician.
+
+### Do I need a service upgrade or just a panel upgrade?
+
+You need a full service upgrade if you are increasing the total amperage delivered to your home — for example, from 100A to 200A. This requires replacing the meter base, service entrance cable, and panel, plus utility coordination. You only need a panel upgrade (swap) if your existing service amperage is adequate but your breaker panel is outdated, full, or uses obsolete breakers (Federal Pacific, Zinsco). A panel swap costs $1,500–$3,000 and does not require utility involvement.
+
+### When should I upgrade to 200 amp service?
+
+You should upgrade to 200-amp service when your current 100-amp service cannot safely support your electrical loads. Common triggers include adding central air conditioning (30–60 amps), an EV charger (40–50 amps), a hot tub (40–50 amps), electric range (40–50 amps), or a home workshop. If your breakers trip frequently, you cannot add new circuits, or you are planning a major renovation, a service upgrade is likely needed. Most modern homes require at least 200 amps.
+
+### Is a permit required for an electrical service upgrade?
+
+A building permit is required for electrical service upgrades in virtually all U.S. jurisdictions, typically costing $200–$600. The permit ensures the work is inspected by a qualified electrical inspector for NEC code compliance. More critically, your utility company will not reconnect your service without a passed inspection. Working without a permit risks failed future home inspections, voided homeowner insurance, and potential fire hazards from uninspected work. Always verify permit requirements with your local building department before starting work.
+
+</div>
+
+{/* Section 14: Related Calculators — auto-rendered from spec */}
+
+{/* Section 15: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates electrical service upgrade costs using base project pricing by upgrade type, split into material (35%) and labor (65%) components. Four multiplicative labor adjustments account for meter relocation, service entrance type, home age, and regional wage differences. Cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys, supplemented by **National Electrical Contractors Association (NECA)** unit pricing. Regional labor multipliers are derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for electricians (SOC 47-2111). Permit costs reflect national average building permit fees for residential electrical work. All prices are fully installed costs excluding utility company charges for service drop reconnection. Regional variation of 15–25% on labor is expected.
+
+{/* Section 16: Disclaimer — auto-rendered */}

@@ -1,0 +1,210 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+Insulating a 1,000-square-foot attic with fiberglass batts costs $2,250–$5,000 installed at national average rates, including material and professional labor. Blown-in cellulose is comparable at $2,500–$5,000. Closed-cell spray foam — the highest-performing option — runs $6,000–$12,000 for the same area. Old insulation removal adds $1,000–$2,500, and wall or basement applications increase labor by 15–20% over standard attic installation. Regional labor rates shift the total 15–25% above or below the national baseline. Enter your square footage, insulation type, R-value target, application area, and region below for a personalized estimate with a side-by-side comparison of all six insulation materials.
+
+**Note:** This calculator estimates **total installed project cost** (material + labor). Looking for material quantity only? Use the [Insulation Calculator](/calculators/construction/insulation-calculator) instead.
+
+</div>
+
+{/* At a Glance — Insulation Costs */}
+<div className="at-a-glance">
+
+| Metric | Value |
+|--------|-------|
+| **Fiberglass batt (installed)** | $2.25–$5.00 per sq ft |
+| **Blown-in cellulose (installed)** | $2.50–$5.00 per sq ft |
+| **Closed-cell spray foam (installed)** | $6.00–$12.00 per sq ft |
+| **1,000 sq ft attic (fiberglass, R-30)** | $2,250–$5,000 |
+| **Old insulation removal** | $1.00–$2.50 per sq ft |
+| **Source** | HomeAdvisor / Angi, 2025–2026; U.S. DOE |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator provides installed cost ranges for six insulation types — fiberglass batt, blown-in cellulose, open-cell spray foam, closed-cell spray foam, rigid board, and mineral wool — based on your area, R-value target, application location, and region. It produces a low/mid/high cost estimate, a cost-per-square-foot figure, and a comparison table showing all six types for your area at baseline settings.
+
+The **material cost** multiplies your square footage by the material's cost-per-square-foot rate, then adjusts for R-value target. Higher R-values require thicker insulation, increasing material use. R-13 uses 80% of the baseline material amount, while R-49 uses 130%. R-30 is the baseline (1.0x) and the standard DOE recommendation for most attics.
+
+The **labor cost** multiplies your square footage by the insulation type's labor rate, then adjusts for application area difficulty and regional labor rates. Attic floor installation is the baseline (1.0x). Walls add 15% for cutting and fitting between studs. Crawl spaces add 10% for confined-space work. Basements add 20% for moisture management and wall preparation.
+
+The **removal cost** applies when existing insulation must be removed before new installation. At $1.00–$2.50 per square foot, removing 1,000 sq ft of old insulation adds $1,000–$2,500 to the project. Removal is necessary when existing insulation is contaminated, damaged, or incompatible with the new material.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Enter the area to insulate** — measure the total square footage of the space. For attics, measure the floor area (length x width). For walls, measure total wall area (perimeter x height minus windows and doors). A typical attic is 800–1,500 sq ft; a typical home has 1,500–2,500 sq ft of exterior wall area.
+
+2. **Choose your insulation type** — fiberglass batt is the most common and affordable. Blown-in cellulose is popular for attic retrofits because it fills gaps and irregular spaces. Open-cell spray foam provides an air seal and is ideal for new construction. Closed-cell spray foam has the highest R-value per inch and acts as a vapor barrier but costs 2–3x more. Rigid board is used for basement walls and exterior sheathing. Mineral wool offers fire resistance and soundproofing.
+
+3. **Select the application area** — attic installation is the baseline. Wall insulation costs 15% more in labor due to cutting and fitting between studs. Crawl space adds 10% for difficult access. Basement adds 20% for moisture considerations and wall preparation.
+
+4. **Choose your R-value target** — the U.S. DOE recommends R-30 to R-60 for attics depending on your climate zone, and R-13 to R-23 for walls. Higher R-values require more material thickness, increasing material cost via a multiplier from 0.80x (R-13) to 1.30x (R-49).
+
+5. **Select removal** — choose "Yes" if existing insulation is damaged, contaminated (mold, rodent damage, water damage), or needs full replacement rather than topping off. Removal adds $1.00–$2.50 per square foot.
+
+6. **Select your region** — this adjusts labor costs for regional pricing. Material costs do not vary by region — only the labor portion changes.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Insulation cost is estimated using area times material and labor rates, with multipliers for R-value target, application area difficulty, and regional labor differences.
+
+**Material cost:**
+
+$$C_{mat} = A \times R_{mat} \times M_{rv}$$
+
+**Labor cost:**
+
+$$C_{lab} = A \times R_{lab} \times M_{app} \times M_{reg}$$
+
+**Removal cost (if applicable):**
+
+$$C_{rem} = A \times R_{rem}$$
+
+**Total cost range:**
+
+$$C_{low} = C_{mat,low} + C_{lab,low} + C_{rem,low}$$
+
+$$C_{high} = C_{mat,high} + C_{lab,high} + C_{rem,high}$$
+
+$$C_{mid} = \frac{C_{low} + C_{high}}{2}$$
+
+Where:
+
+- **A** = area in square feet
+- **R_mat** = material cost per square foot (low/high range by insulation type)
+- **R_lab** = labor cost per square foot (low/high range by insulation type)
+- **M_rv** = R-value target multiplier (R-13: 0.80, R-19: 0.90, R-30: 1.00, R-38: 1.15, R-49: 1.30)
+- **M_app** = application area multiplier (attic: 1.0, crawl space: 1.10, walls: 1.15, basement: 1.20)
+- **M_reg** = regional labor multiplier (0.85–1.25)
+- **R_rem** = removal rate ($1.00–$2.50/sq ft, or $0 if no removal)
+
+**Installed cost rates per sq ft (2025–2026):**
+
+| Insulation Type | Material | Labor | Total Installed |
+|---|---|---|---|
+| Fiberglass Batt | $1.50–$3.50 | $0.75–$1.50 | $2.25–$5.00 |
+| Blown-In Cellulose | $1.50–$3.00 | $1.00–$2.00 | $2.50–$5.00 |
+| Open-Cell Spray Foam | $2.50–$5.50 | $1.50–$3.00 | $4.00–$8.50 |
+| Closed-Cell Spray Foam | $4.00–$8.00 | $2.00–$4.00 | $6.00–$12.00 |
+| Rigid Board | $2.00–$4.50 | $1.00–$2.00 | $3.00–$6.50 |
+| Mineral Wool | $3.00–$5.50 | $1.50–$2.50 | $4.50–$8.00 |
+
+**Source:** Cost data from **HomeAdvisor / Angi** 2025–2026 national averages. R-value recommendations from **U.S. Department of Energy** insulation guidelines.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: 1,000 sq ft Attic, Fiberglass Batt, R-30 (National Average, No Removal)
+
+A homeowner is insulating a 1,000-square-foot attic with fiberglass batts, targeting R-30, no old insulation removal, national average labor rates.
+
+**Step-by-step:**
+
+1. Area = **1,000 sq ft**
+2. Look up fiberglass batt material rate: **$1.50–$3.50/sq ft**
+3. Look up fiberglass batt labor rate: **$0.75–$1.50/sq ft**
+4. Apply R-30 material multiplier (1.0x): no change to material rate
+5. Material cost: low = 1,000 x $1.50 x 1.0 = **$1,500** | high = 1,000 x $3.50 x 1.0 = **$3,500**
+6. Apply attic multiplier (1.0x) and national regional multiplier (1.0x)
+7. Labor cost: low = 1,000 x $0.75 x 1.0 x 1.0 = **$750** | high = 1,000 x $1.50 x 1.0 x 1.0 = **$1,500**
+8. Removal cost: **$0** (no removal)
+9. Total low: $1,500 + $750 + $0 = **$2,250**
+10. Total high: $3,500 + $1,500 + $0 = **$5,000**
+11. Total mid: ($2,250 + $5,000) / 2 = **$3,625**
+12. Cost per sq ft: $3,625 / 1,000 = **$3.63/sq ft**
+
+**Insulation type comparison (1,000 sq ft, attic, R-30, national, no removal):**
+- Fiberglass Batt: $2,250–$5,000 (mid: $3,625)
+- Blown-In Cellulose: $2,500–$5,000 (mid: $3,750)
+- Rigid Board: $3,000–$6,500 (mid: $4,750)
+- Open-Cell Spray Foam: $4,000–$8,500 (mid: $6,250)
+- Mineral Wool: $4,500–$8,000 (mid: $6,250)
+- Closed-Cell Spray Foam: $6,000–$12,000 (mid: $9,000)
+
+**Interpretation:** At $3,625 midpoint for 1,000 sq ft, fiberglass batt is the most affordable attic insulation option. Blown-in cellulose costs only $125 more at midpoint but fills irregular spaces better around joists, wiring, and ductwork. Closed-cell spray foam at $9,000 costs nearly 2.5x as much but offers the highest R-value per inch (R-5.5 to R-7.0 versus R-3.1 to R-3.4 for fiberglass) and doubles as a vapor barrier.
+
+{/* Section 10: Cost by Insulation Type */}
+## Insulation Cost by Type (1,000 sq ft, R-30, National Average)
+
+| Insulation Type | Cost/sq ft | 1,000 sq ft Total | R-Value/Inch | Best For |
+|---|---|---|---|---|
+| Fiberglass Batt | $2.25–$5.00 | $2,250–$5,000 | R-3.1 to R-3.4 | Budget attics, DIY-friendly walls |
+| Blown-In Cellulose | $2.50–$5.00 | $2,500–$5,000 | R-3.2 to R-3.8 | Attic retrofits, irregular spaces |
+| Rigid Board | $3.00–$6.50 | $3,000–$6,500 | R-3.8 to R-6.5 | Basement walls, exterior sheathing |
+| Open-Cell Spray Foam | $4.00–$8.50 | $4,000–$8,500 | R-3.5 to R-3.7 | Air sealing, new construction |
+| Mineral Wool | $4.50–$8.00 | $4,500–$8,000 | R-3.3 to R-4.2 | Fire resistance, soundproofing |
+| Closed-Cell Spray Foam | $6.00–$12.00 | $6,000–$12,000 | R-5.5 to R-7.0 | Moisture barrier, highest R-value |
+
+All costs include materials and professional labor at national average rates, R-30 target (1.0x multiplier), attic application. Regional variation of 15–25% on the labor portion is expected.
+
+{/* Section 11: Key Cost Factors */}
+## Factors That Affect Insulation Cost
+
+**Insulation type** is the biggest cost driver. The same 1,000-square-foot attic ranges from $2,250 with fiberglass batt to $12,000 with closed-cell spray foam — a 5.3x difference. Fiberglass batt and blown-in cellulose are the most common residential choices, covering 75% of installations. Spray foam costs significantly more but provides superior air sealing that can reduce heating and cooling costs by 15–25% according to the U.S. DOE.
+
+**R-value target** directly affects material quantity and cost. Moving from R-30 (standard attic) to R-49 (cold climate attic) increases material cost by 30%. The DOE recommends R-30 to R-60 for attics in most of the continental U.S. (Zones 3–7), with R-13 to R-23 for wall cavities. Under-insulating saves upfront cost but increases energy bills for the life of the home.
+
+**Application area** affects labor difficulty and cost. Attic floor insulation is the simplest installation at 1.0x labor. Wall cavity insulation requires cutting batts to fit between studs or drilling injection holes for blown-in material — adding 15% to labor. Crawl space work in tight, low-clearance conditions adds 10%. Basement insulation requires moisture management and often rigid board or closed-cell foam — adding 20% to labor.
+
+**Old insulation removal** adds $1.00–$2.50 per square foot when existing insulation is damaged, contaminated with mold or rodent droppings, or contains vermiculite (potential asbestos). For attics where existing insulation is clean and undamaged, you can blow new material on top to increase total R-value without removal.
+
+**Regional labor costs** shift the total by 15–25%. The labor component of a $3,625 attic project shifts from roughly $637 in the South (0.85x) to $937 on the West Coast (1.25x). Material costs are the same nationwide — only labor changes by region.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including professional labor and materials. This calculator does not estimate DIY-only material costs — use the [Insulation Calculator](/calculators/construction/insulation-calculator) for material quantity estimates.
+- Cost ranges reflect **2025–2026 U.S. national averages** from HomeAdvisor and Angi. Your local market may vary 15–25% depending on contractor availability and material supply.
+- The calculator assumes a **standard installation** on accessible surfaces in reasonable condition. Structural repairs, electrical relocation, air sealing beyond spray foam, or separate vapor barrier installation are not included.
+- **R-value multipliers** approximate the cost difference of achieving higher R-values by using thicker material. Actual thickness depends on the specific product's R-value per inch.
+- **Removal cost** covers standard insulation removal (fiberglass, cellulose). Hazardous material removal (asbestos-containing vermiculite) requires licensed abatement contractors and costs significantly more ($15–$25/sq ft).
+- Application area multipliers reflect **labor difficulty** only. Material costs are not affected by where the insulation is installed.
+- This calculator does not account for **air sealing** (caulking, weatherstripping, foam around penetrations) which the DOE recommends completing before adding insulation. Air sealing typically costs $1,000–$3,000 as a separate project.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does insulation cost per square foot?
+
+Installed insulation costs $2.25–$12.00 per square foot depending on the type. Fiberglass batt is the cheapest at $2.25–$5.00/sq ft (material + labor). Blown-in cellulose runs $2.50–$5.00/sq ft. Open-cell spray foam costs $4.00–$8.50/sq ft. Mineral wool costs $4.50–$8.00/sq ft. Closed-cell spray foam is the most expensive at $6.00–$12.00/sq ft. All prices include professional installation at national average labor rates with R-30 target.
+
+### What is the best type of insulation?
+
+The best insulation depends on your application. Blown-in cellulose is best for attic retrofits — it fills gaps around joists and wiring better than batts and costs $2.50–$5.00/sq ft. Closed-cell spray foam is best for basements, crawl spaces, and moisture-prone areas — it provides the highest R-value per inch (R-5.5 to R-7.0) and acts as a vapor barrier, but costs $6.00–$12.00/sq ft. Fiberglass batt is best for budget projects and new construction walls where studs provide clean cavities at $2.25–$5.00/sq ft.
+
+### What R-value do I need?
+
+The U.S. DOE recommends R-30 to R-60 for attics, R-13 to R-23 for exterior walls, and R-25 to R-30 for floors over unheated spaces, depending on your climate zone. DOE Zone 1 (southern Florida, Hawaii) needs R-30 attic minimum. Zones 4–5 (mid-Atlantic, Midwest) need R-38 to R-49. Zones 6–7 (northern states, Alaska) need R-49 to R-60. Under-insulating saves 20–30% upfront but can cost $200–$500 more per year in heating and cooling.
+
+### Should I remove old insulation before adding new?
+
+Remove old insulation only if it is damaged, contaminated (mold, rodent droppings, water damage), or contains vermiculite (potential asbestos risk). In most cases, you can blow new cellulose or lay new batts over existing insulation to increase total R-value — adding R-19 over existing R-19 gives approximately R-38. Removal is necessary before spray foam application and costs $1.00–$2.50 per square foot ($1,000–$2,500 for a 1,000 sq ft attic).
+
+### Is spray foam insulation worth the extra cost?
+
+Spray foam costs 2–3x more than fiberglass batt but provides superior air sealing, higher R-value per inch, and can reduce heating/cooling costs by 15–25% according to the U.S. DOE. Closed-cell spray foam also acts as a vapor barrier and adds structural rigidity. The payback period is typically 5–8 years through energy savings, making it a strong investment for homeowners who plan to stay long-term or live in extreme climate zones. Open-cell spray foam at $4.00–$8.50/sq ft offers good air sealing at a lower price point but lacks the vapor barrier properties.
+
+### How long does insulation installation take?
+
+Professional insulation installation takes 1–3 days for a typical 1,000-square-foot attic. Blown-in cellulose is the fastest at about 1 day with a blowing machine. Fiberglass batt takes 1–2 days. Open-cell spray foam takes 1–2 days plus 24 hours cure time. Closed-cell spray foam takes 1–3 days plus 24 hours cure time. Rigid board takes 2–3 days due to cutting and fitting. Add half a day if old insulation removal is required.
+
+</div>
+
+{/* Section 15: Related Calculators — auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates full insulation installation costs using separate material and labor rates per square foot for six insulation types, adjusted for R-value target, application area difficulty, and regional labor differences. Material and labor cost data comes from **HomeAdvisor** and **Angi** 2025–2026 national average surveys. R-value recommendations and climate zone guidelines are from the **U.S. Department of Energy** Insulation Fact Sheet (DOE/CE-0180). R-value multipliers (0.80x for R-13 through 1.30x for R-49) approximate the cost scaling of achieving higher R-values through increased material thickness. Application area labor multipliers are derived from contractor installation surveys accounting for access difficulty and working conditions. Regional labor multipliers come from Bureau of Labor Statistics Occupational Employment and Wage Statistics for insulation workers (SOC 47-2131). Old insulation removal rates are based on HomeAdvisor national contractor surveys. All prices are fully installed costs including professional labor.
+
+{/* Section 17: Disclaimer — auto-rendered */}

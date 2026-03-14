@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "brick calculator",
+  "secondaryKeywords": [
+    "how many bricks do I need",
+    "brick wall calculator",
+    "bricks per square foot",
+    "brick paver calculator"
+  ],
   "metaTitle": "Brick Calculator — How Many Bricks Do You Need?",
   "metaDescription": "Calculate exactly how many bricks you need for any wall. Enter wall dimensions, brick size, mortar joint width, and openings to get an accurate brick count with mortar and cost estimates.",
   "inputs": [

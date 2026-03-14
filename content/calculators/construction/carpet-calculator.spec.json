@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "materials",
   "primaryKeyword": "carpet calculator",
+  "secondaryKeywords": [
+    "how much carpet do I need",
+    "carpet square footage calculator",
+    "carpet yardage calculator",
+    "room carpet estimator"
+  ],
   "metaTitle": "Carpet Calculator — Square Yards, Roll Length & Cost Estimate",
   "metaDescription": "Calculate how much carpet you need in square yards and linear feet. Accounts for closets, waste factor, seam planning, and padding. Free carpet calculator with cost estimates.",
   "inputs": [

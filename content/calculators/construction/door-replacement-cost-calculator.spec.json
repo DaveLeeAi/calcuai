@@ -1,0 +1,283 @@
+{
+  "id": "door-replacement-cost-calculator",
+  "title": "Door Replacement Cost Calculator",
+  "slug": "door-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "door replacement cost calculator",
+  "secondaryKeywords": [
+    "door replacement cost",
+    "new door cost",
+    "interior door cost",
+    "exterior door cost"
+  ],
+  "metaTitle": "Door Replacement Cost Calculator | Interior & Exterior",
+  "metaDescription": "Estimate door replacement costs for interior hollow-core, solid-core, exterior steel, fiberglass, wood, french, and sliding glass doors. Compare hardware, frame, and trim add-ons by region.",
+  "inputs": [
+    {
+      "id": "doorType",
+      "label": "Door Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "interior-hollow",
+      "options": [
+        {
+          "value": "interior-hollow",
+          "label": "Interior Hollow-Core ($75–$200)"
+        },
+        {
+          "value": "interior-solid",
+          "label": "Interior Solid-Core ($150–$500)"
+        },
+        {
+          "value": "exterior-steel",
+          "label": "Exterior Steel ($250–$600)"
+        },
+        {
+          "value": "exterior-fiberglass",
+          "label": "Exterior Fiberglass ($400–$1,000)"
+        },
+        {
+          "value": "exterior-wood",
+          "label": "Exterior Wood ($500–$1,500)"
+        },
+        {
+          "value": "french-door",
+          "label": "French Door ($800–$2,500)"
+        },
+        {
+          "value": "sliding-glass",
+          "label": "Sliding Glass Door ($1,000–$3,000)"
+        }
+      ],
+      "helpText": "Interior doors are lighter and less expensive. Exterior doors include weather sealing and security features."
+    },
+    {
+      "id": "quantity",
+      "label": "Number of Doors",
+      "type": "number",
+      "required": true,
+      "defaultValue": 1,
+      "min": 1,
+      "max": 20,
+      "step": 1,
+      "helpText": "Total number of doors to replace. Clamped to 1–20."
+    },
+    {
+      "id": "hardware",
+      "label": "Hardware Upgrade",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard (included)"
+        },
+        {
+          "value": "upgraded",
+          "label": "Upgraded (+$50–$150)"
+        },
+        {
+          "value": "smart-lock",
+          "label": "Smart Lock (+$150–$400)"
+        }
+      ],
+      "helpText": "Standard hardware is included with the door. Upgraded adds premium handles and deadbolts. Smart lock adds keyless entry."
+    },
+    {
+      "id": "frame",
+      "label": "Frame Option",
+      "type": "select",
+      "required": true,
+      "defaultValue": "door-only",
+      "options": [
+        {
+          "value": "door-only",
+          "label": "Door Only (1.0x)"
+        },
+        {
+          "value": "with-frame",
+          "label": "Door + New Frame (1.35x door cost)"
+        }
+      ],
+      "helpText": "Select 'Door + New Frame' if the existing frame is damaged, rotted, or non-standard size."
+    },
+    {
+      "id": "trimWork",
+      "label": "Trim Work",
+      "type": "select",
+      "required": true,
+      "defaultValue": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "No Trim Work"
+        },
+        {
+          "value": "standard-trim",
+          "label": "Standard Trim (+$50–$150)"
+        },
+        {
+          "value": "decorative-trim",
+          "label": "Decorative Trim (+$150–$400)"
+        }
+      ],
+      "helpText": "Trim work covers the gap between door frame and wall. Decorative trim includes crown moulding or rosette blocks."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "doorCost",
+      "label": "Door Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCost",
+      "label": "Installation Labor (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "hardwareCost",
+      "label": "Hardware Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "frameCost",
+      "label": "Frame Add-On (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "trimCost",
+      "label": "Trim Work (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalPerDoor",
+      "label": "Cost Per Door (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "doorTypeComparison",
+      "label": "Door Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Installation Time",
+      "type": "single-value",
+      "format": "string"
+    }
+  ],
+  "formula": "door-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "garage-door-cost-calculator",
+    "window-replacement-cost-calculator",
+    "renovation-cost-calculator",
+    "painting-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026; American Architectural Manufacturers Association (AAMA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Door base pricing from HomeAdvisor and Angi 2025-2026 national average surveys covering interior hollow-core, solid-core, and exterior steel, fiberglass, wood, french, and sliding glass doors. Hardware and trim add-on costs from HomeAdvisor contractor survey data. Frame replacement multiplier derived from American Architectural Manufacturers Association (AAMA) installation cost studies. Labor rates from Bureau of Labor Statistics OES data for door installers (SOC 47-2031). Regional labor multipliers derived from BLS OES regional wage data.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [
+    "garage-door-cost-calculator",
+    "window-replacement-cost-calculator"
+  ],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

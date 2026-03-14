@@ -31,6 +31,7 @@ export function buildCalculatorMetadata(spec: CalculatorSpec): Metadata {
       index: true,
       follow: true,
     },
+    keywords: [spec.primaryKeyword, ...(spec.secondaryKeywords ?? [])].join(', ') || undefined,
   };
 }
 

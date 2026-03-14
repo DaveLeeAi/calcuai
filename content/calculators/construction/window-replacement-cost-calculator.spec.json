@@ -1,0 +1,319 @@
+{
+  "id": "window-replacement-cost-calculator",
+  "title": "Window Replacement Cost Calculator",
+  "slug": "window-replacement-cost-calculator",
+  "category": "construction",
+  "subcategory": "materials",
+  "primaryKeyword": "window replacement cost calculator",
+  "secondaryKeywords": [
+    "window replacement cost per window",
+    "new window cost estimator",
+    "vinyl window replacement cost",
+    "double hung window cost"
+  ],
+  "metaTitle": "Window Replacement Cost Calculator | Compare Frame Types & Get Estimates",
+  "metaDescription": "Calculate window replacement costs by type, frame material, and glass. Vinyl, wood, fiberglass options with installation labor and regional pricing.",
+  "inputs": [
+    {
+      "id": "windowCount",
+      "label": "Number of Windows",
+      "type": "number",
+      "required": true,
+      "defaultValue": 10,
+      "min": 1,
+      "max": 100,
+      "step": 1,
+      "helpText": "Total number of windows to replace"
+    },
+    {
+      "id": "windowType",
+      "label": "Window Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "double-hung",
+      "options": [
+        {
+          "value": "single-hung",
+          "label": "Single-Hung ($200–$400/window)"
+        },
+        {
+          "value": "double-hung",
+          "label": "Double-Hung ($250–$500/window)"
+        },
+        {
+          "value": "casement",
+          "label": "Casement ($300–$600/window)"
+        },
+        {
+          "value": "sliding",
+          "label": "Sliding ($200–$450/window)"
+        },
+        {
+          "value": "bay-bow",
+          "label": "Bay/Bow ($800–$2,500/window)"
+        },
+        {
+          "value": "picture",
+          "label": "Picture ($250–$600/window)"
+        },
+        {
+          "value": "awning",
+          "label": "Awning ($300–$650/window)"
+        }
+      ],
+      "helpText": "Window style — each has different material cost and aesthetic"
+    },
+    {
+      "id": "frameMaterial",
+      "label": "Frame Material",
+      "type": "select",
+      "required": true,
+      "defaultValue": "vinyl",
+      "options": [
+        {
+          "value": "vinyl",
+          "label": "Vinyl (1.0x — baseline)"
+        },
+        {
+          "value": "wood",
+          "label": "Wood (1.35x material premium)"
+        },
+        {
+          "value": "fiberglass",
+          "label": "Fiberglass (1.25x material premium)"
+        },
+        {
+          "value": "aluminum",
+          "label": "Aluminum (0.90x — budget)"
+        },
+        {
+          "value": "composite",
+          "label": "Composite (1.30x material premium)"
+        }
+      ],
+      "helpText": "Frame material affects cost, insulation, and maintenance needs"
+    },
+    {
+      "id": "glassType",
+      "label": "Glass Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "double-pane",
+      "options": [
+        {
+          "value": "double-pane",
+          "label": "Double-Pane (1.0x — standard)"
+        },
+        {
+          "value": "triple-pane",
+          "label": "Triple-Pane (1.30x — premium insulation)"
+        },
+        {
+          "value": "low-e-double",
+          "label": "Low-E Double-Pane (1.15x — energy efficient)"
+        },
+        {
+          "value": "low-e-triple",
+          "label": "Low-E Triple-Pane (1.45x — best efficiency)"
+        }
+      ],
+      "helpText": "Glass type affects energy efficiency and cost — Low-E coatings reflect heat"
+    },
+    {
+      "id": "windowSize",
+      "label": "Window Size",
+      "type": "select",
+      "required": true,
+      "defaultValue": "standard-3x4",
+      "options": [
+        {
+          "value": "standard-3x4",
+          "label": "Standard 3×4 ft (1.0x)"
+        },
+        {
+          "value": "large-4x5",
+          "label": "Large 4×5 ft (1.35x)"
+        },
+        {
+          "value": "oversized-5x6",
+          "label": "Oversized 5×6 ft (1.75x)"
+        }
+      ],
+      "helpText": "Larger windows cost more for materials — labor per window stays similar"
+    },
+    {
+      "id": "installation",
+      "label": "Installation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "replacement-in-frame",
+      "options": [
+        {
+          "value": "replacement-in-frame",
+          "label": "Replacement (Existing Frame) — $150–$300/window"
+        },
+        {
+          "value": "full-frame",
+          "label": "Full-Frame Replacement — $300–$600/window"
+        },
+        {
+          "value": "new-opening",
+          "label": "New Opening (Structural) — $500–$1,000/window"
+        }
+      ],
+      "helpText": "Replacement-in-frame is cheapest — existing frame stays. Full-frame removes everything. New opening requires structural work."
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "windowCount",
+      "label": "Windows",
+      "type": "single-value",
+      "format": "number",
+      "precision": 0
+    },
+    {
+      "id": "materialCostPerWindow",
+      "label": "Material Cost per Window (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "laborCostPerWindow",
+      "label": "Labor Cost per Window (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalMaterialCost",
+      "label": "Total Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLaborCost",
+      "label": "Total Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Cost (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Cost (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerWindow",
+      "label": "Cost per Window (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "windowTypeComparison",
+      "label": "Window Type Cost Comparison",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "estimatedEnergySavings",
+      "label": "Estimated Energy Savings",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "window-replacement-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "door-replacement-cost-calculator",
+    "siding-replacement-cost-calculator",
+    "insulation-calculator",
+    "renovation-cost-calculator",
+    "hvac-size-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 Window Replacement Cost Data; ENERGY STAR Window Selection Guide",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Per-window cost data from HomeAdvisor and Angi 2025-2026 national averages, split into material and labor components. Frame material and glass type multipliers derived from manufacturer pricing surveys (Andersen, Pella, Marvin, Milgard). Regional labor multipliers from Bureau of Labor Statistics Occupational Employment and Wage Statistics for glaziers (SOC 47-2121). Energy savings estimates from ENERGY STAR Residential Windows Selection Guide and DOE energy performance ratings.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": "spring-fall"
+}

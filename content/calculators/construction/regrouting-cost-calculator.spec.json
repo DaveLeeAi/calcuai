@@ -5,6 +5,12 @@
   "category": "construction",
   "subcategory": "remodeling",
   "primaryKeyword": "regrouting cost calculator",
+  "secondaryKeywords": [
+    "regrouting tile cost",
+    "grout replacement cost",
+    "shower regrout cost",
+    "tile regrout cost per square foot"
+  ],
   "metaTitle": "Regrouting Cost Calculator | Estimate Tile Regrout Costs",
   "metaDescription": "Estimate tile regrouting costs for standard, epoxy, and urethane grout. Includes grout removal, sealing, and regional labor rates. Free regrouting calculator.",
   "inputs": [
@@ -92,13 +98,34 @@
       "required": true,
       "defaultValue": "national",
       "options": [
-        { "value": "national", "label": "National Average" },
-        { "value": "northeast", "label": "Northeast (NY, NJ, CT, MA)" },
-        { "value": "west-coast", "label": "West Coast (CA, WA, OR)" },
-        { "value": "mid-atlantic", "label": "Mid-Atlantic (PA, MD, VA, DC)" },
-        { "value": "midwest", "label": "Midwest (OH, IN, MI, WI)" },
-        { "value": "south", "label": "South (TX, FL, GA, NC)" },
-        { "value": "mountain-west", "label": "Mountain West (CO, AZ, UT)" }
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
       ],
       "helpText": "Adjusts labor costs for regional pricing differences"
     }
@@ -205,7 +232,7 @@
     ".formula-section",
     ".faq-section"
   ],
-  "editorialStatus": "review",
+  "editorialStatus": "published",
   "reviewOwner": "editorial",
   "formulaSource": "Material and labor cost splits from HomeAdvisor and Angi 2025-2026 national averages. Grout removal rates from Tile Council of North America guidelines. Sealing costs from HomeAdvisor contractor surveys. Regional multipliers from HomeAdvisor regional cost index.",
   "formulaAuditDate": "2026-03-14",

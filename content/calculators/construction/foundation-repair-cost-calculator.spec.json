@@ -1,0 +1,285 @@
+{
+  "id": "foundation-repair-cost-calculator",
+  "title": "Foundation Repair Cost Calculator",
+  "slug": "foundation-repair-cost-calculator",
+  "category": "construction",
+  "subcategory": "foundation",
+  "primaryKeyword": "foundation repair cost calculator",
+  "secondaryKeywords": [
+    "foundation repair cost estimate",
+    "house foundation repair cost",
+    "foundation crack repair cost",
+    "pier and beam foundation repair cost"
+  ],
+  "metaTitle": "Foundation Repair Cost Calculator | Piers, Cracks & Full Estimates",
+  "metaDescription": "Estimate foundation repair costs for crack sealing, steel piers, helical piers, mudjacking, and wall anchors. Includes severity, access, and regional labor pricing.",
+  "inputs": [
+    {
+      "id": "repairType",
+      "label": "Repair Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "crack-sealing",
+      "options": [
+        {
+          "value": "crack-sealing",
+          "label": "Crack Sealing ($250–$800 per crack)"
+        },
+        {
+          "value": "carbon-fiber-straps",
+          "label": "Carbon Fiber Straps ($5,000–$10,000 per wall)"
+        },
+        {
+          "value": "steel-piers",
+          "label": "Steel Piers ($1,000–$2,000 per pier)"
+        },
+        {
+          "value": "helical-piers",
+          "label": "Helical Piers ($1,500–$3,000 per pier)"
+        },
+        {
+          "value": "mudjacking",
+          "label": "Mudjacking ($500–$1,300 per section)"
+        },
+        {
+          "value": "polyurethane-foam",
+          "label": "Polyurethane Foam Injection ($1,000–$2,500 per section)"
+        },
+        {
+          "value": "wall-anchors",
+          "label": "Wall Anchors ($3,000–$7,000 per wall)"
+        },
+        {
+          "value": "underpinning",
+          "label": "Underpinning ($1,000–$3,000 per pier)"
+        }
+      ],
+      "helpText": "Select the repair method recommended by your structural engineer or contractor"
+    },
+    {
+      "id": "quantity",
+      "label": "Quantity / Number of Units",
+      "type": "number",
+      "required": true,
+      "defaultValue": 4,
+      "min": 1,
+      "max": 50,
+      "step": 1,
+      "helpText": "Number of cracks, piers, walls, or sections to be repaired"
+    },
+    {
+      "id": "foundationType",
+      "label": "Foundation Type",
+      "type": "select",
+      "required": true,
+      "defaultValue": "slab-on-grade",
+      "options": [
+        {
+          "value": "slab-on-grade",
+          "label": "Slab-on-Grade (1.0x)"
+        },
+        {
+          "value": "pier-and-beam",
+          "label": "Pier-and-Beam (1.10x)"
+        },
+        {
+          "value": "basement",
+          "label": "Basement (1.25x)"
+        },
+        {
+          "value": "crawl-space",
+          "label": "Crawl Space (1.15x)"
+        }
+      ],
+      "helpText": "Foundation style affects repair complexity and cost"
+    },
+    {
+      "id": "severity",
+      "label": "Damage Severity",
+      "type": "select",
+      "required": true,
+      "defaultValue": "moderate-structural",
+      "options": [
+        {
+          "value": "minor-cosmetic",
+          "label": "Minor / Cosmetic (0.75x)"
+        },
+        {
+          "value": "moderate-structural",
+          "label": "Moderate / Structural (1.0x)"
+        },
+        {
+          "value": "severe-critical",
+          "label": "Severe / Critical (1.50x)"
+        }
+      ],
+      "helpText": "Severity of foundation damage — a structural engineer should assess this"
+    },
+    {
+      "id": "accessDifficulty",
+      "label": "Access Difficulty",
+      "type": "select",
+      "required": true,
+      "defaultValue": "easy",
+      "options": [
+        {
+          "value": "easy",
+          "label": "Easy — Open Access (1.0x)"
+        },
+        {
+          "value": "moderate",
+          "label": "Moderate — Some Obstacles (1.15x)"
+        },
+        {
+          "value": "difficult",
+          "label": "Difficult — Tight / Obstructed (1.30x)"
+        }
+      ],
+      "helpText": "How easy it is for crews and equipment to reach the repair area"
+    },
+    {
+      "id": "region",
+      "label": "Region",
+      "type": "select",
+      "required": true,
+      "defaultValue": "national",
+      "options": [
+        {
+          "value": "national",
+          "label": "National Average"
+        },
+        {
+          "value": "northeast",
+          "label": "Northeast (NY, NJ, CT, MA)"
+        },
+        {
+          "value": "west-coast",
+          "label": "West Coast (CA, WA, OR)"
+        },
+        {
+          "value": "mid-atlantic",
+          "label": "Mid-Atlantic (PA, MD, VA, DC)"
+        },
+        {
+          "value": "midwest",
+          "label": "Midwest (OH, IN, MI, WI)"
+        },
+        {
+          "value": "south",
+          "label": "South (TX, FL, GA, NC)"
+        },
+        {
+          "value": "mountain-west",
+          "label": "Mountain West (CO, AZ, UT)"
+        }
+      ],
+      "helpText": "Adjusts labor costs for regional pricing differences"
+    }
+  ],
+  "outputs": [
+    {
+      "id": "repairCostPerUnit",
+      "label": "Cost per Unit (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalMaterialCost",
+      "label": "Total Material Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLaborCost",
+      "label": "Total Labor Cost (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "totalLow",
+      "label": "Estimated Total (Low)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalHigh",
+      "label": "Estimated Total (High)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0,
+      "highlight": true
+    },
+    {
+      "id": "totalMid",
+      "label": "Estimated Total (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "costPerUnit",
+      "label": "Cost per Unit (Mid)",
+      "type": "single-value",
+      "format": "currency",
+      "precision": 0
+    },
+    {
+      "id": "repairComparison",
+      "label": "Repair Method Cost Comparison (per unit, national avg)",
+      "type": "value-group",
+      "format": "currency"
+    },
+    {
+      "id": "timeline",
+      "label": "Estimated Timeline",
+      "type": "single-value",
+      "format": "text"
+    },
+    {
+      "id": "permitNote",
+      "label": "Permit Information",
+      "type": "single-value",
+      "format": "text"
+    }
+  ],
+  "formula": "foundation-repair-cost",
+  "features": [
+    "shareable-url",
+    "print-results"
+  ],
+  "relatedCalculators": [
+    "concrete-calculator",
+    "concrete-slab-calculator",
+    "renovation-cost-calculator",
+    "concrete-patio-cost-calculator",
+    "driveway-cost-calculator"
+  ],
+  "disclaimer": "construction",
+  "hasFAQ": true,
+  "hasMethodologyPage": false,
+  "requiresSources": true,
+  "formulaCitation": "HomeAdvisor / Angi 2025-2026 Foundation Repair Cost Data; Foundation Repair Association (FRA)",
+  "articleWordTarget": 1400,
+  "speakableSelectors": [
+    ".bluf-intro",
+    ".formula-section",
+    ".faq-section"
+  ],
+  "editorialStatus": "review",
+  "reviewOwner": "editorial",
+  "formulaSource": "Per-unit repair cost ranges from HomeAdvisor and Angi 2025-2026 national averages for eight common foundation repair methods. Foundation type, severity, and access multipliers based on contractor industry surveys and Foundation Repair Association (FRA) guidelines. Regional labor multipliers derived from Bureau of Labor Statistics Occupational Employment and Wage Statistics for cement masons and concrete finishers (SOC 47-2051) and construction laborers (SOC 47-2061). Material/labor split of 40/60 based on industry standard for foundation repair projects.",
+  "formulaAuditDate": "2026-03-14",
+  "priority": "standard",
+  "targetIntent": "transactional",
+  "monetizationType": "ads+affiliate",
+  "mergeCandidateOf": null,
+  "duplicationRisk": [],
+  "qualityScore": 82,
+  "lastContentUpdate": "2026-03-14",
+  "seasonality": null
+}

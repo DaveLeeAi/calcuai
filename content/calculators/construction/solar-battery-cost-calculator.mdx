@@ -1,0 +1,241 @@
+{/* Section 3: BLUF Intro */}
+<div className="bluf-intro">
+
+A standard 13.5 kWh home battery costs $9,000-$14,000 before incentives. The IRA 30% federal tax credit drops that to $6,300-$9,800 -- saving $2,700-$4,200 on the battery equipment alone. Installation labor adds 25% of the battery cost, and an automatic transfer switch adds $1,000-$2,500 for seamless outage protection. A fully installed 13.5 kWh system with automatic transfer switch runs $8,575-$14,000 after the 30% credit, with a midpoint of $11,288. Whole-home backup (30 kWh) runs $18,000-$28,000 before the credit. Enter your battery capacity, chemistry, and add-ons below for a personalized estimate with the IRA tax credit calculated automatically.
+
+</div>
+
+{/* At a Glance -- Solar Battery Costs */}
+<div className="at-a-glance">
+
+| Metric | Value |
+|--------|-------|
+| **5 kWh (partial backup)** | $4,000-$6,000 before credit |
+| **13.5 kWh (standard home)** | $9,000-$14,000 before credit |
+| **30 kWh (whole-home backup)** | $18,000-$28,000 before credit |
+| **IRA 30% tax credit** | Covers battery + installation through 2032 |
+| **Estimated backup (13.5 kWh)** | 10-14 hours (most circuits) |
+| **Source** | HomeAdvisor / Angi 2025-2026; ENERGY STAR; IRS IRC 25D |
+
+</div>
+
+{/* Sections 1, 2, 4, 5 are auto-rendered by CalculatorRenderer */}
+
+{/* Section 6: What This Estimate Shows */}
+## What This Estimates
+
+This calculator estimates the total installed cost of a home battery storage system, including the battery unit, installation labor, inverter, transfer switch, and any electrical upgrades -- then applies the IRA 30% federal tax credit to show your net cost after incentives.
+
+The **battery cost** is the largest component, ranging from $4,000 for a 5 kWh partial-backup unit to $28,000 for a 30 kWh whole-home system. The chemistry multiplier adjusts for battery type: NMC (nickel manganese cobalt) is the baseline at 1.0x, LFP (lithium iron phosphate) is 10% more expensive but offers 2-3x more charge cycles and a longer lifespan, and lead-acid is 35% cheaper but has significantly shorter lifespan and lower round-trip efficiency.
+
+**Installation labor** is estimated at 25% of the battery equipment cost, adjusted by your regional labor multiplier. Battery installation involves mounting the unit (wall or floor), connecting DC and AC wiring, configuring the battery management system (BMS), and commissioning the system with your utility company for interconnection approval.
+
+The **add-on components** include inverters ($1,500-$3,000 if a separate unit is needed), transfer switches ($300-$2,500 depending on manual vs automatic), and electrical upgrades ($1,500-$6,000 for panel or service upgrades). Many modern batteries like the Tesla Powerwall include a hybrid inverter, eliminating the separate inverter cost.
+
+The **IRA 30% tax credit** (IRC 25D Clean Energy Tax Credit) applies to the full installed cost -- battery, labor, inverter, transfer switch, and electrical upgrades. The credit is available through December 31, 2032, then steps down to 26% in 2033 and 22% in 2034. The battery does not need to be paired with solar panels to qualify -- standalone installations are eligible.
+
+{/* Section 7: How to Use This Calculator */}
+## How to Use This Calculator
+
+1. **Select battery capacity** -- 5 kWh backs up essential loads (refrigerator, lights, Wi-Fi router) for 4-6 hours. 10 kWh covers essential circuits for 8-12 hours. 13.5 kWh (Tesla Powerwall size) is the most popular choice, covering most circuits for 10-14 hours. 20 kWh handles nearly the whole home for 16-20 hours. 30 kWh provides full whole-home backup for 20-30 hours.
+
+2. **Select battery chemistry** -- NMC (nickel manganese cobalt) is the standard in most home batteries and is the 1.0x baseline. LFP (lithium iron phosphate) costs 10% more but handles 5,000-10,000 charge cycles vs 2,000-4,000 for NMC, making it better for daily solar cycling. Lead-acid is 35% cheaper but lasts only 3-7 years with 500-1,200 cycles.
+
+3. **Select inverter type** -- "hybrid included" means the battery has a built-in inverter (like Tesla Powerwall or Enphase IQ). "Separate inverter" adds $1,500-$3,000 for batteries that need an external inverter. "Existing compatible" means your current solar inverter already works with the battery -- no additional cost.
+
+4. **Select transfer switch** -- "none" if you already have one or do not need backup switching. "Manual" ($300-$600) requires you to flip a switch during outages. "Automatic" ($1,000-$2,500) detects outages instantly and switches to battery power within milliseconds -- essential for medical equipment or uninterrupted operation.
+
+5. **Select IRA tax credit** -- choose "yes" if you will claim the 30% federal clean energy tax credit. The credit is non-refundable, meaning you must have sufficient federal tax liability to use it. Consult a tax professional for eligibility.
+
+6. **Select electrical upgrades** -- "none" if your panel has sufficient amperage and available breaker spaces. "Panel upgrade" ($1,500-$3,000) if your breaker panel is full or outdated. "Service upgrade" ($3,000-$6,000) if you need to upgrade from 100A to 200A electrical service.
+
+7. **Select your region** -- adjusts installation labor for regional wage differences. West Coast (1.25x) and Northeast (1.20x) are the most expensive. South (0.85x) and Midwest (0.90x) are the most affordable.
+
+{/* Section 8: The Formula */}
+<div className="formula-section">
+
+## The Formula
+
+Solar battery cost combines equipment cost (adjusted by chemistry), installation labor (adjusted by region), and add-on components, with an optional 30% IRA federal tax credit applied to the full subtotal.
+
+**Battery equipment cost:**
+
+$$C_{\text{battery}} = C_{\text{capacity}} \times M_{\text{chemistry}}$$
+
+**Installation labor:**
+
+$$C_{\text{labor}} = C_{\text{battery}} \times 0.25 \times R$$
+
+**Subtotal before credit:**
+
+$$C_{\text{sub}} = C_{\text{battery}} + C_{\text{labor}} + C_{\text{inverter}} + C_{\text{transfer}} + C_{\text{electrical}}$$
+
+**IRA 30% tax credit (if claimed):**
+
+$$\text{Credit} = C_{\text{sub}} \times 0.30$$
+
+**Total after credit:**
+
+$$C_{\text{total}} = C_{\text{sub}} - \text{Credit}$$
+
+$$C_{\text{mid}} = \frac{C_{\text{total,low}} + C_{\text{total,high}}}{2}$$
+
+Where:
+
+- **C_capacity** = base battery cost by size (see table below)
+- **M_chemistry** = chemistry multiplier (NMC: 1.0, LFP: 1.10, lead-acid: 0.65)
+- **R** = regional labor multiplier (national: 1.0, northeast: 1.20, west-coast: 1.25, midwest: 0.90, south: 0.85)
+- **0.25** = labor cost as percentage of battery equipment cost
+- **C_inverter** = inverter add-on (hybrid included: $0, separate: $1,500-$3,000, existing: $0)
+- **C_transfer** = transfer switch add-on (none: $0, manual: $300-$600, automatic: $1,000-$2,500)
+- **C_electrical** = electrical upgrade (none: $0, panel upgrade: $1,500-$3,000, service upgrade: $3,000-$6,000)
+
+**Battery capacity costs (2025-2026):**
+
+| Capacity | Low | High |
+|---|---|---|
+| 5 kWh (partial backup) | $4,000 | $6,000 |
+| 10 kWh (essential circuits) | $7,000 | $11,000 |
+| 13.5 kWh (standard home) | $9,000 | $14,000 |
+| 20 kWh (large home) | $13,000 | $20,000 |
+| 30 kWh (whole-home backup) | $18,000 | $28,000 |
+
+**Source:** Battery pricing from **HomeAdvisor / Angi** 2025-2026 and **EnergySage** marketplace data. Tax credit per **IRS IRC 25D** Clean Energy Tax Credit (Inflation Reduction Act). Chemistry and performance data from **ENERGY STAR** and battery manufacturer specifications.
+
+</div>
+
+{/* Section 9: Worked Examples */}
+## Worked Example: 13.5 kWh NMC, Hybrid Inverter, Automatic Transfer Switch, IRA Credit
+
+A homeowner is adding a standard 13.5 kWh lithium-ion NMC battery to their existing solar system. The battery includes a hybrid inverter. They want an automatic transfer switch for seamless outage protection and will claim the IRA 30% tax credit. No electrical upgrades needed. National average pricing.
+
+**Step-by-step:**
+
+1. Battery capacity cost (13.5 kWh standard): **$9,000-$14,000**
+2. Chemistry multiplier (NMC, 1.0x): **$9,000-$14,000** (no change)
+3. Installation labor (25% x 1.0 national): $9,000 x 0.25 = **$2,250** low | $14,000 x 0.25 = **$3,500** high
+4. Inverter (hybrid included): **$0**
+5. Transfer switch (automatic): **$1,000-$2,500**
+6. Electrical upgrade (none): **$0**
+7. Subtotal low: $9,000 + $2,250 + $0 + $1,000 + $0 = **$12,250**
+8. Subtotal high: $14,000 + $3,500 + $0 + $2,500 + $0 = **$20,000**
+9. IRA 30% credit low: $12,250 x 0.30 = **$3,675**
+10. IRA 30% credit high: $20,000 x 0.30 = **$6,000**
+11. Total after credit low: $12,250 - $3,675 = **$8,575**
+12. Total after credit high: $20,000 - $6,000 = **$14,000**
+13. Total mid: ($8,575 + $14,000) / 2 = **$11,287.50**
+
+**Interpretation:** At $11,288 midpoint after the IRA credit, this 13.5 kWh battery system provides 10-14 hours of backup for most home circuits. The $4,838 average tax credit makes the investment significantly more attractive -- without it, the same system would cost $16,125 midpoint (43% more). With solar panels generating daytime energy stored in the battery for evening use, the estimated payback period is 8-12 years. The automatic transfer switch adds $1,750 midpoint but ensures seamless power transition within milliseconds of an outage.
+
+## Worked Example: 30 kWh LFP, Separate Inverter, Northeast Pricing
+
+A homeowner in Massachusetts wants whole-home backup with a 30 kWh LFP battery. They need a separate inverter, automatic transfer switch, and a panel upgrade. Claiming IRA credit. Northeast labor rates.
+
+**Step-by-step:**
+
+1. Battery capacity cost (30 kWh): **$18,000-$28,000**
+2. Chemistry multiplier (LFP, 1.10x): $18,000 x 1.10 = **$19,800** low | $28,000 x 1.10 = **$30,800** high
+3. Installation labor (25% x 1.20 northeast): $19,800 x 0.25 x 1.20 = **$5,940** low | $30,800 x 0.25 x 1.20 = **$9,240** high
+4. Inverter (separate): **$1,500-$3,000**
+5. Transfer switch (automatic): **$1,000-$2,500**
+6. Electrical upgrade (panel upgrade): **$1,500-$3,000**
+7. Subtotal low: $19,800 + $5,940 + $1,500 + $1,000 + $1,500 = **$29,740**
+8. Subtotal high: $30,800 + $9,240 + $3,000 + $2,500 + $3,000 = **$48,540**
+9. IRA 30% credit low: $29,740 x 0.30 = **$8,922**
+10. IRA 30% credit high: $48,540 x 0.30 = **$14,562**
+11. Total after credit low: $29,740 - $8,922 = **$20,818**
+12. Total after credit high: $48,540 - $14,562 = **$33,978**
+13. Total mid: ($20,818 + $33,978) / 2 = **$27,398**
+
+**Interpretation:** At $27,398 midpoint after the IRA credit, this is a premium whole-home backup system. The LFP chemistry adds 10% to the battery cost but is the right choice for daily solar cycling -- LFP handles 5,000-10,000 cycles vs 2,000-4,000 for NMC, effectively lasting 15-20 years instead of 10-15 years. The IRA credit saves $11,742 on average. Massachusetts offers additional state incentives (SMART program, ConnectedSolutions) that can reduce the net cost further. The 30 kWh capacity provides 20-30 hours of full-home backup -- enough to ride through most outages when paired with solar panels recharging the battery each day.
+
+{/* Section 10: Battery Capacity Comparison */}
+## Battery Capacity Comparison
+
+| Capacity | Cost Before Credit | After 30% Credit | Backup Duration | Best For |
+|---|---|---|---|---|
+| 5 kWh | $4,000-$6,000 | $2,800-$4,200 | 4-6 hours (essentials) | Lights, fridge, Wi-Fi only |
+| 10 kWh | $7,000-$11,000 | $4,900-$7,700 | 8-12 hours (essential circuits) | Partial home backup |
+| 13.5 kWh | $9,000-$14,000 | $6,300-$9,800 | 10-14 hours (most circuits) | Standard home -- most popular |
+| 20 kWh | $13,000-$20,000 | $9,100-$14,000 | 16-20 hours (nearly whole home) | Large homes, heavy loads |
+| 30 kWh | $18,000-$28,000 | $12,600-$19,600 | 20-30 hours (full home) | Whole-home off-grid capability |
+
+All costs shown are NMC chemistry at national average rates with hybrid inverter (no separate inverter cost) and no transfer switch or electrical upgrades. "After 30% Credit" is the battery equipment cost only after applying the IRA credit. Backup duration assumes average U.S. home consumption of approximately 30 kWh/day. Actual duration depends on which circuits are connected and real-time power draw.
+
+{/* Section 11: Battery Chemistry Comparison */}
+## Battery Chemistry Comparison
+
+| Chemistry | Cost Multiplier | Cycle Life | Round-Trip Efficiency | Lifespan | Best For |
+|---|---|---|---|---|---|
+| NMC (Nickel Manganese Cobalt) | 1.0x (baseline) | 2,000-4,000 cycles | 90-95% | 10-15 years | Backup-only, occasional cycling |
+| LFP (Lithium Iron Phosphate) | 1.10x (+10%) | 5,000-10,000 cycles | 92-98% | 15-20 years | Daily solar cycling, long-term value |
+| Lead-Acid (AGM) | 0.65x (-35%) | 500-1,200 cycles | 80-85% | 3-7 years | Budget backup, limited cycling |
+
+NMC is the standard chemistry in Tesla Powerwall and most home batteries. LFP (used in Enphase IQ, some Tesla models, and BYD batteries) costs 10% more upfront but lasts 2-3x longer in daily cycling applications -- making it cheaper per cycle over the battery lifetime. Lead-acid is only recommended for occasional emergency backup due to low cycle count and poor efficiency.
+
+{/* Section 12: Solar Battery vs Generator */}
+## Solar Battery vs. Whole-House Generator
+
+| Feature | Home Battery (13.5 kWh) | Natural Gas Generator |
+|---|---|---|
+| Installed cost | $8,575-$14,000 (after IRA credit) | $5,000-$15,000 |
+| Backup duration | 10-14 hours (without solar recharge) | Unlimited (with fuel supply) |
+| Operating cost | $0 (if paired with solar) | $5-$20/day in fuel |
+| Maintenance | None | Annual service ($200-$500/year) |
+| Noise level | Silent | 60-70 dB (comparable to a vacuum) |
+| Daily energy savings | Yes (solar storage, rate arbitrage) | None |
+| IRA tax credit | 30% federal credit | Not eligible |
+| Lifespan | 10-20 years | 15-25 years |
+
+For homeowners with solar panels, a battery offers better long-term value because it stores free solar energy for evening use and enables utility rate arbitrage in time-of-use markets. For areas with frequent multi-day outages or homes without solar, a generator provides unlimited backup as long as fuel is available. Some homeowners install both -- a battery for daily energy management and a generator for extended outages.
+
+{/* Section 13: Assumptions & Limitations */}
+## Assumptions & Limitations
+
+- All costs are **installed prices** including battery equipment, mounting hardware, wiring, BMS configuration, and utility interconnection. Solar panel costs are not included -- see our solar panel calculator for that estimate.
+- The **IRA 30% tax credit** applies to the full installed cost of qualifying battery systems (minimum 3 kWh capacity). The credit is non-refundable -- you must have sufficient federal tax liability. Consult a tax professional for eligibility.
+- Cost ranges reflect **2025-2026 U.S. national averages** from HomeAdvisor, Angi, and EnergySage. Battery prices have been dropping 5-10% annually as manufacturing capacity scales up.
+- **Backup duration** assumes average U.S. household consumption of approximately 30 kWh per day (EIA data). Actual backup time depends on which circuits are connected, time of day, season, and real-time power draw.
+- The calculator does not account for **state and local incentives**, which can add 10-30% additional savings. California (SGIP), Massachusetts (SMART/ConnectedSolutions), and New York (ConEd) offer significant additional battery incentives.
+- **Utility rate arbitrage** savings (charging at off-peak rates, discharging at peak rates) are not calculated but can reduce the effective payback period by 1-3 years in time-of-use markets.
+- The **25% labor-to-equipment ratio** is an industry average. Complex installations (roof-mounted, tight spaces, long conduit runs) may cost more in labor.
+
+{/* Section 14: FAQ */}
+<div className="faq-section">
+
+## Frequently Asked Questions
+
+### How much does a home battery cost?
+
+A home battery costs $4,000-$28,000 before incentives, depending on capacity. The most popular size -- 13.5 kWh (Tesla Powerwall equivalent) -- costs $9,000-$14,000 installed before the tax credit. The IRA 30% federal tax credit reduces that to $6,300-$9,800 for the battery equipment. A fully installed system with automatic transfer switch runs $8,575-$14,000 after the credit. Additional costs for separate inverters ($1,500-$3,000), transfer switches ($300-$2,500), and electrical upgrades ($1,500-$6,000) may apply depending on your existing electrical setup.
+
+### Is the IRA 30% tax credit still available for home batteries?
+
+Yes, as of 2026 the IRA 30% federal tax credit (IRC 25D) is available for residential battery storage systems with a capacity of 3 kWh or more. The full 30% credit runs through December 31, 2032, then steps down to 26% in 2033 and 22% in 2034. The battery does not need to be paired with solar panels to qualify -- standalone battery installations are eligible. The credit applies to the full installed cost including the battery, inverter, transfer switch, labor, and electrical upgrades.
+
+### How long will a home battery power my house?
+
+A 13.5 kWh battery powers most home circuits for 10-14 hours, assuming average consumption. The average U.S. home uses about 30 kWh per day, so a single 13.5 kWh battery provides roughly half a day of power. For essential loads only (refrigerator, lights, Wi-Fi, phone charging), the same battery can last 24-36 hours. For full whole-home backup lasting 20-30 hours, you need 30 kWh of storage. If paired with solar panels, the battery recharges during daylight hours, potentially providing indefinite backup during extended outages as long as the sun shines.
+
+### Solar battery vs. generator -- which is better?
+
+A generator ($5,000-$15,000 installed for natural gas) provides unlimited backup as long as fuel is available but requires annual maintenance ($200-$500), produces noise and emissions, and offers no daily energy savings. A battery ($8,575-$14,000 after the IRA credit for 13.5 kWh with transfer switch) is silent, maintenance-free, provides daily energy savings through solar storage and rate arbitrage, and qualifies for the 30% federal tax credit. For homeowners with solar panels, a battery typically offers better long-term value. For frequent multi-day outages or homes without solar, a generator provides indefinite power.
+
+### Do I need to upgrade my electrical panel for a battery?
+
+Not always. If your main panel has available breaker spaces and sufficient amperage (200A service), a battery can typically be added without upgrades. Homes with 100A service or full panels may need a panel upgrade ($1,500-$3,000) or a service upgrade from 100A to 200A ($3,000-$6,000). Your battery installer will assess panel compatibility during the required site survey. The electrical upgrade cost is eligible for the 30% IRA tax credit when performed as part of the battery installation.
+
+### How long do home batteries last?
+
+Home battery lifespan depends on chemistry and usage pattern. NMC (nickel manganese cobalt) batteries last 10-15 years with 2,000-4,000 charge cycles. LFP (lithium iron phosphate) batteries last 15-20 years with 5,000-10,000 cycles. Lead-acid batteries last only 3-7 years with 500-1,200 cycles. Most manufacturers warranty their batteries for 10 years or a specified cycle count. For daily solar cycling (one full charge/discharge per day), LFP chemistry is recommended because it will outlast NMC by 2-3x in total cycle count, making the 10% upfront premium a good long-term investment.
+
+</div>
+
+{/* Section 15: Related Calculators -- auto-rendered from spec */}
+
+{/* Section 16: Methodology & Sources */}
+## Methodology & Sources
+
+This calculator estimates home battery storage costs using capacity-based pricing tiers adjusted by battery chemistry, with add-on components for inverters, transfer switches, and electrical upgrades. Installation labor is calculated at 25% of battery equipment cost with regional adjustment. Battery pricing data comes from **HomeAdvisor**, **Angi**, and **EnergySage** 2025-2026 marketplace surveys representing actual installer quotes. Chemistry multipliers reflect manufacturer pricing differences between NMC (Tesla, LG), LFP (Enphase, BYD, some Tesla models), and lead-acid (Trojan, Rolls) battery systems. The IRA 30% tax credit calculation follows **IRS IRC 25D** as amended by the Inflation Reduction Act of 2022, applicable to residential clean energy property including standalone battery storage of 3 kWh or more. Regional labor multipliers are based on the HomeAdvisor regional cost index (Northeast 1.20x, West Coast 1.25x, Mid-Atlantic 1.15x, Midwest 0.90x, South 0.85x, Mountain West 0.95x). Backup duration estimates use **EIA** average household electricity consumption of approximately 30 kWh per day. Cycle life and efficiency data come from **ENERGY STAR** specifications and manufacturer datasheets.
+
+{/* Section 17: Disclaimer -- auto-rendered */}

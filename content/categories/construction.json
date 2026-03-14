@@ -1,1 +1,158 @@
-{"id":"construction","name":"Construction & Home Calculators","slug":"construction","description":"Free construction calculators for concrete, roofing, flooring, paint, and material estimates.","icon":"/icons/construction.svg","metaTitle":"Construction Calculators — Free Online Tools","metaDescription":"Calculate concrete yardage, roofing squares, paint gallons, fence materials, and flooring coverage. Free construction material calculators.","subcategories":[{"id":"materials","name":"Materials","slug":"materials","description":"Calculate concrete yardage, roofing squares, paint gallons, board feet, fence posts and boards, and drywall sheets. Free material quantity estimators.","calculators":["concrete-calculator","concrete-slab-calculator","concrete-footing-calculator","roofing-calculator","paint-calculator","board-foot-calculator","fence-calculator","drywall-calculator","tile-calculator","insulation-calculator","deck-calculator","wallpaper-calculator","brick-calculator","carpet-calculator","siding-calculator","concrete-block-calculator","asphalt-calculator","driveway-cost-calculator","metal-roofing-calculator","deck-replacement-cost-calculator","siding-replacement-cost-calculator","gutter-replacement-cost-calculator"]},{"id":"landscaping","name":"Landscaping","slug":"landscaping","description":"Calculate material quantities for landscaping projects.","calculators":["mulch-calculator","gravel-calculator","topsoil-calculator","paver-calculator","retaining-wall-calculator","pool-volume-calculator","concrete-patio-cost-calculator"]},{"id":"remodeling","name":"Remodeling","slug":"remodeling","description":"Estimate kitchen and bathroom remodel costs by fixture quality, materials, and scope of work.","calculators":["kitchen-remodel-calculator","bathroom-remodel-calculator","renovation-cost-calculator","backsplash-tile-cost-calculator","bathroom-tile-cost-calculator","regrouting-cost-calculator","flooring-installation-cost-calculator"]},{"id":"measurement","name":"Measurement","slug":"measurement","description":"Square footage and area calculations.","calculators":["square-footage-calculator","flooring-calculator","stair-calculator","roof-pitch-calculator","rafter-length-calculator","cubic-yard-calculator","hvac-size-calculator","wire-size-calculator"]}],"featuredCalculators":["concrete-calculator","square-footage-calculator","roofing-calculator","paint-calculator","flooring-calculator"]}
+{
+  "id": "construction",
+  "name": "Construction & Home Calculators",
+  "slug": "construction",
+  "description": "Free construction calculators for concrete, roofing, flooring, paint, HVAC, plumbing, electrical, and cost estimates across every major home trade.",
+  "icon": "/icons/construction.svg",
+  "metaTitle": "Construction Calculators — Free Online Tools for Every Trade",
+  "metaDescription": "80 free construction calculators: roofing, plumbing, electrical, HVAC, remodeling costs, energy upgrades & material estimates for 2025-2026.",
+  "subcategories": [
+    {
+      "id": "materials",
+      "name": "Materials & Exterior",
+      "slug": "materials",
+      "description": "Calculate concrete yardage, roofing squares, paint gallons, board feet, fence posts, drywall sheets, and exterior replacement costs. Free material quantity and cost estimators.",
+      "calculators": [
+        "concrete-calculator",
+        "concrete-slab-calculator",
+        "concrete-footing-calculator",
+        "roofing-calculator",
+        "paint-calculator",
+        "board-foot-calculator",
+        "fence-calculator",
+        "drywall-calculator",
+        "tile-calculator",
+        "insulation-calculator",
+        "deck-calculator",
+        "wallpaper-calculator",
+        "brick-calculator",
+        "carpet-calculator",
+        "siding-calculator",
+        "concrete-block-calculator",
+        "asphalt-calculator",
+        "driveway-cost-calculator",
+        "metal-roofing-calculator",
+        "deck-replacement-cost-calculator",
+        "siding-replacement-cost-calculator",
+        "gutter-replacement-cost-calculator",
+        "garage-door-cost-calculator",
+        "door-replacement-cost-calculator",
+        "roof-replacement-cost-calculator",
+        "window-replacement-cost-calculator"
+      ]
+    },
+    {
+      "id": "landscaping",
+      "name": "Landscaping & Outdoor",
+      "slug": "landscaping",
+      "description": "Calculate material quantities and costs for landscaping, patios, and outdoor living projects.",
+      "calculators": [
+        "mulch-calculator",
+        "gravel-calculator",
+        "topsoil-calculator",
+        "paver-calculator",
+        "retaining-wall-calculator",
+        "pool-volume-calculator",
+        "concrete-patio-cost-calculator",
+        "pergola-cost-calculator",
+        "tree-removal-cost-calculator",
+        "sprinkler-system-cost-calculator",
+        "artificial-turf-cost-calculator"
+      ]
+    },
+    {
+      "id": "remodeling",
+      "name": "Remodeling & Interior",
+      "slug": "remodeling",
+      "description": "Estimate kitchen, bathroom, painting, and interior remodel costs by fixture quality, materials, and scope of work.",
+      "calculators": [
+        "kitchen-remodel-calculator",
+        "bathroom-remodel-calculator",
+        "renovation-cost-calculator",
+        "backsplash-tile-cost-calculator",
+        "bathroom-tile-cost-calculator",
+        "regrouting-cost-calculator",
+        "flooring-installation-cost-calculator",
+        "insulation-cost-calculator",
+        "painting-cost-calculator",
+        "accessibility-remodel-cost-calculator",
+        "crown-molding-cost-calculator"
+      ]
+    },
+    {
+      "id": "measurement",
+      "name": "Measurement & Sizing",
+      "slug": "measurement",
+      "description": "Square footage, area calculations, roof pitch, stair dimensions, and HVAC sizing tools.",
+      "calculators": [
+        "square-footage-calculator",
+        "flooring-calculator",
+        "stair-calculator",
+        "roof-pitch-calculator",
+        "rafter-length-calculator",
+        "cubic-yard-calculator",
+        "hvac-size-calculator",
+        "wire-size-calculator"
+      ]
+    },
+    {
+      "id": "hvac",
+      "name": "HVAC & Climate",
+      "slug": "hvac",
+      "description": "Estimate HVAC replacement, heat pump, mini-split, and ductwork installation costs with regional labor pricing.",
+      "calculators": [
+        "hvac-replacement-cost-calculator",
+        "heat-pump-cost-calculator",
+        "mini-split-cost-calculator",
+        "ductwork-cost-calculator"
+      ]
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical",
+      "slug": "electrical",
+      "description": "Calculate electrical panel upgrade, EV charger installation, and other electrical project costs.",
+      "calculators": [
+        "electrical-panel-upgrade-cost-calculator",
+        "electrical-service-upgrade-cost-calculator",
+        "backup-generator-cost-calculator",
+        "solar-battery-cost-calculator",
+        "ev-charger-installation-cost-calculator",
+        "home-energy-audit-cost-calculator"
+      ]
+    },
+    {
+      "id": "plumbing",
+      "name": "Plumbing",
+      "slug": "plumbing",
+      "description": "Estimate water heater, sump pump, and whole-house repipe costs with installation labor.",
+      "calculators": [
+        "water-heater-cost-calculator",
+        "whole-house-repipe-cost-calculator"
+      ]
+    },
+    {
+      "id": "foundation",
+      "name": "Foundation & Structural",
+      "slug": "foundation",
+      "description": "Calculate foundation repair, basement waterproofing, and crawl space encapsulation costs.",
+      "calculators": [
+        "foundation-repair-cost-calculator",
+        "basement-waterproofing-cost-calculator",
+        "crawl-space-encapsulation-cost-calculator",
+        "sump-pump-cost-calculator",
+        "radon-mitigation-cost-calculator"
+      ]
+    }
+  ],
+  "featuredCalculators": [
+    "concrete-calculator",
+    "square-footage-calculator",
+    "roofing-calculator",
+    "paint-calculator",
+    "flooring-calculator",
+    "roof-replacement-cost-calculator",
+    "hvac-replacement-cost-calculator",
+    "heat-pump-cost-calculator"
+  ]
+}
